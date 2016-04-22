@@ -1,0 +1,3 @@
+<manifest package="br.com.conductor.pier.api.v1.invoker" xmlns:android="http://schemas.android.com/apk/res/android">
+    <application />
+</manifest>
