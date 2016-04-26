@@ -1,8 +1,8 @@
 apply plugin: 'idea'
 apply plugin: 'eclipse'
 
-group = 'br.com.conductor.pier'
-version = '0.0.1-SNAPSHOT'
+group = 'br.com.conductor.caas'
+version = '0.0.1'
 
 buildscript {
     repositories {
@@ -83,7 +83,7 @@ if(hasProperty('target') && target == 'android') {
     
     install {
         repositories.mavenInstaller {
-            pom.artifactId = 'pier-sdk-java'
+            pom.artifactId = 'caas-sdk-java'
         }
     }
     

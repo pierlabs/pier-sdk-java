@@ -1,7 +1,7 @@
-package br.com.conductor.pier.api.v1.model;
+package br.com.conductor.caas.api.v1.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v1.model.ExtratoResponse;
+import br.com.conductor.caas.api.v1.model.ExtratoResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;

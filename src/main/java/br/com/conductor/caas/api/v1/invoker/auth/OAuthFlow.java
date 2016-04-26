@@ -1,4 +1,4 @@
-package br.com.conductor.pier.api.v1.invoker.auth;
+package br.com.conductor.caas.api.v1.invoker.auth;
 
 public enum OAuthFlow {
     accessCode, implicit, password, application

@@ -1,4 +1,4 @@
-package br.com.conductor.pier.api.v1.model;
+package br.com.conductor.caas.api.v1.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;

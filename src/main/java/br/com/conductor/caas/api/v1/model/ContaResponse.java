@@ -1,9 +1,9 @@
-package br.com.conductor.pier.api.v1.model;
+package br.com.conductor.caas.api.v1.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v1.model.CartaoResponse;
-import br.com.conductor.pier.api.v1.model.PessoaFisicaResponse;
-import br.com.conductor.pier.api.v1.model.SaldoLimiteResponse;
+import br.com.conductor.caas.api.v1.model.CartaoResponse;
+import br.com.conductor.caas.api.v1.model.PessoaFisicaResponse;
+import br.com.conductor.caas.api.v1.model.SaldoLimiteResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;

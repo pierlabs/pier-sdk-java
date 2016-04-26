@@ -1,18 +1,18 @@
-package br.com.conductor.pier.api.v1;
+package br.com.conductor.caas.api.v1;
 
 import com.sun.jersey.api.client.GenericType;
 
-import br.com.conductor.pier.api.v1.invoker.ApiException;
-import br.com.conductor.pier.api.v1.invoker.ApiClient;
-import br.com.conductor.pier.api.v1.invoker.Configuration;
-import br.com.conductor.pier.api.v1.invoker.Pair;
+import br.com.conductor.caas.api.v1.invoker.ApiException;
+import br.com.conductor.caas.api.v1.invoker.ApiClient;
+import br.com.conductor.caas.api.v1.invoker.Configuration;
+import br.com.conductor.caas.api.v1.invoker.Pair;
 
-import br.com.conductor.pier.api.v1.model.ConsultarCartaoResponse;
-import br.com.conductor.pier.api.v1.model.CancelarCartaoResponse;
-import br.com.conductor.pier.api.v1.model.DesbloquearCartaoResponse;
-import br.com.conductor.pier.api.v1.model.ConsultarExtratoContaResponse;
-import br.com.conductor.pier.api.v1.model.ConsultarSaldoLimitesResponse;
-import br.com.conductor.pier.api.v1.model.ContaResponse;
+import br.com.conductor.caas.api.v1.model.ConsultarCartaoResponse;
+import br.com.conductor.caas.api.v1.model.CancelarCartaoResponse;
+import br.com.conductor.caas.api.v1.model.DesbloquearCartaoResponse;
+import br.com.conductor.caas.api.v1.model.ConsultarExtratoContaResponse;
+import br.com.conductor.caas.api.v1.model.ConsultarSaldoLimitesResponse;
+import br.com.conductor.caas.api.v1.model.ContaResponse;
 
 
 
