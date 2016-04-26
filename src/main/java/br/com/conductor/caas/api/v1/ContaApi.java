@@ -46,17 +46,17 @@ public class ContaApi {
    * @param idConta ID da Conta
    * @return ContaResponse
    */
-  public ContaResponse consultarContaUsingGET1(Integer idEmissor, Integer idConta) throws ApiException {
+  public ContaResponse consultarContaUsingGET(Integer idEmissor, Integer idConta) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idEmissor' is set
      if (idEmissor == null) {
-        throw new ApiException(400, "Missing the required parameter 'idEmissor' when calling consultarContaUsingGET1");
+        throw new ApiException(400, "Missing the required parameter 'idEmissor' when calling consultarContaUsingGET");
      }
      
      // verify the required parameter 'idConta' is set
      if (idConta == null) {
-        throw new ApiException(400, "Missing the required parameter 'idConta' when calling consultarContaUsingGET1");
+        throw new ApiException(400, "Missing the required parameter 'idConta' when calling consultarContaUsingGET");
      }
      
     // create path and map variables

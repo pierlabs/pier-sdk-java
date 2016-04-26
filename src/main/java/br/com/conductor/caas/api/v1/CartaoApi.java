@@ -12,7 +12,6 @@ import br.com.conductor.caas.api.v1.model.CancelarCartaoResponse;
 import br.com.conductor.caas.api.v1.model.DesbloquearCartaoResponse;
 import br.com.conductor.caas.api.v1.model.ConsultarExtratoContaResponse;
 import br.com.conductor.caas.api.v1.model.ConsultarSaldoLimitesResponse;
-import br.com.conductor.caas.api.v1.model.ContaResponse;
 
 
 
@@ -390,61 +389,6 @@ public class CartaoApi {
 
     
     GenericType<ConsultarSaldoLimitesResponse> returnType = new GenericType<ConsultarSaldoLimitesResponse>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
-   * /contas/{idConta}
-   * Consulte informaÃ§Ãµes de uma determinada conta
-   * @param idEmissor ID do Emissor
-   * @param idConta ID da Conta
-   * @return ContaResponse
-   */
-  public ContaResponse consultarContaUsingGET(Integer idEmissor, Integer idConta) throws ApiException {
-    Object postBody = null;
-    
-     // verify the required parameter 'idEmissor' is set
-     if (idEmissor == null) {
-        throw new ApiException(400, "Missing the required parameter 'idEmissor' when calling consultarContaUsingGET");
-     }
-     
-     // verify the required parameter 'idConta' is set
-     if (idConta == null) {
-        throw new ApiException(400, "Missing the required parameter 'idConta' when calling consultarContaUsingGET");
-     }
-     
-    // create path and map variables
-    String path = "/api/v1/contas/{idConta}/cartoes/{idConta}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "idConta" + "\\}", apiClient.escapeString(idConta.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-
-    if (idEmissor != null)
-      headerParams.put("idEmissor", apiClient.parameterToString(idEmissor));
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] { "access_token" };
-
-    
-    GenericType<ContaResponse> returnType = new GenericType<ContaResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
