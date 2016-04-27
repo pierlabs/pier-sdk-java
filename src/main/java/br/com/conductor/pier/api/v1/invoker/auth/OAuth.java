@@ -1,6 +1,6 @@
-package br.com.conductor.caas.api.v1.invoker.auth;
+package br.com.conductor.pier.api.v1.invoker.auth;
 
-import br.com.conductor.caas.api.v1.invoker.Pair;
+import br.com.conductor.pier.api.v1.invoker.Pair;
 
 import java.util.Map;
 import java.util.List;

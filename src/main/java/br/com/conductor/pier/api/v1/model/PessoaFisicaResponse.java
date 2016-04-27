@@ -1,8 +1,7 @@
-package br.com.conductor.caas.api.v1.model;
+package br.com.conductor.pier.api.v1.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -43,7 +42,7 @@ public class PessoaFisicaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("bairro")
   public String getBairro() {
     return bairro;
@@ -60,7 +59,7 @@ public class PessoaFisicaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("cep")
   public String getCep() {
     return cep;
@@ -77,7 +76,7 @@ public class PessoaFisicaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("cidade")
   public String getCidade() {
     return cidade;
@@ -94,7 +93,7 @@ public class PessoaFisicaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("complementoLogradouro")
   public String getComplementoLogradouro() {
     return complementoLogradouro;
@@ -111,7 +110,7 @@ public class PessoaFisicaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("cpf")
   public String getCpf() {
     return cpf;
@@ -128,7 +127,7 @@ public class PessoaFisicaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("dataEmissaoIdentidade")
   public String getDataEmissaoIdentidade() {
     return dataEmissaoIdentidade;
@@ -145,7 +144,7 @@ public class PessoaFisicaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("dataNascimento")
   public String getDataNascimento() {
     return dataNascimento;
@@ -162,7 +161,7 @@ public class PessoaFisicaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("dddcelular")
   public String getDddcelular() {
     return dddcelular;
@@ -179,7 +178,7 @@ public class PessoaFisicaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("dddtelefone")
   public String getDddtelefone() {
     return dddtelefone;
@@ -196,7 +195,7 @@ public class PessoaFisicaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("endereco")
   public String getEndereco() {
     return endereco;
@@ -213,7 +212,7 @@ public class PessoaFisicaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("idPessoaFisica")
   public Integer getIdPessoaFisica() {
     return idPessoaFisica;
@@ -230,7 +229,7 @@ public class PessoaFisicaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("identidade")
   public String getIdentidade() {
     return identidade;
@@ -247,7 +246,7 @@ public class PessoaFisicaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -264,7 +263,7 @@ public class PessoaFisicaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("numeroCelular")
   public String getNumeroCelular() {
     return numeroCelular;
@@ -281,7 +280,7 @@ public class PessoaFisicaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("numeroLogradouro")
   public Integer getNumeroLogradouro() {
     return numeroLogradouro;
@@ -298,7 +297,7 @@ public class PessoaFisicaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("numeroTelefone")
   public String getNumeroTelefone() {
     return numeroTelefone;
@@ -315,7 +314,7 @@ public class PessoaFisicaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("orgaoEmissor")
   public String getOrgaoEmissor() {
     return orgaoEmissor;
@@ -332,7 +331,7 @@ public class PessoaFisicaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("sexo")
   public String getSexo() {
     return sexo;
@@ -349,7 +348,7 @@ public class PessoaFisicaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("uf")
   public String getUf() {
     return uf;

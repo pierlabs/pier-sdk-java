@@ -1,4 +1,4 @@
-package br.com.conductor.caas.api.v1.invoker;
+package br.com.conductor.pier.api.v1.invoker;
 
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class Pair {

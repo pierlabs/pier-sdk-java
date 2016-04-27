@@ -1,4 +1,4 @@
-# caas-sdk-java
+# pier-sdk-java
 
 ## Requirements
 
@@ -24,8 +24,8 @@ After the client library is installed/deployed, you can use it in your Maven pro
 
 ```xml
 <dependency>
-    <groupId>br.com.conductor.caas</groupId>
-    <artifactId>caas-sdk-java</artifactId>
+    <groupId>br.com.conductor.pier</groupId>
+    <artifactId>pier-sdk-java</artifactId>
     <version>0.0.1</version>
     <scope>compile</scope>
 </dependency>

@@ -1,8 +1,7 @@
-package br.com.conductor.caas.api.v1.model;
+package br.com.conductor.pier.api.v1.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -56,7 +55,7 @@ public class SaldoLimiteResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("disponibCompraNac")
   public Double getDisponibCompraNac() {
     return disponibCompraNac;
@@ -73,7 +72,7 @@ public class SaldoLimiteResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("disponibGlobalCredito")
   public Double getDisponibGlobalCredito() {
     return disponibGlobalCredito;
@@ -90,7 +89,7 @@ public class SaldoLimiteResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("disponibParceladoNac")
   public Double getDisponibParceladoNac() {
     return disponibParceladoNac;
@@ -107,7 +106,7 @@ public class SaldoLimiteResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("disponibParcelasNac")
   public Double getDisponibParcelasNac() {
     return disponibParcelasNac;
@@ -124,7 +123,7 @@ public class SaldoLimiteResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("disponibSaqueNacGlobal")
   public Double getDisponibSaqueNacGlobal() {
     return disponibSaqueNacGlobal;
@@ -141,7 +140,7 @@ public class SaldoLimiteResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("flagAntecipacao")
   public Boolean getFlagAntecipacao() {
     return flagAntecipacao;
@@ -158,7 +157,7 @@ public class SaldoLimiteResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("limiteCompraNac")
   public Double getLimiteCompraNac() {
     return limiteCompraNac;
@@ -175,7 +174,7 @@ public class SaldoLimiteResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("limiteCreditoConcedido")
   public Double getLimiteCreditoConcedido() {
     return limiteCreditoConcedido;
@@ -192,7 +191,7 @@ public class SaldoLimiteResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("limiteCreditoDisponivel")
   public Double getLimiteCreditoDisponivel() {
     return limiteCreditoDisponivel;
@@ -209,7 +208,7 @@ public class SaldoLimiteResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("limiteGlobalCredito")
   public Double getLimiteGlobalCredito() {
     return limiteGlobalCredito;
@@ -226,7 +225,7 @@ public class SaldoLimiteResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("limiteParceladoNac")
   public Double getLimiteParceladoNac() {
     return limiteParceladoNac;
@@ -243,7 +242,7 @@ public class SaldoLimiteResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("limiteParcelasNac")
   public Double getLimiteParcelasNac() {
     return limiteParcelasNac;
@@ -260,7 +259,7 @@ public class SaldoLimiteResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("limitePontuacao")
   public Double getLimitePontuacao() {
     return limitePontuacao;
@@ -277,7 +276,7 @@ public class SaldoLimiteResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("limiteSaqueNacGlobal")
   public Double getLimiteSaqueNacGlobal() {
     return limiteSaqueNacGlobal;
@@ -294,7 +293,7 @@ public class SaldoLimiteResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("numeroCiclo")
   public Integer getNumeroCiclo() {
     return numeroCiclo;
@@ -311,7 +310,7 @@ public class SaldoLimiteResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("pontosConcedidos")
   public Double getPontosConcedidos() {
     return pontosConcedidos;
@@ -328,7 +327,7 @@ public class SaldoLimiteResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("pontosRemanescentes")
   public Double getPontosRemanescentes() {
     return pontosRemanescentes;
@@ -345,7 +344,7 @@ public class SaldoLimiteResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("proximoVencimentoPadrao")
   public String getProximoVencimentoPadrao() {
     return proximoVencimentoPadrao;
@@ -362,7 +361,7 @@ public class SaldoLimiteResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("proximoVencimentoReal")
   public String getProximoVencimentoReal() {
     return proximoVencimentoReal;
@@ -379,7 +378,7 @@ public class SaldoLimiteResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("saldoAtualFinal")
   public Double getSaldoAtualFinal() {
     return saldoAtualFinal;
@@ -396,7 +395,7 @@ public class SaldoLimiteResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("saldoCredor")
   public Double getSaldoCredor() {
     return saldoCredor;
@@ -413,7 +412,7 @@ public class SaldoLimiteResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("saldoDevedor")
   public Double getSaldoDevedor() {
     return saldoDevedor;
@@ -430,7 +429,7 @@ public class SaldoLimiteResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("saldoDevedorOneroso")
   public Double getSaldoDevedorOneroso() {
     return saldoDevedorOneroso;
@@ -447,7 +446,7 @@ public class SaldoLimiteResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("saldoDevedorTotal")
   public Double getSaldoDevedorTotal() {
     return saldoDevedorTotal;
@@ -464,7 +463,7 @@ public class SaldoLimiteResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("saltaExtratoAnterior")
   public Double getSaltaExtratoAnterior() {
     return saltaExtratoAnterior;
@@ -481,7 +480,7 @@ public class SaldoLimiteResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("totalDisponivelUtilizacao")
   public Double getTotalDisponivelUtilizacao() {
     return totalDisponivelUtilizacao;
@@ -498,7 +497,7 @@ public class SaldoLimiteResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("totalFuturo")
   public Double getTotalFuturo() {
     return totalFuturo;
@@ -515,7 +514,7 @@ public class SaldoLimiteResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("valorMinimoExtrato")
   public Double getValorMinimoExtrato() {
     return valorMinimoExtrato;
@@ -532,7 +531,7 @@ public class SaldoLimiteResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("valorMinimoExtratoOriginal")
   public Double getValorMinimoExtratoOriginal() {
     return valorMinimoExtratoOriginal;
@@ -549,7 +548,7 @@ public class SaldoLimiteResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("vencimentoPadraoAnterior")
   public String getVencimentoPadraoAnterior() {
     return vencimentoPadraoAnterior;
@@ -566,7 +565,7 @@ public class SaldoLimiteResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("vencimentoPosProx")
   public String getVencimentoPosProx() {
     return vencimentoPosProx;
@@ -583,7 +582,7 @@ public class SaldoLimiteResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("vencimentoRealAnterior")
   public String getVencimentoRealAnterior() {
     return vencimentoRealAnterior;

@@ -1,8 +1,7 @@
-package br.com.conductor.caas.api.v1.model;
+package br.com.conductor.pier.api.v1.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -15,8 +14,8 @@ import io.swagger.annotations.ApiModelProperty;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ConsultarSaldoLimitesResponse   {
   
+  private Integer codRetorno = null;
   private Integer codigoRetorno = null;
-  private String dataVencimento = null;
   private String descricaoRetorno = null;
   private Double disponibCompraNac = null;
   private Double disponibGlobalCredito = null;
@@ -28,9 +27,26 @@ public class ConsultarSaldoLimitesResponse   {
   private Double limiteParceladoNac = null;
   private Double limiteParcelasNac = null;
   private Double limiteSaqueNacGlobal = null;
-  private Double saldoAtualFinal = null;
-  private Double saldoDevedor = null;
-  private Double saldoFuturo = null;
+  private Double limiteSaqueNacPeriodo = null;
+  private Double rendaComprovada = null;
+  private Boolean solicitacaoPendente = null;
+
+  
+  /**
+   **/
+  public ConsultarSaldoLimitesResponse codRetorno(Integer codRetorno) {
+    this.codRetorno = codRetorno;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("codRetorno")
+  public Integer getCodRetorno() {
+    return codRetorno;
+  }
+  public void setCodRetorno(Integer codRetorno) {
+    this.codRetorno = codRetorno;
+  }
 
   
   /**
@@ -40,7 +56,7 @@ public class ConsultarSaldoLimitesResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("codigoRetorno")
   public Integer getCodigoRetorno() {
     return codigoRetorno;
@@ -52,29 +68,12 @@ public class ConsultarSaldoLimitesResponse   {
   
   /**
    **/
-  public ConsultarSaldoLimitesResponse dataVencimento(String dataVencimento) {
-    this.dataVencimento = dataVencimento;
-    return this;
-  }
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("dataVencimento")
-  public String getDataVencimento() {
-    return dataVencimento;
-  }
-  public void setDataVencimento(String dataVencimento) {
-    this.dataVencimento = dataVencimento;
-  }
-
-  
-  /**
-   **/
   public ConsultarSaldoLimitesResponse descricaoRetorno(String descricaoRetorno) {
     this.descricaoRetorno = descricaoRetorno;
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("descricaoRetorno")
   public String getDescricaoRetorno() {
     return descricaoRetorno;
@@ -91,7 +90,7 @@ public class ConsultarSaldoLimitesResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("disponibCompraNac")
   public Double getDisponibCompraNac() {
     return disponibCompraNac;
@@ -108,7 +107,7 @@ public class ConsultarSaldoLimitesResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("disponibGlobalCredito")
   public Double getDisponibGlobalCredito() {
     return disponibGlobalCredito;
@@ -125,7 +124,7 @@ public class ConsultarSaldoLimitesResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("disponibParceladoNac")
   public Double getDisponibParceladoNac() {
     return disponibParceladoNac;
@@ -142,7 +141,7 @@ public class ConsultarSaldoLimitesResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("disponibParcelasNac")
   public Double getDisponibParcelasNac() {
     return disponibParcelasNac;
@@ -159,7 +158,7 @@ public class ConsultarSaldoLimitesResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("disponibSaqueNacGlobal")
   public Double getDisponibSaqueNacGlobal() {
     return disponibSaqueNacGlobal;
@@ -176,7 +175,7 @@ public class ConsultarSaldoLimitesResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("limiteCompraNac")
   public Double getLimiteCompraNac() {
     return limiteCompraNac;
@@ -193,7 +192,7 @@ public class ConsultarSaldoLimitesResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("limiteGlobalCredito")
   public Double getLimiteGlobalCredito() {
     return limiteGlobalCredito;
@@ -210,7 +209,7 @@ public class ConsultarSaldoLimitesResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("limiteParceladoNac")
   public Double getLimiteParceladoNac() {
     return limiteParceladoNac;
@@ -227,7 +226,7 @@ public class ConsultarSaldoLimitesResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("limiteParcelasNac")
   public Double getLimiteParcelasNac() {
     return limiteParcelasNac;
@@ -244,7 +243,7 @@ public class ConsultarSaldoLimitesResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("limiteSaqueNacGlobal")
   public Double getLimiteSaqueNacGlobal() {
     return limiteSaqueNacGlobal;
@@ -256,52 +255,52 @@ public class ConsultarSaldoLimitesResponse   {
   
   /**
    **/
-  public ConsultarSaldoLimitesResponse saldoAtualFinal(Double saldoAtualFinal) {
-    this.saldoAtualFinal = saldoAtualFinal;
+  public ConsultarSaldoLimitesResponse limiteSaqueNacPeriodo(Double limiteSaqueNacPeriodo) {
+    this.limiteSaqueNacPeriodo = limiteSaqueNacPeriodo;
     return this;
   }
   
-  @ApiModelProperty(value = "")
-  @JsonProperty("saldoAtualFinal")
-  public Double getSaldoAtualFinal() {
-    return saldoAtualFinal;
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("limiteSaqueNacPeriodo")
+  public Double getLimiteSaqueNacPeriodo() {
+    return limiteSaqueNacPeriodo;
   }
-  public void setSaldoAtualFinal(Double saldoAtualFinal) {
-    this.saldoAtualFinal = saldoAtualFinal;
+  public void setLimiteSaqueNacPeriodo(Double limiteSaqueNacPeriodo) {
+    this.limiteSaqueNacPeriodo = limiteSaqueNacPeriodo;
   }
 
   
   /**
    **/
-  public ConsultarSaldoLimitesResponse saldoDevedor(Double saldoDevedor) {
-    this.saldoDevedor = saldoDevedor;
+  public ConsultarSaldoLimitesResponse rendaComprovada(Double rendaComprovada) {
+    this.rendaComprovada = rendaComprovada;
     return this;
   }
   
-  @ApiModelProperty(value = "")
-  @JsonProperty("saldoDevedor")
-  public Double getSaldoDevedor() {
-    return saldoDevedor;
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("rendaComprovada")
+  public Double getRendaComprovada() {
+    return rendaComprovada;
   }
-  public void setSaldoDevedor(Double saldoDevedor) {
-    this.saldoDevedor = saldoDevedor;
+  public void setRendaComprovada(Double rendaComprovada) {
+    this.rendaComprovada = rendaComprovada;
   }
 
   
   /**
    **/
-  public ConsultarSaldoLimitesResponse saldoFuturo(Double saldoFuturo) {
-    this.saldoFuturo = saldoFuturo;
+  public ConsultarSaldoLimitesResponse solicitacaoPendente(Boolean solicitacaoPendente) {
+    this.solicitacaoPendente = solicitacaoPendente;
     return this;
   }
   
-  @ApiModelProperty(value = "")
-  @JsonProperty("saldoFuturo")
-  public Double getSaldoFuturo() {
-    return saldoFuturo;
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("solicitacaoPendente")
+  public Boolean getSolicitacaoPendente() {
+    return solicitacaoPendente;
   }
-  public void setSaldoFuturo(Double saldoFuturo) {
-    this.saldoFuturo = saldoFuturo;
+  public void setSolicitacaoPendente(Boolean solicitacaoPendente) {
+    this.solicitacaoPendente = solicitacaoPendente;
   }
 
   
@@ -315,8 +314,8 @@ public class ConsultarSaldoLimitesResponse   {
       return false;
     }
     ConsultarSaldoLimitesResponse consultarSaldoLimitesResponse = (ConsultarSaldoLimitesResponse) o;
-    return Objects.equals(this.codigoRetorno, consultarSaldoLimitesResponse.codigoRetorno) &&
-        Objects.equals(this.dataVencimento, consultarSaldoLimitesResponse.dataVencimento) &&
+    return Objects.equals(this.codRetorno, consultarSaldoLimitesResponse.codRetorno) &&
+        Objects.equals(this.codigoRetorno, consultarSaldoLimitesResponse.codigoRetorno) &&
         Objects.equals(this.descricaoRetorno, consultarSaldoLimitesResponse.descricaoRetorno) &&
         Objects.equals(this.disponibCompraNac, consultarSaldoLimitesResponse.disponibCompraNac) &&
         Objects.equals(this.disponibGlobalCredito, consultarSaldoLimitesResponse.disponibGlobalCredito) &&
@@ -328,14 +327,14 @@ public class ConsultarSaldoLimitesResponse   {
         Objects.equals(this.limiteParceladoNac, consultarSaldoLimitesResponse.limiteParceladoNac) &&
         Objects.equals(this.limiteParcelasNac, consultarSaldoLimitesResponse.limiteParcelasNac) &&
         Objects.equals(this.limiteSaqueNacGlobal, consultarSaldoLimitesResponse.limiteSaqueNacGlobal) &&
-        Objects.equals(this.saldoAtualFinal, consultarSaldoLimitesResponse.saldoAtualFinal) &&
-        Objects.equals(this.saldoDevedor, consultarSaldoLimitesResponse.saldoDevedor) &&
-        Objects.equals(this.saldoFuturo, consultarSaldoLimitesResponse.saldoFuturo);
+        Objects.equals(this.limiteSaqueNacPeriodo, consultarSaldoLimitesResponse.limiteSaqueNacPeriodo) &&
+        Objects.equals(this.rendaComprovada, consultarSaldoLimitesResponse.rendaComprovada) &&
+        Objects.equals(this.solicitacaoPendente, consultarSaldoLimitesResponse.solicitacaoPendente);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(codigoRetorno, dataVencimento, descricaoRetorno, disponibCompraNac, disponibGlobalCredito, disponibParceladoNac, disponibParcelasNac, disponibSaqueNacGlobal, limiteCompraNac, limiteGlobalCredito, limiteParceladoNac, limiteParcelasNac, limiteSaqueNacGlobal, saldoAtualFinal, saldoDevedor, saldoFuturo);
+    return Objects.hash(codRetorno, codigoRetorno, descricaoRetorno, disponibCompraNac, disponibGlobalCredito, disponibParceladoNac, disponibParcelasNac, disponibSaqueNacGlobal, limiteCompraNac, limiteGlobalCredito, limiteParceladoNac, limiteParcelasNac, limiteSaqueNacGlobal, limiteSaqueNacPeriodo, rendaComprovada, solicitacaoPendente);
   }
 
   @Override
@@ -343,8 +342,8 @@ public class ConsultarSaldoLimitesResponse   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConsultarSaldoLimitesResponse {\n");
     
+    sb.append("    codRetorno: ").append(toIndentedString(codRetorno)).append("\n");
     sb.append("    codigoRetorno: ").append(toIndentedString(codigoRetorno)).append("\n");
-    sb.append("    dataVencimento: ").append(toIndentedString(dataVencimento)).append("\n");
     sb.append("    descricaoRetorno: ").append(toIndentedString(descricaoRetorno)).append("\n");
     sb.append("    disponibCompraNac: ").append(toIndentedString(disponibCompraNac)).append("\n");
     sb.append("    disponibGlobalCredito: ").append(toIndentedString(disponibGlobalCredito)).append("\n");
@@ -356,9 +355,9 @@ public class ConsultarSaldoLimitesResponse   {
     sb.append("    limiteParceladoNac: ").append(toIndentedString(limiteParceladoNac)).append("\n");
     sb.append("    limiteParcelasNac: ").append(toIndentedString(limiteParcelasNac)).append("\n");
     sb.append("    limiteSaqueNacGlobal: ").append(toIndentedString(limiteSaqueNacGlobal)).append("\n");
-    sb.append("    saldoAtualFinal: ").append(toIndentedString(saldoAtualFinal)).append("\n");
-    sb.append("    saldoDevedor: ").append(toIndentedString(saldoDevedor)).append("\n");
-    sb.append("    saldoFuturo: ").append(toIndentedString(saldoFuturo)).append("\n");
+    sb.append("    limiteSaqueNacPeriodo: ").append(toIndentedString(limiteSaqueNacPeriodo)).append("\n");
+    sb.append("    rendaComprovada: ").append(toIndentedString(rendaComprovada)).append("\n");
+    sb.append("    solicitacaoPendente: ").append(toIndentedString(solicitacaoPendente)).append("\n");
     sb.append("}");
     return sb.toString();
   }

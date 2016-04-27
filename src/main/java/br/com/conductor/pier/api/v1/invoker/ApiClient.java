@@ -1,4 +1,4 @@
-package br.com.conductor.caas.api.v1.invoker;
+package br.com.conductor.pier.api.v1.invoker;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.*;
@@ -36,10 +36,10 @@ import java.io.UnsupportedEncodingException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
-import br.com.conductor.caas.api.v1.invoker.auth.Authentication;
-import br.com.conductor.caas.api.v1.invoker.auth.HttpBasicAuth;
-import br.com.conductor.caas.api.v1.invoker.auth.ApiKeyAuth;
-import br.com.conductor.caas.api.v1.invoker.auth.OAuth;
+import br.com.conductor.pier.api.v1.invoker.auth.Authentication;
+import br.com.conductor.pier.api.v1.invoker.auth.HttpBasicAuth;
+import br.com.conductor.pier.api.v1.invoker.auth.ApiKeyAuth;
+import br.com.conductor.pier.api.v1.invoker.auth.OAuth;
 
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ApiClient {

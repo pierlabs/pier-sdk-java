@@ -1,11 +1,10 @@
-package br.com.conductor.caas.api.v1.model;
+package br.com.conductor.pier.api.v1.model;
 
 import java.util.Objects;
-import br.com.conductor.caas.api.v1.model.CartaoResponse;
-import br.com.conductor.caas.api.v1.model.PessoaFisicaResponse;
-import br.com.conductor.caas.api.v1.model.SaldoLimiteResponse;
+import br.com.conductor.pier.api.v1.model.ConsultarContaCartaoResponse;
+import br.com.conductor.pier.api.v1.model.PessoaFisicaResponse;
+import br.com.conductor.pier.api.v1.model.SaldoLimiteResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -20,7 +19,7 @@ import java.util.Date;
 public class ContaResponse   {
   
   private Integer bin = null;
-  private CartaoResponse cartao = null;
+  private ConsultarContaCartaoResponse cartao = null;
   private String dataCadastramento = null;
   private String dataUltimoPagamento = null;
   private String dataVencCobranca = null;
@@ -62,7 +61,7 @@ public class ContaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("bin")
   public Integer getBin() {
     return bin;
@@ -74,17 +73,17 @@ public class ContaResponse   {
   
   /**
    **/
-  public ContaResponse cartao(CartaoResponse cartao) {
+  public ContaResponse cartao(ConsultarContaCartaoResponse cartao) {
     this.cartao = cartao;
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("cartao")
-  public CartaoResponse getCartao() {
+  public ConsultarContaCartaoResponse getCartao() {
     return cartao;
   }
-  public void setCartao(CartaoResponse cartao) {
+  public void setCartao(ConsultarContaCartaoResponse cartao) {
     this.cartao = cartao;
   }
 
@@ -96,7 +95,7 @@ public class ContaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("dataCadastramento")
   public String getDataCadastramento() {
     return dataCadastramento;
@@ -113,7 +112,7 @@ public class ContaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("dataUltimoPagamento")
   public String getDataUltimoPagamento() {
     return dataUltimoPagamento;
@@ -130,7 +129,7 @@ public class ContaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("dataVencCobranca")
   public String getDataVencCobranca() {
     return dataVencCobranca;
@@ -147,7 +146,7 @@ public class ContaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("dddcelularSMS")
   public String getDddcelularSMS() {
     return dddcelularSMS;
@@ -164,7 +163,7 @@ public class ContaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("descricaoStatus")
   public String getDescricaoStatus() {
     return descricaoStatus;
@@ -181,7 +180,7 @@ public class ContaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("diasEmAtraso")
   public Integer getDiasEmAtraso() {
     return diasEmAtraso;
@@ -198,7 +197,7 @@ public class ContaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("emissor")
   public String getEmissor() {
     return emissor;
@@ -215,7 +214,7 @@ public class ContaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("flagCancelamento")
   public Boolean getFlagCancelamento() {
     return flagCancelamento;
@@ -232,7 +231,7 @@ public class ContaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("formaEnvioFatura")
   public String getFormaEnvioFatura() {
     return formaEnvioFatura;
@@ -249,7 +248,7 @@ public class ContaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("idBandeira")
   public Integer getIdBandeira() {
     return idBandeira;
@@ -266,7 +265,7 @@ public class ContaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("idConta")
   public Integer getIdConta() {
     return idConta;
@@ -283,7 +282,7 @@ public class ContaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("idEmissor")
   public Integer getIdEmissor() {
     return idEmissor;
@@ -300,7 +299,7 @@ public class ContaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("idEndereco")
   public Integer getIdEndereco() {
     return idEndereco;
@@ -317,7 +316,7 @@ public class ContaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("idFantasiaBasica")
   public Integer getIdFantasiaBasica() {
     return idFantasiaBasica;
@@ -334,7 +333,7 @@ public class ContaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("idOrigemComercial")
   public Integer getIdOrigemComercial() {
     return idOrigemComercial;
@@ -351,7 +350,7 @@ public class ContaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("idProduto")
   public Integer getIdProduto() {
     return idProduto;
@@ -368,7 +367,7 @@ public class ContaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("idProposta")
   public Integer getIdProposta() {
     return idProposta;
@@ -385,7 +384,7 @@ public class ContaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("melhorDia")
   public Integer getMelhorDia() {
     return melhorDia;
@@ -402,7 +401,7 @@ public class ContaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("nomeCredor")
   public String getNomeCredor() {
     return nomeCredor;
@@ -419,7 +418,7 @@ public class ContaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("nomeProduto")
   public String getNomeProduto() {
     return nomeProduto;
@@ -436,7 +435,7 @@ public class ContaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("numCelularSMS")
   public String getNumCelularSMS() {
     return numCelularSMS;
@@ -453,7 +452,7 @@ public class ContaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("pagamentos")
   public Double getPagamentos() {
     return pagamentos;
@@ -470,7 +469,7 @@ public class ContaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("permiteRefinanciamento")
   public Boolean getPermiteRefinanciamento() {
     return permiteRefinanciamento;
@@ -487,7 +486,7 @@ public class ContaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("pessoaFisica")
   public PessoaFisicaResponse getPessoaFisica() {
     return pessoaFisica;
@@ -504,7 +503,7 @@ public class ContaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("quantidadePagamentos")
   public Integer getQuantidadePagamentos() {
     return quantidadePagamentos;
@@ -521,7 +520,7 @@ public class ContaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("saldoLimite")
   public SaldoLimiteResponse getSaldoLimite() {
     return saldoLimite;
@@ -538,7 +537,7 @@ public class ContaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("status")
   public Integer getStatus() {
     return status;
@@ -555,7 +554,7 @@ public class ContaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("statusData")
   public Date getStatusData() {
     return statusData;
@@ -572,7 +571,7 @@ public class ContaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("taxaRefinanciamento")
   public String getTaxaRefinanciamento() {
     return taxaRefinanciamento;
@@ -589,7 +588,7 @@ public class ContaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("vcto")
   public String getVcto() {
     return vcto;
@@ -606,7 +605,7 @@ public class ContaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("vencimento1")
   public Integer getVencimento1() {
     return vencimento1;
@@ -623,7 +622,7 @@ public class ContaResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("vinculoOrigemUsuario")
   public Boolean getVinculoOrigemUsuario() {
     return vinculoOrigemUsuario;

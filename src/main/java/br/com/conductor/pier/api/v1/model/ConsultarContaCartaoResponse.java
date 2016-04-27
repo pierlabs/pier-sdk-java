@@ -1,8 +1,7 @@
-package br.com.conductor.caas.api.v1.model;
+package br.com.conductor.pier.api.v1.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -14,7 +13,7 @@ import java.util.Date;
 
 
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class CartaoResponse   {
+public class ConsultarContaCartaoResponse   {
   
   private String dataValidade = null;
   private String descricaoEstagio = null;
@@ -31,12 +30,12 @@ public class CartaoResponse   {
   
   /**
    **/
-  public CartaoResponse dataValidade(String dataValidade) {
+  public ConsultarContaCartaoResponse dataValidade(String dataValidade) {
     this.dataValidade = dataValidade;
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("dataValidade")
   public String getDataValidade() {
     return dataValidade;
@@ -48,12 +47,12 @@ public class CartaoResponse   {
   
   /**
    **/
-  public CartaoResponse descricaoEstagio(String descricaoEstagio) {
+  public ConsultarContaCartaoResponse descricaoEstagio(String descricaoEstagio) {
     this.descricaoEstagio = descricaoEstagio;
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("descricaoEstagio")
   public String getDescricaoEstagio() {
     return descricaoEstagio;
@@ -65,12 +64,12 @@ public class CartaoResponse   {
   
   /**
    **/
-  public CartaoResponse descricaoStatus(String descricaoStatus) {
+  public ConsultarContaCartaoResponse descricaoStatus(String descricaoStatus) {
     this.descricaoStatus = descricaoStatus;
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("descricaoStatus")
   public String getDescricaoStatus() {
     return descricaoStatus;
@@ -82,12 +81,12 @@ public class CartaoResponse   {
   
   /**
    **/
-  public CartaoResponse estagio(Integer estagio) {
+  public ConsultarContaCartaoResponse estagio(Integer estagio) {
     this.estagio = estagio;
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("estagio")
   public Integer getEstagio() {
     return estagio;
@@ -99,12 +98,12 @@ public class CartaoResponse   {
   
   /**
    **/
-  public CartaoResponse flagCancelamento(Boolean flagCancelamento) {
+  public ConsultarContaCartaoResponse flagCancelamento(Boolean flagCancelamento) {
     this.flagCancelamento = flagCancelamento;
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("flagCancelamento")
   public Boolean getFlagCancelamento() {
     return flagCancelamento;
@@ -116,12 +115,12 @@ public class CartaoResponse   {
   
   /**
    **/
-  public CartaoResponse idCartao(Integer idCartao) {
+  public ConsultarContaCartaoResponse idCartao(Integer idCartao) {
     this.idCartao = idCartao;
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("idCartao")
   public Integer getIdCartao() {
     return idCartao;
@@ -133,12 +132,12 @@ public class CartaoResponse   {
   
   /**
    **/
-  public CartaoResponse numeroCartao(String numeroCartao) {
+  public ConsultarContaCartaoResponse numeroCartao(String numeroCartao) {
     this.numeroCartao = numeroCartao;
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("numeroCartao")
   public String getNumeroCartao() {
     return numeroCartao;
@@ -150,12 +149,12 @@ public class CartaoResponse   {
   
   /**
    **/
-  public CartaoResponse portador(String portador) {
+  public ConsultarContaCartaoResponse portador(String portador) {
     this.portador = portador;
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("portador")
   public String getPortador() {
     return portador;
@@ -167,12 +166,12 @@ public class CartaoResponse   {
   
   /**
    **/
-  public CartaoResponse portadorId(Integer portadorId) {
+  public ConsultarContaCartaoResponse portadorId(Integer portadorId) {
     this.portadorId = portadorId;
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("portadorId")
   public Integer getPortadorId() {
     return portadorId;
@@ -184,12 +183,12 @@ public class CartaoResponse   {
   
   /**
    **/
-  public CartaoResponse status(Integer status) {
+  public ConsultarContaCartaoResponse status(Integer status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("status")
   public Integer getStatus() {
     return status;
@@ -201,12 +200,12 @@ public class CartaoResponse   {
   
   /**
    **/
-  public CartaoResponse statusData(Date statusData) {
+  public ConsultarContaCartaoResponse statusData(Date statusData) {
     this.statusData = statusData;
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("statusData")
   public Date getStatusData() {
     return statusData;
@@ -225,18 +224,18 @@ public class CartaoResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CartaoResponse cartaoResponse = (CartaoResponse) o;
-    return Objects.equals(this.dataValidade, cartaoResponse.dataValidade) &&
-        Objects.equals(this.descricaoEstagio, cartaoResponse.descricaoEstagio) &&
-        Objects.equals(this.descricaoStatus, cartaoResponse.descricaoStatus) &&
-        Objects.equals(this.estagio, cartaoResponse.estagio) &&
-        Objects.equals(this.flagCancelamento, cartaoResponse.flagCancelamento) &&
-        Objects.equals(this.idCartao, cartaoResponse.idCartao) &&
-        Objects.equals(this.numeroCartao, cartaoResponse.numeroCartao) &&
-        Objects.equals(this.portador, cartaoResponse.portador) &&
-        Objects.equals(this.portadorId, cartaoResponse.portadorId) &&
-        Objects.equals(this.status, cartaoResponse.status) &&
-        Objects.equals(this.statusData, cartaoResponse.statusData);
+    ConsultarContaCartaoResponse consultarContaCartaoResponse = (ConsultarContaCartaoResponse) o;
+    return Objects.equals(this.dataValidade, consultarContaCartaoResponse.dataValidade) &&
+        Objects.equals(this.descricaoEstagio, consultarContaCartaoResponse.descricaoEstagio) &&
+        Objects.equals(this.descricaoStatus, consultarContaCartaoResponse.descricaoStatus) &&
+        Objects.equals(this.estagio, consultarContaCartaoResponse.estagio) &&
+        Objects.equals(this.flagCancelamento, consultarContaCartaoResponse.flagCancelamento) &&
+        Objects.equals(this.idCartao, consultarContaCartaoResponse.idCartao) &&
+        Objects.equals(this.numeroCartao, consultarContaCartaoResponse.numeroCartao) &&
+        Objects.equals(this.portador, consultarContaCartaoResponse.portador) &&
+        Objects.equals(this.portadorId, consultarContaCartaoResponse.portadorId) &&
+        Objects.equals(this.status, consultarContaCartaoResponse.status) &&
+        Objects.equals(this.statusData, consultarContaCartaoResponse.statusData);
   }
 
   @Override
@@ -247,7 +246,7 @@ public class CartaoResponse   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class CartaoResponse {\n");
+    sb.append("class ConsultarContaCartaoResponse {\n");
     
     sb.append("    dataValidade: ").append(toIndentedString(dataValidade)).append("\n");
     sb.append("    descricaoEstagio: ").append(toIndentedString(descricaoEstagio)).append("\n");

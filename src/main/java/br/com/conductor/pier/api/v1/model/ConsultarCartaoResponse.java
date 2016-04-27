@@ -1,10 +1,12 @@
-package br.com.conductor.caas.api.v1.model;
+package br.com.conductor.pier.api.v1.model;
 
 import java.util.Objects;
+import br.com.conductor.pier.api.v1.model.CartaoResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 
 
 
@@ -13,20 +15,38 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class DesbloquearCartaoResponse   {
+public class ConsultarCartaoResponse   {
   
+  private List<CartaoResponse> cartoes = new ArrayList<CartaoResponse>();
   private Integer codigoRetorno = null;
   private String descricaoRetorno = null;
 
   
   /**
    **/
-  public DesbloquearCartaoResponse codigoRetorno(Integer codigoRetorno) {
+  public ConsultarCartaoResponse cartoes(List<CartaoResponse> cartoes) {
+    this.cartoes = cartoes;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("cartoes")
+  public List<CartaoResponse> getCartoes() {
+    return cartoes;
+  }
+  public void setCartoes(List<CartaoResponse> cartoes) {
+    this.cartoes = cartoes;
+  }
+
+  
+  /**
+   **/
+  public ConsultarCartaoResponse codigoRetorno(Integer codigoRetorno) {
     this.codigoRetorno = codigoRetorno;
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("codigoRetorno")
   public Integer getCodigoRetorno() {
     return codigoRetorno;
@@ -38,12 +58,12 @@ public class DesbloquearCartaoResponse   {
   
   /**
    **/
-  public DesbloquearCartaoResponse descricaoRetorno(String descricaoRetorno) {
+  public ConsultarCartaoResponse descricaoRetorno(String descricaoRetorno) {
     this.descricaoRetorno = descricaoRetorno;
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("descricaoRetorno")
   public String getDescricaoRetorno() {
     return descricaoRetorno;
@@ -62,21 +82,23 @@ public class DesbloquearCartaoResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    DesbloquearCartaoResponse desbloquearCartaoResponse = (DesbloquearCartaoResponse) o;
-    return Objects.equals(this.codigoRetorno, desbloquearCartaoResponse.codigoRetorno) &&
-        Objects.equals(this.descricaoRetorno, desbloquearCartaoResponse.descricaoRetorno);
+    ConsultarCartaoResponse consultarCartaoResponse = (ConsultarCartaoResponse) o;
+    return Objects.equals(this.cartoes, consultarCartaoResponse.cartoes) &&
+        Objects.equals(this.codigoRetorno, consultarCartaoResponse.codigoRetorno) &&
+        Objects.equals(this.descricaoRetorno, consultarCartaoResponse.descricaoRetorno);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(codigoRetorno, descricaoRetorno);
+    return Objects.hash(cartoes, codigoRetorno, descricaoRetorno);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class DesbloquearCartaoResponse {\n");
+    sb.append("class ConsultarCartaoResponse {\n");
     
+    sb.append("    cartoes: ").append(toIndentedString(cartoes)).append("\n");
     sb.append("    codigoRetorno: ").append(toIndentedString(codigoRetorno)).append("\n");
     sb.append("    descricaoRetorno: ").append(toIndentedString(descricaoRetorno)).append("\n");
     sb.append("}");

@@ -1,8 +1,7 @@
-package br.com.conductor.caas.api.v1.model;
+package br.com.conductor.pier.api.v1.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -53,7 +52,7 @@ public class ExtratoResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("cartao")
   public String getCartao() {
     return cartao;
@@ -70,7 +69,7 @@ public class ExtratoResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("chip")
   public String getChip() {
     return chip;
@@ -87,7 +86,7 @@ public class ExtratoResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("cidadeUFPais")
   public String getCidadeUFPais() {
     return cidadeUFPais;
@@ -104,7 +103,7 @@ public class ExtratoResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("codigoAutorizacao")
   public String getCodigoAutorizacao() {
     return codigoAutorizacao;
@@ -121,7 +120,7 @@ public class ExtratoResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("codigoMoeda")
   public String getCodigoMoeda() {
     return codigoMoeda;
@@ -138,7 +137,7 @@ public class ExtratoResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("codigoMoedaDestino")
   public String getCodigoMoedaDestino() {
     return codigoMoedaDestino;
@@ -155,7 +154,7 @@ public class ExtratoResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("cotacaoDolar")
   public Double getCotacaoDolar() {
     return cotacaoDolar;
@@ -172,7 +171,7 @@ public class ExtratoResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("credito")
   public Double getCredito() {
     return credito;
@@ -189,7 +188,7 @@ public class ExtratoResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("dataCompra")
   public String getDataCompra() {
     return dataCompra;
@@ -206,7 +205,7 @@ public class ExtratoResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("dataCotacaoDolar")
   public Date getDataCotacaoDolar() {
     return dataCotacaoDolar;
@@ -223,7 +222,7 @@ public class ExtratoResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("dataEntradaCompra")
   public String getDataEntradaCompra() {
     return dataEntradaCompra;
@@ -240,7 +239,7 @@ public class ExtratoResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("dataTransacaoUTC")
   public String getDataTransacaoUTC() {
     return dataTransacaoUTC;
@@ -257,7 +256,7 @@ public class ExtratoResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("debito")
   public Double getDebito() {
     return debito;
@@ -274,7 +273,7 @@ public class ExtratoResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("descricaoModoEntrada")
   public String getDescricaoModoEntrada() {
     return descricaoModoEntrada;
@@ -291,7 +290,7 @@ public class ExtratoResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("descricaoTransacao")
   public String getDescricaoTransacao() {
     return descricaoTransacao;
@@ -308,7 +307,7 @@ public class ExtratoResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("encargosFinanceiros")
   public Double getEncargosFinanceiros() {
     return encargosFinanceiros;
@@ -325,7 +324,7 @@ public class ExtratoResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("historico")
   public String getHistorico() {
     return historico;
@@ -342,7 +341,7 @@ public class ExtratoResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("idEventoExterno")
   public Integer getIdEventoExterno() {
     return idEventoExterno;
@@ -359,7 +358,7 @@ public class ExtratoResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("idTipoTransacao")
   public Integer getIdTipoTransacao() {
     return idTipoTransacao;
@@ -376,7 +375,7 @@ public class ExtratoResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("idTransacao")
   public Integer getIdTransacao() {
     return idTransacao;
@@ -393,7 +392,7 @@ public class ExtratoResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("mcc")
   public Integer getMcc() {
     return mcc;
@@ -410,7 +409,7 @@ public class ExtratoResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("nomeEstabVisa")
   public String getNomeEstabVisa() {
     return nomeEstabVisa;
@@ -427,7 +426,7 @@ public class ExtratoResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("nomePlastico")
   public String getNomePlastico() {
     return nomePlastico;
@@ -444,7 +443,7 @@ public class ExtratoResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("numeroEstabelecimento")
   public Integer getNumeroEstabelecimento() {
     return numeroEstabelecimento;
@@ -461,7 +460,7 @@ public class ExtratoResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("origem")
   public String getOrigem() {
     return origem;
@@ -478,7 +477,7 @@ public class ExtratoResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("taxaEmbarque")
   public Double getTaxaEmbarque() {
     return taxaEmbarque;
@@ -495,7 +494,7 @@ public class ExtratoResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("tipoEvento")
   public String getTipoEvento() {
     return tipoEvento;
@@ -512,7 +511,7 @@ public class ExtratoResponse   {
     return this;
   }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("valorDolar")
   public Double getValorDolar() {
     return valorDolar;
