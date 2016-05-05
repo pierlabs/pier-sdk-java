@@ -24,7 +24,7 @@ public class AuthToken   {
 
   public enum StatusEnum {
     ACTIVE("ACTIVE"),
-    REVOKE("REVOKE"),
+    REVOKED("REVOKED"),
     DELETED("DELETED");
 
     private String value;

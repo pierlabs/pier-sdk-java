@@ -54,7 +54,7 @@ public class TokenApi {
      }
      
     // create path and map variables
-    String path = "/api/v1/tokens/callback".replaceAll("\\{format\\}","json");
+    String path = "/v1/tokens/callback".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -81,6 +81,52 @@ public class TokenApi {
 
     
     GenericType<BodyAccessToken> returnType = new GenericType<BodyAccessToken>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * /tokens/validar
+   * 
+   * @param bodyAccessToken bodyAccessToken
+   * @return Object
+   */
+  public Object validarUsingPOST(BodyAccessToken bodyAccessToken) throws ApiException {
+    Object postBody = bodyAccessToken;
+    
+     // verify the required parameter 'bodyAccessToken' is set
+     if (bodyAccessToken == null) {
+        throw new ApiException(400, "Missing the required parameter 'bodyAccessToken' when calling validarUsingPOST");
+     }
+     
+    // create path and map variables
+    String path = "/v1/tokens/validar".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    String[] authNames = new String[] { "access_token" };
+
+    
+    GenericType<Object> returnType = new GenericType<Object>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

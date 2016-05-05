@@ -1,26 +1,24 @@
 # pier-sdk-java
 
-## Requirements
+## Requerimentos
 
-Building the API client library requires [Maven](https://maven.apache.org/) to be installed.
+Ã‰ necessÃ¡rio vocÃª empacotar o cÃ³dido com o [Maven](https://maven.apache.org/) para que possa ser utilizado. 
 
-## Installation & Usage
+## InstalaÃ§Ã£o e UtilizaÃ§Ã£o
 
-To install the API client library to your local Maven repository, simply execute:
+Para instalar o pier-sdk-java em seu repositorio local do maven simplesmente execute:
 
 ```shell
 mvn install
 ```
 
-To deploy it to a remote Maven repository instead, configure the settings of the repository and execute:
+Para fazer depoly do artefato gerado em algum repositÃ³rio maven configure o arquivo pom.xml com as informaÃ§Ãµes do seu Artifactory ou Nexus e execute o comando abaixo. Caso nÃ£o possua nenhum repositÃ³rio para suas bibliotecas maven nÃ³s recomendamos a utilizaÃ§Ã£o do [Jitpack](https://jitpack.io/). Essa ferramenta simplifica muito a utilizaÃ§Ã£o de bibliotecas maven hospedadas no [Github](https://github.com).
 
 ```shell
 mvn deploy
 ```
 
-Refer to the [official documentation](https://maven.apache.org/plugins/maven-deploy-plugin/usage.html) for more information.
-
-After the client library is installed/deployed, you can use it in your Maven project by adding the following to your *pom.xml*:
+Depois da biblioteca Maven instalada vocÃª pode utilizar em seus projetos Java adicionando no seu arquivo pom.xml
 
 ```xml
 <dependency>
@@ -32,9 +30,40 @@ After the client library is installed/deployed, you can use it in your Maven pro
 
 ```
 
-## Recommendation
+## Criando um API Client
 
-It's recommended to create an instance of `ApiClient` per thread in a multithreaded environment to avoid any potential issue.
+Antes de utilizar as APIs, Ã© necessÃƒÂ¡rio a criaÃ§ao de um client com as configuraÃ§oes de _base path_ e tambÃ©m as credenciais para acesso.
+
+Abaixo segue o cÃ³digo de exemplo:
+
+```java
+ApiClient apiClient = new ApiClient();
+apiClient.setBasePath("https://sandbox.conductor.com.br/pier/v1");
+
+// Alterar a chave informada com o valor de client_id disponÃ­vel para sua APP
+((ApiKeyAuth)apiClient.getAuthentication("client_id")).setApiKey("ll0s@$AS$Ssasds");
+
+// Alterar a chave informada com o valor de access_token disponÃ­vel para sua APP
+((ApiKeyAuth)apiClient.getAuthentication("access_token")).setApiKey("nsswllKgtXTMv0G");
+```
+
+## Exemplo: Consultando um determinado cartÃ£o
+
+No exemplo abaixo vamos consultar um determinado cartÃ£o de crÃ©dito de uma determinada conta. Para isso utilize o mÃ©todo `consultarCartaoUsingGET` da classe `CartaoApi`.
+Todas as classes de recursos da API recebem no seu construtor o ApiClient gerando no mÃ©todo acima:
+
+```java
+Integer idCartao = 1;
+Integer idConta = 1;
+
+//Opcional
+String numerodoCartao = null;
+
+CartaoApi cartaoApi = new CartaoApi(apiClient);
+ConsultarCartaoResponse cartaoResponse = cartaoApi.consultarCartaoUsingGET(idConta, idCartao, numerodoCartao);
+      
+System.out.println(cartaoResponse);
+```
 
 ## Author
 
