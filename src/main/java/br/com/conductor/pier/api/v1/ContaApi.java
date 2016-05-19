@@ -9,6 +9,8 @@ import br.com.conductor.pier.api.v1.invoker.Pair;
 
 import br.com.conductor.pier.api.v1.model.ConsultarContaResponse;
 import br.com.conductor.pier.api.v1.model.ContaResponse;
+import br.com.conductor.pier.api.v1.model.ConsultarExtratoContaResponse;
+import br.com.conductor.pier.api.v1.model.ConsultarSaldoLimitesResponse;
 
 
 
@@ -135,6 +137,108 @@ public class ContaApi {
 
     
     GenericType<ContaResponse> returnType = new GenericType<ContaResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * /contas/{idConta}/faturas
+   * Consulte os extratos/faturas de uma determinada conta
+   * @param idConta ID da Conta
+   * @param dataVencimento Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es
+   * @return ConsultarExtratoContaResponse
+   */
+  public ConsultarExtratoContaResponse consultarExtratoFaturasUsingGET(Integer idConta, String dataVencimento) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'idConta' is set
+     if (idConta == null) {
+        throw new ApiException(400, "Missing the required parameter 'idConta' when calling consultarExtratoFaturasUsingGET");
+     }
+     
+     // verify the required parameter 'dataVencimento' is set
+     if (dataVencimento == null) {
+        throw new ApiException(400, "Missing the required parameter 'dataVencimento' when calling consultarExtratoFaturasUsingGET");
+     }
+     
+    // create path and map variables
+    String path = "/v1/contas/{idConta}/faturas".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "idConta" + "\\}", apiClient.escapeString(idConta.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "dataVencimento", dataVencimento));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    String[] authNames = new String[] { "access_token" };
+
+    
+    GenericType<ConsultarExtratoContaResponse> returnType = new GenericType<ConsultarExtratoContaResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * /contas/{idConta}/limites
+   * Consulte os limites de uma determinada conta
+   * @param idConta ID da Conta
+   * @return ConsultarSaldoLimitesResponse
+   */
+  public ConsultarSaldoLimitesResponse consultarSaldosLimitesUsingGET(Integer idConta) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'idConta' is set
+     if (idConta == null) {
+        throw new ApiException(400, "Missing the required parameter 'idConta' when calling consultarSaldosLimitesUsingGET");
+     }
+     
+    // create path and map variables
+    String path = "/v1/contas/{idConta}/limites".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "idConta" + "\\}", apiClient.escapeString(idConta.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    String[] authNames = new String[] { "access_token" };
+
+    
+    GenericType<ConsultarSaldoLimitesResponse> returnType = new GenericType<ConsultarSaldoLimitesResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

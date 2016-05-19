@@ -9,8 +9,6 @@ import br.com.conductor.pier.api.v1.invoker.Pair;
 
 import br.com.conductor.pier.api.v1.model.CancelarCartaoResponse;
 import br.com.conductor.pier.api.v1.model.ConsultarCartaoResponse;
-import br.com.conductor.pier.api.v1.model.ConsultarExtratoContaResponse;
-import br.com.conductor.pier.api.v1.model.ConsultarSaldoLimitesResponse;
 import br.com.conductor.pier.api.v1.model.DesbloquearCartaoResponse;
 
 
@@ -44,39 +42,34 @@ public class CartaoApi {
 
   
   /**
-   * /contas/{idConta}/cartoes/{idCartao}/cancelar
-   * Cancelar um determinado cart\u00C3\u00A3o
+   * /contas/{idConta}/cartoes/{idCartao}/bloquear
+   * Bloquear um determinado cart\u00C3\u00A3o
    * @param idConta ID da Conta
    * @param idCartao ID do Cart\u00C3\u00A3o que deseja cancelar
-   * @param motivo Motivo do cancelamento
-   * @param observacao Alguma observa\u00C3\u00A7\u00C3\u00A3o para o cancelamento
+   * @param motivo Motivo do bloqueio
+   * @param observacao Alguma observa\u00C3\u00A7\u00C3\u00A3o para o bloqueio
    * @return CancelarCartaoResponse
    */
-  public CancelarCartaoResponse cancelarCartaoUsingPOST(Integer idConta, Integer idCartao, Integer motivo, String observacao) throws ApiException {
+  public CancelarCartaoResponse bloquearCartaoUsingPOST(Integer idConta, Integer idCartao, Integer motivo, String observacao) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idConta' is set
      if (idConta == null) {
-        throw new ApiException(400, "Missing the required parameter 'idConta' when calling cancelarCartaoUsingPOST");
+        throw new ApiException(400, "Missing the required parameter 'idConta' when calling bloquearCartaoUsingPOST");
      }
      
      // verify the required parameter 'idCartao' is set
      if (idCartao == null) {
-        throw new ApiException(400, "Missing the required parameter 'idCartao' when calling cancelarCartaoUsingPOST");
+        throw new ApiException(400, "Missing the required parameter 'idCartao' when calling bloquearCartaoUsingPOST");
      }
      
      // verify the required parameter 'motivo' is set
      if (motivo == null) {
-        throw new ApiException(400, "Missing the required parameter 'motivo' when calling cancelarCartaoUsingPOST");
-     }
-     
-     // verify the required parameter 'observacao' is set
-     if (observacao == null) {
-        throw new ApiException(400, "Missing the required parameter 'observacao' when calling cancelarCartaoUsingPOST");
+        throw new ApiException(400, "Missing the required parameter 'motivo' when calling bloquearCartaoUsingPOST");
      }
      
     // create path and map variables
-    String path = "/v1/contas/{idConta}/cartoes/{idCartao}/cancelar".replaceAll("\\{format\\}","json")
+    String path = "/v1/contas/{idConta}/cartoes/{idCartao}/bloquear".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "idConta" + "\\}", apiClient.escapeString(idConta.toString()))
       .replaceAll("\\{" + "idCartao" + "\\}", apiClient.escapeString(idCartao.toString()));
 
@@ -218,122 +211,6 @@ public class CartaoApi {
   }
   
   /**
-   * /contas/{idConta}/cartoes/{idCartao}/faturas
-   * Consulte os extratos/faturas do cart\u00C3\u00A3o de uma determinada conta
-   * @param idConta ID da Conta
-   * @param idCartao ID do Cart\u00C3\u00A3o que deseja consultar o extrato
-   * @param dataVencimento Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es
-   * @return ConsultarExtratoContaResponse
-   */
-  public ConsultarExtratoContaResponse consultarExtratoFaturasUsingGET(Integer idConta, Integer idCartao, String dataVencimento) throws ApiException {
-    Object postBody = null;
-    
-     // verify the required parameter 'idConta' is set
-     if (idConta == null) {
-        throw new ApiException(400, "Missing the required parameter 'idConta' when calling consultarExtratoFaturasUsingGET");
-     }
-     
-     // verify the required parameter 'idCartao' is set
-     if (idCartao == null) {
-        throw new ApiException(400, "Missing the required parameter 'idCartao' when calling consultarExtratoFaturasUsingGET");
-     }
-     
-     // verify the required parameter 'dataVencimento' is set
-     if (dataVencimento == null) {
-        throw new ApiException(400, "Missing the required parameter 'dataVencimento' when calling consultarExtratoFaturasUsingGET");
-     }
-     
-    // create path and map variables
-    String path = "/v1/contas/{idConta}/cartoes/{idCartao}/faturas".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "idConta" + "\\}", apiClient.escapeString(idConta.toString()))
-      .replaceAll("\\{" + "idCartao" + "\\}", apiClient.escapeString(idCartao.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "dataVencimento", dataVencimento));
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] { "access_token" };
-
-    
-    GenericType<ConsultarExtratoContaResponse> returnType = new GenericType<ConsultarExtratoContaResponse>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
-   * /contas/{idConta}/cartoes/{idCartao}/limites
-   * Consulte os limites de um determinado cart\u00C3\u00A3o
-   * @param idConta ID da Conta
-   * @param idCartao ID do Cart\u00C3\u00A3o que deseja consultar o saldo/limite
-   * @return ConsultarSaldoLimitesResponse
-   */
-  public ConsultarSaldoLimitesResponse consultarSaldosLimitesUsingGET(Integer idConta, Integer idCartao) throws ApiException {
-    Object postBody = null;
-    
-     // verify the required parameter 'idConta' is set
-     if (idConta == null) {
-        throw new ApiException(400, "Missing the required parameter 'idConta' when calling consultarSaldosLimitesUsingGET");
-     }
-     
-     // verify the required parameter 'idCartao' is set
-     if (idCartao == null) {
-        throw new ApiException(400, "Missing the required parameter 'idCartao' when calling consultarSaldosLimitesUsingGET");
-     }
-     
-    // create path and map variables
-    String path = "/v1/contas/{idConta}/cartoes/{idCartao}/limites".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "idConta" + "\\}", apiClient.escapeString(idConta.toString()))
-      .replaceAll("\\{" + "idCartao" + "\\}", apiClient.escapeString(idCartao.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] { "access_token" };
-
-    
-    GenericType<ConsultarSaldoLimitesResponse> returnType = new GenericType<ConsultarSaldoLimitesResponse>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
    * /contas/{idConta}/cartoes/{idCartao}/desbloquear
    * Desbloquear cart\u00C3\u00A3o de uma determinada conta
    * @param idConta ID da Conta
@@ -352,11 +229,6 @@ public class CartaoApi {
      // verify the required parameter 'idCartao' is set
      if (idCartao == null) {
         throw new ApiException(400, "Missing the required parameter 'idCartao' when calling desbloquearCartaoUsingPOST");
-     }
-     
-     // verify the required parameter 'codigoSegurancao' is set
-     if (codigoSegurancao == null) {
-        throw new ApiException(400, "Missing the required parameter 'codigoSegurancao' when calling desbloquearCartaoUsingPOST");
      }
      
     // create path and map variables
