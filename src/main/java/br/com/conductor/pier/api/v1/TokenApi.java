@@ -54,7 +54,7 @@ public class TokenApi {
      }
      
     // create path and map variables
-    String path = "/v1/tokens/callback".replaceAll("\\{format\\}","json");
+    String path = "/v1.1/tokens/callback".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -100,7 +100,7 @@ public class TokenApi {
      }
      
     // create path and map variables
-    String path = "/v1/tokens/validar".replaceAll("\\{format\\}","json");
+    String path = "/v1.1/tokens/validar".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();

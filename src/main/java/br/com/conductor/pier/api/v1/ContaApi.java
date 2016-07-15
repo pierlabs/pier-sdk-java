@@ -43,7 +43,7 @@ public class ContaApi {
 
   
   /**
-   * /contas/buscar
+   * Buscar contas
    * Consulte contas filtrando pelos campos id do emissor, n\u00C3\u00BAmero do cart\u00C3\u00A3o, nome ou CPF/CNPJ 
    * @param nome Nome
    * @param cpf CPF (opcional caso nao informe o n\u00C3\u00BAmero do cart\u00C3\u00A3o ou id da conta)
@@ -55,7 +55,7 @@ public class ContaApi {
     Object postBody = null;
     
     // create path and map variables
-    String path = "/v1/contas/buscar".replaceAll("\\{format\\}","json");
+    String path = "/v1.1/contas/buscar".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -95,7 +95,7 @@ public class ContaApi {
   }
   
   /**
-   * /contas/{idConta}
+   * Retorna uma conta
    * Consulte informa\u00C3\u00A7\u00C3\u00B5es de uma determinada conta
    * @param idConta ID da Conta
    * @return ContaResponse
@@ -109,7 +109,7 @@ public class ContaApi {
      }
      
     // create path and map variables
-    String path = "/v1/contas/{idConta}".replaceAll("\\{format\\}","json")
+    String path = "/v1.1/contas/{idConta}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "idConta" + "\\}", apiClient.escapeString(idConta.toString()));
 
     // query params
@@ -142,8 +142,8 @@ public class ContaApi {
   }
   
   /**
-   * /contas/{idConta}/faturas
-   * Consulte os extratos/faturas de uma determinada conta
+   * Retorna os extratos
+   * Consulte os extratos de uma determinada conta
    * @param idConta ID da Conta
    * @param dataVencimento Data limite para o vencimento das transa\u00C3\u00A7\u00C3\u00B5es
    * @return ConsultarExtratoContaResponse
@@ -162,7 +162,7 @@ public class ContaApi {
      }
      
     // create path and map variables
-    String path = "/v1/contas/{idConta}/faturas".replaceAll("\\{format\\}","json")
+    String path = "/v1.1/contas/{idConta}/faturas".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "idConta" + "\\}", apiClient.escapeString(idConta.toString()));
 
     // query params
@@ -197,7 +197,7 @@ public class ContaApi {
   }
   
   /**
-   * /contas/{idConta}/limites
+   * Retorna o limite
    * Consulte os limites de uma determinada conta
    * @param idConta ID da Conta
    * @return ConsultarSaldoLimitesResponse
@@ -211,7 +211,7 @@ public class ContaApi {
      }
      
     // create path and map variables
-    String path = "/v1/contas/{idConta}/limites".replaceAll("\\{format\\}","json")
+    String path = "/v1.1/contas/{idConta}/limites".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "idConta" + "\\}", apiClient.escapeString(idConta.toString()));
 
     // query params
