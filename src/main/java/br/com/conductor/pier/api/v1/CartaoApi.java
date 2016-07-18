@@ -70,7 +70,7 @@ public class CartaoApi {
      }
      
     // create path and map variables
-    String path = "/v1.1/contas/{idConta}/cartoes/{idCartao}/bloquear".replaceAll("\\{format\\}","json")
+    String path = "/api/contas/{idConta}/cartoes/{idCartao}/bloquear".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "idConta" + "\\}", apiClient.escapeString(idConta.toString()))
       .replaceAll("\\{" + "idCartao" + "\\}", apiClient.escapeString(idCartao.toString()));
 
@@ -129,7 +129,7 @@ public class CartaoApi {
      }
      
     // create path and map variables
-    String path = "/v1.1/contas/{idConta}/cartoes/{idCartao}".replaceAll("\\{format\\}","json")
+    String path = "/api/contas/{idConta}/cartoes/{idCartao}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "idConta" + "\\}", apiClient.escapeString(idConta.toString()))
       .replaceAll("\\{" + "idCartao" + "\\}", apiClient.escapeString(idCartao.toString()));
 
@@ -179,7 +179,7 @@ public class CartaoApi {
      }
      
     // create path and map variables
-    String path = "/v1.1/contas/{idConta}/cartoes".replaceAll("\\{format\\}","json")
+    String path = "/api/contas/{idConta}/cartoes".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "idConta" + "\\}", apiClient.escapeString(idConta.toString()));
 
     // query params
@@ -233,7 +233,7 @@ public class CartaoApi {
      }
      
     // create path and map variables
-    String path = "/v1.1/contas/{idConta}/cartoes/{idCartao}/desbloquear".replaceAll("\\{format\\}","json")
+    String path = "/api/contas/{idConta}/cartoes/{idCartao}/desbloquear".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "idConta" + "\\}", apiClient.escapeString(idConta.toString()))
       .replaceAll("\\{" + "idCartao" + "\\}", apiClient.escapeString(idCartao.toString()));
 
@@ -289,7 +289,7 @@ public class CartaoApi {
      }
      
     // create path and map variables
-    String path = "/v1.1/contas/{idConta}/cartoes/{idCartao}/embossado".replaceAll("\\{format\\}","json")
+    String path = "/api/contas/{idConta}/cartoes/{idCartao}/embossado".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "idConta" + "\\}", apiClient.escapeString(idConta.toString()))
       .replaceAll("\\{" + "idCartao" + "\\}", apiClient.escapeString(idCartao.toString()));
 
