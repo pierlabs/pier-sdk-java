@@ -24,7 +24,7 @@ Depois da biblioteca Maven instalada vocÃª pode utilizar em seus projetos Java
 <dependency>
     <groupId>br.com.conductor.pier</groupId>
     <artifactId>pier-sdk-java</artifactId>
-    <version>2.0.0</version>
+    <version>1.1.0</version>
     <scope>compile</scope>
 </dependency>
 
