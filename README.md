@@ -4,7 +4,7 @@
 
 Ã‰ necessÃ¡rio vocÃª empacotar o cÃ³dido com o [Maven](https://maven.apache.org/) para que possa ser utilizado. 
 
-## InstalaÃ§Ã£o e UtilizaÃ§Ã£o
+## InstalaÃ§Ã£o e utilizaÃ§Ã£o
 
 Para instalar o pier-sdk-java em seu repositorio local do maven simplesmente execute:
 
@@ -12,7 +12,7 @@ Para instalar o pier-sdk-java em seu repositorio local do maven simplesmente exe
 mvn install
 ```
 
-Para fazer depoly do artefato gerado em algum repositÃ³rio maven configure o arquivo pom.xml com as informaÃ§Ãµes do seu Artifactory ou Nexus e execute o comando abaixo. Caso nÃ£o possua nenhum repositÃ³rio para suas bibliotecas maven nÃ³s recomendamos a utilizaÃ§Ã£o do [Jitpack](https://jitpack.io/). Essa ferramenta simplifica muito a utilizaÃ§Ã£o de bibliotecas maven hospedadas no [Github](https://github.com).
+Para fazer deploy do artefato gerado em algum repositÃ³rio maven configure o arquivo pom.xml com as informaÃ§Ãµes do seu Artifactory ou Nexus e execute o comando abaixo. Caso nÃ£o possua nenhum repositÃ³rio para suas bibliotecas maven nÃ³s recomendamos a utilizaÃ§Ã£o do [Jitpack](https://jitpack.io/). Essa ferramenta simplifica muito a utilizaÃ§Ã£o de bibliotecas maven hospedadas no [Github](https://github.com).
 
 ```shell
 mvn deploy
@@ -20,31 +20,61 @@ mvn deploy
 
 Depois da biblioteca Maven instalada vocÃª pode utilizar em seus projetos Java adicionando no seu arquivo pom.xml
 
-```xml
-<dependency>
-    <groupId>br.com.conductor.pier</groupId>
-    <artifactId>pier-sdk-java</artifactId>
-    <version>1.1.0</version>
-    <scope>compile</scope>
-</dependency>
+### Maven
 
+#### RepositÃ³rios
+```xml
+	<repositories>
+		<repository>
+		    <id>jitpack.io</id>
+		    <url>https://jitpack.io</url>
+		</repository>
+	</repositories>
 ```
+
+#### DependÃªncia
+```xml
+	<dependency>
+	    <groupId>com.github.devconductor</groupId>
+	    <artifactId>pier-sdk-java</artifactId>
+	    <version>1.1.0</version>
+	</dependency>
+```
+
+### Gradle
+
+#### RepositÃ³rios
+```groovy
+	allprojects {
+		repositories {
+			maven { url "https://jitpack.io" }
+		}
+	}
+```
+
+#### DependÃªncia
+```groovy
+	dependencies {
+	 	compile 'com.github.devconductor:pier-sdk-java:1.1.0'
+	}
+```
+
 
 ## Criando um API Client
 
-Antes de utilizar as APIs, Ã© necessÃƒÂ¡rio a criaÃ§ao de um client com as configuraÃ§oes de _base path_ e tambÃ©m as credenciais para acesso.
+Antes de utilizar as APIs, Ã© necessÃ¡rio a criaÃ§ao de um client com as configuraÃ§oes de _base path_ e tambÃ©m as credenciais para acesso.
 
 Abaixo segue o cÃ³digo de exemplo:
 
 ```java
 ApiClient apiClient = new ApiClient();
-apiClient.setBasePath("https://sandbox.conductor.com.br/pier/v1");
+apiClient.setBasePath("https://sandbox.conductor.com.br/pier/v1.1");
 
 // Alterar a chave informada com o valor de client_id disponÃ­vel para sua APP
-((ApiKeyAuth)apiClient.getAuthentication("client_id")).setApiKey("ll0s@$AS$Ssasds");
+((ApiKeyAuth)apiClient.getAuthentication("client_id")).setApiKey("ACESS_TOKEN");
 
 // Alterar a chave informada com o valor de access_token disponÃ­vel para sua APP
-((ApiKeyAuth)apiClient.getAuthentication("access_token")).setApiKey("nsswllKgtXTMv0G");
+((ApiKeyAuth)apiClient.getAuthentication("access_token")).setApiKey("CLIENT_ID");
 ```
 
 ## Exemplo: Consultando um determinado cartÃ£o

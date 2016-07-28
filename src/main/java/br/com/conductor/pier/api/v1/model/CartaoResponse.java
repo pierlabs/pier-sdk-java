@@ -33,6 +33,7 @@ public class CartaoResponse   {
   private String idLog = null;
   private Integer idPessoaFisica = null;
   private Integer idProduto = null;
+  private String nomePlastico = null;
   private String numeroCartao = null;
   private String numeroCartaoReal = null;
   private Integer statusCartao = null;
@@ -347,6 +348,23 @@ public class CartaoResponse   {
   
   /**
    **/
+  public CartaoResponse nomePlastico(String nomePlastico) {
+    this.nomePlastico = nomePlastico;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("nomePlastico")
+  public String getNomePlastico() {
+    return nomePlastico;
+  }
+  public void setNomePlastico(String nomePlastico) {
+    this.nomePlastico = nomePlastico;
+  }
+
+  
+  /**
+   **/
   public CartaoResponse numeroCartao(String numeroCartao) {
     this.numeroCartao = numeroCartao;
     return this;
@@ -441,6 +459,7 @@ public class CartaoResponse   {
         Objects.equals(this.idLog, cartaoResponse.idLog) &&
         Objects.equals(this.idPessoaFisica, cartaoResponse.idPessoaFisica) &&
         Objects.equals(this.idProduto, cartaoResponse.idProduto) &&
+        Objects.equals(this.nomePlastico, cartaoResponse.nomePlastico) &&
         Objects.equals(this.numeroCartao, cartaoResponse.numeroCartao) &&
         Objects.equals(this.numeroCartaoReal, cartaoResponse.numeroCartaoReal) &&
         Objects.equals(this.statusCartao, cartaoResponse.statusCartao) &&
@@ -449,7 +468,7 @@ public class CartaoResponse   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(bin, codRetorno, codigoDesbloqueio, criptografiaHSM, dataEmissao, dataValidade, dataVencimentoPadrao, descricaoRetorno, estagioCartao, estagioData, flagReversao, flagSenha, idCartao, idConta, idEmissor, idLog, idPessoaFisica, idProduto, numeroCartao, numeroCartaoReal, statusCartao, statusData);
+    return Objects.hash(bin, codRetorno, codigoDesbloqueio, criptografiaHSM, dataEmissao, dataValidade, dataVencimentoPadrao, descricaoRetorno, estagioCartao, estagioData, flagReversao, flagSenha, idCartao, idConta, idEmissor, idLog, idPessoaFisica, idProduto, nomePlastico, numeroCartao, numeroCartaoReal, statusCartao, statusData);
   }
 
   @Override
@@ -475,6 +494,7 @@ public class CartaoResponse   {
     sb.append("    idLog: ").append(toIndentedString(idLog)).append("\n");
     sb.append("    idPessoaFisica: ").append(toIndentedString(idPessoaFisica)).append("\n");
     sb.append("    idProduto: ").append(toIndentedString(idProduto)).append("\n");
+    sb.append("    nomePlastico: ").append(toIndentedString(nomePlastico)).append("\n");
     sb.append("    numeroCartao: ").append(toIndentedString(numeroCartao)).append("\n");
     sb.append("    numeroCartaoReal: ").append(toIndentedString(numeroCartaoReal)).append("\n");
     sb.append("    statusCartao: ").append(toIndentedString(statusCartao)).append("\n");

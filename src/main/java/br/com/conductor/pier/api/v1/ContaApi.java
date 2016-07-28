@@ -86,7 +86,7 @@ public class ContaApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] { "access_token" };
+    String[] authNames = new String[] {"client_id", "access_token" };
 
     
     GenericType<ConsultarContaResponse> returnType = new GenericType<ConsultarContaResponse>() {};
@@ -133,7 +133,7 @@ public class ContaApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] { "access_token" };
+    String[] authNames = new String[] {"client_id", "access_token" };
 
     
     GenericType<ContaResponse> returnType = new GenericType<ContaResponse>() {};
@@ -188,7 +188,7 @@ public class ContaApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] { "access_token" };
+    String[] authNames = new String[] {"client_id", "access_token" };
 
     
     GenericType<ConsultarExtratoContaResponse> returnType = new GenericType<ConsultarExtratoContaResponse>() {};
@@ -235,7 +235,7 @@ public class ContaApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] { "access_token" };
+    String[] authNames = new String[] {"client_id", "access_token" };
 
     
     GenericType<ConsultarSaldoLimitesResponse> returnType = new GenericType<ConsultarSaldoLimitesResponse>() {};
