@@ -71,10 +71,10 @@ ApiClient apiClient = new ApiClient();
 apiClient.setBasePath("https://sandbox.conductor.com.br/pier/v1.1");
 
 // Alterar a chave informada com o valor de client_id disponÃ­vel para sua APP
-((ApiKeyAuth)apiClient.getAuthentication("client_id")).setApiKey("ACESS_TOKEN");
+((ApiKeyAuth)apiClient.getAuthentication("client_id")).setApiKey("CLIENT_ID");
 
 // Alterar a chave informada com o valor de access_token disponÃ­vel para sua APP
-((ApiKeyAuth)apiClient.getAuthentication("access_token")).setApiKey("CLIENT_ID");
+((ApiKeyAuth)apiClient.getAuthentication("access_token")).setApiKey("ACESS_TOKEN");
 ```
 
 ## Exemplo: Consultando um determinado cartÃ£o
