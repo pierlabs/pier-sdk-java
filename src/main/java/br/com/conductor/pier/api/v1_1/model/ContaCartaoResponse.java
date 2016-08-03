@@ -4,6 +4,7 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Date;
 
 
 
@@ -16,9 +17,9 @@ public class ContaCartaoResponse   {
   
   private String cnpjLoja = null;
   private String cpf = null;
-  private String dataCadastroConta = null;
-  private String dataEmissaoIdentidade = null;
-  private String dataNascimento = null;
+  private Date dataCadastroConta = null;
+  private Date dataEmissaoIdentidade = null;
+  private Date dataNascimento = null;
   private String dddCelular = null;
   private Integer idConta = null;
   private String nome = null;
@@ -66,51 +67,51 @@ public class ContaCartaoResponse   {
   
   /**
    **/
-  public ContaCartaoResponse dataCadastroConta(String dataCadastroConta) {
+  public ContaCartaoResponse dataCadastroConta(Date dataCadastroConta) {
     this.dataCadastroConta = dataCadastroConta;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("dataCadastroConta")
-  public String getDataCadastroConta() {
+  public Date getDataCadastroConta() {
     return dataCadastroConta;
   }
-  public void setDataCadastroConta(String dataCadastroConta) {
+  public void setDataCadastroConta(Date dataCadastroConta) {
     this.dataCadastroConta = dataCadastroConta;
   }
 
   
   /**
    **/
-  public ContaCartaoResponse dataEmissaoIdentidade(String dataEmissaoIdentidade) {
+  public ContaCartaoResponse dataEmissaoIdentidade(Date dataEmissaoIdentidade) {
     this.dataEmissaoIdentidade = dataEmissaoIdentidade;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("dataEmissaoIdentidade")
-  public String getDataEmissaoIdentidade() {
+  public Date getDataEmissaoIdentidade() {
     return dataEmissaoIdentidade;
   }
-  public void setDataEmissaoIdentidade(String dataEmissaoIdentidade) {
+  public void setDataEmissaoIdentidade(Date dataEmissaoIdentidade) {
     this.dataEmissaoIdentidade = dataEmissaoIdentidade;
   }
 
   
   /**
    **/
-  public ContaCartaoResponse dataNascimento(String dataNascimento) {
+  public ContaCartaoResponse dataNascimento(Date dataNascimento) {
     this.dataNascimento = dataNascimento;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("dataNascimento")
-  public String getDataNascimento() {
+  public Date getDataNascimento() {
     return dataNascimento;
   }
-  public void setDataNascimento(String dataNascimento) {
+  public void setDataNascimento(Date dataNascimento) {
     this.dataNascimento = dataNascimento;
   }
 
