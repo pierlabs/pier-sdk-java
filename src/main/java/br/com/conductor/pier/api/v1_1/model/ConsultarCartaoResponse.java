@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v1_1.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v1_1.model.CartaoResponse;
+import br.com.conductor.pier.api.v1_1.model.CartaoResponseOld;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -17,24 +17,24 @@ import java.util.List;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ConsultarCartaoResponse   {
   
-  private List<CartaoResponse> cartoes = new ArrayList<CartaoResponse>();
+  private List<CartaoResponseOld> cartoes = new ArrayList<CartaoResponseOld>();
   private Integer codigoRetorno = null;
   private String descricaoRetorno = null;
 
   
   /**
    **/
-  public ConsultarCartaoResponse cartoes(List<CartaoResponse> cartoes) {
+  public ConsultarCartaoResponse cartoes(List<CartaoResponseOld> cartoes) {
     this.cartoes = cartoes;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("cartoes")
-  public List<CartaoResponse> getCartoes() {
+  public List<CartaoResponseOld> getCartoes() {
     return cartoes;
   }
-  public void setCartoes(List<CartaoResponse> cartoes) {
+  public void setCartoes(List<CartaoResponseOld> cartoes) {
     this.cartoes = cartoes;
   }
 

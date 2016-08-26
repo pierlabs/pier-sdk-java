@@ -4,7 +4,7 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.Date;
+import org.joda.time.*;
 
 
 
@@ -15,73 +15,51 @@ import java.util.Date;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class CartaoResponse   {
   
-  private Integer bin = null;
-  private Integer codRetorno = null;
+  private String arquivoImpressao = null;
   private String codigoDesbloqueio = null;
-  private String criptografiaHSM = null;
-  private Date dataEmissao = null;
-  private Date dataValidade = null;
-  private String dataVencimentoPadrao = null;
-  private String descricaoRetorno = null;
-  private Integer estagioCartao = null;
-  private Date estagioData = null;
-  private Boolean flagReversao = null;
-  private Boolean flagSenha = null;
-  private Integer idCartao = null;
-  private Integer idConta = null;
-  private Integer idEmissor = null;
-  private String idLog = null;
-  private Integer idPessoaFisica = null;
-  private Integer idProduto = null;
-  private String nomePlastico = null;
+  private LocalDateTime dataEstagioCartao = null;
+  private LocalDateTime dataGeracao = null;
+  private LocalDateTime dataImpressao = null;
+  private LocalDateTime dataStatusCartao = null;
+  private LocalDateTime dataValidade = null;
+  private Integer flagImpressaoOrigemComercial = null;
+  private Integer flagProvisorio = null;
+  private Long id = null;
+  private Long idConta = null;
+  private Long idEstagioCartao = null;
+  private Long idPessoa = null;
+  private Long idStatusCartao = null;
   private String numeroCartao = null;
-  private String numeroCartaoReal = null;
-  private Integer statusCartao = null;
-  private Date statusData = null;
+  private Integer portador = null;
 
   
   /**
+   * Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver.
    **/
-  public CartaoResponse bin(Integer bin) {
-    this.bin = bin;
+  public CartaoResponse arquivoImpressao(String arquivoImpressao) {
+    this.arquivoImpressao = arquivoImpressao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("bin")
-  public Integer getBin() {
-    return bin;
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver.")
+  @JsonProperty("arquivoImpressao")
+  public String getArquivoImpressao() {
+    return arquivoImpressao;
   }
-  public void setBin(Integer bin) {
-    this.bin = bin;
-  }
-
-  
-  /**
-   **/
-  public CartaoResponse codRetorno(Integer codRetorno) {
-    this.codRetorno = codRetorno;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("codRetorno")
-  public Integer getCodRetorno() {
-    return codRetorno;
-  }
-  public void setCodRetorno(Integer codRetorno) {
-    this.codRetorno = codRetorno;
+  public void setArquivoImpressao(String arquivoImpressao) {
+    this.arquivoImpressao = arquivoImpressao;
   }
 
   
   /**
+   * Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
    **/
   public CartaoResponse codigoDesbloqueio(String codigoDesbloqueio) {
     this.codigoDesbloqueio = codigoDesbloqueio;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.")
   @JsonProperty("codigoDesbloqueio")
   public String getCodigoDesbloqueio() {
     return codigoDesbloqueio;
@@ -92,285 +70,230 @@ public class CartaoResponse   {
 
   
   /**
+   * Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
    **/
-  public CartaoResponse criptografiaHSM(String criptografiaHSM) {
-    this.criptografiaHSM = criptografiaHSM;
+  public CartaoResponse dataEstagioCartao(LocalDateTime dataEstagioCartao) {
+    this.dataEstagioCartao = dataEstagioCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("criptografiaHSM")
-  public String getCriptografiaHSM() {
-    return criptografiaHSM;
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.")
+  @JsonProperty("dataEstagioCartao")
+  public LocalDateTime getDataEstagioCartao() {
+    return dataEstagioCartao;
   }
-  public void setCriptografiaHSM(String criptografiaHSM) {
-    this.criptografiaHSM = criptografiaHSM;
+  public void setDataEstagioCartao(LocalDateTime dataEstagioCartao) {
+    this.dataEstagioCartao = dataEstagioCartao;
   }
 
   
   /**
+   * Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
    **/
-  public CartaoResponse dataEmissao(Date dataEmissao) {
-    this.dataEmissao = dataEmissao;
+  public CartaoResponse dataGeracao(LocalDateTime dataGeracao) {
+    this.dataGeracao = dataGeracao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("dataEmissao")
-  public Date getDataEmissao() {
-    return dataEmissao;
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta a data em que o cart\u00C3\u00A3o foi gerado.")
+  @JsonProperty("dataGeracao")
+  public LocalDateTime getDataGeracao() {
+    return dataGeracao;
   }
-  public void setDataEmissao(Date dataEmissao) {
-    this.dataEmissao = dataEmissao;
+  public void setDataGeracao(LocalDateTime dataGeracao) {
+    this.dataGeracao = dataGeracao;
   }
 
   
   /**
+   * Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
    **/
-  public CartaoResponse dataValidade(Date dataValidade) {
+  public CartaoResponse dataImpressao(LocalDateTime dataImpressao) {
+    this.dataImpressao = dataImpressao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.")
+  @JsonProperty("dataImpressao")
+  public LocalDateTime getDataImpressao() {
+    return dataImpressao;
+  }
+  public void setDataImpressao(LocalDateTime dataImpressao) {
+    this.dataImpressao = dataImpressao;
+  }
+
+  
+  /**
+   * Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
+   **/
+  public CartaoResponse dataStatusCartao(LocalDateTime dataStatusCartao) {
+    this.dataStatusCartao = dataStatusCartao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.")
+  @JsonProperty("dataStatusCartao")
+  public LocalDateTime getDataStatusCartao() {
+    return dataStatusCartao;
+  }
+  public void setDataStatusCartao(LocalDateTime dataStatusCartao) {
+    this.dataStatusCartao = dataStatusCartao;
+  }
+
+  
+  /**
+   * Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver.
+   **/
+  public CartaoResponse dataValidade(LocalDateTime dataValidade) {
     this.dataValidade = dataValidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver.")
   @JsonProperty("dataValidade")
-  public Date getDataValidade() {
+  public LocalDateTime getDataValidade() {
     return dataValidade;
   }
-  public void setDataValidade(Date dataValidade) {
+  public void setDataValidade(LocalDateTime dataValidade) {
     this.dataValidade = dataValidade;
   }
 
   
   /**
+   * Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.
    **/
-  public CartaoResponse dataVencimentoPadrao(String dataVencimentoPadrao) {
-    this.dataVencimentoPadrao = dataVencimentoPadrao;
+  public CartaoResponse flagImpressaoOrigemComercial(Integer flagImpressaoOrigemComercial) {
+    this.flagImpressaoOrigemComercial = flagImpressaoOrigemComercial;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("dataVencimentoPadrao")
-  public String getDataVencimentoPadrao() {
-    return dataVencimentoPadrao;
+  @ApiModelProperty(example = "null", required = true, value = "Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.")
+  @JsonProperty("flagImpressaoOrigemComercial")
+  public Integer getFlagImpressaoOrigemComercial() {
+    return flagImpressaoOrigemComercial;
   }
-  public void setDataVencimentoPadrao(String dataVencimentoPadrao) {
-    this.dataVencimentoPadrao = dataVencimentoPadrao;
+  public void setFlagImpressaoOrigemComercial(Integer flagImpressaoOrigemComercial) {
+    this.flagImpressaoOrigemComercial = flagImpressaoOrigemComercial;
   }
 
   
   /**
+   * Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
    **/
-  public CartaoResponse descricaoRetorno(String descricaoRetorno) {
-    this.descricaoRetorno = descricaoRetorno;
+  public CartaoResponse flagProvisorio(Integer flagProvisorio) {
+    this.flagProvisorio = flagProvisorio;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("descricaoRetorno")
-  public String getDescricaoRetorno() {
-    return descricaoRetorno;
+  @ApiModelProperty(example = "null", required = true, value = "Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.")
+  @JsonProperty("flagProvisorio")
+  public Integer getFlagProvisorio() {
+    return flagProvisorio;
   }
-  public void setDescricaoRetorno(String descricaoRetorno) {
-    this.descricaoRetorno = descricaoRetorno;
+  public void setFlagProvisorio(Integer flagProvisorio) {
+    this.flagProvisorio = flagProvisorio;
   }
 
   
   /**
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
    **/
-  public CartaoResponse estagioCartao(Integer estagioCartao) {
-    this.estagioCartao = estagioCartao;
+  public CartaoResponse id(Long id) {
+    this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("estagioCartao")
-  public Integer getEstagioCartao() {
-    return estagioCartao;
+  @ApiModelProperty(example = "null", required = true, value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).")
+  @JsonProperty("id")
+  public Long getId() {
+    return id;
   }
-  public void setEstagioCartao(Integer estagioCartao) {
-    this.estagioCartao = estagioCartao;
+  public void setId(Long id) {
+    this.id = id;
   }
 
   
   /**
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id).
    **/
-  public CartaoResponse estagioData(Date estagioData) {
-    this.estagioData = estagioData;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("estagioData")
-  public Date getEstagioData() {
-    return estagioData;
-  }
-  public void setEstagioData(Date estagioData) {
-    this.estagioData = estagioData;
-  }
-
-  
-  /**
-   **/
-  public CartaoResponse flagReversao(Boolean flagReversao) {
-    this.flagReversao = flagReversao;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("flagReversao")
-  public Boolean getFlagReversao() {
-    return flagReversao;
-  }
-  public void setFlagReversao(Boolean flagReversao) {
-    this.flagReversao = flagReversao;
-  }
-
-  
-  /**
-   **/
-  public CartaoResponse flagSenha(Boolean flagSenha) {
-    this.flagSenha = flagSenha;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("flagSenha")
-  public Boolean getFlagSenha() {
-    return flagSenha;
-  }
-  public void setFlagSenha(Boolean flagSenha) {
-    this.flagSenha = flagSenha;
-  }
-
-  
-  /**
-   **/
-  public CartaoResponse idCartao(Integer idCartao) {
-    this.idCartao = idCartao;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("idCartao")
-  public Integer getIdCartao() {
-    return idCartao;
-  }
-  public void setIdCartao(Integer idCartao) {
-    this.idCartao = idCartao;
-  }
-
-  
-  /**
-   **/
-  public CartaoResponse idConta(Integer idConta) {
+  public CartaoResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id).")
   @JsonProperty("idConta")
-  public Integer getIdConta() {
+  public Long getIdConta() {
     return idConta;
   }
-  public void setIdConta(Integer idConta) {
+  public void setIdConta(Long idConta) {
     this.idConta = idConta;
   }
 
   
   /**
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
    **/
-  public CartaoResponse idEmissor(Integer idEmissor) {
-    this.idEmissor = idEmissor;
+  public CartaoResponse idEstagioCartao(Long idEstagioCartao) {
+    this.idEstagioCartao = idEstagioCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("idEmissor")
-  public Integer getIdEmissor() {
-    return idEmissor;
+  @ApiModelProperty(example = "null", required = true, value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).")
+  @JsonProperty("idEstagioCartao")
+  public Long getIdEstagioCartao() {
+    return idEstagioCartao;
   }
-  public void setIdEmissor(Integer idEmissor) {
-    this.idEmissor = idEmissor;
+  public void setIdEstagioCartao(Long idEstagioCartao) {
+    this.idEstagioCartao = idEstagioCartao;
   }
 
   
   /**
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id)
    **/
-  public CartaoResponse idLog(String idLog) {
-    this.idLog = idLog;
+  public CartaoResponse idPessoa(Long idPessoa) {
+    this.idPessoa = idPessoa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("idLog")
-  public String getIdLog() {
-    return idLog;
+  @ApiModelProperty(example = "null", required = true, value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id)")
+  @JsonProperty("idPessoa")
+  public Long getIdPessoa() {
+    return idPessoa;
   }
-  public void setIdLog(String idLog) {
-    this.idLog = idLog;
+  public void setIdPessoa(Long idPessoa) {
+    this.idPessoa = idPessoa;
   }
 
   
   /**
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).
    **/
-  public CartaoResponse idPessoaFisica(Integer idPessoaFisica) {
-    this.idPessoaFisica = idPessoaFisica;
+  public CartaoResponse idStatusCartao(Long idStatusCartao) {
+    this.idStatusCartao = idStatusCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("idPessoaFisica")
-  public Integer getIdPessoaFisica() {
-    return idPessoaFisica;
+  @ApiModelProperty(example = "null", required = true, value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).")
+  @JsonProperty("idStatusCartao")
+  public Long getIdStatusCartao() {
+    return idStatusCartao;
   }
-  public void setIdPessoaFisica(Integer idPessoaFisica) {
-    this.idPessoaFisica = idPessoaFisica;
+  public void setIdStatusCartao(Long idStatusCartao) {
+    this.idStatusCartao = idStatusCartao;
   }
 
   
   /**
-   **/
-  public CartaoResponse idProduto(Integer idProduto) {
-    this.idProduto = idProduto;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("idProduto")
-  public Integer getIdProduto() {
-    return idProduto;
-  }
-  public void setIdProduto(Integer idProduto) {
-    this.idProduto = idProduto;
-  }
-
-  
-  /**
-   **/
-  public CartaoResponse nomePlastico(String nomePlastico) {
-    this.nomePlastico = nomePlastico;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("nomePlastico")
-  public String getNomePlastico() {
-    return nomePlastico;
-  }
-  public void setNomePlastico(String nomePlastico) {
-    this.nomePlastico = nomePlastico;
-  }
-
-  
-  /**
+   * Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.
    **/
   public CartaoResponse numeroCartao(String numeroCartao) {
     this.numeroCartao = numeroCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.")
   @JsonProperty("numeroCartao")
   public String getNumeroCartao() {
     return numeroCartao;
@@ -381,53 +304,20 @@ public class CartaoResponse   {
 
   
   /**
+   * Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando \u00E2\u0080\u00981\u00E2\u0080\u0099, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.
    **/
-  public CartaoResponse numeroCartaoReal(String numeroCartaoReal) {
-    this.numeroCartaoReal = numeroCartaoReal;
+  public CartaoResponse portador(Integer portador) {
+    this.portador = portador;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("numeroCartaoReal")
-  public String getNumeroCartaoReal() {
-    return numeroCartaoReal;
+  @ApiModelProperty(example = "null", required = true, value = "Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando \u00E2\u0080\u00981\u00E2\u0080\u0099, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.")
+  @JsonProperty("portador")
+  public Integer getPortador() {
+    return portador;
   }
-  public void setNumeroCartaoReal(String numeroCartaoReal) {
-    this.numeroCartaoReal = numeroCartaoReal;
-  }
-
-  
-  /**
-   **/
-  public CartaoResponse statusCartao(Integer statusCartao) {
-    this.statusCartao = statusCartao;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("statusCartao")
-  public Integer getStatusCartao() {
-    return statusCartao;
-  }
-  public void setStatusCartao(Integer statusCartao) {
-    this.statusCartao = statusCartao;
-  }
-
-  
-  /**
-   **/
-  public CartaoResponse statusData(Date statusData) {
-    this.statusData = statusData;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("statusData")
-  public Date getStatusData() {
-    return statusData;
-  }
-  public void setStatusData(Date statusData) {
-    this.statusData = statusData;
+  public void setPortador(Integer portador) {
+    this.portador = portador;
   }
 
   
@@ -441,34 +331,27 @@ public class CartaoResponse   {
       return false;
     }
     CartaoResponse cartaoResponse = (CartaoResponse) o;
-    return Objects.equals(this.bin, cartaoResponse.bin) &&
-        Objects.equals(this.codRetorno, cartaoResponse.codRetorno) &&
+    return Objects.equals(this.arquivoImpressao, cartaoResponse.arquivoImpressao) &&
         Objects.equals(this.codigoDesbloqueio, cartaoResponse.codigoDesbloqueio) &&
-        Objects.equals(this.criptografiaHSM, cartaoResponse.criptografiaHSM) &&
-        Objects.equals(this.dataEmissao, cartaoResponse.dataEmissao) &&
+        Objects.equals(this.dataEstagioCartao, cartaoResponse.dataEstagioCartao) &&
+        Objects.equals(this.dataGeracao, cartaoResponse.dataGeracao) &&
+        Objects.equals(this.dataImpressao, cartaoResponse.dataImpressao) &&
+        Objects.equals(this.dataStatusCartao, cartaoResponse.dataStatusCartao) &&
         Objects.equals(this.dataValidade, cartaoResponse.dataValidade) &&
-        Objects.equals(this.dataVencimentoPadrao, cartaoResponse.dataVencimentoPadrao) &&
-        Objects.equals(this.descricaoRetorno, cartaoResponse.descricaoRetorno) &&
-        Objects.equals(this.estagioCartao, cartaoResponse.estagioCartao) &&
-        Objects.equals(this.estagioData, cartaoResponse.estagioData) &&
-        Objects.equals(this.flagReversao, cartaoResponse.flagReversao) &&
-        Objects.equals(this.flagSenha, cartaoResponse.flagSenha) &&
-        Objects.equals(this.idCartao, cartaoResponse.idCartao) &&
+        Objects.equals(this.flagImpressaoOrigemComercial, cartaoResponse.flagImpressaoOrigemComercial) &&
+        Objects.equals(this.flagProvisorio, cartaoResponse.flagProvisorio) &&
+        Objects.equals(this.id, cartaoResponse.id) &&
         Objects.equals(this.idConta, cartaoResponse.idConta) &&
-        Objects.equals(this.idEmissor, cartaoResponse.idEmissor) &&
-        Objects.equals(this.idLog, cartaoResponse.idLog) &&
-        Objects.equals(this.idPessoaFisica, cartaoResponse.idPessoaFisica) &&
-        Objects.equals(this.idProduto, cartaoResponse.idProduto) &&
-        Objects.equals(this.nomePlastico, cartaoResponse.nomePlastico) &&
+        Objects.equals(this.idEstagioCartao, cartaoResponse.idEstagioCartao) &&
+        Objects.equals(this.idPessoa, cartaoResponse.idPessoa) &&
+        Objects.equals(this.idStatusCartao, cartaoResponse.idStatusCartao) &&
         Objects.equals(this.numeroCartao, cartaoResponse.numeroCartao) &&
-        Objects.equals(this.numeroCartaoReal, cartaoResponse.numeroCartaoReal) &&
-        Objects.equals(this.statusCartao, cartaoResponse.statusCartao) &&
-        Objects.equals(this.statusData, cartaoResponse.statusData);
+        Objects.equals(this.portador, cartaoResponse.portador);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(bin, codRetorno, codigoDesbloqueio, criptografiaHSM, dataEmissao, dataValidade, dataVencimentoPadrao, descricaoRetorno, estagioCartao, estagioData, flagReversao, flagSenha, idCartao, idConta, idEmissor, idLog, idPessoaFisica, idProduto, nomePlastico, numeroCartao, numeroCartaoReal, statusCartao, statusData);
+    return Objects.hash(arquivoImpressao, codigoDesbloqueio, dataEstagioCartao, dataGeracao, dataImpressao, dataStatusCartao, dataValidade, flagImpressaoOrigemComercial, flagProvisorio, id, idConta, idEstagioCartao, idPessoa, idStatusCartao, numeroCartao, portador);
   }
 
   @Override
@@ -476,29 +359,22 @@ public class CartaoResponse   {
     StringBuilder sb = new StringBuilder();
     sb.append("class CartaoResponse {\n");
     
-    sb.append("    bin: ").append(toIndentedString(bin)).append("\n");
-    sb.append("    codRetorno: ").append(toIndentedString(codRetorno)).append("\n");
+    sb.append("    arquivoImpressao: ").append(toIndentedString(arquivoImpressao)).append("\n");
     sb.append("    codigoDesbloqueio: ").append(toIndentedString(codigoDesbloqueio)).append("\n");
-    sb.append("    criptografiaHSM: ").append(toIndentedString(criptografiaHSM)).append("\n");
-    sb.append("    dataEmissao: ").append(toIndentedString(dataEmissao)).append("\n");
+    sb.append("    dataEstagioCartao: ").append(toIndentedString(dataEstagioCartao)).append("\n");
+    sb.append("    dataGeracao: ").append(toIndentedString(dataGeracao)).append("\n");
+    sb.append("    dataImpressao: ").append(toIndentedString(dataImpressao)).append("\n");
+    sb.append("    dataStatusCartao: ").append(toIndentedString(dataStatusCartao)).append("\n");
     sb.append("    dataValidade: ").append(toIndentedString(dataValidade)).append("\n");
-    sb.append("    dataVencimentoPadrao: ").append(toIndentedString(dataVencimentoPadrao)).append("\n");
-    sb.append("    descricaoRetorno: ").append(toIndentedString(descricaoRetorno)).append("\n");
-    sb.append("    estagioCartao: ").append(toIndentedString(estagioCartao)).append("\n");
-    sb.append("    estagioData: ").append(toIndentedString(estagioData)).append("\n");
-    sb.append("    flagReversao: ").append(toIndentedString(flagReversao)).append("\n");
-    sb.append("    flagSenha: ").append(toIndentedString(flagSenha)).append("\n");
-    sb.append("    idCartao: ").append(toIndentedString(idCartao)).append("\n");
+    sb.append("    flagImpressaoOrigemComercial: ").append(toIndentedString(flagImpressaoOrigemComercial)).append("\n");
+    sb.append("    flagProvisorio: ").append(toIndentedString(flagProvisorio)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idConta: ").append(toIndentedString(idConta)).append("\n");
-    sb.append("    idEmissor: ").append(toIndentedString(idEmissor)).append("\n");
-    sb.append("    idLog: ").append(toIndentedString(idLog)).append("\n");
-    sb.append("    idPessoaFisica: ").append(toIndentedString(idPessoaFisica)).append("\n");
-    sb.append("    idProduto: ").append(toIndentedString(idProduto)).append("\n");
-    sb.append("    nomePlastico: ").append(toIndentedString(nomePlastico)).append("\n");
+    sb.append("    idEstagioCartao: ").append(toIndentedString(idEstagioCartao)).append("\n");
+    sb.append("    idPessoa: ").append(toIndentedString(idPessoa)).append("\n");
+    sb.append("    idStatusCartao: ").append(toIndentedString(idStatusCartao)).append("\n");
     sb.append("    numeroCartao: ").append(toIndentedString(numeroCartao)).append("\n");
-    sb.append("    numeroCartaoReal: ").append(toIndentedString(numeroCartaoReal)).append("\n");
-    sb.append("    statusCartao: ").append(toIndentedString(statusCartao)).append("\n");
-    sb.append("    statusData: ").append(toIndentedString(statusData)).append("\n");
+    sb.append("    portador: ").append(toIndentedString(portador)).append("\n");
     sb.append("}");
     return sb.toString();
   }

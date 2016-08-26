@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v1_1.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v1_1.model.StatusCarto;
+import br.com.conductor.pier.api.v1_1.model.Pessoa;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -13,31 +13,31 @@ import java.util.List;
 
 
 /**
- * Lista de Status Cart\u00C3\u00B5es
+ * Lista de Pessoas
  **/
 
-@ApiModel(description = "Lista de Status Cart\u00C3\u00B5es")
+@ApiModel(description = "Lista de Pessoas")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class ListaDeStatusCartes   {
+public class ListaDePessoas   {
   
-  private List<StatusCarto> statusCartoes = new ArrayList<StatusCarto>();
+  private List<Pessoa> pessoas = new ArrayList<Pessoa>();
 
   
   /**
-   * Lista de status cart\u00C3\u00B5es
+   * Lista de pessoas
    **/
-  public ListaDeStatusCartes statusCartoes(List<StatusCarto> statusCartoes) {
-    this.statusCartoes = statusCartoes;
+  public ListaDePessoas pessoas(List<Pessoa> pessoas) {
+    this.pessoas = pessoas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Lista de status cart\u00C3\u00B5es")
-  @JsonProperty("statusCartoes")
-  public List<StatusCarto> getStatusCartoes() {
-    return statusCartoes;
+  @ApiModelProperty(example = "null", value = "Lista de pessoas")
+  @JsonProperty("pessoas")
+  public List<Pessoa> getPessoas() {
+    return pessoas;
   }
-  public void setStatusCartoes(List<StatusCarto> statusCartoes) {
-    this.statusCartoes = statusCartoes;
+  public void setPessoas(List<Pessoa> pessoas) {
+    this.pessoas = pessoas;
   }
 
   
@@ -50,21 +50,21 @@ public class ListaDeStatusCartes   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ListaDeStatusCartes listaDeStatusCartes = (ListaDeStatusCartes) o;
-    return Objects.equals(this.statusCartoes, listaDeStatusCartes.statusCartoes);
+    ListaDePessoas listaDePessoas = (ListaDePessoas) o;
+    return Objects.equals(this.pessoas, listaDePessoas.pessoas);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(statusCartoes);
+    return Objects.hash(pessoas);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ListaDeStatusCartes {\n");
+    sb.append("class ListaDePessoas {\n");
     
-    sb.append("    statusCartoes: ").append(toIndentedString(statusCartoes)).append("\n");
+    sb.append("    pessoas: ").append(toIndentedString(pessoas)).append("\n");
     sb.append("}");
     return sb.toString();
   }
