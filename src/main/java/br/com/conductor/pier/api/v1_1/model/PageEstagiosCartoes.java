@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v1_1.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v1_1.model.PageImplOfEstagioCartao;
+import br.com.conductor.pier.api.v1_1.model.PageApiOfEstagioCartao;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -18,22 +18,22 @@ import io.swagger.annotations.ApiModelProperty;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageEstagiosCartoes   {
   
-  private PageImplOfEstagioCartao estagioCartoes = null;
+  private PageApiOfEstagioCartao estagioCartoes = null;
 
   
   /**
    **/
-  public PageEstagiosCartoes estagioCartoes(PageImplOfEstagioCartao estagioCartoes) {
+  public PageEstagiosCartoes estagioCartoes(PageApiOfEstagioCartao estagioCartoes) {
     this.estagioCartoes = estagioCartoes;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("estagioCartoes")
-  public PageImplOfEstagioCartao getEstagioCartoes() {
+  public PageApiOfEstagioCartao getEstagioCartoes() {
     return estagioCartoes;
   }
-  public void setEstagioCartoes(PageImplOfEstagioCartao estagioCartoes) {
+  public void setEstagioCartoes(PageApiOfEstagioCartao estagioCartoes) {
     this.estagioCartoes = estagioCartoes;
   }
 
