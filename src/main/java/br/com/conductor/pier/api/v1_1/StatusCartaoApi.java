@@ -20,14 +20,14 @@ import java.util.Map;
 
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 
-public class StatusCartoApi {
+public class StatusCartaoApi {
   private ApiClient apiClient;
 
-  public StatusCartoApi() {
+  public StatusCartaoApi() {
     this(Configuration.getDefaultApiClient());
   }
 
-  public StatusCartoApi(ApiClient apiClient) {
+  public StatusCartaoApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
