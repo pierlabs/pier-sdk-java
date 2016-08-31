@@ -17,20 +17,16 @@ import io.swagger.annotations.ApiModelProperty;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class StatusCarto   {
   
-  private String flagAlteraStatus = null;
-  private String flagCadastroNovaSenha = null;
-  private String flagCadastroSenha = null;
-  private String flagCancelaCartao = null;
-  private String flagCancelaConta = null;
-  private String flagCobraTarifa = null;
-  private String flagDesbloqueio = null;
-  private String flagDestinoTransferencia = null;
-  private String flagEmiteProvisorio = null;
-  private String flagExcecaoBandeira = null;
-  private String flagOrigemTransferencia = null;
-  private String flagReemiteCartao = null;
-  private String flagReversaoCancelamento = null;
-  private String flagReversaoDesbloqueio = null;
+  private Integer flagAlteraStatus = null;
+  private Integer flagCadastroNovaSenha = null;
+  private Integer flagCancelaConta = null;
+  private Integer flagCancelaNoDesbloqueio = null;
+  private Integer flagCobraTarifa = null;
+  private Integer flagDestinoTransferencia = null;
+  private Integer flagEmiteProvisorio = null;
+  private Integer flagExcecaoBandeira = null;
+  private Integer flagOrigemTransferencia = null;
+  private Integer flagReemiteCartao = null;
   private Long id = null;
   private Long idStatusDestinoConta = null;
   private Long idStatusDestinoDesbloqueio = null;
@@ -38,163 +34,127 @@ public class StatusCarto   {
 
   
   /**
-   * Quanto ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo n\u00C3\u00A3o ter\u00C3\u00A3o seu idStatusCartao Alterado, fazendo com que o Cart\u00C3\u00A3o atual possa continuar sendo utilizado at\u00C3\u00A9 o desbloqueio de um novo cart\u00C3\u00A3o.
+   * Quando ativa, indica que ao ser atribu\u00C3\u00ADdo um idStatusCartao com essa caracter\u00C3\u00ADstica, o cart\u00C3\u00A3o ter\u00C3\u00A1 o seu idStatusCartao alterado para o que fora escolhido. Caso contr\u00C3\u00A1rio, o idStatusCartao s\u00C3\u00B3 ser\u00C3\u00A1 alterado ap\u00C3\u00B3s o desbloqueio de um novo cart\u00C3\u00A3o do mesmo Portador e Conta.
    **/
-  public StatusCarto flagAlteraStatus(String flagAlteraStatus) {
+  public StatusCarto flagAlteraStatus(Integer flagAlteraStatus) {
     this.flagAlteraStatus = flagAlteraStatus;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Quanto ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo n\u00C3\u00A3o ter\u00C3\u00A3o seu idStatusCartao Alterado, fazendo com que o Cart\u00C3\u00A3o atual possa continuar sendo utilizado at\u00C3\u00A9 o desbloqueio de um novo cart\u00C3\u00A3o.")
+  @ApiModelProperty(example = "null", required = true, value = "Quando ativa, indica que ao ser atribu\u00C3\u00ADdo um idStatusCartao com essa caracter\u00C3\u00ADstica, o cart\u00C3\u00A3o ter\u00C3\u00A1 o seu idStatusCartao alterado para o que fora escolhido. Caso contr\u00C3\u00A1rio, o idStatusCartao s\u00C3\u00B3 ser\u00C3\u00A1 alterado ap\u00C3\u00B3s o desbloqueio de um novo cart\u00C3\u00A3o do mesmo Portador e Conta.")
   @JsonProperty("flagAlteraStatus")
-  public String getFlagAlteraStatus() {
+  public Integer getFlagAlteraStatus() {
     return flagAlteraStatus;
   }
-  public void setFlagAlteraStatus(String flagAlteraStatus) {
+  public void setFlagAlteraStatus(Integer flagAlteraStatus) {
     this.flagAlteraStatus = flagAlteraStatus;
   }
 
   
   /**
-   * Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a senha atual exclu\u00C3\u00ADda.
+   * Quando ativa, indica que a senha cadastrada ser\u00C3\u00A1 exclu\u00C3\u00ADda no momento do Bloqueio do cart\u00C3\u00A3o com um idStatusCartao que possua essa caracter\u00C3\u00ADstica, sendo ent\u00C3\u00A3o necess\u00C3\u00A1rio o cadastro de uma nova senha.
    **/
-  public StatusCarto flagCadastroNovaSenha(String flagCadastroNovaSenha) {
+  public StatusCarto flagCadastroNovaSenha(Integer flagCadastroNovaSenha) {
     this.flagCadastroNovaSenha = flagCadastroNovaSenha;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a senha atual exclu\u00C3\u00ADda.")
+  @ApiModelProperty(example = "null", required = true, value = "Quando ativa, indica que a senha cadastrada ser\u00C3\u00A1 exclu\u00C3\u00ADda no momento do Bloqueio do cart\u00C3\u00A3o com um idStatusCartao que possua essa caracter\u00C3\u00ADstica, sendo ent\u00C3\u00A3o necess\u00C3\u00A1rio o cadastro de uma nova senha.")
   @JsonProperty("flagCadastroNovaSenha")
-  public String getFlagCadastroNovaSenha() {
+  public Integer getFlagCadastroNovaSenha() {
     return flagCadastroNovaSenha;
   }
-  public void setFlagCadastroNovaSenha(String flagCadastroNovaSenha) {
+  public void setFlagCadastroNovaSenha(Integer flagCadastroNovaSenha) {
     this.flagCadastroNovaSenha = flagCadastroNovaSenha;
   }
 
   
   /**
-   * Quando ativa, indica se poder\u00C3\u00A1 ser realizado o cadastro de uma senha para o Cart\u00C3\u00A3o.
+   * Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, e tal cart\u00C3\u00A3o seja de um titular (portador = 1), ter\u00C3\u00A3o a conta a qual o cart\u00C3\u00A3o pertence cancelada.
    **/
-  public StatusCarto flagCadastroSenha(String flagCadastroSenha) {
-    this.flagCadastroSenha = flagCadastroSenha;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", required = true, value = "Quando ativa, indica se poder\u00C3\u00A1 ser realizado o cadastro de uma senha para o Cart\u00C3\u00A3o.")
-  @JsonProperty("flagCadastroSenha")
-  public String getFlagCadastroSenha() {
-    return flagCadastroSenha;
-  }
-  public void setFlagCadastroSenha(String flagCadastroSenha) {
-    this.flagCadastroSenha = flagCadastroSenha;
-  }
-
-  
-  /**
-   * Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o o cart\u00C3\u00A3o Cancelado.
-   **/
-  public StatusCarto flagCancelaCartao(String flagCancelaCartao) {
-    this.flagCancelaCartao = flagCancelaCartao;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", required = true, value = "Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o o cart\u00C3\u00A3o Cancelado.")
-  @JsonProperty("flagCancelaCartao")
-  public String getFlagCancelaCartao() {
-    return flagCancelaCartao;
-  }
-  public void setFlagCancelaCartao(String flagCancelaCartao) {
-    this.flagCancelaCartao = flagCancelaCartao;
-  }
-
-  
-  /**
-   * Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a conta Cancelada.
-   **/
-  public StatusCarto flagCancelaConta(String flagCancelaConta) {
+  public StatusCarto flagCancelaConta(Integer flagCancelaConta) {
     this.flagCancelaConta = flagCancelaConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a conta Cancelada.")
+  @ApiModelProperty(example = "null", required = true, value = "Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, e tal cart\u00C3\u00A3o seja de um titular (portador = 1), ter\u00C3\u00A3o a conta a qual o cart\u00C3\u00A3o pertence cancelada.")
   @JsonProperty("flagCancelaConta")
-  public String getFlagCancelaConta() {
+  public Integer getFlagCancelaConta() {
     return flagCancelaConta;
   }
-  public void setFlagCancelaConta(String flagCancelaConta) {
+  public void setFlagCancelaConta(Integer flagCancelaConta) {
     this.flagCancelaConta = flagCancelaConta;
   }
 
   
   /**
-   * Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a cobran\u00C3\u00A7a de tarifa lan\u00C3\u00A7ada junto a gera\u00C3\u00A7\u00C3\u00A3o do novo cart\u00C3\u00A3o, desde que o Produto ao qual o cart\u00C3\u00A3o pertence possua o respectivo par\u00C3\u00A2metro configurado.
+   * Quando ativa, indica que o cart\u00C3\u00A3o ativo que o portador possuir na mesma conta do cart\u00C3\u00A3o a ser desbloqueado, e que o status dele possua essa caracter\u00C3\u00ADstica, dever\u00C3\u00A1 ser cancelado quando um novo cart\u00C3\u00A3o for desbloqueado.
    **/
-  public StatusCarto flagCobraTarifa(String flagCobraTarifa) {
-    this.flagCobraTarifa = flagCobraTarifa;
+  public StatusCarto flagCancelaNoDesbloqueio(Integer flagCancelaNoDesbloqueio) {
+    this.flagCancelaNoDesbloqueio = flagCancelaNoDesbloqueio;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o a cobran\u00C3\u00A7a de tarifa lan\u00C3\u00A7ada junto a gera\u00C3\u00A7\u00C3\u00A3o do novo cart\u00C3\u00A3o, desde que o Produto ao qual o cart\u00C3\u00A3o pertence possua o respectivo par\u00C3\u00A2metro configurado.")
-  @JsonProperty("flagCobraTarifa")
-  public String getFlagCobraTarifa() {
-    return flagCobraTarifa;
+  @ApiModelProperty(example = "null", value = "Quando ativa, indica que o cart\u00C3\u00A3o ativo que o portador possuir na mesma conta do cart\u00C3\u00A3o a ser desbloqueado, e que o status dele possua essa caracter\u00C3\u00ADstica, dever\u00C3\u00A1 ser cancelado quando um novo cart\u00C3\u00A3o for desbloqueado.")
+  @JsonProperty("flagCancelaNoDesbloqueio")
+  public Integer getFlagCancelaNoDesbloqueio() {
+    return flagCancelaNoDesbloqueio;
   }
-  public void setFlagCobraTarifa(String flagCobraTarifa) {
-    this.flagCobraTarifa = flagCobraTarifa;
+  public void setFlagCancelaNoDesbloqueio(Integer flagCancelaNoDesbloqueio) {
+    this.flagCancelaNoDesbloqueio = flagCancelaNoDesbloqueio;
   }
 
   
   /**
-   * Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao poder\u00C3\u00A3o ser Desbloqueados.
+   * Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
    **/
-  public StatusCarto flagDesbloqueio(String flagDesbloqueio) {
-    this.flagDesbloqueio = flagDesbloqueio;
+  public StatusCarto flagCobraTarifa(Integer flagCobraTarifa) {
+    this.flagCobraTarifa = flagCobraTarifa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao poder\u00C3\u00A3o ser Desbloqueados.")
-  @JsonProperty("flagDesbloqueio")
-  public String getFlagDesbloqueio() {
-    return flagDesbloqueio;
+  @ApiModelProperty(example = "null", required = true, value = "Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.")
+  @JsonProperty("flagCobraTarifa")
+  public Integer getFlagCobraTarifa() {
+    return flagCobraTarifa;
   }
-  public void setFlagDesbloqueio(String flagDesbloqueio) {
-    this.flagDesbloqueio = flagDesbloqueio;
+  public void setFlagCobraTarifa(Integer flagCobraTarifa) {
+    this.flagCobraTarifa = flagCobraTarifa;
   }
 
   
   /**
    * Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem receber transfer\u00C3\u00AAncias de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos oriundos de outros cart\u00C3\u00B5es.
    **/
-  public StatusCarto flagDestinoTransferencia(String flagDestinoTransferencia) {
+  public StatusCarto flagDestinoTransferencia(Integer flagDestinoTransferencia) {
     this.flagDestinoTransferencia = flagDestinoTransferencia;
     return this;
   }
   
   @ApiModelProperty(example = "null", required = true, value = "Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem receber transfer\u00C3\u00AAncias de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos oriundos de outros cart\u00C3\u00B5es.")
   @JsonProperty("flagDestinoTransferencia")
-  public String getFlagDestinoTransferencia() {
+  public Integer getFlagDestinoTransferencia() {
     return flagDestinoTransferencia;
   }
-  public void setFlagDestinoTransferencia(String flagDestinoTransferencia) {
+  public void setFlagDestinoTransferencia(Integer flagDestinoTransferencia) {
     this.flagDestinoTransferencia = flagDestinoTransferencia;
   }
 
   
   /**
-   * Quando ativa, indica que os portadores que tiverem seus cart\u00C3\u00B5es associados a idStatusCartao com esta flag poder\u00C3\u00A3o solicitar a emiss\u00C3\u00A3o de um cart\u00C3\u00A3o provis\u00C3\u00B3rio at\u00C3\u00A9 que um novo cart\u00C3\u00A3o definitivo seja recebido. 
+   * Quando ativa, indica que poder\u00C3\u00A1 ser criado um novo cart\u00C3\u00A3o provis\u00C3\u00B3rio para o portador.
    **/
-  public StatusCarto flagEmiteProvisorio(String flagEmiteProvisorio) {
+  public StatusCarto flagEmiteProvisorio(Integer flagEmiteProvisorio) {
     this.flagEmiteProvisorio = flagEmiteProvisorio;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Quando ativa, indica que os portadores que tiverem seus cart\u00C3\u00B5es associados a idStatusCartao com esta flag poder\u00C3\u00A3o solicitar a emiss\u00C3\u00A3o de um cart\u00C3\u00A3o provis\u00C3\u00B3rio at\u00C3\u00A9 que um novo cart\u00C3\u00A3o definitivo seja recebido. ")
+  @ApiModelProperty(example = "null", required = true, value = "Quando ativa, indica que poder\u00C3\u00A1 ser criado um novo cart\u00C3\u00A3o provis\u00C3\u00B3rio para o portador.")
   @JsonProperty("flagEmiteProvisorio")
-  public String getFlagEmiteProvisorio() {
+  public Integer getFlagEmiteProvisorio() {
     return flagEmiteProvisorio;
   }
-  public void setFlagEmiteProvisorio(String flagEmiteProvisorio) {
+  public void setFlagEmiteProvisorio(Integer flagEmiteProvisorio) {
     this.flagEmiteProvisorio = flagEmiteProvisorio;
   }
 
@@ -202,17 +162,17 @@ public class StatusCarto   {
   /**
    * Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo dever\u00C3\u00A3o ter a respectiva informa\u00C3\u00A7\u00C3\u00A3o de mudan\u00C3\u00A7a de status inclu\u00C3\u00ADda no arquivo de exce\u00C3\u00A7\u00C3\u00A3o da Bandeira, a fim de manter atualizado o cadastro do cart\u00C3\u00A3o nela para nortear o que fazer com as transa\u00C3\u00A7\u00C3\u00B5es quando o autorizador estiver indispon\u00C3\u00ADvel.
    **/
-  public StatusCarto flagExcecaoBandeira(String flagExcecaoBandeira) {
+  public StatusCarto flagExcecaoBandeira(Integer flagExcecaoBandeira) {
     this.flagExcecaoBandeira = flagExcecaoBandeira;
     return this;
   }
   
   @ApiModelProperty(example = "null", required = true, value = "Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo dever\u00C3\u00A3o ter a respectiva informa\u00C3\u00A7\u00C3\u00A3o de mudan\u00C3\u00A7a de status inclu\u00C3\u00ADda no arquivo de exce\u00C3\u00A7\u00C3\u00A3o da Bandeira, a fim de manter atualizado o cadastro do cart\u00C3\u00A3o nela para nortear o que fazer com as transa\u00C3\u00A7\u00C3\u00B5es quando o autorizador estiver indispon\u00C3\u00ADvel.")
   @JsonProperty("flagExcecaoBandeira")
-  public String getFlagExcecaoBandeira() {
+  public Integer getFlagExcecaoBandeira() {
     return flagExcecaoBandeira;
   }
-  public void setFlagExcecaoBandeira(String flagExcecaoBandeira) {
+  public void setFlagExcecaoBandeira(Integer flagExcecaoBandeira) {
     this.flagExcecaoBandeira = flagExcecaoBandeira;
   }
 
@@ -220,72 +180,36 @@ public class StatusCarto   {
   /**
    * Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos para outros cart\u00C3\u00B5es.
    **/
-  public StatusCarto flagOrigemTransferencia(String flagOrigemTransferencia) {
+  public StatusCarto flagOrigemTransferencia(Integer flagOrigemTransferencia) {
     this.flagOrigemTransferencia = flagOrigemTransferencia;
     return this;
   }
   
   @ApiModelProperty(example = "null", required = true, value = "Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos para outros cart\u00C3\u00B5es.")
   @JsonProperty("flagOrigemTransferencia")
-  public String getFlagOrigemTransferencia() {
+  public Integer getFlagOrigemTransferencia() {
     return flagOrigemTransferencia;
   }
-  public void setFlagOrigemTransferencia(String flagOrigemTransferencia) {
+  public void setFlagOrigemTransferencia(Integer flagOrigemTransferencia) {
     this.flagOrigemTransferencia = flagOrigemTransferencia;
   }
 
   
   /**
-   * Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o um novo cart\u00C3\u00A3o automaticamente gerado.
+   * Quando ativa, indica que cart\u00C3\u00B5es que tiverem este status atribu\u00C3\u00ADdo ter\u00C3\u00A3o um novo cart\u00C3\u00A3o gerado para o portador, para a mesma conta, automaticamente.
    **/
-  public StatusCarto flagReemiteCartao(String flagReemiteCartao) {
+  public StatusCarto flagReemiteCartao(Integer flagReemiteCartao) {
     this.flagReemiteCartao = flagReemiteCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Quando ativa, indica que Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo ter\u00C3\u00A3o um novo cart\u00C3\u00A3o automaticamente gerado.")
+  @ApiModelProperty(example = "null", required = true, value = "Quando ativa, indica que cart\u00C3\u00B5es que tiverem este status atribu\u00C3\u00ADdo ter\u00C3\u00A3o um novo cart\u00C3\u00A3o gerado para o portador, para a mesma conta, automaticamente.")
   @JsonProperty("flagReemiteCartao")
-  public String getFlagReemiteCartao() {
+  public Integer getFlagReemiteCartao() {
     return flagReemiteCartao;
   }
-  public void setFlagReemiteCartao(String flagReemiteCartao) {
+  public void setFlagReemiteCartao(Integer flagReemiteCartao) {
     this.flagReemiteCartao = flagReemiteCartao;
-  }
-
-  
-  /**
-   * Quando ativa, indica que o cart\u00C3\u00A3o, mesmo tendo sido cancelado, poder\u00C3\u00A1 ter o processo desfeito.
-   **/
-  public StatusCarto flagReversaoCancelamento(String flagReversaoCancelamento) {
-    this.flagReversaoCancelamento = flagReversaoCancelamento;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", required = true, value = "Quando ativa, indica que o cart\u00C3\u00A3o, mesmo tendo sido cancelado, poder\u00C3\u00A1 ter o processo desfeito.")
-  @JsonProperty("flagReversaoCancelamento")
-  public String getFlagReversaoCancelamento() {
-    return flagReversaoCancelamento;
-  }
-  public void setFlagReversaoCancelamento(String flagReversaoCancelamento) {
-    this.flagReversaoCancelamento = flagReversaoCancelamento;
-  }
-
-  
-  /**
-   * Quando ativa, indica que o cart\u00C3\u00A3o, mesmo tendo sido bloqueado, poder\u00C3\u00A1 ter o processo desfeito.
-   **/
-  public StatusCarto flagReversaoDesbloqueio(String flagReversaoDesbloqueio) {
-    this.flagReversaoDesbloqueio = flagReversaoDesbloqueio;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", required = true, value = "Quando ativa, indica que o cart\u00C3\u00A3o, mesmo tendo sido bloqueado, poder\u00C3\u00A1 ter o processo desfeito.")
-  @JsonProperty("flagReversaoDesbloqueio")
-  public String getFlagReversaoDesbloqueio() {
-    return flagReversaoDesbloqueio;
-  }
-  public void setFlagReversaoDesbloqueio(String flagReversaoDesbloqueio) {
-    this.flagReversaoDesbloqueio = flagReversaoDesbloqueio;
   }
 
   
@@ -308,14 +232,14 @@ public class StatusCarto   {
 
   
   /**
-   * Indica qual o idStatusConta que ser\u00C3\u00A1 atribu\u00C3\u00ADdo ao idConta que tiver o Cartao do titular da mesma cancelado por um idStatusCartao que recomenda o cancelamento da conta.
+   * Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica.
    **/
   public StatusCarto idStatusDestinoConta(Long idStatusDestinoConta) {
     this.idStatusDestinoConta = idStatusDestinoConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Indica qual o idStatusConta que ser\u00C3\u00A1 atribu\u00C3\u00ADdo ao idConta que tiver o Cartao do titular da mesma cancelado por um idStatusCartao que recomenda o cancelamento da conta.")
+  @ApiModelProperty(example = "null", required = true, value = "Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica.")
   @JsonProperty("idStatusDestinoConta")
   public Long getIdStatusDestinoConta() {
     return idStatusDestinoConta;
@@ -326,14 +250,14 @@ public class StatusCarto   {
 
   
   /**
-   * Indica qual o idStatusCartao que deve ser atribu\u00C3\u00ADdo a um idCartao quando ele for desbloqueado.
+   * Indica qual o idStatusCartao que que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.
    **/
   public StatusCarto idStatusDestinoDesbloqueio(Long idStatusDestinoDesbloqueio) {
     this.idStatusDestinoDesbloqueio = idStatusDestinoDesbloqueio;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Indica qual o idStatusCartao que deve ser atribu\u00C3\u00ADdo a um idCartao quando ele for desbloqueado.")
+  @ApiModelProperty(example = "null", required = true, value = "Indica qual o idStatusCartao que que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.")
   @JsonProperty("idStatusDestinoDesbloqueio")
   public Long getIdStatusDestinoDesbloqueio() {
     return idStatusDestinoDesbloqueio;
@@ -373,18 +297,14 @@ public class StatusCarto   {
     StatusCarto statusCarto = (StatusCarto) o;
     return Objects.equals(this.flagAlteraStatus, statusCarto.flagAlteraStatus) &&
         Objects.equals(this.flagCadastroNovaSenha, statusCarto.flagCadastroNovaSenha) &&
-        Objects.equals(this.flagCadastroSenha, statusCarto.flagCadastroSenha) &&
-        Objects.equals(this.flagCancelaCartao, statusCarto.flagCancelaCartao) &&
         Objects.equals(this.flagCancelaConta, statusCarto.flagCancelaConta) &&
+        Objects.equals(this.flagCancelaNoDesbloqueio, statusCarto.flagCancelaNoDesbloqueio) &&
         Objects.equals(this.flagCobraTarifa, statusCarto.flagCobraTarifa) &&
-        Objects.equals(this.flagDesbloqueio, statusCarto.flagDesbloqueio) &&
         Objects.equals(this.flagDestinoTransferencia, statusCarto.flagDestinoTransferencia) &&
         Objects.equals(this.flagEmiteProvisorio, statusCarto.flagEmiteProvisorio) &&
         Objects.equals(this.flagExcecaoBandeira, statusCarto.flagExcecaoBandeira) &&
         Objects.equals(this.flagOrigemTransferencia, statusCarto.flagOrigemTransferencia) &&
         Objects.equals(this.flagReemiteCartao, statusCarto.flagReemiteCartao) &&
-        Objects.equals(this.flagReversaoCancelamento, statusCarto.flagReversaoCancelamento) &&
-        Objects.equals(this.flagReversaoDesbloqueio, statusCarto.flagReversaoDesbloqueio) &&
         Objects.equals(this.id, statusCarto.id) &&
         Objects.equals(this.idStatusDestinoConta, statusCarto.idStatusDestinoConta) &&
         Objects.equals(this.idStatusDestinoDesbloqueio, statusCarto.idStatusDestinoDesbloqueio) &&
@@ -393,7 +313,7 @@ public class StatusCarto   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(flagAlteraStatus, flagCadastroNovaSenha, flagCadastroSenha, flagCancelaCartao, flagCancelaConta, flagCobraTarifa, flagDesbloqueio, flagDestinoTransferencia, flagEmiteProvisorio, flagExcecaoBandeira, flagOrigemTransferencia, flagReemiteCartao, flagReversaoCancelamento, flagReversaoDesbloqueio, id, idStatusDestinoConta, idStatusDestinoDesbloqueio, nome);
+    return Objects.hash(flagAlteraStatus, flagCadastroNovaSenha, flagCancelaConta, flagCancelaNoDesbloqueio, flagCobraTarifa, flagDestinoTransferencia, flagEmiteProvisorio, flagExcecaoBandeira, flagOrigemTransferencia, flagReemiteCartao, id, idStatusDestinoConta, idStatusDestinoDesbloqueio, nome);
   }
 
   @Override
@@ -403,18 +323,14 @@ public class StatusCarto   {
     
     sb.append("    flagAlteraStatus: ").append(toIndentedString(flagAlteraStatus)).append("\n");
     sb.append("    flagCadastroNovaSenha: ").append(toIndentedString(flagCadastroNovaSenha)).append("\n");
-    sb.append("    flagCadastroSenha: ").append(toIndentedString(flagCadastroSenha)).append("\n");
-    sb.append("    flagCancelaCartao: ").append(toIndentedString(flagCancelaCartao)).append("\n");
     sb.append("    flagCancelaConta: ").append(toIndentedString(flagCancelaConta)).append("\n");
+    sb.append("    flagCancelaNoDesbloqueio: ").append(toIndentedString(flagCancelaNoDesbloqueio)).append("\n");
     sb.append("    flagCobraTarifa: ").append(toIndentedString(flagCobraTarifa)).append("\n");
-    sb.append("    flagDesbloqueio: ").append(toIndentedString(flagDesbloqueio)).append("\n");
     sb.append("    flagDestinoTransferencia: ").append(toIndentedString(flagDestinoTransferencia)).append("\n");
     sb.append("    flagEmiteProvisorio: ").append(toIndentedString(flagEmiteProvisorio)).append("\n");
     sb.append("    flagExcecaoBandeira: ").append(toIndentedString(flagExcecaoBandeira)).append("\n");
     sb.append("    flagOrigemTransferencia: ").append(toIndentedString(flagOrigemTransferencia)).append("\n");
     sb.append("    flagReemiteCartao: ").append(toIndentedString(flagReemiteCartao)).append("\n");
-    sb.append("    flagReversaoCancelamento: ").append(toIndentedString(flagReversaoCancelamento)).append("\n");
-    sb.append("    flagReversaoDesbloqueio: ").append(toIndentedString(flagReversaoDesbloqueio)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idStatusDestinoConta: ").append(toIndentedString(idStatusDestinoConta)).append("\n");
     sb.append("    idStatusDestinoDesbloqueio: ").append(toIndentedString(idStatusDestinoDesbloqueio)).append("\n");

@@ -90,15 +90,25 @@ public class EstgioCartoApi {
   /**
    * Lista as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gios do Cart\u00C3\u00A3o 
    * Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Est\u00C3\u00A1gio de Entrega que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
-   * @param idEstagioCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
-   * @param nome Nome atribu\u00C3\u00ADdo ao Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o.
+   * @param id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
+   * @param nome Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @return ListaDeEstgiosCartes
    */
-  public ListaDeEstgiosCartes listarEstagiosCartoesUsingGET(Long idEstagioCartao, String nome, Integer page, Integer limit) throws ApiException {
+  public ListaDeEstgiosCartes listarEstagiosCartoesUsingGET(Long id, String nome, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling listarEstagiosCartoesUsingGET");
+     }
+     
+     // verify the required parameter 'nome' is set
+     if (nome == null) {
+        throw new ApiException(400, "Missing the required parameter 'nome' when calling listarEstagiosCartoesUsingGET");
+     }
+     
     // create path and map variables
     String path = "/api/estagios-cartoes".replaceAll("\\{format\\}","json");
 
@@ -108,7 +118,7 @@ public class EstgioCartoApi {
     Map<String, Object> formParams = new HashMap<String, Object>();
 
     
-    queryParams.addAll(apiClient.parameterToPairs("", "id_estagio_cartao", idEstagioCartao));
+    queryParams.addAll(apiClient.parameterToPairs("", "id", id));
     
     queryParams.addAll(apiClient.parameterToPairs("", "nome", nome));
     
