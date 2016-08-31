@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v1_1.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v1_1.model.Pessoa;
+import br.com.conductor.pier.api.v1_1.model.Cartao;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -13,31 +13,31 @@ import java.util.List;
 
 
 /**
- * Lista de Pessoas
+ * Lista de Cart\u00C3\u00B5es
  **/
 
-@ApiModel(description = "Lista de Pessoas")
+@ApiModel(description = "Lista de Cart\u00C3\u00B5es")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class ListaDePessoas   {
+public class ListaCartoes   {
   
-  private List<Pessoa> pessoas = new ArrayList<Pessoa>();
+  private List<Cartao> cartoes = new ArrayList<Cartao>();
 
   
   /**
-   * Lista de pessoas
+   * Lista de cart\u00C3\u00B5es
    **/
-  public ListaDePessoas pessoas(List<Pessoa> pessoas) {
-    this.pessoas = pessoas;
+  public ListaCartoes cartoes(List<Cartao> cartoes) {
+    this.cartoes = cartoes;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Lista de pessoas")
-  @JsonProperty("pessoas")
-  public List<Pessoa> getPessoas() {
-    return pessoas;
+  @ApiModelProperty(example = "null", value = "Lista de cart\u00C3\u00B5es")
+  @JsonProperty("cartoes")
+  public List<Cartao> getCartoes() {
+    return cartoes;
   }
-  public void setPessoas(List<Pessoa> pessoas) {
-    this.pessoas = pessoas;
+  public void setCartoes(List<Cartao> cartoes) {
+    this.cartoes = cartoes;
   }
 
   
@@ -50,21 +50,21 @@ public class ListaDePessoas   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ListaDePessoas listaDePessoas = (ListaDePessoas) o;
-    return Objects.equals(this.pessoas, listaDePessoas.pessoas);
+    ListaCartoes listaCartoes = (ListaCartoes) o;
+    return Objects.equals(this.cartoes, listaCartoes.cartoes);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pessoas);
+    return Objects.hash(cartoes);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ListaDePessoas {\n");
+    sb.append("class ListaCartoes {\n");
     
-    sb.append("    pessoas: ").append(toIndentedString(pessoas)).append("\n");
+    sb.append("    cartoes: ").append(toIndentedString(cartoes)).append("\n");
     sb.append("}");
     return sb.toString();
   }

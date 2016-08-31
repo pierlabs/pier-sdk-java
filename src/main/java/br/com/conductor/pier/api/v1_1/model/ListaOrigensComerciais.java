@@ -18,7 +18,7 @@ import java.util.List;
 
 @ApiModel(description = "Lista de Origens Comerciais")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class ListaDeOrigensComerciais   {
+public class ListaOrigensComerciais   {
   
   private List<OrigemComercial> origensComerciais = new ArrayList<OrigemComercial>();
 
@@ -26,7 +26,7 @@ public class ListaDeOrigensComerciais   {
   /**
    * Lista de origens comerciais
    **/
-  public ListaDeOrigensComerciais origensComerciais(List<OrigemComercial> origensComerciais) {
+  public ListaOrigensComerciais origensComerciais(List<OrigemComercial> origensComerciais) {
     this.origensComerciais = origensComerciais;
     return this;
   }
@@ -50,8 +50,8 @@ public class ListaDeOrigensComerciais   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ListaDeOrigensComerciais listaDeOrigensComerciais = (ListaDeOrigensComerciais) o;
-    return Objects.equals(this.origensComerciais, listaDeOrigensComerciais.origensComerciais);
+    ListaOrigensComerciais listaOrigensComerciais = (ListaOrigensComerciais) o;
+    return Objects.equals(this.origensComerciais, listaOrigensComerciais.origensComerciais);
   }
 
   @Override
@@ -62,7 +62,7 @@ public class ListaDeOrigensComerciais   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ListaDeOrigensComerciais {\n");
+    sb.append("class ListaOrigensComerciais {\n");
     
     sb.append("    origensComerciais: ").append(toIndentedString(origensComerciais)).append("\n");
     sb.append("}");

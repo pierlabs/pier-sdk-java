@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v1_1.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v1_1.model.Carto;
+import br.com.conductor.pier.api.v1_1.model.Produto;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -13,31 +13,31 @@ import java.util.List;
 
 
 /**
- * Lista de Cart\u00C3\u00B5es
+ * Lista de Produtos
  **/
 
-@ApiModel(description = "Lista de Cart\u00C3\u00B5es")
+@ApiModel(description = "Lista de Produtos")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class ListaDeCartes   {
+public class ListaProdutos   {
   
-  private List<Carto> cartoes = new ArrayList<Carto>();
+  private List<Produto> produtos = new ArrayList<Produto>();
 
   
   /**
-   * Lista de cart\u00C3\u00B5es
+   * Lista de produtos
    **/
-  public ListaDeCartes cartoes(List<Carto> cartoes) {
-    this.cartoes = cartoes;
+  public ListaProdutos produtos(List<Produto> produtos) {
+    this.produtos = produtos;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Lista de cart\u00C3\u00B5es")
-  @JsonProperty("cartoes")
-  public List<Carto> getCartoes() {
-    return cartoes;
+  @ApiModelProperty(example = "null", value = "Lista de produtos")
+  @JsonProperty("produtos")
+  public List<Produto> getProdutos() {
+    return produtos;
   }
-  public void setCartoes(List<Carto> cartoes) {
-    this.cartoes = cartoes;
+  public void setProdutos(List<Produto> produtos) {
+    this.produtos = produtos;
   }
 
   
@@ -50,21 +50,21 @@ public class ListaDeCartes   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ListaDeCartes listaDeCartes = (ListaDeCartes) o;
-    return Objects.equals(this.cartoes, listaDeCartes.cartoes);
+    ListaProdutos listaProdutos = (ListaProdutos) o;
+    return Objects.equals(this.produtos, listaProdutos.produtos);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(cartoes);
+    return Objects.hash(produtos);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ListaDeCartes {\n");
+    sb.append("class ListaProdutos {\n");
     
-    sb.append("    cartoes: ").append(toIndentedString(cartoes)).append("\n");
+    sb.append("    produtos: ").append(toIndentedString(produtos)).append("\n");
     sb.append("}");
     return sb.toString();
   }

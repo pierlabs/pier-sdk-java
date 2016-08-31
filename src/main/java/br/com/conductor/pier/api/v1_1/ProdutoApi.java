@@ -8,7 +8,7 @@ import br.com.conductor.pier.api.v1_1.invoker.Configuration;
 import br.com.conductor.pier.api.v1_1.invoker.Pair;
 
 import br.com.conductor.pier.api.v1_1.model.OrigemComercial;
-import br.com.conductor.pier.api.v1_1.model.ListaDePessoas;
+import br.com.conductor.pier.api.v1_1.model.ListaProdutos;
 
 
 
@@ -95,9 +95,9 @@ public class ProdutoApi {
    * @param status Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo).
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-   * @return ListaDePessoas
+   * @return ListaProdutos
    */
-  public ListaDePessoas listarProdutosUsingGET(Long idProduto, String nome, String status, Integer page, Integer limit) throws ApiException {
+  public ListaProdutos listarProdutosUsingGET(Long idProduto, String nome, String status, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -137,7 +137,7 @@ public class ProdutoApi {
     String[] authNames = new String[] {"client_id", "access_token" };
 
     
-    GenericType<ListaDePessoas> returnType = new GenericType<ListaDePessoas>() {};
+    GenericType<ListaProdutos> returnType = new GenericType<ListaProdutos>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

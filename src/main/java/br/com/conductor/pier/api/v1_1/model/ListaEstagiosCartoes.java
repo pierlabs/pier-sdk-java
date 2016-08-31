@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v1_1.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v1_1.model.EstgioCarto;
+import br.com.conductor.pier.api.v1_1.model.EstagioCartao;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -18,25 +18,25 @@ import java.util.List;
 
 @ApiModel(description = "Lista de Est\u00C3\u00A1gios Cart\u00C3\u00B5es")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class ListaDeEstgiosCartes   {
+public class ListaEstagiosCartoes   {
   
-  private List<EstgioCarto> estagiosCartoes = new ArrayList<EstgioCarto>();
+  private List<EstagioCartao> estagiosCartoes = new ArrayList<EstagioCartao>();
 
   
   /**
    * Lista de est\u00C3\u00A1gios cart\u00C3\u00B5es
    **/
-  public ListaDeEstgiosCartes estagiosCartoes(List<EstgioCarto> estagiosCartoes) {
+  public ListaEstagiosCartoes estagiosCartoes(List<EstagioCartao> estagiosCartoes) {
     this.estagiosCartoes = estagiosCartoes;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Lista de est\u00C3\u00A1gios cart\u00C3\u00B5es")
   @JsonProperty("estagiosCartoes")
-  public List<EstgioCarto> getEstagiosCartoes() {
+  public List<EstagioCartao> getEstagiosCartoes() {
     return estagiosCartoes;
   }
-  public void setEstagiosCartoes(List<EstgioCarto> estagiosCartoes) {
+  public void setEstagiosCartoes(List<EstagioCartao> estagiosCartoes) {
     this.estagiosCartoes = estagiosCartoes;
   }
 
@@ -50,8 +50,8 @@ public class ListaDeEstgiosCartes   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ListaDeEstgiosCartes listaDeEstgiosCartes = (ListaDeEstgiosCartes) o;
-    return Objects.equals(this.estagiosCartoes, listaDeEstgiosCartes.estagiosCartoes);
+    ListaEstagiosCartoes listaEstagiosCartoes = (ListaEstagiosCartoes) o;
+    return Objects.equals(this.estagiosCartoes, listaEstagiosCartoes.estagiosCartoes);
   }
 
   @Override
@@ -62,7 +62,7 @@ public class ListaDeEstgiosCartes   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ListaDeEstgiosCartes {\n");
+    sb.append("class ListaEstagiosCartoes {\n");
     
     sb.append("    estagiosCartoes: ").append(toIndentedString(estagiosCartoes)).append("\n");
     sb.append("}");

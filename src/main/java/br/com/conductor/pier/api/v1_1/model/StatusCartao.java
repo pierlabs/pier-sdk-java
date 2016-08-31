@@ -15,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 @ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o do recurso Status Cart\u00C3\u00A3o")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class StatusCarto   {
+public class StatusCartao   {
   
   private Integer flagAlteraStatus = null;
   private Integer flagCadastroNovaSenha = null;
@@ -36,7 +36,7 @@ public class StatusCarto   {
   /**
    * Quando ativa, indica que ao ser atribu\u00C3\u00ADdo um idStatusCartao com essa caracter\u00C3\u00ADstica, o cart\u00C3\u00A3o ter\u00C3\u00A1 o seu idStatusCartao alterado para o que fora escolhido. Caso contr\u00C3\u00A1rio, o idStatusCartao s\u00C3\u00B3 ser\u00C3\u00A1 alterado ap\u00C3\u00B3s o desbloqueio de um novo cart\u00C3\u00A3o do mesmo Portador e Conta.
    **/
-  public StatusCarto flagAlteraStatus(Integer flagAlteraStatus) {
+  public StatusCartao flagAlteraStatus(Integer flagAlteraStatus) {
     this.flagAlteraStatus = flagAlteraStatus;
     return this;
   }
@@ -54,7 +54,7 @@ public class StatusCarto   {
   /**
    * Quando ativa, indica que a senha cadastrada ser\u00C3\u00A1 exclu\u00C3\u00ADda no momento do Bloqueio do cart\u00C3\u00A3o com um idStatusCartao que possua essa caracter\u00C3\u00ADstica, sendo ent\u00C3\u00A3o necess\u00C3\u00A1rio o cadastro de uma nova senha.
    **/
-  public StatusCarto flagCadastroNovaSenha(Integer flagCadastroNovaSenha) {
+  public StatusCartao flagCadastroNovaSenha(Integer flagCadastroNovaSenha) {
     this.flagCadastroNovaSenha = flagCadastroNovaSenha;
     return this;
   }
@@ -72,7 +72,7 @@ public class StatusCarto   {
   /**
    * Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, e tal cart\u00C3\u00A3o seja de um titular (portador = 1), ter\u00C3\u00A3o a conta a qual o cart\u00C3\u00A3o pertence cancelada.
    **/
-  public StatusCarto flagCancelaConta(Integer flagCancelaConta) {
+  public StatusCartao flagCancelaConta(Integer flagCancelaConta) {
     this.flagCancelaConta = flagCancelaConta;
     return this;
   }
@@ -90,7 +90,7 @@ public class StatusCarto   {
   /**
    * Quando ativa, indica que o cart\u00C3\u00A3o ativo que o portador possuir na mesma conta do cart\u00C3\u00A3o a ser desbloqueado, e que o status dele possua essa caracter\u00C3\u00ADstica, dever\u00C3\u00A1 ser cancelado quando um novo cart\u00C3\u00A3o for desbloqueado.
    **/
-  public StatusCarto flagCancelaNoDesbloqueio(Integer flagCancelaNoDesbloqueio) {
+  public StatusCartao flagCancelaNoDesbloqueio(Integer flagCancelaNoDesbloqueio) {
     this.flagCancelaNoDesbloqueio = flagCancelaNoDesbloqueio;
     return this;
   }
@@ -108,7 +108,7 @@ public class StatusCarto   {
   /**
    * Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
    **/
-  public StatusCarto flagCobraTarifa(Integer flagCobraTarifa) {
+  public StatusCartao flagCobraTarifa(Integer flagCobraTarifa) {
     this.flagCobraTarifa = flagCobraTarifa;
     return this;
   }
@@ -126,7 +126,7 @@ public class StatusCarto   {
   /**
    * Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem receber transfer\u00C3\u00AAncias de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos oriundos de outros cart\u00C3\u00B5es.
    **/
-  public StatusCarto flagDestinoTransferencia(Integer flagDestinoTransferencia) {
+  public StatusCartao flagDestinoTransferencia(Integer flagDestinoTransferencia) {
     this.flagDestinoTransferencia = flagDestinoTransferencia;
     return this;
   }
@@ -144,7 +144,7 @@ public class StatusCarto   {
   /**
    * Quando ativa, indica que poder\u00C3\u00A1 ser criado um novo cart\u00C3\u00A3o provis\u00C3\u00B3rio para o portador.
    **/
-  public StatusCarto flagEmiteProvisorio(Integer flagEmiteProvisorio) {
+  public StatusCartao flagEmiteProvisorio(Integer flagEmiteProvisorio) {
     this.flagEmiteProvisorio = flagEmiteProvisorio;
     return this;
   }
@@ -162,7 +162,7 @@ public class StatusCarto   {
   /**
    * Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo dever\u00C3\u00A3o ter a respectiva informa\u00C3\u00A7\u00C3\u00A3o de mudan\u00C3\u00A7a de status inclu\u00C3\u00ADda no arquivo de exce\u00C3\u00A7\u00C3\u00A3o da Bandeira, a fim de manter atualizado o cadastro do cart\u00C3\u00A3o nela para nortear o que fazer com as transa\u00C3\u00A7\u00C3\u00B5es quando o autorizador estiver indispon\u00C3\u00ADvel.
    **/
-  public StatusCarto flagExcecaoBandeira(Integer flagExcecaoBandeira) {
+  public StatusCartao flagExcecaoBandeira(Integer flagExcecaoBandeira) {
     this.flagExcecaoBandeira = flagExcecaoBandeira;
     return this;
   }
@@ -180,7 +180,7 @@ public class StatusCarto   {
   /**
    * Quando ativa, indica que Cart\u00C3\u00B5es com este idStatusCartao podem realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9ditos/d\u00C3\u00A9bitos para outros cart\u00C3\u00B5es.
    **/
-  public StatusCarto flagOrigemTransferencia(Integer flagOrigemTransferencia) {
+  public StatusCartao flagOrigemTransferencia(Integer flagOrigemTransferencia) {
     this.flagOrigemTransferencia = flagOrigemTransferencia;
     return this;
   }
@@ -198,7 +198,7 @@ public class StatusCarto   {
   /**
    * Quando ativa, indica que cart\u00C3\u00B5es que tiverem este status atribu\u00C3\u00ADdo ter\u00C3\u00A3o um novo cart\u00C3\u00A3o gerado para o portador, para a mesma conta, automaticamente.
    **/
-  public StatusCarto flagReemiteCartao(Integer flagReemiteCartao) {
+  public StatusCartao flagReemiteCartao(Integer flagReemiteCartao) {
     this.flagReemiteCartao = flagReemiteCartao;
     return this;
   }
@@ -216,7 +216,7 @@ public class StatusCarto   {
   /**
    * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id) 
    **/
-  public StatusCarto id(Long id) {
+  public StatusCartao id(Long id) {
     this.id = id;
     return this;
   }
@@ -234,7 +234,7 @@ public class StatusCarto   {
   /**
    * Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica.
    **/
-  public StatusCarto idStatusDestinoConta(Long idStatusDestinoConta) {
+  public StatusCartao idStatusDestinoConta(Long idStatusDestinoConta) {
     this.idStatusDestinoConta = idStatusDestinoConta;
     return this;
   }
@@ -252,7 +252,7 @@ public class StatusCarto   {
   /**
    * Indica qual o idStatusCartao que que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.
    **/
-  public StatusCarto idStatusDestinoDesbloqueio(Long idStatusDestinoDesbloqueio) {
+  public StatusCartao idStatusDestinoDesbloqueio(Long idStatusDestinoDesbloqueio) {
     this.idStatusDestinoDesbloqueio = idStatusDestinoDesbloqueio;
     return this;
   }
@@ -270,7 +270,7 @@ public class StatusCarto   {
   /**
    * Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o.
    **/
-  public StatusCarto nome(String nome) {
+  public StatusCartao nome(String nome) {
     this.nome = nome;
     return this;
   }
@@ -294,21 +294,21 @@ public class StatusCarto   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    StatusCarto statusCarto = (StatusCarto) o;
-    return Objects.equals(this.flagAlteraStatus, statusCarto.flagAlteraStatus) &&
-        Objects.equals(this.flagCadastroNovaSenha, statusCarto.flagCadastroNovaSenha) &&
-        Objects.equals(this.flagCancelaConta, statusCarto.flagCancelaConta) &&
-        Objects.equals(this.flagCancelaNoDesbloqueio, statusCarto.flagCancelaNoDesbloqueio) &&
-        Objects.equals(this.flagCobraTarifa, statusCarto.flagCobraTarifa) &&
-        Objects.equals(this.flagDestinoTransferencia, statusCarto.flagDestinoTransferencia) &&
-        Objects.equals(this.flagEmiteProvisorio, statusCarto.flagEmiteProvisorio) &&
-        Objects.equals(this.flagExcecaoBandeira, statusCarto.flagExcecaoBandeira) &&
-        Objects.equals(this.flagOrigemTransferencia, statusCarto.flagOrigemTransferencia) &&
-        Objects.equals(this.flagReemiteCartao, statusCarto.flagReemiteCartao) &&
-        Objects.equals(this.id, statusCarto.id) &&
-        Objects.equals(this.idStatusDestinoConta, statusCarto.idStatusDestinoConta) &&
-        Objects.equals(this.idStatusDestinoDesbloqueio, statusCarto.idStatusDestinoDesbloqueio) &&
-        Objects.equals(this.nome, statusCarto.nome);
+    StatusCartao statusCartao = (StatusCartao) o;
+    return Objects.equals(this.flagAlteraStatus, statusCartao.flagAlteraStatus) &&
+        Objects.equals(this.flagCadastroNovaSenha, statusCartao.flagCadastroNovaSenha) &&
+        Objects.equals(this.flagCancelaConta, statusCartao.flagCancelaConta) &&
+        Objects.equals(this.flagCancelaNoDesbloqueio, statusCartao.flagCancelaNoDesbloqueio) &&
+        Objects.equals(this.flagCobraTarifa, statusCartao.flagCobraTarifa) &&
+        Objects.equals(this.flagDestinoTransferencia, statusCartao.flagDestinoTransferencia) &&
+        Objects.equals(this.flagEmiteProvisorio, statusCartao.flagEmiteProvisorio) &&
+        Objects.equals(this.flagExcecaoBandeira, statusCartao.flagExcecaoBandeira) &&
+        Objects.equals(this.flagOrigemTransferencia, statusCartao.flagOrigemTransferencia) &&
+        Objects.equals(this.flagReemiteCartao, statusCartao.flagReemiteCartao) &&
+        Objects.equals(this.id, statusCartao.id) &&
+        Objects.equals(this.idStatusDestinoConta, statusCartao.idStatusDestinoConta) &&
+        Objects.equals(this.idStatusDestinoDesbloqueio, statusCartao.idStatusDestinoDesbloqueio) &&
+        Objects.equals(this.nome, statusCartao.nome);
   }
 
   @Override
@@ -319,7 +319,7 @@ public class StatusCarto   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class StatusCarto {\n");
+    sb.append("class StatusCartao {\n");
     
     sb.append("    flagAlteraStatus: ").append(toIndentedString(flagAlteraStatus)).append("\n");
     sb.append("    flagCadastroNovaSenha: ").append(toIndentedString(flagCadastroNovaSenha)).append("\n");

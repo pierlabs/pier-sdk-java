@@ -7,8 +7,8 @@ import br.com.conductor.pier.api.v1_1.invoker.ApiClient;
 import br.com.conductor.pier.api.v1_1.invoker.Configuration;
 import br.com.conductor.pier.api.v1_1.invoker.Pair;
 
-import br.com.conductor.pier.api.v1_1.model.StatusCarto;
-import br.com.conductor.pier.api.v1_1.model.ListaDeStatusCartes;
+import br.com.conductor.pier.api.v1_1.model.StatusCartao;
+import br.com.conductor.pier.api.v1_1.model.ListaStatusCartoes;
 
 
 
@@ -44,9 +44,9 @@ public class StatusCartoApi {
    * Apresenta os dados de um determinado Status Cart\u00C3\u00A3o 
    * Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).  
    * @param idStatusCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
-   * @return StatusCarto
+   * @return StatusCartao
    */
-  public StatusCarto consultarStatusCartaoUsingGET(Long idStatusCartao) throws ApiException {
+  public StatusCartao consultarStatusCartaoUsingGET(Long idStatusCartao) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idStatusCartao' is set
@@ -82,7 +82,7 @@ public class StatusCartoApi {
     String[] authNames = new String[] {"client_id", "access_token" };
 
     
-    GenericType<StatusCarto> returnType = new GenericType<StatusCarto>() {};
+    GenericType<StatusCartao> returnType = new GenericType<StatusCartao>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -106,9 +106,9 @@ public class StatusCartoApi {
    * @param flagExcecaoBandeira Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo dever\u00C3\u00A3o ter a respectiva informa\u00C3\u00A7\u00C3\u00A3o de mudan\u00C3\u00A7a de status inclu\u00C3\u00ADda no arquivo de exce\u00C3\u00A7\u00C3\u00A3o da Bandeira, a fim de manter atualizado o cadastro do cart\u00C3\u00A3o nela para nortear o que fazer com as transa\u00C3\u00A7\u00C3\u00B5es quando o autorizador estiver indispon\u00C3\u00ADvel.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-   * @return ListaDeStatusCartes
+   * @return ListaStatusCartoes
    */
-  public ListaDeStatusCartes listarStatusCartoesUsingGET(Long id, String nome, Integer flagAlteraStatus, Integer flagCancelaNoDesbloqueio, Long idStatusDestinoDesbloqueio, Integer flagCancelaConta, Long idStatusDestinoConta, Integer flagCobraTarifa, Integer flagReemiteCartao, Integer flagEmiteProvisorio, Integer flagCadastroNovaSenha, Integer flagOrigemTransferencia, Integer flagDestinoTransferencia, Integer flagExcecaoBandeira, Integer page, Integer limit) throws ApiException {
+  public ListaStatusCartoes listarStatusCartoesUsingGET(Long id, String nome, Integer flagAlteraStatus, Integer flagCancelaNoDesbloqueio, Long idStatusDestinoDesbloqueio, Integer flagCancelaConta, Long idStatusDestinoConta, Integer flagCobraTarifa, Integer flagReemiteCartao, Integer flagEmiteProvisorio, Integer flagCadastroNovaSenha, Integer flagOrigemTransferencia, Integer flagDestinoTransferencia, Integer flagExcecaoBandeira, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -170,7 +170,7 @@ public class StatusCartoApi {
     String[] authNames = new String[] {"client_id", "access_token" };
 
     
-    GenericType<ListaDeStatusCartes> returnType = new GenericType<ListaDeStatusCartes>() {};
+    GenericType<ListaStatusCartoes> returnType = new GenericType<ListaStatusCartoes>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

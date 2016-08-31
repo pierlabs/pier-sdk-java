@@ -8,7 +8,7 @@ import br.com.conductor.pier.api.v1_1.invoker.Configuration;
 import br.com.conductor.pier.api.v1_1.invoker.Pair;
 
 import br.com.conductor.pier.api.v1_1.model.OrigemComercial;
-import br.com.conductor.pier.api.v1_1.model.ListaDeOrigensComerciais;
+import br.com.conductor.pier.api.v1_1.model.ListaOrigensComerciais;
 
 
 
@@ -95,9 +95,9 @@ public class OrigemComercialApi {
    * @param status Status da Origem Comercial
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-   * @return ListaDeOrigensComerciais
+   * @return ListaOrigensComerciais
    */
-  public ListaDeOrigensComerciais listarOrigensComerciaisUsingGET(Long idOrigemComercial, String nome, String status, Integer page, Integer limit) throws ApiException {
+  public ListaOrigensComerciais listarOrigensComerciaisUsingGET(Long idOrigemComercial, String nome, String status, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -137,7 +137,7 @@ public class OrigemComercialApi {
     String[] authNames = new String[] {"client_id", "access_token" };
 
     
-    GenericType<ListaDeOrigensComerciais> returnType = new GenericType<ListaDeOrigensComerciais>() {};
+    GenericType<ListaOrigensComerciais> returnType = new GenericType<ListaOrigensComerciais>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

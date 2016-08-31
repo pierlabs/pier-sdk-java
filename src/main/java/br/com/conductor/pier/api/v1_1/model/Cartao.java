@@ -16,7 +16,7 @@ import java.util.Date;
 
 @ApiModel(description = "Objeto Cart\u00C3\u00A3o")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class Carto   {
+public class Cartao   {
   
   private String arquivoImpressao = null;
   private String codigoDesbloqueio = null;
@@ -41,7 +41,7 @@ public class Carto   {
   /**
    * Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver.
    **/
-  public Carto arquivoImpressao(String arquivoImpressao) {
+  public Cartao arquivoImpressao(String arquivoImpressao) {
     this.arquivoImpressao = arquivoImpressao;
     return this;
   }
@@ -59,7 +59,7 @@ public class Carto   {
   /**
    * Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
    **/
-  public Carto codigoDesbloqueio(String codigoDesbloqueio) {
+  public Cartao codigoDesbloqueio(String codigoDesbloqueio) {
     this.codigoDesbloqueio = codigoDesbloqueio;
     return this;
   }
@@ -77,7 +77,7 @@ public class Carto   {
   /**
    * Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
    **/
-  public Carto dataEstagioCartao(Date dataEstagioCartao) {
+  public Cartao dataEstagioCartao(Date dataEstagioCartao) {
     this.dataEstagioCartao = dataEstagioCartao;
     return this;
   }
@@ -95,7 +95,7 @@ public class Carto   {
   /**
    * Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
    **/
-  public Carto dataGeracao(Date dataGeracao) {
+  public Cartao dataGeracao(Date dataGeracao) {
     this.dataGeracao = dataGeracao;
     return this;
   }
@@ -113,7 +113,7 @@ public class Carto   {
   /**
    * Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
    **/
-  public Carto dataImpressao(Date dataImpressao) {
+  public Cartao dataImpressao(Date dataImpressao) {
     this.dataImpressao = dataImpressao;
     return this;
   }
@@ -131,7 +131,7 @@ public class Carto   {
   /**
    * Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
    **/
-  public Carto dataStatusCartao(Date dataStatusCartao) {
+  public Cartao dataStatusCartao(Date dataStatusCartao) {
     this.dataStatusCartao = dataStatusCartao;
     return this;
   }
@@ -149,7 +149,7 @@ public class Carto   {
   /**
    * Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver.
    **/
-  public Carto dataValidade(Date dataValidade) {
+  public Cartao dataValidade(Date dataValidade) {
     this.dataValidade = dataValidade;
     return this;
   }
@@ -167,7 +167,7 @@ public class Carto   {
   /**
    * Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.
    **/
-  public Carto flagImpressaoOrigemComercial(Integer flagImpressaoOrigemComercial) {
+  public Cartao flagImpressaoOrigemComercial(Integer flagImpressaoOrigemComercial) {
     this.flagImpressaoOrigemComercial = flagImpressaoOrigemComercial;
     return this;
   }
@@ -185,7 +185,7 @@ public class Carto   {
   /**
    * Quando ativa, indica que o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio. Ou seja, \u00C3\u00A9 um cart\u00C3\u00A3o para uso tempor\u00C3\u00A1rio quando se deseja permitir que o cliente transacione sem que ele tenha recebido um cart\u00C3\u00A3o definitivo.
    **/
-  public Carto flagProvisorio(Integer flagProvisorio) {
+  public Cartao flagProvisorio(Integer flagProvisorio) {
     this.flagProvisorio = flagProvisorio;
     return this;
   }
@@ -203,7 +203,7 @@ public class Carto   {
   /**
    * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
    **/
-  public Carto id(Long id) {
+  public Cartao id(Long id) {
     this.id = id;
     return this;
   }
@@ -221,7 +221,7 @@ public class Carto   {
   /**
    * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id).
    **/
-  public Carto idConta(Long idConta) {
+  public Cartao idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
@@ -239,7 +239,7 @@ public class Carto   {
   /**
    * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
    **/
-  public Carto idEstagioCartao(Long idEstagioCartao) {
+  public Cartao idEstagioCartao(Long idEstagioCartao) {
     this.idEstagioCartao = idEstagioCartao;
     return this;
   }
@@ -257,7 +257,7 @@ public class Carto   {
   /**
    * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id)
    **/
-  public Carto idPessoa(Long idPessoa) {
+  public Cartao idPessoa(Long idPessoa) {
     this.idPessoa = idPessoa;
     return this;
   }
@@ -275,7 +275,7 @@ public class Carto   {
   /**
    * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
    **/
-  public Carto idProduto(Long idProduto) {
+  public Cartao idProduto(Long idProduto) {
     this.idProduto = idProduto;
     return this;
   }
@@ -293,7 +293,7 @@ public class Carto   {
   /**
    * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).
    **/
-  public Carto idStatusCartao(Long idStatusCartao) {
+  public Cartao idStatusCartao(Long idStatusCartao) {
     this.idStatusCartao = idStatusCartao;
     return this;
   }
@@ -311,7 +311,7 @@ public class Carto   {
   /**
    * Apresenta o nome impresso no cart\u00C3\u00A3o.
    **/
-  public Carto nomeImpresso(String nomeImpresso) {
+  public Cartao nomeImpresso(String nomeImpresso) {
     this.nomeImpresso = nomeImpresso;
     return this;
   }
@@ -329,7 +329,7 @@ public class Carto   {
   /**
    * Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.
    **/
-  public Carto numeroCartao(String numeroCartao) {
+  public Cartao numeroCartao(String numeroCartao) {
     this.numeroCartao = numeroCartao;
     return this;
   }
@@ -347,7 +347,7 @@ public class Carto   {
   /**
    * Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando \u00E2\u0080\u00981\u00E2\u0080\u0099, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.
    **/
-  public Carto portador(Integer portador) {
+  public Cartao portador(Integer portador) {
     this.portador = portador;
     return this;
   }
@@ -371,25 +371,25 @@ public class Carto   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Carto carto = (Carto) o;
-    return Objects.equals(this.arquivoImpressao, carto.arquivoImpressao) &&
-        Objects.equals(this.codigoDesbloqueio, carto.codigoDesbloqueio) &&
-        Objects.equals(this.dataEstagioCartao, carto.dataEstagioCartao) &&
-        Objects.equals(this.dataGeracao, carto.dataGeracao) &&
-        Objects.equals(this.dataImpressao, carto.dataImpressao) &&
-        Objects.equals(this.dataStatusCartao, carto.dataStatusCartao) &&
-        Objects.equals(this.dataValidade, carto.dataValidade) &&
-        Objects.equals(this.flagImpressaoOrigemComercial, carto.flagImpressaoOrigemComercial) &&
-        Objects.equals(this.flagProvisorio, carto.flagProvisorio) &&
-        Objects.equals(this.id, carto.id) &&
-        Objects.equals(this.idConta, carto.idConta) &&
-        Objects.equals(this.idEstagioCartao, carto.idEstagioCartao) &&
-        Objects.equals(this.idPessoa, carto.idPessoa) &&
-        Objects.equals(this.idProduto, carto.idProduto) &&
-        Objects.equals(this.idStatusCartao, carto.idStatusCartao) &&
-        Objects.equals(this.nomeImpresso, carto.nomeImpresso) &&
-        Objects.equals(this.numeroCartao, carto.numeroCartao) &&
-        Objects.equals(this.portador, carto.portador);
+    Cartao cartao = (Cartao) o;
+    return Objects.equals(this.arquivoImpressao, cartao.arquivoImpressao) &&
+        Objects.equals(this.codigoDesbloqueio, cartao.codigoDesbloqueio) &&
+        Objects.equals(this.dataEstagioCartao, cartao.dataEstagioCartao) &&
+        Objects.equals(this.dataGeracao, cartao.dataGeracao) &&
+        Objects.equals(this.dataImpressao, cartao.dataImpressao) &&
+        Objects.equals(this.dataStatusCartao, cartao.dataStatusCartao) &&
+        Objects.equals(this.dataValidade, cartao.dataValidade) &&
+        Objects.equals(this.flagImpressaoOrigemComercial, cartao.flagImpressaoOrigemComercial) &&
+        Objects.equals(this.flagProvisorio, cartao.flagProvisorio) &&
+        Objects.equals(this.id, cartao.id) &&
+        Objects.equals(this.idConta, cartao.idConta) &&
+        Objects.equals(this.idEstagioCartao, cartao.idEstagioCartao) &&
+        Objects.equals(this.idPessoa, cartao.idPessoa) &&
+        Objects.equals(this.idProduto, cartao.idProduto) &&
+        Objects.equals(this.idStatusCartao, cartao.idStatusCartao) &&
+        Objects.equals(this.nomeImpresso, cartao.nomeImpresso) &&
+        Objects.equals(this.numeroCartao, cartao.numeroCartao) &&
+        Objects.equals(this.portador, cartao.portador);
   }
 
   @Override
@@ -400,7 +400,7 @@ public class Carto   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Carto {\n");
+    sb.append("class Cartao {\n");
     
     sb.append("    arquivoImpressao: ").append(toIndentedString(arquivoImpressao)).append("\n");
     sb.append("    codigoDesbloqueio: ").append(toIndentedString(codigoDesbloqueio)).append("\n");
