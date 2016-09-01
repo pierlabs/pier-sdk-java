@@ -1,10 +1,12 @@
 package br.com.conductor.pier.api.v1_1.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v1_1.model.PageApiOfEstagioCartao;
+import br.com.conductor.pier.api.v1_1.model.EstagioCartao;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 
 
 
@@ -18,23 +20,257 @@ import io.swagger.annotations.ApiModelProperty;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageEstagiosCartoes   {
   
-  private PageApiOfEstagioCartao estagioCartoes = null;
+  private List<EstagioCartao> content = new ArrayList<EstagioCartao>();
+  private Boolean first = null;
+  private Boolean firstPage = null;
+  private Boolean hasContent = null;
+  private Boolean hasNextPage = null;
+  private Boolean hasPreviousPage = null;
+  private Boolean last = null;
+  private Integer nextPage = null;
+  private Integer number = null;
+  private Integer numberOfElements = null;
+  private Integer previousPage = null;
+  private Integer size = null;
+  private Long totalElements = null;
+  private Integer totalPages = null;
 
   
   /**
    **/
-  public PageEstagiosCartoes estagioCartoes(PageApiOfEstagioCartao estagioCartoes) {
-    this.estagioCartoes = estagioCartoes;
+  public PageEstagiosCartoes content(List<EstagioCartao> content) {
+    this.content = content;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("estagioCartoes")
-  public PageApiOfEstagioCartao getEstagioCartoes() {
-    return estagioCartoes;
+  @JsonProperty("content")
+  public List<EstagioCartao> getContent() {
+    return content;
   }
-  public void setEstagioCartoes(PageApiOfEstagioCartao estagioCartoes) {
-    this.estagioCartoes = estagioCartoes;
+  public void setContent(List<EstagioCartao> content) {
+    this.content = content;
+  }
+
+  
+  /**
+   **/
+  public PageEstagiosCartoes first(Boolean first) {
+    this.first = first;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("first")
+  public Boolean getFirst() {
+    return first;
+  }
+  public void setFirst(Boolean first) {
+    this.first = first;
+  }
+
+  
+  /**
+   **/
+  public PageEstagiosCartoes firstPage(Boolean firstPage) {
+    this.firstPage = firstPage;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("firstPage")
+  public Boolean getFirstPage() {
+    return firstPage;
+  }
+  public void setFirstPage(Boolean firstPage) {
+    this.firstPage = firstPage;
+  }
+
+  
+  /**
+   **/
+  public PageEstagiosCartoes hasContent(Boolean hasContent) {
+    this.hasContent = hasContent;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("hasContent")
+  public Boolean getHasContent() {
+    return hasContent;
+  }
+  public void setHasContent(Boolean hasContent) {
+    this.hasContent = hasContent;
+  }
+
+  
+  /**
+   **/
+  public PageEstagiosCartoes hasNextPage(Boolean hasNextPage) {
+    this.hasNextPage = hasNextPage;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("hasNextPage")
+  public Boolean getHasNextPage() {
+    return hasNextPage;
+  }
+  public void setHasNextPage(Boolean hasNextPage) {
+    this.hasNextPage = hasNextPage;
+  }
+
+  
+  /**
+   **/
+  public PageEstagiosCartoes hasPreviousPage(Boolean hasPreviousPage) {
+    this.hasPreviousPage = hasPreviousPage;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("hasPreviousPage")
+  public Boolean getHasPreviousPage() {
+    return hasPreviousPage;
+  }
+  public void setHasPreviousPage(Boolean hasPreviousPage) {
+    this.hasPreviousPage = hasPreviousPage;
+  }
+
+  
+  /**
+   **/
+  public PageEstagiosCartoes last(Boolean last) {
+    this.last = last;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("last")
+  public Boolean getLast() {
+    return last;
+  }
+  public void setLast(Boolean last) {
+    this.last = last;
+  }
+
+  
+  /**
+   **/
+  public PageEstagiosCartoes nextPage(Integer nextPage) {
+    this.nextPage = nextPage;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("nextPage")
+  public Integer getNextPage() {
+    return nextPage;
+  }
+  public void setNextPage(Integer nextPage) {
+    this.nextPage = nextPage;
+  }
+
+  
+  /**
+   **/
+  public PageEstagiosCartoes number(Integer number) {
+    this.number = number;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("number")
+  public Integer getNumber() {
+    return number;
+  }
+  public void setNumber(Integer number) {
+    this.number = number;
+  }
+
+  
+  /**
+   **/
+  public PageEstagiosCartoes numberOfElements(Integer numberOfElements) {
+    this.numberOfElements = numberOfElements;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("numberOfElements")
+  public Integer getNumberOfElements() {
+    return numberOfElements;
+  }
+  public void setNumberOfElements(Integer numberOfElements) {
+    this.numberOfElements = numberOfElements;
+  }
+
+  
+  /**
+   **/
+  public PageEstagiosCartoes previousPage(Integer previousPage) {
+    this.previousPage = previousPage;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("previousPage")
+  public Integer getPreviousPage() {
+    return previousPage;
+  }
+  public void setPreviousPage(Integer previousPage) {
+    this.previousPage = previousPage;
+  }
+
+  
+  /**
+   **/
+  public PageEstagiosCartoes size(Integer size) {
+    this.size = size;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("size")
+  public Integer getSize() {
+    return size;
+  }
+  public void setSize(Integer size) {
+    this.size = size;
+  }
+
+  
+  /**
+   **/
+  public PageEstagiosCartoes totalElements(Long totalElements) {
+    this.totalElements = totalElements;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("totalElements")
+  public Long getTotalElements() {
+    return totalElements;
+  }
+  public void setTotalElements(Long totalElements) {
+    this.totalElements = totalElements;
+  }
+
+  
+  /**
+   **/
+  public PageEstagiosCartoes totalPages(Integer totalPages) {
+    this.totalPages = totalPages;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("totalPages")
+  public Integer getTotalPages() {
+    return totalPages;
+  }
+  public void setTotalPages(Integer totalPages) {
+    this.totalPages = totalPages;
   }
 
   
@@ -48,12 +284,25 @@ public class PageEstagiosCartoes   {
       return false;
     }
     PageEstagiosCartoes pageEstagiosCartoes = (PageEstagiosCartoes) o;
-    return Objects.equals(this.estagioCartoes, pageEstagiosCartoes.estagioCartoes);
+    return Objects.equals(this.content, pageEstagiosCartoes.content) &&
+        Objects.equals(this.first, pageEstagiosCartoes.first) &&
+        Objects.equals(this.firstPage, pageEstagiosCartoes.firstPage) &&
+        Objects.equals(this.hasContent, pageEstagiosCartoes.hasContent) &&
+        Objects.equals(this.hasNextPage, pageEstagiosCartoes.hasNextPage) &&
+        Objects.equals(this.hasPreviousPage, pageEstagiosCartoes.hasPreviousPage) &&
+        Objects.equals(this.last, pageEstagiosCartoes.last) &&
+        Objects.equals(this.nextPage, pageEstagiosCartoes.nextPage) &&
+        Objects.equals(this.number, pageEstagiosCartoes.number) &&
+        Objects.equals(this.numberOfElements, pageEstagiosCartoes.numberOfElements) &&
+        Objects.equals(this.previousPage, pageEstagiosCartoes.previousPage) &&
+        Objects.equals(this.size, pageEstagiosCartoes.size) &&
+        Objects.equals(this.totalElements, pageEstagiosCartoes.totalElements) &&
+        Objects.equals(this.totalPages, pageEstagiosCartoes.totalPages);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(estagioCartoes);
+    return Objects.hash(content, first, firstPage, hasContent, hasNextPage, hasPreviousPage, last, nextPage, number, numberOfElements, previousPage, size, totalElements, totalPages);
   }
 
   @Override
@@ -61,7 +310,20 @@ public class PageEstagiosCartoes   {
     StringBuilder sb = new StringBuilder();
     sb.append("class PageEstagiosCartoes {\n");
     
-    sb.append("    estagioCartoes: ").append(toIndentedString(estagioCartoes)).append("\n");
+    sb.append("    content: ").append(toIndentedString(content)).append("\n");
+    sb.append("    first: ").append(toIndentedString(first)).append("\n");
+    sb.append("    firstPage: ").append(toIndentedString(firstPage)).append("\n");
+    sb.append("    hasContent: ").append(toIndentedString(hasContent)).append("\n");
+    sb.append("    hasNextPage: ").append(toIndentedString(hasNextPage)).append("\n");
+    sb.append("    hasPreviousPage: ").append(toIndentedString(hasPreviousPage)).append("\n");
+    sb.append("    last: ").append(toIndentedString(last)).append("\n");
+    sb.append("    nextPage: ").append(toIndentedString(nextPage)).append("\n");
+    sb.append("    number: ").append(toIndentedString(number)).append("\n");
+    sb.append("    numberOfElements: ").append(toIndentedString(numberOfElements)).append("\n");
+    sb.append("    previousPage: ").append(toIndentedString(previousPage)).append("\n");
+    sb.append("    size: ").append(toIndentedString(size)).append("\n");
+    sb.append("    totalElements: ").append(toIndentedString(totalElements)).append("\n");
+    sb.append("    totalPages: ").append(toIndentedString(totalPages)).append("\n");
     sb.append("}");
     return sb.toString();
   }
