@@ -7,8 +7,8 @@ import br.com.conductor.pier.api.v1_1.invoker.ApiClient;
 import br.com.conductor.pier.api.v1_1.invoker.Configuration;
 import br.com.conductor.pier.api.v1_1.invoker.Pair;
 
-import br.com.conductor.pier.api.v1_1.model.OrigemComercial;
-import br.com.conductor.pier.api.v1_1.model.ListaCartoes;
+import br.com.conductor.pier.api.v1_1.model.Cartao;
+import br.com.conductor.pier.api.v1_1.model.PageCartoes;
 import java.util.Date;
 
 
@@ -45,9 +45,9 @@ public class CartaoApi {
    * Apresenta os dados de um determinado Cart\u00C3\u00A3o
    * Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
    * @param idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-   * @return OrigemComercial
+   * @return Cartao
    */
-  public OrigemComercial consultarUsingGET(Long idCartao) throws ApiException {
+  public Cartao consultarUsingGET(Long idCartao) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idCartao' is set
@@ -83,7 +83,54 @@ public class CartaoApi {
     String[] authNames = new String[] {"client_id", "access_token" };
 
     
-    GenericType<OrigemComercial> returnType = new GenericType<OrigemComercial>() {};
+    GenericType<Cartao> returnType = new GenericType<Cartao>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
+   * Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+   * @param idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+   * @return Cartao
+   */
+  public Cartao debloquearUsingGET(Long idCartao) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'idCartao' is set
+     if (idCartao == null) {
+        throw new ApiException(400, "Missing the required parameter 'idCartao' when calling debloquearUsingGET");
+     }
+     
+    // create path and map variables
+    String path = "/api/cartoes/{id_cartao}/desbloqueio".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id_cartao" + "\\}", apiClient.escapeString(idCartao.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    String[] authNames = new String[] {"client_id", "access_token" };
+
+    
+    GenericType<Cartao> returnType = new GenericType<Cartao>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -111,9 +158,9 @@ public class CartaoApi {
    * @param codigoDesbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-   * @return ListaCartoes
+   * @return PageCartoes
    */
-  public ListaCartoes listarUsingGET(Long id, Long idStatusCartao, Long idEstagioCartao, Long idConta, Long idPessoa, Long idProduto, Integer portador, String numeroCartao, String nomeImpresso, Date dataGeracao, Date dataStatusCartao, Date dataEstagioCartao, String dataValidade, Date dataImpressao, String arquivoImpressao, Integer flagImpressaoOrigemComercial, Integer flagProvisorio, String codigoDesbloqueio, Integer page, Integer limit) throws ApiException {
+  public PageCartoes listarUsingGET(Long id, Long idStatusCartao, Long idEstagioCartao, Long idConta, Long idPessoa, Long idProduto, Integer portador, String numeroCartao, String nomeImpresso, Date dataGeracao, Date dataStatusCartao, Date dataEstagioCartao, String dataValidade, Date dataImpressao, String arquivoImpressao, Integer flagImpressaoOrigemComercial, Integer flagProvisorio, String codigoDesbloqueio, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -183,7 +230,7 @@ public class CartaoApi {
     String[] authNames = new String[] {"client_id", "access_token" };
 
     
-    GenericType<ListaCartoes> returnType = new GenericType<ListaCartoes>() {};
+    GenericType<PageCartoes> returnType = new GenericType<PageCartoes>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

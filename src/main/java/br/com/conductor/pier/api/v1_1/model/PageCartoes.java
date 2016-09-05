@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v1_1.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v1_1.model.Produto;
+import br.com.conductor.pier.api.v1_1.model.Cartao;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -13,14 +13,14 @@ import java.util.List;
 
 
 /**
- * Lista de Produtos
+ * Lista de Cart\u00C3\u00B5es
  **/
 
-@ApiModel(description = "Lista de Produtos")
+@ApiModel(description = "Lista de Cart\u00C3\u00B5es")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class ListaProdutos   {
+public class PageCartoes   {
   
-  private List<Produto> content = new ArrayList<Produto>();
+  private List<Cartao> content = new ArrayList<Cartao>();
   private Boolean first = null;
   private Boolean firstPage = null;
   private Boolean hasContent = null;
@@ -38,24 +38,24 @@ public class ListaProdutos   {
   
   /**
    **/
-  public ListaProdutos content(List<Produto> content) {
+  public PageCartoes content(List<Cartao> content) {
     this.content = content;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("content")
-  public List<Produto> getContent() {
+  public List<Cartao> getContent() {
     return content;
   }
-  public void setContent(List<Produto> content) {
+  public void setContent(List<Cartao> content) {
     this.content = content;
   }
 
   
   /**
    **/
-  public ListaProdutos first(Boolean first) {
+  public PageCartoes first(Boolean first) {
     this.first = first;
     return this;
   }
@@ -72,7 +72,7 @@ public class ListaProdutos   {
   
   /**
    **/
-  public ListaProdutos firstPage(Boolean firstPage) {
+  public PageCartoes firstPage(Boolean firstPage) {
     this.firstPage = firstPage;
     return this;
   }
@@ -89,7 +89,7 @@ public class ListaProdutos   {
   
   /**
    **/
-  public ListaProdutos hasContent(Boolean hasContent) {
+  public PageCartoes hasContent(Boolean hasContent) {
     this.hasContent = hasContent;
     return this;
   }
@@ -106,7 +106,7 @@ public class ListaProdutos   {
   
   /**
    **/
-  public ListaProdutos hasNextPage(Boolean hasNextPage) {
+  public PageCartoes hasNextPage(Boolean hasNextPage) {
     this.hasNextPage = hasNextPage;
     return this;
   }
@@ -123,7 +123,7 @@ public class ListaProdutos   {
   
   /**
    **/
-  public ListaProdutos hasPreviousPage(Boolean hasPreviousPage) {
+  public PageCartoes hasPreviousPage(Boolean hasPreviousPage) {
     this.hasPreviousPage = hasPreviousPage;
     return this;
   }
@@ -140,7 +140,7 @@ public class ListaProdutos   {
   
   /**
    **/
-  public ListaProdutos last(Boolean last) {
+  public PageCartoes last(Boolean last) {
     this.last = last;
     return this;
   }
@@ -157,7 +157,7 @@ public class ListaProdutos   {
   
   /**
    **/
-  public ListaProdutos nextPage(Integer nextPage) {
+  public PageCartoes nextPage(Integer nextPage) {
     this.nextPage = nextPage;
     return this;
   }
@@ -174,7 +174,7 @@ public class ListaProdutos   {
   
   /**
    **/
-  public ListaProdutos number(Integer number) {
+  public PageCartoes number(Integer number) {
     this.number = number;
     return this;
   }
@@ -191,7 +191,7 @@ public class ListaProdutos   {
   
   /**
    **/
-  public ListaProdutos numberOfElements(Integer numberOfElements) {
+  public PageCartoes numberOfElements(Integer numberOfElements) {
     this.numberOfElements = numberOfElements;
     return this;
   }
@@ -208,7 +208,7 @@ public class ListaProdutos   {
   
   /**
    **/
-  public ListaProdutos previousPage(Integer previousPage) {
+  public PageCartoes previousPage(Integer previousPage) {
     this.previousPage = previousPage;
     return this;
   }
@@ -225,7 +225,7 @@ public class ListaProdutos   {
   
   /**
    **/
-  public ListaProdutos size(Integer size) {
+  public PageCartoes size(Integer size) {
     this.size = size;
     return this;
   }
@@ -242,7 +242,7 @@ public class ListaProdutos   {
   
   /**
    **/
-  public ListaProdutos totalElements(Long totalElements) {
+  public PageCartoes totalElements(Long totalElements) {
     this.totalElements = totalElements;
     return this;
   }
@@ -259,7 +259,7 @@ public class ListaProdutos   {
   
   /**
    **/
-  public ListaProdutos totalPages(Integer totalPages) {
+  public PageCartoes totalPages(Integer totalPages) {
     this.totalPages = totalPages;
     return this;
   }
@@ -283,21 +283,21 @@ public class ListaProdutos   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ListaProdutos listaProdutos = (ListaProdutos) o;
-    return Objects.equals(this.content, listaProdutos.content) &&
-        Objects.equals(this.first, listaProdutos.first) &&
-        Objects.equals(this.firstPage, listaProdutos.firstPage) &&
-        Objects.equals(this.hasContent, listaProdutos.hasContent) &&
-        Objects.equals(this.hasNextPage, listaProdutos.hasNextPage) &&
-        Objects.equals(this.hasPreviousPage, listaProdutos.hasPreviousPage) &&
-        Objects.equals(this.last, listaProdutos.last) &&
-        Objects.equals(this.nextPage, listaProdutos.nextPage) &&
-        Objects.equals(this.number, listaProdutos.number) &&
-        Objects.equals(this.numberOfElements, listaProdutos.numberOfElements) &&
-        Objects.equals(this.previousPage, listaProdutos.previousPage) &&
-        Objects.equals(this.size, listaProdutos.size) &&
-        Objects.equals(this.totalElements, listaProdutos.totalElements) &&
-        Objects.equals(this.totalPages, listaProdutos.totalPages);
+    PageCartoes pageCartoes = (PageCartoes) o;
+    return Objects.equals(this.content, pageCartoes.content) &&
+        Objects.equals(this.first, pageCartoes.first) &&
+        Objects.equals(this.firstPage, pageCartoes.firstPage) &&
+        Objects.equals(this.hasContent, pageCartoes.hasContent) &&
+        Objects.equals(this.hasNextPage, pageCartoes.hasNextPage) &&
+        Objects.equals(this.hasPreviousPage, pageCartoes.hasPreviousPage) &&
+        Objects.equals(this.last, pageCartoes.last) &&
+        Objects.equals(this.nextPage, pageCartoes.nextPage) &&
+        Objects.equals(this.number, pageCartoes.number) &&
+        Objects.equals(this.numberOfElements, pageCartoes.numberOfElements) &&
+        Objects.equals(this.previousPage, pageCartoes.previousPage) &&
+        Objects.equals(this.size, pageCartoes.size) &&
+        Objects.equals(this.totalElements, pageCartoes.totalElements) &&
+        Objects.equals(this.totalPages, pageCartoes.totalPages);
   }
 
   @Override
@@ -308,7 +308,7 @@ public class ListaProdutos   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ListaProdutos {\n");
+    sb.append("class PageCartoes {\n");
     
     sb.append("    content: ").append(toIndentedString(content)).append("\n");
     sb.append("    first: ").append(toIndentedString(first)).append("\n");

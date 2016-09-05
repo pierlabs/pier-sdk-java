@@ -8,7 +8,7 @@ import br.com.conductor.pier.api.v1_1.invoker.Configuration;
 import br.com.conductor.pier.api.v1_1.invoker.Pair;
 
 import br.com.conductor.pier.api.v1_1.model.StatusCartao;
-import br.com.conductor.pier.api.v1_1.model.ListaStatusCartoes;
+import br.com.conductor.pier.api.v1_1.model.PageStatusCartoes;
 
 
 
@@ -106,9 +106,9 @@ public class StatusCartaoApi {
    * @param flagExcecaoBandeira Quando ativa, indica que os Cart\u00C3\u00B5es que tiverem este idStatusCartao atribu\u00C3\u00ADdo dever\u00C3\u00A3o ter a respectiva informa\u00C3\u00A7\u00C3\u00A3o de mudan\u00C3\u00A7a de status inclu\u00C3\u00ADda no arquivo de exce\u00C3\u00A7\u00C3\u00A3o da Bandeira, a fim de manter atualizado o cadastro do cart\u00C3\u00A3o nela para nortear o que fazer com as transa\u00C3\u00A7\u00C3\u00B5es quando o autorizador estiver indispon\u00C3\u00ADvel.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-   * @return ListaStatusCartoes
+   * @return PageStatusCartoes
    */
-  public ListaStatusCartoes listarStatusCartoesUsingGET(Long id, String nome, Integer flagAlteraStatus, Integer flagCancelaNoDesbloqueio, Long idStatusDestinoDesbloqueio, Integer flagCancelaConta, Long idStatusDestinoConta, Integer flagCobraTarifa, Integer flagReemiteCartao, Integer flagEmiteProvisorio, Integer flagCadastroNovaSenha, Integer flagOrigemTransferencia, Integer flagDestinoTransferencia, Integer flagExcecaoBandeira, Integer page, Integer limit) throws ApiException {
+  public PageStatusCartoes listarStatusCartoesUsingGET(Long id, String nome, Integer flagAlteraStatus, Integer flagCancelaNoDesbloqueio, Long idStatusDestinoDesbloqueio, Integer flagCancelaConta, Long idStatusDestinoConta, Integer flagCobraTarifa, Integer flagReemiteCartao, Integer flagEmiteProvisorio, Integer flagCadastroNovaSenha, Integer flagOrigemTransferencia, Integer flagDestinoTransferencia, Integer flagExcecaoBandeira, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -170,7 +170,7 @@ public class StatusCartaoApi {
     String[] authNames = new String[] {"client_id", "access_token" };
 
     
-    GenericType<ListaStatusCartoes> returnType = new GenericType<ListaStatusCartoes>() {};
+    GenericType<PageStatusCartoes> returnType = new GenericType<PageStatusCartoes>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
