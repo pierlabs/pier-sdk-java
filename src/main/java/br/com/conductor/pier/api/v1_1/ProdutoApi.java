@@ -90,14 +90,14 @@ public class ProdutoApi {
   /**
    * Lista os Produtos do Emissor
    * Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor. 
-   * @param idProduto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
-   * @param nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto
-   * @param status Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo).
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
+   * @param nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
+   * @param status Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo).
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @return ListaProdutos
    */
-  public ListaProdutos listarProdutosUsingGET(Long idProduto, String nome, String status, Integer page, Integer limit) throws ApiException {
+  public ListaProdutos listarProdutosUsingGET(Long id, String nome, String status, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -109,7 +109,7 @@ public class ProdutoApi {
     Map<String, Object> formParams = new HashMap<String, Object>();
 
     
-    queryParams.addAll(apiClient.parameterToPairs("", "id_produto", idProduto));
+    queryParams.addAll(apiClient.parameterToPairs("", "id", id));
     
     queryParams.addAll(apiClient.parameterToPairs("", "nome", nome));
     

@@ -7,6 +7,7 @@ import br.com.conductor.pier.api.v1_1.invoker.ApiClient;
 import br.com.conductor.pier.api.v1_1.invoker.Configuration;
 import br.com.conductor.pier.api.v1_1.invoker.Pair;
 
+import br.com.conductor.pier.api.v1_1.model.LimiteDisponibilidade;
 import br.com.conductor.pier.api.v1_1.model.Cartao;
 import br.com.conductor.pier.api.v1_1.model.PageCartoes;
 import java.util.Date;
@@ -40,6 +41,53 @@ public class CartaoApi {
     this.apiClient = apiClient;
   }
 
+  
+  /**
+   * Apresenta os limites do Portador do Cart\u00C3\u00A3o
+   * Este m\u00C3\u00A9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00C3\u00A3o, seja ele o titular da conta ou um adicional, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+   * @param idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+   * @return LimiteDisponibilidade
+   */
+  public LimiteDisponibilidade consultarLimiteUsingGET(Long idCartao) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'idCartao' is set
+     if (idCartao == null) {
+        throw new ApiException(400, "Missing the required parameter 'idCartao' when calling consultarLimiteUsingGET");
+     }
+     
+    // create path and map variables
+    String path = "/api/cartoes/{id_cartao}/limites".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id_cartao" + "\\}", apiClient.escapeString(idCartao.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    String[] authNames = new String[] {"client_id", "access_token" };
+
+    
+    GenericType<LimiteDisponibilidade> returnType = new GenericType<LimiteDisponibilidade>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
   
   /**
    * Apresenta os dados de um determinado Cart\u00C3\u00A3o
@@ -150,7 +198,7 @@ public class CartaoApi {
    * @param dataGeracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
    * @param dataStatusCartao Apresenta a data em que o idStatusCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
    * @param dataEstagioCartao Apresenta a data em que o idEstagioCartao atual do cart\u00C3\u00A3o fora aplicado, quando houver.
-   * @param dataValidade Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver.
+   * @param dataValidade Apresenta a data de validade do cart\u00C3\u00A3o em formato aaaa-MM, quando houver.
    * @param dataImpressao Apresenta a data em que o cart\u00C3\u00A3o fora impresso, caso impress\u00C3\u00A3o em loja, ou a data em que ele fora inclu\u00C3\u00ADdo no arquivo para impress\u00C3\u00A3o via gr\u00C3\u00A1fica.
    * @param arquivoImpressao Apresenta o nome do arquivo onde o cart\u00C3\u00A3o fora inclu\u00C3\u00ADdo para impress\u00C3\u00A3o por uma gr\u00C3\u00A1fica, quando houver.
    * @param flagImpressaoOrigemComercial Quando ativa, indica que o cart\u00C3\u00A3o fora impresso na Origem Comercial.
