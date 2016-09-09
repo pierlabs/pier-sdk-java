@@ -19,7 +19,7 @@ public class Produto   {
   
   private Long id = null;
   private String nome = null;
-  private String status = null;
+  private Integer status = null;
 
   
   /**
@@ -61,17 +61,17 @@ public class Produto   {
   /**
    * Representa o Status do Produto, onde: (\"0\": Inativo), (\"1\": Ativo).
    **/
-  public Produto status(String status) {
+  public Produto status(Integer status) {
     this.status = status;
     return this;
   }
   
   @ApiModelProperty(example = "null", required = true, value = "Representa o Status do Produto, onde: (\"0\": Inativo), (\"1\": Ativo).")
   @JsonProperty("status")
-  public String getStatus() {
+  public Integer getStatus() {
     return status;
   }
-  public void setStatus(String status) {
+  public void setStatus(Integer status) {
     this.status = status;
   }
 

@@ -10,12 +10,12 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * LimiteDisponibilidade
+ * Limites
  **/
 
-@ApiModel(description = "LimiteDisponibilidade")
+@ApiModel(description = "Limites")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class LimiteDisponibilidade   {
+public class Limites   {
   
   private Long id = null;
   private Double limiteCompra = null;
@@ -38,7 +38,7 @@ public class LimiteDisponibilidade   {
   /**
    * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Limite Disponibilidade (id).
    **/
-  public LimiteDisponibilidade id(Long id) {
+  public Limites id(Long id) {
     this.id = id;
     return this;
   }
@@ -55,7 +55,7 @@ public class LimiteDisponibilidade   {
   
   /**
    **/
-  public LimiteDisponibilidade limiteCompra(Double limiteCompra) {
+  public Limites limiteCompra(Double limiteCompra) {
     this.limiteCompra = limiteCompra;
     return this;
   }
@@ -72,7 +72,7 @@ public class LimiteDisponibilidade   {
   
   /**
    **/
-  public LimiteDisponibilidade limiteConsignado(Double limiteConsignado) {
+  public Limites limiteConsignado(Double limiteConsignado) {
     this.limiteConsignado = limiteConsignado;
     return this;
   }
@@ -89,7 +89,7 @@ public class LimiteDisponibilidade   {
   
   /**
    **/
-  public LimiteDisponibilidade limiteExterno(Double limiteExterno) {
+  public Limites limiteExterno(Double limiteExterno) {
     this.limiteExterno = limiteExterno;
     return this;
   }
@@ -106,7 +106,7 @@ public class LimiteDisponibilidade   {
   
   /**
    **/
-  public LimiteDisponibilidade limiteExtra(Double limiteExtra) {
+  public Limites limiteExtra(Double limiteExtra) {
     this.limiteExtra = limiteExtra;
     return this;
   }
@@ -122,14 +122,13 @@ public class LimiteDisponibilidade   {
 
   
   /**
-   * Campo que 
    **/
-  public LimiteDisponibilidade limiteGlobal(Double limiteGlobal) {
+  public Limites limiteGlobal(Double limiteGlobal) {
     this.limiteGlobal = limiteGlobal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Campo que ")
+  @ApiModelProperty(example = "null", required = true, value = "")
   @JsonProperty("limiteGlobal")
   public Double getLimiteGlobal() {
     return limiteGlobal;
@@ -141,7 +140,7 @@ public class LimiteDisponibilidade   {
   
   /**
    **/
-  public LimiteDisponibilidade limiteInternacionalCompra(Double limiteInternacionalCompra) {
+  public Limites limiteInternacionalCompra(Double limiteInternacionalCompra) {
     this.limiteInternacionalCompra = limiteInternacionalCompra;
     return this;
   }
@@ -158,7 +157,7 @@ public class LimiteDisponibilidade   {
   
   /**
    **/
-  public LimiteDisponibilidade limiteInternacionalParcelado(Double limiteInternacionalParcelado) {
+  public Limites limiteInternacionalParcelado(Double limiteInternacionalParcelado) {
     this.limiteInternacionalParcelado = limiteInternacionalParcelado;
     return this;
   }
@@ -175,7 +174,7 @@ public class LimiteDisponibilidade   {
   
   /**
    **/
-  public LimiteDisponibilidade limiteInternacionalParcelas(Double limiteInternacionalParcelas) {
+  public Limites limiteInternacionalParcelas(Double limiteInternacionalParcelas) {
     this.limiteInternacionalParcelas = limiteInternacionalParcelas;
     return this;
   }
@@ -192,7 +191,7 @@ public class LimiteDisponibilidade   {
   
   /**
    **/
-  public LimiteDisponibilidade limiteInternacionalSaqueGlobal(Double limiteInternacionalSaqueGlobal) {
+  public Limites limiteInternacionalSaqueGlobal(Double limiteInternacionalSaqueGlobal) {
     this.limiteInternacionalSaqueGlobal = limiteInternacionalSaqueGlobal;
     return this;
   }
@@ -209,7 +208,7 @@ public class LimiteDisponibilidade   {
   
   /**
    **/
-  public LimiteDisponibilidade limiteInternacionalSaquePeriodo(Double limiteInternacionalSaquePeriodo) {
+  public Limites limiteInternacionalSaquePeriodo(Double limiteInternacionalSaquePeriodo) {
     this.limiteInternacionalSaquePeriodo = limiteInternacionalSaquePeriodo;
     return this;
   }
@@ -226,7 +225,7 @@ public class LimiteDisponibilidade   {
   
   /**
    **/
-  public LimiteDisponibilidade limiteMensal(Double limiteMensal) {
+  public Limites limiteMensal(Double limiteMensal) {
     this.limiteMensal = limiteMensal;
     return this;
   }
@@ -243,7 +242,7 @@ public class LimiteDisponibilidade   {
   
   /**
    **/
-  public LimiteDisponibilidade limiteParcelado(Double limiteParcelado) {
+  public Limites limiteParcelado(Double limiteParcelado) {
     this.limiteParcelado = limiteParcelado;
     return this;
   }
@@ -260,7 +259,7 @@ public class LimiteDisponibilidade   {
   
   /**
    **/
-  public LimiteDisponibilidade limiteParcelas(Double limiteParcelas) {
+  public Limites limiteParcelas(Double limiteParcelas) {
     this.limiteParcelas = limiteParcelas;
     return this;
   }
@@ -277,7 +276,7 @@ public class LimiteDisponibilidade   {
   
   /**
    **/
-  public LimiteDisponibilidade limiteSaqueGlobal(Double limiteSaqueGlobal) {
+  public Limites limiteSaqueGlobal(Double limiteSaqueGlobal) {
     this.limiteSaqueGlobal = limiteSaqueGlobal;
     return this;
   }
@@ -294,7 +293,7 @@ public class LimiteDisponibilidade   {
   
   /**
    **/
-  public LimiteDisponibilidade limiteSaquePeriodo(Double limiteSaquePeriodo) {
+  public Limites limiteSaquePeriodo(Double limiteSaquePeriodo) {
     this.limiteSaquePeriodo = limiteSaquePeriodo;
     return this;
   }
@@ -318,23 +317,23 @@ public class LimiteDisponibilidade   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    LimiteDisponibilidade limiteDisponibilidade = (LimiteDisponibilidade) o;
-    return Objects.equals(this.id, limiteDisponibilidade.id) &&
-        Objects.equals(this.limiteCompra, limiteDisponibilidade.limiteCompra) &&
-        Objects.equals(this.limiteConsignado, limiteDisponibilidade.limiteConsignado) &&
-        Objects.equals(this.limiteExterno, limiteDisponibilidade.limiteExterno) &&
-        Objects.equals(this.limiteExtra, limiteDisponibilidade.limiteExtra) &&
-        Objects.equals(this.limiteGlobal, limiteDisponibilidade.limiteGlobal) &&
-        Objects.equals(this.limiteInternacionalCompra, limiteDisponibilidade.limiteInternacionalCompra) &&
-        Objects.equals(this.limiteInternacionalParcelado, limiteDisponibilidade.limiteInternacionalParcelado) &&
-        Objects.equals(this.limiteInternacionalParcelas, limiteDisponibilidade.limiteInternacionalParcelas) &&
-        Objects.equals(this.limiteInternacionalSaqueGlobal, limiteDisponibilidade.limiteInternacionalSaqueGlobal) &&
-        Objects.equals(this.limiteInternacionalSaquePeriodo, limiteDisponibilidade.limiteInternacionalSaquePeriodo) &&
-        Objects.equals(this.limiteMensal, limiteDisponibilidade.limiteMensal) &&
-        Objects.equals(this.limiteParcelado, limiteDisponibilidade.limiteParcelado) &&
-        Objects.equals(this.limiteParcelas, limiteDisponibilidade.limiteParcelas) &&
-        Objects.equals(this.limiteSaqueGlobal, limiteDisponibilidade.limiteSaqueGlobal) &&
-        Objects.equals(this.limiteSaquePeriodo, limiteDisponibilidade.limiteSaquePeriodo);
+    Limites limites = (Limites) o;
+    return Objects.equals(this.id, limites.id) &&
+        Objects.equals(this.limiteCompra, limites.limiteCompra) &&
+        Objects.equals(this.limiteConsignado, limites.limiteConsignado) &&
+        Objects.equals(this.limiteExterno, limites.limiteExterno) &&
+        Objects.equals(this.limiteExtra, limites.limiteExtra) &&
+        Objects.equals(this.limiteGlobal, limites.limiteGlobal) &&
+        Objects.equals(this.limiteInternacionalCompra, limites.limiteInternacionalCompra) &&
+        Objects.equals(this.limiteInternacionalParcelado, limites.limiteInternacionalParcelado) &&
+        Objects.equals(this.limiteInternacionalParcelas, limites.limiteInternacionalParcelas) &&
+        Objects.equals(this.limiteInternacionalSaqueGlobal, limites.limiteInternacionalSaqueGlobal) &&
+        Objects.equals(this.limiteInternacionalSaquePeriodo, limites.limiteInternacionalSaquePeriodo) &&
+        Objects.equals(this.limiteMensal, limites.limiteMensal) &&
+        Objects.equals(this.limiteParcelado, limites.limiteParcelado) &&
+        Objects.equals(this.limiteParcelas, limites.limiteParcelas) &&
+        Objects.equals(this.limiteSaqueGlobal, limites.limiteSaqueGlobal) &&
+        Objects.equals(this.limiteSaquePeriodo, limites.limiteSaquePeriodo);
   }
 
   @Override
@@ -345,7 +344,7 @@ public class LimiteDisponibilidade   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class LimiteDisponibilidade {\n");
+    sb.append("class Limites {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    limiteCompra: ").append(toIndentedString(limiteCompra)).append("\n");

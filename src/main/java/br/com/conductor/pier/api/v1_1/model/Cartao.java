@@ -35,7 +35,7 @@ public class Cartao   {
   private Long idStatusCartao = null;
   private String nomeImpresso = null;
   private String numeroCartao = null;
-  private Integer portador = null;
+  private String tipoPortador = null;
 
   
   /**
@@ -347,18 +347,18 @@ public class Cartao   {
   /**
    * Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando \u00E2\u0080\u00981\u00E2\u0080\u0099, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.
    **/
-  public Cartao portador(Integer portador) {
-    this.portador = portador;
+  public Cartao tipoPortador(String tipoPortador) {
+    this.tipoPortador = tipoPortador;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando \u00E2\u0080\u00981\u00E2\u0080\u0099, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.")
-  @JsonProperty("portador")
-  public Integer getPortador() {
-    return portador;
+  @JsonProperty("tipoPortador")
+  public String getTipoPortador() {
+    return tipoPortador;
   }
-  public void setPortador(Integer portador) {
-    this.portador = portador;
+  public void setTipoPortador(String tipoPortador) {
+    this.tipoPortador = tipoPortador;
   }
 
   
@@ -389,12 +389,12 @@ public class Cartao   {
         Objects.equals(this.idStatusCartao, cartao.idStatusCartao) &&
         Objects.equals(this.nomeImpresso, cartao.nomeImpresso) &&
         Objects.equals(this.numeroCartao, cartao.numeroCartao) &&
-        Objects.equals(this.portador, cartao.portador);
+        Objects.equals(this.tipoPortador, cartao.tipoPortador);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(arquivoImpressao, codigoDesbloqueio, dataEstagioCartao, dataGeracao, dataImpressao, dataStatusCartao, dataValidade, flagImpressaoOrigemComercial, flagProvisorio, id, idConta, idEstagioCartao, idPessoa, idProduto, idStatusCartao, nomeImpresso, numeroCartao, portador);
+    return Objects.hash(arquivoImpressao, codigoDesbloqueio, dataEstagioCartao, dataGeracao, dataImpressao, dataStatusCartao, dataValidade, flagImpressaoOrigemComercial, flagProvisorio, id, idConta, idEstagioCartao, idPessoa, idProduto, idStatusCartao, nomeImpresso, numeroCartao, tipoPortador);
   }
 
   @Override
@@ -419,7 +419,7 @@ public class Cartao   {
     sb.append("    idStatusCartao: ").append(toIndentedString(idStatusCartao)).append("\n");
     sb.append("    nomeImpresso: ").append(toIndentedString(nomeImpresso)).append("\n");
     sb.append("    numeroCartao: ").append(toIndentedString(numeroCartao)).append("\n");
-    sb.append("    portador: ").append(toIndentedString(portador)).append("\n");
+    sb.append("    tipoPortador: ").append(toIndentedString(tipoPortador)).append("\n");
     sb.append("}");
     return sb.toString();
   }
