@@ -19,7 +19,7 @@ public class OrigemComercial   {
   
   private Long id = null;
   private String nome = null;
-  private String status = null;
+  private Integer status = null;
 
   
   /**
@@ -61,17 +61,17 @@ public class OrigemComercial   {
   /**
    * Status da origem comercial
    **/
-  public OrigemComercial status(String status) {
+  public OrigemComercial status(Integer status) {
     this.status = status;
     return this;
   }
   
   @ApiModelProperty(example = "null", required = true, value = "Status da origem comercial")
   @JsonProperty("status")
-  public String getStatus() {
+  public Integer getStatus() {
     return status;
   }
-  public void setStatus(String status) {
+  public void setStatus(Integer status) {
     this.status = status;
   }
 

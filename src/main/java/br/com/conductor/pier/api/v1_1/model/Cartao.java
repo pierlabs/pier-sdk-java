@@ -147,14 +147,14 @@ public class Cartao   {
 
   
   /**
-   * Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver.
+   * Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver.
    **/
   public Cartao dataValidade(Date dataValidade) {
     this.dataValidade = dataValidade;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Apresenta a data de validade do cart\u00C3\u00A3o em formato MMAAAA, quando houver.")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Apresenta a data de validade do cart\u00C3\u00A3o em formato yyyy-MM, quando houver.")
   @JsonProperty("dataValidade")
   public Date getDataValidade() {
     return dataValidade;
