@@ -174,13 +174,14 @@ public class Portador   {
 
   
   /**
+   * Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).
    **/
   public Portador tipoPortador(String tipoPortador) {
     this.tipoPortador = tipoPortador;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(example = "null", value = "Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: ('T': Titular, 'A': Adicional).")
   @JsonProperty("tipoPortador")
   public String getTipoPortador() {
     return tipoPortador;

@@ -7,9 +7,8 @@ import br.com.conductor.pier.api.v1_1.invoker.ApiClient;
 import br.com.conductor.pier.api.v1_1.invoker.Configuration;
 import br.com.conductor.pier.api.v1_1.invoker.Pair;
 
-import br.com.conductor.pier.api.v1_1.model.Limites;
+import br.com.conductor.pier.api.v1_1.model.LimiteDisponibilidade;
 import br.com.conductor.pier.api.v1_1.model.Portador;
-import br.com.conductor.pier.api.v1_1.model.Saldos;
 import br.com.conductor.pier.api.v1_1.model.Cartao;
 import br.com.conductor.pier.api.v1_1.model.PageCartoes;
 import java.util.Date;
@@ -48,18 +47,18 @@ public class CartaoApi {
    * Apresenta os limites do Portador do Cart\u00C3\u00A3o
    * Este m\u00C3\u00A9todo permite consultar os Limites configurados para o Portador de um determinado Cart\u00C3\u00A3o, seja ele o titular da conta ou um adicional, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
    * @param idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-   * @return Limites
+   * @return LimiteDisponibilidade
    */
-  public Limites consultarLimiteUsingGET(Long idCartao) throws ApiException {
+  public LimiteDisponibilidade consultarLimiteDisponibilidadeUsingGET(Long idCartao) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idCartao' is set
      if (idCartao == null) {
-        throw new ApiException(400, "Missing the required parameter 'idCartao' when calling consultarLimiteUsingGET");
+        throw new ApiException(400, "Missing the required parameter 'idCartao' when calling consultarLimiteDisponibilidadeUsingGET");
      }
      
     // create path and map variables
-    String path = "/api/cartoes/{id_cartao}/limites".replaceAll("\\{format\\}","json")
+    String path = "/api/cartoes/{id_cartao}/limites-disponibilidades".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "id_cartao" + "\\}", apiClient.escapeString(idCartao.toString()));
 
     // query params
@@ -86,7 +85,7 @@ public class CartaoApi {
     String[] authNames = new String[] {"client_id", "access_token" };
 
     
-    GenericType<Limites> returnType = new GenericType<Limites>() {};
+    GenericType<LimiteDisponibilidade> returnType = new GenericType<LimiteDisponibilidade>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -134,53 +133,6 @@ public class CartaoApi {
 
     
     GenericType<Portador> returnType = new GenericType<Portador>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
-   * Apresenta os saldos dispon\u00C3\u00ADveis para o Portador do Cart\u00C3\u00A3o
-   * Este m\u00C3\u00A9todo permite consultar os saldos dispon\u00C3\u00ADveis para uso pelo Portador de um determinado Cart\u00C3\u00A3o, seja ele o titular da conta ou um adicional, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-   * @param idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-   * @return Saldos
-   */
-  public Saldos consultarSaldoUsingGET(Long idCartao) throws ApiException {
-    Object postBody = null;
-    
-     // verify the required parameter 'idCartao' is set
-     if (idCartao == null) {
-        throw new ApiException(400, "Missing the required parameter 'idCartao' when calling consultarSaldoUsingGET");
-     }
-     
-    // create path and map variables
-    String path = "/api/cartoes/{id_cartao}/saldos-disponiveis".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id_cartao" + "\\}", apiClient.escapeString(idCartao.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {"client_id", "access_token" };
-
-    
-    GenericType<Saldos> returnType = new GenericType<Saldos>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -288,7 +240,7 @@ public class CartaoApi {
    * @param idConta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id).
    * @param idPessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o cart\u00C3\u00A3o pertence (id)
    * @param idProduto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
-   * @param tipoPortador Indica qual \u00C3\u00A9 a rela\u00C3\u00A7\u00C3\u00A3o do portador do cart\u00C3\u00A3o com a conta. Quando &#39;1&#39;, corresponde ao seu titular. Quando diferente disso, corresponde a um cart\u00C3\u00A3o adicional.
+   * @param tipoPortador Apresenta o tipo do Portador do cart\u00C3\u00A3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional).
    * @param numeroCartao Apresenta o n\u00C3\u00BAmero do cart\u00C3\u00A3o.
    * @param nomeImpresso Apresenta o nome impresso no cart\u00C3\u00A3o.
    * @param dataGeracao Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
