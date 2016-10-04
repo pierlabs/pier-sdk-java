@@ -7,6 +7,7 @@ import br.com.conductor.pier.api.v1_1.invoker.ApiClient;
 import br.com.conductor.pier.api.v1_1.invoker.Configuration;
 import br.com.conductor.pier.api.v1_1.invoker.Pair;
 
+import br.com.conductor.pier.api.v1_1.model.HistoricoImpressaoCartao;
 import br.com.conductor.pier.api.v1_1.model.LimiteDisponibilidade;
 import br.com.conductor.pier.api.v1_1.model.Portador;
 import br.com.conductor.pier.api.v1_1.model.Cartao;
@@ -42,6 +43,60 @@ public class CartaoApi {
     this.apiClient = apiClient;
   }
 
+  
+  /**
+   * Realiza a altera\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o.
+   * 
+   * @param idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+   * @param idStatusImpressao Id .
+   * @return HistoricoImpressaoCartao
+   */
+  public HistoricoImpressaoCartao alterarStatusImpressaoUsingPUT(Long idCartao, Long idStatusImpressao) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'idCartao' is set
+     if (idCartao == null) {
+        throw new ApiException(400, "Missing the required parameter 'idCartao' when calling alterarStatusImpressaoUsingPUT");
+     }
+     
+     // verify the required parameter 'idStatusImpressao' is set
+     if (idStatusImpressao == null) {
+        throw new ApiException(400, "Missing the required parameter 'idStatusImpressao' when calling alterarStatusImpressaoUsingPUT");
+     }
+     
+    // create path and map variables
+    String path = "/api/cartoes/{id_cartao}/impressao/{id_status_impressao} ".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id_cartao" + "\\}", apiClient.escapeString(idCartao.toString()))
+      .replaceAll("\\{" + "id_status_impressao" + "\\}", apiClient.escapeString(idStatusImpressao.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    String[] authNames = new String[] {"client_id", "access_token" };
+
+    
+    GenericType<HistoricoImpressaoCartao> returnType = new GenericType<HistoricoImpressaoCartao>() {};
+    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
   
   /**
    * Apresenta os limites do Portador do Cart\u00C3\u00A3o
