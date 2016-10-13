@@ -88,7 +88,7 @@ public class StatusContaApi {
   }
   
   /**
-   * Lista os Status Contas cadastrados para o Emissor 
+   * Lista os Status Contas cadastrados para o Emissor
    * Este m\u00C3\u00A9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor.
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
    * @param nome Nome atribu\u00C3\u00ADdo ao Status da Conta.

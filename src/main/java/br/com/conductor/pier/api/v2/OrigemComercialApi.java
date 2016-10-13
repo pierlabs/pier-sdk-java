@@ -41,8 +41,8 @@ public class OrigemComercialApi {
 
   
   /**
-   * Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial 
-   * Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). 
+   * Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial
+   * Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
    * @param idOrigemComercial ID da Origem Comercial
    * @return OrigemComercial
    */
@@ -88,7 +88,7 @@ public class OrigemComercialApi {
   }
   
   /**
-   * Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais 
+   * Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais
    * Este m\u00C3\u00A9todo permite que sejam listadas as Origens Comerciais existentes na base do emissor.
    * @param id Id da origem comercial
    * @param nome Nome da origem comercial

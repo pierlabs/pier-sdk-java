@@ -42,7 +42,7 @@ public class PessoaApi {
 
   
   /**
-   * Apresenta os dados de uma determinada Pessoa.
+   * Apresenta os dados de uma determinada Pessoa
    * Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
    * @param idPessoa ID da Origem Comercial
    * @return Pessoa
