@@ -96,7 +96,7 @@ public class StatusImpressaoApi {
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @return PageStatusImpressao
    */
-  public PageStatusImpressao listarUsingGET3(Long id, String nome, Integer page, Integer limit) throws ApiException {
+  public PageStatusImpressao listarUsingGET4(Long id, String nome, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

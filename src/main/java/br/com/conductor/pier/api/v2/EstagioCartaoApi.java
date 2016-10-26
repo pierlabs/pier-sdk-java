@@ -46,12 +46,12 @@ public class EstagioCartaoApi {
    * @param idEstagioCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
    * @return EstagioCartao
    */
-  public EstagioCartao consultarEstagioCartaoUsingGET(Long idEstagioCartao) throws ApiException {
+  public EstagioCartao consultarEstagioCartaoUsingGET1(Long idEstagioCartao) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idEstagioCartao' is set
      if (idEstagioCartao == null) {
-        throw new ApiException(400, "Missing the required parameter 'idEstagioCartao' when calling consultarEstagioCartaoUsingGET");
+        throw new ApiException(400, "Missing the required parameter 'idEstagioCartao' when calling consultarEstagioCartaoUsingGET1");
      }
      
     // create path and map variables

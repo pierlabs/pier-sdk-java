@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v2.model.StatusImpressao;
+import br.com.conductor.pier.api.v2.model.Endereco;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -13,14 +13,14 @@ import java.util.List;
 
 
 /**
- * Lista de Status Impress\u00C3\u00A3o
+ * Lista de Endere\u00C3\u00A7os
  **/
 
-@ApiModel(description = "Lista de Status Impress\u00C3\u00A3o")
+@ApiModel(description = "Lista de Endere\u00C3\u00A7os")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class PageStatusImpressao   {
+public class PageEnderecos   {
   
-  private List<StatusImpressao> content = new ArrayList<StatusImpressao>();
+  private List<Endereco> content = new ArrayList<Endereco>();
   private Boolean first = null;
   private Boolean firstPage = null;
   private Boolean hasContent = null;
@@ -38,24 +38,24 @@ public class PageStatusImpressao   {
   
   /**
    **/
-  public PageStatusImpressao content(List<StatusImpressao> content) {
+  public PageEnderecos content(List<Endereco> content) {
     this.content = content;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("content")
-  public List<StatusImpressao> getContent() {
+  public List<Endereco> getContent() {
     return content;
   }
-  public void setContent(List<StatusImpressao> content) {
+  public void setContent(List<Endereco> content) {
     this.content = content;
   }
 
   
   /**
    **/
-  public PageStatusImpressao first(Boolean first) {
+  public PageEnderecos first(Boolean first) {
     this.first = first;
     return this;
   }
@@ -72,7 +72,7 @@ public class PageStatusImpressao   {
   
   /**
    **/
-  public PageStatusImpressao firstPage(Boolean firstPage) {
+  public PageEnderecos firstPage(Boolean firstPage) {
     this.firstPage = firstPage;
     return this;
   }
@@ -89,7 +89,7 @@ public class PageStatusImpressao   {
   
   /**
    **/
-  public PageStatusImpressao hasContent(Boolean hasContent) {
+  public PageEnderecos hasContent(Boolean hasContent) {
     this.hasContent = hasContent;
     return this;
   }
@@ -106,7 +106,7 @@ public class PageStatusImpressao   {
   
   /**
    **/
-  public PageStatusImpressao hasNextPage(Boolean hasNextPage) {
+  public PageEnderecos hasNextPage(Boolean hasNextPage) {
     this.hasNextPage = hasNextPage;
     return this;
   }
@@ -123,7 +123,7 @@ public class PageStatusImpressao   {
   
   /**
    **/
-  public PageStatusImpressao hasPreviousPage(Boolean hasPreviousPage) {
+  public PageEnderecos hasPreviousPage(Boolean hasPreviousPage) {
     this.hasPreviousPage = hasPreviousPage;
     return this;
   }
@@ -140,7 +140,7 @@ public class PageStatusImpressao   {
   
   /**
    **/
-  public PageStatusImpressao last(Boolean last) {
+  public PageEnderecos last(Boolean last) {
     this.last = last;
     return this;
   }
@@ -157,7 +157,7 @@ public class PageStatusImpressao   {
   
   /**
    **/
-  public PageStatusImpressao nextPage(Integer nextPage) {
+  public PageEnderecos nextPage(Integer nextPage) {
     this.nextPage = nextPage;
     return this;
   }
@@ -174,7 +174,7 @@ public class PageStatusImpressao   {
   
   /**
    **/
-  public PageStatusImpressao number(Integer number) {
+  public PageEnderecos number(Integer number) {
     this.number = number;
     return this;
   }
@@ -191,7 +191,7 @@ public class PageStatusImpressao   {
   
   /**
    **/
-  public PageStatusImpressao numberOfElements(Integer numberOfElements) {
+  public PageEnderecos numberOfElements(Integer numberOfElements) {
     this.numberOfElements = numberOfElements;
     return this;
   }
@@ -208,7 +208,7 @@ public class PageStatusImpressao   {
   
   /**
    **/
-  public PageStatusImpressao previousPage(Integer previousPage) {
+  public PageEnderecos previousPage(Integer previousPage) {
     this.previousPage = previousPage;
     return this;
   }
@@ -225,7 +225,7 @@ public class PageStatusImpressao   {
   
   /**
    **/
-  public PageStatusImpressao size(Integer size) {
+  public PageEnderecos size(Integer size) {
     this.size = size;
     return this;
   }
@@ -242,7 +242,7 @@ public class PageStatusImpressao   {
   
   /**
    **/
-  public PageStatusImpressao totalElements(Long totalElements) {
+  public PageEnderecos totalElements(Long totalElements) {
     this.totalElements = totalElements;
     return this;
   }
@@ -259,7 +259,7 @@ public class PageStatusImpressao   {
   
   /**
    **/
-  public PageStatusImpressao totalPages(Integer totalPages) {
+  public PageEnderecos totalPages(Integer totalPages) {
     this.totalPages = totalPages;
     return this;
   }
@@ -283,21 +283,21 @@ public class PageStatusImpressao   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    PageStatusImpressao pageStatusImpressao = (PageStatusImpressao) o;
-    return Objects.equals(this.content, pageStatusImpressao.content) &&
-        Objects.equals(this.first, pageStatusImpressao.first) &&
-        Objects.equals(this.firstPage, pageStatusImpressao.firstPage) &&
-        Objects.equals(this.hasContent, pageStatusImpressao.hasContent) &&
-        Objects.equals(this.hasNextPage, pageStatusImpressao.hasNextPage) &&
-        Objects.equals(this.hasPreviousPage, pageStatusImpressao.hasPreviousPage) &&
-        Objects.equals(this.last, pageStatusImpressao.last) &&
-        Objects.equals(this.nextPage, pageStatusImpressao.nextPage) &&
-        Objects.equals(this.number, pageStatusImpressao.number) &&
-        Objects.equals(this.numberOfElements, pageStatusImpressao.numberOfElements) &&
-        Objects.equals(this.previousPage, pageStatusImpressao.previousPage) &&
-        Objects.equals(this.size, pageStatusImpressao.size) &&
-        Objects.equals(this.totalElements, pageStatusImpressao.totalElements) &&
-        Objects.equals(this.totalPages, pageStatusImpressao.totalPages);
+    PageEnderecos pageEnderecos = (PageEnderecos) o;
+    return Objects.equals(this.content, pageEnderecos.content) &&
+        Objects.equals(this.first, pageEnderecos.first) &&
+        Objects.equals(this.firstPage, pageEnderecos.firstPage) &&
+        Objects.equals(this.hasContent, pageEnderecos.hasContent) &&
+        Objects.equals(this.hasNextPage, pageEnderecos.hasNextPage) &&
+        Objects.equals(this.hasPreviousPage, pageEnderecos.hasPreviousPage) &&
+        Objects.equals(this.last, pageEnderecos.last) &&
+        Objects.equals(this.nextPage, pageEnderecos.nextPage) &&
+        Objects.equals(this.number, pageEnderecos.number) &&
+        Objects.equals(this.numberOfElements, pageEnderecos.numberOfElements) &&
+        Objects.equals(this.previousPage, pageEnderecos.previousPage) &&
+        Objects.equals(this.size, pageEnderecos.size) &&
+        Objects.equals(this.totalElements, pageEnderecos.totalElements) &&
+        Objects.equals(this.totalPages, pageEnderecos.totalPages);
   }
 
   @Override
@@ -308,7 +308,7 @@ public class PageStatusImpressao   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PageStatusImpressao {\n");
+    sb.append("class PageEnderecos {\n");
     
     sb.append("    content: ").append(toIndentedString(content)).append("\n");
     sb.append("    first: ").append(toIndentedString(first)).append("\n");

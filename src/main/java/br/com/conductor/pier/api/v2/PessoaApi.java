@@ -102,7 +102,7 @@ public class PessoaApi {
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @return PagePessoas
    */
-  public PagePessoas listarUsingGET1(Long id, String nome, String tipo, String cpf, String cnpj, Date dataNascimento, String sexo, Integer page, Integer limit) throws ApiException {
+  public PagePessoas listarUsingGET2(Long id, String nome, String tipo, String cpf, String cnpj, Date dataNascimento, String sexo, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

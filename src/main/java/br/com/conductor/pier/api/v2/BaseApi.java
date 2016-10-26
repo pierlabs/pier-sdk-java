@@ -40,7 +40,7 @@ public class BaseApi {
 
   
   /**
-   * /api/bases/clear
+   * Limpar mapa de bases
    * 
    * @return BodyAccessToken
    */
