@@ -46,12 +46,12 @@ public class StatusImpressaoApi {
    * @param idStatusImpressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
    * @return StatusImpressao
    */
-  public StatusImpressao consultarUsingGET3(Long idStatusImpressao) throws ApiException {
+  public StatusImpressao consultarUsingGET5(Long idStatusImpressao) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idStatusImpressao' is set
      if (idStatusImpressao == null) {
-        throw new ApiException(400, "Missing the required parameter 'idStatusImpressao' when calling consultarUsingGET3");
+        throw new ApiException(400, "Missing the required parameter 'idStatusImpressao' when calling consultarUsingGET5");
      }
      
     // create path and map variables
@@ -96,7 +96,7 @@ public class StatusImpressaoApi {
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @return PageStatusImpressao
    */
-  public PageStatusImpressao listarUsingGET4(Long id, String nome, Integer page, Integer limit) throws ApiException {
+  public PageStatusImpressao listarUsingGET5(Long id, String nome, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

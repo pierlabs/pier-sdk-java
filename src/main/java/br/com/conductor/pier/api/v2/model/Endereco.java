@@ -28,7 +28,7 @@ public class Endereco   {
   private Long idPessoa = null;
   private Long idTipoEndereco = null;
   private String logradouro = null;
-  private String numero = null;
+  private Integer numero = null;
   private String pais = null;
   private String pontoReferencia = null;
   private String uf = null;
@@ -53,14 +53,14 @@ public class Endereco   {
 
   
   /**
-   * Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP)
+   * Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'
    **/
   public Endereco cep(String cep) {
     this.cep = cep;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP)")
+  @ApiModelProperty(example = "null", value = "Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'")
   @JsonProperty("cep")
   public String getCep() {
     return cep;
@@ -217,17 +217,17 @@ public class Endereco   {
   /**
    * Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
    **/
-  public Endereco numero(String numero) {
+  public Endereco numero(Integer numero) {
     this.numero = numero;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o")
   @JsonProperty("numero")
-  public String getNumero() {
+  public Integer getNumero() {
     return numero;
   }
-  public void setNumero(String numero) {
+  public void setNumero(Integer numero) {
     this.numero = numero;
   }
 

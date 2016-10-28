@@ -42,12 +42,12 @@ public class EnderecoApi {
 
   
   /**
-   * Realiza o cadastro de um novo Endere\u00C3\u00A7o
-   * Este m\u00C3\u00A9todo permite que seja cadastrado um novo Endere\u00C3\u00A7o na base de dados do Emissor.
+   * Atualiza os dados de um determinado Endere\u00C3\u00A7o
+   * Este m\u00C3\u00A9todo permite que seja alterado na base do emissor um ou mais registros ligados a um determinado Endere\u00C3\u00A7o.
    * @param id id
    * @param idPessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)
    * @param idTipoEndereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
-   * @param cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP)
+   * @param cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39;
    * @param logradouro Apresenta o nome do Logradouro
    * @param numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
    * @param complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
@@ -58,7 +58,7 @@ public class EnderecoApi {
    * @param pais Apresenta nome do Pais
    * @return Endereco
    */
-  public Endereco alterarUsingPUT(Long id, Long idPessoa, Long idTipoEndereco, String cep, String logradouro, String numero, String complemento, String pontoReferencia, String bairro, String cidade, String uf, String pais) throws ApiException {
+  public Endereco alterarUsingPUT(Long id, Long idPessoa, Long idTipoEndereco, String cep, String logradouro, Integer numero, String complemento, String pontoReferencia, String bairro, String cidade, String uf, String pais) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -128,12 +128,12 @@ public class EnderecoApi {
    * @param idEndereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
    * @return Endereco
    */
-  public Endereco consultarEstagioCartaoUsingGET(Long idEndereco) throws ApiException {
+  public Endereco consultarUsingGET2(Long idEndereco) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idEndereco' is set
      if (idEndereco == null) {
-        throw new ApiException(400, "Missing the required parameter 'idEndereco' when calling consultarEstagioCartaoUsingGET");
+        throw new ApiException(400, "Missing the required parameter 'idEndereco' when calling consultarUsingGET2");
      }
      
     // create path and map variables
@@ -190,7 +190,7 @@ public class EnderecoApi {
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @return PageEnderecos
    */
-  public PageEnderecos listarUsingGET1(Long id, Long idPessoa, Long idTipoEndereco, String cep, String logradouro, String numero, String complemento, String pontoReferencia, String bairro, String cidade, String uf, String pais, Date dataInclusao, Date dataUltimaAtualizacao, Integer page, Integer limit) throws ApiException {
+  public PageEnderecos listarUsingGET2(Long id, Long idPessoa, Long idTipoEndereco, String cep, String logradouro, Integer numero, String complemento, String pontoReferencia, String bairro, String cidade, String uf, String pais, Date dataInclusao, Date dataUltimaAtualizacao, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -262,7 +262,7 @@ public class EnderecoApi {
    * Este m\u00C3\u00A9todo permite que seja cadastrado um novo Endere\u00C3\u00A7o na base de dados do Emissor.
    * @param idPessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)
    * @param idTipoEndereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
-   * @param cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP)
+   * @param cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39;
    * @param logradouro Apresenta o nome do Logradouro
    * @param numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
    * @param complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
@@ -273,7 +273,7 @@ public class EnderecoApi {
    * @param pais Apresenta nome do Pais
    * @return Endereco
    */
-  public Endereco salvarUsingPOST(Long idPessoa, Long idTipoEndereco, String cep, String logradouro, String numero, String complemento, String pontoReferencia, String bairro, String cidade, String uf, String pais) throws ApiException {
+  public Endereco salvarUsingPOST(Long idPessoa, Long idTipoEndereco, String cep, String logradouro, Integer numero, String complemento, String pontoReferencia, String bairro, String cidade, String uf, String pais) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

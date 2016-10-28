@@ -46,12 +46,12 @@ public class StatusContaApi {
    * @param idStatusConta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
    * @return StatusConta
    */
-  public StatusConta consultarUsingGET2(Long idStatusConta) throws ApiException {
+  public StatusConta consultarUsingGET4(Long idStatusConta) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idStatusConta' is set
      if (idStatusConta == null) {
-        throw new ApiException(400, "Missing the required parameter 'idStatusConta' when calling consultarUsingGET2");
+        throw new ApiException(400, "Missing the required parameter 'idStatusConta' when calling consultarUsingGET4");
      }
      
     // create path and map variables
@@ -98,7 +98,7 @@ public class StatusContaApi {
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @return PageStatusContas
    */
-  public PageStatusContas listarUsingGET3(Long id, String nome, Integer flagAlteraLimite, String mensagemConsultaNegada, Integer page, Integer limit) throws ApiException {
+  public PageStatusContas listarUsingGET4(Long id, String nome, Integer flagAlteraLimite, String mensagemConsultaNegada, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

@@ -47,12 +47,12 @@ public class PessoaApi {
    * @param idPessoa ID da Origem Comercial
    * @return Pessoa
    */
-  public Pessoa consultarUsingGET1(Long idPessoa) throws ApiException {
+  public Pessoa consultarUsingGET3(Long idPessoa) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idPessoa' is set
      if (idPessoa == null) {
-        throw new ApiException(400, "Missing the required parameter 'idPessoa' when calling consultarUsingGET1");
+        throw new ApiException(400, "Missing the required parameter 'idPessoa' when calling consultarUsingGET3");
      }
      
     // create path and map variables
@@ -102,7 +102,7 @@ public class PessoaApi {
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @return PagePessoas
    */
-  public PagePessoas listarUsingGET2(Long id, String nome, String tipo, String cpf, String cnpj, Date dataNascimento, String sexo, Integer page, Integer limit) throws ApiException {
+  public PagePessoas listarUsingGET3(Long id, String nome, String tipo, String cpf, String cnpj, Date dataNascimento, String sexo, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
