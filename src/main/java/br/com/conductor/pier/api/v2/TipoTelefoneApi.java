@@ -7,8 +7,8 @@ import br.com.conductor.pier.api.v2.invoker.ApiClient;
 import br.com.conductor.pier.api.v2.invoker.Configuration;
 import br.com.conductor.pier.api.v2.invoker.Pair;
 
-import br.com.conductor.pier.api.v2.model.StatusImpressao;
-import br.com.conductor.pier.api.v2.model.PageStatusImpressao;
+import br.com.conductor.pier.api.v2.model.TipoTelefone;
+import br.com.conductor.pier.api.v2.model.PageTipoTelefones;
 
 
 
@@ -20,14 +20,14 @@ import java.util.Map;
 
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 
-public class StatusImpressaoApi {
+public class TipoTelefoneApi {
   private ApiClient apiClient;
 
-  public StatusImpressaoApi() {
+  public TipoTelefoneApi() {
     this(Configuration.getDefaultApiClient());
   }
 
-  public StatusImpressaoApi(ApiClient apiClient) {
+  public TipoTelefoneApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
@@ -41,22 +41,22 @@ public class StatusImpressaoApi {
 
   
   /**
-   * Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
-   * Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-   * @param idStatusImpressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-   * @return StatusImpressao
+   * Apresenta os dados de um determinado Tipo de Telefone
+   * Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+   * @param idTipoTelefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
+   * @return TipoTelefone
    */
-  public StatusImpressao consultarUsingGET5(Long idStatusImpressao) throws ApiException {
+  public TipoTelefone consultarUsingGET8(Long idTipoTelefone) throws ApiException {
     Object postBody = null;
     
-     // verify the required parameter 'idStatusImpressao' is set
-     if (idStatusImpressao == null) {
-        throw new ApiException(400, "Missing the required parameter 'idStatusImpressao' when calling consultarUsingGET5");
+     // verify the required parameter 'idTipoTelefone' is set
+     if (idTipoTelefone == null) {
+        throw new ApiException(400, "Missing the required parameter 'idTipoTelefone' when calling consultarUsingGET8");
      }
      
     // create path and map variables
-    String path = "/api/status-impressoes/{id_status_impressao}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id_status_impressao" + "\\}", apiClient.escapeString(idStatusImpressao.toString()));
+    String path = "/api/tipos-telefones/{id_tipo_telefone}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id_tipo_telefone" + "\\}", apiClient.escapeString(idTipoTelefone.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -82,25 +82,25 @@ public class StatusImpressaoApi {
     String[] authNames = new String[] {"client_id", "access_token" };
 
     
-    GenericType<StatusImpressao> returnType = new GenericType<StatusImpressao>() {};
+    GenericType<TipoTelefone> returnType = new GenericType<TipoTelefone>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
   /**
-   * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
-   * Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
-   * @param id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
-   * @param nome Nome do status impress\u00C3\u00A3o
+   * Lista os Tipos de Telefones
+   * Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+   * @param nome Nome do Tipo do Telefone
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-   * @return PageStatusImpressao
+   * @return PageTipoTelefones
    */
-  public PageStatusImpressao listarUsingGET6(Long id, String nome, Integer page, Integer limit) throws ApiException {
+  public PageTipoTelefones listarUsingGET9(Long id, String nome, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
-    String path = "/api/status-impressoes".replaceAll("\\{format\\}","json");
+    String path = "/api/tipos-telefones".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -134,7 +134,7 @@ public class StatusImpressaoApi {
     String[] authNames = new String[] {"client_id", "access_token" };
 
     
-    GenericType<PageStatusImpressao> returnType = new GenericType<PageStatusImpressao>() {};
+    GenericType<PageTipoTelefones> returnType = new GenericType<PageTipoTelefones>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

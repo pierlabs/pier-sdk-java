@@ -98,7 +98,7 @@ public class StatusContaApi {
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @return PageStatusContas
    */
-  public PageStatusContas listarUsingGET4(Long id, String nome, Integer flagAlteraLimite, String mensagemConsultaNegada, Integer page, Integer limit) throws ApiException {
+  public PageStatusContas listarUsingGET5(Long id, String nome, Integer flagAlteraLimite, String mensagemConsultaNegada, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

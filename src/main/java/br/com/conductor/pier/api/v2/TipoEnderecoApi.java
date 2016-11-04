@@ -7,8 +7,8 @@ import br.com.conductor.pier.api.v2.invoker.ApiClient;
 import br.com.conductor.pier.api.v2.invoker.Configuration;
 import br.com.conductor.pier.api.v2.invoker.Pair;
 
-import br.com.conductor.pier.api.v2.model.StatusImpressao;
-import br.com.conductor.pier.api.v2.model.PageStatusImpressao;
+import br.com.conductor.pier.api.v2.model.TipoEndereco;
+import br.com.conductor.pier.api.v2.model.PageTiposEndereco;
 
 
 
@@ -20,14 +20,14 @@ import java.util.Map;
 
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 
-public class StatusImpressaoApi {
+public class TipoEnderecoApi {
   private ApiClient apiClient;
 
-  public StatusImpressaoApi() {
+  public TipoEnderecoApi() {
     this(Configuration.getDefaultApiClient());
   }
 
-  public StatusImpressaoApi(ApiClient apiClient) {
+  public TipoEnderecoApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
@@ -41,22 +41,22 @@ public class StatusImpressaoApi {
 
   
   /**
-   * Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
-   * Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-   * @param idStatusImpressao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-   * @return StatusImpressao
+   * Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
+   * Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+   * @param idTipoEndereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
+   * @return TipoEndereco
    */
-  public StatusImpressao consultarUsingGET5(Long idStatusImpressao) throws ApiException {
+  public TipoEndereco consultarUsingGET7(Long idTipoEndereco) throws ApiException {
     Object postBody = null;
     
-     // verify the required parameter 'idStatusImpressao' is set
-     if (idStatusImpressao == null) {
-        throw new ApiException(400, "Missing the required parameter 'idStatusImpressao' when calling consultarUsingGET5");
+     // verify the required parameter 'idTipoEndereco' is set
+     if (idTipoEndereco == null) {
+        throw new ApiException(400, "Missing the required parameter 'idTipoEndereco' when calling consultarUsingGET7");
      }
      
     // create path and map variables
-    String path = "/api/status-impressoes/{id_status_impressao}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id_status_impressao" + "\\}", apiClient.escapeString(idStatusImpressao.toString()));
+    String path = "/api/tipos-endereco/{id_tipo_endereco}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id_tipo_endereco" + "\\}", apiClient.escapeString(idTipoEndereco.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -82,25 +82,25 @@ public class StatusImpressaoApi {
     String[] authNames = new String[] {"client_id", "access_token" };
 
     
-    GenericType<StatusImpressao> returnType = new GenericType<StatusImpressao>() {};
+    GenericType<TipoEndereco> returnType = new GenericType<TipoEndereco>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
   /**
-   * Lista as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o
-   * Este m\u00C3\u00A9todo permite que sejam listadas as op\u00C3\u00A7\u00C3\u00B5es de Status Impress\u00C3\u00A3o que podem ser atribu\u00C3\u00ADdas aos Cart\u00C3\u00B5es.
-   * @param id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
-   * @param nome Nome do status impress\u00C3\u00A3o
+   * Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
+   * Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Endere\u00C3\u00A7os existentes na base de dados do Emissor.
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
+   * @param nome Nome do Tipo do Endere\u00C3\u00A7o
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-   * @return PageStatusImpressao
+   * @return PageTiposEndereco
    */
-  public PageStatusImpressao listarUsingGET6(Long id, String nome, Integer page, Integer limit) throws ApiException {
+  public PageTiposEndereco listarUsingGET8(Long id, String nome, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
-    String path = "/api/status-impressoes".replaceAll("\\{format\\}","json");
+    String path = "/api/tipos-endereco".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -134,7 +134,7 @@ public class StatusImpressaoApi {
     String[] authNames = new String[] {"client_id", "access_token" };
 
     
-    GenericType<PageStatusImpressao> returnType = new GenericType<PageStatusImpressao>() {};
+    GenericType<PageTiposEndereco> returnType = new GenericType<PageTiposEndereco>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

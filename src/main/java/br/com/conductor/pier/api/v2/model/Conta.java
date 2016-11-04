@@ -20,6 +20,7 @@ public class Conta   {
   
   private Date dataCadastro = null;
   private Date dataStatusConta = null;
+  private Date dataUltimaAlteracaoVencimento = null;
   private Integer diaVencimento = null;
   private Long id = null;
   private Long idOrigemComercial = null;
@@ -62,6 +63,24 @@ public class Conta   {
   }
   public void setDataStatusConta(Date dataStatusConta) {
     this.dataStatusConta = dataStatusConta;
+  }
+
+  
+  /**
+   * Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
+   **/
+  public Conta dataUltimaAlteracaoVencimento(Date dataUltimaAlteracaoVencimento) {
+    this.dataUltimaAlteracaoVencimento = dataUltimaAlteracaoVencimento;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.")
+  @JsonProperty("dataUltimaAlteracaoVencimento")
+  public Date getDataUltimaAlteracaoVencimento() {
+    return dataUltimaAlteracaoVencimento;
+  }
+  public void setDataUltimaAlteracaoVencimento(Date dataUltimaAlteracaoVencimento) {
+    this.dataUltimaAlteracaoVencimento = dataUltimaAlteracaoVencimento;
   }
 
   
@@ -203,6 +222,7 @@ public class Conta   {
     Conta conta = (Conta) o;
     return Objects.equals(this.dataCadastro, conta.dataCadastro) &&
         Objects.equals(this.dataStatusConta, conta.dataStatusConta) &&
+        Objects.equals(this.dataUltimaAlteracaoVencimento, conta.dataUltimaAlteracaoVencimento) &&
         Objects.equals(this.diaVencimento, conta.diaVencimento) &&
         Objects.equals(this.id, conta.id) &&
         Objects.equals(this.idOrigemComercial, conta.idOrigemComercial) &&
@@ -214,7 +234,7 @@ public class Conta   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(dataCadastro, dataStatusConta, diaVencimento, id, idOrigemComercial, idPessoa, idProduto, idStatusConta, melhorDiaCompra);
+    return Objects.hash(dataCadastro, dataStatusConta, dataUltimaAlteracaoVencimento, diaVencimento, id, idOrigemComercial, idPessoa, idProduto, idStatusConta, melhorDiaCompra);
   }
 
   @Override
@@ -224,6 +244,7 @@ public class Conta   {
     
     sb.append("    dataCadastro: ").append(toIndentedString(dataCadastro)).append("\n");
     sb.append("    dataStatusConta: ").append(toIndentedString(dataStatusConta)).append("\n");
+    sb.append("    dataUltimaAlteracaoVencimento: ").append(toIndentedString(dataUltimaAlteracaoVencimento)).append("\n");
     sb.append("    diaVencimento: ").append(toIndentedString(diaVencimento)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idOrigemComercial: ").append(toIndentedString(idOrigemComercial)).append("\n");
