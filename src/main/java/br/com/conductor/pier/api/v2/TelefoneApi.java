@@ -164,7 +164,7 @@ public class TelefoneApi {
    * @param ramal N\u00C3\u00BAmero do ramal.
    * @return Telefone
    */
-  public Telefone salvarUsingPOST1(Long idTipoTelefone, Long idPessoa, String ddd, String telefone, String ramal) throws ApiException {
+  public Telefone salvarUsingPOST2(Long idTipoTelefone, Long idPessoa, String ddd, String telefone, String ramal) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
