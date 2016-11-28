@@ -8,6 +8,7 @@ import br.com.conductor.pier.api.v2.invoker.Configuration;
 import br.com.conductor.pier.api.v2.invoker.Pair;
 
 import br.com.conductor.pier.api.v2.model.Conta;
+import br.com.conductor.pier.api.v2.model.CartaoImpressao;
 import java.util.Date;
 
 
@@ -139,6 +140,60 @@ public class ContaApi {
     
     GenericType<Conta> returnType = new GenericType<Conta>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
+   * 
+   * @param idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * @param idPessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
+   * @return CartaoImpressao
+   */
+  public CartaoImpressao gerarCartaoUsingPUT(Long idConta, Long idPessoa) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'idConta' is set
+     if (idConta == null) {
+        throw new ApiException(400, "Missing the required parameter 'idConta' when calling gerarCartaoUsingPUT");
+     }
+     
+     // verify the required parameter 'idPessoa' is set
+     if (idPessoa == null) {
+        throw new ApiException(400, "Missing the required parameter 'idPessoa' when calling gerarCartaoUsingPUT");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/{id_conta}/pessoas/{id_pessoa}/gerar-cartao".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id_conta" + "\\}", apiClient.escapeString(idConta.toString()))
+      .replaceAll("\\{" + "id_pessoa" + "\\}", apiClient.escapeString(idPessoa.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    String[] authNames = new String[] {"client_id", "access_token" };
+
+    
+    GenericType<CartaoImpressao> returnType = new GenericType<CartaoImpressao>() {};
+    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   

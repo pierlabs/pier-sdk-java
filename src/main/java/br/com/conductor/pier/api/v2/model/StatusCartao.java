@@ -117,14 +117,14 @@ public class StatusCartao   {
 
   
   /**
-   * Indica qual o idStatusCartao que que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.
+   * Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.
    **/
   public StatusCartao idStatusDestinoDesbloqueio(Long idStatusDestinoDesbloqueio) {
     this.idStatusDestinoDesbloqueio = idStatusDestinoDesbloqueio;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Indica qual o idStatusCartao que que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.")
+  @ApiModelProperty(example = "null", required = true, value = "Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.")
   @JsonProperty("idStatusDestinoDesbloqueio")
   public Long getIdStatusDestinoDesbloqueio() {
     return idStatusDestinoDesbloqueio;
