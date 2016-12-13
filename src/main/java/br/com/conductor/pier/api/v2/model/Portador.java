@@ -22,6 +22,7 @@ public class Portador   {
   private Date dataCancelamentoPortador = null;
   private Integer flagAtivo = null;
   private Long idConta = null;
+  private Long idImagem = null;
   private Long idParentesco = null;
   private Long idPessoa = null;
   private Long idProduto = null;
@@ -99,6 +100,24 @@ public class Portador   {
   }
   public void setIdConta(Long idConta) {
     this.idConta = idConta;
+  }
+
+  
+  /**
+   * Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da imagem do cart\u00C3\u00A3o.
+   **/
+  public Portador idImagem(Long idImagem) {
+    this.idImagem = idImagem;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da imagem do cart\u00C3\u00A3o.")
+  @JsonProperty("idImagem")
+  public Long getIdImagem() {
+    return idImagem;
+  }
+  public void setIdImagem(Long idImagem) {
+    this.idImagem = idImagem;
   }
 
   
@@ -224,6 +243,7 @@ public class Portador   {
         Objects.equals(this.dataCancelamentoPortador, portador.dataCancelamentoPortador) &&
         Objects.equals(this.flagAtivo, portador.flagAtivo) &&
         Objects.equals(this.idConta, portador.idConta) &&
+        Objects.equals(this.idImagem, portador.idImagem) &&
         Objects.equals(this.idParentesco, portador.idParentesco) &&
         Objects.equals(this.idPessoa, portador.idPessoa) &&
         Objects.equals(this.idProduto, portador.idProduto) &&
@@ -234,7 +254,7 @@ public class Portador   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(dataCadastroPortador, dataCancelamentoPortador, flagAtivo, idConta, idParentesco, idPessoa, idProduto, idTipoCartao, nomeImpresso, tipoPortador);
+    return Objects.hash(dataCadastroPortador, dataCancelamentoPortador, flagAtivo, idConta, idImagem, idParentesco, idPessoa, idProduto, idTipoCartao, nomeImpresso, tipoPortador);
   }
 
   @Override
@@ -246,6 +266,7 @@ public class Portador   {
     sb.append("    dataCancelamentoPortador: ").append(toIndentedString(dataCancelamentoPortador)).append("\n");
     sb.append("    flagAtivo: ").append(toIndentedString(flagAtivo)).append("\n");
     sb.append("    idConta: ").append(toIndentedString(idConta)).append("\n");
+    sb.append("    idImagem: ").append(toIndentedString(idImagem)).append("\n");
     sb.append("    idParentesco: ").append(toIndentedString(idParentesco)).append("\n");
     sb.append("    idPessoa: ").append(toIndentedString(idPessoa)).append("\n");
     sb.append("    idProduto: ").append(toIndentedString(idProduto)).append("\n");
