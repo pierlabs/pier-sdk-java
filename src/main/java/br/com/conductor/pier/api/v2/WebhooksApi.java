@@ -49,27 +49,27 @@ public class WebhooksApi {
    * @param url URL que a ser consumida pelo WebHook
    * @return WebHook
    */
-  public WebHook alterarUsingPUT2(Long id, Object evento, Object metodo, String url) throws ApiException {
+  public WebHook alterarUsingPUT3(Long id, Object evento, Object metodo, String url) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT2");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT3");
      }
      
      // verify the required parameter 'evento' is set
      if (evento == null) {
-        throw new ApiException(400, "Missing the required parameter 'evento' when calling alterarUsingPUT2");
+        throw new ApiException(400, "Missing the required parameter 'evento' when calling alterarUsingPUT3");
      }
      
      // verify the required parameter 'metodo' is set
      if (metodo == null) {
-        throw new ApiException(400, "Missing the required parameter 'metodo' when calling alterarUsingPUT2");
+        throw new ApiException(400, "Missing the required parameter 'metodo' when calling alterarUsingPUT3");
      }
      
      // verify the required parameter 'url' is set
      if (url == null) {
-        throw new ApiException(400, "Missing the required parameter 'url' when calling alterarUsingPUT2");
+        throw new ApiException(400, "Missing the required parameter 'url' when calling alterarUsingPUT3");
      }
      
     // create path and map variables
