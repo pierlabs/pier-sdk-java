@@ -115,20 +115,20 @@ public class WebhooksApi {
   /**
    * Consultar Webhook
    * Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
-   * @param idWebhook C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
    * @return WebHook
    */
-  public WebHook consultarUsingGET9(Long idWebhook) throws ApiException {
+  public WebHook consultarUsingGET9(Long id) throws ApiException {
     Object postBody = null;
     
-     // verify the required parameter 'idWebhook' is set
-     if (idWebhook == null) {
-        throw new ApiException(400, "Missing the required parameter 'idWebhook' when calling consultarUsingGET9");
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET9");
      }
      
     // create path and map variables
-    String path = "/api/webhooks/{id_webhook}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id_webhook" + "\\}", apiClient.escapeString(idWebhook.toString()));
+    String path = "/api/webhooks/{id}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
