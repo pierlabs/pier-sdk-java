@@ -219,7 +219,7 @@ public class CartaoApi {
   
   /**
    * Realiza o cadastro ou altera\u00C3\u00A7\u00C3\u00A3o da senha de um Cart\u00C3\u00A3o
-   * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha, a sua escolha
+   * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que o portador de um determinado cart\u00C3\u00A3o possa definir uma senha a sua escolha.
    * @param idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
    * @param senha Senha para ser cadastrada ou alterada.
    * @return String
@@ -562,8 +562,8 @@ public class CartaoApi {
   }
   
   /**
-   * Permite validar um Cart\u00C3\u00A3o Bandeirado a partir do chip
-   * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele.
+   * Permite validar um Cart\u00C3\u00A3o Mastercard a partir do chip
+   * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem o criptograma gerado a partir da leitura de um chip EMV de um Cart\u00C3\u00A3o Mastercard a fim de verificar a sua autenticidade.
    * @param numeroCartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
    * @param criptograma Criptograma do cart\u00C3\u00A3o no formato de55
    * @return ValidaCartao
@@ -763,7 +763,7 @@ public class CartaoApi {
   
   /**
    * Permite validar um Cart\u00C3\u00A3o Bandeirado a partir da Tarja
-   * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir do envio dos dados sens\u00C3\u00ADveis impressos nele.
+   * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00C3\u00A3o a partir da leitura da tarja magn\u00C3\u00A9tica do mesmo.
    * @param numeroCartao N\u00C3\u00BAmero do cart\u00C3\u00A3o a ser validado.
    * @param trilha1 Trilha 1 do cart\u00C3\u00A3o a ser validado
    * @param trilha2 Trilha 2 do cart\u00C3\u00A3o a ser validado
