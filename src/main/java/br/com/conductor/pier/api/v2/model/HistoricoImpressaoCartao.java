@@ -18,29 +18,11 @@ import java.util.Date;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class HistoricoImpressaoCartao   {
   
-  private Date dataHistorico = null;
   private Long id = null;
   private Long idCartao = null;
   private Long idStatusImpressaoCartao = null;
   private String mensagemHistorico = null;
-
-  
-  /**
-   * Apresenta a data que o registro de Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o de um Cart\u00C3\u00A3o fora inserido.
-   **/
-  public HistoricoImpressaoCartao dataHistorico(Date dataHistorico) {
-    this.dataHistorico = dataHistorico;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Apresenta a data que o registro de Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o de um Cart\u00C3\u00A3o fora inserido.")
-  @JsonProperty("dataHistorico")
-  public Date getDataHistorico() {
-    return dataHistorico;
-  }
-  public void setDataHistorico(Date dataHistorico) {
-    this.dataHistorico = dataHistorico;
-  }
+  private Date dataHistorico = null;
 
   
   /**
@@ -115,6 +97,24 @@ public class HistoricoImpressaoCartao   {
   }
 
   
+  /**
+   * Apresenta a data que o registro de Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o de um Cart\u00C3\u00A3o fora inserido.
+   **/
+  public HistoricoImpressaoCartao dataHistorico(Date dataHistorico) {
+    this.dataHistorico = dataHistorico;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Apresenta a data que o registro de Hist\u00C3\u00B3rico de Impress\u00C3\u00A3o de um Cart\u00C3\u00A3o fora inserido.")
+  @JsonProperty("dataHistorico")
+  public Date getDataHistorico() {
+    return dataHistorico;
+  }
+  public void setDataHistorico(Date dataHistorico) {
+    this.dataHistorico = dataHistorico;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -125,16 +125,16 @@ public class HistoricoImpressaoCartao   {
       return false;
     }
     HistoricoImpressaoCartao historicoImpressaoCartao = (HistoricoImpressaoCartao) o;
-    return Objects.equals(this.dataHistorico, historicoImpressaoCartao.dataHistorico) &&
-        Objects.equals(this.id, historicoImpressaoCartao.id) &&
+    return Objects.equals(this.id, historicoImpressaoCartao.id) &&
         Objects.equals(this.idCartao, historicoImpressaoCartao.idCartao) &&
         Objects.equals(this.idStatusImpressaoCartao, historicoImpressaoCartao.idStatusImpressaoCartao) &&
-        Objects.equals(this.mensagemHistorico, historicoImpressaoCartao.mensagemHistorico);
+        Objects.equals(this.mensagemHistorico, historicoImpressaoCartao.mensagemHistorico) &&
+        Objects.equals(this.dataHistorico, historicoImpressaoCartao.dataHistorico);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(dataHistorico, id, idCartao, idStatusImpressaoCartao, mensagemHistorico);
+    return Objects.hash(id, idCartao, idStatusImpressaoCartao, mensagemHistorico, dataHistorico);
   }
 
   @Override
@@ -142,11 +142,11 @@ public class HistoricoImpressaoCartao   {
     StringBuilder sb = new StringBuilder();
     sb.append("class HistoricoImpressaoCartao {\n");
     
-    sb.append("    dataHistorico: ").append(toIndentedString(dataHistorico)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idCartao: ").append(toIndentedString(idCartao)).append("\n");
     sb.append("    idStatusImpressaoCartao: ").append(toIndentedString(idStatusImpressaoCartao)).append("\n");
     sb.append("    mensagemHistorico: ").append(toIndentedString(mensagemHistorico)).append("\n");
+    sb.append("    dataHistorico: ").append(toIndentedString(dataHistorico)).append("\n");
     sb.append("}");
     return sb.toString();
   }

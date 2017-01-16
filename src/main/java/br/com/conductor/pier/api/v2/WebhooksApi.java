@@ -49,7 +49,7 @@ public class WebhooksApi {
    * @param url URL que a ser consumida pelo WebHook
    * @return WebHook
    */
-  public WebHook alterarUsingPUT3(Long id, Object evento, Object metodo, String url) throws ApiException {
+  public WebHook alterarUsingPUT3(Long id, String evento, String metodo, String url) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -162,15 +162,15 @@ public class WebhooksApi {
   /**
    * Lista os Webhooks
    * Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @param id Id do WebHook
    * @param evento Evento a ser chamado pelo WebHook
    * @param metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
    * @param url URL que a ser consumida pelo WebHook
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @return PageWebHooks
    */
-  public PageWebHooks listarUsingGET10(Long id, Object evento, Object metodo, String url, Integer page, Integer limit) throws ApiException {
+  public PageWebHooks listarUsingGET10(Integer page, Integer limit, Long id, String evento, String metodo, String url) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -182,6 +182,10 @@ public class WebhooksApi {
     Map<String, Object> formParams = new HashMap<String, Object>();
 
     
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
     queryParams.addAll(apiClient.parameterToPairs("", "id", id));
     
     queryParams.addAll(apiClient.parameterToPairs("", "evento", evento));
@@ -189,10 +193,6 @@ public class WebhooksApi {
     queryParams.addAll(apiClient.parameterToPairs("", "metodo", metodo));
     
     queryParams.addAll(apiClient.parameterToPairs("", "url", url));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
     
 
     
@@ -225,7 +225,7 @@ public class WebhooksApi {
    * @param url URL que a ser consumida pelo WebHook
    * @return WebHook
    */
-  public WebHook salvarUsingPOST3(Object evento, Object metodo, String url) throws ApiException {
+  public WebHook salvarUsingPOST3(String evento, String metodo, String url) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'evento' is set

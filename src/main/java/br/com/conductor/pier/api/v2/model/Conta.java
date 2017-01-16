@@ -18,88 +18,16 @@ import java.util.Date;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class Conta   {
   
-  private Date dataCadastro = null;
-  private Date dataStatusConta = null;
-  private Date dataUltimaAlteracaoVencimento = null;
-  private Integer diaVencimento = null;
   private Long id = null;
+  private Long idProduto = null;
   private Long idOrigemComercial = null;
   private Long idPessoa = null;
-  private Long idProduto = null;
   private Long idStatusConta = null;
+  private Integer diaVencimento = null;
   private Integer melhorDiaCompra = null;
-
-  
-  /**
-   * Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
-   **/
-  public Conta dataCadastro(Date dataCadastro) {
-    this.dataCadastro = dataCadastro;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Apresenta a data em que o cart\u00C3\u00A3o foi gerado.")
-  @JsonProperty("dataCadastro")
-  public Date getDataCadastro() {
-    return dataCadastro;
-  }
-  public void setDataCadastro(Date dataCadastro) {
-    this.dataCadastro = dataCadastro;
-  }
-
-  
-  /**
-   * Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
-   **/
-  public Conta dataStatusConta(Date dataStatusConta) {
-    this.dataStatusConta = dataStatusConta;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.")
-  @JsonProperty("dataStatusConta")
-  public Date getDataStatusConta() {
-    return dataStatusConta;
-  }
-  public void setDataStatusConta(Date dataStatusConta) {
-    this.dataStatusConta = dataStatusConta;
-  }
-
-  
-  /**
-   * Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
-   **/
-  public Conta dataUltimaAlteracaoVencimento(Date dataUltimaAlteracaoVencimento) {
-    this.dataUltimaAlteracaoVencimento = dataUltimaAlteracaoVencimento;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.")
-  @JsonProperty("dataUltimaAlteracaoVencimento")
-  public Date getDataUltimaAlteracaoVencimento() {
-    return dataUltimaAlteracaoVencimento;
-  }
-  public void setDataUltimaAlteracaoVencimento(Date dataUltimaAlteracaoVencimento) {
-    this.dataUltimaAlteracaoVencimento = dataUltimaAlteracaoVencimento;
-  }
-
-  
-  /**
-   * Apresenta o dia de vencimento.
-   **/
-  public Conta diaVencimento(Integer diaVencimento) {
-    this.diaVencimento = diaVencimento;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Apresenta o dia de vencimento.")
-  @JsonProperty("diaVencimento")
-  public Integer getDiaVencimento() {
-    return diaVencimento;
-  }
-  public void setDiaVencimento(Integer diaVencimento) {
-    this.diaVencimento = diaVencimento;
-  }
+  private Date dataStatusConta = null;
+  private Date dataCadastro = null;
+  private Date dataUltimaAlteracaoVencimento = null;
 
   
   /**
@@ -117,6 +45,24 @@ public class Conta   {
   }
   public void setId(Long id) {
     this.id = id;
+  }
+
+  
+  /**
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
+   **/
+  public Conta idProduto(Long idProduto) {
+    this.idProduto = idProduto;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).")
+  @JsonProperty("idProduto")
+  public Long getIdProduto() {
+    return idProduto;
+  }
+  public void setIdProduto(Long idProduto) {
+    this.idProduto = idProduto;
   }
 
   
@@ -157,24 +103,6 @@ public class Conta   {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
-   **/
-  public Conta idProduto(Long idProduto) {
-    this.idProduto = idProduto;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).")
-  @JsonProperty("idProduto")
-  public Long getIdProduto() {
-    return idProduto;
-  }
-  public void setIdProduto(Long idProduto) {
-    this.idProduto = idProduto;
-  }
-
-  
-  /**
    * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
    **/
   public Conta idStatusConta(Long idStatusConta) {
@@ -189,6 +117,24 @@ public class Conta   {
   }
   public void setIdStatusConta(Long idStatusConta) {
     this.idStatusConta = idStatusConta;
+  }
+
+  
+  /**
+   * Apresenta o dia de vencimento.
+   **/
+  public Conta diaVencimento(Integer diaVencimento) {
+    this.diaVencimento = diaVencimento;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Apresenta o dia de vencimento.")
+  @JsonProperty("diaVencimento")
+  public Integer getDiaVencimento() {
+    return diaVencimento;
+  }
+  public void setDiaVencimento(Integer diaVencimento) {
+    this.diaVencimento = diaVencimento;
   }
 
   
@@ -210,6 +156,60 @@ public class Conta   {
   }
 
   
+  /**
+   * Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
+   **/
+  public Conta dataStatusConta(Date dataStatusConta) {
+    this.dataStatusConta = dataStatusConta;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.")
+  @JsonProperty("dataStatusConta")
+  public Date getDataStatusConta() {
+    return dataStatusConta;
+  }
+  public void setDataStatusConta(Date dataStatusConta) {
+    this.dataStatusConta = dataStatusConta;
+  }
+
+  
+  /**
+   * Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
+   **/
+  public Conta dataCadastro(Date dataCadastro) {
+    this.dataCadastro = dataCadastro;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Apresenta a data em que o cart\u00C3\u00A3o foi gerado.")
+  @JsonProperty("dataCadastro")
+  public Date getDataCadastro() {
+    return dataCadastro;
+  }
+  public void setDataCadastro(Date dataCadastro) {
+    this.dataCadastro = dataCadastro;
+  }
+
+  
+  /**
+   * Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
+   **/
+  public Conta dataUltimaAlteracaoVencimento(Date dataUltimaAlteracaoVencimento) {
+    this.dataUltimaAlteracaoVencimento = dataUltimaAlteracaoVencimento;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.")
+  @JsonProperty("dataUltimaAlteracaoVencimento")
+  public Date getDataUltimaAlteracaoVencimento() {
+    return dataUltimaAlteracaoVencimento;
+  }
+  public void setDataUltimaAlteracaoVencimento(Date dataUltimaAlteracaoVencimento) {
+    this.dataUltimaAlteracaoVencimento = dataUltimaAlteracaoVencimento;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -220,21 +220,21 @@ public class Conta   {
       return false;
     }
     Conta conta = (Conta) o;
-    return Objects.equals(this.dataCadastro, conta.dataCadastro) &&
-        Objects.equals(this.dataStatusConta, conta.dataStatusConta) &&
-        Objects.equals(this.dataUltimaAlteracaoVencimento, conta.dataUltimaAlteracaoVencimento) &&
-        Objects.equals(this.diaVencimento, conta.diaVencimento) &&
-        Objects.equals(this.id, conta.id) &&
+    return Objects.equals(this.id, conta.id) &&
+        Objects.equals(this.idProduto, conta.idProduto) &&
         Objects.equals(this.idOrigemComercial, conta.idOrigemComercial) &&
         Objects.equals(this.idPessoa, conta.idPessoa) &&
-        Objects.equals(this.idProduto, conta.idProduto) &&
         Objects.equals(this.idStatusConta, conta.idStatusConta) &&
-        Objects.equals(this.melhorDiaCompra, conta.melhorDiaCompra);
+        Objects.equals(this.diaVencimento, conta.diaVencimento) &&
+        Objects.equals(this.melhorDiaCompra, conta.melhorDiaCompra) &&
+        Objects.equals(this.dataStatusConta, conta.dataStatusConta) &&
+        Objects.equals(this.dataCadastro, conta.dataCadastro) &&
+        Objects.equals(this.dataUltimaAlteracaoVencimento, conta.dataUltimaAlteracaoVencimento);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(dataCadastro, dataStatusConta, dataUltimaAlteracaoVencimento, diaVencimento, id, idOrigemComercial, idPessoa, idProduto, idStatusConta, melhorDiaCompra);
+    return Objects.hash(id, idProduto, idOrigemComercial, idPessoa, idStatusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, dataUltimaAlteracaoVencimento);
   }
 
   @Override
@@ -242,16 +242,16 @@ public class Conta   {
     StringBuilder sb = new StringBuilder();
     sb.append("class Conta {\n");
     
-    sb.append("    dataCadastro: ").append(toIndentedString(dataCadastro)).append("\n");
-    sb.append("    dataStatusConta: ").append(toIndentedString(dataStatusConta)).append("\n");
-    sb.append("    dataUltimaAlteracaoVencimento: ").append(toIndentedString(dataUltimaAlteracaoVencimento)).append("\n");
-    sb.append("    diaVencimento: ").append(toIndentedString(diaVencimento)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    idProduto: ").append(toIndentedString(idProduto)).append("\n");
     sb.append("    idOrigemComercial: ").append(toIndentedString(idOrigemComercial)).append("\n");
     sb.append("    idPessoa: ").append(toIndentedString(idPessoa)).append("\n");
-    sb.append("    idProduto: ").append(toIndentedString(idProduto)).append("\n");
     sb.append("    idStatusConta: ").append(toIndentedString(idStatusConta)).append("\n");
+    sb.append("    diaVencimento: ").append(toIndentedString(diaVencimento)).append("\n");
     sb.append("    melhorDiaCompra: ").append(toIndentedString(melhorDiaCompra)).append("\n");
+    sb.append("    dataStatusConta: ").append(toIndentedString(dataStatusConta)).append("\n");
+    sb.append("    dataCadastro: ").append(toIndentedString(dataCadastro)).append("\n");
+    sb.append("    dataUltimaAlteracaoVencimento: ").append(toIndentedString(dataUltimaAlteracaoVencimento)).append("\n");
     sb.append("}");
     return sb.toString();
   }

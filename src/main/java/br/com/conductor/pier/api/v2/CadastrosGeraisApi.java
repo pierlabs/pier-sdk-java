@@ -274,20 +274,20 @@ public class CadastrosGeraisApi {
   /**
    * Opera\u00C3\u00A7\u00C3\u00A3o utilizada para consultar uma determinada Origem Comercial
    * Este m\u00C3\u00A9todo permite que sejam listados os registros de uma determinada Origem Comercial existente na base do emissor. Para isso, \u00C3\u00A9 preciso informar o seu respectivo c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-   * @param idOrigemComercial ID da Origem Comercial
+   * @param id ID da Origem Comercial
    * @return OrigemComercial
    */
-  public OrigemComercial consultarOrigemComercialUsingGET(Long idOrigemComercial) throws ApiException {
+  public OrigemComercial consultarOrigemComercialUsingGET(Long id) throws ApiException {
     Object postBody = null;
     
-     // verify the required parameter 'idOrigemComercial' is set
-     if (idOrigemComercial == null) {
-        throw new ApiException(400, "Missing the required parameter 'idOrigemComercial' when calling consultarOrigemComercialUsingGET");
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarOrigemComercialUsingGET");
      }
      
     // create path and map variables
-    String path = "/api/origens-comerciais/{id_origem_comercial}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id_origem_comercial" + "\\}", apiClient.escapeString(idOrigemComercial.toString()));
+    String path = "/api/origens-comerciais/{id}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -321,20 +321,20 @@ public class CadastrosGeraisApi {
   /**
    * Apresenta os dados de um determinado Produto
    * Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-   * @param idProduto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
    * @return Produto
    */
-  public Produto consultarProdutoUsingGET(Long idProduto) throws ApiException {
+  public Produto consultarProdutoUsingGET(Long id) throws ApiException {
     Object postBody = null;
     
-     // verify the required parameter 'idProduto' is set
-     if (idProduto == null) {
-        throw new ApiException(400, "Missing the required parameter 'idProduto' when calling consultarProdutoUsingGET");
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarProdutoUsingGET");
      }
      
     // create path and map variables
-    String path = "/api/produtos/{id_produto}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id_produto" + "\\}", apiClient.escapeString(idProduto.toString()));
+    String path = "/api/produtos/{id}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -368,20 +368,20 @@ public class CadastrosGeraisApi {
   /**
    * Apresenta os dados de um determinado Endere\u00C3\u00A7o
    * Este m\u00C3\u00A9todo permite consultar um determinado Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-   * @param idEndereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
    * @return Endereco
    */
-  public Endereco consultarUsingGET2(Long idEndereco) throws ApiException {
+  public Endereco consultarUsingGET2(Long id) throws ApiException {
     Object postBody = null;
     
-     // verify the required parameter 'idEndereco' is set
-     if (idEndereco == null) {
-        throw new ApiException(400, "Missing the required parameter 'idEndereco' when calling consultarUsingGET2");
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET2");
      }
      
     // create path and map variables
-    String path = "/api/enderecos/{id_endereco}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id_endereco" + "\\}", apiClient.escapeString(idEndereco.toString()));
+    String path = "/api/enderecos/{id}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -415,20 +415,20 @@ public class CadastrosGeraisApi {
   /**
    * Apresenta os dados de uma determinada Pessoa
    * Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
-   * @param idPessoa ID da Pessoa
+   * @param id ID da Pessoa
    * @return Pessoa
    */
-  public Pessoa consultarUsingGET3(Long idPessoa) throws ApiException {
+  public Pessoa consultarUsingGET3(Long id) throws ApiException {
     Object postBody = null;
     
-     // verify the required parameter 'idPessoa' is set
-     if (idPessoa == null) {
-        throw new ApiException(400, "Missing the required parameter 'idPessoa' when calling consultarUsingGET3");
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET3");
      }
      
     // create path and map variables
-    String path = "/api/pessoas/{id_pessoa}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id_pessoa" + "\\}", apiClient.escapeString(idPessoa.toString()));
+    String path = "/api/pessoas/{id}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -462,20 +462,20 @@ public class CadastrosGeraisApi {
   /**
    * Apresenta os dados de um determinado Telefone
    * Este m\u00C3\u00A9todo permite consultar um determinado Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-   * @param idTelefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
    * @return Telefone
    */
-  public Telefone consultarUsingGET6(Long idTelefone) throws ApiException {
+  public Telefone consultarUsingGET6(Long id) throws ApiException {
     Object postBody = null;
     
-     // verify the required parameter 'idTelefone' is set
-     if (idTelefone == null) {
-        throw new ApiException(400, "Missing the required parameter 'idTelefone' when calling consultarUsingGET6");
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET6");
      }
      
     // create path and map variables
-    String path = "/api/telefones/{id_telefone}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id_telefone" + "\\}", apiClient.escapeString(idTelefone.toString()));
+    String path = "/api/telefones/{id}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -509,20 +509,20 @@ public class CadastrosGeraisApi {
   /**
    * Apresenta os dados de um determinado Tipo de Endere\u00C3\u00A7o
    * Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-   * @param idTipoEndereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
    * @return TipoEndereco
    */
-  public TipoEndereco consultarUsingGET7(Long idTipoEndereco) throws ApiException {
+  public TipoEndereco consultarUsingGET7(Long id) throws ApiException {
     Object postBody = null;
     
-     // verify the required parameter 'idTipoEndereco' is set
-     if (idTipoEndereco == null) {
-        throw new ApiException(400, "Missing the required parameter 'idTipoEndereco' when calling consultarUsingGET7");
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET7");
      }
      
     // create path and map variables
-    String path = "/api/tipos-endereco/{id_tipo_endereco}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id_tipo_endereco" + "\\}", apiClient.escapeString(idTipoEndereco.toString()));
+    String path = "/api/tipos-enderecos/{id}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -556,20 +556,20 @@ public class CadastrosGeraisApi {
   /**
    * Apresenta os dados de um determinado Tipo de Telefone
    * Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-   * @param idTipoTelefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
    * @return TipoTelefone
    */
-  public TipoTelefone consultarUsingGET8(Long idTipoTelefone) throws ApiException {
+  public TipoTelefone consultarUsingGET8(Long id) throws ApiException {
     Object postBody = null;
     
-     // verify the required parameter 'idTipoTelefone' is set
-     if (idTipoTelefone == null) {
-        throw new ApiException(400, "Missing the required parameter 'idTipoTelefone' when calling consultarUsingGET8");
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET8");
      }
      
     // create path and map variables
-    String path = "/api/tipos-telefones/{id_tipo_telefone}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id_tipo_telefone" + "\\}", apiClient.escapeString(idTipoTelefone.toString()));
+    String path = "/api/tipos-telefones/{id}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -603,14 +603,14 @@ public class CadastrosGeraisApi {
   /**
    * Opera\u00C3\u00A7\u00C3\u00A3o utilizada para listar Origens Comerciais
    * Este m\u00C3\u00A9todo permite que sejam listadas as Origens Comerciais existentes na base do emissor.
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @param id Id da origem comercial
    * @param nome Nome da origem comercial
    * @param status Status da origem comercial
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @return PageOrigensComerciais
    */
-  public PageOrigensComerciais listarOrigensComerciaisUsingGET(Long id, String nome, Integer status, Integer page, Integer limit) throws ApiException {
+  public PageOrigensComerciais listarOrigensComerciaisUsingGET(Integer page, Integer limit, Long id, String nome, Integer status) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -622,15 +622,15 @@ public class CadastrosGeraisApi {
     Map<String, Object> formParams = new HashMap<String, Object>();
 
     
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
     queryParams.addAll(apiClient.parameterToPairs("", "id", id));
     
     queryParams.addAll(apiClient.parameterToPairs("", "nome", nome));
     
     queryParams.addAll(apiClient.parameterToPairs("", "status", status));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
     
 
     
@@ -658,14 +658,14 @@ public class CadastrosGeraisApi {
   /**
    * Lista os Produtos do Emissor
    * Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor.
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
    * @param nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
    * @param status Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo).
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @return ListaProdutos
    */
-  public ListaProdutos listarProdutosUsingGET(Long id, String nome, Integer status, Integer page, Integer limit) throws ApiException {
+  public ListaProdutos listarProdutosUsingGET(Integer page, Integer limit, Long id, String nome, Integer status) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -677,15 +677,15 @@ public class CadastrosGeraisApi {
     Map<String, Object> formParams = new HashMap<String, Object>();
 
     
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
     queryParams.addAll(apiClient.parameterToPairs("", "id", id));
     
     queryParams.addAll(apiClient.parameterToPairs("", "nome", nome));
     
     queryParams.addAll(apiClient.parameterToPairs("", "status", status));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
     
 
     
@@ -713,6 +713,8 @@ public class CadastrosGeraisApi {
   /**
    * Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
    * Este m\u00C3\u00A9todo permite que sejam listados os Endere\u00C3\u00A7os existentes na base de dados do Emissor.
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
    * @param idPessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)
    * @param idTipoEndereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
@@ -727,11 +729,9 @@ public class CadastrosGeraisApi {
    * @param pais Apresenta nome do Pais
    * @param dataInclusao Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
    * @param dataUltimaAtualizacao Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @return PageEnderecos
    */
-  public PageEnderecos listarUsingGET2(Long id, Long idPessoa, Long idTipoEndereco, String cep, String logradouro, Integer numero, String complemento, String pontoReferencia, String bairro, String cidade, String uf, String pais, Date dataInclusao, Date dataUltimaAtualizacao, Integer page, Integer limit) throws ApiException {
+  public PageEnderecos listarUsingGET2(Integer page, Integer limit, Long id, Long idPessoa, Long idTipoEndereco, String cep, String logradouro, Integer numero, String complemento, String pontoReferencia, String bairro, String cidade, String uf, String pais, Date dataInclusao, Date dataUltimaAtualizacao) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -742,6 +742,10 @@ public class CadastrosGeraisApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     Map<String, Object> formParams = new HashMap<String, Object>();
 
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
     
     queryParams.addAll(apiClient.parameterToPairs("", "id", id));
     
@@ -771,10 +775,6 @@ public class CadastrosGeraisApi {
     
     queryParams.addAll(apiClient.parameterToPairs("", "dataUltimaAtualizacao", dataUltimaAtualizacao));
     
-    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
-    
 
     
 
@@ -801,6 +801,8 @@ public class CadastrosGeraisApi {
   /**
    * Lista as Pessoas cadastradas no Emissor
    * Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
    * @param nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
    * @param tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica).
@@ -808,11 +810,9 @@ public class CadastrosGeraisApi {
    * @param cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
    * @param dataNascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
    * @param sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @return PagePessoas
    */
-  public PagePessoas listarUsingGET3(Long id, String nome, String tipo, String cpf, String cnpj, Date dataNascimento, String sexo, Integer page, Integer limit) throws ApiException {
+  public PagePessoas listarUsingGET3(Integer page, Integer limit, Long id, String nome, String tipo, String cpf, String cnpj, Date dataNascimento, String sexo) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -823,6 +823,10 @@ public class CadastrosGeraisApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     Map<String, Object> formParams = new HashMap<String, Object>();
 
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
     
     queryParams.addAll(apiClient.parameterToPairs("", "id", id));
     
@@ -837,10 +841,6 @@ public class CadastrosGeraisApi {
     queryParams.addAll(apiClient.parameterToPairs("", "dataNascimento", dataNascimento));
     
     queryParams.addAll(apiClient.parameterToPairs("", "sexo", sexo));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
     
 
     
@@ -868,6 +868,8 @@ public class CadastrosGeraisApi {
   /**
    * Lista os Portadores existentes
    * Este m\u00C3\u00A9todo permite que sejam listados os portadores cadastrados na base do emissor.
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @param idConta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
    * @param idProduto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
    * @param idPessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
@@ -879,11 +881,9 @@ public class CadastrosGeraisApi {
    * @param flagAtivo Quanto ativa, indica que o cadastro do Portador est\u00C3\u00A1 ativo, em emissores que realizam este tipo de gest\u00C3\u00A3o.
    * @param dataCadastroPortador Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
    * @param dataCancelamentoPortador Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @return PagePortador
    */
-  public PagePortador listarUsingGET4(Long idConta, Long idProduto, Long idPessoa, Long idParentesco, String tipoPortador, String nomeImpresso, Long idImagem, Long idTipoCartao, Integer flagAtivo, Date dataCadastroPortador, Date dataCancelamentoPortador, Integer page, Integer limit) throws ApiException {
+  public PagePortador listarUsingGET4(Integer page, Integer limit, Long idConta, Long idProduto, Long idPessoa, Long idParentesco, String tipoPortador, String nomeImpresso, Long idImagem, Long idTipoCartao, Integer flagAtivo, Date dataCadastroPortador, Date dataCancelamentoPortador) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -894,6 +894,10 @@ public class CadastrosGeraisApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     Map<String, Object> formParams = new HashMap<String, Object>();
 
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
     
     queryParams.addAll(apiClient.parameterToPairs("", "idConta", idConta));
     
@@ -916,10 +920,6 @@ public class CadastrosGeraisApi {
     queryParams.addAll(apiClient.parameterToPairs("", "dataCadastroPortador", dataCadastroPortador));
     
     queryParams.addAll(apiClient.parameterToPairs("", "dataCancelamentoPortador", dataCancelamentoPortador));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
     
 
     
@@ -947,6 +947,8 @@ public class CadastrosGeraisApi {
   /**
    * Lista os Telefones cadastrados no Emissor
    * Este m\u00C3\u00A9todo permite que sejam listados os Telefones existentes na base de dados do Emissor.
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
    * @param idTipoTelefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
    * @param idPessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) a qual o telefone pertence.
@@ -954,11 +956,9 @@ public class CadastrosGeraisApi {
    * @param telefone N\u00C3\u00BAmero do telefone.
    * @param ramal N\u00C3\u00BAmero do ramal.
    * @param status Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @return PageTelefones
    */
-  public PageTelefones listarUsingGET7(Long id, Long idTipoTelefone, Long idPessoa, String ddd, String telefone, String ramal, Integer status, Integer page, Integer limit) throws ApiException {
+  public PageTelefones listarUsingGET7(Integer page, Integer limit, Long id, Long idTipoTelefone, Long idPessoa, String ddd, String telefone, String ramal, Integer status) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -969,6 +969,10 @@ public class CadastrosGeraisApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     Map<String, Object> formParams = new HashMap<String, Object>();
 
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
     
     queryParams.addAll(apiClient.parameterToPairs("", "id", id));
     
@@ -983,10 +987,6 @@ public class CadastrosGeraisApi {
     queryParams.addAll(apiClient.parameterToPairs("", "ramal", ramal));
     
     queryParams.addAll(apiClient.parameterToPairs("", "status", status));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
     
 
     
@@ -1014,17 +1014,17 @@ public class CadastrosGeraisApi {
   /**
    * Lista as op\u00C3\u00B5es de Tipos de Endere\u00C3\u00A7os do Emissor 
    * Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Endere\u00C3\u00A7os existentes na base de dados do Emissor.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
-   * @param nome Nome do Tipo do Endere\u00C3\u00A7o
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
+   * @param nome Nome do Tipo do Endere\u00C3\u00A7o
    * @return PageTiposEndereco
    */
-  public PageTiposEndereco listarUsingGET8(Long id, String nome, Integer page, Integer limit) throws ApiException {
+  public PageTiposEndereco listarUsingGET8(Integer page, Integer limit, Long id, String nome) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
-    String path = "/api/tipos-endereco".replaceAll("\\{format\\}","json");
+    String path = "/api/tipos-enderecos".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1032,13 +1032,13 @@ public class CadastrosGeraisApi {
     Map<String, Object> formParams = new HashMap<String, Object>();
 
     
-    queryParams.addAll(apiClient.parameterToPairs("", "id", id));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "nome", nome));
-    
     queryParams.addAll(apiClient.parameterToPairs("", "page", page));
     
     queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "id", id));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "nome", nome));
     
 
     
@@ -1066,13 +1066,13 @@ public class CadastrosGeraisApi {
   /**
    * Lista os Tipos de Telefones
    * Este m\u00C3\u00A9todo permite que sejam listados os Tipos de Telefones existentes na base de dados do Emissor.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
-   * @param nome Nome do Tipo do Telefone
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+   * @param nome Nome do Tipo do Telefone
    * @return PageTipoTelefones
    */
-  public PageTipoTelefones listarUsingGET9(Long id, String nome, Integer page, Integer limit) throws ApiException {
+  public PageTipoTelefones listarUsingGET9(Integer page, Integer limit, Long id, String nome) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -1084,13 +1084,13 @@ public class CadastrosGeraisApi {
     Map<String, Object> formParams = new HashMap<String, Object>();
 
     
-    queryParams.addAll(apiClient.parameterToPairs("", "id", id));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "nome", nome));
-    
     queryParams.addAll(apiClient.parameterToPairs("", "page", page));
     
     queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "id", id));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "nome", nome));
     
 
     

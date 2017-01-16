@@ -17,13 +17,49 @@ import io.swagger.annotations.ApiModelProperty;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class StatusCartao   {
   
+  private Long id = null;
+  private String nome = null;
   private Integer flagCancelaCartao = null;
   private Integer flagCancelaNoDesbloqueio = null;
-  private Integer flagCobraTarifa = null;
-  private Long id = null;
-  private Long idStatusDestinoConta = null;
   private Long idStatusDestinoDesbloqueio = null;
-  private String nome = null;
+  private Long idStatusDestinoConta = null;
+  private Integer flagCobraTarifa = null;
+
+  
+  /**
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id) 
+   **/
+  public StatusCartao id(Long id) {
+    this.id = id;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id) ")
+  @JsonProperty("id")
+  public Long getId() {
+    return id;
+  }
+  public void setId(Long id) {
+    this.id = id;
+  }
+
+  
+  /**
+   * Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o.
+   **/
+  public StatusCartao nome(String nome) {
+    this.nome = nome;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o.")
+  @JsonProperty("nome")
+  public String getNome() {
+    return nome;
+  }
+  public void setNome(String nome) {
+    this.nome = nome;
+  }
 
   
   /**
@@ -63,38 +99,20 @@ public class StatusCartao   {
 
   
   /**
-   * Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
+   * Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.
    **/
-  public StatusCartao flagCobraTarifa(Integer flagCobraTarifa) {
-    this.flagCobraTarifa = flagCobraTarifa;
+  public StatusCartao idStatusDestinoDesbloqueio(Long idStatusDestinoDesbloqueio) {
+    this.idStatusDestinoDesbloqueio = idStatusDestinoDesbloqueio;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.")
-  @JsonProperty("flagCobraTarifa")
-  public Integer getFlagCobraTarifa() {
-    return flagCobraTarifa;
+  @ApiModelProperty(example = "null", required = true, value = "Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.")
+  @JsonProperty("idStatusDestinoDesbloqueio")
+  public Long getIdStatusDestinoDesbloqueio() {
+    return idStatusDestinoDesbloqueio;
   }
-  public void setFlagCobraTarifa(Integer flagCobraTarifa) {
-    this.flagCobraTarifa = flagCobraTarifa;
-  }
-
-  
-  /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id) 
-   **/
-  public StatusCartao id(Long id) {
-    this.id = id;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", required = true, value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id) ")
-  @JsonProperty("id")
-  public Long getId() {
-    return id;
-  }
-  public void setId(Long id) {
-    this.id = id;
+  public void setIdStatusDestinoDesbloqueio(Long idStatusDestinoDesbloqueio) {
+    this.idStatusDestinoDesbloqueio = idStatusDestinoDesbloqueio;
   }
 
   
@@ -117,38 +135,20 @@ public class StatusCartao   {
 
   
   /**
-   * Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.
+   * Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
    **/
-  public StatusCartao idStatusDestinoDesbloqueio(Long idStatusDestinoDesbloqueio) {
-    this.idStatusDestinoDesbloqueio = idStatusDestinoDesbloqueio;
+  public StatusCartao flagCobraTarifa(Integer flagCobraTarifa) {
+    this.flagCobraTarifa = flagCobraTarifa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo aos cart\u00C3\u00B5es que forem cancelados devido ao desbloqueio de um novo cart\u00C3\u00A3o.")
-  @JsonProperty("idStatusDestinoDesbloqueio")
-  public Long getIdStatusDestinoDesbloqueio() {
-    return idStatusDestinoDesbloqueio;
+  @ApiModelProperty(example = "null", required = true, value = "Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.")
+  @JsonProperty("flagCobraTarifa")
+  public Integer getFlagCobraTarifa() {
+    return flagCobraTarifa;
   }
-  public void setIdStatusDestinoDesbloqueio(Long idStatusDestinoDesbloqueio) {
-    this.idStatusDestinoDesbloqueio = idStatusDestinoDesbloqueio;
-  }
-
-  
-  /**
-   * Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o.
-   **/
-  public StatusCartao nome(String nome) {
-    this.nome = nome;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", required = true, value = "Nome atribu\u00C3\u00ADdo ao Status de Entrega do Cart\u00C3\u00A3o.")
-  @JsonProperty("nome")
-  public String getNome() {
-    return nome;
-  }
-  public void setNome(String nome) {
-    this.nome = nome;
+  public void setFlagCobraTarifa(Integer flagCobraTarifa) {
+    this.flagCobraTarifa = flagCobraTarifa;
   }
 
   
@@ -162,18 +162,18 @@ public class StatusCartao   {
       return false;
     }
     StatusCartao statusCartao = (StatusCartao) o;
-    return Objects.equals(this.flagCancelaCartao, statusCartao.flagCancelaCartao) &&
+    return Objects.equals(this.id, statusCartao.id) &&
+        Objects.equals(this.nome, statusCartao.nome) &&
+        Objects.equals(this.flagCancelaCartao, statusCartao.flagCancelaCartao) &&
         Objects.equals(this.flagCancelaNoDesbloqueio, statusCartao.flagCancelaNoDesbloqueio) &&
-        Objects.equals(this.flagCobraTarifa, statusCartao.flagCobraTarifa) &&
-        Objects.equals(this.id, statusCartao.id) &&
-        Objects.equals(this.idStatusDestinoConta, statusCartao.idStatusDestinoConta) &&
         Objects.equals(this.idStatusDestinoDesbloqueio, statusCartao.idStatusDestinoDesbloqueio) &&
-        Objects.equals(this.nome, statusCartao.nome);
+        Objects.equals(this.idStatusDestinoConta, statusCartao.idStatusDestinoConta) &&
+        Objects.equals(this.flagCobraTarifa, statusCartao.flagCobraTarifa);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(flagCancelaCartao, flagCancelaNoDesbloqueio, flagCobraTarifa, id, idStatusDestinoConta, idStatusDestinoDesbloqueio, nome);
+    return Objects.hash(id, nome, flagCancelaCartao, flagCancelaNoDesbloqueio, idStatusDestinoDesbloqueio, idStatusDestinoConta, flagCobraTarifa);
   }
 
   @Override
@@ -181,13 +181,13 @@ public class StatusCartao   {
     StringBuilder sb = new StringBuilder();
     sb.append("class StatusCartao {\n");
     
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    nome: ").append(toIndentedString(nome)).append("\n");
     sb.append("    flagCancelaCartao: ").append(toIndentedString(flagCancelaCartao)).append("\n");
     sb.append("    flagCancelaNoDesbloqueio: ").append(toIndentedString(flagCancelaNoDesbloqueio)).append("\n");
-    sb.append("    flagCobraTarifa: ").append(toIndentedString(flagCobraTarifa)).append("\n");
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    idStatusDestinoConta: ").append(toIndentedString(idStatusDestinoConta)).append("\n");
     sb.append("    idStatusDestinoDesbloqueio: ").append(toIndentedString(idStatusDestinoDesbloqueio)).append("\n");
-    sb.append("    nome: ").append(toIndentedString(nome)).append("\n");
+    sb.append("    idStatusDestinoConta: ").append(toIndentedString(idStatusDestinoConta)).append("\n");
+    sb.append("    flagCobraTarifa: ").append(toIndentedString(flagCobraTarifa)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -18,128 +18,20 @@ import java.util.Date;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class Endereco   {
   
-  private String bairro = null;
-  private String cep = null;
-  private String cidade = null;
-  private String complemento = null;
-  private Date dataInclusao = null;
-  private Date dataUltimaAtualizacao = null;
   private Long id = null;
   private Long idPessoa = null;
   private Long idTipoEndereco = null;
+  private String cep = null;
   private String logradouro = null;
   private Integer numero = null;
-  private String pais = null;
+  private String complemento = null;
   private String pontoReferencia = null;
+  private String bairro = null;
+  private String cidade = null;
   private String uf = null;
-
-  
-  /**
-   * Apresenta nome do bairro
-   **/
-  public Endereco bairro(String bairro) {
-    this.bairro = bairro;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Apresenta nome do bairro")
-  @JsonProperty("bairro")
-  public String getBairro() {
-    return bairro;
-  }
-  public void setBairro(String bairro) {
-    this.bairro = bairro;
-  }
-
-  
-  /**
-   * Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'
-   **/
-  public Endereco cep(String cep) {
-    this.cep = cep;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'")
-  @JsonProperty("cep")
-  public String getCep() {
-    return cep;
-  }
-  public void setCep(String cep) {
-    this.cep = cep;
-  }
-
-  
-  /**
-   * Apresenta nome da cidade
-   **/
-  public Endereco cidade(String cidade) {
-    this.cidade = cidade;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Apresenta nome da cidade")
-  @JsonProperty("cidade")
-  public String getCidade() {
-    return cidade;
-  }
-  public void setCidade(String cidade) {
-    this.cidade = cidade;
-  }
-
-  
-  /**
-   * Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
-   **/
-  public Endereco complemento(String complemento) {
-    this.complemento = complemento;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o")
-  @JsonProperty("complemento")
-  public String getComplemento() {
-    return complemento;
-  }
-  public void setComplemento(String complemento) {
-    this.complemento = complemento;
-  }
-
-  
-  /**
-   * Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
-   **/
-  public Endereco dataInclusao(Date dataInclusao) {
-    this.dataInclusao = dataInclusao;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o")
-  @JsonProperty("dataInclusao")
-  public Date getDataInclusao() {
-    return dataInclusao;
-  }
-  public void setDataInclusao(Date dataInclusao) {
-    this.dataInclusao = dataInclusao;
-  }
-
-  
-  /**
-   * Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
-   **/
-  public Endereco dataUltimaAtualizacao(Date dataUltimaAtualizacao) {
-    this.dataUltimaAtualizacao = dataUltimaAtualizacao;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao")
-  @JsonProperty("dataUltimaAtualizacao")
-  public Date getDataUltimaAtualizacao() {
-    return dataUltimaAtualizacao;
-  }
-  public void setDataUltimaAtualizacao(Date dataUltimaAtualizacao) {
-    this.dataUltimaAtualizacao = dataUltimaAtualizacao;
-  }
+  private String pais = null;
+  private Date dataInclusao = null;
+  private Date dataUltimaAtualizacao = null;
 
   
   /**
@@ -197,6 +89,24 @@ public class Endereco   {
 
   
   /**
+   * Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'
+   **/
+  public Endereco cep(String cep) {
+    this.cep = cep;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro '58800000'")
+  @JsonProperty("cep")
+  public String getCep() {
+    return cep;
+  }
+  public void setCep(String cep) {
+    this.cep = cep;
+  }
+
+  
+  /**
    * Apresenta o nome do Logradouro
    **/
   public Endereco logradouro(String logradouro) {
@@ -233,20 +143,20 @@ public class Endereco   {
 
   
   /**
-   * Apresenta nome do Pais
+   * Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
    **/
-  public Endereco pais(String pais) {
-    this.pais = pais;
+  public Endereco complemento(String complemento) {
+    this.complemento = complemento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta nome do Pais")
-  @JsonProperty("pais")
-  public String getPais() {
-    return pais;
+  @ApiModelProperty(example = "null", value = "Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o")
+  @JsonProperty("complemento")
+  public String getComplemento() {
+    return complemento;
   }
-  public void setPais(String pais) {
-    this.pais = pais;
+  public void setComplemento(String complemento) {
+    this.complemento = complemento;
   }
 
   
@@ -269,6 +179,42 @@ public class Endereco   {
 
   
   /**
+   * Apresenta nome do bairro
+   **/
+  public Endereco bairro(String bairro) {
+    this.bairro = bairro;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Apresenta nome do bairro")
+  @JsonProperty("bairro")
+  public String getBairro() {
+    return bairro;
+  }
+  public void setBairro(String bairro) {
+    this.bairro = bairro;
+  }
+
+  
+  /**
+   * Apresenta nome da cidade
+   **/
+  public Endereco cidade(String cidade) {
+    this.cidade = cidade;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Apresenta nome da cidade")
+  @JsonProperty("cidade")
+  public String getCidade() {
+    return cidade;
+  }
+  public void setCidade(String cidade) {
+    this.cidade = cidade;
+  }
+
+  
+  /**
    * Apresenta sigla da Unidade Federativa
    **/
   public Endereco uf(String uf) {
@@ -286,6 +232,60 @@ public class Endereco   {
   }
 
   
+  /**
+   * Apresenta nome do Pais
+   **/
+  public Endereco pais(String pais) {
+    this.pais = pais;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Apresenta nome do Pais")
+  @JsonProperty("pais")
+  public String getPais() {
+    return pais;
+  }
+  public void setPais(String pais) {
+    this.pais = pais;
+  }
+
+  
+  /**
+   * Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
+   **/
+  public Endereco dataInclusao(Date dataInclusao) {
+    this.dataInclusao = dataInclusao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o")
+  @JsonProperty("dataInclusao")
+  public Date getDataInclusao() {
+    return dataInclusao;
+  }
+  public void setDataInclusao(Date dataInclusao) {
+    this.dataInclusao = dataInclusao;
+  }
+
+  
+  /**
+   * Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
+   **/
+  public Endereco dataUltimaAtualizacao(Date dataUltimaAtualizacao) {
+    this.dataUltimaAtualizacao = dataUltimaAtualizacao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao")
+  @JsonProperty("dataUltimaAtualizacao")
+  public Date getDataUltimaAtualizacao() {
+    return dataUltimaAtualizacao;
+  }
+  public void setDataUltimaAtualizacao(Date dataUltimaAtualizacao) {
+    this.dataUltimaAtualizacao = dataUltimaAtualizacao;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -296,25 +296,25 @@ public class Endereco   {
       return false;
     }
     Endereco endereco = (Endereco) o;
-    return Objects.equals(this.bairro, endereco.bairro) &&
-        Objects.equals(this.cep, endereco.cep) &&
-        Objects.equals(this.cidade, endereco.cidade) &&
-        Objects.equals(this.complemento, endereco.complemento) &&
-        Objects.equals(this.dataInclusao, endereco.dataInclusao) &&
-        Objects.equals(this.dataUltimaAtualizacao, endereco.dataUltimaAtualizacao) &&
-        Objects.equals(this.id, endereco.id) &&
+    return Objects.equals(this.id, endereco.id) &&
         Objects.equals(this.idPessoa, endereco.idPessoa) &&
         Objects.equals(this.idTipoEndereco, endereco.idTipoEndereco) &&
+        Objects.equals(this.cep, endereco.cep) &&
         Objects.equals(this.logradouro, endereco.logradouro) &&
         Objects.equals(this.numero, endereco.numero) &&
-        Objects.equals(this.pais, endereco.pais) &&
+        Objects.equals(this.complemento, endereco.complemento) &&
         Objects.equals(this.pontoReferencia, endereco.pontoReferencia) &&
-        Objects.equals(this.uf, endereco.uf);
+        Objects.equals(this.bairro, endereco.bairro) &&
+        Objects.equals(this.cidade, endereco.cidade) &&
+        Objects.equals(this.uf, endereco.uf) &&
+        Objects.equals(this.pais, endereco.pais) &&
+        Objects.equals(this.dataInclusao, endereco.dataInclusao) &&
+        Objects.equals(this.dataUltimaAtualizacao, endereco.dataUltimaAtualizacao);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(bairro, cep, cidade, complemento, dataInclusao, dataUltimaAtualizacao, id, idPessoa, idTipoEndereco, logradouro, numero, pais, pontoReferencia, uf);
+    return Objects.hash(id, idPessoa, idTipoEndereco, cep, logradouro, numero, complemento, pontoReferencia, bairro, cidade, uf, pais, dataInclusao, dataUltimaAtualizacao);
   }
 
   @Override
@@ -322,20 +322,20 @@ public class Endereco   {
     StringBuilder sb = new StringBuilder();
     sb.append("class Endereco {\n");
     
-    sb.append("    bairro: ").append(toIndentedString(bairro)).append("\n");
-    sb.append("    cep: ").append(toIndentedString(cep)).append("\n");
-    sb.append("    cidade: ").append(toIndentedString(cidade)).append("\n");
-    sb.append("    complemento: ").append(toIndentedString(complemento)).append("\n");
-    sb.append("    dataInclusao: ").append(toIndentedString(dataInclusao)).append("\n");
-    sb.append("    dataUltimaAtualizacao: ").append(toIndentedString(dataUltimaAtualizacao)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idPessoa: ").append(toIndentedString(idPessoa)).append("\n");
     sb.append("    idTipoEndereco: ").append(toIndentedString(idTipoEndereco)).append("\n");
+    sb.append("    cep: ").append(toIndentedString(cep)).append("\n");
     sb.append("    logradouro: ").append(toIndentedString(logradouro)).append("\n");
     sb.append("    numero: ").append(toIndentedString(numero)).append("\n");
-    sb.append("    pais: ").append(toIndentedString(pais)).append("\n");
+    sb.append("    complemento: ").append(toIndentedString(complemento)).append("\n");
     sb.append("    pontoReferencia: ").append(toIndentedString(pontoReferencia)).append("\n");
+    sb.append("    bairro: ").append(toIndentedString(bairro)).append("\n");
+    sb.append("    cidade: ").append(toIndentedString(cidade)).append("\n");
     sb.append("    uf: ").append(toIndentedString(uf)).append("\n");
+    sb.append("    pais: ").append(toIndentedString(pais)).append("\n");
+    sb.append("    dataInclusao: ").append(toIndentedString(dataInclusao)).append("\n");
+    sb.append("    dataUltimaAtualizacao: ").append(toIndentedString(dataUltimaAtualizacao)).append("\n");
     sb.append("}");
     return sb.toString();
   }

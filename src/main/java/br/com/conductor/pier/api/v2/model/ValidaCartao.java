@@ -17,27 +17,9 @@ import io.swagger.annotations.ApiModelProperty;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ValidaCartao   {
   
-  private String criptogramaResposta = null;
   private String statusCartao = null;
   private String statusConta = null;
-
-  
-  /**
-   * Criptograma de resposta
-   **/
-  public ValidaCartao criptogramaResposta(String criptogramaResposta) {
-    this.criptogramaResposta = criptogramaResposta;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Criptograma de resposta")
-  @JsonProperty("criptogramaResposta")
-  public String getCriptogramaResposta() {
-    return criptogramaResposta;
-  }
-  public void setCriptogramaResposta(String criptogramaResposta) {
-    this.criptogramaResposta = criptogramaResposta;
-  }
+  private String criptogramaResposta = null;
 
   
   /**
@@ -76,6 +58,24 @@ public class ValidaCartao   {
   }
 
   
+  /**
+   * Criptograma de resposta
+   **/
+  public ValidaCartao criptogramaResposta(String criptogramaResposta) {
+    this.criptogramaResposta = criptogramaResposta;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Criptograma de resposta")
+  @JsonProperty("criptogramaResposta")
+  public String getCriptogramaResposta() {
+    return criptogramaResposta;
+  }
+  public void setCriptogramaResposta(String criptogramaResposta) {
+    this.criptogramaResposta = criptogramaResposta;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -86,14 +86,14 @@ public class ValidaCartao   {
       return false;
     }
     ValidaCartao validaCartao = (ValidaCartao) o;
-    return Objects.equals(this.criptogramaResposta, validaCartao.criptogramaResposta) &&
-        Objects.equals(this.statusCartao, validaCartao.statusCartao) &&
-        Objects.equals(this.statusConta, validaCartao.statusConta);
+    return Objects.equals(this.statusCartao, validaCartao.statusCartao) &&
+        Objects.equals(this.statusConta, validaCartao.statusConta) &&
+        Objects.equals(this.criptogramaResposta, validaCartao.criptogramaResposta);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(criptogramaResposta, statusCartao, statusConta);
+    return Objects.hash(statusCartao, statusConta, criptogramaResposta);
   }
 
   @Override
@@ -101,9 +101,9 @@ public class ValidaCartao   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ValidaCartao {\n");
     
-    sb.append("    criptogramaResposta: ").append(toIndentedString(criptogramaResposta)).append("\n");
     sb.append("    statusCartao: ").append(toIndentedString(statusCartao)).append("\n");
     sb.append("    statusConta: ").append(toIndentedString(statusConta)).append("\n");
+    sb.append("    criptogramaResposta: ").append(toIndentedString(criptogramaResposta)).append("\n");
     sb.append("}");
     return sb.toString();
   }

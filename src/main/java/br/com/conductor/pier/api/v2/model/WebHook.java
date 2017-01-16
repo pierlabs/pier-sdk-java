@@ -18,6 +18,7 @@ import io.swagger.annotations.ApiModelProperty;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class WebHook   {
   
+  private Long id = null;
 
 
   public enum EventoEnum {
@@ -38,7 +39,6 @@ public class WebHook   {
   }
 
   private EventoEnum evento = null;
-  private Long id = null;
 
 
   public enum MetodoEnum {
@@ -65,24 +65,6 @@ public class WebHook   {
 
   
   /**
-   * Evento a ser chamado pelo WebHook
-   **/
-  public WebHook evento(EventoEnum evento) {
-    this.evento = evento;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", required = true, value = "Evento a ser chamado pelo WebHook")
-  @JsonProperty("evento")
-  public EventoEnum getEvento() {
-    return evento;
-  }
-  public void setEvento(EventoEnum evento) {
-    this.evento = evento;
-  }
-
-  
-  /**
    * Id do WebHook
    **/
   public WebHook id(Long id) {
@@ -97,6 +79,24 @@ public class WebHook   {
   }
   public void setId(Long id) {
     this.id = id;
+  }
+
+  
+  /**
+   * Evento a ser chamado pelo WebHook
+   **/
+  public WebHook evento(EventoEnum evento) {
+    this.evento = evento;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "Evento a ser chamado pelo WebHook")
+  @JsonProperty("evento")
+  public EventoEnum getEvento() {
+    return evento;
+  }
+  public void setEvento(EventoEnum evento) {
+    this.evento = evento;
   }
 
   
@@ -146,15 +146,15 @@ public class WebHook   {
       return false;
     }
     WebHook webHook = (WebHook) o;
-    return Objects.equals(this.evento, webHook.evento) &&
-        Objects.equals(this.id, webHook.id) &&
+    return Objects.equals(this.id, webHook.id) &&
+        Objects.equals(this.evento, webHook.evento) &&
         Objects.equals(this.metodo, webHook.metodo) &&
         Objects.equals(this.url, webHook.url);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(evento, id, metodo, url);
+    return Objects.hash(id, evento, metodo, url);
   }
 
   @Override
@@ -162,8 +162,8 @@ public class WebHook   {
     StringBuilder sb = new StringBuilder();
     sb.append("class WebHook {\n");
     
-    sb.append("    evento: ").append(toIndentedString(evento)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    evento: ").append(toIndentedString(evento)).append("\n");
     sb.append("    metodo: ").append(toIndentedString(metodo)).append("\n");
     sb.append("    url: ").append(toIndentedString(url)).append("\n");
     sb.append("}");

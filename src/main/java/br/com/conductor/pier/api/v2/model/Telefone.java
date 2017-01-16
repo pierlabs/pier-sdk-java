@@ -17,31 +17,13 @@ import io.swagger.annotations.ApiModelProperty;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class Telefone   {
   
-  private String ddd = null;
   private Long id = null;
-  private Long idPessoa = null;
   private Long idTipoTelefone = null;
+  private Long idPessoa = null;
+  private String ddd = null;
+  private String telefone = null;
   private String ramal = null;
   private Integer status = null;
-  private String telefone = null;
-
-  
-  /**
-   * C\u00C3\u00B3digo DDD do telefone (id).
-   **/
-  public Telefone ddd(String ddd) {
-    this.ddd = ddd;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo DDD do telefone (id).")
-  @JsonProperty("ddd")
-  public String getDdd() {
-    return ddd;
-  }
-  public void setDdd(String ddd) {
-    this.ddd = ddd;
-  }
 
   
   /**
@@ -59,6 +41,24 @@ public class Telefone   {
   }
   public void setId(Long id) {
     this.id = id;
+  }
+
+  
+  /**
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+   **/
+  public Telefone idTipoTelefone(Long idTipoTelefone) {
+    this.idTipoTelefone = idTipoTelefone;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).")
+  @JsonProperty("idTipoTelefone")
+  public Long getIdTipoTelefone() {
+    return idTipoTelefone;
+  }
+  public void setIdTipoTelefone(Long idTipoTelefone) {
+    this.idTipoTelefone = idTipoTelefone;
   }
 
   
@@ -81,20 +81,38 @@ public class Telefone   {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
+   * C\u00C3\u00B3digo DDD do telefone (id).
    **/
-  public Telefone idTipoTelefone(Long idTipoTelefone) {
-    this.idTipoTelefone = idTipoTelefone;
+  public Telefone ddd(String ddd) {
+    this.ddd = ddd;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).")
-  @JsonProperty("idTipoTelefone")
-  public Long getIdTipoTelefone() {
-    return idTipoTelefone;
+  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo DDD do telefone (id).")
+  @JsonProperty("ddd")
+  public String getDdd() {
+    return ddd;
   }
-  public void setIdTipoTelefone(Long idTipoTelefone) {
-    this.idTipoTelefone = idTipoTelefone;
+  public void setDdd(String ddd) {
+    this.ddd = ddd;
+  }
+
+  
+  /**
+   * N\u00C3\u00BAmero do telefone.
+   **/
+  public Telefone telefone(String telefone) {
+    this.telefone = telefone;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero do telefone.")
+  @JsonProperty("telefone")
+  public String getTelefone() {
+    return telefone;
+  }
+  public void setTelefone(String telefone) {
+    this.telefone = telefone;
   }
 
   
@@ -134,24 +152,6 @@ public class Telefone   {
   }
 
   
-  /**
-   * N\u00C3\u00BAmero do telefone.
-   **/
-  public Telefone telefone(String telefone) {
-    this.telefone = telefone;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero do telefone.")
-  @JsonProperty("telefone")
-  public String getTelefone() {
-    return telefone;
-  }
-  public void setTelefone(String telefone) {
-    this.telefone = telefone;
-  }
-
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -162,18 +162,18 @@ public class Telefone   {
       return false;
     }
     Telefone telefone = (Telefone) o;
-    return Objects.equals(this.ddd, telefone.ddd) &&
-        Objects.equals(this.id, telefone.id) &&
-        Objects.equals(this.idPessoa, telefone.idPessoa) &&
+    return Objects.equals(this.id, telefone.id) &&
         Objects.equals(this.idTipoTelefone, telefone.idTipoTelefone) &&
+        Objects.equals(this.idPessoa, telefone.idPessoa) &&
+        Objects.equals(this.ddd, telefone.ddd) &&
+        Objects.equals(this.telefone, telefone.telefone) &&
         Objects.equals(this.ramal, telefone.ramal) &&
-        Objects.equals(this.status, telefone.status) &&
-        Objects.equals(this.telefone, telefone.telefone);
+        Objects.equals(this.status, telefone.status);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(ddd, id, idPessoa, idTipoTelefone, ramal, status, telefone);
+    return Objects.hash(id, idTipoTelefone, idPessoa, ddd, telefone, ramal, status);
   }
 
   @Override
@@ -181,13 +181,13 @@ public class Telefone   {
     StringBuilder sb = new StringBuilder();
     sb.append("class Telefone {\n");
     
-    sb.append("    ddd: ").append(toIndentedString(ddd)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    idPessoa: ").append(toIndentedString(idPessoa)).append("\n");
     sb.append("    idTipoTelefone: ").append(toIndentedString(idTipoTelefone)).append("\n");
+    sb.append("    idPessoa: ").append(toIndentedString(idPessoa)).append("\n");
+    sb.append("    ddd: ").append(toIndentedString(ddd)).append("\n");
+    sb.append("    telefone: ").append(toIndentedString(telefone)).append("\n");
     sb.append("    ramal: ").append(toIndentedString(ramal)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    telefone: ").append(toIndentedString(telefone)).append("\n");
     sb.append("}");
     return sb.toString();
   }
