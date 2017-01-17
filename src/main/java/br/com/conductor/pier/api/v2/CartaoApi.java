@@ -60,6 +60,11 @@ public class CartaoApi {
         throw new ApiException(400, "Missing the required parameter 'id' when calling alterarStatusImpressaoUsingPUT");
      }
      
+     // verify the required parameter 'idStatusImpressao' is set
+     if (idStatusImpressao == null) {
+        throw new ApiException(400, "Missing the required parameter 'idStatusImpressao' when calling alterarStatusImpressaoUsingPUT");
+     }
+     
     // create path and map variables
     String path = "/api/cartoes/{id}/alterar-status-impressao".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
@@ -234,15 +239,14 @@ public class CartaoApi {
      }
      
     // create path and map variables
-    String path = "/api/cartoes/{id}/alterar-senha".replaceAll("\\{format\\}","json");
+    String path = "/api/cartoes/{id}/alterar-senha".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
     Map<String, String> headerParams = new HashMap<String, String>();
     Map<String, Object> formParams = new HashMap<String, Object>();
 
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "id", id));
     
 
     if (senha != null)
@@ -918,15 +922,14 @@ public class CartaoApi {
      }
      
     // create path and map variables
-    String path = "/api/cartoes/{id}/validar-senha".replaceAll("\\{format\\}","json");
+    String path = "/api/cartoes/{id}/validar-senha".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
     Map<String, String> headerParams = new HashMap<String, String>();
     Map<String, Object> formParams = new HashMap<String, Object>();
 
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "id", id));
     
 
     if (senha != null)
