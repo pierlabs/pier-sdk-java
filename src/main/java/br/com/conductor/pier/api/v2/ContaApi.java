@@ -392,8 +392,8 @@ public class ContaApi {
   }
   
   /**
+   * Listar Faturas da Conta
    * Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
-   * 
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
@@ -520,8 +520,8 @@ public class ContaApi {
   }
   
   /**
-   * Permite listar todas as transa\u00C3\u00A7\u00C3\u00B5es da Conta
-   * 
+   * Permite listar uma linha do tempo com os eventos da conta
+   * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00C3\u00A7\u00C3\u00B5es, fechamento da fatura, pagamentos, gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es e altera\u00C3\u00A7\u00C3\u00A3o de limite s\u00C3\u00A3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00C3\u00A9todo, as opera\u00C3\u00A7\u00C3\u00B5es s\u00C3\u00A3o ordenadas de forma decrescente.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @param idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
@@ -531,7 +531,7 @@ public class ContaApi {
     Object postBody = null;
     
     // create path and map variables
-    String path = "/api/contas/{id_conta}/transacoes".replaceAll("\\{format\\}","json");
+    String path = "/api/contas/{id_conta}/timeline".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
