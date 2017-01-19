@@ -11,7 +11,9 @@ import br.com.conductor.pier.api.v2.model.Conta;
 import java.math.BigDecimal;
 import br.com.conductor.pier.api.v2.model.LimiteDisponibilidade;
 import br.com.conductor.pier.api.v2.model.CartaoImpressao;
+import br.com.conductor.pier.api.v2.model.Fatura;
 import java.util.Date;
+import br.com.conductor.pier.api.v2.model.PageTransacaoResponse;
 
 
 
@@ -390,6 +392,58 @@ public class ContaApi {
   }
   
   /**
+   * Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
+   * 
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
+   * @param dataVencimento Data de Vencimento da Fatura.
+   * @return Fatura
+   */
+  public Fatura listarFaturasUsingGET(Integer page, Integer limit, Long id, Date dataVencimento) throws ApiException {
+    Object postBody = null;
+    
+    // create path and map variables
+    String path = "/api/contas/{id_conta}/faturas".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "id", id));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "dataVencimento", dataVencimento));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    String[] authNames = new String[] {"client_id", "access_token" };
+
+    
+    GenericType<Fatura> returnType = new GenericType<Fatura>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Lista contas existentes na base de dados do Emissor
    * Este recurso permite listar contas existentes na base de dados do Emissor.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
@@ -462,6 +516,55 @@ public class ContaApi {
     
     GenericType<Conta> returnType = new GenericType<Conta>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Permite listar todas as transa\u00C3\u00A7\u00C3\u00B5es da Conta
+   * 
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @param idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * @return PageTransacaoResponse
+   */
+  public PageTransacaoResponse transacoesUsingPOST(Integer page, Integer limit, Long idConta) throws ApiException {
+    Object postBody = null;
+    
+    // create path and map variables
+    String path = "/api/contas/{id_conta}/transacoes".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idConta", idConta));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    String[] authNames = new String[] {"client_id", "access_token" };
+
+    
+    GenericType<PageTransacaoResponse> returnType = new GenericType<PageTransacaoResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   

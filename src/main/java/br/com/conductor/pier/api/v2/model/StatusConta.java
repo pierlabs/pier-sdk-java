@@ -21,6 +21,7 @@ public class StatusConta   {
   private String nome = null;
   private Integer flagAlteraLimite = null;
   private String mensagemConsultaNegada = null;
+  private Integer flagPermiteNovaViaCartao = null;
 
   
   /**
@@ -95,6 +96,24 @@ public class StatusConta   {
   }
 
   
+  /**
+   * Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+   **/
+  public StatusConta flagPermiteNovaViaCartao(Integer flagPermiteNovaViaCartao) {
+    this.flagPermiteNovaViaCartao = flagPermiteNovaViaCartao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.")
+  @JsonProperty("flagPermiteNovaViaCartao")
+  public Integer getFlagPermiteNovaViaCartao() {
+    return flagPermiteNovaViaCartao;
+  }
+  public void setFlagPermiteNovaViaCartao(Integer flagPermiteNovaViaCartao) {
+    this.flagPermiteNovaViaCartao = flagPermiteNovaViaCartao;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -108,12 +127,13 @@ public class StatusConta   {
     return Objects.equals(this.id, statusConta.id) &&
         Objects.equals(this.nome, statusConta.nome) &&
         Objects.equals(this.flagAlteraLimite, statusConta.flagAlteraLimite) &&
-        Objects.equals(this.mensagemConsultaNegada, statusConta.mensagemConsultaNegada);
+        Objects.equals(this.mensagemConsultaNegada, statusConta.mensagemConsultaNegada) &&
+        Objects.equals(this.flagPermiteNovaViaCartao, statusConta.flagPermiteNovaViaCartao);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, nome, flagAlteraLimite, mensagemConsultaNegada);
+    return Objects.hash(id, nome, flagAlteraLimite, mensagemConsultaNegada, flagPermiteNovaViaCartao);
   }
 
   @Override
@@ -125,6 +145,7 @@ public class StatusConta   {
     sb.append("    nome: ").append(toIndentedString(nome)).append("\n");
     sb.append("    flagAlteraLimite: ").append(toIndentedString(flagAlteraLimite)).append("\n");
     sb.append("    mensagemConsultaNegada: ").append(toIndentedString(mensagemConsultaNegada)).append("\n");
+    sb.append("    flagPermiteNovaViaCartao: ").append(toIndentedString(flagPermiteNovaViaCartao)).append("\n");
     sb.append("}");
     return sb.toString();
   }

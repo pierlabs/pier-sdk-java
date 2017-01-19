@@ -24,6 +24,7 @@ public class StatusCartao   {
   private Long idStatusDestinoDesbloqueio = null;
   private Long idStatusDestinoConta = null;
   private Integer flagCobraTarifa = null;
+  private Integer flagPermiteNovaViaCartao = null;
 
   
   /**
@@ -152,6 +153,24 @@ public class StatusCartao   {
   }
 
   
+  /**
+   * Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo.
+   **/
+  public StatusCartao flagPermiteNovaViaCartao(Integer flagPermiteNovaViaCartao) {
+    this.flagPermiteNovaViaCartao = flagPermiteNovaViaCartao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo.")
+  @JsonProperty("flagPermiteNovaViaCartao")
+  public Integer getFlagPermiteNovaViaCartao() {
+    return flagPermiteNovaViaCartao;
+  }
+  public void setFlagPermiteNovaViaCartao(Integer flagPermiteNovaViaCartao) {
+    this.flagPermiteNovaViaCartao = flagPermiteNovaViaCartao;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -168,12 +187,13 @@ public class StatusCartao   {
         Objects.equals(this.flagCancelaNoDesbloqueio, statusCartao.flagCancelaNoDesbloqueio) &&
         Objects.equals(this.idStatusDestinoDesbloqueio, statusCartao.idStatusDestinoDesbloqueio) &&
         Objects.equals(this.idStatusDestinoConta, statusCartao.idStatusDestinoConta) &&
-        Objects.equals(this.flagCobraTarifa, statusCartao.flagCobraTarifa);
+        Objects.equals(this.flagCobraTarifa, statusCartao.flagCobraTarifa) &&
+        Objects.equals(this.flagPermiteNovaViaCartao, statusCartao.flagPermiteNovaViaCartao);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, nome, flagCancelaCartao, flagCancelaNoDesbloqueio, idStatusDestinoDesbloqueio, idStatusDestinoConta, flagCobraTarifa);
+    return Objects.hash(id, nome, flagCancelaCartao, flagCancelaNoDesbloqueio, idStatusDestinoDesbloqueio, idStatusDestinoConta, flagCobraTarifa, flagPermiteNovaViaCartao);
   }
 
   @Override
@@ -188,6 +208,7 @@ public class StatusCartao   {
     sb.append("    idStatusDestinoDesbloqueio: ").append(toIndentedString(idStatusDestinoDesbloqueio)).append("\n");
     sb.append("    idStatusDestinoConta: ").append(toIndentedString(idStatusDestinoConta)).append("\n");
     sb.append("    flagCobraTarifa: ").append(toIndentedString(flagCobraTarifa)).append("\n");
+    sb.append("    flagPermiteNovaViaCartao: ").append(toIndentedString(flagPermiteNovaViaCartao)).append("\n");
     sb.append("}");
     return sb.toString();
   }

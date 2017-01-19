@@ -11,6 +11,7 @@ import br.com.conductor.pier.api.v2.model.HistoricoImpressaoCartao;
 import br.com.conductor.pier.api.v2.model.Cartao;
 import br.com.conductor.pier.api.v2.model.LimiteDisponibilidade;
 import br.com.conductor.pier.api.v2.model.Portador;
+import br.com.conductor.pier.api.v2.model.LoteCartoesPrePagos;
 import br.com.conductor.pier.api.v2.model.PageCartoes;
 import java.util.Date;
 import br.com.conductor.pier.api.v2.model.ValidaCartao;
@@ -462,6 +463,111 @@ public class CartaoApi {
   }
   
   /**
+   * Permite gerar um novo Lote de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
+   * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores gerem uma determinada quantidade de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pagos, de forma n\u00C3\u00A3o nominal, os quais poder\u00C3\u00A3o ser comercializados e posteriormente vinculados a um cliente que o adquirir. Para isso, al\u00C3\u00A9m de definir quantos cart\u00C3\u00B5es dever\u00C3\u00A3o ser gerados, ser\u00C3\u00A1 poss\u00C3\u00ADvel definir qual a Origem Comercial, o Produto, o Tipo do Cart\u00C3\u00A3o, a Imagem e o Endere\u00C3\u00A7o para entrega dos Cart\u00C3\u00B5es presentes no lote gerado. Por padr\u00C3\u00A3o, todos os cart\u00C3\u00B5es ser\u00C3\u00A3o associados a um idPessoa fict\u00C3\u00ADcio e receber\u00C3\u00A1 um idConta \u00C3\u00BAnico para cada um deles. Feito isso, os Cart\u00C3\u00B5es gerados por esta opera\u00C3\u00A7\u00C3\u00A3o seguir\u00C3\u00A3o os mesmos processos de impress\u00C3\u00A3o via gr\u00C3\u00A1fica previamente definidos entre o Emissor e a Conductor.
+   * @param idOrigemComercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id).
+   * @param idProduto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
+   * @param idTipoCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id).
+   * @param idImagem C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id).
+   * @param idEndereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
+   * @param quantidadeCartoes N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
+   * @return LoteCartoesPrePagos
+   */
+  public LoteCartoesPrePagos gerarLotesCartoesPrePagosUsingPOST(Long idOrigemComercial, Long idProduto, Long idTipoCartao, Long idImagem, Long idEndereco, Integer quantidadeCartoes) throws ApiException {
+    Object postBody = null;
+    
+    // create path and map variables
+    String path = "/api/cartoes/pre-pagos/lotes".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idOrigemComercial", idOrigemComercial));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idProduto", idProduto));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idTipoCartao", idTipoCartao));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idImagem", idImagem));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idEndereco", idEndereco));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "quantidadeCartoes", quantidadeCartoes));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    String[] authNames = new String[] {"client_id", "access_token" };
+
+    
+    GenericType<LoteCartoesPrePagos> returnType = new GenericType<LoteCartoesPrePagos>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Gerar uma nova via de Cart\u00C3\u00A3o
+   * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores ou seus clientes possam solicitar a gera\u00C3\u00A7\u00C3\u00A3o de uma nova via de Cart\u00C3\u00A3o que ser\u00C3\u00A1 encaminhando para impress\u00C3\u00A3o e postagem de acordo com os fluxos padr\u00C3\u00B5es j\u00C3\u00A1 definidos pelo emissor. Para isso, \u00C3\u00A9 preciso que o cliente j\u00C3\u00A1 possua um cart\u00C3\u00A3o gerado e informar o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o deste (idCartao) para que ele possa utilizar esta opera\u00C3\u00A7\u00C3\u00A3o. Assim, esta funcionalidade se aplica apenas para a gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es f\u00C3\u00ADsicos.
+   * @param idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)
+   * @return Cartao
+   */
+  public Cartao gerarNovaViaUsingPOST(Long idCartao) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'idCartao' is set
+     if (idCartao == null) {
+        throw new ApiException(400, "Missing the required parameter 'idCartao' when calling gerarNovaViaUsingPOST");
+     }
+     
+    // create path and map variables
+    String path = "/api/cartoes/{id_cartao}/gerar-nova-via".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id_cartao" + "\\}", apiClient.escapeString(idCartao.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    String[] authNames = new String[] {"client_id", "access_token" };
+
+    
+    GenericType<Cartao> returnType = new GenericType<Cartao>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
    * Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es pr\u00C3\u00A9-pagos existentes na base do emissor.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
@@ -473,12 +579,12 @@ public class CartaoApi {
    * @param idImagem C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Imagem (id).
    * @param idEndereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
    * @param quantidadeCartoes N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
-   * @param dataCadastroLote Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais.
+   * @param dataCadastro Data de Cadastro do Lote de Cart\u00C3\u00B5es N\u00C3\u00A3o Nominais.
    * @param usuarioCadastro Nome do Usu\u00C3\u00A1rio que criou o Lote.
-   * @param flagProcessado Indica o Status de Processamento do Lote.
+   * @param statusProcessamento Indica o Status de Processamento do Lote.
    * @return PageCartoes
    */
-  public PageCartoes listarLotesCartoesPrePagosUsingGET(Integer page, Integer limit, Long id, Long idOrigemComercial, Long idProduto, Long idTipoCartao, Long idImagem, Long idEndereco, Integer quantidadeCartoes, Date dataCadastroLote, String usuarioCadastro, Integer flagProcessado) throws ApiException {
+  public PageCartoes listarLotesCartoesPrePagosUsingGET(Integer page, Integer limit, Long id, Long idOrigemComercial, Long idProduto, Long idTipoCartao, Long idImagem, Long idEndereco, Integer quantidadeCartoes, Date dataCadastro, String usuarioCadastro, Integer statusProcessamento) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -508,11 +614,11 @@ public class CartaoApi {
     
     queryParams.addAll(apiClient.parameterToPairs("", "quantidadeCartoes", quantidadeCartoes));
     
-    queryParams.addAll(apiClient.parameterToPairs("", "dataCadastroLote", dataCadastroLote));
+    queryParams.addAll(apiClient.parameterToPairs("", "dataCadastro", dataCadastro));
     
     queryParams.addAll(apiClient.parameterToPairs("", "usuarioCadastro", usuarioCadastro));
     
-    queryParams.addAll(apiClient.parameterToPairs("", "flagProcessado", flagProcessado));
+    queryParams.addAll(apiClient.parameterToPairs("", "statusProcessamento", statusProcessamento));
     
 
     
