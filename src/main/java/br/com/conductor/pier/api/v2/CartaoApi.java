@@ -523,20 +523,20 @@ public class CartaoApi {
   /**
    * Gerar uma nova via de Cart\u00C3\u00A3o
    * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores ou seus clientes possam solicitar a gera\u00C3\u00A7\u00C3\u00A3o de uma nova via de Cart\u00C3\u00A3o que ser\u00C3\u00A1 encaminhando para impress\u00C3\u00A3o e postagem de acordo com os fluxos padr\u00C3\u00B5es j\u00C3\u00A1 definidos pelo emissor. Para isso, \u00C3\u00A9 preciso que o cliente j\u00C3\u00A1 possua um cart\u00C3\u00A3o gerado e informar o C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o deste (idCartao) para que ele possa utilizar esta opera\u00C3\u00A7\u00C3\u00A3o. Assim, esta funcionalidade se aplica apenas para a gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es f\u00C3\u00ADsicos.
-   * @param idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id)
    * @return Cartao
    */
-  public Cartao gerarNovaViaUsingPOST(Long idCartao) throws ApiException {
+  public Cartao gerarNovaViaUsingPOST(Long id) throws ApiException {
     Object postBody = null;
     
-     // verify the required parameter 'idCartao' is set
-     if (idCartao == null) {
-        throw new ApiException(400, "Missing the required parameter 'idCartao' when calling gerarNovaViaUsingPOST");
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling gerarNovaViaUsingPOST");
      }
      
     // create path and map variables
-    String path = "/api/cartoes/{id_cartao}/gerar-nova-via".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id_cartao" + "\\}", apiClient.escapeString(idCartao.toString()));
+    String path = "/api/cartoes/{id}/gerar-nova-via".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();

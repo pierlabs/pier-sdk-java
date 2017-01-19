@@ -394,17 +394,23 @@ public class ContaApi {
   /**
    * Listar Faturas da Conta
    * Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
+   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
    * @param dataVencimento Data de Vencimento da Fatura.
    * @return Fatura
    */
-  public Fatura listarFaturasUsingGET(Integer page, Integer limit, Long id, Date dataVencimento) throws ApiException {
+  public Fatura listarFaturasUsingGET(Long id, Integer page, Integer limit, Date dataVencimento) throws ApiException {
     Object postBody = null;
     
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling listarFaturasUsingGET");
+     }
+     
     // create path and map variables
-    String path = "/api/contas/{id_conta}/faturas".replaceAll("\\{format\\}","json");
+    String path = "/api/contas/{id}/faturas".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -415,8 +421,6 @@ public class ContaApi {
     queryParams.addAll(apiClient.parameterToPairs("", "page", page));
     
     queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "id", id));
     
     queryParams.addAll(apiClient.parameterToPairs("", "dataVencimento", dataVencimento));
     
@@ -527,11 +531,11 @@ public class ContaApi {
    * @param idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
    * @return PageTransacaoResponse
    */
-  public PageTransacaoResponse transacoesUsingPOST(Integer page, Integer limit, Long idConta) throws ApiException {
+  public PageTransacaoResponse transacoesUsingGET(Integer page, Integer limit, Long idConta) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
-    String path = "/api/contas/{id_conta}/timeline".replaceAll("\\{format\\}","json");
+    String path = "/api/contas/{id}/timeline".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -564,7 +568,7 @@ public class ContaApi {
 
     
     GenericType<PageTransacaoResponse> returnType = new GenericType<PageTransacaoResponse>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
