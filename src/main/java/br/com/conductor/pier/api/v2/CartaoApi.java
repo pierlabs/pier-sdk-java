@@ -374,12 +374,12 @@ public class CartaoApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
    * @return Cartao
    */
-  public Cartao consultarUsingGET(Long id) throws ApiException {
+  public Cartao consultarUsingGET1(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET1");
      }
      
     // create path and map variables
@@ -668,7 +668,7 @@ public class CartaoApi {
    * @param codigoDesbloqueio Apresenta um c\u00C3\u00B3digo espec\u00C3\u00ADfico para ser utilizado como vari\u00C3\u00A1vel no processo de desbloqueio do cart\u00C3\u00A3o para emissores que querem usar esta funcionalidade.
    * @return PageCartoes
    */
-  public PageCartoes listarUsingGET(Integer page, Integer limit, Long id, Long idStatusCartao, Long idEstagioCartao, Long idConta, Long idPessoa, Long idProduto, String tipoPortador, String numeroCartao, String nomeImpresso, Date dataGeracao, Date dataStatusCartao, Date dataEstagioCartao, String dataValidade, Date dataImpressao, String arquivoImpressao, Integer flagImpressaoOrigemComercial, Integer flagProvisorio, String codigoDesbloqueio) throws ApiException {
+  public PageCartoes listarUsingGET1(Integer page, Integer limit, Long id, Long idStatusCartao, Long idEstagioCartao, Long idConta, Long idPessoa, Long idProduto, String tipoPortador, String numeroCartao, String nomeImpresso, Date dataGeracao, Date dataStatusCartao, Date dataEstagioCartao, String dataValidade, Date dataImpressao, String arquivoImpressao, Integer flagImpressaoOrigemComercial, Integer flagProvisorio, String codigoDesbloqueio) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

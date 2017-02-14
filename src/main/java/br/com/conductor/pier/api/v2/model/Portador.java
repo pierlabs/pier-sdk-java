@@ -24,7 +24,6 @@ public class Portador   {
   private Long idParentesco = null;
   private String tipoPortador = null;
   private String nomeImpresso = null;
-  private Long idImagem = null;
   private Long idTipoCartao = null;
   private Integer flagAtivo = null;
   private Date dataCadastroPortador = null;
@@ -140,24 +139,6 @@ public class Portador   {
 
   
   /**
-   * Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da imagem do cart\u00C3\u00A3o.
-   **/
-  public Portador idImagem(Long idImagem) {
-    this.idImagem = idImagem;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da imagem do cart\u00C3\u00A3o.")
-  @JsonProperty("idImagem")
-  public Long getIdImagem() {
-    return idImagem;
-  }
-  public void setIdImagem(Long idImagem) {
-    this.idImagem = idImagem;
-  }
-
-  
-  /**
    * Apresenta o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do cart\u00C3\u00A3o (id), que ser\u00C3\u00A1 utilizado para gerar os cart\u00C3\u00B5es deste portador, vinculados a sua respectiva conta atrav\u00C3\u00A9s do campo idConta.
    **/
   public Portador idTipoCartao(Long idTipoCartao) {
@@ -245,7 +226,6 @@ public class Portador   {
         Objects.equals(this.idParentesco, portador.idParentesco) &&
         Objects.equals(this.tipoPortador, portador.tipoPortador) &&
         Objects.equals(this.nomeImpresso, portador.nomeImpresso) &&
-        Objects.equals(this.idImagem, portador.idImagem) &&
         Objects.equals(this.idTipoCartao, portador.idTipoCartao) &&
         Objects.equals(this.flagAtivo, portador.flagAtivo) &&
         Objects.equals(this.dataCadastroPortador, portador.dataCadastroPortador) &&
@@ -254,7 +234,7 @@ public class Portador   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(idConta, idProduto, idPessoa, idParentesco, tipoPortador, nomeImpresso, idImagem, idTipoCartao, flagAtivo, dataCadastroPortador, dataCancelamentoPortador);
+    return Objects.hash(idConta, idProduto, idPessoa, idParentesco, tipoPortador, nomeImpresso, idTipoCartao, flagAtivo, dataCadastroPortador, dataCancelamentoPortador);
   }
 
   @Override
@@ -268,7 +248,6 @@ public class Portador   {
     sb.append("    idParentesco: ").append(toIndentedString(idParentesco)).append("\n");
     sb.append("    tipoPortador: ").append(toIndentedString(tipoPortador)).append("\n");
     sb.append("    nomeImpresso: ").append(toIndentedString(nomeImpresso)).append("\n");
-    sb.append("    idImagem: ").append(toIndentedString(idImagem)).append("\n");
     sb.append("    idTipoCartao: ").append(toIndentedString(idTipoCartao)).append("\n");
     sb.append("    flagAtivo: ").append(toIndentedString(flagAtivo)).append("\n");
     sb.append("    dataCadastroPortador: ").append(toIndentedString(dataCadastroPortador)).append("\n");

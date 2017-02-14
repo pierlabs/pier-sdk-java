@@ -12,13 +12,16 @@ import java.util.Date;
 
 
 /**
- * Objeto Fatura
+ * Fatura
  **/
 
-@ApiModel(description = "Objeto Fatura")
+@ApiModel(description = "Fatura")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class Fatura   {
+public class FaturaResponse   {
   
+  private Long id = null;
+  private Long idConta = null;
+  private Long idProduto = null;
   private Date dataVencimento = null;
   private BigDecimal saldoFaturaAnterior = null;
   private BigDecimal saldoMulta = null;
@@ -33,14 +36,68 @@ public class Fatura   {
 
   
   /**
-   * Data de Vencimento da Fatura.
+   * C\u00C3\u00B3digo identificador da fatura.
    **/
-  public Fatura dataVencimento(Date dataVencimento) {
+  public FaturaResponse id(Long id) {
+    this.id = id;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador da fatura.")
+  @JsonProperty("id")
+  public Long getId() {
+    return id;
+  }
+  public void setId(Long id) {
+    this.id = id;
+  }
+
+  
+  /**
+   * C\u00C3\u00B3digo identificador da conta.
+   **/
+  public FaturaResponse idConta(Long idConta) {
+    this.idConta = idConta;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador da conta.")
+  @JsonProperty("idConta")
+  public Long getIdConta() {
+    return idConta;
+  }
+  public void setIdConta(Long idConta) {
+    this.idConta = idConta;
+  }
+
+  
+  /**
+   * C\u00C3\u00B3digo identificador do produto.
+   **/
+  public FaturaResponse idProduto(Long idProduto) {
+    this.idProduto = idProduto;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador do produto.")
+  @JsonProperty("idProduto")
+  public Long getIdProduto() {
+    return idProduto;
+  }
+  public void setIdProduto(Long idProduto) {
+    this.idProduto = idProduto;
+  }
+
+  
+  /**
+   * Data de vencimento da fatura.
+   **/
+  public FaturaResponse dataVencimento(Date dataVencimento) {
     this.dataVencimento = dataVencimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data de Vencimento da Fatura.")
+  @ApiModelProperty(example = "null", value = "Data de vencimento da fatura.")
   @JsonProperty("dataVencimento")
   public Date getDataVencimento() {
     return dataVencimento;
@@ -51,14 +108,14 @@ public class Fatura   {
 
   
   /**
-   * Saldo da Fatura Anterior.
+   * Saldo da fatura anterior.
    **/
-  public Fatura saldoFaturaAnterior(BigDecimal saldoFaturaAnterior) {
+  public FaturaResponse saldoFaturaAnterior(BigDecimal saldoFaturaAnterior) {
     this.saldoFaturaAnterior = saldoFaturaAnterior;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Saldo da Fatura Anterior.")
+  @ApiModelProperty(example = "null", value = "Saldo da fatura anterior.")
   @JsonProperty("saldoFaturaAnterior")
   public BigDecimal getSaldoFaturaAnterior() {
     return saldoFaturaAnterior;
@@ -71,7 +128,7 @@ public class Fatura   {
   /**
    * Saldo total da Multa lan\u00C3\u00A7ada na Fatura atual.
    **/
-  public Fatura saldoMulta(BigDecimal saldoMulta) {
+  public FaturaResponse saldoMulta(BigDecimal saldoMulta) {
     this.saldoMulta = saldoMulta;
     return this;
   }
@@ -87,14 +144,14 @@ public class Fatura   {
 
   
   /**
-   * Saldo total das Compras lan\u00C3\u00A7adas na Fatura atual.
+   * Saldo total das compras lan\u00C3\u00A7adas na fatura atual.
    **/
-  public Fatura saldoCompras(BigDecimal saldoCompras) {
+  public FaturaResponse saldoCompras(BigDecimal saldoCompras) {
     this.saldoCompras = saldoCompras;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Saldo total das Compras lan\u00C3\u00A7adas na Fatura atual.")
+  @ApiModelProperty(example = "null", value = "Saldo total das compras lan\u00C3\u00A7adas na fatura atual.")
   @JsonProperty("saldoCompras")
   public BigDecimal getSaldoCompras() {
     return saldoCompras;
@@ -105,14 +162,14 @@ public class Fatura   {
 
   
   /**
-   * Saldo total dos Pagamentos lan\u00C3\u00A7ados na Fatura atual.
+   * Saldo total dos pagamentos lan\u00C3\u00A7ados na fatura atual.
    **/
-  public Fatura saldoPagamentos(BigDecimal saldoPagamentos) {
+  public FaturaResponse saldoPagamentos(BigDecimal saldoPagamentos) {
     this.saldoPagamentos = saldoPagamentos;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Saldo total dos Pagamentos lan\u00C3\u00A7ados na Fatura atual.")
+  @ApiModelProperty(example = "null", value = "Saldo total dos pagamentos lan\u00C3\u00A7ados na fatura atual.")
   @JsonProperty("saldoPagamentos")
   public BigDecimal getSaldoPagamentos() {
     return saldoPagamentos;
@@ -123,14 +180,14 @@ public class Fatura   {
 
   
   /**
-   * Saldo total das Tarifas lan\u00C3\u00A7adas na Fatura atual.
+   * Saldo total das tarifas lan\u00C3\u00A7adas na fatura atual.
    **/
-  public Fatura saldoTarifas(BigDecimal saldoTarifas) {
+  public FaturaResponse saldoTarifas(BigDecimal saldoTarifas) {
     this.saldoTarifas = saldoTarifas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Saldo total das Tarifas lan\u00C3\u00A7adas na Fatura atual.")
+  @ApiModelProperty(example = "null", value = "Saldo total das tarifas lan\u00C3\u00A7adas na fatura atual.")
   @JsonProperty("saldoTarifas")
   public BigDecimal getSaldoTarifas() {
     return saldoTarifas;
@@ -141,14 +198,14 @@ public class Fatura   {
 
   
   /**
-   * Saldo total dos D\u00C3\u00A9bitos lan\u00C3\u00A7ados na Fatura atual.
+   * Saldo total dos d\u00C3\u00A9bitos lan\u00C3\u00A7ados na fatura atual.
    **/
-  public Fatura saldoDebitos(BigDecimal saldoDebitos) {
+  public FaturaResponse saldoDebitos(BigDecimal saldoDebitos) {
     this.saldoDebitos = saldoDebitos;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Saldo total dos D\u00C3\u00A9bitos lan\u00C3\u00A7ados na Fatura atual.")
+  @ApiModelProperty(example = "null", value = "Saldo total dos d\u00C3\u00A9bitos lan\u00C3\u00A7ados na fatura atual.")
   @JsonProperty("saldoDebitos")
   public BigDecimal getSaldoDebitos() {
     return saldoDebitos;
@@ -159,14 +216,14 @@ public class Fatura   {
 
   
   /**
-   * Saldo total dos Cr\u00C3\u00A9dito lan\u00C3\u00A7ados na Fatura atual.
+   * Saldo total dos cr\u00C3\u00A9dito lan\u00C3\u00A7ados na fatura atual.
    **/
-  public Fatura saldoCreditos(BigDecimal saldoCreditos) {
+  public FaturaResponse saldoCreditos(BigDecimal saldoCreditos) {
     this.saldoCreditos = saldoCreditos;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Saldo total dos Cr\u00C3\u00A9dito lan\u00C3\u00A7ados na Fatura atual.")
+  @ApiModelProperty(example = "null", value = "Saldo total dos cr\u00C3\u00A9dito lan\u00C3\u00A7ados na fatura atual.")
   @JsonProperty("saldoCreditos")
   public BigDecimal getSaldoCreditos() {
     return saldoCreditos;
@@ -177,14 +234,14 @@ public class Fatura   {
 
   
   /**
-   * Salto total devedor da Fatura atual.
+   * Salto total devedor da fatura atual.
    **/
-  public Fatura saldoAtualFinal(BigDecimal saldoAtualFinal) {
+  public FaturaResponse saldoAtualFinal(BigDecimal saldoAtualFinal) {
     this.saldoAtualFinal = saldoAtualFinal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Salto total devedor da Fatura atual.")
+  @ApiModelProperty(example = "null", value = "Salto total devedor da fatura atual.")
   @JsonProperty("saldoAtualFinal")
   public BigDecimal getSaldoAtualFinal() {
     return saldoAtualFinal;
@@ -195,14 +252,14 @@ public class Fatura   {
 
   
   /**
-   * Valor m\u00C3\u00ADnimo para Pagamento da Fatura.
+   * Valor m\u00C3\u00ADnimo para pagamento da fatura.
    **/
-  public Fatura valorMinimoFatura(BigDecimal valorMinimoFatura) {
+  public FaturaResponse valorMinimoFatura(BigDecimal valorMinimoFatura) {
     this.valorMinimoFatura = valorMinimoFatura;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor m\u00C3\u00ADnimo para Pagamento da Fatura.")
+  @ApiModelProperty(example = "null", value = "Valor m\u00C3\u00ADnimo para pagamento da fatura.")
   @JsonProperty("valorMinimoFatura")
   public BigDecimal getValorMinimoFatura() {
     return valorMinimoFatura;
@@ -213,14 +270,14 @@ public class Fatura   {
 
   
   /**
-   * Quando ativa, indica que fora emitida uma Fatura.
+   * Quando ativa, indica que fora emitida uma fatura.
    **/
-  public Fatura flagEmiteFatura(Integer flagEmiteFatura) {
+  public FaturaResponse flagEmiteFatura(Integer flagEmiteFatura) {
     this.flagEmiteFatura = flagEmiteFatura;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Quando ativa, indica que fora emitida uma Fatura.")
+  @ApiModelProperty(example = "null", value = "Quando ativa, indica que fora emitida uma fatura.")
   @JsonProperty("flagEmiteFatura")
   public Integer getFlagEmiteFatura() {
     return flagEmiteFatura;
@@ -239,30 +296,36 @@ public class Fatura   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Fatura fatura = (Fatura) o;
-    return Objects.equals(this.dataVencimento, fatura.dataVencimento) &&
-        Objects.equals(this.saldoFaturaAnterior, fatura.saldoFaturaAnterior) &&
-        Objects.equals(this.saldoMulta, fatura.saldoMulta) &&
-        Objects.equals(this.saldoCompras, fatura.saldoCompras) &&
-        Objects.equals(this.saldoPagamentos, fatura.saldoPagamentos) &&
-        Objects.equals(this.saldoTarifas, fatura.saldoTarifas) &&
-        Objects.equals(this.saldoDebitos, fatura.saldoDebitos) &&
-        Objects.equals(this.saldoCreditos, fatura.saldoCreditos) &&
-        Objects.equals(this.saldoAtualFinal, fatura.saldoAtualFinal) &&
-        Objects.equals(this.valorMinimoFatura, fatura.valorMinimoFatura) &&
-        Objects.equals(this.flagEmiteFatura, fatura.flagEmiteFatura);
+    FaturaResponse faturaResponse = (FaturaResponse) o;
+    return Objects.equals(this.id, faturaResponse.id) &&
+        Objects.equals(this.idConta, faturaResponse.idConta) &&
+        Objects.equals(this.idProduto, faturaResponse.idProduto) &&
+        Objects.equals(this.dataVencimento, faturaResponse.dataVencimento) &&
+        Objects.equals(this.saldoFaturaAnterior, faturaResponse.saldoFaturaAnterior) &&
+        Objects.equals(this.saldoMulta, faturaResponse.saldoMulta) &&
+        Objects.equals(this.saldoCompras, faturaResponse.saldoCompras) &&
+        Objects.equals(this.saldoPagamentos, faturaResponse.saldoPagamentos) &&
+        Objects.equals(this.saldoTarifas, faturaResponse.saldoTarifas) &&
+        Objects.equals(this.saldoDebitos, faturaResponse.saldoDebitos) &&
+        Objects.equals(this.saldoCreditos, faturaResponse.saldoCreditos) &&
+        Objects.equals(this.saldoAtualFinal, faturaResponse.saldoAtualFinal) &&
+        Objects.equals(this.valorMinimoFatura, faturaResponse.valorMinimoFatura) &&
+        Objects.equals(this.flagEmiteFatura, faturaResponse.flagEmiteFatura);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(dataVencimento, saldoFaturaAnterior, saldoMulta, saldoCompras, saldoPagamentos, saldoTarifas, saldoDebitos, saldoCreditos, saldoAtualFinal, valorMinimoFatura, flagEmiteFatura);
+    return Objects.hash(id, idConta, idProduto, dataVencimento, saldoFaturaAnterior, saldoMulta, saldoCompras, saldoPagamentos, saldoTarifas, saldoDebitos, saldoCreditos, saldoAtualFinal, valorMinimoFatura, flagEmiteFatura);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Fatura {\n");
+    sb.append("class FaturaResponse {\n");
     
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    idConta: ").append(toIndentedString(idConta)).append("\n");
+    sb.append("    idProduto: ").append(toIndentedString(idProduto)).append("\n");
     sb.append("    dataVencimento: ").append(toIndentedString(dataVencimento)).append("\n");
     sb.append("    saldoFaturaAnterior: ").append(toIndentedString(saldoFaturaAnterior)).append("\n");
     sb.append("    saldoMulta: ").append(toIndentedString(saldoMulta)).append("\n");

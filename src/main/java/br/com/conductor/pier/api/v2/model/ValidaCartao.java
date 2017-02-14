@@ -17,9 +17,32 @@ import io.swagger.annotations.ApiModelProperty;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ValidaCartao   {
   
+  private Long idStatusCartao = null;
   private String statusCartao = null;
+  private Long idStatusConta = null;
   private String statusConta = null;
+  private Long idConta = null;
+  private Integer numeroAgencia = null;
+  private String numeroContaCorrente = null;
   private String criptogramaResposta = null;
+
+  
+  /**
+   * Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o
+   **/
+  public ValidaCartao idStatusCartao(Long idStatusCartao) {
+    this.idStatusCartao = idStatusCartao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o")
+  @JsonProperty("idStatusCartao")
+  public Long getIdStatusCartao() {
+    return idStatusCartao;
+  }
+  public void setIdStatusCartao(Long idStatusCartao) {
+    this.idStatusCartao = idStatusCartao;
+  }
 
   
   /**
@@ -43,6 +66,24 @@ public class ValidaCartao   {
   /**
    * Descri\u00C3\u00A7\u00C3\u00A3o do status da conta
    **/
+  public ValidaCartao idStatusConta(Long idStatusConta) {
+    this.idStatusConta = idStatusConta;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o do status da conta")
+  @JsonProperty("idStatusConta")
+  public Long getIdStatusConta() {
+    return idStatusConta;
+  }
+  public void setIdStatusConta(Long idStatusConta) {
+    this.idStatusConta = idStatusConta;
+  }
+
+  
+  /**
+   * Descri\u00C3\u00A7\u00C3\u00A3o do status da conta
+   **/
   public ValidaCartao statusConta(String statusConta) {
     this.statusConta = statusConta;
     return this;
@@ -55,6 +96,60 @@ public class ValidaCartao   {
   }
   public void setStatusConta(String statusConta) {
     this.statusConta = statusConta;
+  }
+
+  
+  /**
+   * C\u00C3\u00B3digo identificador da conta.
+   **/
+  public ValidaCartao idConta(Long idConta) {
+    this.idConta = idConta;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador da conta.")
+  @JsonProperty("idConta")
+  public Long getIdConta() {
+    return idConta;
+  }
+  public void setIdConta(Long idConta) {
+    this.idConta = idConta;
+  }
+
+  
+  /**
+   * N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+   **/
+  public ValidaCartao numeroAgencia(Integer numeroAgencia) {
+    this.numeroAgencia = numeroAgencia;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero da ag\u00C3\u00AAncia.")
+  @JsonProperty("numeroAgencia")
+  public Integer getNumeroAgencia() {
+    return numeroAgencia;
+  }
+  public void setNumeroAgencia(Integer numeroAgencia) {
+    this.numeroAgencia = numeroAgencia;
+  }
+
+  
+  /**
+   * N\u00C3\u00BAmero da conta corrente.
+   **/
+  public ValidaCartao numeroContaCorrente(String numeroContaCorrente) {
+    this.numeroContaCorrente = numeroContaCorrente;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero da conta corrente.")
+  @JsonProperty("numeroContaCorrente")
+  public String getNumeroContaCorrente() {
+    return numeroContaCorrente;
+  }
+  public void setNumeroContaCorrente(String numeroContaCorrente) {
+    this.numeroContaCorrente = numeroContaCorrente;
   }
 
   
@@ -86,14 +181,19 @@ public class ValidaCartao   {
       return false;
     }
     ValidaCartao validaCartao = (ValidaCartao) o;
-    return Objects.equals(this.statusCartao, validaCartao.statusCartao) &&
+    return Objects.equals(this.idStatusCartao, validaCartao.idStatusCartao) &&
+        Objects.equals(this.statusCartao, validaCartao.statusCartao) &&
+        Objects.equals(this.idStatusConta, validaCartao.idStatusConta) &&
         Objects.equals(this.statusConta, validaCartao.statusConta) &&
+        Objects.equals(this.idConta, validaCartao.idConta) &&
+        Objects.equals(this.numeroAgencia, validaCartao.numeroAgencia) &&
+        Objects.equals(this.numeroContaCorrente, validaCartao.numeroContaCorrente) &&
         Objects.equals(this.criptogramaResposta, validaCartao.criptogramaResposta);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(statusCartao, statusConta, criptogramaResposta);
+    return Objects.hash(idStatusCartao, statusCartao, idStatusConta, statusConta, idConta, numeroAgencia, numeroContaCorrente, criptogramaResposta);
   }
 
   @Override
@@ -101,8 +201,13 @@ public class ValidaCartao   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ValidaCartao {\n");
     
+    sb.append("    idStatusCartao: ").append(toIndentedString(idStatusCartao)).append("\n");
     sb.append("    statusCartao: ").append(toIndentedString(statusCartao)).append("\n");
+    sb.append("    idStatusConta: ").append(toIndentedString(idStatusConta)).append("\n");
     sb.append("    statusConta: ").append(toIndentedString(statusConta)).append("\n");
+    sb.append("    idConta: ").append(toIndentedString(idConta)).append("\n");
+    sb.append("    numeroAgencia: ").append(toIndentedString(numeroAgencia)).append("\n");
+    sb.append("    numeroContaCorrente: ").append(toIndentedString(numeroContaCorrente)).append("\n");
     sb.append("    criptogramaResposta: ").append(toIndentedString(criptogramaResposta)).append("\n");
     sb.append("}");
     return sb.toString();

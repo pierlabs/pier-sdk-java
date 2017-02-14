@@ -146,12 +146,12 @@ public class StatusParametrosApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
    * @return StatusConta
    */
-  public StatusConta consultarUsingGET4(Long id) throws ApiException {
+  public StatusConta consultarUsingGET5(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET4");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET5");
      }
      
     // create path and map variables
@@ -193,12 +193,12 @@ public class StatusParametrosApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
    * @return StatusImpressao
    */
-  public StatusImpressao consultarUsingGET5(Long id) throws ApiException {
+  public StatusImpressao consultarUsingGET6(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET5");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET6");
      }
      
     // create path and map variables
@@ -368,7 +368,7 @@ public class StatusParametrosApi {
    * @param flagPermiteNovaViaCartao Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
    * @return PageStatusContas
    */
-  public PageStatusContas listarUsingGET5(Integer page, Integer limit, Long id, String nome, Integer flagAlteraLimite, String mensagemConsultaNegada, Integer flagPermiteNovaViaCartao) throws ApiException {
+  public PageStatusContas listarUsingGET6(Integer page, Integer limit, Long id, String nome, Integer flagAlteraLimite, String mensagemConsultaNegada, Integer flagPermiteNovaViaCartao) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -426,7 +426,7 @@ public class StatusParametrosApi {
    * @param nome Nome do status impress\u00C3\u00A3o
    * @return PageStatusImpressao
    */
-  public PageStatusImpressao listarUsingGET6(Integer page, Integer limit, Long id, String nome) throws ApiException {
+  public PageStatusImpressao listarUsingGET7(Integer page, Integer limit, Long id, String nome) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
