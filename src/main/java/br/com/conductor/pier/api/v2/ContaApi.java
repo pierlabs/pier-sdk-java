@@ -11,8 +11,8 @@ import br.com.conductor.pier.api.v2.model.Conta;
 import java.math.BigDecimal;
 import br.com.conductor.pier.api.v2.model.LimiteDisponibilidade;
 import br.com.conductor.pier.api.v2.model.CartaoImpressao;
+import br.com.conductor.pier.api.v2.model.PageFaturas;
 import java.util.Date;
-import br.com.conductor.pier.api.v2.model.FaturaResponse;
 import br.com.conductor.pier.api.v2.model.PageTransacaoResponse;
 
 
@@ -401,9 +401,9 @@ public class ContaApi {
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @param dataVencimento Data de Vencimento da Fatura.
-   * @return FaturaResponse
+   * @return PageFaturas
    */
-  public FaturaResponse listarFaturasUsingGET(Long id, Integer page, Integer limit, Date dataVencimento) throws ApiException {
+  public PageFaturas listarFaturasUsingGET(Long id, Integer page, Integer limit, Date dataVencimento) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -445,7 +445,7 @@ public class ContaApi {
     String[] authNames = new String[] {"client_id", "access_token" };
 
     
-    GenericType<FaturaResponse> returnType = new GenericType<FaturaResponse>() {};
+    GenericType<PageFaturas> returnType = new GenericType<PageFaturas>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
