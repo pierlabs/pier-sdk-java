@@ -19,6 +19,7 @@ import java.util.Date;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class SMS   {
   
+  private Long id = null;
   private Long nsu = null;
   private Long idEmissor = null;
 
@@ -65,15 +66,36 @@ public class SMS   {
   }
 
   private StatusEnum status = null;
+  private String descricaoStatus = null;
   private Long idPessoa = null;
   private Long idConta = null;
   private String celular = null;
+  private String operadora = null;
   private String conteudo = null;
+  private String resposta = null;
   private Date dataAgendamento = null;
   private Integer quantidadeTentativasEnvio = null;
   private Date dataInclusao = null;
   private Date dataAlteracaoStatus = null;
   private String protocolo = null;
+
+  
+  /**
+   * C\u00C3\u00B3digo Identificador.
+   **/
+  public SMS id(Long id) {
+    this.id = id;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo Identificador.")
+  @JsonProperty("id")
+  public Long getId() {
+    return id;
+  }
+  public void setId(Long id) {
+    this.id = id;
+  }
 
   
   /**
@@ -149,6 +171,24 @@ public class SMS   {
 
   
   /**
+   * Descri\u00C3\u00A7\u00C3\u00A3o do status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+   **/
+  public SMS descricaoStatus(String descricaoStatus) {
+    this.descricaoStatus = descricaoStatus;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "Descri\u00C3\u00A7\u00C3\u00A3o do status de envio da notifica\u00C3\u00A7\u00C3\u00A3o")
+  @JsonProperty("descricaoStatus")
+  public String getDescricaoStatus() {
+    return descricaoStatus;
+  }
+  public void setDescricaoStatus(String descricaoStatus) {
+    this.descricaoStatus = descricaoStatus;
+  }
+
+  
+  /**
    * C\u00C3\u00B3digo identificado da pessoa
    **/
   public SMS idPessoa(Long idPessoa) {
@@ -203,6 +243,24 @@ public class SMS   {
 
   
   /**
+   * Apresenta a operadora do celular a ser eviado o SMS
+   **/
+  public SMS operadora(String operadora) {
+    this.operadora = operadora;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta a operadora do celular a ser eviado o SMS")
+  @JsonProperty("operadora")
+  public String getOperadora() {
+    return operadora;
+  }
+  public void setOperadora(String operadora) {
+    this.operadora = operadora;
+  }
+
+  
+  /**
    * Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado
    **/
   public SMS conteudo(String conteudo) {
@@ -217,6 +275,24 @@ public class SMS   {
   }
   public void setConteudo(String conteudo) {
     this.conteudo = conteudo;
+  }
+
+  
+  /**
+   * Apresenta o texto da resposta da notifica\u00C3\u00A7\u00C3\u00A3o que foi enviada
+   **/
+  public SMS resposta(String resposta) {
+    this.resposta = resposta;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta o texto da resposta da notifica\u00C3\u00A7\u00C3\u00A3o que foi enviada")
+  @JsonProperty("resposta")
+  public String getResposta() {
+    return resposta;
+  }
+  public void setResposta(String resposta) {
+    this.resposta = resposta;
   }
 
   
@@ -320,14 +396,18 @@ public class SMS   {
       return false;
     }
     SMS SMS = (SMS) o;
-    return Objects.equals(this.nsu, SMS.nsu) &&
+    return Objects.equals(this.id, SMS.id) &&
+        Objects.equals(this.nsu, SMS.nsu) &&
         Objects.equals(this.idEmissor, SMS.idEmissor) &&
         Objects.equals(this.evento, SMS.evento) &&
         Objects.equals(this.status, SMS.status) &&
+        Objects.equals(this.descricaoStatus, SMS.descricaoStatus) &&
         Objects.equals(this.idPessoa, SMS.idPessoa) &&
         Objects.equals(this.idConta, SMS.idConta) &&
         Objects.equals(this.celular, SMS.celular) &&
+        Objects.equals(this.operadora, SMS.operadora) &&
         Objects.equals(this.conteudo, SMS.conteudo) &&
+        Objects.equals(this.resposta, SMS.resposta) &&
         Objects.equals(this.dataAgendamento, SMS.dataAgendamento) &&
         Objects.equals(this.quantidadeTentativasEnvio, SMS.quantidadeTentativasEnvio) &&
         Objects.equals(this.dataInclusao, SMS.dataInclusao) &&
@@ -337,7 +417,7 @@ public class SMS   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(nsu, idEmissor, evento, status, idPessoa, idConta, celular, conteudo, dataAgendamento, quantidadeTentativasEnvio, dataInclusao, dataAlteracaoStatus, protocolo);
+    return Objects.hash(id, nsu, idEmissor, evento, status, descricaoStatus, idPessoa, idConta, celular, operadora, conteudo, resposta, dataAgendamento, quantidadeTentativasEnvio, dataInclusao, dataAlteracaoStatus, protocolo);
   }
 
   @Override
@@ -345,14 +425,18 @@ public class SMS   {
     StringBuilder sb = new StringBuilder();
     sb.append("class SMS {\n");
     
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    nsu: ").append(toIndentedString(nsu)).append("\n");
     sb.append("    idEmissor: ").append(toIndentedString(idEmissor)).append("\n");
     sb.append("    evento: ").append(toIndentedString(evento)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    descricaoStatus: ").append(toIndentedString(descricaoStatus)).append("\n");
     sb.append("    idPessoa: ").append(toIndentedString(idPessoa)).append("\n");
     sb.append("    idConta: ").append(toIndentedString(idConta)).append("\n");
     sb.append("    celular: ").append(toIndentedString(celular)).append("\n");
+    sb.append("    operadora: ").append(toIndentedString(operadora)).append("\n");
     sb.append("    conteudo: ").append(toIndentedString(conteudo)).append("\n");
+    sb.append("    resposta: ").append(toIndentedString(resposta)).append("\n");
     sb.append("    dataAgendamento: ").append(toIndentedString(dataAgendamento)).append("\n");
     sb.append("    quantidadeTentativasEnvio: ").append(toIndentedString(quantidadeTentativasEnvio)).append("\n");
     sb.append("    dataInclusao: ").append(toIndentedString(dataInclusao)).append("\n");

@@ -8,6 +8,7 @@ import br.com.conductor.pier.api.v2.invoker.Configuration;
 import br.com.conductor.pier.api.v2.invoker.Pair;
 
 import br.com.conductor.pier.api.v2.model.AtendimentoCliente;
+import br.com.conductor.pier.api.v2.model.PageAtendimentoClientes;
 import java.util.Date;
 
 
@@ -97,9 +98,9 @@ public class FraudesApi {
    * @param idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
    * @param nomeAtendente Apresenta o nome do Atendente que registrou o Atendimento.
    * @param dataAtendimento Apresenta a data em que o Atendimento foi realizado.
-   * @return AtendimentoCliente
+   * @return PageAtendimentoClientes
    */
-  public AtendimentoCliente listarUsingGET(Integer page, Integer limit, Long idAtendimento, Long idTipoAtendimento, Long idConta, String nomeAtendente, Date dataAtendimento) throws ApiException {
+  public PageAtendimentoClientes listarUsingGET(Integer page, Integer limit, Long idAtendimento, Long idTipoAtendimento, Long idConta, String nomeAtendente, Date dataAtendimento) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -143,7 +144,7 @@ public class FraudesApi {
     String[] authNames = new String[] {"client_id", "access_token" };
 
     
-    GenericType<AtendimentoCliente> returnType = new GenericType<AtendimentoCliente>() {};
+    GenericType<PageAtendimentoClientes> returnType = new GenericType<PageAtendimentoClientes>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

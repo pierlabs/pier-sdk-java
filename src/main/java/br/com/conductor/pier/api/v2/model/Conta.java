@@ -28,6 +28,8 @@ public class Conta   {
   private Date dataStatusConta = null;
   private Date dataCadastro = null;
   private Date dataUltimaAlteracaoVencimento = null;
+  private Integer numeroAgencia = null;
+  private String numeroContaCorrente = null;
 
   
   /**
@@ -210,6 +212,42 @@ public class Conta   {
   }
 
   
+  /**
+   * N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+   **/
+  public Conta numeroAgencia(Integer numeroAgencia) {
+    this.numeroAgencia = numeroAgencia;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero da ag\u00C3\u00AAncia.")
+  @JsonProperty("numeroAgencia")
+  public Integer getNumeroAgencia() {
+    return numeroAgencia;
+  }
+  public void setNumeroAgencia(Integer numeroAgencia) {
+    this.numeroAgencia = numeroAgencia;
+  }
+
+  
+  /**
+   * N\u00C3\u00BAmero da conta corrente.
+   **/
+  public Conta numeroContaCorrente(String numeroContaCorrente) {
+    this.numeroContaCorrente = numeroContaCorrente;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero da conta corrente.")
+  @JsonProperty("numeroContaCorrente")
+  public String getNumeroContaCorrente() {
+    return numeroContaCorrente;
+  }
+  public void setNumeroContaCorrente(String numeroContaCorrente) {
+    this.numeroContaCorrente = numeroContaCorrente;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -229,12 +267,14 @@ public class Conta   {
         Objects.equals(this.melhorDiaCompra, conta.melhorDiaCompra) &&
         Objects.equals(this.dataStatusConta, conta.dataStatusConta) &&
         Objects.equals(this.dataCadastro, conta.dataCadastro) &&
-        Objects.equals(this.dataUltimaAlteracaoVencimento, conta.dataUltimaAlteracaoVencimento);
+        Objects.equals(this.dataUltimaAlteracaoVencimento, conta.dataUltimaAlteracaoVencimento) &&
+        Objects.equals(this.numeroAgencia, conta.numeroAgencia) &&
+        Objects.equals(this.numeroContaCorrente, conta.numeroContaCorrente);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idProduto, idOrigemComercial, idPessoa, idStatusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, dataUltimaAlteracaoVencimento);
+    return Objects.hash(id, idProduto, idOrigemComercial, idPessoa, idStatusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, dataUltimaAlteracaoVencimento, numeroAgencia, numeroContaCorrente);
   }
 
   @Override
@@ -252,6 +292,8 @@ public class Conta   {
     sb.append("    dataStatusConta: ").append(toIndentedString(dataStatusConta)).append("\n");
     sb.append("    dataCadastro: ").append(toIndentedString(dataCadastro)).append("\n");
     sb.append("    dataUltimaAlteracaoVencimento: ").append(toIndentedString(dataUltimaAlteracaoVencimento)).append("\n");
+    sb.append("    numeroAgencia: ").append(toIndentedString(numeroAgencia)).append("\n");
+    sb.append("    numeroContaCorrente: ").append(toIndentedString(numeroContaCorrente)).append("\n");
     sb.append("}");
     return sb.toString();
   }

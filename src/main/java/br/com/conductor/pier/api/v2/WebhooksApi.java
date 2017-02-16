@@ -118,12 +118,12 @@ public class WebhooksApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
    * @return WebHook
    */
-  public WebHook consultarUsingGET10(Long id) throws ApiException {
+  public WebHook consultarUsingGET11(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET10");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET11");
      }
      
     // create path and map variables
@@ -170,7 +170,7 @@ public class WebhooksApi {
    * @param url URL que a ser consumida pelo WebHook
    * @return PageWebHooks
    */
-  public PageWebHooks listarUsingGET11(Integer page, Integer limit, Long id, String evento, String metodo, String url) throws ApiException {
+  public PageWebHooks listarUsingGET12(Integer page, Integer limit, Long id, String evento, String metodo, String url) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
