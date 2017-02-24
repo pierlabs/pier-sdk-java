@@ -24,13 +24,13 @@ public class SMS   {
   private Long idEmissor = null;
 
 
-  public enum EventoEnum {
+  public enum TipoEventoEnum {
     RISCO_FRAUDE("RISCO_FRAUDE"),
     OUTROS("OUTROS");
 
     private String value;
 
-    EventoEnum(String value) {
+    TipoEventoEnum(String value) {
       this.value = value;
     }
 
@@ -41,7 +41,7 @@ public class SMS   {
     }
   }
 
-  private EventoEnum evento = null;
+  private TipoEventoEnum tipoEvento = null;
 
 
   public enum StatusEnum {
@@ -135,20 +135,20 @@ public class SMS   {
 
   
   /**
-   * Evento de notifica\u00C3\u00A7\u00C3\u00A3o
+   * TipoEvento de notifica\u00C3\u00A7\u00C3\u00A3o
    **/
-  public SMS evento(EventoEnum evento) {
-    this.evento = evento;
+  public SMS tipoEvento(TipoEventoEnum tipoEvento) {
+    this.tipoEvento = tipoEvento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Evento de notifica\u00C3\u00A7\u00C3\u00A3o")
-  @JsonProperty("evento")
-  public EventoEnum getEvento() {
-    return evento;
+  @ApiModelProperty(example = "null", value = "TipoEvento de notifica\u00C3\u00A7\u00C3\u00A3o")
+  @JsonProperty("tipoEvento")
+  public TipoEventoEnum getTipoEvento() {
+    return tipoEvento;
   }
-  public void setEvento(EventoEnum evento) {
-    this.evento = evento;
+  public void setTipoEvento(TipoEventoEnum tipoEvento) {
+    this.tipoEvento = tipoEvento;
   }
 
   
@@ -399,7 +399,7 @@ public class SMS   {
     return Objects.equals(this.id, SMS.id) &&
         Objects.equals(this.nsu, SMS.nsu) &&
         Objects.equals(this.idEmissor, SMS.idEmissor) &&
-        Objects.equals(this.evento, SMS.evento) &&
+        Objects.equals(this.tipoEvento, SMS.tipoEvento) &&
         Objects.equals(this.status, SMS.status) &&
         Objects.equals(this.descricaoStatus, SMS.descricaoStatus) &&
         Objects.equals(this.idPessoa, SMS.idPessoa) &&
@@ -417,7 +417,7 @@ public class SMS   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, nsu, idEmissor, evento, status, descricaoStatus, idPessoa, idConta, celular, operadora, conteudo, resposta, dataAgendamento, quantidadeTentativasEnvio, dataInclusao, dataAlteracaoStatus, protocolo);
+    return Objects.hash(id, nsu, idEmissor, tipoEvento, status, descricaoStatus, idPessoa, idConta, celular, operadora, conteudo, resposta, dataAgendamento, quantidadeTentativasEnvio, dataInclusao, dataAlteracaoStatus, protocolo);
   }
 
   @Override
@@ -428,7 +428,7 @@ public class SMS   {
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    nsu: ").append(toIndentedString(nsu)).append("\n");
     sb.append("    idEmissor: ").append(toIndentedString(idEmissor)).append("\n");
-    sb.append("    evento: ").append(toIndentedString(evento)).append("\n");
+    sb.append("    tipoEvento: ").append(toIndentedString(tipoEvento)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    descricaoStatus: ").append(toIndentedString(descricaoStatus)).append("\n");
     sb.append("    idPessoa: ").append(toIndentedString(idPessoa)).append("\n");

@@ -44,36 +44,31 @@ public class WebhooksApi {
    * Alterar Webhook
    * Este m\u00C3\u00A9todo permite que seja modificado um webhooks j\u00C3\u00A1 cadastrado
    * @param id C\u00C3\u00B3digo identificador do Webhook
-   * @param evento Evento a ser chamado pelo WebHook
-   * @param metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
+   * @param tipoEvento TipoEvento a ser chamado pelo WebHook
    * @param url URL que a ser consumida pelo WebHook
    * @return WebHook
    */
-  public WebHook alterarUsingPUT3(Long id, String evento, String metodo, String url) throws ApiException {
+  public WebHook alterarUsingPUT7(Long id, String tipoEvento, String url) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT3");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT7");
      }
      
-     // verify the required parameter 'evento' is set
-     if (evento == null) {
-        throw new ApiException(400, "Missing the required parameter 'evento' when calling alterarUsingPUT3");
-     }
-     
-     // verify the required parameter 'metodo' is set
-     if (metodo == null) {
-        throw new ApiException(400, "Missing the required parameter 'metodo' when calling alterarUsingPUT3");
+     // verify the required parameter 'tipoEvento' is set
+     if (tipoEvento == null) {
+        throw new ApiException(400, "Missing the required parameter 'tipoEvento' when calling alterarUsingPUT7");
      }
      
      // verify the required parameter 'url' is set
      if (url == null) {
-        throw new ApiException(400, "Missing the required parameter 'url' when calling alterarUsingPUT3");
+        throw new ApiException(400, "Missing the required parameter 'url' when calling alterarUsingPUT7");
      }
      
     // create path and map variables
-    String path = "/api/webhooks".replaceAll("\\{format\\}","json");
+    String path = "/api/webhooks/{id}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -81,11 +76,7 @@ public class WebhooksApi {
     Map<String, Object> formParams = new HashMap<String, Object>();
 
     
-    queryParams.addAll(apiClient.parameterToPairs("", "id", id));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "evento", evento));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "metodo", metodo));
+    queryParams.addAll(apiClient.parameterToPairs("", "tipoEvento", tipoEvento));
     
     queryParams.addAll(apiClient.parameterToPairs("", "url", url));
     
@@ -118,12 +109,12 @@ public class WebhooksApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
    * @return WebHook
    */
-  public WebHook consultarUsingGET11(Long id) throws ApiException {
+  public WebHook consultarUsingGET17(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET11");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET17");
      }
      
     // create path and map variables
@@ -165,12 +156,12 @@ public class WebhooksApi {
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @param id Id do WebHook
-   * @param evento Evento a ser chamado pelo WebHook
+   * @param tipoEvento TipoEvento a ser chamado pelo WebHook
    * @param metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
    * @param url URL que a ser consumida pelo WebHook
    * @return PageWebHooks
    */
-  public PageWebHooks listarUsingGET12(Integer page, Integer limit, Long id, String evento, String metodo, String url) throws ApiException {
+  public PageWebHooks listarUsingGET17(Integer page, Integer limit, Long id, String tipoEvento, String metodo, String url) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -188,7 +179,7 @@ public class WebhooksApi {
     
     queryParams.addAll(apiClient.parameterToPairs("", "id", id));
     
-    queryParams.addAll(apiClient.parameterToPairs("", "evento", evento));
+    queryParams.addAll(apiClient.parameterToPairs("", "tipoEvento", tipoEvento));
     
     queryParams.addAll(apiClient.parameterToPairs("", "metodo", metodo));
     
@@ -220,27 +211,21 @@ public class WebhooksApi {
   /**
    * Salvar Webhook
    * Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
-   * @param evento Evento a ser chamado pelo WebHook
-   * @param metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
+   * @param tipoEvento TipoEvento a ser chamado pelo WebHook
    * @param url URL que a ser consumida pelo WebHook
    * @return WebHook
    */
-  public WebHook salvarUsingPOST4(String evento, String metodo, String url) throws ApiException {
+  public WebHook salvarUsingPOST7(String tipoEvento, String url) throws ApiException {
     Object postBody = null;
     
-     // verify the required parameter 'evento' is set
-     if (evento == null) {
-        throw new ApiException(400, "Missing the required parameter 'evento' when calling salvarUsingPOST4");
-     }
-     
-     // verify the required parameter 'metodo' is set
-     if (metodo == null) {
-        throw new ApiException(400, "Missing the required parameter 'metodo' when calling salvarUsingPOST4");
+     // verify the required parameter 'tipoEvento' is set
+     if (tipoEvento == null) {
+        throw new ApiException(400, "Missing the required parameter 'tipoEvento' when calling salvarUsingPOST7");
      }
      
      // verify the required parameter 'url' is set
      if (url == null) {
-        throw new ApiException(400, "Missing the required parameter 'url' when calling salvarUsingPOST4");
+        throw new ApiException(400, "Missing the required parameter 'url' when calling salvarUsingPOST7");
      }
      
     // create path and map variables
@@ -252,9 +237,7 @@ public class WebhooksApi {
     Map<String, Object> formParams = new HashMap<String, Object>();
 
     
-    queryParams.addAll(apiClient.parameterToPairs("", "evento", evento));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "metodo", metodo));
+    queryParams.addAll(apiClient.parameterToPairs("", "tipoEvento", tipoEvento));
     
     queryParams.addAll(apiClient.parameterToPairs("", "url", url));
     

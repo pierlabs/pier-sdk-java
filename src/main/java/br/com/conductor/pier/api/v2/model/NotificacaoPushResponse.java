@@ -20,13 +20,13 @@ public class NotificacaoPushResponse   {
   private Long idEmissor = null;
 
 
-  public enum EventoEnum {
+  public enum TipoEventoEnum {
     RISCO_FRAUDE("RISCO_FRAUDE"),
     OUTROS("OUTROS");
 
     private String value;
 
-    EventoEnum(String value) {
+    TipoEventoEnum(String value) {
       this.value = value;
     }
 
@@ -37,7 +37,7 @@ public class NotificacaoPushResponse   {
     }
   }
 
-  private EventoEnum evento = null;
+  private TipoEventoEnum tipoEvento = null;
 
 
   public enum StatusEnum {
@@ -128,20 +128,20 @@ public class NotificacaoPushResponse   {
 
   
   /**
-   * Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o
+   * Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
    **/
-  public NotificacaoPushResponse evento(EventoEnum evento) {
-    this.evento = evento;
+  public NotificacaoPushResponse tipoEvento(TipoEventoEnum tipoEvento) {
+    this.tipoEvento = tipoEvento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome do evento da notifica\u00C3\u00A7\u00C3\u00A3o")
-  @JsonProperty("evento")
-  public EventoEnum getEvento() {
-    return evento;
+  @ApiModelProperty(example = "null", value = "Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o")
+  @JsonProperty("tipoEvento")
+  public TipoEventoEnum getTipoEvento() {
+    return tipoEvento;
   }
-  public void setEvento(EventoEnum evento) {
-    this.evento = evento;
+  public void setTipoEvento(TipoEventoEnum tipoEvento) {
+    this.tipoEvento = tipoEvento;
   }
 
   
@@ -301,7 +301,7 @@ public class NotificacaoPushResponse   {
     NotificacaoPushResponse notificacaoPushResponse = (NotificacaoPushResponse) o;
     return Objects.equals(this.dataEnvio, notificacaoPushResponse.dataEnvio) &&
         Objects.equals(this.idEmissor, notificacaoPushResponse.idEmissor) &&
-        Objects.equals(this.evento, notificacaoPushResponse.evento) &&
+        Objects.equals(this.tipoEvento, notificacaoPushResponse.tipoEvento) &&
         Objects.equals(this.status, notificacaoPushResponse.status) &&
         Objects.equals(this.idPessoa, notificacaoPushResponse.idPessoa) &&
         Objects.equals(this.idConta, notificacaoPushResponse.idConta) &&
@@ -314,7 +314,7 @@ public class NotificacaoPushResponse   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(dataEnvio, idEmissor, evento, status, idPessoa, idConta, tokenDispositivo, titulo, conteudo, plataforma, protocolo);
+    return Objects.hash(dataEnvio, idEmissor, tipoEvento, status, idPessoa, idConta, tokenDispositivo, titulo, conteudo, plataforma, protocolo);
   }
 
   @Override
@@ -324,7 +324,7 @@ public class NotificacaoPushResponse   {
     
     sb.append("    dataEnvio: ").append(toIndentedString(dataEnvio)).append("\n");
     sb.append("    idEmissor: ").append(toIndentedString(idEmissor)).append("\n");
-    sb.append("    evento: ").append(toIndentedString(evento)).append("\n");
+    sb.append("    tipoEvento: ").append(toIndentedString(tipoEvento)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    idPessoa: ").append(toIndentedString(idPessoa)).append("\n");
     sb.append("    idConta: ").append(toIndentedString(idConta)).append("\n");

@@ -4,6 +4,7 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.math.BigDecimal;
 import java.util.Date;
 
 
@@ -29,6 +30,7 @@ public class Conta   {
   private Date dataCadastro = null;
   private Date dataUltimaAlteracaoVencimento = null;
   private Integer numeroAgencia = null;
+  private BigDecimal valorRenda = null;
   private String numeroContaCorrente = null;
 
   
@@ -231,6 +233,24 @@ public class Conta   {
 
   
   /**
+   * Apresenta o valor da renda comprovada
+   **/
+  public Conta valorRenda(BigDecimal valorRenda) {
+    this.valorRenda = valorRenda;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Apresenta o valor da renda comprovada")
+  @JsonProperty("valorRenda")
+  public BigDecimal getValorRenda() {
+    return valorRenda;
+  }
+  public void setValorRenda(BigDecimal valorRenda) {
+    this.valorRenda = valorRenda;
+  }
+
+  
+  /**
    * N\u00C3\u00BAmero da conta corrente.
    **/
   public Conta numeroContaCorrente(String numeroContaCorrente) {
@@ -269,12 +289,13 @@ public class Conta   {
         Objects.equals(this.dataCadastro, conta.dataCadastro) &&
         Objects.equals(this.dataUltimaAlteracaoVencimento, conta.dataUltimaAlteracaoVencimento) &&
         Objects.equals(this.numeroAgencia, conta.numeroAgencia) &&
+        Objects.equals(this.valorRenda, conta.valorRenda) &&
         Objects.equals(this.numeroContaCorrente, conta.numeroContaCorrente);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idProduto, idOrigemComercial, idPessoa, idStatusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, dataUltimaAlteracaoVencimento, numeroAgencia, numeroContaCorrente);
+    return Objects.hash(id, idProduto, idOrigemComercial, idPessoa, idStatusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, dataUltimaAlteracaoVencimento, numeroAgencia, valorRenda, numeroContaCorrente);
   }
 
   @Override
@@ -293,6 +314,7 @@ public class Conta   {
     sb.append("    dataCadastro: ").append(toIndentedString(dataCadastro)).append("\n");
     sb.append("    dataUltimaAlteracaoVencimento: ").append(toIndentedString(dataUltimaAlteracaoVencimento)).append("\n");
     sb.append("    numeroAgencia: ").append(toIndentedString(numeroAgencia)).append("\n");
+    sb.append("    valorRenda: ").append(toIndentedString(valorRenda)).append("\n");
     sb.append("    numeroContaCorrente: ").append(toIndentedString(numeroContaCorrente)).append("\n");
     sb.append("}");
     return sb.toString();

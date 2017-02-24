@@ -21,13 +21,13 @@ public class WebHook   {
   private Long id = null;
 
 
-  public enum EventoEnum {
+  public enum TipoEventoEnum {
     RISCO_FRAUDE("RISCO_FRAUDE"),
     OUTROS("OUTROS");
 
     private String value;
 
-    EventoEnum(String value) {
+    TipoEventoEnum(String value) {
       this.value = value;
     }
 
@@ -38,7 +38,7 @@ public class WebHook   {
     }
   }
 
-  private EventoEnum evento = null;
+  private TipoEventoEnum tipoEvento = null;
 
 
   public enum MetodoEnum {
@@ -83,20 +83,20 @@ public class WebHook   {
 
   
   /**
-   * Evento a ser chamado pelo WebHook
+   * TipoEvento a ser chamado pelo WebHook
    **/
-  public WebHook evento(EventoEnum evento) {
-    this.evento = evento;
+  public WebHook tipoEvento(TipoEventoEnum tipoEvento) {
+    this.tipoEvento = tipoEvento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Evento a ser chamado pelo WebHook")
-  @JsonProperty("evento")
-  public EventoEnum getEvento() {
-    return evento;
+  @ApiModelProperty(example = "null", required = true, value = "TipoEvento a ser chamado pelo WebHook")
+  @JsonProperty("tipoEvento")
+  public TipoEventoEnum getTipoEvento() {
+    return tipoEvento;
   }
-  public void setEvento(EventoEnum evento) {
-    this.evento = evento;
+  public void setTipoEvento(TipoEventoEnum tipoEvento) {
+    this.tipoEvento = tipoEvento;
   }
 
   
@@ -147,14 +147,14 @@ public class WebHook   {
     }
     WebHook webHook = (WebHook) o;
     return Objects.equals(this.id, webHook.id) &&
-        Objects.equals(this.evento, webHook.evento) &&
+        Objects.equals(this.tipoEvento, webHook.tipoEvento) &&
         Objects.equals(this.metodo, webHook.metodo) &&
         Objects.equals(this.url, webHook.url);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, evento, metodo, url);
+    return Objects.hash(id, tipoEvento, metodo, url);
   }
 
   @Override
@@ -163,7 +163,7 @@ public class WebHook   {
     sb.append("class WebHook {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    evento: ").append(toIndentedString(evento)).append("\n");
+    sb.append("    tipoEvento: ").append(toIndentedString(tipoEvento)).append("\n");
     sb.append("    metodo: ").append(toIndentedString(metodo)).append("\n");
     sb.append("    url: ").append(toIndentedString(url)).append("\n");
     sb.append("}");

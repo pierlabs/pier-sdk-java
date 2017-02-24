@@ -27,13 +27,13 @@ public class PushAPNS   {
   private String conteudo = null;
 
 
-  public enum EventoEnum {
+  public enum TipoEventoEnum {
     RISCO_FRAUDE("RISCO_FRAUDE"),
     OUTROS("OUTROS");
 
     private String value;
 
-    EventoEnum(String value) {
+    TipoEventoEnum(String value) {
       this.value = value;
     }
 
@@ -44,7 +44,7 @@ public class PushAPNS   {
     }
   }
 
-  private EventoEnum evento = null;
+  private TipoEventoEnum tipoEvento = null;
   private String icone = null;
   private String som = null;
 
@@ -176,20 +176,20 @@ public class PushAPNS   {
 
   
   /**
-   * Apresenta o evento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
+   * Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
    **/
-  public PushAPNS evento(EventoEnum evento) {
-    this.evento = evento;
+  public PushAPNS tipoEvento(TipoEventoEnum tipoEvento) {
+    this.tipoEvento = tipoEvento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Apresenta o evento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o")
-  @JsonProperty("evento")
-  public EventoEnum getEvento() {
-    return evento;
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o")
+  @JsonProperty("tipoEvento")
+  public TipoEventoEnum getTipoEvento() {
+    return tipoEvento;
   }
-  public void setEvento(EventoEnum evento) {
-    this.evento = evento;
+  public void setTipoEvento(TipoEventoEnum tipoEvento) {
+    this.tipoEvento = tipoEvento;
   }
 
   
@@ -246,14 +246,14 @@ public class PushAPNS   {
         Objects.equals(this.senha, pushAPNS.senha) &&
         Objects.equals(this.titulo, pushAPNS.titulo) &&
         Objects.equals(this.conteudo, pushAPNS.conteudo) &&
-        Objects.equals(this.evento, pushAPNS.evento) &&
+        Objects.equals(this.tipoEvento, pushAPNS.tipoEvento) &&
         Objects.equals(this.icone, pushAPNS.icone) &&
         Objects.equals(this.som, pushAPNS.som);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idPessoa, idConta, tokenDispositivo, certificado, senha, titulo, conteudo, evento, icone, som);
+    return Objects.hash(idPessoa, idConta, tokenDispositivo, certificado, senha, titulo, conteudo, tipoEvento, icone, som);
   }
 
   @Override
@@ -268,7 +268,7 @@ public class PushAPNS   {
     sb.append("    senha: ").append(toIndentedString(senha)).append("\n");
     sb.append("    titulo: ").append(toIndentedString(titulo)).append("\n");
     sb.append("    conteudo: ").append(toIndentedString(conteudo)).append("\n");
-    sb.append("    evento: ").append(toIndentedString(evento)).append("\n");
+    sb.append("    tipoEvento: ").append(toIndentedString(tipoEvento)).append("\n");
     sb.append("    icone: ").append(toIndentedString(icone)).append("\n");
     sb.append("    som: ").append(toIndentedString(som)).append("\n");
     sb.append("}");

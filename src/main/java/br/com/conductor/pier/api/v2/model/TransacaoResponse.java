@@ -36,8 +36,6 @@ public class TransacaoResponse   {
   private String estabelecimento = null;
   private Integer flagCredito = null;
   private String tipoEstabelecimento = null;
-  private String latitude = null;
-  private String longetude = null;
   private Integer idGrupoMCC = null;
   private Integer flagSolicitouContestacao = null;
 
@@ -338,40 +336,6 @@ public class TransacaoResponse   {
   
   /**
    **/
-  public TransacaoResponse latitude(String latitude) {
-    this.latitude = latitude;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("latitude")
-  public String getLatitude() {
-    return latitude;
-  }
-  public void setLatitude(String latitude) {
-    this.latitude = latitude;
-  }
-
-  
-  /**
-   **/
-  public TransacaoResponse longetude(String longetude) {
-    this.longetude = longetude;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("longetude")
-  public String getLongetude() {
-    return longetude;
-  }
-  public void setLongetude(String longetude) {
-    this.longetude = longetude;
-  }
-
-  
-  /**
-   **/
   public TransacaoResponse idGrupoMCC(Integer idGrupoMCC) {
     this.idGrupoMCC = idGrupoMCC;
     return this;
@@ -431,15 +395,13 @@ public class TransacaoResponse   {
         Objects.equals(this.estabelecimento, transacaoResponse.estabelecimento) &&
         Objects.equals(this.flagCredito, transacaoResponse.flagCredito) &&
         Objects.equals(this.tipoEstabelecimento, transacaoResponse.tipoEstabelecimento) &&
-        Objects.equals(this.latitude, transacaoResponse.latitude) &&
-        Objects.equals(this.longetude, transacaoResponse.longetude) &&
         Objects.equals(this.idGrupoMCC, transacaoResponse.idGrupoMCC) &&
         Objects.equals(this.flagSolicitouContestacao, transacaoResponse.flagSolicitouContestacao);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(ultimaParcelaLancada, id, idConta, idTipoRegistro, ordem, idTransacao, descricao, status, descricaoStatus, valor, valorDolar, quantidadeParcelas, valorParcela, dataEvento, estabelecimento, flagCredito, tipoEstabelecimento, latitude, longetude, idGrupoMCC, flagSolicitouContestacao);
+    return Objects.hash(ultimaParcelaLancada, id, idConta, idTipoRegistro, ordem, idTransacao, descricao, status, descricaoStatus, valor, valorDolar, quantidadeParcelas, valorParcela, dataEvento, estabelecimento, flagCredito, tipoEstabelecimento, idGrupoMCC, flagSolicitouContestacao);
   }
 
   @Override
@@ -464,8 +426,6 @@ public class TransacaoResponse   {
     sb.append("    estabelecimento: ").append(toIndentedString(estabelecimento)).append("\n");
     sb.append("    flagCredito: ").append(toIndentedString(flagCredito)).append("\n");
     sb.append("    tipoEstabelecimento: ").append(toIndentedString(tipoEstabelecimento)).append("\n");
-    sb.append("    latitude: ").append(toIndentedString(latitude)).append("\n");
-    sb.append("    longetude: ").append(toIndentedString(longetude)).append("\n");
     sb.append("    idGrupoMCC: ").append(toIndentedString(idGrupoMCC)).append("\n");
     sb.append("    flagSolicitouContestacao: ").append(toIndentedString(flagSolicitouContestacao)).append("\n");
     sb.append("}");
