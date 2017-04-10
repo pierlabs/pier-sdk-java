@@ -32,6 +32,7 @@ public class Conta   {
   private Integer numeroAgencia = null;
   private BigDecimal valorRenda = null;
   private String numeroContaCorrente = null;
+  private String formaEnvioFatura = null;
 
   
   /**
@@ -268,6 +269,24 @@ public class Conta   {
   }
 
   
+  /**
+   * Forma de envio da fatura.
+   **/
+  public Conta formaEnvioFatura(String formaEnvioFatura) {
+    this.formaEnvioFatura = formaEnvioFatura;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Forma de envio da fatura.")
+  @JsonProperty("formaEnvioFatura")
+  public String getFormaEnvioFatura() {
+    return formaEnvioFatura;
+  }
+  public void setFormaEnvioFatura(String formaEnvioFatura) {
+    this.formaEnvioFatura = formaEnvioFatura;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -290,12 +309,13 @@ public class Conta   {
         Objects.equals(this.dataUltimaAlteracaoVencimento, conta.dataUltimaAlteracaoVencimento) &&
         Objects.equals(this.numeroAgencia, conta.numeroAgencia) &&
         Objects.equals(this.valorRenda, conta.valorRenda) &&
-        Objects.equals(this.numeroContaCorrente, conta.numeroContaCorrente);
+        Objects.equals(this.numeroContaCorrente, conta.numeroContaCorrente) &&
+        Objects.equals(this.formaEnvioFatura, conta.formaEnvioFatura);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idProduto, idOrigemComercial, idPessoa, idStatusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, dataUltimaAlteracaoVencimento, numeroAgencia, valorRenda, numeroContaCorrente);
+    return Objects.hash(id, idProduto, idOrigemComercial, idPessoa, idStatusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, dataUltimaAlteracaoVencimento, numeroAgencia, valorRenda, numeroContaCorrente, formaEnvioFatura);
   }
 
   @Override
@@ -316,6 +336,7 @@ public class Conta   {
     sb.append("    numeroAgencia: ").append(toIndentedString(numeroAgencia)).append("\n");
     sb.append("    valorRenda: ").append(toIndentedString(valorRenda)).append("\n");
     sb.append("    numeroContaCorrente: ").append(toIndentedString(numeroContaCorrente)).append("\n");
+    sb.append("    formaEnvioFatura: ").append(toIndentedString(formaEnvioFatura)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -18,7 +18,7 @@ import io.swagger.annotations.ApiModelProperty;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class FAQ   {
   
-  private Long idFaq = null;
+  private Long id = null;
   private Long idEmissor = null;
   private String pergunta = null;
   private String resposta = null;
@@ -50,18 +50,18 @@ public class FAQ   {
   /**
    * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id).
    **/
-  public FAQ idFaq(Long idFaq) {
-    this.idFaq = idFaq;
+  public FAQ id(Long id) {
+    this.id = id;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id).")
-  @JsonProperty("idFaq")
-  public Long getIdFaq() {
-    return idFaq;
+  @JsonProperty("id")
+  public Long getId() {
+    return id;
   }
-  public void setIdFaq(Long idFaq) {
-    this.idFaq = idFaq;
+  public void setId(Long id) {
+    this.id = id;
   }
 
   
@@ -201,7 +201,7 @@ public class FAQ   {
       return false;
     }
     FAQ FAQ = (FAQ) o;
-    return Objects.equals(this.idFaq, FAQ.idFaq) &&
+    return Objects.equals(this.id, FAQ.id) &&
         Objects.equals(this.idEmissor, FAQ.idEmissor) &&
         Objects.equals(this.pergunta, FAQ.pergunta) &&
         Objects.equals(this.resposta, FAQ.resposta) &&
@@ -213,7 +213,7 @@ public class FAQ   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(idFaq, idEmissor, pergunta, resposta, relevancia, plataforma, categoria, status);
+    return Objects.hash(id, idEmissor, pergunta, resposta, relevancia, plataforma, categoria, status);
   }
 
   @Override
@@ -221,7 +221,7 @@ public class FAQ   {
     StringBuilder sb = new StringBuilder();
     sb.append("class FAQ {\n");
     
-    sb.append("    idFaq: ").append(toIndentedString(idFaq)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idEmissor: ").append(toIndentedString(idEmissor)).append("\n");
     sb.append("    pergunta: ").append(toIndentedString(pergunta)).append("\n");
     sb.append("    resposta: ").append(toIndentedString(resposta)).append("\n");

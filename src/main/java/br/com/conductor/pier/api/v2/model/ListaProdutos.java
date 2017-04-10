@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v2.model.Produto;
+import br.com.conductor.pier.api.v2.model.ProdutoResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -20,7 +20,7 @@ import java.util.List;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ListaProdutos   {
   
-  private List<Produto> content = new ArrayList<Produto>();
+  private List<ProdutoResponse> content = new ArrayList<ProdutoResponse>();
   private Boolean first = null;
   private Boolean firstPage = null;
   private Boolean hasContent = null;
@@ -38,17 +38,17 @@ public class ListaProdutos   {
   
   /**
    **/
-  public ListaProdutos content(List<Produto> content) {
+  public ListaProdutos content(List<ProdutoResponse> content) {
     this.content = content;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("content")
-  public List<Produto> getContent() {
+  public List<ProdutoResponse> getContent() {
     return content;
   }
-  public void setContent(List<Produto> content) {
+  public void setContent(List<ProdutoResponse> content) {
     this.content = content;
   }
 

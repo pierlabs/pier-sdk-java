@@ -96,12 +96,12 @@ public class RiscoFraudeApi {
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
    * @return RiscoFraudeDetalhadoResponse
    */
-  public RiscoFraudeDetalhadoResponse consultarUsingGET7(Long id) throws ApiException {
+  public RiscoFraudeDetalhadoResponse consultarUsingGET10(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET7");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET10");
      }
      
     // create path and map variables
@@ -188,14 +188,13 @@ public class RiscoFraudeApi {
    * Este m\u00C3\u00A9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-   * @param idAtendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Atendimento (id)
    * @param idTipoAtendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
    * @param idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
    * @param nomeAtendente Apresenta o nome do Atendente que registrou o Atendimento.
    * @param dataAtendimento Apresenta a data em que o Atendimento foi realizado.
    * @return PageAtendimentoClientes
    */
-  public PageAtendimentoClientes listarUsingGET(Integer page, Integer limit, Long idAtendimento, Long idTipoAtendimento, Long idConta, String nomeAtendente, Date dataAtendimento) throws ApiException {
+  public PageAtendimentoClientes listarUsingGET(Integer page, Integer limit, Long idTipoAtendimento, Long idConta, String nomeAtendente, Date dataAtendimento) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -210,8 +209,6 @@ public class RiscoFraudeApi {
     queryParams.addAll(apiClient.parameterToPairs("", "page", page));
     
     queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "idAtendimento", idAtendimento));
     
     queryParams.addAll(apiClient.parameterToPairs("", "idTipoAtendimento", idTipoAtendimento));
     
@@ -253,17 +250,17 @@ public class RiscoFraudeApi {
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @return RiscoFraudeResponsePage
    */
-  public RiscoFraudeResponsePage listarUsingGET8(Long idConta, String confirmacaoFraude, Integer page, Integer limit) throws ApiException {
+  public RiscoFraudeResponsePage listarUsingGET11(Long idConta, String confirmacaoFraude, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idConta' is set
      if (idConta == null) {
-        throw new ApiException(400, "Missing the required parameter 'idConta' when calling listarUsingGET8");
+        throw new ApiException(400, "Missing the required parameter 'idConta' when calling listarUsingGET11");
      }
      
      // verify the required parameter 'confirmacaoFraude' is set
      if (confirmacaoFraude == null) {
-        throw new ApiException(400, "Missing the required parameter 'confirmacaoFraude' when calling listarUsingGET8");
+        throw new ApiException(400, "Missing the required parameter 'confirmacaoFraude' when calling listarUsingGET11");
      }
      
     // create path and map variables
@@ -407,13 +404,14 @@ public class RiscoFraudeApi {
    * @param conteudoAtendimento Apresenta as informa\u00C3\u00A7\u00C3\u00B5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00C3\u00A7\u00C3\u00B5es relacionadas ao Atendimento.
    * @param detalhesAtendimento Apresenta os detalhes lan\u00C3\u00A7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento.
    * @param nomeAtendente Apresenta o nome do Atendente que registrou o Atendimento.
-   * @param dataAtendimento Apresenta a data em que o Atendimento foi realizado.
-   * @param dataAgendamento Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data para processamento ou a data para retorno do Atendimento.
-   * @param dataHoraInicioAtendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.
-   * @param dataHoraFimAtendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.
+   * @param dataAtendimento Apresenta a data e hora em que o Atendimento foi realizado no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
+   * @param dataAgendamento Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data e hora para retorno do Atendimento no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
+   * @param dataHoraInicioAtendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
+   * @param dataHoraFimAtendimento Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
+   * @param flagFilaFraude Flag fila fraude
    * @return AtendimentoCliente
    */
-  public AtendimentoCliente salvarUsingPOST(Long idConta, String conteudoAtendimento, String detalhesAtendimento, String nomeAtendente, Date dataAtendimento, Date dataAgendamento, Date dataHoraInicioAtendimento, Date dataHoraFimAtendimento) throws ApiException {
+  public AtendimentoCliente salvarUsingPOST(Long idConta, String conteudoAtendimento, String detalhesAtendimento, String nomeAtendente, Date dataAtendimento, Date dataAgendamento, Date dataHoraInicioAtendimento, Date dataHoraFimAtendimento, Integer flagFilaFraude) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -440,6 +438,8 @@ public class RiscoFraudeApi {
     queryParams.addAll(apiClient.parameterToPairs("", "dataHoraInicioAtendimento", dataHoraInicioAtendimento));
     
     queryParams.addAll(apiClient.parameterToPairs("", "dataHoraFimAtendimento", dataHoraFimAtendimento));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "flagFilaFraude", flagFilaFraude));
     
 
     

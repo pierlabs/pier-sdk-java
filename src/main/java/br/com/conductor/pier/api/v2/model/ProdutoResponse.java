@@ -15,17 +15,18 @@ import io.swagger.annotations.ApiModelProperty;
 
 @ApiModel(description = "Produto")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class Produto   {
+public class ProdutoResponse   {
   
   private Long id = null;
   private String nome = null;
   private Integer status = null;
+  private Long idFantasiaBasica = null;
 
   
   /**
    * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
    **/
-  public Produto id(Long id) {
+  public ProdutoResponse id(Long id) {
     this.id = id;
     return this;
   }
@@ -43,7 +44,7 @@ public class Produto   {
   /**
    * Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
    **/
-  public Produto nome(String nome) {
+  public ProdutoResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
@@ -61,7 +62,7 @@ public class Produto   {
   /**
    * Representa o Status do Produto, onde: (\"0\": Inativo), (\"1\": Ativo).
    **/
-  public Produto status(Integer status) {
+  public ProdutoResponse status(Integer status) {
     this.status = status;
     return this;
   }
@@ -76,6 +77,24 @@ public class Produto   {
   }
 
   
+  /**
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.
+   **/
+  public ProdutoResponse idFantasiaBasica(Long idFantasiaBasica) {
+    this.idFantasiaBasica = idFantasiaBasica;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.")
+  @JsonProperty("idFantasiaBasica")
+  public Long getIdFantasiaBasica() {
+    return idFantasiaBasica;
+  }
+  public void setIdFantasiaBasica(Long idFantasiaBasica) {
+    this.idFantasiaBasica = idFantasiaBasica;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -85,25 +104,27 @@ public class Produto   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Produto produto = (Produto) o;
-    return Objects.equals(this.id, produto.id) &&
-        Objects.equals(this.nome, produto.nome) &&
-        Objects.equals(this.status, produto.status);
+    ProdutoResponse produtoResponse = (ProdutoResponse) o;
+    return Objects.equals(this.id, produtoResponse.id) &&
+        Objects.equals(this.nome, produtoResponse.nome) &&
+        Objects.equals(this.status, produtoResponse.status) &&
+        Objects.equals(this.idFantasiaBasica, produtoResponse.idFantasiaBasica);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, nome, status);
+    return Objects.hash(id, nome, status, idFantasiaBasica);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Produto {\n");
+    sb.append("class ProdutoResponse {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    nome: ").append(toIndentedString(nome)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    idFantasiaBasica: ").append(toIndentedString(idFantasiaBasica)).append("\n");
     sb.append("}");
     return sb.toString();
   }

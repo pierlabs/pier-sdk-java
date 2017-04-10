@@ -215,14 +215,14 @@ public class AtendimentoCliente   {
 
   
   /**
-   * Apresenta a data em que o Atendimento foi realizado.
+   * Apresenta a data e hora em que o Atendimento foi realizado.
    **/
   public AtendimentoCliente dataAtendimento(Date dataAtendimento) {
     this.dataAtendimento = dataAtendimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta a data em que o Atendimento foi realizado.")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Apresenta a data e hora em que o Atendimento foi realizado.")
   @JsonProperty("dataAtendimento")
   public Date getDataAtendimento() {
     return dataAtendimento;
@@ -233,14 +233,14 @@ public class AtendimentoCliente   {
 
   
   /**
-   * Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data para processamento ou a data para retorno do Atendimento.
+   * Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data para retorno do Atendimento.
    **/
   public AtendimentoCliente dataAgendamento(Date dataAgendamento) {
     this.dataAgendamento = dataAgendamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data para processamento ou a data para retorno do Atendimento.")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data para retorno do Atendimento.")
   @JsonProperty("dataAgendamento")
   public Date getDataAgendamento() {
     return dataAgendamento;
@@ -251,14 +251,14 @@ public class AtendimentoCliente   {
 
   
   /**
-   * Quando utilizado, apresenta a data em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada.
+   * Quando utilizado, apresenta a data e hora em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada.
    **/
   public AtendimentoCliente dataProcessamento(Date dataProcessamento) {
     this.dataProcessamento = dataProcessamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Quando utilizado, apresenta a data em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada.")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Quando utilizado, apresenta a data e hora em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada.")
   @JsonProperty("dataProcessamento")
   public Date getDataProcessamento() {
     return dataProcessamento;

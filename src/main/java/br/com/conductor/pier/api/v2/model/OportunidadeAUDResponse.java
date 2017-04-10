@@ -1,0 +1,317 @@
+package br.com.conductor.pier.api.v2.model;
+
+import java.util.Objects;
+import br.com.conductor.pier.api.v2.model.CdtDetalheOportunidadeAUD;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+
+
+
+
+/**
+ * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso Oportunidades
+ **/
+
+@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso Oportunidades")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
+public class OportunidadeAUDResponse   {
+  
+  private Long id = null;
+  private Long idTipoOportunidade = null;
+  private Long idStatusOportunidade = null;
+  private Date dataCadastro = null;
+  private Date dataAtualizacao = null;
+  private String numeroReceitaFederal = null;
+  private Date dataInicioVigencia = null;
+  private Date dataFimVigencia = null;
+  private Boolean flagAtivo = null;
+  private List<CdtDetalheOportunidadeAUD> detalhes = new ArrayList<CdtDetalheOportunidadeAUD>();
+  private Date revDate = null;
+  private Long revType = null;
+
+  
+  /**
+   * C\u00C3\u00B3digo identificador da oportunidade
+   **/
+  public OportunidadeAUDResponse id(Long id) {
+    this.id = id;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador da oportunidade")
+  @JsonProperty("id")
+  public Long getId() {
+    return id;
+  }
+  public void setId(Long id) {
+    this.id = id;
+  }
+
+  
+  /**
+   * C\u00C3\u00B3digo identificador do tipo oportunidade
+   **/
+  public OportunidadeAUDResponse idTipoOportunidade(Long idTipoOportunidade) {
+    this.idTipoOportunidade = idTipoOportunidade;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador do tipo oportunidade")
+  @JsonProperty("idTipoOportunidade")
+  public Long getIdTipoOportunidade() {
+    return idTipoOportunidade;
+  }
+  public void setIdTipoOportunidade(Long idTipoOportunidade) {
+    this.idTipoOportunidade = idTipoOportunidade;
+  }
+
+  
+  /**
+   * C\u00C3\u00B3digo identificador do status oportunidade
+   **/
+  public OportunidadeAUDResponse idStatusOportunidade(Long idStatusOportunidade) {
+    this.idStatusOportunidade = idStatusOportunidade;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador do status oportunidade")
+  @JsonProperty("idStatusOportunidade")
+  public Long getIdStatusOportunidade() {
+    return idStatusOportunidade;
+  }
+  public void setIdStatusOportunidade(Long idStatusOportunidade) {
+    this.idStatusOportunidade = idStatusOportunidade;
+  }
+
+  
+  /**
+   * Data cadastro da oportunidade.
+   **/
+  public OportunidadeAUDResponse dataCadastro(Date dataCadastro) {
+    this.dataCadastro = dataCadastro;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data cadastro da oportunidade.")
+  @JsonProperty("dataCadastro")
+  public Date getDataCadastro() {
+    return dataCadastro;
+  }
+  public void setDataCadastro(Date dataCadastro) {
+    this.dataCadastro = dataCadastro;
+  }
+
+  
+  /**
+   * Data atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade.
+   **/
+  public OportunidadeAUDResponse dataAtualizacao(Date dataAtualizacao) {
+    this.dataAtualizacao = dataAtualizacao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade.")
+  @JsonProperty("dataAtualizacao")
+  public Date getDataAtualizacao() {
+    return dataAtualizacao;
+  }
+  public void setDataAtualizacao(Date dataAtualizacao) {
+    this.dataAtualizacao = dataAtualizacao;
+  }
+
+  
+  /**
+   * N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade
+   **/
+  public OportunidadeAUDResponse numeroReceitaFederal(String numeroReceitaFederal) {
+    this.numeroReceitaFederal = numeroReceitaFederal;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade")
+  @JsonProperty("numeroReceitaFederal")
+  public String getNumeroReceitaFederal() {
+    return numeroReceitaFederal;
+  }
+  public void setNumeroReceitaFederal(String numeroReceitaFederal) {
+    this.numeroReceitaFederal = numeroReceitaFederal;
+  }
+
+  
+  /**
+   * In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
+   **/
+  public OportunidadeAUDResponse dataInicioVigencia(Date dataInicioVigencia) {
+    this.dataInicioVigencia = dataInicioVigencia;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade")
+  @JsonProperty("dataInicioVigencia")
+  public Date getDataInicioVigencia() {
+    return dataInicioVigencia;
+  }
+  public void setDataInicioVigencia(Date dataInicioVigencia) {
+    this.dataInicioVigencia = dataInicioVigencia;
+  }
+
+  
+  /**
+   * fim da vig\u00C3\u00AAncia da oportunidade
+   **/
+  public OportunidadeAUDResponse dataFimVigencia(Date dataFimVigencia) {
+    this.dataFimVigencia = dataFimVigencia;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "fim da vig\u00C3\u00AAncia da oportunidade")
+  @JsonProperty("dataFimVigencia")
+  public Date getDataFimVigencia() {
+    return dataFimVigencia;
+  }
+  public void setDataFimVigencia(Date dataFimVigencia) {
+    this.dataFimVigencia = dataFimVigencia;
+  }
+
+  
+  /**
+   * Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
+   **/
+  public OportunidadeAUDResponse flagAtivo(Boolean flagAtivo) {
+    this.flagAtivo = flagAtivo;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa")
+  @JsonProperty("flagAtivo")
+  public Boolean getFlagAtivo() {
+    return flagAtivo;
+  }
+  public void setFlagAtivo(Boolean flagAtivo) {
+    this.flagAtivo = flagAtivo;
+  }
+
+  
+  /**
+   * Lista de detalhes da oportunidade
+   **/
+  public OportunidadeAUDResponse detalhes(List<CdtDetalheOportunidadeAUD> detalhes) {
+    this.detalhes = detalhes;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Lista de detalhes da oportunidade")
+  @JsonProperty("detalhes")
+  public List<CdtDetalheOportunidadeAUD> getDetalhes() {
+    return detalhes;
+  }
+  public void setDetalhes(List<CdtDetalheOportunidadeAUD> detalhes) {
+    this.detalhes = detalhes;
+  }
+
+  
+  /**
+   * Data da auditoria
+   **/
+  public OportunidadeAUDResponse revDate(Date revDate) {
+    this.revDate = revDate;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Data da auditoria")
+  @JsonProperty("revDate")
+  public Date getRevDate() {
+    return revDate;
+  }
+  public void setRevDate(Date revDate) {
+    this.revDate = revDate;
+  }
+
+  
+  /**
+   * Tipo da auditoria
+   **/
+  public OportunidadeAUDResponse revType(Long revType) {
+    this.revType = revType;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Tipo da auditoria")
+  @JsonProperty("revType")
+  public Long getRevType() {
+    return revType;
+  }
+  public void setRevType(Long revType) {
+    this.revType = revType;
+  }
+
+  
+
+  @Override
+  public boolean equals(java.lang.Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    OportunidadeAUDResponse oportunidadeAUDResponse = (OportunidadeAUDResponse) o;
+    return Objects.equals(this.id, oportunidadeAUDResponse.id) &&
+        Objects.equals(this.idTipoOportunidade, oportunidadeAUDResponse.idTipoOportunidade) &&
+        Objects.equals(this.idStatusOportunidade, oportunidadeAUDResponse.idStatusOportunidade) &&
+        Objects.equals(this.dataCadastro, oportunidadeAUDResponse.dataCadastro) &&
+        Objects.equals(this.dataAtualizacao, oportunidadeAUDResponse.dataAtualizacao) &&
+        Objects.equals(this.numeroReceitaFederal, oportunidadeAUDResponse.numeroReceitaFederal) &&
+        Objects.equals(this.dataInicioVigencia, oportunidadeAUDResponse.dataInicioVigencia) &&
+        Objects.equals(this.dataFimVigencia, oportunidadeAUDResponse.dataFimVigencia) &&
+        Objects.equals(this.flagAtivo, oportunidadeAUDResponse.flagAtivo) &&
+        Objects.equals(this.detalhes, oportunidadeAUDResponse.detalhes) &&
+        Objects.equals(this.revDate, oportunidadeAUDResponse.revDate) &&
+        Objects.equals(this.revType, oportunidadeAUDResponse.revType);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(id, idTipoOportunidade, idStatusOportunidade, dataCadastro, dataAtualizacao, numeroReceitaFederal, dataInicioVigencia, dataFimVigencia, flagAtivo, detalhes, revDate, revType);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class OportunidadeAUDResponse {\n");
+    
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    idTipoOportunidade: ").append(toIndentedString(idTipoOportunidade)).append("\n");
+    sb.append("    idStatusOportunidade: ").append(toIndentedString(idStatusOportunidade)).append("\n");
+    sb.append("    dataCadastro: ").append(toIndentedString(dataCadastro)).append("\n");
+    sb.append("    dataAtualizacao: ").append(toIndentedString(dataAtualizacao)).append("\n");
+    sb.append("    numeroReceitaFederal: ").append(toIndentedString(numeroReceitaFederal)).append("\n");
+    sb.append("    dataInicioVigencia: ").append(toIndentedString(dataInicioVigencia)).append("\n");
+    sb.append("    dataFimVigencia: ").append(toIndentedString(dataFimVigencia)).append("\n");
+    sb.append("    flagAtivo: ").append(toIndentedString(flagAtivo)).append("\n");
+    sb.append("    detalhes: ").append(toIndentedString(detalhes)).append("\n");
+    sb.append("    revDate: ").append(toIndentedString(revDate)).append("\n");
+    sb.append("    revType: ").append(toIndentedString(revType)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+}
+
+
+

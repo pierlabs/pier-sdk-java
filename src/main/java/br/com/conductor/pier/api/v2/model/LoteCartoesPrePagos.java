@@ -24,7 +24,7 @@ public class LoteCartoesPrePagos   {
   private Long idTipoCartao = null;
   private Long idImagem = null;
   private Long idEndereco = null;
-  private Integer quantidadeCartoes = null;
+  private Integer quantidade = null;
   private Date dataCadastro = null;
   private String usuarioCadastro = null;
   private Integer statusProcessamento = null;
@@ -141,18 +141,18 @@ public class LoteCartoesPrePagos   {
   /**
    * N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.
    **/
-  public LoteCartoesPrePagos quantidadeCartoes(Integer quantidadeCartoes) {
-    this.quantidadeCartoes = quantidadeCartoes;
+  public LoteCartoesPrePagos quantidade(Integer quantidade) {
+    this.quantidade = quantidade;
     return this;
   }
   
   @ApiModelProperty(example = "null", required = true, value = "N\u00C3\u00BAmero de cart\u00C3\u00B5es existentes no Lote.")
-  @JsonProperty("quantidadeCartoes")
-  public Integer getQuantidadeCartoes() {
-    return quantidadeCartoes;
+  @JsonProperty("quantidade")
+  public Integer getQuantidade() {
+    return quantidade;
   }
-  public void setQuantidadeCartoes(Integer quantidadeCartoes) {
-    this.quantidadeCartoes = quantidadeCartoes;
+  public void setQuantidade(Integer quantidade) {
+    this.quantidade = quantidade;
   }
 
   
@@ -226,7 +226,7 @@ public class LoteCartoesPrePagos   {
         Objects.equals(this.idTipoCartao, loteCartoesPrePagos.idTipoCartao) &&
         Objects.equals(this.idImagem, loteCartoesPrePagos.idImagem) &&
         Objects.equals(this.idEndereco, loteCartoesPrePagos.idEndereco) &&
-        Objects.equals(this.quantidadeCartoes, loteCartoesPrePagos.quantidadeCartoes) &&
+        Objects.equals(this.quantidade, loteCartoesPrePagos.quantidade) &&
         Objects.equals(this.dataCadastro, loteCartoesPrePagos.dataCadastro) &&
         Objects.equals(this.usuarioCadastro, loteCartoesPrePagos.usuarioCadastro) &&
         Objects.equals(this.statusProcessamento, loteCartoesPrePagos.statusProcessamento);
@@ -234,7 +234,7 @@ public class LoteCartoesPrePagos   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idOrigemComercial, idProduto, idTipoCartao, idImagem, idEndereco, quantidadeCartoes, dataCadastro, usuarioCadastro, statusProcessamento);
+    return Objects.hash(id, idOrigemComercial, idProduto, idTipoCartao, idImagem, idEndereco, quantidade, dataCadastro, usuarioCadastro, statusProcessamento);
   }
 
   @Override
@@ -248,7 +248,7 @@ public class LoteCartoesPrePagos   {
     sb.append("    idTipoCartao: ").append(toIndentedString(idTipoCartao)).append("\n");
     sb.append("    idImagem: ").append(toIndentedString(idImagem)).append("\n");
     sb.append("    idEndereco: ").append(toIndentedString(idEndereco)).append("\n");
-    sb.append("    quantidadeCartoes: ").append(toIndentedString(quantidadeCartoes)).append("\n");
+    sb.append("    quantidade: ").append(toIndentedString(quantidade)).append("\n");
     sb.append("    dataCadastro: ").append(toIndentedString(dataCadastro)).append("\n");
     sb.append("    usuarioCadastro: ").append(toIndentedString(usuarioCadastro)).append("\n");
     sb.append("    statusProcessamento: ").append(toIndentedString(statusProcessamento)).append("\n");

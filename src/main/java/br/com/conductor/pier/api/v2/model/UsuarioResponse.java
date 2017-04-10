@@ -17,7 +17,7 @@ import java.util.Date;
 
 @ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o do recurso Usuario")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class Usuario   {
+public class UsuarioResponse   {
   
   private Long id = null;
   private String nome = null;
@@ -25,7 +25,6 @@ public class Usuario   {
   private Long idEmissor = null;
   private String cpf = null;
   private String email = null;
-  private String senha = null;
 
 
   public enum StatusEnum {
@@ -54,12 +53,12 @@ public class Usuario   {
   /**
    * Id do Usu\u00C3\u00A1rio
    **/
-  public Usuario id(Long id) {
+  public UsuarioResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Id do Usu\u00C3\u00A1rio")
+  @ApiModelProperty(example = "null", value = "Id do Usu\u00C3\u00A1rio")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -72,7 +71,7 @@ public class Usuario   {
   /**
    * Nome do Usu\u00C3\u00A1rio
    **/
-  public Usuario nome(String nome) {
+  public UsuarioResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
@@ -90,7 +89,7 @@ public class Usuario   {
   /**
    * Login do Usu\u00C3\u00A1rio
    **/
-  public Usuario login(String login) {
+  public UsuarioResponse login(String login) {
     this.login = login;
     return this;
   }
@@ -108,7 +107,7 @@ public class Usuario   {
   /**
    * Id do emissor do usu\u00C3\u00A1rio
    **/
-  public Usuario idEmissor(Long idEmissor) {
+  public UsuarioResponse idEmissor(Long idEmissor) {
     this.idEmissor = idEmissor;
     return this;
   }
@@ -126,7 +125,7 @@ public class Usuario   {
   /**
    * CPF do Usu\u00C3\u00A1rio
    **/
-  public Usuario cpf(String cpf) {
+  public UsuarioResponse cpf(String cpf) {
     this.cpf = cpf;
     return this;
   }
@@ -144,7 +143,7 @@ public class Usuario   {
   /**
    * Email do Usu\u00C3\u00A1rio
    **/
-  public Usuario email(String email) {
+  public UsuarioResponse email(String email) {
     this.email = email;
     return this;
   }
@@ -160,27 +159,9 @@ public class Usuario   {
 
   
   /**
-   * Apresenta a senha do usu\u00C3\u00A1rio.
-   **/
-  public Usuario senha(String senha) {
-    this.senha = senha;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Apresenta a senha do usu\u00C3\u00A1rio.")
-  @JsonProperty("senha")
-  public String getSenha() {
-    return senha;
-  }
-  public void setSenha(String senha) {
-    this.senha = senha;
-  }
-
-  
-  /**
    * Status do Usu\u00C3\u00A1rio
    **/
-  public Usuario status(StatusEnum status) {
+  public UsuarioResponse status(StatusEnum status) {
     this.status = status;
     return this;
   }
@@ -198,7 +179,7 @@ public class Usuario   {
   /**
    * Status do Usu\u00C3\u00A1rio
    **/
-  public Usuario dataCriacao(Date dataCriacao) {
+  public UsuarioResponse dataCriacao(Date dataCriacao) {
     this.dataCriacao = dataCriacao;
     return this;
   }
@@ -216,7 +197,7 @@ public class Usuario   {
   /**
    * Status do Usu\u00C3\u00A1rio
    **/
-  public Usuario dataModificacao(Date dataModificacao) {
+  public UsuarioResponse dataModificacao(Date dataModificacao) {
     this.dataModificacao = dataModificacao;
     return this;
   }
@@ -234,7 +215,7 @@ public class Usuario   {
   /**
    * N\u00C3\u00BAmero de tentativas de valida\u00C3\u00A7\u00C3\u00A3o incorretas
    **/
-  public Usuario tentativasIncorretas(Long tentativasIncorretas) {
+  public UsuarioResponse tentativasIncorretas(Long tentativasIncorretas) {
     this.tentativasIncorretas = tentativasIncorretas;
     return this;
   }
@@ -258,29 +239,28 @@ public class Usuario   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Usuario usuario = (Usuario) o;
-    return Objects.equals(this.id, usuario.id) &&
-        Objects.equals(this.nome, usuario.nome) &&
-        Objects.equals(this.login, usuario.login) &&
-        Objects.equals(this.idEmissor, usuario.idEmissor) &&
-        Objects.equals(this.cpf, usuario.cpf) &&
-        Objects.equals(this.email, usuario.email) &&
-        Objects.equals(this.senha, usuario.senha) &&
-        Objects.equals(this.status, usuario.status) &&
-        Objects.equals(this.dataCriacao, usuario.dataCriacao) &&
-        Objects.equals(this.dataModificacao, usuario.dataModificacao) &&
-        Objects.equals(this.tentativasIncorretas, usuario.tentativasIncorretas);
+    UsuarioResponse usuarioResponse = (UsuarioResponse) o;
+    return Objects.equals(this.id, usuarioResponse.id) &&
+        Objects.equals(this.nome, usuarioResponse.nome) &&
+        Objects.equals(this.login, usuarioResponse.login) &&
+        Objects.equals(this.idEmissor, usuarioResponse.idEmissor) &&
+        Objects.equals(this.cpf, usuarioResponse.cpf) &&
+        Objects.equals(this.email, usuarioResponse.email) &&
+        Objects.equals(this.status, usuarioResponse.status) &&
+        Objects.equals(this.dataCriacao, usuarioResponse.dataCriacao) &&
+        Objects.equals(this.dataModificacao, usuarioResponse.dataModificacao) &&
+        Objects.equals(this.tentativasIncorretas, usuarioResponse.tentativasIncorretas);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, nome, login, idEmissor, cpf, email, senha, status, dataCriacao, dataModificacao, tentativasIncorretas);
+    return Objects.hash(id, nome, login, idEmissor, cpf, email, status, dataCriacao, dataModificacao, tentativasIncorretas);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Usuario {\n");
+    sb.append("class UsuarioResponse {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    nome: ").append(toIndentedString(nome)).append("\n");
@@ -288,7 +268,6 @@ public class Usuario   {
     sb.append("    idEmissor: ").append(toIndentedString(idEmissor)).append("\n");
     sb.append("    cpf: ").append(toIndentedString(cpf)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
-    sb.append("    senha: ").append(toIndentedString(senha)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    dataCriacao: ").append(toIndentedString(dataCriacao)).append("\n");
     sb.append("    dataModificacao: ").append(toIndentedString(dataModificacao)).append("\n");

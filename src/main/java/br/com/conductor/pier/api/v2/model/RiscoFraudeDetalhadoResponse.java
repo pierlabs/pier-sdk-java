@@ -1,11 +1,14 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
+import br.com.conductor.pier.api.v2.model.Telefone;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 
 
@@ -42,6 +45,10 @@ public class RiscoFraudeDetalhadoResponse   {
   private String origemTransacao = null;
   private String codigoModoEntradaTerminal = null;
   private String descricaoModoEntradaTerminal = null;
+  private String cpf = null;
+  private String cnpj = null;
+  private String email = null;
+  private List<Telefone> tefefones = new ArrayList<Telefone>();
 
   
   /**
@@ -458,6 +465,78 @@ public class RiscoFraudeDetalhadoResponse   {
   }
 
   
+  /**
+   * N\u00C3\u00BAmero do CPF da Pessoa portadora do Cart\u00C3\u00A3o, quando for do tipo Pessoa F\u00C3\u00ADsica
+   **/
+  public RiscoFraudeDetalhadoResponse cpf(String cpf) {
+    this.cpf = cpf;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero do CPF da Pessoa portadora do Cart\u00C3\u00A3o, quando for do tipo Pessoa F\u00C3\u00ADsica")
+  @JsonProperty("cpf")
+  public String getCpf() {
+    return cpf;
+  }
+  public void setCpf(String cpf) {
+    this.cpf = cpf;
+  }
+
+  
+  /**
+   * N\u00C3\u00BAmero do CNPJ da Pessoa portadora do Cart\u00C3\u00A3o, quanto for do tipo Pessoa Jur\u00C3\u00ADdica
+   **/
+  public RiscoFraudeDetalhadoResponse cnpj(String cnpj) {
+    this.cnpj = cnpj;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero do CNPJ da Pessoa portadora do Cart\u00C3\u00A3o, quanto for do tipo Pessoa Jur\u00C3\u00ADdica")
+  @JsonProperty("cnpj")
+  public String getCnpj() {
+    return cnpj;
+  }
+  public void setCnpj(String cnpj) {
+    this.cnpj = cnpj;
+  }
+
+  
+  /**
+   * Endere\u00C3\u00A7o de email da Pessoa portadora do Cart\u00C3\u00A3o
+   **/
+  public RiscoFraudeDetalhadoResponse email(String email) {
+    this.email = email;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Endere\u00C3\u00A7o de email da Pessoa portadora do Cart\u00C3\u00A3o")
+  @JsonProperty("email")
+  public String getEmail() {
+    return email;
+  }
+  public void setEmail(String email) {
+    this.email = email;
+  }
+
+  
+  /**
+   * Lista contendo idTipoTelefone, tipoTelefone (Descricao), DDD, Numero, Ramal associados a Pessoa portadora do Cart\u00C3\u00A3o
+   **/
+  public RiscoFraudeDetalhadoResponse tefefones(List<Telefone> tefefones) {
+    this.tefefones = tefefones;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Lista contendo idTipoTelefone, tipoTelefone (Descricao), DDD, Numero, Ramal associados a Pessoa portadora do Cart\u00C3\u00A3o")
+  @JsonProperty("tefefones")
+  public List<Telefone> getTefefones() {
+    return tefefones;
+  }
+  public void setTefefones(List<Telefone> tefefones) {
+    this.tefefones = tefefones;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -490,12 +569,16 @@ public class RiscoFraudeDetalhadoResponse   {
         Objects.equals(this.descricaoRespostaFraude, riscoFraudeDetalhadoResponse.descricaoRespostaFraude) &&
         Objects.equals(this.origemTransacao, riscoFraudeDetalhadoResponse.origemTransacao) &&
         Objects.equals(this.codigoModoEntradaTerminal, riscoFraudeDetalhadoResponse.codigoModoEntradaTerminal) &&
-        Objects.equals(this.descricaoModoEntradaTerminal, riscoFraudeDetalhadoResponse.descricaoModoEntradaTerminal);
+        Objects.equals(this.descricaoModoEntradaTerminal, riscoFraudeDetalhadoResponse.descricaoModoEntradaTerminal) &&
+        Objects.equals(this.cpf, riscoFraudeDetalhadoResponse.cpf) &&
+        Objects.equals(this.cnpj, riscoFraudeDetalhadoResponse.cnpj) &&
+        Objects.equals(this.email, riscoFraudeDetalhadoResponse.email) &&
+        Objects.equals(this.tefefones, riscoFraudeDetalhadoResponse.tefefones);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idTipoResolucao, descricaoTipoResolucao, flagAltoRisco, idConta, idCartao, idProduto, idTransacao, dataTransacao, valorTransacao, codigoMoedaOrigem, valorOrigem, codigoMoedaDestino, valorDestino, nomeEstabelecimento, idPais, codigoRespostaAutorizador, descricaoRespostaAutorizador, codigoRespostaFraude, descricaoRespostaFraude, origemTransacao, codigoModoEntradaTerminal, descricaoModoEntradaTerminal);
+    return Objects.hash(id, idTipoResolucao, descricaoTipoResolucao, flagAltoRisco, idConta, idCartao, idProduto, idTransacao, dataTransacao, valorTransacao, codigoMoedaOrigem, valorOrigem, codigoMoedaDestino, valorDestino, nomeEstabelecimento, idPais, codigoRespostaAutorizador, descricaoRespostaAutorizador, codigoRespostaFraude, descricaoRespostaFraude, origemTransacao, codigoModoEntradaTerminal, descricaoModoEntradaTerminal, cpf, cnpj, email, tefefones);
   }
 
   @Override
@@ -526,6 +609,10 @@ public class RiscoFraudeDetalhadoResponse   {
     sb.append("    origemTransacao: ").append(toIndentedString(origemTransacao)).append("\n");
     sb.append("    codigoModoEntradaTerminal: ").append(toIndentedString(codigoModoEntradaTerminal)).append("\n");
     sb.append("    descricaoModoEntradaTerminal: ").append(toIndentedString(descricaoModoEntradaTerminal)).append("\n");
+    sb.append("    cpf: ").append(toIndentedString(cpf)).append("\n");
+    sb.append("    cnpj: ").append(toIndentedString(cnpj)).append("\n");
+    sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    tefefones: ").append(toIndentedString(tefefones)).append("\n");
     sb.append("}");
     return sb.toString();
   }

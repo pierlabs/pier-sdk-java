@@ -23,10 +23,10 @@ public class TransacaoResponse   {
   private Long id = null;
   private Long idConta = null;
   private Long idTipoRegistro = null;
-  private Long ordem = null;
+  private Integer ordem = null;
   private Long idTransacao = null;
   private String descricao = null;
-  private Long status = null;
+  private Integer status = null;
   private String descricaoStatus = null;
   private BigDecimal valor = null;
   private BigDecimal valorDolar = null;
@@ -114,17 +114,17 @@ public class TransacaoResponse   {
   /**
    * Representa\u00C3\u00A7\u00C3\u00A3o da ordena\u00C3\u00A7\u00C3\u00A3o da transacao (id).
    **/
-  public TransacaoResponse ordem(Long ordem) {
+  public TransacaoResponse ordem(Integer ordem) {
     this.ordem = ordem;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Representa\u00C3\u00A7\u00C3\u00A3o da ordena\u00C3\u00A7\u00C3\u00A3o da transacao (id).")
   @JsonProperty("ordem")
-  public Long getOrdem() {
+  public Integer getOrdem() {
     return ordem;
   }
-  public void setOrdem(Long ordem) {
+  public void setOrdem(Integer ordem) {
     this.ordem = ordem;
   }
 
@@ -166,17 +166,17 @@ public class TransacaoResponse   {
   
   /**
    **/
-  public TransacaoResponse status(Long status) {
+  public TransacaoResponse status(Integer status) {
     this.status = status;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("status")
-  public Long getStatus() {
+  public Integer getStatus() {
     return status;
   }
-  public void setStatus(Long status) {
+  public void setStatus(Integer status) {
     this.status = status;
   }
 

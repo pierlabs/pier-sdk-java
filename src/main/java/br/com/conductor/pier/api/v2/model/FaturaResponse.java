@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
+import java.util.Date;
 
 
 
@@ -19,24 +20,30 @@ import java.math.BigDecimal;
 public class FaturaResponse   {
   
   private Long id = null;
-  private String descricao = null;
-  private Long banco = null;
-  private Integer faixaNossoNumero = null;
-  private BigDecimal minNossoNumero = null;
-  private BigDecimal maxNossoNumero = null;
-  private Integer tamNossoNumero = null;
-  private BigDecimal ultimoNossoNumero = null;
+  private Long idConta = null;
+  private Long idProduto = null;
+  private Date dataVencimento = null;
+  private BigDecimal saldoFaturaAnterior = null;
+  private BigDecimal saldoMulta = null;
+  private BigDecimal saldoCompras = null;
+  private BigDecimal saldoPagamentos = null;
+  private BigDecimal saldoTarifas = null;
+  private BigDecimal saldoDebitos = null;
+  private BigDecimal saldoCreditos = null;
+  private BigDecimal saldoAtualFinal = null;
+  private BigDecimal valorMinimoFatura = null;
+  private Integer flagEmiteFatura = null;
 
   
   /**
-   * C\u00C3\u00B3digo identificador do tipo de boleto.
+   * C\u00C3\u00B3digo identificador da fatura.
    **/
   public FaturaResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador do tipo de boleto.")
+  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador da fatura.")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -47,128 +54,236 @@ public class FaturaResponse   {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do tipo de boleto.
+   * C\u00C3\u00B3digo identificador da conta.
    **/
-  public FaturaResponse descricao(String descricao) {
-    this.descricao = descricao;
+  public FaturaResponse idConta(Long idConta) {
+    this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o do tipo de boleto.")
-  @JsonProperty("descricao")
-  public String getDescricao() {
-    return descricao;
+  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador da conta.")
+  @JsonProperty("idConta")
+  public Long getIdConta() {
+    return idConta;
   }
-  public void setDescricao(String descricao) {
-    this.descricao = descricao;
+  public void setIdConta(Long idConta) {
+    this.idConta = idConta;
   }
 
   
   /**
-   * C\u00C3\u00B3digo identificador do banco.
+   * C\u00C3\u00B3digo identificador do produto.
    **/
-  public FaturaResponse banco(Long banco) {
-    this.banco = banco;
+  public FaturaResponse idProduto(Long idProduto) {
+    this.idProduto = idProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador do banco.")
-  @JsonProperty("banco")
-  public Long getBanco() {
-    return banco;
+  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador do produto.")
+  @JsonProperty("idProduto")
+  public Long getIdProduto() {
+    return idProduto;
   }
-  public void setBanco(Long banco) {
-    this.banco = banco;
+  public void setIdProduto(Long idProduto) {
+    this.idProduto = idProduto;
   }
 
   
   /**
-   * Faixa permitida para cria\u00C3\u00A7\u00C3\u00A3o do nosso n\u00C3\u00BAmero.
+   * Data de vencimento da fatura.
    **/
-  public FaturaResponse faixaNossoNumero(Integer faixaNossoNumero) {
-    this.faixaNossoNumero = faixaNossoNumero;
+  public FaturaResponse dataVencimento(Date dataVencimento) {
+    this.dataVencimento = dataVencimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Faixa permitida para cria\u00C3\u00A7\u00C3\u00A3o do nosso n\u00C3\u00BAmero.")
-  @JsonProperty("faixaNossoNumero")
-  public Integer getFaixaNossoNumero() {
-    return faixaNossoNumero;
+  @ApiModelProperty(example = "null", value = "Data de vencimento da fatura.")
+  @JsonProperty("dataVencimento")
+  public Date getDataVencimento() {
+    return dataVencimento;
   }
-  public void setFaixaNossoNumero(Integer faixaNossoNumero) {
-    this.faixaNossoNumero = faixaNossoNumero;
+  public void setDataVencimento(Date dataVencimento) {
+    this.dataVencimento = dataVencimento;
   }
 
   
   /**
-   * N\u00C3\u00BAmero minimo para o nosso n\u00C3\u00BAmero.
+   * Saldo da fatura anterior.
    **/
-  public FaturaResponse minNossoNumero(BigDecimal minNossoNumero) {
-    this.minNossoNumero = minNossoNumero;
+  public FaturaResponse saldoFaturaAnterior(BigDecimal saldoFaturaAnterior) {
+    this.saldoFaturaAnterior = saldoFaturaAnterior;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero minimo para o nosso n\u00C3\u00BAmero.")
-  @JsonProperty("minNossoNumero")
-  public BigDecimal getMinNossoNumero() {
-    return minNossoNumero;
+  @ApiModelProperty(example = "null", value = "Saldo da fatura anterior.")
+  @JsonProperty("saldoFaturaAnterior")
+  public BigDecimal getSaldoFaturaAnterior() {
+    return saldoFaturaAnterior;
   }
-  public void setMinNossoNumero(BigDecimal minNossoNumero) {
-    this.minNossoNumero = minNossoNumero;
+  public void setSaldoFaturaAnterior(BigDecimal saldoFaturaAnterior) {
+    this.saldoFaturaAnterior = saldoFaturaAnterior;
   }
 
   
   /**
-   * N\u00C3\u00BAmero m\u00C3\u00A1ximo para o nosso n\u00C3\u00BAmero.
+   * Saldo total da Multa lan\u00C3\u00A7ada na Fatura atual.
    **/
-  public FaturaResponse maxNossoNumero(BigDecimal maxNossoNumero) {
-    this.maxNossoNumero = maxNossoNumero;
+  public FaturaResponse saldoMulta(BigDecimal saldoMulta) {
+    this.saldoMulta = saldoMulta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero m\u00C3\u00A1ximo para o nosso n\u00C3\u00BAmero.")
-  @JsonProperty("maxNossoNumero")
-  public BigDecimal getMaxNossoNumero() {
-    return maxNossoNumero;
+  @ApiModelProperty(example = "null", value = "Saldo total da Multa lan\u00C3\u00A7ada na Fatura atual.")
+  @JsonProperty("saldoMulta")
+  public BigDecimal getSaldoMulta() {
+    return saldoMulta;
   }
-  public void setMaxNossoNumero(BigDecimal maxNossoNumero) {
-    this.maxNossoNumero = maxNossoNumero;
+  public void setSaldoMulta(BigDecimal saldoMulta) {
+    this.saldoMulta = saldoMulta;
   }
 
   
   /**
-   * Tamanho do nosso n\u00C3\u00BAmero.
+   * Saldo total das compras lan\u00C3\u00A7adas na fatura atual.
    **/
-  public FaturaResponse tamNossoNumero(Integer tamNossoNumero) {
-    this.tamNossoNumero = tamNossoNumero;
+  public FaturaResponse saldoCompras(BigDecimal saldoCompras) {
+    this.saldoCompras = saldoCompras;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Tamanho do nosso n\u00C3\u00BAmero.")
-  @JsonProperty("tamNossoNumero")
-  public Integer getTamNossoNumero() {
-    return tamNossoNumero;
+  @ApiModelProperty(example = "null", value = "Saldo total das compras lan\u00C3\u00A7adas na fatura atual.")
+  @JsonProperty("saldoCompras")
+  public BigDecimal getSaldoCompras() {
+    return saldoCompras;
   }
-  public void setTamNossoNumero(Integer tamNossoNumero) {
-    this.tamNossoNumero = tamNossoNumero;
+  public void setSaldoCompras(BigDecimal saldoCompras) {
+    this.saldoCompras = saldoCompras;
   }
 
   
   /**
-   * \u00C3\u009Altimo nosso n\u00C3\u00BAmero utilizado.
+   * Saldo total dos pagamentos lan\u00C3\u00A7ados na fatura atual.
    **/
-  public FaturaResponse ultimoNossoNumero(BigDecimal ultimoNossoNumero) {
-    this.ultimoNossoNumero = ultimoNossoNumero;
+  public FaturaResponse saldoPagamentos(BigDecimal saldoPagamentos) {
+    this.saldoPagamentos = saldoPagamentos;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "\u00C3\u009Altimo nosso n\u00C3\u00BAmero utilizado.")
-  @JsonProperty("ultimoNossoNumero")
-  public BigDecimal getUltimoNossoNumero() {
-    return ultimoNossoNumero;
+  @ApiModelProperty(example = "null", value = "Saldo total dos pagamentos lan\u00C3\u00A7ados na fatura atual.")
+  @JsonProperty("saldoPagamentos")
+  public BigDecimal getSaldoPagamentos() {
+    return saldoPagamentos;
   }
-  public void setUltimoNossoNumero(BigDecimal ultimoNossoNumero) {
-    this.ultimoNossoNumero = ultimoNossoNumero;
+  public void setSaldoPagamentos(BigDecimal saldoPagamentos) {
+    this.saldoPagamentos = saldoPagamentos;
+  }
+
+  
+  /**
+   * Saldo total das tarifas lan\u00C3\u00A7adas na fatura atual.
+   **/
+  public FaturaResponse saldoTarifas(BigDecimal saldoTarifas) {
+    this.saldoTarifas = saldoTarifas;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Saldo total das tarifas lan\u00C3\u00A7adas na fatura atual.")
+  @JsonProperty("saldoTarifas")
+  public BigDecimal getSaldoTarifas() {
+    return saldoTarifas;
+  }
+  public void setSaldoTarifas(BigDecimal saldoTarifas) {
+    this.saldoTarifas = saldoTarifas;
+  }
+
+  
+  /**
+   * Saldo total dos d\u00C3\u00A9bitos lan\u00C3\u00A7ados na fatura atual.
+   **/
+  public FaturaResponse saldoDebitos(BigDecimal saldoDebitos) {
+    this.saldoDebitos = saldoDebitos;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Saldo total dos d\u00C3\u00A9bitos lan\u00C3\u00A7ados na fatura atual.")
+  @JsonProperty("saldoDebitos")
+  public BigDecimal getSaldoDebitos() {
+    return saldoDebitos;
+  }
+  public void setSaldoDebitos(BigDecimal saldoDebitos) {
+    this.saldoDebitos = saldoDebitos;
+  }
+
+  
+  /**
+   * Saldo total dos cr\u00C3\u00A9dito lan\u00C3\u00A7ados na fatura atual.
+   **/
+  public FaturaResponse saldoCreditos(BigDecimal saldoCreditos) {
+    this.saldoCreditos = saldoCreditos;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Saldo total dos cr\u00C3\u00A9dito lan\u00C3\u00A7ados na fatura atual.")
+  @JsonProperty("saldoCreditos")
+  public BigDecimal getSaldoCreditos() {
+    return saldoCreditos;
+  }
+  public void setSaldoCreditos(BigDecimal saldoCreditos) {
+    this.saldoCreditos = saldoCreditos;
+  }
+
+  
+  /**
+   * Salto total devedor da fatura atual.
+   **/
+  public FaturaResponse saldoAtualFinal(BigDecimal saldoAtualFinal) {
+    this.saldoAtualFinal = saldoAtualFinal;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Salto total devedor da fatura atual.")
+  @JsonProperty("saldoAtualFinal")
+  public BigDecimal getSaldoAtualFinal() {
+    return saldoAtualFinal;
+  }
+  public void setSaldoAtualFinal(BigDecimal saldoAtualFinal) {
+    this.saldoAtualFinal = saldoAtualFinal;
+  }
+
+  
+  /**
+   * Valor m\u00C3\u00ADnimo para pagamento da fatura.
+   **/
+  public FaturaResponse valorMinimoFatura(BigDecimal valorMinimoFatura) {
+    this.valorMinimoFatura = valorMinimoFatura;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor m\u00C3\u00ADnimo para pagamento da fatura.")
+  @JsonProperty("valorMinimoFatura")
+  public BigDecimal getValorMinimoFatura() {
+    return valorMinimoFatura;
+  }
+  public void setValorMinimoFatura(BigDecimal valorMinimoFatura) {
+    this.valorMinimoFatura = valorMinimoFatura;
+  }
+
+  
+  /**
+   * Quando ativa, indica que fora emitida uma fatura.
+   **/
+  public FaturaResponse flagEmiteFatura(Integer flagEmiteFatura) {
+    this.flagEmiteFatura = flagEmiteFatura;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Quando ativa, indica que fora emitida uma fatura.")
+  @JsonProperty("flagEmiteFatura")
+  public Integer getFlagEmiteFatura() {
+    return flagEmiteFatura;
+  }
+  public void setFlagEmiteFatura(Integer flagEmiteFatura) {
+    this.flagEmiteFatura = flagEmiteFatura;
   }
 
   
@@ -183,18 +298,24 @@ public class FaturaResponse   {
     }
     FaturaResponse faturaResponse = (FaturaResponse) o;
     return Objects.equals(this.id, faturaResponse.id) &&
-        Objects.equals(this.descricao, faturaResponse.descricao) &&
-        Objects.equals(this.banco, faturaResponse.banco) &&
-        Objects.equals(this.faixaNossoNumero, faturaResponse.faixaNossoNumero) &&
-        Objects.equals(this.minNossoNumero, faturaResponse.minNossoNumero) &&
-        Objects.equals(this.maxNossoNumero, faturaResponse.maxNossoNumero) &&
-        Objects.equals(this.tamNossoNumero, faturaResponse.tamNossoNumero) &&
-        Objects.equals(this.ultimoNossoNumero, faturaResponse.ultimoNossoNumero);
+        Objects.equals(this.idConta, faturaResponse.idConta) &&
+        Objects.equals(this.idProduto, faturaResponse.idProduto) &&
+        Objects.equals(this.dataVencimento, faturaResponse.dataVencimento) &&
+        Objects.equals(this.saldoFaturaAnterior, faturaResponse.saldoFaturaAnterior) &&
+        Objects.equals(this.saldoMulta, faturaResponse.saldoMulta) &&
+        Objects.equals(this.saldoCompras, faturaResponse.saldoCompras) &&
+        Objects.equals(this.saldoPagamentos, faturaResponse.saldoPagamentos) &&
+        Objects.equals(this.saldoTarifas, faturaResponse.saldoTarifas) &&
+        Objects.equals(this.saldoDebitos, faturaResponse.saldoDebitos) &&
+        Objects.equals(this.saldoCreditos, faturaResponse.saldoCreditos) &&
+        Objects.equals(this.saldoAtualFinal, faturaResponse.saldoAtualFinal) &&
+        Objects.equals(this.valorMinimoFatura, faturaResponse.valorMinimoFatura) &&
+        Objects.equals(this.flagEmiteFatura, faturaResponse.flagEmiteFatura);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, descricao, banco, faixaNossoNumero, minNossoNumero, maxNossoNumero, tamNossoNumero, ultimoNossoNumero);
+    return Objects.hash(id, idConta, idProduto, dataVencimento, saldoFaturaAnterior, saldoMulta, saldoCompras, saldoPagamentos, saldoTarifas, saldoDebitos, saldoCreditos, saldoAtualFinal, valorMinimoFatura, flagEmiteFatura);
   }
 
   @Override
@@ -203,13 +324,19 @@ public class FaturaResponse   {
     sb.append("class FaturaResponse {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    descricao: ").append(toIndentedString(descricao)).append("\n");
-    sb.append("    banco: ").append(toIndentedString(banco)).append("\n");
-    sb.append("    faixaNossoNumero: ").append(toIndentedString(faixaNossoNumero)).append("\n");
-    sb.append("    minNossoNumero: ").append(toIndentedString(minNossoNumero)).append("\n");
-    sb.append("    maxNossoNumero: ").append(toIndentedString(maxNossoNumero)).append("\n");
-    sb.append("    tamNossoNumero: ").append(toIndentedString(tamNossoNumero)).append("\n");
-    sb.append("    ultimoNossoNumero: ").append(toIndentedString(ultimoNossoNumero)).append("\n");
+    sb.append("    idConta: ").append(toIndentedString(idConta)).append("\n");
+    sb.append("    idProduto: ").append(toIndentedString(idProduto)).append("\n");
+    sb.append("    dataVencimento: ").append(toIndentedString(dataVencimento)).append("\n");
+    sb.append("    saldoFaturaAnterior: ").append(toIndentedString(saldoFaturaAnterior)).append("\n");
+    sb.append("    saldoMulta: ").append(toIndentedString(saldoMulta)).append("\n");
+    sb.append("    saldoCompras: ").append(toIndentedString(saldoCompras)).append("\n");
+    sb.append("    saldoPagamentos: ").append(toIndentedString(saldoPagamentos)).append("\n");
+    sb.append("    saldoTarifas: ").append(toIndentedString(saldoTarifas)).append("\n");
+    sb.append("    saldoDebitos: ").append(toIndentedString(saldoDebitos)).append("\n");
+    sb.append("    saldoCreditos: ").append(toIndentedString(saldoCreditos)).append("\n");
+    sb.append("    saldoAtualFinal: ").append(toIndentedString(saldoAtualFinal)).append("\n");
+    sb.append("    valorMinimoFatura: ").append(toIndentedString(valorMinimoFatura)).append("\n");
+    sb.append("    flagEmiteFatura: ").append(toIndentedString(flagEmiteFatura)).append("\n");
     sb.append("}");
     return sb.toString();
   }

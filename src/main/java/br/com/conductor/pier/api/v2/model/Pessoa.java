@@ -24,7 +24,11 @@ public class Pessoa   {
   private String cpf = null;
   private String cnpj = null;
   private Date dataNascimento = null;
+  private String numeroIdentidade = null;
+  private String orgaoExpedidorIdentidade = null;
   private String sexo = null;
+  private String unidadeFederativaIdentidade = null;
+  private Date dataEmissaoIdentidade = null;
 
   
   /**
@@ -136,6 +140,42 @@ public class Pessoa   {
 
   
   /**
+   * N\u00C3\u00BAmero da Identidade
+   **/
+  public Pessoa numeroIdentidade(String numeroIdentidade) {
+    this.numeroIdentidade = numeroIdentidade;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero da Identidade")
+  @JsonProperty("numeroIdentidade")
+  public String getNumeroIdentidade() {
+    return numeroIdentidade;
+  }
+  public void setNumeroIdentidade(String numeroIdentidade) {
+    this.numeroIdentidade = numeroIdentidade;
+  }
+
+  
+  /**
+   * Org\u00C3\u00A3o expedidor do RG.
+   **/
+  public Pessoa orgaoExpedidorIdentidade(String orgaoExpedidorIdentidade) {
+    this.orgaoExpedidorIdentidade = orgaoExpedidorIdentidade;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Org\u00C3\u00A3o expedidor do RG.")
+  @JsonProperty("orgaoExpedidorIdentidade")
+  public String getOrgaoExpedidorIdentidade() {
+    return orgaoExpedidorIdentidade;
+  }
+  public void setOrgaoExpedidorIdentidade(String orgaoExpedidorIdentidade) {
+    this.orgaoExpedidorIdentidade = orgaoExpedidorIdentidade;
+  }
+
+  
+  /**
    * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino), (\"O\": Outro), (\"N\": N\u00C3\u00A3o Especificado).
    **/
   public Pessoa sexo(String sexo) {
@@ -150,6 +190,42 @@ public class Pessoa   {
   }
   public void setSexo(String sexo) {
     this.sexo = sexo;
+  }
+
+  
+  /**
+   * Sigla da Unidade Federativa de onde foi expedido a Identidade
+   **/
+  public Pessoa unidadeFederativaIdentidade(String unidadeFederativaIdentidade) {
+    this.unidadeFederativaIdentidade = unidadeFederativaIdentidade;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Sigla da Unidade Federativa de onde foi expedido a Identidade")
+  @JsonProperty("unidadeFederativaIdentidade")
+  public String getUnidadeFederativaIdentidade() {
+    return unidadeFederativaIdentidade;
+  }
+  public void setUnidadeFederativaIdentidade(String unidadeFederativaIdentidade) {
+    this.unidadeFederativaIdentidade = unidadeFederativaIdentidade;
+  }
+
+  
+  /**
+   * Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
+   **/
+  public Pessoa dataEmissaoIdentidade(Date dataEmissaoIdentidade) {
+    this.dataEmissaoIdentidade = dataEmissaoIdentidade;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd")
+  @JsonProperty("dataEmissaoIdentidade")
+  public Date getDataEmissaoIdentidade() {
+    return dataEmissaoIdentidade;
+  }
+  public void setDataEmissaoIdentidade(Date dataEmissaoIdentidade) {
+    this.dataEmissaoIdentidade = dataEmissaoIdentidade;
   }
 
   
@@ -169,12 +245,16 @@ public class Pessoa   {
         Objects.equals(this.cpf, pessoa.cpf) &&
         Objects.equals(this.cnpj, pessoa.cnpj) &&
         Objects.equals(this.dataNascimento, pessoa.dataNascimento) &&
-        Objects.equals(this.sexo, pessoa.sexo);
+        Objects.equals(this.numeroIdentidade, pessoa.numeroIdentidade) &&
+        Objects.equals(this.orgaoExpedidorIdentidade, pessoa.orgaoExpedidorIdentidade) &&
+        Objects.equals(this.sexo, pessoa.sexo) &&
+        Objects.equals(this.unidadeFederativaIdentidade, pessoa.unidadeFederativaIdentidade) &&
+        Objects.equals(this.dataEmissaoIdentidade, pessoa.dataEmissaoIdentidade);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, nome, tipo, cpf, cnpj, dataNascimento, sexo);
+    return Objects.hash(id, nome, tipo, cpf, cnpj, dataNascimento, numeroIdentidade, orgaoExpedidorIdentidade, sexo, unidadeFederativaIdentidade, dataEmissaoIdentidade);
   }
 
   @Override
@@ -188,7 +268,11 @@ public class Pessoa   {
     sb.append("    cpf: ").append(toIndentedString(cpf)).append("\n");
     sb.append("    cnpj: ").append(toIndentedString(cnpj)).append("\n");
     sb.append("    dataNascimento: ").append(toIndentedString(dataNascimento)).append("\n");
+    sb.append("    numeroIdentidade: ").append(toIndentedString(numeroIdentidade)).append("\n");
+    sb.append("    orgaoExpedidorIdentidade: ").append(toIndentedString(orgaoExpedidorIdentidade)).append("\n");
     sb.append("    sexo: ").append(toIndentedString(sexo)).append("\n");
+    sb.append("    unidadeFederativaIdentidade: ").append(toIndentedString(unidadeFederativaIdentidade)).append("\n");
+    sb.append("    dataEmissaoIdentidade: ").append(toIndentedString(dataEmissaoIdentidade)).append("\n");
     sb.append("}");
     return sb.toString();
   }
