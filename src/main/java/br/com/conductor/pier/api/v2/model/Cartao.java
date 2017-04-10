@@ -36,6 +36,7 @@ public class Cartao   {
   private Integer flagImpressaoOrigemComercial = null;
   private Integer flagProvisorio = null;
   private String codigoDesbloqueio = null;
+  private Integer sequencialCartao = null;
 
   
   /**
@@ -362,6 +363,24 @@ public class Cartao   {
   }
 
   
+  /**
+   * N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o
+   **/
+  public Cartao sequencialCartao(Integer sequencialCartao) {
+    this.sequencialCartao = sequencialCartao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o")
+  @JsonProperty("sequencialCartao")
+  public Integer getSequencialCartao() {
+    return sequencialCartao;
+  }
+  public void setSequencialCartao(Integer sequencialCartao) {
+    this.sequencialCartao = sequencialCartao;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -389,12 +408,13 @@ public class Cartao   {
         Objects.equals(this.arquivoImpressao, cartao.arquivoImpressao) &&
         Objects.equals(this.flagImpressaoOrigemComercial, cartao.flagImpressaoOrigemComercial) &&
         Objects.equals(this.flagProvisorio, cartao.flagProvisorio) &&
-        Objects.equals(this.codigoDesbloqueio, cartao.codigoDesbloqueio);
+        Objects.equals(this.codigoDesbloqueio, cartao.codigoDesbloqueio) &&
+        Objects.equals(this.sequencialCartao, cartao.sequencialCartao);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idStatusCartao, idEstagioCartao, idConta, idPessoa, idProduto, tipoPortador, numeroCartao, nomeImpresso, dataGeracao, dataStatusCartao, dataEstagioCartao, dataValidade, dataImpressao, arquivoImpressao, flagImpressaoOrigemComercial, flagProvisorio, codigoDesbloqueio);
+    return Objects.hash(id, idStatusCartao, idEstagioCartao, idConta, idPessoa, idProduto, tipoPortador, numeroCartao, nomeImpresso, dataGeracao, dataStatusCartao, dataEstagioCartao, dataValidade, dataImpressao, arquivoImpressao, flagImpressaoOrigemComercial, flagProvisorio, codigoDesbloqueio, sequencialCartao);
   }
 
   @Override
@@ -420,6 +440,7 @@ public class Cartao   {
     sb.append("    flagImpressaoOrigemComercial: ").append(toIndentedString(flagImpressaoOrigemComercial)).append("\n");
     sb.append("    flagProvisorio: ").append(toIndentedString(flagProvisorio)).append("\n");
     sb.append("    codigoDesbloqueio: ").append(toIndentedString(codigoDesbloqueio)).append("\n");
+    sb.append("    sequencialCartao: ").append(toIndentedString(sequencialCartao)).append("\n");
     sb.append("}");
     return sb.toString();
   }
