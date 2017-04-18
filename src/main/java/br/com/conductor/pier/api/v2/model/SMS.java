@@ -50,7 +50,8 @@ public class SMS   {
     ENVIADO("ENVIADO"),
     RESPONDIDO("RESPONDIDO"),
     ERRO("ERRO"),
-    ERRO_RESPOSTA("ERRO_RESPOSTA");
+    ERRO_RESPOSTA("ERRO_RESPOSTA"),
+    SUCESSO_RESPOSTA("SUCESSO_RESPOSTA");
 
     private String value;
 

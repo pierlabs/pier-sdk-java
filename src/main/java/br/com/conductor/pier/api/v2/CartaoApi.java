@@ -12,12 +12,9 @@ import br.com.conductor.pier.api.v2.model.Cartao;
 import br.com.conductor.pier.api.v2.model.LimiteDisponibilidade;
 import br.com.conductor.pier.api.v2.model.LoteCartoesPrePagos;
 import br.com.conductor.pier.api.v2.model.Portador;
-import br.com.conductor.pier.api.v2.model.LinkTransferenciaBancariaResponse;
 import br.com.conductor.pier.api.v2.model.PageLoteCartoesPrePagosResponse;
 import java.util.Date;
-import br.com.conductor.pier.api.v2.model.LinkPageTransferenciaBancariaResponse;
 import br.com.conductor.pier.api.v2.model.PageCartoes;
-import java.math.BigDecimal;
 import br.com.conductor.pier.api.v2.model.ValidaCartao;
 
 
@@ -522,63 +519,6 @@ public class CartaoApi {
   }
   
   /**
-   * Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria
-   * Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
-   * @param id Id Cart\u00C3\u00A3o
-   * @param idTransferencia Id Transfer\u00C3\u00AAncia
-   * @param idContaBancariaDestino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
-   * @return LinkTransferenciaBancariaResponse
-   */
-  public LinkTransferenciaBancariaResponse consultarUsingGET20(Long id, Long idTransferencia, Long idContaBancariaDestino) throws ApiException {
-    Object postBody = null;
-    
-     // verify the required parameter 'id' is set
-     if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET20");
-     }
-     
-     // verify the required parameter 'idTransferencia' is set
-     if (idTransferencia == null) {
-        throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET20");
-     }
-     
-    // create path and map variables
-    String path = "/api/cartoes/{id}/transferencias-creditos-contas-bancarias/{id_transferencia}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()))
-      .replaceAll("\\{" + "id_transferencia" + "\\}", apiClient.escapeString(idTransferencia.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "id_conta_bancaria_destino", idContaBancariaDestino));
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {"client_id", "access_token" };
-
-    
-    GenericType<LinkTransferenciaBancariaResponse> returnType = new GenericType<LinkTransferenciaBancariaResponse>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
    * Realiza o desbloqueio de um determinado Cart\u00C3\u00A3o
    * Este m\u00C3\u00A9todo permite que seja desbloqueado um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
@@ -804,62 +744,6 @@ public class CartaoApi {
   }
   
   /**
-   * Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
-   * Este recurso tem como objetivo permitir que o portador de um Cart\u00C3\u00A3o possa consultar uma lista das Transfer\u00C3\u00AAncias Banc\u00C3\u00A1rias para os Favorecidos cadastrados.
-   * @param id Id Cart\u00C3\u00A3o
-   * @param idContaBancariaDestino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-   * @return LinkPageTransferenciaBancariaResponse
-   */
-  public LinkPageTransferenciaBancariaResponse listarUsingGET19(Long id, Long idContaBancariaDestino, Integer page, Integer limit) throws ApiException {
-    Object postBody = null;
-    
-     // verify the required parameter 'id' is set
-     if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET19");
-     }
-     
-    // create path and map variables
-    String path = "/api/cartoes/{id}/transferencias-creditos-contas-bancarias".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "id_conta_bancaria_destino", idContaBancariaDestino));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {"client_id", "access_token" };
-
-    
-    GenericType<LinkPageTransferenciaBancariaResponse> returnType = new GenericType<LinkPageTransferenciaBancariaResponse>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
    * Lista os Cart\u00C3\u00B5es gerados pelo Emissor
    * Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existentes na base do emissor.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
@@ -956,145 +840,6 @@ public class CartaoApi {
     
     GenericType<PageCartoes> returnType = new GenericType<PageCartoes>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
-   * Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria entre bancos / contas
-   * Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para outro cliente do mesmo emissor. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta de destino.
-   * @param id Id Cart\u00C3\u00A3o
-   * @param dataCompra Data da transfer\u00C3\u00AAncia
-   * @param proximoVencimentoPadrao Dia do vencimento padr\u00C3\u00A3o da fatura
-   * @param proximoVencimentoReal Data do vencimento real da fatura
-   * @param valorCompra Valor da transfer\u00C3\u00AAncia
-   * @param nomeFavorecido Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
-   * @param documentoFavorecido N\u00C3\u00BAmero do CPF ou CNPJ.
-   * @param banco C\u00C3\u00B3digo do banco
-   * @param numeroAgencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia
-   * @param numeroConta N\u00C3\u00BAmero da conta
-   * @param flagContaPoupanca Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente)
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-   * @param digitoAgencia D\u00C3\u00ADgito da ag\u00C3\u00AAncia
-   * @param digitoConta D\u00C3\u00ADgito da conta
-   * @return LinkTransferenciaBancariaResponse
-   */
-  public LinkTransferenciaBancariaResponse transferirUsingPOST(Long id, Date dataCompra, Date proximoVencimentoPadrao, Date proximoVencimentoReal, BigDecimal valorCompra, String nomeFavorecido, String documentoFavorecido, Long banco, String numeroAgencia, String numeroConta, Integer flagContaPoupanca, Integer page, Integer limit, String digitoAgencia, String digitoConta) throws ApiException {
-    Object postBody = null;
-    
-     // verify the required parameter 'id' is set
-     if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling transferirUsingPOST");
-     }
-     
-     // verify the required parameter 'dataCompra' is set
-     if (dataCompra == null) {
-        throw new ApiException(400, "Missing the required parameter 'dataCompra' when calling transferirUsingPOST");
-     }
-     
-     // verify the required parameter 'proximoVencimentoPadrao' is set
-     if (proximoVencimentoPadrao == null) {
-        throw new ApiException(400, "Missing the required parameter 'proximoVencimentoPadrao' when calling transferirUsingPOST");
-     }
-     
-     // verify the required parameter 'proximoVencimentoReal' is set
-     if (proximoVencimentoReal == null) {
-        throw new ApiException(400, "Missing the required parameter 'proximoVencimentoReal' when calling transferirUsingPOST");
-     }
-     
-     // verify the required parameter 'valorCompra' is set
-     if (valorCompra == null) {
-        throw new ApiException(400, "Missing the required parameter 'valorCompra' when calling transferirUsingPOST");
-     }
-     
-     // verify the required parameter 'nomeFavorecido' is set
-     if (nomeFavorecido == null) {
-        throw new ApiException(400, "Missing the required parameter 'nomeFavorecido' when calling transferirUsingPOST");
-     }
-     
-     // verify the required parameter 'documentoFavorecido' is set
-     if (documentoFavorecido == null) {
-        throw new ApiException(400, "Missing the required parameter 'documentoFavorecido' when calling transferirUsingPOST");
-     }
-     
-     // verify the required parameter 'banco' is set
-     if (banco == null) {
-        throw new ApiException(400, "Missing the required parameter 'banco' when calling transferirUsingPOST");
-     }
-     
-     // verify the required parameter 'numeroAgencia' is set
-     if (numeroAgencia == null) {
-        throw new ApiException(400, "Missing the required parameter 'numeroAgencia' when calling transferirUsingPOST");
-     }
-     
-     // verify the required parameter 'numeroConta' is set
-     if (numeroConta == null) {
-        throw new ApiException(400, "Missing the required parameter 'numeroConta' when calling transferirUsingPOST");
-     }
-     
-     // verify the required parameter 'flagContaPoupanca' is set
-     if (flagContaPoupanca == null) {
-        throw new ApiException(400, "Missing the required parameter 'flagContaPoupanca' when calling transferirUsingPOST");
-     }
-     
-    // create path and map variables
-    String path = "/api/cartoes/{id}/transferencias-creditos-contas-bancarias".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "dataCompra", dataCompra));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "proximoVencimentoPadrao", proximoVencimentoPadrao));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "proximoVencimentoReal", proximoVencimentoReal));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "valorCompra", valorCompra));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "nomeFavorecido", nomeFavorecido));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "documentoFavorecido", documentoFavorecido));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "banco", banco));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "numeroAgencia", numeroAgencia));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "digitoAgencia", digitoAgencia));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "numeroConta", numeroConta));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "digitoConta", digitoConta));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "flagContaPoupanca", flagContaPoupanca));
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {"client_id", "access_token" };
-
-    
-    GenericType<LinkTransferenciaBancariaResponse> returnType = new GenericType<LinkTransferenciaBancariaResponse>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   

@@ -44,7 +44,7 @@ public class BaseApi {
    * 
    * @return BodyAccessToken
    */
-  public BodyAccessToken clearUsingPOST() throws ApiException {
+  public BodyAccessToken limparUsingPOST() throws ApiException {
     Object postBody = null;
     
     // create path and map variables

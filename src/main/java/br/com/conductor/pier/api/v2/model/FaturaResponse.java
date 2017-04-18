@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
-import java.util.Date;
 
 
 
@@ -21,18 +20,30 @@ public class FaturaResponse   {
   
   private Long id = null;
   private Long idConta = null;
-  private Long idProduto = null;
-  private Date dataVencimento = null;
-  private BigDecimal saldoFaturaAnterior = null;
-  private BigDecimal saldoMulta = null;
-  private BigDecimal saldoCompras = null;
-  private BigDecimal saldoPagamentos = null;
-  private BigDecimal saldoTarifas = null;
-  private BigDecimal saldoDebitos = null;
-  private BigDecimal saldoCreditos = null;
-  private BigDecimal saldoAtualFinal = null;
-  private BigDecimal valorMinimoFatura = null;
   private Integer flagEmiteFatura = null;
+  private String dataVencimentoFatura = null;
+  private BigDecimal valorTotalFatura = null;
+  private BigDecimal valorFaturaAnterior = null;
+  private BigDecimal valorPagamentoMinimo = null;
+  private BigDecimal totalComprasNacionais = null;
+  private BigDecimal totalComprasInternacionas = null;
+  private BigDecimal totalSaquesNacionais = null;
+  private BigDecimal totalSaquesInternacionais = null;
+  private BigDecimal totalDebitosNacionais = null;
+  private BigDecimal totalDebitosRecorrentes = null;
+  private BigDecimal totalDebitosInternacionais = null;
+  private BigDecimal totalDebitosDiversosNacionais = null;
+  private BigDecimal totalDebitosOpcionais = null;
+  private BigDecimal totalPagamentos = null;
+  private BigDecimal totalCreditosNacionais = null;
+  private BigDecimal totalAjustes = null;
+  private BigDecimal totalTarifas = null;
+  private BigDecimal totalMulta = null;
+  private BigDecimal totalJuros = null;
+  private BigDecimal taxaRotativo = null;
+  private BigDecimal taxaSaque = null;
+  private BigDecimal taxaMaximaProximoPeriodo = null;
+  private BigDecimal totalServicos = null;
 
   
   /**
@@ -72,218 +83,434 @@ public class FaturaResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do produto.
-   **/
-  public FaturaResponse idProduto(Long idProduto) {
-    this.idProduto = idProduto;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador do produto.")
-  @JsonProperty("idProduto")
-  public Long getIdProduto() {
-    return idProduto;
-  }
-  public void setIdProduto(Long idProduto) {
-    this.idProduto = idProduto;
-  }
-
-  
-  /**
-   * Data de vencimento da fatura.
-   **/
-  public FaturaResponse dataVencimento(Date dataVencimento) {
-    this.dataVencimento = dataVencimento;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Data de vencimento da fatura.")
-  @JsonProperty("dataVencimento")
-  public Date getDataVencimento() {
-    return dataVencimento;
-  }
-  public void setDataVencimento(Date dataVencimento) {
-    this.dataVencimento = dataVencimento;
-  }
-
-  
-  /**
-   * Saldo da fatura anterior.
-   **/
-  public FaturaResponse saldoFaturaAnterior(BigDecimal saldoFaturaAnterior) {
-    this.saldoFaturaAnterior = saldoFaturaAnterior;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Saldo da fatura anterior.")
-  @JsonProperty("saldoFaturaAnterior")
-  public BigDecimal getSaldoFaturaAnterior() {
-    return saldoFaturaAnterior;
-  }
-  public void setSaldoFaturaAnterior(BigDecimal saldoFaturaAnterior) {
-    this.saldoFaturaAnterior = saldoFaturaAnterior;
-  }
-
-  
-  /**
-   * Saldo total da Multa lan\u00C3\u00A7ada na Fatura atual.
-   **/
-  public FaturaResponse saldoMulta(BigDecimal saldoMulta) {
-    this.saldoMulta = saldoMulta;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Saldo total da Multa lan\u00C3\u00A7ada na Fatura atual.")
-  @JsonProperty("saldoMulta")
-  public BigDecimal getSaldoMulta() {
-    return saldoMulta;
-  }
-  public void setSaldoMulta(BigDecimal saldoMulta) {
-    this.saldoMulta = saldoMulta;
-  }
-
-  
-  /**
-   * Saldo total das compras lan\u00C3\u00A7adas na fatura atual.
-   **/
-  public FaturaResponse saldoCompras(BigDecimal saldoCompras) {
-    this.saldoCompras = saldoCompras;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Saldo total das compras lan\u00C3\u00A7adas na fatura atual.")
-  @JsonProperty("saldoCompras")
-  public BigDecimal getSaldoCompras() {
-    return saldoCompras;
-  }
-  public void setSaldoCompras(BigDecimal saldoCompras) {
-    this.saldoCompras = saldoCompras;
-  }
-
-  
-  /**
-   * Saldo total dos pagamentos lan\u00C3\u00A7ados na fatura atual.
-   **/
-  public FaturaResponse saldoPagamentos(BigDecimal saldoPagamentos) {
-    this.saldoPagamentos = saldoPagamentos;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Saldo total dos pagamentos lan\u00C3\u00A7ados na fatura atual.")
-  @JsonProperty("saldoPagamentos")
-  public BigDecimal getSaldoPagamentos() {
-    return saldoPagamentos;
-  }
-  public void setSaldoPagamentos(BigDecimal saldoPagamentos) {
-    this.saldoPagamentos = saldoPagamentos;
-  }
-
-  
-  /**
-   * Saldo total das tarifas lan\u00C3\u00A7adas na fatura atual.
-   **/
-  public FaturaResponse saldoTarifas(BigDecimal saldoTarifas) {
-    this.saldoTarifas = saldoTarifas;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Saldo total das tarifas lan\u00C3\u00A7adas na fatura atual.")
-  @JsonProperty("saldoTarifas")
-  public BigDecimal getSaldoTarifas() {
-    return saldoTarifas;
-  }
-  public void setSaldoTarifas(BigDecimal saldoTarifas) {
-    this.saldoTarifas = saldoTarifas;
-  }
-
-  
-  /**
-   * Saldo total dos d\u00C3\u00A9bitos lan\u00C3\u00A7ados na fatura atual.
-   **/
-  public FaturaResponse saldoDebitos(BigDecimal saldoDebitos) {
-    this.saldoDebitos = saldoDebitos;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Saldo total dos d\u00C3\u00A9bitos lan\u00C3\u00A7ados na fatura atual.")
-  @JsonProperty("saldoDebitos")
-  public BigDecimal getSaldoDebitos() {
-    return saldoDebitos;
-  }
-  public void setSaldoDebitos(BigDecimal saldoDebitos) {
-    this.saldoDebitos = saldoDebitos;
-  }
-
-  
-  /**
-   * Saldo total dos cr\u00C3\u00A9dito lan\u00C3\u00A7ados na fatura atual.
-   **/
-  public FaturaResponse saldoCreditos(BigDecimal saldoCreditos) {
-    this.saldoCreditos = saldoCreditos;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Saldo total dos cr\u00C3\u00A9dito lan\u00C3\u00A7ados na fatura atual.")
-  @JsonProperty("saldoCreditos")
-  public BigDecimal getSaldoCreditos() {
-    return saldoCreditos;
-  }
-  public void setSaldoCreditos(BigDecimal saldoCreditos) {
-    this.saldoCreditos = saldoCreditos;
-  }
-
-  
-  /**
-   * Salto total devedor da fatura atual.
-   **/
-  public FaturaResponse saldoAtualFinal(BigDecimal saldoAtualFinal) {
-    this.saldoAtualFinal = saldoAtualFinal;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Salto total devedor da fatura atual.")
-  @JsonProperty("saldoAtualFinal")
-  public BigDecimal getSaldoAtualFinal() {
-    return saldoAtualFinal;
-  }
-  public void setSaldoAtualFinal(BigDecimal saldoAtualFinal) {
-    this.saldoAtualFinal = saldoAtualFinal;
-  }
-
-  
-  /**
-   * Valor m\u00C3\u00ADnimo para pagamento da fatura.
-   **/
-  public FaturaResponse valorMinimoFatura(BigDecimal valorMinimoFatura) {
-    this.valorMinimoFatura = valorMinimoFatura;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Valor m\u00C3\u00ADnimo para pagamento da fatura.")
-  @JsonProperty("valorMinimoFatura")
-  public BigDecimal getValorMinimoFatura() {
-    return valorMinimoFatura;
-  }
-  public void setValorMinimoFatura(BigDecimal valorMinimoFatura) {
-    this.valorMinimoFatura = valorMinimoFatura;
-  }
-
-  
-  /**
-   * Quando ativa, indica que fora emitida uma fatura.
+   * C\u00C3\u00B3digo identificador da conta a qual a fatura se refere.
    **/
   public FaturaResponse flagEmiteFatura(Integer flagEmiteFatura) {
     this.flagEmiteFatura = flagEmiteFatura;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Quando ativa, indica que fora emitida uma fatura.")
+  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador da conta a qual a fatura se refere.")
   @JsonProperty("flagEmiteFatura")
   public Integer getFlagEmiteFatura() {
     return flagEmiteFatura;
   }
   public void setFlagEmiteFatura(Integer flagEmiteFatura) {
     this.flagEmiteFatura = flagEmiteFatura;
+  }
+
+  
+  /**
+   * Data de vencimento da fatura.
+   **/
+  public FaturaResponse dataVencimentoFatura(String dataVencimentoFatura) {
+    this.dataVencimentoFatura = dataVencimentoFatura;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Data de vencimento da fatura.")
+  @JsonProperty("dataVencimentoFatura")
+  public String getDataVencimentoFatura() {
+    return dataVencimentoFatura;
+  }
+  public void setDataVencimentoFatura(String dataVencimentoFatura) {
+    this.dataVencimentoFatura = dataVencimentoFatura;
+  }
+
+  
+  /**
+   * Valor para pagamento total da fatura.
+   **/
+  public FaturaResponse valorTotalFatura(BigDecimal valorTotalFatura) {
+    this.valorTotalFatura = valorTotalFatura;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor para pagamento total da fatura.")
+  @JsonProperty("valorTotalFatura")
+  public BigDecimal getValorTotalFatura() {
+    return valorTotalFatura;
+  }
+  public void setValorTotalFatura(BigDecimal valorTotalFatura) {
+    this.valorTotalFatura = valorTotalFatura;
+  }
+
+  
+  /**
+   * Valor total da fatura anterior.
+   **/
+  public FaturaResponse valorFaturaAnterior(BigDecimal valorFaturaAnterior) {
+    this.valorFaturaAnterior = valorFaturaAnterior;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor total da fatura anterior.")
+  @JsonProperty("valorFaturaAnterior")
+  public BigDecimal getValorFaturaAnterior() {
+    return valorFaturaAnterior;
+  }
+  public void setValorFaturaAnterior(BigDecimal valorFaturaAnterior) {
+    this.valorFaturaAnterior = valorFaturaAnterior;
+  }
+
+  
+  /**
+   * Valor m\u00C3\u00ADnimo para pagamento da fatura.
+   **/
+  public FaturaResponse valorPagamentoMinimo(BigDecimal valorPagamentoMinimo) {
+    this.valorPagamentoMinimo = valorPagamentoMinimo;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor m\u00C3\u00ADnimo para pagamento da fatura.")
+  @JsonProperty("valorPagamentoMinimo")
+  public BigDecimal getValorPagamentoMinimo() {
+    return valorPagamentoMinimo;
+  }
+  public void setValorPagamentoMinimo(BigDecimal valorPagamentoMinimo) {
+    this.valorPagamentoMinimo = valorPagamentoMinimo;
+  }
+
+  
+  /**
+   * Valor total das compras nacionais lan\u00C3\u00A7adas na fatura.
+   **/
+  public FaturaResponse totalComprasNacionais(BigDecimal totalComprasNacionais) {
+    this.totalComprasNacionais = totalComprasNacionais;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor total das compras nacionais lan\u00C3\u00A7adas na fatura.")
+  @JsonProperty("totalComprasNacionais")
+  public BigDecimal getTotalComprasNacionais() {
+    return totalComprasNacionais;
+  }
+  public void setTotalComprasNacionais(BigDecimal totalComprasNacionais) {
+    this.totalComprasNacionais = totalComprasNacionais;
+  }
+
+  
+  /**
+   * Valor total das compras internacionais lan\u00C3\u00A7adas na fatura.
+   **/
+  public FaturaResponse totalComprasInternacionas(BigDecimal totalComprasInternacionas) {
+    this.totalComprasInternacionas = totalComprasInternacionas;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor total das compras internacionais lan\u00C3\u00A7adas na fatura.")
+  @JsonProperty("totalComprasInternacionas")
+  public BigDecimal getTotalComprasInternacionas() {
+    return totalComprasInternacionas;
+  }
+  public void setTotalComprasInternacionas(BigDecimal totalComprasInternacionas) {
+    this.totalComprasInternacionas = totalComprasInternacionas;
+  }
+
+  
+  /**
+   * Valor total dos saques nacionais lan\u00C3\u00A7ados na fatura.
+   **/
+  public FaturaResponse totalSaquesNacionais(BigDecimal totalSaquesNacionais) {
+    this.totalSaquesNacionais = totalSaquesNacionais;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor total dos saques nacionais lan\u00C3\u00A7ados na fatura.")
+  @JsonProperty("totalSaquesNacionais")
+  public BigDecimal getTotalSaquesNacionais() {
+    return totalSaquesNacionais;
+  }
+  public void setTotalSaquesNacionais(BigDecimal totalSaquesNacionais) {
+    this.totalSaquesNacionais = totalSaquesNacionais;
+  }
+
+  
+  /**
+   * Valor total dos saques internacionais lan\u00C3\u00A7ados na fatura.
+   **/
+  public FaturaResponse totalSaquesInternacionais(BigDecimal totalSaquesInternacionais) {
+    this.totalSaquesInternacionais = totalSaquesInternacionais;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor total dos saques internacionais lan\u00C3\u00A7ados na fatura.")
+  @JsonProperty("totalSaquesInternacionais")
+  public BigDecimal getTotalSaquesInternacionais() {
+    return totalSaquesInternacionais;
+  }
+  public void setTotalSaquesInternacionais(BigDecimal totalSaquesInternacionais) {
+    this.totalSaquesInternacionais = totalSaquesInternacionais;
+  }
+
+  
+  /**
+   * Valor total dos d\u00C3\u00A9bitos nacionais lan\u00C3\u00A7ados na fatura.
+   **/
+  public FaturaResponse totalDebitosNacionais(BigDecimal totalDebitosNacionais) {
+    this.totalDebitosNacionais = totalDebitosNacionais;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor total dos d\u00C3\u00A9bitos nacionais lan\u00C3\u00A7ados na fatura.")
+  @JsonProperty("totalDebitosNacionais")
+  public BigDecimal getTotalDebitosNacionais() {
+    return totalDebitosNacionais;
+  }
+  public void setTotalDebitosNacionais(BigDecimal totalDebitosNacionais) {
+    this.totalDebitosNacionais = totalDebitosNacionais;
+  }
+
+  
+  /**
+   * Valor total dos d\u00C3\u00A9bitos recorrentes lan\u00C3\u00A7ados na fatura.
+   **/
+  public FaturaResponse totalDebitosRecorrentes(BigDecimal totalDebitosRecorrentes) {
+    this.totalDebitosRecorrentes = totalDebitosRecorrentes;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor total dos d\u00C3\u00A9bitos recorrentes lan\u00C3\u00A7ados na fatura.")
+  @JsonProperty("totalDebitosRecorrentes")
+  public BigDecimal getTotalDebitosRecorrentes() {
+    return totalDebitosRecorrentes;
+  }
+  public void setTotalDebitosRecorrentes(BigDecimal totalDebitosRecorrentes) {
+    this.totalDebitosRecorrentes = totalDebitosRecorrentes;
+  }
+
+  
+  /**
+   * Valor total dos d\u00C3\u00A9bitos internacionais lan\u00C3\u00A7ados na fatura.
+   **/
+  public FaturaResponse totalDebitosInternacionais(BigDecimal totalDebitosInternacionais) {
+    this.totalDebitosInternacionais = totalDebitosInternacionais;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor total dos d\u00C3\u00A9bitos internacionais lan\u00C3\u00A7ados na fatura.")
+  @JsonProperty("totalDebitosInternacionais")
+  public BigDecimal getTotalDebitosInternacionais() {
+    return totalDebitosInternacionais;
+  }
+  public void setTotalDebitosInternacionais(BigDecimal totalDebitosInternacionais) {
+    this.totalDebitosInternacionais = totalDebitosInternacionais;
+  }
+
+  
+  /**
+   * Valor total dos d\u00C3\u00A9bitos diversos nacionais lan\u00C3\u00A7ados na fatura.
+   **/
+  public FaturaResponse totalDebitosDiversosNacionais(BigDecimal totalDebitosDiversosNacionais) {
+    this.totalDebitosDiversosNacionais = totalDebitosDiversosNacionais;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor total dos d\u00C3\u00A9bitos diversos nacionais lan\u00C3\u00A7ados na fatura.")
+  @JsonProperty("totalDebitosDiversosNacionais")
+  public BigDecimal getTotalDebitosDiversosNacionais() {
+    return totalDebitosDiversosNacionais;
+  }
+  public void setTotalDebitosDiversosNacionais(BigDecimal totalDebitosDiversosNacionais) {
+    this.totalDebitosDiversosNacionais = totalDebitosDiversosNacionais;
+  }
+
+  
+  /**
+   * Valor total dos d\u00C3\u00A9bitos diversos opcionais lan\u00C3\u00A7ados na fatura.
+   **/
+  public FaturaResponse totalDebitosOpcionais(BigDecimal totalDebitosOpcionais) {
+    this.totalDebitosOpcionais = totalDebitosOpcionais;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor total dos d\u00C3\u00A9bitos diversos opcionais lan\u00C3\u00A7ados na fatura.")
+  @JsonProperty("totalDebitosOpcionais")
+  public BigDecimal getTotalDebitosOpcionais() {
+    return totalDebitosOpcionais;
+  }
+  public void setTotalDebitosOpcionais(BigDecimal totalDebitosOpcionais) {
+    this.totalDebitosOpcionais = totalDebitosOpcionais;
+  }
+
+  
+  /**
+   * Valor total dos pagamentos lan\u00C3\u00A7ados na fatura.
+   **/
+  public FaturaResponse totalPagamentos(BigDecimal totalPagamentos) {
+    this.totalPagamentos = totalPagamentos;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor total dos pagamentos lan\u00C3\u00A7ados na fatura.")
+  @JsonProperty("totalPagamentos")
+  public BigDecimal getTotalPagamentos() {
+    return totalPagamentos;
+  }
+  public void setTotalPagamentos(BigDecimal totalPagamentos) {
+    this.totalPagamentos = totalPagamentos;
+  }
+
+  
+  /**
+   * Valor total dos cr\u00C3\u00A9ditos nacionais lan\u00C3\u00A7ados na fatura.
+   **/
+  public FaturaResponse totalCreditosNacionais(BigDecimal totalCreditosNacionais) {
+    this.totalCreditosNacionais = totalCreditosNacionais;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor total dos cr\u00C3\u00A9ditos nacionais lan\u00C3\u00A7ados na fatura.")
+  @JsonProperty("totalCreditosNacionais")
+  public BigDecimal getTotalCreditosNacionais() {
+    return totalCreditosNacionais;
+  }
+  public void setTotalCreditosNacionais(BigDecimal totalCreditosNacionais) {
+    this.totalCreditosNacionais = totalCreditosNacionais;
+  }
+
+  
+  /**
+   * Valor total dos ajustes lan\u00C3\u00A7ados na fatura.
+   **/
+  public FaturaResponse totalAjustes(BigDecimal totalAjustes) {
+    this.totalAjustes = totalAjustes;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor total dos ajustes lan\u00C3\u00A7ados na fatura.")
+  @JsonProperty("totalAjustes")
+  public BigDecimal getTotalAjustes() {
+    return totalAjustes;
+  }
+  public void setTotalAjustes(BigDecimal totalAjustes) {
+    this.totalAjustes = totalAjustes;
+  }
+
+  
+  /**
+   * Valor total das tarifas lan\u00C3\u00A7adas na fatura.
+   **/
+  public FaturaResponse totalTarifas(BigDecimal totalTarifas) {
+    this.totalTarifas = totalTarifas;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor total das tarifas lan\u00C3\u00A7adas na fatura.")
+  @JsonProperty("totalTarifas")
+  public BigDecimal getTotalTarifas() {
+    return totalTarifas;
+  }
+  public void setTotalTarifas(BigDecimal totalTarifas) {
+    this.totalTarifas = totalTarifas;
+  }
+
+  
+  /**
+   * Valor total da multa lan\u00C3\u00A7ada na fatura.
+   **/
+  public FaturaResponse totalMulta(BigDecimal totalMulta) {
+    this.totalMulta = totalMulta;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor total da multa lan\u00C3\u00A7ada na fatura.")
+  @JsonProperty("totalMulta")
+  public BigDecimal getTotalMulta() {
+    return totalMulta;
+  }
+  public void setTotalMulta(BigDecimal totalMulta) {
+    this.totalMulta = totalMulta;
+  }
+
+  
+  /**
+   * Valor total dos juros de mora lan\u00C3\u00A7ados na fatura.
+   **/
+  public FaturaResponse totalJuros(BigDecimal totalJuros) {
+    this.totalJuros = totalJuros;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor total dos juros de mora lan\u00C3\u00A7ados na fatura.")
+  @JsonProperty("totalJuros")
+  public BigDecimal getTotalJuros() {
+    return totalJuros;
+  }
+  public void setTotalJuros(BigDecimal totalJuros) {
+    this.totalJuros = totalJuros;
+  }
+
+  
+  /**
+   * Valor percentual da taxa de juros rotativos.
+   **/
+  public FaturaResponse taxaRotativo(BigDecimal taxaRotativo) {
+    this.taxaRotativo = taxaRotativo;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor percentual da taxa de juros rotativos.")
+  @JsonProperty("taxaRotativo")
+  public BigDecimal getTaxaRotativo() {
+    return taxaRotativo;
+  }
+  public void setTaxaRotativo(BigDecimal taxaRotativo) {
+    this.taxaRotativo = taxaRotativo;
+  }
+
+  
+  /**
+   * Valor percentual da taxa de saque.
+   **/
+  public FaturaResponse taxaSaque(BigDecimal taxaSaque) {
+    this.taxaSaque = taxaSaque;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor percentual da taxa de saque.")
+  @JsonProperty("taxaSaque")
+  public BigDecimal getTaxaSaque() {
+    return taxaSaque;
+  }
+  public void setTaxaSaque(BigDecimal taxaSaque) {
+    this.taxaSaque = taxaSaque;
+  }
+
+  
+  /**
+   * Valor m\u00C3\u00A1ximo percentual da taxa de encargos para o pr\u00C3\u00B3ximo per\u00C3\u00ADodo.
+   **/
+  public FaturaResponse taxaMaximaProximoPeriodo(BigDecimal taxaMaximaProximoPeriodo) {
+    this.taxaMaximaProximoPeriodo = taxaMaximaProximoPeriodo;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor m\u00C3\u00A1ximo percentual da taxa de encargos para o pr\u00C3\u00B3ximo per\u00C3\u00ADodo.")
+  @JsonProperty("taxaMaximaProximoPeriodo")
+  public BigDecimal getTaxaMaximaProximoPeriodo() {
+    return taxaMaximaProximoPeriodo;
+  }
+  public void setTaxaMaximaProximoPeriodo(BigDecimal taxaMaximaProximoPeriodo) {
+    this.taxaMaximaProximoPeriodo = taxaMaximaProximoPeriodo;
+  }
+
+  
+  /**
+   * Apresenta a soma de todos os seguros cobrados na fatura do cliente.
+   **/
+  public FaturaResponse totalServicos(BigDecimal totalServicos) {
+    this.totalServicos = totalServicos;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta a soma de todos os seguros cobrados na fatura do cliente.")
+  @JsonProperty("totalServicos")
+  public BigDecimal getTotalServicos() {
+    return totalServicos;
+  }
+  public void setTotalServicos(BigDecimal totalServicos) {
+    this.totalServicos = totalServicos;
   }
 
   
@@ -299,23 +526,35 @@ public class FaturaResponse   {
     FaturaResponse faturaResponse = (FaturaResponse) o;
     return Objects.equals(this.id, faturaResponse.id) &&
         Objects.equals(this.idConta, faturaResponse.idConta) &&
-        Objects.equals(this.idProduto, faturaResponse.idProduto) &&
-        Objects.equals(this.dataVencimento, faturaResponse.dataVencimento) &&
-        Objects.equals(this.saldoFaturaAnterior, faturaResponse.saldoFaturaAnterior) &&
-        Objects.equals(this.saldoMulta, faturaResponse.saldoMulta) &&
-        Objects.equals(this.saldoCompras, faturaResponse.saldoCompras) &&
-        Objects.equals(this.saldoPagamentos, faturaResponse.saldoPagamentos) &&
-        Objects.equals(this.saldoTarifas, faturaResponse.saldoTarifas) &&
-        Objects.equals(this.saldoDebitos, faturaResponse.saldoDebitos) &&
-        Objects.equals(this.saldoCreditos, faturaResponse.saldoCreditos) &&
-        Objects.equals(this.saldoAtualFinal, faturaResponse.saldoAtualFinal) &&
-        Objects.equals(this.valorMinimoFatura, faturaResponse.valorMinimoFatura) &&
-        Objects.equals(this.flagEmiteFatura, faturaResponse.flagEmiteFatura);
+        Objects.equals(this.flagEmiteFatura, faturaResponse.flagEmiteFatura) &&
+        Objects.equals(this.dataVencimentoFatura, faturaResponse.dataVencimentoFatura) &&
+        Objects.equals(this.valorTotalFatura, faturaResponse.valorTotalFatura) &&
+        Objects.equals(this.valorFaturaAnterior, faturaResponse.valorFaturaAnterior) &&
+        Objects.equals(this.valorPagamentoMinimo, faturaResponse.valorPagamentoMinimo) &&
+        Objects.equals(this.totalComprasNacionais, faturaResponse.totalComprasNacionais) &&
+        Objects.equals(this.totalComprasInternacionas, faturaResponse.totalComprasInternacionas) &&
+        Objects.equals(this.totalSaquesNacionais, faturaResponse.totalSaquesNacionais) &&
+        Objects.equals(this.totalSaquesInternacionais, faturaResponse.totalSaquesInternacionais) &&
+        Objects.equals(this.totalDebitosNacionais, faturaResponse.totalDebitosNacionais) &&
+        Objects.equals(this.totalDebitosRecorrentes, faturaResponse.totalDebitosRecorrentes) &&
+        Objects.equals(this.totalDebitosInternacionais, faturaResponse.totalDebitosInternacionais) &&
+        Objects.equals(this.totalDebitosDiversosNacionais, faturaResponse.totalDebitosDiversosNacionais) &&
+        Objects.equals(this.totalDebitosOpcionais, faturaResponse.totalDebitosOpcionais) &&
+        Objects.equals(this.totalPagamentos, faturaResponse.totalPagamentos) &&
+        Objects.equals(this.totalCreditosNacionais, faturaResponse.totalCreditosNacionais) &&
+        Objects.equals(this.totalAjustes, faturaResponse.totalAjustes) &&
+        Objects.equals(this.totalTarifas, faturaResponse.totalTarifas) &&
+        Objects.equals(this.totalMulta, faturaResponse.totalMulta) &&
+        Objects.equals(this.totalJuros, faturaResponse.totalJuros) &&
+        Objects.equals(this.taxaRotativo, faturaResponse.taxaRotativo) &&
+        Objects.equals(this.taxaSaque, faturaResponse.taxaSaque) &&
+        Objects.equals(this.taxaMaximaProximoPeriodo, faturaResponse.taxaMaximaProximoPeriodo) &&
+        Objects.equals(this.totalServicos, faturaResponse.totalServicos);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idConta, idProduto, dataVencimento, saldoFaturaAnterior, saldoMulta, saldoCompras, saldoPagamentos, saldoTarifas, saldoDebitos, saldoCreditos, saldoAtualFinal, valorMinimoFatura, flagEmiteFatura);
+    return Objects.hash(id, idConta, flagEmiteFatura, dataVencimentoFatura, valorTotalFatura, valorFaturaAnterior, valorPagamentoMinimo, totalComprasNacionais, totalComprasInternacionas, totalSaquesNacionais, totalSaquesInternacionais, totalDebitosNacionais, totalDebitosRecorrentes, totalDebitosInternacionais, totalDebitosDiversosNacionais, totalDebitosOpcionais, totalPagamentos, totalCreditosNacionais, totalAjustes, totalTarifas, totalMulta, totalJuros, taxaRotativo, taxaSaque, taxaMaximaProximoPeriodo, totalServicos);
   }
 
   @Override
@@ -325,18 +564,30 @@ public class FaturaResponse   {
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idConta: ").append(toIndentedString(idConta)).append("\n");
-    sb.append("    idProduto: ").append(toIndentedString(idProduto)).append("\n");
-    sb.append("    dataVencimento: ").append(toIndentedString(dataVencimento)).append("\n");
-    sb.append("    saldoFaturaAnterior: ").append(toIndentedString(saldoFaturaAnterior)).append("\n");
-    sb.append("    saldoMulta: ").append(toIndentedString(saldoMulta)).append("\n");
-    sb.append("    saldoCompras: ").append(toIndentedString(saldoCompras)).append("\n");
-    sb.append("    saldoPagamentos: ").append(toIndentedString(saldoPagamentos)).append("\n");
-    sb.append("    saldoTarifas: ").append(toIndentedString(saldoTarifas)).append("\n");
-    sb.append("    saldoDebitos: ").append(toIndentedString(saldoDebitos)).append("\n");
-    sb.append("    saldoCreditos: ").append(toIndentedString(saldoCreditos)).append("\n");
-    sb.append("    saldoAtualFinal: ").append(toIndentedString(saldoAtualFinal)).append("\n");
-    sb.append("    valorMinimoFatura: ").append(toIndentedString(valorMinimoFatura)).append("\n");
     sb.append("    flagEmiteFatura: ").append(toIndentedString(flagEmiteFatura)).append("\n");
+    sb.append("    dataVencimentoFatura: ").append(toIndentedString(dataVencimentoFatura)).append("\n");
+    sb.append("    valorTotalFatura: ").append(toIndentedString(valorTotalFatura)).append("\n");
+    sb.append("    valorFaturaAnterior: ").append(toIndentedString(valorFaturaAnterior)).append("\n");
+    sb.append("    valorPagamentoMinimo: ").append(toIndentedString(valorPagamentoMinimo)).append("\n");
+    sb.append("    totalComprasNacionais: ").append(toIndentedString(totalComprasNacionais)).append("\n");
+    sb.append("    totalComprasInternacionas: ").append(toIndentedString(totalComprasInternacionas)).append("\n");
+    sb.append("    totalSaquesNacionais: ").append(toIndentedString(totalSaquesNacionais)).append("\n");
+    sb.append("    totalSaquesInternacionais: ").append(toIndentedString(totalSaquesInternacionais)).append("\n");
+    sb.append("    totalDebitosNacionais: ").append(toIndentedString(totalDebitosNacionais)).append("\n");
+    sb.append("    totalDebitosRecorrentes: ").append(toIndentedString(totalDebitosRecorrentes)).append("\n");
+    sb.append("    totalDebitosInternacionais: ").append(toIndentedString(totalDebitosInternacionais)).append("\n");
+    sb.append("    totalDebitosDiversosNacionais: ").append(toIndentedString(totalDebitosDiversosNacionais)).append("\n");
+    sb.append("    totalDebitosOpcionais: ").append(toIndentedString(totalDebitosOpcionais)).append("\n");
+    sb.append("    totalPagamentos: ").append(toIndentedString(totalPagamentos)).append("\n");
+    sb.append("    totalCreditosNacionais: ").append(toIndentedString(totalCreditosNacionais)).append("\n");
+    sb.append("    totalAjustes: ").append(toIndentedString(totalAjustes)).append("\n");
+    sb.append("    totalTarifas: ").append(toIndentedString(totalTarifas)).append("\n");
+    sb.append("    totalMulta: ").append(toIndentedString(totalMulta)).append("\n");
+    sb.append("    totalJuros: ").append(toIndentedString(totalJuros)).append("\n");
+    sb.append("    taxaRotativo: ").append(toIndentedString(taxaRotativo)).append("\n");
+    sb.append("    taxaSaque: ").append(toIndentedString(taxaSaque)).append("\n");
+    sb.append("    taxaMaximaProximoPeriodo: ").append(toIndentedString(taxaMaximaProximoPeriodo)).append("\n");
+    sb.append("    totalServicos: ").append(toIndentedString(totalServicos)).append("\n");
     sb.append("}");
     return sb.toString();
   }

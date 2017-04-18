@@ -27,15 +27,15 @@ public class TransacoesCorrentes   {
   private Long idConta = null;
   private String cartaoMascarado = null;
   private String nomePortador = null;
-  private String dataTransacaoUTC = null;
+  private Date dataTransacaoUTC = null;
   private Date dataFaturamento = null;
-  private String dataVencimento = null;
+  private Date dataVencimento = null;
   private String modoEntradaTransacao = null;
   private BigDecimal valorTaxaEmbarque = null;
   private BigDecimal valorEntrada = null;
   private BigDecimal valorBRL = null;
-  private BigDecimal cotacaoUSD = null;
   private BigDecimal valorUSD = null;
+  private BigDecimal cotacaoUSD = null;
   private Date dataCotacaoUSD = null;
   private String codigoMoedaOrigem = null;
   private String codigoMoedaDestino = null;
@@ -202,17 +202,17 @@ public class TransacoesCorrentes   {
   /**
    * Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada sob o padr\u00C3\u00A3o de Tempo Universal Coordenado (UTC).
    **/
-  public TransacoesCorrentes dataTransacaoUTC(String dataTransacaoUTC) {
+  public TransacoesCorrentes dataTransacaoUTC(Date dataTransacaoUTC) {
     this.dataTransacaoUTC = dataTransacaoUTC;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada sob o padr\u00C3\u00A3o de Tempo Universal Coordenado (UTC).")
   @JsonProperty("dataTransacaoUTC")
-  public String getDataTransacaoUTC() {
+  public Date getDataTransacaoUTC() {
     return dataTransacaoUTC;
   }
-  public void setDataTransacaoUTC(String dataTransacaoUTC) {
+  public void setDataTransacaoUTC(Date dataTransacaoUTC) {
     this.dataTransacaoUTC = dataTransacaoUTC;
   }
 
@@ -238,17 +238,17 @@ public class TransacoesCorrentes   {
   /**
    * Data de Vencimento da Fatura.
    **/
-  public TransacoesCorrentes dataVencimento(String dataVencimento) {
+  public TransacoesCorrentes dataVencimento(Date dataVencimento) {
     this.dataVencimento = dataVencimento;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Data de Vencimento da Fatura.")
   @JsonProperty("dataVencimento")
-  public String getDataVencimento() {
+  public Date getDataVencimento() {
     return dataVencimento;
   }
-  public void setDataVencimento(String dataVencimento) {
+  public void setDataVencimento(Date dataVencimento) {
     this.dataVencimento = dataVencimento;
   }
 
@@ -326,24 +326,6 @@ public class TransacoesCorrentes   {
 
   
   /**
-   * Valor do D\u00C3\u00B3lar Americano (USD) convertido em Real (BRL).
-   **/
-  public TransacoesCorrentes cotacaoUSD(BigDecimal cotacaoUSD) {
-    this.cotacaoUSD = cotacaoUSD;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Valor do D\u00C3\u00B3lar Americano (USD) convertido em Real (BRL).")
-  @JsonProperty("cotacaoUSD")
-  public BigDecimal getCotacaoUSD() {
-    return cotacaoUSD;
-  }
-  public void setCotacaoUSD(BigDecimal cotacaoUSD) {
-    this.cotacaoUSD = cotacaoUSD;
-  }
-
-  
-  /**
    * Valor da Transa\u00C3\u00A7\u00C3\u00A3o em D\u00C3\u00B3lar Americano (USD).
    **/
   public TransacoesCorrentes valorUSD(BigDecimal valorUSD) {
@@ -358,6 +340,24 @@ public class TransacoesCorrentes   {
   }
   public void setValorUSD(BigDecimal valorUSD) {
     this.valorUSD = valorUSD;
+  }
+
+  
+  /**
+   * Valor do D\u00C3\u00B3lar Americano (USD) convertido em Real (BRL).
+   **/
+  public TransacoesCorrentes cotacaoUSD(BigDecimal cotacaoUSD) {
+    this.cotacaoUSD = cotacaoUSD;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor do D\u00C3\u00B3lar Americano (USD) convertido em Real (BRL).")
+  @JsonProperty("cotacaoUSD")
+  public BigDecimal getCotacaoUSD() {
+    return cotacaoUSD;
+  }
+  public void setCotacaoUSD(BigDecimal cotacaoUSD) {
+    this.cotacaoUSD = cotacaoUSD;
   }
 
   
@@ -692,8 +692,8 @@ public class TransacoesCorrentes   {
         Objects.equals(this.valorTaxaEmbarque, transacoesCorrentes.valorTaxaEmbarque) &&
         Objects.equals(this.valorEntrada, transacoesCorrentes.valorEntrada) &&
         Objects.equals(this.valorBRL, transacoesCorrentes.valorBRL) &&
-        Objects.equals(this.cotacaoUSD, transacoesCorrentes.cotacaoUSD) &&
         Objects.equals(this.valorUSD, transacoesCorrentes.valorUSD) &&
+        Objects.equals(this.cotacaoUSD, transacoesCorrentes.cotacaoUSD) &&
         Objects.equals(this.dataCotacaoUSD, transacoesCorrentes.dataCotacaoUSD) &&
         Objects.equals(this.codigoMoedaOrigem, transacoesCorrentes.codigoMoedaOrigem) &&
         Objects.equals(this.codigoMoedaDestino, transacoesCorrentes.codigoMoedaDestino) &&
@@ -715,7 +715,7 @@ public class TransacoesCorrentes   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, tipoTransacao, statusTransacao, idEvento, tipoEvento, idConta, cartaoMascarado, nomePortador, dataTransacaoUTC, dataFaturamento, dataVencimento, modoEntradaTransacao, valorTaxaEmbarque, valorEntrada, valorBRL, cotacaoUSD, valorUSD, dataCotacaoUSD, codigoMoedaOrigem, codigoMoedaDestino, codigoAutorizacao, codigoReferencia, codigoTerminal, codigoMCC, idEstabelecimento, nomeEstabelecimento, localidadeEstabelecimento, planoParcelamento, numeroParcela, detalhesTransacao, flagCredito, flagFaturado, flagEstorno, idTransacaoEstorno);
+    return Objects.hash(id, tipoTransacao, statusTransacao, idEvento, tipoEvento, idConta, cartaoMascarado, nomePortador, dataTransacaoUTC, dataFaturamento, dataVencimento, modoEntradaTransacao, valorTaxaEmbarque, valorEntrada, valorBRL, valorUSD, cotacaoUSD, dataCotacaoUSD, codigoMoedaOrigem, codigoMoedaDestino, codigoAutorizacao, codigoReferencia, codigoTerminal, codigoMCC, idEstabelecimento, nomeEstabelecimento, localidadeEstabelecimento, planoParcelamento, numeroParcela, detalhesTransacao, flagCredito, flagFaturado, flagEstorno, idTransacaoEstorno);
   }
 
   @Override
@@ -738,8 +738,8 @@ public class TransacoesCorrentes   {
     sb.append("    valorTaxaEmbarque: ").append(toIndentedString(valorTaxaEmbarque)).append("\n");
     sb.append("    valorEntrada: ").append(toIndentedString(valorEntrada)).append("\n");
     sb.append("    valorBRL: ").append(toIndentedString(valorBRL)).append("\n");
-    sb.append("    cotacaoUSD: ").append(toIndentedString(cotacaoUSD)).append("\n");
     sb.append("    valorUSD: ").append(toIndentedString(valorUSD)).append("\n");
+    sb.append("    cotacaoUSD: ").append(toIndentedString(cotacaoUSD)).append("\n");
     sb.append("    dataCotacaoUSD: ").append(toIndentedString(dataCotacaoUSD)).append("\n");
     sb.append("    codigoMoedaOrigem: ").append(toIndentedString(codigoMoedaOrigem)).append("\n");
     sb.append("    codigoMoedaDestino: ").append(toIndentedString(codigoMoedaDestino)).append("\n");
