@@ -82,7 +82,7 @@ public class RiscoFraudeApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<AtendimentoCliente> returnType = new GenericType<AtendimentoCliente>() {};
@@ -129,7 +129,7 @@ public class RiscoFraudeApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<RiscoFraudeDetalhadoResponse> returnType = new GenericType<RiscoFraudeDetalhadoResponse>() {};
@@ -175,7 +175,7 @@ public class RiscoFraudeApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<String> returnType = new GenericType<String>() {};
@@ -194,7 +194,7 @@ public class RiscoFraudeApi {
    * @param dataAtendimento Apresenta a data em que o Atendimento foi realizado.
    * @return PageAtendimentoClientes
    */
-  public PageAtendimentoClientes listarUsingGET(Integer page, Integer limit, Long idTipoAtendimento, Long idConta, String nomeAtendente, Date dataAtendimento) throws ApiException {
+  public PageAtendimentoClientes listarUsingGET1(Integer page, Integer limit, Long idTipoAtendimento, Long idConta, String nomeAtendente, Date dataAtendimento) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -233,7 +233,7 @@ public class RiscoFraudeApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<PageAtendimentoClientes> returnType = new GenericType<PageAtendimentoClientes>() {};
@@ -250,17 +250,17 @@ public class RiscoFraudeApi {
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
    * @return RiscoFraudeResponsePage
    */
-  public RiscoFraudeResponsePage listarUsingGET11(Long idConta, String confirmacaoFraude, Integer page, Integer limit) throws ApiException {
+  public RiscoFraudeResponsePage listarUsingGET14(Long idConta, String confirmacaoFraude, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idConta' is set
      if (idConta == null) {
-        throw new ApiException(400, "Missing the required parameter 'idConta' when calling listarUsingGET11");
+        throw new ApiException(400, "Missing the required parameter 'idConta' when calling listarUsingGET14");
      }
      
      // verify the required parameter 'confirmacaoFraude' is set
      if (confirmacaoFraude == null) {
-        throw new ApiException(400, "Missing the required parameter 'confirmacaoFraude' when calling listarUsingGET11");
+        throw new ApiException(400, "Missing the required parameter 'confirmacaoFraude' when calling listarUsingGET14");
      }
      
     // create path and map variables
@@ -295,7 +295,7 @@ public class RiscoFraudeApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<RiscoFraudeResponsePage> returnType = new GenericType<RiscoFraudeResponsePage>() {};
@@ -309,12 +309,12 @@ public class RiscoFraudeApi {
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
    * @return RiscoFraudeDetalhadoResponse
    */
-  public RiscoFraudeDetalhadoResponse negarUsingGET(Long id) throws ApiException {
+  public RiscoFraudeDetalhadoResponse negarUsingPOST(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling negarUsingGET");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling negarUsingPOST");
      }
      
     // create path and map variables
@@ -342,11 +342,11 @@ public class RiscoFraudeApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<RiscoFraudeDetalhadoResponse> returnType = new GenericType<RiscoFraudeDetalhadoResponse>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
@@ -356,12 +356,12 @@ public class RiscoFraudeApi {
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
    * @return RiscoFraudeDetalhadoResponse
    */
-  public RiscoFraudeDetalhadoResponse reconhecerUsingGET(Long id) throws ApiException {
+  public RiscoFraudeDetalhadoResponse reconhecerUsingPOST(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling reconhecerUsingGET");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling reconhecerUsingPOST");
      }
      
     // create path and map variables
@@ -389,11 +389,11 @@ public class RiscoFraudeApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<RiscoFraudeDetalhadoResponse> returnType = new GenericType<RiscoFraudeDetalhadoResponse>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
@@ -411,7 +411,7 @@ public class RiscoFraudeApi {
    * @param flagFilaFraude Flag fila fraude
    * @return AtendimentoCliente
    */
-  public AtendimentoCliente salvarUsingPOST(Long idConta, String conteudoAtendimento, String detalhesAtendimento, String nomeAtendente, Date dataAtendimento, Date dataAgendamento, Date dataHoraInicioAtendimento, Date dataHoraFimAtendimento, Integer flagFilaFraude) throws ApiException {
+  public AtendimentoCliente salvarUsingPOST1(Long idConta, String conteudoAtendimento, String detalhesAtendimento, String nomeAtendente, Date dataAtendimento, Date dataAgendamento, Date dataHoraInicioAtendimento, Date dataHoraFimAtendimento, Integer flagFilaFraude) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -456,7 +456,7 @@ public class RiscoFraudeApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<AtendimentoCliente> returnType = new GenericType<AtendimentoCliente>() {};

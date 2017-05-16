@@ -100,7 +100,7 @@ public class FAQApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<FAQ> returnType = new GenericType<FAQ>() {};
@@ -175,7 +175,7 @@ public class FAQApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<FAQ> returnType = new GenericType<FAQ>() {};
@@ -222,7 +222,7 @@ public class FAQApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<FAQ> returnType = new GenericType<FAQ>() {};
@@ -244,7 +244,7 @@ public class FAQApi {
    * @param status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
    * @return PageFaqs
    */
-  public PageFaqs listarUsingGET6(Integer page, Integer limit, Long idFaq, String pergunta, String resposta, Integer relevancia, String plataforma, String categoria, String status) throws ApiException {
+  public PageFaqs listarUsingGET8(Integer page, Integer limit, Long idFaq, String pergunta, String resposta, Integer relevancia, String plataforma, String categoria, String status) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -289,7 +289,7 @@ public class FAQApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<PageFaqs> returnType = new GenericType<PageFaqs>() {};

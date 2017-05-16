@@ -7,8 +7,10 @@ import br.com.conductor.pier.api.v2.invoker.ApiClient;
 import br.com.conductor.pier.api.v2.invoker.Configuration;
 import br.com.conductor.pier.api.v2.invoker.Pair;
 
-import br.com.conductor.pier.api.v2.model.WebHook;
-import br.com.conductor.pier.api.v2.model.PageWebHooks;
+import br.com.conductor.pier.api.v2.model.Dispositivo;
+import br.com.conductor.pier.api.v2.model.PageDispositivos;
+import java.util.Date;
+import br.com.conductor.pier.api.v2.model.DispositivoPersist;
 
 
 
@@ -20,14 +22,14 @@ import java.util.Map;
 
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 
-public class WebhooksApi {
+public class DispositivosApi {
   private ApiClient apiClient;
 
-  public WebhooksApi() {
+  public DispositivosApi() {
     this(Configuration.getDefaultApiClient());
   }
 
-  public WebhooksApi(ApiClient apiClient) {
+  public DispositivosApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
@@ -41,84 +43,21 @@ public class WebhooksApi {
 
   
   /**
-   * Alterar Webhook
-   * Este m\u00C3\u00A9todo permite que seja modificado um webhooks j\u00C3\u00A1 cadastrado
-   * @param id C\u00C3\u00B3digo identificador do Webhook
-   * @param tipoEvento TipoEvento a ser chamado pelo WebHook
-   * @param url URL que a ser consumida pelo WebHook
-   * @return WebHook
+   * Ativa Dispositivo
+   * Esse recurso permite ativar dispositivo.
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).
+   * @return Dispositivo
    */
-  public WebHook alterarUsingPUT10(Long id, String tipoEvento, String url) throws ApiException {
+  public Dispositivo ativarUsingPOST(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT10");
-     }
-     
-     // verify the required parameter 'tipoEvento' is set
-     if (tipoEvento == null) {
-        throw new ApiException(400, "Missing the required parameter 'tipoEvento' when calling alterarUsingPUT10");
-     }
-     
-     // verify the required parameter 'url' is set
-     if (url == null) {
-        throw new ApiException(400, "Missing the required parameter 'url' when calling alterarUsingPUT10");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling ativarUsingPOST");
      }
      
     // create path and map variables
-    String path = "/api/webhooks/{id}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "tipoEvento", tipoEvento));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "url", url));
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {"client_id",  };
-
-    
-    GenericType<WebHook> returnType = new GenericType<WebHook>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
-   * Consultar Webhook
-   * Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
-   * @return WebHook
-   */
-  public WebHook consultarUsingGET23(Long id) throws ApiException {
-    Object postBody = null;
-    
-     // verify the required parameter 'id' is set
-     if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET23");
-     }
-     
-    // create path and map variables
-    String path = "/api/webhooks/{id}".replaceAll("\\{format\\}","json")
+    String path = "/api/dispositivos/{id}/ativar-dispositivo".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
     // query params
@@ -145,27 +84,75 @@ public class WebhooksApi {
     String[] authNames = new String[] {"client_id",  };
 
     
-    GenericType<WebHook> returnType = new GenericType<WebHook>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<Dispositivo> returnType = new GenericType<Dispositivo>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
   /**
-   * Lista os Webhooks
-   * Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
+   * Desativa Dispositivo
+   * Esse recurso permite desativar dispositivo.
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).
+   * @return Dispositivo
+   */
+  public Dispositivo desativarUsingPOST(Long id) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling desativarUsingPOST");
+     }
+     
+    // create path and map variables
+    String path = "/api/dispositivos/{id}/desativar-dispositivo".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    String[] authNames = new String[] {"client_id",  };
+
+    
+    GenericType<Dispositivo> returnType = new GenericType<Dispositivo>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Lista os dispositivos cadastrados
+   * Este m\u00C3\u00A9todo permite que sejam listados os dispositivos existentes na base do PIER.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-   * @param id Id do WebHook
-   * @param tipoEvento TipoEvento a ser chamado pelo WebHook
-   * @param metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
-   * @param url URL que a ser consumida pelo WebHook
-   * @return PageWebHooks
+   * @param token Token do Dispositivo
+   * @param idUsuario Identificador do Usu\u00C3\u00A1rio
+   * @param idAplicacaoMobile Identificador da aplica\u00C3\u00A7\u00C3\u00A3o
+   * @param dataCriacao Apresenta a data e em que o registro foi criado.
+   * @param dataDesativacao Apresenta a data e em que o registro foi desativado.
+   * @return PageDispositivos
    */
-  public PageWebHooks listarUsingGET25(Integer page, Integer limit, Long id, String tipoEvento, String metodo, String url) throws ApiException {
+  public PageDispositivos listarUsingGET5(Integer page, Integer limit, String token, Long idUsuario, Long idAplicacaoMobile, Date dataCriacao, Date dataDesativacao) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
-    String path = "/api/webhooks".replaceAll("\\{format\\}","json");
+    String path = "/api/dispositivos".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -177,13 +164,15 @@ public class WebhooksApi {
     
     queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
     
-    queryParams.addAll(apiClient.parameterToPairs("", "id", id));
+    queryParams.addAll(apiClient.parameterToPairs("", "token", token));
     
-    queryParams.addAll(apiClient.parameterToPairs("", "tipoEvento", tipoEvento));
+    queryParams.addAll(apiClient.parameterToPairs("", "idUsuario", idUsuario));
     
-    queryParams.addAll(apiClient.parameterToPairs("", "metodo", metodo));
+    queryParams.addAll(apiClient.parameterToPairs("", "idAplicacaoMobile", idAplicacaoMobile));
     
-    queryParams.addAll(apiClient.parameterToPairs("", "url", url));
+    queryParams.addAll(apiClient.parameterToPairs("", "dataCriacao", dataCriacao));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "dataDesativacao", dataDesativacao));
     
 
     
@@ -203,33 +192,27 @@ public class WebhooksApi {
     String[] authNames = new String[] {"client_id",  };
 
     
-    GenericType<PageWebHooks> returnType = new GenericType<PageWebHooks>() {};
+    GenericType<PageDispositivos> returnType = new GenericType<PageDispositivos>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
   /**
-   * Salvar Webhook
-   * Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
-   * @param tipoEvento TipoEvento a ser chamado pelo WebHook
-   * @param url URL que a ser consumida pelo WebHook
-   * @return WebHook
+   * Cadastra Dispositivo
+   * Esse recurso permite cadastrar dispositivos.
+   * @param persist persist
+   * @return Dispositivo
    */
-  public WebHook salvarUsingPOST13(String tipoEvento, String url) throws ApiException {
-    Object postBody = null;
+  public Dispositivo salvarUsingPOST3(DispositivoPersist persist) throws ApiException {
+    Object postBody = persist;
     
-     // verify the required parameter 'tipoEvento' is set
-     if (tipoEvento == null) {
-        throw new ApiException(400, "Missing the required parameter 'tipoEvento' when calling salvarUsingPOST13");
-     }
-     
-     // verify the required parameter 'url' is set
-     if (url == null) {
-        throw new ApiException(400, "Missing the required parameter 'url' when calling salvarUsingPOST13");
+     // verify the required parameter 'persist' is set
+     if (persist == null) {
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST3");
      }
      
     // create path and map variables
-    String path = "/api/webhooks".replaceAll("\\{format\\}","json");
+    String path = "/api/dispositivos".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -237,10 +220,6 @@ public class WebhooksApi {
     Map<String, Object> formParams = new HashMap<String, Object>();
 
     
-    queryParams.addAll(apiClient.parameterToPairs("", "tipoEvento", tipoEvento));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "url", url));
-    
 
     
 
@@ -259,7 +238,7 @@ public class WebhooksApi {
     String[] authNames = new String[] {"client_id",  };
 
     
-    GenericType<WebHook> returnType = new GenericType<WebHook>() {};
+    GenericType<Dispositivo> returnType = new GenericType<Dispositivo>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

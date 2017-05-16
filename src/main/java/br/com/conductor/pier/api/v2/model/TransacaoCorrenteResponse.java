@@ -17,7 +17,7 @@ import java.util.Date;
 
 @ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o do recurso transacao")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class TransacaoResponse   {
+public class TransacaoCorrenteResponse   {
   
   private Integer ultimaParcelaLancada = null;
   private Long id = null;
@@ -42,7 +42,7 @@ public class TransacaoResponse   {
   
   /**
    **/
-  public TransacaoResponse ultimaParcelaLancada(Integer ultimaParcelaLancada) {
+  public TransacaoCorrenteResponse ultimaParcelaLancada(Integer ultimaParcelaLancada) {
     this.ultimaParcelaLancada = ultimaParcelaLancada;
     return this;
   }
@@ -60,7 +60,7 @@ public class TransacaoResponse   {
   /**
    * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transacao (id).
    **/
-  public TransacaoResponse id(Long id) {
+  public TransacaoCorrenteResponse id(Long id) {
     this.id = id;
     return this;
   }
@@ -78,7 +78,7 @@ public class TransacaoResponse   {
   /**
    * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
    **/
-  public TransacaoResponse idConta(Long idConta) {
+  public TransacaoCorrenteResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
@@ -96,7 +96,7 @@ public class TransacaoResponse   {
   /**
    * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de transacao (id).
    **/
-  public TransacaoResponse idTipoRegistro(Long idTipoRegistro) {
+  public TransacaoCorrenteResponse idTipoRegistro(Long idTipoRegistro) {
     this.idTipoRegistro = idTipoRegistro;
     return this;
   }
@@ -114,7 +114,7 @@ public class TransacaoResponse   {
   /**
    * Representa\u00C3\u00A7\u00C3\u00A3o da ordena\u00C3\u00A7\u00C3\u00A3o da transacao (id).
    **/
-  public TransacaoResponse ordem(Integer ordem) {
+  public TransacaoCorrenteResponse ordem(Integer ordem) {
     this.ordem = ordem;
     return this;
   }
@@ -132,7 +132,7 @@ public class TransacaoResponse   {
   /**
    * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transacao (id).
    **/
-  public TransacaoResponse idTransacao(Long idTransacao) {
+  public TransacaoCorrenteResponse idTransacao(Long idTransacao) {
     this.idTransacao = idTransacao;
     return this;
   }
@@ -149,7 +149,7 @@ public class TransacaoResponse   {
   
   /**
    **/
-  public TransacaoResponse descricao(String descricao) {
+  public TransacaoCorrenteResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
@@ -166,7 +166,7 @@ public class TransacaoResponse   {
   
   /**
    **/
-  public TransacaoResponse status(Integer status) {
+  public TransacaoCorrenteResponse status(Integer status) {
     this.status = status;
     return this;
   }
@@ -183,7 +183,7 @@ public class TransacaoResponse   {
   
   /**
    **/
-  public TransacaoResponse descricaoStatus(String descricaoStatus) {
+  public TransacaoCorrenteResponse descricaoStatus(String descricaoStatus) {
     this.descricaoStatus = descricaoStatus;
     return this;
   }
@@ -200,7 +200,7 @@ public class TransacaoResponse   {
   
   /**
    **/
-  public TransacaoResponse valor(BigDecimal valor) {
+  public TransacaoCorrenteResponse valor(BigDecimal valor) {
     this.valor = valor;
     return this;
   }
@@ -217,7 +217,7 @@ public class TransacaoResponse   {
   
   /**
    **/
-  public TransacaoResponse valorDolar(BigDecimal valorDolar) {
+  public TransacaoCorrenteResponse valorDolar(BigDecimal valorDolar) {
     this.valorDolar = valorDolar;
     return this;
   }
@@ -234,7 +234,7 @@ public class TransacaoResponse   {
   
   /**
    **/
-  public TransacaoResponse quantidadeParcelas(Integer quantidadeParcelas) {
+  public TransacaoCorrenteResponse quantidadeParcelas(Integer quantidadeParcelas) {
     this.quantidadeParcelas = quantidadeParcelas;
     return this;
   }
@@ -251,7 +251,7 @@ public class TransacaoResponse   {
   
   /**
    **/
-  public TransacaoResponse valorParcela(BigDecimal valorParcela) {
+  public TransacaoCorrenteResponse valorParcela(BigDecimal valorParcela) {
     this.valorParcela = valorParcela;
     return this;
   }
@@ -268,7 +268,7 @@ public class TransacaoResponse   {
   
   /**
    **/
-  public TransacaoResponse dataEvento(Date dataEvento) {
+  public TransacaoCorrenteResponse dataEvento(Date dataEvento) {
     this.dataEvento = dataEvento;
     return this;
   }
@@ -285,7 +285,7 @@ public class TransacaoResponse   {
   
   /**
    **/
-  public TransacaoResponse estabelecimento(String estabelecimento) {
+  public TransacaoCorrenteResponse estabelecimento(String estabelecimento) {
     this.estabelecimento = estabelecimento;
     return this;
   }
@@ -302,7 +302,7 @@ public class TransacaoResponse   {
   
   /**
    **/
-  public TransacaoResponse flagCredito(Integer flagCredito) {
+  public TransacaoCorrenteResponse flagCredito(Integer flagCredito) {
     this.flagCredito = flagCredito;
     return this;
   }
@@ -319,7 +319,7 @@ public class TransacaoResponse   {
   
   /**
    **/
-  public TransacaoResponse tipoEstabelecimento(String tipoEstabelecimento) {
+  public TransacaoCorrenteResponse tipoEstabelecimento(String tipoEstabelecimento) {
     this.tipoEstabelecimento = tipoEstabelecimento;
     return this;
   }
@@ -336,7 +336,7 @@ public class TransacaoResponse   {
   
   /**
    **/
-  public TransacaoResponse idGrupoMCC(Integer idGrupoMCC) {
+  public TransacaoCorrenteResponse idGrupoMCC(Integer idGrupoMCC) {
     this.idGrupoMCC = idGrupoMCC;
     return this;
   }
@@ -353,7 +353,7 @@ public class TransacaoResponse   {
   
   /**
    **/
-  public TransacaoResponse flagSolicitouContestacao(Integer flagSolicitouContestacao) {
+  public TransacaoCorrenteResponse flagSolicitouContestacao(Integer flagSolicitouContestacao) {
     this.flagSolicitouContestacao = flagSolicitouContestacao;
     return this;
   }
@@ -377,26 +377,26 @@ public class TransacaoResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    TransacaoResponse transacaoResponse = (TransacaoResponse) o;
-    return Objects.equals(this.ultimaParcelaLancada, transacaoResponse.ultimaParcelaLancada) &&
-        Objects.equals(this.id, transacaoResponse.id) &&
-        Objects.equals(this.idConta, transacaoResponse.idConta) &&
-        Objects.equals(this.idTipoRegistro, transacaoResponse.idTipoRegistro) &&
-        Objects.equals(this.ordem, transacaoResponse.ordem) &&
-        Objects.equals(this.idTransacao, transacaoResponse.idTransacao) &&
-        Objects.equals(this.descricao, transacaoResponse.descricao) &&
-        Objects.equals(this.status, transacaoResponse.status) &&
-        Objects.equals(this.descricaoStatus, transacaoResponse.descricaoStatus) &&
-        Objects.equals(this.valor, transacaoResponse.valor) &&
-        Objects.equals(this.valorDolar, transacaoResponse.valorDolar) &&
-        Objects.equals(this.quantidadeParcelas, transacaoResponse.quantidadeParcelas) &&
-        Objects.equals(this.valorParcela, transacaoResponse.valorParcela) &&
-        Objects.equals(this.dataEvento, transacaoResponse.dataEvento) &&
-        Objects.equals(this.estabelecimento, transacaoResponse.estabelecimento) &&
-        Objects.equals(this.flagCredito, transacaoResponse.flagCredito) &&
-        Objects.equals(this.tipoEstabelecimento, transacaoResponse.tipoEstabelecimento) &&
-        Objects.equals(this.idGrupoMCC, transacaoResponse.idGrupoMCC) &&
-        Objects.equals(this.flagSolicitouContestacao, transacaoResponse.flagSolicitouContestacao);
+    TransacaoCorrenteResponse transacaoCorrenteResponse = (TransacaoCorrenteResponse) o;
+    return Objects.equals(this.ultimaParcelaLancada, transacaoCorrenteResponse.ultimaParcelaLancada) &&
+        Objects.equals(this.id, transacaoCorrenteResponse.id) &&
+        Objects.equals(this.idConta, transacaoCorrenteResponse.idConta) &&
+        Objects.equals(this.idTipoRegistro, transacaoCorrenteResponse.idTipoRegistro) &&
+        Objects.equals(this.ordem, transacaoCorrenteResponse.ordem) &&
+        Objects.equals(this.idTransacao, transacaoCorrenteResponse.idTransacao) &&
+        Objects.equals(this.descricao, transacaoCorrenteResponse.descricao) &&
+        Objects.equals(this.status, transacaoCorrenteResponse.status) &&
+        Objects.equals(this.descricaoStatus, transacaoCorrenteResponse.descricaoStatus) &&
+        Objects.equals(this.valor, transacaoCorrenteResponse.valor) &&
+        Objects.equals(this.valorDolar, transacaoCorrenteResponse.valorDolar) &&
+        Objects.equals(this.quantidadeParcelas, transacaoCorrenteResponse.quantidadeParcelas) &&
+        Objects.equals(this.valorParcela, transacaoCorrenteResponse.valorParcela) &&
+        Objects.equals(this.dataEvento, transacaoCorrenteResponse.dataEvento) &&
+        Objects.equals(this.estabelecimento, transacaoCorrenteResponse.estabelecimento) &&
+        Objects.equals(this.flagCredito, transacaoCorrenteResponse.flagCredito) &&
+        Objects.equals(this.tipoEstabelecimento, transacaoCorrenteResponse.tipoEstabelecimento) &&
+        Objects.equals(this.idGrupoMCC, transacaoCorrenteResponse.idGrupoMCC) &&
+        Objects.equals(this.flagSolicitouContestacao, transacaoCorrenteResponse.flagSolicitouContestacao);
   }
 
   @Override
@@ -407,7 +407,7 @@ public class TransacaoResponse   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class TransacaoResponse {\n");
+    sb.append("class TransacaoCorrenteResponse {\n");
     
     sb.append("    ultimaParcelaLancada: ").append(toIndentedString(ultimaParcelaLancada)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");

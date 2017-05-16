@@ -19,6 +19,7 @@ public class StatusOportunidadeResponse   {
   
   private Long id = null;
   private Long idTipoOportunidade = null;
+  private String nome = null;
   private String descricao = null;
   private Boolean flagAtivo = null;
 
@@ -56,6 +57,24 @@ public class StatusOportunidadeResponse   {
   }
   public void setIdTipoOportunidade(Long idTipoOportunidade) {
     this.idTipoOportunidade = idTipoOportunidade;
+  }
+
+  
+  /**
+   * Nome do status oportunidade
+   **/
+  public StatusOportunidadeResponse nome(String nome) {
+    this.nome = nome;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Nome do status oportunidade")
+  @JsonProperty("nome")
+  public String getNome() {
+    return nome;
+  }
+  public void setNome(String nome) {
+    this.nome = nome;
   }
 
   
@@ -107,13 +126,14 @@ public class StatusOportunidadeResponse   {
     StatusOportunidadeResponse statusOportunidadeResponse = (StatusOportunidadeResponse) o;
     return Objects.equals(this.id, statusOportunidadeResponse.id) &&
         Objects.equals(this.idTipoOportunidade, statusOportunidadeResponse.idTipoOportunidade) &&
+        Objects.equals(this.nome, statusOportunidadeResponse.nome) &&
         Objects.equals(this.descricao, statusOportunidadeResponse.descricao) &&
         Objects.equals(this.flagAtivo, statusOportunidadeResponse.flagAtivo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idTipoOportunidade, descricao, flagAtivo);
+    return Objects.hash(id, idTipoOportunidade, nome, descricao, flagAtivo);
   }
 
   @Override
@@ -123,6 +143,7 @@ public class StatusOportunidadeResponse   {
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idTipoOportunidade: ").append(toIndentedString(idTipoOportunidade)).append("\n");
+    sb.append("    nome: ").append(toIndentedString(nome)).append("\n");
     sb.append("    descricao: ").append(toIndentedString(descricao)).append("\n");
     sb.append("    flagAtivo: ").append(toIndentedString(flagAtivo)).append("\n");
     sb.append("}");

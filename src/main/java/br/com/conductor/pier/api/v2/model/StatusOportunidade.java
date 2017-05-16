@@ -17,8 +17,27 @@ import io.swagger.annotations.ApiModelProperty;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class StatusOportunidade   {
   
+  private String nome = null;
   private String descricao = null;
   private Boolean flagAtivo = null;
+
+  
+  /**
+   * Nome do status oportunidade
+   **/
+  public StatusOportunidade nome(String nome) {
+    this.nome = nome;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Nome do status oportunidade")
+  @JsonProperty("nome")
+  public String getNome() {
+    return nome;
+  }
+  public void setNome(String nome) {
+    this.nome = nome;
+  }
 
   
   /**
@@ -67,13 +86,14 @@ public class StatusOportunidade   {
       return false;
     }
     StatusOportunidade statusOportunidade = (StatusOportunidade) o;
-    return Objects.equals(this.descricao, statusOportunidade.descricao) &&
+    return Objects.equals(this.nome, statusOportunidade.nome) &&
+        Objects.equals(this.descricao, statusOportunidade.descricao) &&
         Objects.equals(this.flagAtivo, statusOportunidade.flagAtivo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(descricao, flagAtivo);
+    return Objects.hash(nome, descricao, flagAtivo);
   }
 
   @Override
@@ -81,6 +101,7 @@ public class StatusOportunidade   {
     StringBuilder sb = new StringBuilder();
     sb.append("class StatusOportunidade {\n");
     
+    sb.append("    nome: ").append(toIndentedString(nome)).append("\n");
     sb.append("    descricao: ").append(toIndentedString(descricao)).append("\n");
     sb.append("    flagAtivo: ").append(toIndentedString(flagAtivo)).append("\n");
     sb.append("}");

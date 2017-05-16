@@ -23,6 +23,7 @@ public class CdtDetalheOportunidadeAUD   {
   private Date revDate = null;
   private Long revOportunidade = null;
   private Long revType = null;
+  private String revUser = null;
 
   
   /**
@@ -161,6 +162,23 @@ public class CdtDetalheOportunidadeAUD   {
   }
 
   
+  /**
+   **/
+  public CdtDetalheOportunidadeAUD revUser(String revUser) {
+    this.revUser = revUser;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("revUser")
+  public String getRevUser() {
+    return revUser;
+  }
+  public void setRevUser(String revUser) {
+    this.revUser = revUser;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -178,12 +196,13 @@ public class CdtDetalheOportunidadeAUD   {
         Objects.equals(this.rev, cdtDetalheOportunidadeAUD.rev) &&
         Objects.equals(this.revDate, cdtDetalheOportunidadeAUD.revDate) &&
         Objects.equals(this.revOportunidade, cdtDetalheOportunidadeAUD.revOportunidade) &&
-        Objects.equals(this.revType, cdtDetalheOportunidadeAUD.revType);
+        Objects.equals(this.revType, cdtDetalheOportunidadeAUD.revType) &&
+        Objects.equals(this.revUser, cdtDetalheOportunidadeAUD.revUser);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(conteudo, id, idOportunidade, nomeCampo, rev, revDate, revOportunidade, revType);
+    return Objects.hash(conteudo, id, idOportunidade, nomeCampo, rev, revDate, revOportunidade, revType, revUser);
   }
 
   @Override
@@ -199,6 +218,7 @@ public class CdtDetalheOportunidadeAUD   {
     sb.append("    revDate: ").append(toIndentedString(revDate)).append("\n");
     sb.append("    revOportunidade: ").append(toIndentedString(revOportunidade)).append("\n");
     sb.append("    revType: ").append(toIndentedString(revType)).append("\n");
+    sb.append("    revUser: ").append(toIndentedString(revUser)).append("\n");
     sb.append("}");
     return sb.toString();
   }

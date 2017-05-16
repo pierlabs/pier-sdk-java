@@ -19,17 +19,18 @@ import br.com.conductor.pier.api.v2.model.PageTipoBoleto;
 import br.com.conductor.pier.api.v2.model.TipoEndereco;
 import br.com.conductor.pier.api.v2.model.TipoTelefone;
 import br.com.conductor.pier.api.v2.model.Estabelecimento;
+import br.com.conductor.pier.api.v2.model.PageContasDetalhe;
 import br.com.conductor.pier.api.v2.model.PageCampoCodificadoDescricao;
 import br.com.conductor.pier.api.v2.model.HistoricoTelefone;
 import br.com.conductor.pier.api.v2.model.PageOrigensComerciais;
 import br.com.conductor.pier.api.v2.model.ListaProdutos;
+import br.com.conductor.pier.api.v2.model.PagePessoas;
 import br.com.conductor.pier.api.v2.model.PagePortador;
 import br.com.conductor.pier.api.v2.model.PageTelefones;
 import br.com.conductor.pier.api.v2.model.PageTiposEndereco;
 import br.com.conductor.pier.api.v2.model.PageTipoTelefones;
 import br.com.conductor.pier.api.v2.model.PageEnderecos;
 import br.com.conductor.pier.api.v2.model.PageEstabelecimentos;
-import br.com.conductor.pier.api.v2.model.PagePessoas;
 import br.com.conductor.pier.api.v2.model.PessoaFisicaAprovadaPersist;
 import br.com.conductor.pier.api.v2.model.PessoaFisicaAprovadaResponse;
 import br.com.conductor.pier.api.v2.model.PessoaJuridicaAprovadaResponse;
@@ -138,7 +139,7 @@ public class CadastrosGeraisApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<Endereco> returnType = new GenericType<Endereco>() {};
@@ -148,7 +149,7 @@ public class CadastrosGeraisApi {
   
   /**
    * Atualiza os detalhes de uma determinada Pessoa
-   * Este m\u00C3\u00A9todo permite que seja alterado na base do emissor od detalhes de uma determinada Pessoa.
+   * Este m\u00C3\u00A9todo permite que seja alterado na base do emissor os detalhes de uma determinada Pessoa.
    * @param id ID da Pessoa
    * @param nomeMae Apresenta o nome da m\u00C3\u00A3e da pessoa fisica
    * @param idEstadoCivil Id Estado civil da pessoa fisica
@@ -212,7 +213,7 @@ public class CadastrosGeraisApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<PessoaDetalheResponse> returnType = new GenericType<PessoaDetalheResponse>() {};
@@ -300,7 +301,7 @@ public class CadastrosGeraisApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<Pessoa> returnType = new GenericType<Pessoa>() {};
@@ -360,7 +361,7 @@ public class CadastrosGeraisApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<Telefone> returnType = new GenericType<Telefone>() {};
@@ -407,7 +408,7 @@ public class CadastrosGeraisApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<OrigemComercial> returnType = new GenericType<OrigemComercial>() {};
@@ -454,7 +455,7 @@ public class CadastrosGeraisApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<ProdutoDetalhesResponse> returnType = new GenericType<ProdutoDetalhesResponse>() {};
@@ -501,7 +502,7 @@ public class CadastrosGeraisApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<Telefone> returnType = new GenericType<Telefone>() {};
@@ -553,7 +554,7 @@ public class CadastrosGeraisApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<PageTipoAjuste> returnType = new GenericType<PageTipoAjuste>() {};
@@ -608,7 +609,7 @@ public class CadastrosGeraisApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<PageTipoBoleto> returnType = new GenericType<PageTipoBoleto>() {};
@@ -655,7 +656,7 @@ public class CadastrosGeraisApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<TipoEndereco> returnType = new GenericType<TipoEndereco>() {};
@@ -702,7 +703,7 @@ public class CadastrosGeraisApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<TipoTelefone> returnType = new GenericType<TipoTelefone>() {};
@@ -749,7 +750,7 @@ public class CadastrosGeraisApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<Endereco> returnType = new GenericType<Endereco>() {};
@@ -796,7 +797,7 @@ public class CadastrosGeraisApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<Estabelecimento> returnType = new GenericType<Estabelecimento>() {};
@@ -843,7 +844,7 @@ public class CadastrosGeraisApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<PessoaDetalheResponse> returnType = new GenericType<PessoaDetalheResponse>() {};
@@ -890,10 +891,64 @@ public class CadastrosGeraisApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<Pessoa> returnType = new GenericType<Pessoa>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Lista as contas da pessoa
+   * Permite listar as contas de um pessoa a partir do seu numero na receita federal.
+   * @param numeroReceitaFederal Id Conta
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @return PageContasDetalhe
+   */
+  public PageContasDetalhe listarContasPorPessoaUsingGET(String numeroReceitaFederal, Integer page, Integer limit) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'numeroReceitaFederal' is set
+     if (numeroReceitaFederal == null) {
+        throw new ApiException(400, "Missing the required parameter 'numeroReceitaFederal' when calling listarContasPorPessoaUsingGET");
+     }
+     
+    // create path and map variables
+    String path = "/api/pessoas/listar-contas".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "numeroReceitaFederal", numeroReceitaFederal));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    String[] authNames = new String[] {"client_id",  };
+
+    
+    GenericType<PageContasDetalhe> returnType = new GenericType<PageContasDetalhe>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -936,7 +991,7 @@ public class CadastrosGeraisApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<PageCampoCodificadoDescricao> returnType = new GenericType<PageCampoCodificadoDescricao>() {};
@@ -983,10 +1038,56 @@ public class CadastrosGeraisApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<HistoricoTelefone> returnType = new GenericType<HistoricoTelefone>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Lista nacionalidades
+   * Este m\u00C3\u00A9todo permite que sejam listados as nacionalidades na base de dados do Emissor.
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @return PageCampoCodificadoDescricao
+   */
+  public PageCampoCodificadoDescricao listarNacionalidadesUsingGET(Integer page, Integer limit) throws ApiException {
+    Object postBody = null;
+    
+    // create path and map variables
+    String path = "/api/nacionalidades".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    String[] authNames = new String[] {"client_id",  };
+
+    
+    GenericType<PageCampoCodificadoDescricao> returnType = new GenericType<PageCampoCodificadoDescricao>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -1029,7 +1130,7 @@ public class CadastrosGeraisApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<PageCampoCodificadoDescricao> returnType = new GenericType<PageCampoCodificadoDescricao>() {};
@@ -1084,7 +1185,7 @@ public class CadastrosGeraisApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<PageOrigensComerciais> returnType = new GenericType<PageOrigensComerciais>() {};
@@ -1142,7 +1243,7 @@ public class CadastrosGeraisApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<ListaProdutos> returnType = new GenericType<ListaProdutos>() {};
@@ -1188,10 +1289,165 @@ public class CadastrosGeraisApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<PageCampoCodificadoDescricao> returnType = new GenericType<PageCampoCodificadoDescricao>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Lista os Detalhes das Pessoas cadastradas no Emissor
+   * Este m\u00C3\u00A9todo permite que sejam listadas od detalhes das Pessoas existentes na base de dados do Emissor.
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @param idPessoa C\u00C3\u00B3digo identificador da pessoa
+   * @param nomeMae Apresenta o nome da m\u00C3\u00A3e da pessoa fisica
+   * @param idEstadoCivil Id Estado civil da pessoa fisica
+   * @param profissao Profiss\u00C3\u00A3o da pessoa fisica
+   * @param idNaturezaOcupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
+   * @param idNacionalidade Id Nacionalidade da pessoa fisica
+   * @param numeroAgencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+   * @param numeroContaCorrente N\u00C3\u00BAmero da conta corrente.
+   * @param email Email da pessoa fisica
+   * @param nomeEmpresa Nome que deve ser impresso no cart\u00C3\u00A3o
+   * @return PessoaDetalheResponse
+   */
+  public PessoaDetalheResponse listarUsingGET10(Integer page, Integer limit, Long idPessoa, String nomeMae, Long idEstadoCivil, String profissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa) throws ApiException {
+    Object postBody = null;
+    
+    // create path and map variables
+    String path = "/api/pessoas-detalhes".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idPessoa", idPessoa));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "nomeMae", nomeMae));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idEstadoCivil", idEstadoCivil));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "profissao", profissao));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idNaturezaOcupacao", idNaturezaOcupacao));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idNacionalidade", idNacionalidade));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "numeroAgencia", numeroAgencia));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "numeroContaCorrente", numeroContaCorrente));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "email", email));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "nomeEmpresa", nomeEmpresa));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    String[] authNames = new String[] {"client_id",  };
+
+    
+    GenericType<PessoaDetalheResponse> returnType = new GenericType<PessoaDetalheResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Lista as Pessoas cadastradas no Emissor
+   * Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
+   * @param nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
+   * @param tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica).
+   * @param cpf N\u00C3\u00BAmero do CPF, quando PF.
+   * @param cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
+   * @param dataNascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
+   * @param sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
+   * @param numeroIdentidade N\u00C3\u00BAmero da Identidade
+   * @param orgaoExpedidorIdentidade Org\u00C3\u00A3o expedidor do RG.
+   * @param unidadeFederativaIdentidade Sigla da Unidade Federativa de onde foi expedido a Identidade
+   * @param dataEmissaoIdentidade Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
+   * @return PagePessoas
+   */
+  public PagePessoas listarUsingGET11(Integer page, Integer limit, Long id, String nome, String tipo, String cpf, String cnpj, Date dataNascimento, String sexo, String numeroIdentidade, String orgaoExpedidorIdentidade, String unidadeFederativaIdentidade, Date dataEmissaoIdentidade) throws ApiException {
+    Object postBody = null;
+    
+    // create path and map variables
+    String path = "/api/pessoas".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "id", id));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "nome", nome));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "tipo", tipo));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "cpf", cpf));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "cnpj", cnpj));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "dataNascimento", dataNascimento));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "sexo", sexo));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "numeroIdentidade", numeroIdentidade));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "orgaoExpedidorIdentidade", orgaoExpedidorIdentidade));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "unidadeFederativaIdentidade", unidadeFederativaIdentidade));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "dataEmissaoIdentidade", dataEmissaoIdentidade));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    String[] authNames = new String[] {"client_id",  };
+
+    
+    GenericType<PagePessoas> returnType = new GenericType<PagePessoas>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -1213,7 +1469,7 @@ public class CadastrosGeraisApi {
    * @param dataCancelamentoPortador Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
    * @return PagePortador
    */
-  public PagePortador listarUsingGET10(Integer page, Integer limit, Long idConta, Long idProduto, Long idPessoa, Long idParentesco, String tipoPortador, String nomeImpresso, Long idTipoCartao, Integer flagAtivo, Date dataCadastroPortador, Date dataCancelamentoPortador) throws ApiException {
+  public PagePortador listarUsingGET13(Integer page, Integer limit, Long idConta, Long idProduto, Long idPessoa, Long idParentesco, String tipoPortador, String nomeImpresso, Long idTipoCartao, Integer flagAtivo, Date dataCadastroPortador, Date dataCancelamentoPortador) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -1264,7 +1520,7 @@ public class CadastrosGeraisApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<PagePortador> returnType = new GenericType<PagePortador>() {};
@@ -1286,7 +1542,7 @@ public class CadastrosGeraisApi {
    * @param status Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo
    * @return PageTelefones
    */
-  public PageTelefones listarUsingGET14(Integer page, Integer limit, Long id, Long idTipoTelefone, Long idPessoa, String ddd, String telefone, String ramal, Integer status) throws ApiException {
+  public PageTelefones listarUsingGET17(Integer page, Integer limit, Long id, Long idTipoTelefone, Long idPessoa, String ddd, String telefone, String ramal, Integer status) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -1331,7 +1587,7 @@ public class CadastrosGeraisApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<PageTelefones> returnType = new GenericType<PageTelefones>() {};
@@ -1348,7 +1604,7 @@ public class CadastrosGeraisApi {
    * @param nome Nome do Tipo do Endere\u00C3\u00A7o
    * @return PageTiposEndereco
    */
-  public PageTiposEndereco listarUsingGET15(Integer page, Integer limit, Long id, String nome) throws ApiException {
+  public PageTiposEndereco listarUsingGET18(Integer page, Integer limit, Long id, String nome) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -1383,7 +1639,7 @@ public class CadastrosGeraisApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<PageTiposEndereco> returnType = new GenericType<PageTiposEndereco>() {};
@@ -1400,7 +1656,7 @@ public class CadastrosGeraisApi {
    * @param nome Nome do Tipo do Telefone
    * @return PageTipoTelefones
    */
-  public PageTipoTelefones listarUsingGET17(Integer page, Integer limit, Long id, String nome) throws ApiException {
+  public PageTipoTelefones listarUsingGET20(Integer page, Integer limit, Long id, String nome) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -1435,7 +1691,7 @@ public class CadastrosGeraisApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<PageTipoTelefones> returnType = new GenericType<PageTipoTelefones>() {};
@@ -1464,7 +1720,7 @@ public class CadastrosGeraisApi {
    * @param dataUltimaAtualizacao Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
    * @return PageEnderecos
    */
-  public PageEnderecos listarUsingGET4(Integer page, Integer limit, Long id, Long idPessoa, Long idTipoEndereco, String cep, String logradouro, Integer numero, String complemento, String pontoReferencia, String bairro, String cidade, String uf, String pais, Date dataInclusao, Date dataUltimaAtualizacao) throws ApiException {
+  public PageEnderecos listarUsingGET6(Integer page, Integer limit, Long id, Long idPessoa, Long idTipoEndereco, String cep, String logradouro, Integer numero, String complemento, String pontoReferencia, String bairro, String cidade, String uf, String pais, Date dataInclusao, Date dataUltimaAtualizacao) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -1523,7 +1779,7 @@ public class CadastrosGeraisApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<PageEnderecos> returnType = new GenericType<PageEnderecos>() {};
@@ -1557,7 +1813,7 @@ public class CadastrosGeraisApi {
    * @param inativo Indica se o estabelecimento est\u00C3\u00A1 inativo.
    * @return PageEstabelecimentos
    */
-  public PageEstabelecimentos listarUsingGET5(Integer page, Integer limit, Long id, Long numeroReceitaFederal, String nome, String descricao, String nomeFantasia, String cep, String nomeLogradouro, Long numeroEndereco, String complemento, String bairro, String cidade, String uf, String pais, Date dataCadastramento, String contato, String email, Integer flagArquivoSecrFazenda, Integer flagCartaoDigitado, Integer inativo) throws ApiException {
+  public PageEstabelecimentos listarUsingGET7(Integer page, Integer limit, Long id, Long numeroReceitaFederal, String nome, String descricao, String nomeFantasia, String cep, String nomeLogradouro, Long numeroEndereco, String complemento, String bairro, String cidade, String uf, String pais, Date dataCadastramento, String contato, String email, Integer flagArquivoSecrFazenda, Integer flagCartaoDigitado, Integer inativo) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -1626,165 +1882,10 @@ public class CadastrosGeraisApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<PageEstabelecimentos> returnType = new GenericType<PageEstabelecimentos>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
-   * Lista os Detalhes das Pessoas cadastradas no Emissor
-   * Este m\u00C3\u00A9todo permite que sejam listadas od detalhes das Pessoas existentes na base de dados do Emissor.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-   * @param idPessoa C\u00C3\u00B3digo identificador da pessoa
-   * @param nomeMae Apresenta o nome da m\u00C3\u00A3e da pessoa fisica
-   * @param idEstadoCivil Id Estado civil da pessoa fisica
-   * @param profissao Profiss\u00C3\u00A3o da pessoa fisica
-   * @param idNaturezaOcupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
-   * @param idNacionalidade Id Nacionalidade da pessoa fisica
-   * @param numeroAgencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
-   * @param numeroContaCorrente N\u00C3\u00BAmero da conta corrente.
-   * @param email Email da pessoa fisica
-   * @param nomeEmpresa Nome que deve ser impresso no cart\u00C3\u00A3o
-   * @return PessoaDetalheResponse
-   */
-  public PessoaDetalheResponse listarUsingGET8(Integer page, Integer limit, Long idPessoa, String nomeMae, Long idEstadoCivil, String profissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa) throws ApiException {
-    Object postBody = null;
-    
-    // create path and map variables
-    String path = "/api/pessoas-detalhes".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "idPessoa", idPessoa));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "nomeMae", nomeMae));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "idEstadoCivil", idEstadoCivil));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "profissao", profissao));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "idNaturezaOcupacao", idNaturezaOcupacao));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "idNacionalidade", idNacionalidade));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "numeroAgencia", numeroAgencia));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "numeroContaCorrente", numeroContaCorrente));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "email", email));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "nomeEmpresa", nomeEmpresa));
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {"client_id", "access_token" };
-
-    
-    GenericType<PessoaDetalheResponse> returnType = new GenericType<PessoaDetalheResponse>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
-   * Lista as Pessoas cadastradas no Emissor
-   * Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
-   * @param nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
-   * @param tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica).
-   * @param cpf N\u00C3\u00BAmero do CPF, quando PF.
-   * @param cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
-   * @param dataNascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
-   * @param sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
-   * @param numeroIdentidade N\u00C3\u00BAmero da Identidade
-   * @param orgaoExpedidorIdentidade Org\u00C3\u00A3o expedidor do RG.
-   * @param unidadeFederativaIdentidade Sigla da Unidade Federativa de onde foi expedido a Identidade
-   * @param dataEmissaoIdentidade Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
-   * @return PagePessoas
-   */
-  public PagePessoas listarUsingGET9(Integer page, Integer limit, Long id, String nome, String tipo, String cpf, String cnpj, Date dataNascimento, String sexo, String numeroIdentidade, String orgaoExpedidorIdentidade, String unidadeFederativaIdentidade, Date dataEmissaoIdentidade) throws ApiException {
-    Object postBody = null;
-    
-    // create path and map variables
-    String path = "/api/pessoas".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "id", id));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "nome", nome));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "tipo", tipo));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "cpf", cpf));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "cnpj", cnpj));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "dataNascimento", dataNascimento));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "sexo", sexo));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "numeroIdentidade", numeroIdentidade));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "orgaoExpedidorIdentidade", orgaoExpedidorIdentidade));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "unidadeFederativaIdentidade", unidadeFederativaIdentidade));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "dataEmissaoIdentidade", dataEmissaoIdentidade));
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {"client_id", "access_token" };
-
-    
-    GenericType<PagePessoas> returnType = new GenericType<PagePessoas>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -1804,7 +1905,7 @@ public class CadastrosGeraisApi {
      }
      
     // create path and map variables
-    String path = "/api/contas-pessoas/fisicas".replaceAll("\\{format\\}","json");
+    String path = "/api/clientes-pessoas-fisicas".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1827,7 +1928,7 @@ public class CadastrosGeraisApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<PessoaFisicaAprovadaResponse> returnType = new GenericType<PessoaFisicaAprovadaResponse>() {};
@@ -1850,7 +1951,7 @@ public class CadastrosGeraisApi {
      }
      
     // create path and map variables
-    String path = "/api/contas-pessoas/juridicas".replaceAll("\\{format\\}","json");
+    String path = "/api/clientes-pessoas-juridicas".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1873,7 +1974,7 @@ public class CadastrosGeraisApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<PessoaJuridicaAprovadaResponse> returnType = new GenericType<PessoaJuridicaAprovadaResponse>() {};
@@ -1897,7 +1998,7 @@ public class CadastrosGeraisApi {
    * @param pais Apresenta nome do Pais
    * @return Endereco
    */
-  public Endereco salvarUsingPOST2(Long idPessoa, Long idTipoEndereco, String cep, String logradouro, Integer numero, String complemento, String pontoReferencia, String bairro, String cidade, String uf, String pais) throws ApiException {
+  public Endereco salvarUsingPOST4(Long idPessoa, Long idTipoEndereco, String cep, String logradouro, Integer numero, String complemento, String pontoReferencia, String bairro, String cidade, String uf, String pais) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -1946,10 +2047,80 @@ public class CadastrosGeraisApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<Endereco> returnType = new GenericType<Endereco>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Salvar os detalhes de uma determinada Pessoa
+   * Este m\u00C3\u00A9todo permite que seja incluido na base do emissor os detalhes de uma determinada Pessoa.
+   * @param idPessoa Apresenta o c\u00C3\u00B3digo identificador da pessoa
+   * @param nomeMae Apresenta o nome da m\u00C3\u00A3e da pessoa fisica
+   * @param idEstadoCivil Id Estado civil da pessoa fisica
+   * @param profissao Profiss\u00C3\u00A3o da pessoa fisica
+   * @param idNaturezaOcupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
+   * @param idNacionalidade Id Nacionalidade da pessoa fisica
+   * @param numeroAgencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+   * @param numeroContaCorrente N\u00C3\u00BAmero da conta corrente.
+   * @param email Email da pessoa fisica
+   * @param nomeEmpresa Nome que deve ser impresso no cart\u00C3\u00A3o
+   * @return PessoaDetalheResponse
+   */
+  public PessoaDetalheResponse salvarUsingPOST6(Long idPessoa, String nomeMae, Long idEstadoCivil, String profissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa) throws ApiException {
+    Object postBody = null;
+    
+    // create path and map variables
+    String path = "/api/pessoas-detalhes".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idPessoa", idPessoa));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "nomeMae", nomeMae));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idEstadoCivil", idEstadoCivil));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "profissao", profissao));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idNaturezaOcupacao", idNaturezaOcupacao));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idNacionalidade", idNacionalidade));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "numeroAgencia", numeroAgencia));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "numeroContaCorrente", numeroContaCorrente));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "email", email));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "nomeEmpresa", nomeEmpresa));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    String[] authNames = new String[] {"client_id",  };
+
+    
+    GenericType<PessoaDetalheResponse> returnType = new GenericType<PessoaDetalheResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -1969,17 +2140,17 @@ public class CadastrosGeraisApi {
    * @param dataEmissaoIdentidade Data emiss\u00C3\u00A3o da Identidade.
    * @return Pessoa
    */
-  public Pessoa salvarUsingPOST4(String nome, String tipo, String cpf, String cnpj, Date dataNascimento, String sexo, String numeroIdentidade, String orgaoExpedidorIdentidade, String unidadeFederativaIdentidade, Date dataEmissaoIdentidade) throws ApiException {
+  public Pessoa salvarUsingPOST7(String nome, String tipo, String cpf, String cnpj, Date dataNascimento, String sexo, String numeroIdentidade, String orgaoExpedidorIdentidade, String unidadeFederativaIdentidade, Date dataEmissaoIdentidade) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'nome' is set
      if (nome == null) {
-        throw new ApiException(400, "Missing the required parameter 'nome' when calling salvarUsingPOST4");
+        throw new ApiException(400, "Missing the required parameter 'nome' when calling salvarUsingPOST7");
      }
      
      // verify the required parameter 'tipo' is set
      if (tipo == null) {
-        throw new ApiException(400, "Missing the required parameter 'tipo' when calling salvarUsingPOST4");
+        throw new ApiException(400, "Missing the required parameter 'tipo' when calling salvarUsingPOST7");
      }
      
     // create path and map variables
@@ -2026,7 +2197,7 @@ public class CadastrosGeraisApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<Pessoa> returnType = new GenericType<Pessoa>() {};
@@ -2044,7 +2215,7 @@ public class CadastrosGeraisApi {
    * @param ramal N\u00C3\u00BAmero do ramal.
    * @return Telefone
    */
-  public Telefone salvarUsingPOST5(Long idTipoTelefone, Long idPessoa, String ddd, String telefone, String ramal) throws ApiException {
+  public Telefone salvarUsingPOST9(Long idTipoTelefone, Long idPessoa, String ddd, String telefone, String ramal) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -2081,7 +2252,7 @@ public class CadastrosGeraisApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<Telefone> returnType = new GenericType<Telefone>() {};

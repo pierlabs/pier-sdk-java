@@ -44,6 +44,8 @@ public class FaturaResponse   {
   private BigDecimal taxaSaque = null;
   private BigDecimal taxaMaximaProximoPeriodo = null;
   private BigDecimal totalServicos = null;
+  private BigDecimal totalParceladoNacionais = null;
+  private BigDecimal totalParceladoInternacionais = null;
 
   
   /**
@@ -514,6 +516,42 @@ public class FaturaResponse   {
   }
 
   
+  /**
+   * Apresenta a soma de todos os valores parcelados + compras nacionais.
+   **/
+  public FaturaResponse totalParceladoNacionais(BigDecimal totalParceladoNacionais) {
+    this.totalParceladoNacionais = totalParceladoNacionais;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta a soma de todos os valores parcelados + compras nacionais.")
+  @JsonProperty("totalParceladoNacionais")
+  public BigDecimal getTotalParceladoNacionais() {
+    return totalParceladoNacionais;
+  }
+  public void setTotalParceladoNacionais(BigDecimal totalParceladoNacionais) {
+    this.totalParceladoNacionais = totalParceladoNacionais;
+  }
+
+  
+  /**
+   * Apresenta a soma de todos os valores parcelados + compras internacionais.
+   **/
+  public FaturaResponse totalParceladoInternacionais(BigDecimal totalParceladoInternacionais) {
+    this.totalParceladoInternacionais = totalParceladoInternacionais;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta a soma de todos os valores parcelados + compras internacionais.")
+  @JsonProperty("totalParceladoInternacionais")
+  public BigDecimal getTotalParceladoInternacionais() {
+    return totalParceladoInternacionais;
+  }
+  public void setTotalParceladoInternacionais(BigDecimal totalParceladoInternacionais) {
+    this.totalParceladoInternacionais = totalParceladoInternacionais;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -549,12 +587,14 @@ public class FaturaResponse   {
         Objects.equals(this.taxaRotativo, faturaResponse.taxaRotativo) &&
         Objects.equals(this.taxaSaque, faturaResponse.taxaSaque) &&
         Objects.equals(this.taxaMaximaProximoPeriodo, faturaResponse.taxaMaximaProximoPeriodo) &&
-        Objects.equals(this.totalServicos, faturaResponse.totalServicos);
+        Objects.equals(this.totalServicos, faturaResponse.totalServicos) &&
+        Objects.equals(this.totalParceladoNacionais, faturaResponse.totalParceladoNacionais) &&
+        Objects.equals(this.totalParceladoInternacionais, faturaResponse.totalParceladoInternacionais);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idConta, flagEmiteFatura, dataVencimentoFatura, valorTotalFatura, valorFaturaAnterior, valorPagamentoMinimo, totalComprasNacionais, totalComprasInternacionas, totalSaquesNacionais, totalSaquesInternacionais, totalDebitosNacionais, totalDebitosRecorrentes, totalDebitosInternacionais, totalDebitosDiversosNacionais, totalDebitosOpcionais, totalPagamentos, totalCreditosNacionais, totalAjustes, totalTarifas, totalMulta, totalJuros, taxaRotativo, taxaSaque, taxaMaximaProximoPeriodo, totalServicos);
+    return Objects.hash(id, idConta, flagEmiteFatura, dataVencimentoFatura, valorTotalFatura, valorFaturaAnterior, valorPagamentoMinimo, totalComprasNacionais, totalComprasInternacionas, totalSaquesNacionais, totalSaquesInternacionais, totalDebitosNacionais, totalDebitosRecorrentes, totalDebitosInternacionais, totalDebitosDiversosNacionais, totalDebitosOpcionais, totalPagamentos, totalCreditosNacionais, totalAjustes, totalTarifas, totalMulta, totalJuros, taxaRotativo, taxaSaque, taxaMaximaProximoPeriodo, totalServicos, totalParceladoNacionais, totalParceladoInternacionais);
   }
 
   @Override
@@ -588,6 +628,8 @@ public class FaturaResponse   {
     sb.append("    taxaSaque: ").append(toIndentedString(taxaSaque)).append("\n");
     sb.append("    taxaMaximaProximoPeriodo: ").append(toIndentedString(taxaMaximaProximoPeriodo)).append("\n");
     sb.append("    totalServicos: ").append(toIndentedString(totalServicos)).append("\n");
+    sb.append("    totalParceladoNacionais: ").append(toIndentedString(totalParceladoNacionais)).append("\n");
+    sb.append("    totalParceladoInternacionais: ").append(toIndentedString(totalParceladoInternacionais)).append("\n");
     sb.append("}");
     return sb.toString();
   }

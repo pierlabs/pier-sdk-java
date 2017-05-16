@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v2.model.ContaResponse;
+import br.com.conductor.pier.api.v2.model.AplicacaoMobile;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -13,14 +13,14 @@ import java.util.List;
 
 
 /**
- * Lista de contas
+ * Lista de Aplicacoes Mobile
  **/
 
-@ApiModel(description = "Lista de contas")
+@ApiModel(description = "Lista de Aplicacoes Mobile")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class PageContas   {
+public class PageAplicacoesMobile   {
   
-  private List<ContaResponse> content = new ArrayList<ContaResponse>();
+  private List<AplicacaoMobile> content = new ArrayList<AplicacaoMobile>();
   private Boolean first = null;
   private Boolean firstPage = null;
   private Boolean hasContent = null;
@@ -38,24 +38,24 @@ public class PageContas   {
   
   /**
    **/
-  public PageContas content(List<ContaResponse> content) {
+  public PageAplicacoesMobile content(List<AplicacaoMobile> content) {
     this.content = content;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("content")
-  public List<ContaResponse> getContent() {
+  public List<AplicacaoMobile> getContent() {
     return content;
   }
-  public void setContent(List<ContaResponse> content) {
+  public void setContent(List<AplicacaoMobile> content) {
     this.content = content;
   }
 
   
   /**
    **/
-  public PageContas first(Boolean first) {
+  public PageAplicacoesMobile first(Boolean first) {
     this.first = first;
     return this;
   }
@@ -72,7 +72,7 @@ public class PageContas   {
   
   /**
    **/
-  public PageContas firstPage(Boolean firstPage) {
+  public PageAplicacoesMobile firstPage(Boolean firstPage) {
     this.firstPage = firstPage;
     return this;
   }
@@ -89,7 +89,7 @@ public class PageContas   {
   
   /**
    **/
-  public PageContas hasContent(Boolean hasContent) {
+  public PageAplicacoesMobile hasContent(Boolean hasContent) {
     this.hasContent = hasContent;
     return this;
   }
@@ -106,7 +106,7 @@ public class PageContas   {
   
   /**
    **/
-  public PageContas hasNextPage(Boolean hasNextPage) {
+  public PageAplicacoesMobile hasNextPage(Boolean hasNextPage) {
     this.hasNextPage = hasNextPage;
     return this;
   }
@@ -123,7 +123,7 @@ public class PageContas   {
   
   /**
    **/
-  public PageContas hasPreviousPage(Boolean hasPreviousPage) {
+  public PageAplicacoesMobile hasPreviousPage(Boolean hasPreviousPage) {
     this.hasPreviousPage = hasPreviousPage;
     return this;
   }
@@ -140,7 +140,7 @@ public class PageContas   {
   
   /**
    **/
-  public PageContas last(Boolean last) {
+  public PageAplicacoesMobile last(Boolean last) {
     this.last = last;
     return this;
   }
@@ -157,7 +157,7 @@ public class PageContas   {
   
   /**
    **/
-  public PageContas nextPage(Integer nextPage) {
+  public PageAplicacoesMobile nextPage(Integer nextPage) {
     this.nextPage = nextPage;
     return this;
   }
@@ -174,7 +174,7 @@ public class PageContas   {
   
   /**
    **/
-  public PageContas number(Integer number) {
+  public PageAplicacoesMobile number(Integer number) {
     this.number = number;
     return this;
   }
@@ -191,7 +191,7 @@ public class PageContas   {
   
   /**
    **/
-  public PageContas numberOfElements(Integer numberOfElements) {
+  public PageAplicacoesMobile numberOfElements(Integer numberOfElements) {
     this.numberOfElements = numberOfElements;
     return this;
   }
@@ -208,7 +208,7 @@ public class PageContas   {
   
   /**
    **/
-  public PageContas previousPage(Integer previousPage) {
+  public PageAplicacoesMobile previousPage(Integer previousPage) {
     this.previousPage = previousPage;
     return this;
   }
@@ -225,7 +225,7 @@ public class PageContas   {
   
   /**
    **/
-  public PageContas size(Integer size) {
+  public PageAplicacoesMobile size(Integer size) {
     this.size = size;
     return this;
   }
@@ -242,7 +242,7 @@ public class PageContas   {
   
   /**
    **/
-  public PageContas totalElements(Long totalElements) {
+  public PageAplicacoesMobile totalElements(Long totalElements) {
     this.totalElements = totalElements;
     return this;
   }
@@ -259,7 +259,7 @@ public class PageContas   {
   
   /**
    **/
-  public PageContas totalPages(Integer totalPages) {
+  public PageAplicacoesMobile totalPages(Integer totalPages) {
     this.totalPages = totalPages;
     return this;
   }
@@ -283,21 +283,21 @@ public class PageContas   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    PageContas pageContas = (PageContas) o;
-    return Objects.equals(this.content, pageContas.content) &&
-        Objects.equals(this.first, pageContas.first) &&
-        Objects.equals(this.firstPage, pageContas.firstPage) &&
-        Objects.equals(this.hasContent, pageContas.hasContent) &&
-        Objects.equals(this.hasNextPage, pageContas.hasNextPage) &&
-        Objects.equals(this.hasPreviousPage, pageContas.hasPreviousPage) &&
-        Objects.equals(this.last, pageContas.last) &&
-        Objects.equals(this.nextPage, pageContas.nextPage) &&
-        Objects.equals(this.number, pageContas.number) &&
-        Objects.equals(this.numberOfElements, pageContas.numberOfElements) &&
-        Objects.equals(this.previousPage, pageContas.previousPage) &&
-        Objects.equals(this.size, pageContas.size) &&
-        Objects.equals(this.totalElements, pageContas.totalElements) &&
-        Objects.equals(this.totalPages, pageContas.totalPages);
+    PageAplicacoesMobile pageAplicacoesMobile = (PageAplicacoesMobile) o;
+    return Objects.equals(this.content, pageAplicacoesMobile.content) &&
+        Objects.equals(this.first, pageAplicacoesMobile.first) &&
+        Objects.equals(this.firstPage, pageAplicacoesMobile.firstPage) &&
+        Objects.equals(this.hasContent, pageAplicacoesMobile.hasContent) &&
+        Objects.equals(this.hasNextPage, pageAplicacoesMobile.hasNextPage) &&
+        Objects.equals(this.hasPreviousPage, pageAplicacoesMobile.hasPreviousPage) &&
+        Objects.equals(this.last, pageAplicacoesMobile.last) &&
+        Objects.equals(this.nextPage, pageAplicacoesMobile.nextPage) &&
+        Objects.equals(this.number, pageAplicacoesMobile.number) &&
+        Objects.equals(this.numberOfElements, pageAplicacoesMobile.numberOfElements) &&
+        Objects.equals(this.previousPage, pageAplicacoesMobile.previousPage) &&
+        Objects.equals(this.size, pageAplicacoesMobile.size) &&
+        Objects.equals(this.totalElements, pageAplicacoesMobile.totalElements) &&
+        Objects.equals(this.totalPages, pageAplicacoesMobile.totalPages);
   }
 
   @Override
@@ -308,7 +308,7 @@ public class PageContas   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PageContas {\n");
+    sb.append("class PageAplicacoesMobile {\n");
     
     sb.append("    content: ").append(toIndentedString(content)).append("\n");
     sb.append("    first: ").append(toIndentedString(first)).append("\n");

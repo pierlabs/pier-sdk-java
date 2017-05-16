@@ -44,7 +44,7 @@ import br.com.conductor.pier.api.v2.invoker.auth.OAuth;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ApiClient {
   private Map<String, String> defaultHeaderMap = new HashMap<String, String>();
-  private String basePath = "https://localhost/";
+  private String basePath = "http://localhost/";
   private boolean debugging = false;
   private int connectionTimeout = 0;
 
@@ -75,8 +75,6 @@ public class ApiClient {
 
     // Setup authentications (key: authentication name, value: authentication).
     authentications = new HashMap<String, Authentication>();
-    authentications.put("access_token", new ApiKeyAuth("header", "access_token"));
-    authentications.put("client_id", new ApiKeyAuth("header", "client_id"));
     // Prevent the authentications from being modified.
     authentications = Collections.unmodifiableMap(authentications);
 

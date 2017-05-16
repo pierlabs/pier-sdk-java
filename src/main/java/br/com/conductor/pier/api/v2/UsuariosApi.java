@@ -97,7 +97,7 @@ public class UsuariosApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<String> returnType = new GenericType<String>() {};
@@ -150,11 +150,58 @@ public class UsuariosApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<UsuarioResponse> returnType = new GenericType<UsuarioResponse>() {};
     return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Ativa os usu\u00C3\u00A1rios cadastrados
+   * Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+   * @return UsuarioResponse
+   */
+  public UsuarioResponse ativarUsuarioUsingPOST(Long id) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling ativarUsuarioUsingPOST");
+     }
+     
+    // create path and map variables
+    String path = "/api/usuarios/{id}/ativar-usuario".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    String[] authNames = new String[] {"client_id",  };
+
+    
+    GenericType<UsuarioResponse> returnType = new GenericType<UsuarioResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
@@ -197,11 +244,58 @@ public class UsuariosApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<UsuarioResponse> returnType = new GenericType<UsuarioResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Desativa os usu\u00C3\u00A1rios cadastrados
+   * Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+   * @return UsuarioResponse
+   */
+  public UsuarioResponse desativarUsuarioUsingPOST(Long id) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling desativarUsuarioUsingPOST");
+     }
+     
+    // create path and map variables
+    String path = "/api/usuarios/{id}/desativar-usuario".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    String[] authNames = new String[] {"client_id",  };
+
+    
+    GenericType<UsuarioResponse> returnType = new GenericType<UsuarioResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
@@ -216,7 +310,7 @@ public class UsuariosApi {
    * @param status Status do Usuario
    * @return PageUsuarios
    */
-  public PageUsuarios listarUsingGET21(Integer page, Integer limit, String nome, String cpf, String email, String status) throws ApiException {
+  public PageUsuarios listarUsingGET24(Integer page, Integer limit, String nome, String cpf, String email, String status) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -255,7 +349,7 @@ public class UsuariosApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<PageUsuarios> returnType = new GenericType<PageUsuarios>() {};
@@ -302,7 +396,7 @@ public class UsuariosApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<String> returnType = new GenericType<String>() {};
@@ -316,12 +410,12 @@ public class UsuariosApi {
    * @param persist persist
    * @return UsuarioResponse
    */
-  public UsuarioResponse salvarUsingPOST8(UsuarioPersist persist) throws ApiException {
+  public UsuarioResponse salvarUsingPOST12(UsuarioPersist persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST8");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST12");
      }
      
     // create path and map variables
@@ -348,7 +442,7 @@ public class UsuariosApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<UsuarioResponse> returnType = new GenericType<UsuarioResponse>() {};
@@ -403,7 +497,7 @@ public class UsuariosApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<String> returnType = new GenericType<String>() {};

@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v2.model.TransacaoResponse;
+import br.com.conductor.pier.api.v2.model.TransacaoCorrenteResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -20,7 +20,7 @@ import java.util.List;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageTransacaoResponse   {
   
-  private List<TransacaoResponse> content = new ArrayList<TransacaoResponse>();
+  private List<TransacaoCorrenteResponse> content = new ArrayList<TransacaoCorrenteResponse>();
   private Boolean first = null;
   private Boolean firstPage = null;
   private Boolean hasContent = null;
@@ -38,17 +38,17 @@ public class PageTransacaoResponse   {
   
   /**
    **/
-  public PageTransacaoResponse content(List<TransacaoResponse> content) {
+  public PageTransacaoResponse content(List<TransacaoCorrenteResponse> content) {
     this.content = content;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("content")
-  public List<TransacaoResponse> getContent() {
+  public List<TransacaoCorrenteResponse> getContent() {
     return content;
   }
-  public void setContent(List<TransacaoResponse> content) {
+  public void setContent(List<TransacaoCorrenteResponse> content) {
     this.content = content;
   }
 

@@ -93,7 +93,7 @@ public class NotificacoesApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<SMS> returnType = new GenericType<SMS>() {};
@@ -154,7 +154,7 @@ public class NotificacoesApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<PagePush> returnType = new GenericType<PagePush>() {};
@@ -172,9 +172,10 @@ public class NotificacoesApi {
    * @param status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
    * @param operadora Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada.
    * @param protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
+   * @param nsu Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o
    * @return PageSMS
    */
-  public PageSMS listarSMSUsingGET(Integer page, Integer limit, Date dataInclusao, String tipoEvento, String status, String operadora, String protocolo) throws ApiException {
+  public PageSMS listarSMSUsingGET(Integer page, Integer limit, Date dataInclusao, String tipoEvento, String status, String operadora, String protocolo, Long nsu) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -200,6 +201,8 @@ public class NotificacoesApi {
     
     queryParams.addAll(apiClient.parameterToPairs("", "protocolo", protocolo));
     
+    queryParams.addAll(apiClient.parameterToPairs("", "nsu", nsu));
+    
 
     
 
@@ -215,7 +218,7 @@ public class NotificacoesApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<PageSMS> returnType = new GenericType<PageSMS>() {};
@@ -264,7 +267,7 @@ public class NotificacoesApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<SMS> returnType = new GenericType<SMS>() {};
@@ -310,7 +313,7 @@ public class NotificacoesApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<NotificacaoSMSResponse> returnType = new GenericType<NotificacaoSMSResponse>() {};
@@ -356,7 +359,7 @@ public class NotificacoesApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<NotificacaoSMSResponse> returnType = new GenericType<NotificacaoSMSResponse>() {};
@@ -402,7 +405,7 @@ public class NotificacoesApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<NotificacaoSMSResponse> returnType = new GenericType<NotificacaoSMSResponse>() {};
@@ -448,7 +451,7 @@ public class NotificacoesApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<NotificacaoSMSResponse> returnType = new GenericType<NotificacaoSMSResponse>() {};

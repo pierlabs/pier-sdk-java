@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v2.model.ContaResponse;
+import br.com.conductor.pier.api.v2.model.Dispositivo;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -13,14 +13,14 @@ import java.util.List;
 
 
 /**
- * Lista de contas
+ * Lista de Dispositivos
  **/
 
-@ApiModel(description = "Lista de contas")
+@ApiModel(description = "Lista de Dispositivos")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class PageContas   {
+public class PageDispositivos   {
   
-  private List<ContaResponse> content = new ArrayList<ContaResponse>();
+  private List<Dispositivo> content = new ArrayList<Dispositivo>();
   private Boolean first = null;
   private Boolean firstPage = null;
   private Boolean hasContent = null;
@@ -38,24 +38,24 @@ public class PageContas   {
   
   /**
    **/
-  public PageContas content(List<ContaResponse> content) {
+  public PageDispositivos content(List<Dispositivo> content) {
     this.content = content;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("content")
-  public List<ContaResponse> getContent() {
+  public List<Dispositivo> getContent() {
     return content;
   }
-  public void setContent(List<ContaResponse> content) {
+  public void setContent(List<Dispositivo> content) {
     this.content = content;
   }
 
   
   /**
    **/
-  public PageContas first(Boolean first) {
+  public PageDispositivos first(Boolean first) {
     this.first = first;
     return this;
   }
@@ -72,7 +72,7 @@ public class PageContas   {
   
   /**
    **/
-  public PageContas firstPage(Boolean firstPage) {
+  public PageDispositivos firstPage(Boolean firstPage) {
     this.firstPage = firstPage;
     return this;
   }
@@ -89,7 +89,7 @@ public class PageContas   {
   
   /**
    **/
-  public PageContas hasContent(Boolean hasContent) {
+  public PageDispositivos hasContent(Boolean hasContent) {
     this.hasContent = hasContent;
     return this;
   }
@@ -106,7 +106,7 @@ public class PageContas   {
   
   /**
    **/
-  public PageContas hasNextPage(Boolean hasNextPage) {
+  public PageDispositivos hasNextPage(Boolean hasNextPage) {
     this.hasNextPage = hasNextPage;
     return this;
   }
@@ -123,7 +123,7 @@ public class PageContas   {
   
   /**
    **/
-  public PageContas hasPreviousPage(Boolean hasPreviousPage) {
+  public PageDispositivos hasPreviousPage(Boolean hasPreviousPage) {
     this.hasPreviousPage = hasPreviousPage;
     return this;
   }
@@ -140,7 +140,7 @@ public class PageContas   {
   
   /**
    **/
-  public PageContas last(Boolean last) {
+  public PageDispositivos last(Boolean last) {
     this.last = last;
     return this;
   }
@@ -157,7 +157,7 @@ public class PageContas   {
   
   /**
    **/
-  public PageContas nextPage(Integer nextPage) {
+  public PageDispositivos nextPage(Integer nextPage) {
     this.nextPage = nextPage;
     return this;
   }
@@ -174,7 +174,7 @@ public class PageContas   {
   
   /**
    **/
-  public PageContas number(Integer number) {
+  public PageDispositivos number(Integer number) {
     this.number = number;
     return this;
   }
@@ -191,7 +191,7 @@ public class PageContas   {
   
   /**
    **/
-  public PageContas numberOfElements(Integer numberOfElements) {
+  public PageDispositivos numberOfElements(Integer numberOfElements) {
     this.numberOfElements = numberOfElements;
     return this;
   }
@@ -208,7 +208,7 @@ public class PageContas   {
   
   /**
    **/
-  public PageContas previousPage(Integer previousPage) {
+  public PageDispositivos previousPage(Integer previousPage) {
     this.previousPage = previousPage;
     return this;
   }
@@ -225,7 +225,7 @@ public class PageContas   {
   
   /**
    **/
-  public PageContas size(Integer size) {
+  public PageDispositivos size(Integer size) {
     this.size = size;
     return this;
   }
@@ -242,7 +242,7 @@ public class PageContas   {
   
   /**
    **/
-  public PageContas totalElements(Long totalElements) {
+  public PageDispositivos totalElements(Long totalElements) {
     this.totalElements = totalElements;
     return this;
   }
@@ -259,7 +259,7 @@ public class PageContas   {
   
   /**
    **/
-  public PageContas totalPages(Integer totalPages) {
+  public PageDispositivos totalPages(Integer totalPages) {
     this.totalPages = totalPages;
     return this;
   }
@@ -283,21 +283,21 @@ public class PageContas   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    PageContas pageContas = (PageContas) o;
-    return Objects.equals(this.content, pageContas.content) &&
-        Objects.equals(this.first, pageContas.first) &&
-        Objects.equals(this.firstPage, pageContas.firstPage) &&
-        Objects.equals(this.hasContent, pageContas.hasContent) &&
-        Objects.equals(this.hasNextPage, pageContas.hasNextPage) &&
-        Objects.equals(this.hasPreviousPage, pageContas.hasPreviousPage) &&
-        Objects.equals(this.last, pageContas.last) &&
-        Objects.equals(this.nextPage, pageContas.nextPage) &&
-        Objects.equals(this.number, pageContas.number) &&
-        Objects.equals(this.numberOfElements, pageContas.numberOfElements) &&
-        Objects.equals(this.previousPage, pageContas.previousPage) &&
-        Objects.equals(this.size, pageContas.size) &&
-        Objects.equals(this.totalElements, pageContas.totalElements) &&
-        Objects.equals(this.totalPages, pageContas.totalPages);
+    PageDispositivos pageDispositivos = (PageDispositivos) o;
+    return Objects.equals(this.content, pageDispositivos.content) &&
+        Objects.equals(this.first, pageDispositivos.first) &&
+        Objects.equals(this.firstPage, pageDispositivos.firstPage) &&
+        Objects.equals(this.hasContent, pageDispositivos.hasContent) &&
+        Objects.equals(this.hasNextPage, pageDispositivos.hasNextPage) &&
+        Objects.equals(this.hasPreviousPage, pageDispositivos.hasPreviousPage) &&
+        Objects.equals(this.last, pageDispositivos.last) &&
+        Objects.equals(this.nextPage, pageDispositivos.nextPage) &&
+        Objects.equals(this.number, pageDispositivos.number) &&
+        Objects.equals(this.numberOfElements, pageDispositivos.numberOfElements) &&
+        Objects.equals(this.previousPage, pageDispositivos.previousPage) &&
+        Objects.equals(this.size, pageDispositivos.size) &&
+        Objects.equals(this.totalElements, pageDispositivos.totalElements) &&
+        Objects.equals(this.totalPages, pageDispositivos.totalPages);
   }
 
   @Override
@@ -308,7 +308,7 @@ public class PageContas   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PageContas {\n");
+    sb.append("class PageDispositivos {\n");
     
     sb.append("    content: ").append(toIndentedString(content)).append("\n");
     sb.append("    first: ").append(toIndentedString(first)).append("\n");

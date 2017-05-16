@@ -85,7 +85,7 @@ public class StatusParametrosApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<EstagioCartao> returnType = new GenericType<EstagioCartao>() {};
@@ -132,7 +132,7 @@ public class StatusParametrosApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<StatusCartao> returnType = new GenericType<StatusCartao>() {};
@@ -179,7 +179,7 @@ public class StatusParametrosApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<StatusConta> returnType = new GenericType<StatusConta>() {};
@@ -226,7 +226,7 @@ public class StatusParametrosApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<StatusImpressao> returnType = new GenericType<StatusImpressao>() {};
@@ -278,7 +278,7 @@ public class StatusParametrosApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<PageEstagiosCartoes> returnType = new GenericType<PageEstagiosCartoes>() {};
@@ -348,7 +348,7 @@ public class StatusParametrosApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<PageStatusCartoes> returnType = new GenericType<PageStatusCartoes>() {};
@@ -368,7 +368,7 @@ public class StatusParametrosApi {
    * @param flagPermiteNovaViaCartao Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
    * @return PageStatusContas
    */
-  public PageStatusContas listarUsingGET12(Integer page, Integer limit, Long id, String nome, Integer flagAlteraLimite, String mensagemConsultaNegada, Integer flagPermiteNovaViaCartao) throws ApiException {
+  public PageStatusContas listarUsingGET15(Integer page, Integer limit, Long id, String nome, Integer flagAlteraLimite, String mensagemConsultaNegada, Integer flagPermiteNovaViaCartao) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -409,7 +409,7 @@ public class StatusParametrosApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<PageStatusContas> returnType = new GenericType<PageStatusContas>() {};
@@ -426,7 +426,7 @@ public class StatusParametrosApi {
    * @param nome Nome do status impress\u00C3\u00A3o
    * @return PageStatusImpressao
    */
-  public PageStatusImpressao listarUsingGET13(Integer page, Integer limit, Long id, String nome) throws ApiException {
+  public PageStatusImpressao listarUsingGET16(Integer page, Integer limit, Long id, String nome) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -461,7 +461,7 @@ public class StatusParametrosApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<PageStatusImpressao> returnType = new GenericType<PageStatusImpressao>() {};

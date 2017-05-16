@@ -177,14 +177,14 @@ public class UsuarioResponse   {
 
   
   /**
-   * Status do Usu\u00C3\u00A1rio
+   * Data de cria\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
    **/
   public UsuarioResponse dataCriacao(Date dataCriacao) {
     this.dataCriacao = dataCriacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Status do Usu\u00C3\u00A1rio")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data de cria\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio")
   @JsonProperty("dataCriacao")
   public Date getDataCriacao() {
     return dataCriacao;
@@ -195,14 +195,14 @@ public class UsuarioResponse   {
 
   
   /**
-   * Status do Usu\u00C3\u00A1rio
+   * Data de modifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
    **/
   public UsuarioResponse dataModificacao(Date dataModificacao) {
     this.dataModificacao = dataModificacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Status do Usu\u00C3\u00A1rio")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data de modifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio")
   @JsonProperty("dataModificacao")
   public Date getDataModificacao() {
     return dataModificacao;

@@ -17,7 +17,7 @@ import java.util.Date;
 
 @ApiModel(description = "Objeto conta")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class Conta   {
+public class ContaResponse   {
   
   private Long id = null;
   private Long idProduto = null;
@@ -29,16 +29,13 @@ public class Conta   {
   private Date dataStatusConta = null;
   private Date dataCadastro = null;
   private Date dataUltimaAlteracaoVencimento = null;
-  private Integer numeroAgencia = null;
   private BigDecimal valorRenda = null;
-  private String numeroContaCorrente = null;
-  private String formaEnvioFatura = null;
 
   
   /**
    * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
    **/
-  public Conta id(Long id) {
+  public ContaResponse id(Long id) {
     this.id = id;
     return this;
   }
@@ -56,7 +53,7 @@ public class Conta   {
   /**
    * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
    **/
-  public Conta idProduto(Long idProduto) {
+  public ContaResponse idProduto(Long idProduto) {
     this.idProduto = idProduto;
     return this;
   }
@@ -74,7 +71,7 @@ public class Conta   {
   /**
    * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta.
    **/
-  public Conta idOrigemComercial(Long idOrigemComercial) {
+  public ContaResponse idOrigemComercial(Long idOrigemComercial) {
     this.idOrigemComercial = idOrigemComercial;
     return this;
   }
@@ -92,7 +89,7 @@ public class Conta   {
   /**
    * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id).
    **/
-  public Conta idPessoa(Long idPessoa) {
+  public ContaResponse idPessoa(Long idPessoa) {
     this.idPessoa = idPessoa;
     return this;
   }
@@ -110,7 +107,7 @@ public class Conta   {
   /**
    * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
    **/
-  public Conta idStatusConta(Long idStatusConta) {
+  public ContaResponse idStatusConta(Long idStatusConta) {
     this.idStatusConta = idStatusConta;
     return this;
   }
@@ -128,7 +125,7 @@ public class Conta   {
   /**
    * Apresenta o dia de vencimento.
    **/
-  public Conta diaVencimento(Integer diaVencimento) {
+  public ContaResponse diaVencimento(Integer diaVencimento) {
     this.diaVencimento = diaVencimento;
     return this;
   }
@@ -146,7 +143,7 @@ public class Conta   {
   /**
    * Apresenta o melhor dia de compra.
    **/
-  public Conta melhorDiaCompra(Integer melhorDiaCompra) {
+  public ContaResponse melhorDiaCompra(Integer melhorDiaCompra) {
     this.melhorDiaCompra = melhorDiaCompra;
     return this;
   }
@@ -164,7 +161,7 @@ public class Conta   {
   /**
    * Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
    **/
-  public Conta dataStatusConta(Date dataStatusConta) {
+  public ContaResponse dataStatusConta(Date dataStatusConta) {
     this.dataStatusConta = dataStatusConta;
     return this;
   }
@@ -182,7 +179,7 @@ public class Conta   {
   /**
    * Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
    **/
-  public Conta dataCadastro(Date dataCadastro) {
+  public ContaResponse dataCadastro(Date dataCadastro) {
     this.dataCadastro = dataCadastro;
     return this;
   }
@@ -200,7 +197,7 @@ public class Conta   {
   /**
    * Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
    **/
-  public Conta dataUltimaAlteracaoVencimento(Date dataUltimaAlteracaoVencimento) {
+  public ContaResponse dataUltimaAlteracaoVencimento(Date dataUltimaAlteracaoVencimento) {
     this.dataUltimaAlteracaoVencimento = dataUltimaAlteracaoVencimento;
     return this;
   }
@@ -216,27 +213,9 @@ public class Conta   {
 
   
   /**
-   * N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
-   **/
-  public Conta numeroAgencia(Integer numeroAgencia) {
-    this.numeroAgencia = numeroAgencia;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero da ag\u00C3\u00AAncia.")
-  @JsonProperty("numeroAgencia")
-  public Integer getNumeroAgencia() {
-    return numeroAgencia;
-  }
-  public void setNumeroAgencia(Integer numeroAgencia) {
-    this.numeroAgencia = numeroAgencia;
-  }
-
-  
-  /**
    * Apresenta o valor da renda comprovada
    **/
-  public Conta valorRenda(BigDecimal valorRenda) {
+  public ContaResponse valorRenda(BigDecimal valorRenda) {
     this.valorRenda = valorRenda;
     return this;
   }
@@ -251,42 +230,6 @@ public class Conta   {
   }
 
   
-  /**
-   * N\u00C3\u00BAmero da conta corrente.
-   **/
-  public Conta numeroContaCorrente(String numeroContaCorrente) {
-    this.numeroContaCorrente = numeroContaCorrente;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero da conta corrente.")
-  @JsonProperty("numeroContaCorrente")
-  public String getNumeroContaCorrente() {
-    return numeroContaCorrente;
-  }
-  public void setNumeroContaCorrente(String numeroContaCorrente) {
-    this.numeroContaCorrente = numeroContaCorrente;
-  }
-
-  
-  /**
-   * Forma de envio da fatura.
-   **/
-  public Conta formaEnvioFatura(String formaEnvioFatura) {
-    this.formaEnvioFatura = formaEnvioFatura;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Forma de envio da fatura.")
-  @JsonProperty("formaEnvioFatura")
-  public String getFormaEnvioFatura() {
-    return formaEnvioFatura;
-  }
-  public void setFormaEnvioFatura(String formaEnvioFatura) {
-    this.formaEnvioFatura = formaEnvioFatura;
-  }
-
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -296,32 +239,29 @@ public class Conta   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Conta conta = (Conta) o;
-    return Objects.equals(this.id, conta.id) &&
-        Objects.equals(this.idProduto, conta.idProduto) &&
-        Objects.equals(this.idOrigemComercial, conta.idOrigemComercial) &&
-        Objects.equals(this.idPessoa, conta.idPessoa) &&
-        Objects.equals(this.idStatusConta, conta.idStatusConta) &&
-        Objects.equals(this.diaVencimento, conta.diaVencimento) &&
-        Objects.equals(this.melhorDiaCompra, conta.melhorDiaCompra) &&
-        Objects.equals(this.dataStatusConta, conta.dataStatusConta) &&
-        Objects.equals(this.dataCadastro, conta.dataCadastro) &&
-        Objects.equals(this.dataUltimaAlteracaoVencimento, conta.dataUltimaAlteracaoVencimento) &&
-        Objects.equals(this.numeroAgencia, conta.numeroAgencia) &&
-        Objects.equals(this.valorRenda, conta.valorRenda) &&
-        Objects.equals(this.numeroContaCorrente, conta.numeroContaCorrente) &&
-        Objects.equals(this.formaEnvioFatura, conta.formaEnvioFatura);
+    ContaResponse contaResponse = (ContaResponse) o;
+    return Objects.equals(this.id, contaResponse.id) &&
+        Objects.equals(this.idProduto, contaResponse.idProduto) &&
+        Objects.equals(this.idOrigemComercial, contaResponse.idOrigemComercial) &&
+        Objects.equals(this.idPessoa, contaResponse.idPessoa) &&
+        Objects.equals(this.idStatusConta, contaResponse.idStatusConta) &&
+        Objects.equals(this.diaVencimento, contaResponse.diaVencimento) &&
+        Objects.equals(this.melhorDiaCompra, contaResponse.melhorDiaCompra) &&
+        Objects.equals(this.dataStatusConta, contaResponse.dataStatusConta) &&
+        Objects.equals(this.dataCadastro, contaResponse.dataCadastro) &&
+        Objects.equals(this.dataUltimaAlteracaoVencimento, contaResponse.dataUltimaAlteracaoVencimento) &&
+        Objects.equals(this.valorRenda, contaResponse.valorRenda);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idProduto, idOrigemComercial, idPessoa, idStatusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, dataUltimaAlteracaoVencimento, numeroAgencia, valorRenda, numeroContaCorrente, formaEnvioFatura);
+    return Objects.hash(id, idProduto, idOrigemComercial, idPessoa, idStatusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, dataUltimaAlteracaoVencimento, valorRenda);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Conta {\n");
+    sb.append("class ContaResponse {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idProduto: ").append(toIndentedString(idProduto)).append("\n");
@@ -333,10 +273,7 @@ public class Conta   {
     sb.append("    dataStatusConta: ").append(toIndentedString(dataStatusConta)).append("\n");
     sb.append("    dataCadastro: ").append(toIndentedString(dataCadastro)).append("\n");
     sb.append("    dataUltimaAlteracaoVencimento: ").append(toIndentedString(dataUltimaAlteracaoVencimento)).append("\n");
-    sb.append("    numeroAgencia: ").append(toIndentedString(numeroAgencia)).append("\n");
     sb.append("    valorRenda: ").append(toIndentedString(valorRenda)).append("\n");
-    sb.append("    numeroContaCorrente: ").append(toIndentedString(numeroContaCorrente)).append("\n");
-    sb.append("    formaEnvioFatura: ").append(toIndentedString(formaEnvioFatura)).append("\n");
     sb.append("}");
     return sb.toString();
   }

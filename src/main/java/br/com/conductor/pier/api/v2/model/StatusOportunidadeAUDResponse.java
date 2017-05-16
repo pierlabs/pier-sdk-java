@@ -23,6 +23,7 @@ public class StatusOportunidadeAUDResponse   {
   private Date revDate = null;
   private Long id = null;
   private Long idTipoOportunidade = null;
+  private String nome = null;
   private String descricao = null;
   private Boolean flagAtivo = null;
 
@@ -118,6 +119,24 @@ public class StatusOportunidadeAUDResponse   {
 
   
   /**
+   * Nome do status oportunidade
+   **/
+  public StatusOportunidadeAUDResponse nome(String nome) {
+    this.nome = nome;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Nome do status oportunidade")
+  @JsonProperty("nome")
+  public String getNome() {
+    return nome;
+  }
+  public void setNome(String nome) {
+    this.nome = nome;
+  }
+
+  
+  /**
    * Descricao do StatusOportunidade
    **/
   public StatusOportunidadeAUDResponse descricao(String descricao) {
@@ -168,13 +187,14 @@ public class StatusOportunidadeAUDResponse   {
         Objects.equals(this.revDate, statusOportunidadeAUDResponse.revDate) &&
         Objects.equals(this.id, statusOportunidadeAUDResponse.id) &&
         Objects.equals(this.idTipoOportunidade, statusOportunidadeAUDResponse.idTipoOportunidade) &&
+        Objects.equals(this.nome, statusOportunidadeAUDResponse.nome) &&
         Objects.equals(this.descricao, statusOportunidadeAUDResponse.descricao) &&
         Objects.equals(this.flagAtivo, statusOportunidadeAUDResponse.flagAtivo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(rev, revType, revDate, id, idTipoOportunidade, descricao, flagAtivo);
+    return Objects.hash(rev, revType, revDate, id, idTipoOportunidade, nome, descricao, flagAtivo);
   }
 
   @Override
@@ -187,6 +207,7 @@ public class StatusOportunidadeAUDResponse   {
     sb.append("    revDate: ").append(toIndentedString(revDate)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idTipoOportunidade: ").append(toIndentedString(idTipoOportunidade)).append("\n");
+    sb.append("    nome: ").append(toIndentedString(nome)).append("\n");
     sb.append("    descricao: ").append(toIndentedString(descricao)).append("\n");
     sb.append("    flagAtivo: ").append(toIndentedString(flagAtivo)).append("\n");
     sb.append("}");

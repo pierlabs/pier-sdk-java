@@ -71,7 +71,7 @@ public class BaseApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id", "access_token" };
+    String[] authNames = new String[] {"client_id",  };
 
     
     GenericType<BodyAccessToken> returnType = new GenericType<BodyAccessToken>() {};
