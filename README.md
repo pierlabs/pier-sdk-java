@@ -2,9 +2,9 @@
 
 ## Requerimentos
 
-Ã‰ necessÃ¡rio vocÃª empacotar o cÃ³dido com o [Maven](https://maven.apache.org/) para que possa ser utilizado. 
+Será necessário você empacotar o códido com o [Maven](https://maven.apache.org/) para que possa ser utilizado. 
 
-## InstalaÃ§Ã£o e utilizaÃ§Ã£o
+## Instalaçao e utilizaçao
 
 Para instalar o pier-sdk-java em seu repositorio local do maven simplesmente execute:
 
@@ -12,17 +12,17 @@ Para instalar o pier-sdk-java em seu repositorio local do maven simplesmente exe
 mvn install
 ```
 
-Para fazer deploy do artefato gerado em algum repositÃ³rio maven configure o arquivo pom.xml com as informaÃ§Ãµes do seu Artifactory ou Nexus e execute o comando abaixo. Caso nÃ£o possua nenhum repositÃ³rio para suas bibliotecas maven nÃ³s recomendamos a utilizaÃ§Ã£o do [Jitpack](https://jitpack.io/). Essa ferramenta simplifica muito a utilizaÃ§Ã£o de bibliotecas maven hospedadas no [Github](https://github.com).
+Para fazer deploy do artefato gerado em algum repositório maven configure o arquivo pom.xml com as informaçoes do seu Artifactory ou Nexus e execute o comando abaixo. Caso não possua nenhum repositório para suas bibliotecas maven recomendamos a utilizaçao do [Jitpack](https://jitpack.io/). Essa ferramenta simplifica muito a utilizaçao de bibliotecas maven hospedadas no [Github](https://github.com).
 
 ```shell
 mvn deploy
 ```
 
-Depois da biblioteca Maven instalada vocÃª pode utilizar em seus projetos Java adicionando no seu arquivo pom.xml
+Depois da biblioteca Maven instalada você pode utilizar em seus projetos Java adicionando no seu arquivo pom.xml
 
 ### Maven
 
-#### RepositÃ³rios
+#### Repositórios
 ```xml
 	<repositories>
 		<repository>
@@ -32,10 +32,10 @@ Depois da biblioteca Maven instalada vocÃª pode utilizar em seus projetos Java
 	</repositories>
 ```
 
-#### DependÃªncia
+#### Dependêcia
 ```xml
 	<dependency>
-	    <groupId>com.github.devconductor</groupId>
+	    <groupId>com.github.pierlabs</groupId>
 	    <artifactId>pier-sdk-java</artifactId>
 	    <version>2.15.5</version>
 	</dependency>
@@ -43,7 +43,7 @@ Depois da biblioteca Maven instalada vocÃª pode utilizar em seus projetos Java
 
 ### Gradle
 
-#### RepositÃ³rios
+#### Repositórios
 ```groovy
 	allprojects {
 		repositories {
@@ -52,7 +52,7 @@ Depois da biblioteca Maven instalada vocÃª pode utilizar em seus projetos Java
 	}
 ```
 
-#### DependÃªncia
+#### Dependêcia
 ```groovy
 	dependencies {
 	 	compile 'com.github.devconductor:pier-sdk-java:2.15.5'
@@ -62,9 +62,9 @@ Depois da biblioteca Maven instalada vocÃª pode utilizar em seus projetos Java
 
 ## Criando um API Client
 
-Antes de utilizar as APIs, Ã© necessÃ¡rio a criaÃ§ao de um client com as configuraÃ§oes de _base path_ e tambÃ©m as credenciais para acesso.
+Antes de utilizar as APIs, é necessário a criaçao de um client com as configurações de _base path_ e também as credenciais para acesso.
 
-Abaixo segue o cÃ³digo de exemplo:
+Abaixo segue o código de exemplo:
 
 ```java
 ApiClient apiClient = new ApiClient();
@@ -77,10 +77,10 @@ apiClient.setBasePath("https://sandbox.conductor.com.br/pier/v1.1");
 ((ApiKeyAuth)apiClient.getAuthentication("access_token")).setApiKey("ACESS_TOKEN");
 ```
 
-## Exemplo: Consultando um determinado cartÃ£o
+## Exemplo: Consultando um determinado cartão
 
-No exemplo abaixo vamos consultar um determinado cartÃ£o de crÃ©dito de uma determinada conta. Para isso utilize o mÃ©todo `consultarCartaoUsingGET` da classe `CartaoApi`.
-Todas as classes de recursos da API recebem no seu construtor o ApiClient gerando no mÃ©todo acima:
+No exemplo abaixo vamos consultar um determinado cartão de crédito de uma determinada conta. Para isso utilize o método `consultarCartaoUsingGET` da classe `CartaoApi`.
+Todas as classes de recursos da API recebem no seu construtor o ApiClient gerando no método acima:
 
 ```java
 ContaApi contaApi = new ContaApi(apiClient);
