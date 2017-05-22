@@ -82,7 +82,8 @@ public class RiscoFraudeApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<AtendimentoCliente> returnType = new GenericType<AtendimentoCliente>() {};
@@ -129,7 +130,8 @@ public class RiscoFraudeApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<RiscoFraudeDetalhadoResponse> returnType = new GenericType<RiscoFraudeDetalhadoResponse>() {};
@@ -175,7 +177,8 @@ public class RiscoFraudeApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<String> returnType = new GenericType<String>() {};
@@ -233,7 +236,8 @@ public class RiscoFraudeApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<PageAtendimentoClientes> returnType = new GenericType<PageAtendimentoClientes>() {};
@@ -295,7 +299,8 @@ public class RiscoFraudeApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<RiscoFraudeResponsePage> returnType = new GenericType<RiscoFraudeResponsePage>() {};
@@ -342,7 +347,8 @@ public class RiscoFraudeApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<RiscoFraudeDetalhadoResponse> returnType = new GenericType<RiscoFraudeDetalhadoResponse>() {};
@@ -389,7 +395,8 @@ public class RiscoFraudeApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<RiscoFraudeDetalhadoResponse> returnType = new GenericType<RiscoFraudeDetalhadoResponse>() {};
@@ -456,7 +463,8 @@ public class RiscoFraudeApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<AtendimentoCliente> returnType = new GenericType<AtendimentoCliente>() {};

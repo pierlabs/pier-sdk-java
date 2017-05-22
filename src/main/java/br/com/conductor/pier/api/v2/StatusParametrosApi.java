@@ -85,7 +85,8 @@ public class StatusParametrosApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<EstagioCartao> returnType = new GenericType<EstagioCartao>() {};
@@ -132,7 +133,8 @@ public class StatusParametrosApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<StatusCartao> returnType = new GenericType<StatusCartao>() {};
@@ -179,7 +181,8 @@ public class StatusParametrosApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<StatusConta> returnType = new GenericType<StatusConta>() {};
@@ -226,7 +229,8 @@ public class StatusParametrosApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<StatusImpressao> returnType = new GenericType<StatusImpressao>() {};
@@ -278,7 +282,8 @@ public class StatusParametrosApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<PageEstagiosCartoes> returnType = new GenericType<PageEstagiosCartoes>() {};
@@ -348,7 +353,8 @@ public class StatusParametrosApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<PageStatusCartoes> returnType = new GenericType<PageStatusCartoes>() {};
@@ -409,7 +415,8 @@ public class StatusParametrosApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<PageStatusContas> returnType = new GenericType<PageStatusContas>() {};
@@ -461,7 +468,8 @@ public class StatusParametrosApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<PageStatusImpressao> returnType = new GenericType<PageStatusImpressao>() {};

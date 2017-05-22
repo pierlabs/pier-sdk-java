@@ -9,7 +9,7 @@ import br.com.conductor.pier.api.v2.invoker.Pair;
 
 import br.com.conductor.pier.api.v2.model.HistoricoImpressaoCartao;
 import br.com.conductor.pier.api.v2.model.Cartao;
-import br.com.conductor.pier.api.v2.model.TransacaoOnUsResponse;
+import br.com.conductor.pier.api.v2.model.DadosCarto;
 import br.com.conductor.pier.api.v2.model.LimiteDisponibilidade;
 import br.com.conductor.pier.api.v2.model.LoteCartoesPrePagos;
 import br.com.conductor.pier.api.v2.model.Portador;
@@ -96,7 +96,8 @@ public class CartaoApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<String> returnType = new GenericType<String>() {};
@@ -151,7 +152,8 @@ public class CartaoApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<HistoricoImpressaoCartao> returnType = new GenericType<HistoricoImpressaoCartao>() {};
@@ -206,7 +208,8 @@ public class CartaoApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<Cartao> returnType = new GenericType<Cartao>() {};
@@ -269,7 +272,8 @@ public class CartaoApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<Cartao> returnType = new GenericType<Cartao>() {};
@@ -324,7 +328,8 @@ public class CartaoApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<String> returnType = new GenericType<String>() {};
@@ -336,9 +341,9 @@ public class CartaoApi {
    * Consultar Detalhes do Cart\u00C3\u00A3o
    * Este m\u00C3\u00A9todo permite que seja consultado os dados necessarios de um cart\u00C3\u00A3o para executar servi\u00C3\u00A7os de autoriza\u00C3\u00A7\u00C3\u00A3o.
    * @param id id
-   * @return TransacaoOnUsResponse
+   * @return DadosCarto
    */
-  public TransacaoOnUsResponse consultarDadosCartaoUsingGET(Long id) throws ApiException {
+  public DadosCarto consultarDadosCartaoUsingGET(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -371,10 +376,11 @@ public class CartaoApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<TransacaoOnUsResponse> returnType = new GenericType<TransacaoOnUsResponse>() {};
+    GenericType<DadosCarto> returnType = new GenericType<DadosCarto>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -418,7 +424,8 @@ public class CartaoApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<LimiteDisponibilidade> returnType = new GenericType<LimiteDisponibilidade>() {};
@@ -465,7 +472,8 @@ public class CartaoApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<LoteCartoesPrePagos> returnType = new GenericType<LoteCartoesPrePagos>() {};
@@ -512,7 +520,8 @@ public class CartaoApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<Portador> returnType = new GenericType<Portador>() {};
@@ -559,7 +568,8 @@ public class CartaoApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<Cartao> returnType = new GenericType<Cartao>() {};
@@ -606,7 +616,8 @@ public class CartaoApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<Cartao> returnType = new GenericType<Cartao>() {};
@@ -653,7 +664,8 @@ public class CartaoApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<Cartao> returnType = new GenericType<Cartao>() {};
@@ -711,7 +723,8 @@ public class CartaoApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<LoteCartoesPrePagos> returnType = new GenericType<LoteCartoesPrePagos>() {};
@@ -758,7 +771,8 @@ public class CartaoApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<Cartao> returnType = new GenericType<Cartao>() {};
@@ -831,7 +845,8 @@ public class CartaoApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<PageLoteCartoesPrePagosResponse> returnType = new GenericType<PageLoteCartoesPrePagosResponse>() {};
@@ -931,7 +946,8 @@ public class CartaoApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<PageCartoes> returnType = new GenericType<PageCartoes>() {};
@@ -1003,7 +1019,8 @@ public class CartaoApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<ValidaCartao> returnType = new GenericType<ValidaCartao>() {};
@@ -1075,7 +1092,8 @@ public class CartaoApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<ValidaCartao> returnType = new GenericType<ValidaCartao>() {};
@@ -1131,7 +1149,8 @@ public class CartaoApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<ValidaCartao> returnType = new GenericType<ValidaCartao>() {};
@@ -1186,7 +1205,8 @@ public class CartaoApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<ValidaSenhaCartao> returnType = new GenericType<ValidaSenhaCartao>() {};
@@ -1250,7 +1270,8 @@ public class CartaoApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<ValidaCartao> returnType = new GenericType<ValidaCartao>() {};

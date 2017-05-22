@@ -37,7 +37,7 @@ Depois da biblioteca Maven instalada vocÃª pode utilizar em seus projetos Java
 	<dependency>
 	    <groupId>com.github.devconductor</groupId>
 	    <artifactId>pier-sdk-java</artifactId>
-	    <version>2.15.0</version>
+	    <version>2.15.5</version>
 	</dependency>
 ```
 
@@ -55,7 +55,7 @@ Depois da biblioteca Maven instalada vocÃª pode utilizar em seus projetos Java
 #### DependÃªncia
 ```groovy
 	dependencies {
-	 	compile 'com.github.devconductor:pier-sdk-java:2.15.0'
+	 	compile 'com.github.devconductor:pier-sdk-java:2.15.5'
 	}
 ```
 
@@ -83,16 +83,9 @@ No exemplo abaixo vamos consultar um determinado cartÃ£o de crÃ©dito de uma 
 Todas as classes de recursos da API recebem no seu construtor o ApiClient gerando no mÃ©todo acima:
 
 ```java
-Integer idCartao = 1;
-Integer idConta = 1;
-
-//Opcional
-String numerodoCartao = null;
-
-CartaoApi cartaoApi = new CartaoApi(apiClient);
-ConsultarCartaoResponse cartaoResponse = cartaoApi.consultarCartaoUsingGET(idConta, idCartao, numerodoCartao);
-      
-System.out.println(cartaoResponse);
+ContaApi contaApi = new ContaApi(apiClient);
+ContaDetalhe consultarUsingGET3 = contaApi.consultarUsingGET3(1L);
+System.out.println(consultarUsingGET3);
 ```
 
 ## Author

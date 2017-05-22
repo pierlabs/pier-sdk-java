@@ -44,7 +44,7 @@ public class ContaDetalheResponse   {
   private BigDecimal limiteSaqueGlobal = null;
   private BigDecimal saldoDisponivelGlobal = null;
   private BigDecimal saldoDisponivelSaque = null;
-  private Date dataInicioAtraso = null;
+  private Long diasAtraso = null;
 
   
   /**
@@ -498,20 +498,20 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * Apresenta a data da ultima cobran\u00C3\u00A7a.
+   * Apresenta a quantidade de dias que a conta esta em atraso
    **/
-  public ContaDetalheResponse dataInicioAtraso(Date dataInicioAtraso) {
-    this.dataInicioAtraso = dataInicioAtraso;
+  public ContaDetalheResponse diasAtraso(Long diasAtraso) {
+    this.diasAtraso = diasAtraso;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta a data da ultima cobran\u00C3\u00A7a.")
-  @JsonProperty("dataInicioAtraso")
-  public Date getDataInicioAtraso() {
-    return dataInicioAtraso;
+  @ApiModelProperty(example = "null", value = "Apresenta a quantidade de dias que a conta esta em atraso")
+  @JsonProperty("diasAtraso")
+  public Long getDiasAtraso() {
+    return diasAtraso;
   }
-  public void setDataInicioAtraso(Date dataInicioAtraso) {
-    this.dataInicioAtraso = dataInicioAtraso;
+  public void setDiasAtraso(Long diasAtraso) {
+    this.diasAtraso = diasAtraso;
   }
 
   
@@ -550,12 +550,12 @@ public class ContaDetalheResponse   {
         Objects.equals(this.limiteSaqueGlobal, contaDetalheResponse.limiteSaqueGlobal) &&
         Objects.equals(this.saldoDisponivelGlobal, contaDetalheResponse.saldoDisponivelGlobal) &&
         Objects.equals(this.saldoDisponivelSaque, contaDetalheResponse.saldoDisponivelSaque) &&
-        Objects.equals(this.dataInicioAtraso, contaDetalheResponse.dataInicioAtraso);
+        Objects.equals(this.diasAtraso, contaDetalheResponse.diasAtraso);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idPessoa, nome, idProduto, idOrigemComercial, nomeOrigemComercial, idFantasiaBasica, nomeFantasiaBasica, idStatusConta, statusConta, diaVencimento, melhorDiaCompra, dataStatusConta, valorRenda, dataCadastro, dataUltimaAlteracaoVencimento, dataHoraUltimaCompra, numeroAgencia, numeroContaCorrente, formaEnvioFatura, titular, limiteGlobal, limiteSaqueGlobal, saldoDisponivelGlobal, saldoDisponivelSaque, dataInicioAtraso);
+    return Objects.hash(id, idPessoa, nome, idProduto, idOrigemComercial, nomeOrigemComercial, idFantasiaBasica, nomeFantasiaBasica, idStatusConta, statusConta, diaVencimento, melhorDiaCompra, dataStatusConta, valorRenda, dataCadastro, dataUltimaAlteracaoVencimento, dataHoraUltimaCompra, numeroAgencia, numeroContaCorrente, formaEnvioFatura, titular, limiteGlobal, limiteSaqueGlobal, saldoDisponivelGlobal, saldoDisponivelSaque, diasAtraso);
   }
 
   @Override
@@ -588,7 +588,7 @@ public class ContaDetalheResponse   {
     sb.append("    limiteSaqueGlobal: ").append(toIndentedString(limiteSaqueGlobal)).append("\n");
     sb.append("    saldoDisponivelGlobal: ").append(toIndentedString(saldoDisponivelGlobal)).append("\n");
     sb.append("    saldoDisponivelSaque: ").append(toIndentedString(saldoDisponivelSaque)).append("\n");
-    sb.append("    dataInicioAtraso: ").append(toIndentedString(dataInicioAtraso)).append("\n");
+    sb.append("    diasAtraso: ").append(toIndentedString(diasAtraso)).append("\n");
     sb.append("}");
     return sb.toString();
   }

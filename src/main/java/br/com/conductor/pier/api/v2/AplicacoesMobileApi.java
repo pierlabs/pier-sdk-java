@@ -87,7 +87,8 @@ public class AplicacoesMobileApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<AplicacaoMobile> returnType = new GenericType<AplicacaoMobile>() {};
@@ -142,7 +143,8 @@ public class AplicacoesMobileApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<PageAplicacoesMobile> returnType = new GenericType<PageAplicacoesMobile>() {};
@@ -188,7 +190,8 @@ public class AplicacoesMobileApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<AplicacaoMobile> returnType = new GenericType<AplicacaoMobile>() {};

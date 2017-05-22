@@ -125,7 +125,8 @@ public class ContaApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<AjusteResponse> returnType = new GenericType<AjusteResponse>() {};
@@ -268,7 +269,8 @@ public class ContaApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<LimiteDisponibilidade> returnType = new GenericType<LimiteDisponibilidade>() {};
@@ -323,7 +325,8 @@ public class ContaApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<ContaResponse> returnType = new GenericType<ContaResponse>() {};
@@ -378,7 +381,8 @@ public class ContaApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<ContaResponse> returnType = new GenericType<ContaResponse>() {};
@@ -425,7 +429,8 @@ public class ContaApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<Object> returnType = new GenericType<Object>() {};
@@ -472,7 +477,8 @@ public class ContaApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<BoletoDeFatura> returnType = new GenericType<BoletoDeFatura>() {};
@@ -531,7 +537,8 @@ public class ContaApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<DividaClienteResponse> returnType = new GenericType<DividaClienteResponse>() {};
@@ -581,7 +588,8 @@ public class ContaApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<DetalhesFaturaConsignadaResponse> returnType = new GenericType<DetalhesFaturaConsignadaResponse>() {};
@@ -635,7 +643,8 @@ public class ContaApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<FaturaConsignadaDetalheResponse> returnType = new GenericType<FaturaConsignadaDetalheResponse>() {};
@@ -690,7 +699,8 @@ public class ContaApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<DetalhesFaturaResponse> returnType = new GenericType<DetalhesFaturaResponse>() {};
@@ -740,7 +750,8 @@ public class ContaApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<DetalhesFaturaResponse> returnType = new GenericType<DetalhesFaturaResponse>() {};
@@ -787,7 +798,8 @@ public class ContaApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<LimiteDisponibilidade> returnType = new GenericType<LimiteDisponibilidade>() {};
@@ -844,7 +856,8 @@ public class ContaApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<LinkTransferenciaBancariaResponse> returnType = new GenericType<LinkTransferenciaBancariaResponse>() {};
@@ -898,7 +911,8 @@ public class ContaApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<PageTransferencias> returnType = new GenericType<PageTransferencias>() {};
@@ -945,7 +959,8 @@ public class ContaApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<ContaDetalheResponse> returnType = new GenericType<ContaDetalheResponse>() {};
@@ -992,7 +1007,8 @@ public class ContaApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<Object> returnType = new GenericType<Object>() {};
@@ -1061,7 +1077,8 @@ public class ContaApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<BoletoDeFatura> returnType = new GenericType<BoletoDeFatura>() {};
@@ -1118,7 +1135,8 @@ public class ContaApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<CartaoImpressao> returnType = new GenericType<CartaoImpressao>() {};
@@ -1174,7 +1192,8 @@ public class ContaApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<PageFaturasConsignadas> returnType = new GenericType<PageFaturasConsignadas>() {};
@@ -1230,7 +1249,8 @@ public class ContaApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<PageFaturas> returnType = new GenericType<PageFaturas>() {};
@@ -1283,7 +1303,8 @@ public class ContaApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<PageHistoricoEventos> returnType = new GenericType<PageHistoricoEventos>() {};
@@ -1336,7 +1357,8 @@ public class ContaApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<LinkPageHistoricoAssessoriaResponse> returnType = new GenericType<LinkPageHistoricoAssessoriaResponse>() {};
@@ -1383,7 +1405,8 @@ public class ContaApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<PageHistoricoAtraso> returnType = new GenericType<PageHistoricoAtraso>() {};
@@ -1436,7 +1459,8 @@ public class ContaApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<PageTransacoesCorrentes> returnType = new GenericType<PageTransacoesCorrentes>() {};
@@ -1492,7 +1516,8 @@ public class ContaApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<PageTransacoesCorrentes> returnType = new GenericType<PageTransacoesCorrentes>() {};
@@ -1548,7 +1573,8 @@ public class ContaApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<LinkPageTransferenciaBancariaResponse> returnType = new GenericType<LinkPageTransferenciaBancariaResponse>() {};
@@ -1616,7 +1642,8 @@ public class ContaApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<PageTransferencias> returnType = new GenericType<PageTransferencias>() {};
@@ -1689,7 +1716,8 @@ public class ContaApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<PageContas> returnType = new GenericType<PageContas>() {};
@@ -1736,7 +1764,8 @@ public class ContaApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<Object> returnType = new GenericType<Object>() {};
@@ -1789,7 +1818,8 @@ public class ContaApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<PageTransacaoResponse> returnType = new GenericType<PageTransacaoResponse>() {};
@@ -1842,7 +1872,8 @@ public class ContaApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<LinkTransferenciaBancariaResponse> returnType = new GenericType<LinkTransferenciaBancariaResponse>() {};
@@ -1905,7 +1936,8 @@ public class ContaApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {"client_id",  };
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
 
     
     GenericType<PageTransferencias> returnType = new GenericType<PageTransferencias>() {};
