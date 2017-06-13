@@ -4,7 +4,6 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.Date;
 
 
 
@@ -23,12 +22,12 @@ public class Pessoa   {
   private String tipo = null;
   private String cpf = null;
   private String cnpj = null;
-  private Date dataNascimento = null;
+  private String dataNascimento = null;
   private String numeroIdentidade = null;
   private String orgaoExpedidorIdentidade = null;
   private String sexo = null;
   private String unidadeFederativaIdentidade = null;
-  private Date dataEmissaoIdentidade = null;
+  private String dataEmissaoIdentidade = null;
 
   
   /**
@@ -124,17 +123,17 @@ public class Pessoa   {
   /**
    * Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
    **/
-  public Pessoa dataNascimento(Date dataNascimento) {
+  public Pessoa dataNascimento(String dataNascimento) {
     this.dataNascimento = dataNascimento;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.")
   @JsonProperty("dataNascimento")
-  public Date getDataNascimento() {
+  public String getDataNascimento() {
     return dataNascimento;
   }
-  public void setDataNascimento(Date dataNascimento) {
+  public void setDataNascimento(String dataNascimento) {
     this.dataNascimento = dataNascimento;
   }
 
@@ -214,17 +213,17 @@ public class Pessoa   {
   /**
    * Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
    **/
-  public Pessoa dataEmissaoIdentidade(Date dataEmissaoIdentidade) {
+  public Pessoa dataEmissaoIdentidade(String dataEmissaoIdentidade) {
     this.dataEmissaoIdentidade = dataEmissaoIdentidade;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd")
   @JsonProperty("dataEmissaoIdentidade")
-  public Date getDataEmissaoIdentidade() {
+  public String getDataEmissaoIdentidade() {
     return dataEmissaoIdentidade;
   }
-  public void setDataEmissaoIdentidade(Date dataEmissaoIdentidade) {
+  public void setDataEmissaoIdentidade(String dataEmissaoIdentidade) {
     this.dataEmissaoIdentidade = dataEmissaoIdentidade;
   }
 

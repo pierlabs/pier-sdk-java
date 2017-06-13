@@ -6,7 +6,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 
@@ -21,9 +20,9 @@ import java.util.List;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class BoletoDeFatura   {
   
-  private Date dataProcessamento = null;
-  private Date dataDocumento = null;
-  private Date dataVencimento = null;
+  private String dataProcessamento = null;
+  private String dataDocumento = null;
+  private String dataVencimento = null;
   private BigDecimal valorBoleto = null;
   private String numeroDoDocumento = null;
   private String nomeBeneficiario = null;
@@ -55,17 +54,17 @@ public class BoletoDeFatura   {
   /**
    * Data do processamento (emiss\u00C3\u00A3o ou faturamento) do boleto
    **/
-  public BoletoDeFatura dataProcessamento(Date dataProcessamento) {
+  public BoletoDeFatura dataProcessamento(String dataProcessamento) {
     this.dataProcessamento = dataProcessamento;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Data do processamento (emiss\u00C3\u00A3o ou faturamento) do boleto")
   @JsonProperty("dataProcessamento")
-  public Date getDataProcessamento() {
+  public String getDataProcessamento() {
     return dataProcessamento;
   }
-  public void setDataProcessamento(Date dataProcessamento) {
+  public void setDataProcessamento(String dataProcessamento) {
     this.dataProcessamento = dataProcessamento;
   }
 
@@ -73,17 +72,17 @@ public class BoletoDeFatura   {
   /**
    * Data do documento (impress\u00C3\u00A3o)
    **/
-  public BoletoDeFatura dataDocumento(Date dataDocumento) {
+  public BoletoDeFatura dataDocumento(String dataDocumento) {
     this.dataDocumento = dataDocumento;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Data do documento (impress\u00C3\u00A3o)")
   @JsonProperty("dataDocumento")
-  public Date getDataDocumento() {
+  public String getDataDocumento() {
     return dataDocumento;
   }
-  public void setDataDocumento(Date dataDocumento) {
+  public void setDataDocumento(String dataDocumento) {
     this.dataDocumento = dataDocumento;
   }
 
@@ -91,29 +90,30 @@ public class BoletoDeFatura   {
   /**
    * Data do vencimento
    **/
-  public BoletoDeFatura dataVencimento(Date dataVencimento) {
+  public BoletoDeFatura dataVencimento(String dataVencimento) {
     this.dataVencimento = dataVencimento;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Data do vencimento")
   @JsonProperty("dataVencimento")
-  public Date getDataVencimento() {
+  public String getDataVencimento() {
     return dataVencimento;
   }
-  public void setDataVencimento(Date dataVencimento) {
+  public void setDataVencimento(String dataVencimento) {
     this.dataVencimento = dataVencimento;
   }
 
   
   /**
+   * Valor do Boleto.
    **/
   public BoletoDeFatura valorBoleto(BigDecimal valorBoleto) {
     this.valorBoleto = valorBoleto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(example = "null", value = "Valor do Boleto.")
   @JsonProperty("valorBoleto")
   public BigDecimal getValorBoleto() {
     return valorBoleto;
@@ -160,14 +160,14 @@ public class BoletoDeFatura   {
 
   
   /**
-   * Ag\u00C3\u00AAncia
+   * Ag\u00C3\u00AAncia.
    **/
   public BoletoDeFatura agencia(String agencia) {
     this.agencia = agencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Ag\u00C3\u00AAncia")
+  @ApiModelProperty(example = "null", value = "Ag\u00C3\u00AAncia.")
   @JsonProperty("agencia")
   public String getAgencia() {
     return agencia;
@@ -412,13 +412,14 @@ public class BoletoDeFatura   {
 
   
   /**
+   * Documento do Beneficiario.
    **/
   public BoletoDeFatura documentoBeneficiario(String documentoBeneficiario) {
     this.documentoBeneficiario = documentoBeneficiario;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(example = "null", value = "Documento do Beneficiario.")
   @JsonProperty("documentoBeneficiario")
   public String getDocumentoBeneficiario() {
     return documentoBeneficiario;

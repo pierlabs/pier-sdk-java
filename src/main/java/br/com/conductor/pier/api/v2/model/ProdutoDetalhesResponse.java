@@ -22,6 +22,7 @@ public class ProdutoDetalhesResponse   {
   private Integer status = null;
   private Long idFantasiaBasica = null;
   private String fantasiaBasica = null;
+  private Boolean usoExterior = null;
 
   
   /**
@@ -114,6 +115,24 @@ public class ProdutoDetalhesResponse   {
   }
 
   
+  /**
+   * Par\u00C3\u00A2metro que indica se o produto est\u00C3\u00A1 habilitado para compras no exterior.
+   **/
+  public ProdutoDetalhesResponse usoExterior(Boolean usoExterior) {
+    this.usoExterior = usoExterior;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "Par\u00C3\u00A2metro que indica se o produto est\u00C3\u00A1 habilitado para compras no exterior.")
+  @JsonProperty("usoExterior")
+  public Boolean getUsoExterior() {
+    return usoExterior;
+  }
+  public void setUsoExterior(Boolean usoExterior) {
+    this.usoExterior = usoExterior;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -128,12 +147,13 @@ public class ProdutoDetalhesResponse   {
         Objects.equals(this.nome, produtoDetalhesResponse.nome) &&
         Objects.equals(this.status, produtoDetalhesResponse.status) &&
         Objects.equals(this.idFantasiaBasica, produtoDetalhesResponse.idFantasiaBasica) &&
-        Objects.equals(this.fantasiaBasica, produtoDetalhesResponse.fantasiaBasica);
+        Objects.equals(this.fantasiaBasica, produtoDetalhesResponse.fantasiaBasica) &&
+        Objects.equals(this.usoExterior, produtoDetalhesResponse.usoExterior);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, nome, status, idFantasiaBasica, fantasiaBasica);
+    return Objects.hash(id, nome, status, idFantasiaBasica, fantasiaBasica, usoExterior);
   }
 
   @Override
@@ -146,6 +166,7 @@ public class ProdutoDetalhesResponse   {
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    idFantasiaBasica: ").append(toIndentedString(idFantasiaBasica)).append("\n");
     sb.append("    fantasiaBasica: ").append(toIndentedString(fantasiaBasica)).append("\n");
+    sb.append("    usoExterior: ").append(toIndentedString(usoExterior)).append("\n");
     sb.append("}");
     return sb.toString();
   }

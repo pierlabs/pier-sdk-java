@@ -4,7 +4,6 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.Date;
 
 
 
@@ -18,24 +17,24 @@ import java.util.Date;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class HistoricoAtrasoFaturaResponse   {
   
-  private Date dataVencimento = null;
+  private String dataVencimento = null;
   private Long diasPagamentoAposVencimento = null;
 
   
   /**
    * Data vencimento fatura.
    **/
-  public HistoricoAtrasoFaturaResponse dataVencimento(Date dataVencimento) {
+  public HistoricoAtrasoFaturaResponse dataVencimento(String dataVencimento) {
     this.dataVencimento = dataVencimento;
     return this;
   }
   
   @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data vencimento fatura.")
   @JsonProperty("dataVencimento")
-  public Date getDataVencimento() {
+  public String getDataVencimento() {
     return dataVencimento;
   }
-  public void setDataVencimento(Date dataVencimento) {
+  public void setDataVencimento(String dataVencimento) {
     this.dataVencimento = dataVencimento;
   }
 

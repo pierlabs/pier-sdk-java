@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
-import java.util.Date;
 
 
 
@@ -20,7 +19,7 @@ import java.util.Date;
 public class Transferencia   {
   
   private Long id = null;
-  private Date dataTransferencia = null;
+  private String dataTransferencia = null;
   private Long idContaOrigem = null;
   private String nomePessoaOrigem = null;
   private Long idContaDestino = null;
@@ -50,17 +49,17 @@ public class Transferencia   {
   /**
    * Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
    **/
-  public Transferencia dataTransferencia(Date dataTransferencia) {
+  public Transferencia dataTransferencia(String dataTransferencia) {
     this.dataTransferencia = dataTransferencia;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.")
   @JsonProperty("dataTransferencia")
-  public Date getDataTransferencia() {
+  public String getDataTransferencia() {
     return dataTransferencia;
   }
-  public void setDataTransferencia(Date dataTransferencia) {
+  public void setDataTransferencia(String dataTransferencia) {
     this.dataTransferencia = dataTransferencia;
   }
 

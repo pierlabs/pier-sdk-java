@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
-import java.util.Date;
 
 
 
@@ -19,9 +18,9 @@ import java.util.Date;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TransferenciaBancariaPersist   {
   
-  private Date dataCompra = null;
-  private Date proximoVencimentoPadrao = null;
-  private Date proximoVencimentoReal = null;
+  private String dataCompra = null;
+  private String proximoVencimentoPadrao = null;
+  private String proximoVencimentoReal = null;
   private BigDecimal valorCompra = null;
   private String nomeFavorecido = null;
   private String documentoFavorecido = null;
@@ -36,17 +35,17 @@ public class TransferenciaBancariaPersist   {
   /**
    * Data da transfer\u00C3\u00AAncia
    **/
-  public TransferenciaBancariaPersist dataCompra(Date dataCompra) {
+  public TransferenciaBancariaPersist dataCompra(String dataCompra) {
     this.dataCompra = dataCompra;
     return this;
   }
   
   @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ", required = true, value = "Data da transfer\u00C3\u00AAncia")
   @JsonProperty("dataCompra")
-  public Date getDataCompra() {
+  public String getDataCompra() {
     return dataCompra;
   }
-  public void setDataCompra(Date dataCompra) {
+  public void setDataCompra(String dataCompra) {
     this.dataCompra = dataCompra;
   }
 
@@ -54,17 +53,17 @@ public class TransferenciaBancariaPersist   {
   /**
    * Dia do vencimento padr\u00C3\u00A3o da fatura
    **/
-  public TransferenciaBancariaPersist proximoVencimentoPadrao(Date proximoVencimentoPadrao) {
+  public TransferenciaBancariaPersist proximoVencimentoPadrao(String proximoVencimentoPadrao) {
     this.proximoVencimentoPadrao = proximoVencimentoPadrao;
     return this;
   }
   
   @ApiModelProperty(example = "null", required = true, value = "Dia do vencimento padr\u00C3\u00A3o da fatura")
   @JsonProperty("proximoVencimentoPadrao")
-  public Date getProximoVencimentoPadrao() {
+  public String getProximoVencimentoPadrao() {
     return proximoVencimentoPadrao;
   }
-  public void setProximoVencimentoPadrao(Date proximoVencimentoPadrao) {
+  public void setProximoVencimentoPadrao(String proximoVencimentoPadrao) {
     this.proximoVencimentoPadrao = proximoVencimentoPadrao;
   }
 
@@ -72,17 +71,17 @@ public class TransferenciaBancariaPersist   {
   /**
    * Data do vencimento real da fatura
    **/
-  public TransferenciaBancariaPersist proximoVencimentoReal(Date proximoVencimentoReal) {
+  public TransferenciaBancariaPersist proximoVencimentoReal(String proximoVencimentoReal) {
     this.proximoVencimentoReal = proximoVencimentoReal;
     return this;
   }
   
   @ApiModelProperty(example = "null", required = true, value = "Data do vencimento real da fatura")
   @JsonProperty("proximoVencimentoReal")
-  public Date getProximoVencimentoReal() {
+  public String getProximoVencimentoReal() {
     return proximoVencimentoReal;
   }
-  public void setProximoVencimentoReal(Date proximoVencimentoReal) {
+  public void setProximoVencimentoReal(String proximoVencimentoReal) {
     this.proximoVencimentoReal = proximoVencimentoReal;
   }
 

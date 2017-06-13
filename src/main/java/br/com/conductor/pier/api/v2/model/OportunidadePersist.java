@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 
@@ -24,8 +23,8 @@ public class OportunidadePersist   {
   private Long idTipoOportunidade = null;
   private Long idStatusOportunidade = null;
   private String numeroReceitaFederal = null;
-  private Date dataInicioVigencia = null;
-  private Date dataFimVigencia = null;
+  private String dataInicioVigencia = null;
+  private String dataFimVigencia = null;
   private Boolean flagAtivo = null;
   private List<DetalheOportunidadePersist> detalhes = new ArrayList<DetalheOportunidadePersist>();
 
@@ -87,17 +86,17 @@ public class OportunidadePersist   {
   /**
    * Date de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
    **/
-  public OportunidadePersist dataInicioVigencia(Date dataInicioVigencia) {
+  public OportunidadePersist dataInicioVigencia(String dataInicioVigencia) {
     this.dataInicioVigencia = dataInicioVigencia;
     return this;
   }
   
   @ApiModelProperty(example = "null", required = true, value = "Date de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade")
   @JsonProperty("dataInicioVigencia")
-  public Date getDataInicioVigencia() {
+  public String getDataInicioVigencia() {
     return dataInicioVigencia;
   }
-  public void setDataInicioVigencia(Date dataInicioVigencia) {
+  public void setDataInicioVigencia(String dataInicioVigencia) {
     this.dataInicioVigencia = dataInicioVigencia;
   }
 
@@ -105,17 +104,17 @@ public class OportunidadePersist   {
   /**
    * Data do fim da vig\u00C3\u00AAncia da oportunidade
    **/
-  public OportunidadePersist dataFimVigencia(Date dataFimVigencia) {
+  public OportunidadePersist dataFimVigencia(String dataFimVigencia) {
     this.dataFimVigencia = dataFimVigencia;
     return this;
   }
   
   @ApiModelProperty(example = "null", required = true, value = "Data do fim da vig\u00C3\u00AAncia da oportunidade")
   @JsonProperty("dataFimVigencia")
-  public Date getDataFimVigencia() {
+  public String getDataFimVigencia() {
     return dataFimVigencia;
   }
-  public void setDataFimVigencia(Date dataFimVigencia) {
+  public void setDataFimVigencia(String dataFimVigencia) {
     this.dataFimVigencia = dataFimVigencia;
   }
 

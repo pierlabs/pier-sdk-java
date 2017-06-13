@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
-import java.util.Date;
 
 
 
@@ -25,7 +24,7 @@ public class TransacaoOnUsRequest   {
   private String numeroRealCartao = null;
   private String dataValidadeCartao = null;
   private Long numeroEstabelecimento = null;
-  private Date dataHoraTerminal = null;
+  private String dataHoraTerminal = null;
   private String terminalRequisitante = null;
 
   
@@ -37,7 +36,7 @@ public class TransacaoOnUsRequest   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.")
+  @ApiModelProperty(example = "null", required = true, value = "N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.")
   @JsonProperty("nsuOrigem")
   public String getNsuOrigem() {
     return nsuOrigem;
@@ -55,7 +54,7 @@ public class TransacaoOnUsRequest   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.")
   @JsonProperty("codigoProcessamento")
   public String getCodigoProcessamento() {
     return codigoProcessamento;
@@ -73,7 +72,7 @@ public class TransacaoOnUsRequest   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos.")
+  @ApiModelProperty(example = "10.25", required = true, value = "Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos.")
   @JsonProperty("valorTransacao")
   public BigDecimal getValorTransacao() {
     return valorTransacao;
@@ -91,7 +90,7 @@ public class TransacaoOnUsRequest   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero Real do Cart\u00C3\u00A3o.")
+  @ApiModelProperty(example = "null", required = true, value = "N\u00C3\u00BAmero Real do Cart\u00C3\u00A3o.")
   @JsonProperty("numeroRealCartao")
   public String getNumeroRealCartao() {
     return numeroRealCartao;
@@ -109,7 +108,7 @@ public class TransacaoOnUsRequest   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM")
+  @ApiModelProperty(example = "null", required = true, value = "Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM")
   @JsonProperty("dataValidadeCartao")
   public String getDataValidadeCartao() {
     return dataValidadeCartao;
@@ -127,7 +126,7 @@ public class TransacaoOnUsRequest   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV).")
+  @ApiModelProperty(example = "null", required = true, value = "N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV).")
   @JsonProperty("numeroEstabelecimento")
   public Long getNumeroEstabelecimento() {
     return numeroEstabelecimento;
@@ -140,17 +139,17 @@ public class TransacaoOnUsRequest   {
   /**
    * Apresenta a data e hora local da consulta yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
    **/
-  public TransacaoOnUsRequest dataHoraTerminal(Date dataHoraTerminal) {
+  public TransacaoOnUsRequest dataHoraTerminal(String dataHoraTerminal) {
     this.dataHoraTerminal = dataHoraTerminal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta a data e hora local da consulta yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00")
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta a data e hora local da consulta yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00")
   @JsonProperty("dataHoraTerminal")
-  public Date getDataHoraTerminal() {
+  public String getDataHoraTerminal() {
     return dataHoraTerminal;
   }
-  public void setDataHoraTerminal(Date dataHoraTerminal) {
+  public void setDataHoraTerminal(String dataHoraTerminal) {
     this.dataHoraTerminal = dataHoraTerminal;
   }
 
@@ -163,7 +162,7 @@ public class TransacaoOnUsRequest   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante")
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante")
   @JsonProperty("terminalRequisitante")
   public String getTerminalRequisitante() {
     return terminalRequisitante;

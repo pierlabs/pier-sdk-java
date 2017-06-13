@@ -13,8 +13,8 @@ import br.com.conductor.pier.api.v2.model.DadosCarto;
 import br.com.conductor.pier.api.v2.model.LimiteDisponibilidade;
 import br.com.conductor.pier.api.v2.model.LoteCartoesPrePagos;
 import br.com.conductor.pier.api.v2.model.Portador;
+import br.com.conductor.pier.api.v2.model.CartaoDetalhado;
 import br.com.conductor.pier.api.v2.model.PageLoteCartoesPrePagosResponse;
-import java.util.Date;
 import br.com.conductor.pier.api.v2.model.PageCartoes;
 import br.com.conductor.pier.api.v2.model.ValidaCartao;
 import br.com.conductor.pier.api.v2.model.ValidaSenhaCartao;
@@ -343,12 +343,12 @@ public class CartaoApi {
    * @param id id
    * @return DadosCarto
    */
-  public DadosCarto consultarDadosCartaoUsingGET(Long id) throws ApiException {
+  public DadosCarto consultarDadosReaisCartaoUsingGET(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarDadosCartaoUsingGET");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarDadosReaisCartaoUsingGET");
      }
      
     // create path and map variables
@@ -533,14 +533,14 @@ public class CartaoApi {
    * Apresenta os dados de um determinado Cart\u00C3\u00A3o
    * Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es b\u00C3\u00A1sicas de um determinado Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-   * @return Cartao
+   * @return CartaoDetalhado
    */
-  public Cartao consultarUsingGET2(Long id) throws ApiException {
+  public CartaoDetalhado consultarUsingGET3(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET2");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET3");
      }
      
     // create path and map variables
@@ -572,7 +572,7 @@ public class CartaoApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<Cartao> returnType = new GenericType<Cartao>() {};
+    GenericType<CartaoDetalhado> returnType = new GenericType<CartaoDetalhado>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -784,7 +784,7 @@ public class CartaoApi {
    * Permite listar os Lotes de Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pago
    * Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es pr\u00C3\u00A9-pagos existentes na base do emissor.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param idOrigemComercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id).
    * @param idProduto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
    * @param idTipoCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Cart\u00C3\u00A3o (id).
@@ -796,7 +796,7 @@ public class CartaoApi {
    * @param statusProcessamento Indica o Status de Processamento do Lote.
    * @return PageLoteCartoesPrePagosResponse
    */
-  public PageLoteCartoesPrePagosResponse listarLotesCartoesPrePagosUsingGET(Integer page, Integer limit, Long idOrigemComercial, Long idProduto, Long idTipoCartao, Long idImagem, Long idEndereco, Integer quantidadeCartoes, Date dataCadastro, String usuarioCadastro, Integer statusProcessamento) throws ApiException {
+  public PageLoteCartoesPrePagosResponse listarLotesCartoesPrePagosUsingGET(Integer page, Integer limit, Long idOrigemComercial, Long idProduto, Long idTipoCartao, Long idImagem, Long idEndereco, Integer quantidadeCartoes, String dataCadastro, String usuarioCadastro, Integer statusProcessamento) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -858,7 +858,7 @@ public class CartaoApi {
    * Lista os Cart\u00C3\u00B5es gerados pelo Emissor
    * Este m\u00C3\u00A9todo permite que sejam listados os cart\u00C3\u00B5es existentes na base do emissor.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param idStatusCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Cart\u00C3\u00A3o (id).
    * @param idEstagioCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
    * @param idConta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta a qual o cart\u00C3\u00A3o pertence (id).
@@ -879,7 +879,7 @@ public class CartaoApi {
    * @param sequencialCartao N\u00C3\u00BAmero sequencial do cart\u00C3\u00A3o
    * @return PageCartoes
    */
-  public PageCartoes listarUsingGET3(Integer page, Integer limit, Long idStatusCartao, Long idEstagioCartao, Long idConta, Long idPessoa, Long idProduto, String tipoPortador, String numeroCartao, String nomeImpresso, Date dataGeracao, Date dataStatusCartao, Date dataEstagioCartao, String dataValidade, Date dataImpressao, String arquivoImpressao, Integer flagImpressaoOrigemComercial, Integer flagProvisorio, String codigoDesbloqueio, Integer sequencialCartao) throws ApiException {
+  public PageCartoes listarUsingGET4(Integer page, Integer limit, Long idStatusCartao, Long idEstagioCartao, Long idConta, Long idPessoa, Long idProduto, String tipoPortador, String numeroCartao, String nomeImpresso, String dataGeracao, String dataStatusCartao, String dataEstagioCartao, String dataValidade, String dataImpressao, String arquivoImpressao, Integer flagImpressaoOrigemComercial, Integer flagProvisorio, String codigoDesbloqueio, Integer sequencialCartao) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

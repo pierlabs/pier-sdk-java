@@ -4,7 +4,6 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.Date;
 
 
 
@@ -20,7 +19,7 @@ public class TipoOportunidadeAUDResponse   {
   
   private Long rev = null;
   private Long revType = null;
-  private Date revDate = null;
+  private String revDate = null;
   private Long id = null;
   private String descricao = null;
   private Boolean flagAtivo = null;
@@ -65,17 +64,17 @@ public class TipoOportunidadeAUDResponse   {
   /**
    * Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
    **/
-  public TipoOportunidadeAUDResponse revDate(Date revDate) {
+  public TipoOportunidadeAUDResponse revDate(String revDate) {
     this.revDate = revDate;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades")
   @JsonProperty("revDate")
-  public Date getRevDate() {
+  public String getRevDate() {
     return revDate;
   }
-  public void setRevDate(Date revDate) {
+  public void setRevDate(String revDate) {
     this.revDate = revDate;
   }
 

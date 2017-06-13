@@ -4,7 +4,6 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.Date;
 
 
 
@@ -26,8 +25,8 @@ public class Portador   {
   private String nomeImpresso = null;
   private Long idTipoCartao = null;
   private Integer flagAtivo = null;
-  private Date dataCadastroPortador = null;
-  private Date dataCancelamentoPortador = null;
+  private String dataCadastroPortador = null;
+  private String dataCancelamentoPortador = null;
 
   
   /**
@@ -177,17 +176,17 @@ public class Portador   {
   /**
    * Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
    **/
-  public Portador dataCadastroPortador(Date dataCadastroPortador) {
+  public Portador dataCadastroPortador(String dataCadastroPortador) {
     this.dataCadastroPortador = dataCadastroPortador;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.")
   @JsonProperty("dataCadastroPortador")
-  public Date getDataCadastroPortador() {
+  public String getDataCadastroPortador() {
     return dataCadastroPortador;
   }
-  public void setDataCadastroPortador(Date dataCadastroPortador) {
+  public void setDataCadastroPortador(String dataCadastroPortador) {
     this.dataCadastroPortador = dataCadastroPortador;
   }
 
@@ -195,17 +194,17 @@ public class Portador   {
   /**
    * Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
    **/
-  public Portador dataCancelamentoPortador(Date dataCancelamentoPortador) {
+  public Portador dataCancelamentoPortador(String dataCancelamentoPortador) {
     this.dataCancelamentoPortador = dataCancelamentoPortador;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.")
   @JsonProperty("dataCancelamentoPortador")
-  public Date getDataCancelamentoPortador() {
+  public String getDataCancelamentoPortador() {
     return dataCancelamentoPortador;
   }
-  public void setDataCancelamentoPortador(Date dataCancelamentoPortador) {
+  public void setDataCancelamentoPortador(String dataCancelamentoPortador) {
     this.dataCancelamentoPortador = dataCancelamentoPortador;
   }
 

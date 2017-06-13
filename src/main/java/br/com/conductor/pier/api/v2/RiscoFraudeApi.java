@@ -10,7 +10,6 @@ import br.com.conductor.pier.api.v2.invoker.Pair;
 import br.com.conductor.pier.api.v2.model.AtendimentoCliente;
 import br.com.conductor.pier.api.v2.model.RiscoFraudeDetalhadoResponse;
 import br.com.conductor.pier.api.v2.model.PageAtendimentoClientes;
-import java.util.Date;
 import br.com.conductor.pier.api.v2.model.RiscoFraudeResponsePage;
 
 
@@ -97,12 +96,12 @@ public class RiscoFraudeApi {
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
    * @return RiscoFraudeDetalhadoResponse
    */
-  public RiscoFraudeDetalhadoResponse consultarUsingGET10(Long id) throws ApiException {
+  public RiscoFraudeDetalhadoResponse consultarUsingGET12(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET10");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET12");
      }
      
     // create path and map variables
@@ -190,14 +189,14 @@ public class RiscoFraudeApi {
    * Lista todos os atendimentos
    * Este m\u00C3\u00A9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param idTipoAtendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
    * @param idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
    * @param nomeAtendente Apresenta o nome do Atendente que registrou o Atendimento.
    * @param dataAtendimento Apresenta a data em que o Atendimento foi realizado.
    * @return PageAtendimentoClientes
    */
-  public PageAtendimentoClientes listarUsingGET1(Integer page, Integer limit, Long idTipoAtendimento, Long idConta, String nomeAtendente, Date dataAtendimento) throws ApiException {
+  public PageAtendimentoClientes listarUsingGET1(Integer page, Integer limit, Long idTipoAtendimento, Long idConta, String nomeAtendente, String dataAtendimento) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -251,20 +250,20 @@ public class RiscoFraudeApi {
    * @param idConta Id Conta
    * @param confirmacaoFraude Confirma\u00C3\u00A7\u00C3\u00A3o da fraude
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @return RiscoFraudeResponsePage
    */
-  public RiscoFraudeResponsePage listarUsingGET14(Long idConta, String confirmacaoFraude, Integer page, Integer limit) throws ApiException {
+  public RiscoFraudeResponsePage listarUsingGET18(Long idConta, String confirmacaoFraude, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idConta' is set
      if (idConta == null) {
-        throw new ApiException(400, "Missing the required parameter 'idConta' when calling listarUsingGET14");
+        throw new ApiException(400, "Missing the required parameter 'idConta' when calling listarUsingGET18");
      }
      
      // verify the required parameter 'confirmacaoFraude' is set
      if (confirmacaoFraude == null) {
-        throw new ApiException(400, "Missing the required parameter 'confirmacaoFraude' when calling listarUsingGET14");
+        throw new ApiException(400, "Missing the required parameter 'confirmacaoFraude' when calling listarUsingGET18");
      }
      
     // create path and map variables
@@ -418,7 +417,7 @@ public class RiscoFraudeApi {
    * @param flagFilaFraude Flag fila fraude
    * @return AtendimentoCliente
    */
-  public AtendimentoCliente salvarUsingPOST1(Long idConta, String conteudoAtendimento, String detalhesAtendimento, String nomeAtendente, Date dataAtendimento, Date dataAgendamento, Date dataHoraInicioAtendimento, Date dataHoraFimAtendimento, Integer flagFilaFraude) throws ApiException {
+  public AtendimentoCliente salvarUsingPOST1(Long idConta, String conteudoAtendimento, String detalhesAtendimento, String nomeAtendente, String dataAtendimento, String dataAgendamento, String dataHoraInicioAtendimento, String dataHoraFimAtendimento, Integer flagFilaFraude) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

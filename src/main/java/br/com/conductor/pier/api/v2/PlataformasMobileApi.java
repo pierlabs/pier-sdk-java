@@ -100,11 +100,11 @@ public class PlataformasMobileApi {
    * Lista as plataformas mobile cadastradas
    * Este m\u00C3\u00A9todo permite que sejam listadas as plataformas mobile existentes na base do PIER.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param nome Nome da Plataforma Mobile
    * @return PagePlataformasMobile
    */
-  public PagePlataformasMobile listarUsingGET12(Integer page, Integer limit, String nome) throws ApiException {
+  public PagePlataformasMobile listarUsingGET15(Integer page, Integer limit, String nome) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -152,12 +152,12 @@ public class PlataformasMobileApi {
    * @param persist persist
    * @return PlataformaMobile
    */
-  public PlataformaMobile salvarUsingPOST8(PlataformaMobilePersist persist) throws ApiException {
+  public PlataformaMobile salvarUsingPOST9(PlataformaMobilePersist persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST8");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST9");
      }
      
     // create path and map variables

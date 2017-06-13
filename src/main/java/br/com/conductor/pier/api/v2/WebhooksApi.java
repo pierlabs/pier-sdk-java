@@ -110,12 +110,12 @@ public class WebhooksApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
    * @return WebHook
    */
-  public WebHook consultarUsingGET23(Long id) throws ApiException {
+  public WebHook consultarUsingGET26(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET23");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET26");
      }
      
     // create path and map variables
@@ -156,14 +156,14 @@ public class WebhooksApi {
    * Lista os Webhooks
    * Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param id Id do WebHook
    * @param tipoEvento TipoEvento a ser chamado pelo WebHook
    * @param metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
    * @param url URL que a ser consumida pelo WebHook
    * @return PageWebHooks
    */
-  public PageWebHooks listarUsingGET25(Integer page, Integer limit, Long id, String tipoEvento, String metodo, String url) throws ApiException {
+  public PageWebHooks listarUsingGET30(Integer page, Integer limit, Long id, String tipoEvento, String metodo, String url) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -218,17 +218,17 @@ public class WebhooksApi {
    * @param url URL que a ser consumida pelo WebHook
    * @return WebHook
    */
-  public WebHook salvarUsingPOST13(String tipoEvento, String url) throws ApiException {
+  public WebHook salvarUsingPOST14(String tipoEvento, String url) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'tipoEvento' is set
      if (tipoEvento == null) {
-        throw new ApiException(400, "Missing the required parameter 'tipoEvento' when calling salvarUsingPOST13");
+        throw new ApiException(400, "Missing the required parameter 'tipoEvento' when calling salvarUsingPOST14");
      }
      
      // verify the required parameter 'url' is set
      if (url == null) {
-        throw new ApiException(400, "Missing the required parameter 'url' when calling salvarUsingPOST13");
+        throw new ApiException(400, "Missing the required parameter 'url' when calling salvarUsingPOST14");
      }
      
     // create path and map variables

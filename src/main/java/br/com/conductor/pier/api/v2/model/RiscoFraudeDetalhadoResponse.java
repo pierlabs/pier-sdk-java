@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 
@@ -30,7 +29,7 @@ public class RiscoFraudeDetalhadoResponse   {
   private Long idCartao = null;
   private Long idProduto = null;
   private Long idTransacao = null;
-  private Date dataTransacao = null;
+  private String dataTransacao = null;
   private BigDecimal valorTransacao = null;
   private String codigoMoedaOrigem = null;
   private BigDecimal valorOrigem = null;
@@ -198,17 +197,17 @@ public class RiscoFraudeDetalhadoResponse   {
   /**
    * Data que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada
    **/
-  public RiscoFraudeDetalhadoResponse dataTransacao(Date dataTransacao) {
+  public RiscoFraudeDetalhadoResponse dataTransacao(String dataTransacao) {
     this.dataTransacao = dataTransacao;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Data que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada")
   @JsonProperty("dataTransacao")
-  public Date getDataTransacao() {
+  public String getDataTransacao() {
     return dataTransacao;
   }
-  public void setDataTransacao(Date dataTransacao) {
+  public void setDataTransacao(String dataTransacao) {
     this.dataTransacao = dataTransacao;
   }
 

@@ -4,7 +4,6 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.Date;
 
 
 
@@ -18,15 +17,36 @@ import java.util.Date;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class DadosCarto   {
   
+  private Integer flagVirtual = null;
   private String numeroCartao = null;
-  private Date dataValidade = null;
+  private String dataValidade = null;
   private String cvv2 = null;
   private String nomePlastico = null;
   private Long idConta = null;
   private Long idCartao = null;
-  private Long status = null;
-  private String statusDescricao = null;
-  private Integer flagProvisorio = null;
+  private Integer numeroAgencia = null;
+  private String numeroContaCorente = null;
+  private Long idStatusConta = null;
+  private String statusConta = null;
+  private Long idStatusCartao = null;
+  private String statusCartao = null;
+
+  
+  /**
+   **/
+  public DadosCarto flagVirtual(Integer flagVirtual) {
+    this.flagVirtual = flagVirtual;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("flagVirtual")
+  public Integer getFlagVirtual() {
+    return flagVirtual;
+  }
+  public void setFlagVirtual(Integer flagVirtual) {
+    this.flagVirtual = flagVirtual;
+  }
 
   
   /**
@@ -50,17 +70,17 @@ public class DadosCarto   {
   /**
    * Data de validade.
    **/
-  public DadosCarto dataValidade(Date dataValidade) {
+  public DadosCarto dataValidade(String dataValidade) {
     this.dataValidade = dataValidade;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Data de validade.")
   @JsonProperty("dataValidade")
-  public Date getDataValidade() {
+  public String getDataValidade() {
     return dataValidade;
   }
-  public void setDataValidade(Date dataValidade) {
+  public void setDataValidade(String dataValidade) {
     this.dataValidade = dataValidade;
   }
 
@@ -138,56 +158,110 @@ public class DadosCarto   {
 
   
   /**
+   * Apresenta o n\u00C3\u00BAmero da Ag\u00C3\u00AAncia a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+   **/
+  public DadosCarto numeroAgencia(Integer numeroAgencia) {
+    this.numeroAgencia = numeroAgencia;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Apresenta o n\u00C3\u00BAmero da Ag\u00C3\u00AAncia a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.")
+  @JsonProperty("numeroAgencia")
+  public Integer getNumeroAgencia() {
+    return numeroAgencia;
+  }
+  public void setNumeroAgencia(Integer numeroAgencia) {
+    this.numeroAgencia = numeroAgencia;
+  }
+
+  
+  /**
+   * Apresenta o n\u00C3\u00BAmero da Conta Corrente a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.
+   **/
+  public DadosCarto numeroContaCorente(String numeroContaCorente) {
+    this.numeroContaCorente = numeroContaCorente;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Apresenta o n\u00C3\u00BAmero da Conta Corrente a ser impresso no Cart\u00C3\u00A3o, quando aplic\u00C3\u00A1vel.")
+  @JsonProperty("numeroContaCorente")
+  public String getNumeroContaCorente() {
+    return numeroContaCorente;
+  }
+  public void setNumeroContaCorente(String numeroContaCorente) {
+    this.numeroContaCorente = numeroContaCorente;
+  }
+
+  
+  /**
    * Status da conta do portador.
    **/
-  public DadosCarto status(Long status) {
-    this.status = status;
+  public DadosCarto idStatusConta(Long idStatusConta) {
+    this.idStatusConta = idStatusConta;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Status da conta do portador.")
-  @JsonProperty("status")
-  public Long getStatus() {
-    return status;
+  @JsonProperty("idStatusConta")
+  public Long getIdStatusConta() {
+    return idStatusConta;
   }
-  public void setStatus(Long status) {
-    this.status = status;
+  public void setIdStatusConta(Long idStatusConta) {
+    this.idStatusConta = idStatusConta;
   }
 
   
   /**
    * Descri\u00C3\u00A7\u00C3\u00A3o do status da conta do portador.
    **/
-  public DadosCarto statusDescricao(String statusDescricao) {
-    this.statusDescricao = statusDescricao;
+  public DadosCarto statusConta(String statusConta) {
+    this.statusConta = statusConta;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o do status da conta do portador.")
-  @JsonProperty("statusDescricao")
-  public String getStatusDescricao() {
-    return statusDescricao;
+  @JsonProperty("statusConta")
+  public String getStatusConta() {
+    return statusConta;
   }
-  public void setStatusDescricao(String statusDescricao) {
-    this.statusDescricao = statusDescricao;
+  public void setStatusConta(String statusConta) {
+    this.statusConta = statusConta;
   }
 
   
   /**
-   * Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio.
+   * Status do cart\u00C3\u00A3o.
    **/
-  public DadosCarto flagProvisorio(Integer flagProvisorio) {
-    this.flagProvisorio = flagProvisorio;
+  public DadosCarto idStatusCartao(Long idStatusCartao) {
+    this.idStatusCartao = idStatusCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o cart\u00C3\u00A3o \u00C3\u00A9 provis\u00C3\u00B3rio.")
-  @JsonProperty("flagProvisorio")
-  public Integer getFlagProvisorio() {
-    return flagProvisorio;
+  @ApiModelProperty(example = "null", value = "Status do cart\u00C3\u00A3o.")
+  @JsonProperty("idStatusCartao")
+  public Long getIdStatusCartao() {
+    return idStatusCartao;
   }
-  public void setFlagProvisorio(Integer flagProvisorio) {
-    this.flagProvisorio = flagProvisorio;
+  public void setIdStatusCartao(Long idStatusCartao) {
+    this.idStatusCartao = idStatusCartao;
+  }
+
+  
+  /**
+   * Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o.
+   **/
+  public DadosCarto statusCartao(String statusCartao) {
+    this.statusCartao = statusCartao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o.")
+  @JsonProperty("statusCartao")
+  public String getStatusCartao() {
+    return statusCartao;
+  }
+  public void setStatusCartao(String statusCartao) {
+    this.statusCartao = statusCartao;
   }
 
   
@@ -201,20 +275,24 @@ public class DadosCarto   {
       return false;
     }
     DadosCarto dadosCarto = (DadosCarto) o;
-    return Objects.equals(this.numeroCartao, dadosCarto.numeroCartao) &&
+    return Objects.equals(this.flagVirtual, dadosCarto.flagVirtual) &&
+        Objects.equals(this.numeroCartao, dadosCarto.numeroCartao) &&
         Objects.equals(this.dataValidade, dadosCarto.dataValidade) &&
         Objects.equals(this.cvv2, dadosCarto.cvv2) &&
         Objects.equals(this.nomePlastico, dadosCarto.nomePlastico) &&
         Objects.equals(this.idConta, dadosCarto.idConta) &&
         Objects.equals(this.idCartao, dadosCarto.idCartao) &&
-        Objects.equals(this.status, dadosCarto.status) &&
-        Objects.equals(this.statusDescricao, dadosCarto.statusDescricao) &&
-        Objects.equals(this.flagProvisorio, dadosCarto.flagProvisorio);
+        Objects.equals(this.numeroAgencia, dadosCarto.numeroAgencia) &&
+        Objects.equals(this.numeroContaCorente, dadosCarto.numeroContaCorente) &&
+        Objects.equals(this.idStatusConta, dadosCarto.idStatusConta) &&
+        Objects.equals(this.statusConta, dadosCarto.statusConta) &&
+        Objects.equals(this.idStatusCartao, dadosCarto.idStatusCartao) &&
+        Objects.equals(this.statusCartao, dadosCarto.statusCartao);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(numeroCartao, dataValidade, cvv2, nomePlastico, idConta, idCartao, status, statusDescricao, flagProvisorio);
+    return Objects.hash(flagVirtual, numeroCartao, dataValidade, cvv2, nomePlastico, idConta, idCartao, numeroAgencia, numeroContaCorente, idStatusConta, statusConta, idStatusCartao, statusCartao);
   }
 
   @Override
@@ -222,15 +300,19 @@ public class DadosCarto   {
     StringBuilder sb = new StringBuilder();
     sb.append("class DadosCarto {\n");
     
+    sb.append("    flagVirtual: ").append(toIndentedString(flagVirtual)).append("\n");
     sb.append("    numeroCartao: ").append(toIndentedString(numeroCartao)).append("\n");
     sb.append("    dataValidade: ").append(toIndentedString(dataValidade)).append("\n");
     sb.append("    cvv2: ").append(toIndentedString(cvv2)).append("\n");
     sb.append("    nomePlastico: ").append(toIndentedString(nomePlastico)).append("\n");
     sb.append("    idConta: ").append(toIndentedString(idConta)).append("\n");
     sb.append("    idCartao: ").append(toIndentedString(idCartao)).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    statusDescricao: ").append(toIndentedString(statusDescricao)).append("\n");
-    sb.append("    flagProvisorio: ").append(toIndentedString(flagProvisorio)).append("\n");
+    sb.append("    numeroAgencia: ").append(toIndentedString(numeroAgencia)).append("\n");
+    sb.append("    numeroContaCorente: ").append(toIndentedString(numeroContaCorente)).append("\n");
+    sb.append("    idStatusConta: ").append(toIndentedString(idStatusConta)).append("\n");
+    sb.append("    statusConta: ").append(toIndentedString(statusConta)).append("\n");
+    sb.append("    idStatusCartao: ").append(toIndentedString(idStatusCartao)).append("\n");
+    sb.append("    statusCartao: ").append(toIndentedString(statusCartao)).append("\n");
     sb.append("}");
     return sb.toString();
   }

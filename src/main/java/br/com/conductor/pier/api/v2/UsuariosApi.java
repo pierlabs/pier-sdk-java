@@ -214,12 +214,12 @@ public class UsuariosApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
    * @return UsuarioResponse
    */
-  public UsuarioResponse consultarUsingGET22(Long id) throws ApiException {
+  public UsuarioResponse consultarUsingGET25(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET22");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET25");
      }
      
     // create path and map variables
@@ -308,14 +308,14 @@ public class UsuariosApi {
    * Lista os Usu\u00C3\u00A1rios cadastrados
    * Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param nome Nome do Usuario
    * @param cpf CPF do Usuario
    * @param email Email do Usuario
    * @param status Status do Usuario
    * @return PageUsuarios
    */
-  public PageUsuarios listarUsingGET24(Integer page, Integer limit, String nome, String cpf, String email, String status) throws ApiException {
+  public PageUsuarios listarUsingGET29(Integer page, Integer limit, String nome, String cpf, String email, String status) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -417,12 +417,12 @@ public class UsuariosApi {
    * @param persist persist
    * @return UsuarioResponse
    */
-  public UsuarioResponse salvarUsingPOST12(UsuarioPersist persist) throws ApiException {
+  public UsuarioResponse salvarUsingPOST13(UsuarioPersist persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST12");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST13");
      }
      
     // create path and map variables

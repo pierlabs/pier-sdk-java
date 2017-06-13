@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
-import java.util.Date;
 
 
 
@@ -31,11 +30,11 @@ public class ContaDetalheResponse   {
   private String statusConta = null;
   private Integer diaVencimento = null;
   private Integer melhorDiaCompra = null;
-  private Date dataStatusConta = null;
+  private String dataStatusConta = null;
   private BigDecimal valorRenda = null;
-  private Date dataCadastro = null;
-  private Date dataUltimaAlteracaoVencimento = null;
-  private Date dataHoraUltimaCompra = null;
+  private String dataCadastro = null;
+  private String dataUltimaAlteracaoVencimento = null;
+  private String dataHoraUltimaCompra = null;
   private Integer numeroAgencia = null;
   private String numeroContaCorrente = null;
   private String formaEnvioFatura = null;
@@ -266,17 +265,17 @@ public class ContaDetalheResponse   {
   /**
    * Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
    **/
-  public ContaDetalheResponse dataStatusConta(Date dataStatusConta) {
+  public ContaDetalheResponse dataStatusConta(String dataStatusConta) {
     this.dataStatusConta = dataStatusConta;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.")
   @JsonProperty("dataStatusConta")
-  public Date getDataStatusConta() {
+  public String getDataStatusConta() {
     return dataStatusConta;
   }
-  public void setDataStatusConta(Date dataStatusConta) {
+  public void setDataStatusConta(String dataStatusConta) {
     this.dataStatusConta = dataStatusConta;
   }
 
@@ -302,17 +301,17 @@ public class ContaDetalheResponse   {
   /**
    * Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
    **/
-  public ContaDetalheResponse dataCadastro(Date dataCadastro) {
+  public ContaDetalheResponse dataCadastro(String dataCadastro) {
     this.dataCadastro = dataCadastro;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Apresenta a data em que o cart\u00C3\u00A3o foi gerado.")
   @JsonProperty("dataCadastro")
-  public Date getDataCadastro() {
+  public String getDataCadastro() {
     return dataCadastro;
   }
-  public void setDataCadastro(Date dataCadastro) {
+  public void setDataCadastro(String dataCadastro) {
     this.dataCadastro = dataCadastro;
   }
 
@@ -320,17 +319,17 @@ public class ContaDetalheResponse   {
   /**
    * Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
    **/
-  public ContaDetalheResponse dataUltimaAlteracaoVencimento(Date dataUltimaAlteracaoVencimento) {
+  public ContaDetalheResponse dataUltimaAlteracaoVencimento(String dataUltimaAlteracaoVencimento) {
     this.dataUltimaAlteracaoVencimento = dataUltimaAlteracaoVencimento;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.")
   @JsonProperty("dataUltimaAlteracaoVencimento")
-  public Date getDataUltimaAlteracaoVencimento() {
+  public String getDataUltimaAlteracaoVencimento() {
     return dataUltimaAlteracaoVencimento;
   }
-  public void setDataUltimaAlteracaoVencimento(Date dataUltimaAlteracaoVencimento) {
+  public void setDataUltimaAlteracaoVencimento(String dataUltimaAlteracaoVencimento) {
     this.dataUltimaAlteracaoVencimento = dataUltimaAlteracaoVencimento;
   }
 
@@ -338,17 +337,17 @@ public class ContaDetalheResponse   {
   /**
    * Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
    **/
-  public ContaDetalheResponse dataHoraUltimaCompra(Date dataHoraUltimaCompra) {
+  public ContaDetalheResponse dataHoraUltimaCompra(String dataHoraUltimaCompra) {
     this.dataHoraUltimaCompra = dataHoraUltimaCompra;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.")
   @JsonProperty("dataHoraUltimaCompra")
-  public Date getDataHoraUltimaCompra() {
+  public String getDataHoraUltimaCompra() {
     return dataHoraUltimaCompra;
   }
-  public void setDataHoraUltimaCompra(Date dataHoraUltimaCompra) {
+  public void setDataHoraUltimaCompra(String dataHoraUltimaCompra) {
     this.dataHoraUltimaCompra = dataHoraUltimaCompra;
   }
 

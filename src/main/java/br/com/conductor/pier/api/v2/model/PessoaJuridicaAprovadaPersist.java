@@ -8,7 +8,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 
@@ -27,7 +26,7 @@ public class PessoaJuridicaAprovadaPersist   {
   private String nomeFantasia = null;
   private String cnpj = null;
   private String inscricaoEstadual = null;
-  private Date dataAberturaEmpresa = null;
+  private String dataAberturaEmpresa = null;
   private Long idOrigemComercial = null;
   private Long idProduto = null;
   private Integer numeroAgencia = null;
@@ -115,17 +114,17 @@ public class PessoaJuridicaAprovadaPersist   {
   /**
    * Data de abertura da empresa, essa data deve ser informada no formato: aaaa-MM-dd.
    **/
-  public PessoaJuridicaAprovadaPersist dataAberturaEmpresa(Date dataAberturaEmpresa) {
+  public PessoaJuridicaAprovadaPersist dataAberturaEmpresa(String dataAberturaEmpresa) {
     this.dataAberturaEmpresa = dataAberturaEmpresa;
     return this;
   }
   
   @ApiModelProperty(example = "null", required = true, value = "Data de abertura da empresa, essa data deve ser informada no formato: aaaa-MM-dd.")
   @JsonProperty("dataAberturaEmpresa")
-  public Date getDataAberturaEmpresa() {
+  public String getDataAberturaEmpresa() {
     return dataAberturaEmpresa;
   }
-  public void setDataAberturaEmpresa(Date dataAberturaEmpresa) {
+  public void setDataAberturaEmpresa(String dataAberturaEmpresa) {
     this.dataAberturaEmpresa = dataAberturaEmpresa;
   }
 

@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 
@@ -25,13 +24,13 @@ public class PessoaFisicaAprovadaResponse   {
   private Long id = null;
   private String nome = null;
   private String nomeMae = null;
-  private Date dataNascimento = null;
+  private String dataNascimento = null;
   private String sexo = null;
   private String cpf = null;
   private String numeroIdentidade = null;
   private String orgaoExpedidorIdentidade = null;
   private String unidadeFederativaIdentidade = null;
-  private Date dataEmissaoIdentidade = null;
+  private String dataEmissaoIdentidade = null;
   private Long idEstadoCivil = null;
   private String profissao = null;
   private Long idNaturezaOcupacao = null;
@@ -105,17 +104,17 @@ public class PessoaFisicaAprovadaResponse   {
   /**
    * Data de Nascimento da Pessoa. Essa data deve ser informada no formato aaaa-MM-dd.
    **/
-  public PessoaFisicaAprovadaResponse dataNascimento(Date dataNascimento) {
+  public PessoaFisicaAprovadaResponse dataNascimento(String dataNascimento) {
     this.dataNascimento = dataNascimento;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Data de Nascimento da Pessoa. Essa data deve ser informada no formato aaaa-MM-dd.")
   @JsonProperty("dataNascimento")
-  public Date getDataNascimento() {
+  public String getDataNascimento() {
     return dataNascimento;
   }
-  public void setDataNascimento(Date dataNascimento) {
+  public void setDataNascimento(String dataNascimento) {
     this.dataNascimento = dataNascimento;
   }
 
@@ -213,17 +212,17 @@ public class PessoaFisicaAprovadaResponse   {
   /**
    * Data emiss\u00C3\u00A3o da Identidade no formato aaaa-MM-dd
    **/
-  public PessoaFisicaAprovadaResponse dataEmissaoIdentidade(Date dataEmissaoIdentidade) {
+  public PessoaFisicaAprovadaResponse dataEmissaoIdentidade(String dataEmissaoIdentidade) {
     this.dataEmissaoIdentidade = dataEmissaoIdentidade;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Data emiss\u00C3\u00A3o da Identidade no formato aaaa-MM-dd")
   @JsonProperty("dataEmissaoIdentidade")
-  public Date getDataEmissaoIdentidade() {
+  public String getDataEmissaoIdentidade() {
     return dataEmissaoIdentidade;
   }
-  public void setDataEmissaoIdentidade(Date dataEmissaoIdentidade) {
+  public void setDataEmissaoIdentidade(String dataEmissaoIdentidade) {
     this.dataEmissaoIdentidade = dataEmissaoIdentidade;
   }
 

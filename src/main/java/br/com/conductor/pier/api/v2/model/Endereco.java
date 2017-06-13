@@ -4,7 +4,6 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.Date;
 
 
 
@@ -30,8 +29,8 @@ public class Endereco   {
   private String cidade = null;
   private String uf = null;
   private String pais = null;
-  private Date dataInclusao = null;
-  private Date dataUltimaAtualizacao = null;
+  private String dataInclusao = null;
+  private String dataUltimaAtualizacao = null;
 
   
   /**
@@ -253,17 +252,17 @@ public class Endereco   {
   /**
    * Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
    **/
-  public Endereco dataInclusao(Date dataInclusao) {
+  public Endereco dataInclusao(String dataInclusao) {
     this.dataInclusao = dataInclusao;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o")
   @JsonProperty("dataInclusao")
-  public Date getDataInclusao() {
+  public String getDataInclusao() {
     return dataInclusao;
   }
-  public void setDataInclusao(Date dataInclusao) {
+  public void setDataInclusao(String dataInclusao) {
     this.dataInclusao = dataInclusao;
   }
 
@@ -271,17 +270,17 @@ public class Endereco   {
   /**
    * Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
    **/
-  public Endereco dataUltimaAtualizacao(Date dataUltimaAtualizacao) {
+  public Endereco dataUltimaAtualizacao(String dataUltimaAtualizacao) {
     this.dataUltimaAtualizacao = dataUltimaAtualizacao;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao")
   @JsonProperty("dataUltimaAtualizacao")
-  public Date getDataUltimaAtualizacao() {
+  public String getDataUltimaAtualizacao() {
     return dataUltimaAtualizacao;
   }
-  public void setDataUltimaAtualizacao(Date dataUltimaAtualizacao) {
+  public void setDataUltimaAtualizacao(String dataUltimaAtualizacao) {
     this.dataUltimaAtualizacao = dataUltimaAtualizacao;
   }
 

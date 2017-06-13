@@ -18,7 +18,6 @@ import io.swagger.annotations.ApiModelProperty;
 public class AplicacaoMobilePersist   {
   
   private Long idPlataformaMobile = null;
-  private Long idEmissor = null;
   private String token = null;
   private String cor = null;
   private String som = null;
@@ -42,24 +41,6 @@ public class AplicacaoMobilePersist   {
   }
   public void setIdPlataformaMobile(Long idPlataformaMobile) {
     this.idPlataformaMobile = idPlataformaMobile;
-  }
-
-  
-  /**
-   * Apresenta o identificador do emissor.
-   **/
-  public AplicacaoMobilePersist idEmissor(Long idEmissor) {
-    this.idEmissor = idEmissor;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Apresenta o identificador do emissor.")
-  @JsonProperty("idEmissor")
-  public Long getIdEmissor() {
-    return idEmissor;
-  }
-  public void setIdEmissor(Long idEmissor) {
-    this.idEmissor = idEmissor;
   }
 
   
@@ -182,7 +163,6 @@ public class AplicacaoMobilePersist   {
     }
     AplicacaoMobilePersist aplicacaoMobilePersist = (AplicacaoMobilePersist) o;
     return Objects.equals(this.idPlataformaMobile, aplicacaoMobilePersist.idPlataformaMobile) &&
-        Objects.equals(this.idEmissor, aplicacaoMobilePersist.idEmissor) &&
         Objects.equals(this.token, aplicacaoMobilePersist.token) &&
         Objects.equals(this.cor, aplicacaoMobilePersist.cor) &&
         Objects.equals(this.som, aplicacaoMobilePersist.som) &&
@@ -193,7 +173,7 @@ public class AplicacaoMobilePersist   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(idPlataformaMobile, idEmissor, token, cor, som, icone, certificadoBase64, senha);
+    return Objects.hash(idPlataformaMobile, token, cor, som, icone, certificadoBase64, senha);
   }
 
   @Override
@@ -202,7 +182,6 @@ public class AplicacaoMobilePersist   {
     sb.append("class AplicacaoMobilePersist {\n");
     
     sb.append("    idPlataformaMobile: ").append(toIndentedString(idPlataformaMobile)).append("\n");
-    sb.append("    idEmissor: ").append(toIndentedString(idEmissor)).append("\n");
     sb.append("    token: ").append(toIndentedString(token)).append("\n");
     sb.append("    cor: ").append(toIndentedString(cor)).append("\n");
     sb.append("    som: ").append(toIndentedString(som)).append("\n");

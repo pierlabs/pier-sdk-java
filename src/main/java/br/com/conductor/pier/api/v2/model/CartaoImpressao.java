@@ -4,7 +4,6 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.Date;
 
 
 
@@ -18,6 +17,7 @@ import java.util.Date;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class CartaoImpressao   {
   
+  private Integer flagVirtual = null;
   private Long idConta = null;
   private Long idPessoa = null;
   private Long idCartao = null;
@@ -26,8 +26,8 @@ public class CartaoImpressao   {
   private String numeroCartao = null;
   private String nomePlastico = null;
   private String cvv2 = null;
-  private Date dataGeracao = null;
-  private Date dataValidade = null;
+  private String dataGeracao = null;
+  private String dataValidade = null;
   private String nomeOrigemComercial = null;
   private String nomeEmpresa = null;
   private Integer numeroAgencia = null;
@@ -40,6 +40,23 @@ public class CartaoImpressao   {
   private String trilha2 = null;
   private String trilhaCVV1 = null;
   private String trilhaCVV2 = null;
+
+  
+  /**
+   **/
+  public CartaoImpressao flagVirtual(Integer flagVirtual) {
+    this.flagVirtual = flagVirtual;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("flagVirtual")
+  public Integer getFlagVirtual() {
+    return flagVirtual;
+  }
+  public void setFlagVirtual(Integer flagVirtual) {
+    this.flagVirtual = flagVirtual;
+  }
 
   
   /**
@@ -189,17 +206,17 @@ public class CartaoImpressao   {
   /**
    * Apresenta a data de emiss\u00C3\u00A3o do Cart\u00C3\u00A3o.
    **/
-  public CartaoImpressao dataGeracao(Date dataGeracao) {
+  public CartaoImpressao dataGeracao(String dataGeracao) {
     this.dataGeracao = dataGeracao;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Apresenta a data de emiss\u00C3\u00A3o do Cart\u00C3\u00A3o.")
   @JsonProperty("dataGeracao")
-  public Date getDataGeracao() {
+  public String getDataGeracao() {
     return dataGeracao;
   }
-  public void setDataGeracao(Date dataGeracao) {
+  public void setDataGeracao(String dataGeracao) {
     this.dataGeracao = dataGeracao;
   }
 
@@ -207,17 +224,17 @@ public class CartaoImpressao   {
   /**
    * Apresenta a data de Validade do Cart\u00C3\u00A3o.
    **/
-  public CartaoImpressao dataValidade(Date dataValidade) {
+  public CartaoImpressao dataValidade(String dataValidade) {
     this.dataValidade = dataValidade;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Apresenta a data de Validade do Cart\u00C3\u00A3o.")
   @JsonProperty("dataValidade")
-  public Date getDataValidade() {
+  public String getDataValidade() {
     return dataValidade;
   }
-  public void setDataValidade(Date dataValidade) {
+  public void setDataValidade(String dataValidade) {
     this.dataValidade = dataValidade;
   }
 
@@ -448,7 +465,8 @@ public class CartaoImpressao   {
       return false;
     }
     CartaoImpressao cartaoImpressao = (CartaoImpressao) o;
-    return Objects.equals(this.idConta, cartaoImpressao.idConta) &&
+    return Objects.equals(this.flagVirtual, cartaoImpressao.flagVirtual) &&
+        Objects.equals(this.idConta, cartaoImpressao.idConta) &&
         Objects.equals(this.idPessoa, cartaoImpressao.idPessoa) &&
         Objects.equals(this.idCartao, cartaoImpressao.idCartao) &&
         Objects.equals(this.idBandeira, cartaoImpressao.idBandeira) &&
@@ -474,7 +492,7 @@ public class CartaoImpressao   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(idConta, idPessoa, idCartao, idBandeira, idTipoCartao, numeroCartao, nomePlastico, cvv2, dataGeracao, dataValidade, nomeOrigemComercial, nomeEmpresa, numeroAgencia, numeroContaCorente, nomeEmpresaBeneficio, cpf, tipoPortador, nomeEmpregador, trilha1, trilha2, trilhaCVV1, trilhaCVV2);
+    return Objects.hash(flagVirtual, idConta, idPessoa, idCartao, idBandeira, idTipoCartao, numeroCartao, nomePlastico, cvv2, dataGeracao, dataValidade, nomeOrigemComercial, nomeEmpresa, numeroAgencia, numeroContaCorente, nomeEmpresaBeneficio, cpf, tipoPortador, nomeEmpregador, trilha1, trilha2, trilhaCVV1, trilhaCVV2);
   }
 
   @Override
@@ -482,6 +500,7 @@ public class CartaoImpressao   {
     StringBuilder sb = new StringBuilder();
     sb.append("class CartaoImpressao {\n");
     
+    sb.append("    flagVirtual: ").append(toIndentedString(flagVirtual)).append("\n");
     sb.append("    idConta: ").append(toIndentedString(idConta)).append("\n");
     sb.append("    idPessoa: ").append(toIndentedString(idPessoa)).append("\n");
     sb.append("    idCartao: ").append(toIndentedString(idCartao)).append("\n");

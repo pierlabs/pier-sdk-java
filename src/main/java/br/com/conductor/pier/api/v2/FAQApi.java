@@ -191,12 +191,12 @@ public class FAQApi {
    * @param id Id
    * @return FAQ
    */
-  public FAQ consultarUsingGET6(Long id) throws ApiException {
+  public FAQ consultarUsingGET7(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET6");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET7");
      }
      
     // create path and map variables
@@ -237,7 +237,7 @@ public class FAQApi {
    * Lista FAQs
    * Lista todas as FAQs
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param idFaq C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id).
    * @param pergunta Conte\u00C3\u00BAdo da pergunta.
    * @param resposta Conte\u00C3\u00BAdo da resposta.
@@ -247,7 +247,7 @@ public class FAQApi {
    * @param status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
    * @return PageFaqs
    */
-  public PageFaqs listarUsingGET8(Integer page, Integer limit, Long idFaq, String pergunta, String resposta, Integer relevancia, String plataforma, String categoria, String status) throws ApiException {
+  public PageFaqs listarUsingGET10(Integer page, Integer limit, Long idFaq, String pergunta, String resposta, Integer relevancia, String plataforma, String categoria, String status) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

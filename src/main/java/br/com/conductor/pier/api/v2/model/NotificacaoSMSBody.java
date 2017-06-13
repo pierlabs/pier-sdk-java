@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.Date;
 
 
 
@@ -24,7 +23,7 @@ public class NotificacaoSMSBody   {
   private Long idConta = null;
   private String celular = null;
   private String conteudo = null;
-  private Date dataAgendamento = null;
+  private String dataAgendamento = null;
 
 
   public enum TipoEventoEnum {
@@ -140,17 +139,17 @@ public class NotificacaoSMSBody   {
   /**
    * Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o
    **/
-  public NotificacaoSMSBody dataAgendamento(Date dataAgendamento) {
+  public NotificacaoSMSBody dataAgendamento(String dataAgendamento) {
     this.dataAgendamento = dataAgendamento;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o")
   @JsonProperty("dataAgendamento")
-  public Date getDataAgendamento() {
+  public String getDataAgendamento() {
     return dataAgendamento;
   }
-  public void setDataAgendamento(Date dataAgendamento) {
+  public void setDataAgendamento(String dataAgendamento) {
     this.dataAgendamento = dataAgendamento;
   }
 

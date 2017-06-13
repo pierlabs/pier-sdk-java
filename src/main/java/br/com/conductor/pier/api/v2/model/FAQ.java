@@ -19,7 +19,6 @@ import io.swagger.annotations.ApiModelProperty;
 public class FAQ   {
   
   private Long id = null;
-  private Long idEmissor = null;
   private String pergunta = null;
   private String resposta = null;
   private Integer relevancia = null;
@@ -62,24 +61,6 @@ public class FAQ   {
   }
   public void setId(Long id) {
     this.id = id;
-  }
-
-  
-  /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Emissor de qual a FAQ \u00C3\u00A9 relacionada (id).
-   **/
-  public FAQ idEmissor(Long idEmissor) {
-    this.idEmissor = idEmissor;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Emissor de qual a FAQ \u00C3\u00A9 relacionada (id).")
-  @JsonProperty("idEmissor")
-  public Long getIdEmissor() {
-    return idEmissor;
-  }
-  public void setIdEmissor(Long idEmissor) {
-    this.idEmissor = idEmissor;
   }
 
   
@@ -202,7 +183,6 @@ public class FAQ   {
     }
     FAQ FAQ = (FAQ) o;
     return Objects.equals(this.id, FAQ.id) &&
-        Objects.equals(this.idEmissor, FAQ.idEmissor) &&
         Objects.equals(this.pergunta, FAQ.pergunta) &&
         Objects.equals(this.resposta, FAQ.resposta) &&
         Objects.equals(this.relevancia, FAQ.relevancia) &&
@@ -213,7 +193,7 @@ public class FAQ   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idEmissor, pergunta, resposta, relevancia, plataforma, categoria, status);
+    return Objects.hash(id, pergunta, resposta, relevancia, plataforma, categoria, status);
   }
 
   @Override
@@ -222,7 +202,6 @@ public class FAQ   {
     sb.append("class FAQ {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    idEmissor: ").append(toIndentedString(idEmissor)).append("\n");
     sb.append("    pergunta: ").append(toIndentedString(pergunta)).append("\n");
     sb.append("    resposta: ").append(toIndentedString(resposta)).append("\n");
     sb.append("    relevancia: ").append(toIndentedString(relevancia)).append("\n");

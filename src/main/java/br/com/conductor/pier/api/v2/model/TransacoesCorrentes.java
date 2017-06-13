@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
-import java.util.Date;
 
 
 
@@ -27,22 +26,24 @@ public class TransacoesCorrentes   {
   private Long idConta = null;
   private String cartaoMascarado = null;
   private String nomePortador = null;
-  private Date dataTransacaoUTC = null;
-  private Date dataFaturamento = null;
-  private Date dataVencimento = null;
+  private String dataTransacaoUTC = null;
+  private String dataFaturamento = null;
+  private String dataVencimento = null;
   private String modoEntradaTransacao = null;
   private BigDecimal valorTaxaEmbarque = null;
   private BigDecimal valorEntrada = null;
   private BigDecimal valorBRL = null;
   private BigDecimal valorUSD = null;
   private BigDecimal cotacaoUSD = null;
-  private Date dataCotacaoUSD = null;
+  private String dataCotacaoUSD = null;
   private String codigoMoedaOrigem = null;
   private String codigoMoedaDestino = null;
   private String codigoAutorizacao = null;
   private String codigoReferencia = null;
   private String codigoTerminal = null;
   private Long codigoMCC = null;
+  private Long grupoMCC = null;
+  private String grupoDescricaoMCC = null;
   private Long idEstabelecimento = null;
   private String nomeEstabelecimento = null;
   private String localidadeEstabelecimento = null;
@@ -202,17 +203,17 @@ public class TransacoesCorrentes   {
   /**
    * Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada sob o padr\u00C3\u00A3o de Tempo Universal Coordenado (UTC).
    **/
-  public TransacoesCorrentes dataTransacaoUTC(Date dataTransacaoUTC) {
+  public TransacoesCorrentes dataTransacaoUTC(String dataTransacaoUTC) {
     this.dataTransacaoUTC = dataTransacaoUTC;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada sob o padr\u00C3\u00A3o de Tempo Universal Coordenado (UTC).")
   @JsonProperty("dataTransacaoUTC")
-  public Date getDataTransacaoUTC() {
+  public String getDataTransacaoUTC() {
     return dataTransacaoUTC;
   }
-  public void setDataTransacaoUTC(Date dataTransacaoUTC) {
+  public void setDataTransacaoUTC(String dataTransacaoUTC) {
     this.dataTransacaoUTC = dataTransacaoUTC;
   }
 
@@ -220,17 +221,17 @@ public class TransacoesCorrentes   {
   /**
    * Data de Faturamento da Transa\u00C3\u00A7\u00C3\u00A3o.
    **/
-  public TransacoesCorrentes dataFaturamento(Date dataFaturamento) {
+  public TransacoesCorrentes dataFaturamento(String dataFaturamento) {
     this.dataFaturamento = dataFaturamento;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Data de Faturamento da Transa\u00C3\u00A7\u00C3\u00A3o.")
   @JsonProperty("dataFaturamento")
-  public Date getDataFaturamento() {
+  public String getDataFaturamento() {
     return dataFaturamento;
   }
-  public void setDataFaturamento(Date dataFaturamento) {
+  public void setDataFaturamento(String dataFaturamento) {
     this.dataFaturamento = dataFaturamento;
   }
 
@@ -238,17 +239,17 @@ public class TransacoesCorrentes   {
   /**
    * Data de Vencimento da Fatura.
    **/
-  public TransacoesCorrentes dataVencimento(Date dataVencimento) {
+  public TransacoesCorrentes dataVencimento(String dataVencimento) {
     this.dataVencimento = dataVencimento;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Data de Vencimento da Fatura.")
   @JsonProperty("dataVencimento")
-  public Date getDataVencimento() {
+  public String getDataVencimento() {
     return dataVencimento;
   }
-  public void setDataVencimento(Date dataVencimento) {
+  public void setDataVencimento(String dataVencimento) {
     this.dataVencimento = dataVencimento;
   }
 
@@ -364,17 +365,17 @@ public class TransacoesCorrentes   {
   /**
    * Data de Fechamento da Cota\u00C3\u00A7\u00C3\u00A3o do D\u00C3\u00B3lar Americano (USD).
    **/
-  public TransacoesCorrentes dataCotacaoUSD(Date dataCotacaoUSD) {
+  public TransacoesCorrentes dataCotacaoUSD(String dataCotacaoUSD) {
     this.dataCotacaoUSD = dataCotacaoUSD;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Data de Fechamento da Cota\u00C3\u00A7\u00C3\u00A3o do D\u00C3\u00B3lar Americano (USD).")
   @JsonProperty("dataCotacaoUSD")
-  public Date getDataCotacaoUSD() {
+  public String getDataCotacaoUSD() {
     return dataCotacaoUSD;
   }
-  public void setDataCotacaoUSD(Date dataCotacaoUSD) {
+  public void setDataCotacaoUSD(String dataCotacaoUSD) {
     this.dataCotacaoUSD = dataCotacaoUSD;
   }
 
@@ -484,6 +485,42 @@ public class TransacoesCorrentes   {
   }
   public void setCodigoMCC(Long codigoMCC) {
     this.codigoMCC = codigoMCC;
+  }
+
+  
+  /**
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo do Estabelecimento.
+   **/
+  public TransacoesCorrentes grupoMCC(Long grupoMCC) {
+    this.grupoMCC = grupoMCC;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo do Estabelecimento.")
+  @JsonProperty("grupoMCC")
+  public Long getGrupoMCC() {
+    return grupoMCC;
+  }
+  public void setGrupoMCC(Long grupoMCC) {
+    this.grupoMCC = grupoMCC;
+  }
+
+  
+  /**
+   * Descri\u00C3\u00A7\u00C3\u00A3o do grupo do Estabelecimento.
+   **/
+  public TransacoesCorrentes grupoDescricaoMCC(String grupoDescricaoMCC) {
+    this.grupoDescricaoMCC = grupoDescricaoMCC;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o do grupo do Estabelecimento.")
+  @JsonProperty("grupoDescricaoMCC")
+  public String getGrupoDescricaoMCC() {
+    return grupoDescricaoMCC;
+  }
+  public void setGrupoDescricaoMCC(String grupoDescricaoMCC) {
+    this.grupoDescricaoMCC = grupoDescricaoMCC;
   }
 
   
@@ -701,6 +738,8 @@ public class TransacoesCorrentes   {
         Objects.equals(this.codigoReferencia, transacoesCorrentes.codigoReferencia) &&
         Objects.equals(this.codigoTerminal, transacoesCorrentes.codigoTerminal) &&
         Objects.equals(this.codigoMCC, transacoesCorrentes.codigoMCC) &&
+        Objects.equals(this.grupoMCC, transacoesCorrentes.grupoMCC) &&
+        Objects.equals(this.grupoDescricaoMCC, transacoesCorrentes.grupoDescricaoMCC) &&
         Objects.equals(this.idEstabelecimento, transacoesCorrentes.idEstabelecimento) &&
         Objects.equals(this.nomeEstabelecimento, transacoesCorrentes.nomeEstabelecimento) &&
         Objects.equals(this.localidadeEstabelecimento, transacoesCorrentes.localidadeEstabelecimento) &&
@@ -715,7 +754,7 @@ public class TransacoesCorrentes   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, tipoTransacao, statusTransacao, idEvento, tipoEvento, idConta, cartaoMascarado, nomePortador, dataTransacaoUTC, dataFaturamento, dataVencimento, modoEntradaTransacao, valorTaxaEmbarque, valorEntrada, valorBRL, valorUSD, cotacaoUSD, dataCotacaoUSD, codigoMoedaOrigem, codigoMoedaDestino, codigoAutorizacao, codigoReferencia, codigoTerminal, codigoMCC, idEstabelecimento, nomeEstabelecimento, localidadeEstabelecimento, planoParcelamento, numeroParcela, detalhesTransacao, flagCredito, flagFaturado, flagEstorno, idTransacaoEstorno);
+    return Objects.hash(id, tipoTransacao, statusTransacao, idEvento, tipoEvento, idConta, cartaoMascarado, nomePortador, dataTransacaoUTC, dataFaturamento, dataVencimento, modoEntradaTransacao, valorTaxaEmbarque, valorEntrada, valorBRL, valorUSD, cotacaoUSD, dataCotacaoUSD, codigoMoedaOrigem, codigoMoedaDestino, codigoAutorizacao, codigoReferencia, codigoTerminal, codigoMCC, grupoMCC, grupoDescricaoMCC, idEstabelecimento, nomeEstabelecimento, localidadeEstabelecimento, planoParcelamento, numeroParcela, detalhesTransacao, flagCredito, flagFaturado, flagEstorno, idTransacaoEstorno);
   }
 
   @Override
@@ -747,6 +786,8 @@ public class TransacoesCorrentes   {
     sb.append("    codigoReferencia: ").append(toIndentedString(codigoReferencia)).append("\n");
     sb.append("    codigoTerminal: ").append(toIndentedString(codigoTerminal)).append("\n");
     sb.append("    codigoMCC: ").append(toIndentedString(codigoMCC)).append("\n");
+    sb.append("    grupoMCC: ").append(toIndentedString(grupoMCC)).append("\n");
+    sb.append("    grupoDescricaoMCC: ").append(toIndentedString(grupoDescricaoMCC)).append("\n");
     sb.append("    idEstabelecimento: ").append(toIndentedString(idEstabelecimento)).append("\n");
     sb.append("    nomeEstabelecimento: ").append(toIndentedString(nomeEstabelecimento)).append("\n");
     sb.append("    localidadeEstabelecimento: ").append(toIndentedString(localidadeEstabelecimento)).append("\n");

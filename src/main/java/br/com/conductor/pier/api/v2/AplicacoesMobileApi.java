@@ -100,13 +100,12 @@ public class AplicacoesMobileApi {
    * Lista os aplicacoes mobile cadastradas
    * Este m\u00C3\u00A9todo permite que sejam listadas as aplicacoes mobile existentes na base do PIER.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param id Identificador da Aplicacao Mobile
    * @param idPlataformaMobile Identificador da Plataforma Mobile
-   * @param idEmissor Identificador do Emissor
    * @return PageAplicacoesMobile
    */
-  public PageAplicacoesMobile listarUsingGET(Integer page, Integer limit, String id, Long idPlataformaMobile, Long idEmissor) throws ApiException {
+  public PageAplicacoesMobile listarUsingGET(Integer page, Integer limit, String id, Long idPlataformaMobile) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -125,8 +124,6 @@ public class AplicacoesMobileApi {
     queryParams.addAll(apiClient.parameterToPairs("", "id", id));
     
     queryParams.addAll(apiClient.parameterToPairs("", "idPlataformaMobile", idPlataformaMobile));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "idEmissor", idEmissor));
     
 
     

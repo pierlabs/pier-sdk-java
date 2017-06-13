@@ -4,7 +4,6 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.Date;
 
 
 
@@ -25,7 +24,7 @@ public class LoteCartoesPrePagos   {
   private Long idImagem = null;
   private Long idEndereco = null;
   private Integer quantidade = null;
-  private Date dataCadastro = null;
+  private String dataCadastro = null;
   private String usuarioCadastro = null;
   private Integer statusProcessamento = null;
 
@@ -159,17 +158,17 @@ public class LoteCartoesPrePagos   {
   /**
    * Data de cadastro do lote de cart\u00C3\u00B5es pr\u00C3\u00A9-pagos.
    **/
-  public LoteCartoesPrePagos dataCadastro(Date dataCadastro) {
+  public LoteCartoesPrePagos dataCadastro(String dataCadastro) {
     this.dataCadastro = dataCadastro;
     return this;
   }
   
   @ApiModelProperty(example = "null", required = true, value = "Data de cadastro do lote de cart\u00C3\u00B5es pr\u00C3\u00A9-pagos.")
   @JsonProperty("dataCadastro")
-  public Date getDataCadastro() {
+  public String getDataCadastro() {
     return dataCadastro;
   }
-  public void setDataCadastro(Date dataCadastro) {
+  public void setDataCadastro(String dataCadastro) {
     this.dataCadastro = dataCadastro;
   }
 

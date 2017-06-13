@@ -9,7 +9,6 @@ import br.com.conductor.pier.api.v2.invoker.Pair;
 
 import br.com.conductor.pier.api.v2.model.Dispositivo;
 import br.com.conductor.pier.api.v2.model.PageDispositivos;
-import java.util.Date;
 import br.com.conductor.pier.api.v2.model.DispositivoPersist;
 
 
@@ -142,7 +141,7 @@ public class DispositivosApi {
    * Lista os dispositivos cadastrados
    * Este m\u00C3\u00A9todo permite que sejam listados os dispositivos existentes na base do PIER.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param token Token do Dispositivo
    * @param idUsuario Identificador do Usu\u00C3\u00A1rio
    * @param idAplicacaoMobile Identificador da aplica\u00C3\u00A7\u00C3\u00A3o
@@ -150,7 +149,7 @@ public class DispositivosApi {
    * @param dataDesativacao Apresenta a data e em que o registro foi desativado.
    * @return PageDispositivos
    */
-  public PageDispositivos listarUsingGET5(Integer page, Integer limit, String token, Long idUsuario, Long idAplicacaoMobile, Date dataCriacao, Date dataDesativacao) throws ApiException {
+  public PageDispositivos listarUsingGET7(Integer page, Integer limit, String token, Long idUsuario, Long idAplicacaoMobile, String dataCriacao, String dataDesativacao) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

@@ -4,7 +4,6 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.Date;
 
 
 
@@ -32,7 +31,7 @@ public class Estabelecimento   {
   private String cidade = null;
   private String uf = null;
   private String pais = null;
-  private Date dataCadastramento = null;
+  private String dataCadastramento = null;
   private String obs = null;
   private String contato = null;
   private String email = null;
@@ -60,14 +59,14 @@ public class Estabelecimento   {
 
   
   /**
-   * N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor, com dois d\u00C3\u00ADgitos.
+   * N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor.
    **/
   public Estabelecimento numeroEstabelecimento(String numeroEstabelecimento) {
     this.numeroEstabelecimento = numeroEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor, com dois d\u00C3\u00ADgitos.")
+  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor.")
   @JsonProperty("numeroEstabelecimento")
   public String getNumeroEstabelecimento() {
     return numeroEstabelecimento;
@@ -296,17 +295,17 @@ public class Estabelecimento   {
   /**
    * Data de Cadastro do Estabelecimento.
    **/
-  public Estabelecimento dataCadastramento(Date dataCadastramento) {
+  public Estabelecimento dataCadastramento(String dataCadastramento) {
     this.dataCadastramento = dataCadastramento;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Data de Cadastro do Estabelecimento.")
   @JsonProperty("dataCadastramento")
-  public Date getDataCadastramento() {
+  public String getDataCadastramento() {
     return dataCadastramento;
   }
-  public void setDataCadastramento(Date dataCadastramento) {
+  public void setDataCadastramento(String dataCadastramento) {
     this.dataCadastramento = dataCadastramento;
   }
 

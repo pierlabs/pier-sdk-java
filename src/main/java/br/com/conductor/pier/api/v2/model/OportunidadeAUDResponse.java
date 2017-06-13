@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 
@@ -24,14 +23,14 @@ public class OportunidadeAUDResponse   {
   private Long id = null;
   private Long idTipoOportunidade = null;
   private Long idStatusOportunidade = null;
-  private Date dataCadastro = null;
-  private Date dataAtualizacao = null;
+  private String dataCadastro = null;
+  private String dataAtualizacao = null;
   private String numeroReceitaFederal = null;
-  private Date dataInicioVigencia = null;
-  private Date dataFimVigencia = null;
+  private String dataInicioVigencia = null;
+  private String dataFimVigencia = null;
   private Boolean flagAtivo = null;
   private List<CdtDetalheOportunidadeAUD> detalhes = new ArrayList<CdtDetalheOportunidadeAUD>();
-  private Date revDate = null;
+  private String revDate = null;
   private Long revType = null;
 
   
@@ -92,17 +91,17 @@ public class OportunidadeAUDResponse   {
   /**
    * Data cadastro da oportunidade.
    **/
-  public OportunidadeAUDResponse dataCadastro(Date dataCadastro) {
+  public OportunidadeAUDResponse dataCadastro(String dataCadastro) {
     this.dataCadastro = dataCadastro;
     return this;
   }
   
   @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data cadastro da oportunidade.")
   @JsonProperty("dataCadastro")
-  public Date getDataCadastro() {
+  public String getDataCadastro() {
     return dataCadastro;
   }
-  public void setDataCadastro(Date dataCadastro) {
+  public void setDataCadastro(String dataCadastro) {
     this.dataCadastro = dataCadastro;
   }
 
@@ -110,17 +109,17 @@ public class OportunidadeAUDResponse   {
   /**
    * Data atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade.
    **/
-  public OportunidadeAUDResponse dataAtualizacao(Date dataAtualizacao) {
+  public OportunidadeAUDResponse dataAtualizacao(String dataAtualizacao) {
     this.dataAtualizacao = dataAtualizacao;
     return this;
   }
   
   @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade.")
   @JsonProperty("dataAtualizacao")
-  public Date getDataAtualizacao() {
+  public String getDataAtualizacao() {
     return dataAtualizacao;
   }
-  public void setDataAtualizacao(Date dataAtualizacao) {
+  public void setDataAtualizacao(String dataAtualizacao) {
     this.dataAtualizacao = dataAtualizacao;
   }
 
@@ -146,17 +145,17 @@ public class OportunidadeAUDResponse   {
   /**
    * In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
    **/
-  public OportunidadeAUDResponse dataInicioVigencia(Date dataInicioVigencia) {
+  public OportunidadeAUDResponse dataInicioVigencia(String dataInicioVigencia) {
     this.dataInicioVigencia = dataInicioVigencia;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade")
   @JsonProperty("dataInicioVigencia")
-  public Date getDataInicioVigencia() {
+  public String getDataInicioVigencia() {
     return dataInicioVigencia;
   }
-  public void setDataInicioVigencia(Date dataInicioVigencia) {
+  public void setDataInicioVigencia(String dataInicioVigencia) {
     this.dataInicioVigencia = dataInicioVigencia;
   }
 
@@ -164,17 +163,17 @@ public class OportunidadeAUDResponse   {
   /**
    * fim da vig\u00C3\u00AAncia da oportunidade
    **/
-  public OportunidadeAUDResponse dataFimVigencia(Date dataFimVigencia) {
+  public OportunidadeAUDResponse dataFimVigencia(String dataFimVigencia) {
     this.dataFimVigencia = dataFimVigencia;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "fim da vig\u00C3\u00AAncia da oportunidade")
   @JsonProperty("dataFimVigencia")
-  public Date getDataFimVigencia() {
+  public String getDataFimVigencia() {
     return dataFimVigencia;
   }
-  public void setDataFimVigencia(Date dataFimVigencia) {
+  public void setDataFimVigencia(String dataFimVigencia) {
     this.dataFimVigencia = dataFimVigencia;
   }
 
@@ -218,17 +217,17 @@ public class OportunidadeAUDResponse   {
   /**
    * Data da auditoria
    **/
-  public OportunidadeAUDResponse revDate(Date revDate) {
+  public OportunidadeAUDResponse revDate(String revDate) {
     this.revDate = revDate;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Data da auditoria")
   @JsonProperty("revDate")
-  public Date getRevDate() {
+  public String getRevDate() {
     return revDate;
   }
-  public void setRevDate(Date revDate) {
+  public void setRevDate(String revDate) {
     this.revDate = revDate;
   }
 

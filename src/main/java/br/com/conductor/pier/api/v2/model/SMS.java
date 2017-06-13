@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.Date;
 
 
 
@@ -74,10 +73,10 @@ public class SMS   {
   private String operadora = null;
   private String conteudo = null;
   private String resposta = null;
-  private Date dataAgendamento = null;
+  private String dataAgendamento = null;
   private Integer quantidadeTentativasEnvio = null;
-  private Date dataInclusao = null;
-  private Date dataAlteracaoStatus = null;
+  private String dataInclusao = null;
+  private String dataAlteracaoStatus = null;
   private String protocolo = null;
 
   
@@ -300,17 +299,17 @@ public class SMS   {
   /**
    * Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o
    **/
-  public SMS dataAgendamento(Date dataAgendamento) {
+  public SMS dataAgendamento(String dataAgendamento) {
     this.dataAgendamento = dataAgendamento;
     return this;
   }
   
   @ApiModelProperty(example = "null", required = true, value = "Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o")
   @JsonProperty("dataAgendamento")
-  public Date getDataAgendamento() {
+  public String getDataAgendamento() {
     return dataAgendamento;
   }
-  public void setDataAgendamento(Date dataAgendamento) {
+  public void setDataAgendamento(String dataAgendamento) {
     this.dataAgendamento = dataAgendamento;
   }
 
@@ -336,17 +335,17 @@ public class SMS   {
   /**
    * Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
    **/
-  public SMS dataInclusao(Date dataInclusao) {
+  public SMS dataInclusao(String dataInclusao) {
     this.dataInclusao = dataInclusao;
     return this;
   }
   
   @ApiModelProperty(example = "null", required = true, value = "Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado")
   @JsonProperty("dataInclusao")
-  public Date getDataInclusao() {
+  public String getDataInclusao() {
     return dataInclusao;
   }
-  public void setDataInclusao(Date dataInclusao) {
+  public void setDataInclusao(String dataInclusao) {
     this.dataInclusao = dataInclusao;
   }
 
@@ -354,17 +353,17 @@ public class SMS   {
   /**
    * Apresenta a data e em que o Stattjus do registro foi modificado
    **/
-  public SMS dataAlteracaoStatus(Date dataAlteracaoStatus) {
+  public SMS dataAlteracaoStatus(String dataAlteracaoStatus) {
     this.dataAlteracaoStatus = dataAlteracaoStatus;
     return this;
   }
   
   @ApiModelProperty(example = "null", required = true, value = "Apresenta a data e em que o Stattjus do registro foi modificado")
   @JsonProperty("dataAlteracaoStatus")
-  public Date getDataAlteracaoStatus() {
+  public String getDataAlteracaoStatus() {
     return dataAlteracaoStatus;
   }
-  public void setDataAlteracaoStatus(Date dataAlteracaoStatus) {
+  public void setDataAlteracaoStatus(String dataAlteracaoStatus) {
     this.dataAlteracaoStatus = dataAlteracaoStatus;
   }
 

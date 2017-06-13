@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
-import java.util.Date;
 
 
 
@@ -23,25 +22,25 @@ public class LinkTransferenciaBancariaResponse   {
   private Long idAutorizacao = null;
   private Long idTransferencia = null;
   private String codigoAutorizacao = null;
-  private Date dataAutorizacao = null;
+  private String dataAutorizacao = null;
   private String origem = null;
   private BigDecimal valor = null;
   private Long idOperacao = null;
   private String terminal = null;
   private Long idCartao = null;
-  private Date dataCompra = null;
+  private String dataCompra = null;
   private BigDecimal valorCompra = null;
   private Integer numeroParcelas = null;
   private BigDecimal valorParcela = null;
   private Long idEstabelecimento = null;
-  private Date dataMovimento = null;
+  private String dataMovimento = null;
   private BigDecimal valorContrato = null;
   private BigDecimal taxaJuros = null;
   private BigDecimal valorIOF = null;
   private BigDecimal valorTAC = null;
   private Long idConta = null;
   private BigDecimal valorEntrada = null;
-  private Date dataVencimentoReal = null;
+  private String dataVencimentoReal = null;
   private String dataVencimentoPadrao = null;
   private Long idContaPortador = null;
   private Long numeroEstabelecimento = null;
@@ -121,17 +120,17 @@ public class LinkTransferenciaBancariaResponse   {
   /**
    * Data da autoriza\u00C3\u00A7\u00C3\u00A3o
    **/
-  public LinkTransferenciaBancariaResponse dataAutorizacao(Date dataAutorizacao) {
+  public LinkTransferenciaBancariaResponse dataAutorizacao(String dataAutorizacao) {
     this.dataAutorizacao = dataAutorizacao;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Data da autoriza\u00C3\u00A7\u00C3\u00A3o")
   @JsonProperty("dataAutorizacao")
-  public Date getDataAutorizacao() {
+  public String getDataAutorizacao() {
     return dataAutorizacao;
   }
-  public void setDataAutorizacao(Date dataAutorizacao) {
+  public void setDataAutorizacao(String dataAutorizacao) {
     this.dataAutorizacao = dataAutorizacao;
   }
 
@@ -229,17 +228,17 @@ public class LinkTransferenciaBancariaResponse   {
   /**
    * Data da transfer\u00C3\u00AAncia
    **/
-  public LinkTransferenciaBancariaResponse dataCompra(Date dataCompra) {
+  public LinkTransferenciaBancariaResponse dataCompra(String dataCompra) {
     this.dataCompra = dataCompra;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Data da transfer\u00C3\u00AAncia")
   @JsonProperty("dataCompra")
-  public Date getDataCompra() {
+  public String getDataCompra() {
     return dataCompra;
   }
-  public void setDataCompra(Date dataCompra) {
+  public void setDataCompra(String dataCompra) {
     this.dataCompra = dataCompra;
   }
 
@@ -319,17 +318,17 @@ public class LinkTransferenciaBancariaResponse   {
   /**
    * Data do movimento
    **/
-  public LinkTransferenciaBancariaResponse dataMovimento(Date dataMovimento) {
+  public LinkTransferenciaBancariaResponse dataMovimento(String dataMovimento) {
     this.dataMovimento = dataMovimento;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Data do movimento")
   @JsonProperty("dataMovimento")
-  public Date getDataMovimento() {
+  public String getDataMovimento() {
     return dataMovimento;
   }
-  public void setDataMovimento(Date dataMovimento) {
+  public void setDataMovimento(String dataMovimento) {
     this.dataMovimento = dataMovimento;
   }
 
@@ -445,17 +444,17 @@ public class LinkTransferenciaBancariaResponse   {
   /**
    * Data do vencimento real da fatura
    **/
-  public LinkTransferenciaBancariaResponse dataVencimentoReal(Date dataVencimentoReal) {
+  public LinkTransferenciaBancariaResponse dataVencimentoReal(String dataVencimentoReal) {
     this.dataVencimentoReal = dataVencimentoReal;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Data do vencimento real da fatura")
   @JsonProperty("dataVencimentoReal")
-  public Date getDataVencimentoReal() {
+  public String getDataVencimentoReal() {
     return dataVencimentoReal;
   }
-  public void setDataVencimentoReal(Date dataVencimentoReal) {
+  public void setDataVencimentoReal(String dataVencimentoReal) {
     this.dataVencimentoReal = dataVencimentoReal;
   }
 
@@ -497,13 +496,14 @@ public class LinkTransferenciaBancariaResponse   {
 
   
   /**
+   * Atributo que representa o numero do estabelecimento.
    **/
   public LinkTransferenciaBancariaResponse numeroEstabelecimento(Long numeroEstabelecimento) {
     this.numeroEstabelecimento = numeroEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(example = "null", value = "Atributo que representa o numero do estabelecimento.")
   @JsonProperty("numeroEstabelecimento")
   public Long getNumeroEstabelecimento() {
     return numeroEstabelecimento;

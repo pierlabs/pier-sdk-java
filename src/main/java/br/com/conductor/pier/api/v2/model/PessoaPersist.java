@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 
@@ -22,8 +21,8 @@ import java.util.List;
 public class PessoaPersist   {
   
   private String cpf = null;
-  private Date dataEmissaoIdentidade = null;
-  private Date dataNascimento = null;
+  private String dataEmissaoIdentidade = null;
+  private String dataNascimento = null;
   private String email = null;
   private String estadoCivil = null;
   private String nacionalidade = null;
@@ -57,17 +56,17 @@ public class PessoaPersist   {
   /**
    * Data emiss\u00C3\u00A3o da Identidade
    **/
-  public PessoaPersist dataEmissaoIdentidade(Date dataEmissaoIdentidade) {
+  public PessoaPersist dataEmissaoIdentidade(String dataEmissaoIdentidade) {
     this.dataEmissaoIdentidade = dataEmissaoIdentidade;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Data emiss\u00C3\u00A3o da Identidade")
   @JsonProperty("dataEmissaoIdentidade")
-  public Date getDataEmissaoIdentidade() {
+  public String getDataEmissaoIdentidade() {
     return dataEmissaoIdentidade;
   }
-  public void setDataEmissaoIdentidade(Date dataEmissaoIdentidade) {
+  public void setDataEmissaoIdentidade(String dataEmissaoIdentidade) {
     this.dataEmissaoIdentidade = dataEmissaoIdentidade;
   }
 
@@ -75,17 +74,17 @@ public class PessoaPersist   {
   /**
    * Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.
    **/
-  public PessoaPersist dataNascimento(Date dataNascimento) {
+  public PessoaPersist dataNascimento(String dataNascimento) {
     this.dataNascimento = dataNascimento;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.")
   @JsonProperty("dataNascimento")
-  public Date getDataNascimento() {
+  public String getDataNascimento() {
     return dataNascimento;
   }
-  public void setDataNascimento(Date dataNascimento) {
+  public void setDataNascimento(String dataNascimento) {
     this.dataNascimento = dataNascimento;
   }
 

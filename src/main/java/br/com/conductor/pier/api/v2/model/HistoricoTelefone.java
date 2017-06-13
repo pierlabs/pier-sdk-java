@@ -4,7 +4,6 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.Date;
 
 
 
@@ -22,7 +21,7 @@ public class HistoricoTelefone   {
   private String telefone = null;
   private Long idTipoTelefone = null;
   private String tipoTelefone = null;
-  private Date dataModificacao = null;
+  private String dataModificacao = null;
 
   
   /**
@@ -100,17 +99,17 @@ public class HistoricoTelefone   {
   /**
    * Apresenta a data que o telefone fora alterado.
    **/
-  public HistoricoTelefone dataModificacao(Date dataModificacao) {
+  public HistoricoTelefone dataModificacao(String dataModificacao) {
     this.dataModificacao = dataModificacao;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Apresenta a data que o telefone fora alterado.")
   @JsonProperty("dataModificacao")
-  public Date getDataModificacao() {
+  public String getDataModificacao() {
     return dataModificacao;
   }
-  public void setDataModificacao(Date dataModificacao) {
+  public void setDataModificacao(String dataModificacao) {
     this.dataModificacao = dataModificacao;
   }
 

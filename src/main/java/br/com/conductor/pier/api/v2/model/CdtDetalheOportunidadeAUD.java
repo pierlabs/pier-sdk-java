@@ -4,7 +4,6 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.Date;
 
 
 
@@ -20,7 +19,7 @@ public class CdtDetalheOportunidadeAUD   {
   private Long idOportunidade = null;
   private String nomeCampo = null;
   private Long rev = null;
-  private Date revDate = null;
+  private String revDate = null;
   private Long revOportunidade = null;
   private Long revType = null;
   private String revUser = null;
@@ -113,17 +112,17 @@ public class CdtDetalheOportunidadeAUD   {
   
   /**
    **/
-  public CdtDetalheOportunidadeAUD revDate(Date revDate) {
+  public CdtDetalheOportunidadeAUD revDate(String revDate) {
     this.revDate = revDate;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("revDate")
-  public Date getRevDate() {
+  public String getRevDate() {
     return revDate;
   }
-  public void setRevDate(Date revDate) {
+  public void setRevDate(String revDate) {
     this.revDate = revDate;
   }
 

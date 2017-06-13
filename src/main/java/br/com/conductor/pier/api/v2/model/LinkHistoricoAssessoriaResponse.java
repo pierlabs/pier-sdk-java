@@ -4,7 +4,6 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.Date;
 
 
 
@@ -18,7 +17,7 @@ import java.util.Date;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class LinkHistoricoAssessoriaResponse   {
   
-  private Date dataHoraHistorico = null;
+  private String dataHoraHistorico = null;
   private String tipoHistorico = null;
   private String nomeAssessoria = null;
 
@@ -26,17 +25,17 @@ public class LinkHistoricoAssessoriaResponse   {
   /**
    * Apresenta a data e hora do hist\u00C3\u00B3rico
    **/
-  public LinkHistoricoAssessoriaResponse dataHoraHistorico(Date dataHoraHistorico) {
+  public LinkHistoricoAssessoriaResponse dataHoraHistorico(String dataHoraHistorico) {
     this.dataHoraHistorico = dataHoraHistorico;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Apresenta a data e hora do hist\u00C3\u00B3rico")
   @JsonProperty("dataHoraHistorico")
-  public Date getDataHoraHistorico() {
+  public String getDataHoraHistorico() {
     return dataHoraHistorico;
   }
-  public void setDataHoraHistorico(Date dataHoraHistorico) {
+  public void setDataHoraHistorico(String dataHoraHistorico) {
     this.dataHoraHistorico = dataHoraHistorico;
   }
 

@@ -9,7 +9,6 @@ import br.com.conductor.pier.api.v2.invoker.Pair;
 
 import br.com.conductor.pier.api.v2.model.SMS;
 import br.com.conductor.pier.api.v2.model.PagePush;
-import java.util.Date;
 import br.com.conductor.pier.api.v2.model.PageSMS;
 import br.com.conductor.pier.api.v2.model.NotificacaoSMSResponse;
 import br.com.conductor.pier.api.v2.model.PushFCMEGCM;
@@ -106,7 +105,7 @@ public class NotificacoesApi {
    * Listar Push
    * Esse recurso permite listar os Pushes do emissor
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param dataEnvio Apresenta a data e em que o registro foi enviado para o dispositivo.
    * @param tipoEvento Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
    * @param status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
@@ -114,7 +113,7 @@ public class NotificacoesApi {
    * @param protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
    * @return PagePush
    */
-  public PagePush listarPushUsingGET(Integer page, Integer limit, Date dataEnvio, String tipoEvento, String status, String plataforma, String protocolo) throws ApiException {
+  public PagePush listarPushUsingGET(Integer page, Integer limit, String dataEnvio, String tipoEvento, String status, String plataforma, String protocolo) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -168,7 +167,7 @@ public class NotificacoesApi {
    * Listar SMS
    * Esse recurso permite listar os SMS do emissor
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param dataInclusao Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
    * @param tipoEvento Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
    * @param status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
@@ -177,7 +176,7 @@ public class NotificacoesApi {
    * @param nsu Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o
    * @return PageSMS
    */
-  public PageSMS listarSMSUsingGET(Integer page, Integer limit, Date dataInclusao, String tipoEvento, String status, String operadora, String protocolo, Long nsu) throws ApiException {
+  public PageSMS listarSMSUsingGET(Integer page, Integer limit, String dataInclusao, String tipoEvento, String status, String operadora, String protocolo, Long nsu) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

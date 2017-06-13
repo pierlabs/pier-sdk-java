@@ -4,7 +4,6 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.Date;
 
 
 
@@ -26,11 +25,11 @@ public class AtendimentoCliente   {
   private String detalhesAtendimento = null;
   private String nomeAtendente = null;
   private String nomeSistema = null;
-  private Date dataHoraInicioAtendimento = null;
-  private Date dataHoraFimAtendimento = null;
-  private Date dataAtendimento = null;
-  private Date dataAgendamento = null;
-  private Date dataProcessamento = null;
+  private String dataHoraInicioAtendimento = null;
+  private String dataHoraFimAtendimento = null;
+  private String dataAtendimento = null;
+  private String dataAgendamento = null;
+  private String dataProcessamento = null;
   private Integer flagProcessamento = null;
 
   
@@ -181,17 +180,17 @@ public class AtendimentoCliente   {
   /**
    * Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.
    **/
-  public AtendimentoCliente dataHoraInicioAtendimento(Date dataHoraInicioAtendimento) {
+  public AtendimentoCliente dataHoraInicioAtendimento(String dataHoraInicioAtendimento) {
     this.dataHoraInicioAtendimento = dataHoraInicioAtendimento;
     return this;
   }
   
   @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.")
   @JsonProperty("dataHoraInicioAtendimento")
-  public Date getDataHoraInicioAtendimento() {
+  public String getDataHoraInicioAtendimento() {
     return dataHoraInicioAtendimento;
   }
-  public void setDataHoraInicioAtendimento(Date dataHoraInicioAtendimento) {
+  public void setDataHoraInicioAtendimento(String dataHoraInicioAtendimento) {
     this.dataHoraInicioAtendimento = dataHoraInicioAtendimento;
   }
 
@@ -199,17 +198,17 @@ public class AtendimentoCliente   {
   /**
    * Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.
    **/
-  public AtendimentoCliente dataHoraFimAtendimento(Date dataHoraFimAtendimento) {
+  public AtendimentoCliente dataHoraFimAtendimento(String dataHoraFimAtendimento) {
     this.dataHoraFimAtendimento = dataHoraFimAtendimento;
     return this;
   }
   
   @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.")
   @JsonProperty("dataHoraFimAtendimento")
-  public Date getDataHoraFimAtendimento() {
+  public String getDataHoraFimAtendimento() {
     return dataHoraFimAtendimento;
   }
-  public void setDataHoraFimAtendimento(Date dataHoraFimAtendimento) {
+  public void setDataHoraFimAtendimento(String dataHoraFimAtendimento) {
     this.dataHoraFimAtendimento = dataHoraFimAtendimento;
   }
 
@@ -217,17 +216,17 @@ public class AtendimentoCliente   {
   /**
    * Apresenta a data e hora em que o Atendimento foi realizado.
    **/
-  public AtendimentoCliente dataAtendimento(Date dataAtendimento) {
+  public AtendimentoCliente dataAtendimento(String dataAtendimento) {
     this.dataAtendimento = dataAtendimento;
     return this;
   }
   
   @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Apresenta a data e hora em que o Atendimento foi realizado.")
   @JsonProperty("dataAtendimento")
-  public Date getDataAtendimento() {
+  public String getDataAtendimento() {
     return dataAtendimento;
   }
-  public void setDataAtendimento(Date dataAtendimento) {
+  public void setDataAtendimento(String dataAtendimento) {
     this.dataAtendimento = dataAtendimento;
   }
 
@@ -235,17 +234,17 @@ public class AtendimentoCliente   {
   /**
    * Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data para retorno do Atendimento.
    **/
-  public AtendimentoCliente dataAgendamento(Date dataAgendamento) {
+  public AtendimentoCliente dataAgendamento(String dataAgendamento) {
     this.dataAgendamento = dataAgendamento;
     return this;
   }
   
   @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data para retorno do Atendimento.")
   @JsonProperty("dataAgendamento")
-  public Date getDataAgendamento() {
+  public String getDataAgendamento() {
     return dataAgendamento;
   }
-  public void setDataAgendamento(Date dataAgendamento) {
+  public void setDataAgendamento(String dataAgendamento) {
     this.dataAgendamento = dataAgendamento;
   }
 
@@ -253,17 +252,17 @@ public class AtendimentoCliente   {
   /**
    * Quando utilizado, apresenta a data e hora em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada.
    **/
-  public AtendimentoCliente dataProcessamento(Date dataProcessamento) {
+  public AtendimentoCliente dataProcessamento(String dataProcessamento) {
     this.dataProcessamento = dataProcessamento;
     return this;
   }
   
   @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Quando utilizado, apresenta a data e hora em que a solicita\u00C3\u00A7\u00C3\u00A3o registrada no Atendimento fora processada.")
   @JsonProperty("dataProcessamento")
-  public Date getDataProcessamento() {
+  public String getDataProcessamento() {
     return dataProcessamento;
   }
-  public void setDataProcessamento(Date dataProcessamento) {
+  public void setDataProcessamento(String dataProcessamento) {
     this.dataProcessamento = dataProcessamento;
   }
 

@@ -4,7 +4,6 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.Date;
 
 
 
@@ -19,7 +18,7 @@ import java.util.Date;
 public class HistoricoEventos   {
   
   private Long idHistorico = null;
-  private Date dataHistorico = null;
+  private String dataHistorico = null;
   private String tipoHistorico = null;
   private String valorAnterior = null;
   private String valorAtribuido = null;
@@ -46,17 +45,17 @@ public class HistoricoEventos   {
   /**
    * Data do evento
    **/
-  public HistoricoEventos dataHistorico(Date dataHistorico) {
+  public HistoricoEventos dataHistorico(String dataHistorico) {
     this.dataHistorico = dataHistorico;
     return this;
   }
   
   @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", required = true, value = "Data do evento")
   @JsonProperty("dataHistorico")
-  public Date getDataHistorico() {
+  public String getDataHistorico() {
     return dataHistorico;
   }
-  public void setDataHistorico(Date dataHistorico) {
+  public void setDataHistorico(String dataHistorico) {
     this.dataHistorico = dataHistorico;
   }
 
