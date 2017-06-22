@@ -7,10 +7,10 @@ import br.com.conductor.pier.api.v2.invoker.ApiClient;
 import br.com.conductor.pier.api.v2.invoker.Configuration;
 import br.com.conductor.pier.api.v2.invoker.Pair;
 
-import br.com.conductor.pier.api.v2.model.SMS;
-import br.com.conductor.pier.api.v2.model.PagePush;
-import br.com.conductor.pier.api.v2.model.PageSMS;
 import br.com.conductor.pier.api.v2.model.NotificacaoSMSResponse;
+import br.com.conductor.pier.api.v2.model.PagePushResponse;
+import br.com.conductor.pier.api.v2.model.PageSMSResponse;
+import br.com.conductor.pier.api.v2.model.NotificacaoResponse;
 import br.com.conductor.pier.api.v2.model.PushFCMEGCM;
 import br.com.conductor.pier.api.v2.model.PushAPNS;
 import br.com.conductor.pier.api.v2.model.NotificacaoSMSBody;
@@ -53,9 +53,9 @@ public class NotificacoesApi {
    * @param data Data
    * @param textoStatus TextoStatus
    * @param operadora Operadora
-   * @return SMS
+   * @return NotificacaoSMSResponse
    */
-  public SMS atualizarSMSUsingPOST(String nsu, String status, String data, String textoStatus, String operadora) throws ApiException {
+  public NotificacaoSMSResponse atualizarSMSUsingPOST(String nsu, String status, String data, String textoStatus, String operadora) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -96,7 +96,7 @@ public class NotificacoesApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<SMS> returnType = new GenericType<SMS>() {};
+    GenericType<NotificacaoSMSResponse> returnType = new GenericType<NotificacaoSMSResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -111,9 +111,9 @@ public class NotificacoesApi {
    * @param status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
    * @param plataforma Plataforma de Push notifications.
    * @param protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
-   * @return PagePush
+   * @return PagePushResponse
    */
-  public PagePush listarPushUsingGET(Integer page, Integer limit, String dataEnvio, String tipoEvento, String status, String plataforma, String protocolo) throws ApiException {
+  public PagePushResponse listarPushUsingGET(Integer page, Integer limit, String dataEnvio, String tipoEvento, String status, String plataforma, String protocolo) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -158,7 +158,7 @@ public class NotificacoesApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<PagePush> returnType = new GenericType<PagePush>() {};
+    GenericType<PagePushResponse> returnType = new GenericType<PagePushResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -174,9 +174,9 @@ public class NotificacoesApi {
    * @param operadora Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada.
    * @param protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
    * @param nsu Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o
-   * @return PageSMS
+   * @return PageSMSResponse
    */
-  public PageSMS listarSMSUsingGET(Integer page, Integer limit, String dataInclusao, String tipoEvento, String status, String operadora, String protocolo, Long nsu) throws ApiException {
+  public PageSMSResponse listarSMSUsingGET(Integer page, Integer limit, String dataInclusao, String tipoEvento, String status, String operadora, String protocolo, Long nsu) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -223,7 +223,7 @@ public class NotificacoesApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<PageSMS> returnType = new GenericType<PageSMS>() {};
+    GenericType<PageSMSResponse> returnType = new GenericType<PageSMSResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -234,9 +234,9 @@ public class NotificacoesApi {
    * @param nsu Seu n\u00C3\u00BAmero
    * @param data Data
    * @param resposta TextoStatus
-   * @return SMS
+   * @return NotificacaoSMSResponse
    */
-  public SMS responderSMSUsingPOST(String nsu, String data, String resposta) throws ApiException {
+  public NotificacaoSMSResponse responderSMSUsingPOST(String nsu, String data, String resposta) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -273,7 +273,7 @@ public class NotificacoesApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<SMS> returnType = new GenericType<SMS>() {};
+    GenericType<NotificacaoSMSResponse> returnType = new GenericType<NotificacaoSMSResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -282,9 +282,9 @@ public class NotificacoesApi {
    * Enviar Push FCM
    * Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma FCM (Firebase Cloud Messaging).
    * @param pushPersists pushPersists
-   * @return NotificacaoSMSResponse
+   * @return NotificacaoResponse
    */
-  public NotificacaoSMSResponse salvarPushFCMUsingPOST(List<PushFCMEGCM> pushPersists) throws ApiException {
+  public NotificacaoResponse salvarPushFCMUsingPOST(List<PushFCMEGCM> pushPersists) throws ApiException {
     Object postBody = pushPersists;
     
      // verify the required parameter 'pushPersists' is set
@@ -320,7 +320,7 @@ public class NotificacoesApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<NotificacaoSMSResponse> returnType = new GenericType<NotificacaoSMSResponse>() {};
+    GenericType<NotificacaoResponse> returnType = new GenericType<NotificacaoResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -329,9 +329,9 @@ public class NotificacoesApi {
    * Enviar Push GCM
    * Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma GCM (Google Cloud Messaging).
    * @param pushPersists pushPersists
-   * @return NotificacaoSMSResponse
+   * @return NotificacaoResponse
    */
-  public NotificacaoSMSResponse salvarPushGCMUsingPOST(List<PushFCMEGCM> pushPersists) throws ApiException {
+  public NotificacaoResponse salvarPushGCMUsingPOST(List<PushFCMEGCM> pushPersists) throws ApiException {
     Object postBody = pushPersists;
     
      // verify the required parameter 'pushPersists' is set
@@ -367,7 +367,7 @@ public class NotificacoesApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<NotificacaoSMSResponse> returnType = new GenericType<NotificacaoSMSResponse>() {};
+    GenericType<NotificacaoResponse> returnType = new GenericType<NotificacaoResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -376,9 +376,9 @@ public class NotificacoesApi {
    * Enviar Push APNS
    * Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma APNS (Apple Push Notification Service).
    * @param pushPersists pushPersists
-   * @return NotificacaoSMSResponse
+   * @return NotificacaoResponse
    */
-  public NotificacaoSMSResponse salvarPushUsingPOST(List<PushAPNS> pushPersists) throws ApiException {
+  public NotificacaoResponse salvarPushUsingPOST(List<PushAPNS> pushPersists) throws ApiException {
     Object postBody = pushPersists;
     
      // verify the required parameter 'pushPersists' is set
@@ -414,7 +414,7 @@ public class NotificacoesApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<NotificacaoSMSResponse> returnType = new GenericType<NotificacaoSMSResponse>() {};
+    GenericType<NotificacaoResponse> returnType = new GenericType<NotificacaoResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -423,9 +423,9 @@ public class NotificacoesApi {
    * Enviar SMS
    * Esse recurso permite enviar uma lista de SMS.
    * @param listaSMS listaSMS
-   * @return NotificacaoSMSResponse
+   * @return NotificacaoResponse
    */
-  public NotificacaoSMSResponse salvarSMSUsingPOST(List<NotificacaoSMSBody> listaSMS) throws ApiException {
+  public NotificacaoResponse salvarSMSUsingPOST(List<NotificacaoSMSBody> listaSMS) throws ApiException {
     Object postBody = listaSMS;
     
      // verify the required parameter 'listaSMS' is set
@@ -461,7 +461,7 @@ public class NotificacoesApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<NotificacaoSMSResponse> returnType = new GenericType<NotificacaoSMSResponse>() {};
+    GenericType<NotificacaoResponse> returnType = new GenericType<NotificacaoResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

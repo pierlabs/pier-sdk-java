@@ -7,14 +7,14 @@ import br.com.conductor.pier.api.v2.invoker.ApiClient;
 import br.com.conductor.pier.api.v2.invoker.Configuration;
 import br.com.conductor.pier.api.v2.invoker.Pair;
 
-import br.com.conductor.pier.api.v2.model.EstagioCartao;
-import br.com.conductor.pier.api.v2.model.StatusCartao;
-import br.com.conductor.pier.api.v2.model.StatusConta;
-import br.com.conductor.pier.api.v2.model.StatusImpressao;
-import br.com.conductor.pier.api.v2.model.PageEstagiosCartoes;
-import br.com.conductor.pier.api.v2.model.PageStatusCartoes;
-import br.com.conductor.pier.api.v2.model.PageStatusContas;
-import br.com.conductor.pier.api.v2.model.PageStatusImpressao;
+import br.com.conductor.pier.api.v2.model.EstagioCartaoResponse;
+import br.com.conductor.pier.api.v2.model.StatusCartaoResponse;
+import br.com.conductor.pier.api.v2.model.StatusContaResponse;
+import br.com.conductor.pier.api.v2.model.StatusImpressaoResponse;
+import br.com.conductor.pier.api.v2.model.PageEstagioCartaoResponse;
+import br.com.conductor.pier.api.v2.model.PageStatusCartaoResponse;
+import br.com.conductor.pier.api.v2.model.PageStatusContaResponse;
+import br.com.conductor.pier.api.v2.model.PageStatusImpressaoResponse;
 
 
 
@@ -50,9 +50,9 @@ public class StatusParametrosApi {
    * Apresenta os dados de um determinado Estagio Cart\u00C3\u00A3o
    * Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
-   * @return EstagioCartao
+   * @return EstagioCartaoResponse
    */
-  public EstagioCartao consultarEstagioCartaoUsingGET(Long id) throws ApiException {
+  public EstagioCartaoResponse consultarEstagioCartaoUsingGET(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -89,7 +89,7 @@ public class StatusParametrosApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<EstagioCartao> returnType = new GenericType<EstagioCartao>() {};
+    GenericType<EstagioCartaoResponse> returnType = new GenericType<EstagioCartaoResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -98,9 +98,9 @@ public class StatusParametrosApi {
    * Apresenta os dados de um determinado Status Cart\u00C3\u00A3o
    * Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Est\u00C3\u00A1gio de Entrega do Cart\u00C3\u00A3o (id).
-   * @return StatusCartao
+   * @return StatusCartaoResponse
    */
-  public StatusCartao consultarStatusCartaoUsingGET(Long id) throws ApiException {
+  public StatusCartaoResponse consultarStatusCartaoUsingGET(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -137,7 +137,7 @@ public class StatusParametrosApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<StatusCartao> returnType = new GenericType<StatusCartao>() {};
+    GenericType<StatusCartaoResponse> returnType = new GenericType<StatusCartaoResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -146,9 +146,9 @@ public class StatusParametrosApi {
    * Apresenta os dados de um determinado Status Conta
    * Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status Conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
-   * @return StatusConta
+   * @return StatusContaResponse
    */
-  public StatusConta consultarUsingGET13(Long id) throws ApiException {
+  public StatusContaResponse consultarUsingGET13(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -185,7 +185,7 @@ public class StatusParametrosApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<StatusConta> returnType = new GenericType<StatusConta>() {};
+    GenericType<StatusContaResponse> returnType = new GenericType<StatusContaResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -194,9 +194,9 @@ public class StatusParametrosApi {
    * Apresenta os dados de um determinado Status Impress\u00C3\u00A3o
    * Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
-   * @return StatusImpressao
+   * @return StatusImpressaoResponse
    */
-  public StatusImpressao consultarUsingGET14(Long id) throws ApiException {
+  public StatusImpressaoResponse consultarUsingGET14(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -233,7 +233,7 @@ public class StatusParametrosApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<StatusImpressao> returnType = new GenericType<StatusImpressao>() {};
+    GenericType<StatusImpressaoResponse> returnType = new GenericType<StatusImpressaoResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -245,9 +245,9 @@ public class StatusParametrosApi {
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
    * @param nome Nome do est\u00C3\u00A1gio cart\u00C3\u00A3o
-   * @return PageEstagiosCartoes
+   * @return PageEstagioCartaoResponse
    */
-  public PageEstagiosCartoes listarEstagiosCartoesUsingGET(Integer page, Integer limit, Long id, String nome) throws ApiException {
+  public PageEstagioCartaoResponse listarEstagiosCartoesUsingGET(Integer page, Integer limit, Long id, String nome) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -286,7 +286,7 @@ public class StatusParametrosApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<PageEstagiosCartoes> returnType = new GenericType<PageEstagiosCartoes>() {};
+    GenericType<PageEstagioCartaoResponse> returnType = new GenericType<PageEstagioCartaoResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -304,9 +304,10 @@ public class StatusParametrosApi {
    * @param idStatusDestinoConta Indica qual o idStatusCartao que ser\u00C3\u00A1 atribu\u00C3\u00ADdo a conta, caso ela seja cancelada devido ao bloqueio de um cart\u00C3\u00A3o quando for utilizado um idStatusCartao no processo de Bloqueio que possua essa caracter\u00C3\u00ADstica.
    * @param flagCobraTarifa Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
    * @param flagPermiteNovaViaCartao Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo.
-   * @return PageStatusCartoes
+   * @param flagPermiteDesbloqueio Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o desbloqueio, sendo: 0: Inativo e 1: Ativo.
+   * @return PageStatusCartaoResponse
    */
-  public PageStatusCartoes listarStatusCartoesUsingGET(Integer page, Integer limit, Long id, String nome, Integer flagCancelaCartao, Integer flagCancelaNoDesbloqueio, Long idStatusDestinoDesbloqueio, Long idStatusDestinoConta, Integer flagCobraTarifa, Integer flagPermiteNovaViaCartao) throws ApiException {
+  public PageStatusCartaoResponse listarStatusCartoesUsingGET(Integer page, Integer limit, Long id, String nome, Integer flagCancelaCartao, Integer flagCancelaNoDesbloqueio, Long idStatusDestinoDesbloqueio, Long idStatusDestinoConta, Integer flagCobraTarifa, Integer flagPermiteNovaViaCartao, Integer flagPermiteDesbloqueio) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -338,6 +339,8 @@ public class StatusParametrosApi {
     
     queryParams.addAll(apiClient.parameterToPairs("", "flagPermiteNovaViaCartao", flagPermiteNovaViaCartao));
     
+    queryParams.addAll(apiClient.parameterToPairs("", "flagPermiteDesbloqueio", flagPermiteDesbloqueio));
+    
 
     
 
@@ -357,7 +360,7 @@ public class StatusParametrosApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<PageStatusCartoes> returnType = new GenericType<PageStatusCartoes>() {};
+    GenericType<PageStatusCartaoResponse> returnType = new GenericType<PageStatusCartaoResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -372,9 +375,11 @@ public class StatusParametrosApi {
    * @param flagAlteraLimite Par\u00C3\u00A2metro que define se o Status da Conta permite realizar a Altera\u00C3\u00A7\u00C3\u00A3o de Limites do Portador, sendo: 0: Inativo e 1: Ativo.
    * @param mensagemConsultaNegada Apresenta o texto com o motivo que ser\u00C3\u00A1 apresentado na resposta as opera\u00C3\u00A7\u00C3\u00B5es de Listar e Consultar LimitesDisponibilidades.
    * @param flagPermiteNovaViaCartao Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
-   * @return PageStatusContas
+   * @param flagFazTransferencia Par\u00C3\u00A2metro que define se o Status da conta permite fazer transferencia, sendo: 0: Inativo e 1: Ativo.
+   * @param flagRecebeTransferencia Par\u00C3\u00A2metro que define se o Status da conta permite receber transferencia, sendo: 0: Inativo e 1: Ativo.
+   * @return PageStatusContaResponse
    */
-  public PageStatusContas listarUsingGET19(Integer page, Integer limit, Long id, String nome, Integer flagAlteraLimite, String mensagemConsultaNegada, Integer flagPermiteNovaViaCartao) throws ApiException {
+  public PageStatusContaResponse listarUsingGET20(Integer page, Integer limit, Long id, String nome, Integer flagAlteraLimite, String mensagemConsultaNegada, Integer flagPermiteNovaViaCartao, Integer flagFazTransferencia, Integer flagRecebeTransferencia) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -400,6 +405,10 @@ public class StatusParametrosApi {
     
     queryParams.addAll(apiClient.parameterToPairs("", "flagPermiteNovaViaCartao", flagPermiteNovaViaCartao));
     
+    queryParams.addAll(apiClient.parameterToPairs("", "flagFazTransferencia", flagFazTransferencia));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "flagRecebeTransferencia", flagRecebeTransferencia));
+    
 
     
 
@@ -419,7 +428,7 @@ public class StatusParametrosApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<PageStatusContas> returnType = new GenericType<PageStatusContas>() {};
+    GenericType<PageStatusContaResponse> returnType = new GenericType<PageStatusContaResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -431,9 +440,9 @@ public class StatusParametrosApi {
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param id Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
    * @param nome Nome do status impress\u00C3\u00A3o
-   * @return PageStatusImpressao
+   * @return PageStatusImpressaoResponse
    */
-  public PageStatusImpressao listarUsingGET20(Integer page, Integer limit, Long id, String nome) throws ApiException {
+  public PageStatusImpressaoResponse listarUsingGET21(Integer page, Integer limit, Long id, String nome) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -472,7 +481,7 @@ public class StatusParametrosApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<PageStatusImpressao> returnType = new GenericType<PageStatusImpressao>() {};
+    GenericType<PageStatusImpressaoResponse> returnType = new GenericType<PageStatusImpressaoResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

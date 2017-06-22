@@ -7,8 +7,8 @@ import br.com.conductor.pier.api.v2.invoker.ApiClient;
 import br.com.conductor.pier.api.v2.invoker.Configuration;
 import br.com.conductor.pier.api.v2.invoker.Pair;
 
-import br.com.conductor.pier.api.v2.model.Job;
-import br.com.conductor.pier.api.v2.model.PageJob;
+import br.com.conductor.pier.api.v2.model.JobResponse;
+import br.com.conductor.pier.api.v2.model.PageJobResponse;
 
 
 
@@ -44,9 +44,9 @@ public class JobsApi {
    * Ativar Job
    * Este recurso adiciona o job ao agendador de tarefas.
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).
-   * @return Job
+   * @return JobResponse
    */
-  public Job ativarJobUsingPOST(Long id) throws ApiException {
+  public JobResponse ativarJobUsingPOST(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -83,7 +83,7 @@ public class JobsApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<Job> returnType = new GenericType<Job>() {};
+    GenericType<JobResponse> returnType = new GenericType<JobResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -95,9 +95,9 @@ public class JobsApi {
    * @param descricao descricao.
    * @param cron Cron do Job.
    * @param groovy groovy
-   * @return Job
+   * @return JobResponse
    */
-  public Job atualizarUsingPUT(Long id, String descricao, String cron, String groovy) throws ApiException {
+  public JobResponse atualizarUsingPUT(Long id, String descricao, String cron, String groovy) throws ApiException {
     Object postBody = groovy;
     
      // verify the required parameter 'id' is set
@@ -153,7 +153,7 @@ public class JobsApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<Job> returnType = new GenericType<Job>() {};
+    GenericType<JobResponse> returnType = new GenericType<JobResponse>() {};
     return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -162,9 +162,9 @@ public class JobsApi {
    * Desativar Job
    * Este recurso retira o job do agendador de tarefas.
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).
-   * @return Job
+   * @return JobResponse
    */
-  public Job desativarJobUsingPOST(Long id) throws ApiException {
+  public JobResponse desativarJobUsingPOST(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -201,7 +201,7 @@ public class JobsApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<Job> returnType = new GenericType<Job>() {};
+    GenericType<JobResponse> returnType = new GenericType<JobResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -215,9 +215,9 @@ public class JobsApi {
    * @param status Status do Job
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @return PageJob
+   * @return PageJobResponse
    */
-  public PageJob listarUsingGET11(String groovy, String descricao, String cron, String status, Integer page, Integer limit) throws ApiException {
+  public PageJobResponse listarUsingGET12(String groovy, String descricao, String cron, String status, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -260,7 +260,7 @@ public class JobsApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<PageJob> returnType = new GenericType<PageJob>() {};
+    GenericType<PageJobResponse> returnType = new GenericType<PageJobResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -271,9 +271,9 @@ public class JobsApi {
    * @param descricao descricao.
    * @param cron Cron do Job.
    * @param groovy groovy
-   * @return Job
+   * @return JobResponse
    */
-  public Job salvarUsingPOST5(String descricao, String cron, String groovy) throws ApiException {
+  public JobResponse salvarUsingPOST5(String descricao, String cron, String groovy) throws ApiException {
     Object postBody = groovy;
     
      // verify the required parameter 'descricao' is set
@@ -323,7 +323,7 @@ public class JobsApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<Job> returnType = new GenericType<Job>() {};
+    GenericType<JobResponse> returnType = new GenericType<JobResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

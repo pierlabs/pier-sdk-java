@@ -9,7 +9,7 @@ import br.com.conductor.pier.api.v2.invoker.Pair;
 
 import br.com.conductor.pier.api.v2.model.UsuarioUpdate;
 import br.com.conductor.pier.api.v2.model.UsuarioResponse;
-import br.com.conductor.pier.api.v2.model.PageUsuarios;
+import br.com.conductor.pier.api.v2.model.PageUsuarioResponse;
 import br.com.conductor.pier.api.v2.model.UsuarioPersist;
 
 
@@ -313,9 +313,9 @@ public class UsuariosApi {
    * @param cpf CPF do Usuario
    * @param email Email do Usuario
    * @param status Status do Usuario
-   * @return PageUsuarios
+   * @return PageUsuarioResponse
    */
-  public PageUsuarios listarUsingGET29(Integer page, Integer limit, String nome, String cpf, String email, String status) throws ApiException {
+  public PageUsuarioResponse listarUsingGET30(Integer page, Integer limit, String nome, String cpf, String email, String status) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -358,7 +358,7 @@ public class UsuariosApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<PageUsuarios> returnType = new GenericType<PageUsuarios>() {};
+    GenericType<PageUsuarioResponse> returnType = new GenericType<PageUsuarioResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

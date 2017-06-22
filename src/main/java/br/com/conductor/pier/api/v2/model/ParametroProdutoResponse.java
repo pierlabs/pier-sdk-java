@@ -22,13 +22,13 @@ public class ParametroProdutoResponse   {
   private Long idProduto = null;
 
 
-  public enum TipoTransacaoEnum {
+  public enum TipoOrigemTransacaoEnum {
     ON_US("ON_US"),
     OFF_US("OFF_US");
 
     private String value;
 
-    TipoTransacaoEnum(String value) {
+    TipoOrigemTransacaoEnum(String value) {
       this.value = value;
     }
 
@@ -39,7 +39,7 @@ public class ParametroProdutoResponse   {
     }
   }
 
-  private TipoTransacaoEnum tipoTransacao = null;
+  private TipoOrigemTransacaoEnum tipoOrigemTransacao = null;
   private String descricao = null;
   private BigDecimal valorParametro = null;
   private String dataValidade = null;
@@ -66,18 +66,18 @@ public class ParametroProdutoResponse   {
   /**
    * Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON_US ou OFF_US).
    **/
-  public ParametroProdutoResponse tipoTransacao(TipoTransacaoEnum tipoTransacao) {
-    this.tipoTransacao = tipoTransacao;
+  public ParametroProdutoResponse tipoOrigemTransacao(TipoOrigemTransacaoEnum tipoOrigemTransacao) {
+    this.tipoOrigemTransacao = tipoOrigemTransacao;
     return this;
   }
   
   @ApiModelProperty(example = "null", required = true, value = "Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON_US ou OFF_US).")
-  @JsonProperty("tipoTransacao")
-  public TipoTransacaoEnum getTipoTransacao() {
-    return tipoTransacao;
+  @JsonProperty("tipoOrigemTransacao")
+  public TipoOrigemTransacaoEnum getTipoOrigemTransacao() {
+    return tipoOrigemTransacao;
   }
-  public void setTipoTransacao(TipoTransacaoEnum tipoTransacao) {
-    this.tipoTransacao = tipoTransacao;
+  public void setTipoOrigemTransacao(TipoOrigemTransacaoEnum tipoOrigemTransacao) {
+    this.tipoOrigemTransacao = tipoOrigemTransacao;
   }
 
   
@@ -146,7 +146,7 @@ public class ParametroProdutoResponse   {
     }
     ParametroProdutoResponse parametroProdutoResponse = (ParametroProdutoResponse) o;
     return Objects.equals(this.idProduto, parametroProdutoResponse.idProduto) &&
-        Objects.equals(this.tipoTransacao, parametroProdutoResponse.tipoTransacao) &&
+        Objects.equals(this.tipoOrigemTransacao, parametroProdutoResponse.tipoOrigemTransacao) &&
         Objects.equals(this.descricao, parametroProdutoResponse.descricao) &&
         Objects.equals(this.valorParametro, parametroProdutoResponse.valorParametro) &&
         Objects.equals(this.dataValidade, parametroProdutoResponse.dataValidade);
@@ -154,7 +154,7 @@ public class ParametroProdutoResponse   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(idProduto, tipoTransacao, descricao, valorParametro, dataValidade);
+    return Objects.hash(idProduto, tipoOrigemTransacao, descricao, valorParametro, dataValidade);
   }
 
   @Override
@@ -163,7 +163,7 @@ public class ParametroProdutoResponse   {
     sb.append("class ParametroProdutoResponse {\n");
     
     sb.append("    idProduto: ").append(toIndentedString(idProduto)).append("\n");
-    sb.append("    tipoTransacao: ").append(toIndentedString(tipoTransacao)).append("\n");
+    sb.append("    tipoOrigemTransacao: ").append(toIndentedString(tipoOrigemTransacao)).append("\n");
     sb.append("    descricao: ").append(toIndentedString(descricao)).append("\n");
     sb.append("    valorParametro: ").append(toIndentedString(valorParametro)).append("\n");
     sb.append("    dataValidade: ").append(toIndentedString(dataValidade)).append("\n");

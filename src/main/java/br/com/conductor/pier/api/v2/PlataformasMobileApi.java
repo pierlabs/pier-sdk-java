@@ -8,8 +8,8 @@ import br.com.conductor.pier.api.v2.invoker.Configuration;
 import br.com.conductor.pier.api.v2.invoker.Pair;
 
 import br.com.conductor.pier.api.v2.model.PlataformaMobileUpdate;
-import br.com.conductor.pier.api.v2.model.PlataformaMobile;
-import br.com.conductor.pier.api.v2.model.PagePlataformasMobile;
+import br.com.conductor.pier.api.v2.model.PlataformaMobileResponse;
+import br.com.conductor.pier.api.v2.model.PagePlataformaMobileResponse;
 import br.com.conductor.pier.api.v2.model.PlataformaMobilePersist;
 
 
@@ -47,9 +47,9 @@ public class PlataformasMobileApi {
    * Esse recurso permite atualizar plataforma mobile.
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).
    * @param update update
-   * @return PlataformaMobile
+   * @return PlataformaMobileResponse
    */
-  public PlataformaMobile atualizarUsingPUT1(Long id, PlataformaMobileUpdate update) throws ApiException {
+  public PlataformaMobileResponse atualizarUsingPUT1(Long id, PlataformaMobileUpdate update) throws ApiException {
     Object postBody = update;
     
      // verify the required parameter 'id' is set
@@ -91,7 +91,7 @@ public class PlataformasMobileApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<PlataformaMobile> returnType = new GenericType<PlataformaMobile>() {};
+    GenericType<PlataformaMobileResponse> returnType = new GenericType<PlataformaMobileResponse>() {};
     return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -102,9 +102,9 @@ public class PlataformasMobileApi {
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param nome Nome da Plataforma Mobile
-   * @return PagePlataformasMobile
+   * @return PagePlataformaMobileResponse
    */
-  public PagePlataformasMobile listarUsingGET15(Integer page, Integer limit, String nome) throws ApiException {
+  public PagePlataformaMobileResponse listarUsingGET16(Integer page, Integer limit, String nome) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -141,7 +141,7 @@ public class PlataformasMobileApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<PagePlataformasMobile> returnType = new GenericType<PagePlataformasMobile>() {};
+    GenericType<PagePlataformaMobileResponse> returnType = new GenericType<PagePlataformaMobileResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -150,9 +150,9 @@ public class PlataformasMobileApi {
    * Cadastra Plataforma Mobile
    * Esse recurso permite cadastrar plataformas mobile.
    * @param persist persist
-   * @return PlataformaMobile
+   * @return PlataformaMobileResponse
    */
-  public PlataformaMobile salvarUsingPOST9(PlataformaMobilePersist persist) throws ApiException {
+  public PlataformaMobileResponse salvarUsingPOST9(PlataformaMobilePersist persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'persist' is set
@@ -188,7 +188,7 @@ public class PlataformasMobileApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<PlataformaMobile> returnType = new GenericType<PlataformaMobile>() {};
+    GenericType<PlataformaMobileResponse> returnType = new GenericType<PlataformaMobileResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

@@ -8,7 +8,7 @@ import br.com.conductor.pier.api.v2.invoker.Configuration;
 import br.com.conductor.pier.api.v2.invoker.Pair;
 
 import br.com.conductor.pier.api.v2.model.AntecipacaoResponse;
-import br.com.conductor.pier.api.v2.model.PageCompras;
+import br.com.conductor.pier.api.v2.model.PageCompraResponse;
 import br.com.conductor.pier.api.v2.model.AntecipacaoSimuladaResponse;
 
 
@@ -45,8 +45,8 @@ public class CompraApi {
    * Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
    * Metodo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o.
    * @param idConta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra.
-   * @param quantidadeParcelas Quantidade de parcelas para serem antecipadas (quantidadeParcelas).
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.
+   * @param quantidadeParcelas Quantidade de parcelas para serem antecipadas.
    * @return AntecipacaoResponse
    */
   public AntecipacaoResponse efetivarAntecipacaoUsingPOST(Long idConta, Long id, Long quantidadeParcelas) throws ApiException {
@@ -114,15 +114,15 @@ public class CompraApi {
    * @param idCompra C\u00C3\u00B3digo identificador da Compra.
    * @param parcelada Indica se a compra \u00C3\u00A9 parcelada.
    * @param juros Indica se a compra \u00C3\u00A9 com ou sem juros.
-   * @param tipoTransacao Indica se a compra \u00C3\u00A9 ON-US ou OFF-US
-   * @return PageCompras
+   * @param tipoOrigemTransacao Indica se a compra \u00C3\u00A9 ON-US ou OFF-US
+   * @return PageCompraResponse
    */
-  public PageCompras listarUsingGET5(Long idConta, Integer page, Integer limit, Long idCompra, Boolean parcelada, Boolean juros, String tipoTransacao) throws ApiException {
+  public PageCompraResponse listarUsingGET6(Long idConta, Integer page, Integer limit, Long idCompra, Boolean parcelada, Boolean juros, String tipoOrigemTransacao) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idConta' is set
      if (idConta == null) {
-        throw new ApiException(400, "Missing the required parameter 'idConta' when calling listarUsingGET5");
+        throw new ApiException(400, "Missing the required parameter 'idConta' when calling listarUsingGET6");
      }
      
     // create path and map variables
@@ -146,7 +146,7 @@ public class CompraApi {
     
     queryParams.addAll(apiClient.parameterToPairs("", "juros", juros));
     
-    queryParams.addAll(apiClient.parameterToPairs("", "tipoTransacao", tipoTransacao));
+    queryParams.addAll(apiClient.parameterToPairs("", "tipoOrigemTransacao", tipoOrigemTransacao));
     
 
     
@@ -167,16 +167,16 @@ public class CompraApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<PageCompras> returnType = new GenericType<PageCompras>() {};
+    GenericType<PageCompraResponse> returnType = new GenericType<PageCompraResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
   /**
    * Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
-   * Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de uma compra, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
-   * @param idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da compra.
+   * Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis.
+   * @param idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.
    * @return AntecipacaoSimuladaResponse
    */
   public AntecipacaoSimuladaResponse simularAntecipacaoUsingGET(Long idConta, Long id) throws ApiException {

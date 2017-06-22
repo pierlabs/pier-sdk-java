@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v2.model.Telefone;
+import br.com.conductor.pier.api.v2.model.TelefoneResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -47,7 +47,7 @@ public class RiscoFraudeDetalhadoResponse   {
   private String cpf = null;
   private String cnpj = null;
   private String email = null;
-  private List<Telefone> tefefones = new ArrayList<Telefone>();
+  private List<TelefoneResponse> tefefones = new ArrayList<TelefoneResponse>();
 
   
   /**
@@ -521,17 +521,17 @@ public class RiscoFraudeDetalhadoResponse   {
   /**
    * Lista contendo idTipoTelefone, tipoTelefone (Descricao), DDD, Numero, Ramal associados a Pessoa portadora do Cart\u00C3\u00A3o
    **/
-  public RiscoFraudeDetalhadoResponse tefefones(List<Telefone> tefefones) {
+  public RiscoFraudeDetalhadoResponse tefefones(List<TelefoneResponse> tefefones) {
     this.tefefones = tefefones;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Lista contendo idTipoTelefone, tipoTelefone (Descricao), DDD, Numero, Ramal associados a Pessoa portadora do Cart\u00C3\u00A3o")
   @JsonProperty("tefefones")
-  public List<Telefone> getTefefones() {
+  public List<TelefoneResponse> getTefefones() {
     return tefefones;
   }
-  public void setTefefones(List<Telefone> tefefones) {
+  public void setTefefones(List<TelefoneResponse> tefefones) {
     this.tefefones = tefefones;
   }
 

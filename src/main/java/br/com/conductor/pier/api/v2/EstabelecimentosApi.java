@@ -7,10 +7,10 @@ import br.com.conductor.pier.api.v2.invoker.ApiClient;
 import br.com.conductor.pier.api.v2.invoker.Configuration;
 import br.com.conductor.pier.api.v2.invoker.Pair;
 
-import br.com.conductor.pier.api.v2.model.Terminal;
-import br.com.conductor.pier.api.v2.model.Estabelecimento;
-import br.com.conductor.pier.api.v2.model.PageTerminal;
-import br.com.conductor.pier.api.v2.model.PageEstabelecimentos;
+import br.com.conductor.pier.api.v2.model.TerminalResponse;
+import br.com.conductor.pier.api.v2.model.EstabelecimentoResponse;
+import br.com.conductor.pier.api.v2.model.PageEstabelecimentoResponse;
+import br.com.conductor.pier.api.v2.model.PageTerminalResponse;
 
 
 
@@ -46,9 +46,9 @@ public class EstabelecimentosApi {
    * Apresenta os dados de um determinado Terminal
    * Este m\u00C3\u00A9todo permite consultar um determinado Terminal a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
-   * @return Terminal
+   * @return TerminalResponse
    */
-  public Terminal consultarUsingGET16(Long id) throws ApiException {
+  public TerminalResponse consultarUsingGET16(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -85,7 +85,7 @@ public class EstabelecimentosApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<Terminal> returnType = new GenericType<Terminal>() {};
+    GenericType<TerminalResponse> returnType = new GenericType<TerminalResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -94,9 +94,9 @@ public class EstabelecimentosApi {
    * Consultar estabelecimento por id
    * Consulta os detalhes de um determinado estabelecimento
    * @param id Id
-   * @return Estabelecimento
+   * @return EstabelecimentoResponse
    */
-  public Estabelecimento consultarUsingGET6(Long id) throws ApiException {
+  public EstabelecimentoResponse consultarUsingGET6(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -133,66 +133,7 @@ public class EstabelecimentosApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<Estabelecimento> returnType = new GenericType<Estabelecimento>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
-   * Lista os Terminais cadastrados no Emissor
-   * Este m\u00C3\u00A9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
-   * @param terminal C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal.
-   * @param numeroEstabelecimento N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence.
-   * @param idEstabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
-   * @return PageTerminal
-   */
-  public PageTerminal listarUsingGET22(Integer page, Integer limit, Long id, String terminal, Long numeroEstabelecimento, Long idEstabelecimento) throws ApiException {
-    Object postBody = null;
-    
-    // create path and map variables
-    String path = "/api/terminais".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "id", id));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "terminal", terminal));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "numeroEstabelecimento", numeroEstabelecimento));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "idEstabelecimento", idEstabelecimento));
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<PageTerminal> returnType = new GenericType<PageTerminal>() {};
+    GenericType<EstabelecimentoResponse> returnType = new GenericType<EstabelecimentoResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -221,9 +162,9 @@ public class EstabelecimentosApi {
    * @param flagArquivoSecrFazenda Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual.
    * @param flagCartaoDigitado Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o.
    * @param inativo Indica se o estabelecimento est\u00C3\u00A1 inativo.
-   * @return PageEstabelecimentos
+   * @return PageEstabelecimentoResponse
    */
-  public PageEstabelecimentos listarUsingGET9(Integer page, Integer limit, Long id, Long numeroReceitaFederal, String nome, String descricao, String nomeFantasia, String cep, String nomeLogradouro, Long numeroEndereco, String complemento, String bairro, String cidade, String uf, String pais, String dataCadastramento, String contato, String email, Integer flagArquivoSecrFazenda, Integer flagCartaoDigitado, Integer inativo) throws ApiException {
+  public PageEstabelecimentoResponse listarUsingGET10(Integer page, Integer limit, Long id, Long numeroReceitaFederal, String nome, String descricao, String nomeFantasia, String cep, String nomeLogradouro, Long numeroEndereco, String complemento, String bairro, String cidade, String uf, String pais, String dataCadastramento, String contato, String email, Integer flagArquivoSecrFazenda, Integer flagCartaoDigitado, Integer inativo) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -296,7 +237,66 @@ public class EstabelecimentosApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<PageEstabelecimentos> returnType = new GenericType<PageEstabelecimentos>() {};
+    GenericType<PageEstabelecimentoResponse> returnType = new GenericType<PageEstabelecimentoResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Lista os Terminais cadastrados no Emissor
+   * Este m\u00C3\u00A9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
+   * @param terminal C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal.
+   * @param numeroEstabelecimento N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence.
+   * @param idEstabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
+   * @return PageTerminalResponse
+   */
+  public PageTerminalResponse listarUsingGET23(Integer page, Integer limit, Long id, String terminal, Long numeroEstabelecimento, Long idEstabelecimento) throws ApiException {
+    Object postBody = null;
+    
+    // create path and map variables
+    String path = "/api/terminais".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "id", id));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "terminal", terminal));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "numeroEstabelecimento", numeroEstabelecimento));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idEstabelecimento", idEstabelecimento));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PageTerminalResponse> returnType = new GenericType<PageTerminalResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

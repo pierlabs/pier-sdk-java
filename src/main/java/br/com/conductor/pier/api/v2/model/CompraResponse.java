@@ -29,7 +29,7 @@ public class CompraResponse   {
   private Integer numeroParcelas = null;
   private Integer numeroParcelasAntecipaveis = null;
   private String nomeEstabelecimento = null;
-  private String tipoTransacao = null;
+  private String tipoOrigemTransacao = null;
   private String cidade = null;
   private String pais = null;
   private String latitude = null;
@@ -242,18 +242,18 @@ public class CompraResponse   {
   /**
    * Tipo de transa\u00C3\u00A7\u00C3\u00A3o da compra.
    **/
-  public CompraResponse tipoTransacao(String tipoTransacao) {
-    this.tipoTransacao = tipoTransacao;
+  public CompraResponse tipoOrigemTransacao(String tipoOrigemTransacao) {
+    this.tipoOrigemTransacao = tipoOrigemTransacao;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Tipo de transa\u00C3\u00A7\u00C3\u00A3o da compra.")
-  @JsonProperty("tipoTransacao")
-  public String getTipoTransacao() {
-    return tipoTransacao;
+  @JsonProperty("tipoOrigemTransacao")
+  public String getTipoOrigemTransacao() {
+    return tipoOrigemTransacao;
   }
-  public void setTipoTransacao(String tipoTransacao) {
-    this.tipoTransacao = tipoTransacao;
+  public void setTipoOrigemTransacao(String tipoOrigemTransacao) {
+    this.tipoOrigemTransacao = tipoOrigemTransacao;
   }
 
   
@@ -476,7 +476,7 @@ public class CompraResponse   {
         Objects.equals(this.numeroParcelas, compraResponse.numeroParcelas) &&
         Objects.equals(this.numeroParcelasAntecipaveis, compraResponse.numeroParcelasAntecipaveis) &&
         Objects.equals(this.nomeEstabelecimento, compraResponse.nomeEstabelecimento) &&
-        Objects.equals(this.tipoTransacao, compraResponse.tipoTransacao) &&
+        Objects.equals(this.tipoOrigemTransacao, compraResponse.tipoOrigemTransacao) &&
         Objects.equals(this.cidade, compraResponse.cidade) &&
         Objects.equals(this.pais, compraResponse.pais) &&
         Objects.equals(this.latitude, compraResponse.latitude) &&
@@ -492,7 +492,7 @@ public class CompraResponse   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(mcc, uf, idCompra, status, dataCompra, valorTotalCompra, valorParcela, primeiraParcela, numeroParcelas, numeroParcelasAntecipaveis, nomeEstabelecimento, tipoTransacao, cidade, pais, latitude, longitude, idGrupoMCC, descricaoGrupoMCC, idConta, idProduto, descricaoProduto, cartao, nomePortadorCartao);
+    return Objects.hash(mcc, uf, idCompra, status, dataCompra, valorTotalCompra, valorParcela, primeiraParcela, numeroParcelas, numeroParcelasAntecipaveis, nomeEstabelecimento, tipoOrigemTransacao, cidade, pais, latitude, longitude, idGrupoMCC, descricaoGrupoMCC, idConta, idProduto, descricaoProduto, cartao, nomePortadorCartao);
   }
 
   @Override
@@ -511,7 +511,7 @@ public class CompraResponse   {
     sb.append("    numeroParcelas: ").append(toIndentedString(numeroParcelas)).append("\n");
     sb.append("    numeroParcelasAntecipaveis: ").append(toIndentedString(numeroParcelasAntecipaveis)).append("\n");
     sb.append("    nomeEstabelecimento: ").append(toIndentedString(nomeEstabelecimento)).append("\n");
-    sb.append("    tipoTransacao: ").append(toIndentedString(tipoTransacao)).append("\n");
+    sb.append("    tipoOrigemTransacao: ").append(toIndentedString(tipoOrigemTransacao)).append("\n");
     sb.append("    cidade: ").append(toIndentedString(cidade)).append("\n");
     sb.append("    pais: ").append(toIndentedString(pais)).append("\n");
     sb.append("    latitude: ").append(toIndentedString(latitude)).append("\n");

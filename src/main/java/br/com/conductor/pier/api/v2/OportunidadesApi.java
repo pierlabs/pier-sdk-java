@@ -13,12 +13,12 @@ import br.com.conductor.pier.api.v2.model.OportunidadeResponse;
 import br.com.conductor.pier.api.v2.model.OportunidadeUpdate;
 import br.com.conductor.pier.api.v2.model.TipoOportunidade;
 import br.com.conductor.pier.api.v2.model.TipoOportunidadeResponse;
-import br.com.conductor.pier.api.v2.model.PageStatusOprtunidadesAUD;
-import br.com.conductor.pier.api.v2.model.PageOprtunidadeAUD;
-import br.com.conductor.pier.api.v2.model.PageTipoOprtunidadesAUD;
-import br.com.conductor.pier.api.v2.model.PageStatusOprtunidades;
-import br.com.conductor.pier.api.v2.model.PageOprtunidadesResponse;
-import br.com.conductor.pier.api.v2.model.PageTipoOprtunidades;
+import br.com.conductor.pier.api.v2.model.PageStatusOportunidadeAUDResponse;
+import br.com.conductor.pier.api.v2.model.PageOportunidadeAUDResponse;
+import br.com.conductor.pier.api.v2.model.PageTipoOportunidadeAUDResponse;
+import br.com.conductor.pier.api.v2.model.PageStatusOportunidadeResponse;
+import br.com.conductor.pier.api.v2.model.PageOportunidadeResponse;
+import br.com.conductor.pier.api.v2.model.PageTipoOportunidadeResponse;
 import br.com.conductor.pier.api.v2.model.OportunidadePersist;
 
 
@@ -384,9 +384,9 @@ public class OportunidadesApi {
    * @param descricao Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade
    * @param flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo
    * @param revUser Usu\u00C3\u00A1rio da auditoria
-   * @return PageStatusOprtunidadesAUD
+   * @return PageStatusOportunidadeAUDResponse
    */
-  public PageStatusOprtunidadesAUD listarAuditoriasStatusUsingGET(Integer page, Integer limit, Long revType, String revDate, Long id, Long idTipoOportunidade, String nome, String descricao, Boolean flagAtivo, String revUser) throws ApiException {
+  public PageStatusOportunidadeAUDResponse listarAuditoriasStatusUsingGET(Integer page, Integer limit, Long revType, String revDate, Long id, Long idTipoOportunidade, String nome, String descricao, Boolean flagAtivo, String revUser) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -437,7 +437,7 @@ public class OportunidadesApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<PageStatusOprtunidadesAUD> returnType = new GenericType<PageStatusOprtunidadesAUD>() {};
+    GenericType<PageStatusOportunidadeAUDResponse> returnType = new GenericType<PageStatusOportunidadeAUDResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -457,9 +457,9 @@ public class OportunidadesApi {
    * @param revDate Data da auditoria
    * @param revType Tipo da auditoria
    * @param revUser Usu\u00C3\u00A1rio da auditoria
-   * @return PageOprtunidadeAUD
+   * @return PageOportunidadeAUDResponse
    */
-  public PageOprtunidadeAUD listarAuditoriasUsingGET(Integer page, Integer limit, Long idStatusOportunidade, String dataCadastro, String dataAtualizacao, String numeroReceitaFederal, String dataInicioVigencia, String datatFimVigencia, Boolean flagAtivo, String revDate, String revType, String revUser) throws ApiException {
+  public PageOportunidadeAUDResponse listarAuditoriasUsingGET(Integer page, Integer limit, Long idStatusOportunidade, String dataCadastro, String dataAtualizacao, String numeroReceitaFederal, String dataInicioVigencia, String datatFimVigencia, Boolean flagAtivo, String revDate, String revType, String revUser) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -514,7 +514,7 @@ public class OportunidadesApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<PageOprtunidadeAUD> returnType = new GenericType<PageOprtunidadeAUD>() {};
+    GenericType<PageOportunidadeAUDResponse> returnType = new GenericType<PageOportunidadeAUDResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -530,9 +530,9 @@ public class OportunidadesApi {
    * @param descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o
    * @param flagAtivo Atributo que representa se o tipo oportunidade est\u00C3\u00A1 ativo
    * @param revUser Usu\u00C3\u00A1rio da auditoria
-   * @return PageTipoOprtunidadesAUD
+   * @return PageTipoOportunidadeAUDResponse
    */
-  public PageTipoOprtunidadesAUD listarAuditoriasUsingGET1(Integer page, Integer limit, Long revType, String revDate, Long id, String descricao, Boolean flagAtivo, String revUser) throws ApiException {
+  public PageTipoOportunidadeAUDResponse listarAuditoriasUsingGET1(Integer page, Integer limit, Long revType, String revDate, Long id, String descricao, Boolean flagAtivo, String revUser) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -579,7 +579,7 @@ public class OportunidadesApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<PageTipoOprtunidadesAUD> returnType = new GenericType<PageTipoOprtunidadesAUD>() {};
+    GenericType<PageTipoOportunidadeAUDResponse> returnType = new GenericType<PageTipoOportunidadeAUDResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -593,9 +593,9 @@ public class OportunidadesApi {
    * @param nome Nome do status oportunidade
    * @param descricao Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade
    * @param flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo
-   * @return PageStatusOprtunidades
+   * @return PageStatusOportunidadeResponse
    */
-  public PageStatusOprtunidades listarStatusUsingGET(Long id, Integer page, Integer limit, String nome, String descricao, Boolean flagAtivo) throws ApiException {
+  public PageStatusOportunidadeResponse listarStatusUsingGET(Long id, Integer page, Integer limit, String nome, String descricao, Boolean flagAtivo) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -642,7 +642,7 @@ public class OportunidadesApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<PageStatusOprtunidades> returnType = new GenericType<PageStatusOprtunidades>() {};
+    GenericType<PageStatusOportunidadeResponse> returnType = new GenericType<PageStatusOportunidadeResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -659,9 +659,9 @@ public class OportunidadesApi {
    * @param dataInicioVigencia Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
    * @param dataFimVigencia Data do fim da vig\u00C3\u00AAncia da oportunidade
    * @param flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
-   * @return PageOprtunidadesResponse
+   * @return PageOportunidadeResponse
    */
-  public PageOprtunidadesResponse listarUsingGET12(Integer page, Integer limit, Long idStatusOportunidade, String dataCadastro, String dataAtualizacao, String numeroReceitaFederal, String dataInicioVigencia, String dataFimVigencia, Boolean flagAtivo) throws ApiException {
+  public PageOportunidadeResponse listarUsingGET13(Integer page, Integer limit, Long idStatusOportunidade, String dataCadastro, String dataAtualizacao, String numeroReceitaFederal, String dataInicioVigencia, String dataFimVigencia, Boolean flagAtivo) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -710,7 +710,7 @@ public class OportunidadesApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<PageOprtunidadesResponse> returnType = new GenericType<PageOprtunidadesResponse>() {};
+    GenericType<PageOportunidadeResponse> returnType = new GenericType<PageOportunidadeResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -722,9 +722,9 @@ public class OportunidadesApi {
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade
    * @param flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo
-   * @return PageTipoOprtunidades
+   * @return PageTipoOportunidadeResponse
    */
-  public PageTipoOprtunidades listarUsingGET24(Integer page, Integer limit, String descricao, Boolean flagAtivo) throws ApiException {
+  public PageTipoOportunidadeResponse listarUsingGET25(Integer page, Integer limit, String descricao, Boolean flagAtivo) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -763,7 +763,7 @@ public class OportunidadesApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<PageTipoOprtunidades> returnType = new GenericType<PageTipoOprtunidades>() {};
+    GenericType<PageTipoOportunidadeResponse> returnType = new GenericType<PageTipoOportunidadeResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

@@ -20,7 +20,10 @@ public class AntecipacaoResponse   {
   private Long idCompra = null;
   private Long quantidadeParcelasTotal = null;
   private Long quantidadeParcelasAntecipadas = null;
-  private BigDecimal valorParcelas = null;
+  private BigDecimal valorParcela = null;
+  private BigDecimal valorDescontoTotal = null;
+  private BigDecimal valorTotalComDesconto = null;
+  private BigDecimal taxaDesconto = null;
 
   
   /**
@@ -78,14 +81,14 @@ public class AntecipacaoResponse   {
 
   
   /**
-   * Apresenta o numero total de parcelas da comprae
+   * Apresenta o numero total de parcelas da compra
    **/
   public AntecipacaoResponse quantidadeParcelasTotal(Long quantidadeParcelasTotal) {
     this.quantidadeParcelasTotal = quantidadeParcelasTotal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o numero total de parcelas da comprae")
+  @ApiModelProperty(example = "null", value = "Apresenta o numero total de parcelas da compra")
   @JsonProperty("quantidadeParcelasTotal")
   public Long getQuantidadeParcelasTotal() {
     return quantidadeParcelasTotal;
@@ -114,20 +117,74 @@ public class AntecipacaoResponse   {
 
   
   /**
-   * Apresenta o valor das parcelas efetivadas
+   * Apresenta o valor de cada parcela antecipadas
    **/
-  public AntecipacaoResponse valorParcelas(BigDecimal valorParcelas) {
-    this.valorParcelas = valorParcelas;
+  public AntecipacaoResponse valorParcela(BigDecimal valorParcela) {
+    this.valorParcela = valorParcela;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o valor das parcelas efetivadas")
-  @JsonProperty("valorParcelas")
-  public BigDecimal getValorParcelas() {
-    return valorParcelas;
+  @ApiModelProperty(example = "null", value = "Apresenta o valor de cada parcela antecipadas")
+  @JsonProperty("valorParcela")
+  public BigDecimal getValorParcela() {
+    return valorParcela;
   }
-  public void setValorParcelas(BigDecimal valorParcelas) {
-    this.valorParcelas = valorParcelas;
+  public void setValorParcela(BigDecimal valorParcela) {
+    this.valorParcela = valorParcela;
+  }
+
+  
+  /**
+   * Apresenta o valor total do desconto
+   **/
+  public AntecipacaoResponse valorDescontoTotal(BigDecimal valorDescontoTotal) {
+    this.valorDescontoTotal = valorDescontoTotal;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Apresenta o valor total do desconto")
+  @JsonProperty("valorDescontoTotal")
+  public BigDecimal getValorDescontoTotal() {
+    return valorDescontoTotal;
+  }
+  public void setValorDescontoTotal(BigDecimal valorDescontoTotal) {
+    this.valorDescontoTotal = valorDescontoTotal;
+  }
+
+  
+  /**
+   * Apresenta o valor total com desconto
+   **/
+  public AntecipacaoResponse valorTotalComDesconto(BigDecimal valorTotalComDesconto) {
+    this.valorTotalComDesconto = valorTotalComDesconto;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Apresenta o valor total com desconto")
+  @JsonProperty("valorTotalComDesconto")
+  public BigDecimal getValorTotalComDesconto() {
+    return valorTotalComDesconto;
+  }
+  public void setValorTotalComDesconto(BigDecimal valorTotalComDesconto) {
+    this.valorTotalComDesconto = valorTotalComDesconto;
+  }
+
+  
+  /**
+   * Apresenta a taxa de desconto
+   **/
+  public AntecipacaoResponse taxaDesconto(BigDecimal taxaDesconto) {
+    this.taxaDesconto = taxaDesconto;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Apresenta a taxa de desconto")
+  @JsonProperty("taxaDesconto")
+  public BigDecimal getTaxaDesconto() {
+    return taxaDesconto;
+  }
+  public void setTaxaDesconto(BigDecimal taxaDesconto) {
+    this.taxaDesconto = taxaDesconto;
   }
 
   
@@ -146,12 +203,15 @@ public class AntecipacaoResponse   {
         Objects.equals(this.idCompra, antecipacaoResponse.idCompra) &&
         Objects.equals(this.quantidadeParcelasTotal, antecipacaoResponse.quantidadeParcelasTotal) &&
         Objects.equals(this.quantidadeParcelasAntecipadas, antecipacaoResponse.quantidadeParcelasAntecipadas) &&
-        Objects.equals(this.valorParcelas, antecipacaoResponse.valorParcelas);
+        Objects.equals(this.valorParcela, antecipacaoResponse.valorParcela) &&
+        Objects.equals(this.valorDescontoTotal, antecipacaoResponse.valorDescontoTotal) &&
+        Objects.equals(this.valorTotalComDesconto, antecipacaoResponse.valorTotalComDesconto) &&
+        Objects.equals(this.taxaDesconto, antecipacaoResponse.taxaDesconto);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idConta, idCompra, quantidadeParcelasTotal, quantidadeParcelasAntecipadas, valorParcelas);
+    return Objects.hash(id, idConta, idCompra, quantidadeParcelasTotal, quantidadeParcelasAntecipadas, valorParcela, valorDescontoTotal, valorTotalComDesconto, taxaDesconto);
   }
 
   @Override
@@ -164,7 +224,10 @@ public class AntecipacaoResponse   {
     sb.append("    idCompra: ").append(toIndentedString(idCompra)).append("\n");
     sb.append("    quantidadeParcelasTotal: ").append(toIndentedString(quantidadeParcelasTotal)).append("\n");
     sb.append("    quantidadeParcelasAntecipadas: ").append(toIndentedString(quantidadeParcelasAntecipadas)).append("\n");
-    sb.append("    valorParcelas: ").append(toIndentedString(valorParcelas)).append("\n");
+    sb.append("    valorParcela: ").append(toIndentedString(valorParcela)).append("\n");
+    sb.append("    valorDescontoTotal: ").append(toIndentedString(valorDescontoTotal)).append("\n");
+    sb.append("    valorTotalComDesconto: ").append(toIndentedString(valorTotalComDesconto)).append("\n");
+    sb.append("    taxaDesconto: ").append(toIndentedString(taxaDesconto)).append("\n");
     sb.append("}");
     return sb.toString();
   }

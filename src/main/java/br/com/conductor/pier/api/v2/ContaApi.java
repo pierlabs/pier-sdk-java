@@ -9,26 +9,26 @@ import br.com.conductor.pier.api.v2.invoker.Pair;
 
 import java.math.BigDecimal;
 import br.com.conductor.pier.api.v2.model.AjusteResponse;
-import br.com.conductor.pier.api.v2.model.LimiteDisponibilidade;
+import br.com.conductor.pier.api.v2.model.LimiteDisponibilidadeResponse;
 import br.com.conductor.pier.api.v2.model.ContaResponse;
-import br.com.conductor.pier.api.v2.model.BoletoDeFatura;
+import br.com.conductor.pier.api.v2.model.BoletoResponse;
 import br.com.conductor.pier.api.v2.model.DividaClienteResponse;
 import br.com.conductor.pier.api.v2.model.DetalhesFaturaConsignadaResponse;
 import br.com.conductor.pier.api.v2.model.FaturaConsignadaDetalheResponse;
 import br.com.conductor.pier.api.v2.model.DetalhesFaturaResponse;
-import br.com.conductor.pier.api.v2.model.PageTaxasRefinanciamento;
-import br.com.conductor.pier.api.v2.model.LinkTransferenciaBancariaResponse;
-import br.com.conductor.pier.api.v2.model.PageTransferencias;
+import br.com.conductor.pier.api.v2.model.PageTaxasRefinanciamentoResponse;
+import br.com.conductor.pier.api.v2.model.TransferenciaBancariaResponse;
+import br.com.conductor.pier.api.v2.model.PageTransferenciaResponse;
 import br.com.conductor.pier.api.v2.model.ContaDetalheResponse;
-import br.com.conductor.pier.api.v2.model.CartaoImpressao;
-import br.com.conductor.pier.api.v2.model.PageFaturasConsignadas;
-import br.com.conductor.pier.api.v2.model.PageFaturas;
-import br.com.conductor.pier.api.v2.model.PageHistoricoEventos;
-import br.com.conductor.pier.api.v2.model.LinkPageHistoricoAssessoriaResponse;
-import br.com.conductor.pier.api.v2.model.PageHistoricoAtraso;
-import br.com.conductor.pier.api.v2.model.PageTransacoesCorrentes;
-import br.com.conductor.pier.api.v2.model.LinkPageTransferenciaBancariaResponse;
-import br.com.conductor.pier.api.v2.model.PageContas;
+import br.com.conductor.pier.api.v2.model.CartaoImpressaoResponse;
+import br.com.conductor.pier.api.v2.model.PageFaturaConsignadaResponse;
+import br.com.conductor.pier.api.v2.model.PageFaturaResponse;
+import br.com.conductor.pier.api.v2.model.PageHistoricoEventosResponse;
+import br.com.conductor.pier.api.v2.model.PageHistoricoAssessoriaResponse;
+import br.com.conductor.pier.api.v2.model.PageHistoricoAtrasoFaturaResponse;
+import br.com.conductor.pier.api.v2.model.PageTransacoesCorrentesResponse;
+import br.com.conductor.pier.api.v2.model.PageTransferenciaBancariaResponse;
+import br.com.conductor.pier.api.v2.model.PageContaResponse;
 import br.com.conductor.pier.api.v2.model.PageTransacaoResponse;
 import br.com.conductor.pier.api.v2.model.TransferenciaBancariaPersist;
 
@@ -150,9 +150,9 @@ public class ContaApi {
    * @param limiteInternacionalParcelas Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.
    * @param limiteInternacionalSaqueGlobal Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.
    * @param limiteInternacionalSaquePeriodo Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.
-   * @return LimiteDisponibilidade
+   * @return LimiteDisponibilidadeResponse
    */
-  public LimiteDisponibilidade alterarLimiteUsingPUT(Long id, BigDecimal limiteGlobal, BigDecimal limiteCompra, BigDecimal limiteParcelado, BigDecimal limiteParcelas, BigDecimal limiteSaqueGlobal, BigDecimal limiteSaquePeriodo, BigDecimal limiteConsignado, BigDecimal limiteInternacionalCompra, BigDecimal limiteInternacionalParcelado, BigDecimal limiteInternacionalParcelas, BigDecimal limiteInternacionalSaqueGlobal, BigDecimal limiteInternacionalSaquePeriodo) throws ApiException {
+  public LimiteDisponibilidadeResponse alterarLimiteUsingPUT(Long id, BigDecimal limiteGlobal, BigDecimal limiteCompra, BigDecimal limiteParcelado, BigDecimal limiteParcelas, BigDecimal limiteSaqueGlobal, BigDecimal limiteSaquePeriodo, BigDecimal limiteConsignado, BigDecimal limiteInternacionalCompra, BigDecimal limiteInternacionalParcelado, BigDecimal limiteInternacionalParcelas, BigDecimal limiteInternacionalSaqueGlobal, BigDecimal limiteInternacionalSaquePeriodo) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -273,7 +273,7 @@ public class ContaApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<LimiteDisponibilidade> returnType = new GenericType<LimiteDisponibilidade>() {};
+    GenericType<LimiteDisponibilidadeResponse> returnType = new GenericType<LimiteDisponibilidadeResponse>() {};
     return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -442,9 +442,9 @@ public class ContaApi {
    * Consulta os dados de um determinado boleto da fatura
    * Este recurso consulta um boleto da fatura
    * @param id Id Conta
-   * @return BoletoDeFatura
+   * @return BoletoResponse
    */
-  public BoletoDeFatura consultarBoletoEmitidoUsingGET(Long id) throws ApiException {
+  public BoletoResponse consultarBoletoEmitidoUsingGET(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -481,7 +481,7 @@ public class ContaApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<BoletoDeFatura> returnType = new GenericType<BoletoDeFatura>() {};
+    GenericType<BoletoResponse> returnType = new GenericType<BoletoResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -763,9 +763,9 @@ public class ContaApi {
    * Apresenta os limites da conta
    * Este m\u00C3\u00A9todo permite consultar os Limites configurados para uma determinada Conta, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
    * @param id Id Conta
-   * @return LimiteDisponibilidade
+   * @return LimiteDisponibilidadeResponse
    */
-  public LimiteDisponibilidade consultarLimiteDisponibilidadeUsingGET1(Long id) throws ApiException {
+  public LimiteDisponibilidadeResponse consultarLimiteDisponibilidadeUsingGET1(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -802,7 +802,7 @@ public class ContaApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<LimiteDisponibilidade> returnType = new GenericType<LimiteDisponibilidade>() {};
+    GenericType<LimiteDisponibilidadeResponse> returnType = new GenericType<LimiteDisponibilidadeResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -813,9 +813,9 @@ public class ContaApi {
    * @param id ID da conta a ser consultada.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @return PageTaxasRefinanciamento
+   * @return PageTaxasRefinanciamentoResponse
    */
-  public PageTaxasRefinanciamento consultarTaxasTarifasUsingGET(Long id, Integer page, Integer limit) throws ApiException {
+  public PageTaxasRefinanciamentoResponse consultarTaxasTarifasUsingGET(Long id, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -856,7 +856,7 @@ public class ContaApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<PageTaxasRefinanciamento> returnType = new GenericType<PageTaxasRefinanciamento>() {};
+    GenericType<PageTaxasRefinanciamentoResponse> returnType = new GenericType<PageTaxasRefinanciamentoResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -867,9 +867,9 @@ public class ContaApi {
    * @param id Id Conta
    * @param idTransferencia Id Transfer\u00C3\u00AAncia
    * @param idContaBancariaDestino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
-   * @return LinkTransferenciaBancariaResponse
+   * @return TransferenciaBancariaResponse
    */
-  public LinkTransferenciaBancariaResponse consultarUsingGET23(Long id, Long idTransferencia, Long idContaBancariaDestino) throws ApiException {
+  public TransferenciaBancariaResponse consultarUsingGET23(Long id, Long idTransferencia, Long idContaBancariaDestino) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -914,7 +914,7 @@ public class ContaApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<LinkTransferenciaBancariaResponse> returnType = new GenericType<LinkTransferenciaBancariaResponse>() {};
+    GenericType<TransferenciaBancariaResponse> returnType = new GenericType<TransferenciaBancariaResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -924,9 +924,9 @@ public class ContaApi {
    * Este m\u00C3\u00A9todo permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas.
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
    * @param idTransferencia C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).
-   * @return PageTransferencias
+   * @return PageTransferenciaResponse
    */
-  public PageTransferencias consultarUsingGET24(Long id, Long idTransferencia) throws ApiException {
+  public PageTransferenciaResponse consultarUsingGET24(Long id, Long idTransferencia) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -969,7 +969,7 @@ public class ContaApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<PageTransferencias> returnType = new GenericType<PageTransferencias>() {};
+    GenericType<PageTransferenciaResponse> returnType = new GenericType<PageTransferenciaResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -1076,9 +1076,9 @@ public class ContaApi {
    * @param id Id Conta
    * @param valor Atributo que representa o valor do Boleto Emitido
    * @param dataVencimento Atributo que representa a data de vencimento do boleto
-   * @return BoletoDeFatura
+   * @return BoletoResponse
    */
-  public BoletoDeFatura gerarBoletoRecargaUsingPOST(Long id, BigDecimal valor, String dataVencimento) throws ApiException {
+  public BoletoResponse gerarBoletoRecargaUsingPOST(Long id, BigDecimal valor, String dataVencimento) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -1129,7 +1129,7 @@ public class ContaApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<BoletoDeFatura> returnType = new GenericType<BoletoDeFatura>() {};
+    GenericType<BoletoResponse> returnType = new GenericType<BoletoResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -1140,9 +1140,9 @@ public class ContaApi {
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
    * @param idPessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
    * @param idTipoPlastico C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id).
-   * @return CartaoImpressao
+   * @return CartaoImpressaoResponse
    */
-  public CartaoImpressao gerarCartaoUsingPOST(Long id, Long idPessoa, Long idTipoPlastico) throws ApiException {
+  public CartaoImpressaoResponse gerarCartaoUsingPOST(Long id, Long idPessoa, Long idTipoPlastico) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -1187,7 +1187,7 @@ public class ContaApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<CartaoImpressao> returnType = new GenericType<CartaoImpressao>() {};
+    GenericType<CartaoImpressaoResponse> returnType = new GenericType<CartaoImpressaoResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -1197,9 +1197,9 @@ public class ContaApi {
    * Este recurso permite que seja gerado um Cart\u00C3\u00A3o virtual para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id). Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es virtuaes atraves de um app.
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
    * @param dataValidade Data de Validade
-   * @return CartaoImpressao
+   * @return CartaoImpressaoResponse
    */
-  public CartaoImpressao gerarCartaoVirtualUsingPOST(Long id, String dataValidade) throws ApiException {
+  public CartaoImpressaoResponse gerarCartaoVirtualUsingPOST(Long id, String dataValidade) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -1243,7 +1243,7 @@ public class ContaApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<CartaoImpressao> returnType = new GenericType<CartaoImpressao>() {};
+    GenericType<CartaoImpressaoResponse> returnType = new GenericType<CartaoImpressaoResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -1255,9 +1255,9 @@ public class ContaApi {
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param dataVencimento Apresenta a data de vencimento da fatura.
-   * @return PageFaturasConsignadas
+   * @return PageFaturaConsignadaResponse
    */
-  public PageFaturasConsignadas listarFaturasConsignadasUsingGET(Long id, Integer page, Integer limit, String dataVencimento) throws ApiException {
+  public PageFaturaConsignadaResponse listarFaturasConsignadasUsingGET(Long id, Integer page, Integer limit, String dataVencimento) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -1300,7 +1300,7 @@ public class ContaApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<PageFaturasConsignadas> returnType = new GenericType<PageFaturasConsignadas>() {};
+    GenericType<PageFaturaConsignadaResponse> returnType = new GenericType<PageFaturaConsignadaResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -1312,9 +1312,9 @@ public class ContaApi {
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param dataVencimento Data de Vencimento da Fatura.
-   * @return PageFaturas
+   * @return PageFaturaResponse
    */
-  public PageFaturas listarFaturasUsingGET(Long id, Integer page, Integer limit, String dataVencimento) throws ApiException {
+  public PageFaturaResponse listarFaturasUsingGET(Long id, Integer page, Integer limit, String dataVencimento) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -1357,7 +1357,7 @@ public class ContaApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<PageFaturas> returnType = new GenericType<PageFaturas>() {};
+    GenericType<PageFaturaResponse> returnType = new GenericType<PageFaturaResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -1368,9 +1368,9 @@ public class ContaApi {
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @return PageHistoricoEventos
+   * @return PageHistoricoEventosResponse
    */
-  public PageHistoricoEventos listarHistoricoAlteracoesLimitesUsingGET(Long id, Integer page, Integer limit) throws ApiException {
+  public PageHistoricoEventosResponse listarHistoricoAlteracoesLimitesUsingGET(Long id, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -1411,7 +1411,7 @@ public class ContaApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<PageHistoricoEventos> returnType = new GenericType<PageHistoricoEventos>() {};
+    GenericType<PageHistoricoEventosResponse> returnType = new GenericType<PageHistoricoEventosResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -1422,9 +1422,9 @@ public class ContaApi {
    * @param id Id Conta
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @return LinkPageHistoricoAssessoriaResponse
+   * @return PageHistoricoAssessoriaResponse
    */
-  public LinkPageHistoricoAssessoriaResponse listarHistoricoAssessoriaUsingGET(Long id, Integer page, Integer limit) throws ApiException {
+  public PageHistoricoAssessoriaResponse listarHistoricoAssessoriaUsingGET(Long id, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -1465,7 +1465,7 @@ public class ContaApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<LinkPageHistoricoAssessoriaResponse> returnType = new GenericType<LinkPageHistoricoAssessoriaResponse>() {};
+    GenericType<PageHistoricoAssessoriaResponse> returnType = new GenericType<PageHistoricoAssessoriaResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -1474,9 +1474,9 @@ public class ContaApi {
    * Lista o historico de atrasos das faturas
    * Este recurso lista o hist\u00C3\u00B3rico do pagamento de faturas em atraso
    * @param id Id Conta
-   * @return PageHistoricoAtraso
+   * @return PageHistoricoAtrasoFaturaResponse
    */
-  public PageHistoricoAtraso listarHistoricoAtrasosFaturasUsingGET(Long id) throws ApiException {
+  public PageHistoricoAtrasoFaturaResponse listarHistoricoAtrasosFaturasUsingGET(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -1513,7 +1513,7 @@ public class ContaApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<PageHistoricoAtraso> returnType = new GenericType<PageHistoricoAtraso>() {};
+    GenericType<PageHistoricoAtrasoFaturaResponse> returnType = new GenericType<PageHistoricoAtrasoFaturaResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -1526,9 +1526,9 @@ public class ContaApi {
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param dataInicio Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Par\u00C3\u00A2mentro Ignorado se dataFim n\u00C3\u00A3o for definida).
    * @param dataFim Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00C3\u00A2mentro Ignorado se dataInicio n\u00C3\u00A3o for definida).
-   * @return PageTransacoesCorrentes
+   * @return PageTransacoesCorrentesResponse
    */
-  public PageTransacoesCorrentes listarNaoProcessadasUsingGET(Long id, Integer page, Integer limit, String dataInicio, String dataFim) throws ApiException {
+  public PageTransacoesCorrentesResponse listarNaoProcessadasUsingGET(Long id, Integer page, Integer limit, String dataInicio, String dataFim) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -1573,7 +1573,7 @@ public class ContaApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<PageTransacoesCorrentes> returnType = new GenericType<PageTransacoesCorrentes>() {};
+    GenericType<PageTransacoesCorrentesResponse> returnType = new GenericType<PageTransacoesCorrentesResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -1587,9 +1587,9 @@ public class ContaApi {
    * @param dataVencimento Data de vencimento do extrato no formato yyyy-MM-dd.
    * @param dataInicio Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado).
    * @param dataFim Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado).
-   * @return PageTransacoesCorrentes
+   * @return PageTransacoesCorrentesResponse
    */
-  public PageTransacoesCorrentes listarProcessadasUsingGET(Long id, Integer page, Integer limit, String dataVencimento, String dataInicio, String dataFim) throws ApiException {
+  public PageTransacoesCorrentesResponse listarProcessadasUsingGET(Long id, Integer page, Integer limit, String dataVencimento, String dataInicio, String dataFim) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -1636,7 +1636,7 @@ public class ContaApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<PageTransacoesCorrentes> returnType = new GenericType<PageTransacoesCorrentes>() {};
+    GenericType<PageTransacoesCorrentesResponse> returnType = new GenericType<PageTransacoesCorrentesResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -1648,14 +1648,14 @@ public class ContaApi {
    * @param idContaBancariaDestino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @return LinkPageTransferenciaBancariaResponse
+   * @return PageTransferenciaBancariaResponse
    */
-  public LinkPageTransferenciaBancariaResponse listarUsingGET27(Long id, Long idContaBancariaDestino, Integer page, Integer limit) throws ApiException {
+  public PageTransferenciaBancariaResponse listarUsingGET28(Long id, Long idContaBancariaDestino, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET27");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET28");
      }
      
     // create path and map variables
@@ -1693,7 +1693,7 @@ public class ContaApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<LinkPageTransferenciaBancariaResponse> returnType = new GenericType<LinkPageTransferenciaBancariaResponse>() {};
+    GenericType<PageTransferenciaBancariaResponse> returnType = new GenericType<PageTransferenciaBancariaResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -1709,14 +1709,14 @@ public class ContaApi {
    * @param idContaDestino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id).
    * @param valorTransferencia Valor estabelecido para ser transferido.
    * @param dataTransferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
-   * @return PageTransferencias
+   * @return PageTransferenciaResponse
    */
-  public PageTransferencias listarUsingGET28(Long id, Integer page, Integer limit, Long idTransferencia, Long idContaOrigem, Long idContaDestino, BigDecimal valorTransferencia, String dataTransferencia) throws ApiException {
+  public PageTransferenciaResponse listarUsingGET29(Long id, Integer page, Integer limit, Long idTransferencia, Long idContaOrigem, Long idContaDestino, BigDecimal valorTransferencia, String dataTransferencia) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET28");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET29");
      }
      
     // create path and map variables
@@ -1762,7 +1762,7 @@ public class ContaApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<PageTransferencias> returnType = new GenericType<PageTransferencias>() {};
+    GenericType<PageTransferenciaResponse> returnType = new GenericType<PageTransferenciaResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -1781,9 +1781,9 @@ public class ContaApi {
    * @param dataStatusConta Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
    * @param dataCadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
    * @param dataUltimaAlteracaoVencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
-   * @return PageContas
+   * @return PageContaResponse
    */
-  public PageContas listarUsingGET6(Integer page, Integer limit, Long idProduto, Long idOrigemComercial, Long idPessoa, Long idStatusConta, Integer diaVencimento, Integer melhorDiaCompra, String dataStatusConta, String dataCadastro, String dataUltimaAlteracaoVencimento) throws ApiException {
+  public PageContaResponse listarUsingGET7(Integer page, Integer limit, Long idProduto, Long idOrigemComercial, Long idPessoa, Long idStatusConta, Integer diaVencimento, Integer melhorDiaCompra, String dataStatusConta, String dataCadastro, String dataUltimaAlteracaoVencimento) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -1836,14 +1836,14 @@ public class ContaApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<PageContas> returnType = new GenericType<PageContas>() {};
+    GenericType<PageContaResponse> returnType = new GenericType<PageContaResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
   /**
-   * Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas que foram desativadas por inadimpl\u00C3\u00AAncia
-   * Este recurso permite reativar contas que foram desativadas por inadimpl\u00C3\u00AAncia. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+   * Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
+   * Este recurso permite reativar contas. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
    * @param id Id Conta
    * @return Object
    */
@@ -1948,9 +1948,9 @@ public class ContaApi {
    * Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para uma conta banc\u00C3\u00A1ria. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta banc\u00C3\u00A1ria de destino.
    * @param id Id Conta
    * @param transferenciaBancariaPersist transferenciaBancariaPersist
-   * @return LinkTransferenciaBancariaResponse
+   * @return TransferenciaBancariaResponse
    */
-  public LinkTransferenciaBancariaResponse transferirUsingPOST(Long id, TransferenciaBancariaPersist transferenciaBancariaPersist) throws ApiException {
+  public TransferenciaBancariaResponse transferirUsingPOST(Long id, TransferenciaBancariaPersist transferenciaBancariaPersist) throws ApiException {
     Object postBody = transferenciaBancariaPersist;
     
      // verify the required parameter 'id' is set
@@ -1992,7 +1992,7 @@ public class ContaApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<LinkTransferenciaBancariaResponse> returnType = new GenericType<LinkTransferenciaBancariaResponse>() {};
+    GenericType<TransferenciaBancariaResponse> returnType = new GenericType<TransferenciaBancariaResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -2003,9 +2003,9 @@ public class ContaApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id).
    * @param idContaDestino C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id).
    * @param valorTransferencia Valor da Transfer\u00C3\u00AAncia.
-   * @return PageTransferencias
+   * @return PageTransferenciaResponse
    */
-  public PageTransferencias transferirUsingPOST1(Long id, Long idContaDestino, BigDecimal valorTransferencia) throws ApiException {
+  public PageTransferenciaResponse transferirUsingPOST1(Long id, Long idContaDestino, BigDecimal valorTransferencia) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -2056,7 +2056,7 @@ public class ContaApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<PageTransferencias> returnType = new GenericType<PageTransferencias>() {};
+    GenericType<PageTransferenciaResponse> returnType = new GenericType<PageTransferenciaResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

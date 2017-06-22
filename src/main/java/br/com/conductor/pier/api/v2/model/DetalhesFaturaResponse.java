@@ -2,7 +2,7 @@ package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
 import br.com.conductor.pier.api.v2.model.FaturaResponse;
-import br.com.conductor.pier.api.v2.model.TransacoesCorrentes;
+import br.com.conductor.pier.api.v2.model.TransacoesCorrentesResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -22,7 +22,7 @@ import java.util.List;
 public class DetalhesFaturaResponse   {
   
   private FaturaResponse fatura = null;
-  private List<TransacoesCorrentes> transacoes = new ArrayList<TransacoesCorrentes>();
+  private List<TransacoesCorrentesResponse> transacoes = new ArrayList<TransacoesCorrentesResponse>();
 
   
   /**
@@ -46,17 +46,17 @@ public class DetalhesFaturaResponse   {
   /**
    * Apresenta as transa\u00C3\u00A7\u00C3\u00B5es relacionadas a fatura.
    **/
-  public DetalhesFaturaResponse transacoes(List<TransacoesCorrentes> transacoes) {
+  public DetalhesFaturaResponse transacoes(List<TransacoesCorrentesResponse> transacoes) {
     this.transacoes = transacoes;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Apresenta as transa\u00C3\u00A7\u00C3\u00B5es relacionadas a fatura.")
   @JsonProperty("transacoes")
-  public List<TransacoesCorrentes> getTransacoes() {
+  public List<TransacoesCorrentesResponse> getTransacoes() {
     return transacoes;
   }
-  public void setTransacoes(List<TransacoesCorrentes> transacoes) {
+  public void setTransacoes(List<TransacoesCorrentesResponse> transacoes) {
     this.transacoes = transacoes;
   }
 

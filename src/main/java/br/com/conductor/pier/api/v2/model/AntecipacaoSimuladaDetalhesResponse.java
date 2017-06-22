@@ -11,36 +11,17 @@ import java.math.BigDecimal;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso Antecipacao Simulada
+ * Representa\u00C3\u00A7\u00C3\u00A3o da resposta dos detalhes do recurso Antecipacao Simulada
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso Antecipacao Simulada")
+@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta dos detalhes do recurso Antecipacao Simulada")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class AntecipacaoSimuladaDetalhesResponse   {
   
-  private Long idSimulacaoDetalhe = null;
   private Integer quantidadeParcelas = null;
   private BigDecimal valorParcelas = null;
   private BigDecimal valorDesconto = null;
   private BigDecimal valorParcelasDesconto = null;
-
-  
-  /**
-   * C\u00C3\u00B3digo identificador do detalhe da simula\u00C3\u00A7\u00C3\u00A3o de antecipa\u00C3\u00A7\u00C3\u00A3o.
-   **/
-  public AntecipacaoSimuladaDetalhesResponse idSimulacaoDetalhe(Long idSimulacaoDetalhe) {
-    this.idSimulacaoDetalhe = idSimulacaoDetalhe;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador do detalhe da simula\u00C3\u00A7\u00C3\u00A3o de antecipa\u00C3\u00A7\u00C3\u00A3o.")
-  @JsonProperty("idSimulacaoDetalhe")
-  public Long getIdSimulacaoDetalhe() {
-    return idSimulacaoDetalhe;
-  }
-  public void setIdSimulacaoDetalhe(Long idSimulacaoDetalhe) {
-    this.idSimulacaoDetalhe = idSimulacaoDetalhe;
-  }
 
   
   /**
@@ -125,8 +106,7 @@ public class AntecipacaoSimuladaDetalhesResponse   {
       return false;
     }
     AntecipacaoSimuladaDetalhesResponse antecipacaoSimuladaDetalhesResponse = (AntecipacaoSimuladaDetalhesResponse) o;
-    return Objects.equals(this.idSimulacaoDetalhe, antecipacaoSimuladaDetalhesResponse.idSimulacaoDetalhe) &&
-        Objects.equals(this.quantidadeParcelas, antecipacaoSimuladaDetalhesResponse.quantidadeParcelas) &&
+    return Objects.equals(this.quantidadeParcelas, antecipacaoSimuladaDetalhesResponse.quantidadeParcelas) &&
         Objects.equals(this.valorParcelas, antecipacaoSimuladaDetalhesResponse.valorParcelas) &&
         Objects.equals(this.valorDesconto, antecipacaoSimuladaDetalhesResponse.valorDesconto) &&
         Objects.equals(this.valorParcelasDesconto, antecipacaoSimuladaDetalhesResponse.valorParcelasDesconto);
@@ -134,7 +114,7 @@ public class AntecipacaoSimuladaDetalhesResponse   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(idSimulacaoDetalhe, quantidadeParcelas, valorParcelas, valorDesconto, valorParcelasDesconto);
+    return Objects.hash(quantidadeParcelas, valorParcelas, valorDesconto, valorParcelasDesconto);
   }
 
   @Override
@@ -142,7 +122,6 @@ public class AntecipacaoSimuladaDetalhesResponse   {
     StringBuilder sb = new StringBuilder();
     sb.append("class AntecipacaoSimuladaDetalhesResponse {\n");
     
-    sb.append("    idSimulacaoDetalhe: ").append(toIndentedString(idSimulacaoDetalhe)).append("\n");
     sb.append("    quantidadeParcelas: ").append(toIndentedString(quantidadeParcelas)).append("\n");
     sb.append("    valorParcelas: ").append(toIndentedString(valorParcelas)).append("\n");
     sb.append("    valorDesconto: ").append(toIndentedString(valorDesconto)).append("\n");
