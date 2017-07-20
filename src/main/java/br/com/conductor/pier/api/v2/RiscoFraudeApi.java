@@ -8,7 +8,7 @@ import br.com.conductor.pier.api.v2.invoker.Configuration;
 import br.com.conductor.pier.api.v2.invoker.Pair;
 
 import br.com.conductor.pier.api.v2.model.RiscoFraudeDetalhadoResponse;
-import br.com.conductor.pier.api.v2.model.RiscoFraudeResponsePage;
+import br.com.conductor.pier.api.v2.model.TipoResolucaoResponse;
 
 
 
@@ -42,16 +42,16 @@ public class RiscoFraudeApi {
   
   /**
    * Consultar uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
-   * Consulta os detalhes de uma transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude.
+   * Consulta os detalhes de uma transa\u00C3\u00A7\u00C3\u00A3o classificada como risco de fraude.
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
    * @return RiscoFraudeDetalhadoResponse
    */
-  public RiscoFraudeDetalhadoResponse consultarUsingGET12(Long id) throws ApiException {
+  public RiscoFraudeDetalhadoResponse consultarUsingGET13(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET12");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET13");
      }
      
     // create path and map variables
@@ -89,39 +89,23 @@ public class RiscoFraudeApi {
   }
   
   /**
-   * Listar as transa\u00C3\u00A7\u00C3\u00B5es com resolu\u00C3\u00A7\u00C3\u00A3o de risco fraude pendente
-   * Este recurso permite que sejam listados os riscos de fraudes existentes
-   * @param idConta Id Conta
-   * @param confirmacaoFraude Confirma\u00C3\u00A7\u00C3\u00A3o da fraude
+   * Listar os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude
+   * Este recurso permite que sejam listados os tipos de resolu\u00C3\u00A7\u00C3\u00A3o de fraude, cadastrados para um emissor
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @return RiscoFraudeResponsePage
+   * @return TipoResolucaoResponse
    */
-  public RiscoFraudeResponsePage listarUsingGET19(Long idConta, String confirmacaoFraude, Integer page, Integer limit) throws ApiException {
+  public TipoResolucaoResponse listarTiposResolucaoUsingGET(Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
-     // verify the required parameter 'idConta' is set
-     if (idConta == null) {
-        throw new ApiException(400, "Missing the required parameter 'idConta' when calling listarUsingGET19");
-     }
-     
-     // verify the required parameter 'confirmacaoFraude' is set
-     if (confirmacaoFraude == null) {
-        throw new ApiException(400, "Missing the required parameter 'confirmacaoFraude' when calling listarUsingGET19");
-     }
-     
     // create path and map variables
-    String path = "/api/riscos-fraudes".replaceAll("\\{format\\}","json");
+    String path = "/api/tipos-resolucao".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
     Map<String, String> headerParams = new HashMap<String, String>();
     Map<String, Object> formParams = new HashMap<String, Object>();
 
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "id_conta", idConta));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "confirmacao_fraude", confirmacaoFraude));
     
     queryParams.addAll(apiClient.parameterToPairs("", "page", page));
     
@@ -146,104 +130,8 @@ public class RiscoFraudeApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<RiscoFraudeResponsePage> returnType = new GenericType<RiscoFraudeResponsePage>() {};
+    GenericType<TipoResolucaoResponse> returnType = new GenericType<TipoResolucaoResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
-   * Negar autenticidade da transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
-   * Nega a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude.
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
-   * @return RiscoFraudeDetalhadoResponse
-   */
-  public RiscoFraudeDetalhadoResponse negarUsingPOST(Long id) throws ApiException {
-    Object postBody = null;
-    
-     // verify the required parameter 'id' is set
-     if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling negarUsingPOST");
-     }
-     
-    // create path and map variables
-    String path = "/api/riscos-fraudes/{id}/negar".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<RiscoFraudeDetalhadoResponse> returnType = new GenericType<RiscoFraudeDetalhadoResponse>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
-   * Reconhecer a transa\u00C3\u00A7\u00C3\u00A3o com risco de fraude
-   * Confirma a autenticidade da transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude.
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
-   * @return RiscoFraudeDetalhadoResponse
-   */
-  public RiscoFraudeDetalhadoResponse reconhecerUsingPOST(Long id) throws ApiException {
-    Object postBody = null;
-    
-     // verify the required parameter 'id' is set
-     if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling reconhecerUsingPOST");
-     }
-     
-    // create path and map variables
-    String path = "/api/riscos-fraudes/{id}/reconhecer".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<RiscoFraudeDetalhadoResponse> returnType = new GenericType<RiscoFraudeDetalhadoResponse>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   

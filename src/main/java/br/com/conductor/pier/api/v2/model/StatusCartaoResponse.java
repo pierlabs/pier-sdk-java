@@ -26,6 +26,9 @@ public class StatusCartaoResponse   {
   private Integer flagCobraTarifa = null;
   private Integer flagPermiteNovaViaCartao = null;
   private Integer flagPermiteDesbloqueio = null;
+  private Integer flagCancelamento = null;
+  private Integer flagPermiteBloqueio = null;
+  private Integer flagReativar = null;
 
   
   /**
@@ -190,6 +193,60 @@ public class StatusCartaoResponse   {
   }
 
   
+  /**
+   * Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o cancelamento, sendo: 0: Inativo e 1: Ativo.
+   **/
+  public StatusCartaoResponse flagCancelamento(Integer flagCancelamento) {
+    this.flagCancelamento = flagCancelamento;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o cancelamento, sendo: 0: Inativo e 1: Ativo.")
+  @JsonProperty("flagCancelamento")
+  public Integer getFlagCancelamento() {
+    return flagCancelamento;
+  }
+  public void setFlagCancelamento(Integer flagCancelamento) {
+    this.flagCancelamento = flagCancelamento;
+  }
+
+  
+  /**
+   * Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o bloqueio, sendo: 0: Inativo e 1: Ativo.
+   **/
+  public StatusCartaoResponse flagPermiteBloqueio(Integer flagPermiteBloqueio) {
+    this.flagPermiteBloqueio = flagPermiteBloqueio;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o bloqueio, sendo: 0: Inativo e 1: Ativo.")
+  @JsonProperty("flagPermiteBloqueio")
+  public Integer getFlagPermiteBloqueio() {
+    return flagPermiteBloqueio;
+  }
+  public void setFlagPermiteBloqueio(Integer flagPermiteBloqueio) {
+    this.flagPermiteBloqueio = flagPermiteBloqueio;
+  }
+
+  
+  /**
+   * Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
+   **/
+  public StatusCartaoResponse flagReativar(Integer flagReativar) {
+    this.flagReativar = flagReativar;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.")
+  @JsonProperty("flagReativar")
+  public Integer getFlagReativar() {
+    return flagReativar;
+  }
+  public void setFlagReativar(Integer flagReativar) {
+    this.flagReativar = flagReativar;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -208,12 +265,15 @@ public class StatusCartaoResponse   {
         Objects.equals(this.idStatusDestinoConta, statusCartaoResponse.idStatusDestinoConta) &&
         Objects.equals(this.flagCobraTarifa, statusCartaoResponse.flagCobraTarifa) &&
         Objects.equals(this.flagPermiteNovaViaCartao, statusCartaoResponse.flagPermiteNovaViaCartao) &&
-        Objects.equals(this.flagPermiteDesbloqueio, statusCartaoResponse.flagPermiteDesbloqueio);
+        Objects.equals(this.flagPermiteDesbloqueio, statusCartaoResponse.flagPermiteDesbloqueio) &&
+        Objects.equals(this.flagCancelamento, statusCartaoResponse.flagCancelamento) &&
+        Objects.equals(this.flagPermiteBloqueio, statusCartaoResponse.flagPermiteBloqueio) &&
+        Objects.equals(this.flagReativar, statusCartaoResponse.flagReativar);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, nome, flagCancelaCartao, flagCancelaNoDesbloqueio, idStatusDestinoDesbloqueio, idStatusDestinoConta, flagCobraTarifa, flagPermiteNovaViaCartao, flagPermiteDesbloqueio);
+    return Objects.hash(id, nome, flagCancelaCartao, flagCancelaNoDesbloqueio, idStatusDestinoDesbloqueio, idStatusDestinoConta, flagCobraTarifa, flagPermiteNovaViaCartao, flagPermiteDesbloqueio, flagCancelamento, flagPermiteBloqueio, flagReativar);
   }
 
   @Override
@@ -230,6 +290,9 @@ public class StatusCartaoResponse   {
     sb.append("    flagCobraTarifa: ").append(toIndentedString(flagCobraTarifa)).append("\n");
     sb.append("    flagPermiteNovaViaCartao: ").append(toIndentedString(flagPermiteNovaViaCartao)).append("\n");
     sb.append("    flagPermiteDesbloqueio: ").append(toIndentedString(flagPermiteDesbloqueio)).append("\n");
+    sb.append("    flagCancelamento: ").append(toIndentedString(flagCancelamento)).append("\n");
+    sb.append("    flagPermiteBloqueio: ").append(toIndentedString(flagPermiteBloqueio)).append("\n");
+    sb.append("    flagReativar: ").append(toIndentedString(flagReativar)).append("\n");
     sb.append("}");
     return sb.toString();
   }

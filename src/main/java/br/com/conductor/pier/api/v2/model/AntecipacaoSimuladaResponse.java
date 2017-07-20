@@ -23,9 +23,9 @@ public class AntecipacaoSimuladaResponse   {
   
   private Long idAntecipacaoSimulada = null;
   private Long idConta = null;
-  private Long idEventoExterno = null;
+  private Long idCompra = null;
   private Long idTipoTransacao = null;
-  private Integer qtdeParcelasAntecipaveis = null;
+  private Integer quantidadeParcelasAntecipaveis = null;
   private BigDecimal valorParcela = null;
   private String dataHoraSimulacao = null;
   private BigDecimal taxaAntecipacaoAno = null;
@@ -69,32 +69,32 @@ public class AntecipacaoSimuladaResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do evento.
+   * C\u00C3\u00B3digo identificador do evento compra.
    **/
-  public AntecipacaoSimuladaResponse idEventoExterno(Long idEventoExterno) {
-    this.idEventoExterno = idEventoExterno;
+  public AntecipacaoSimuladaResponse idCompra(Long idCompra) {
+    this.idCompra = idCompra;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador do evento.")
-  @JsonProperty("idEventoExterno")
-  public Long getIdEventoExterno() {
-    return idEventoExterno;
+  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador do evento compra.")
+  @JsonProperty("idCompra")
+  public Long getIdCompra() {
+    return idCompra;
   }
-  public void setIdEventoExterno(Long idEventoExterno) {
-    this.idEventoExterno = idEventoExterno;
+  public void setIdCompra(Long idCompra) {
+    this.idCompra = idCompra;
   }
 
   
   /**
-   * C\u00C3\u00B3digo identificador do tipo do evento.
+   * C\u00C3\u00B3digo identificador do tipo do evento compra.
    **/
   public AntecipacaoSimuladaResponse idTipoTransacao(Long idTipoTransacao) {
     this.idTipoTransacao = idTipoTransacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador do tipo do evento.")
+  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador do tipo do evento compra.")
   @JsonProperty("idTipoTransacao")
   public Long getIdTipoTransacao() {
     return idTipoTransacao;
@@ -107,18 +107,18 @@ public class AntecipacaoSimuladaResponse   {
   /**
    * Quantidade de parcelas antecip\u00C3\u00A1veis.
    **/
-  public AntecipacaoSimuladaResponse qtdeParcelasAntecipaveis(Integer qtdeParcelasAntecipaveis) {
-    this.qtdeParcelasAntecipaveis = qtdeParcelasAntecipaveis;
+  public AntecipacaoSimuladaResponse quantidadeParcelasAntecipaveis(Integer quantidadeParcelasAntecipaveis) {
+    this.quantidadeParcelasAntecipaveis = quantidadeParcelasAntecipaveis;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Quantidade de parcelas antecip\u00C3\u00A1veis.")
-  @JsonProperty("qtdeParcelasAntecipaveis")
-  public Integer getQtdeParcelasAntecipaveis() {
-    return qtdeParcelasAntecipaveis;
+  @JsonProperty("quantidadeParcelasAntecipaveis")
+  public Integer getQuantidadeParcelasAntecipaveis() {
+    return quantidadeParcelasAntecipaveis;
   }
-  public void setQtdeParcelasAntecipaveis(Integer qtdeParcelasAntecipaveis) {
-    this.qtdeParcelasAntecipaveis = qtdeParcelasAntecipaveis;
+  public void setQuantidadeParcelasAntecipaveis(Integer quantidadeParcelasAntecipaveis) {
+    this.quantidadeParcelasAntecipaveis = quantidadeParcelasAntecipaveis;
   }
 
   
@@ -206,9 +206,9 @@ public class AntecipacaoSimuladaResponse   {
     AntecipacaoSimuladaResponse antecipacaoSimuladaResponse = (AntecipacaoSimuladaResponse) o;
     return Objects.equals(this.idAntecipacaoSimulada, antecipacaoSimuladaResponse.idAntecipacaoSimulada) &&
         Objects.equals(this.idConta, antecipacaoSimuladaResponse.idConta) &&
-        Objects.equals(this.idEventoExterno, antecipacaoSimuladaResponse.idEventoExterno) &&
+        Objects.equals(this.idCompra, antecipacaoSimuladaResponse.idCompra) &&
         Objects.equals(this.idTipoTransacao, antecipacaoSimuladaResponse.idTipoTransacao) &&
-        Objects.equals(this.qtdeParcelasAntecipaveis, antecipacaoSimuladaResponse.qtdeParcelasAntecipaveis) &&
+        Objects.equals(this.quantidadeParcelasAntecipaveis, antecipacaoSimuladaResponse.quantidadeParcelasAntecipaveis) &&
         Objects.equals(this.valorParcela, antecipacaoSimuladaResponse.valorParcela) &&
         Objects.equals(this.dataHoraSimulacao, antecipacaoSimuladaResponse.dataHoraSimulacao) &&
         Objects.equals(this.taxaAntecipacaoAno, antecipacaoSimuladaResponse.taxaAntecipacaoAno) &&
@@ -217,7 +217,7 @@ public class AntecipacaoSimuladaResponse   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(idAntecipacaoSimulada, idConta, idEventoExterno, idTipoTransacao, qtdeParcelasAntecipaveis, valorParcela, dataHoraSimulacao, taxaAntecipacaoAno, detalhes);
+    return Objects.hash(idAntecipacaoSimulada, idConta, idCompra, idTipoTransacao, quantidadeParcelasAntecipaveis, valorParcela, dataHoraSimulacao, taxaAntecipacaoAno, detalhes);
   }
 
   @Override
@@ -227,9 +227,9 @@ public class AntecipacaoSimuladaResponse   {
     
     sb.append("    idAntecipacaoSimulada: ").append(toIndentedString(idAntecipacaoSimulada)).append("\n");
     sb.append("    idConta: ").append(toIndentedString(idConta)).append("\n");
-    sb.append("    idEventoExterno: ").append(toIndentedString(idEventoExterno)).append("\n");
+    sb.append("    idCompra: ").append(toIndentedString(idCompra)).append("\n");
     sb.append("    idTipoTransacao: ").append(toIndentedString(idTipoTransacao)).append("\n");
-    sb.append("    qtdeParcelasAntecipaveis: ").append(toIndentedString(qtdeParcelasAntecipaveis)).append("\n");
+    sb.append("    quantidadeParcelasAntecipaveis: ").append(toIndentedString(quantidadeParcelasAntecipaveis)).append("\n");
     sb.append("    valorParcela: ").append(toIndentedString(valorParcela)).append("\n");
     sb.append("    dataHoraSimulacao: ").append(toIndentedString(dataHoraSimulacao)).append("\n");
     sb.append("    taxaAntecipacaoAno: ").append(toIndentedString(taxaAntecipacaoAno)).append("\n");

@@ -148,12 +148,12 @@ public class StatusParametrosApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
    * @return StatusContaResponse
    */
-  public StatusContaResponse consultarUsingGET13(Long id) throws ApiException {
+  public StatusContaResponse consultarUsingGET14(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET13");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET14");
      }
      
     // create path and map variables
@@ -196,12 +196,12 @@ public class StatusParametrosApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
    * @return StatusImpressaoResponse
    */
-  public StatusImpressaoResponse consultarUsingGET14(Long id) throws ApiException {
+  public StatusImpressaoResponse consultarUsingGET15(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET14");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET15");
      }
      
     // create path and map variables
@@ -305,9 +305,12 @@ public class StatusParametrosApi {
    * @param flagCobraTarifa Quando ativa, indica que cart\u00C3\u00B5es que tiverem um idStatusCartao atribu\u00C3\u00ADdo com essa caracter\u00C3\u00ADstica, incluir\u00C3\u00A3o a cobran\u00C3\u00A7a de uma tarifa para a conta de acordo com os valores definidos nos par\u00C3\u00A2metros do emissor.
    * @param flagPermiteNovaViaCartao Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a solicita\u00C3\u00A7\u00C3\u00A3o de uma nova via, sendo: 0: Inativo e 1: Ativo.
    * @param flagPermiteDesbloqueio Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o desbloqueio, sendo: 0: Inativo e 1: Ativo.
+   * @param flagCancelamento Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o cancelamento, sendo: 0: Inativo e 1: Ativo.
+   * @param flagPermiteBloqueio Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite o Bloqueio, sendo: 0: Inativo e 1: Ativo.
+   * @param flagReativar Par\u00C3\u00A2metro que define se o status do cart\u00C3\u00A3o permite a reativa\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
    * @return PageStatusCartaoResponse
    */
-  public PageStatusCartaoResponse listarStatusCartoesUsingGET(Integer page, Integer limit, Long id, String nome, Integer flagCancelaCartao, Integer flagCancelaNoDesbloqueio, Long idStatusDestinoDesbloqueio, Long idStatusDestinoConta, Integer flagCobraTarifa, Integer flagPermiteNovaViaCartao, Integer flagPermiteDesbloqueio) throws ApiException {
+  public PageStatusCartaoResponse listarStatusCartoesUsingGET(Integer page, Integer limit, Long id, String nome, Integer flagCancelaCartao, Integer flagCancelaNoDesbloqueio, Long idStatusDestinoDesbloqueio, Long idStatusDestinoConta, Integer flagCobraTarifa, Integer flagPermiteNovaViaCartao, Integer flagPermiteDesbloqueio, Integer flagCancelamento, Integer flagPermiteBloqueio, Integer flagReativar) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -340,6 +343,12 @@ public class StatusParametrosApi {
     queryParams.addAll(apiClient.parameterToPairs("", "flagPermiteNovaViaCartao", flagPermiteNovaViaCartao));
     
     queryParams.addAll(apiClient.parameterToPairs("", "flagPermiteDesbloqueio", flagPermiteDesbloqueio));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "flagCancelamento", flagCancelamento));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "flagPermiteBloqueio", flagPermiteBloqueio));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "flagReativar", flagReativar));
     
 
     
@@ -377,9 +386,12 @@ public class StatusParametrosApi {
    * @param flagPermiteNovaViaCartao Par\u00C3\u00A2metro que define se o Status da conta permite a solicita\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o, sendo: 0: Inativo e 1: Ativo.
    * @param flagFazTransferencia Par\u00C3\u00A2metro que define se o Status da conta permite fazer transferencia, sendo: 0: Inativo e 1: Ativo.
    * @param flagRecebeTransferencia Par\u00C3\u00A2metro que define se o Status da conta permite receber transferencia, sendo: 0: Inativo e 1: Ativo.
+   * @param flagPermiteBloqueio Par\u00C3\u00A2metro que define se o Status da conta permite receber bloqueio, sendo: 0: Inativo e 1: Ativo.
+   * @param flagPermiteDesbloqueio Par\u00C3\u00A2metro que define se o Status da conta permite receber desbloqueio, sendo: 0: Inativo e 1: Ativo.
+   * @param flagCancelaConta Par\u00C3\u00A2metro que define se o Status da conta permite receber cancelamento, sendo: 0: Inativo e 1: Ativo.
    * @return PageStatusContaResponse
    */
-  public PageStatusContaResponse listarUsingGET20(Integer page, Integer limit, Long id, String nome, Integer flagAlteraLimite, String mensagemConsultaNegada, Integer flagPermiteNovaViaCartao, Integer flagFazTransferencia, Integer flagRecebeTransferencia) throws ApiException {
+  public PageStatusContaResponse listarUsingGET20(Integer page, Integer limit, Long id, String nome, Integer flagAlteraLimite, String mensagemConsultaNegada, Integer flagPermiteNovaViaCartao, Integer flagFazTransferencia, Integer flagRecebeTransferencia, Integer flagPermiteBloqueio, Integer flagPermiteDesbloqueio, Integer flagCancelaConta) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -408,6 +420,12 @@ public class StatusParametrosApi {
     queryParams.addAll(apiClient.parameterToPairs("", "flagFazTransferencia", flagFazTransferencia));
     
     queryParams.addAll(apiClient.parameterToPairs("", "flagRecebeTransferencia", flagRecebeTransferencia));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "flagPermiteBloqueio", flagPermiteBloqueio));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "flagPermiteDesbloqueio", flagPermiteDesbloqueio));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "flagCancelaConta", flagCancelaConta));
     
 
     

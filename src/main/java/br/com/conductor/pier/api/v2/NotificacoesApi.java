@@ -7,13 +7,20 @@ import br.com.conductor.pier.api.v2.invoker.ApiClient;
 import br.com.conductor.pier.api.v2.invoker.Configuration;
 import br.com.conductor.pier.api.v2.invoker.Pair;
 
+import br.com.conductor.pier.api.v2.model.ConfiguracaoEmailResponse;
+import br.com.conductor.pier.api.v2.model.ConfiguracaoEmailPersist;
+import br.com.conductor.pier.api.v2.model.TemplateNotificacaoResponse;
 import br.com.conductor.pier.api.v2.model.NotificacaoSMSResponse;
+import br.com.conductor.pier.api.v2.model.CodigoSegurancaSMSPersist;
+import br.com.conductor.pier.api.v2.model.PageConfiguracaoEmailResponse;
 import br.com.conductor.pier.api.v2.model.PagePushResponse;
 import br.com.conductor.pier.api.v2.model.PageSMSResponse;
+import br.com.conductor.pier.api.v2.model.PageTemplateNotificacaoResponse;
 import br.com.conductor.pier.api.v2.model.NotificacaoResponse;
 import br.com.conductor.pier.api.v2.model.PushFCMEGCM;
 import br.com.conductor.pier.api.v2.model.PushAPNS;
 import br.com.conductor.pier.api.v2.model.NotificacaoSMSBody;
+import br.com.conductor.pier.api.v2.model.CodigoSegurancaSMSRequest;
 
 
 
@@ -44,6 +51,126 @@ public class NotificacoesApi {
     this.apiClient = apiClient;
   }
 
+  
+  /**
+   * Altera configura\u00C3\u00A7\u00C3\u00B5es de E-mail
+   * Esse recurso permite salvar altera\u00C3\u00A7\u00C3\u00B5es de configura\u00C3\u00A7\u00C3\u00B5es de E-mail.
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.
+   * @param persist persist
+   * @return ConfiguracaoEmailResponse
+   */
+  public ConfiguracaoEmailResponse alterarConfiguracaoUsingPUT(Long id, ConfiguracaoEmailPersist persist) throws ApiException {
+    Object postBody = persist;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarConfiguracaoUsingPUT");
+     }
+     
+     // verify the required parameter 'persist' is set
+     if (persist == null) {
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling alterarConfiguracaoUsingPUT");
+     }
+     
+    // create path and map variables
+    String path = "/api/configuracoes-email/{id}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<ConfiguracaoEmailResponse> returnType = new GenericType<ConfiguracaoEmailResponse>() {};
+    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Alterar template de notifica\u00C3\u00A7\u00C3\u00A3o
+   * Esse recurso permite salvar altera\u00C3\u00A7\u00C3\u00B5es de templates notifica\u00C3\u00A7\u00C3\u00B5es.
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail.
+   * @param conteudo Template HTML
+   * @param idConfiguracaoEmail C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL.
+   * @param tipoLayout Tipo do layout.
+   * @param tipoNotificacao Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+   * @param assunto Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
+   * @return TemplateNotificacaoResponse
+   */
+  public TemplateNotificacaoResponse alterarTemplateNotificacaoUsingPUT(Long id, String conteudo, Long idConfiguracaoEmail, String tipoLayout, String tipoNotificacao, String assunto) throws ApiException {
+    Object postBody = conteudo;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarTemplateNotificacaoUsingPUT");
+     }
+     
+     // verify the required parameter 'conteudo' is set
+     if (conteudo == null) {
+        throw new ApiException(400, "Missing the required parameter 'conteudo' when calling alterarTemplateNotificacaoUsingPUT");
+     }
+     
+    // create path and map variables
+    String path = "/api/templates-notificacoes/{id}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idConfiguracaoEmail", idConfiguracaoEmail));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "tipoLayout", tipoLayout));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "tipoNotificacao", tipoNotificacao));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "assunto", assunto));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "text/plain"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<TemplateNotificacaoResponse> returnType = new GenericType<TemplateNotificacaoResponse>() {};
+    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
   
   /**
    * Atualizar SMS
@@ -98,6 +225,196 @@ public class NotificacoesApi {
     
     GenericType<NotificacaoSMSResponse> returnType = new GenericType<NotificacaoSMSResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Consulta configura\u00C3\u00A7\u00C3\u00A3o de E-mail
+   * Esse recurso permite consultar uma configura\u00C3\u00A7\u00C3\u00A3o espec\u00C3\u00ADfica por id.
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.
+   * @return ConfiguracaoEmailResponse
+   */
+  public ConfiguracaoEmailResponse consultarConfiguracaoUsingGET(Long id) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarConfiguracaoUsingGET");
+     }
+     
+    // create path and map variables
+    String path = "/api/configuracoes-email/{id}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<ConfiguracaoEmailResponse> returnType = new GenericType<ConfiguracaoEmailResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Consulta template de notifica\u00C3\u00A7\u00C3\u00A3o
+   * Esse recurso permite consultar uma configura\u00C3\u00A7\u00C3\u00A3o espec\u00C3\u00ADfica por id.
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail.
+   * @return TemplateNotificacaoResponse
+   */
+  public TemplateNotificacaoResponse consultarTemplateNotificacaoUsingGET(Long id) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarTemplateNotificacaoUsingGET");
+     }
+     
+    // create path and map variables
+    String path = "/api/templates-notificacoes/{id}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<TemplateNotificacaoResponse> returnType = new GenericType<TemplateNotificacaoResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por sms
+   * Esse recurso permite gerar e enviar c\u00C3\u00B3digos de seguran\u00C3\u00A7a por sms, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+   * @param persist persist
+   * @return String
+   */
+  public String gerarTokenUsingPOST(CodigoSegurancaSMSPersist persist) throws ApiException {
+    Object postBody = persist;
+    
+     // verify the required parameter 'persist' is set
+     if (persist == null) {
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling gerarTokenUsingPOST");
+     }
+     
+    // create path and map variables
+    String path = "/api/notificacoes-sms/gerar-codigo-seguranca".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<String> returnType = new GenericType<String>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails
+   * Esse recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es de E-mails.
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @return PageConfiguracaoEmailResponse
+   */
+  public PageConfiguracaoEmailResponse listarConfiguracaoUsingGET(Integer page, Integer limit) throws ApiException {
+    Object postBody = null;
+    
+    // create path and map variables
+    String path = "/api/configuracoes-email".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PageConfiguracaoEmailResponse> returnType = new GenericType<PageConfiguracaoEmailResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
@@ -229,6 +546,94 @@ public class NotificacoesApi {
   }
   
   /**
+   * Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
+   * Esse recurso permite listar templates notifica\u00C3\u00A7\u00C3\u00B5es.
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @return PageTemplateNotificacaoResponse
+   */
+  public PageTemplateNotificacaoResponse listarTemplateNotificacaoUsingGET(Integer page, Integer limit) throws ApiException {
+    Object postBody = null;
+    
+    // create path and map variables
+    String path = "/api/templates-notificacoes".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PageTemplateNotificacaoResponse> returnType = new GenericType<PageTemplateNotificacaoResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Lista os tipos templates de notifica\u00C3\u00A7\u00C3\u00A3o
+   * Esse recurso permite listar os tipos de templates dispon\u00C3\u00ADveis os par\u00C3\u00A2metros devem ser usados entre chaves. Ex: {{nomeParametro}} .
+   * @return List<Object>
+   */
+  public List<Object> listarTiposLayoutsUsingGET() throws ApiException {
+    Object postBody = null;
+    
+    // create path and map variables
+    String path = "/api/tipos-layouts".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<List<Object>> returnType = new GenericType<List<Object>>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Responder SMS
    * Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00C3\u00A1rio
    * @param nsu Seu n\u00C3\u00BAmero
@@ -274,6 +679,53 @@ public class NotificacoesApi {
 
     
     GenericType<NotificacaoSMSResponse> returnType = new GenericType<NotificacaoSMSResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Salva configura\u00C3\u00A7\u00C3\u00B5es de E-mail
+   * Esse recurso salvar configura\u00C3\u00A7\u00C3\u00B5es de E-mail.
+   * @param persist persist
+   * @return ConfiguracaoEmailResponse
+   */
+  public ConfiguracaoEmailResponse salvarConfiguracaoUsingPOST(ConfiguracaoEmailPersist persist) throws ApiException {
+    Object postBody = persist;
+    
+     // verify the required parameter 'persist' is set
+     if (persist == null) {
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarConfiguracaoUsingPOST");
+     }
+     
+    // create path and map variables
+    String path = "/api/configuracoes-email".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<ConfiguracaoEmailResponse> returnType = new GenericType<ConfiguracaoEmailResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -462,6 +914,112 @@ public class NotificacoesApi {
 
     
     GenericType<NotificacaoResponse> returnType = new GenericType<NotificacaoResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Salva template de notifica\u00C3\u00A7\u00C3\u00A3o
+   * Esse recurso salvar template notifica\u00C3\u00A7\u00C3\u00B5e.
+   * @param conteudo Template HTML
+   * @param idConfiguracaoEmail C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL.
+   * @param tipoLayout Tipo do layout.
+   * @param tipoNotificacao Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+   * @param assunto Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
+   * @return TemplateNotificacaoResponse
+   */
+  public TemplateNotificacaoResponse salvarTemplateNotificacaoUsingPOST(String conteudo, Long idConfiguracaoEmail, String tipoLayout, String tipoNotificacao, String assunto) throws ApiException {
+    Object postBody = conteudo;
+    
+     // verify the required parameter 'conteudo' is set
+     if (conteudo == null) {
+        throw new ApiException(400, "Missing the required parameter 'conteudo' when calling salvarTemplateNotificacaoUsingPOST");
+     }
+     
+    // create path and map variables
+    String path = "/api/templates-notificacoes".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idConfiguracaoEmail", idConfiguracaoEmail));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "tipoLayout", tipoLayout));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "tipoNotificacao", tipoNotificacao));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "assunto", assunto));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "text/plain"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<TemplateNotificacaoResponse> returnType = new GenericType<TemplateNotificacaoResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por sms
+   * Esse recurso permite validar os c\u00C3\u00B3digos de seguran\u00C3\u00A7a enviador por sms, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+   * @param request request
+   * @return String
+   */
+  public String validarTokenUsingPOST(CodigoSegurancaSMSRequest request) throws ApiException {
+    Object postBody = request;
+    
+     // verify the required parameter 'request' is set
+     if (request == null) {
+        throw new ApiException(400, "Missing the required parameter 'request' when calling validarTokenUsingPOST");
+     }
+     
+    // create path and map variables
+    String path = "/api/notificacoes-sms/validar-codigo-seguranca".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<String> returnType = new GenericType<String>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

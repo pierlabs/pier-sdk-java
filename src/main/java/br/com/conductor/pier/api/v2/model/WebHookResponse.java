@@ -23,6 +23,7 @@ public class WebHookResponse   {
 
   public enum TipoEventoEnum {
     RISCO_FRAUDE("RISCO_FRAUDE"),
+    TOKEN_SMS("TOKEN_SMS"),
     OUTROS("OUTROS");
 
     private String value;
@@ -62,6 +63,26 @@ public class WebHookResponse   {
 
   private MetodoEnum metodo = null;
   private String url = null;
+
+
+  public enum StatusEnum {
+    INATIVO("INATIVO"),
+    ATIVO("ATIVO");
+
+    private String value;
+
+    StatusEnum(String value) {
+      this.value = value;
+    }
+
+    @Override
+    @JsonValue
+    public String toString() {
+      return value;
+    }
+  }
+
+  private StatusEnum status = null;
 
   
   /**
@@ -136,6 +157,24 @@ public class WebHookResponse   {
   }
 
   
+  /**
+   * Status do WebHook
+   **/
+  public WebHookResponse status(StatusEnum status) {
+    this.status = status;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "Status do WebHook")
+  @JsonProperty("status")
+  public StatusEnum getStatus() {
+    return status;
+  }
+  public void setStatus(StatusEnum status) {
+    this.status = status;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -149,12 +188,13 @@ public class WebHookResponse   {
     return Objects.equals(this.id, webHookResponse.id) &&
         Objects.equals(this.tipoEvento, webHookResponse.tipoEvento) &&
         Objects.equals(this.metodo, webHookResponse.metodo) &&
-        Objects.equals(this.url, webHookResponse.url);
+        Objects.equals(this.url, webHookResponse.url) &&
+        Objects.equals(this.status, webHookResponse.status);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, tipoEvento, metodo, url);
+    return Objects.hash(id, tipoEvento, metodo, url, status);
   }
 
   @Override
@@ -166,6 +206,7 @@ public class WebHookResponse   {
     sb.append("    tipoEvento: ").append(toIndentedString(tipoEvento)).append("\n");
     sb.append("    metodo: ").append(toIndentedString(metodo)).append("\n");
     sb.append("    url: ").append(toIndentedString(url)).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("}");
     return sb.toString();
   }

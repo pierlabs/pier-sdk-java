@@ -110,12 +110,12 @@ public class WebhooksApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
    * @return WebHookResponse
    */
-  public WebHookResponse consultarUsingGET26(Long id) throws ApiException {
+  public WebHookResponse consultarUsingGET27(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET26");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET27");
      }
      
     // create path and map variables
@@ -218,17 +218,17 @@ public class WebhooksApi {
    * @param url URL que a ser consumida pelo WebHook
    * @return WebHookResponse
    */
-  public WebHookResponse salvarUsingPOST14(String tipoEvento, String url) throws ApiException {
+  public WebHookResponse salvarUsingPOST16(String tipoEvento, String url) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'tipoEvento' is set
      if (tipoEvento == null) {
-        throw new ApiException(400, "Missing the required parameter 'tipoEvento' when calling salvarUsingPOST14");
+        throw new ApiException(400, "Missing the required parameter 'tipoEvento' when calling salvarUsingPOST16");
      }
      
      // verify the required parameter 'url' is set
      if (url == null) {
-        throw new ApiException(400, "Missing the required parameter 'url' when calling salvarUsingPOST14");
+        throw new ApiException(400, "Missing the required parameter 'url' when calling salvarUsingPOST16");
      }
      
     // create path and map variables

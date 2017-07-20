@@ -35,20 +35,23 @@ public class PessoaJuridicaAprovadaResponse   {
   private String email = null;
   private Integer diaVencimento = null;
   private String nomeImpresso = null;
+  private Long idConta = null;
+  private Long idProposta = null;
+  private String canalEntrada = null;
   private List<TelefonePessoaAprovadaResponse> telefones = new ArrayList<TelefonePessoaAprovadaResponse>();
   private List<EnderecoAprovadoResponse> enderecos = new ArrayList<EnderecoAprovadoResponse>();
   private List<SocioAprovadoResponse> socios = new ArrayList<SocioAprovadoResponse>();
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id)
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa jur\u00C3\u00ADdica (id)
    **/
   public PessoaJuridicaAprovadaResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id)")
+  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa jur\u00C3\u00ADdica (id)")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -275,6 +278,60 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta cadastrada
+   **/
+  public PessoaJuridicaAprovadaResponse idConta(Long idConta) {
+    this.idConta = idConta;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta cadastrada")
+  @JsonProperty("idConta")
+  public Long getIdConta() {
+    return idConta;
+  }
+  public void setIdConta(Long idConta) {
+    this.idConta = idConta;
+  }
+
+  
+  /**
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da proposta
+   **/
+  public PessoaJuridicaAprovadaResponse idProposta(Long idProposta) {
+    this.idProposta = idProposta;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da proposta")
+  @JsonProperty("idProposta")
+  public Long getIdProposta() {
+    return idProposta;
+  }
+  public void setIdProposta(Long idProposta) {
+    this.idProposta = idProposta;
+  }
+
+  
+  /**
+   * Indica o canal pelo qual o cadastro do cliente foi realizado
+   **/
+  public PessoaJuridicaAprovadaResponse canalEntrada(String canalEntrada) {
+    this.canalEntrada = canalEntrada;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Indica o canal pelo qual o cadastro do cliente foi realizado")
+  @JsonProperty("canalEntrada")
+  public String getCanalEntrada() {
+    return canalEntrada;
+  }
+  public void setCanalEntrada(String canalEntrada) {
+    this.canalEntrada = canalEntrada;
+  }
+
+  
+  /**
    * Apresenta os telefones da empresa
    **/
   public PessoaJuridicaAprovadaResponse telefones(List<TelefonePessoaAprovadaResponse> telefones) {
@@ -351,6 +408,9 @@ public class PessoaJuridicaAprovadaResponse   {
         Objects.equals(this.email, pessoaJuridicaAprovadaResponse.email) &&
         Objects.equals(this.diaVencimento, pessoaJuridicaAprovadaResponse.diaVencimento) &&
         Objects.equals(this.nomeImpresso, pessoaJuridicaAprovadaResponse.nomeImpresso) &&
+        Objects.equals(this.idConta, pessoaJuridicaAprovadaResponse.idConta) &&
+        Objects.equals(this.idProposta, pessoaJuridicaAprovadaResponse.idProposta) &&
+        Objects.equals(this.canalEntrada, pessoaJuridicaAprovadaResponse.canalEntrada) &&
         Objects.equals(this.telefones, pessoaJuridicaAprovadaResponse.telefones) &&
         Objects.equals(this.enderecos, pessoaJuridicaAprovadaResponse.enderecos) &&
         Objects.equals(this.socios, pessoaJuridicaAprovadaResponse.socios);
@@ -358,7 +418,7 @@ public class PessoaJuridicaAprovadaResponse   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, razaoSocial, nomeFantasia, cnpj, inscricaoEstadual, dataAberturaEmpresa, idOrigemComercial, idProduto, numeroAgencia, numeroContaCorrente, email, diaVencimento, nomeImpresso, telefones, enderecos, socios);
+    return Objects.hash(id, razaoSocial, nomeFantasia, cnpj, inscricaoEstadual, dataAberturaEmpresa, idOrigemComercial, idProduto, numeroAgencia, numeroContaCorrente, email, diaVencimento, nomeImpresso, idConta, idProposta, canalEntrada, telefones, enderecos, socios);
   }
 
   @Override
@@ -379,6 +439,9 @@ public class PessoaJuridicaAprovadaResponse   {
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    diaVencimento: ").append(toIndentedString(diaVencimento)).append("\n");
     sb.append("    nomeImpresso: ").append(toIndentedString(nomeImpresso)).append("\n");
+    sb.append("    idConta: ").append(toIndentedString(idConta)).append("\n");
+    sb.append("    idProposta: ").append(toIndentedString(idProposta)).append("\n");
+    sb.append("    canalEntrada: ").append(toIndentedString(canalEntrada)).append("\n");
     sb.append("    telefones: ").append(toIndentedString(telefones)).append("\n");
     sb.append("    enderecos: ").append(toIndentedString(enderecos)).append("\n");
     sb.append("    socios: ").append(toIndentedString(socios)).append("\n");

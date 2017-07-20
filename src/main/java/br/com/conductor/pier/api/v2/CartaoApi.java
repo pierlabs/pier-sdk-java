@@ -225,22 +225,22 @@ public class CartaoApi {
    * @param observacao Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o bloqueio.
    * @return CartaoResponse
    */
-  public CartaoResponse bloquearUsingPUT(Long id, Long idStatus, String observacao) throws ApiException {
+  public CartaoResponse bloquearUsingPOST(Long id, Long idStatus, String observacao) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling bloquearUsingPUT");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling bloquearUsingPOST");
      }
      
      // verify the required parameter 'idStatus' is set
      if (idStatus == null) {
-        throw new ApiException(400, "Missing the required parameter 'idStatus' when calling bloquearUsingPUT");
+        throw new ApiException(400, "Missing the required parameter 'idStatus' when calling bloquearUsingPOST");
      }
      
      // verify the required parameter 'observacao' is set
      if (observacao == null) {
-        throw new ApiException(400, "Missing the required parameter 'observacao' when calling bloquearUsingPUT");
+        throw new ApiException(400, "Missing the required parameter 'observacao' when calling bloquearUsingPOST");
      }
      
     // create path and map variables
@@ -277,7 +277,7 @@ public class CartaoApi {
 
     
     GenericType<CartaoResponse> returnType = new GenericType<CartaoResponse>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
@@ -333,6 +333,70 @@ public class CartaoApi {
 
     
     GenericType<String> returnType = new GenericType<String>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Realiza o cancelamento de um determinado Cart\u00C3\u00A3o
+   * Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o cancelamento de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id). Para isso, \u00C3\u00A9 preciso informar qual o motivo deste bloqueio que nada mais \u00C3\u00A9 do que atribuir um novo StatusCartao para ele dentre as op\u00C3\u00A7\u00C3\u00B5es praticadas pelo emissor.
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+   * @param idStatus C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Cart\u00C3\u00A3o.
+   * @param observacao Texto informando uma observa\u00C3\u00A7\u00C3\u00A3o sobre o cancelamento.
+   * @return CartaoResponse
+   */
+  public CartaoResponse cancelarUsingPOST(Long id, Long idStatus, String observacao) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling cancelarUsingPOST");
+     }
+     
+     // verify the required parameter 'idStatus' is set
+     if (idStatus == null) {
+        throw new ApiException(400, "Missing the required parameter 'idStatus' when calling cancelarUsingPOST");
+     }
+     
+     // verify the required parameter 'observacao' is set
+     if (observacao == null) {
+        throw new ApiException(400, "Missing the required parameter 'observacao' when calling cancelarUsingPOST");
+     }
+     
+    // create path and map variables
+    String path = "/api/cartoes/{id}/cancelar".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "id_status", idStatus));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "observacao", observacao));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<CartaoResponse> returnType = new GenericType<CartaoResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -535,12 +599,12 @@ public class CartaoApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
    * @return CartaoDetalheResponse
    */
-  public CartaoDetalheResponse consultarUsingGET3(Long id) throws ApiException {
+  public CartaoDetalheResponse consultarUsingGET4(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET3");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET4");
      }
      
     // create path and map variables
@@ -631,12 +695,12 @@ public class CartaoApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
    * @return CartaoResponse
    */
-  public CartaoResponse desbloquearUsingPUT(Long id) throws ApiException {
+  public CartaoResponse desbloquearUsingPOST(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling desbloquearUsingPUT");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling desbloquearUsingPOST");
      }
      
     // create path and map variables
@@ -669,7 +733,7 @@ public class CartaoApi {
 
     
     GenericType<CartaoResponse> returnType = new GenericType<CartaoResponse>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
@@ -952,6 +1016,54 @@ public class CartaoApi {
     
     GenericType<PageCartaoResponse> returnType = new GenericType<PageCartaoResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de um determinado Cart\u00C3\u00A3o
+   * Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o da reativa\u00C3\u00A7\u00C3\u00A3o de um determinado cart\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
+   * @return CartaoResponse
+   */
+  public CartaoResponse reativarUsingPOST(Long id) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling reativarUsingPOST");
+     }
+     
+    // create path and map variables
+    String path = "/api/cartoes/{id}/reativar".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<CartaoResponse> returnType = new GenericType<CartaoResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   

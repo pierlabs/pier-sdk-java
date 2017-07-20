@@ -32,6 +32,7 @@ public class OportunidadeAUDResponse   {
   private List<CdtDetalheOportunidadeAUD> detalhes = new ArrayList<CdtDetalheOportunidadeAUD>();
   private String revDate = null;
   private Long revType = null;
+  private Long rev = null;
 
   
   /**
@@ -150,7 +151,7 @@ public class OportunidadeAUDResponse   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade")
   @JsonProperty("dataInicioVigencia")
   public String getDataInicioVigencia() {
     return dataInicioVigencia;
@@ -168,7 +169,7 @@ public class OportunidadeAUDResponse   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "fim da vig\u00C3\u00AAncia da oportunidade")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "fim da vig\u00C3\u00AAncia da oportunidade")
   @JsonProperty("dataFimVigencia")
   public String getDataFimVigencia() {
     return dataFimVigencia;
@@ -186,7 +187,7 @@ public class OportunidadeAUDResponse   {
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa")
+  @ApiModelProperty(example = "true", value = "Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa")
   @JsonProperty("flagAtivo")
   public Boolean getFlagAtivo() {
     return flagAtivo;
@@ -250,6 +251,24 @@ public class OportunidadeAUDResponse   {
   }
 
   
+  /**
+   * Identificador da auditoria
+   **/
+  public OportunidadeAUDResponse rev(Long rev) {
+    this.rev = rev;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Identificador da auditoria")
+  @JsonProperty("rev")
+  public Long getRev() {
+    return rev;
+  }
+  public void setRev(Long rev) {
+    this.rev = rev;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -271,12 +290,13 @@ public class OportunidadeAUDResponse   {
         Objects.equals(this.flagAtivo, oportunidadeAUDResponse.flagAtivo) &&
         Objects.equals(this.detalhes, oportunidadeAUDResponse.detalhes) &&
         Objects.equals(this.revDate, oportunidadeAUDResponse.revDate) &&
-        Objects.equals(this.revType, oportunidadeAUDResponse.revType);
+        Objects.equals(this.revType, oportunidadeAUDResponse.revType) &&
+        Objects.equals(this.rev, oportunidadeAUDResponse.rev);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idTipoOportunidade, idStatusOportunidade, dataCadastro, dataAtualizacao, numeroReceitaFederal, dataInicioVigencia, dataFimVigencia, flagAtivo, detalhes, revDate, revType);
+    return Objects.hash(id, idTipoOportunidade, idStatusOportunidade, dataCadastro, dataAtualizacao, numeroReceitaFederal, dataInicioVigencia, dataFimVigencia, flagAtivo, detalhes, revDate, revType, rev);
   }
 
   @Override
@@ -296,6 +316,7 @@ public class OportunidadeAUDResponse   {
     sb.append("    detalhes: ").append(toIndentedString(detalhes)).append("\n");
     sb.append("    revDate: ").append(toIndentedString(revDate)).append("\n");
     sb.append("    revType: ").append(toIndentedString(revType)).append("\n");
+    sb.append("    rev: ").append(toIndentedString(rev)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -91,7 +91,7 @@ public class OportunidadePersist   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Date de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", required = true, value = "Date de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade")
   @JsonProperty("dataInicioVigencia")
   public String getDataInicioVigencia() {
     return dataInicioVigencia;
@@ -109,7 +109,7 @@ public class OportunidadePersist   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Data do fim da vig\u00C3\u00AAncia da oportunidade")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", required = true, value = "Data do fim da vig\u00C3\u00AAncia da oportunidade")
   @JsonProperty("dataFimVigencia")
   public String getDataFimVigencia() {
     return dataFimVigencia;
@@ -127,7 +127,7 @@ public class OportunidadePersist   {
     return this;
   }
   
-  @ApiModelProperty(example = "false", required = true, value = "Atributo que indica se a oportunidade est\u00C3\u00A1 ativa")
+  @ApiModelProperty(example = "true", required = true, value = "Atributo que indica se a oportunidade est\u00C3\u00A1 ativa")
   @JsonProperty("flagAtivo")
   public Boolean getFlagAtivo() {
     return flagAtivo;

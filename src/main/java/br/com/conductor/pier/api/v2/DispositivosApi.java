@@ -205,12 +205,12 @@ public class DispositivosApi {
    * @param persist persist
    * @return DispositivoResponse
    */
-  public DispositivoResponse salvarUsingPOST3(DispositivoPersist persist) throws ApiException {
+  public DispositivoResponse salvarUsingPOST4(DispositivoPersist persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST3");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST4");
      }
      
     // create path and map variables

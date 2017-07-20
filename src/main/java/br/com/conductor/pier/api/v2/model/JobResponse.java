@@ -25,8 +25,8 @@ public class JobResponse   {
 
 
   public enum StatusEnum {
-    ATIVO("ATIVO"),
-    INATIVO("INATIVO");
+    INATIVO("INATIVO"),
+    ATIVO("ATIVO");
 
     private String value;
 

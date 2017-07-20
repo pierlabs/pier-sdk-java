@@ -6,6 +6,7 @@ import br.com.conductor.pier.api.v2.model.TelefonePessoaAprovadaPersist;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,7 +32,7 @@ public class PessoaFisicaAprovadaPersist   {
   private String unidadeFederativaIdentidade = null;
   private String dataEmissaoIdentidade = null;
   private Long idEstadoCivil = null;
-  private String profissao = null;
+  private Integer idProfissao = null;
   private Long idNaturezaOcupacao = null;
   private Long idNacionalidade = null;
   private Long idOrigemComercial = null;
@@ -42,6 +43,8 @@ public class PessoaFisicaAprovadaPersist   {
   private Integer diaVencimento = null;
   private String nomeImpresso = null;
   private String nomeEmpresa = null;
+  private BigDecimal valorRenda = null;
+  private String canalEntrada = null;
   private List<TelefonePessoaAprovadaPersist> telefones = new ArrayList<TelefonePessoaAprovadaPersist>();
   private List<EnderecoAprovadoPersist> enderecos = new ArrayList<EnderecoAprovadoPersist>();
 
@@ -229,18 +232,18 @@ public class PessoaFisicaAprovadaPersist   {
   /**
    * Profiss\u00C3\u00A3o da pessoa fisica
    **/
-  public PessoaFisicaAprovadaPersist profissao(String profissao) {
-    this.profissao = profissao;
+  public PessoaFisicaAprovadaPersist idProfissao(Integer idProfissao) {
+    this.idProfissao = idProfissao;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Profiss\u00C3\u00A3o da pessoa fisica")
-  @JsonProperty("profissao")
-  public String getProfissao() {
-    return profissao;
+  @JsonProperty("idProfissao")
+  public Integer getIdProfissao() {
+    return idProfissao;
   }
-  public void setProfissao(String profissao) {
-    this.profissao = profissao;
+  public void setIdProfissao(Integer idProfissao) {
+    this.idProfissao = idProfissao;
   }
 
   
@@ -425,6 +428,42 @@ public class PessoaFisicaAprovadaPersist   {
 
   
   /**
+   * Apresenta o valor da renda compravada
+   **/
+  public PessoaFisicaAprovadaPersist valorRenda(BigDecimal valorRenda) {
+    this.valorRenda = valorRenda;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Apresenta o valor da renda compravada")
+  @JsonProperty("valorRenda")
+  public BigDecimal getValorRenda() {
+    return valorRenda;
+  }
+  public void setValorRenda(BigDecimal valorRenda) {
+    this.valorRenda = valorRenda;
+  }
+
+  
+  /**
+   * Indica o canal pelo qual o cadastro do cliente foi realizado
+   **/
+  public PessoaFisicaAprovadaPersist canalEntrada(String canalEntrada) {
+    this.canalEntrada = canalEntrada;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Indica o canal pelo qual o cadastro do cliente foi realizado")
+  @JsonProperty("canalEntrada")
+  public String getCanalEntrada() {
+    return canalEntrada;
+  }
+  public void setCanalEntrada(String canalEntrada) {
+    this.canalEntrada = canalEntrada;
+  }
+
+  
+  /**
    * Apresenta os telefones da empresa
    **/
   public PessoaFisicaAprovadaPersist telefones(List<TelefonePessoaAprovadaPersist> telefones) {
@@ -480,7 +519,7 @@ public class PessoaFisicaAprovadaPersist   {
         Objects.equals(this.unidadeFederativaIdentidade, pessoaFisicaAprovadaPersist.unidadeFederativaIdentidade) &&
         Objects.equals(this.dataEmissaoIdentidade, pessoaFisicaAprovadaPersist.dataEmissaoIdentidade) &&
         Objects.equals(this.idEstadoCivil, pessoaFisicaAprovadaPersist.idEstadoCivil) &&
-        Objects.equals(this.profissao, pessoaFisicaAprovadaPersist.profissao) &&
+        Objects.equals(this.idProfissao, pessoaFisicaAprovadaPersist.idProfissao) &&
         Objects.equals(this.idNaturezaOcupacao, pessoaFisicaAprovadaPersist.idNaturezaOcupacao) &&
         Objects.equals(this.idNacionalidade, pessoaFisicaAprovadaPersist.idNacionalidade) &&
         Objects.equals(this.idOrigemComercial, pessoaFisicaAprovadaPersist.idOrigemComercial) &&
@@ -491,13 +530,15 @@ public class PessoaFisicaAprovadaPersist   {
         Objects.equals(this.diaVencimento, pessoaFisicaAprovadaPersist.diaVencimento) &&
         Objects.equals(this.nomeImpresso, pessoaFisicaAprovadaPersist.nomeImpresso) &&
         Objects.equals(this.nomeEmpresa, pessoaFisicaAprovadaPersist.nomeEmpresa) &&
+        Objects.equals(this.valorRenda, pessoaFisicaAprovadaPersist.valorRenda) &&
+        Objects.equals(this.canalEntrada, pessoaFisicaAprovadaPersist.canalEntrada) &&
         Objects.equals(this.telefones, pessoaFisicaAprovadaPersist.telefones) &&
         Objects.equals(this.enderecos, pessoaFisicaAprovadaPersist.enderecos);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(nome, nomeMae, dataNascimento, sexo, cpf, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, idEstadoCivil, profissao, idNaturezaOcupacao, idNacionalidade, idOrigemComercial, idProduto, numeroAgencia, numeroContaCorrente, email, diaVencimento, nomeImpresso, nomeEmpresa, telefones, enderecos);
+    return Objects.hash(nome, nomeMae, dataNascimento, sexo, cpf, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, idOrigemComercial, idProduto, numeroAgencia, numeroContaCorrente, email, diaVencimento, nomeImpresso, nomeEmpresa, valorRenda, canalEntrada, telefones, enderecos);
   }
 
   @Override
@@ -515,7 +556,7 @@ public class PessoaFisicaAprovadaPersist   {
     sb.append("    unidadeFederativaIdentidade: ").append(toIndentedString(unidadeFederativaIdentidade)).append("\n");
     sb.append("    dataEmissaoIdentidade: ").append(toIndentedString(dataEmissaoIdentidade)).append("\n");
     sb.append("    idEstadoCivil: ").append(toIndentedString(idEstadoCivil)).append("\n");
-    sb.append("    profissao: ").append(toIndentedString(profissao)).append("\n");
+    sb.append("    idProfissao: ").append(toIndentedString(idProfissao)).append("\n");
     sb.append("    idNaturezaOcupacao: ").append(toIndentedString(idNaturezaOcupacao)).append("\n");
     sb.append("    idNacionalidade: ").append(toIndentedString(idNacionalidade)).append("\n");
     sb.append("    idOrigemComercial: ").append(toIndentedString(idOrigemComercial)).append("\n");
@@ -526,6 +567,8 @@ public class PessoaFisicaAprovadaPersist   {
     sb.append("    diaVencimento: ").append(toIndentedString(diaVencimento)).append("\n");
     sb.append("    nomeImpresso: ").append(toIndentedString(nomeImpresso)).append("\n");
     sb.append("    nomeEmpresa: ").append(toIndentedString(nomeEmpresa)).append("\n");
+    sb.append("    valorRenda: ").append(toIndentedString(valorRenda)).append("\n");
+    sb.append("    canalEntrada: ").append(toIndentedString(canalEntrada)).append("\n");
     sb.append("    telefones: ").append(toIndentedString(telefones)).append("\n");
     sb.append("    enderecos: ").append(toIndentedString(enderecos)).append("\n");
     sb.append("}");

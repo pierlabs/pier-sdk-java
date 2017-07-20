@@ -7,6 +7,7 @@ import br.com.conductor.pier.api.v2.model.TelefonePessoaAprovadaPersist;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,6 +35,8 @@ public class PessoaJuridicaAprovadaPersist   {
   private String email = null;
   private Integer diaVencimento = null;
   private String nomeImpresso = null;
+  private BigDecimal valorRenda = null;
+  private String canalEntrada = null;
   private List<TelefonePessoaAprovadaPersist> telefones = new ArrayList<TelefonePessoaAprovadaPersist>();
   private List<EnderecoAprovadoPersist> enderecos = new ArrayList<EnderecoAprovadoPersist>();
   private List<PessoaPersist> socios = new ArrayList<PessoaPersist>();
@@ -256,6 +259,42 @@ public class PessoaJuridicaAprovadaPersist   {
 
   
   /**
+   * Apresenta o valor da renda compravada
+   **/
+  public PessoaJuridicaAprovadaPersist valorRenda(BigDecimal valorRenda) {
+    this.valorRenda = valorRenda;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Apresenta o valor da renda compravada")
+  @JsonProperty("valorRenda")
+  public BigDecimal getValorRenda() {
+    return valorRenda;
+  }
+  public void setValorRenda(BigDecimal valorRenda) {
+    this.valorRenda = valorRenda;
+  }
+
+  
+  /**
+   * Indica o canal pelo qual o cadastro do cliente foi realizado
+   **/
+  public PessoaJuridicaAprovadaPersist canalEntrada(String canalEntrada) {
+    this.canalEntrada = canalEntrada;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Indica o canal pelo qual o cadastro do cliente foi realizado")
+  @JsonProperty("canalEntrada")
+  public String getCanalEntrada() {
+    return canalEntrada;
+  }
+  public void setCanalEntrada(String canalEntrada) {
+    this.canalEntrada = canalEntrada;
+  }
+
+  
+  /**
    * Apresenta os telefones da empresa
    **/
   public PessoaJuridicaAprovadaPersist telefones(List<TelefonePessoaAprovadaPersist> telefones) {
@@ -331,6 +370,8 @@ public class PessoaJuridicaAprovadaPersist   {
         Objects.equals(this.email, pessoaJuridicaAprovadaPersist.email) &&
         Objects.equals(this.diaVencimento, pessoaJuridicaAprovadaPersist.diaVencimento) &&
         Objects.equals(this.nomeImpresso, pessoaJuridicaAprovadaPersist.nomeImpresso) &&
+        Objects.equals(this.valorRenda, pessoaJuridicaAprovadaPersist.valorRenda) &&
+        Objects.equals(this.canalEntrada, pessoaJuridicaAprovadaPersist.canalEntrada) &&
         Objects.equals(this.telefones, pessoaJuridicaAprovadaPersist.telefones) &&
         Objects.equals(this.enderecos, pessoaJuridicaAprovadaPersist.enderecos) &&
         Objects.equals(this.socios, pessoaJuridicaAprovadaPersist.socios);
@@ -338,7 +379,7 @@ public class PessoaJuridicaAprovadaPersist   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(razaoSocial, nomeFantasia, cnpj, inscricaoEstadual, dataAberturaEmpresa, idOrigemComercial, idProduto, numeroAgencia, numeroContaCorrente, email, diaVencimento, nomeImpresso, telefones, enderecos, socios);
+    return Objects.hash(razaoSocial, nomeFantasia, cnpj, inscricaoEstadual, dataAberturaEmpresa, idOrigemComercial, idProduto, numeroAgencia, numeroContaCorrente, email, diaVencimento, nomeImpresso, valorRenda, canalEntrada, telefones, enderecos, socios);
   }
 
   @Override
@@ -358,6 +399,8 @@ public class PessoaJuridicaAprovadaPersist   {
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    diaVencimento: ").append(toIndentedString(diaVencimento)).append("\n");
     sb.append("    nomeImpresso: ").append(toIndentedString(nomeImpresso)).append("\n");
+    sb.append("    valorRenda: ").append(toIndentedString(valorRenda)).append("\n");
+    sb.append("    canalEntrada: ").append(toIndentedString(canalEntrada)).append("\n");
     sb.append("    telefones: ").append(toIndentedString(telefones)).append("\n");
     sb.append("    enderecos: ").append(toIndentedString(enderecos)).append("\n");
     sb.append("    socios: ").append(toIndentedString(socios)).append("\n");

@@ -123,7 +123,7 @@ public class TipoOportunidadeAUDResponse   {
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Atributo que representa se o tipo oportunidade est\u00C3\u00A1 ativo")
+  @ApiModelProperty(example = "true", value = "Atributo que representa se o tipo oportunidade est\u00C3\u00A1 ativo")
   @JsonProperty("flagAtivo")
   public Boolean getFlagAtivo() {
     return flagAtivo;

@@ -150,9 +150,10 @@ public class ContaApi {
    * @param limiteInternacionalParcelas Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.
    * @param limiteInternacionalSaqueGlobal Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional.
    * @param limiteInternacionalSaquePeriodo Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00C3\u00A9dito que o portador pode utilizar para realizar transa\u00C3\u00A7\u00C3\u00B5es de Saque Internacional dentro de cada ciclo de faturamento.
+   * @param limiteMaximo Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es.
    * @return LimiteDisponibilidadeResponse
    */
-  public LimiteDisponibilidadeResponse alterarLimiteUsingPUT(Long id, BigDecimal limiteGlobal, BigDecimal limiteCompra, BigDecimal limiteParcelado, BigDecimal limiteParcelas, BigDecimal limiteSaqueGlobal, BigDecimal limiteSaquePeriodo, BigDecimal limiteConsignado, BigDecimal limiteInternacionalCompra, BigDecimal limiteInternacionalParcelado, BigDecimal limiteInternacionalParcelas, BigDecimal limiteInternacionalSaqueGlobal, BigDecimal limiteInternacionalSaquePeriodo) throws ApiException {
+  public LimiteDisponibilidadeResponse alterarLimiteUsingPUT(Long id, BigDecimal limiteGlobal, BigDecimal limiteCompra, BigDecimal limiteParcelado, BigDecimal limiteParcelas, BigDecimal limiteSaqueGlobal, BigDecimal limiteSaquePeriodo, BigDecimal limiteConsignado, BigDecimal limiteInternacionalCompra, BigDecimal limiteInternacionalParcelado, BigDecimal limiteInternacionalParcelas, BigDecimal limiteInternacionalSaqueGlobal, BigDecimal limiteInternacionalSaquePeriodo, BigDecimal limiteMaximo) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -220,6 +221,11 @@ public class ContaApi {
         throw new ApiException(400, "Missing the required parameter 'limiteInternacionalSaquePeriodo' when calling alterarLimiteUsingPUT");
      }
      
+     // verify the required parameter 'limiteMaximo' is set
+     if (limiteMaximo == null) {
+        throw new ApiException(400, "Missing the required parameter 'limiteMaximo' when calling alterarLimiteUsingPUT");
+     }
+     
     // create path and map variables
     String path = "/api/contas/{id}/alterar-limites".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
@@ -253,6 +259,8 @@ public class ContaApi {
     queryParams.addAll(apiClient.parameterToPairs("", "limiteInternacionalSaqueGlobal", limiteInternacionalSaqueGlobal));
     
     queryParams.addAll(apiClient.parameterToPairs("", "limiteInternacionalSaquePeriodo", limiteInternacionalSaquePeriodo));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limiteMaximo", limiteMaximo));
     
 
     
@@ -391,6 +399,80 @@ public class ContaApi {
   }
   
   /**
+   * Atribuir Anuidade
+   * Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
+   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * @param idAnuidade Identificador da anuidade
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @param DDD DDD do celular
+   * @param celular N\u00C3\u00BAmero do celular
+   * @param idOperadora Identificador da operadora do celular
+   * @param idOrigemComercial Identificador da origem comercial
+   * @return Object
+   */
+  public Object ativarAnuidadeUsingPOST(Long id, Long idAnuidade, Integer page, Integer limit, String DDD, String celular, Long idOperadora, Long idOrigemComercial) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling ativarAnuidadeUsingPOST");
+     }
+     
+     // verify the required parameter 'idAnuidade' is set
+     if (idAnuidade == null) {
+        throw new ApiException(400, "Missing the required parameter 'idAnuidade' when calling ativarAnuidadeUsingPOST");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/{id}/atribuir-anuidade".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idAnuidade", idAnuidade));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "DDD", DDD));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "celular", celular));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idOperadora", idOperadora));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idOrigemComercial", idOrigemComercial));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<Object> returnType = new GenericType<Object>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    *  Ativa o servi\u00C3\u00A7o de envio de fatura por email
    * Este recurso ativa o servi\u00C3\u00A7o de envio de fatura por email
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
@@ -434,6 +516,118 @@ public class ContaApi {
 
     
     GenericType<Object> returnType = new GenericType<Object>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Realiza o bloqueio de uma determinada Conta
+   * Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * @param idStatus C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.
+   * @return ContaResponse
+   */
+  public ContaResponse bloquearUsingPOST1(Long id, Long idStatus) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling bloquearUsingPOST1");
+     }
+     
+     // verify the required parameter 'idStatus' is set
+     if (idStatus == null) {
+        throw new ApiException(400, "Missing the required parameter 'idStatus' when calling bloquearUsingPOST1");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/{id}/bloquear".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "id_status", idStatus));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<ContaResponse> returnType = new GenericType<ContaResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Realiza o cancelamento de uma determinada Conta
+   * Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do cancelamento de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * @param idStatus C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.
+   * @return ContaResponse
+   */
+  public ContaResponse cancelarUsingPOST1(Long id, Long idStatus) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling cancelarUsingPOST1");
+     }
+     
+     // verify the required parameter 'idStatus' is set
+     if (idStatus == null) {
+        throw new ApiException(400, "Missing the required parameter 'idStatus' when calling cancelarUsingPOST1");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/{id}/cancelar".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "id_status", idStatus));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<ContaResponse> returnType = new GenericType<ContaResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -869,17 +1063,17 @@ public class ContaApi {
    * @param idContaBancariaDestino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
    * @return TransferenciaBancariaResponse
    */
-  public TransferenciaBancariaResponse consultarUsingGET23(Long id, Long idTransferencia, Long idContaBancariaDestino) throws ApiException {
+  public TransferenciaBancariaResponse consultarUsingGET24(Long id, Long idTransferencia, Long idContaBancariaDestino) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET23");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET24");
      }
      
      // verify the required parameter 'idTransferencia' is set
      if (idTransferencia == null) {
-        throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET23");
+        throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET24");
      }
      
     // create path and map variables
@@ -926,17 +1120,17 @@ public class ContaApi {
    * @param idTransferencia C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).
    * @return PageTransferenciaResponse
    */
-  public PageTransferenciaResponse consultarUsingGET24(Long id, Long idTransferencia) throws ApiException {
+  public PageTransferenciaResponse consultarUsingGET25(Long id, Long idTransferencia) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET24");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET25");
      }
      
      // verify the required parameter 'idTransferencia' is set
      if (idTransferencia == null) {
-        throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET24");
+        throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET25");
      }
      
     // create path and map variables
@@ -980,12 +1174,12 @@ public class ContaApi {
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
    * @return ContaDetalheResponse
    */
-  public ContaDetalheResponse consultarUsingGET4(Long id) throws ApiException {
+  public ContaDetalheResponse consultarUsingGET5(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET4");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET5");
      }
      
     // create path and map variables
@@ -1847,12 +2041,12 @@ public class ContaApi {
    * @param id Id Conta
    * @return Object
    */
-  public Object reativarUsingPOST(Long id) throws ApiException {
+  public Object reativarUsingPOST1(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling reativarUsingPOST");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling reativarUsingPOST1");
      }
      
     // create path and map variables

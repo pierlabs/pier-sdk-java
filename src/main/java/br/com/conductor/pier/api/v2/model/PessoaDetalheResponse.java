@@ -20,7 +20,7 @@ public class PessoaDetalheResponse   {
   private Long idPessoa = null;
   private String nomeMae = null;
   private Long idEstadoCivil = null;
-  private String profissao = null;
+  private Integer idProfissao = null;
   private Long idNaturezaOcupacao = null;
   private Long idNacionalidade = null;
   private Integer numeroAgencia = null;
@@ -86,18 +86,18 @@ public class PessoaDetalheResponse   {
   /**
    * Profiss\u00C3\u00A3o da pessoa fisica
    **/
-  public PessoaDetalheResponse profissao(String profissao) {
-    this.profissao = profissao;
+  public PessoaDetalheResponse idProfissao(Integer idProfissao) {
+    this.idProfissao = idProfissao;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Profiss\u00C3\u00A3o da pessoa fisica")
-  @JsonProperty("profissao")
-  public String getProfissao() {
-    return profissao;
+  @JsonProperty("idProfissao")
+  public Integer getIdProfissao() {
+    return idProfissao;
   }
-  public void setProfissao(String profissao) {
-    this.profissao = profissao;
+  public void setIdProfissao(Integer idProfissao) {
+    this.idProfissao = idProfissao;
   }
 
   
@@ -222,7 +222,7 @@ public class PessoaDetalheResponse   {
     return Objects.equals(this.idPessoa, pessoaDetalheResponse.idPessoa) &&
         Objects.equals(this.nomeMae, pessoaDetalheResponse.nomeMae) &&
         Objects.equals(this.idEstadoCivil, pessoaDetalheResponse.idEstadoCivil) &&
-        Objects.equals(this.profissao, pessoaDetalheResponse.profissao) &&
+        Objects.equals(this.idProfissao, pessoaDetalheResponse.idProfissao) &&
         Objects.equals(this.idNaturezaOcupacao, pessoaDetalheResponse.idNaturezaOcupacao) &&
         Objects.equals(this.idNacionalidade, pessoaDetalheResponse.idNacionalidade) &&
         Objects.equals(this.numeroAgencia, pessoaDetalheResponse.numeroAgencia) &&
@@ -233,7 +233,7 @@ public class PessoaDetalheResponse   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(idPessoa, nomeMae, idEstadoCivil, profissao, idNaturezaOcupacao, idNacionalidade, numeroAgencia, numeroContaCorrente, email, nomeEmpresa);
+    return Objects.hash(idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroAgencia, numeroContaCorrente, email, nomeEmpresa);
   }
 
   @Override
@@ -244,7 +244,7 @@ public class PessoaDetalheResponse   {
     sb.append("    idPessoa: ").append(toIndentedString(idPessoa)).append("\n");
     sb.append("    nomeMae: ").append(toIndentedString(nomeMae)).append("\n");
     sb.append("    idEstadoCivil: ").append(toIndentedString(idEstadoCivil)).append("\n");
-    sb.append("    profissao: ").append(toIndentedString(profissao)).append("\n");
+    sb.append("    idProfissao: ").append(toIndentedString(idProfissao)).append("\n");
     sb.append("    idNaturezaOcupacao: ").append(toIndentedString(idNaturezaOcupacao)).append("\n");
     sb.append("    idNacionalidade: ").append(toIndentedString(idNacionalidade)).append("\n");
     sb.append("    numeroAgencia: ").append(toIndentedString(numeroAgencia)).append("\n");

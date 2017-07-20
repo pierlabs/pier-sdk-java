@@ -18,7 +18,7 @@ import java.util.List;
 
 @ApiModel(description = "Lista dos riscos de fraudes")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class RiscoFraudeResponsePage   {
+public class PageRiscoFraudeResponse   {
   
   private List<RiscoFraudeResponse> content = new ArrayList<RiscoFraudeResponse>();
   private Boolean first = null;
@@ -38,7 +38,7 @@ public class RiscoFraudeResponsePage   {
   
   /**
    **/
-  public RiscoFraudeResponsePage content(List<RiscoFraudeResponse> content) {
+  public PageRiscoFraudeResponse content(List<RiscoFraudeResponse> content) {
     this.content = content;
     return this;
   }
@@ -55,7 +55,7 @@ public class RiscoFraudeResponsePage   {
   
   /**
    **/
-  public RiscoFraudeResponsePage first(Boolean first) {
+  public PageRiscoFraudeResponse first(Boolean first) {
     this.first = first;
     return this;
   }
@@ -72,7 +72,7 @@ public class RiscoFraudeResponsePage   {
   
   /**
    **/
-  public RiscoFraudeResponsePage firstPage(Boolean firstPage) {
+  public PageRiscoFraudeResponse firstPage(Boolean firstPage) {
     this.firstPage = firstPage;
     return this;
   }
@@ -89,7 +89,7 @@ public class RiscoFraudeResponsePage   {
   
   /**
    **/
-  public RiscoFraudeResponsePage hasContent(Boolean hasContent) {
+  public PageRiscoFraudeResponse hasContent(Boolean hasContent) {
     this.hasContent = hasContent;
     return this;
   }
@@ -106,7 +106,7 @@ public class RiscoFraudeResponsePage   {
   
   /**
    **/
-  public RiscoFraudeResponsePage hasNextPage(Boolean hasNextPage) {
+  public PageRiscoFraudeResponse hasNextPage(Boolean hasNextPage) {
     this.hasNextPage = hasNextPage;
     return this;
   }
@@ -123,7 +123,7 @@ public class RiscoFraudeResponsePage   {
   
   /**
    **/
-  public RiscoFraudeResponsePage hasPreviousPage(Boolean hasPreviousPage) {
+  public PageRiscoFraudeResponse hasPreviousPage(Boolean hasPreviousPage) {
     this.hasPreviousPage = hasPreviousPage;
     return this;
   }
@@ -140,7 +140,7 @@ public class RiscoFraudeResponsePage   {
   
   /**
    **/
-  public RiscoFraudeResponsePage last(Boolean last) {
+  public PageRiscoFraudeResponse last(Boolean last) {
     this.last = last;
     return this;
   }
@@ -157,7 +157,7 @@ public class RiscoFraudeResponsePage   {
   
   /**
    **/
-  public RiscoFraudeResponsePage nextPage(Integer nextPage) {
+  public PageRiscoFraudeResponse nextPage(Integer nextPage) {
     this.nextPage = nextPage;
     return this;
   }
@@ -174,7 +174,7 @@ public class RiscoFraudeResponsePage   {
   
   /**
    **/
-  public RiscoFraudeResponsePage number(Integer number) {
+  public PageRiscoFraudeResponse number(Integer number) {
     this.number = number;
     return this;
   }
@@ -191,7 +191,7 @@ public class RiscoFraudeResponsePage   {
   
   /**
    **/
-  public RiscoFraudeResponsePage numberOfElements(Integer numberOfElements) {
+  public PageRiscoFraudeResponse numberOfElements(Integer numberOfElements) {
     this.numberOfElements = numberOfElements;
     return this;
   }
@@ -208,7 +208,7 @@ public class RiscoFraudeResponsePage   {
   
   /**
    **/
-  public RiscoFraudeResponsePage previousPage(Integer previousPage) {
+  public PageRiscoFraudeResponse previousPage(Integer previousPage) {
     this.previousPage = previousPage;
     return this;
   }
@@ -225,7 +225,7 @@ public class RiscoFraudeResponsePage   {
   
   /**
    **/
-  public RiscoFraudeResponsePage size(Integer size) {
+  public PageRiscoFraudeResponse size(Integer size) {
     this.size = size;
     return this;
   }
@@ -242,7 +242,7 @@ public class RiscoFraudeResponsePage   {
   
   /**
    **/
-  public RiscoFraudeResponsePage totalElements(Long totalElements) {
+  public PageRiscoFraudeResponse totalElements(Long totalElements) {
     this.totalElements = totalElements;
     return this;
   }
@@ -259,7 +259,7 @@ public class RiscoFraudeResponsePage   {
   
   /**
    **/
-  public RiscoFraudeResponsePage totalPages(Integer totalPages) {
+  public PageRiscoFraudeResponse totalPages(Integer totalPages) {
     this.totalPages = totalPages;
     return this;
   }
@@ -283,21 +283,21 @@ public class RiscoFraudeResponsePage   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    RiscoFraudeResponsePage riscoFraudeResponsePage = (RiscoFraudeResponsePage) o;
-    return Objects.equals(this.content, riscoFraudeResponsePage.content) &&
-        Objects.equals(this.first, riscoFraudeResponsePage.first) &&
-        Objects.equals(this.firstPage, riscoFraudeResponsePage.firstPage) &&
-        Objects.equals(this.hasContent, riscoFraudeResponsePage.hasContent) &&
-        Objects.equals(this.hasNextPage, riscoFraudeResponsePage.hasNextPage) &&
-        Objects.equals(this.hasPreviousPage, riscoFraudeResponsePage.hasPreviousPage) &&
-        Objects.equals(this.last, riscoFraudeResponsePage.last) &&
-        Objects.equals(this.nextPage, riscoFraudeResponsePage.nextPage) &&
-        Objects.equals(this.number, riscoFraudeResponsePage.number) &&
-        Objects.equals(this.numberOfElements, riscoFraudeResponsePage.numberOfElements) &&
-        Objects.equals(this.previousPage, riscoFraudeResponsePage.previousPage) &&
-        Objects.equals(this.size, riscoFraudeResponsePage.size) &&
-        Objects.equals(this.totalElements, riscoFraudeResponsePage.totalElements) &&
-        Objects.equals(this.totalPages, riscoFraudeResponsePage.totalPages);
+    PageRiscoFraudeResponse pageRiscoFraudeResponse = (PageRiscoFraudeResponse) o;
+    return Objects.equals(this.content, pageRiscoFraudeResponse.content) &&
+        Objects.equals(this.first, pageRiscoFraudeResponse.first) &&
+        Objects.equals(this.firstPage, pageRiscoFraudeResponse.firstPage) &&
+        Objects.equals(this.hasContent, pageRiscoFraudeResponse.hasContent) &&
+        Objects.equals(this.hasNextPage, pageRiscoFraudeResponse.hasNextPage) &&
+        Objects.equals(this.hasPreviousPage, pageRiscoFraudeResponse.hasPreviousPage) &&
+        Objects.equals(this.last, pageRiscoFraudeResponse.last) &&
+        Objects.equals(this.nextPage, pageRiscoFraudeResponse.nextPage) &&
+        Objects.equals(this.number, pageRiscoFraudeResponse.number) &&
+        Objects.equals(this.numberOfElements, pageRiscoFraudeResponse.numberOfElements) &&
+        Objects.equals(this.previousPage, pageRiscoFraudeResponse.previousPage) &&
+        Objects.equals(this.size, pageRiscoFraudeResponse.size) &&
+        Objects.equals(this.totalElements, pageRiscoFraudeResponse.totalElements) &&
+        Objects.equals(this.totalPages, pageRiscoFraudeResponse.totalPages);
   }
 
   @Override
@@ -308,7 +308,7 @@ public class RiscoFraudeResponsePage   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class RiscoFraudeResponsePage {\n");
+    sb.append("class PageRiscoFraudeResponse {\n");
     
     sb.append("    content: ").append(toIndentedString(content)).append("\n");
     sb.append("    first: ").append(toIndentedString(first)).append("\n");

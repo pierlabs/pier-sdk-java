@@ -29,6 +29,7 @@ public class PushAPNS   {
 
   public enum TipoEventoEnum {
     RISCO_FRAUDE("RISCO_FRAUDE"),
+    TOKEN_SMS("TOKEN_SMS"),
     OUTROS("OUTROS");
 
     private String value;

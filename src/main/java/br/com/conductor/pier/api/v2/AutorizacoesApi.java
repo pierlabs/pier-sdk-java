@@ -95,12 +95,12 @@ public class AutorizacoesApi {
    * @param cancelamentoRequest cancelamentoRequest
    * @return TransacaoOnUsResponse
    */
-  public TransacaoOnUsResponse cancelarUsingPOST(CancelamentoTransacaoOnUsRequest cancelamentoRequest) throws ApiException {
+  public TransacaoOnUsResponse cancelarUsingPOST2(CancelamentoTransacaoOnUsRequest cancelamentoRequest) throws ApiException {
     Object postBody = cancelamentoRequest;
     
      // verify the required parameter 'cancelamentoRequest' is set
      if (cancelamentoRequest == null) {
-        throw new ApiException(400, "Missing the required parameter 'cancelamentoRequest' when calling cancelarUsingPOST");
+        throw new ApiException(400, "Missing the required parameter 'cancelamentoRequest' when calling cancelarUsingPOST2");
      }
      
     // create path and map variables
@@ -178,8 +178,8 @@ public class AutorizacoesApi {
   }
   
   /**
-   * Simula planos de pagamento
-   * Este m\u00C3\u00A9todo permite que seja simulada um plano de pagamento.
+   * Simula planos de transa\u00C3\u00A7\u00C3\u00B5es
+   * Este m\u00C3\u00A9todo permite que seja simulada um plano de transa\u00C3\u00A7\u00C3\u00B5es.
    * @param transacoesRequest transacoesRequest
    * @return TransacaoOnUsResponse
    */
