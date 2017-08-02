@@ -37,7 +37,7 @@ Depois da biblioteca Maven instalada vocÃª pode utilizar em seus projetos Java
 	<dependency>
 	    <groupId>com.github.devconductor</groupId>
 	    <artifactId>pier-sdk-java</artifactId>
-	    <version>2.24.0</version>
+	    <version>v2.24.0</version>
 	</dependency>
 ```
 
