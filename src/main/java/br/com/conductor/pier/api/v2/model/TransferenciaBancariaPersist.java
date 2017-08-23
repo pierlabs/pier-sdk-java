@@ -18,11 +18,8 @@ import java.math.BigDecimal;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TransferenciaBancariaPersist   {
   
-  private String dataCompra = null;
-  private String proximoVencimentoPadrao = null;
-  private String proximoVencimentoReal = null;
   private BigDecimal valorCompra = null;
-  private String nomeFavorecido = null;
+  private BigDecimal valor = null;
   private String documentoFavorecido = null;
   private Long banco = null;
   private String numeroAgencia = null;
@@ -30,60 +27,7 @@ public class TransferenciaBancariaPersist   {
   private String numeroConta = null;
   private String digitoConta = null;
   private Integer flagContaPoupanca = null;
-
-  
-  /**
-   * Data da transfer\u00C3\u00AAncia
-   **/
-  public TransferenciaBancariaPersist dataCompra(String dataCompra) {
-    this.dataCompra = dataCompra;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ", required = true, value = "Data da transfer\u00C3\u00AAncia")
-  @JsonProperty("dataCompra")
-  public String getDataCompra() {
-    return dataCompra;
-  }
-  public void setDataCompra(String dataCompra) {
-    this.dataCompra = dataCompra;
-  }
-
-  
-  /**
-   * Dia do vencimento padr\u00C3\u00A3o da fatura
-   **/
-  public TransferenciaBancariaPersist proximoVencimentoPadrao(String proximoVencimentoPadrao) {
-    this.proximoVencimentoPadrao = proximoVencimentoPadrao;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", required = true, value = "Dia do vencimento padr\u00C3\u00A3o da fatura")
-  @JsonProperty("proximoVencimentoPadrao")
-  public String getProximoVencimentoPadrao() {
-    return proximoVencimentoPadrao;
-  }
-  public void setProximoVencimentoPadrao(String proximoVencimentoPadrao) {
-    this.proximoVencimentoPadrao = proximoVencimentoPadrao;
-  }
-
-  
-  /**
-   * Data do vencimento real da fatura
-   **/
-  public TransferenciaBancariaPersist proximoVencimentoReal(String proximoVencimentoReal) {
-    this.proximoVencimentoReal = proximoVencimentoReal;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", required = true, value = "Data do vencimento real da fatura")
-  @JsonProperty("proximoVencimentoReal")
-  public String getProximoVencimentoReal() {
-    return proximoVencimentoReal;
-  }
-  public void setProximoVencimentoReal(String proximoVencimentoReal) {
-    this.proximoVencimentoReal = proximoVencimentoReal;
-  }
+  private String nomeFavorecido = null;
 
   
   /**
@@ -105,20 +49,20 @@ public class TransferenciaBancariaPersist   {
 
   
   /**
-   * Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
+   * Valor da transfer\u00C3\u00AAncia
    **/
-  public TransferenciaBancariaPersist nomeFavorecido(String nomeFavorecido) {
-    this.nomeFavorecido = nomeFavorecido;
+  public TransferenciaBancariaPersist valor(BigDecimal valor) {
+    this.valor = valor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.")
-  @JsonProperty("nomeFavorecido")
-  public String getNomeFavorecido() {
-    return nomeFavorecido;
+  @ApiModelProperty(example = "null", required = true, value = "Valor da transfer\u00C3\u00AAncia")
+  @JsonProperty("valor")
+  public BigDecimal getValor() {
+    return valor;
   }
-  public void setNomeFavorecido(String nomeFavorecido) {
-    this.nomeFavorecido = nomeFavorecido;
+  public void setValor(BigDecimal valor) {
+    this.valor = valor;
   }
 
   
@@ -248,6 +192,24 @@ public class TransferenciaBancariaPersist   {
   }
 
   
+  /**
+   * Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
+   **/
+  public TransferenciaBancariaPersist nomeFavorecido(String nomeFavorecido) {
+    this.nomeFavorecido = nomeFavorecido;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.")
+  @JsonProperty("nomeFavorecido")
+  public String getNomeFavorecido() {
+    return nomeFavorecido;
+  }
+  public void setNomeFavorecido(String nomeFavorecido) {
+    this.nomeFavorecido = nomeFavorecido;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -258,23 +220,21 @@ public class TransferenciaBancariaPersist   {
       return false;
     }
     TransferenciaBancariaPersist transferenciaBancariaPersist = (TransferenciaBancariaPersist) o;
-    return Objects.equals(this.dataCompra, transferenciaBancariaPersist.dataCompra) &&
-        Objects.equals(this.proximoVencimentoPadrao, transferenciaBancariaPersist.proximoVencimentoPadrao) &&
-        Objects.equals(this.proximoVencimentoReal, transferenciaBancariaPersist.proximoVencimentoReal) &&
-        Objects.equals(this.valorCompra, transferenciaBancariaPersist.valorCompra) &&
-        Objects.equals(this.nomeFavorecido, transferenciaBancariaPersist.nomeFavorecido) &&
+    return Objects.equals(this.valorCompra, transferenciaBancariaPersist.valorCompra) &&
+        Objects.equals(this.valor, transferenciaBancariaPersist.valor) &&
         Objects.equals(this.documentoFavorecido, transferenciaBancariaPersist.documentoFavorecido) &&
         Objects.equals(this.banco, transferenciaBancariaPersist.banco) &&
         Objects.equals(this.numeroAgencia, transferenciaBancariaPersist.numeroAgencia) &&
         Objects.equals(this.digitoAgencia, transferenciaBancariaPersist.digitoAgencia) &&
         Objects.equals(this.numeroConta, transferenciaBancariaPersist.numeroConta) &&
         Objects.equals(this.digitoConta, transferenciaBancariaPersist.digitoConta) &&
-        Objects.equals(this.flagContaPoupanca, transferenciaBancariaPersist.flagContaPoupanca);
+        Objects.equals(this.flagContaPoupanca, transferenciaBancariaPersist.flagContaPoupanca) &&
+        Objects.equals(this.nomeFavorecido, transferenciaBancariaPersist.nomeFavorecido);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(dataCompra, proximoVencimentoPadrao, proximoVencimentoReal, valorCompra, nomeFavorecido, documentoFavorecido, banco, numeroAgencia, digitoAgencia, numeroConta, digitoConta, flagContaPoupanca);
+    return Objects.hash(valorCompra, valor, documentoFavorecido, banco, numeroAgencia, digitoAgencia, numeroConta, digitoConta, flagContaPoupanca, nomeFavorecido);
   }
 
   @Override
@@ -282,11 +242,8 @@ public class TransferenciaBancariaPersist   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TransferenciaBancariaPersist {\n");
     
-    sb.append("    dataCompra: ").append(toIndentedString(dataCompra)).append("\n");
-    sb.append("    proximoVencimentoPadrao: ").append(toIndentedString(proximoVencimentoPadrao)).append("\n");
-    sb.append("    proximoVencimentoReal: ").append(toIndentedString(proximoVencimentoReal)).append("\n");
     sb.append("    valorCompra: ").append(toIndentedString(valorCompra)).append("\n");
-    sb.append("    nomeFavorecido: ").append(toIndentedString(nomeFavorecido)).append("\n");
+    sb.append("    valor: ").append(toIndentedString(valor)).append("\n");
     sb.append("    documentoFavorecido: ").append(toIndentedString(documentoFavorecido)).append("\n");
     sb.append("    banco: ").append(toIndentedString(banco)).append("\n");
     sb.append("    numeroAgencia: ").append(toIndentedString(numeroAgencia)).append("\n");
@@ -294,6 +251,7 @@ public class TransferenciaBancariaPersist   {
     sb.append("    numeroConta: ").append(toIndentedString(numeroConta)).append("\n");
     sb.append("    digitoConta: ").append(toIndentedString(digitoConta)).append("\n");
     sb.append("    flagContaPoupanca: ").append(toIndentedString(flagContaPoupanca)).append("\n");
+    sb.append("    nomeFavorecido: ").append(toIndentedString(nomeFavorecido)).append("\n");
     sb.append("}");
     return sb.toString();
   }

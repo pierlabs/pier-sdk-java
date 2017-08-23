@@ -217,7 +217,7 @@ public class JobsApi {
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @return PageJobResponse
    */
-  public PageJobResponse listarUsingGET12(String groovy, String descricao, String cron, String status, Integer page, Integer limit) throws ApiException {
+  public PageJobResponse listarUsingGET13(String groovy, String descricao, String cron, String status, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -273,22 +273,22 @@ public class JobsApi {
    * @param groovy groovy
    * @return JobResponse
    */
-  public JobResponse salvarUsingPOST7(String descricao, String cron, String groovy) throws ApiException {
+  public JobResponse salvarUsingPOST8(String descricao, String cron, String groovy) throws ApiException {
     Object postBody = groovy;
     
      // verify the required parameter 'descricao' is set
      if (descricao == null) {
-        throw new ApiException(400, "Missing the required parameter 'descricao' when calling salvarUsingPOST7");
+        throw new ApiException(400, "Missing the required parameter 'descricao' when calling salvarUsingPOST8");
      }
      
      // verify the required parameter 'cron' is set
      if (cron == null) {
-        throw new ApiException(400, "Missing the required parameter 'cron' when calling salvarUsingPOST7");
+        throw new ApiException(400, "Missing the required parameter 'cron' when calling salvarUsingPOST8");
      }
      
      // verify the required parameter 'groovy' is set
      if (groovy == null) {
-        throw new ApiException(400, "Missing the required parameter 'groovy' when calling salvarUsingPOST7");
+        throw new ApiException(400, "Missing the required parameter 'groovy' when calling salvarUsingPOST8");
      }
      
     // create path and map variables

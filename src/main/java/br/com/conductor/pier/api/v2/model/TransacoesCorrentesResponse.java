@@ -27,7 +27,7 @@ public class TransacoesCorrentesResponse   {
   private Long idConta = null;
   private String cartaoMascarado = null;
   private String nomePortador = null;
-  private String dataTransacaoUTC = null;
+  private String dataTransacao = null;
   private String dataFaturamento = null;
   private String dataVencimento = null;
   private String modoEntradaTransacao = null;
@@ -220,20 +220,20 @@ public class TransacoesCorrentesResponse   {
 
   
   /**
-   * Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada sob o padr\u00C3\u00A3o de Tempo Universal Coordenado (UTC).
+   * Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada.
    **/
-  public TransacoesCorrentesResponse dataTransacaoUTC(String dataTransacaoUTC) {
-    this.dataTransacaoUTC = dataTransacaoUTC;
+  public TransacoesCorrentesResponse dataTransacao(String dataTransacao) {
+    this.dataTransacao = dataTransacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada sob o padr\u00C3\u00A3o de Tempo Universal Coordenado (UTC).")
-  @JsonProperty("dataTransacaoUTC")
-  public String getDataTransacaoUTC() {
-    return dataTransacaoUTC;
+  @ApiModelProperty(example = "null", value = "Data em que a Transa\u00C3\u00A7\u00C3\u00A3o foi realizada.")
+  @JsonProperty("dataTransacao")
+  public String getDataTransacao() {
+    return dataTransacao;
   }
-  public void setDataTransacaoUTC(String dataTransacaoUTC) {
-    this.dataTransacaoUTC = dataTransacaoUTC;
+  public void setDataTransacao(String dataTransacao) {
+    this.dataTransacao = dataTransacao;
   }
 
   
@@ -742,7 +742,7 @@ public class TransacoesCorrentesResponse   {
         Objects.equals(this.idConta, transacoesCorrentesResponse.idConta) &&
         Objects.equals(this.cartaoMascarado, transacoesCorrentesResponse.cartaoMascarado) &&
         Objects.equals(this.nomePortador, transacoesCorrentesResponse.nomePortador) &&
-        Objects.equals(this.dataTransacaoUTC, transacoesCorrentesResponse.dataTransacaoUTC) &&
+        Objects.equals(this.dataTransacao, transacoesCorrentesResponse.dataTransacao) &&
         Objects.equals(this.dataFaturamento, transacoesCorrentesResponse.dataFaturamento) &&
         Objects.equals(this.dataVencimento, transacoesCorrentesResponse.dataVencimento) &&
         Objects.equals(this.modoEntradaTransacao, transacoesCorrentesResponse.modoEntradaTransacao) &&
@@ -774,7 +774,7 @@ public class TransacoesCorrentesResponse   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idTipoTransacao, descricaoAbreviada, statusTransacao, idEvento, tipoEvento, idConta, cartaoMascarado, nomePortador, dataTransacaoUTC, dataFaturamento, dataVencimento, modoEntradaTransacao, valorTaxaEmbarque, valorEntrada, valorBRL, valorUSD, cotacaoUSD, dataCotacaoUSD, codigoMoedaOrigem, codigoMoedaDestino, codigoAutorizacao, codigoReferencia, codigoTerminal, codigoMCC, grupoMCC, grupoDescricaoMCC, idEstabelecimento, nomeEstabelecimento, localidadeEstabelecimento, planoParcelamento, numeroParcela, detalhesTransacao, flagCredito, flagFaturado, flagEstorno, idTransacaoEstorno);
+    return Objects.hash(id, idTipoTransacao, descricaoAbreviada, statusTransacao, idEvento, tipoEvento, idConta, cartaoMascarado, nomePortador, dataTransacao, dataFaturamento, dataVencimento, modoEntradaTransacao, valorTaxaEmbarque, valorEntrada, valorBRL, valorUSD, cotacaoUSD, dataCotacaoUSD, codigoMoedaOrigem, codigoMoedaDestino, codigoAutorizacao, codigoReferencia, codigoTerminal, codigoMCC, grupoMCC, grupoDescricaoMCC, idEstabelecimento, nomeEstabelecimento, localidadeEstabelecimento, planoParcelamento, numeroParcela, detalhesTransacao, flagCredito, flagFaturado, flagEstorno, idTransacaoEstorno);
   }
 
   @Override
@@ -791,7 +791,7 @@ public class TransacoesCorrentesResponse   {
     sb.append("    idConta: ").append(toIndentedString(idConta)).append("\n");
     sb.append("    cartaoMascarado: ").append(toIndentedString(cartaoMascarado)).append("\n");
     sb.append("    nomePortador: ").append(toIndentedString(nomePortador)).append("\n");
-    sb.append("    dataTransacaoUTC: ").append(toIndentedString(dataTransacaoUTC)).append("\n");
+    sb.append("    dataTransacao: ").append(toIndentedString(dataTransacao)).append("\n");
     sb.append("    dataFaturamento: ").append(toIndentedString(dataFaturamento)).append("\n");
     sb.append("    dataVencimento: ").append(toIndentedString(dataVencimento)).append("\n");
     sb.append("    modoEntradaTransacao: ").append(toIndentedString(modoEntradaTransacao)).append("\n");

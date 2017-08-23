@@ -44,6 +44,7 @@ public class TransferenciaBancariaResponse   {
   private String dataVencimentoPadrao = null;
   private Long idContaPortador = null;
   private Long numeroEstabelecimento = null;
+  private BigDecimal valorTaxaSaque = null;
 
   
   /**
@@ -513,6 +514,24 @@ public class TransferenciaBancariaResponse   {
   }
 
   
+  /**
+   * Valor da taxa saque.
+   **/
+  public TransferenciaBancariaResponse valorTaxaSaque(BigDecimal valorTaxaSaque) {
+    this.valorTaxaSaque = valorTaxaSaque;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor da taxa saque.")
+  @JsonProperty("valorTaxaSaque")
+  public BigDecimal getValorTaxaSaque() {
+    return valorTaxaSaque;
+  }
+  public void setValorTaxaSaque(BigDecimal valorTaxaSaque) {
+    this.valorTaxaSaque = valorTaxaSaque;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -548,12 +567,13 @@ public class TransferenciaBancariaResponse   {
         Objects.equals(this.dataVencimentoReal, transferenciaBancariaResponse.dataVencimentoReal) &&
         Objects.equals(this.dataVencimentoPadrao, transferenciaBancariaResponse.dataVencimentoPadrao) &&
         Objects.equals(this.idContaPortador, transferenciaBancariaResponse.idContaPortador) &&
-        Objects.equals(this.numeroEstabelecimento, transferenciaBancariaResponse.numeroEstabelecimento);
+        Objects.equals(this.numeroEstabelecimento, transferenciaBancariaResponse.numeroEstabelecimento) &&
+        Objects.equals(this.valorTaxaSaque, transferenciaBancariaResponse.valorTaxaSaque);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(nsuorigem, idAutorizacao, idTransferencia, codigoAutorizacao, dataAutorizacao, origem, valor, idOperacao, terminal, idCartao, dataCompra, valorCompra, numeroParcelas, valorParcela, idEstabelecimento, dataMovimento, valorContrato, taxaJuros, valorIOF, valorTAC, idConta, valorEntrada, dataVencimentoReal, dataVencimentoPadrao, idContaPortador, numeroEstabelecimento);
+    return Objects.hash(nsuorigem, idAutorizacao, idTransferencia, codigoAutorizacao, dataAutorizacao, origem, valor, idOperacao, terminal, idCartao, dataCompra, valorCompra, numeroParcelas, valorParcela, idEstabelecimento, dataMovimento, valorContrato, taxaJuros, valorIOF, valorTAC, idConta, valorEntrada, dataVencimentoReal, dataVencimentoPadrao, idContaPortador, numeroEstabelecimento, valorTaxaSaque);
   }
 
   @Override
@@ -587,6 +607,7 @@ public class TransferenciaBancariaResponse   {
     sb.append("    dataVencimentoPadrao: ").append(toIndentedString(dataVencimentoPadrao)).append("\n");
     sb.append("    idContaPortador: ").append(toIndentedString(idContaPortador)).append("\n");
     sb.append("    numeroEstabelecimento: ").append(toIndentedString(numeroEstabelecimento)).append("\n");
+    sb.append("    valorTaxaSaque: ").append(toIndentedString(valorTaxaSaque)).append("\n");
     sb.append("}");
     return sb.toString();
   }

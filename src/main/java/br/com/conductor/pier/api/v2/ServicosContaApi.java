@@ -45,6 +45,7 @@ public class ServicosContaApi {
    * Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
    * @param idAnuidade Identificador da anuidade
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param DDD DDD do celular
@@ -53,7 +54,7 @@ public class ServicosContaApi {
    * @param idOrigemComercial Identificador da origem comercial
    * @return Object
    */
-  public Object ativarAnuidadeUsingPOST(Long id, Long idAnuidade, Integer page, Integer limit, String DDD, String celular, Long idOperadora, Long idOrigemComercial) throws ApiException {
+  public Object ativarAnuidadeUsingPOST(Long id, Long idAnuidade, List<String> sort, Integer page, Integer limit, String DDD, String celular, Long idOperadora, Long idOrigemComercial) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -75,6 +76,8 @@ public class ServicosContaApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     Map<String, Object> formParams = new HashMap<String, Object>();
 
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(apiClient.parameterToPairs("", "page", page));
     
@@ -213,21 +216,24 @@ public class ServicosContaApi {
   /**
    * Listar Anuidades
    * Lista as anuidades
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @return PageAnuidadeResponse
    */
-  public PageAnuidadeResponse listarAnuidadesUsingGET(Integer page, Integer limit) throws ApiException {
+  public PageAnuidadeResponse listarAnuidadesUsingGET(List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
-    String path = "/api/api/anuidades".replaceAll("\\{format\\}","json");
+    String path = "/api/anuidades".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
     Map<String, String> headerParams = new HashMap<String, String>();
     Map<String, Object> formParams = new HashMap<String, Object>();
 
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(apiClient.parameterToPairs("", "page", page));
     
@@ -260,11 +266,12 @@ public class ServicosContaApi {
   /**
    * Listar Operadoras
    * Lista as operadoras.
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @return PageOperadoraResponse
    */
-  public PageOperadoraResponse listarOperadorasTelefonicasUsingGET(Integer page, Integer limit) throws ApiException {
+  public PageOperadoraResponse listarOperadorasTelefonicasUsingGET(List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -275,6 +282,8 @@ public class ServicosContaApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     Map<String, Object> formParams = new HashMap<String, Object>();
 
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(apiClient.parameterToPairs("", "page", page));
     

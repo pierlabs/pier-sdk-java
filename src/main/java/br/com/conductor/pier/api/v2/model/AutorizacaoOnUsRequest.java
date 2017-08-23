@@ -92,7 +92,7 @@ public class AutorizacaoOnUsRequest   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "C\u00C3\u00B3digo de Seguran\u00C3\u00A7a do Cart\u00C3\u00A3o.")
+  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Seguran\u00C3\u00A7a do Cart\u00C3\u00A3o.")
   @JsonProperty("codigoSegurancaCartao")
   public String getCodigoSegurancaCartao() {
     return codigoSegurancaCartao;

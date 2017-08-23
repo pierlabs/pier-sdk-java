@@ -113,17 +113,17 @@ public class UsuariosApi {
    * @param update update
    * @return UsuarioResponse
    */
-  public UsuarioResponse alterarUsingPUT9(Long id, UsuarioUpdate update) throws ApiException {
+  public UsuarioResponse alterarUsingPUT10(Long id, UsuarioUpdate update) throws ApiException {
     Object postBody = update;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT9");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT10");
      }
      
      // verify the required parameter 'update' is set
      if (update == null) {
-        throw new ApiException(400, "Missing the required parameter 'update' when calling alterarUsingPUT9");
+        throw new ApiException(400, "Missing the required parameter 'update' when calling alterarUsingPUT10");
      }
      
     // create path and map variables
@@ -307,6 +307,7 @@ public class UsuariosApi {
   /**
    * Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
    * Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param nome Nome do Usuario
@@ -315,7 +316,7 @@ public class UsuariosApi {
    * @param status Status do Usuario
    * @return PageUsuarioResponse
    */
-  public PageUsuarioResponse listarUsingGET30(Integer page, Integer limit, String nome, String cpf, String email, String status) throws ApiException {
+  public PageUsuarioResponse listarUsingGET32(List<String> sort, Integer page, Integer limit, String nome, String cpf, String email, String status) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -326,6 +327,8 @@ public class UsuariosApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     Map<String, Object> formParams = new HashMap<String, Object>();
 
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(apiClient.parameterToPairs("", "page", page));
     
@@ -417,12 +420,12 @@ public class UsuariosApi {
    * @param persist persist
    * @return UsuarioResponse
    */
-  public UsuarioResponse salvarUsingPOST15(UsuarioPersist persist) throws ApiException {
+  public UsuarioResponse salvarUsingPOST16(UsuarioPersist persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST15");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST16");
      }
      
     // create path and map variables

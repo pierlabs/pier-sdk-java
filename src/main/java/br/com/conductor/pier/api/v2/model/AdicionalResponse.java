@@ -36,6 +36,7 @@ public class AdicionalResponse   {
   private Long idNacionalidade = null;
   private Long idParentesco = null;
   private String email = null;
+  private Integer flagAtivo = null;
   private List<TelefoneResponse> telefones = new ArrayList<TelefoneResponse>();
 
   
@@ -328,6 +329,24 @@ public class AdicionalResponse   {
 
   
   /**
+   * Indica se o adicional est\u00C3\u00A1 ativo = 1 ou inativo = 0
+   **/
+  public AdicionalResponse flagAtivo(Integer flagAtivo) {
+    this.flagAtivo = flagAtivo;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "1", value = "Indica se o adicional est\u00C3\u00A1 ativo = 1 ou inativo = 0")
+  @JsonProperty("flagAtivo")
+  public Integer getFlagAtivo() {
+    return flagAtivo;
+  }
+  public void setFlagAtivo(Integer flagAtivo) {
+    this.flagAtivo = flagAtivo;
+  }
+
+  
+  /**
    * Lista dos telefones do adicional
    **/
   public AdicionalResponse telefones(List<TelefoneResponse> telefones) {
@@ -371,12 +390,13 @@ public class AdicionalResponse   {
         Objects.equals(this.idNacionalidade, adicionalResponse.idNacionalidade) &&
         Objects.equals(this.idParentesco, adicionalResponse.idParentesco) &&
         Objects.equals(this.email, adicionalResponse.email) &&
+        Objects.equals(this.flagAtivo, adicionalResponse.flagAtivo) &&
         Objects.equals(this.telefones, adicionalResponse.telefones);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idConta, idPessoa, nome, nomeImpresso, numeroReceitaFederal, dataNascimento, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, idEstadoCivil, idProfissao, idNacionalidade, idParentesco, email, telefones);
+    return Objects.hash(idConta, idPessoa, nome, nomeImpresso, numeroReceitaFederal, dataNascimento, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, idEstadoCivil, idProfissao, idNacionalidade, idParentesco, email, flagAtivo, telefones);
   }
 
   @Override
@@ -400,6 +420,7 @@ public class AdicionalResponse   {
     sb.append("    idNacionalidade: ").append(toIndentedString(idNacionalidade)).append("\n");
     sb.append("    idParentesco: ").append(toIndentedString(idParentesco)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    flagAtivo: ").append(toIndentedString(flagAtivo)).append("\n");
     sb.append("    telefones: ").append(toIndentedString(telefones)).append("\n");
     sb.append("}");
     return sb.toString();

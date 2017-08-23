@@ -10,12 +10,14 @@ import br.com.conductor.pier.api.v2.invoker.Pair;
 import java.math.BigDecimal;
 import br.com.conductor.pier.api.v2.model.AjusteResponse;
 import br.com.conductor.pier.api.v2.model.LimiteDisponibilidadeResponse;
+import br.com.conductor.pier.api.v2.model.PageContaHistoricoPagamentoResponse;
 import br.com.conductor.pier.api.v2.model.ContaResponse;
 import br.com.conductor.pier.api.v2.model.BoletoResponse;
 import br.com.conductor.pier.api.v2.model.DividaClienteResponse;
 import br.com.conductor.pier.api.v2.model.DetalhesFaturaConsignadaResponse;
 import br.com.conductor.pier.api.v2.model.FaturaConsignadaDetalheResponse;
 import br.com.conductor.pier.api.v2.model.DetalhesFaturaResponse;
+import br.com.conductor.pier.api.v2.model.PagePlanoParcelamentoResponse;
 import br.com.conductor.pier.api.v2.model.PageTaxasRefinanciamentoResponse;
 import br.com.conductor.pier.api.v2.model.TransferenciaBancariaResponse;
 import br.com.conductor.pier.api.v2.model.PageTransferenciaResponse;
@@ -161,71 +163,6 @@ public class ContaApi {
         throw new ApiException(400, "Missing the required parameter 'id' when calling alterarLimiteUsingPUT");
      }
      
-     // verify the required parameter 'limiteGlobal' is set
-     if (limiteGlobal == null) {
-        throw new ApiException(400, "Missing the required parameter 'limiteGlobal' when calling alterarLimiteUsingPUT");
-     }
-     
-     // verify the required parameter 'limiteCompra' is set
-     if (limiteCompra == null) {
-        throw new ApiException(400, "Missing the required parameter 'limiteCompra' when calling alterarLimiteUsingPUT");
-     }
-     
-     // verify the required parameter 'limiteParcelado' is set
-     if (limiteParcelado == null) {
-        throw new ApiException(400, "Missing the required parameter 'limiteParcelado' when calling alterarLimiteUsingPUT");
-     }
-     
-     // verify the required parameter 'limiteParcelas' is set
-     if (limiteParcelas == null) {
-        throw new ApiException(400, "Missing the required parameter 'limiteParcelas' when calling alterarLimiteUsingPUT");
-     }
-     
-     // verify the required parameter 'limiteSaqueGlobal' is set
-     if (limiteSaqueGlobal == null) {
-        throw new ApiException(400, "Missing the required parameter 'limiteSaqueGlobal' when calling alterarLimiteUsingPUT");
-     }
-     
-     // verify the required parameter 'limiteSaquePeriodo' is set
-     if (limiteSaquePeriodo == null) {
-        throw new ApiException(400, "Missing the required parameter 'limiteSaquePeriodo' when calling alterarLimiteUsingPUT");
-     }
-     
-     // verify the required parameter 'limiteConsignado' is set
-     if (limiteConsignado == null) {
-        throw new ApiException(400, "Missing the required parameter 'limiteConsignado' when calling alterarLimiteUsingPUT");
-     }
-     
-     // verify the required parameter 'limiteInternacionalCompra' is set
-     if (limiteInternacionalCompra == null) {
-        throw new ApiException(400, "Missing the required parameter 'limiteInternacionalCompra' when calling alterarLimiteUsingPUT");
-     }
-     
-     // verify the required parameter 'limiteInternacionalParcelado' is set
-     if (limiteInternacionalParcelado == null) {
-        throw new ApiException(400, "Missing the required parameter 'limiteInternacionalParcelado' when calling alterarLimiteUsingPUT");
-     }
-     
-     // verify the required parameter 'limiteInternacionalParcelas' is set
-     if (limiteInternacionalParcelas == null) {
-        throw new ApiException(400, "Missing the required parameter 'limiteInternacionalParcelas' when calling alterarLimiteUsingPUT");
-     }
-     
-     // verify the required parameter 'limiteInternacionalSaqueGlobal' is set
-     if (limiteInternacionalSaqueGlobal == null) {
-        throw new ApiException(400, "Missing the required parameter 'limiteInternacionalSaqueGlobal' when calling alterarLimiteUsingPUT");
-     }
-     
-     // verify the required parameter 'limiteInternacionalSaquePeriodo' is set
-     if (limiteInternacionalSaquePeriodo == null) {
-        throw new ApiException(400, "Missing the required parameter 'limiteInternacionalSaquePeriodo' when calling alterarLimiteUsingPUT");
-     }
-     
-     // verify the required parameter 'limiteMaximo' is set
-     if (limiteMaximo == null) {
-        throw new ApiException(400, "Missing the required parameter 'limiteMaximo' when calling alterarLimiteUsingPUT");
-     }
-     
     // create path and map variables
     String path = "/api/contas/{id}/alterar-limites".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
@@ -283,6 +220,62 @@ public class ContaApi {
     
     GenericType<LimiteDisponibilidadeResponse> returnType = new GenericType<LimiteDisponibilidadeResponse>() {};
     return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Altera o produto associado \u00C3\u00A0 conta.
+   * O recurso permite fazer modifica\u00C3\u00A7\u00C3\u00A3o do produto associado \u00C3\u00A0 conta.
+   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * @param idProduto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do novo produto a ser associado (idProduto).
+   * @return PageContaHistoricoPagamentoResponse
+   */
+  public PageContaHistoricoPagamentoResponse alterarProdutoUsingPOST(Long id, Long idProduto) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarProdutoUsingPOST");
+     }
+     
+     // verify the required parameter 'idProduto' is set
+     if (idProduto == null) {
+        throw new ApiException(400, "Missing the required parameter 'idProduto' when calling alterarProdutoUsingPOST");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/{id}/alterar-produto".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idProduto", idProduto));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PageContaHistoricoPagamentoResponse> returnType = new GenericType<PageContaHistoricoPagamentoResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
@@ -403,6 +396,7 @@ public class ContaApi {
    * Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
    * @param idAnuidade Identificador da anuidade
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param DDD DDD do celular
@@ -411,7 +405,7 @@ public class ContaApi {
    * @param idOrigemComercial Identificador da origem comercial
    * @return Object
    */
-  public Object ativarAnuidadeUsingPOST(Long id, Long idAnuidade, Integer page, Integer limit, String DDD, String celular, Long idOperadora, Long idOrigemComercial) throws ApiException {
+  public Object ativarAnuidadeUsingPOST(Long id, Long idAnuidade, List<String> sort, Integer page, Integer limit, String DDD, String celular, Long idOperadora, Long idOrigemComercial) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -433,6 +427,8 @@ public class ContaApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     Map<String, Object> formParams = new HashMap<String, Object>();
 
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(apiClient.parameterToPairs("", "page", page));
     
@@ -684,13 +680,14 @@ public class ContaApi {
    * Consulta a d\u00C3\u00ADvida atualizada do cliente
    * Este recurso consulta a d\u00C3\u00ADvida atualizada do cliente
    * @param id Id Conta
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param dataVencimento Data do vencimento
    * @param idEscritorioCobranca C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a
    * @return DividaClienteResponse
    */
-  public DividaClienteResponse consultarDividaAtualizadaClienteUsingGET(Long id, Integer page, Integer limit, String dataVencimento, Long idEscritorioCobranca) throws ApiException {
+  public DividaClienteResponse consultarDividaAtualizadaClienteUsingGET(Long id, List<String> sort, Integer page, Integer limit, String dataVencimento, Long idEscritorioCobranca) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -707,6 +704,8 @@ public class ContaApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     Map<String, Object> formParams = new HashMap<String, Object>();
 
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(apiClient.parameterToPairs("", "page", page));
     
@@ -954,6 +953,74 @@ public class ContaApi {
   }
   
   /**
+   * Listar planos de parcelamento
+   * Lista os planos de parcelamento da fatura de uma conta.
+   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * @param dataVencimentoPadrao Indica a data de vencimento padr\u00C3\u00A3o das faturas
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @param quantidadeParcelas 
+   * @return PagePlanoParcelamentoResponse
+   */
+  public PagePlanoParcelamentoResponse consultarLancamentosFuturosFaturaUsingGET1(Long id, String dataVencimentoPadrao, List<String> sort, Integer page, Integer limit, Integer quantidadeParcelas) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarLancamentosFuturosFaturaUsingGET1");
+     }
+     
+     // verify the required parameter 'dataVencimentoPadrao' is set
+     if (dataVencimentoPadrao == null) {
+        throw new ApiException(400, "Missing the required parameter 'dataVencimentoPadrao' when calling consultarLancamentosFuturosFaturaUsingGET1");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/{id}/faturas/planos-parcelamento".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "dataVencimentoPadrao", dataVencimentoPadrao));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "quantidadeParcelas", quantidadeParcelas));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PagePlanoParcelamentoResponse> returnType = new GenericType<PagePlanoParcelamentoResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Apresenta os limites da conta
    * Este m\u00C3\u00A9todo permite consultar os Limites configurados para uma determinada Conta, a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
    * @param id Id Conta
@@ -1005,11 +1072,12 @@ public class ContaApi {
    * Permite consultar a partir do ID da conta as taxas e tarifas
    * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores consultem as taxas e tarifas da conta
    * @param id ID da conta a ser consultada.
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @return PageTaxasRefinanciamentoResponse
    */
-  public PageTaxasRefinanciamentoResponse consultarTaxasTarifasUsingGET(Long id, Integer page, Integer limit) throws ApiException {
+  public PageTaxasRefinanciamentoResponse consultarTaxasTarifasUsingGET(Long id, List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -1026,6 +1094,8 @@ public class ContaApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     Map<String, Object> formParams = new HashMap<String, Object>();
 
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(apiClient.parameterToPairs("", "page", page));
     
@@ -1265,6 +1335,64 @@ public class ContaApi {
   }
   
   /**
+   * Envia 2\u00C2\u00AA via de fatura por E-mail
+   * Envia a segunda via da fatura para o e-mail informado/cadastrado.
+   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * @param dataVencimento Data de Vencimento da fatura.
+   * @param email E-mail para envio da 2\u00C2\u00AA via da fatura, caso n\u00C3\u00A3o seja informado ser\u00C3\u00A1 usado o e-mail cadastrado.
+   * @return String
+   */
+  public String enviarFaturaEmailUsingPOST(Long id, String dataVencimento, String email) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling enviarFaturaEmailUsingPOST");
+     }
+     
+     // verify the required parameter 'dataVencimento' is set
+     if (dataVencimento == null) {
+        throw new ApiException(400, "Missing the required parameter 'dataVencimento' when calling enviarFaturaEmailUsingPOST");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/{id}/faturas/{dataVencimento}/enviar-email".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()))
+      .replaceAll("\\{" + "dataVencimento" + "\\}", apiClient.escapeString(dataVencimento.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "email", email));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<String> returnType = new GenericType<String>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Gera um boleto de recarga
    * Este recurso gera um boleto de recarga
    * @param id Id Conta
@@ -1324,6 +1452,64 @@ public class ContaApi {
 
     
     GenericType<BoletoResponse> returnType = new GenericType<BoletoResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica
+   * Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para impress\u00C3\u00A3o de cart\u00C3\u00B5es em gr\u00C3\u00A1fica.
+   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * @param idPessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
+   * @param idTipoPlastico C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id).
+   * @return CartaoImpressaoResponse
+   */
+  public CartaoImpressaoResponse gerarCartaoEmbossingUsingPOST(Long id, Long idPessoa, Long idTipoPlastico) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling gerarCartaoEmbossingUsingPOST");
+     }
+     
+     // verify the required parameter 'idPessoa' is set
+     if (idPessoa == null) {
+        throw new ApiException(400, "Missing the required parameter 'idPessoa' when calling gerarCartaoEmbossingUsingPOST");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/{id}/gerar-cartao-grafica".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()))
+      .replaceAll("\\{" + "id_pessoa" + "\\}", apiClient.escapeString(idPessoa.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "id_tipo_plastico", idTipoPlastico));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<CartaoImpressaoResponse> returnType = new GenericType<CartaoImpressaoResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -1446,12 +1632,13 @@ public class ContaApi {
    * Lista as faturas consignadas da conta
    * Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param dataVencimento Apresenta a data de vencimento da fatura.
    * @return PageFaturaConsignadaResponse
    */
-  public PageFaturaConsignadaResponse listarFaturasConsignadasUsingGET(Long id, Integer page, Integer limit, String dataVencimento) throws ApiException {
+  public PageFaturaConsignadaResponse listarFaturasConsignadasUsingGET(Long id, List<String> sort, Integer page, Integer limit, String dataVencimento) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -1468,6 +1655,8 @@ public class ContaApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     Map<String, Object> formParams = new HashMap<String, Object>();
 
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(apiClient.parameterToPairs("", "page", page));
     
@@ -1503,12 +1692,13 @@ public class ContaApi {
    * Lista as faturas da conta
    * Atrav\u00C3\u00A9s desta opera\u00C3\u00A7\u00C3\u00A3o os Emissores ou Portadores poder\u00C3\u00A3o consultar todo o Hist\u00C3\u00B3rico de Faturas vinculados a uma determinada Conta, independentemente do valor delas.
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param dataVencimento Data de Vencimento da Fatura.
    * @return PageFaturaResponse
    */
-  public PageFaturaResponse listarFaturasUsingGET(Long id, Integer page, Integer limit, String dataVencimento) throws ApiException {
+  public PageFaturaResponse listarFaturasUsingGET(Long id, List<String> sort, Integer page, Integer limit, String dataVencimento) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -1525,6 +1715,8 @@ public class ContaApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     Map<String, Object> formParams = new HashMap<String, Object>();
 
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(apiClient.parameterToPairs("", "page", page));
     
@@ -1560,11 +1752,12 @@ public class ContaApi {
    * Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
    * Este recurso consulta o hist\u00C3\u00B3rico com as altera\u00C3\u00A7\u00C3\u00B5es de limites da conta informada
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @return PageHistoricoEventosResponse
    */
-  public PageHistoricoEventosResponse listarHistoricoAlteracoesLimitesUsingGET(Long id, Integer page, Integer limit) throws ApiException {
+  public PageHistoricoEventosResponse listarHistoricoAlteracoesLimitesUsingGET(Long id, List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -1581,6 +1774,8 @@ public class ContaApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     Map<String, Object> formParams = new HashMap<String, Object>();
 
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(apiClient.parameterToPairs("", "page", page));
     
@@ -1614,11 +1809,12 @@ public class ContaApi {
    * Lista o hist\u00C3\u00B3rico de entradas/sa\u00C3\u00ADdas de assessorias de cobran\u00C3\u00A7a
    * Permite listar todos os registros de entrada e sa\u00C3\u00ADda da Conta em arquivos de integra\u00C3\u00A7\u00C3\u00A3o com empresas de assessorias de cobran\u00C3\u00A7a a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (idConta).
    * @param id Id Conta
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @return PageHistoricoAssessoriaResponse
    */
-  public PageHistoricoAssessoriaResponse listarHistoricoAssessoriaUsingGET(Long id, Integer page, Integer limit) throws ApiException {
+  public PageHistoricoAssessoriaResponse listarHistoricoAssessoriaUsingGET(Long id, List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -1635,6 +1831,8 @@ public class ContaApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     Map<String, Object> formParams = new HashMap<String, Object>();
 
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(apiClient.parameterToPairs("", "page", page));
     
@@ -1668,9 +1866,12 @@ public class ContaApi {
    * Lista o historico de atrasos das faturas
    * Este recurso lista o hist\u00C3\u00B3rico do pagamento de faturas em atraso
    * @param id Id Conta
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @return PageHistoricoAtrasoFaturaResponse
    */
-  public PageHistoricoAtrasoFaturaResponse listarHistoricoAtrasosFaturasUsingGET(Long id) throws ApiException {
+  public PageHistoricoAtrasoFaturaResponse listarHistoricoAtrasosFaturasUsingGET(Long id, List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -1687,6 +1888,12 @@ public class ContaApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     Map<String, Object> formParams = new HashMap<String, Object>();
 
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
     
 
     
@@ -1716,13 +1923,14 @@ public class ContaApi {
    * Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta
    * Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da Conta.
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param dataInicio Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Par\u00C3\u00A2mentro Ignorado se dataFim n\u00C3\u00A3o for definida).
    * @param dataFim Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00C3\u00A2mentro Ignorado se dataInicio n\u00C3\u00A3o for definida).
    * @return PageTransacoesCorrentesResponse
    */
-  public PageTransacoesCorrentesResponse listarNaoProcessadasUsingGET(Long id, Integer page, Integer limit, String dataInicio, String dataFim) throws ApiException {
+  public PageTransacoesCorrentesResponse listarNaoProcessadasUsingGET(Long id, List<String> sort, Integer page, Integer limit, String dataInicio, String dataFim) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -1739,6 +1947,8 @@ public class ContaApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     Map<String, Object> formParams = new HashMap<String, Object>();
 
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(apiClient.parameterToPairs("", "page", page));
     
@@ -1773,9 +1983,85 @@ public class ContaApi {
   }
   
   /**
+   * Lista hist\u00C3\u00B3rico de pagamentos da conta
+   * Este recurso permite listar todos os Pagamentos realizados por uma determinada Conta independente do seu Status de Processamento.
+   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @param idPagamento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Pagamento
+   * @param idEstabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento onde o Pagamento foi realizado, quando este for o local de pagamento
+   * @param idBanco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Institui\u00C3\u00A7\u00C3\u00A3o Banc\u00C3\u00A1ria onde o Pagamento foi realizado, quando este for o local de pagamento
+   * @param idCartao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o
+   * @param dataHoraPagamento Data e Hora da realiza\u00C3\u00A7\u00C3\u00A3o do Pagamento. Quando feito em Institui\u00C3\u00A7\u00C3\u00A3o Banc\u00C3\u00A1ria, o hor\u00C3\u00A1rio do pagamento \u00C3\u00A9 exibido com valor zero
+   * @param status C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Pagamento
+   * @return PageContaHistoricoPagamentoResponse
+   */
+  public PageContaHistoricoPagamentoResponse listarPagamentosUsingGET(Long id, List<String> sort, Integer page, Integer limit, Long idPagamento, Long idEstabelecimento, Long idBanco, Long idCartao, String dataHoraPagamento, Long status) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling listarPagamentosUsingGET");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/{id}/pagamentos".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idPagamento", idPagamento));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idEstabelecimento", idEstabelecimento));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idBanco", idBanco));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idCartao", idCartao));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "dataHoraPagamento", dataHoraPagamento));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "status", status));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PageContaHistoricoPagamentoResponse> returnType = new GenericType<PageContaHistoricoPagamentoResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta
    * Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u00C3\u00B5es processadas da Conta.
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param dataVencimento Data de vencimento do extrato no formato yyyy-MM-dd.
@@ -1783,7 +2069,7 @@ public class ContaApi {
    * @param dataFim Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado).
    * @return PageTransacoesCorrentesResponse
    */
-  public PageTransacoesCorrentesResponse listarProcessadasUsingGET(Long id, Integer page, Integer limit, String dataVencimento, String dataInicio, String dataFim) throws ApiException {
+  public PageTransacoesCorrentesResponse listarProcessadasUsingGET(Long id, List<String> sort, Integer page, Integer limit, String dataVencimento, String dataInicio, String dataFim) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -1800,6 +2086,8 @@ public class ContaApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     Map<String, Object> formParams = new HashMap<String, Object>();
 
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(apiClient.parameterToPairs("", "page", page));
     
@@ -1840,16 +2128,17 @@ public class ContaApi {
    * Este recurso tem como objetivo permitir que o portador de um Cart\u00C3\u00A3o possa consultar uma lista das Transfer\u00C3\u00AAncias Banc\u00C3\u00A1rias para os Favorecidos cadastrados.
    * @param id Id Conta
    * @param idContaBancariaDestino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @return PageTransferenciaBancariaResponse
    */
-  public PageTransferenciaBancariaResponse listarUsingGET28(Long id, Long idContaBancariaDestino, Integer page, Integer limit) throws ApiException {
+  public PageTransferenciaBancariaResponse listarUsingGET30(Long id, Long idContaBancariaDestino, List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET28");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET30");
      }
      
     // create path and map variables
@@ -1863,6 +2152,8 @@ public class ContaApi {
 
     
     queryParams.addAll(apiClient.parameterToPairs("", "id_conta_bancaria_destino", idContaBancariaDestino));
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(apiClient.parameterToPairs("", "page", page));
     
@@ -1896,6 +2187,7 @@ public class ContaApi {
    * Lista as transfer\u00C3\u00AAncias realizadas pela conta
    * Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias realizadas pela conta existentes na base do emissor.
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param idTransferencia C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id).
@@ -1905,12 +2197,12 @@ public class ContaApi {
    * @param dataTransferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
    * @return PageTransferenciaResponse
    */
-  public PageTransferenciaResponse listarUsingGET29(Long id, Integer page, Integer limit, Long idTransferencia, Long idContaOrigem, Long idContaDestino, BigDecimal valorTransferencia, String dataTransferencia) throws ApiException {
+  public PageTransferenciaResponse listarUsingGET31(Long id, List<String> sort, Integer page, Integer limit, Long idTransferencia, Long idContaOrigem, Long idContaDestino, BigDecimal valorTransferencia, String dataTransferencia) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET29");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET31");
      }
      
     // create path and map variables
@@ -1922,6 +2214,8 @@ public class ContaApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     Map<String, Object> formParams = new HashMap<String, Object>();
 
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(apiClient.parameterToPairs("", "page", page));
     
@@ -1964,12 +2258,13 @@ public class ContaApi {
   /**
    * Lista contas existentes na base de dados do Emissor
    * Este recurso permite listar contas existentes na base de dados do Emissor.
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param idProduto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
    * @param idOrigemComercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta.
    * @param idPessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id).
-   * @param idStatusConta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
+   * @param idStatusConta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status da conta.
    * @param diaVencimento Apresenta o dia de vencimento.
    * @param melhorDiaCompra Apresenta o melhor dia de compra.
    * @param dataStatusConta Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
@@ -1977,7 +2272,7 @@ public class ContaApi {
    * @param dataUltimaAlteracaoVencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
    * @return PageContaResponse
    */
-  public PageContaResponse listarUsingGET7(Integer page, Integer limit, Long idProduto, Long idOrigemComercial, Long idPessoa, Long idStatusConta, Integer diaVencimento, Integer melhorDiaCompra, String dataStatusConta, String dataCadastro, String dataUltimaAlteracaoVencimento) throws ApiException {
+  public PageContaResponse listarUsingGET8(List<String> sort, Integer page, Integer limit, Long idProduto, Long idOrigemComercial, Long idPessoa, Long idStatusConta, Integer diaVencimento, Integer melhorDiaCompra, String dataStatusConta, String dataCadastro, String dataUltimaAlteracaoVencimento) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -1988,6 +2283,8 @@ public class ContaApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     Map<String, Object> formParams = new HashMap<String, Object>();
 
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(apiClient.parameterToPairs("", "page", page));
     
@@ -2087,11 +2384,12 @@ public class ContaApi {
    * Permite listar uma linha do tempo com os eventos da conta
    * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00C3\u00A7\u00C3\u00B5es, fechamento da fatura, pagamentos, gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es e altera\u00C3\u00A7\u00C3\u00A3o de limite s\u00C3\u00A3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00C3\u00A9todo, as opera\u00C3\u00A7\u00C3\u00B5es s\u00C3\u00A3o ordenadas de forma decrescente.
    * @param id Id Conta
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @return PageTransacaoResponse
    */
-  public PageTransacaoResponse transacoesUsingGET(Long id, Integer page, Integer limit) throws ApiException {
+  public PageTransacaoResponse transacoesUsingGET(Long id, List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -2108,6 +2406,8 @@ public class ContaApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     Map<String, Object> formParams = new HashMap<String, Object>();
 
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(apiClient.parameterToPairs("", "page", page));
     

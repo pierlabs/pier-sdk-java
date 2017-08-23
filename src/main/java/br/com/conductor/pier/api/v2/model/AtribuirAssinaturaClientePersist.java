@@ -15,26 +15,26 @@ import io.swagger.annotations.ApiModelProperty;
 
 @ApiModel(description = "Objeto que representa a atribui\u00C3\u00A7\u00C3\u00A3o da assinatura do cliente")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class AtribuirAssinaturaClienteRequest   {
+public class AtribuirAssinaturaClientePersist   {
   
-  private Long idImagem = null;
+  private Long idArquivo = null;
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da imagem
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Arquivo
    **/
-  public AtribuirAssinaturaClienteRequest idImagem(Long idImagem) {
-    this.idImagem = idImagem;
+  public AtribuirAssinaturaClientePersist idArquivo(Long idArquivo) {
+    this.idArquivo = idArquivo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da imagem")
-  @JsonProperty("idImagem")
-  public Long getIdImagem() {
-    return idImagem;
+  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Arquivo")
+  @JsonProperty("idArquivo")
+  public Long getIdArquivo() {
+    return idArquivo;
   }
-  public void setIdImagem(Long idImagem) {
-    this.idImagem = idImagem;
+  public void setIdArquivo(Long idArquivo) {
+    this.idArquivo = idArquivo;
   }
 
   
@@ -47,21 +47,21 @@ public class AtribuirAssinaturaClienteRequest   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AtribuirAssinaturaClienteRequest atribuirAssinaturaClienteRequest = (AtribuirAssinaturaClienteRequest) o;
-    return Objects.equals(this.idImagem, atribuirAssinaturaClienteRequest.idImagem);
+    AtribuirAssinaturaClientePersist atribuirAssinaturaClientePersist = (AtribuirAssinaturaClientePersist) o;
+    return Objects.equals(this.idArquivo, atribuirAssinaturaClientePersist.idArquivo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idImagem);
+    return Objects.hash(idArquivo);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AtribuirAssinaturaClienteRequest {\n");
+    sb.append("class AtribuirAssinaturaClientePersist {\n");
     
-    sb.append("    idImagem: ").append(toIndentedString(idImagem)).append("\n");
+    sb.append("    idArquivo: ").append(toIndentedString(idArquivo)).append("\n");
     sb.append("}");
     return sb.toString();
   }

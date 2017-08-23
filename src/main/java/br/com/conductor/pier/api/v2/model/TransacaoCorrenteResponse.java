@@ -19,7 +19,6 @@ import java.math.BigDecimal;
 public class TransacaoCorrenteResponse   {
   
   private Integer ultimaParcelaLancada = null;
-  private Long id = null;
   private Long idConta = null;
   private Long idTipoRegistro = null;
   private Integer ordem = null;
@@ -53,24 +52,6 @@ public class TransacaoCorrenteResponse   {
   }
   public void setUltimaParcelaLancada(Integer ultimaParcelaLancada) {
     this.ultimaParcelaLancada = ultimaParcelaLancada;
-  }
-
-  
-  /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da timeline (idTimeline).
-   **/
-  public TransacaoCorrenteResponse id(Long id) {
-    this.id = id;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da timeline (idTimeline).")
-  @JsonProperty("id")
-  public Long getId() {
-    return id;
-  }
-  public void setId(Long id) {
-    this.id = id;
   }
 
   
@@ -391,7 +372,6 @@ public class TransacaoCorrenteResponse   {
     }
     TransacaoCorrenteResponse transacaoCorrenteResponse = (TransacaoCorrenteResponse) o;
     return Objects.equals(this.ultimaParcelaLancada, transacaoCorrenteResponse.ultimaParcelaLancada) &&
-        Objects.equals(this.id, transacaoCorrenteResponse.id) &&
         Objects.equals(this.idConta, transacaoCorrenteResponse.idConta) &&
         Objects.equals(this.idTipoRegistro, transacaoCorrenteResponse.idTipoRegistro) &&
         Objects.equals(this.ordem, transacaoCorrenteResponse.ordem) &&
@@ -413,7 +393,7 @@ public class TransacaoCorrenteResponse   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(ultimaParcelaLancada, id, idConta, idTipoRegistro, ordem, idTransacao, descricao, status, descricaoStatus, valor, valorDolar, quantidadeParcelas, valorParcela, dataEvento, estabelecimento, flagCredito, tipoEstabelecimento, idGrupoMCC, flagSolicitouContestacao);
+    return Objects.hash(ultimaParcelaLancada, idConta, idTipoRegistro, ordem, idTransacao, descricao, status, descricaoStatus, valor, valorDolar, quantidadeParcelas, valorParcela, dataEvento, estabelecimento, flagCredito, tipoEstabelecimento, idGrupoMCC, flagSolicitouContestacao);
   }
 
   @Override
@@ -422,7 +402,6 @@ public class TransacaoCorrenteResponse   {
     sb.append("class TransacaoCorrenteResponse {\n");
     
     sb.append("    ultimaParcelaLancada: ").append(toIndentedString(ultimaParcelaLancada)).append("\n");
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idConta: ").append(toIndentedString(idConta)).append("\n");
     sb.append("    idTipoRegistro: ").append(toIndentedString(idTipoRegistro)).append("\n");
     sb.append("    ordem: ").append(toIndentedString(ordem)).append("\n");

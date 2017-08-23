@@ -37,9 +37,13 @@ public class PessoaJuridicaAprovadaPersist   {
   private String nomeImpresso = null;
   private BigDecimal valorRenda = null;
   private String canalEntrada = null;
+  private Integer valorPontuacao = null;
   private List<TelefonePessoaAprovadaPersist> telefones = new ArrayList<TelefonePessoaAprovadaPersist>();
   private List<EnderecoAprovadoPersist> enderecos = new ArrayList<EnderecoAprovadoPersist>();
+  private BigDecimal limiteGlobal = null;
   private List<PessoaPersist> socios = new ArrayList<PessoaPersist>();
+  private BigDecimal limiteMaximo = null;
+  private BigDecimal limiteParcelas = null;
 
   
   /**
@@ -295,6 +299,24 @@ public class PessoaJuridicaAprovadaPersist   {
 
   
   /**
+   * Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)
+   **/
+  public PessoaJuridicaAprovadaPersist valorPontuacao(Integer valorPontuacao) {
+    this.valorPontuacao = valorPontuacao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)")
+  @JsonProperty("valorPontuacao")
+  public Integer getValorPontuacao() {
+    return valorPontuacao;
+  }
+  public void setValorPontuacao(Integer valorPontuacao) {
+    this.valorPontuacao = valorPontuacao;
+  }
+
+  
+  /**
    * Apresenta os telefones da empresa
    **/
   public PessoaJuridicaAprovadaPersist telefones(List<TelefonePessoaAprovadaPersist> telefones) {
@@ -331,6 +353,24 @@ public class PessoaJuridicaAprovadaPersist   {
 
   
   /**
+   * Valor do Limite Global
+   **/
+  public PessoaJuridicaAprovadaPersist limiteGlobal(BigDecimal limiteGlobal) {
+    this.limiteGlobal = limiteGlobal;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "Valor do Limite Global")
+  @JsonProperty("limiteGlobal")
+  public BigDecimal getLimiteGlobal() {
+    return limiteGlobal;
+  }
+  public void setLimiteGlobal(BigDecimal limiteGlobal) {
+    this.limiteGlobal = limiteGlobal;
+  }
+
+  
+  /**
    * Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista
    **/
   public PessoaJuridicaAprovadaPersist socios(List<PessoaPersist> socios) {
@@ -345,6 +385,42 @@ public class PessoaJuridicaAprovadaPersist   {
   }
   public void setSocios(List<PessoaPersist> socios) {
     this.socios = socios;
+  }
+
+  
+  /**
+   * Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es
+   **/
+  public PessoaJuridicaAprovadaPersist limiteMaximo(BigDecimal limiteMaximo) {
+    this.limiteMaximo = limiteMaximo;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es")
+  @JsonProperty("limiteMaximo")
+  public BigDecimal getLimiteMaximo() {
+    return limiteMaximo;
+  }
+  public void setLimiteMaximo(BigDecimal limiteMaximo) {
+    this.limiteMaximo = limiteMaximo;
+  }
+
+  
+  /**
+   * Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras
+   **/
+  public PessoaJuridicaAprovadaPersist limiteParcelas(BigDecimal limiteParcelas) {
+    this.limiteParcelas = limiteParcelas;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras")
+  @JsonProperty("limiteParcelas")
+  public BigDecimal getLimiteParcelas() {
+    return limiteParcelas;
+  }
+  public void setLimiteParcelas(BigDecimal limiteParcelas) {
+    this.limiteParcelas = limiteParcelas;
   }
 
   
@@ -372,14 +448,18 @@ public class PessoaJuridicaAprovadaPersist   {
         Objects.equals(this.nomeImpresso, pessoaJuridicaAprovadaPersist.nomeImpresso) &&
         Objects.equals(this.valorRenda, pessoaJuridicaAprovadaPersist.valorRenda) &&
         Objects.equals(this.canalEntrada, pessoaJuridicaAprovadaPersist.canalEntrada) &&
+        Objects.equals(this.valorPontuacao, pessoaJuridicaAprovadaPersist.valorPontuacao) &&
         Objects.equals(this.telefones, pessoaJuridicaAprovadaPersist.telefones) &&
         Objects.equals(this.enderecos, pessoaJuridicaAprovadaPersist.enderecos) &&
-        Objects.equals(this.socios, pessoaJuridicaAprovadaPersist.socios);
+        Objects.equals(this.limiteGlobal, pessoaJuridicaAprovadaPersist.limiteGlobal) &&
+        Objects.equals(this.socios, pessoaJuridicaAprovadaPersist.socios) &&
+        Objects.equals(this.limiteMaximo, pessoaJuridicaAprovadaPersist.limiteMaximo) &&
+        Objects.equals(this.limiteParcelas, pessoaJuridicaAprovadaPersist.limiteParcelas);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(razaoSocial, nomeFantasia, cnpj, inscricaoEstadual, dataAberturaEmpresa, idOrigemComercial, idProduto, numeroAgencia, numeroContaCorrente, email, diaVencimento, nomeImpresso, valorRenda, canalEntrada, telefones, enderecos, socios);
+    return Objects.hash(razaoSocial, nomeFantasia, cnpj, inscricaoEstadual, dataAberturaEmpresa, idOrigemComercial, idProduto, numeroAgencia, numeroContaCorrente, email, diaVencimento, nomeImpresso, valorRenda, canalEntrada, valorPontuacao, telefones, enderecos, limiteGlobal, socios, limiteMaximo, limiteParcelas);
   }
 
   @Override
@@ -401,9 +481,13 @@ public class PessoaJuridicaAprovadaPersist   {
     sb.append("    nomeImpresso: ").append(toIndentedString(nomeImpresso)).append("\n");
     sb.append("    valorRenda: ").append(toIndentedString(valorRenda)).append("\n");
     sb.append("    canalEntrada: ").append(toIndentedString(canalEntrada)).append("\n");
+    sb.append("    valorPontuacao: ").append(toIndentedString(valorPontuacao)).append("\n");
     sb.append("    telefones: ").append(toIndentedString(telefones)).append("\n");
     sb.append("    enderecos: ").append(toIndentedString(enderecos)).append("\n");
+    sb.append("    limiteGlobal: ").append(toIndentedString(limiteGlobal)).append("\n");
     sb.append("    socios: ").append(toIndentedString(socios)).append("\n");
+    sb.append("    limiteMaximo: ").append(toIndentedString(limiteMaximo)).append("\n");
+    sb.append("    limiteParcelas: ").append(toIndentedString(limiteParcelas)).append("\n");
     sb.append("}");
     return sb.toString();
   }

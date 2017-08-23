@@ -40,6 +40,7 @@ public class CartaoImpressaoResponse   {
   private String trilha2 = null;
   private String trilhaCVV1 = null;
   private String trilhaCVV2 = null;
+  private Long numeroCartaoHash = null;
 
   
   /**
@@ -455,6 +456,24 @@ public class CartaoImpressaoResponse   {
   }
 
   
+  /**
+   * Apresenta o numero da hash do cart\u00C3\u00A3o 
+   **/
+  public CartaoImpressaoResponse numeroCartaoHash(Long numeroCartaoHash) {
+    this.numeroCartaoHash = numeroCartaoHash;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Apresenta o numero da hash do cart\u00C3\u00A3o ")
+  @JsonProperty("numeroCartaoHash")
+  public Long getNumeroCartaoHash() {
+    return numeroCartaoHash;
+  }
+  public void setNumeroCartaoHash(Long numeroCartaoHash) {
+    this.numeroCartaoHash = numeroCartaoHash;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -487,12 +506,13 @@ public class CartaoImpressaoResponse   {
         Objects.equals(this.trilha1, cartaoImpressaoResponse.trilha1) &&
         Objects.equals(this.trilha2, cartaoImpressaoResponse.trilha2) &&
         Objects.equals(this.trilhaCVV1, cartaoImpressaoResponse.trilhaCVV1) &&
-        Objects.equals(this.trilhaCVV2, cartaoImpressaoResponse.trilhaCVV2);
+        Objects.equals(this.trilhaCVV2, cartaoImpressaoResponse.trilhaCVV2) &&
+        Objects.equals(this.numeroCartaoHash, cartaoImpressaoResponse.numeroCartaoHash);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(flagVirtual, idConta, idPessoa, idCartao, idBandeira, idTipoCartao, numeroCartao, nomePlastico, cvv2, dataGeracao, dataValidade, nomeOrigemComercial, nomeEmpresa, numeroAgencia, numeroContaCorente, nomeEmpresaBeneficio, cpf, tipoPortador, nomeEmpregador, trilha1, trilha2, trilhaCVV1, trilhaCVV2);
+    return Objects.hash(flagVirtual, idConta, idPessoa, idCartao, idBandeira, idTipoCartao, numeroCartao, nomePlastico, cvv2, dataGeracao, dataValidade, nomeOrigemComercial, nomeEmpresa, numeroAgencia, numeroContaCorente, nomeEmpresaBeneficio, cpf, tipoPortador, nomeEmpregador, trilha1, trilha2, trilhaCVV1, trilhaCVV2, numeroCartaoHash);
   }
 
   @Override
@@ -523,6 +543,7 @@ public class CartaoImpressaoResponse   {
     sb.append("    trilha2: ").append(toIndentedString(trilha2)).append("\n");
     sb.append("    trilhaCVV1: ").append(toIndentedString(trilhaCVV1)).append("\n");
     sb.append("    trilhaCVV2: ").append(toIndentedString(trilhaCVV2)).append("\n");
+    sb.append("    numeroCartaoHash: ").append(toIndentedString(numeroCartaoHash)).append("\n");
     sb.append("}");
     return sb.toString();
   }

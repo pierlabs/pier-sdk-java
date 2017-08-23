@@ -46,24 +46,25 @@ public class WebhooksApi {
    * @param id C\u00C3\u00B3digo identificador do Webhook
    * @param tipoEvento TipoEvento a ser chamado pelo WebHook
    * @param url URL que a ser consumida pelo WebHook
+   * @param status Status
    * @return WebHookResponse
    */
-  public WebHookResponse alterarUsingPUT10(Long id, String tipoEvento, String url) throws ApiException {
+  public WebHookResponse alterarUsingPUT11(Long id, String tipoEvento, String url, String status) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT10");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT11");
      }
      
      // verify the required parameter 'tipoEvento' is set
      if (tipoEvento == null) {
-        throw new ApiException(400, "Missing the required parameter 'tipoEvento' when calling alterarUsingPUT10");
+        throw new ApiException(400, "Missing the required parameter 'tipoEvento' when calling alterarUsingPUT11");
      }
      
      // verify the required parameter 'url' is set
      if (url == null) {
-        throw new ApiException(400, "Missing the required parameter 'url' when calling alterarUsingPUT10");
+        throw new ApiException(400, "Missing the required parameter 'url' when calling alterarUsingPUT11");
      }
      
     // create path and map variables
@@ -75,6 +76,8 @@ public class WebhooksApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     Map<String, Object> formParams = new HashMap<String, Object>();
 
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "status", status));
     
     queryParams.addAll(apiClient.parameterToPairs("", "tipoEvento", tipoEvento));
     
@@ -155,6 +158,7 @@ public class WebhooksApi {
   /**
    * Lista os Webhooks
    * Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param id Id do WebHook
@@ -163,7 +167,7 @@ public class WebhooksApi {
    * @param url URL que a ser consumida pelo WebHook
    * @return PageWebHookResponse
    */
-  public PageWebHookResponse listarUsingGET31(Integer page, Integer limit, Long id, String tipoEvento, String metodo, String url) throws ApiException {
+  public PageWebHookResponse listarUsingGET34(List<String> sort, Integer page, Integer limit, Long id, String tipoEvento, String metodo, String url) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -174,6 +178,8 @@ public class WebhooksApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     Map<String, Object> formParams = new HashMap<String, Object>();
 
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(apiClient.parameterToPairs("", "page", page));
     
@@ -218,17 +224,17 @@ public class WebhooksApi {
    * @param url URL que a ser consumida pelo WebHook
    * @return WebHookResponse
    */
-  public WebHookResponse salvarUsingPOST16(String tipoEvento, String url) throws ApiException {
+  public WebHookResponse salvarUsingPOST17(String tipoEvento, String url) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'tipoEvento' is set
      if (tipoEvento == null) {
-        throw new ApiException(400, "Missing the required parameter 'tipoEvento' when calling salvarUsingPOST16");
+        throw new ApiException(400, "Missing the required parameter 'tipoEvento' when calling salvarUsingPOST17");
      }
      
      // verify the required parameter 'url' is set
      if (url == null) {
-        throw new ApiException(400, "Missing the required parameter 'url' when calling salvarUsingPOST16");
+        throw new ApiException(400, "Missing the required parameter 'url' when calling salvarUsingPOST17");
      }
      
     // create path and map variables

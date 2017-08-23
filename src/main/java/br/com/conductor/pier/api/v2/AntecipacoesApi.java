@@ -221,6 +221,7 @@ public class AntecipacoesApi {
    * Listar compras com parcelas antecip\u00C3\u00A1veis
    * Lista as compras antecip\u00C3\u00A1veis de uma conta.
    * @param idConta C\u00C3\u00B3digo identificador da conta da Compra.
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param idCompra C\u00C3\u00B3digo identificador da Compra.
@@ -229,12 +230,12 @@ public class AntecipacoesApi {
    * @param tipoOrigemTransacao Indica se a compra \u00C3\u00A9 ON-US ou OFF-US
    * @return PageCompraResponse
    */
-  public PageCompraResponse listarUsingGET6(Long idConta, Integer page, Integer limit, Long idCompra, Boolean parcelada, Boolean juros, String tipoOrigemTransacao) throws ApiException {
+  public PageCompraResponse listarUsingGET7(Long idConta, List<String> sort, Integer page, Integer limit, Long idCompra, Boolean parcelada, Boolean juros, String tipoOrigemTransacao) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idConta' is set
      if (idConta == null) {
-        throw new ApiException(400, "Missing the required parameter 'idConta' when calling listarUsingGET6");
+        throw new ApiException(400, "Missing the required parameter 'idConta' when calling listarUsingGET7");
      }
      
     // create path and map variables
@@ -245,6 +246,8 @@ public class AntecipacoesApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     Map<String, Object> formParams = new HashMap<String, Object>();
 
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(apiClient.parameterToPairs("", "page", page));
     

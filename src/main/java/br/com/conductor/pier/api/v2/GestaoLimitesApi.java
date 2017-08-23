@@ -68,71 +68,6 @@ public class GestaoLimitesApi {
         throw new ApiException(400, "Missing the required parameter 'id' when calling alterarLimiteUsingPUT");
      }
      
-     // verify the required parameter 'limiteGlobal' is set
-     if (limiteGlobal == null) {
-        throw new ApiException(400, "Missing the required parameter 'limiteGlobal' when calling alterarLimiteUsingPUT");
-     }
-     
-     // verify the required parameter 'limiteCompra' is set
-     if (limiteCompra == null) {
-        throw new ApiException(400, "Missing the required parameter 'limiteCompra' when calling alterarLimiteUsingPUT");
-     }
-     
-     // verify the required parameter 'limiteParcelado' is set
-     if (limiteParcelado == null) {
-        throw new ApiException(400, "Missing the required parameter 'limiteParcelado' when calling alterarLimiteUsingPUT");
-     }
-     
-     // verify the required parameter 'limiteParcelas' is set
-     if (limiteParcelas == null) {
-        throw new ApiException(400, "Missing the required parameter 'limiteParcelas' when calling alterarLimiteUsingPUT");
-     }
-     
-     // verify the required parameter 'limiteSaqueGlobal' is set
-     if (limiteSaqueGlobal == null) {
-        throw new ApiException(400, "Missing the required parameter 'limiteSaqueGlobal' when calling alterarLimiteUsingPUT");
-     }
-     
-     // verify the required parameter 'limiteSaquePeriodo' is set
-     if (limiteSaquePeriodo == null) {
-        throw new ApiException(400, "Missing the required parameter 'limiteSaquePeriodo' when calling alterarLimiteUsingPUT");
-     }
-     
-     // verify the required parameter 'limiteConsignado' is set
-     if (limiteConsignado == null) {
-        throw new ApiException(400, "Missing the required parameter 'limiteConsignado' when calling alterarLimiteUsingPUT");
-     }
-     
-     // verify the required parameter 'limiteInternacionalCompra' is set
-     if (limiteInternacionalCompra == null) {
-        throw new ApiException(400, "Missing the required parameter 'limiteInternacionalCompra' when calling alterarLimiteUsingPUT");
-     }
-     
-     // verify the required parameter 'limiteInternacionalParcelado' is set
-     if (limiteInternacionalParcelado == null) {
-        throw new ApiException(400, "Missing the required parameter 'limiteInternacionalParcelado' when calling alterarLimiteUsingPUT");
-     }
-     
-     // verify the required parameter 'limiteInternacionalParcelas' is set
-     if (limiteInternacionalParcelas == null) {
-        throw new ApiException(400, "Missing the required parameter 'limiteInternacionalParcelas' when calling alterarLimiteUsingPUT");
-     }
-     
-     // verify the required parameter 'limiteInternacionalSaqueGlobal' is set
-     if (limiteInternacionalSaqueGlobal == null) {
-        throw new ApiException(400, "Missing the required parameter 'limiteInternacionalSaqueGlobal' when calling alterarLimiteUsingPUT");
-     }
-     
-     // verify the required parameter 'limiteInternacionalSaquePeriodo' is set
-     if (limiteInternacionalSaquePeriodo == null) {
-        throw new ApiException(400, "Missing the required parameter 'limiteInternacionalSaquePeriodo' when calling alterarLimiteUsingPUT");
-     }
-     
-     // verify the required parameter 'limiteMaximo' is set
-     if (limiteMaximo == null) {
-        throw new ApiException(400, "Missing the required parameter 'limiteMaximo' when calling alterarLimiteUsingPUT");
-     }
-     
     // create path and map variables
     String path = "/api/contas/{id}/alterar-limites".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
@@ -245,11 +180,12 @@ public class GestaoLimitesApi {
    * Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
    * Este recurso consulta o hist\u00C3\u00B3rico com as altera\u00C3\u00A7\u00C3\u00B5es de limites da conta informada
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @return PageHistoricoEventosResponse
    */
-  public PageHistoricoEventosResponse listarHistoricoAlteracoesLimitesUsingGET(Long id, Integer page, Integer limit) throws ApiException {
+  public PageHistoricoEventosResponse listarHistoricoAlteracoesLimitesUsingGET(Long id, List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -266,6 +202,8 @@ public class GestaoLimitesApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     Map<String, Object> formParams = new HashMap<String, Object>();
 
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(apiClient.parameterToPairs("", "page", page));
     

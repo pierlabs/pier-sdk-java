@@ -19,8 +19,10 @@ public class IntegracaoEmissorResponse   {
   
   private Long id = null;
   private Long idConta = null;
-  private Integer status = null;
-  private String dataEvento = null;
+  private Long idArquivo = null;
+  private String status = null;
+  private String dataInclusao = null;
+  private String dataAlteracao = null;
 
   
   /**
@@ -60,19 +62,37 @@ public class IntegracaoEmissorResponse   {
 
   
   /**
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do arquivo.
+   **/
+  public IntegracaoEmissorResponse idArquivo(Long idArquivo) {
+    this.idArquivo = idArquivo;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do arquivo.")
+  @JsonProperty("idArquivo")
+  public Long getIdArquivo() {
+    return idArquivo;
+  }
+  public void setIdArquivo(Long idArquivo) {
+    this.idArquivo = idArquivo;
+  }
+
+  
+  /**
    * Status do registro.
    **/
-  public IntegracaoEmissorResponse status(Integer status) {
+  public IntegracaoEmissorResponse status(String status) {
     this.status = status;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Status do registro.")
   @JsonProperty("status")
-  public Integer getStatus() {
+  public String getStatus() {
     return status;
   }
-  public void setStatus(Integer status) {
+  public void setStatus(String status) {
     this.status = status;
   }
 
@@ -80,18 +100,36 @@ public class IntegracaoEmissorResponse   {
   /**
    * Data de inclus\u00C3\u00A3o do registro.
    **/
-  public IntegracaoEmissorResponse dataEvento(String dataEvento) {
-    this.dataEvento = dataEvento;
+  public IntegracaoEmissorResponse dataInclusao(String dataInclusao) {
+    this.dataInclusao = dataInclusao;
     return this;
   }
   
   @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data de inclus\u00C3\u00A3o do registro.")
-  @JsonProperty("dataEvento")
-  public String getDataEvento() {
-    return dataEvento;
+  @JsonProperty("dataInclusao")
+  public String getDataInclusao() {
+    return dataInclusao;
   }
-  public void setDataEvento(String dataEvento) {
-    this.dataEvento = dataEvento;
+  public void setDataInclusao(String dataInclusao) {
+    this.dataInclusao = dataInclusao;
+  }
+
+  
+  /**
+   * Data da ultima altera\u00C3\u00A7\u00C3\u00A3o do registro.
+   **/
+  public IntegracaoEmissorResponse dataAlteracao(String dataAlteracao) {
+    this.dataAlteracao = dataAlteracao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data da ultima altera\u00C3\u00A7\u00C3\u00A3o do registro.")
+  @JsonProperty("dataAlteracao")
+  public String getDataAlteracao() {
+    return dataAlteracao;
+  }
+  public void setDataAlteracao(String dataAlteracao) {
+    this.dataAlteracao = dataAlteracao;
   }
 
   
@@ -107,13 +145,15 @@ public class IntegracaoEmissorResponse   {
     IntegracaoEmissorResponse integracaoEmissorResponse = (IntegracaoEmissorResponse) o;
     return Objects.equals(this.id, integracaoEmissorResponse.id) &&
         Objects.equals(this.idConta, integracaoEmissorResponse.idConta) &&
+        Objects.equals(this.idArquivo, integracaoEmissorResponse.idArquivo) &&
         Objects.equals(this.status, integracaoEmissorResponse.status) &&
-        Objects.equals(this.dataEvento, integracaoEmissorResponse.dataEvento);
+        Objects.equals(this.dataInclusao, integracaoEmissorResponse.dataInclusao) &&
+        Objects.equals(this.dataAlteracao, integracaoEmissorResponse.dataAlteracao);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idConta, status, dataEvento);
+    return Objects.hash(id, idConta, idArquivo, status, dataInclusao, dataAlteracao);
   }
 
   @Override
@@ -123,8 +163,10 @@ public class IntegracaoEmissorResponse   {
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idConta: ").append(toIndentedString(idConta)).append("\n");
+    sb.append("    idArquivo: ").append(toIndentedString(idArquivo)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    dataEvento: ").append(toIndentedString(dataEvento)).append("\n");
+    sb.append("    dataInclusao: ").append(toIndentedString(dataInclusao)).append("\n");
+    sb.append("    dataAlteracao: ").append(toIndentedString(dataAlteracao)).append("\n");
     sb.append("}");
     return sb.toString();
   }

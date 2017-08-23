@@ -23,7 +23,7 @@ public class WebHookResponse   {
 
   public enum TipoEventoEnum {
     RISCO_FRAUDE("RISCO_FRAUDE"),
-    TOKEN_SMS("TOKEN_SMS"),
+    CODIGO_SEGURANCA("CODIGO_SEGURANCA"),
     OUTROS("OUTROS");
 
     private String value;
