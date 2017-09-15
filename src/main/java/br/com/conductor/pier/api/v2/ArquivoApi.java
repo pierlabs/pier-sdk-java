@@ -20,14 +20,14 @@ import java.util.Map;
 
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 
-public class ArquivosApi {
+public class ArquivoApi {
   private ApiClient apiClient;
 
-  public ArquivosApi() {
+  public ArquivoApi() {
     this(Configuration.getDefaultApiClient());
   }
 
-  public ArquivosApi(ApiClient apiClient) {
+  public ArquivoApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
@@ -46,12 +46,12 @@ public class ArquivosApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo
    * @return ArquivoResponse
    */
-  public ArquivoResponse consultarUsingGET(Long id) throws ApiException {
+  public ArquivoResponse consultarUsingGET1(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET1");
      }
      
     // create path and map variables

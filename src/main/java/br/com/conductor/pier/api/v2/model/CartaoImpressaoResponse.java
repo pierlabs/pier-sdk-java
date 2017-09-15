@@ -17,7 +17,6 @@ import io.swagger.annotations.ApiModelProperty;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class CartaoImpressaoResponse   {
   
-  private Integer flagVirtual = null;
   private Long idConta = null;
   private Long idPessoa = null;
   private Long idCartao = null;
@@ -40,24 +39,8 @@ public class CartaoImpressaoResponse   {
   private String trilha2 = null;
   private String trilhaCVV1 = null;
   private String trilhaCVV2 = null;
+  private Integer flagVirtual = null;
   private Long numeroCartaoHash = null;
-
-  
-  /**
-   **/
-  public CartaoImpressaoResponse flagVirtual(Integer flagVirtual) {
-    this.flagVirtual = flagVirtual;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("flagVirtual")
-  public Integer getFlagVirtual() {
-    return flagVirtual;
-  }
-  public void setFlagVirtual(Integer flagVirtual) {
-    this.flagVirtual = flagVirtual;
-  }
 
   
   /**
@@ -457,6 +440,24 @@ public class CartaoImpressaoResponse   {
 
   
   /**
+   * Apresenta o status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual 
+   **/
+  public CartaoImpressaoResponse flagVirtual(Integer flagVirtual) {
+    this.flagVirtual = flagVirtual;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Apresenta o status que informa se o cart\u00C3\u00A3o \u00C3\u00A9 virtual ")
+  @JsonProperty("flagVirtual")
+  public Integer getFlagVirtual() {
+    return flagVirtual;
+  }
+  public void setFlagVirtual(Integer flagVirtual) {
+    this.flagVirtual = flagVirtual;
+  }
+
+  
+  /**
    * Apresenta o numero da hash do cart\u00C3\u00A3o 
    **/
   public CartaoImpressaoResponse numeroCartaoHash(Long numeroCartaoHash) {
@@ -484,8 +485,7 @@ public class CartaoImpressaoResponse   {
       return false;
     }
     CartaoImpressaoResponse cartaoImpressaoResponse = (CartaoImpressaoResponse) o;
-    return Objects.equals(this.flagVirtual, cartaoImpressaoResponse.flagVirtual) &&
-        Objects.equals(this.idConta, cartaoImpressaoResponse.idConta) &&
+    return Objects.equals(this.idConta, cartaoImpressaoResponse.idConta) &&
         Objects.equals(this.idPessoa, cartaoImpressaoResponse.idPessoa) &&
         Objects.equals(this.idCartao, cartaoImpressaoResponse.idCartao) &&
         Objects.equals(this.idBandeira, cartaoImpressaoResponse.idBandeira) &&
@@ -507,12 +507,13 @@ public class CartaoImpressaoResponse   {
         Objects.equals(this.trilha2, cartaoImpressaoResponse.trilha2) &&
         Objects.equals(this.trilhaCVV1, cartaoImpressaoResponse.trilhaCVV1) &&
         Objects.equals(this.trilhaCVV2, cartaoImpressaoResponse.trilhaCVV2) &&
+        Objects.equals(this.flagVirtual, cartaoImpressaoResponse.flagVirtual) &&
         Objects.equals(this.numeroCartaoHash, cartaoImpressaoResponse.numeroCartaoHash);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(flagVirtual, idConta, idPessoa, idCartao, idBandeira, idTipoCartao, numeroCartao, nomePlastico, cvv2, dataGeracao, dataValidade, nomeOrigemComercial, nomeEmpresa, numeroAgencia, numeroContaCorente, nomeEmpresaBeneficio, cpf, tipoPortador, nomeEmpregador, trilha1, trilha2, trilhaCVV1, trilhaCVV2, numeroCartaoHash);
+    return Objects.hash(idConta, idPessoa, idCartao, idBandeira, idTipoCartao, numeroCartao, nomePlastico, cvv2, dataGeracao, dataValidade, nomeOrigemComercial, nomeEmpresa, numeroAgencia, numeroContaCorente, nomeEmpresaBeneficio, cpf, tipoPortador, nomeEmpregador, trilha1, trilha2, trilhaCVV1, trilhaCVV2, flagVirtual, numeroCartaoHash);
   }
 
   @Override
@@ -520,7 +521,6 @@ public class CartaoImpressaoResponse   {
     StringBuilder sb = new StringBuilder();
     sb.append("class CartaoImpressaoResponse {\n");
     
-    sb.append("    flagVirtual: ").append(toIndentedString(flagVirtual)).append("\n");
     sb.append("    idConta: ").append(toIndentedString(idConta)).append("\n");
     sb.append("    idPessoa: ").append(toIndentedString(idPessoa)).append("\n");
     sb.append("    idCartao: ").append(toIndentedString(idCartao)).append("\n");
@@ -543,6 +543,7 @@ public class CartaoImpressaoResponse   {
     sb.append("    trilha2: ").append(toIndentedString(trilha2)).append("\n");
     sb.append("    trilhaCVV1: ").append(toIndentedString(trilhaCVV1)).append("\n");
     sb.append("    trilhaCVV2: ").append(toIndentedString(trilhaCVV2)).append("\n");
+    sb.append("    flagVirtual: ").append(toIndentedString(flagVirtual)).append("\n");
     sb.append("    numeroCartaoHash: ").append(toIndentedString(numeroCartaoHash)).append("\n");
     sb.append("}");
     return sb.toString();

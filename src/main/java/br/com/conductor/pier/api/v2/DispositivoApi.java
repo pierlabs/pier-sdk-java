@@ -21,14 +21,14 @@ import java.util.Map;
 
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 
-public class DispositivosApi {
+public class DispositivoApi {
   private ApiClient apiClient;
 
-  public DispositivosApi() {
+  public DispositivoApi() {
     this(Configuration.getDefaultApiClient());
   }
 
-  public DispositivosApi(ApiClient apiClient) {
+  public DispositivoApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 

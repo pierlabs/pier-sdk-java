@@ -20,14 +20,14 @@ import java.util.Map;
 
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 
-public class JobsApi {
+public class JobApi {
   private ApiClient apiClient;
 
-  public JobsApi() {
+  public JobApi() {
     this(Configuration.getDefaultApiClient());
   }
 
-  public JobsApi(ApiClient apiClient) {
+  public JobApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 

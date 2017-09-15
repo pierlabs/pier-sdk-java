@@ -21,14 +21,14 @@ import java.util.Map;
 
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 
-public class GestaoLimitesApi {
+public class LimiteApi {
   private ApiClient apiClient;
 
-  public GestaoLimitesApi() {
+  public LimiteApi() {
     this(Configuration.getDefaultApiClient());
   }
 
-  public GestaoLimitesApi(ApiClient apiClient) {
+  public LimiteApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 

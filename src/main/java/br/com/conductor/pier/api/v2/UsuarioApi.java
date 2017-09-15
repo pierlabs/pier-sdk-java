@@ -22,14 +22,14 @@ import java.util.Map;
 
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 
-public class UsuariosApi {
+public class UsuarioApi {
   private ApiClient apiClient;
 
-  public UsuariosApi() {
+  public UsuarioApi() {
     this(Configuration.getDefaultApiClient());
   }
 
-  public UsuariosApi(ApiClient apiClient) {
+  public UsuarioApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
@@ -214,12 +214,12 @@ public class UsuariosApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
    * @return UsuarioResponse
    */
-  public UsuarioResponse consultarUsingGET26(Long id) throws ApiException {
+  public UsuarioResponse consultarUsingGET28(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET26");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET28");
      }
      
     // create path and map variables

@@ -20,14 +20,14 @@ import java.util.Map;
 
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 
-public class ServicosContaApi {
+public class ServicoContaApi {
   private ApiClient apiClient;
 
-  public ServicosContaApi() {
+  public ServicoContaApi() {
     this(Configuration.getDefaultApiClient());
   }
 
-  public ServicosContaApi(ApiClient apiClient) {
+  public ServicoContaApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 

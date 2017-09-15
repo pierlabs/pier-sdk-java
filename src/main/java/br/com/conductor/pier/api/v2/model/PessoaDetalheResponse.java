@@ -20,7 +20,7 @@ public class PessoaDetalheResponse   {
   private Long idPessoa = null;
   private String nomeMae = null;
   private Long idEstadoCivil = null;
-  private Integer idProfissao = null;
+  private String idProfissao = null;
   private Long idNaturezaOcupacao = null;
   private Long idNacionalidade = null;
   private Integer numeroAgencia = null;
@@ -86,17 +86,17 @@ public class PessoaDetalheResponse   {
   /**
    * Profiss\u00C3\u00A3o da pessoa fisica
    **/
-  public PessoaDetalheResponse idProfissao(Integer idProfissao) {
+  public PessoaDetalheResponse idProfissao(String idProfissao) {
     this.idProfissao = idProfissao;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Profiss\u00C3\u00A3o da pessoa fisica")
   @JsonProperty("idProfissao")
-  public Integer getIdProfissao() {
+  public String getIdProfissao() {
     return idProfissao;
   }
-  public void setIdProfissao(Integer idProfissao) {
+  public void setIdProfissao(String idProfissao) {
     this.idProfissao = idProfissao;
   }
 

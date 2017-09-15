@@ -32,14 +32,14 @@ import java.util.Map;
 
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 
-public class NotificacoesApi {
+public class NotificacaoApi {
   private ApiClient apiClient;
 
-  public NotificacoesApi() {
+  public NotificacaoApi() {
     this(Configuration.getDefaultApiClient());
   }
 
-  public NotificacoesApi(ApiClient apiClient) {
+  public NotificacaoApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 

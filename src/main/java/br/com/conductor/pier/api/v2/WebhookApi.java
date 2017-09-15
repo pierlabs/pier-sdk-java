@@ -20,14 +20,14 @@ import java.util.Map;
 
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 
-public class WebhooksApi {
+public class WebhookApi {
   private ApiClient apiClient;
 
-  public WebhooksApi() {
+  public WebhookApi() {
     this(Configuration.getDefaultApiClient());
   }
 
-  public WebhooksApi(ApiClient apiClient) {
+  public WebhookApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
@@ -113,12 +113,12 @@ public class WebhooksApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
    * @return WebHookResponse
    */
-  public WebHookResponse consultarUsingGET27(Long id) throws ApiException {
+  public WebHookResponse consultarUsingGET29(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET27");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET29");
      }
      
     // create path and map variables

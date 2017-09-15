@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v2.model.TelefoneAdicionalPersist;
+import br.com.conductor.pier.api.v2.model.TelefoneAdicionalUpdate;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -29,12 +29,8 @@ public class AdicionalUpdate   {
   private String orgaoExpedidorIdentidade = null;
   private String unidadeFederativaIdentidade = null;
   private String dataEmissaoIdentidade = null;
-  private Long idEstadoCivil = null;
-  private Long idProfissao = null;
-  private Long idNacionalidade = null;
   private Long idParentesco = null;
-  private String email = null;
-  private List<TelefoneAdicionalPersist> telefones = new ArrayList<TelefoneAdicionalPersist>();
+  private List<TelefoneAdicionalUpdate> telefones = new ArrayList<TelefoneAdicionalUpdate>();
 
   
   /**
@@ -200,60 +196,6 @@ public class AdicionalUpdate   {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estado Civil do Adicional.
-   **/
-  public AdicionalUpdate idEstadoCivil(Long idEstadoCivil) {
-    this.idEstadoCivil = idEstadoCivil;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estado Civil do Adicional.")
-  @JsonProperty("idEstadoCivil")
-  public Long getIdEstadoCivil() {
-    return idEstadoCivil;
-  }
-  public void setIdEstadoCivil(Long idEstadoCivil) {
-    this.idEstadoCivil = idEstadoCivil;
-  }
-
-  
-  /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Profissao do Adicional.
-   **/
-  public AdicionalUpdate idProfissao(Long idProfissao) {
-    this.idProfissao = idProfissao;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Profissao do Adicional.")
-  @JsonProperty("idProfissao")
-  public Long getIdProfissao() {
-    return idProfissao;
-  }
-  public void setIdProfissao(Long idProfissao) {
-    this.idProfissao = idProfissao;
-  }
-
-  
-  /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Nacionalidade do Adicional.
-   **/
-  public AdicionalUpdate idNacionalidade(Long idNacionalidade) {
-    this.idNacionalidade = idNacionalidade;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Nacionalidade do Adicional.")
-  @JsonProperty("idNacionalidade")
-  public Long getIdNacionalidade() {
-    return idNacionalidade;
-  }
-  public void setIdNacionalidade(Long idNacionalidade) {
-    this.idNacionalidade = idNacionalidade;
-  }
-
-  
-  /**
    * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular.
    **/
   public AdicionalUpdate idParentesco(Long idParentesco) {
@@ -272,37 +214,19 @@ public class AdicionalUpdate   {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular.
-   **/
-  public AdicionalUpdate email(String email) {
-    this.email = email;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Parentesco do Adicional com o Titular.")
-  @JsonProperty("email")
-  public String getEmail() {
-    return email;
-  }
-  public void setEmail(String email) {
-    this.email = email;
-  }
-
-  
-  /**
    * Lista de telefones do adicional.
    **/
-  public AdicionalUpdate telefones(List<TelefoneAdicionalPersist> telefones) {
+  public AdicionalUpdate telefones(List<TelefoneAdicionalUpdate> telefones) {
     this.telefones = telefones;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Lista de telefones do adicional.")
   @JsonProperty("telefones")
-  public List<TelefoneAdicionalPersist> getTelefones() {
+  public List<TelefoneAdicionalUpdate> getTelefones() {
     return telefones;
   }
-  public void setTelefones(List<TelefoneAdicionalPersist> telefones) {
+  public void setTelefones(List<TelefoneAdicionalUpdate> telefones) {
     this.telefones = telefones;
   }
 
@@ -326,17 +250,13 @@ public class AdicionalUpdate   {
         Objects.equals(this.orgaoExpedidorIdentidade, adicionalUpdate.orgaoExpedidorIdentidade) &&
         Objects.equals(this.unidadeFederativaIdentidade, adicionalUpdate.unidadeFederativaIdentidade) &&
         Objects.equals(this.dataEmissaoIdentidade, adicionalUpdate.dataEmissaoIdentidade) &&
-        Objects.equals(this.idEstadoCivil, adicionalUpdate.idEstadoCivil) &&
-        Objects.equals(this.idProfissao, adicionalUpdate.idProfissao) &&
-        Objects.equals(this.idNacionalidade, adicionalUpdate.idNacionalidade) &&
         Objects.equals(this.idParentesco, adicionalUpdate.idParentesco) &&
-        Objects.equals(this.email, adicionalUpdate.email) &&
         Objects.equals(this.telefones, adicionalUpdate.telefones);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(nome, nomeImpresso, numeroReceitaFederal, dataNascimento, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, idEstadoCivil, idProfissao, idNacionalidade, idParentesco, email, telefones);
+    return Objects.hash(nome, nomeImpresso, numeroReceitaFederal, dataNascimento, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, idParentesco, telefones);
   }
 
   @Override
@@ -353,11 +273,7 @@ public class AdicionalUpdate   {
     sb.append("    orgaoExpedidorIdentidade: ").append(toIndentedString(orgaoExpedidorIdentidade)).append("\n");
     sb.append("    unidadeFederativaIdentidade: ").append(toIndentedString(unidadeFederativaIdentidade)).append("\n");
     sb.append("    dataEmissaoIdentidade: ").append(toIndentedString(dataEmissaoIdentidade)).append("\n");
-    sb.append("    idEstadoCivil: ").append(toIndentedString(idEstadoCivil)).append("\n");
-    sb.append("    idProfissao: ").append(toIndentedString(idProfissao)).append("\n");
-    sb.append("    idNacionalidade: ").append(toIndentedString(idNacionalidade)).append("\n");
     sb.append("    idParentesco: ").append(toIndentedString(idParentesco)).append("\n");
-    sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    telefones: ").append(toIndentedString(telefones)).append("\n");
     sb.append("}");
     return sb.toString();

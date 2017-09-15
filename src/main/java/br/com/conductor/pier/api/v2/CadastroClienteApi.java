@@ -7,8 +7,8 @@ import br.com.conductor.pier.api.v2.invoker.ApiClient;
 import br.com.conductor.pier.api.v2.invoker.Configuration;
 import br.com.conductor.pier.api.v2.invoker.Pair;
 
+import br.com.conductor.pier.api.v2.model.AdicionalDetalheResponse;
 import br.com.conductor.pier.api.v2.model.AdicionalUpdate;
-import br.com.conductor.pier.api.v2.model.AdicionalResponse;
 import br.com.conductor.pier.api.v2.model.EnderecoResponse;
 import br.com.conductor.pier.api.v2.model.PessoaDetalheResponse;
 import br.com.conductor.pier.api.v2.model.PessoaResponse;
@@ -16,6 +16,7 @@ import br.com.conductor.pier.api.v2.model.TelefoneResponse;
 import br.com.conductor.pier.api.v2.model.AtribuirAssinaturaClientePersist;
 import br.com.conductor.pier.api.v2.model.AdicionalPersist;
 import br.com.conductor.pier.api.v2.model.PagePessoaResponse;
+import br.com.conductor.pier.api.v2.model.AdicionalResponse;
 import br.com.conductor.pier.api.v2.model.PageEnderecoResponse;
 import br.com.conductor.pier.api.v2.model.PagePessoaDetalheResponse;
 import br.com.conductor.pier.api.v2.model.PageTelefoneResponse;
@@ -36,14 +37,14 @@ import java.util.Map;
 
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 
-public class CadastrosClientesApi {
+public class CadastroClienteApi {
   private ApiClient apiClient;
 
-  public CadastrosClientesApi() {
+  public CadastroClienteApi() {
     this(Configuration.getDefaultApiClient());
   }
 
-  public CadastrosClientesApi(ApiClient apiClient) {
+  public CadastroClienteApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
@@ -62,9 +63,9 @@ public class CadastrosClientesApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
    * @param idPessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
    * @param adicionalUpdate adicionalUpdate
-   * @return AdicionalResponse
+   * @return AdicionalDetalheResponse
    */
-  public AdicionalResponse alterarUsingPUT(Long id, Long idPessoa, AdicionalUpdate adicionalUpdate) throws ApiException {
+  public AdicionalDetalheResponse alterarUsingPUT(Long id, Long idPessoa, AdicionalUpdate adicionalUpdate) throws ApiException {
     Object postBody = adicionalUpdate;
     
      // verify the required parameter 'id' is set
@@ -112,7 +113,7 @@ public class CadastrosClientesApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<AdicionalResponse> returnType = new GenericType<AdicionalResponse>() {};
+    GenericType<AdicionalDetalheResponse> returnType = new GenericType<AdicionalDetalheResponse>() {};
     return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -214,7 +215,7 @@ public class CadastrosClientesApi {
    * @param nomeEmpresa Nome que deve ser impresso no cart\u00C3\u00A3o
    * @return PessoaDetalheResponse
    */
-  public PessoaDetalheResponse alterarUsingPUT5(Long id, String nomeMae, Long idEstadoCivil, Integer idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa) throws ApiException {
+  public PessoaDetalheResponse alterarUsingPUT5(Long id, String nomeMae, Long idEstadoCivil, String idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -482,9 +483,9 @@ public class CadastrosClientesApi {
    * Este m\u00C3\u00A9todo permite que sejam cadastrados um portador Adicional para uma determinada Conta.
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
    * @param persist persist
-   * @return AdicionalResponse
+   * @return AdicionalDetalheResponse
    */
-  public AdicionalResponse cadastrarUsingPOST(Long id, AdicionalPersist persist) throws ApiException {
+  public AdicionalDetalheResponse cadastrarUsingPOST(Long id, AdicionalPersist persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'id' is set
@@ -526,8 +527,63 @@ public class CadastrosClientesApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<AdicionalResponse> returnType = new GenericType<AdicionalResponse>() {};
+    GenericType<AdicionalDetalheResponse> returnType = new GenericType<AdicionalDetalheResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Consulta Adicional de uma Conta
+   * Este m\u00C3\u00A9todo permite que seja consultado um portador Adicional de uma determinada Conta.
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * @param idPessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
+   * @return AdicionalDetalheResponse
+   */
+  public AdicionalDetalheResponse consultarUsingGET(Long id, Long idPessoa) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET");
+     }
+     
+     // verify the required parameter 'idPessoa' is set
+     if (idPessoa == null) {
+        throw new ApiException(400, "Missing the required parameter 'idPessoa' when calling consultarUsingGET");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/{id}/adicionais/{idPessoa}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()))
+      .replaceAll("\\{" + "idPessoa" + "\\}", apiClient.escapeString(idPessoa.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<AdicionalDetalheResponse> returnType = new GenericType<AdicionalDetalheResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
@@ -537,12 +593,12 @@ public class CadastrosClientesApi {
    * @param id ID da Pessoa
    * @return PessoaDetalheResponse
    */
-  public PessoaDetalheResponse consultarUsingGET10(Long id) throws ApiException {
+  public PessoaDetalheResponse consultarUsingGET11(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET10");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET11");
      }
      
     // create path and map variables
@@ -585,12 +641,12 @@ public class CadastrosClientesApi {
    * @param id ID da Pessoa
    * @return PessoaResponse
    */
-  public PessoaResponse consultarUsingGET11(Long id) throws ApiException {
+  public PessoaResponse consultarUsingGET12(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET11");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET12");
      }
      
     // create path and map variables
@@ -633,12 +689,12 @@ public class CadastrosClientesApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
    * @return TelefoneResponse
    */
-  public TelefoneResponse consultarUsingGET16(Long id) throws ApiException {
+  public TelefoneResponse consultarUsingGET17(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET16");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET17");
      }
      
     // create path and map variables
@@ -681,12 +737,12 @@ public class CadastrosClientesApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
    * @return EnderecoResponse
    */
-  public EnderecoResponse consultarUsingGET6(Long id) throws ApiException {
+  public EnderecoResponse consultarUsingGET7(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET6");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET7");
      }
      
     // create path and map variables
@@ -839,11 +895,12 @@ public class CadastrosClientesApi {
    * Lista os Adicionais de uma Conta
    * Este m\u00C3\u00A9todo permite que sejam listados portadores Adicionais de uma determinada Conta.
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @return AdicionalResponse
    */
-  public AdicionalResponse listarUsingGET(Long id, Integer page, Integer limit) throws ApiException {
+  public AdicionalResponse listarUsingGET(Long id, List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -860,6 +917,8 @@ public class CadastrosClientesApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     Map<String, Object> formParams = new HashMap<String, Object>();
 
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(apiClient.parameterToPairs("", "page", page));
     
@@ -999,7 +1058,7 @@ public class CadastrosClientesApi {
    * @param nomeEmpresa Nome que deve ser impresso no cart\u00C3\u00A3o
    * @return PagePessoaDetalheResponse
    */
-  public PagePessoaDetalheResponse listarUsingGET15(List<String> sort, Integer page, Integer limit, Long idPessoa, String nomeMae, Long idEstadoCivil, Integer idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa) throws ApiException {
+  public PagePessoaDetalheResponse listarUsingGET15(List<String> sort, Integer page, Integer limit, Long idPessoa, String nomeMae, Long idEstadoCivil, String idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -1324,7 +1383,7 @@ public class CadastrosClientesApi {
    * @param nomeEmpresa Nome que deve ser impresso no cart\u00C3\u00A3o
    * @return PessoaDetalheResponse
    */
-  public PessoaDetalheResponse salvarUsingPOST10(Long idPessoa, String nomeMae, Long idEstadoCivil, Integer idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa) throws ApiException {
+  public PessoaDetalheResponse salvarUsingPOST10(Long idPessoa, String nomeMae, Long idEstadoCivil, String idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idPessoa' is set

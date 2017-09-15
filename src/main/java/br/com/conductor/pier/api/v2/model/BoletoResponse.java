@@ -20,27 +20,28 @@ import java.util.List;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class BoletoResponse   {
   
+  private String numeroDoDocumento = null;
   private String dataProcessamento = null;
   private String dataDocumento = null;
   private String dataVencimento = null;
+  private String dataFechamento = null;
   private BigDecimal valorBoleto = null;
-  private String numeroDoDocumento = null;
   private String nomeBeneficiario = null;
+  private String documentoBeneficiario = null;
   private String agencia = null;
   private String codigoBeneficiario = null;
-  private String digitoCodigoBeneficiario = null;
   private String numeroConvenio = null;
+  private String digitoCodigoBeneficiario = null;
   private String carteira = null;
   private String nossoNumero = null;
-  private String banco = null;
   private String digitoNossoNumero = null;
+  private String banco = null;
   private Boolean aceite = null;
   private String especieDoDocumento = null;
   private String especie = null;
   private List<String> instrucoes = new ArrayList<String>();
   private List<String> locaisDePagamento = new ArrayList<String>();
   private String nomePagador = null;
-  private String documentoBeneficiario = null;
   private String documentoPagador = null;
   private String logradouroPagador = null;
   private String bairroPagador = null;
@@ -49,6 +50,24 @@ public class BoletoResponse   {
   private String ufPagador = null;
   private String codigoDeBarras = null;
   private String linhaDigitavel = null;
+
+  
+  /**
+   * N\u00C3\u00BAmero do documento \u00C3\u00A9 o c\u00C3\u00B3digo informado pelo banco para identifica\u00C3\u00A7\u00C3\u00A3o do cliente
+   **/
+  public BoletoResponse numeroDoDocumento(String numeroDoDocumento) {
+    this.numeroDoDocumento = numeroDoDocumento;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero do documento \u00C3\u00A9 o c\u00C3\u00B3digo informado pelo banco para identifica\u00C3\u00A7\u00C3\u00A3o do cliente")
+  @JsonProperty("numeroDoDocumento")
+  public String getNumeroDoDocumento() {
+    return numeroDoDocumento;
+  }
+  public void setNumeroDoDocumento(String numeroDoDocumento) {
+    this.numeroDoDocumento = numeroDoDocumento;
+  }
 
   
   /**
@@ -106,6 +125,24 @@ public class BoletoResponse   {
 
   
   /**
+   * Data do fechamento
+   **/
+  public BoletoResponse dataFechamento(String dataFechamento) {
+    this.dataFechamento = dataFechamento;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Data do fechamento")
+  @JsonProperty("dataFechamento")
+  public String getDataFechamento() {
+    return dataFechamento;
+  }
+  public void setDataFechamento(String dataFechamento) {
+    this.dataFechamento = dataFechamento;
+  }
+
+  
+  /**
    * Valor do Boleto.
    **/
   public BoletoResponse valorBoleto(BigDecimal valorBoleto) {
@@ -124,24 +161,6 @@ public class BoletoResponse   {
 
   
   /**
-   * N\u00C3\u00BAmero do documento \u00C3\u00A9 o c\u00C3\u00B3digo informado pelo banco para identifica\u00C3\u00A7\u00C3\u00A3o do cliente
-   **/
-  public BoletoResponse numeroDoDocumento(String numeroDoDocumento) {
-    this.numeroDoDocumento = numeroDoDocumento;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero do documento \u00C3\u00A9 o c\u00C3\u00B3digo informado pelo banco para identifica\u00C3\u00A7\u00C3\u00A3o do cliente")
-  @JsonProperty("numeroDoDocumento")
-  public String getNumeroDoDocumento() {
-    return numeroDoDocumento;
-  }
-  public void setNumeroDoDocumento(String numeroDoDocumento) {
-    this.numeroDoDocumento = numeroDoDocumento;
-  }
-
-  
-  /**
    * Benefici\u00C3\u00A1rio \u00C3\u00A9 a pessoa/empresa que gera o boleto
    **/
   public BoletoResponse nomeBeneficiario(String nomeBeneficiario) {
@@ -156,6 +175,24 @@ public class BoletoResponse   {
   }
   public void setNomeBeneficiario(String nomeBeneficiario) {
     this.nomeBeneficiario = nomeBeneficiario;
+  }
+
+  
+  /**
+   * Documento do Beneficiario.
+   **/
+  public BoletoResponse documentoBeneficiario(String documentoBeneficiario) {
+    this.documentoBeneficiario = documentoBeneficiario;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Documento do Beneficiario.")
+  @JsonProperty("documentoBeneficiario")
+  public String getDocumentoBeneficiario() {
+    return documentoBeneficiario;
+  }
+  public void setDocumentoBeneficiario(String documentoBeneficiario) {
+    this.documentoBeneficiario = documentoBeneficiario;
   }
 
   
@@ -196,24 +233,6 @@ public class BoletoResponse   {
 
   
   /**
-   * D\u00C3\u00ADgito do c\u00C3\u00B3digo do benefici\u00C3\u00A1rio
-   **/
-  public BoletoResponse digitoCodigoBeneficiario(String digitoCodigoBeneficiario) {
-    this.digitoCodigoBeneficiario = digitoCodigoBeneficiario;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "D\u00C3\u00ADgito do c\u00C3\u00B3digo do benefici\u00C3\u00A1rio")
-  @JsonProperty("digitoCodigoBeneficiario")
-  public String getDigitoCodigoBeneficiario() {
-    return digitoCodigoBeneficiario;
-  }
-  public void setDigitoCodigoBeneficiario(String digitoCodigoBeneficiario) {
-    this.digitoCodigoBeneficiario = digitoCodigoBeneficiario;
-  }
-
-  
-  /**
    * N\u00C3\u00BAmero do conv\u00C3\u00AAnio fornecido pelo banco \u00C3\u00A9 o c\u00C3\u00B3digo que identifica um emissor junto ao seu banco para associar seus boletos.
    **/
   public BoletoResponse numeroConvenio(String numeroConvenio) {
@@ -228,6 +247,24 @@ public class BoletoResponse   {
   }
   public void setNumeroConvenio(String numeroConvenio) {
     this.numeroConvenio = numeroConvenio;
+  }
+
+  
+  /**
+   * D\u00C3\u00ADgito do c\u00C3\u00B3digo do benefici\u00C3\u00A1rio
+   **/
+  public BoletoResponse digitoCodigoBeneficiario(String digitoCodigoBeneficiario) {
+    this.digitoCodigoBeneficiario = digitoCodigoBeneficiario;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "D\u00C3\u00ADgito do c\u00C3\u00B3digo do benefici\u00C3\u00A1rio")
+  @JsonProperty("digitoCodigoBeneficiario")
+  public String getDigitoCodigoBeneficiario() {
+    return digitoCodigoBeneficiario;
+  }
+  public void setDigitoCodigoBeneficiario(String digitoCodigoBeneficiario) {
+    this.digitoCodigoBeneficiario = digitoCodigoBeneficiario;
   }
 
   
@@ -268,24 +305,6 @@ public class BoletoResponse   {
 
   
   /**
-   * Banco
-   **/
-  public BoletoResponse banco(String banco) {
-    this.banco = banco;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Banco")
-  @JsonProperty("banco")
-  public String getBanco() {
-    return banco;
-  }
-  public void setBanco(String banco) {
-    this.banco = banco;
-  }
-
-  
-  /**
    * D\u00C3\u00ADgito do nosso n\u00C3\u00BAmero
    **/
   public BoletoResponse digitoNossoNumero(String digitoNossoNumero) {
@@ -300,6 +319,24 @@ public class BoletoResponse   {
   }
   public void setDigitoNossoNumero(String digitoNossoNumero) {
     this.digitoNossoNumero = digitoNossoNumero;
+  }
+
+  
+  /**
+   * Banco
+   **/
+  public BoletoResponse banco(String banco) {
+    this.banco = banco;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Banco")
+  @JsonProperty("banco")
+  public String getBanco() {
+    return banco;
+  }
+  public void setBanco(String banco) {
+    this.banco = banco;
   }
 
   
@@ -408,24 +445,6 @@ public class BoletoResponse   {
   }
   public void setNomePagador(String nomePagador) {
     this.nomePagador = nomePagador;
-  }
-
-  
-  /**
-   * Documento do Beneficiario.
-   **/
-  public BoletoResponse documentoBeneficiario(String documentoBeneficiario) {
-    this.documentoBeneficiario = documentoBeneficiario;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Documento do Beneficiario.")
-  @JsonProperty("documentoBeneficiario")
-  public String getDocumentoBeneficiario() {
-    return documentoBeneficiario;
-  }
-  public void setDocumentoBeneficiario(String documentoBeneficiario) {
-    this.documentoBeneficiario = documentoBeneficiario;
   }
 
   
@@ -583,27 +602,28 @@ public class BoletoResponse   {
       return false;
     }
     BoletoResponse boletoResponse = (BoletoResponse) o;
-    return Objects.equals(this.dataProcessamento, boletoResponse.dataProcessamento) &&
+    return Objects.equals(this.numeroDoDocumento, boletoResponse.numeroDoDocumento) &&
+        Objects.equals(this.dataProcessamento, boletoResponse.dataProcessamento) &&
         Objects.equals(this.dataDocumento, boletoResponse.dataDocumento) &&
         Objects.equals(this.dataVencimento, boletoResponse.dataVencimento) &&
+        Objects.equals(this.dataFechamento, boletoResponse.dataFechamento) &&
         Objects.equals(this.valorBoleto, boletoResponse.valorBoleto) &&
-        Objects.equals(this.numeroDoDocumento, boletoResponse.numeroDoDocumento) &&
         Objects.equals(this.nomeBeneficiario, boletoResponse.nomeBeneficiario) &&
+        Objects.equals(this.documentoBeneficiario, boletoResponse.documentoBeneficiario) &&
         Objects.equals(this.agencia, boletoResponse.agencia) &&
         Objects.equals(this.codigoBeneficiario, boletoResponse.codigoBeneficiario) &&
-        Objects.equals(this.digitoCodigoBeneficiario, boletoResponse.digitoCodigoBeneficiario) &&
         Objects.equals(this.numeroConvenio, boletoResponse.numeroConvenio) &&
+        Objects.equals(this.digitoCodigoBeneficiario, boletoResponse.digitoCodigoBeneficiario) &&
         Objects.equals(this.carteira, boletoResponse.carteira) &&
         Objects.equals(this.nossoNumero, boletoResponse.nossoNumero) &&
-        Objects.equals(this.banco, boletoResponse.banco) &&
         Objects.equals(this.digitoNossoNumero, boletoResponse.digitoNossoNumero) &&
+        Objects.equals(this.banco, boletoResponse.banco) &&
         Objects.equals(this.aceite, boletoResponse.aceite) &&
         Objects.equals(this.especieDoDocumento, boletoResponse.especieDoDocumento) &&
         Objects.equals(this.especie, boletoResponse.especie) &&
         Objects.equals(this.instrucoes, boletoResponse.instrucoes) &&
         Objects.equals(this.locaisDePagamento, boletoResponse.locaisDePagamento) &&
         Objects.equals(this.nomePagador, boletoResponse.nomePagador) &&
-        Objects.equals(this.documentoBeneficiario, boletoResponse.documentoBeneficiario) &&
         Objects.equals(this.documentoPagador, boletoResponse.documentoPagador) &&
         Objects.equals(this.logradouroPagador, boletoResponse.logradouroPagador) &&
         Objects.equals(this.bairroPagador, boletoResponse.bairroPagador) &&
@@ -616,7 +636,7 @@ public class BoletoResponse   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(dataProcessamento, dataDocumento, dataVencimento, valorBoleto, numeroDoDocumento, nomeBeneficiario, agencia, codigoBeneficiario, digitoCodigoBeneficiario, numeroConvenio, carteira, nossoNumero, banco, digitoNossoNumero, aceite, especieDoDocumento, especie, instrucoes, locaisDePagamento, nomePagador, documentoBeneficiario, documentoPagador, logradouroPagador, bairroPagador, cepPagador, cidadePagador, ufPagador, codigoDeBarras, linhaDigitavel);
+    return Objects.hash(numeroDoDocumento, dataProcessamento, dataDocumento, dataVencimento, dataFechamento, valorBoleto, nomeBeneficiario, documentoBeneficiario, agencia, codigoBeneficiario, numeroConvenio, digitoCodigoBeneficiario, carteira, nossoNumero, digitoNossoNumero, banco, aceite, especieDoDocumento, especie, instrucoes, locaisDePagamento, nomePagador, documentoPagador, logradouroPagador, bairroPagador, cepPagador, cidadePagador, ufPagador, codigoDeBarras, linhaDigitavel);
   }
 
   @Override
@@ -624,27 +644,28 @@ public class BoletoResponse   {
     StringBuilder sb = new StringBuilder();
     sb.append("class BoletoResponse {\n");
     
+    sb.append("    numeroDoDocumento: ").append(toIndentedString(numeroDoDocumento)).append("\n");
     sb.append("    dataProcessamento: ").append(toIndentedString(dataProcessamento)).append("\n");
     sb.append("    dataDocumento: ").append(toIndentedString(dataDocumento)).append("\n");
     sb.append("    dataVencimento: ").append(toIndentedString(dataVencimento)).append("\n");
+    sb.append("    dataFechamento: ").append(toIndentedString(dataFechamento)).append("\n");
     sb.append("    valorBoleto: ").append(toIndentedString(valorBoleto)).append("\n");
-    sb.append("    numeroDoDocumento: ").append(toIndentedString(numeroDoDocumento)).append("\n");
     sb.append("    nomeBeneficiario: ").append(toIndentedString(nomeBeneficiario)).append("\n");
+    sb.append("    documentoBeneficiario: ").append(toIndentedString(documentoBeneficiario)).append("\n");
     sb.append("    agencia: ").append(toIndentedString(agencia)).append("\n");
     sb.append("    codigoBeneficiario: ").append(toIndentedString(codigoBeneficiario)).append("\n");
-    sb.append("    digitoCodigoBeneficiario: ").append(toIndentedString(digitoCodigoBeneficiario)).append("\n");
     sb.append("    numeroConvenio: ").append(toIndentedString(numeroConvenio)).append("\n");
+    sb.append("    digitoCodigoBeneficiario: ").append(toIndentedString(digitoCodigoBeneficiario)).append("\n");
     sb.append("    carteira: ").append(toIndentedString(carteira)).append("\n");
     sb.append("    nossoNumero: ").append(toIndentedString(nossoNumero)).append("\n");
-    sb.append("    banco: ").append(toIndentedString(banco)).append("\n");
     sb.append("    digitoNossoNumero: ").append(toIndentedString(digitoNossoNumero)).append("\n");
+    sb.append("    banco: ").append(toIndentedString(banco)).append("\n");
     sb.append("    aceite: ").append(toIndentedString(aceite)).append("\n");
     sb.append("    especieDoDocumento: ").append(toIndentedString(especieDoDocumento)).append("\n");
     sb.append("    especie: ").append(toIndentedString(especie)).append("\n");
     sb.append("    instrucoes: ").append(toIndentedString(instrucoes)).append("\n");
     sb.append("    locaisDePagamento: ").append(toIndentedString(locaisDePagamento)).append("\n");
     sb.append("    nomePagador: ").append(toIndentedString(nomePagador)).append("\n");
-    sb.append("    documentoBeneficiario: ").append(toIndentedString(documentoBeneficiario)).append("\n");
     sb.append("    documentoPagador: ").append(toIndentedString(documentoPagador)).append("\n");
     sb.append("    logradouroPagador: ").append(toIndentedString(logradouroPagador)).append("\n");
     sb.append("    bairroPagador: ").append(toIndentedString(bairroPagador)).append("\n");

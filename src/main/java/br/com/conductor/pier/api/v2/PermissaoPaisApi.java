@@ -20,14 +20,14 @@ import java.util.Map;
 
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 
-public class PermissaoPaisesApi {
+public class PermissaoPaisApi {
   private ApiClient apiClient;
 
-  public PermissaoPaisesApi() {
+  public PermissaoPaisApi() {
     this(Configuration.getDefaultApiClient());
   }
 
-  public PermissaoPaisesApi(ApiClient apiClient) {
+  public PermissaoPaisApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 

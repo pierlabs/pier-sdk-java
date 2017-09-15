@@ -9,6 +9,7 @@ import br.com.conductor.pier.api.v2.invoker.Pair;
 
 import br.com.conductor.pier.api.v2.model.TransacaoOnUsResponse;
 import br.com.conductor.pier.api.v2.model.AutorizacaoOnUsRequest;
+import br.com.conductor.pier.api.v2.model.TransacaoOnUsPorIdCartaoRequest;
 import br.com.conductor.pier.api.v2.model.CancelamentoTransacaoOnUsRequest;
 import br.com.conductor.pier.api.v2.model.TransacaoOnUsRequest;
 
@@ -22,14 +23,14 @@ import java.util.Map;
 
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 
-public class AutorizacoesApi {
+public class AutorizacaoApi {
   private ApiClient apiClient;
 
-  public AutorizacoesApi() {
+  public AutorizacaoApi() {
     this(Configuration.getDefaultApiClient());
   }
 
-  public AutorizacoesApi(ApiClient apiClient) {
+  public AutorizacaoApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
@@ -58,6 +59,60 @@ public class AutorizacoesApi {
      
     // create path and map variables
     String path = "/api/autorizar-transacao".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<TransacaoOnUsResponse> returnType = new GenericType<TransacaoOnUsResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Autoriza transa\u00C3\u00A7\u00C3\u00A3o financeira por idCartao
+   * Este m\u00C3\u00A9todo faz uma autoriza\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o financeira com o idCartao.
+   * @param id Id Cartao
+   * @param transacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest
+   * @return TransacaoOnUsResponse
+   */
+  public TransacaoOnUsResponse autorizarUsingPOST1(Long id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest) throws ApiException {
+    Object postBody = transacaoOnUsPorIdCartaoRequest;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling autorizarUsingPOST1");
+     }
+     
+     // verify the required parameter 'transacaoOnUsPorIdCartaoRequest' is set
+     if (transacaoOnUsPorIdCartaoRequest == null) {
+        throw new ApiException(400, "Missing the required parameter 'transacaoOnUsPorIdCartaoRequest' when calling autorizarUsingPOST1");
+     }
+     
+    // create path and map variables
+    String path = "/api/cartoes/{id}/autorizar-transacao".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();

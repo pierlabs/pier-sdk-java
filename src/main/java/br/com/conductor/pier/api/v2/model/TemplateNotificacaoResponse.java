@@ -24,6 +24,7 @@ public class TemplateNotificacaoResponse   {
 
   public enum TipoLayoutEnum {
     RECUPERAR_SENHA("RECUPERAR_SENHA"),
+    FATURA_POR_EMAIL("FATURA_POR_EMAIL"),
     VALIDAR_DISPOSITIVO("VALIDAR_DISPOSITIVO");
 
     private String value;

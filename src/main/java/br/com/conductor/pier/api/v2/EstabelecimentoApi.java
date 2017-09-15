@@ -22,14 +22,14 @@ import java.util.Map;
 
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 
-public class EstabelecimentosApi {
+public class EstabelecimentoApi {
   private ApiClient apiClient;
 
-  public EstabelecimentosApi() {
+  public EstabelecimentoApi() {
     this(Configuration.getDefaultApiClient());
   }
 
-  public EstabelecimentosApi(ApiClient apiClient) {
+  public EstabelecimentoApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
@@ -48,12 +48,12 @@ public class EstabelecimentosApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
    * @return TerminalResponse
    */
-  public TerminalResponse consultarUsingGET17(Long id) throws ApiException {
+  public TerminalResponse consultarUsingGET18(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET17");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET18");
      }
      
     // create path and map variables
@@ -96,12 +96,12 @@ public class EstabelecimentosApi {
    * @param id Id
    * @return EstabelecimentoResponse
    */
-  public EstabelecimentoResponse consultarUsingGET7(Long id) throws ApiException {
+  public EstabelecimentoResponse consultarUsingGET8(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET7");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET8");
      }
      
     // create path and map variables

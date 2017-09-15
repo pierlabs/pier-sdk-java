@@ -23,14 +23,14 @@ import java.util.Map;
 
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 
-public class AntecipacoesApi {
+public class AntecipacaoApi {
   private ApiClient apiClient;
 
-  public AntecipacoesApi() {
+  public AntecipacaoApi() {
     this(Configuration.getDefaultApiClient());
   }
 
-  public AntecipacoesApi(ApiClient apiClient) {
+  public AntecipacaoApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 

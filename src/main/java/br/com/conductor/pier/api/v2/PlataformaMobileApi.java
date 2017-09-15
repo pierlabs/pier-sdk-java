@@ -22,14 +22,14 @@ import java.util.Map;
 
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 
-public class PlataformasMobileApi {
+public class PlataformaMobileApi {
   private ApiClient apiClient;
 
-  public PlataformasMobileApi() {
+  public PlataformaMobileApi() {
     this(Configuration.getDefaultApiClient());
   }
 
-  public PlataformasMobileApi(ApiClient apiClient) {
+  public PlataformaMobileApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 

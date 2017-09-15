@@ -19,14 +19,14 @@ import java.util.Map;
 
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 
-public class EnderecosNacionaisApi {
+public class EnderecoNacionalApi {
   private ApiClient apiClient;
 
-  public EnderecosNacionaisApi() {
+  public EnderecoNacionalApi() {
     this(Configuration.getDefaultApiClient());
   }
 
-  public EnderecosNacionaisApi(ApiClient apiClient) {
+  public EnderecoNacionalApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
