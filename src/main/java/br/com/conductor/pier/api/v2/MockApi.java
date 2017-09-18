@@ -205,9 +205,9 @@ public class MockApi {
    * Esta opera\u00C3\u00A7\u00C3\u00A3o permite visualizar o extrato da fatura de uma determinada conta, em formato PDF. Quando ela for a fatura ativa, ou seja, a do m\u00C3\u00AAs corrente, o pdf ser\u00C3\u00A1 composto pelo extrato de lan\u00C3\u00A7amentos e pela ficha de compensa\u00C3\u00A7\u00C3\u00A3o banc\u00C3\u00A1ria. Quando for de uma fatura do hist\u00C3\u00B3rico do cliente, o PDF ser\u00C3\u00A1 composto apenas pelo extrato de transa\u00C3\u00A7\u00C3\u00B5es.
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
    * @param dataVencimento Data de Vencimento da fatura.
-   * @return List<byte[]>
+   * @return Object
    */
-  public List<byte[]> visualizarDocumentoUsingPOST(Long id, String dataVencimento) throws ApiException {
+  public Object visualizarDocumentoUsingPOST(Long id, String dataVencimento) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -250,7 +250,7 @@ public class MockApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<List<byte[]>> returnType = new GenericType<List<byte[]>>() {};
+    GenericType<Object> returnType = new GenericType<Object>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

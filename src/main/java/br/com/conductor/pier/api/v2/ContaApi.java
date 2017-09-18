@@ -1012,17 +1012,17 @@ public class ContaApi {
    * @param idContaBancariaDestino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
    * @return TransferenciaBancariaResponse
    */
-  public TransferenciaBancariaResponse consultarUsingGET26(Long id, Long idTransferencia, Long idContaBancariaDestino) throws ApiException {
+  public TransferenciaBancariaResponse consultarUsingGET25(Long id, Long idTransferencia, Long idContaBancariaDestino) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET26");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET25");
      }
      
      // verify the required parameter 'idTransferencia' is set
      if (idTransferencia == null) {
-        throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET26");
+        throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET25");
      }
      
     // create path and map variables
@@ -1069,17 +1069,17 @@ public class ContaApi {
    * @param idTransferencia C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).
    * @return PageTransferenciaResponse
    */
-  public PageTransferenciaResponse consultarUsingGET27(Long id, Long idTransferencia) throws ApiException {
+  public PageTransferenciaResponse consultarUsingGET26(Long id, Long idTransferencia) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET27");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET26");
      }
      
      // verify the required parameter 'idTransferencia' is set
      if (idTransferencia == null) {
-        throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET27");
+        throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET26");
      }
      
     // create path and map variables
