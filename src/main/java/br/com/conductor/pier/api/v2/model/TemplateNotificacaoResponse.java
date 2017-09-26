@@ -25,7 +25,8 @@ public class TemplateNotificacaoResponse   {
   public enum TipoLayoutEnum {
     RECUPERAR_SENHA("RECUPERAR_SENHA"),
     FATURA_POR_EMAIL("FATURA_POR_EMAIL"),
-    VALIDAR_DISPOSITIVO("VALIDAR_DISPOSITIVO");
+    VALIDAR_DISPOSITIVO("VALIDAR_DISPOSITIVO"),
+    NOTIFICACAO_EMAIL("NOTIFICACAO_EMAIL");
 
     private String value;
 
@@ -64,6 +65,7 @@ public class TemplateNotificacaoResponse   {
   }
 
   private TipoNotificacaoEnum tipoNotificacao = null;
+  private String remetente = null;
   private String assunto = null;
   private String conteudo = null;
   private String dataInclusao = null;
@@ -139,6 +141,24 @@ public class TemplateNotificacaoResponse   {
   }
   public void setTipoNotificacao(TipoNotificacaoEnum tipoNotificacao) {
     this.tipoNotificacao = tipoNotificacao;
+  }
+
+  
+  /**
+   * Remetente.
+   **/
+  public TemplateNotificacaoResponse remetente(String remetente) {
+    this.remetente = remetente;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Remetente.")
+  @JsonProperty("remetente")
+  public String getRemetente() {
+    return remetente;
+  }
+  public void setRemetente(String remetente) {
+    this.remetente = remetente;
   }
 
   
@@ -228,6 +248,7 @@ public class TemplateNotificacaoResponse   {
         Objects.equals(this.idConfiguracaoEmail, templateNotificacaoResponse.idConfiguracaoEmail) &&
         Objects.equals(this.tipoLayout, templateNotificacaoResponse.tipoLayout) &&
         Objects.equals(this.tipoNotificacao, templateNotificacaoResponse.tipoNotificacao) &&
+        Objects.equals(this.remetente, templateNotificacaoResponse.remetente) &&
         Objects.equals(this.assunto, templateNotificacaoResponse.assunto) &&
         Objects.equals(this.conteudo, templateNotificacaoResponse.conteudo) &&
         Objects.equals(this.dataInclusao, templateNotificacaoResponse.dataInclusao) &&
@@ -236,7 +257,7 @@ public class TemplateNotificacaoResponse   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idConfiguracaoEmail, tipoLayout, tipoNotificacao, assunto, conteudo, dataInclusao, dataAlteracao);
+    return Objects.hash(id, idConfiguracaoEmail, tipoLayout, tipoNotificacao, remetente, assunto, conteudo, dataInclusao, dataAlteracao);
   }
 
   @Override
@@ -248,6 +269,7 @@ public class TemplateNotificacaoResponse   {
     sb.append("    idConfiguracaoEmail: ").append(toIndentedString(idConfiguracaoEmail)).append("\n");
     sb.append("    tipoLayout: ").append(toIndentedString(tipoLayout)).append("\n");
     sb.append("    tipoNotificacao: ").append(toIndentedString(tipoNotificacao)).append("\n");
+    sb.append("    remetente: ").append(toIndentedString(remetente)).append("\n");
     sb.append("    assunto: ").append(toIndentedString(assunto)).append("\n");
     sb.append("    conteudo: ").append(toIndentedString(conteudo)).append("\n");
     sb.append("    dataInclusao: ").append(toIndentedString(dataInclusao)).append("\n");

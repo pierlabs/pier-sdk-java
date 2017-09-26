@@ -155,12 +155,12 @@ public class PlataformaMobileApi {
    * @param persist persist
    * @return PlataformaMobileResponse
    */
-  public PlataformaMobileResponse salvarUsingPOST12(PlataformaMobilePersist persist) throws ApiException {
+  public PlataformaMobileResponse salvarUsingPOST15(PlataformaMobilePersist persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST12");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST15");
      }
      
     // create path and map variables

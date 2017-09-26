@@ -23,10 +23,13 @@ public class EmprestimoPessoalResponse   {
   
   private List<PlanoParcelamentoEmprestimoResponse> planosParcelamentos = new ArrayList<PlanoParcelamentoEmprestimoResponse>();
   private BigDecimal valorSolicitado = null;
-  private BigDecimal valorTotal = null;
-  private String sistemaAmortizacao = null;
-  private String periodoTaxa = null;
+  private BigDecimal valorMaximoSolicitacao = null;
+  private Integer numeroParcelas = null;
+  private BigDecimal valorMaximoParcela = null;
   private String dataPrimeiraParcela = null;
+  private String periodoTaxa = null;
+  private String sistemaAmortizacao = null;
+  private BigDecimal taxaJuros = null;
 
   
   /**
@@ -65,38 +68,74 @@ public class EmprestimoPessoalResponse   {
 
   
   /**
-   * Valor total do empr\u00C3\u00A9stimo/financiamento
+   * Valor m\u00C3\u00A1ximo de empr\u00C3\u00A9stimo pelo valor limite de parcela
    **/
-  public EmprestimoPessoalResponse valorTotal(BigDecimal valorTotal) {
-    this.valorTotal = valorTotal;
+  public EmprestimoPessoalResponse valorMaximoSolicitacao(BigDecimal valorMaximoSolicitacao) {
+    this.valorMaximoSolicitacao = valorMaximoSolicitacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor total do empr\u00C3\u00A9stimo/financiamento")
-  @JsonProperty("valorTotal")
-  public BigDecimal getValorTotal() {
-    return valorTotal;
+  @ApiModelProperty(example = "null", value = "Valor m\u00C3\u00A1ximo de empr\u00C3\u00A9stimo pelo valor limite de parcela")
+  @JsonProperty("valorMaximoSolicitacao")
+  public BigDecimal getValorMaximoSolicitacao() {
+    return valorMaximoSolicitacao;
   }
-  public void setValorTotal(BigDecimal valorTotal) {
-    this.valorTotal = valorTotal;
+  public void setValorMaximoSolicitacao(BigDecimal valorMaximoSolicitacao) {
+    this.valorMaximoSolicitacao = valorMaximoSolicitacao;
   }
 
   
   /**
-   * Sistema para amortiza\u00C3\u00A7\u00C3\u00A3o do valor das parcelas
+   * N\u00C3\u00BAmero de parcelas solicitado
    **/
-  public EmprestimoPessoalResponse sistemaAmortizacao(String sistemaAmortizacao) {
-    this.sistemaAmortizacao = sistemaAmortizacao;
+  public EmprestimoPessoalResponse numeroParcelas(Integer numeroParcelas) {
+    this.numeroParcelas = numeroParcelas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Sistema para amortiza\u00C3\u00A7\u00C3\u00A3o do valor das parcelas")
-  @JsonProperty("sistemaAmortizacao")
-  public String getSistemaAmortizacao() {
-    return sistemaAmortizacao;
+  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero de parcelas solicitado")
+  @JsonProperty("numeroParcelas")
+  public Integer getNumeroParcelas() {
+    return numeroParcelas;
   }
-  public void setSistemaAmortizacao(String sistemaAmortizacao) {
-    this.sistemaAmortizacao = sistemaAmortizacao;
+  public void setNumeroParcelas(Integer numeroParcelas) {
+    this.numeroParcelas = numeroParcelas;
+  }
+
+  
+  /**
+   * Limite m\u00C3\u00A1ximo de parcela permitido
+   **/
+  public EmprestimoPessoalResponse valorMaximoParcela(BigDecimal valorMaximoParcela) {
+    this.valorMaximoParcela = valorMaximoParcela;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Limite m\u00C3\u00A1ximo de parcela permitido")
+  @JsonProperty("valorMaximoParcela")
+  public BigDecimal getValorMaximoParcela() {
+    return valorMaximoParcela;
+  }
+  public void setValorMaximoParcela(BigDecimal valorMaximoParcela) {
+    this.valorMaximoParcela = valorMaximoParcela;
+  }
+
+  
+  /**
+   * Data do desconto da primeira parcela
+   **/
+  public EmprestimoPessoalResponse dataPrimeiraParcela(String dataPrimeiraParcela) {
+    this.dataPrimeiraParcela = dataPrimeiraParcela;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Data do desconto da primeira parcela")
+  @JsonProperty("dataPrimeiraParcela")
+  public String getDataPrimeiraParcela() {
+    return dataPrimeiraParcela;
+  }
+  public void setDataPrimeiraParcela(String dataPrimeiraParcela) {
+    this.dataPrimeiraParcela = dataPrimeiraParcela;
   }
 
   
@@ -119,20 +158,38 @@ public class EmprestimoPessoalResponse   {
 
   
   /**
-   * Data da primeira parcela do empr\u00C3\u00A9stimo/financiamento
+   * Sistema para amortiza\u00C3\u00A7\u00C3\u00A3o do valor das parcelas
    **/
-  public EmprestimoPessoalResponse dataPrimeiraParcela(String dataPrimeiraParcela) {
-    this.dataPrimeiraParcela = dataPrimeiraParcela;
+  public EmprestimoPessoalResponse sistemaAmortizacao(String sistemaAmortizacao) {
+    this.sistemaAmortizacao = sistemaAmortizacao;
     return this;
   }
   
-  @ApiModelProperty(example = "2017-10-20", value = "Data da primeira parcela do empr\u00C3\u00A9stimo/financiamento")
-  @JsonProperty("dataPrimeiraParcela")
-  public String getDataPrimeiraParcela() {
-    return dataPrimeiraParcela;
+  @ApiModelProperty(example = "null", value = "Sistema para amortiza\u00C3\u00A7\u00C3\u00A3o do valor das parcelas")
+  @JsonProperty("sistemaAmortizacao")
+  public String getSistemaAmortizacao() {
+    return sistemaAmortizacao;
   }
-  public void setDataPrimeiraParcela(String dataPrimeiraParcela) {
-    this.dataPrimeiraParcela = dataPrimeiraParcela;
+  public void setSistemaAmortizacao(String sistemaAmortizacao) {
+    this.sistemaAmortizacao = sistemaAmortizacao;
+  }
+
+  
+  /**
+   * Valor percentual da taxa de juros a ser aplicada
+   **/
+  public EmprestimoPessoalResponse taxaJuros(BigDecimal taxaJuros) {
+    this.taxaJuros = taxaJuros;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor percentual da taxa de juros a ser aplicada")
+  @JsonProperty("taxaJuros")
+  public BigDecimal getTaxaJuros() {
+    return taxaJuros;
+  }
+  public void setTaxaJuros(BigDecimal taxaJuros) {
+    this.taxaJuros = taxaJuros;
   }
 
   
@@ -148,15 +205,18 @@ public class EmprestimoPessoalResponse   {
     EmprestimoPessoalResponse emprestimoPessoalResponse = (EmprestimoPessoalResponse) o;
     return Objects.equals(this.planosParcelamentos, emprestimoPessoalResponse.planosParcelamentos) &&
         Objects.equals(this.valorSolicitado, emprestimoPessoalResponse.valorSolicitado) &&
-        Objects.equals(this.valorTotal, emprestimoPessoalResponse.valorTotal) &&
-        Objects.equals(this.sistemaAmortizacao, emprestimoPessoalResponse.sistemaAmortizacao) &&
+        Objects.equals(this.valorMaximoSolicitacao, emprestimoPessoalResponse.valorMaximoSolicitacao) &&
+        Objects.equals(this.numeroParcelas, emprestimoPessoalResponse.numeroParcelas) &&
+        Objects.equals(this.valorMaximoParcela, emprestimoPessoalResponse.valorMaximoParcela) &&
+        Objects.equals(this.dataPrimeiraParcela, emprestimoPessoalResponse.dataPrimeiraParcela) &&
         Objects.equals(this.periodoTaxa, emprestimoPessoalResponse.periodoTaxa) &&
-        Objects.equals(this.dataPrimeiraParcela, emprestimoPessoalResponse.dataPrimeiraParcela);
+        Objects.equals(this.sistemaAmortizacao, emprestimoPessoalResponse.sistemaAmortizacao) &&
+        Objects.equals(this.taxaJuros, emprestimoPessoalResponse.taxaJuros);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(planosParcelamentos, valorSolicitado, valorTotal, sistemaAmortizacao, periodoTaxa, dataPrimeiraParcela);
+    return Objects.hash(planosParcelamentos, valorSolicitado, valorMaximoSolicitacao, numeroParcelas, valorMaximoParcela, dataPrimeiraParcela, periodoTaxa, sistemaAmortizacao, taxaJuros);
   }
 
   @Override
@@ -166,10 +226,13 @@ public class EmprestimoPessoalResponse   {
     
     sb.append("    planosParcelamentos: ").append(toIndentedString(planosParcelamentos)).append("\n");
     sb.append("    valorSolicitado: ").append(toIndentedString(valorSolicitado)).append("\n");
-    sb.append("    valorTotal: ").append(toIndentedString(valorTotal)).append("\n");
-    sb.append("    sistemaAmortizacao: ").append(toIndentedString(sistemaAmortizacao)).append("\n");
-    sb.append("    periodoTaxa: ").append(toIndentedString(periodoTaxa)).append("\n");
+    sb.append("    valorMaximoSolicitacao: ").append(toIndentedString(valorMaximoSolicitacao)).append("\n");
+    sb.append("    numeroParcelas: ").append(toIndentedString(numeroParcelas)).append("\n");
+    sb.append("    valorMaximoParcela: ").append(toIndentedString(valorMaximoParcela)).append("\n");
     sb.append("    dataPrimeiraParcela: ").append(toIndentedString(dataPrimeiraParcela)).append("\n");
+    sb.append("    periodoTaxa: ").append(toIndentedString(periodoTaxa)).append("\n");
+    sb.append("    sistemaAmortizacao: ").append(toIndentedString(sistemaAmortizacao)).append("\n");
+    sb.append("    taxaJuros: ").append(toIndentedString(taxaJuros)).append("\n");
     sb.append("}");
     return sb.toString();
   }

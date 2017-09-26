@@ -11,6 +11,7 @@ import java.math.BigDecimal;
 import br.com.conductor.pier.api.v2.model.AjusteResponse;
 import br.com.conductor.pier.api.v2.model.LimiteDisponibilidadeResponse;
 import br.com.conductor.pier.api.v2.model.ContaResponse;
+import br.com.conductor.pier.api.v2.model.BeneficioPagamentoAtrasoResponse;
 import br.com.conductor.pier.api.v2.model.BoletoResponse;
 import br.com.conductor.pier.api.v2.model.DividaClienteResponse;
 import br.com.conductor.pier.api.v2.model.DetalhesFaturaConsignadaResponse;
@@ -34,6 +35,8 @@ import br.com.conductor.pier.api.v2.model.PageContaHistoricoPagamentoResponse;
 import br.com.conductor.pier.api.v2.model.PageTransacoesCorrentesResponse;
 import br.com.conductor.pier.api.v2.model.PageTransferenciaBancariaResponse;
 import br.com.conductor.pier.api.v2.model.PageContaResponse;
+import br.com.conductor.pier.api.v2.model.EmprestimoPessoalRequest;
+import br.com.conductor.pier.api.v2.model.EmprestimoPessoalResponse;
 import br.com.conductor.pier.api.v2.model.PageTransacaoResponse;
 import br.com.conductor.pier.api.v2.model.TransferenciaBancariaPersist;
 
@@ -572,6 +575,54 @@ public class ContaApi {
     
     GenericType<ContaResponse> returnType = new GenericType<ContaResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Apresenta a data m\u00C3\u00A1xima para pagamento da fatura em atraso para receber o benef\u00C3\u00ADcio.
+   * Este m\u00C3\u00A9todo permite consultar se o cliente tem direito ao benef\u00C3\u00ADcio de pagamento em atraso, em loja, at\u00C3\u00A9 o s\u00C3\u00A1bado subsequente ao vencimento, ficando isento do pagamento de multa, encargos, mora e IOF.
+   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * @return BeneficioPagamentoAtrasoResponse
+   */
+  public BeneficioPagamentoAtrasoResponse consultarBeneficioPagamentoAtrasoUsingGET(Long id) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarBeneficioPagamentoAtrasoUsingGET");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/{id}/consultar-beneficio-pagamento-atraso".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<BeneficioPagamentoAtrasoResponse> returnType = new GenericType<BeneficioPagamentoAtrasoResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
@@ -2241,6 +2292,60 @@ public class ContaApi {
 
     
     GenericType<Object> returnType = new GenericType<Object>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Simula valores de presta\u00C3\u00A7\u00C3\u00B5es de empr\u00C3\u00A9stimos/financiamentos
+   * Esta opera\u00C3\u00A7\u00C3\u00A3o pode ser utilizada para simular opera\u00C3\u00A7\u00C3\u00B5es financeiras a partir de informa\u00C3\u00A7\u00C3\u00B5es fornecidas pelo usu\u00C3\u00A1rio. Os c\u00C3\u00A1lculos gerados devem ser considerados apenas como refer\u00C3\u00AAncia para as situa\u00C3\u00A7\u00C3\u00B5es reais e n\u00C3\u00A3o como valores oficiais.
+   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * @param request request
+   * @return EmprestimoPessoalResponse
+   */
+  public EmprestimoPessoalResponse simularEmprestimoFinanciamentoUsingPOST(Long id, EmprestimoPessoalRequest request) throws ApiException {
+    Object postBody = request;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling simularEmprestimoFinanciamentoUsingPOST");
+     }
+     
+     // verify the required parameter 'request' is set
+     if (request == null) {
+        throw new ApiException(400, "Missing the required parameter 'request' when calling simularEmprestimoFinanciamentoUsingPOST");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/{id}/simular-emprestimos-financiamentos".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<EmprestimoPessoalResponse> returnType = new GenericType<EmprestimoPessoalResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

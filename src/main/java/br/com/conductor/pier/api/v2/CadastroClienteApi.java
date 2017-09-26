@@ -1369,6 +1369,55 @@ public class CadastroClienteApi {
   }
   
   /**
+   * Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
+   * Este recurso permite incluir uma conta como registro para integra\u00C3\u00A7\u00C3\u00A3o.
+   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * @param body Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada
+   * @return IntegracaoEmissorResponse
+   */
+  public IntegracaoEmissorResponse salvarUsingPOST10(Long id, IntegracaoEmissorPersist body) throws ApiException {
+    Object postBody = body;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling salvarUsingPOST10");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/{id}/incluir-registro-integracao".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<IntegracaoEmissorResponse> returnType = new GenericType<IntegracaoEmissorResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Salvar os detalhes de uma determinada Pessoa
    * Este m\u00C3\u00A9todo permite que seja incluido na base do emissor os detalhes de uma determinada Pessoa.
    * @param idPessoa Apresenta o c\u00C3\u00B3digo identificador da pessoa
@@ -1383,12 +1432,12 @@ public class CadastroClienteApi {
    * @param nomeEmpresa Nome que deve ser impresso no cart\u00C3\u00A3o
    * @return PessoaDetalheResponse
    */
-  public PessoaDetalheResponse salvarUsingPOST10(Long idPessoa, String nomeMae, Long idEstadoCivil, String idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa) throws ApiException {
+  public PessoaDetalheResponse salvarUsingPOST13(Long idPessoa, String nomeMae, Long idEstadoCivil, String idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idPessoa' is set
      if (idPessoa == null) {
-        throw new ApiException(400, "Missing the required parameter 'idPessoa' when calling salvarUsingPOST10");
+        throw new ApiException(400, "Missing the required parameter 'idPessoa' when calling salvarUsingPOST13");
      }
      
     // create path and map variables
@@ -1459,17 +1508,17 @@ public class CadastroClienteApi {
    * @param dataEmissaoIdentidade Data emiss\u00C3\u00A3o da Identidade.
    * @return PessoaResponse
    */
-  public PessoaResponse salvarUsingPOST11(String nome, String tipo, String cpf, String cnpj, String dataNascimento, String sexo, String numeroIdentidade, String orgaoExpedidorIdentidade, String unidadeFederativaIdentidade, String dataEmissaoIdentidade) throws ApiException {
+  public PessoaResponse salvarUsingPOST14(String nome, String tipo, String cpf, String cnpj, String dataNascimento, String sexo, String numeroIdentidade, String orgaoExpedidorIdentidade, String unidadeFederativaIdentidade, String dataEmissaoIdentidade) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'nome' is set
      if (nome == null) {
-        throw new ApiException(400, "Missing the required parameter 'nome' when calling salvarUsingPOST11");
+        throw new ApiException(400, "Missing the required parameter 'nome' when calling salvarUsingPOST14");
      }
      
      // verify the required parameter 'tipo' is set
      if (tipo == null) {
-        throw new ApiException(400, "Missing the required parameter 'tipo' when calling salvarUsingPOST11");
+        throw new ApiException(400, "Missing the required parameter 'tipo' when calling salvarUsingPOST14");
      }
      
     // create path and map variables
@@ -1535,7 +1584,7 @@ public class CadastroClienteApi {
    * @param ramal N\u00C3\u00BAmero do ramal.
    * @return TelefoneResponse
    */
-  public TelefoneResponse salvarUsingPOST13(Long idTipoTelefone, Long idPessoa, String ddd, String telefone, String ramal) throws ApiException {
+  public TelefoneResponse salvarUsingPOST16(Long idTipoTelefone, Long idPessoa, String ddd, String telefone, String ramal) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -1597,7 +1646,7 @@ public class CadastroClienteApi {
    * @param pais Apresenta nome do Pais
    * @return EnderecoResponse
    */
-  public EnderecoResponse salvarUsingPOST5(Long idPessoa, Long idTipoEndereco, String cep, String logradouro, Integer numero, String complemento, String pontoReferencia, String bairro, String cidade, String uf, String pais) throws ApiException {
+  public EnderecoResponse salvarUsingPOST8(Long idPessoa, Long idTipoEndereco, String cep, String logradouro, Integer numero, String complemento, String pontoReferencia, String bairro, String cidade, String uf, String pais) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -1651,55 +1700,6 @@ public class CadastroClienteApi {
 
     
     GenericType<EnderecoResponse> returnType = new GenericType<EnderecoResponse>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
-   * Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
-   * Este recurso permite incluir uma conta como registro para integra\u00C3\u00A7\u00C3\u00A3o.
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-   * @param body Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada
-   * @return IntegracaoEmissorResponse
-   */
-  public IntegracaoEmissorResponse salvarUsingPOST7(Long id, IntegracaoEmissorPersist body) throws ApiException {
-    Object postBody = body;
-    
-     // verify the required parameter 'id' is set
-     if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling salvarUsingPOST7");
-     }
-     
-    // create path and map variables
-    String path = "/api/contas/{id}/incluir-registro-integracao".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<IntegracaoEmissorResponse> returnType = new GenericType<IntegracaoEmissorResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

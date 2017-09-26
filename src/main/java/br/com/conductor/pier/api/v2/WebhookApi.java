@@ -224,17 +224,17 @@ public class WebhookApi {
    * @param url URL que a ser consumida pelo WebHook
    * @return WebHookResponse
    */
-  public WebHookResponse salvarUsingPOST17(String tipoEvento, String url) throws ApiException {
+  public WebHookResponse salvarUsingPOST20(String tipoEvento, String url) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'tipoEvento' is set
      if (tipoEvento == null) {
-        throw new ApiException(400, "Missing the required parameter 'tipoEvento' when calling salvarUsingPOST17");
+        throw new ApiException(400, "Missing the required parameter 'tipoEvento' when calling salvarUsingPOST20");
      }
      
      // verify the required parameter 'url' is set
      if (url == null) {
-        throw new ApiException(400, "Missing the required parameter 'url' when calling salvarUsingPOST17");
+        throw new ApiException(400, "Missing the required parameter 'url' when calling salvarUsingPOST20");
      }
      
     // create path and map variables

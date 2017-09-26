@@ -841,64 +841,17 @@ public class OportunidadeApi {
   }
   
   /**
-   * Cadastra tipos oportunidades
-   * Esse recurso permite cadastrar tipos oportunidades.
-   * @param persist persist
-   * @return TipoOportunidadeResponse
-   */
-  public TipoOportunidadeResponse salvarUsingPOST14(TipoOportunidade persist) throws ApiException {
-    Object postBody = persist;
-    
-     // verify the required parameter 'persist' is set
-     if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST14");
-     }
-     
-    // create path and map variables
-    String path = "/api/tipos-oportunidades".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<TipoOportunidadeResponse> returnType = new GenericType<TipoOportunidadeResponse>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
    * Cadastra as oportunidades
    * Esse recurso permite cadastrar oportunidades.
    * @param persist persist
    * @return OportunidadeResponse
    */
-  public OportunidadeResponse salvarUsingPOST9(OportunidadePersist persist) throws ApiException {
+  public OportunidadeResponse salvarUsingPOST12(OportunidadePersist persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST9");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST12");
      }
      
     // create path and map variables
@@ -930,6 +883,53 @@ public class OportunidadeApi {
 
     
     GenericType<OportunidadeResponse> returnType = new GenericType<OportunidadeResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Cadastra tipos oportunidades
+   * Esse recurso permite cadastrar tipos oportunidades.
+   * @param persist persist
+   * @return TipoOportunidadeResponse
+   */
+  public TipoOportunidadeResponse salvarUsingPOST17(TipoOportunidade persist) throws ApiException {
+    Object postBody = persist;
+    
+     // verify the required parameter 'persist' is set
+     if (persist == null) {
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST17");
+     }
+     
+    // create path and map variables
+    String path = "/api/tipos-oportunidades".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<TipoOportunidadeResponse> returnType = new GenericType<TipoOportunidadeResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

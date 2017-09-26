@@ -23,7 +23,6 @@ public class EmprestimoPessoalRequest   {
   private BigDecimal taxaJuros = null;
   private String periodoTaxa = null;
   private String sistemaAmortizacao = null;
-  private Integer diaVencimento = null;
   private Integer numeroMesesCarencia = null;
 
   
@@ -118,24 +117,6 @@ public class EmprestimoPessoalRequest   {
 
   
   /**
-   * Dia para cobran\u00C3\u00A7a da primeira parcela
-   **/
-  public EmprestimoPessoalRequest diaVencimento(Integer diaVencimento) {
-    this.diaVencimento = diaVencimento;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", required = true, value = "Dia para cobran\u00C3\u00A7a da primeira parcela")
-  @JsonProperty("diaVencimento")
-  public Integer getDiaVencimento() {
-    return diaVencimento;
-  }
-  public void setDiaVencimento(Integer diaVencimento) {
-    this.diaVencimento = diaVencimento;
-  }
-
-  
-  /**
    * N\u00C3\u00BAmero de meses para cobran\u00C3\u00A7a da primeira parcela
    **/
   public EmprestimoPessoalRequest numeroMesesCarencia(Integer numeroMesesCarencia) {
@@ -168,13 +149,12 @@ public class EmprestimoPessoalRequest   {
         Objects.equals(this.taxaJuros, emprestimoPessoalRequest.taxaJuros) &&
         Objects.equals(this.periodoTaxa, emprestimoPessoalRequest.periodoTaxa) &&
         Objects.equals(this.sistemaAmortizacao, emprestimoPessoalRequest.sistemaAmortizacao) &&
-        Objects.equals(this.diaVencimento, emprestimoPessoalRequest.diaVencimento) &&
         Objects.equals(this.numeroMesesCarencia, emprestimoPessoalRequest.numeroMesesCarencia);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(valorSolicitado, numeroParcelas, taxaJuros, periodoTaxa, sistemaAmortizacao, diaVencimento, numeroMesesCarencia);
+    return Objects.hash(valorSolicitado, numeroParcelas, taxaJuros, periodoTaxa, sistemaAmortizacao, numeroMesesCarencia);
   }
 
   @Override
@@ -187,7 +167,6 @@ public class EmprestimoPessoalRequest   {
     sb.append("    taxaJuros: ").append(toIndentedString(taxaJuros)).append("\n");
     sb.append("    periodoTaxa: ").append(toIndentedString(periodoTaxa)).append("\n");
     sb.append("    sistemaAmortizacao: ").append(toIndentedString(sistemaAmortizacao)).append("\n");
-    sb.append("    diaVencimento: ").append(toIndentedString(diaVencimento)).append("\n");
     sb.append("    numeroMesesCarencia: ").append(toIndentedString(numeroMesesCarencia)).append("\n");
     sb.append("}");
     return sb.toString();

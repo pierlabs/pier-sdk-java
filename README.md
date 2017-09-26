@@ -37,7 +37,7 @@ Depois da biblioteca Maven instalada vocÃª pode utilizar em seus projetos Java
 	<dependency>
 	    <groupId>com.github.devconductor</groupId>
 	    <artifactId>pier-sdk-java</artifactId>
-	    <version>2.33.0</version>
+	    <version>2.35.2</version>
 	</dependency>
 ```
 
@@ -55,7 +55,7 @@ Depois da biblioteca Maven instalada vocÃª pode utilizar em seus projetos Java
 #### DependÃªncia
 ```groovy
 	dependencies {
-	 	compile 'com.github.devconductor:pier-sdk-java:2.33.0'
+	 	compile 'com.github.devconductor:pier-sdk-java:2.35.2'
 	}
 ```
 

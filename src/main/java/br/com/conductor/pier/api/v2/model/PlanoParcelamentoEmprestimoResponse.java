@@ -21,8 +21,8 @@ public class PlanoParcelamentoEmprestimoResponse   {
   private Integer numeroParcelas = null;
   private BigDecimal valorParcelas = null;
   private BigDecimal taxaJuros = null;
-  private BigDecimal valorPercentualCET = null;
   private BigDecimal valorTributosIOF = null;
+  private BigDecimal valorPercentualCET = null;
 
   
   /**
@@ -80,24 +80,6 @@ public class PlanoParcelamentoEmprestimoResponse   {
 
   
   /**
-   * valor percentual do Custo Efetivo Total, ao ano, do empr\u00C3\u00A9stimo / financiamento
-   **/
-  public PlanoParcelamentoEmprestimoResponse valorPercentualCET(BigDecimal valorPercentualCET) {
-    this.valorPercentualCET = valorPercentualCET;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "valor percentual do Custo Efetivo Total, ao ano, do empr\u00C3\u00A9stimo / financiamento")
-  @JsonProperty("valorPercentualCET")
-  public BigDecimal getValorPercentualCET() {
-    return valorPercentualCET;
-  }
-  public void setValorPercentualCET(BigDecimal valorPercentualCET) {
-    this.valorPercentualCET = valorPercentualCET;
-  }
-
-  
-  /**
    * valor total estimado dos tributos do Imposto sobre Opera\u00C3\u00A7\u00C3\u00B5es Financeiras
    **/
   public PlanoParcelamentoEmprestimoResponse valorTributosIOF(BigDecimal valorTributosIOF) {
@@ -115,6 +97,24 @@ public class PlanoParcelamentoEmprestimoResponse   {
   }
 
   
+  /**
+   * valor percentual do Custo Efetivo Total, ao ano, do empr\u00C3\u00A9stimo / financiamento
+   **/
+  public PlanoParcelamentoEmprestimoResponse valorPercentualCET(BigDecimal valorPercentualCET) {
+    this.valorPercentualCET = valorPercentualCET;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "valor percentual do Custo Efetivo Total, ao ano, do empr\u00C3\u00A9stimo / financiamento")
+  @JsonProperty("valorPercentualCET")
+  public BigDecimal getValorPercentualCET() {
+    return valorPercentualCET;
+  }
+  public void setValorPercentualCET(BigDecimal valorPercentualCET) {
+    this.valorPercentualCET = valorPercentualCET;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -128,13 +128,13 @@ public class PlanoParcelamentoEmprestimoResponse   {
     return Objects.equals(this.numeroParcelas, planoParcelamentoEmprestimoResponse.numeroParcelas) &&
         Objects.equals(this.valorParcelas, planoParcelamentoEmprestimoResponse.valorParcelas) &&
         Objects.equals(this.taxaJuros, planoParcelamentoEmprestimoResponse.taxaJuros) &&
-        Objects.equals(this.valorPercentualCET, planoParcelamentoEmprestimoResponse.valorPercentualCET) &&
-        Objects.equals(this.valorTributosIOF, planoParcelamentoEmprestimoResponse.valorTributosIOF);
+        Objects.equals(this.valorTributosIOF, planoParcelamentoEmprestimoResponse.valorTributosIOF) &&
+        Objects.equals(this.valorPercentualCET, planoParcelamentoEmprestimoResponse.valorPercentualCET);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(numeroParcelas, valorParcelas, taxaJuros, valorPercentualCET, valorTributosIOF);
+    return Objects.hash(numeroParcelas, valorParcelas, taxaJuros, valorTributosIOF, valorPercentualCET);
   }
 
   @Override
@@ -145,8 +145,8 @@ public class PlanoParcelamentoEmprestimoResponse   {
     sb.append("    numeroParcelas: ").append(toIndentedString(numeroParcelas)).append("\n");
     sb.append("    valorParcelas: ").append(toIndentedString(valorParcelas)).append("\n");
     sb.append("    taxaJuros: ").append(toIndentedString(taxaJuros)).append("\n");
-    sb.append("    valorPercentualCET: ").append(toIndentedString(valorPercentualCET)).append("\n");
     sb.append("    valorTributosIOF: ").append(toIndentedString(valorTributosIOF)).append("\n");
+    sb.append("    valorPercentualCET: ").append(toIndentedString(valorPercentualCET)).append("\n");
     sb.append("}");
     return sb.toString();
   }

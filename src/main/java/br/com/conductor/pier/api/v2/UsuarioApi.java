@@ -43,6 +43,62 @@ public class UsuarioApi {
 
   
   /**
+   * Alterar senha do usu\u00C3\u00A1rio.
+   * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
+   * @param login Login do usu\u00C3\u00A1rio.
+   * @param senhaNova Senha Nova
+   * @return String
+   */
+  public String alterarSenhaLoginUsingPOST(String login, String senhaNova) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'login' is set
+     if (login == null) {
+        throw new ApiException(400, "Missing the required parameter 'login' when calling alterarSenhaLoginUsingPOST");
+     }
+     
+     // verify the required parameter 'senhaNova' is set
+     if (senhaNova == null) {
+        throw new ApiException(400, "Missing the required parameter 'senhaNova' when calling alterarSenhaLoginUsingPOST");
+     }
+     
+    // create path and map variables
+    String path = "/api/usuarios/{login}/alterar-senha".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "login" + "\\}", apiClient.escapeString(login.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    if (senhaNova != null)
+      headerParams.put("senhaNova", apiClient.parameterToString(senhaNova));
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<String> returnType = new GenericType<String>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
    * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
@@ -107,7 +163,7 @@ public class UsuarioApi {
   }
   
   /**
-   * Altera os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+   * Altera os usu\u00C3\u00A1rios cadastrados na base.
    * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
    * @param update update
@@ -415,17 +471,17 @@ public class UsuarioApi {
   }
   
   /**
-   * Cadastra Usu\u00C3\u00A1rio na base do PIER ou WS.
+   * Cadastra Usu\u00C3\u00A1rio na base.
    * Esse recurso permite cadastrar usu\u00C3\u00A1rios.
    * @param persist persist
    * @return UsuarioResponse
    */
-  public UsuarioResponse salvarUsingPOST16(UsuarioPersist persist) throws ApiException {
+  public UsuarioResponse salvarUsingPOST19(UsuarioPersist persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST16");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST19");
      }
      
     // create path and map variables
@@ -457,6 +513,62 @@ public class UsuarioApi {
 
     
     GenericType<UsuarioResponse> returnType = new GenericType<UsuarioResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
+   * O recurso permite fazer login do usu\u00C3\u00A1rio atrav\u00C3\u00A9s da senha definida pelo emissor.
+   * @param login Login identificador do usu\u00C3\u00A1rio (login).
+   * @param senha Senha do usu\u00C3\u00A1rio
+   * @return Object
+   */
+  public Object validarSenhaLoginUsingPOST(String login, String senha) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'login' is set
+     if (login == null) {
+        throw new ApiException(400, "Missing the required parameter 'login' when calling validarSenhaLoginUsingPOST");
+     }
+     
+     // verify the required parameter 'senha' is set
+     if (senha == null) {
+        throw new ApiException(400, "Missing the required parameter 'senha' when calling validarSenhaLoginUsingPOST");
+     }
+     
+    // create path and map variables
+    String path = "/api/usuarios/{login}/validar-senha".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "login" + "\\}", apiClient.escapeString(login.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    if (senha != null)
+      headerParams.put("senha", apiClient.parameterToString(senha));
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<Object> returnType = new GenericType<Object>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

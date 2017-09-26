@@ -16,6 +16,8 @@ import br.com.conductor.pier.api.v2.model.PageConfiguracaoEmailResponse;
 import br.com.conductor.pier.api.v2.model.PagePushResponse;
 import br.com.conductor.pier.api.v2.model.PageSMSResponse;
 import br.com.conductor.pier.api.v2.model.PageTemplateNotificacaoResponse;
+import br.com.conductor.pier.api.v2.model.NotificacaoEmailResponse;
+import br.com.conductor.pier.api.v2.model.NotificacaoEmailRequest;
 import br.com.conductor.pier.api.v2.model.NotificacaoResponse;
 import br.com.conductor.pier.api.v2.model.PushFCMEGCM;
 import br.com.conductor.pier.api.v2.model.PushAPNS;
@@ -114,10 +116,11 @@ public class NotificacaoApi {
    * @param idConfiguracaoEmail C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL.
    * @param tipoLayout Tipo do layout.
    * @param tipoNotificacao Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+   * @param remetente Remetente
    * @param assunto Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
    * @return TemplateNotificacaoResponse
    */
-  public TemplateNotificacaoResponse alterarTemplateNotificacaoUsingPUT(Long id, String conteudo, Long idConfiguracaoEmail, String tipoLayout, String tipoNotificacao, String assunto) throws ApiException {
+  public TemplateNotificacaoResponse alterarTemplateNotificacaoUsingPUT(Long id, String conteudo, Long idConfiguracaoEmail, String tipoLayout, String tipoNotificacao, String remetente, String assunto) throws ApiException {
     Object postBody = conteudo;
     
      // verify the required parameter 'id' is set
@@ -145,6 +148,8 @@ public class NotificacaoApi {
     queryParams.addAll(apiClient.parameterToPairs("", "tipoLayout", tipoLayout));
     
     queryParams.addAll(apiClient.parameterToPairs("", "tipoNotificacao", tipoNotificacao));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "remetente", remetente));
     
     queryParams.addAll(apiClient.parameterToPairs("", "assunto", assunto));
     
@@ -646,6 +651,53 @@ public class NotificacaoApi {
   }
   
   /**
+   * Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
+   * Esse recurso permite enviar uma mensagem de notifica\u00C3\u00A7\u00C3\u00A3o por email
+   * @param request request
+   * @return NotificacaoEmailResponse
+   */
+  public NotificacaoEmailResponse notificacaoEmailUsingPOST(NotificacaoEmailRequest request) throws ApiException {
+    Object postBody = request;
+    
+     // verify the required parameter 'request' is set
+     if (request == null) {
+        throw new ApiException(400, "Missing the required parameter 'request' when calling notificacaoEmailUsingPOST");
+     }
+     
+    // create path and map variables
+    String path = "/api/notificacoes-email".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<NotificacaoEmailResponse> returnType = new GenericType<NotificacaoEmailResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Responder SMS
    * Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00C3\u00A1rio
    * @param nsu Seu n\u00C3\u00BAmero
@@ -937,10 +989,11 @@ public class NotificacaoApi {
    * @param idConfiguracaoEmail C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL.
    * @param tipoLayout Tipo do layout.
    * @param tipoNotificacao Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+   * @param remetente Remetente
    * @param assunto Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
    * @return TemplateNotificacaoResponse
    */
-  public TemplateNotificacaoResponse salvarTemplateNotificacaoUsingPOST(String conteudo, Long idConfiguracaoEmail, String tipoLayout, String tipoNotificacao, String assunto) throws ApiException {
+  public TemplateNotificacaoResponse salvarTemplateNotificacaoUsingPOST(String conteudo, Long idConfiguracaoEmail, String tipoLayout, String tipoNotificacao, String remetente, String assunto) throws ApiException {
     Object postBody = conteudo;
     
      // verify the required parameter 'conteudo' is set
@@ -962,6 +1015,8 @@ public class NotificacaoApi {
     queryParams.addAll(apiClient.parameterToPairs("", "tipoLayout", tipoLayout));
     
     queryParams.addAll(apiClient.parameterToPairs("", "tipoNotificacao", tipoNotificacao));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "remetente", remetente));
     
     queryParams.addAll(apiClient.parameterToPairs("", "assunto", assunto));
     

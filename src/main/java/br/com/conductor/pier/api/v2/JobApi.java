@@ -273,22 +273,22 @@ public class JobApi {
    * @param groovy groovy
    * @return JobResponse
    */
-  public JobResponse salvarUsingPOST8(String descricao, String cron, String groovy) throws ApiException {
+  public JobResponse salvarUsingPOST11(String descricao, String cron, String groovy) throws ApiException {
     Object postBody = groovy;
     
      // verify the required parameter 'descricao' is set
      if (descricao == null) {
-        throw new ApiException(400, "Missing the required parameter 'descricao' when calling salvarUsingPOST8");
+        throw new ApiException(400, "Missing the required parameter 'descricao' when calling salvarUsingPOST11");
      }
      
      // verify the required parameter 'cron' is set
      if (cron == null) {
-        throw new ApiException(400, "Missing the required parameter 'cron' when calling salvarUsingPOST8");
+        throw new ApiException(400, "Missing the required parameter 'cron' when calling salvarUsingPOST11");
      }
      
      // verify the required parameter 'groovy' is set
      if (groovy == null) {
-        throw new ApiException(400, "Missing the required parameter 'groovy' when calling salvarUsingPOST8");
+        throw new ApiException(400, "Missing the required parameter 'groovy' when calling salvarUsingPOST11");
      }
      
     // create path and map variables
