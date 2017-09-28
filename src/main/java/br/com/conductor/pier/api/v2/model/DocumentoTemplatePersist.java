@@ -15,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 @ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o do template do documento.")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class DocumentoTemplateRequest   {
+public class DocumentoTemplatePersist   {
   
   private Long idTipoDocumento = null;
   private String template = null;
@@ -24,7 +24,7 @@ public class DocumentoTemplateRequest   {
   /**
    * ID para o Tipo de Documento vinculado ao template.
    **/
-  public DocumentoTemplateRequest idTipoDocumento(Long idTipoDocumento) {
+  public DocumentoTemplatePersist idTipoDocumento(Long idTipoDocumento) {
     this.idTipoDocumento = idTipoDocumento;
     return this;
   }
@@ -42,7 +42,7 @@ public class DocumentoTemplateRequest   {
   /**
    * Template para o conte\u00C3\u00BAdo do documento.
    **/
-  public DocumentoTemplateRequest template(String template) {
+  public DocumentoTemplatePersist template(String template) {
     this.template = template;
     return this;
   }
@@ -66,9 +66,9 @@ public class DocumentoTemplateRequest   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    DocumentoTemplateRequest documentoTemplateRequest = (DocumentoTemplateRequest) o;
-    return Objects.equals(this.idTipoDocumento, documentoTemplateRequest.idTipoDocumento) &&
-        Objects.equals(this.template, documentoTemplateRequest.template);
+    DocumentoTemplatePersist documentoTemplatePersist = (DocumentoTemplatePersist) o;
+    return Objects.equals(this.idTipoDocumento, documentoTemplatePersist.idTipoDocumento) &&
+        Objects.equals(this.template, documentoTemplatePersist.template);
   }
 
   @Override
@@ -79,7 +79,7 @@ public class DocumentoTemplateRequest   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class DocumentoTemplateRequest {\n");
+    sb.append("class DocumentoTemplatePersist {\n");
     
     sb.append("    idTipoDocumento: ").append(toIndentedString(idTipoDocumento)).append("\n");
     sb.append("    template: ").append(toIndentedString(template)).append("\n");

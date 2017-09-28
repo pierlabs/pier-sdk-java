@@ -11,10 +11,11 @@ import br.com.conductor.pier.api.v2.model.ProdutoDetalhesResponse;
 import br.com.conductor.pier.api.v2.model.ParametroProdutoResponse;
 import br.com.conductor.pier.api.v2.model.TaxaAntecipacaoRequest;
 import br.com.conductor.pier.api.v2.model.OrigemComercialResponse;
-import br.com.conductor.pier.api.v2.model.PageTipoAjusteResponse;
 import br.com.conductor.pier.api.v2.model.AtendimentoClienteResponse;
+import br.com.conductor.pier.api.v2.model.PageTipoAjusteResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoBoletoResponse;
 import br.com.conductor.pier.api.v2.model.TipoEnderecoResponse;
+import br.com.conductor.pier.api.v2.model.TipoOperacaoResponse;
 import br.com.conductor.pier.api.v2.model.TipoTelefoneResponse;
 import br.com.conductor.pier.api.v2.model.BancoResponse;
 import br.com.conductor.pier.api.v2.model.PageContaDetalheResponse;
@@ -23,8 +24,8 @@ import br.com.conductor.pier.api.v2.model.PageFantasiaBasicaResponse;
 import br.com.conductor.pier.api.v2.model.HistoricoTelefoneResponse;
 import br.com.conductor.pier.api.v2.model.PageOrigemComercialResponse;
 import br.com.conductor.pier.api.v2.model.PagePortadorResponse;
-import br.com.conductor.pier.api.v2.model.PageProdutoResponse;
 import br.com.conductor.pier.api.v2.model.PageAtendimentoClienteResponse;
+import br.com.conductor.pier.api.v2.model.PageProdutoResponse;
 import br.com.conductor.pier.api.v2.model.PagePromotorResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoEnderecoResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoTelefoneResponse;
@@ -273,12 +274,12 @@ public class CadastroGeralApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
    * @return ProdutoDetalhesResponse
    */
-  public ProdutoDetalhesResponse consultarUsingGET13(Long id) throws ApiException {
+  public ProdutoDetalhesResponse consultarUsingGET14(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET13");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET14");
      }
      
     // create path and map variables
@@ -311,62 +312,6 @@ public class CadastroGeralApi {
 
     
     GenericType<ProdutoDetalhesResponse> returnType = new GenericType<ProdutoDetalhesResponse>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
-   * Lista os tipos de ajustes do emissor 
-   * Este recurso permite que sejam listados os tipos de ajustes existentes na base de dados do emissor.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param id C\u00C3\u00B3digo identificador do tipo de ajuste.
-   * @param descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de ajuste.
-   * @return PageTipoAjusteResponse
-   */
-  public PageTipoAjusteResponse consultarUsingGET19(List<String> sort, Integer page, Integer limit, Long id, String descricao) throws ApiException {
-    Object postBody = null;
-    
-    // create path and map variables
-    String path = "/api/tipos-ajustes".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "id", id));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "descricao", descricao));
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<PageTipoAjusteResponse> returnType = new GenericType<PageTipoAjusteResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -420,6 +365,62 @@ public class CadastroGeralApi {
   }
   
   /**
+   * Lista os tipos de ajustes do emissor 
+   * Este recurso permite que sejam listados os tipos de ajustes existentes na base de dados do emissor.
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @param id C\u00C3\u00B3digo identificador do tipo de ajuste.
+   * @param descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de ajuste.
+   * @return PageTipoAjusteResponse
+   */
+  public PageTipoAjusteResponse consultarUsingGET20(List<String> sort, Integer page, Integer limit, Long id, String descricao) throws ApiException {
+    Object postBody = null;
+    
+    // create path and map variables
+    String path = "/api/tipos-ajustes".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "id", id));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "descricao", descricao));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PageTipoAjusteResponse> returnType = new GenericType<PageTipoAjusteResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Lista os tipos de boletos do emissor 
    * Este recurso permite que sejam listados os tipos de boletos existentes na base de dados do emissor.
    * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
@@ -430,7 +431,7 @@ public class CadastroGeralApi {
    * @param banco C\u00C3\u00B3digo identificador do banco.
    * @return PageTipoBoletoResponse
    */
-  public PageTipoBoletoResponse consultarUsingGET20(List<String> sort, Integer page, Integer limit, Long id, String descricao, Long banco) throws ApiException {
+  public PageTipoBoletoResponse consultarUsingGET21(List<String> sort, Integer page, Integer limit, Long id, String descricao, Long banco) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -484,12 +485,12 @@ public class CadastroGeralApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
    * @return TipoEnderecoResponse
    */
-  public TipoEnderecoResponse consultarUsingGET21(Long id) throws ApiException {
+  public TipoEnderecoResponse consultarUsingGET22(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET21");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET22");
      }
      
     // create path and map variables
@@ -527,17 +528,82 @@ public class CadastroGeralApi {
   }
   
   /**
+   * Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
+   * Este recurso permite consultar dados de um determinado tipo opera\u00C3\u00A7\u00C3\u00A3o a partir do idCartao, idEstabelecimento e codigoProcessamento.
+   * @param idCartao C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cartao (idCartao).
+   * @param idEstabelecimento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (idEstabelecimento).
+   * @param codigoProcessamento C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o.
+   * @return TipoOperacaoResponse
+   */
+  public TipoOperacaoResponse consultarUsingGET23(Long idCartao, Long idEstabelecimento, String codigoProcessamento) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'idCartao' is set
+     if (idCartao == null) {
+        throw new ApiException(400, "Missing the required parameter 'idCartao' when calling consultarUsingGET23");
+     }
+     
+     // verify the required parameter 'idEstabelecimento' is set
+     if (idEstabelecimento == null) {
+        throw new ApiException(400, "Missing the required parameter 'idEstabelecimento' when calling consultarUsingGET23");
+     }
+     
+     // verify the required parameter 'codigoProcessamento' is set
+     if (codigoProcessamento == null) {
+        throw new ApiException(400, "Missing the required parameter 'codigoProcessamento' when calling consultarUsingGET23");
+     }
+     
+    // create path and map variables
+    String path = "/api/tipos-operacoes".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idCartao", idCartao));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idEstabelecimento", idEstabelecimento));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "codigoProcessamento", codigoProcessamento));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<TipoOperacaoResponse> returnType = new GenericType<TipoOperacaoResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Apresenta os dados de um determinado Tipo de Telefone
    * Este m\u00C3\u00A9todo permite consultar um determinado Tipo de Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
    * @return TipoTelefoneResponse
    */
-  public TipoTelefoneResponse consultarUsingGET23(Long id) throws ApiException {
+  public TipoTelefoneResponse consultarUsingGET25(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET23");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET25");
      }
      
     // create path and map variables
@@ -1159,7 +1225,7 @@ public class CadastroGeralApi {
    * @param dataCancelamentoPortador Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00C3\u00A7\u00C3\u00A3o.
    * @return PagePortadorResponse
    */
-  public PagePortadorResponse listarUsingGET18(List<String> sort, Integer page, Integer limit, Long idConta, Long idProduto, Long idPessoa, Long idParentesco, String tipoPortador, String nomeImpresso, Long idTipoCartao, Integer flagAtivo, String dataCadastroPortador, String dataCancelamentoPortador) throws ApiException {
+  public PagePortadorResponse listarUsingGET19(List<String> sort, Integer page, Integer limit, Long idConta, Long idProduto, Long idPessoa, Long idParentesco, String tipoPortador, String nomeImpresso, Long idTipoCartao, Integer flagAtivo, String dataCadastroPortador, String dataCancelamentoPortador) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -1217,65 +1283,6 @@ public class CadastroGeralApi {
 
     
     GenericType<PagePortadorResponse> returnType = new GenericType<PagePortadorResponse>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
-   * Lista os Produtos do Emissor
-   * Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
-   * @param status Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo).
-   * @param idFantasiaBasica C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.
-   * @return PageProdutoResponse
-   */
-  public PageProdutoResponse listarUsingGET19(List<String> sort, Integer page, Integer limit, String nome, Integer status, Long idFantasiaBasica) throws ApiException {
-    Object postBody = null;
-    
-    // create path and map variables
-    String path = "/api/produtos".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "nome", nome));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "status", status));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "idFantasiaBasica", idFantasiaBasica));
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<PageProdutoResponse> returnType = new GenericType<PageProdutoResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -1343,6 +1350,65 @@ public class CadastroGeralApi {
   }
   
   /**
+   * Lista os Produtos do Emissor
+   * Este m\u00C3\u00A9todo permite que sejam listados os Produtos existentes na base de dados do Emissor.
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @param nome Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
+   * @param status Representa o Status do Produto, onde: (\&quot;0\&quot;: Inativo), (\&quot;1\&quot;: Ativo).
+   * @param idFantasiaBasica C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.
+   * @return PageProdutoResponse
+   */
+  public PageProdutoResponse listarUsingGET20(List<String> sort, Integer page, Integer limit, String nome, Integer status, Long idFantasiaBasica) throws ApiException {
+    Object postBody = null;
+    
+    // create path and map variables
+    String path = "/api/produtos".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "nome", nome));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "status", status));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idFantasiaBasica", idFantasiaBasica));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PageProdutoResponse> returnType = new GenericType<PageProdutoResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Lista promotores cadastrados na base do emissor
    * Este m\u00C3\u00A9todo permite que sejam listados os cadastros de Promoteres existentes na base de dados do Emissor.
    * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
@@ -1355,7 +1421,7 @@ public class CadastroGeralApi {
    * @param idUsuario C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do usu\u00C3\u00A1rio
    * @return PagePromotorResponse
    */
-  public PagePromotorResponse listarUsingGET20(List<String> sort, Integer page, Integer limit, Long id, String nome, String dataCadastro, Long idEstabelecimento, Long idUsuario) throws ApiException {
+  public PagePromotorResponse listarUsingGET21(List<String> sort, Integer page, Integer limit, Long id, String nome, String dataCadastro, Long idEstabelecimento, Long idUsuario) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -1417,7 +1483,7 @@ public class CadastroGeralApi {
    * @param nome Nome do Tipo do Endere\u00C3\u00A7o
    * @return PageTipoEnderecoResponse
    */
-  public PageTipoEnderecoResponse listarUsingGET26(List<String> sort, Integer page, Integer limit, Long id, String nome) throws ApiException {
+  public PageTipoEnderecoResponse listarUsingGET27(List<String> sort, Integer page, Integer limit, Long id, String nome) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -1473,7 +1539,7 @@ public class CadastroGeralApi {
    * @param nome Nome do Tipo do Telefone
    * @return PageTipoTelefoneResponse
    */
-  public PageTipoTelefoneResponse listarUsingGET28(List<String> sort, Integer page, Integer limit, Long id, String nome) throws ApiException {
+  public PageTipoTelefoneResponse listarUsingGET29(List<String> sort, Integer page, Integer limit, Long id, String nome) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -1578,7 +1644,7 @@ public class CadastroGeralApi {
    * @param dataVencimento Indica a data de vencimento das faturas
    * @return PageControleVencimentoResponse
    */
-  public PageControleVencimentoResponse listarUsingGET33(List<String> sort, Integer page, Integer limit, String dataVencimento) throws ApiException {
+  public PageControleVencimentoResponse listarUsingGET34(List<String> sort, Integer page, Integer limit, String dataVencimento) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

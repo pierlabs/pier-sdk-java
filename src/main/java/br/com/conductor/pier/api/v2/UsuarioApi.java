@@ -270,12 +270,12 @@ public class UsuarioApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
    * @return UsuarioResponse
    */
-  public UsuarioResponse consultarUsingGET27(Long id) throws ApiException {
+  public UsuarioResponse consultarUsingGET29(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET27");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET29");
      }
      
     // create path and map variables
@@ -372,7 +372,7 @@ public class UsuarioApi {
    * @param status Status do Usuario
    * @return PageUsuarioResponse
    */
-  public PageUsuarioResponse listarUsingGET32(List<String> sort, Integer page, Integer limit, String nome, String cpf, String email, String status) throws ApiException {
+  public PageUsuarioResponse listarUsingGET33(List<String> sort, Integer page, Integer limit, String nome, String cpf, String email, String status) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

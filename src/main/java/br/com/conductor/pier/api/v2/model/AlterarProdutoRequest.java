@@ -4,6 +4,7 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.math.BigDecimal;
 
 
 
@@ -17,8 +18,27 @@ import io.swagger.annotations.ApiModelProperty;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class AlterarProdutoRequest   {
   
-  private Long idOrigemComercial = null;
   private Long idProduto = null;
+  private Long idOrigemComercial = null;
+  private BigDecimal limiteGlobal = null;
+
+  
+  /**
+   * C\u00C3\u00B3digo identificador do produto.
+   **/
+  public AlterarProdutoRequest idProduto(Long idProduto) {
+    this.idProduto = idProduto;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "C\u00C3\u00B3digo identificador do produto.")
+  @JsonProperty("idProduto")
+  public Long getIdProduto() {
+    return idProduto;
+  }
+  public void setIdProduto(Long idProduto) {
+    this.idProduto = idProduto;
+  }
 
   
   /**
@@ -40,20 +60,20 @@ public class AlterarProdutoRequest   {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do produto.
+   * Valor do novo limite Global.
    **/
-  public AlterarProdutoRequest idProduto(Long idProduto) {
-    this.idProduto = idProduto;
+  public AlterarProdutoRequest limiteGlobal(BigDecimal limiteGlobal) {
+    this.limiteGlobal = limiteGlobal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "C\u00C3\u00B3digo identificador do produto.")
-  @JsonProperty("idProduto")
-  public Long getIdProduto() {
-    return idProduto;
+  @ApiModelProperty(example = "null", value = "Valor do novo limite Global.")
+  @JsonProperty("limiteGlobal")
+  public BigDecimal getLimiteGlobal() {
+    return limiteGlobal;
   }
-  public void setIdProduto(Long idProduto) {
-    this.idProduto = idProduto;
+  public void setLimiteGlobal(BigDecimal limiteGlobal) {
+    this.limiteGlobal = limiteGlobal;
   }
 
   
@@ -67,13 +87,14 @@ public class AlterarProdutoRequest   {
       return false;
     }
     AlterarProdutoRequest alterarProdutoRequest = (AlterarProdutoRequest) o;
-    return Objects.equals(this.idOrigemComercial, alterarProdutoRequest.idOrigemComercial) &&
-        Objects.equals(this.idProduto, alterarProdutoRequest.idProduto);
+    return Objects.equals(this.idProduto, alterarProdutoRequest.idProduto) &&
+        Objects.equals(this.idOrigemComercial, alterarProdutoRequest.idOrigemComercial) &&
+        Objects.equals(this.limiteGlobal, alterarProdutoRequest.limiteGlobal);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idOrigemComercial, idProduto);
+    return Objects.hash(idProduto, idOrigemComercial, limiteGlobal);
   }
 
   @Override
@@ -81,8 +102,9 @@ public class AlterarProdutoRequest   {
     StringBuilder sb = new StringBuilder();
     sb.append("class AlterarProdutoRequest {\n");
     
-    sb.append("    idOrigemComercial: ").append(toIndentedString(idOrigemComercial)).append("\n");
     sb.append("    idProduto: ").append(toIndentedString(idProduto)).append("\n");
+    sb.append("    idOrigemComercial: ").append(toIndentedString(idOrigemComercial)).append("\n");
+    sb.append("    limiteGlobal: ").append(toIndentedString(limiteGlobal)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -148,12 +148,12 @@ public class StatusParametroApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
    * @return StatusContaResponse
    */
-  public StatusContaResponse consultarUsingGET15(Long id) throws ApiException {
+  public StatusContaResponse consultarUsingGET16(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET15");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET16");
      }
      
     // create path and map variables
@@ -196,12 +196,12 @@ public class StatusParametroApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
    * @return StatusImpressaoResponse
    */
-  public StatusImpressaoResponse consultarUsingGET16(Long id) throws ApiException {
+  public StatusImpressaoResponse consultarUsingGET17(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET16");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET17");
      }
      
     // create path and map variables
@@ -381,7 +381,7 @@ public class StatusParametroApi {
    * @param permiteAtribuirComoCancelamento Par\u00C3\u00A2metro que define se o Status da conta permite ser atribu\u00C3\u00ADdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo.
    * @return PageStatusContaResponse
    */
-  public PageStatusContaResponse listarUsingGET22(List<String> sort, Integer page, Integer limit, Long id, String nome, Integer permiteAlterarVencimento, Integer permiteAlterarLimite, Integer permiteEmitirNovaViaCartao, Integer permiteFazerTransferencia, Integer permiteReceberTransferencia, Integer permiteCriarAcordoCobranca, Integer permiteAtribuirComoBloqueio, Integer permiteDesbloquear, Integer permiteAtribuirComoCancelamento) throws ApiException {
+  public PageStatusContaResponse listarUsingGET23(List<String> sort, Integer page, Integer limit, Long id, String nome, Integer permiteAlterarVencimento, Integer permiteAlterarLimite, Integer permiteEmitirNovaViaCartao, Integer permiteFazerTransferencia, Integer permiteReceberTransferencia, Integer permiteCriarAcordoCobranca, Integer permiteAtribuirComoBloqueio, Integer permiteDesbloquear, Integer permiteAtribuirComoCancelamento) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -455,7 +455,7 @@ public class StatusParametroApi {
    * @param nome Nome do status impress\u00C3\u00A3o
    * @return PageStatusImpressaoResponse
    */
-  public PageStatusImpressaoResponse listarUsingGET23(List<String> sort, Integer page, Integer limit, Long id, String nome) throws ApiException {
+  public PageStatusImpressaoResponse listarUsingGET24(List<String> sort, Integer page, Integer limit, Long id, String nome) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

@@ -1,12 +1,12 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
+import br.com.conductor.pier.api.v2.model.PropriedadeDocumentoRequest;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 
 
@@ -23,7 +23,7 @@ public class DocumentoParametrosRequest   {
   private Long idTipoDocumento = null;
   private Long idTemplateDocumento = null;
   private String nome = null;
-  private Map<String, Object> parametrosConteudo = new HashMap<String, Object>();
+  private List<PropriedadeDocumentoRequest> parametrosConteudo = new ArrayList<PropriedadeDocumentoRequest>();
 
   
   /**
@@ -81,19 +81,19 @@ public class DocumentoParametrosRequest   {
 
   
   /**
-   * Mapa de par\u00C3\u00A2metros para montagem do documento.
+   * Lista de par\u00C3\u00A2metros para montagem do documento.
    **/
-  public DocumentoParametrosRequest parametrosConteudo(Map<String, Object> parametrosConteudo) {
+  public DocumentoParametrosRequest parametrosConteudo(List<PropriedadeDocumentoRequest> parametrosConteudo) {
     this.parametrosConteudo = parametrosConteudo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Mapa de par\u00C3\u00A2metros para montagem do documento.")
+  @ApiModelProperty(example = "null", value = "Lista de par\u00C3\u00A2metros para montagem do documento.")
   @JsonProperty("parametrosConteudo")
-  public Map<String, Object> getParametrosConteudo() {
+  public List<PropriedadeDocumentoRequest> getParametrosConteudo() {
     return parametrosConteudo;
   }
-  public void setParametrosConteudo(Map<String, Object> parametrosConteudo) {
+  public void setParametrosConteudo(List<PropriedadeDocumentoRequest> parametrosConteudo) {
     this.parametrosConteudo = parametrosConteudo;
   }
 

@@ -21,8 +21,8 @@ import java.util.List;
 public class DocumentoResponse   {
   
   private Long id = null;
-  private Long idDocumentoTipo = null;
-  private Long idDocumentoTemplate = null;
+  private Long idTipoDocumento = null;
+  private Long idTemplateDocumento = null;
   private String nome = null;
   private String documento = null;
   private String extensao = null;
@@ -50,36 +50,36 @@ public class DocumentoResponse   {
   /**
    * ID do Tipo de Documento associado.
    **/
-  public DocumentoResponse idDocumentoTipo(Long idDocumentoTipo) {
-    this.idDocumentoTipo = idDocumentoTipo;
+  public DocumentoResponse idTipoDocumento(Long idTipoDocumento) {
+    this.idTipoDocumento = idTipoDocumento;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "ID do Tipo de Documento associado.")
-  @JsonProperty("idDocumentoTipo")
-  public Long getIdDocumentoTipo() {
-    return idDocumentoTipo;
+  @JsonProperty("idTipoDocumento")
+  public Long getIdTipoDocumento() {
+    return idTipoDocumento;
   }
-  public void setIdDocumentoTipo(Long idDocumentoTipo) {
-    this.idDocumentoTipo = idDocumentoTipo;
+  public void setIdTipoDocumento(Long idTipoDocumento) {
+    this.idTipoDocumento = idTipoDocumento;
   }
 
   
   /**
    * ID do Template de Documento associado.
    **/
-  public DocumentoResponse idDocumentoTemplate(Long idDocumentoTemplate) {
-    this.idDocumentoTemplate = idDocumentoTemplate;
+  public DocumentoResponse idTemplateDocumento(Long idTemplateDocumento) {
+    this.idTemplateDocumento = idTemplateDocumento;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "ID do Template de Documento associado.")
-  @JsonProperty("idDocumentoTemplate")
-  public Long getIdDocumentoTemplate() {
-    return idDocumentoTemplate;
+  @JsonProperty("idTemplateDocumento")
+  public Long getIdTemplateDocumento() {
+    return idTemplateDocumento;
   }
-  public void setIdDocumentoTemplate(Long idDocumentoTemplate) {
-    this.idDocumentoTemplate = idDocumentoTemplate;
+  public void setIdTemplateDocumento(Long idTemplateDocumento) {
+    this.idTemplateDocumento = idTemplateDocumento;
   }
 
   
@@ -166,8 +166,8 @@ public class DocumentoResponse   {
     }
     DocumentoResponse documentoResponse = (DocumentoResponse) o;
     return Objects.equals(this.id, documentoResponse.id) &&
-        Objects.equals(this.idDocumentoTipo, documentoResponse.idDocumentoTipo) &&
-        Objects.equals(this.idDocumentoTemplate, documentoResponse.idDocumentoTemplate) &&
+        Objects.equals(this.idTipoDocumento, documentoResponse.idTipoDocumento) &&
+        Objects.equals(this.idTemplateDocumento, documentoResponse.idTemplateDocumento) &&
         Objects.equals(this.nome, documentoResponse.nome) &&
         Objects.equals(this.documento, documentoResponse.documento) &&
         Objects.equals(this.extensao, documentoResponse.extensao) &&
@@ -176,7 +176,7 @@ public class DocumentoResponse   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idDocumentoTipo, idDocumentoTemplate, nome, documento, extensao, documentoDetalhes);
+    return Objects.hash(id, idTipoDocumento, idTemplateDocumento, nome, documento, extensao, documentoDetalhes);
   }
 
   @Override
@@ -185,8 +185,8 @@ public class DocumentoResponse   {
     sb.append("class DocumentoResponse {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    idDocumentoTipo: ").append(toIndentedString(idDocumentoTipo)).append("\n");
-    sb.append("    idDocumentoTemplate: ").append(toIndentedString(idDocumentoTemplate)).append("\n");
+    sb.append("    idTipoDocumento: ").append(toIndentedString(idTipoDocumento)).append("\n");
+    sb.append("    idTemplateDocumento: ").append(toIndentedString(idTemplateDocumento)).append("\n");
     sb.append("    nome: ").append(toIndentedString(nome)).append("\n");
     sb.append("    documento: ").append(toIndentedString(documento)).append("\n");
     sb.append("    extensao: ").append(toIndentedString(extensao)).append("\n");

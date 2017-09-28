@@ -281,12 +281,12 @@ public class OportunidadeApi {
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).
    * @return OportunidadeResponse
    */
-  public OportunidadeResponse consultarUsingGET10(Long id) throws ApiException {
+  public OportunidadeResponse consultarUsingGET11(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET10");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET11");
      }
      
     // create path and map variables
@@ -329,12 +329,12 @@ public class OportunidadeApi {
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
    * @return TipoOportunidadeResponse
    */
-  public TipoOportunidadeResponse consultarUsingGET22(Long id) throws ApiException {
+  public TipoOportunidadeResponse consultarUsingGET24(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET22");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET24");
      }
      
     // create path and map variables
@@ -674,7 +674,7 @@ public class OportunidadeApi {
    * @param flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
    * @return PageOportunidadeResponse
    */
-  public PageOportunidadeResponse listarUsingGET14(List<String> sort, Integer page, Integer limit, Long idStatusOportunidade, String dataCadastro, String dataAtualizacao, String numeroReceitaFederal, String dataInicioVigencia, String dataFimVigencia, Boolean flagAtivo) throws ApiException {
+  public PageOportunidadeResponse listarUsingGET15(List<String> sort, Integer page, Integer limit, Long idStatusOportunidade, String dataCadastro, String dataAtualizacao, String numeroReceitaFederal, String dataInicioVigencia, String dataFimVigencia, Boolean flagAtivo) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -740,7 +740,7 @@ public class OportunidadeApi {
    * @param flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo
    * @return PageTipoOportunidadeResponse
    */
-  public PageTipoOportunidadeResponse listarUsingGET27(List<String> sort, Integer page, Integer limit, String descricao, Boolean flagAtivo) throws ApiException {
+  public PageTipoOportunidadeResponse listarUsingGET28(List<String> sort, Integer page, Integer limit, String descricao, Boolean flagAtivo) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

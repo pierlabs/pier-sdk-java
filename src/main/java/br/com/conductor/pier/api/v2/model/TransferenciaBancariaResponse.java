@@ -45,6 +45,14 @@ public class TransferenciaBancariaResponse   {
   private Long idContaPortador = null;
   private Long numeroEstabelecimento = null;
   private BigDecimal valorTaxaSaque = null;
+  private Long banco = null;
+  private String numeroAgencia = null;
+  private String digitoAgencia = null;
+  private String numeroConta = null;
+  private String digitoConta = null;
+  private Integer flagContaPoupanca = null;
+  private String documentoFavorecido = null;
+  private String nomeFavorecido = null;
 
   
   /**
@@ -532,6 +540,150 @@ public class TransferenciaBancariaResponse   {
   }
 
   
+  /**
+   * C\u00C3\u00B3digo do Banco
+   **/
+  public TransferenciaBancariaResponse banco(Long banco) {
+    this.banco = banco;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo do Banco")
+  @JsonProperty("banco")
+  public Long getBanco() {
+    return banco;
+  }
+  public void setBanco(Long banco) {
+    this.banco = banco;
+  }
+
+  
+  /**
+   * N\u00C3\u00BAmero da Ag\u00C3\u00AAncia
+   **/
+  public TransferenciaBancariaResponse numeroAgencia(String numeroAgencia) {
+    this.numeroAgencia = numeroAgencia;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero da Ag\u00C3\u00AAncia")
+  @JsonProperty("numeroAgencia")
+  public String getNumeroAgencia() {
+    return numeroAgencia;
+  }
+  public void setNumeroAgencia(String numeroAgencia) {
+    this.numeroAgencia = numeroAgencia;
+  }
+
+  
+  /**
+   * D\u00C3\u00ADgito da Ag\u00C3\u00AAncia
+   **/
+  public TransferenciaBancariaResponse digitoAgencia(String digitoAgencia) {
+    this.digitoAgencia = digitoAgencia;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "D\u00C3\u00ADgito da Ag\u00C3\u00AAncia")
+  @JsonProperty("digitoAgencia")
+  public String getDigitoAgencia() {
+    return digitoAgencia;
+  }
+  public void setDigitoAgencia(String digitoAgencia) {
+    this.digitoAgencia = digitoAgencia;
+  }
+
+  
+  /**
+   * N\u00C3\u00BAmero da Conta
+   **/
+  public TransferenciaBancariaResponse numeroConta(String numeroConta) {
+    this.numeroConta = numeroConta;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero da Conta")
+  @JsonProperty("numeroConta")
+  public String getNumeroConta() {
+    return numeroConta;
+  }
+  public void setNumeroConta(String numeroConta) {
+    this.numeroConta = numeroConta;
+  }
+
+  
+  /**
+   * D\u00C3\u00ADgito da Conta
+   **/
+  public TransferenciaBancariaResponse digitoConta(String digitoConta) {
+    this.digitoConta = digitoConta;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "D\u00C3\u00ADgito da Conta")
+  @JsonProperty("digitoConta")
+  public String getDigitoConta() {
+    return digitoConta;
+  }
+  public void setDigitoConta(String digitoConta) {
+    this.digitoConta = digitoConta;
+  }
+
+  
+  /**
+   * Tipo da Conta
+   **/
+  public TransferenciaBancariaResponse flagContaPoupanca(Integer flagContaPoupanca) {
+    this.flagContaPoupanca = flagContaPoupanca;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Tipo da Conta")
+  @JsonProperty("flagContaPoupanca")
+  public Integer getFlagContaPoupanca() {
+    return flagContaPoupanca;
+  }
+  public void setFlagContaPoupanca(Integer flagContaPoupanca) {
+    this.flagContaPoupanca = flagContaPoupanca;
+  }
+
+  
+  /**
+   * Documento do Favorecido
+   **/
+  public TransferenciaBancariaResponse documentoFavorecido(String documentoFavorecido) {
+    this.documentoFavorecido = documentoFavorecido;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Documento do Favorecido")
+  @JsonProperty("documentoFavorecido")
+  public String getDocumentoFavorecido() {
+    return documentoFavorecido;
+  }
+  public void setDocumentoFavorecido(String documentoFavorecido) {
+    this.documentoFavorecido = documentoFavorecido;
+  }
+
+  
+  /**
+   * Nome do Favorecido
+   **/
+  public TransferenciaBancariaResponse nomeFavorecido(String nomeFavorecido) {
+    this.nomeFavorecido = nomeFavorecido;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Nome do Favorecido")
+  @JsonProperty("nomeFavorecido")
+  public String getNomeFavorecido() {
+    return nomeFavorecido;
+  }
+  public void setNomeFavorecido(String nomeFavorecido) {
+    this.nomeFavorecido = nomeFavorecido;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -568,12 +720,20 @@ public class TransferenciaBancariaResponse   {
         Objects.equals(this.dataVencimentoPadrao, transferenciaBancariaResponse.dataVencimentoPadrao) &&
         Objects.equals(this.idContaPortador, transferenciaBancariaResponse.idContaPortador) &&
         Objects.equals(this.numeroEstabelecimento, transferenciaBancariaResponse.numeroEstabelecimento) &&
-        Objects.equals(this.valorTaxaSaque, transferenciaBancariaResponse.valorTaxaSaque);
+        Objects.equals(this.valorTaxaSaque, transferenciaBancariaResponse.valorTaxaSaque) &&
+        Objects.equals(this.banco, transferenciaBancariaResponse.banco) &&
+        Objects.equals(this.numeroAgencia, transferenciaBancariaResponse.numeroAgencia) &&
+        Objects.equals(this.digitoAgencia, transferenciaBancariaResponse.digitoAgencia) &&
+        Objects.equals(this.numeroConta, transferenciaBancariaResponse.numeroConta) &&
+        Objects.equals(this.digitoConta, transferenciaBancariaResponse.digitoConta) &&
+        Objects.equals(this.flagContaPoupanca, transferenciaBancariaResponse.flagContaPoupanca) &&
+        Objects.equals(this.documentoFavorecido, transferenciaBancariaResponse.documentoFavorecido) &&
+        Objects.equals(this.nomeFavorecido, transferenciaBancariaResponse.nomeFavorecido);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(nsuorigem, idAutorizacao, idTransferencia, codigoAutorizacao, dataAutorizacao, origem, valor, idOperacao, terminal, idCartao, dataCompra, valorCompra, numeroParcelas, valorParcela, idEstabelecimento, dataMovimento, valorContrato, taxaJuros, valorIOF, valorTAC, idConta, valorEntrada, dataVencimentoReal, dataVencimentoPadrao, idContaPortador, numeroEstabelecimento, valorTaxaSaque);
+    return Objects.hash(nsuorigem, idAutorizacao, idTransferencia, codigoAutorizacao, dataAutorizacao, origem, valor, idOperacao, terminal, idCartao, dataCompra, valorCompra, numeroParcelas, valorParcela, idEstabelecimento, dataMovimento, valorContrato, taxaJuros, valorIOF, valorTAC, idConta, valorEntrada, dataVencimentoReal, dataVencimentoPadrao, idContaPortador, numeroEstabelecimento, valorTaxaSaque, banco, numeroAgencia, digitoAgencia, numeroConta, digitoConta, flagContaPoupanca, documentoFavorecido, nomeFavorecido);
   }
 
   @Override
@@ -608,6 +768,14 @@ public class TransferenciaBancariaResponse   {
     sb.append("    idContaPortador: ").append(toIndentedString(idContaPortador)).append("\n");
     sb.append("    numeroEstabelecimento: ").append(toIndentedString(numeroEstabelecimento)).append("\n");
     sb.append("    valorTaxaSaque: ").append(toIndentedString(valorTaxaSaque)).append("\n");
+    sb.append("    banco: ").append(toIndentedString(banco)).append("\n");
+    sb.append("    numeroAgencia: ").append(toIndentedString(numeroAgencia)).append("\n");
+    sb.append("    digitoAgencia: ").append(toIndentedString(digitoAgencia)).append("\n");
+    sb.append("    numeroConta: ").append(toIndentedString(numeroConta)).append("\n");
+    sb.append("    digitoConta: ").append(toIndentedString(digitoConta)).append("\n");
+    sb.append("    flagContaPoupanca: ").append(toIndentedString(flagContaPoupanca)).append("\n");
+    sb.append("    documentoFavorecido: ").append(toIndentedString(documentoFavorecido)).append("\n");
+    sb.append("    nomeFavorecido: ").append(toIndentedString(nomeFavorecido)).append("\n");
     sb.append("}");
     return sb.toString();
   }
