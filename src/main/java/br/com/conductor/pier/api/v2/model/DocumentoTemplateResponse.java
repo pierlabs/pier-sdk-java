@@ -18,7 +18,7 @@ import io.swagger.annotations.ApiModelProperty;
 public class DocumentoTemplateResponse   {
   
   private Long id = null;
-  private Long idTipoDocumento = null;
+  private Long idTipoTemplate = null;
 
   
   /**
@@ -40,20 +40,20 @@ public class DocumentoTemplateResponse   {
 
   
   /**
-   * ID do Tipo de Documento.
+   * ID do Tipo de Template.
    **/
-  public DocumentoTemplateResponse idTipoDocumento(Long idTipoDocumento) {
-    this.idTipoDocumento = idTipoDocumento;
+  public DocumentoTemplateResponse idTipoTemplate(Long idTipoTemplate) {
+    this.idTipoTemplate = idTipoTemplate;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "ID do Tipo de Documento.")
-  @JsonProperty("idTipoDocumento")
-  public Long getIdTipoDocumento() {
-    return idTipoDocumento;
+  @ApiModelProperty(example = "null", value = "ID do Tipo de Template.")
+  @JsonProperty("idTipoTemplate")
+  public Long getIdTipoTemplate() {
+    return idTipoTemplate;
   }
-  public void setIdTipoDocumento(Long idTipoDocumento) {
-    this.idTipoDocumento = idTipoDocumento;
+  public void setIdTipoTemplate(Long idTipoTemplate) {
+    this.idTipoTemplate = idTipoTemplate;
   }
 
   
@@ -68,12 +68,12 @@ public class DocumentoTemplateResponse   {
     }
     DocumentoTemplateResponse documentoTemplateResponse = (DocumentoTemplateResponse) o;
     return Objects.equals(this.id, documentoTemplateResponse.id) &&
-        Objects.equals(this.idTipoDocumento, documentoTemplateResponse.idTipoDocumento);
+        Objects.equals(this.idTipoTemplate, documentoTemplateResponse.idTipoTemplate);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idTipoDocumento);
+    return Objects.hash(id, idTipoTemplate);
   }
 
   @Override
@@ -82,7 +82,7 @@ public class DocumentoTemplateResponse   {
     sb.append("class DocumentoTemplateResponse {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    idTipoDocumento: ").append(toIndentedString(idTipoDocumento)).append("\n");
+    sb.append("    idTipoTemplate: ").append(toIndentedString(idTipoTemplate)).append("\n");
     sb.append("}");
     return sb.toString();
   }

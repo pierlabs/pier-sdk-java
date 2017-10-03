@@ -1,32 +1,37 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
+import br.com.conductor.pier.api.v2.model.DocumentoDetalheResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 
 
 
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta resumida para o recurso de Documento
+ * Representa\u00C3\u00A7\u00C3\u00A3o da resposta para o recurso de Documento
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta resumida para o recurso de Documento")
+@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta para o recurso de Documento")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class DocumentoResponse   {
+public class DocumentoDetalhadoResponse   {
   
   private Long id = null;
   private Long idTemplateDocumento = null;
   private String nome = null;
+  private String documento = null;
   private String extensao = null;
+  private List<DocumentoDetalheResponse> documentoDetalhes = new ArrayList<DocumentoDetalheResponse>();
 
   
   /**
    * ID do Documento.
    **/
-  public DocumentoResponse id(Long id) {
+  public DocumentoDetalhadoResponse id(Long id) {
     this.id = id;
     return this;
   }
@@ -44,7 +49,7 @@ public class DocumentoResponse   {
   /**
    * ID do Template de Documento associado.
    **/
-  public DocumentoResponse idTemplateDocumento(Long idTemplateDocumento) {
+  public DocumentoDetalhadoResponse idTemplateDocumento(Long idTemplateDocumento) {
     this.idTemplateDocumento = idTemplateDocumento;
     return this;
   }
@@ -62,7 +67,7 @@ public class DocumentoResponse   {
   /**
    * Nome do Documento.
    **/
-  public DocumentoResponse nome(String nome) {
+  public DocumentoDetalhadoResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
@@ -78,9 +83,27 @@ public class DocumentoResponse   {
 
   
   /**
+   * Representa\u00C3\u00A7\u00C3\u00A3o do documento em Base64.
+   **/
+  public DocumentoDetalhadoResponse documento(String documento) {
+    this.documento = documento;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Representa\u00C3\u00A7\u00C3\u00A3o do documento em Base64.")
+  @JsonProperty("documento")
+  public String getDocumento() {
+    return documento;
+  }
+  public void setDocumento(String documento) {
+    this.documento = documento;
+  }
+
+  
+  /**
    * Extens\u00C3\u00A3o do Documento.
    **/
-  public DocumentoResponse extensao(String extensao) {
+  public DocumentoDetalhadoResponse extensao(String extensao) {
     this.extensao = extensao;
     return this;
   }
@@ -95,6 +118,24 @@ public class DocumentoResponse   {
   }
 
   
+  /**
+   * Detalhamento do documento.
+   **/
+  public DocumentoDetalhadoResponse documentoDetalhes(List<DocumentoDetalheResponse> documentoDetalhes) {
+    this.documentoDetalhes = documentoDetalhes;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Detalhamento do documento.")
+  @JsonProperty("documentoDetalhes")
+  public List<DocumentoDetalheResponse> getDocumentoDetalhes() {
+    return documentoDetalhes;
+  }
+  public void setDocumentoDetalhes(List<DocumentoDetalheResponse> documentoDetalhes) {
+    this.documentoDetalhes = documentoDetalhes;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -104,27 +145,31 @@ public class DocumentoResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    DocumentoResponse documentoResponse = (DocumentoResponse) o;
-    return Objects.equals(this.id, documentoResponse.id) &&
-        Objects.equals(this.idTemplateDocumento, documentoResponse.idTemplateDocumento) &&
-        Objects.equals(this.nome, documentoResponse.nome) &&
-        Objects.equals(this.extensao, documentoResponse.extensao);
+    DocumentoDetalhadoResponse documentoDetalhadoResponse = (DocumentoDetalhadoResponse) o;
+    return Objects.equals(this.id, documentoDetalhadoResponse.id) &&
+        Objects.equals(this.idTemplateDocumento, documentoDetalhadoResponse.idTemplateDocumento) &&
+        Objects.equals(this.nome, documentoDetalhadoResponse.nome) &&
+        Objects.equals(this.documento, documentoDetalhadoResponse.documento) &&
+        Objects.equals(this.extensao, documentoDetalhadoResponse.extensao) &&
+        Objects.equals(this.documentoDetalhes, documentoDetalhadoResponse.documentoDetalhes);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idTemplateDocumento, nome, extensao);
+    return Objects.hash(id, idTemplateDocumento, nome, documento, extensao, documentoDetalhes);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class DocumentoResponse {\n");
+    sb.append("class DocumentoDetalhadoResponse {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idTemplateDocumento: ").append(toIndentedString(idTemplateDocumento)).append("\n");
     sb.append("    nome: ").append(toIndentedString(nome)).append("\n");
+    sb.append("    documento: ").append(toIndentedString(documento)).append("\n");
     sb.append("    extensao: ").append(toIndentedString(extensao)).append("\n");
+    sb.append("    documentoDetalhes: ").append(toIndentedString(documentoDetalhes)).append("\n");
     sb.append("}");
     return sb.toString();
   }

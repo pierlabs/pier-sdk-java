@@ -11,12 +11,12 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Objeto de Notifica\u00C3\u00A7\u00C3\u00A3o EMAIL
+ * Objeto de detalhes do Template de Notifica\u00C3\u00A7\u00C3\u00A3o
  **/
 
-@ApiModel(description = "Objeto de Notifica\u00C3\u00A7\u00C3\u00A3o EMAIL")
+@ApiModel(description = "Objeto de detalhes do Template de Notifica\u00C3\u00A7\u00C3\u00A3o")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class TemplateNotificacaoResponse   {
+public class TemplateNotificacaoDetalheResponse   {
   
   private Long id = null;
   private Long idConfiguracaoEmail = null;
@@ -70,12 +70,13 @@ public class TemplateNotificacaoResponse   {
   private String assunto = null;
   private String dataInclusao = null;
   private String dataAlteracao = null;
+  private String conteudo = null;
 
   
   /**
    * C\u00C3\u00B3digo Identificador.
    **/
-  public TemplateNotificacaoResponse id(Long id) {
+  public TemplateNotificacaoDetalheResponse id(Long id) {
     this.id = id;
     return this;
   }
@@ -93,7 +94,7 @@ public class TemplateNotificacaoResponse   {
   /**
    * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de e-mail.
    **/
-  public TemplateNotificacaoResponse idConfiguracaoEmail(Long idConfiguracaoEmail) {
+  public TemplateNotificacaoDetalheResponse idConfiguracaoEmail(Long idConfiguracaoEmail) {
     this.idConfiguracaoEmail = idConfiguracaoEmail;
     return this;
   }
@@ -111,7 +112,7 @@ public class TemplateNotificacaoResponse   {
   /**
    * Tipo do layout de e-mail.
    **/
-  public TemplateNotificacaoResponse tipoLayout(TipoLayoutEnum tipoLayout) {
+  public TemplateNotificacaoDetalheResponse tipoLayout(TipoLayoutEnum tipoLayout) {
     this.tipoLayout = tipoLayout;
     return this;
   }
@@ -129,7 +130,7 @@ public class TemplateNotificacaoResponse   {
   /**
    * Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
    **/
-  public TemplateNotificacaoResponse tipoNotificacao(TipoNotificacaoEnum tipoNotificacao) {
+  public TemplateNotificacaoDetalheResponse tipoNotificacao(TipoNotificacaoEnum tipoNotificacao) {
     this.tipoNotificacao = tipoNotificacao;
     return this;
   }
@@ -147,7 +148,7 @@ public class TemplateNotificacaoResponse   {
   /**
    * Template padr\u00C3\u00A3o.
    **/
-  public TemplateNotificacaoResponse templatePadrao(String templatePadrao) {
+  public TemplateNotificacaoDetalheResponse templatePadrao(String templatePadrao) {
     this.templatePadrao = templatePadrao;
     return this;
   }
@@ -165,7 +166,7 @@ public class TemplateNotificacaoResponse   {
   /**
    * Remetente.
    **/
-  public TemplateNotificacaoResponse remetente(String remetente) {
+  public TemplateNotificacaoDetalheResponse remetente(String remetente) {
     this.remetente = remetente;
     return this;
   }
@@ -183,7 +184,7 @@ public class TemplateNotificacaoResponse   {
   /**
    * Assunto do e-mail.
    **/
-  public TemplateNotificacaoResponse assunto(String assunto) {
+  public TemplateNotificacaoDetalheResponse assunto(String assunto) {
     this.assunto = assunto;
     return this;
   }
@@ -201,7 +202,7 @@ public class TemplateNotificacaoResponse   {
   /**
    * Data da inclus\u00C3\u00A3o.
    **/
-  public TemplateNotificacaoResponse dataInclusao(String dataInclusao) {
+  public TemplateNotificacaoDetalheResponse dataInclusao(String dataInclusao) {
     this.dataInclusao = dataInclusao;
     return this;
   }
@@ -219,7 +220,7 @@ public class TemplateNotificacaoResponse   {
   /**
    * Data altera\u00C3\u00A7\u00C3\u00A3o.
    **/
-  public TemplateNotificacaoResponse dataAlteracao(String dataAlteracao) {
+  public TemplateNotificacaoDetalheResponse dataAlteracao(String dataAlteracao) {
     this.dataAlteracao = dataAlteracao;
     return this;
   }
@@ -234,6 +235,24 @@ public class TemplateNotificacaoResponse   {
   }
 
   
+  /**
+   * Conteudo do e-mail.
+   **/
+  public TemplateNotificacaoDetalheResponse conteudo(String conteudo) {
+    this.conteudo = conteudo;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Conteudo do e-mail.")
+  @JsonProperty("conteudo")
+  public String getConteudo() {
+    return conteudo;
+  }
+  public void setConteudo(String conteudo) {
+    this.conteudo = conteudo;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -243,27 +262,28 @@ public class TemplateNotificacaoResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    TemplateNotificacaoResponse templateNotificacaoResponse = (TemplateNotificacaoResponse) o;
-    return Objects.equals(this.id, templateNotificacaoResponse.id) &&
-        Objects.equals(this.idConfiguracaoEmail, templateNotificacaoResponse.idConfiguracaoEmail) &&
-        Objects.equals(this.tipoLayout, templateNotificacaoResponse.tipoLayout) &&
-        Objects.equals(this.tipoNotificacao, templateNotificacaoResponse.tipoNotificacao) &&
-        Objects.equals(this.templatePadrao, templateNotificacaoResponse.templatePadrao) &&
-        Objects.equals(this.remetente, templateNotificacaoResponse.remetente) &&
-        Objects.equals(this.assunto, templateNotificacaoResponse.assunto) &&
-        Objects.equals(this.dataInclusao, templateNotificacaoResponse.dataInclusao) &&
-        Objects.equals(this.dataAlteracao, templateNotificacaoResponse.dataAlteracao);
+    TemplateNotificacaoDetalheResponse templateNotificacaoDetalheResponse = (TemplateNotificacaoDetalheResponse) o;
+    return Objects.equals(this.id, templateNotificacaoDetalheResponse.id) &&
+        Objects.equals(this.idConfiguracaoEmail, templateNotificacaoDetalheResponse.idConfiguracaoEmail) &&
+        Objects.equals(this.tipoLayout, templateNotificacaoDetalheResponse.tipoLayout) &&
+        Objects.equals(this.tipoNotificacao, templateNotificacaoDetalheResponse.tipoNotificacao) &&
+        Objects.equals(this.templatePadrao, templateNotificacaoDetalheResponse.templatePadrao) &&
+        Objects.equals(this.remetente, templateNotificacaoDetalheResponse.remetente) &&
+        Objects.equals(this.assunto, templateNotificacaoDetalheResponse.assunto) &&
+        Objects.equals(this.dataInclusao, templateNotificacaoDetalheResponse.dataInclusao) &&
+        Objects.equals(this.dataAlteracao, templateNotificacaoDetalheResponse.dataAlteracao) &&
+        Objects.equals(this.conteudo, templateNotificacaoDetalheResponse.conteudo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idConfiguracaoEmail, tipoLayout, tipoNotificacao, templatePadrao, remetente, assunto, dataInclusao, dataAlteracao);
+    return Objects.hash(id, idConfiguracaoEmail, tipoLayout, tipoNotificacao, templatePadrao, remetente, assunto, dataInclusao, dataAlteracao, conteudo);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class TemplateNotificacaoResponse {\n");
+    sb.append("class TemplateNotificacaoDetalheResponse {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idConfiguracaoEmail: ").append(toIndentedString(idConfiguracaoEmail)).append("\n");
@@ -274,6 +294,7 @@ public class TemplateNotificacaoResponse   {
     sb.append("    assunto: ").append(toIndentedString(assunto)).append("\n");
     sb.append("    dataInclusao: ").append(toIndentedString(dataInclusao)).append("\n");
     sb.append("    dataAlteracao: ").append(toIndentedString(dataAlteracao)).append("\n");
+    sb.append("    conteudo: ").append(toIndentedString(conteudo)).append("\n");
     sb.append("}");
     return sb.toString();
   }

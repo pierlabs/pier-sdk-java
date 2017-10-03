@@ -10,12 +10,12 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o do tipo de documento.
+ * Representa\u00C3\u00A7\u00C3\u00A3o do tipo de template.
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o do tipo de documento.")
+@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o do tipo de template.")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class DocumentoTipoRequest   {
+public class TipoTemplateRequest   {
   
   private String nome = null;
   private String descricao = null;
@@ -23,14 +23,14 @@ public class DocumentoTipoRequest   {
 
   
   /**
-   * Nome do tipo de documento.
+   * Nome do tipo de template.
    **/
-  public DocumentoTipoRequest nome(String nome) {
+  public TipoTemplateRequest nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome do tipo de documento.")
+  @ApiModelProperty(example = "null", value = "Nome do tipo de template.")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -41,14 +41,14 @@ public class DocumentoTipoRequest   {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do tipo de documento.
+   * Descri\u00C3\u00A7\u00C3\u00A3o do tipo de template.
    **/
-  public DocumentoTipoRequest descricao(String descricao) {
+  public TipoTemplateRequest descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o do tipo de documento.")
+  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o do tipo de template.")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -59,14 +59,14 @@ public class DocumentoTipoRequest   {
 
   
   /**
-   * Sigla do tipo de documento.
+   * Sigla do tipo de template.
    **/
-  public DocumentoTipoRequest sigla(String sigla) {
+  public TipoTemplateRequest sigla(String sigla) {
     this.sigla = sigla;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Sigla do tipo de documento.")
+  @ApiModelProperty(example = "null", value = "Sigla do tipo de template.")
   @JsonProperty("sigla")
   public String getSigla() {
     return sigla;
@@ -85,10 +85,10 @@ public class DocumentoTipoRequest   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    DocumentoTipoRequest documentoTipoRequest = (DocumentoTipoRequest) o;
-    return Objects.equals(this.nome, documentoTipoRequest.nome) &&
-        Objects.equals(this.descricao, documentoTipoRequest.descricao) &&
-        Objects.equals(this.sigla, documentoTipoRequest.sigla);
+    TipoTemplateRequest tipoTemplateRequest = (TipoTemplateRequest) o;
+    return Objects.equals(this.nome, tipoTemplateRequest.nome) &&
+        Objects.equals(this.descricao, tipoTemplateRequest.descricao) &&
+        Objects.equals(this.sigla, tipoTemplateRequest.sigla);
   }
 
   @Override
@@ -99,7 +99,7 @@ public class DocumentoTipoRequest   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class DocumentoTipoRequest {\n");
+    sb.append("class TipoTemplateRequest {\n");
     
     sb.append("    nome: ").append(toIndentedString(nome)).append("\n");
     sb.append("    descricao: ").append(toIndentedString(descricao)).append("\n");

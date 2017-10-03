@@ -16,19 +16,22 @@ import java.math.BigDecimal;
 
 @ApiModel(description = "Objeto transferencia")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class TransferenciaResponse   {
+public class TransferenciaDetalheResponse   {
   
   private Long id = null;
   private String dataTransferencia = null;
   private Long idContaOrigem = null;
+  private String nomePessoaOrigem = null;
   private Long idContaDestino = null;
+  private String nomePessoaDestino = null;
   private BigDecimal valorTransferencia = null;
+  private BigDecimal valorTarifa = null;
 
   
   /**
    * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id).
    **/
-  public TransferenciaResponse id(Long id) {
+  public TransferenciaDetalheResponse id(Long id) {
     this.id = id;
     return this;
   }
@@ -46,7 +49,7 @@ public class TransferenciaResponse   {
   /**
    * Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
    **/
-  public TransferenciaResponse dataTransferencia(String dataTransferencia) {
+  public TransferenciaDetalheResponse dataTransferencia(String dataTransferencia) {
     this.dataTransferencia = dataTransferencia;
     return this;
   }
@@ -64,7 +67,7 @@ public class TransferenciaResponse   {
   /**
    * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id).
    **/
-  public TransferenciaResponse idContaOrigem(Long idContaOrigem) {
+  public TransferenciaDetalheResponse idContaOrigem(Long idContaOrigem) {
     this.idContaOrigem = idContaOrigem;
     return this;
   }
@@ -80,9 +83,27 @@ public class TransferenciaResponse   {
 
   
   /**
+   * Apresenta o nome completo da pessoa que realizou a Transfer\u00C3\u00AAncia.
+   **/
+  public TransferenciaDetalheResponse nomePessoaOrigem(String nomePessoaOrigem) {
+    this.nomePessoaOrigem = nomePessoaOrigem;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Apresenta o nome completo da pessoa que realizou a Transfer\u00C3\u00AAncia.")
+  @JsonProperty("nomePessoaOrigem")
+  public String getNomePessoaOrigem() {
+    return nomePessoaOrigem;
+  }
+  public void setNomePessoaOrigem(String nomePessoaOrigem) {
+    this.nomePessoaOrigem = nomePessoaOrigem;
+  }
+
+  
+  /**
    * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id).
    **/
-  public TransferenciaResponse idContaDestino(Long idContaDestino) {
+  public TransferenciaDetalheResponse idContaDestino(Long idContaDestino) {
     this.idContaDestino = idContaDestino;
     return this;
   }
@@ -98,9 +119,27 @@ public class TransferenciaResponse   {
 
   
   /**
+   * Apresenta o nome completo da pessoa que recebeu a Transfer\u00C3\u00AAncia.
+   **/
+  public TransferenciaDetalheResponse nomePessoaDestino(String nomePessoaDestino) {
+    this.nomePessoaDestino = nomePessoaDestino;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Apresenta o nome completo da pessoa que recebeu a Transfer\u00C3\u00AAncia.")
+  @JsonProperty("nomePessoaDestino")
+  public String getNomePessoaDestino() {
+    return nomePessoaDestino;
+  }
+  public void setNomePessoaDestino(String nomePessoaDestino) {
+    this.nomePessoaDestino = nomePessoaDestino;
+  }
+
+  
+  /**
    * Valor estabelecido para ser transferido.
    **/
-  public TransferenciaResponse valorTransferencia(BigDecimal valorTransferencia) {
+  public TransferenciaDetalheResponse valorTransferencia(BigDecimal valorTransferencia) {
     this.valorTransferencia = valorTransferencia;
     return this;
   }
@@ -115,6 +154,24 @@ public class TransferenciaResponse   {
   }
 
   
+  /**
+   * Valor estabelecido da tarifa para a transfer\u00C3\u00AAncia.
+   **/
+  public TransferenciaDetalheResponse valorTarifa(BigDecimal valorTarifa) {
+    this.valorTarifa = valorTarifa;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor estabelecido da tarifa para a transfer\u00C3\u00AAncia.")
+  @JsonProperty("valorTarifa")
+  public BigDecimal getValorTarifa() {
+    return valorTarifa;
+  }
+  public void setValorTarifa(BigDecimal valorTarifa) {
+    this.valorTarifa = valorTarifa;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -124,29 +181,35 @@ public class TransferenciaResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    TransferenciaResponse transferenciaResponse = (TransferenciaResponse) o;
-    return Objects.equals(this.id, transferenciaResponse.id) &&
-        Objects.equals(this.dataTransferencia, transferenciaResponse.dataTransferencia) &&
-        Objects.equals(this.idContaOrigem, transferenciaResponse.idContaOrigem) &&
-        Objects.equals(this.idContaDestino, transferenciaResponse.idContaDestino) &&
-        Objects.equals(this.valorTransferencia, transferenciaResponse.valorTransferencia);
+    TransferenciaDetalheResponse transferenciaDetalheResponse = (TransferenciaDetalheResponse) o;
+    return Objects.equals(this.id, transferenciaDetalheResponse.id) &&
+        Objects.equals(this.dataTransferencia, transferenciaDetalheResponse.dataTransferencia) &&
+        Objects.equals(this.idContaOrigem, transferenciaDetalheResponse.idContaOrigem) &&
+        Objects.equals(this.nomePessoaOrigem, transferenciaDetalheResponse.nomePessoaOrigem) &&
+        Objects.equals(this.idContaDestino, transferenciaDetalheResponse.idContaDestino) &&
+        Objects.equals(this.nomePessoaDestino, transferenciaDetalheResponse.nomePessoaDestino) &&
+        Objects.equals(this.valorTransferencia, transferenciaDetalheResponse.valorTransferencia) &&
+        Objects.equals(this.valorTarifa, transferenciaDetalheResponse.valorTarifa);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, dataTransferencia, idContaOrigem, idContaDestino, valorTransferencia);
+    return Objects.hash(id, dataTransferencia, idContaOrigem, nomePessoaOrigem, idContaDestino, nomePessoaDestino, valorTransferencia, valorTarifa);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class TransferenciaResponse {\n");
+    sb.append("class TransferenciaDetalheResponse {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    dataTransferencia: ").append(toIndentedString(dataTransferencia)).append("\n");
     sb.append("    idContaOrigem: ").append(toIndentedString(idContaOrigem)).append("\n");
+    sb.append("    nomePessoaOrigem: ").append(toIndentedString(nomePessoaOrigem)).append("\n");
     sb.append("    idContaDestino: ").append(toIndentedString(idContaDestino)).append("\n");
+    sb.append("    nomePessoaDestino: ").append(toIndentedString(nomePessoaDestino)).append("\n");
     sb.append("    valorTransferencia: ").append(toIndentedString(valorTransferencia)).append("\n");
+    sb.append("    valorTarifa: ").append(toIndentedString(valorTarifa)).append("\n");
     sb.append("}");
     return sb.toString();
   }

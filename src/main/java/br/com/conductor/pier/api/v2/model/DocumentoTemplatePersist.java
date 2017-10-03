@@ -1,9 +1,12 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
+import br.com.conductor.pier.api.v2.model.ReferenciaIdPersist;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 
 
 
@@ -17,25 +20,26 @@ import io.swagger.annotations.ApiModelProperty;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class DocumentoTemplatePersist   {
   
-  private Long idTipoDocumento = null;
+  private Long idTipoTemplate = null;
   private String template = null;
+  private List<ReferenciaIdPersist> integracoes = new ArrayList<ReferenciaIdPersist>();
 
   
   /**
-   * ID para o Tipo de Documento vinculado ao template.
+   * ID para o Tipo de Template vinculado ao template.
    **/
-  public DocumentoTemplatePersist idTipoDocumento(Long idTipoDocumento) {
-    this.idTipoDocumento = idTipoDocumento;
+  public DocumentoTemplatePersist idTipoTemplate(Long idTipoTemplate) {
+    this.idTipoTemplate = idTipoTemplate;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "ID para o Tipo de Documento vinculado ao template.")
-  @JsonProperty("idTipoDocumento")
-  public Long getIdTipoDocumento() {
-    return idTipoDocumento;
+  @ApiModelProperty(example = "null", value = "ID para o Tipo de Template vinculado ao template.")
+  @JsonProperty("idTipoTemplate")
+  public Long getIdTipoTemplate() {
+    return idTipoTemplate;
   }
-  public void setIdTipoDocumento(Long idTipoDocumento) {
-    this.idTipoDocumento = idTipoDocumento;
+  public void setIdTipoTemplate(Long idTipoTemplate) {
+    this.idTipoTemplate = idTipoTemplate;
   }
 
   
@@ -57,6 +61,24 @@ public class DocumentoTemplatePersist   {
   }
 
   
+  /**
+   * Lista de configura\u00C3\u00A7\u00C3\u00B5es de integra\u00C3\u00A7\u00C3\u00A3o
+   **/
+  public DocumentoTemplatePersist integracoes(List<ReferenciaIdPersist> integracoes) {
+    this.integracoes = integracoes;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Lista de configura\u00C3\u00A7\u00C3\u00B5es de integra\u00C3\u00A7\u00C3\u00A3o")
+  @JsonProperty("integracoes")
+  public List<ReferenciaIdPersist> getIntegracoes() {
+    return integracoes;
+  }
+  public void setIntegracoes(List<ReferenciaIdPersist> integracoes) {
+    this.integracoes = integracoes;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -67,13 +89,14 @@ public class DocumentoTemplatePersist   {
       return false;
     }
     DocumentoTemplatePersist documentoTemplatePersist = (DocumentoTemplatePersist) o;
-    return Objects.equals(this.idTipoDocumento, documentoTemplatePersist.idTipoDocumento) &&
-        Objects.equals(this.template, documentoTemplatePersist.template);
+    return Objects.equals(this.idTipoTemplate, documentoTemplatePersist.idTipoTemplate) &&
+        Objects.equals(this.template, documentoTemplatePersist.template) &&
+        Objects.equals(this.integracoes, documentoTemplatePersist.integracoes);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idTipoDocumento, template);
+    return Objects.hash(idTipoTemplate, template, integracoes);
   }
 
   @Override
@@ -81,8 +104,9 @@ public class DocumentoTemplatePersist   {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocumentoTemplatePersist {\n");
     
-    sb.append("    idTipoDocumento: ").append(toIndentedString(idTipoDocumento)).append("\n");
+    sb.append("    idTipoTemplate: ").append(toIndentedString(idTipoTemplate)).append("\n");
     sb.append("    template: ").append(toIndentedString(template)).append("\n");
+    sb.append("    integracoes: ").append(toIndentedString(integracoes)).append("\n");
     sb.append("}");
     return sb.toString();
   }

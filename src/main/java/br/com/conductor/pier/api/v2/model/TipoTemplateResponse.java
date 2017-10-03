@@ -10,12 +10,12 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de Tipo de Documento
+ * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de Tipo de Template
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de Tipo de Documento")
+@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de Tipo de Template")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class DocumentoTipoResponse   {
+public class TipoTemplateResponse   {
   
   private Long id = null;
   private String nome = null;
@@ -24,14 +24,14 @@ public class DocumentoTipoResponse   {
 
   
   /**
-   * ID do Tipo de Documento.
+   * ID do Tipo de Template.
    **/
-  public DocumentoTipoResponse id(Long id) {
+  public TipoTemplateResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "ID do Tipo de Documento.")
+  @ApiModelProperty(example = "null", value = "ID do Tipo de Template.")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -42,14 +42,14 @@ public class DocumentoTipoResponse   {
 
   
   /**
-   * Nome do Tipo de Documento.
+   * Nome do Tipo de Template.
    **/
-  public DocumentoTipoResponse nome(String nome) {
+  public TipoTemplateResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome do Tipo de Documento.")
+  @ApiModelProperty(example = "null", value = "Nome do Tipo de Template.")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -60,14 +60,14 @@ public class DocumentoTipoResponse   {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do Tipo de Documento.
+   * Descri\u00C3\u00A7\u00C3\u00A3o do Tipo de Template.
    **/
-  public DocumentoTipoResponse descricao(String descricao) {
+  public TipoTemplateResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o do Tipo de Documento.")
+  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o do Tipo de Template.")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -78,14 +78,14 @@ public class DocumentoTipoResponse   {
 
   
   /**
-   * Sigla do Tipo de Documento.
+   * Sigla do Tipo de Template.
    **/
-  public DocumentoTipoResponse sigla(String sigla) {
+  public TipoTemplateResponse sigla(String sigla) {
     this.sigla = sigla;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Sigla do Tipo de Documento.")
+  @ApiModelProperty(example = "null", value = "Sigla do Tipo de Template.")
   @JsonProperty("sigla")
   public String getSigla() {
     return sigla;
@@ -104,11 +104,11 @@ public class DocumentoTipoResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    DocumentoTipoResponse documentoTipoResponse = (DocumentoTipoResponse) o;
-    return Objects.equals(this.id, documentoTipoResponse.id) &&
-        Objects.equals(this.nome, documentoTipoResponse.nome) &&
-        Objects.equals(this.descricao, documentoTipoResponse.descricao) &&
-        Objects.equals(this.sigla, documentoTipoResponse.sigla);
+    TipoTemplateResponse tipoTemplateResponse = (TipoTemplateResponse) o;
+    return Objects.equals(this.id, tipoTemplateResponse.id) &&
+        Objects.equals(this.nome, tipoTemplateResponse.nome) &&
+        Objects.equals(this.descricao, tipoTemplateResponse.descricao) &&
+        Objects.equals(this.sigla, tipoTemplateResponse.sigla);
   }
 
   @Override
@@ -119,7 +119,7 @@ public class DocumentoTipoResponse   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class DocumentoTipoResponse {\n");
+    sb.append("class TipoTemplateResponse {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    nome: ").append(toIndentedString(nome)).append("\n");

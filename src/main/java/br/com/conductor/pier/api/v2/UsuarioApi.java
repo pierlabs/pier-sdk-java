@@ -169,17 +169,17 @@ public class UsuarioApi {
    * @param update update
    * @return UsuarioResponse
    */
-  public UsuarioResponse alterarUsingPUT10(Long id, UsuarioUpdate update) throws ApiException {
+  public UsuarioResponse alterarUsingPUT11(Long id, UsuarioUpdate update) throws ApiException {
     Object postBody = update;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT10");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT11");
      }
      
      // verify the required parameter 'update' is set
      if (update == null) {
-        throw new ApiException(400, "Missing the required parameter 'update' when calling alterarUsingPUT10");
+        throw new ApiException(400, "Missing the required parameter 'update' when calling alterarUsingPUT11");
      }
      
     // create path and map variables
@@ -270,12 +270,12 @@ public class UsuarioApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
    * @return UsuarioResponse
    */
-  public UsuarioResponse consultarUsingGET29(Long id) throws ApiException {
+  public UsuarioResponse consultarUsingGET31(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET29");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET31");
      }
      
     // create path and map variables
@@ -372,7 +372,7 @@ public class UsuarioApi {
    * @param status Status do Usuario
    * @return PageUsuarioResponse
    */
-  public PageUsuarioResponse listarUsingGET33(List<String> sort, Integer page, Integer limit, String nome, String cpf, String email, String status) throws ApiException {
+  public PageUsuarioResponse listarUsingGET35(List<String> sort, Integer page, Integer limit, String nome, String cpf, String email, String status) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

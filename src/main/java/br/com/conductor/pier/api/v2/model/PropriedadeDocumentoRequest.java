@@ -23,7 +23,6 @@ public class PropriedadeDocumentoRequest   {
 
 
   public enum DetalhesTipoEnum {
-    LIST("LIST"),
     IMAGEM("IMAGEM"),
     TEXTO("TEXTO"),
     NUMERO("NUMERO");
@@ -42,6 +41,7 @@ public class PropriedadeDocumentoRequest   {
   }
 
   private DetalhesTipoEnum detalhesTipo = null;
+  private Boolean flagIndice = null;
 
   
   /**
@@ -98,6 +98,24 @@ public class PropriedadeDocumentoRequest   {
   }
 
   
+  /**
+   * Atributo que indica se o par\u00C3\u00A2metro \u00C3\u00A9 um \u00C3\u00ADndice (default = false)
+   **/
+  public PropriedadeDocumentoRequest flagIndice(Boolean flagIndice) {
+    this.flagIndice = flagIndice;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "Atributo que indica se o par\u00C3\u00A2metro \u00C3\u00A9 um \u00C3\u00ADndice (default = false)")
+  @JsonProperty("flagIndice")
+  public Boolean getFlagIndice() {
+    return flagIndice;
+  }
+  public void setFlagIndice(Boolean flagIndice) {
+    this.flagIndice = flagIndice;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -110,12 +128,13 @@ public class PropriedadeDocumentoRequest   {
     PropriedadeDocumentoRequest propriedadeDocumentoRequest = (PropriedadeDocumentoRequest) o;
     return Objects.equals(this.chave, propriedadeDocumentoRequest.chave) &&
         Objects.equals(this.valor, propriedadeDocumentoRequest.valor) &&
-        Objects.equals(this.detalhesTipo, propriedadeDocumentoRequest.detalhesTipo);
+        Objects.equals(this.detalhesTipo, propriedadeDocumentoRequest.detalhesTipo) &&
+        Objects.equals(this.flagIndice, propriedadeDocumentoRequest.flagIndice);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(chave, valor, detalhesTipo);
+    return Objects.hash(chave, valor, detalhesTipo, flagIndice);
   }
 
   @Override
@@ -126,6 +145,7 @@ public class PropriedadeDocumentoRequest   {
     sb.append("    chave: ").append(toIndentedString(chave)).append("\n");
     sb.append("    valor: ").append(toIndentedString(valor)).append("\n");
     sb.append("    detalhesTipo: ").append(toIndentedString(detalhesTipo)).append("\n");
+    sb.append("    flagIndice: ").append(toIndentedString(flagIndice)).append("\n");
     sb.append("}");
     return sb.toString();
   }

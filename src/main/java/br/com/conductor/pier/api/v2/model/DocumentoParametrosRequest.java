@@ -20,28 +20,9 @@ import java.util.List;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class DocumentoParametrosRequest   {
   
-  private Long idTipoDocumento = null;
   private Long idTemplateDocumento = null;
   private String nome = null;
   private List<PropriedadeDocumentoRequest> parametrosConteudo = new ArrayList<PropriedadeDocumentoRequest>();
-
-  
-  /**
-   * ID para o tipo de documento.
-   **/
-  public DocumentoParametrosRequest idTipoDocumento(Long idTipoDocumento) {
-    this.idTipoDocumento = idTipoDocumento;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "ID para o tipo de documento.")
-  @JsonProperty("idTipoDocumento")
-  public Long getIdTipoDocumento() {
-    return idTipoDocumento;
-  }
-  public void setIdTipoDocumento(Long idTipoDocumento) {
-    this.idTipoDocumento = idTipoDocumento;
-  }
 
   
   /**
@@ -108,15 +89,14 @@ public class DocumentoParametrosRequest   {
       return false;
     }
     DocumentoParametrosRequest documentoParametrosRequest = (DocumentoParametrosRequest) o;
-    return Objects.equals(this.idTipoDocumento, documentoParametrosRequest.idTipoDocumento) &&
-        Objects.equals(this.idTemplateDocumento, documentoParametrosRequest.idTemplateDocumento) &&
+    return Objects.equals(this.idTemplateDocumento, documentoParametrosRequest.idTemplateDocumento) &&
         Objects.equals(this.nome, documentoParametrosRequest.nome) &&
         Objects.equals(this.parametrosConteudo, documentoParametrosRequest.parametrosConteudo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idTipoDocumento, idTemplateDocumento, nome, parametrosConteudo);
+    return Objects.hash(idTemplateDocumento, nome, parametrosConteudo);
   }
 
   @Override
@@ -124,7 +104,6 @@ public class DocumentoParametrosRequest   {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocumentoParametrosRequest {\n");
     
-    sb.append("    idTipoDocumento: ").append(toIndentedString(idTipoDocumento)).append("\n");
     sb.append("    idTemplateDocumento: ").append(toIndentedString(idTemplateDocumento)).append("\n");
     sb.append("    nome: ").append(toIndentedString(nome)).append("\n");
     sb.append("    parametrosConteudo: ").append(toIndentedString(parametrosConteudo)).append("\n");
