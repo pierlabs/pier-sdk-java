@@ -48,12 +48,12 @@ public class EstabelecimentoApi {
    * @param id Id
    * @return EstabelecimentoResponse
    */
-  public EstabelecimentoResponse consultarUsingGET10(Long id) throws ApiException {
+  public EstabelecimentoResponse consultarUsingGET11(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET10");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET11");
      }
      
     // create path and map variables
@@ -96,12 +96,12 @@ public class EstabelecimentoApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
    * @return TerminalResponse
    */
-  public TerminalResponse consultarUsingGET20(Long id) throws ApiException {
+  public TerminalResponse consultarUsingGET21(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET20");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET21");
      }
      
     // create path and map variables
@@ -165,7 +165,7 @@ public class EstabelecimentoApi {
    * @param inativo Indica se o estabelecimento est\u00C3\u00A1 inativo.
    * @return PageEstabelecimentoResponse
    */
-  public PageEstabelecimentoResponse listarUsingGET13(List<String> sort, Integer page, Integer limit, Long id, Long numeroReceitaFederal, String nome, String descricao, String nomeFantasia, String cep, String nomeLogradouro, Long numeroEndereco, String complemento, String bairro, String cidade, String uf, String pais, String dataCadastramento, String contato, String email, Integer flagArquivoSecrFazenda, Integer flagCartaoDigitado, Integer inativo) throws ApiException {
+  public PageEstabelecimentoResponse listarUsingGET14(List<String> sort, Integer page, Integer limit, Long id, Long numeroReceitaFederal, String nome, String descricao, String nomeFantasia, String cep, String nomeLogradouro, Long numeroEndereco, String complemento, String bairro, String cidade, String uf, String pais, String dataCadastramento, String contato, String email, Integer flagArquivoSecrFazenda, Integer flagCartaoDigitado, Integer inativo) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -257,7 +257,7 @@ public class EstabelecimentoApi {
    * @param idEstabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
    * @return PageTerminalResponse
    */
-  public PageTerminalResponse listarUsingGET27(List<String> sort, Integer page, Integer limit, Long id, String terminal, Long numeroEstabelecimento, Long idEstabelecimento) throws ApiException {
+  public PageTerminalResponse listarUsingGET28(List<String> sort, Integer page, Integer limit, Long id, String terminal, Long numeroEstabelecimento, Long idEstabelecimento) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

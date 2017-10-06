@@ -44,6 +44,7 @@ public class TransacaoNaoProcessadaResponse   {
   private String grupoDescricaoMCC = null;
   private Long idEstabelecimento = null;
   private String nomeEstabelecimento = null;
+  private String nomeFantasiaEstabelecimento = null;
   private String localidadeEstabelecimento = null;
   private Long planoParcelamento = null;
   private Long numeroParcela = null;
@@ -524,6 +525,24 @@ public class TransacaoNaoProcessadaResponse   {
 
   
   /**
+   * Nome Fantasia do Estabelecimento.
+   **/
+  public TransacaoNaoProcessadaResponse nomeFantasiaEstabelecimento(String nomeFantasiaEstabelecimento) {
+    this.nomeFantasiaEstabelecimento = nomeFantasiaEstabelecimento;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Nome Fantasia do Estabelecimento.")
+  @JsonProperty("nomeFantasiaEstabelecimento")
+  public String getNomeFantasiaEstabelecimento() {
+    return nomeFantasiaEstabelecimento;
+  }
+  public void setNomeFantasiaEstabelecimento(String nomeFantasiaEstabelecimento) {
+    this.nomeFantasiaEstabelecimento = nomeFantasiaEstabelecimento;
+  }
+
+  
+  /**
    * Localidade do Estabelecimento.
    **/
   public TransacaoNaoProcessadaResponse localidadeEstabelecimento(String localidadeEstabelecimento) {
@@ -721,6 +740,7 @@ public class TransacaoNaoProcessadaResponse   {
         Objects.equals(this.grupoDescricaoMCC, transacaoNaoProcessadaResponse.grupoDescricaoMCC) &&
         Objects.equals(this.idEstabelecimento, transacaoNaoProcessadaResponse.idEstabelecimento) &&
         Objects.equals(this.nomeEstabelecimento, transacaoNaoProcessadaResponse.nomeEstabelecimento) &&
+        Objects.equals(this.nomeFantasiaEstabelecimento, transacaoNaoProcessadaResponse.nomeFantasiaEstabelecimento) &&
         Objects.equals(this.localidadeEstabelecimento, transacaoNaoProcessadaResponse.localidadeEstabelecimento) &&
         Objects.equals(this.planoParcelamento, transacaoNaoProcessadaResponse.planoParcelamento) &&
         Objects.equals(this.numeroParcela, transacaoNaoProcessadaResponse.numeroParcela) &&
@@ -734,7 +754,7 @@ public class TransacaoNaoProcessadaResponse   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(idTipoTransacaoNaoProcessada, descricaoTipoTransacaoNaoProcessada, descricaoAbreviada, idConta, cartaoMascarado, nomePortador, dataOrigem, dataFaturamento, dataVencimento, modoEntradaTransacao, valorTaxaEmbarque, valorEntrada, valorBRL, valorUSD, cotacaoUSD, dataCotacaoUSD, codigoMoedaOrigem, codigoMoedaDestino, codigoAutorizacao, codigoReferencia, codigoTerminal, codigoMCC, grupoMCC, grupoDescricaoMCC, idEstabelecimento, nomeEstabelecimento, localidadeEstabelecimento, planoParcelamento, numeroParcela, detalhesTransacao, flagCredito, flagFaturado, flagEstorno, idTransacaoEstorno, status);
+    return Objects.hash(idTipoTransacaoNaoProcessada, descricaoTipoTransacaoNaoProcessada, descricaoAbreviada, idConta, cartaoMascarado, nomePortador, dataOrigem, dataFaturamento, dataVencimento, modoEntradaTransacao, valorTaxaEmbarque, valorEntrada, valorBRL, valorUSD, cotacaoUSD, dataCotacaoUSD, codigoMoedaOrigem, codigoMoedaDestino, codigoAutorizacao, codigoReferencia, codigoTerminal, codigoMCC, grupoMCC, grupoDescricaoMCC, idEstabelecimento, nomeEstabelecimento, nomeFantasiaEstabelecimento, localidadeEstabelecimento, planoParcelamento, numeroParcela, detalhesTransacao, flagCredito, flagFaturado, flagEstorno, idTransacaoEstorno, status);
   }
 
   @Override
@@ -768,6 +788,7 @@ public class TransacaoNaoProcessadaResponse   {
     sb.append("    grupoDescricaoMCC: ").append(toIndentedString(grupoDescricaoMCC)).append("\n");
     sb.append("    idEstabelecimento: ").append(toIndentedString(idEstabelecimento)).append("\n");
     sb.append("    nomeEstabelecimento: ").append(toIndentedString(nomeEstabelecimento)).append("\n");
+    sb.append("    nomeFantasiaEstabelecimento: ").append(toIndentedString(nomeFantasiaEstabelecimento)).append("\n");
     sb.append("    localidadeEstabelecimento: ").append(toIndentedString(localidadeEstabelecimento)).append("\n");
     sb.append("    planoParcelamento: ").append(toIndentedString(planoParcelamento)).append("\n");
     sb.append("    numeroParcela: ").append(toIndentedString(numeroParcela)).append("\n");

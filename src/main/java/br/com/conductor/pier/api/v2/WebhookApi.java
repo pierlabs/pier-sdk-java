@@ -113,12 +113,12 @@ public class WebhookApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
    * @return WebHookResponse
    */
-  public WebHookResponse consultarUsingGET32(Long id) throws ApiException {
+  public WebHookResponse consultarUsingGET33(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET32");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET33");
      }
      
     // create path and map variables
@@ -167,7 +167,7 @@ public class WebhookApi {
    * @param url URL que a ser consumida pelo WebHook
    * @return PageWebHookResponse
    */
-  public PageWebHookResponse listarUsingGET37(List<String> sort, Integer page, Integer limit, Long id, String tipoEvento, String metodo, String url) throws ApiException {
+  public PageWebHookResponse listarUsingGET38(List<String> sort, Integer page, Integer limit, Long id, String tipoEvento, String metodo, String url) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -224,17 +224,17 @@ public class WebhookApi {
    * @param url URL que a ser consumida pelo WebHook
    * @return WebHookResponse
    */
-  public WebHookResponse salvarUsingPOST20(String tipoEvento, String url) throws ApiException {
+  public WebHookResponse salvarUsingPOST21(String tipoEvento, String url) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'tipoEvento' is set
      if (tipoEvento == null) {
-        throw new ApiException(400, "Missing the required parameter 'tipoEvento' when calling salvarUsingPOST20");
+        throw new ApiException(400, "Missing the required parameter 'tipoEvento' when calling salvarUsingPOST21");
      }
      
      // verify the required parameter 'url' is set
      if (url == null) {
-        throw new ApiException(400, "Missing the required parameter 'url' when calling salvarUsingPOST20");
+        throw new ApiException(400, "Missing the required parameter 'url' when calling salvarUsingPOST21");
      }
      
     // create path and map variables
