@@ -7,7 +7,9 @@ import br.com.conductor.pier.api.v2.invoker.ApiClient;
 import br.com.conductor.pier.api.v2.invoker.Configuration;
 import br.com.conductor.pier.api.v2.invoker.Pair;
 
+import br.com.conductor.pier.api.v2.model.FaturaDetalheResponse;
 import br.com.conductor.pier.api.v2.model.PagePlanoParcelamentoResponse;
+import br.com.conductor.pier.api.v2.model.PageFaturaResponse;
 
 
 
@@ -38,6 +40,62 @@ public class FaturaApi {
     this.apiClient = apiClient;
   }
 
+  
+  /**
+   * Consulta fatura de um cliente
+   * Consulta fatura de um cliente pela data de vencimento.
+   * @param dataVencimento Data Vencimento
+   * @param idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * @return FaturaDetalheResponse
+   */
+  public FaturaDetalheResponse consultarFaturaUsingGET1(String dataVencimento, Long idConta) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'dataVencimento' is set
+     if (dataVencimento == null) {
+        throw new ApiException(400, "Missing the required parameter 'dataVencimento' when calling consultarFaturaUsingGET1");
+     }
+     
+     // verify the required parameter 'idConta' is set
+     if (idConta == null) {
+        throw new ApiException(400, "Missing the required parameter 'idConta' when calling consultarFaturaUsingGET1");
+     }
+     
+    // create path and map variables
+    String path = "/api/faturas/{dataVencimento}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "dataVencimento" + "\\}", apiClient.escapeString(dataVencimento.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idConta", idConta));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<FaturaDetalheResponse> returnType = new GenericType<FaturaDetalheResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
   
   /**
    * Listar planos de parcelamento
@@ -159,6 +217,67 @@ public class FaturaApi {
     
     GenericType<Object> returnType = new GenericType<Object>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Listar faturas de um cliente.
+   * Lista faturas de um cliente.
+   * @param idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * @param situacaoProcessamento Status do processamento das faturas. Valores possiveis [ABERTA, FECHADA, TODAS].
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @return PageFaturaResponse
+   */
+  public PageFaturaResponse listarFaturasUsingGET1(Long idConta, String situacaoProcessamento, List<String> sort, Integer page, Integer limit) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'idConta' is set
+     if (idConta == null) {
+        throw new ApiException(400, "Missing the required parameter 'idConta' when calling listarFaturasUsingGET1");
+     }
+     
+    // create path and map variables
+    String path = "/api/faturas".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idConta", idConta));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "situacaoProcessamento", situacaoProcessamento));
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PageFaturaResponse> returnType = new GenericType<PageFaturaResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   

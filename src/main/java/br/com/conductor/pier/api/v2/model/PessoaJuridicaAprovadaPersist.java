@@ -3,6 +3,7 @@ package br.com.conductor.pier.api.v2.model;
 import java.util.Objects;
 import br.com.conductor.pier.api.v2.model.EnderecoAprovadoPersist;
 import br.com.conductor.pier.api.v2.model.PessoaPersist;
+import br.com.conductor.pier.api.v2.model.RefenciaComercialAprovadoPersist;
 import br.com.conductor.pier.api.v2.model.TelefonePessoaAprovadaPersist;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
@@ -40,8 +41,9 @@ public class PessoaJuridicaAprovadaPersist   {
   private Integer valorPontuacao = null;
   private List<TelefonePessoaAprovadaPersist> telefones = new ArrayList<TelefonePessoaAprovadaPersist>();
   private List<EnderecoAprovadoPersist> enderecos = new ArrayList<EnderecoAprovadoPersist>();
-  private BigDecimal limiteGlobal = null;
   private List<PessoaPersist> socios = new ArrayList<PessoaPersist>();
+  private List<RefenciaComercialAprovadoPersist> referenciasComerciais = new ArrayList<RefenciaComercialAprovadoPersist>();
+  private BigDecimal limiteGlobal = null;
   private BigDecimal limiteMaximo = null;
   private BigDecimal limiteParcelas = null;
 
@@ -353,24 +355,6 @@ public class PessoaJuridicaAprovadaPersist   {
 
   
   /**
-   * Valor do Limite Global
-   **/
-  public PessoaJuridicaAprovadaPersist limiteGlobal(BigDecimal limiteGlobal) {
-    this.limiteGlobal = limiteGlobal;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", required = true, value = "Valor do Limite Global")
-  @JsonProperty("limiteGlobal")
-  public BigDecimal getLimiteGlobal() {
-    return limiteGlobal;
-  }
-  public void setLimiteGlobal(BigDecimal limiteGlobal) {
-    this.limiteGlobal = limiteGlobal;
-  }
-
-  
-  /**
    * Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista
    **/
   public PessoaJuridicaAprovadaPersist socios(List<PessoaPersist> socios) {
@@ -385,6 +369,42 @@ public class PessoaJuridicaAprovadaPersist   {
   }
   public void setSocios(List<PessoaPersist> socios) {
     this.socios = socios;
+  }
+
+  
+  /**
+   * Apresenta os dados das refer\u00C3\u00AAncias comerciais
+   **/
+  public PessoaJuridicaAprovadaPersist referenciasComerciais(List<RefenciaComercialAprovadoPersist> referenciasComerciais) {
+    this.referenciasComerciais = referenciasComerciais;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Apresenta os dados das refer\u00C3\u00AAncias comerciais")
+  @JsonProperty("referenciasComerciais")
+  public List<RefenciaComercialAprovadoPersist> getReferenciasComerciais() {
+    return referenciasComerciais;
+  }
+  public void setReferenciasComerciais(List<RefenciaComercialAprovadoPersist> referenciasComerciais) {
+    this.referenciasComerciais = referenciasComerciais;
+  }
+
+  
+  /**
+   * Valor do Limite Global
+   **/
+  public PessoaJuridicaAprovadaPersist limiteGlobal(BigDecimal limiteGlobal) {
+    this.limiteGlobal = limiteGlobal;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "Valor do Limite Global")
+  @JsonProperty("limiteGlobal")
+  public BigDecimal getLimiteGlobal() {
+    return limiteGlobal;
+  }
+  public void setLimiteGlobal(BigDecimal limiteGlobal) {
+    this.limiteGlobal = limiteGlobal;
   }
 
   
@@ -451,15 +471,16 @@ public class PessoaJuridicaAprovadaPersist   {
         Objects.equals(this.valorPontuacao, pessoaJuridicaAprovadaPersist.valorPontuacao) &&
         Objects.equals(this.telefones, pessoaJuridicaAprovadaPersist.telefones) &&
         Objects.equals(this.enderecos, pessoaJuridicaAprovadaPersist.enderecos) &&
-        Objects.equals(this.limiteGlobal, pessoaJuridicaAprovadaPersist.limiteGlobal) &&
         Objects.equals(this.socios, pessoaJuridicaAprovadaPersist.socios) &&
+        Objects.equals(this.referenciasComerciais, pessoaJuridicaAprovadaPersist.referenciasComerciais) &&
+        Objects.equals(this.limiteGlobal, pessoaJuridicaAprovadaPersist.limiteGlobal) &&
         Objects.equals(this.limiteMaximo, pessoaJuridicaAprovadaPersist.limiteMaximo) &&
         Objects.equals(this.limiteParcelas, pessoaJuridicaAprovadaPersist.limiteParcelas);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(razaoSocial, nomeFantasia, cnpj, inscricaoEstadual, dataAberturaEmpresa, idOrigemComercial, idProduto, numeroAgencia, numeroContaCorrente, email, diaVencimento, nomeImpresso, valorRenda, canalEntrada, valorPontuacao, telefones, enderecos, limiteGlobal, socios, limiteMaximo, limiteParcelas);
+    return Objects.hash(razaoSocial, nomeFantasia, cnpj, inscricaoEstadual, dataAberturaEmpresa, idOrigemComercial, idProduto, numeroAgencia, numeroContaCorrente, email, diaVencimento, nomeImpresso, valorRenda, canalEntrada, valorPontuacao, telefones, enderecos, socios, referenciasComerciais, limiteGlobal, limiteMaximo, limiteParcelas);
   }
 
   @Override
@@ -484,8 +505,9 @@ public class PessoaJuridicaAprovadaPersist   {
     sb.append("    valorPontuacao: ").append(toIndentedString(valorPontuacao)).append("\n");
     sb.append("    telefones: ").append(toIndentedString(telefones)).append("\n");
     sb.append("    enderecos: ").append(toIndentedString(enderecos)).append("\n");
-    sb.append("    limiteGlobal: ").append(toIndentedString(limiteGlobal)).append("\n");
     sb.append("    socios: ").append(toIndentedString(socios)).append("\n");
+    sb.append("    referenciasComerciais: ").append(toIndentedString(referenciasComerciais)).append("\n");
+    sb.append("    limiteGlobal: ").append(toIndentedString(limiteGlobal)).append("\n");
     sb.append("    limiteMaximo: ").append(toIndentedString(limiteMaximo)).append("\n");
     sb.append("    limiteParcelas: ").append(toIndentedString(limiteParcelas)).append("\n");
     sb.append("}");

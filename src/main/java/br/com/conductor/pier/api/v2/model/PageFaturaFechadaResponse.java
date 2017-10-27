@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v2.model.FaturaResponse;
+import br.com.conductor.pier.api.v2.model.FaturaFechadaResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -13,14 +13,14 @@ import java.util.List;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de planos de parcelamento
+ * Lista de faturas
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de planos de parcelamento")
+@ApiModel(description = "Lista de faturas")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class PageFaturaResponse   {
+public class PageFaturaFechadaResponse   {
   
-  private List<FaturaResponse> content = new ArrayList<FaturaResponse>();
+  private List<FaturaFechadaResponse> content = new ArrayList<FaturaFechadaResponse>();
   private Boolean first = null;
   private Boolean firstPage = null;
   private Boolean hasContent = null;
@@ -38,24 +38,24 @@ public class PageFaturaResponse   {
   
   /**
    **/
-  public PageFaturaResponse content(List<FaturaResponse> content) {
+  public PageFaturaFechadaResponse content(List<FaturaFechadaResponse> content) {
     this.content = content;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("content")
-  public List<FaturaResponse> getContent() {
+  public List<FaturaFechadaResponse> getContent() {
     return content;
   }
-  public void setContent(List<FaturaResponse> content) {
+  public void setContent(List<FaturaFechadaResponse> content) {
     this.content = content;
   }
 
   
   /**
    **/
-  public PageFaturaResponse first(Boolean first) {
+  public PageFaturaFechadaResponse first(Boolean first) {
     this.first = first;
     return this;
   }
@@ -72,7 +72,7 @@ public class PageFaturaResponse   {
   
   /**
    **/
-  public PageFaturaResponse firstPage(Boolean firstPage) {
+  public PageFaturaFechadaResponse firstPage(Boolean firstPage) {
     this.firstPage = firstPage;
     return this;
   }
@@ -89,7 +89,7 @@ public class PageFaturaResponse   {
   
   /**
    **/
-  public PageFaturaResponse hasContent(Boolean hasContent) {
+  public PageFaturaFechadaResponse hasContent(Boolean hasContent) {
     this.hasContent = hasContent;
     return this;
   }
@@ -106,7 +106,7 @@ public class PageFaturaResponse   {
   
   /**
    **/
-  public PageFaturaResponse hasNextPage(Boolean hasNextPage) {
+  public PageFaturaFechadaResponse hasNextPage(Boolean hasNextPage) {
     this.hasNextPage = hasNextPage;
     return this;
   }
@@ -123,7 +123,7 @@ public class PageFaturaResponse   {
   
   /**
    **/
-  public PageFaturaResponse hasPreviousPage(Boolean hasPreviousPage) {
+  public PageFaturaFechadaResponse hasPreviousPage(Boolean hasPreviousPage) {
     this.hasPreviousPage = hasPreviousPage;
     return this;
   }
@@ -140,7 +140,7 @@ public class PageFaturaResponse   {
   
   /**
    **/
-  public PageFaturaResponse last(Boolean last) {
+  public PageFaturaFechadaResponse last(Boolean last) {
     this.last = last;
     return this;
   }
@@ -157,7 +157,7 @@ public class PageFaturaResponse   {
   
   /**
    **/
-  public PageFaturaResponse nextPage(Integer nextPage) {
+  public PageFaturaFechadaResponse nextPage(Integer nextPage) {
     this.nextPage = nextPage;
     return this;
   }
@@ -174,7 +174,7 @@ public class PageFaturaResponse   {
   
   /**
    **/
-  public PageFaturaResponse number(Integer number) {
+  public PageFaturaFechadaResponse number(Integer number) {
     this.number = number;
     return this;
   }
@@ -191,7 +191,7 @@ public class PageFaturaResponse   {
   
   /**
    **/
-  public PageFaturaResponse numberOfElements(Integer numberOfElements) {
+  public PageFaturaFechadaResponse numberOfElements(Integer numberOfElements) {
     this.numberOfElements = numberOfElements;
     return this;
   }
@@ -208,7 +208,7 @@ public class PageFaturaResponse   {
   
   /**
    **/
-  public PageFaturaResponse previousPage(Integer previousPage) {
+  public PageFaturaFechadaResponse previousPage(Integer previousPage) {
     this.previousPage = previousPage;
     return this;
   }
@@ -225,7 +225,7 @@ public class PageFaturaResponse   {
   
   /**
    **/
-  public PageFaturaResponse size(Integer size) {
+  public PageFaturaFechadaResponse size(Integer size) {
     this.size = size;
     return this;
   }
@@ -242,7 +242,7 @@ public class PageFaturaResponse   {
   
   /**
    **/
-  public PageFaturaResponse totalElements(Long totalElements) {
+  public PageFaturaFechadaResponse totalElements(Long totalElements) {
     this.totalElements = totalElements;
     return this;
   }
@@ -259,7 +259,7 @@ public class PageFaturaResponse   {
   
   /**
    **/
-  public PageFaturaResponse totalPages(Integer totalPages) {
+  public PageFaturaFechadaResponse totalPages(Integer totalPages) {
     this.totalPages = totalPages;
     return this;
   }
@@ -283,21 +283,21 @@ public class PageFaturaResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    PageFaturaResponse pageFaturaResponse = (PageFaturaResponse) o;
-    return Objects.equals(this.content, pageFaturaResponse.content) &&
-        Objects.equals(this.first, pageFaturaResponse.first) &&
-        Objects.equals(this.firstPage, pageFaturaResponse.firstPage) &&
-        Objects.equals(this.hasContent, pageFaturaResponse.hasContent) &&
-        Objects.equals(this.hasNextPage, pageFaturaResponse.hasNextPage) &&
-        Objects.equals(this.hasPreviousPage, pageFaturaResponse.hasPreviousPage) &&
-        Objects.equals(this.last, pageFaturaResponse.last) &&
-        Objects.equals(this.nextPage, pageFaturaResponse.nextPage) &&
-        Objects.equals(this.number, pageFaturaResponse.number) &&
-        Objects.equals(this.numberOfElements, pageFaturaResponse.numberOfElements) &&
-        Objects.equals(this.previousPage, pageFaturaResponse.previousPage) &&
-        Objects.equals(this.size, pageFaturaResponse.size) &&
-        Objects.equals(this.totalElements, pageFaturaResponse.totalElements) &&
-        Objects.equals(this.totalPages, pageFaturaResponse.totalPages);
+    PageFaturaFechadaResponse pageFaturaFechadaResponse = (PageFaturaFechadaResponse) o;
+    return Objects.equals(this.content, pageFaturaFechadaResponse.content) &&
+        Objects.equals(this.first, pageFaturaFechadaResponse.first) &&
+        Objects.equals(this.firstPage, pageFaturaFechadaResponse.firstPage) &&
+        Objects.equals(this.hasContent, pageFaturaFechadaResponse.hasContent) &&
+        Objects.equals(this.hasNextPage, pageFaturaFechadaResponse.hasNextPage) &&
+        Objects.equals(this.hasPreviousPage, pageFaturaFechadaResponse.hasPreviousPage) &&
+        Objects.equals(this.last, pageFaturaFechadaResponse.last) &&
+        Objects.equals(this.nextPage, pageFaturaFechadaResponse.nextPage) &&
+        Objects.equals(this.number, pageFaturaFechadaResponse.number) &&
+        Objects.equals(this.numberOfElements, pageFaturaFechadaResponse.numberOfElements) &&
+        Objects.equals(this.previousPage, pageFaturaFechadaResponse.previousPage) &&
+        Objects.equals(this.size, pageFaturaFechadaResponse.size) &&
+        Objects.equals(this.totalElements, pageFaturaFechadaResponse.totalElements) &&
+        Objects.equals(this.totalPages, pageFaturaFechadaResponse.totalPages);
   }
 
   @Override
@@ -308,7 +308,7 @@ public class PageFaturaResponse   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PageFaturaResponse {\n");
+    sb.append("class PageFaturaFechadaResponse {\n");
     
     sb.append("    content: ").append(toIndentedString(content)).append("\n");
     sb.append("    first: ").append(toIndentedString(first)).append("\n");

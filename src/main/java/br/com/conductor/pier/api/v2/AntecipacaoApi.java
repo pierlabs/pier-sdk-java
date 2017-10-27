@@ -10,8 +10,10 @@ import br.com.conductor.pier.api.v2.invoker.Pair;
 import br.com.conductor.pier.api.v2.model.ParametroProdutoResponse;
 import br.com.conductor.pier.api.v2.model.TaxaAntecipacaoRequest;
 import br.com.conductor.pier.api.v2.model.AntecipacaoResponse;
+import br.com.conductor.pier.api.v2.model.AntecipacaoMockResponse;
 import br.com.conductor.pier.api.v2.model.PageCompraResponse;
 import br.com.conductor.pier.api.v2.model.AntecipacaoSimuladaResponse;
+import br.com.conductor.pier.api.v2.model.AntecipacaoSimuladaLoteResponse;
 
 
 
@@ -159,9 +161,10 @@ public class AntecipacaoApi {
    * @param idConta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.
    * @param quantidadeParcelas Quantidade de parcelas para serem antecipadas.
+   * @param complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
    * @return AntecipacaoResponse
    */
-  public AntecipacaoResponse efetivarAntecipacaoUsingPOST(Long idConta, Long id, Long quantidadeParcelas) throws ApiException {
+  public AntecipacaoResponse efetivarAntecipacaoUsingPOST(Long idConta, Long id, Long quantidadeParcelas, String complemento) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idConta' is set
@@ -193,6 +196,8 @@ public class AntecipacaoApi {
     
     queryParams.addAll(apiClient.parameterToPairs("", "quantidadeParcelas", quantidadeParcelas));
     
+    queryParams.addAll(apiClient.parameterToPairs("", "complemento", complemento));
+    
 
     
 
@@ -213,6 +218,58 @@ public class AntecipacaoApi {
 
     
     GenericType<AntecipacaoResponse> returnType = new GenericType<AntecipacaoResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
+   * M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o de todas as compras antecip\u00C3\u00A1veis com todas as parcelas de uma conta.
+   * @param idConta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.
+   * @param complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
+   * @return AntecipacaoMockResponse
+   */
+  public AntecipacaoMockResponse efetivarAntecipacoesUsingPOST(Long idConta, String complemento) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'idConta' is set
+     if (idConta == null) {
+        throw new ApiException(400, "Missing the required parameter 'idConta' when calling efetivarAntecipacoesUsingPOST");
+     }
+     
+    // create path and map variables
+    String path = "/api/compras-antecipaveis/efetivar-antecipacao".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idConta", idConta));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "complemento", complemento));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<AntecipacaoMockResponse> returnType = new GenericType<AntecipacaoMockResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -292,9 +349,10 @@ public class AntecipacaoApi {
    * Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
    * @param idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.
+   * @param complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
    * @return AntecipacaoSimuladaResponse
    */
-  public AntecipacaoSimuladaResponse simularAntecipacaoUsingGET(Long idConta, Long id) throws ApiException {
+  public AntecipacaoSimuladaResponse simularAntecipacaoUsingGET(Long idConta, Long id, String complemento) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idConta' is set
@@ -319,6 +377,8 @@ public class AntecipacaoApi {
     
     queryParams.addAll(apiClient.parameterToPairs("", "idConta", idConta));
     
+    queryParams.addAll(apiClient.parameterToPairs("", "complemento", complemento));
+    
 
     
 
@@ -339,6 +399,58 @@ public class AntecipacaoApi {
 
     
     GenericType<AntecipacaoSimuladaResponse> returnType = new GenericType<AntecipacaoSimuladaResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Simular antecipa\u00C3\u00A7\u00C3\u00A3o de todas as parcelas antecip\u00C3\u00A1veis
+   * O recurso permite realizar a simula\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o de todas as compras antecip\u00C3\u00A1veis de todas as parcelas de uma determinada conta.
+   * @param idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
+   * @param complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
+   * @return AntecipacaoSimuladaLoteResponse
+   */
+  public AntecipacaoSimuladaLoteResponse simularAntecipacoesUsingGET(Long idConta, String complemento) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'idConta' is set
+     if (idConta == null) {
+        throw new ApiException(400, "Missing the required parameter 'idConta' when calling simularAntecipacoesUsingGET");
+     }
+     
+    // create path and map variables
+    String path = "/api/compras-antecipaveis/simular-antecipacao".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idConta", idConta));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "complemento", complemento));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<AntecipacaoSimuladaLoteResponse> returnType = new GenericType<AntecipacaoSimuladaLoteResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

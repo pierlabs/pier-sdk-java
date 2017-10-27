@@ -4,7 +4,6 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.math.BigDecimal;
 
 
 
@@ -20,7 +19,6 @@ public class AlterarProdutoRequest   {
   
   private Long idProduto = null;
   private Long idOrigemComercial = null;
-  private BigDecimal limiteGlobal = null;
 
   
   /**
@@ -59,24 +57,6 @@ public class AlterarProdutoRequest   {
   }
 
   
-  /**
-   * Valor do novo limite Global.
-   **/
-  public AlterarProdutoRequest limiteGlobal(BigDecimal limiteGlobal) {
-    this.limiteGlobal = limiteGlobal;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Valor do novo limite Global.")
-  @JsonProperty("limiteGlobal")
-  public BigDecimal getLimiteGlobal() {
-    return limiteGlobal;
-  }
-  public void setLimiteGlobal(BigDecimal limiteGlobal) {
-    this.limiteGlobal = limiteGlobal;
-  }
-
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -88,13 +68,12 @@ public class AlterarProdutoRequest   {
     }
     AlterarProdutoRequest alterarProdutoRequest = (AlterarProdutoRequest) o;
     return Objects.equals(this.idProduto, alterarProdutoRequest.idProduto) &&
-        Objects.equals(this.idOrigemComercial, alterarProdutoRequest.idOrigemComercial) &&
-        Objects.equals(this.limiteGlobal, alterarProdutoRequest.limiteGlobal);
+        Objects.equals(this.idOrigemComercial, alterarProdutoRequest.idOrigemComercial);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idProduto, idOrigemComercial, limiteGlobal);
+    return Objects.hash(idProduto, idOrigemComercial);
   }
 
   @Override
@@ -104,7 +83,6 @@ public class AlterarProdutoRequest   {
     
     sb.append("    idProduto: ").append(toIndentedString(idProduto)).append("\n");
     sb.append("    idOrigemComercial: ").append(toIndentedString(idOrigemComercial)).append("\n");
-    sb.append("    limiteGlobal: ").append(toIndentedString(limiteGlobal)).append("\n");
     sb.append("}");
     return sb.toString();
   }

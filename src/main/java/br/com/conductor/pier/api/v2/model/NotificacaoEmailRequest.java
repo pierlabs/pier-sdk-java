@@ -1,10 +1,11 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
+import br.com.conductor.pier.api.v2.model.AnexoNotificacaoEmailRequest;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -21,50 +22,10 @@ import java.util.Map;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class NotificacaoEmailRequest   {
   
-  private Long idDocumento = null;
   private Long idTemplateNotificacao = null;
-  private String destinatario = null;
-
-
-  public enum TipoLayoutEnum {
-    RECUPERAR_SENHA("RECUPERAR_SENHA"),
-    FATURA_POR_EMAIL("FATURA_POR_EMAIL"),
-    VALIDAR_DISPOSITIVO("VALIDAR_DISPOSITIVO"),
-    NOTIFICACAO_EMAIL("NOTIFICACAO_EMAIL");
-
-    private String value;
-
-    TipoLayoutEnum(String value) {
-      this.value = value;
-    }
-
-    @Override
-    @JsonValue
-    public String toString() {
-      return value;
-    }
-  }
-
-  private TipoLayoutEnum tipoLayout = null;
+  private List<String> destinatarios = new ArrayList<String>();
+  private List<AnexoNotificacaoEmailRequest> anexos = new ArrayList<AnexoNotificacaoEmailRequest>();
   private Map<String, Object> parametrosConteudo = new HashMap<String, Object>();
-
-  
-  /**
-   * ID para o documento a ser enviado.
-   **/
-  public NotificacaoEmailRequest idDocumento(Long idDocumento) {
-    this.idDocumento = idDocumento;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "ID para o documento a ser enviado.")
-  @JsonProperty("idDocumento")
-  public Long getIdDocumento() {
-    return idDocumento;
-  }
-  public void setIdDocumento(Long idDocumento) {
-    this.idDocumento = idDocumento;
-  }
 
   
   /**
@@ -86,38 +47,38 @@ public class NotificacaoEmailRequest   {
 
   
   /**
-   * Email do destinat\u00C3\u00A1rio.
+   * Lista de email(s) do(s) destinat\u00C3\u00A1rio(s).
    **/
-  public NotificacaoEmailRequest destinatario(String destinatario) {
-    this.destinatario = destinatario;
+  public NotificacaoEmailRequest destinatarios(List<String> destinatarios) {
+    this.destinatarios = destinatarios;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Email do destinat\u00C3\u00A1rio.")
-  @JsonProperty("destinatario")
-  public String getDestinatario() {
-    return destinatario;
+  @ApiModelProperty(example = "null", value = "Lista de email(s) do(s) destinat\u00C3\u00A1rio(s).")
+  @JsonProperty("destinatarios")
+  public List<String> getDestinatarios() {
+    return destinatarios;
   }
-  public void setDestinatario(String destinatario) {
-    this.destinatario = destinatario;
+  public void setDestinatarios(List<String> destinatarios) {
+    this.destinatarios = destinatarios;
   }
 
   
   /**
-   * Tipo de layout para o template da notifica\u00C3\u00A7\u00C3\u00A3o.
+   * Lista de ids dos anexos a serem enviados.
    **/
-  public NotificacaoEmailRequest tipoLayout(TipoLayoutEnum tipoLayout) {
-    this.tipoLayout = tipoLayout;
+  public NotificacaoEmailRequest anexos(List<AnexoNotificacaoEmailRequest> anexos) {
+    this.anexos = anexos;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Tipo de layout para o template da notifica\u00C3\u00A7\u00C3\u00A3o.")
-  @JsonProperty("tipoLayout")
-  public TipoLayoutEnum getTipoLayout() {
-    return tipoLayout;
+  @ApiModelProperty(example = "null", value = "Lista de ids dos anexos a serem enviados.")
+  @JsonProperty("anexos")
+  public List<AnexoNotificacaoEmailRequest> getAnexos() {
+    return anexos;
   }
-  public void setTipoLayout(TipoLayoutEnum tipoLayout) {
-    this.tipoLayout = tipoLayout;
+  public void setAnexos(List<AnexoNotificacaoEmailRequest> anexos) {
+    this.anexos = anexos;
   }
 
   
@@ -149,16 +110,15 @@ public class NotificacaoEmailRequest   {
       return false;
     }
     NotificacaoEmailRequest notificacaoEmailRequest = (NotificacaoEmailRequest) o;
-    return Objects.equals(this.idDocumento, notificacaoEmailRequest.idDocumento) &&
-        Objects.equals(this.idTemplateNotificacao, notificacaoEmailRequest.idTemplateNotificacao) &&
-        Objects.equals(this.destinatario, notificacaoEmailRequest.destinatario) &&
-        Objects.equals(this.tipoLayout, notificacaoEmailRequest.tipoLayout) &&
+    return Objects.equals(this.idTemplateNotificacao, notificacaoEmailRequest.idTemplateNotificacao) &&
+        Objects.equals(this.destinatarios, notificacaoEmailRequest.destinatarios) &&
+        Objects.equals(this.anexos, notificacaoEmailRequest.anexos) &&
         Objects.equals(this.parametrosConteudo, notificacaoEmailRequest.parametrosConteudo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idDocumento, idTemplateNotificacao, destinatario, tipoLayout, parametrosConteudo);
+    return Objects.hash(idTemplateNotificacao, destinatarios, anexos, parametrosConteudo);
   }
 
   @Override
@@ -166,10 +126,9 @@ public class NotificacaoEmailRequest   {
     StringBuilder sb = new StringBuilder();
     sb.append("class NotificacaoEmailRequest {\n");
     
-    sb.append("    idDocumento: ").append(toIndentedString(idDocumento)).append("\n");
     sb.append("    idTemplateNotificacao: ").append(toIndentedString(idTemplateNotificacao)).append("\n");
-    sb.append("    destinatario: ").append(toIndentedString(destinatario)).append("\n");
-    sb.append("    tipoLayout: ").append(toIndentedString(tipoLayout)).append("\n");
+    sb.append("    destinatarios: ").append(toIndentedString(destinatarios)).append("\n");
+    sb.append("    anexos: ").append(toIndentedString(anexos)).append("\n");
     sb.append("    parametrosConteudo: ").append(toIndentedString(parametrosConteudo)).append("\n");
     sb.append("}");
     return sb.toString();

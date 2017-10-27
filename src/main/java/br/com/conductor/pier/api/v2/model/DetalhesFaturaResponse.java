@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v2.model.FaturaResponse;
+import br.com.conductor.pier.api.v2.model.FaturaFechadaResponse;
 import br.com.conductor.pier.api.v2.model.TransacoesCorrentesResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
@@ -21,24 +21,24 @@ import java.util.List;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class DetalhesFaturaResponse   {
   
-  private FaturaResponse fatura = null;
+  private FaturaFechadaResponse fatura = null;
   private List<TransacoesCorrentesResponse> transacoes = new ArrayList<TransacoesCorrentesResponse>();
 
   
   /**
    * Apresenta os detalhes da fatura
    **/
-  public DetalhesFaturaResponse fatura(FaturaResponse fatura) {
+  public DetalhesFaturaResponse fatura(FaturaFechadaResponse fatura) {
     this.fatura = fatura;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Apresenta os detalhes da fatura")
   @JsonProperty("fatura")
-  public FaturaResponse getFatura() {
+  public FaturaFechadaResponse getFatura() {
     return fatura;
   }
-  public void setFatura(FaturaResponse fatura) {
+  public void setFatura(FaturaFechadaResponse fatura) {
     this.fatura = fatura;
   }
 

@@ -1,24 +1,28 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
+import br.com.conductor.pier.api.v2.model.LancamentoFaturaResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 
 
 
 
 /**
- * Fatura futura
+ * Detalhes da fatura
  **/
 
-@ApiModel(description = "Fatura futura")
+@ApiModel(description = "Detalhes da fatura")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class FaturaResponse   {
+public class FaturaDetalheResponse   {
   
+  private List<LancamentoFaturaResponse> lancamentosFaturaResponse = new ArrayList<LancamentoFaturaResponse>();
   private Long idConta = null;
 
 
@@ -50,9 +54,26 @@ public class FaturaResponse   {
 
   
   /**
+   **/
+  public FaturaDetalheResponse lancamentosFaturaResponse(List<LancamentoFaturaResponse> lancamentosFaturaResponse) {
+    this.lancamentosFaturaResponse = lancamentosFaturaResponse;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("lancamentosFaturaResponse")
+  public List<LancamentoFaturaResponse> getLancamentosFaturaResponse() {
+    return lancamentosFaturaResponse;
+  }
+  public void setLancamentosFaturaResponse(List<LancamentoFaturaResponse> lancamentosFaturaResponse) {
+    this.lancamentosFaturaResponse = lancamentosFaturaResponse;
+  }
+
+  
+  /**
    * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
    **/
-  public FaturaResponse idConta(Long idConta) {
+  public FaturaDetalheResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
@@ -70,7 +91,7 @@ public class FaturaResponse   {
   /**
    * Situa\u00C3\u00A7\u00C3\u00A3o de Processamento da fatura.
    **/
-  public FaturaResponse situacaoProcessamento(SituacaoProcessamentoEnum situacaoProcessamento) {
+  public FaturaDetalheResponse situacaoProcessamento(SituacaoProcessamentoEnum situacaoProcessamento) {
     this.situacaoProcessamento = situacaoProcessamento;
     return this;
   }
@@ -88,7 +109,7 @@ public class FaturaResponse   {
   /**
    * Status de pagamento efetuado.
    **/
-  public FaturaResponse pagamentoEfetuado(Boolean pagamentoEfetuado) {
+  public FaturaDetalheResponse pagamentoEfetuado(Boolean pagamentoEfetuado) {
     this.pagamentoEfetuado = pagamentoEfetuado;
     return this;
   }
@@ -106,7 +127,7 @@ public class FaturaResponse   {
   /**
    * Data de vencimento da fatura.
    **/
-  public FaturaResponse dataVencimentoFatura(String dataVencimentoFatura) {
+  public FaturaDetalheResponse dataVencimentoFatura(String dataVencimentoFatura) {
     this.dataVencimentoFatura = dataVencimentoFatura;
     return this;
   }
@@ -124,7 +145,7 @@ public class FaturaResponse   {
   /**
    * Data de vencimento real da fatura.
    **/
-  public FaturaResponse dataVencimentoReal(String dataVencimentoReal) {
+  public FaturaDetalheResponse dataVencimentoReal(String dataVencimentoReal) {
     this.dataVencimentoReal = dataVencimentoReal;
     return this;
   }
@@ -142,7 +163,7 @@ public class FaturaResponse   {
   /**
    * Data de fechamento da fatura.
    **/
-  public FaturaResponse dataFechamento(String dataFechamento) {
+  public FaturaDetalheResponse dataFechamento(String dataFechamento) {
     this.dataFechamento = dataFechamento;
     return this;
   }
@@ -160,7 +181,7 @@ public class FaturaResponse   {
   /**
    * Valor total da fatura.
    **/
-  public FaturaResponse valorTotal(BigDecimal valorTotal) {
+  public FaturaDetalheResponse valorTotal(BigDecimal valorTotal) {
     this.valorTotal = valorTotal;
     return this;
   }
@@ -178,7 +199,7 @@ public class FaturaResponse   {
   /**
    * Valor do pagamento m\u00C3\u00ADnimo.
    **/
-  public FaturaResponse valorPagamentoMinimo(BigDecimal valorPagamentoMinimo) {
+  public FaturaDetalheResponse valorPagamentoMinimo(BigDecimal valorPagamentoMinimo) {
     this.valorPagamentoMinimo = valorPagamentoMinimo;
     return this;
   }
@@ -202,27 +223,29 @@ public class FaturaResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    FaturaResponse faturaResponse = (FaturaResponse) o;
-    return Objects.equals(this.idConta, faturaResponse.idConta) &&
-        Objects.equals(this.situacaoProcessamento, faturaResponse.situacaoProcessamento) &&
-        Objects.equals(this.pagamentoEfetuado, faturaResponse.pagamentoEfetuado) &&
-        Objects.equals(this.dataVencimentoFatura, faturaResponse.dataVencimentoFatura) &&
-        Objects.equals(this.dataVencimentoReal, faturaResponse.dataVencimentoReal) &&
-        Objects.equals(this.dataFechamento, faturaResponse.dataFechamento) &&
-        Objects.equals(this.valorTotal, faturaResponse.valorTotal) &&
-        Objects.equals(this.valorPagamentoMinimo, faturaResponse.valorPagamentoMinimo);
+    FaturaDetalheResponse faturaDetalheResponse = (FaturaDetalheResponse) o;
+    return Objects.equals(this.lancamentosFaturaResponse, faturaDetalheResponse.lancamentosFaturaResponse) &&
+        Objects.equals(this.idConta, faturaDetalheResponse.idConta) &&
+        Objects.equals(this.situacaoProcessamento, faturaDetalheResponse.situacaoProcessamento) &&
+        Objects.equals(this.pagamentoEfetuado, faturaDetalheResponse.pagamentoEfetuado) &&
+        Objects.equals(this.dataVencimentoFatura, faturaDetalheResponse.dataVencimentoFatura) &&
+        Objects.equals(this.dataVencimentoReal, faturaDetalheResponse.dataVencimentoReal) &&
+        Objects.equals(this.dataFechamento, faturaDetalheResponse.dataFechamento) &&
+        Objects.equals(this.valorTotal, faturaDetalheResponse.valorTotal) &&
+        Objects.equals(this.valorPagamentoMinimo, faturaDetalheResponse.valorPagamentoMinimo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idConta, situacaoProcessamento, pagamentoEfetuado, dataVencimentoFatura, dataVencimentoReal, dataFechamento, valorTotal, valorPagamentoMinimo);
+    return Objects.hash(lancamentosFaturaResponse, idConta, situacaoProcessamento, pagamentoEfetuado, dataVencimentoFatura, dataVencimentoReal, dataFechamento, valorTotal, valorPagamentoMinimo);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class FaturaResponse {\n");
+    sb.append("class FaturaDetalheResponse {\n");
     
+    sb.append("    lancamentosFaturaResponse: ").append(toIndentedString(lancamentosFaturaResponse)).append("\n");
     sb.append("    idConta: ").append(toIndentedString(idConta)).append("\n");
     sb.append("    situacaoProcessamento: ").append(toIndentedString(situacaoProcessamento)).append("\n");
     sb.append("    pagamentoEfetuado: ").append(toIndentedString(pagamentoEfetuado)).append("\n");

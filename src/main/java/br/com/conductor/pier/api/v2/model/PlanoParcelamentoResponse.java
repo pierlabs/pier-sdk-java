@@ -83,7 +83,7 @@ public class PlanoParcelamentoResponse   {
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data de vencimento padr\u00C3\u00A3o")
+  @ApiModelProperty(example = "yyyy-MM-dd", value = "Data de vencimento padr\u00C3\u00A3o")
   @JsonProperty("dataVencimentoPadrao")
   public String getDataVencimentoPadrao() {
     return dataVencimentoPadrao;
