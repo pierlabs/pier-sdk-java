@@ -46,12 +46,12 @@ public class RiscoFraudeApi {
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
    * @return RiscoFraudeDetalhadoResponse
    */
-  public RiscoFraudeDetalhadoResponse consultarUsingGET17(Long id) throws ApiException {
+  public RiscoFraudeDetalhadoResponse consultarUsingGET22(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET17");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET22");
      }
      
     // create path and map variables

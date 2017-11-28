@@ -7,7 +7,7 @@ import br.com.conductor.pier.api.v2.invoker.ApiClient;
 import br.com.conductor.pier.api.v2.invoker.Configuration;
 import br.com.conductor.pier.api.v2.invoker.Pair;
 
-import br.com.conductor.pier.api.v2.model.PageHistoricoEventosResponse;
+import br.com.conductor.pier.api.v2.model.BoletoResponse;
 
 
 
@@ -19,14 +19,14 @@ import java.util.Map;
 
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 
-public class LimiteApi {
+public class BoletoApi {
   private ApiClient apiClient;
 
-  public LimiteApi() {
+  public BoletoApi() {
     this(Configuration.getDefaultApiClient());
   }
 
-  public LimiteApi(ApiClient apiClient) {
+  public BoletoApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
@@ -40,24 +40,21 @@ public class LimiteApi {
 
   
   /**
-   * Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
-   * Este recurso consulta o hist\u00C3\u00B3rico com as altera\u00C3\u00A7\u00C3\u00B5es de limites da conta informada
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @return PageHistoricoEventosResponse
+   * Registra uma cobranca na entidade banco relacionada a cobranca informado.
+   * Este recurso registra uma cobranca emitido.
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Cobranca (id)
+   * @return BoletoResponse
    */
-  public PageHistoricoEventosResponse listarHistoricoAlteracoesLimitesUsingGET(Long id, List<String> sort, Integer page, Integer limit) throws ApiException {
+  public BoletoResponse registrarBoletoUsingPOST(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling listarHistoricoAlteracoesLimitesUsingGET");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling registrarBoletoUsingPOST");
      }
      
     // create path and map variables
-    String path = "/api/contas/{id}/historicos-alteracoes-limites".replaceAll("\\{format\\}","json")
+    String path = "/api/boletos/{id}/registrar".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
     // query params
@@ -65,12 +62,6 @@ public class LimiteApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     Map<String, Object> formParams = new HashMap<String, Object>();
 
-    
-    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
     
 
     
@@ -91,8 +82,8 @@ public class LimiteApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<PageHistoricoEventosResponse> returnType = new GenericType<PageHistoricoEventosResponse>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<BoletoResponse> returnType = new GenericType<BoletoResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   

@@ -21,6 +21,8 @@ import java.util.List;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class AntecipacaoSimuladaResponse   {
   
+  private Long mcc = null;
+  private String uf = null;
   private Long idAntecipacaoSimulada = null;
   private Long idConta = null;
   private Long idCompra = null;
@@ -29,7 +31,55 @@ public class AntecipacaoSimuladaResponse   {
   private BigDecimal valorParcela = null;
   private String dataHoraSimulacao = null;
   private BigDecimal taxaAntecipacaoAno = null;
+  private String nomeEstabelecimento = null;
+  private String status = null;
+  private String dataCompra = null;
+  private String tipoOrigemTransacao = null;
+  private String cidade = null;
+  private String pais = null;
+  private String latitude = null;
+  private String longitude = null;
+  private Long idGrupoMCC = null;
+  private String descricaoGrupoMCC = null;
+  private Long idProduto = null;
+  private String descricaoProduto = null;
+  private String descricaoEstabelecimento = null;
+  private String nomeFantasiaEstabelecimento = null;
   private List<AntecipacaoSimuladaDetalhesResponse> detalhes = new ArrayList<AntecipacaoSimuladaDetalhesResponse>();
+
+  
+  /**
+   **/
+  public AntecipacaoSimuladaResponse mcc(Long mcc) {
+    this.mcc = mcc;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("mcc")
+  public Long getMcc() {
+    return mcc;
+  }
+  public void setMcc(Long mcc) {
+    this.mcc = mcc;
+  }
+
+  
+  /**
+   **/
+  public AntecipacaoSimuladaResponse uf(String uf) {
+    this.uf = uf;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("uf")
+  public String getUf() {
+    return uf;
+  }
+  public void setUf(String uf) {
+    this.uf = uf;
+  }
 
   
   /**
@@ -177,6 +227,258 @@ public class AntecipacaoSimuladaResponse   {
 
   
   /**
+   * Estabelecimento onde foi realizada a transa\u00C3\u00A7\u00C3\u00A3o
+   **/
+  public AntecipacaoSimuladaResponse nomeEstabelecimento(String nomeEstabelecimento) {
+    this.nomeEstabelecimento = nomeEstabelecimento;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Estabelecimento onde foi realizada a transa\u00C3\u00A7\u00C3\u00A3o")
+  @JsonProperty("nomeEstabelecimento")
+  public String getNomeEstabelecimento() {
+    return nomeEstabelecimento;
+  }
+  public void setNomeEstabelecimento(String nomeEstabelecimento) {
+    this.nomeEstabelecimento = nomeEstabelecimento;
+  }
+
+  
+  /**
+   * Descri\u00C3\u00A7\u00C3\u00A3o do status da autoriza\u00C3\u00A7\u00C3\u00A3o da compra.
+   **/
+  public AntecipacaoSimuladaResponse status(String status) {
+    this.status = status;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o do status da autoriza\u00C3\u00A7\u00C3\u00A3o da compra.")
+  @JsonProperty("status")
+  public String getStatus() {
+    return status;
+  }
+  public void setStatus(String status) {
+    this.status = status;
+  }
+
+  
+  /**
+   * Data da compra.
+   **/
+  public AntecipacaoSimuladaResponse dataCompra(String dataCompra) {
+    this.dataCompra = dataCompra;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Data da compra.")
+  @JsonProperty("dataCompra")
+  public String getDataCompra() {
+    return dataCompra;
+  }
+  public void setDataCompra(String dataCompra) {
+    this.dataCompra = dataCompra;
+  }
+
+  
+  /**
+   * Tipo de transa\u00C3\u00A7\u00C3\u00A3o da compra.
+   **/
+  public AntecipacaoSimuladaResponse tipoOrigemTransacao(String tipoOrigemTransacao) {
+    this.tipoOrigemTransacao = tipoOrigemTransacao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Tipo de transa\u00C3\u00A7\u00C3\u00A3o da compra.")
+  @JsonProperty("tipoOrigemTransacao")
+  public String getTipoOrigemTransacao() {
+    return tipoOrigemTransacao;
+  }
+  public void setTipoOrigemTransacao(String tipoOrigemTransacao) {
+    this.tipoOrigemTransacao = tipoOrigemTransacao;
+  }
+
+  
+  /**
+   * Cidade onde a compra foi realizada.
+   **/
+  public AntecipacaoSimuladaResponse cidade(String cidade) {
+    this.cidade = cidade;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Cidade onde a compra foi realizada.")
+  @JsonProperty("cidade")
+  public String getCidade() {
+    return cidade;
+  }
+  public void setCidade(String cidade) {
+    this.cidade = cidade;
+  }
+
+  
+  /**
+   * Pa\u00C3\u00ADs onde a compra foi realizada.
+   **/
+  public AntecipacaoSimuladaResponse pais(String pais) {
+    this.pais = pais;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Pa\u00C3\u00ADs onde a compra foi realizada.")
+  @JsonProperty("pais")
+  public String getPais() {
+    return pais;
+  }
+  public void setPais(String pais) {
+    this.pais = pais;
+  }
+
+  
+  /**
+   * Coordenada latitudinal da localiza\u00C3\u00A7\u00C3\u00A3o da compra.
+   **/
+  public AntecipacaoSimuladaResponse latitude(String latitude) {
+    this.latitude = latitude;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Coordenada latitudinal da localiza\u00C3\u00A7\u00C3\u00A3o da compra.")
+  @JsonProperty("latitude")
+  public String getLatitude() {
+    return latitude;
+  }
+  public void setLatitude(String latitude) {
+    this.latitude = latitude;
+  }
+
+  
+  /**
+   * Coordenada longitudinal da localiza\u00C3\u00A7\u00C3\u00A3o da compra.
+   **/
+  public AntecipacaoSimuladaResponse longitude(String longitude) {
+    this.longitude = longitude;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Coordenada longitudinal da localiza\u00C3\u00A7\u00C3\u00A3o da compra.")
+  @JsonProperty("longitude")
+  public String getLongitude() {
+    return longitude;
+  }
+  public void setLongitude(String longitude) {
+    this.longitude = longitude;
+  }
+
+  
+  /**
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Grupo MCC da compra.
+   **/
+  public AntecipacaoSimuladaResponse idGrupoMCC(Long idGrupoMCC) {
+    this.idGrupoMCC = idGrupoMCC;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Grupo MCC da compra.")
+  @JsonProperty("idGrupoMCC")
+  public Long getIdGrupoMCC() {
+    return idGrupoMCC;
+  }
+  public void setIdGrupoMCC(Long idGrupoMCC) {
+    this.idGrupoMCC = idGrupoMCC;
+  }
+
+  
+  /**
+   * Descri\u00C3\u00A7\u00C3\u00A3o do Grupo MCC da compra.
+   **/
+  public AntecipacaoSimuladaResponse descricaoGrupoMCC(String descricaoGrupoMCC) {
+    this.descricaoGrupoMCC = descricaoGrupoMCC;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o do Grupo MCC da compra.")
+  @JsonProperty("descricaoGrupoMCC")
+  public String getDescricaoGrupoMCC() {
+    return descricaoGrupoMCC;
+  }
+  public void setDescricaoGrupoMCC(String descricaoGrupoMCC) {
+    this.descricaoGrupoMCC = descricaoGrupoMCC;
+  }
+
+  
+  /**
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do produto da compra.
+   **/
+  public AntecipacaoSimuladaResponse idProduto(Long idProduto) {
+    this.idProduto = idProduto;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do produto da compra.")
+  @JsonProperty("idProduto")
+  public Long getIdProduto() {
+    return idProduto;
+  }
+  public void setIdProduto(Long idProduto) {
+    this.idProduto = idProduto;
+  }
+
+  
+  /**
+   * Descri\u00C3\u00A7\u00C3\u00A3o do produto da compra.
+   **/
+  public AntecipacaoSimuladaResponse descricaoProduto(String descricaoProduto) {
+    this.descricaoProduto = descricaoProduto;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o do produto da compra.")
+  @JsonProperty("descricaoProduto")
+  public String getDescricaoProduto() {
+    return descricaoProduto;
+  }
+  public void setDescricaoProduto(String descricaoProduto) {
+    this.descricaoProduto = descricaoProduto;
+  }
+
+  
+  /**
+   * Descri\u00C3\u00A7\u00C3\u00A3o do estabelecimento da compra.
+   **/
+  public AntecipacaoSimuladaResponse descricaoEstabelecimento(String descricaoEstabelecimento) {
+    this.descricaoEstabelecimento = descricaoEstabelecimento;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o do estabelecimento da compra.")
+  @JsonProperty("descricaoEstabelecimento")
+  public String getDescricaoEstabelecimento() {
+    return descricaoEstabelecimento;
+  }
+  public void setDescricaoEstabelecimento(String descricaoEstabelecimento) {
+    this.descricaoEstabelecimento = descricaoEstabelecimento;
+  }
+
+  
+  /**
+   * Nome fantasia do estabelecimento da compra.
+   **/
+  public AntecipacaoSimuladaResponse nomeFantasiaEstabelecimento(String nomeFantasiaEstabelecimento) {
+    this.nomeFantasiaEstabelecimento = nomeFantasiaEstabelecimento;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Nome fantasia do estabelecimento da compra.")
+  @JsonProperty("nomeFantasiaEstabelecimento")
+  public String getNomeFantasiaEstabelecimento() {
+    return nomeFantasiaEstabelecimento;
+  }
+  public void setNomeFantasiaEstabelecimento(String nomeFantasiaEstabelecimento) {
+    this.nomeFantasiaEstabelecimento = nomeFantasiaEstabelecimento;
+  }
+
+  
+  /**
    * Detalhes da simula\u00C3\u00A7\u00C3\u00A3o.
    **/
   public AntecipacaoSimuladaResponse detalhes(List<AntecipacaoSimuladaDetalhesResponse> detalhes) {
@@ -204,7 +506,9 @@ public class AntecipacaoSimuladaResponse   {
       return false;
     }
     AntecipacaoSimuladaResponse antecipacaoSimuladaResponse = (AntecipacaoSimuladaResponse) o;
-    return Objects.equals(this.idAntecipacaoSimulada, antecipacaoSimuladaResponse.idAntecipacaoSimulada) &&
+    return Objects.equals(this.mcc, antecipacaoSimuladaResponse.mcc) &&
+        Objects.equals(this.uf, antecipacaoSimuladaResponse.uf) &&
+        Objects.equals(this.idAntecipacaoSimulada, antecipacaoSimuladaResponse.idAntecipacaoSimulada) &&
         Objects.equals(this.idConta, antecipacaoSimuladaResponse.idConta) &&
         Objects.equals(this.idCompra, antecipacaoSimuladaResponse.idCompra) &&
         Objects.equals(this.idTipoTransacao, antecipacaoSimuladaResponse.idTipoTransacao) &&
@@ -212,12 +516,26 @@ public class AntecipacaoSimuladaResponse   {
         Objects.equals(this.valorParcela, antecipacaoSimuladaResponse.valorParcela) &&
         Objects.equals(this.dataHoraSimulacao, antecipacaoSimuladaResponse.dataHoraSimulacao) &&
         Objects.equals(this.taxaAntecipacaoAno, antecipacaoSimuladaResponse.taxaAntecipacaoAno) &&
+        Objects.equals(this.nomeEstabelecimento, antecipacaoSimuladaResponse.nomeEstabelecimento) &&
+        Objects.equals(this.status, antecipacaoSimuladaResponse.status) &&
+        Objects.equals(this.dataCompra, antecipacaoSimuladaResponse.dataCompra) &&
+        Objects.equals(this.tipoOrigemTransacao, antecipacaoSimuladaResponse.tipoOrigemTransacao) &&
+        Objects.equals(this.cidade, antecipacaoSimuladaResponse.cidade) &&
+        Objects.equals(this.pais, antecipacaoSimuladaResponse.pais) &&
+        Objects.equals(this.latitude, antecipacaoSimuladaResponse.latitude) &&
+        Objects.equals(this.longitude, antecipacaoSimuladaResponse.longitude) &&
+        Objects.equals(this.idGrupoMCC, antecipacaoSimuladaResponse.idGrupoMCC) &&
+        Objects.equals(this.descricaoGrupoMCC, antecipacaoSimuladaResponse.descricaoGrupoMCC) &&
+        Objects.equals(this.idProduto, antecipacaoSimuladaResponse.idProduto) &&
+        Objects.equals(this.descricaoProduto, antecipacaoSimuladaResponse.descricaoProduto) &&
+        Objects.equals(this.descricaoEstabelecimento, antecipacaoSimuladaResponse.descricaoEstabelecimento) &&
+        Objects.equals(this.nomeFantasiaEstabelecimento, antecipacaoSimuladaResponse.nomeFantasiaEstabelecimento) &&
         Objects.equals(this.detalhes, antecipacaoSimuladaResponse.detalhes);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idAntecipacaoSimulada, idConta, idCompra, idTipoTransacao, quantidadeParcelasAntecipaveis, valorParcela, dataHoraSimulacao, taxaAntecipacaoAno, detalhes);
+    return Objects.hash(mcc, uf, idAntecipacaoSimulada, idConta, idCompra, idTipoTransacao, quantidadeParcelasAntecipaveis, valorParcela, dataHoraSimulacao, taxaAntecipacaoAno, nomeEstabelecimento, status, dataCompra, tipoOrigemTransacao, cidade, pais, latitude, longitude, idGrupoMCC, descricaoGrupoMCC, idProduto, descricaoProduto, descricaoEstabelecimento, nomeFantasiaEstabelecimento, detalhes);
   }
 
   @Override
@@ -225,6 +543,8 @@ public class AntecipacaoSimuladaResponse   {
     StringBuilder sb = new StringBuilder();
     sb.append("class AntecipacaoSimuladaResponse {\n");
     
+    sb.append("    mcc: ").append(toIndentedString(mcc)).append("\n");
+    sb.append("    uf: ").append(toIndentedString(uf)).append("\n");
     sb.append("    idAntecipacaoSimulada: ").append(toIndentedString(idAntecipacaoSimulada)).append("\n");
     sb.append("    idConta: ").append(toIndentedString(idConta)).append("\n");
     sb.append("    idCompra: ").append(toIndentedString(idCompra)).append("\n");
@@ -233,6 +553,20 @@ public class AntecipacaoSimuladaResponse   {
     sb.append("    valorParcela: ").append(toIndentedString(valorParcela)).append("\n");
     sb.append("    dataHoraSimulacao: ").append(toIndentedString(dataHoraSimulacao)).append("\n");
     sb.append("    taxaAntecipacaoAno: ").append(toIndentedString(taxaAntecipacaoAno)).append("\n");
+    sb.append("    nomeEstabelecimento: ").append(toIndentedString(nomeEstabelecimento)).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    dataCompra: ").append(toIndentedString(dataCompra)).append("\n");
+    sb.append("    tipoOrigemTransacao: ").append(toIndentedString(tipoOrigemTransacao)).append("\n");
+    sb.append("    cidade: ").append(toIndentedString(cidade)).append("\n");
+    sb.append("    pais: ").append(toIndentedString(pais)).append("\n");
+    sb.append("    latitude: ").append(toIndentedString(latitude)).append("\n");
+    sb.append("    longitude: ").append(toIndentedString(longitude)).append("\n");
+    sb.append("    idGrupoMCC: ").append(toIndentedString(idGrupoMCC)).append("\n");
+    sb.append("    descricaoGrupoMCC: ").append(toIndentedString(descricaoGrupoMCC)).append("\n");
+    sb.append("    idProduto: ").append(toIndentedString(idProduto)).append("\n");
+    sb.append("    descricaoProduto: ").append(toIndentedString(descricaoProduto)).append("\n");
+    sb.append("    descricaoEstabelecimento: ").append(toIndentedString(descricaoEstabelecimento)).append("\n");
+    sb.append("    nomeFantasiaEstabelecimento: ").append(toIndentedString(nomeFantasiaEstabelecimento)).append("\n");
     sb.append("    detalhes: ").append(toIndentedString(detalhes)).append("\n");
     sb.append("}");
     return sb.toString();

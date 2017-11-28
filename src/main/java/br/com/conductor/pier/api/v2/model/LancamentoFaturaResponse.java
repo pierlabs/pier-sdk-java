@@ -42,6 +42,7 @@ public class LancamentoFaturaResponse   {
   private String numeroCartaoMascarado = null;
   private Boolean flagSolicitouContestacao = null;
   private BigDecimal valorTaxaEmbarque = null;
+  private String descricaoAbreviada = null;
 
   
   /**
@@ -476,6 +477,24 @@ public class LancamentoFaturaResponse   {
   }
 
   
+  /**
+   * Descri\u00C3\u00A7\u00C3\u00A3o abreviada da transa\u00C3\u00A7\u00C3\u00A3o
+   **/
+  public LancamentoFaturaResponse descricaoAbreviada(String descricaoAbreviada) {
+    this.descricaoAbreviada = descricaoAbreviada;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o abreviada da transa\u00C3\u00A7\u00C3\u00A3o")
+  @JsonProperty("descricaoAbreviada")
+  public String getDescricaoAbreviada() {
+    return descricaoAbreviada;
+  }
+  public void setDescricaoAbreviada(String descricaoAbreviada) {
+    this.descricaoAbreviada = descricaoAbreviada;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -509,12 +528,13 @@ public class LancamentoFaturaResponse   {
         Objects.equals(this.nomePortador, lancamentoFaturaResponse.nomePortador) &&
         Objects.equals(this.numeroCartaoMascarado, lancamentoFaturaResponse.numeroCartaoMascarado) &&
         Objects.equals(this.flagSolicitouContestacao, lancamentoFaturaResponse.flagSolicitouContestacao) &&
-        Objects.equals(this.valorTaxaEmbarque, lancamentoFaturaResponse.valorTaxaEmbarque);
+        Objects.equals(this.valorTaxaEmbarque, lancamentoFaturaResponse.valorTaxaEmbarque) &&
+        Objects.equals(this.descricaoAbreviada, lancamentoFaturaResponse.descricaoAbreviada);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idTransacao, descricaoTipoTransacao, idTipoEvento, descricaoTipoEvento, idEvento, idConta, complemento, valorBRL, valorUSD, numeroParcela, quantidadeParcelas, dataHoraTransacao, nomeEstabelecimento, descricaoEstabelecimento, nomeFantasiaEstabelecimento, flagCredito, idMCC, idGrupoMCC, descricaoGrupoMCC, titular, nomePortador, numeroCartaoMascarado, flagSolicitouContestacao, valorTaxaEmbarque);
+    return Objects.hash(idTransacao, descricaoTipoTransacao, idTipoEvento, descricaoTipoEvento, idEvento, idConta, complemento, valorBRL, valorUSD, numeroParcela, quantidadeParcelas, dataHoraTransacao, nomeEstabelecimento, descricaoEstabelecimento, nomeFantasiaEstabelecimento, flagCredito, idMCC, idGrupoMCC, descricaoGrupoMCC, titular, nomePortador, numeroCartaoMascarado, flagSolicitouContestacao, valorTaxaEmbarque, descricaoAbreviada);
   }
 
   @Override
@@ -546,6 +566,7 @@ public class LancamentoFaturaResponse   {
     sb.append("    numeroCartaoMascarado: ").append(toIndentedString(numeroCartaoMascarado)).append("\n");
     sb.append("    flagSolicitouContestacao: ").append(toIndentedString(flagSolicitouContestacao)).append("\n");
     sb.append("    valorTaxaEmbarque: ").append(toIndentedString(valorTaxaEmbarque)).append("\n");
+    sb.append("    descricaoAbreviada: ").append(toIndentedString(descricaoAbreviada)).append("\n");
     sb.append("}");
     return sb.toString();
   }

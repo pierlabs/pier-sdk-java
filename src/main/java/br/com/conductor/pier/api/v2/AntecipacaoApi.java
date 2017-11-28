@@ -10,7 +10,6 @@ import br.com.conductor.pier.api.v2.invoker.Pair;
 import br.com.conductor.pier.api.v2.model.ParametroProdutoResponse;
 import br.com.conductor.pier.api.v2.model.TaxaAntecipacaoRequest;
 import br.com.conductor.pier.api.v2.model.AntecipacaoResponse;
-import br.com.conductor.pier.api.v2.model.AntecipacaoMockResponse;
 import br.com.conductor.pier.api.v2.model.PageCompraResponse;
 import br.com.conductor.pier.api.v2.model.AntecipacaoSimuladaResponse;
 import br.com.conductor.pier.api.v2.model.AntecipacaoSimuladaLoteResponse;
@@ -227,9 +226,9 @@ public class AntecipacaoApi {
    * M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o de todas as compras antecip\u00C3\u00A1veis com todas as parcelas de uma conta.
    * @param idConta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.
    * @param complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
-   * @return AntecipacaoMockResponse
+   * @return AntecipacaoResponse
    */
-  public AntecipacaoMockResponse efetivarAntecipacoesUsingPOST(Long idConta, String complemento) throws ApiException {
+  public AntecipacaoResponse efetivarAntecipacoesUsingPOST(Long idConta, String complemento) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idConta' is set
@@ -269,7 +268,7 @@ public class AntecipacaoApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<AntecipacaoMockResponse> returnType = new GenericType<AntecipacaoMockResponse>() {};
+    GenericType<AntecipacaoResponse> returnType = new GenericType<AntecipacaoResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

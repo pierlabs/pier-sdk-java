@@ -53,6 +53,7 @@ public class PessoaFisicaAprovadaResponse   {
   private BigDecimal limiteGlobal = null;
   private BigDecimal limiteMaximo = null;
   private BigDecimal limiteParcelas = null;
+  private BigDecimal limiteConsignado = null;
 
   
   /**
@@ -613,6 +614,24 @@ public class PessoaFisicaAprovadaResponse   {
   }
 
   
+  /**
+   * Valor do limite de margem consignado
+   **/
+  public PessoaFisicaAprovadaResponse limiteConsignado(BigDecimal limiteConsignado) {
+    this.limiteConsignado = limiteConsignado;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "Valor do limite de margem consignado")
+  @JsonProperty("limiteConsignado")
+  public BigDecimal getLimiteConsignado() {
+    return limiteConsignado;
+  }
+  public void setLimiteConsignado(BigDecimal limiteConsignado) {
+    this.limiteConsignado = limiteConsignado;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -653,12 +672,13 @@ public class PessoaFisicaAprovadaResponse   {
         Objects.equals(this.enderecos, pessoaFisicaAprovadaResponse.enderecos) &&
         Objects.equals(this.limiteGlobal, pessoaFisicaAprovadaResponse.limiteGlobal) &&
         Objects.equals(this.limiteMaximo, pessoaFisicaAprovadaResponse.limiteMaximo) &&
-        Objects.equals(this.limiteParcelas, pessoaFisicaAprovadaResponse.limiteParcelas);
+        Objects.equals(this.limiteParcelas, pessoaFisicaAprovadaResponse.limiteParcelas) &&
+        Objects.equals(this.limiteConsignado, pessoaFisicaAprovadaResponse.limiteConsignado);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, nome, nomeMae, dataNascimento, sexo, cpf, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, idOrigemComercial, idProduto, numeroAgencia, numeroContaCorrente, email, diaVencimento, nomeImpresso, nomeEmpresa, idConta, idProposta, canalEntrada, valorPontuacao, telefones, enderecos, limiteGlobal, limiteMaximo, limiteParcelas);
+    return Objects.hash(id, nome, nomeMae, dataNascimento, sexo, cpf, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, idOrigemComercial, idProduto, numeroAgencia, numeroContaCorrente, email, diaVencimento, nomeImpresso, nomeEmpresa, idConta, idProposta, canalEntrada, valorPontuacao, telefones, enderecos, limiteGlobal, limiteMaximo, limiteParcelas, limiteConsignado);
   }
 
   @Override
@@ -697,6 +717,7 @@ public class PessoaFisicaAprovadaResponse   {
     sb.append("    limiteGlobal: ").append(toIndentedString(limiteGlobal)).append("\n");
     sb.append("    limiteMaximo: ").append(toIndentedString(limiteMaximo)).append("\n");
     sb.append("    limiteParcelas: ").append(toIndentedString(limiteParcelas)).append("\n");
+    sb.append("    limiteConsignado: ").append(toIndentedString(limiteConsignado)).append("\n");
     sb.append("}");
     return sb.toString();
   }

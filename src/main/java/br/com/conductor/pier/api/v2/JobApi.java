@@ -97,27 +97,27 @@ public class JobApi {
    * @param groovy groovy
    * @return JobResponse
    */
-  public JobResponse atualizarUsingPUT2(Long id, String descricao, String cron, String groovy) throws ApiException {
+  public JobResponse atualizarUsingPUT3(Long id, String descricao, String cron, String groovy) throws ApiException {
     Object postBody = groovy;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling atualizarUsingPUT2");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling atualizarUsingPUT3");
      }
      
      // verify the required parameter 'descricao' is set
      if (descricao == null) {
-        throw new ApiException(400, "Missing the required parameter 'descricao' when calling atualizarUsingPUT2");
+        throw new ApiException(400, "Missing the required parameter 'descricao' when calling atualizarUsingPUT3");
      }
      
      // verify the required parameter 'cron' is set
      if (cron == null) {
-        throw new ApiException(400, "Missing the required parameter 'cron' when calling atualizarUsingPUT2");
+        throw new ApiException(400, "Missing the required parameter 'cron' when calling atualizarUsingPUT3");
      }
      
      // verify the required parameter 'groovy' is set
      if (groovy == null) {
-        throw new ApiException(400, "Missing the required parameter 'groovy' when calling atualizarUsingPUT2");
+        throw new ApiException(400, "Missing the required parameter 'groovy' when calling atualizarUsingPUT3");
      }
      
     // create path and map variables
@@ -217,7 +217,7 @@ public class JobApi {
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @return PageJobResponse
    */
-  public PageJobResponse listarUsingGET16(String groovy, String descricao, String cron, String status, Integer page, Integer limit) throws ApiException {
+  public PageJobResponse listarUsingGET20(String groovy, String descricao, String cron, String status, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -273,22 +273,22 @@ public class JobApi {
    * @param groovy groovy
    * @return JobResponse
    */
-  public JobResponse salvarUsingPOST11(String descricao, String cron, String groovy) throws ApiException {
+  public JobResponse salvarUsingPOST14(String descricao, String cron, String groovy) throws ApiException {
     Object postBody = groovy;
     
      // verify the required parameter 'descricao' is set
      if (descricao == null) {
-        throw new ApiException(400, "Missing the required parameter 'descricao' when calling salvarUsingPOST11");
+        throw new ApiException(400, "Missing the required parameter 'descricao' when calling salvarUsingPOST14");
      }
      
      // verify the required parameter 'cron' is set
      if (cron == null) {
-        throw new ApiException(400, "Missing the required parameter 'cron' when calling salvarUsingPOST11");
+        throw new ApiException(400, "Missing the required parameter 'cron' when calling salvarUsingPOST14");
      }
      
      // verify the required parameter 'groovy' is set
      if (groovy == null) {
-        throw new ApiException(400, "Missing the required parameter 'groovy' when calling salvarUsingPOST11");
+        throw new ApiException(400, "Missing the required parameter 'groovy' when calling salvarUsingPOST14");
      }
      
     // create path and map variables

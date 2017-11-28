@@ -51,6 +51,7 @@ public class PessoaFisicaAprovadaPersist   {
   private BigDecimal limiteGlobal = null;
   private BigDecimal limiteMaximo = null;
   private BigDecimal limiteParcelas = null;
+  private BigDecimal limiteConsignado = null;
 
   
   /**
@@ -575,6 +576,24 @@ public class PessoaFisicaAprovadaPersist   {
   }
 
   
+  /**
+   * Valor do limite de margem consignado
+   **/
+  public PessoaFisicaAprovadaPersist limiteConsignado(BigDecimal limiteConsignado) {
+    this.limiteConsignado = limiteConsignado;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor do limite de margem consignado")
+  @JsonProperty("limiteConsignado")
+  public BigDecimal getLimiteConsignado() {
+    return limiteConsignado;
+  }
+  public void setLimiteConsignado(BigDecimal limiteConsignado) {
+    this.limiteConsignado = limiteConsignado;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -613,12 +632,13 @@ public class PessoaFisicaAprovadaPersist   {
         Objects.equals(this.enderecos, pessoaFisicaAprovadaPersist.enderecos) &&
         Objects.equals(this.limiteGlobal, pessoaFisicaAprovadaPersist.limiteGlobal) &&
         Objects.equals(this.limiteMaximo, pessoaFisicaAprovadaPersist.limiteMaximo) &&
-        Objects.equals(this.limiteParcelas, pessoaFisicaAprovadaPersist.limiteParcelas);
+        Objects.equals(this.limiteParcelas, pessoaFisicaAprovadaPersist.limiteParcelas) &&
+        Objects.equals(this.limiteConsignado, pessoaFisicaAprovadaPersist.limiteConsignado);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(nome, nomeMae, dataNascimento, sexo, cpf, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, idOrigemComercial, idProduto, numeroAgencia, numeroContaCorrente, email, diaVencimento, nomeImpresso, nomeEmpresa, valorRenda, canalEntrada, valorPontuacao, telefones, enderecos, limiteGlobal, limiteMaximo, limiteParcelas);
+    return Objects.hash(nome, nomeMae, dataNascimento, sexo, cpf, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, idOrigemComercial, idProduto, numeroAgencia, numeroContaCorrente, email, diaVencimento, nomeImpresso, nomeEmpresa, valorRenda, canalEntrada, valorPontuacao, telefones, enderecos, limiteGlobal, limiteMaximo, limiteParcelas, limiteConsignado);
   }
 
   @Override
@@ -655,6 +675,7 @@ public class PessoaFisicaAprovadaPersist   {
     sb.append("    limiteGlobal: ").append(toIndentedString(limiteGlobal)).append("\n");
     sb.append("    limiteMaximo: ").append(toIndentedString(limiteMaximo)).append("\n");
     sb.append("    limiteParcelas: ").append(toIndentedString(limiteParcelas)).append("\n");
+    sb.append("    limiteConsignado: ").append(toIndentedString(limiteConsignado)).append("\n");
     sb.append("}");
     return sb.toString();
   }

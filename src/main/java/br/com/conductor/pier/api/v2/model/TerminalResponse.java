@@ -21,6 +21,8 @@ public class TerminalResponse   {
   private String terminal = null;
   private Long numeroEstabelecimento = null;
   private Long idEstabelecimento = null;
+  private Boolean flagConsultaExtrato = null;
+  private Boolean flagTerminalVirtual = null;
 
   
   /**
@@ -95,6 +97,42 @@ public class TerminalResponse   {
   }
 
   
+  /**
+   * Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+   **/
+  public TerminalResponse flagConsultaExtrato(Boolean flagConsultaExtrato) {
+    this.flagConsultaExtrato = flagConsultaExtrato;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).")
+  @JsonProperty("flagConsultaExtrato")
+  public Boolean getFlagConsultaExtrato() {
+    return flagConsultaExtrato;
+  }
+  public void setFlagConsultaExtrato(Boolean flagConsultaExtrato) {
+    this.flagConsultaExtrato = flagConsultaExtrato;
+  }
+
+  
+  /**
+   * Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+   **/
+  public TerminalResponse flagTerminalVirtual(Boolean flagTerminalVirtual) {
+    this.flagTerminalVirtual = flagTerminalVirtual;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).")
+  @JsonProperty("flagTerminalVirtual")
+  public Boolean getFlagTerminalVirtual() {
+    return flagTerminalVirtual;
+  }
+  public void setFlagTerminalVirtual(Boolean flagTerminalVirtual) {
+    this.flagTerminalVirtual = flagTerminalVirtual;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -108,12 +146,14 @@ public class TerminalResponse   {
     return Objects.equals(this.id, terminalResponse.id) &&
         Objects.equals(this.terminal, terminalResponse.terminal) &&
         Objects.equals(this.numeroEstabelecimento, terminalResponse.numeroEstabelecimento) &&
-        Objects.equals(this.idEstabelecimento, terminalResponse.idEstabelecimento);
+        Objects.equals(this.idEstabelecimento, terminalResponse.idEstabelecimento) &&
+        Objects.equals(this.flagConsultaExtrato, terminalResponse.flagConsultaExtrato) &&
+        Objects.equals(this.flagTerminalVirtual, terminalResponse.flagTerminalVirtual);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, terminal, numeroEstabelecimento, idEstabelecimento);
+    return Objects.hash(id, terminal, numeroEstabelecimento, idEstabelecimento, flagConsultaExtrato, flagTerminalVirtual);
   }
 
   @Override
@@ -125,6 +165,8 @@ public class TerminalResponse   {
     sb.append("    terminal: ").append(toIndentedString(terminal)).append("\n");
     sb.append("    numeroEstabelecimento: ").append(toIndentedString(numeroEstabelecimento)).append("\n");
     sb.append("    idEstabelecimento: ").append(toIndentedString(idEstabelecimento)).append("\n");
+    sb.append("    flagConsultaExtrato: ").append(toIndentedString(flagConsultaExtrato)).append("\n");
+    sb.append("    flagTerminalVirtual: ").append(toIndentedString(flagTerminalVirtual)).append("\n");
     sb.append("}");
     return sb.toString();
   }

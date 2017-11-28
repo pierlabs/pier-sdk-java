@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v2.model.AntecipacaoSimuladaMockResponse;
+import br.com.conductor.pier.api.v2.model.AntecipacaoSimuladaResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -24,7 +24,7 @@ public class AntecipacaoSimuladaLoteResponse   {
   private BigDecimal valorTotalAntecipado = null;
   private BigDecimal valorTotalDesconto = null;
   private BigDecimal valorTotalComDesconto = null;
-  private List<AntecipacaoSimuladaMockResponse> antecipacoesSimuladas = new ArrayList<AntecipacaoSimuladaMockResponse>();
+  private List<AntecipacaoSimuladaResponse> antecipacoesSimuladas = new ArrayList<AntecipacaoSimuladaResponse>();
 
   
   /**
@@ -84,17 +84,17 @@ public class AntecipacaoSimuladaLoteResponse   {
   /**
    * Antecipa\u00C3\u00A7\u00C3\u00B5es Simuladas.
    **/
-  public AntecipacaoSimuladaLoteResponse antecipacoesSimuladas(List<AntecipacaoSimuladaMockResponse> antecipacoesSimuladas) {
+  public AntecipacaoSimuladaLoteResponse antecipacoesSimuladas(List<AntecipacaoSimuladaResponse> antecipacoesSimuladas) {
     this.antecipacoesSimuladas = antecipacoesSimuladas;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Antecipa\u00C3\u00A7\u00C3\u00B5es Simuladas.")
   @JsonProperty("antecipacoesSimuladas")
-  public List<AntecipacaoSimuladaMockResponse> getAntecipacoesSimuladas() {
+  public List<AntecipacaoSimuladaResponse> getAntecipacoesSimuladas() {
     return antecipacoesSimuladas;
   }
-  public void setAntecipacoesSimuladas(List<AntecipacaoSimuladaMockResponse> antecipacoesSimuladas) {
+  public void setAntecipacoesSimuladas(List<AntecipacaoSimuladaResponse> antecipacoesSimuladas) {
     this.antecipacoesSimuladas = antecipacoesSimuladas;
   }
 

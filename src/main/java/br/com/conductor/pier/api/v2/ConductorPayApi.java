@@ -554,17 +554,17 @@ public class ConductorPayApi {
    * @param persist persist
    * @return CartaoPayCadastroResponse
    */
-  public CartaoPayCadastroResponse salvarUsingPOST4(String deviceId, CartaoPayPersist persist) throws ApiException {
+  public CartaoPayCadastroResponse salvarUsingPOST5(String deviceId, CartaoPayPersist persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'deviceId' is set
      if (deviceId == null) {
-        throw new ApiException(400, "Missing the required parameter 'deviceId' when calling salvarUsingPOST4");
+        throw new ApiException(400, "Missing the required parameter 'deviceId' when calling salvarUsingPOST5");
      }
      
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST4");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST5");
      }
      
     // create path and map variables

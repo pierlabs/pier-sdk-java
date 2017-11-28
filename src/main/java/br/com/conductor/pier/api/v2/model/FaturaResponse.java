@@ -47,6 +47,7 @@ public class FaturaResponse   {
   private String dataFechamento = null;
   private BigDecimal valorTotal = null;
   private BigDecimal valorPagamentoMinimo = null;
+  private BigDecimal saldoAnterior = null;
 
   
   /**
@@ -193,6 +194,24 @@ public class FaturaResponse   {
   }
 
   
+  /**
+   * Valor do saldo anterior.
+   **/
+  public FaturaResponse saldoAnterior(BigDecimal saldoAnterior) {
+    this.saldoAnterior = saldoAnterior;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor do saldo anterior.")
+  @JsonProperty("saldoAnterior")
+  public BigDecimal getSaldoAnterior() {
+    return saldoAnterior;
+  }
+  public void setSaldoAnterior(BigDecimal saldoAnterior) {
+    this.saldoAnterior = saldoAnterior;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -210,12 +229,13 @@ public class FaturaResponse   {
         Objects.equals(this.dataVencimentoReal, faturaResponse.dataVencimentoReal) &&
         Objects.equals(this.dataFechamento, faturaResponse.dataFechamento) &&
         Objects.equals(this.valorTotal, faturaResponse.valorTotal) &&
-        Objects.equals(this.valorPagamentoMinimo, faturaResponse.valorPagamentoMinimo);
+        Objects.equals(this.valorPagamentoMinimo, faturaResponse.valorPagamentoMinimo) &&
+        Objects.equals(this.saldoAnterior, faturaResponse.saldoAnterior);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idConta, situacaoProcessamento, pagamentoEfetuado, dataVencimentoFatura, dataVencimentoReal, dataFechamento, valorTotal, valorPagamentoMinimo);
+    return Objects.hash(idConta, situacaoProcessamento, pagamentoEfetuado, dataVencimentoFatura, dataVencimentoReal, dataFechamento, valorTotal, valorPagamentoMinimo, saldoAnterior);
   }
 
   @Override
@@ -231,6 +251,7 @@ public class FaturaResponse   {
     sb.append("    dataFechamento: ").append(toIndentedString(dataFechamento)).append("\n");
     sb.append("    valorTotal: ").append(toIndentedString(valorTotal)).append("\n");
     sb.append("    valorPagamentoMinimo: ").append(toIndentedString(valorPagamentoMinimo)).append("\n");
+    sb.append("    saldoAnterior: ").append(toIndentedString(saldoAnterior)).append("\n");
     sb.append("}");
     return sb.toString();
   }
