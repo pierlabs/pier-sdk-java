@@ -9,6 +9,7 @@ import br.com.conductor.pier.api.v2.invoker.Pair;
 
 import br.com.conductor.pier.api.v2.model.HistoricoImpressaoCartaoResponse;
 import br.com.conductor.pier.api.v2.model.CartaoResponse;
+import br.com.conductor.pier.api.v2.model.DadosCartaoImpressaoResponse;
 import br.com.conductor.pier.api.v2.model.DadosCartaoResponse;
 import br.com.conductor.pier.api.v2.model.LimiteDisponibilidadeResponse;
 import br.com.conductor.pier.api.v2.model.LoteCartoesPrePagosResponse;
@@ -405,9 +406,9 @@ public class CartaoApi {
    * Consultar os dados de impress\u00C3\u00A3o de um Cart\u00C3\u00A3o
    * Esse recurso permite consultar os dados de impress\u00C3\u00A3o de um cart\u00C3\u00A3o
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
-   * @return Object
+   * @return DadosCartaoImpressaoResponse
    */
-  public Object consultarCartaoImpressaoUsingGET(Long id) throws ApiException {
+  public DadosCartaoImpressaoResponse consultarCartaoImpressaoUsingGET(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -444,7 +445,7 @@ public class CartaoApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<Object> returnType = new GenericType<Object>() {};
+    GenericType<DadosCartaoImpressaoResponse> returnType = new GenericType<DadosCartaoImpressaoResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

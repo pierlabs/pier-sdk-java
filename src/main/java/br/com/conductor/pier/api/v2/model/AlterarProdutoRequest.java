@@ -19,6 +19,8 @@ public class AlterarProdutoRequest   {
   
   private Long idProduto = null;
   private Long idOrigemComercial = null;
+  private Long idEstabelecimento = null;
+  private Long idPromotor = null;
 
   
   /**
@@ -57,6 +59,42 @@ public class AlterarProdutoRequest   {
   }
 
   
+  /**
+   * Identificador do estabelecimento.
+   **/
+  public AlterarProdutoRequest idEstabelecimento(Long idEstabelecimento) {
+    this.idEstabelecimento = idEstabelecimento;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Identificador do estabelecimento.")
+  @JsonProperty("idEstabelecimento")
+  public Long getIdEstabelecimento() {
+    return idEstabelecimento;
+  }
+  public void setIdEstabelecimento(Long idEstabelecimento) {
+    this.idEstabelecimento = idEstabelecimento;
+  }
+
+  
+  /**
+   * Identificador do promotor que realizou a solicita\u00C3\u00A7\u00C3\u00A3o do grade no estabelecimento.
+   **/
+  public AlterarProdutoRequest idPromotor(Long idPromotor) {
+    this.idPromotor = idPromotor;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Identificador do promotor que realizou a solicita\u00C3\u00A7\u00C3\u00A3o do grade no estabelecimento.")
+  @JsonProperty("idPromotor")
+  public Long getIdPromotor() {
+    return idPromotor;
+  }
+  public void setIdPromotor(Long idPromotor) {
+    this.idPromotor = idPromotor;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -68,12 +106,14 @@ public class AlterarProdutoRequest   {
     }
     AlterarProdutoRequest alterarProdutoRequest = (AlterarProdutoRequest) o;
     return Objects.equals(this.idProduto, alterarProdutoRequest.idProduto) &&
-        Objects.equals(this.idOrigemComercial, alterarProdutoRequest.idOrigemComercial);
+        Objects.equals(this.idOrigemComercial, alterarProdutoRequest.idOrigemComercial) &&
+        Objects.equals(this.idEstabelecimento, alterarProdutoRequest.idEstabelecimento) &&
+        Objects.equals(this.idPromotor, alterarProdutoRequest.idPromotor);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idProduto, idOrigemComercial);
+    return Objects.hash(idProduto, idOrigemComercial, idEstabelecimento, idPromotor);
   }
 
   @Override
@@ -83,6 +123,8 @@ public class AlterarProdutoRequest   {
     
     sb.append("    idProduto: ").append(toIndentedString(idProduto)).append("\n");
     sb.append("    idOrigemComercial: ").append(toIndentedString(idOrigemComercial)).append("\n");
+    sb.append("    idEstabelecimento: ").append(toIndentedString(idEstabelecimento)).append("\n");
+    sb.append("    idPromotor: ").append(toIndentedString(idPromotor)).append("\n");
     sb.append("}");
     return sb.toString();
   }
