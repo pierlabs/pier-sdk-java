@@ -59,12 +59,12 @@ public class LimiteDisponibilidadeApi {
    * @param limiteMaximo Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es.
    * @return LimiteDisponibilidadeResponse
    */
-  public LimiteDisponibilidadeResponse alterarUsingPUT7(Long idConta, BigDecimal limiteGlobal, BigDecimal limiteCompra, BigDecimal limiteParcelado, BigDecimal limiteParcelas, BigDecimal limiteSaqueGlobal, BigDecimal limiteSaquePeriodo, BigDecimal limiteConsignado, BigDecimal limiteInternacionalCompra, BigDecimal limiteInternacionalParcelado, BigDecimal limiteInternacionalParcelas, BigDecimal limiteInternacionalSaqueGlobal, BigDecimal limiteInternacionalSaquePeriodo, BigDecimal limiteMaximo) throws ApiException {
+  public LimiteDisponibilidadeResponse alterarUsingPUT8(Long idConta, BigDecimal limiteGlobal, BigDecimal limiteCompra, BigDecimal limiteParcelado, BigDecimal limiteParcelas, BigDecimal limiteSaqueGlobal, BigDecimal limiteSaquePeriodo, BigDecimal limiteConsignado, BigDecimal limiteInternacionalCompra, BigDecimal limiteInternacionalParcelado, BigDecimal limiteInternacionalParcelas, BigDecimal limiteInternacionalSaqueGlobal, BigDecimal limiteInternacionalSaquePeriodo, BigDecimal limiteMaximo) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idConta' is set
      if (idConta == null) {
-        throw new ApiException(400, "Missing the required parameter 'idConta' when calling alterarUsingPUT7");
+        throw new ApiException(400, "Missing the required parameter 'idConta' when calling alterarUsingPUT8");
      }
      
     // create path and map variables
@@ -134,12 +134,12 @@ public class LimiteDisponibilidadeApi {
    * @param idConta Id Conta
    * @return LimiteDisponibilidadeResponse
    */
-  public LimiteDisponibilidadeResponse consultarUsingGET16(Long idConta) throws ApiException {
+  public LimiteDisponibilidadeResponse consultarUsingGET17(Long idConta) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idConta' is set
      if (idConta == null) {
-        throw new ApiException(400, "Missing the required parameter 'idConta' when calling consultarUsingGET16");
+        throw new ApiException(400, "Missing the required parameter 'idConta' when calling consultarUsingGET17");
      }
      
     // create path and map variables

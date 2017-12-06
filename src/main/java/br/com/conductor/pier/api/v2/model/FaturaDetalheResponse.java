@@ -22,7 +22,6 @@ import java.util.List;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class FaturaDetalheResponse   {
   
-  private List<LancamentoFaturaResponse> lancamentosFaturaResponse = new ArrayList<LancamentoFaturaResponse>();
   private Long idConta = null;
 
 
@@ -51,24 +50,8 @@ public class FaturaDetalheResponse   {
   private String dataFechamento = null;
   private BigDecimal valorTotal = null;
   private BigDecimal valorPagamentoMinimo = null;
+  private List<LancamentoFaturaResponse> lancamentosFaturaResponse = new ArrayList<LancamentoFaturaResponse>();
   private BigDecimal saldoAnterior = null;
-
-  
-  /**
-   **/
-  public FaturaDetalheResponse lancamentosFaturaResponse(List<LancamentoFaturaResponse> lancamentosFaturaResponse) {
-    this.lancamentosFaturaResponse = lancamentosFaturaResponse;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("lancamentosFaturaResponse")
-  public List<LancamentoFaturaResponse> getLancamentosFaturaResponse() {
-    return lancamentosFaturaResponse;
-  }
-  public void setLancamentosFaturaResponse(List<LancamentoFaturaResponse> lancamentosFaturaResponse) {
-    this.lancamentosFaturaResponse = lancamentosFaturaResponse;
-  }
 
   
   /**
@@ -216,6 +199,24 @@ public class FaturaDetalheResponse   {
 
   
   /**
+   * Lista de lan\u00C3\u00A7amentos da fatura.
+   **/
+  public FaturaDetalheResponse lancamentosFaturaResponse(List<LancamentoFaturaResponse> lancamentosFaturaResponse) {
+    this.lancamentosFaturaResponse = lancamentosFaturaResponse;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Lista de lan\u00C3\u00A7amentos da fatura.")
+  @JsonProperty("lancamentosFaturaResponse")
+  public List<LancamentoFaturaResponse> getLancamentosFaturaResponse() {
+    return lancamentosFaturaResponse;
+  }
+  public void setLancamentosFaturaResponse(List<LancamentoFaturaResponse> lancamentosFaturaResponse) {
+    this.lancamentosFaturaResponse = lancamentosFaturaResponse;
+  }
+
+  
+  /**
    * Valor do saldo anterior.
    **/
   public FaturaDetalheResponse saldoAnterior(BigDecimal saldoAnterior) {
@@ -243,8 +244,7 @@ public class FaturaDetalheResponse   {
       return false;
     }
     FaturaDetalheResponse faturaDetalheResponse = (FaturaDetalheResponse) o;
-    return Objects.equals(this.lancamentosFaturaResponse, faturaDetalheResponse.lancamentosFaturaResponse) &&
-        Objects.equals(this.idConta, faturaDetalheResponse.idConta) &&
+    return Objects.equals(this.idConta, faturaDetalheResponse.idConta) &&
         Objects.equals(this.situacaoProcessamento, faturaDetalheResponse.situacaoProcessamento) &&
         Objects.equals(this.pagamentoEfetuado, faturaDetalheResponse.pagamentoEfetuado) &&
         Objects.equals(this.dataVencimentoFatura, faturaDetalheResponse.dataVencimentoFatura) &&
@@ -252,12 +252,13 @@ public class FaturaDetalheResponse   {
         Objects.equals(this.dataFechamento, faturaDetalheResponse.dataFechamento) &&
         Objects.equals(this.valorTotal, faturaDetalheResponse.valorTotal) &&
         Objects.equals(this.valorPagamentoMinimo, faturaDetalheResponse.valorPagamentoMinimo) &&
+        Objects.equals(this.lancamentosFaturaResponse, faturaDetalheResponse.lancamentosFaturaResponse) &&
         Objects.equals(this.saldoAnterior, faturaDetalheResponse.saldoAnterior);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(lancamentosFaturaResponse, idConta, situacaoProcessamento, pagamentoEfetuado, dataVencimentoFatura, dataVencimentoReal, dataFechamento, valorTotal, valorPagamentoMinimo, saldoAnterior);
+    return Objects.hash(idConta, situacaoProcessamento, pagamentoEfetuado, dataVencimentoFatura, dataVencimentoReal, dataFechamento, valorTotal, valorPagamentoMinimo, lancamentosFaturaResponse, saldoAnterior);
   }
 
   @Override
@@ -265,7 +266,6 @@ public class FaturaDetalheResponse   {
     StringBuilder sb = new StringBuilder();
     sb.append("class FaturaDetalheResponse {\n");
     
-    sb.append("    lancamentosFaturaResponse: ").append(toIndentedString(lancamentosFaturaResponse)).append("\n");
     sb.append("    idConta: ").append(toIndentedString(idConta)).append("\n");
     sb.append("    situacaoProcessamento: ").append(toIndentedString(situacaoProcessamento)).append("\n");
     sb.append("    pagamentoEfetuado: ").append(toIndentedString(pagamentoEfetuado)).append("\n");
@@ -274,6 +274,7 @@ public class FaturaDetalheResponse   {
     sb.append("    dataFechamento: ").append(toIndentedString(dataFechamento)).append("\n");
     sb.append("    valorTotal: ").append(toIndentedString(valorTotal)).append("\n");
     sb.append("    valorPagamentoMinimo: ").append(toIndentedString(valorPagamentoMinimo)).append("\n");
+    sb.append("    lancamentosFaturaResponse: ").append(toIndentedString(lancamentosFaturaResponse)).append("\n");
     sb.append("    saldoAnterior: ").append(toIndentedString(saldoAnterior)).append("\n");
     sb.append("}");
     return sb.toString();

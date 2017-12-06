@@ -150,7 +150,7 @@ public class DispositivoApi {
    * @param dataDesativacao Apresenta a data e em que o registro foi desativado.
    * @return PageDispositivoResponse
    */
-  public PageDispositivoResponse listarUsingGET14(List<String> sort, Integer page, Integer limit, String token, Long idUsuario, Long idAplicacaoMobile, String dataCriacao, String dataDesativacao) throws ApiException {
+  public PageDispositivoResponse listarUsingGET15(List<String> sort, Integer page, Integer limit, String token, Long idUsuario, Long idAplicacaoMobile, String dataCriacao, String dataDesativacao) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

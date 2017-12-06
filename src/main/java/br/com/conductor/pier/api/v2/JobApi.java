@@ -217,7 +217,7 @@ public class JobApi {
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @return PageJobResponse
    */
-  public PageJobResponse listarUsingGET20(String groovy, String descricao, String cron, String status, Integer page, Integer limit) throws ApiException {
+  public PageJobResponse listarUsingGET21(String groovy, String descricao, String cron, String status, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

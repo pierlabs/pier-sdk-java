@@ -494,7 +494,7 @@ public class PessoaFisicaAprovadaPersist   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta os telefones da empresa")
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta os telefones da empresa")
   @JsonProperty("telefones")
   public List<TelefonePessoaAprovadaPersist> getTelefones() {
     return telefones;

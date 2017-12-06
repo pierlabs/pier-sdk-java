@@ -121,22 +121,22 @@ public class FAQApi {
    * @param status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
    * @return FaqResponse
    */
-  public FaqResponse alterarUsingPUT6(Long id, String pergunta, String resposta, Integer relevancia, String plataforma, String categoria, String status) throws ApiException {
+  public FaqResponse alterarUsingPUT7(Long id, String pergunta, String resposta, Integer relevancia, String plataforma, String categoria, String status) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT6");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT7");
      }
      
      // verify the required parameter 'pergunta' is set
      if (pergunta == null) {
-        throw new ApiException(400, "Missing the required parameter 'pergunta' when calling alterarUsingPUT6");
+        throw new ApiException(400, "Missing the required parameter 'pergunta' when calling alterarUsingPUT7");
      }
      
      // verify the required parameter 'resposta' is set
      if (resposta == null) {
-        throw new ApiException(400, "Missing the required parameter 'resposta' when calling alterarUsingPUT6");
+        throw new ApiException(400, "Missing the required parameter 'resposta' when calling alterarUsingPUT7");
      }
      
     // create path and map variables
@@ -191,12 +191,12 @@ public class FAQApi {
    * @param id Id
    * @return FaqResponse
    */
-  public FaqResponse consultarUsingGET15(Long id) throws ApiException {
+  public FaqResponse consultarUsingGET16(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET15");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET16");
      }
      
     // create path and map variables
@@ -248,7 +248,7 @@ public class FAQApi {
    * @param status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
    * @return PageFaqResponse
    */
-  public PageFaqResponse listarUsingGET19(List<String> sort, Integer page, Integer limit, Long idFaq, String pergunta, String resposta, Integer relevancia, String plataforma, String categoria, String status) throws ApiException {
+  public PageFaqResponse listarUsingGET20(List<String> sort, Integer page, Integer limit, Long idFaq, String pergunta, String resposta, Integer relevancia, String plataforma, String categoria, String status) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

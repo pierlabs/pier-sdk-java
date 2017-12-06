@@ -31,7 +31,7 @@ public class TelefonePessoaAprovadaPersist   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).")
   @JsonProperty("idTipoTelefone")
   public Long getIdTipoTelefone() {
     return idTipoTelefone;
@@ -49,7 +49,7 @@ public class TelefonePessoaAprovadaPersist   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo DDD do telefone (id).")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00C3\u00B3digo DDD do telefone (id).")
   @JsonProperty("ddd")
   public String getDdd() {
     return ddd;
@@ -67,7 +67,7 @@ public class TelefonePessoaAprovadaPersist   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero do telefone.")
+  @ApiModelProperty(example = "null", required = true, value = "N\u00C3\u00BAmero do telefone.")
   @JsonProperty("telefone")
   public String getTelefone() {
     return telefone;
