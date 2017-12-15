@@ -234,17 +234,17 @@ public class ConductorPayApi {
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o (id).
    * @return CartaoPayDetalheResponse
    */
-  public CartaoPayDetalheResponse consultarUsingGET5(String deviceId, Long id) throws ApiException {
+  public CartaoPayDetalheResponse consultarUsingGET6(String deviceId, Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'deviceId' is set
      if (deviceId == null) {
-        throw new ApiException(400, "Missing the required parameter 'deviceId' when calling consultarUsingGET5");
+        throw new ApiException(400, "Missing the required parameter 'deviceId' when calling consultarUsingGET6");
      }
      
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET5");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET6");
      }
      
     // create path and map variables

@@ -191,12 +191,12 @@ public class FAQApi {
    * @param id Id
    * @return FaqResponse
    */
-  public FaqResponse consultarUsingGET16(Long id) throws ApiException {
+  public FaqResponse consultarUsingGET17(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET16");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET17");
      }
      
     // create path and map variables

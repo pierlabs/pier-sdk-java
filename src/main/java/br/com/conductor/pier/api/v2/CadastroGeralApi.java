@@ -19,11 +19,11 @@ import br.com.conductor.pier.api.v2.model.TaxaAntecipacaoRequest;
 import br.com.conductor.pier.api.v2.model.OrigemComercialResponse;
 import br.com.conductor.pier.api.v2.model.AtendimentoClienteResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoAjusteResponse;
-import br.com.conductor.pier.api.v2.model.BancoResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoBoletoResponse;
 import br.com.conductor.pier.api.v2.model.TipoEnderecoResponse;
 import br.com.conductor.pier.api.v2.model.TipoOperacaoResponse;
 import br.com.conductor.pier.api.v2.model.TipoTelefoneResponse;
+import br.com.conductor.pier.api.v2.model.BancoResponse;
 import br.com.conductor.pier.api.v2.model.PageCampanhaResponse;
 import br.com.conductor.pier.api.v2.model.PageContaDetalheResponse;
 import br.com.conductor.pier.api.v2.model.PageCampoCodificadoDescricaoResponse;
@@ -32,13 +32,13 @@ import br.com.conductor.pier.api.v2.model.HistoricoTelefoneResponse;
 import br.com.conductor.pier.api.v2.model.PageOrigemComercialResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoCampanhaResponse;
 import br.com.conductor.pier.api.v2.model.PageConfiguracaoRotativoResponse;
-import br.com.conductor.pier.api.v2.model.PageAtendimentoClienteResponse;
 import br.com.conductor.pier.api.v2.model.PagePortadorResponse;
 import br.com.conductor.pier.api.v2.model.PageProdutoResponse;
 import br.com.conductor.pier.api.v2.model.PagePromotorResponse;
-import br.com.conductor.pier.api.v2.model.PageBancoResponse;
+import br.com.conductor.pier.api.v2.model.PageAtendimentoClienteResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoEnderecoResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoTelefoneResponse;
+import br.com.conductor.pier.api.v2.model.PageBancoResponse;
 import br.com.conductor.pier.api.v2.model.PageControleVencimentoResponse;
 import br.com.conductor.pier.api.v2.model.CampanhaPersist;
 
@@ -536,65 +536,17 @@ public class CadastroGeralApi {
   }
   
   /**
-   * Apresenta os dados de um determinado Atendimento
-   * Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Atendimento a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (idAtendimento).
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do atendimento cliente (id).
-   * @return AtendimentoClienteResponse
-   */
-  public AtendimentoClienteResponse consultarUsingGET2(Long id) throws ApiException {
-    Object postBody = null;
-    
-     // verify the required parameter 'id' is set
-     if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET2");
-     }
-     
-    // create path and map variables
-    String path = "/api/atendimento-clientes/{id}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<AtendimentoClienteResponse> returnType = new GenericType<AtendimentoClienteResponse>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
    * Apresenta os dados de um determinado Produto
    * Este m\u00C3\u00A9todo permite consultar um determinado Produto a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
    * @return ProdutoDetalhesResponse
    */
-  public ProdutoDetalhesResponse consultarUsingGET22(Long id) throws ApiException {
+  public ProdutoDetalhesResponse consultarUsingGET23(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET22");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET23");
      }
      
     // create path and map variables
@@ -632,6 +584,54 @@ public class CadastroGeralApi {
   }
   
   /**
+   * Apresenta os dados de um determinado Atendimento
+   * Este m\u00C3\u00A9todo permite consultar os par\u00C3\u00A2metros de um determinado Atendimento a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (idAtendimento).
+   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do atendimento cliente (id).
+   * @return AtendimentoClienteResponse
+   */
+  public AtendimentoClienteResponse consultarUsingGET3(Long id) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET3");
+     }
+     
+    // create path and map variables
+    String path = "/api/atendimento-clientes/{id}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<AtendimentoClienteResponse> returnType = new GenericType<AtendimentoClienteResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Lista os tipos de ajustes do emissor 
    * Este recurso permite que sejam listados os tipos de ajustes existentes na base de dados do emissor.
    * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
@@ -641,7 +641,7 @@ public class CadastroGeralApi {
    * @param descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de ajuste.
    * @return PageTipoAjusteResponse
    */
-  public PageTipoAjusteResponse consultarUsingGET29(List<String> sort, Integer page, Integer limit, Long id, String descricao) throws ApiException {
+  public PageTipoAjusteResponse consultarUsingGET30(List<String> sort, Integer page, Integer limit, Long id, String descricao) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -688,54 +688,6 @@ public class CadastroGeralApi {
   }
   
   /**
-   * Apresenta os dados de um determinado Banco
-   * Este m\u00C3\u00A9todo permite consultar um determinado Banco a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Banco (id).
-   * @return BancoResponse
-   */
-  public BancoResponse consultarUsingGET3(Long id) throws ApiException {
-    Object postBody = null;
-    
-     // verify the required parameter 'id' is set
-     if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET3");
-     }
-     
-    // create path and map variables
-    String path = "/api/bancos/{id}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<BancoResponse> returnType = new GenericType<BancoResponse>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
    * Lista os tipos de boletos do emissor 
    * Este recurso permite que sejam listados os tipos de boletos existentes na base de dados do emissor.
    * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
@@ -746,7 +698,7 @@ public class CadastroGeralApi {
    * @param banco C\u00C3\u00B3digo identificador do banco.
    * @return PageTipoBoletoResponse
    */
-  public PageTipoBoletoResponse consultarUsingGET30(List<String> sort, Integer page, Integer limit, Long id, String descricao, Long banco) throws ApiException {
+  public PageTipoBoletoResponse consultarUsingGET31(List<String> sort, Integer page, Integer limit, Long id, String descricao, Long banco) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -800,12 +752,12 @@ public class CadastroGeralApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
    * @return TipoEnderecoResponse
    */
-  public TipoEnderecoResponse consultarUsingGET31(Long id) throws ApiException {
+  public TipoEnderecoResponse consultarUsingGET32(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET31");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET32");
      }
      
     // create path and map variables
@@ -850,22 +802,22 @@ public class CadastroGeralApi {
    * @param codigoProcessamento C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o.
    * @return TipoOperacaoResponse
    */
-  public TipoOperacaoResponse consultarUsingGET32(Long idCartao, Long idEstabelecimento, String codigoProcessamento) throws ApiException {
+  public TipoOperacaoResponse consultarUsingGET33(Long idCartao, Long idEstabelecimento, String codigoProcessamento) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idCartao' is set
      if (idCartao == null) {
-        throw new ApiException(400, "Missing the required parameter 'idCartao' when calling consultarUsingGET32");
+        throw new ApiException(400, "Missing the required parameter 'idCartao' when calling consultarUsingGET33");
      }
      
      // verify the required parameter 'idEstabelecimento' is set
      if (idEstabelecimento == null) {
-        throw new ApiException(400, "Missing the required parameter 'idEstabelecimento' when calling consultarUsingGET32");
+        throw new ApiException(400, "Missing the required parameter 'idEstabelecimento' when calling consultarUsingGET33");
      }
      
      // verify the required parameter 'codigoProcessamento' is set
      if (codigoProcessamento == null) {
-        throw new ApiException(400, "Missing the required parameter 'codigoProcessamento' when calling consultarUsingGET32");
+        throw new ApiException(400, "Missing the required parameter 'codigoProcessamento' when calling consultarUsingGET33");
      }
      
     // create path and map variables
@@ -913,12 +865,12 @@ public class CadastroGeralApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id)
    * @return TipoTelefoneResponse
    */
-  public TipoTelefoneResponse consultarUsingGET34(Long id) throws ApiException {
+  public TipoTelefoneResponse consultarUsingGET35(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET34");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET35");
      }
      
     // create path and map variables
@@ -956,17 +908,65 @@ public class CadastroGeralApi {
   }
   
   /**
+   * Apresenta os dados de um determinado Banco
+   * Este m\u00C3\u00A9todo permite consultar um determinado Banco a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Banco (id).
+   * @return BancoResponse
+   */
+  public BancoResponse consultarUsingGET4(Long id) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET4");
+     }
+     
+    // create path and map variables
+    String path = "/api/bancos/{id}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<BancoResponse> returnType = new GenericType<BancoResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Consultar configura\u00C3\u00A7\u00C3\u00A3o para registro de cobran\u00C3\u00A7a
    * Este m\u00C3\u00A9todo permite buscar uma configura\u00C3\u00A7\u00C3\u00A3o, para registro de cobran\u00C3\u00A7a.
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o (id).
    * @return ConfiguracaoRegistroCobrancaResponse
    */
-  public ConfiguracaoRegistroCobrancaResponse consultarUsingGET7(Long id) throws ApiException {
+  public ConfiguracaoRegistroCobrancaResponse consultarUsingGET8(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET7");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET8");
      }
      
     // create path and map variables
@@ -1009,12 +1009,12 @@ public class CadastroGeralApi {
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de configura\u00C3\u00A7\u00C3\u00A3o rotativo (id).
    * @return ConfiguracaoRotativoDetalheResponse
    */
-  public ConfiguracaoRotativoDetalheResponse consultarUsingGET8(Long id) throws ApiException {
+  public ConfiguracaoRotativoDetalheResponse consultarUsingGET9(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET8");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET9");
      }
      
     // create path and map variables
@@ -1727,68 +1727,6 @@ public class CadastroGeralApi {
   }
   
   /**
-   * Lista todos os atendimentos
-   * Este m\u00C3\u00A9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param idTipoAtendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
-   * @param idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
-   * @param nomeAtendente Apresenta o nome do Atendente que registrou o Atendimento.
-   * @param dataAtendimento Apresenta a data em que o Atendimento foi realizado.
-   * @return PageAtendimentoClienteResponse
-   */
-  public PageAtendimentoClienteResponse listarUsingGET2(List<String> sort, Integer page, Integer limit, Long idTipoAtendimento, Long idConta, String nomeAtendente, String dataAtendimento) throws ApiException {
-    Object postBody = null;
-    
-    // create path and map variables
-    String path = "/api/atendimento-clientes".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "idTipoAtendimento", idTipoAtendimento));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "idConta", idConta));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "nomeAtendente", nomeAtendente));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "dataAtendimento", dataAtendimento));
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<PageAtendimentoClienteResponse> returnType = new GenericType<PageAtendimentoClienteResponse>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
    * Lista os Portadores existentes
    * Este m\u00C3\u00A9todo permite que sejam listados os portadores cadastrados na base do emissor.
    * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
@@ -1993,18 +1931,22 @@ public class CadastroGeralApi {
   }
   
   /**
-   * Lista os Bancos cadastrados para o Emissor
-   * Este m\u00C3\u00A9todo permite que sejam listados os Bancos existentes na base de dados do Emissor.
+   * Lista todos os atendimentos
+   * Este m\u00C3\u00A9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo.
    * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @return PageBancoResponse
+   * @param idTipoAtendimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo de Atendimento (id)
+   * @param idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de conta (id).
+   * @param nomeAtendente Apresenta o nome do Atendente que registrou o Atendimento.
+   * @param dataAtendimento Apresenta a data em que o Atendimento foi realizado.
+   * @return PageAtendimentoClienteResponse
    */
-  public PageBancoResponse listarUsingGET3(List<String> sort, Integer page, Integer limit) throws ApiException {
+  public PageAtendimentoClienteResponse listarUsingGET3(List<String> sort, Integer page, Integer limit, Long idTipoAtendimento, Long idConta, String nomeAtendente, String dataAtendimento) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
-    String path = "/api/bancos".replaceAll("\\{format\\}","json");
+    String path = "/api/atendimento-clientes".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2017,6 +1959,14 @@ public class CadastroGeralApi {
     queryParams.addAll(apiClient.parameterToPairs("", "page", page));
     
     queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idTipoAtendimento", idTipoAtendimento));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idConta", idConta));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "nomeAtendente", nomeAtendente));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "dataAtendimento", dataAtendimento));
     
 
     
@@ -2037,7 +1987,7 @@ public class CadastroGeralApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<PageBancoResponse> returnType = new GenericType<PageBancoResponse>() {};
+    GenericType<PageAtendimentoClienteResponse> returnType = new GenericType<PageAtendimentoClienteResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -2150,6 +2100,56 @@ public class CadastroGeralApi {
 
     
     GenericType<PageTipoTelefoneResponse> returnType = new GenericType<PageTipoTelefoneResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Lista os Bancos cadastrados para o Emissor
+   * Este m\u00C3\u00A9todo permite que sejam listados os Bancos existentes na base de dados do Emissor.
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @return PageBancoResponse
+   */
+  public PageBancoResponse listarUsingGET4(List<String> sort, Integer page, Integer limit) throws ApiException {
+    Object postBody = null;
+    
+    // create path and map variables
+    String path = "/api/bancos".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PageBancoResponse> returnType = new GenericType<PageBancoResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

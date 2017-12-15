@@ -13,37 +13,39 @@ import java.math.BigDecimal;
 
 
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class AjusteResponse   {
+public class AjusteFinanceiroResponse   {
   
-  private Long idAjuste = null;
+  private Long id = null;
   private Long idTipoAjuste = null;
   private Long idConta = null;
   private String dataAjuste = null;
   private BigDecimal valor = null;
+  private String identificadorExterno = null;
+  private Long status = null;
 
   
   /**
    * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id)
    **/
-  public AjusteResponse idAjuste(Long idAjuste) {
-    this.idAjuste = idAjuste;
+  public AjusteFinanceiroResponse id(Long id) {
+    this.id = id;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id)")
-  @JsonProperty("idAjuste")
-  public Long getIdAjuste() {
-    return idAjuste;
+  @JsonProperty("id")
+  public Long getId() {
+    return id;
   }
-  public void setIdAjuste(Long idAjuste) {
-    this.idAjuste = idAjuste;
+  public void setId(Long id) {
+    this.id = id;
   }
 
   
   /**
    * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do ajuste
    **/
-  public AjusteResponse idTipoAjuste(Long idTipoAjuste) {
+  public AjusteFinanceiroResponse idTipoAjuste(Long idTipoAjuste) {
     this.idTipoAjuste = idTipoAjuste;
     return this;
   }
@@ -61,7 +63,7 @@ public class AjusteResponse   {
   /**
    * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (idConta)
    **/
-  public AjusteResponse idConta(Long idConta) {
+  public AjusteFinanceiroResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
@@ -79,7 +81,7 @@ public class AjusteResponse   {
   /**
    * Data do ajuste
    **/
-  public AjusteResponse dataAjuste(String dataAjuste) {
+  public AjusteFinanceiroResponse dataAjuste(String dataAjuste) {
     this.dataAjuste = dataAjuste;
     return this;
   }
@@ -97,7 +99,7 @@ public class AjusteResponse   {
   /**
    * Valor do ajuste
    **/
-  public AjusteResponse valor(BigDecimal valor) {
+  public AjusteFinanceiroResponse valor(BigDecimal valor) {
     this.valor = valor;
     return this;
   }
@@ -112,6 +114,42 @@ public class AjusteResponse   {
   }
 
   
+  /**
+   * Descri\u00C3\u00A7\u00C3\u00A3o do status da autoriza\u00C3\u00A7\u00C3\u00A3o da compra.
+   **/
+  public AjusteFinanceiroResponse identificadorExterno(String identificadorExterno) {
+    this.identificadorExterno = identificadorExterno;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o do status da autoriza\u00C3\u00A7\u00C3\u00A3o da compra.")
+  @JsonProperty("identificadorExterno")
+  public String getIdentificadorExterno() {
+    return identificadorExterno;
+  }
+  public void setIdentificadorExterno(String identificadorExterno) {
+    this.identificadorExterno = identificadorExterno;
+  }
+
+  
+  /**
+   * Status do ajuste.
+   **/
+  public AjusteFinanceiroResponse status(Long status) {
+    this.status = status;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Status do ajuste.")
+  @JsonProperty("status")
+  public Long getStatus() {
+    return status;
+  }
+  public void setStatus(Long status) {
+    this.status = status;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -121,29 +159,33 @@ public class AjusteResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AjusteResponse ajusteResponse = (AjusteResponse) o;
-    return Objects.equals(this.idAjuste, ajusteResponse.idAjuste) &&
-        Objects.equals(this.idTipoAjuste, ajusteResponse.idTipoAjuste) &&
-        Objects.equals(this.idConta, ajusteResponse.idConta) &&
-        Objects.equals(this.dataAjuste, ajusteResponse.dataAjuste) &&
-        Objects.equals(this.valor, ajusteResponse.valor);
+    AjusteFinanceiroResponse ajusteFinanceiroResponse = (AjusteFinanceiroResponse) o;
+    return Objects.equals(this.id, ajusteFinanceiroResponse.id) &&
+        Objects.equals(this.idTipoAjuste, ajusteFinanceiroResponse.idTipoAjuste) &&
+        Objects.equals(this.idConta, ajusteFinanceiroResponse.idConta) &&
+        Objects.equals(this.dataAjuste, ajusteFinanceiroResponse.dataAjuste) &&
+        Objects.equals(this.valor, ajusteFinanceiroResponse.valor) &&
+        Objects.equals(this.identificadorExterno, ajusteFinanceiroResponse.identificadorExterno) &&
+        Objects.equals(this.status, ajusteFinanceiroResponse.status);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idAjuste, idTipoAjuste, idConta, dataAjuste, valor);
+    return Objects.hash(id, idTipoAjuste, idConta, dataAjuste, valor, identificadorExterno, status);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AjusteResponse {\n");
+    sb.append("class AjusteFinanceiroResponse {\n");
     
-    sb.append("    idAjuste: ").append(toIndentedString(idAjuste)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idTipoAjuste: ").append(toIndentedString(idTipoAjuste)).append("\n");
     sb.append("    idConta: ").append(toIndentedString(idConta)).append("\n");
     sb.append("    dataAjuste: ").append(toIndentedString(dataAjuste)).append("\n");
     sb.append("    valor: ").append(toIndentedString(valor)).append("\n");
+    sb.append("    identificadorExterno: ").append(toIndentedString(identificadorExterno)).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("}");
     return sb.toString();
   }

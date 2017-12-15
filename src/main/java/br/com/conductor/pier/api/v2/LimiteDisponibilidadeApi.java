@@ -134,12 +134,12 @@ public class LimiteDisponibilidadeApi {
    * @param idConta Id Conta
    * @return LimiteDisponibilidadeResponse
    */
-  public LimiteDisponibilidadeResponse consultarUsingGET17(Long idConta) throws ApiException {
+  public LimiteDisponibilidadeResponse consultarUsingGET18(Long idConta) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idConta' is set
      if (idConta == null) {
-        throw new ApiException(400, "Missing the required parameter 'idConta' when calling consultarUsingGET17");
+        throw new ApiException(400, "Missing the required parameter 'idConta' when calling consultarUsingGET18");
      }
      
     // create path and map variables

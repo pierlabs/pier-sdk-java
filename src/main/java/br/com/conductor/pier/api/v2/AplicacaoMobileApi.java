@@ -106,7 +106,7 @@ public class AplicacaoMobileApi {
    * @param idPlataformaMobile Identificador da Plataforma Mobile
    * @return PageAplicacaoMobileResponse
    */
-  public PageAplicacaoMobileResponse listarUsingGET1(List<String> sort, Integer page, Integer limit, String id, Long idPlataformaMobile) throws ApiException {
+  public PageAplicacaoMobileResponse listarUsingGET2(List<String> sort, Integer page, Integer limit, String id, Long idPlataformaMobile) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

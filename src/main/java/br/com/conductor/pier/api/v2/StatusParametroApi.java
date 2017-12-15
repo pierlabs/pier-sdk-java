@@ -148,12 +148,12 @@ public class StatusParametroApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status da Conta (id).
    * @return StatusContaResponse
    */
-  public StatusContaResponse consultarUsingGET24(Long id) throws ApiException {
+  public StatusContaResponse consultarUsingGET25(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET24");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET25");
      }
      
     // create path and map variables
@@ -196,12 +196,12 @@ public class StatusParametroApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status de Impress\u00C3\u00A3o do Cart\u00C3\u00A3o (id).
    * @return StatusImpressaoResponse
    */
-  public StatusImpressaoResponse consultarUsingGET25(Long id) throws ApiException {
+  public StatusImpressaoResponse consultarUsingGET26(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET25");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET26");
      }
      
     // create path and map variables
