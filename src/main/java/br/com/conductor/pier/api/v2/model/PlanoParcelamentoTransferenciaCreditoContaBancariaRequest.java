@@ -20,8 +20,7 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest   {
   
   private String nsuOrigem = null;
   private BigDecimal valorTransacao = null;
-  private String numeroRealCartao = null;
-  private String dataValidadeCartao = null;
+  private Long idCartao = null;
   private Long numeroMesesCarencia = null;
   private Long numeroEstabelecimento = null;
   private String dataHoraTerminal = null;
@@ -65,38 +64,20 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest   {
 
   
   /**
-   * N\u00C3\u00BAmero Real do Cart\u00C3\u00A3o.
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o.
    **/
-  public PlanoParcelamentoTransferenciaCreditoContaBancariaRequest numeroRealCartao(String numeroRealCartao) {
-    this.numeroRealCartao = numeroRealCartao;
+  public PlanoParcelamentoTransferenciaCreditoContaBancariaRequest idCartao(Long idCartao) {
+    this.idCartao = idCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "N\u00C3\u00BAmero Real do Cart\u00C3\u00A3o.")
-  @JsonProperty("numeroRealCartao")
-  public String getNumeroRealCartao() {
-    return numeroRealCartao;
+  @ApiModelProperty(example = "null", required = true, value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o.")
+  @JsonProperty("idCartao")
+  public Long getIdCartao() {
+    return idCartao;
   }
-  public void setNumeroRealCartao(String numeroRealCartao) {
-    this.numeroRealCartao = numeroRealCartao;
-  }
-
-  
-  /**
-   * Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM
-   **/
-  public PlanoParcelamentoTransferenciaCreditoContaBancariaRequest dataValidadeCartao(String dataValidadeCartao) {
-    this.dataValidadeCartao = dataValidadeCartao;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", required = true, value = "Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM")
-  @JsonProperty("dataValidadeCartao")
-  public String getDataValidadeCartao() {
-    return dataValidadeCartao;
-  }
-  public void setDataValidadeCartao(String dataValidadeCartao) {
-    this.dataValidadeCartao = dataValidadeCartao;
+  public void setIdCartao(Long idCartao) {
+    this.idCartao = idCartao;
   }
 
   
@@ -184,8 +165,7 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest   {
     PlanoParcelamentoTransferenciaCreditoContaBancariaRequest planoParcelamentoTransferenciaCreditoContaBancariaRequest = (PlanoParcelamentoTransferenciaCreditoContaBancariaRequest) o;
     return Objects.equals(this.nsuOrigem, planoParcelamentoTransferenciaCreditoContaBancariaRequest.nsuOrigem) &&
         Objects.equals(this.valorTransacao, planoParcelamentoTransferenciaCreditoContaBancariaRequest.valorTransacao) &&
-        Objects.equals(this.numeroRealCartao, planoParcelamentoTransferenciaCreditoContaBancariaRequest.numeroRealCartao) &&
-        Objects.equals(this.dataValidadeCartao, planoParcelamentoTransferenciaCreditoContaBancariaRequest.dataValidadeCartao) &&
+        Objects.equals(this.idCartao, planoParcelamentoTransferenciaCreditoContaBancariaRequest.idCartao) &&
         Objects.equals(this.numeroMesesCarencia, planoParcelamentoTransferenciaCreditoContaBancariaRequest.numeroMesesCarencia) &&
         Objects.equals(this.numeroEstabelecimento, planoParcelamentoTransferenciaCreditoContaBancariaRequest.numeroEstabelecimento) &&
         Objects.equals(this.dataHoraTerminal, planoParcelamentoTransferenciaCreditoContaBancariaRequest.dataHoraTerminal) &&
@@ -194,7 +174,7 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(nsuOrigem, valorTransacao, numeroRealCartao, dataValidadeCartao, numeroMesesCarencia, numeroEstabelecimento, dataHoraTerminal, terminalRequisitante);
+    return Objects.hash(nsuOrigem, valorTransacao, idCartao, numeroMesesCarencia, numeroEstabelecimento, dataHoraTerminal, terminalRequisitante);
   }
 
   @Override
@@ -204,8 +184,7 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest   {
     
     sb.append("    nsuOrigem: ").append(toIndentedString(nsuOrigem)).append("\n");
     sb.append("    valorTransacao: ").append(toIndentedString(valorTransacao)).append("\n");
-    sb.append("    numeroRealCartao: ").append(toIndentedString(numeroRealCartao)).append("\n");
-    sb.append("    dataValidadeCartao: ").append(toIndentedString(dataValidadeCartao)).append("\n");
+    sb.append("    idCartao: ").append(toIndentedString(idCartao)).append("\n");
     sb.append("    numeroMesesCarencia: ").append(toIndentedString(numeroMesesCarencia)).append("\n");
     sb.append("    numeroEstabelecimento: ").append(toIndentedString(numeroEstabelecimento)).append("\n");
     sb.append("    dataHoraTerminal: ").append(toIndentedString(dataHoraTerminal)).append("\n");

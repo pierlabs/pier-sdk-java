@@ -21,10 +21,7 @@ import java.util.List;
 public class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse   {
   
   private String nsuOrigem = null;
-  private String nsuAutorizacao = null;
-  private String codigoAutorizacao = null;
   private String numeroMascaradoCartao = null;
-  private String nomePortadorCartao = null;
   private String terminalRequisitante = null;
   private List<PlanoParcelamentoTransferenciaResponse> planoParcelamentos = new ArrayList<PlanoParcelamentoTransferenciaResponse>();
 
@@ -48,42 +45,6 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse   {
 
   
   /**
-   * N\u00C3\u00BAmero Sequencial \u00C3\u009Anico gerado pelo Autorizador a cada Transa\u00C3\u00A7\u00C3\u00A3o.
-   **/
-  public PlanoParcelamentoTransferenciaCreditoContaBancariaResponse nsuAutorizacao(String nsuAutorizacao) {
-    this.nsuAutorizacao = nsuAutorizacao;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero Sequencial \u00C3\u009Anico gerado pelo Autorizador a cada Transa\u00C3\u00A7\u00C3\u00A3o.")
-  @JsonProperty("nsuAutorizacao")
-  public String getNsuAutorizacao() {
-    return nsuAutorizacao;
-  }
-  public void setNsuAutorizacao(String nsuAutorizacao) {
-    this.nsuAutorizacao = nsuAutorizacao;
-  }
-
-  
-  /**
-   * C\u00C3\u00B3digo de Autoriza\u00C3\u00A7\u00C3\u00A3o gerado pelo Autorizador.
-   **/
-  public PlanoParcelamentoTransferenciaCreditoContaBancariaResponse codigoAutorizacao(String codigoAutorizacao) {
-    this.codigoAutorizacao = codigoAutorizacao;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Autoriza\u00C3\u00A7\u00C3\u00A3o gerado pelo Autorizador.")
-  @JsonProperty("codigoAutorizacao")
-  public String getCodigoAutorizacao() {
-    return codigoAutorizacao;
-  }
-  public void setCodigoAutorizacao(String codigoAutorizacao) {
-    this.codigoAutorizacao = codigoAutorizacao;
-  }
-
-  
-  /**
    * N\u00C3\u00BAmero do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o em formato mascarado.
    **/
   public PlanoParcelamentoTransferenciaCreditoContaBancariaResponse numeroMascaradoCartao(String numeroMascaradoCartao) {
@@ -98,24 +59,6 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse   {
   }
   public void setNumeroMascaradoCartao(String numeroMascaradoCartao) {
     this.numeroMascaradoCartao = numeroMascaradoCartao;
-  }
-
-  
-  /**
-   * Nome do Portador do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o.
-   **/
-  public PlanoParcelamentoTransferenciaCreditoContaBancariaResponse nomePortadorCartao(String nomePortadorCartao) {
-    this.nomePortadorCartao = nomePortadorCartao;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Nome do Portador do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o.")
-  @JsonProperty("nomePortadorCartao")
-  public String getNomePortadorCartao() {
-    return nomePortadorCartao;
-  }
-  public void setNomePortadorCartao(String nomePortadorCartao) {
-    this.nomePortadorCartao = nomePortadorCartao;
   }
 
   
@@ -166,17 +109,14 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse   {
     }
     PlanoParcelamentoTransferenciaCreditoContaBancariaResponse planoParcelamentoTransferenciaCreditoContaBancariaResponse = (PlanoParcelamentoTransferenciaCreditoContaBancariaResponse) o;
     return Objects.equals(this.nsuOrigem, planoParcelamentoTransferenciaCreditoContaBancariaResponse.nsuOrigem) &&
-        Objects.equals(this.nsuAutorizacao, planoParcelamentoTransferenciaCreditoContaBancariaResponse.nsuAutorizacao) &&
-        Objects.equals(this.codigoAutorizacao, planoParcelamentoTransferenciaCreditoContaBancariaResponse.codigoAutorizacao) &&
         Objects.equals(this.numeroMascaradoCartao, planoParcelamentoTransferenciaCreditoContaBancariaResponse.numeroMascaradoCartao) &&
-        Objects.equals(this.nomePortadorCartao, planoParcelamentoTransferenciaCreditoContaBancariaResponse.nomePortadorCartao) &&
         Objects.equals(this.terminalRequisitante, planoParcelamentoTransferenciaCreditoContaBancariaResponse.terminalRequisitante) &&
         Objects.equals(this.planoParcelamentos, planoParcelamentoTransferenciaCreditoContaBancariaResponse.planoParcelamentos);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(nsuOrigem, nsuAutorizacao, codigoAutorizacao, numeroMascaradoCartao, nomePortadorCartao, terminalRequisitante, planoParcelamentos);
+    return Objects.hash(nsuOrigem, numeroMascaradoCartao, terminalRequisitante, planoParcelamentos);
   }
 
   @Override
@@ -185,10 +125,7 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse   {
     sb.append("class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse {\n");
     
     sb.append("    nsuOrigem: ").append(toIndentedString(nsuOrigem)).append("\n");
-    sb.append("    nsuAutorizacao: ").append(toIndentedString(nsuAutorizacao)).append("\n");
-    sb.append("    codigoAutorizacao: ").append(toIndentedString(codigoAutorizacao)).append("\n");
     sb.append("    numeroMascaradoCartao: ").append(toIndentedString(numeroMascaradoCartao)).append("\n");
-    sb.append("    nomePortadorCartao: ").append(toIndentedString(nomePortadorCartao)).append("\n");
     sb.append("    terminalRequisitante: ").append(toIndentedString(terminalRequisitante)).append("\n");
     sb.append("    planoParcelamentos: ").append(toIndentedString(planoParcelamentos)).append("\n");
     sb.append("}");

@@ -21,6 +21,9 @@ public class ParcelamentoTransferenciaResponse   {
   private String numeroParcela = null;
   private BigDecimal valorPrimeiraParcela = null;
   private BigDecimal valorDemaisParcelas = null;
+  private BigDecimal valorTotal = null;
+  private BigDecimal valorTAC = null;
+  private BigDecimal valorIOF = null;
   private BigDecimal taxaJuros = null;
   private BigDecimal cetAnual = null;
 
@@ -80,6 +83,60 @@ public class ParcelamentoTransferenciaResponse   {
 
   
   /**
+   * Valor total do financiamento.
+   **/
+  public ParcelamentoTransferenciaResponse valorTotal(BigDecimal valorTotal) {
+    this.valorTotal = valorTotal;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor total do financiamento.")
+  @JsonProperty("valorTotal")
+  public BigDecimal getValorTotal() {
+    return valorTotal;
+  }
+  public void setValorTotal(BigDecimal valorTotal) {
+    this.valorTotal = valorTotal;
+  }
+
+  
+  /**
+   * Valor da tarifa de contrata\u00C3\u00A7\u00C3\u00A3o.
+   **/
+  public ParcelamentoTransferenciaResponse valorTAC(BigDecimal valorTAC) {
+    this.valorTAC = valorTAC;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor da tarifa de contrata\u00C3\u00A7\u00C3\u00A3o.")
+  @JsonProperty("valorTAC")
+  public BigDecimal getValorTAC() {
+    return valorTAC;
+  }
+  public void setValorTAC(BigDecimal valorTAC) {
+    this.valorTAC = valorTAC;
+  }
+
+  
+  /**
+   * IOF
+   **/
+  public ParcelamentoTransferenciaResponse valorIOF(BigDecimal valorIOF) {
+    this.valorIOF = valorIOF;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "IOF")
+  @JsonProperty("valorIOF")
+  public BigDecimal getValorIOF() {
+    return valorIOF;
+  }
+  public void setValorIOF(BigDecimal valorIOF) {
+    this.valorIOF = valorIOF;
+  }
+
+  
+  /**
    * Valor da taxa de juros.
    **/
   public ParcelamentoTransferenciaResponse taxaJuros(BigDecimal taxaJuros) {
@@ -128,13 +185,16 @@ public class ParcelamentoTransferenciaResponse   {
     return Objects.equals(this.numeroParcela, parcelamentoTransferenciaResponse.numeroParcela) &&
         Objects.equals(this.valorPrimeiraParcela, parcelamentoTransferenciaResponse.valorPrimeiraParcela) &&
         Objects.equals(this.valorDemaisParcelas, parcelamentoTransferenciaResponse.valorDemaisParcelas) &&
+        Objects.equals(this.valorTotal, parcelamentoTransferenciaResponse.valorTotal) &&
+        Objects.equals(this.valorTAC, parcelamentoTransferenciaResponse.valorTAC) &&
+        Objects.equals(this.valorIOF, parcelamentoTransferenciaResponse.valorIOF) &&
         Objects.equals(this.taxaJuros, parcelamentoTransferenciaResponse.taxaJuros) &&
         Objects.equals(this.cetAnual, parcelamentoTransferenciaResponse.cetAnual);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(numeroParcela, valorPrimeiraParcela, valorDemaisParcelas, taxaJuros, cetAnual);
+    return Objects.hash(numeroParcela, valorPrimeiraParcela, valorDemaisParcelas, valorTotal, valorTAC, valorIOF, taxaJuros, cetAnual);
   }
 
   @Override
@@ -145,6 +205,9 @@ public class ParcelamentoTransferenciaResponse   {
     sb.append("    numeroParcela: ").append(toIndentedString(numeroParcela)).append("\n");
     sb.append("    valorPrimeiraParcela: ").append(toIndentedString(valorPrimeiraParcela)).append("\n");
     sb.append("    valorDemaisParcelas: ").append(toIndentedString(valorDemaisParcelas)).append("\n");
+    sb.append("    valorTotal: ").append(toIndentedString(valorTotal)).append("\n");
+    sb.append("    valorTAC: ").append(toIndentedString(valorTAC)).append("\n");
+    sb.append("    valorIOF: ").append(toIndentedString(valorIOF)).append("\n");
     sb.append("    taxaJuros: ").append(toIndentedString(taxaJuros)).append("\n");
     sb.append("    cetAnual: ").append(toIndentedString(cetAnual)).append("\n");
     sb.append("}");
