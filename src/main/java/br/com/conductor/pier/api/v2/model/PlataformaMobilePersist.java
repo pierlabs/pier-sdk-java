@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Objeto PlataformaMobile
  **/
@@ -77,6 +75,4 @@ public class PlataformaMobilePersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

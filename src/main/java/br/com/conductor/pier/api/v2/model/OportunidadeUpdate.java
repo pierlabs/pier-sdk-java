@@ -6,10 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-
-
 
 
 
@@ -24,8 +21,8 @@ public class OportunidadeUpdate   {
   private Long idTipoOportunidade = null;
   private Long idStatusOportunidade = null;
   private String numeroReceitaFederal = null;
-  private Date dataInicioVigencia = null;
-  private Date dataFimVigencia = null;
+  private String dataInicioVigencia = null;
+  private String dataFimVigencia = null;
   private Boolean flagAtivo = null;
   private List<DetalheOportunidadeUpdate> detalhes = new ArrayList<DetalheOportunidadeUpdate>();
 
@@ -87,17 +84,17 @@ public class OportunidadeUpdate   {
   /**
    * In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
    **/
-  public OportunidadeUpdate dataInicioVigencia(Date dataInicioVigencia) {
+  public OportunidadeUpdate dataInicioVigencia(String dataInicioVigencia) {
     this.dataInicioVigencia = dataInicioVigencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", required = true, value = "In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade")
   @JsonProperty("dataInicioVigencia")
-  public Date getDataInicioVigencia() {
+  public String getDataInicioVigencia() {
     return dataInicioVigencia;
   }
-  public void setDataInicioVigencia(Date dataInicioVigencia) {
+  public void setDataInicioVigencia(String dataInicioVigencia) {
     this.dataInicioVigencia = dataInicioVigencia;
   }
 
@@ -105,17 +102,17 @@ public class OportunidadeUpdate   {
   /**
    * Fim da vig\u00C3\u00AAncia da oportunidade
    **/
-  public OportunidadeUpdate dataFimVigencia(Date dataFimVigencia) {
+  public OportunidadeUpdate dataFimVigencia(String dataFimVigencia) {
     this.dataFimVigencia = dataFimVigencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Fim da vig\u00C3\u00AAncia da oportunidade")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", required = true, value = "Fim da vig\u00C3\u00AAncia da oportunidade")
   @JsonProperty("dataFimVigencia")
-  public Date getDataFimVigencia() {
+  public String getDataFimVigencia() {
     return dataFimVigencia;
   }
-  public void setDataFimVigencia(Date dataFimVigencia) {
+  public void setDataFimVigencia(String dataFimVigencia) {
     this.dataFimVigencia = dataFimVigencia;
   }
 
@@ -128,7 +125,7 @@ public class OportunidadeUpdate   {
     return this;
   }
   
-  @ApiModelProperty(example = "false", required = true, value = "Atributo que indica se a oportunidade est\u00C3\u00A1 ativa")
+  @ApiModelProperty(example = "true", required = true, value = "Atributo que indica se a oportunidade est\u00C3\u00A1 ativa")
   @JsonProperty("flagAtivo")
   public Boolean getFlagAtivo() {
     return flagAtivo;
@@ -207,6 +204,4 @@ public class OportunidadeUpdate   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

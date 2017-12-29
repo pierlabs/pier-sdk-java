@@ -66,9 +66,9 @@ public class ApiClient {
     objectMapper.enable(SerializationFeature.WRITE_ENUMS_USING_TO_STRING);
     objectMapper.enable(DeserializationFeature.READ_ENUMS_USING_TO_STRING);
     objectMapper.registerModule(new JodaModule());
-    objectMapper.setDateFormat(ApiClient.buildDefaultDateFormat());
+    //objectMapper.setDateFormat(ApiClient.buildDefaultDateFormat());
 
-    dateFormat = ApiClient.buildDefaultDateFormat();
+    //dateFormat = ApiClient.buildDefaultDateFormat();
 
     // Set default User-Agent.
     setUserAgent("Java-Swagger");
@@ -83,14 +83,14 @@ public class ApiClient {
     rebuildHttpClient();
   }
 
-  public static DateFormat buildDefaultDateFormat() {
+  //-public static DateFormat buildDefaultDateFormat() {
     // Use RFC3339 format for date and datetime.
     // See http://xml2rfc.ietf.org/public/rfc/html/rfc3339.html#anchor14
-    DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS");
+    //-DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS");
     // Use UTC as the default time zone.
-    dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
-    return dateFormat;
-  }
+    //-dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
+    //-return dateFormat;
+  //-}
 
   /**
    * Build the Client used to make HTTP requests with the latest settings,
@@ -341,8 +341,8 @@ public class ApiClient {
   public String parameterToString(Object param) {
     if (param == null) {
       return "";
-    } else if (param instanceof Date) {
-      return formatDate((Date) param);
+    //} else if (param instanceof Date) {
+    //  return formatDate((Date) param);
     } else if (param instanceof Collection) {
       StringBuilder b = new StringBuilder();
       for(Object o : (Collection<?>)param) {

@@ -5,9 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.Date;
-
-
 
 
 
@@ -28,8 +25,8 @@ public class UsuarioResponse   {
 
 
   public enum StatusEnum {
-    ATIVO("ATIVO"),
-    INATIVO("INATIVO");
+    INATIVO("INATIVO"),
+    ATIVO("ATIVO");
 
     private String value;
 
@@ -45,8 +42,8 @@ public class UsuarioResponse   {
   }
 
   private StatusEnum status = null;
-  private Date dataCriacao = null;
-  private Date dataModificacao = null;
+  private String dataCriacao = null;
+  private String dataModificacao = null;
   private Long tentativasIncorretas = null;
 
   
@@ -179,17 +176,17 @@ public class UsuarioResponse   {
   /**
    * Data de cria\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
    **/
-  public UsuarioResponse dataCriacao(Date dataCriacao) {
+  public UsuarioResponse dataCriacao(String dataCriacao) {
     this.dataCriacao = dataCriacao;
     return this;
   }
   
   @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data de cria\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio")
   @JsonProperty("dataCriacao")
-  public Date getDataCriacao() {
+  public String getDataCriacao() {
     return dataCriacao;
   }
-  public void setDataCriacao(Date dataCriacao) {
+  public void setDataCriacao(String dataCriacao) {
     this.dataCriacao = dataCriacao;
   }
 
@@ -197,17 +194,17 @@ public class UsuarioResponse   {
   /**
    * Data de modifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio
    **/
-  public UsuarioResponse dataModificacao(Date dataModificacao) {
+  public UsuarioResponse dataModificacao(String dataModificacao) {
     this.dataModificacao = dataModificacao;
     return this;
   }
   
   @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data de modifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio")
   @JsonProperty("dataModificacao")
-  public Date getDataModificacao() {
+  public String getDataModificacao() {
     return dataModificacao;
   }
-  public void setDataModificacao(Date dataModificacao) {
+  public void setDataModificacao(String dataModificacao) {
     this.dataModificacao = dataModificacao;
   }
 
@@ -287,6 +284,4 @@ public class UsuarioResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

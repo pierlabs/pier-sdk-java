@@ -2,16 +2,15 @@ package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
 import br.com.conductor.pier.api.v2.model.EnderecoAprovadoResponse;
+import br.com.conductor.pier.api.v2.model.ReferenciaComercialAprovadoResponse;
 import br.com.conductor.pier.api.v2.model.SocioAprovadoResponse;
 import br.com.conductor.pier.api.v2.model.TelefonePessoaAprovadaResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-
-
 
 
 
@@ -28,7 +27,7 @@ public class PessoaJuridicaAprovadaResponse   {
   private String nomeFantasia = null;
   private String cnpj = null;
   private String inscricaoEstadual = null;
-  private Date dataAberturaEmpresa = null;
+  private String dataAberturaEmpresa = null;
   private Long idOrigemComercial = null;
   private Long idProduto = null;
   private Integer numeroAgencia = null;
@@ -36,20 +35,28 @@ public class PessoaJuridicaAprovadaResponse   {
   private String email = null;
   private Integer diaVencimento = null;
   private String nomeImpresso = null;
+  private Long idConta = null;
+  private Long idProposta = null;
+  private String canalEntrada = null;
+  private Integer valorPontuacao = null;
   private List<TelefonePessoaAprovadaResponse> telefones = new ArrayList<TelefonePessoaAprovadaResponse>();
   private List<EnderecoAprovadoResponse> enderecos = new ArrayList<EnderecoAprovadoResponse>();
   private List<SocioAprovadoResponse> socios = new ArrayList<SocioAprovadoResponse>();
+  private List<ReferenciaComercialAprovadoResponse> referencias = new ArrayList<ReferenciaComercialAprovadoResponse>();
+  private BigDecimal limiteGlobal = null;
+  private BigDecimal limiteMaximo = null;
+  private BigDecimal limiteParcelas = null;
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id)
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa jur\u00C3\u00ADdica (id)
    **/
   public PessoaJuridicaAprovadaResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id)")
+  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa jur\u00C3\u00ADdica (id)")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -134,17 +141,17 @@ public class PessoaJuridicaAprovadaResponse   {
   /**
    * Data de abertura da empresa, essa data deve ser informada no formato: aaaa-MM-dd.
    **/
-  public PessoaJuridicaAprovadaResponse dataAberturaEmpresa(Date dataAberturaEmpresa) {
+  public PessoaJuridicaAprovadaResponse dataAberturaEmpresa(String dataAberturaEmpresa) {
     this.dataAberturaEmpresa = dataAberturaEmpresa;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Data de abertura da empresa, essa data deve ser informada no formato: aaaa-MM-dd.")
   @JsonProperty("dataAberturaEmpresa")
-  public Date getDataAberturaEmpresa() {
+  public String getDataAberturaEmpresa() {
     return dataAberturaEmpresa;
   }
-  public void setDataAberturaEmpresa(Date dataAberturaEmpresa) {
+  public void setDataAberturaEmpresa(String dataAberturaEmpresa) {
     this.dataAberturaEmpresa = dataAberturaEmpresa;
   }
 
@@ -276,6 +283,78 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta cadastrada
+   **/
+  public PessoaJuridicaAprovadaResponse idConta(Long idConta) {
+    this.idConta = idConta;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta cadastrada")
+  @JsonProperty("idConta")
+  public Long getIdConta() {
+    return idConta;
+  }
+  public void setIdConta(Long idConta) {
+    this.idConta = idConta;
+  }
+
+  
+  /**
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da proposta
+   **/
+  public PessoaJuridicaAprovadaResponse idProposta(Long idProposta) {
+    this.idProposta = idProposta;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da proposta")
+  @JsonProperty("idProposta")
+  public Long getIdProposta() {
+    return idProposta;
+  }
+  public void setIdProposta(Long idProposta) {
+    this.idProposta = idProposta;
+  }
+
+  
+  /**
+   * Indica o canal pelo qual o cadastro do cliente foi realizado
+   **/
+  public PessoaJuridicaAprovadaResponse canalEntrada(String canalEntrada) {
+    this.canalEntrada = canalEntrada;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Indica o canal pelo qual o cadastro do cliente foi realizado")
+  @JsonProperty("canalEntrada")
+  public String getCanalEntrada() {
+    return canalEntrada;
+  }
+  public void setCanalEntrada(String canalEntrada) {
+    this.canalEntrada = canalEntrada;
+  }
+
+  
+  /**
+   * Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)
+   **/
+  public PessoaJuridicaAprovadaResponse valorPontuacao(Integer valorPontuacao) {
+    this.valorPontuacao = valorPontuacao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)")
+  @JsonProperty("valorPontuacao")
+  public Integer getValorPontuacao() {
+    return valorPontuacao;
+  }
+  public void setValorPontuacao(Integer valorPontuacao) {
+    this.valorPontuacao = valorPontuacao;
+  }
+
+  
+  /**
    * Apresenta os telefones da empresa
    **/
   public PessoaJuridicaAprovadaResponse telefones(List<TelefonePessoaAprovadaResponse> telefones) {
@@ -329,6 +408,78 @@ public class PessoaJuridicaAprovadaResponse   {
   }
 
   
+  /**
+   * Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista
+   **/
+  public PessoaJuridicaAprovadaResponse referencias(List<ReferenciaComercialAprovadoResponse> referencias) {
+    this.referencias = referencias;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista")
+  @JsonProperty("referencias")
+  public List<ReferenciaComercialAprovadoResponse> getReferencias() {
+    return referencias;
+  }
+  public void setReferencias(List<ReferenciaComercialAprovadoResponse> referencias) {
+    this.referencias = referencias;
+  }
+
+  
+  /**
+   * Valor do Limite Global
+   **/
+  public PessoaJuridicaAprovadaResponse limiteGlobal(BigDecimal limiteGlobal) {
+    this.limiteGlobal = limiteGlobal;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "Valor do Limite Global")
+  @JsonProperty("limiteGlobal")
+  public BigDecimal getLimiteGlobal() {
+    return limiteGlobal;
+  }
+  public void setLimiteGlobal(BigDecimal limiteGlobal) {
+    this.limiteGlobal = limiteGlobal;
+  }
+
+  
+  /**
+   * Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es
+   **/
+  public PessoaJuridicaAprovadaResponse limiteMaximo(BigDecimal limiteMaximo) {
+    this.limiteMaximo = limiteMaximo;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es")
+  @JsonProperty("limiteMaximo")
+  public BigDecimal getLimiteMaximo() {
+    return limiteMaximo;
+  }
+  public void setLimiteMaximo(BigDecimal limiteMaximo) {
+    this.limiteMaximo = limiteMaximo;
+  }
+
+  
+  /**
+   * Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras
+   **/
+  public PessoaJuridicaAprovadaResponse limiteParcelas(BigDecimal limiteParcelas) {
+    this.limiteParcelas = limiteParcelas;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras")
+  @JsonProperty("limiteParcelas")
+  public BigDecimal getLimiteParcelas() {
+    return limiteParcelas;
+  }
+  public void setLimiteParcelas(BigDecimal limiteParcelas) {
+    this.limiteParcelas = limiteParcelas;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -352,14 +503,22 @@ public class PessoaJuridicaAprovadaResponse   {
         Objects.equals(this.email, pessoaJuridicaAprovadaResponse.email) &&
         Objects.equals(this.diaVencimento, pessoaJuridicaAprovadaResponse.diaVencimento) &&
         Objects.equals(this.nomeImpresso, pessoaJuridicaAprovadaResponse.nomeImpresso) &&
+        Objects.equals(this.idConta, pessoaJuridicaAprovadaResponse.idConta) &&
+        Objects.equals(this.idProposta, pessoaJuridicaAprovadaResponse.idProposta) &&
+        Objects.equals(this.canalEntrada, pessoaJuridicaAprovadaResponse.canalEntrada) &&
+        Objects.equals(this.valorPontuacao, pessoaJuridicaAprovadaResponse.valorPontuacao) &&
         Objects.equals(this.telefones, pessoaJuridicaAprovadaResponse.telefones) &&
         Objects.equals(this.enderecos, pessoaJuridicaAprovadaResponse.enderecos) &&
-        Objects.equals(this.socios, pessoaJuridicaAprovadaResponse.socios);
+        Objects.equals(this.socios, pessoaJuridicaAprovadaResponse.socios) &&
+        Objects.equals(this.referencias, pessoaJuridicaAprovadaResponse.referencias) &&
+        Objects.equals(this.limiteGlobal, pessoaJuridicaAprovadaResponse.limiteGlobal) &&
+        Objects.equals(this.limiteMaximo, pessoaJuridicaAprovadaResponse.limiteMaximo) &&
+        Objects.equals(this.limiteParcelas, pessoaJuridicaAprovadaResponse.limiteParcelas);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, razaoSocial, nomeFantasia, cnpj, inscricaoEstadual, dataAberturaEmpresa, idOrigemComercial, idProduto, numeroAgencia, numeroContaCorrente, email, diaVencimento, nomeImpresso, telefones, enderecos, socios);
+    return Objects.hash(id, razaoSocial, nomeFantasia, cnpj, inscricaoEstadual, dataAberturaEmpresa, idOrigemComercial, idProduto, numeroAgencia, numeroContaCorrente, email, diaVencimento, nomeImpresso, idConta, idProposta, canalEntrada, valorPontuacao, telefones, enderecos, socios, referencias, limiteGlobal, limiteMaximo, limiteParcelas);
   }
 
   @Override
@@ -380,9 +539,17 @@ public class PessoaJuridicaAprovadaResponse   {
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    diaVencimento: ").append(toIndentedString(diaVencimento)).append("\n");
     sb.append("    nomeImpresso: ").append(toIndentedString(nomeImpresso)).append("\n");
+    sb.append("    idConta: ").append(toIndentedString(idConta)).append("\n");
+    sb.append("    idProposta: ").append(toIndentedString(idProposta)).append("\n");
+    sb.append("    canalEntrada: ").append(toIndentedString(canalEntrada)).append("\n");
+    sb.append("    valorPontuacao: ").append(toIndentedString(valorPontuacao)).append("\n");
     sb.append("    telefones: ").append(toIndentedString(telefones)).append("\n");
     sb.append("    enderecos: ").append(toIndentedString(enderecos)).append("\n");
     sb.append("    socios: ").append(toIndentedString(socios)).append("\n");
+    sb.append("    referencias: ").append(toIndentedString(referencias)).append("\n");
+    sb.append("    limiteGlobal: ").append(toIndentedString(limiteGlobal)).append("\n");
+    sb.append("    limiteMaximo: ").append(toIndentedString(limiteMaximo)).append("\n");
+    sb.append("    limiteParcelas: ").append(toIndentedString(limiteParcelas)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -398,6 +565,4 @@ public class PessoaJuridicaAprovadaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 
