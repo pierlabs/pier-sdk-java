@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Objeto Response do arquivo.
  **/
@@ -290,6 +288,4 @@ public class ArquivoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

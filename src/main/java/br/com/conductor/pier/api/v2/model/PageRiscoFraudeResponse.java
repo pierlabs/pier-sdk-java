@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista dos riscos de fraudes
  **/
@@ -339,6 +337,4 @@ public class PageRiscoFraudeResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

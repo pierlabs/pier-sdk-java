@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista de faturas
  **/
@@ -339,6 +337,4 @@ public class PageFaturaFechadaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

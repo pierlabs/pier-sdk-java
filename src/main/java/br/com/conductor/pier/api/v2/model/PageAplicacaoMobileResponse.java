@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista de Aplicacoes Mobile
  **/
@@ -339,6 +337,4 @@ public class PageAplicacaoMobileResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

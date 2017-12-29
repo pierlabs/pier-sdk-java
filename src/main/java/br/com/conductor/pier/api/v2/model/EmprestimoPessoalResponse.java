@@ -11,8 +11,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Resposta do recurso de simular empr\u00C3\u00A9stimos/financiamentos
  **/
@@ -248,6 +246,4 @@ public class EmprestimoPessoalResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

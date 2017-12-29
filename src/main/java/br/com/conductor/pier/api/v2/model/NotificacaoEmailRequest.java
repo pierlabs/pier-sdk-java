@@ -12,8 +12,6 @@ import java.util.Map;
 
 
 
-
-
 /**
  * Representa\u00C3\u00A7\u00C3\u00A3o do recurso para envio de uma notifica\u00C3\u00A7\u00C3\u00A3o por email.
  **/
@@ -145,6 +143,4 @@ public class NotificacaoEmailRequest   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

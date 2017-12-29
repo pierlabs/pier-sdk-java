@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista de status oportunidades
  **/
@@ -339,6 +337,4 @@ public class PageStatusOportunidadeResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

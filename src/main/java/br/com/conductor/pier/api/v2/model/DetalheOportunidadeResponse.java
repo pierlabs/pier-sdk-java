@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Representa\u00C3\u00A7\u00C3\u00A3o do detalhe da resposta do recurso Oportunidades
  **/
@@ -119,6 +117,4 @@ public class DetalheOportunidadeResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

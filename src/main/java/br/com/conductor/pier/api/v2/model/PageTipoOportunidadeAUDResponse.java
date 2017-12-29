@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista de auditorias dos tipos oportunidades
  **/
@@ -339,6 +337,4 @@ public class PageTipoOportunidadeAUDResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Resposta do recurso de cadastrar adicional detalhe
  **/
@@ -479,6 +477,4 @@ public class AdicionalDetalheResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

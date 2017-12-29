@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista de Push
  **/
@@ -339,6 +337,4 @@ public class PagePushResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista de Jobs
  **/
@@ -339,6 +337,4 @@ public class PageJobResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

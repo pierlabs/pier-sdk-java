@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * Objeto conta
  **/
@@ -288,6 +286,4 @@ public class ContaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Objeto Campanha
  **/
@@ -122,6 +120,4 @@ public class CampanhaUpdate   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

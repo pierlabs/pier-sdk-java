@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Objeto de Resposta de Autoriza\u00C3\u00A7\u00C3\u00A3o
  **/
@@ -206,6 +204,4 @@ public class TransacaoOnUsResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

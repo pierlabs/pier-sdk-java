@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Objeto Usuario
  **/
@@ -161,6 +159,4 @@ public class UsuarioUpdate   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

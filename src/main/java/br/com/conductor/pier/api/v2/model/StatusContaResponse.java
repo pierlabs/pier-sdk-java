@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Status Conta
  **/
@@ -287,6 +285,4 @@ public class StatusContaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

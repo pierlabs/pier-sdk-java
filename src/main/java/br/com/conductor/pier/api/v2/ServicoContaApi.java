@@ -10,16 +10,12 @@ import br.com.conductor.pier.api.v2.invoker.Pair;
 import br.com.conductor.pier.api.v2.model.PageAnuidadeResponse;
 import br.com.conductor.pier.api.v2.model.PageOperadoraResponse;
 
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-
 public class ServicoContaApi {
   private ApiClient apiClient;
 
@@ -314,4 +310,3 @@ public class ServicoContaApi {
   }
   
 }
-

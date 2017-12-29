@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista de SMS
  **/
@@ -339,6 +337,4 @@ public class PageSMSResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

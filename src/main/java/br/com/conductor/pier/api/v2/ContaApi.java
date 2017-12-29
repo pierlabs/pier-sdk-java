@@ -7,8 +7,8 @@ import br.com.conductor.pier.api.v2.invoker.ApiClient;
 import br.com.conductor.pier.api.v2.invoker.Configuration;
 import br.com.conductor.pier.api.v2.invoker.Pair;
 
+import br.com.conductor.pier.api.v2.model.AjusteFinanceiroResponse;
 import java.math.BigDecimal;
-import br.com.conductor.pier.api.v2.model.AjusteResponse;
 import br.com.conductor.pier.api.v2.model.AlterarProdutoRequest;
 import br.com.conductor.pier.api.v2.model.ContaResponse;
 import br.com.conductor.pier.api.v2.model.BeneficioPagamentoAtrasoResponse;
@@ -33,16 +33,12 @@ import br.com.conductor.pier.api.v2.model.EmprestimoPessoalRequest;
 import br.com.conductor.pier.api.v2.model.EmprestimoPessoalResponse;
 import br.com.conductor.pier.api.v2.model.PageTransacaoResponse;
 
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-
 public class ContaApi {
   private ApiClient apiClient;
 
@@ -70,29 +66,30 @@ public class ContaApi {
    * @param idTipoAjuste C\u00C3\u00B3digo identificador do tipo de ajuste.
    * @param dataAjuste Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ.
    * @param valorAjuste Valor do ajuste
-   * @return AjusteResponse
+   * @param identificadorExterno Identificador Externo
+   * @return AjusteFinanceiroResponse
    */
-  public AjusteResponse ajustarContaUsingPOST(Long id, Long idTipoAjuste, String dataAjuste, BigDecimal valorAjuste) throws ApiException {
+  public AjusteFinanceiroResponse ajustarContaUsingPOST1(Long id, Long idTipoAjuste, String dataAjuste, BigDecimal valorAjuste, String identificadorExterno) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling ajustarContaUsingPOST");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling ajustarContaUsingPOST1");
      }
      
      // verify the required parameter 'idTipoAjuste' is set
      if (idTipoAjuste == null) {
-        throw new ApiException(400, "Missing the required parameter 'idTipoAjuste' when calling ajustarContaUsingPOST");
+        throw new ApiException(400, "Missing the required parameter 'idTipoAjuste' when calling ajustarContaUsingPOST1");
      }
      
      // verify the required parameter 'dataAjuste' is set
      if (dataAjuste == null) {
-        throw new ApiException(400, "Missing the required parameter 'dataAjuste' when calling ajustarContaUsingPOST");
+        throw new ApiException(400, "Missing the required parameter 'dataAjuste' when calling ajustarContaUsingPOST1");
      }
      
      // verify the required parameter 'valorAjuste' is set
      if (valorAjuste == null) {
-        throw new ApiException(400, "Missing the required parameter 'valorAjuste' when calling ajustarContaUsingPOST");
+        throw new ApiException(400, "Missing the required parameter 'valorAjuste' when calling ajustarContaUsingPOST1");
      }
      
     // create path and map variables
@@ -110,6 +107,8 @@ public class ContaApi {
     queryParams.addAll(apiClient.parameterToPairs("", "dataAjuste", dataAjuste));
     
     queryParams.addAll(apiClient.parameterToPairs("", "valorAjuste", valorAjuste));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "identificadorExterno", identificadorExterno));
     
 
     
@@ -130,7 +129,7 @@ public class ContaApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<AjusteResponse> returnType = new GenericType<AjusteResponse>() {};
+    GenericType<AjusteFinanceiroResponse> returnType = new GenericType<AjusteFinanceiroResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -760,12 +759,12 @@ public class ContaApi {
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
    * @return ContaDetalheResponse
    */
-  public ContaDetalheResponse consultarUsingGET10(Long id) throws ApiException {
+  public ContaDetalheResponse consultarUsingGET11(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET10");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET11");
      }
      
     // create path and map variables
@@ -809,17 +808,17 @@ public class ContaApi {
    * @param idTransferencia C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).
    * @return TransferenciaDetalheResponse
    */
-  public TransferenciaDetalheResponse consultarUsingGET38(Long id, Long idTransferencia) throws ApiException {
+  public TransferenciaDetalheResponse consultarUsingGET39(Long id, Long idTransferencia) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET38");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET39");
      }
      
      // verify the required parameter 'idTransferencia' is set
      if (idTransferencia == null) {
-        throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET38");
+        throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET39");
      }
      
     // create path and map variables
@@ -1933,4 +1932,3 @@ public class ContaApi {
   }
   
 }
-

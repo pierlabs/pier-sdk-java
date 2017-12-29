@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Representa\u00C3\u00A7\u00C3\u00A3o da resposta resumida para o recurso de Documento
  **/
@@ -140,6 +138,4 @@ public class DocumentoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -12,16 +12,12 @@ import br.com.conductor.pier.api.v2.model.UsuarioResponse;
 import br.com.conductor.pier.api.v2.model.PageUsuarioResponse;
 import br.com.conductor.pier.api.v2.model.UsuarioPersist;
 
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-
 public class UsuarioApi {
   private ApiClient apiClient;
 
@@ -270,12 +266,12 @@ public class UsuarioApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
    * @return UsuarioResponse
    */
-  public UsuarioResponse consultarUsingGET39(Long id) throws ApiException {
+  public UsuarioResponse consultarUsingGET40(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET39");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET40");
      }
      
     // create path and map variables
@@ -630,4 +626,3 @@ public class UsuarioApi {
   }
   
 }
-

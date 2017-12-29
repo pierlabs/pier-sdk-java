@@ -10,16 +10,12 @@ import br.com.conductor.pier.api.v2.invoker.Pair;
 import br.com.conductor.pier.api.v2.model.JobResponse;
 import br.com.conductor.pier.api.v2.model.PageJobResponse;
 
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-
 public class JobApi {
   private ApiClient apiClient;
 
@@ -329,4 +325,3 @@ public class JobApi {
   }
   
 }
-

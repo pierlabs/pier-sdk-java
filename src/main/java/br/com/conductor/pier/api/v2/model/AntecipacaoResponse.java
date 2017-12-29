@@ -10,8 +10,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class AntecipacaoResponse   {
   
@@ -577,6 +575,4 @@ public class AntecipacaoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

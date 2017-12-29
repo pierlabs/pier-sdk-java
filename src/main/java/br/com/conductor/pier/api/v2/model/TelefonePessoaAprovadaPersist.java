@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Objeto Telefone Pessoa Aprovada
  **/
@@ -140,6 +138,4 @@ public class TelefonePessoaAprovadaPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

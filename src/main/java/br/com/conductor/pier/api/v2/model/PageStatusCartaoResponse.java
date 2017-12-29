@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista de Status Cart\u00C3\u00B5es
  **/
@@ -339,6 +337,4 @@ public class PageStatusCartaoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * TerminalUpdate
  **/
@@ -98,6 +96,4 @@ public class TerminalUpdate   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

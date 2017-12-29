@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v2.model.PaisResponse;
+import br.com.conductor.pier.api.v2.model.AjusteFinanceiroResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -10,17 +10,15 @@ import java.util.List;
 
 
 
-
-
 /**
- * Lista de Pa\u00C3\u00ADses
+ * Lista de Ajustes
  **/
 
-@ApiModel(description = "Lista de Pa\u00C3\u00ADses")
+@ApiModel(description = "Lista de Ajustes")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class PagePaisResponse   {
+public class PageAjusteResponse   {
   
-  private List<PaisResponse> content = new ArrayList<PaisResponse>();
+  private List<AjusteFinanceiroResponse> content = new ArrayList<AjusteFinanceiroResponse>();
   private Boolean first = null;
   private Boolean firstPage = null;
   private Boolean hasContent = null;
@@ -38,24 +36,24 @@ public class PagePaisResponse   {
   
   /**
    **/
-  public PagePaisResponse content(List<PaisResponse> content) {
+  public PageAjusteResponse content(List<AjusteFinanceiroResponse> content) {
     this.content = content;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("content")
-  public List<PaisResponse> getContent() {
+  public List<AjusteFinanceiroResponse> getContent() {
     return content;
   }
-  public void setContent(List<PaisResponse> content) {
+  public void setContent(List<AjusteFinanceiroResponse> content) {
     this.content = content;
   }
 
   
   /**
    **/
-  public PagePaisResponse first(Boolean first) {
+  public PageAjusteResponse first(Boolean first) {
     this.first = first;
     return this;
   }
@@ -72,7 +70,7 @@ public class PagePaisResponse   {
   
   /**
    **/
-  public PagePaisResponse firstPage(Boolean firstPage) {
+  public PageAjusteResponse firstPage(Boolean firstPage) {
     this.firstPage = firstPage;
     return this;
   }
@@ -89,7 +87,7 @@ public class PagePaisResponse   {
   
   /**
    **/
-  public PagePaisResponse hasContent(Boolean hasContent) {
+  public PageAjusteResponse hasContent(Boolean hasContent) {
     this.hasContent = hasContent;
     return this;
   }
@@ -106,7 +104,7 @@ public class PagePaisResponse   {
   
   /**
    **/
-  public PagePaisResponse hasNextPage(Boolean hasNextPage) {
+  public PageAjusteResponse hasNextPage(Boolean hasNextPage) {
     this.hasNextPage = hasNextPage;
     return this;
   }
@@ -123,7 +121,7 @@ public class PagePaisResponse   {
   
   /**
    **/
-  public PagePaisResponse hasPreviousPage(Boolean hasPreviousPage) {
+  public PageAjusteResponse hasPreviousPage(Boolean hasPreviousPage) {
     this.hasPreviousPage = hasPreviousPage;
     return this;
   }
@@ -140,7 +138,7 @@ public class PagePaisResponse   {
   
   /**
    **/
-  public PagePaisResponse last(Boolean last) {
+  public PageAjusteResponse last(Boolean last) {
     this.last = last;
     return this;
   }
@@ -157,7 +155,7 @@ public class PagePaisResponse   {
   
   /**
    **/
-  public PagePaisResponse nextPage(Integer nextPage) {
+  public PageAjusteResponse nextPage(Integer nextPage) {
     this.nextPage = nextPage;
     return this;
   }
@@ -174,7 +172,7 @@ public class PagePaisResponse   {
   
   /**
    **/
-  public PagePaisResponse number(Integer number) {
+  public PageAjusteResponse number(Integer number) {
     this.number = number;
     return this;
   }
@@ -191,7 +189,7 @@ public class PagePaisResponse   {
   
   /**
    **/
-  public PagePaisResponse numberOfElements(Integer numberOfElements) {
+  public PageAjusteResponse numberOfElements(Integer numberOfElements) {
     this.numberOfElements = numberOfElements;
     return this;
   }
@@ -208,7 +206,7 @@ public class PagePaisResponse   {
   
   /**
    **/
-  public PagePaisResponse previousPage(Integer previousPage) {
+  public PageAjusteResponse previousPage(Integer previousPage) {
     this.previousPage = previousPage;
     return this;
   }
@@ -225,7 +223,7 @@ public class PagePaisResponse   {
   
   /**
    **/
-  public PagePaisResponse size(Integer size) {
+  public PageAjusteResponse size(Integer size) {
     this.size = size;
     return this;
   }
@@ -242,7 +240,7 @@ public class PagePaisResponse   {
   
   /**
    **/
-  public PagePaisResponse totalElements(Long totalElements) {
+  public PageAjusteResponse totalElements(Long totalElements) {
     this.totalElements = totalElements;
     return this;
   }
@@ -259,7 +257,7 @@ public class PagePaisResponse   {
   
   /**
    **/
-  public PagePaisResponse totalPages(Integer totalPages) {
+  public PageAjusteResponse totalPages(Integer totalPages) {
     this.totalPages = totalPages;
     return this;
   }
@@ -283,21 +281,21 @@ public class PagePaisResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    PagePaisResponse pagePaisResponse = (PagePaisResponse) o;
-    return Objects.equals(this.content, pagePaisResponse.content) &&
-        Objects.equals(this.first, pagePaisResponse.first) &&
-        Objects.equals(this.firstPage, pagePaisResponse.firstPage) &&
-        Objects.equals(this.hasContent, pagePaisResponse.hasContent) &&
-        Objects.equals(this.hasNextPage, pagePaisResponse.hasNextPage) &&
-        Objects.equals(this.hasPreviousPage, pagePaisResponse.hasPreviousPage) &&
-        Objects.equals(this.last, pagePaisResponse.last) &&
-        Objects.equals(this.nextPage, pagePaisResponse.nextPage) &&
-        Objects.equals(this.number, pagePaisResponse.number) &&
-        Objects.equals(this.numberOfElements, pagePaisResponse.numberOfElements) &&
-        Objects.equals(this.previousPage, pagePaisResponse.previousPage) &&
-        Objects.equals(this.size, pagePaisResponse.size) &&
-        Objects.equals(this.totalElements, pagePaisResponse.totalElements) &&
-        Objects.equals(this.totalPages, pagePaisResponse.totalPages);
+    PageAjusteResponse pageAjusteResponse = (PageAjusteResponse) o;
+    return Objects.equals(this.content, pageAjusteResponse.content) &&
+        Objects.equals(this.first, pageAjusteResponse.first) &&
+        Objects.equals(this.firstPage, pageAjusteResponse.firstPage) &&
+        Objects.equals(this.hasContent, pageAjusteResponse.hasContent) &&
+        Objects.equals(this.hasNextPage, pageAjusteResponse.hasNextPage) &&
+        Objects.equals(this.hasPreviousPage, pageAjusteResponse.hasPreviousPage) &&
+        Objects.equals(this.last, pageAjusteResponse.last) &&
+        Objects.equals(this.nextPage, pageAjusteResponse.nextPage) &&
+        Objects.equals(this.number, pageAjusteResponse.number) &&
+        Objects.equals(this.numberOfElements, pageAjusteResponse.numberOfElements) &&
+        Objects.equals(this.previousPage, pageAjusteResponse.previousPage) &&
+        Objects.equals(this.size, pageAjusteResponse.size) &&
+        Objects.equals(this.totalElements, pageAjusteResponse.totalElements) &&
+        Objects.equals(this.totalPages, pageAjusteResponse.totalPages);
   }
 
   @Override
@@ -308,7 +306,7 @@ public class PagePaisResponse   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PagePaisResponse {\n");
+    sb.append("class PageAjusteResponse {\n");
     
     sb.append("    content: ").append(toIndentedString(content)).append("\n");
     sb.append("    first: ").append(toIndentedString(first)).append("\n");
@@ -339,6 +337,4 @@ public class PagePaisResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

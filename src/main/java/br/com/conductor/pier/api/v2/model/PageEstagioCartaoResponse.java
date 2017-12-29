@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista de Est\u00C3\u00A1gios Cart\u00C3\u00B5es
  **/
@@ -339,6 +337,4 @@ public class PageEstagioCartaoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

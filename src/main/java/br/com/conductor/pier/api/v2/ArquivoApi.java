@@ -10,16 +10,12 @@ import br.com.conductor.pier.api.v2.invoker.Pair;
 import br.com.conductor.pier.api.v2.model.ArquivoResponse;
 import br.com.conductor.pier.api.v2.model.ArquivoPersist;
 
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-
 public class ArquivoApi {
   private ApiClient apiClient;
 
@@ -46,12 +42,12 @@ public class ArquivoApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo
    * @return ArquivoResponse
    */
-  public ArquivoResponse consultarUsingGET1(Long id) throws ApiException {
+  public ArquivoResponse consultarUsingGET2(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET1");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET2");
      }
      
     // create path and map variables
@@ -136,4 +132,3 @@ public class ArquivoApi {
   }
   
 }
-

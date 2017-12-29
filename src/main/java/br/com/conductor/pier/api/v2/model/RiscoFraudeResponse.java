@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * Par\u00C3\u00A2metros de resposta de risco de fraude
  **/
@@ -267,6 +265,4 @@ public class RiscoFraudeResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Representa a requisi\u00C3\u00A7\u00C3\u00A3o do recurso de incluir integra\u00C3\u00A7\u00C3\u00A3o emissor
  **/
@@ -77,6 +75,4 @@ public class IntegracaoEmissorPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

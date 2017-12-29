@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Lote Cart\u00C3\u00B5es Pr\u00C3\u00A9-Pagos
  **/
@@ -266,6 +264,4 @@ public class LoteCartoesPrePagosResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

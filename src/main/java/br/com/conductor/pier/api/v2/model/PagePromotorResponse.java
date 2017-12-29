@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista de Promotores
  **/
@@ -339,6 +337,4 @@ public class PagePromotorResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

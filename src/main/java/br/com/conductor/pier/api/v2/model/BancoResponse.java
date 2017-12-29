@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Objeto Banco
  **/
@@ -140,6 +138,4 @@ public class BancoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

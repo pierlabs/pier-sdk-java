@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista historicos atraso pagamento
  **/
@@ -339,6 +337,4 @@ public class PageHistoricoAtrasoFaturaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

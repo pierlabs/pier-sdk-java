@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista de Transa\u00C3\u00A7\u00C3\u00B5es nao Processadas
  **/
@@ -339,6 +337,4 @@ public class PageTransacaoNaoProcessadaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

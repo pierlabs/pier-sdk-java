@@ -10,16 +10,12 @@ import br.com.conductor.pier.api.v2.invoker.Pair;
 import br.com.conductor.pier.api.v2.model.LimiteDisponibilidadeResponse;
 import java.math.BigDecimal;
 
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-
 public class LimiteDisponibilidadeApi {
   private ApiClient apiClient;
 
@@ -134,12 +130,12 @@ public class LimiteDisponibilidadeApi {
    * @param idConta Id Conta
    * @return LimiteDisponibilidadeResponse
    */
-  public LimiteDisponibilidadeResponse consultarUsingGET17(Long idConta) throws ApiException {
+  public LimiteDisponibilidadeResponse consultarUsingGET18(Long idConta) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idConta' is set
      if (idConta == null) {
-        throw new ApiException(400, "Missing the required parameter 'idConta' when calling consultarUsingGET17");
+        throw new ApiException(400, "Missing the required parameter 'idConta' when calling consultarUsingGET18");
      }
      
     // create path and map variables
@@ -178,4 +174,3 @@ public class LimiteDisponibilidadeApi {
   }
   
 }
-
