@@ -23,6 +23,7 @@ public class PessoaDetalheResponse   {
   private String idProfissao = null;
   private Long idNaturezaOcupacao = null;
   private Long idNacionalidade = null;
+  private Integer numeroBanco = null;
   private Integer numeroAgencia = null;
   private String numeroContaCorrente = null;
   private String email = null;
@@ -138,6 +139,24 @@ public class PessoaDetalheResponse   {
 
   
   /**
+   * N\u00C3\u00BAmero do banco.
+   **/
+  public PessoaDetalheResponse numeroBanco(Integer numeroBanco) {
+    this.numeroBanco = numeroBanco;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero do banco.")
+  @JsonProperty("numeroBanco")
+  public Integer getNumeroBanco() {
+    return numeroBanco;
+  }
+  public void setNumeroBanco(Integer numeroBanco) {
+    this.numeroBanco = numeroBanco;
+  }
+
+  
+  /**
    * N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
    **/
   public PessoaDetalheResponse numeroAgencia(Integer numeroAgencia) {
@@ -225,6 +244,7 @@ public class PessoaDetalheResponse   {
         Objects.equals(this.idProfissao, pessoaDetalheResponse.idProfissao) &&
         Objects.equals(this.idNaturezaOcupacao, pessoaDetalheResponse.idNaturezaOcupacao) &&
         Objects.equals(this.idNacionalidade, pessoaDetalheResponse.idNacionalidade) &&
+        Objects.equals(this.numeroBanco, pessoaDetalheResponse.numeroBanco) &&
         Objects.equals(this.numeroAgencia, pessoaDetalheResponse.numeroAgencia) &&
         Objects.equals(this.numeroContaCorrente, pessoaDetalheResponse.numeroContaCorrente) &&
         Objects.equals(this.email, pessoaDetalheResponse.email) &&
@@ -233,7 +253,7 @@ public class PessoaDetalheResponse   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroAgencia, numeroContaCorrente, email, nomeEmpresa);
+    return Objects.hash(idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa);
   }
 
   @Override
@@ -247,6 +267,7 @@ public class PessoaDetalheResponse   {
     sb.append("    idProfissao: ").append(toIndentedString(idProfissao)).append("\n");
     sb.append("    idNaturezaOcupacao: ").append(toIndentedString(idNaturezaOcupacao)).append("\n");
     sb.append("    idNacionalidade: ").append(toIndentedString(idNacionalidade)).append("\n");
+    sb.append("    numeroBanco: ").append(toIndentedString(numeroBanco)).append("\n");
     sb.append("    numeroAgencia: ").append(toIndentedString(numeroAgencia)).append("\n");
     sb.append("    numeroContaCorrente: ").append(toIndentedString(numeroContaCorrente)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");

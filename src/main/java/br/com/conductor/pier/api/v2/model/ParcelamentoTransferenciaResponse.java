@@ -18,9 +18,8 @@ import java.math.BigDecimal;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ParcelamentoTransferenciaResponse   {
   
-  private String numeroParcela = null;
-  private BigDecimal valorPrimeiraParcela = null;
-  private BigDecimal valorDemaisParcelas = null;
+  private Integer numeroParcela = null;
+  private BigDecimal valorParcelas = null;
   private BigDecimal valorTotal = null;
   private BigDecimal valorTAC = null;
   private BigDecimal valorIOF = null;
@@ -31,54 +30,36 @@ public class ParcelamentoTransferenciaResponse   {
   /**
    * N\u00C3\u00BAmero de parcelas dispon\u00C3\u00ADveis.
    **/
-  public ParcelamentoTransferenciaResponse numeroParcela(String numeroParcela) {
+  public ParcelamentoTransferenciaResponse numeroParcela(Integer numeroParcela) {
     this.numeroParcela = numeroParcela;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero de parcelas dispon\u00C3\u00ADveis.")
   @JsonProperty("numeroParcela")
-  public String getNumeroParcela() {
+  public Integer getNumeroParcela() {
     return numeroParcela;
   }
-  public void setNumeroParcela(String numeroParcela) {
+  public void setNumeroParcela(Integer numeroParcela) {
     this.numeroParcela = numeroParcela;
-  }
-
-  
-  /**
-   * Valor da primeira parcela.
-   **/
-  public ParcelamentoTransferenciaResponse valorPrimeiraParcela(BigDecimal valorPrimeiraParcela) {
-    this.valorPrimeiraParcela = valorPrimeiraParcela;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Valor da primeira parcela.")
-  @JsonProperty("valorPrimeiraParcela")
-  public BigDecimal getValorPrimeiraParcela() {
-    return valorPrimeiraParcela;
-  }
-  public void setValorPrimeiraParcela(BigDecimal valorPrimeiraParcela) {
-    this.valorPrimeiraParcela = valorPrimeiraParcela;
   }
 
   
   /**
    * Valor das demais parcelas.
    **/
-  public ParcelamentoTransferenciaResponse valorDemaisParcelas(BigDecimal valorDemaisParcelas) {
-    this.valorDemaisParcelas = valorDemaisParcelas;
+  public ParcelamentoTransferenciaResponse valorParcelas(BigDecimal valorParcelas) {
+    this.valorParcelas = valorParcelas;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Valor das demais parcelas.")
-  @JsonProperty("valorDemaisParcelas")
-  public BigDecimal getValorDemaisParcelas() {
-    return valorDemaisParcelas;
+  @JsonProperty("valorParcelas")
+  public BigDecimal getValorParcelas() {
+    return valorParcelas;
   }
-  public void setValorDemaisParcelas(BigDecimal valorDemaisParcelas) {
-    this.valorDemaisParcelas = valorDemaisParcelas;
+  public void setValorParcelas(BigDecimal valorParcelas) {
+    this.valorParcelas = valorParcelas;
   }
 
   
@@ -183,8 +164,7 @@ public class ParcelamentoTransferenciaResponse   {
     }
     ParcelamentoTransferenciaResponse parcelamentoTransferenciaResponse = (ParcelamentoTransferenciaResponse) o;
     return Objects.equals(this.numeroParcela, parcelamentoTransferenciaResponse.numeroParcela) &&
-        Objects.equals(this.valorPrimeiraParcela, parcelamentoTransferenciaResponse.valorPrimeiraParcela) &&
-        Objects.equals(this.valorDemaisParcelas, parcelamentoTransferenciaResponse.valorDemaisParcelas) &&
+        Objects.equals(this.valorParcelas, parcelamentoTransferenciaResponse.valorParcelas) &&
         Objects.equals(this.valorTotal, parcelamentoTransferenciaResponse.valorTotal) &&
         Objects.equals(this.valorTAC, parcelamentoTransferenciaResponse.valorTAC) &&
         Objects.equals(this.valorIOF, parcelamentoTransferenciaResponse.valorIOF) &&
@@ -194,7 +174,7 @@ public class ParcelamentoTransferenciaResponse   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(numeroParcela, valorPrimeiraParcela, valorDemaisParcelas, valorTotal, valorTAC, valorIOF, taxaJuros, cetAnual);
+    return Objects.hash(numeroParcela, valorParcelas, valorTotal, valorTAC, valorIOF, taxaJuros, cetAnual);
   }
 
   @Override
@@ -203,8 +183,7 @@ public class ParcelamentoTransferenciaResponse   {
     sb.append("class ParcelamentoTransferenciaResponse {\n");
     
     sb.append("    numeroParcela: ").append(toIndentedString(numeroParcela)).append("\n");
-    sb.append("    valorPrimeiraParcela: ").append(toIndentedString(valorPrimeiraParcela)).append("\n");
-    sb.append("    valorDemaisParcelas: ").append(toIndentedString(valorDemaisParcelas)).append("\n");
+    sb.append("    valorParcelas: ").append(toIndentedString(valorParcelas)).append("\n");
     sb.append("    valorTotal: ").append(toIndentedString(valorTotal)).append("\n");
     sb.append("    valorTAC: ").append(toIndentedString(valorTAC)).append("\n");
     sb.append("    valorIOF: ").append(toIndentedString(valorIOF)).append("\n");

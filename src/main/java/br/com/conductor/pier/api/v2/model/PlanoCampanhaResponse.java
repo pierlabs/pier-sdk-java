@@ -21,6 +21,7 @@ public class PlanoCampanhaResponse   {
   private Long id = null;
   private Integer parcelas = null;
   private BigDecimal taxa = null;
+  private String usuario = null;
 
   
   /**
@@ -77,6 +78,24 @@ public class PlanoCampanhaResponse   {
   }
 
   
+  /**
+   * Nome do usu\u00C3\u00A1rio
+   **/
+  public PlanoCampanhaResponse usuario(String usuario) {
+    this.usuario = usuario;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Nome do usu\u00C3\u00A1rio")
+  @JsonProperty("usuario")
+  public String getUsuario() {
+    return usuario;
+  }
+  public void setUsuario(String usuario) {
+    this.usuario = usuario;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -89,12 +108,13 @@ public class PlanoCampanhaResponse   {
     PlanoCampanhaResponse planoCampanhaResponse = (PlanoCampanhaResponse) o;
     return Objects.equals(this.id, planoCampanhaResponse.id) &&
         Objects.equals(this.parcelas, planoCampanhaResponse.parcelas) &&
-        Objects.equals(this.taxa, planoCampanhaResponse.taxa);
+        Objects.equals(this.taxa, planoCampanhaResponse.taxa) &&
+        Objects.equals(this.usuario, planoCampanhaResponse.usuario);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, parcelas, taxa);
+    return Objects.hash(id, parcelas, taxa, usuario);
   }
 
   @Override
@@ -105,6 +125,7 @@ public class PlanoCampanhaResponse   {
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    parcelas: ").append(toIndentedString(parcelas)).append("\n");
     sb.append("    taxa: ").append(toIndentedString(taxa)).append("\n");
+    sb.append("    usuario: ").append(toIndentedString(usuario)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -13,10 +13,10 @@ import br.com.conductor.pier.api.v2.model.ConfiguracaoRegistroCobrancaPersist;
 import br.com.conductor.pier.api.v2.model.ConfiguracaoRegistroCobrancaResponse;
 import br.com.conductor.pier.api.v2.model.ConfiguracaoRotativoDetalheResponse;
 import br.com.conductor.pier.api.v2.model.ConfiguracaoRotativoPersist;
-import br.com.conductor.pier.api.v2.model.ProdutoDetalhesResponse;
 import br.com.conductor.pier.api.v2.model.ParametroProdutoResponse;
 import br.com.conductor.pier.api.v2.model.TaxaAntecipacaoRequest;
 import br.com.conductor.pier.api.v2.model.OrigemComercialResponse;
+import br.com.conductor.pier.api.v2.model.ProdutoDetalhesResponse;
 import br.com.conductor.pier.api.v2.model.AtendimentoClienteResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoAjusteResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoBoletoResponse;
@@ -231,54 +231,6 @@ public class CadastroGeralApi {
     
     GenericType<ConfiguracaoRotativoDetalheResponse> returnType = new GenericType<ConfiguracaoRotativoDetalheResponse>() {};
     return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
-   * Ativa o par\u00C3\u00A2metro uso exterior para o produto
-   * Este m\u00C3\u00A9todo permite ativar o uso no exterior para o produto atrav\u00C3\u00A9s do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
-   * @return ProdutoDetalhesResponse
-   */
-  public ProdutoDetalhesResponse ativarUsoExteriorUsingPOST(Long id) throws ApiException {
-    Object postBody = null;
-    
-     // verify the required parameter 'id' is set
-     if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling ativarUsoExteriorUsingPOST");
-     }
-     
-    // create path and map variables
-    String path = "/api/produtos/{id}/ativar-uso-exterior".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<ProdutoDetalhesResponse> returnType = new GenericType<ProdutoDetalhesResponse>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
@@ -1048,54 +1000,6 @@ public class CadastroGeralApi {
     
     GenericType<ConfiguracaoRotativoDetalheResponse> returnType = new GenericType<ConfiguracaoRotativoDetalheResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
-   * Desativa o par\u00C3\u00A2metro uso exterior para o produto
-   * Este m\u00C3\u00A9todo permite desativar o uso no exterior para o produto atrav\u00C3\u00A9s do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id)
-   * @return ProdutoDetalhesResponse
-   */
-  public ProdutoDetalhesResponse desativarUsoExteriorUsingPOST(Long id) throws ApiException {
-    Object postBody = null;
-    
-     // verify the required parameter 'id' is set
-     if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling desativarUsoExteriorUsingPOST");
-     }
-     
-    // create path and map variables
-    String path = "/api/produtos/{id}/desativar-uso-exterior".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<ProdutoDetalhesResponse> returnType = new GenericType<ProdutoDetalhesResponse>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   

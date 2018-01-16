@@ -1,10 +1,11 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v2.model.PlanoParcelamentoTransferenciaResponse;
+import br.com.conductor.pier.api.v2.model.ParcelamentoTransferenciaResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,28 +21,11 @@ import java.util.List;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse   {
   
-  private String nsuOrigem = null;
   private String numeroMascaradoCartao = null;
-  private String terminalRequisitante = null;
-  private List<PlanoParcelamentoTransferenciaResponse> planoParcelamentos = new ArrayList<PlanoParcelamentoTransferenciaResponse>();
-
-  
-  /**
-   * N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.
-   **/
-  public PlanoParcelamentoTransferenciaCreditoContaBancariaResponse nsuOrigem(String nsuOrigem) {
-    this.nsuOrigem = nsuOrigem;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.")
-  @JsonProperty("nsuOrigem")
-  public String getNsuOrigem() {
-    return nsuOrigem;
-  }
-  public void setNsuOrigem(String nsuOrigem) {
-    this.nsuOrigem = nsuOrigem;
-  }
+  private String vencimentoPrimeiraParcela = null;
+  private BigDecimal valorTransacao = null;
+  private Integer numeroMesesCarencia = null;
+  private List<ParcelamentoTransferenciaResponse> parcelas = new ArrayList<ParcelamentoTransferenciaResponse>();
 
   
   /**
@@ -63,38 +47,74 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse   {
 
   
   /**
-   * Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
+   * Data de vencimento da primeira parcela.
    **/
-  public PlanoParcelamentoTransferenciaCreditoContaBancariaResponse terminalRequisitante(String terminalRequisitante) {
-    this.terminalRequisitante = terminalRequisitante;
+  public PlanoParcelamentoTransferenciaCreditoContaBancariaResponse vencimentoPrimeiraParcela(String vencimentoPrimeiraParcela) {
+    this.vencimentoPrimeiraParcela = vencimentoPrimeiraParcela;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante")
-  @JsonProperty("terminalRequisitante")
-  public String getTerminalRequisitante() {
-    return terminalRequisitante;
+  @ApiModelProperty(example = "null", value = "Data de vencimento da primeira parcela.")
+  @JsonProperty("vencimentoPrimeiraParcela")
+  public String getVencimentoPrimeiraParcela() {
+    return vencimentoPrimeiraParcela;
   }
-  public void setTerminalRequisitante(String terminalRequisitante) {
-    this.terminalRequisitante = terminalRequisitante;
+  public void setVencimentoPrimeiraParcela(String vencimentoPrimeiraParcela) {
+    this.vencimentoPrimeiraParcela = vencimentoPrimeiraParcela;
   }
 
   
   /**
-   * Lista os planos de parcelamentos
+   * Valor da solicita\u00C3\u00A7\u00C3\u00A3o de saque.
    **/
-  public PlanoParcelamentoTransferenciaCreditoContaBancariaResponse planoParcelamentos(List<PlanoParcelamentoTransferenciaResponse> planoParcelamentos) {
-    this.planoParcelamentos = planoParcelamentos;
+  public PlanoParcelamentoTransferenciaCreditoContaBancariaResponse valorTransacao(BigDecimal valorTransacao) {
+    this.valorTransacao = valorTransacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Lista os planos de parcelamentos")
-  @JsonProperty("planoParcelamentos")
-  public List<PlanoParcelamentoTransferenciaResponse> getPlanoParcelamentos() {
-    return planoParcelamentos;
+  @ApiModelProperty(example = "null", value = "Valor da solicita\u00C3\u00A7\u00C3\u00A3o de saque.")
+  @JsonProperty("valorTransacao")
+  public BigDecimal getValorTransacao() {
+    return valorTransacao;
   }
-  public void setPlanoParcelamentos(List<PlanoParcelamentoTransferenciaResponse> planoParcelamentos) {
-    this.planoParcelamentos = planoParcelamentos;
+  public void setValorTransacao(BigDecimal valorTransacao) {
+    this.valorTransacao = valorTransacao;
+  }
+
+  
+  /**
+   * N\u00C3\u00BAmero de meses para car\u00C3\u00AAncia.
+   **/
+  public PlanoParcelamentoTransferenciaCreditoContaBancariaResponse numeroMesesCarencia(Integer numeroMesesCarencia) {
+    this.numeroMesesCarencia = numeroMesesCarencia;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero de meses para car\u00C3\u00AAncia.")
+  @JsonProperty("numeroMesesCarencia")
+  public Integer getNumeroMesesCarencia() {
+    return numeroMesesCarencia;
+  }
+  public void setNumeroMesesCarencia(Integer numeroMesesCarencia) {
+    this.numeroMesesCarencia = numeroMesesCarencia;
+  }
+
+  
+  /**
+   * Lista com os planos de parcelamento.
+   **/
+  public PlanoParcelamentoTransferenciaCreditoContaBancariaResponse parcelas(List<ParcelamentoTransferenciaResponse> parcelas) {
+    this.parcelas = parcelas;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Lista com os planos de parcelamento.")
+  @JsonProperty("parcelas")
+  public List<ParcelamentoTransferenciaResponse> getParcelas() {
+    return parcelas;
+  }
+  public void setParcelas(List<ParcelamentoTransferenciaResponse> parcelas) {
+    this.parcelas = parcelas;
   }
 
   
@@ -108,15 +128,16 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse   {
       return false;
     }
     PlanoParcelamentoTransferenciaCreditoContaBancariaResponse planoParcelamentoTransferenciaCreditoContaBancariaResponse = (PlanoParcelamentoTransferenciaCreditoContaBancariaResponse) o;
-    return Objects.equals(this.nsuOrigem, planoParcelamentoTransferenciaCreditoContaBancariaResponse.nsuOrigem) &&
-        Objects.equals(this.numeroMascaradoCartao, planoParcelamentoTransferenciaCreditoContaBancariaResponse.numeroMascaradoCartao) &&
-        Objects.equals(this.terminalRequisitante, planoParcelamentoTransferenciaCreditoContaBancariaResponse.terminalRequisitante) &&
-        Objects.equals(this.planoParcelamentos, planoParcelamentoTransferenciaCreditoContaBancariaResponse.planoParcelamentos);
+    return Objects.equals(this.numeroMascaradoCartao, planoParcelamentoTransferenciaCreditoContaBancariaResponse.numeroMascaradoCartao) &&
+        Objects.equals(this.vencimentoPrimeiraParcela, planoParcelamentoTransferenciaCreditoContaBancariaResponse.vencimentoPrimeiraParcela) &&
+        Objects.equals(this.valorTransacao, planoParcelamentoTransferenciaCreditoContaBancariaResponse.valorTransacao) &&
+        Objects.equals(this.numeroMesesCarencia, planoParcelamentoTransferenciaCreditoContaBancariaResponse.numeroMesesCarencia) &&
+        Objects.equals(this.parcelas, planoParcelamentoTransferenciaCreditoContaBancariaResponse.parcelas);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(nsuOrigem, numeroMascaradoCartao, terminalRequisitante, planoParcelamentos);
+    return Objects.hash(numeroMascaradoCartao, vencimentoPrimeiraParcela, valorTransacao, numeroMesesCarencia, parcelas);
   }
 
   @Override
@@ -124,10 +145,11 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse   {
     StringBuilder sb = new StringBuilder();
     sb.append("class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse {\n");
     
-    sb.append("    nsuOrigem: ").append(toIndentedString(nsuOrigem)).append("\n");
     sb.append("    numeroMascaradoCartao: ").append(toIndentedString(numeroMascaradoCartao)).append("\n");
-    sb.append("    terminalRequisitante: ").append(toIndentedString(terminalRequisitante)).append("\n");
-    sb.append("    planoParcelamentos: ").append(toIndentedString(planoParcelamentos)).append("\n");
+    sb.append("    vencimentoPrimeiraParcela: ").append(toIndentedString(vencimentoPrimeiraParcela)).append("\n");
+    sb.append("    valorTransacao: ").append(toIndentedString(valorTransacao)).append("\n");
+    sb.append("    numeroMesesCarencia: ").append(toIndentedString(numeroMesesCarencia)).append("\n");
+    sb.append("    parcelas: ").append(toIndentedString(parcelas)).append("\n");
     sb.append("}");
     return sb.toString();
   }
