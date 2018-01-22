@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso StatusOportunidade
  **/
@@ -104,7 +102,7 @@ public class StatusOportunidadeResponse   {
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Flag que representa se o tipo oportunidade est\u00C3\u00A1 ativo")
+  @ApiModelProperty(example = "true", value = "Flag que representa se o tipo oportunidade est\u00C3\u00A1 ativo")
   @JsonProperty("flagAtivo")
   public Boolean getFlagAtivo() {
     return flagAtivo;
@@ -161,6 +159,4 @@ public class StatusOportunidadeResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Objeto Dispositivo
  **/
@@ -119,6 +117,4 @@ public class DispositivoPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

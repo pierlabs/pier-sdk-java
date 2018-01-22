@@ -3,15 +3,14 @@ package br.com.conductor.pier.api.v2.model;
 import java.util.Objects;
 import br.com.conductor.pier.api.v2.model.EnderecoAprovadoPersist;
 import br.com.conductor.pier.api.v2.model.PessoaPersist;
+import br.com.conductor.pier.api.v2.model.RefenciaComercialAprovadoPersist;
 import br.com.conductor.pier.api.v2.model.TelefonePessoaAprovadaPersist;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-
-
 
 
 
@@ -27,7 +26,7 @@ public class PessoaJuridicaAprovadaPersist   {
   private String nomeFantasia = null;
   private String cnpj = null;
   private String inscricaoEstadual = null;
-  private Date dataAberturaEmpresa = null;
+  private String dataAberturaEmpresa = null;
   private Long idOrigemComercial = null;
   private Long idProduto = null;
   private Integer numeroAgencia = null;
@@ -35,9 +34,16 @@ public class PessoaJuridicaAprovadaPersist   {
   private String email = null;
   private Integer diaVencimento = null;
   private String nomeImpresso = null;
+  private BigDecimal valorRenda = null;
+  private String canalEntrada = null;
+  private Integer valorPontuacao = null;
   private List<TelefonePessoaAprovadaPersist> telefones = new ArrayList<TelefonePessoaAprovadaPersist>();
   private List<EnderecoAprovadoPersist> enderecos = new ArrayList<EnderecoAprovadoPersist>();
   private List<PessoaPersist> socios = new ArrayList<PessoaPersist>();
+  private List<RefenciaComercialAprovadoPersist> referenciasComerciais = new ArrayList<RefenciaComercialAprovadoPersist>();
+  private BigDecimal limiteGlobal = null;
+  private BigDecimal limiteMaximo = null;
+  private BigDecimal limiteParcelas = null;
 
   
   /**
@@ -115,17 +121,17 @@ public class PessoaJuridicaAprovadaPersist   {
   /**
    * Data de abertura da empresa, essa data deve ser informada no formato: aaaa-MM-dd.
    **/
-  public PessoaJuridicaAprovadaPersist dataAberturaEmpresa(Date dataAberturaEmpresa) {
+  public PessoaJuridicaAprovadaPersist dataAberturaEmpresa(String dataAberturaEmpresa) {
     this.dataAberturaEmpresa = dataAberturaEmpresa;
     return this;
   }
   
   @ApiModelProperty(example = "null", required = true, value = "Data de abertura da empresa, essa data deve ser informada no formato: aaaa-MM-dd.")
   @JsonProperty("dataAberturaEmpresa")
-  public Date getDataAberturaEmpresa() {
+  public String getDataAberturaEmpresa() {
     return dataAberturaEmpresa;
   }
-  public void setDataAberturaEmpresa(Date dataAberturaEmpresa) {
+  public void setDataAberturaEmpresa(String dataAberturaEmpresa) {
     this.dataAberturaEmpresa = dataAberturaEmpresa;
   }
 
@@ -257,6 +263,60 @@ public class PessoaJuridicaAprovadaPersist   {
 
   
   /**
+   * Apresenta o valor da renda compravada
+   **/
+  public PessoaJuridicaAprovadaPersist valorRenda(BigDecimal valorRenda) {
+    this.valorRenda = valorRenda;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Apresenta o valor da renda compravada")
+  @JsonProperty("valorRenda")
+  public BigDecimal getValorRenda() {
+    return valorRenda;
+  }
+  public void setValorRenda(BigDecimal valorRenda) {
+    this.valorRenda = valorRenda;
+  }
+
+  
+  /**
+   * Indica o canal pelo qual o cadastro do cliente foi realizado
+   **/
+  public PessoaJuridicaAprovadaPersist canalEntrada(String canalEntrada) {
+    this.canalEntrada = canalEntrada;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Indica o canal pelo qual o cadastro do cliente foi realizado")
+  @JsonProperty("canalEntrada")
+  public String getCanalEntrada() {
+    return canalEntrada;
+  }
+  public void setCanalEntrada(String canalEntrada) {
+    this.canalEntrada = canalEntrada;
+  }
+
+  
+  /**
+   * Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)
+   **/
+  public PessoaJuridicaAprovadaPersist valorPontuacao(Integer valorPontuacao) {
+    this.valorPontuacao = valorPontuacao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)")
+  @JsonProperty("valorPontuacao")
+  public Integer getValorPontuacao() {
+    return valorPontuacao;
+  }
+  public void setValorPontuacao(Integer valorPontuacao) {
+    this.valorPontuacao = valorPontuacao;
+  }
+
+  
+  /**
    * Apresenta os telefones da empresa
    **/
   public PessoaJuridicaAprovadaPersist telefones(List<TelefonePessoaAprovadaPersist> telefones) {
@@ -310,6 +370,78 @@ public class PessoaJuridicaAprovadaPersist   {
   }
 
   
+  /**
+   * Apresenta os dados das refer\u00C3\u00AAncias comerciais
+   **/
+  public PessoaJuridicaAprovadaPersist referenciasComerciais(List<RefenciaComercialAprovadoPersist> referenciasComerciais) {
+    this.referenciasComerciais = referenciasComerciais;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Apresenta os dados das refer\u00C3\u00AAncias comerciais")
+  @JsonProperty("referenciasComerciais")
+  public List<RefenciaComercialAprovadoPersist> getReferenciasComerciais() {
+    return referenciasComerciais;
+  }
+  public void setReferenciasComerciais(List<RefenciaComercialAprovadoPersist> referenciasComerciais) {
+    this.referenciasComerciais = referenciasComerciais;
+  }
+
+  
+  /**
+   * Valor do Limite Global
+   **/
+  public PessoaJuridicaAprovadaPersist limiteGlobal(BigDecimal limiteGlobal) {
+    this.limiteGlobal = limiteGlobal;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "Valor do Limite Global")
+  @JsonProperty("limiteGlobal")
+  public BigDecimal getLimiteGlobal() {
+    return limiteGlobal;
+  }
+  public void setLimiteGlobal(BigDecimal limiteGlobal) {
+    this.limiteGlobal = limiteGlobal;
+  }
+
+  
+  /**
+   * Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es
+   **/
+  public PessoaJuridicaAprovadaPersist limiteMaximo(BigDecimal limiteMaximo) {
+    this.limiteMaximo = limiteMaximo;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es")
+  @JsonProperty("limiteMaximo")
+  public BigDecimal getLimiteMaximo() {
+    return limiteMaximo;
+  }
+  public void setLimiteMaximo(BigDecimal limiteMaximo) {
+    this.limiteMaximo = limiteMaximo;
+  }
+
+  
+  /**
+   * Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras
+   **/
+  public PessoaJuridicaAprovadaPersist limiteParcelas(BigDecimal limiteParcelas) {
+    this.limiteParcelas = limiteParcelas;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras")
+  @JsonProperty("limiteParcelas")
+  public BigDecimal getLimiteParcelas() {
+    return limiteParcelas;
+  }
+  public void setLimiteParcelas(BigDecimal limiteParcelas) {
+    this.limiteParcelas = limiteParcelas;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -332,14 +464,21 @@ public class PessoaJuridicaAprovadaPersist   {
         Objects.equals(this.email, pessoaJuridicaAprovadaPersist.email) &&
         Objects.equals(this.diaVencimento, pessoaJuridicaAprovadaPersist.diaVencimento) &&
         Objects.equals(this.nomeImpresso, pessoaJuridicaAprovadaPersist.nomeImpresso) &&
+        Objects.equals(this.valorRenda, pessoaJuridicaAprovadaPersist.valorRenda) &&
+        Objects.equals(this.canalEntrada, pessoaJuridicaAprovadaPersist.canalEntrada) &&
+        Objects.equals(this.valorPontuacao, pessoaJuridicaAprovadaPersist.valorPontuacao) &&
         Objects.equals(this.telefones, pessoaJuridicaAprovadaPersist.telefones) &&
         Objects.equals(this.enderecos, pessoaJuridicaAprovadaPersist.enderecos) &&
-        Objects.equals(this.socios, pessoaJuridicaAprovadaPersist.socios);
+        Objects.equals(this.socios, pessoaJuridicaAprovadaPersist.socios) &&
+        Objects.equals(this.referenciasComerciais, pessoaJuridicaAprovadaPersist.referenciasComerciais) &&
+        Objects.equals(this.limiteGlobal, pessoaJuridicaAprovadaPersist.limiteGlobal) &&
+        Objects.equals(this.limiteMaximo, pessoaJuridicaAprovadaPersist.limiteMaximo) &&
+        Objects.equals(this.limiteParcelas, pessoaJuridicaAprovadaPersist.limiteParcelas);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(razaoSocial, nomeFantasia, cnpj, inscricaoEstadual, dataAberturaEmpresa, idOrigemComercial, idProduto, numeroAgencia, numeroContaCorrente, email, diaVencimento, nomeImpresso, telefones, enderecos, socios);
+    return Objects.hash(razaoSocial, nomeFantasia, cnpj, inscricaoEstadual, dataAberturaEmpresa, idOrigemComercial, idProduto, numeroAgencia, numeroContaCorrente, email, diaVencimento, nomeImpresso, valorRenda, canalEntrada, valorPontuacao, telefones, enderecos, socios, referenciasComerciais, limiteGlobal, limiteMaximo, limiteParcelas);
   }
 
   @Override
@@ -359,9 +498,16 @@ public class PessoaJuridicaAprovadaPersist   {
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    diaVencimento: ").append(toIndentedString(diaVencimento)).append("\n");
     sb.append("    nomeImpresso: ").append(toIndentedString(nomeImpresso)).append("\n");
+    sb.append("    valorRenda: ").append(toIndentedString(valorRenda)).append("\n");
+    sb.append("    canalEntrada: ").append(toIndentedString(canalEntrada)).append("\n");
+    sb.append("    valorPontuacao: ").append(toIndentedString(valorPontuacao)).append("\n");
     sb.append("    telefones: ").append(toIndentedString(telefones)).append("\n");
     sb.append("    enderecos: ").append(toIndentedString(enderecos)).append("\n");
     sb.append("    socios: ").append(toIndentedString(socios)).append("\n");
+    sb.append("    referenciasComerciais: ").append(toIndentedString(referenciasComerciais)).append("\n");
+    sb.append("    limiteGlobal: ").append(toIndentedString(limiteGlobal)).append("\n");
+    sb.append("    limiteMaximo: ").append(toIndentedString(limiteMaximo)).append("\n");
+    sb.append("    limiteParcelas: ").append(toIndentedString(limiteParcelas)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -377,6 +523,4 @@ public class PessoaJuridicaAprovadaPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

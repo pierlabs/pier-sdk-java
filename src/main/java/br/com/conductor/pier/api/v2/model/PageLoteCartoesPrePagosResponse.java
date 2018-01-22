@@ -1,14 +1,12 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v2.model.LoteCartoesPrePagos;
+import br.com.conductor.pier.api.v2.model.LoteCartoesPrePagosResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
-
-
 
 
 
@@ -20,7 +18,7 @@ import java.util.List;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageLoteCartoesPrePagosResponse   {
   
-  private List<LoteCartoesPrePagos> content = new ArrayList<LoteCartoesPrePagos>();
+  private List<LoteCartoesPrePagosResponse> content = new ArrayList<LoteCartoesPrePagosResponse>();
   private Boolean first = null;
   private Boolean firstPage = null;
   private Boolean hasContent = null;
@@ -38,17 +36,17 @@ public class PageLoteCartoesPrePagosResponse   {
   
   /**
    **/
-  public PageLoteCartoesPrePagosResponse content(List<LoteCartoesPrePagos> content) {
+  public PageLoteCartoesPrePagosResponse content(List<LoteCartoesPrePagosResponse> content) {
     this.content = content;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("content")
-  public List<LoteCartoesPrePagos> getContent() {
+  public List<LoteCartoesPrePagosResponse> getContent() {
     return content;
   }
-  public void setContent(List<LoteCartoesPrePagos> content) {
+  public void setContent(List<LoteCartoesPrePagosResponse> content) {
     this.content = content;
   }
 
@@ -339,6 +337,4 @@ public class PageLoteCartoesPrePagosResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -5,9 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.Date;
-
-
 
 
 
@@ -16,12 +13,13 @@ import java.util.Date;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class NotificacaoPushResponse   {
   
-  private Date dataEnvio = null;
+  private String dataEnvio = null;
   private Long idEmissor = null;
 
 
   public enum TipoEventoEnum {
     RISCO_FRAUDE("RISCO_FRAUDE"),
+    CODIGO_SEGURANCA("CODIGO_SEGURANCA"),
     OUTROS("OUTROS");
 
     private String value;
@@ -95,17 +93,17 @@ public class NotificacaoPushResponse   {
   /**
    * Apresenta a data e em que o registro foi enviado para o dispositivo.
    **/
-  public NotificacaoPushResponse dataEnvio(Date dataEnvio) {
+  public NotificacaoPushResponse dataEnvio(String dataEnvio) {
     this.dataEnvio = dataEnvio;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Apresenta a data e em que o registro foi enviado para o dispositivo.")
   @JsonProperty("dataEnvio")
-  public Date getDataEnvio() {
+  public String getDataEnvio() {
     return dataEnvio;
   }
-  public void setDataEnvio(Date dataEnvio) {
+  public void setDataEnvio(String dataEnvio) {
     this.dataEnvio = dataEnvio;
   }
 
@@ -349,6 +347,4 @@ public class NotificacaoPushResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -2,9 +2,9 @@
 
 ## Requerimentos
 
-Será necessário você empacotar o códido com o [Maven](https://maven.apache.org/) para que possa ser utilizado. 
+É necessário você empacotar o códido com o [Maven](https://maven.apache.org/) para que possa ser utilizado. 
 
-## Instalaçao e utilizaçao
+## Instalação e utilização
 
 Para instalar o pier-sdk-java em seu repositorio local do maven simplesmente execute:
 
@@ -12,7 +12,7 @@ Para instalar o pier-sdk-java em seu repositorio local do maven simplesmente exe
 mvn install
 ```
 
-Para fazer deploy do artefato gerado em algum repositório maven configure o arquivo pom.xml com as informaçoes do seu Artifactory ou Nexus e execute o comando abaixo. Caso não possua nenhum repositório para suas bibliotecas maven recomendamos a utilizaçao do [Jitpack](https://jitpack.io/). Essa ferramenta simplifica muito a utilizaçao de bibliotecas maven hospedadas no [Github](https://github.com).
+Para fazer deploy do artefato gerado em algum repositório maven configure o arquivo pom.xml com as informações do seu Artifactory ou Nexus e execute o comando abaixo. Caso não possua nenhum repositório para suas bibliotecas maven nós recomendamos a utilização do [Jitpack](https://jitpack.io/). Essa ferramenta simplifica muito a utilização de bibliotecas maven hospedadas no [Github](https://github.com).
 
 ```shell
 mvn deploy
@@ -32,12 +32,12 @@ Depois da biblioteca Maven instalada você pode utilizar em seus projetos Java a
 	</repositories>
 ```
 
-#### Dependêcia
+#### Dependência
 ```xml
 	<dependency>
-	    <groupId>com.github.pierlabs</groupId>
+	    <groupId>com.github.devconductor</groupId>
 	    <artifactId>pier-sdk-java</artifactId>
-	    <version>2.15.5</version>
+	    <version>2.50.14</version>
 	</dependency>
 ```
 
@@ -52,17 +52,17 @@ Depois da biblioteca Maven instalada você pode utilizar em seus projetos Java a
 	}
 ```
 
-#### Dependêcia
+#### Dependência
 ```groovy
 	dependencies {
-	 	compile 'com.github.devconductor:pier-sdk-java:2.15.5'
+	 	compile 'com.github.devconductor:pier-sdk-java:2.50.14'
 	}
 ```
 
 
 ## Criando um API Client
 
-Antes de utilizar as APIs, é necessário a criaçao de um client com as configurações de _base path_ e também as credenciais para acesso.
+Antes de utilizar as APIs, é necessário a criaçao de um client com as configuraçoes de _base path_ e também as credenciais para acesso.
 
 Abaixo segue o código de exemplo:
 
@@ -70,10 +70,10 @@ Abaixo segue o código de exemplo:
 ApiClient apiClient = new ApiClient();
 apiClient.setBasePath("https://sandbox.conductor.com.br/pier/v1.1");
 
-// Alterar a chave informada com o valor de client_id disponÃ­vel para sua APP
+// Alterar a chave informada com o valor de client_id disponível para sua APP
 ((ApiKeyAuth)apiClient.getAuthentication("client_id")).setApiKey("CLIENT_ID");
 
-// Alterar a chave informada com o valor de access_token disponÃ­vel para sua APP
+// Alterar a chave informada com o valor de access_token disponível para sua APP
 ((ApiKeyAuth)apiClient.getAuthentication("access_token")).setApiKey("ACESS_TOKEN");
 ```
 

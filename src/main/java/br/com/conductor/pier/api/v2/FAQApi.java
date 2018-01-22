@@ -7,19 +7,15 @@ import br.com.conductor.pier.api.v2.invoker.ApiClient;
 import br.com.conductor.pier.api.v2.invoker.Configuration;
 import br.com.conductor.pier.api.v2.invoker.Pair;
 
-import br.com.conductor.pier.api.v2.model.FAQ;
-import br.com.conductor.pier.api.v2.model.PageFaqs;
-
-
+import br.com.conductor.pier.api.v2.model.FaqResponse;
+import br.com.conductor.pier.api.v2.model.PageFaqResponse;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-
 public class FAQApi {
   private ApiClient apiClient;
 
@@ -49,9 +45,9 @@ public class FAQApi {
    * @param plataforma Plataforma em que a FAQ se encaixa.
    * @param categoria Categoria de assunto do qual a FAQ se trata.
    * @param status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
-   * @return FAQ
+   * @return FaqResponse
    */
-  public FAQ adicionarUsingPOST(String pergunta, String resposta, Integer relevancia, String plataforma, String categoria, String status) throws ApiException {
+  public FaqResponse adicionarUsingPOST(String pergunta, String resposta, Integer relevancia, String plataforma, String categoria, String status) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'pergunta' is set
@@ -104,7 +100,7 @@ public class FAQApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<FAQ> returnType = new GenericType<FAQ>() {};
+    GenericType<FaqResponse> returnType = new GenericType<FaqResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -119,24 +115,24 @@ public class FAQApi {
    * @param plataforma Plataforma em que a FAQ se encaixa.
    * @param categoria Categoria de assunto do qual a FAQ se trata.
    * @param status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
-   * @return FAQ
+   * @return FaqResponse
    */
-  public FAQ alterarUsingPUT2(Long id, String pergunta, String resposta, Integer relevancia, String plataforma, String categoria, String status) throws ApiException {
+  public FaqResponse alterarUsingPUT7(Long id, String pergunta, String resposta, Integer relevancia, String plataforma, String categoria, String status) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT2");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT7");
      }
      
      // verify the required parameter 'pergunta' is set
      if (pergunta == null) {
-        throw new ApiException(400, "Missing the required parameter 'pergunta' when calling alterarUsingPUT2");
+        throw new ApiException(400, "Missing the required parameter 'pergunta' when calling alterarUsingPUT7");
      }
      
      // verify the required parameter 'resposta' is set
      if (resposta == null) {
-        throw new ApiException(400, "Missing the required parameter 'resposta' when calling alterarUsingPUT2");
+        throw new ApiException(400, "Missing the required parameter 'resposta' when calling alterarUsingPUT7");
      }
      
     // create path and map variables
@@ -180,7 +176,7 @@ public class FAQApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<FAQ> returnType = new GenericType<FAQ>() {};
+    GenericType<FaqResponse> returnType = new GenericType<FaqResponse>() {};
     return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -189,14 +185,14 @@ public class FAQApi {
    * Consultar FAQ por id
    * Consulta os detalhes de uma determinada FAQ
    * @param id Id
-   * @return FAQ
+   * @return FaqResponse
    */
-  public FAQ consultarUsingGET6(Long id) throws ApiException {
+  public FaqResponse consultarUsingGET17(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET6");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET17");
      }
      
     // create path and map variables
@@ -228,7 +224,7 @@ public class FAQApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<FAQ> returnType = new GenericType<FAQ>() {};
+    GenericType<FaqResponse> returnType = new GenericType<FaqResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -236,8 +232,9 @@ public class FAQApi {
   /**
    * Lista FAQs
    * Lista todas as FAQs
+   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 100, Max = 100)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @param idFaq C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id).
    * @param pergunta Conte\u00C3\u00BAdo da pergunta.
    * @param resposta Conte\u00C3\u00BAdo da resposta.
@@ -245,9 +242,9 @@ public class FAQApi {
    * @param plataforma Plataforma em que a FAQ se encaixa.
    * @param categoria Categoria de assunto do qual a FAQ se trata.
    * @param status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
-   * @return PageFaqs
+   * @return PageFaqResponse
    */
-  public PageFaqs listarUsingGET8(Integer page, Integer limit, Long idFaq, String pergunta, String resposta, Integer relevancia, String plataforma, String categoria, String status) throws ApiException {
+  public PageFaqResponse listarUsingGET20(List<String> sort, Integer page, Integer limit, Long idFaq, String pergunta, String resposta, Integer relevancia, String plataforma, String categoria, String status) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -258,6 +255,8 @@ public class FAQApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     Map<String, Object> formParams = new HashMap<String, Object>();
 
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
     
     queryParams.addAll(apiClient.parameterToPairs("", "page", page));
     
@@ -296,10 +295,9 @@ public class FAQApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<PageFaqs> returnType = new GenericType<PageFaqs>() {};
+    GenericType<PageFaqResponse> returnType = new GenericType<PageFaqResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
 }
-

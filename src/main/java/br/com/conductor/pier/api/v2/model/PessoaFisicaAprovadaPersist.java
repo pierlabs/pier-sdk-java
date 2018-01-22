@@ -6,11 +6,9 @@ import br.com.conductor.pier.api.v2.model.TelefonePessoaAprovadaPersist;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-
-
 
 
 
@@ -24,15 +22,15 @@ public class PessoaFisicaAprovadaPersist   {
   
   private String nome = null;
   private String nomeMae = null;
-  private Date dataNascimento = null;
+  private String dataNascimento = null;
   private String sexo = null;
   private String cpf = null;
   private String numeroIdentidade = null;
   private String orgaoExpedidorIdentidade = null;
   private String unidadeFederativaIdentidade = null;
-  private Date dataEmissaoIdentidade = null;
+  private String dataEmissaoIdentidade = null;
   private Long idEstadoCivil = null;
-  private String profissao = null;
+  private String idProfissao = null;
   private Long idNaturezaOcupacao = null;
   private Long idNacionalidade = null;
   private Long idOrigemComercial = null;
@@ -43,8 +41,15 @@ public class PessoaFisicaAprovadaPersist   {
   private Integer diaVencimento = null;
   private String nomeImpresso = null;
   private String nomeEmpresa = null;
+  private BigDecimal valorRenda = null;
+  private String canalEntrada = null;
+  private Integer valorPontuacao = null;
   private List<TelefonePessoaAprovadaPersist> telefones = new ArrayList<TelefonePessoaAprovadaPersist>();
   private List<EnderecoAprovadoPersist> enderecos = new ArrayList<EnderecoAprovadoPersist>();
+  private BigDecimal limiteGlobal = null;
+  private BigDecimal limiteMaximo = null;
+  private BigDecimal limiteParcelas = null;
+  private BigDecimal limiteConsignado = null;
 
   
   /**
@@ -86,17 +91,17 @@ public class PessoaFisicaAprovadaPersist   {
   /**
    * Data de Nascimento da Pessoa. Essa data deve ser informada no formato aaaa-MM-dd.
    **/
-  public PessoaFisicaAprovadaPersist dataNascimento(Date dataNascimento) {
+  public PessoaFisicaAprovadaPersist dataNascimento(String dataNascimento) {
     this.dataNascimento = dataNascimento;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Data de Nascimento da Pessoa. Essa data deve ser informada no formato aaaa-MM-dd.")
   @JsonProperty("dataNascimento")
-  public Date getDataNascimento() {
+  public String getDataNascimento() {
     return dataNascimento;
   }
-  public void setDataNascimento(Date dataNascimento) {
+  public void setDataNascimento(String dataNascimento) {
     this.dataNascimento = dataNascimento;
   }
 
@@ -194,17 +199,17 @@ public class PessoaFisicaAprovadaPersist   {
   /**
    * Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
    **/
-  public PessoaFisicaAprovadaPersist dataEmissaoIdentidade(Date dataEmissaoIdentidade) {
+  public PessoaFisicaAprovadaPersist dataEmissaoIdentidade(String dataEmissaoIdentidade) {
     this.dataEmissaoIdentidade = dataEmissaoIdentidade;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd")
   @JsonProperty("dataEmissaoIdentidade")
-  public Date getDataEmissaoIdentidade() {
+  public String getDataEmissaoIdentidade() {
     return dataEmissaoIdentidade;
   }
-  public void setDataEmissaoIdentidade(Date dataEmissaoIdentidade) {
+  public void setDataEmissaoIdentidade(String dataEmissaoIdentidade) {
     this.dataEmissaoIdentidade = dataEmissaoIdentidade;
   }
 
@@ -230,18 +235,18 @@ public class PessoaFisicaAprovadaPersist   {
   /**
    * Profiss\u00C3\u00A3o da pessoa fisica
    **/
-  public PessoaFisicaAprovadaPersist profissao(String profissao) {
-    this.profissao = profissao;
+  public PessoaFisicaAprovadaPersist idProfissao(String idProfissao) {
+    this.idProfissao = idProfissao;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Profiss\u00C3\u00A3o da pessoa fisica")
-  @JsonProperty("profissao")
-  public String getProfissao() {
-    return profissao;
+  @JsonProperty("idProfissao")
+  public String getIdProfissao() {
+    return idProfissao;
   }
-  public void setProfissao(String profissao) {
-    this.profissao = profissao;
+  public void setIdProfissao(String idProfissao) {
+    this.idProfissao = idProfissao;
   }
 
   
@@ -426,6 +431,60 @@ public class PessoaFisicaAprovadaPersist   {
 
   
   /**
+   * Apresenta o valor da renda compravada
+   **/
+  public PessoaFisicaAprovadaPersist valorRenda(BigDecimal valorRenda) {
+    this.valorRenda = valorRenda;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Apresenta o valor da renda compravada")
+  @JsonProperty("valorRenda")
+  public BigDecimal getValorRenda() {
+    return valorRenda;
+  }
+  public void setValorRenda(BigDecimal valorRenda) {
+    this.valorRenda = valorRenda;
+  }
+
+  
+  /**
+   * Indica o canal pelo qual o cadastro do cliente foi realizado
+   **/
+  public PessoaFisicaAprovadaPersist canalEntrada(String canalEntrada) {
+    this.canalEntrada = canalEntrada;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Indica o canal pelo qual o cadastro do cliente foi realizado")
+  @JsonProperty("canalEntrada")
+  public String getCanalEntrada() {
+    return canalEntrada;
+  }
+  public void setCanalEntrada(String canalEntrada) {
+    this.canalEntrada = canalEntrada;
+  }
+
+  
+  /**
+   * Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)
+   **/
+  public PessoaFisicaAprovadaPersist valorPontuacao(Integer valorPontuacao) {
+    this.valorPontuacao = valorPontuacao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)")
+  @JsonProperty("valorPontuacao")
+  public Integer getValorPontuacao() {
+    return valorPontuacao;
+  }
+  public void setValorPontuacao(Integer valorPontuacao) {
+    this.valorPontuacao = valorPontuacao;
+  }
+
+  
+  /**
    * Apresenta os telefones da empresa
    **/
   public PessoaFisicaAprovadaPersist telefones(List<TelefonePessoaAprovadaPersist> telefones) {
@@ -433,7 +492,7 @@ public class PessoaFisicaAprovadaPersist   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta os telefones da empresa")
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta os telefones da empresa")
   @JsonProperty("telefones")
   public List<TelefonePessoaAprovadaPersist> getTelefones() {
     return telefones;
@@ -461,6 +520,78 @@ public class PessoaFisicaAprovadaPersist   {
   }
 
   
+  /**
+   * Valor do Limite Global
+   **/
+  public PessoaFisicaAprovadaPersist limiteGlobal(BigDecimal limiteGlobal) {
+    this.limiteGlobal = limiteGlobal;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "Valor do Limite Global")
+  @JsonProperty("limiteGlobal")
+  public BigDecimal getLimiteGlobal() {
+    return limiteGlobal;
+  }
+  public void setLimiteGlobal(BigDecimal limiteGlobal) {
+    this.limiteGlobal = limiteGlobal;
+  }
+
+  
+  /**
+   * Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es
+   **/
+  public PessoaFisicaAprovadaPersist limiteMaximo(BigDecimal limiteMaximo) {
+    this.limiteMaximo = limiteMaximo;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es")
+  @JsonProperty("limiteMaximo")
+  public BigDecimal getLimiteMaximo() {
+    return limiteMaximo;
+  }
+  public void setLimiteMaximo(BigDecimal limiteMaximo) {
+    this.limiteMaximo = limiteMaximo;
+  }
+
+  
+  /**
+   * Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras
+   **/
+  public PessoaFisicaAprovadaPersist limiteParcelas(BigDecimal limiteParcelas) {
+    this.limiteParcelas = limiteParcelas;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras")
+  @JsonProperty("limiteParcelas")
+  public BigDecimal getLimiteParcelas() {
+    return limiteParcelas;
+  }
+  public void setLimiteParcelas(BigDecimal limiteParcelas) {
+    this.limiteParcelas = limiteParcelas;
+  }
+
+  
+  /**
+   * Valor do limite de margem consignado
+   **/
+  public PessoaFisicaAprovadaPersist limiteConsignado(BigDecimal limiteConsignado) {
+    this.limiteConsignado = limiteConsignado;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor do limite de margem consignado")
+  @JsonProperty("limiteConsignado")
+  public BigDecimal getLimiteConsignado() {
+    return limiteConsignado;
+  }
+  public void setLimiteConsignado(BigDecimal limiteConsignado) {
+    this.limiteConsignado = limiteConsignado;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -481,7 +612,7 @@ public class PessoaFisicaAprovadaPersist   {
         Objects.equals(this.unidadeFederativaIdentidade, pessoaFisicaAprovadaPersist.unidadeFederativaIdentidade) &&
         Objects.equals(this.dataEmissaoIdentidade, pessoaFisicaAprovadaPersist.dataEmissaoIdentidade) &&
         Objects.equals(this.idEstadoCivil, pessoaFisicaAprovadaPersist.idEstadoCivil) &&
-        Objects.equals(this.profissao, pessoaFisicaAprovadaPersist.profissao) &&
+        Objects.equals(this.idProfissao, pessoaFisicaAprovadaPersist.idProfissao) &&
         Objects.equals(this.idNaturezaOcupacao, pessoaFisicaAprovadaPersist.idNaturezaOcupacao) &&
         Objects.equals(this.idNacionalidade, pessoaFisicaAprovadaPersist.idNacionalidade) &&
         Objects.equals(this.idOrigemComercial, pessoaFisicaAprovadaPersist.idOrigemComercial) &&
@@ -492,13 +623,20 @@ public class PessoaFisicaAprovadaPersist   {
         Objects.equals(this.diaVencimento, pessoaFisicaAprovadaPersist.diaVencimento) &&
         Objects.equals(this.nomeImpresso, pessoaFisicaAprovadaPersist.nomeImpresso) &&
         Objects.equals(this.nomeEmpresa, pessoaFisicaAprovadaPersist.nomeEmpresa) &&
+        Objects.equals(this.valorRenda, pessoaFisicaAprovadaPersist.valorRenda) &&
+        Objects.equals(this.canalEntrada, pessoaFisicaAprovadaPersist.canalEntrada) &&
+        Objects.equals(this.valorPontuacao, pessoaFisicaAprovadaPersist.valorPontuacao) &&
         Objects.equals(this.telefones, pessoaFisicaAprovadaPersist.telefones) &&
-        Objects.equals(this.enderecos, pessoaFisicaAprovadaPersist.enderecos);
+        Objects.equals(this.enderecos, pessoaFisicaAprovadaPersist.enderecos) &&
+        Objects.equals(this.limiteGlobal, pessoaFisicaAprovadaPersist.limiteGlobal) &&
+        Objects.equals(this.limiteMaximo, pessoaFisicaAprovadaPersist.limiteMaximo) &&
+        Objects.equals(this.limiteParcelas, pessoaFisicaAprovadaPersist.limiteParcelas) &&
+        Objects.equals(this.limiteConsignado, pessoaFisicaAprovadaPersist.limiteConsignado);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(nome, nomeMae, dataNascimento, sexo, cpf, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, idEstadoCivil, profissao, idNaturezaOcupacao, idNacionalidade, idOrigemComercial, idProduto, numeroAgencia, numeroContaCorrente, email, diaVencimento, nomeImpresso, nomeEmpresa, telefones, enderecos);
+    return Objects.hash(nome, nomeMae, dataNascimento, sexo, cpf, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, idOrigemComercial, idProduto, numeroAgencia, numeroContaCorrente, email, diaVencimento, nomeImpresso, nomeEmpresa, valorRenda, canalEntrada, valorPontuacao, telefones, enderecos, limiteGlobal, limiteMaximo, limiteParcelas, limiteConsignado);
   }
 
   @Override
@@ -516,7 +654,7 @@ public class PessoaFisicaAprovadaPersist   {
     sb.append("    unidadeFederativaIdentidade: ").append(toIndentedString(unidadeFederativaIdentidade)).append("\n");
     sb.append("    dataEmissaoIdentidade: ").append(toIndentedString(dataEmissaoIdentidade)).append("\n");
     sb.append("    idEstadoCivil: ").append(toIndentedString(idEstadoCivil)).append("\n");
-    sb.append("    profissao: ").append(toIndentedString(profissao)).append("\n");
+    sb.append("    idProfissao: ").append(toIndentedString(idProfissao)).append("\n");
     sb.append("    idNaturezaOcupacao: ").append(toIndentedString(idNaturezaOcupacao)).append("\n");
     sb.append("    idNacionalidade: ").append(toIndentedString(idNacionalidade)).append("\n");
     sb.append("    idOrigemComercial: ").append(toIndentedString(idOrigemComercial)).append("\n");
@@ -527,8 +665,15 @@ public class PessoaFisicaAprovadaPersist   {
     sb.append("    diaVencimento: ").append(toIndentedString(diaVencimento)).append("\n");
     sb.append("    nomeImpresso: ").append(toIndentedString(nomeImpresso)).append("\n");
     sb.append("    nomeEmpresa: ").append(toIndentedString(nomeEmpresa)).append("\n");
+    sb.append("    valorRenda: ").append(toIndentedString(valorRenda)).append("\n");
+    sb.append("    canalEntrada: ").append(toIndentedString(canalEntrada)).append("\n");
+    sb.append("    valorPontuacao: ").append(toIndentedString(valorPontuacao)).append("\n");
     sb.append("    telefones: ").append(toIndentedString(telefones)).append("\n");
     sb.append("    enderecos: ").append(toIndentedString(enderecos)).append("\n");
+    sb.append("    limiteGlobal: ").append(toIndentedString(limiteGlobal)).append("\n");
+    sb.append("    limiteMaximo: ").append(toIndentedString(limiteMaximo)).append("\n");
+    sb.append("    limiteParcelas: ").append(toIndentedString(limiteParcelas)).append("\n");
+    sb.append("    limiteConsignado: ").append(toIndentedString(limiteConsignado)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -544,6 +689,4 @@ public class PessoaFisicaAprovadaPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

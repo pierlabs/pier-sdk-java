@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Objeto Endere\u00C3\u00A7o Aprovado
  **/
@@ -38,7 +36,7 @@ public class EnderecoAprovadoPersist   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)")
   @JsonProperty("idTipoEndereco")
   public Long getIdTipoEndereco() {
     return idTipoEndereco;
@@ -164,7 +162,7 @@ public class EnderecoAprovadoPersist   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta nome da cidade")
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta nome da cidade")
   @JsonProperty("cidade")
   public String getCidade() {
     return cidade;
@@ -182,7 +180,7 @@ public class EnderecoAprovadoPersist   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta sigla da Unidade Federativa")
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta sigla da Unidade Federativa")
   @JsonProperty("uf")
   public String getUf() {
     return uf;
@@ -218,7 +216,7 @@ public class EnderecoAprovadoPersist   {
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Indica se o endere\u00C3\u00A7o informado \u00C3\u00A9 o de correspond\u00C3\u00AAncia")
+  @ApiModelProperty(example = "false", required = true, value = "Indica se o endere\u00C3\u00A7o informado \u00C3\u00A9 o de correspond\u00C3\u00AAncia")
   @JsonProperty("enderecoCorrespondencia")
   public Boolean getEnderecoCorrespondencia() {
     return enderecoCorrespondencia;
@@ -287,6 +285,4 @@ public class EnderecoAprovadoPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

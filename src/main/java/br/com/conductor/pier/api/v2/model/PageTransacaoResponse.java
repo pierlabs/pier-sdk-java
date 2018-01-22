@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista de transa\u00C3\u00A7\u00C3\u00B5es de uma conta
  **/
@@ -339,6 +337,4 @@ public class PageTransacaoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

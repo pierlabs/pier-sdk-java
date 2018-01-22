@@ -5,9 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
-import java.util.Date;
-
-
 
 
 
@@ -20,9 +17,9 @@ import java.util.Date;
 public class DividaClienteResponse   {
   
   private Long id = null;
-  private Date dataVencimentoFaturaAtraso = null;
+  private String dataVencimentoFaturaAtraso = null;
   private Long quantidadeDiasAtraso = null;
-  private Date dataVencimentoAcordo = null;
+  private String dataVencimentoAcordo = null;
   private Long quantidadeDiasAtrasoCorrigido = null;
   private BigDecimal valorSaldoDevedor = null;
   private BigDecimal taxaCorrecao = null;
@@ -59,17 +56,17 @@ public class DividaClienteResponse   {
   /**
    * Data de vencimento da cobran\u00C3\u00A7a
    **/
-  public DividaClienteResponse dataVencimentoFaturaAtraso(Date dataVencimentoFaturaAtraso) {
+  public DividaClienteResponse dataVencimentoFaturaAtraso(String dataVencimentoFaturaAtraso) {
     this.dataVencimentoFaturaAtraso = dataVencimentoFaturaAtraso;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Data de vencimento da cobran\u00C3\u00A7a")
   @JsonProperty("dataVencimentoFaturaAtraso")
-  public Date getDataVencimentoFaturaAtraso() {
+  public String getDataVencimentoFaturaAtraso() {
     return dataVencimentoFaturaAtraso;
   }
-  public void setDataVencimentoFaturaAtraso(Date dataVencimentoFaturaAtraso) {
+  public void setDataVencimentoFaturaAtraso(String dataVencimentoFaturaAtraso) {
     this.dataVencimentoFaturaAtraso = dataVencimentoFaturaAtraso;
   }
 
@@ -95,17 +92,17 @@ public class DividaClienteResponse   {
   /**
    * Data de vencimento do acordo
    **/
-  public DividaClienteResponse dataVencimentoAcordo(Date dataVencimentoAcordo) {
+  public DividaClienteResponse dataVencimentoAcordo(String dataVencimentoAcordo) {
     this.dataVencimentoAcordo = dataVencimentoAcordo;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Data de vencimento do acordo")
   @JsonProperty("dataVencimentoAcordo")
-  public Date getDataVencimentoAcordo() {
+  public String getDataVencimentoAcordo() {
     return dataVencimentoAcordo;
   }
-  public void setDataVencimentoAcordo(Date dataVencimentoAcordo) {
+  public void setDataVencimentoAcordo(String dataVencimentoAcordo) {
     this.dataVencimentoAcordo = dataVencimentoAcordo;
   }
 
@@ -415,6 +412,4 @@ public class DividaClienteResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

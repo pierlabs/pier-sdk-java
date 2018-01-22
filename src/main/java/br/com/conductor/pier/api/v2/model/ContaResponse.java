@@ -5,9 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
-import java.util.Date;
-
-
 
 
 
@@ -26,9 +23,9 @@ public class ContaResponse   {
   private Long idStatusConta = null;
   private Integer diaVencimento = null;
   private Integer melhorDiaCompra = null;
-  private Date dataStatusConta = null;
-  private Date dataCadastro = null;
-  private Date dataUltimaAlteracaoVencimento = null;
+  private String dataStatusConta = null;
+  private String dataCadastro = null;
+  private String dataUltimaAlteracaoVencimento = null;
   private BigDecimal valorRenda = null;
 
   
@@ -105,14 +102,14 @@ public class ContaResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status atribuido a conta.
    **/
   public ContaResponse idStatusConta(Long idStatusConta) {
     this.idStatusConta = idStatusConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto a qual o cart\u00C3\u00A3o pertence (id).")
+  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status atribuido a conta.")
   @JsonProperty("idStatusConta")
   public Long getIdStatusConta() {
     return idStatusConta;
@@ -161,17 +158,17 @@ public class ContaResponse   {
   /**
    * Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
    **/
-  public ContaResponse dataStatusConta(Date dataStatusConta) {
+  public ContaResponse dataStatusConta(String dataStatusConta) {
     this.dataStatusConta = dataStatusConta;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.")
   @JsonProperty("dataStatusConta")
-  public Date getDataStatusConta() {
+  public String getDataStatusConta() {
     return dataStatusConta;
   }
-  public void setDataStatusConta(Date dataStatusConta) {
+  public void setDataStatusConta(String dataStatusConta) {
     this.dataStatusConta = dataStatusConta;
   }
 
@@ -179,17 +176,17 @@ public class ContaResponse   {
   /**
    * Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
    **/
-  public ContaResponse dataCadastro(Date dataCadastro) {
+  public ContaResponse dataCadastro(String dataCadastro) {
     this.dataCadastro = dataCadastro;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Apresenta a data em que o cart\u00C3\u00A3o foi gerado.")
   @JsonProperty("dataCadastro")
-  public Date getDataCadastro() {
+  public String getDataCadastro() {
     return dataCadastro;
   }
-  public void setDataCadastro(Date dataCadastro) {
+  public void setDataCadastro(String dataCadastro) {
     this.dataCadastro = dataCadastro;
   }
 
@@ -197,17 +194,17 @@ public class ContaResponse   {
   /**
    * Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
    **/
-  public ContaResponse dataUltimaAlteracaoVencimento(Date dataUltimaAlteracaoVencimento) {
+  public ContaResponse dataUltimaAlteracaoVencimento(String dataUltimaAlteracaoVencimento) {
     this.dataUltimaAlteracaoVencimento = dataUltimaAlteracaoVencimento;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.")
   @JsonProperty("dataUltimaAlteracaoVencimento")
-  public Date getDataUltimaAlteracaoVencimento() {
+  public String getDataUltimaAlteracaoVencimento() {
     return dataUltimaAlteracaoVencimento;
   }
-  public void setDataUltimaAlteracaoVencimento(Date dataUltimaAlteracaoVencimento) {
+  public void setDataUltimaAlteracaoVencimento(String dataUltimaAlteracaoVencimento) {
     this.dataUltimaAlteracaoVencimento = dataUltimaAlteracaoVencimento;
   }
 
@@ -289,6 +286,4 @@ public class ContaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

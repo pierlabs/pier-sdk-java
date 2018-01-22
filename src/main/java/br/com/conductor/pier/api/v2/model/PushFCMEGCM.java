@@ -8,8 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Objeto Notifica\u00C3\u00A7\u00C3\u00A3o Push FCM e GCM
  **/
@@ -28,6 +26,7 @@ public class PushFCMEGCM   {
 
   public enum TipoEventoEnum {
     RISCO_FRAUDE("RISCO_FRAUDE"),
+    CODIGO_SEGURANCA("CODIGO_SEGURANCA"),
     OUTROS("OUTROS");
 
     private String value;
@@ -286,6 +285,4 @@ public class PushFCMEGCM   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -6,11 +6,9 @@ import br.com.conductor.pier.api.v2.model.TelefonePessoaAprovadaResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-
-
 
 
 
@@ -25,15 +23,15 @@ public class PessoaFisicaAprovadaResponse   {
   private Long id = null;
   private String nome = null;
   private String nomeMae = null;
-  private Date dataNascimento = null;
+  private String dataNascimento = null;
   private String sexo = null;
   private String cpf = null;
   private String numeroIdentidade = null;
   private String orgaoExpedidorIdentidade = null;
   private String unidadeFederativaIdentidade = null;
-  private Date dataEmissaoIdentidade = null;
+  private String dataEmissaoIdentidade = null;
   private Long idEstadoCivil = null;
-  private String profissao = null;
+  private String idProfissao = null;
   private Long idNaturezaOcupacao = null;
   private Long idNacionalidade = null;
   private Long idOrigemComercial = null;
@@ -44,19 +42,27 @@ public class PessoaFisicaAprovadaResponse   {
   private Integer diaVencimento = null;
   private String nomeImpresso = null;
   private String nomeEmpresa = null;
+  private Long idConta = null;
+  private Long idProposta = null;
+  private String canalEntrada = null;
+  private Integer valorPontuacao = null;
   private List<TelefonePessoaAprovadaResponse> telefones = new ArrayList<TelefonePessoaAprovadaResponse>();
   private List<EnderecoAprovadoResponse> enderecos = new ArrayList<EnderecoAprovadoResponse>();
+  private BigDecimal limiteGlobal = null;
+  private BigDecimal limiteMaximo = null;
+  private BigDecimal limiteParcelas = null;
+  private BigDecimal limiteConsignado = null;
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id)
+   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (id)
    **/
   public PessoaFisicaAprovadaResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id)")
+  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa fisica (id)")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -105,17 +111,17 @@ public class PessoaFisicaAprovadaResponse   {
   /**
    * Data de Nascimento da Pessoa. Essa data deve ser informada no formato aaaa-MM-dd.
    **/
-  public PessoaFisicaAprovadaResponse dataNascimento(Date dataNascimento) {
+  public PessoaFisicaAprovadaResponse dataNascimento(String dataNascimento) {
     this.dataNascimento = dataNascimento;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Data de Nascimento da Pessoa. Essa data deve ser informada no formato aaaa-MM-dd.")
   @JsonProperty("dataNascimento")
-  public Date getDataNascimento() {
+  public String getDataNascimento() {
     return dataNascimento;
   }
-  public void setDataNascimento(Date dataNascimento) {
+  public void setDataNascimento(String dataNascimento) {
     this.dataNascimento = dataNascimento;
   }
 
@@ -213,17 +219,17 @@ public class PessoaFisicaAprovadaResponse   {
   /**
    * Data emiss\u00C3\u00A3o da Identidade no formato aaaa-MM-dd
    **/
-  public PessoaFisicaAprovadaResponse dataEmissaoIdentidade(Date dataEmissaoIdentidade) {
+  public PessoaFisicaAprovadaResponse dataEmissaoIdentidade(String dataEmissaoIdentidade) {
     this.dataEmissaoIdentidade = dataEmissaoIdentidade;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Data emiss\u00C3\u00A3o da Identidade no formato aaaa-MM-dd")
   @JsonProperty("dataEmissaoIdentidade")
-  public Date getDataEmissaoIdentidade() {
+  public String getDataEmissaoIdentidade() {
     return dataEmissaoIdentidade;
   }
-  public void setDataEmissaoIdentidade(Date dataEmissaoIdentidade) {
+  public void setDataEmissaoIdentidade(String dataEmissaoIdentidade) {
     this.dataEmissaoIdentidade = dataEmissaoIdentidade;
   }
 
@@ -249,18 +255,18 @@ public class PessoaFisicaAprovadaResponse   {
   /**
    * Profiss\u00C3\u00A3o da pessoa fisica
    **/
-  public PessoaFisicaAprovadaResponse profissao(String profissao) {
-    this.profissao = profissao;
+  public PessoaFisicaAprovadaResponse idProfissao(String idProfissao) {
+    this.idProfissao = idProfissao;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Profiss\u00C3\u00A3o da pessoa fisica")
-  @JsonProperty("profissao")
-  public String getProfissao() {
-    return profissao;
+  @JsonProperty("idProfissao")
+  public String getIdProfissao() {
+    return idProfissao;
   }
-  public void setProfissao(String profissao) {
-    this.profissao = profissao;
+  public void setIdProfissao(String idProfissao) {
+    this.idProfissao = idProfissao;
   }
 
   
@@ -427,20 +433,92 @@ public class PessoaFisicaAprovadaResponse   {
 
   
   /**
-   * Nome que deve ser impresso no cart\u00C3\u00A3o
+   * Nome da empresa
    **/
   public PessoaFisicaAprovadaResponse nomeEmpresa(String nomeEmpresa) {
     this.nomeEmpresa = nomeEmpresa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome que deve ser impresso no cart\u00C3\u00A3o")
+  @ApiModelProperty(example = "null", value = "Nome da empresa")
   @JsonProperty("nomeEmpresa")
   public String getNomeEmpresa() {
     return nomeEmpresa;
   }
   public void setNomeEmpresa(String nomeEmpresa) {
     this.nomeEmpresa = nomeEmpresa;
+  }
+
+  
+  /**
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta cadastrada
+   **/
+  public PessoaFisicaAprovadaResponse idConta(Long idConta) {
+    this.idConta = idConta;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta cadastrada")
+  @JsonProperty("idConta")
+  public Long getIdConta() {
+    return idConta;
+  }
+  public void setIdConta(Long idConta) {
+    this.idConta = idConta;
+  }
+
+  
+  /**
+   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da proposta
+   **/
+  public PessoaFisicaAprovadaResponse idProposta(Long idProposta) {
+    this.idProposta = idProposta;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da proposta")
+  @JsonProperty("idProposta")
+  public Long getIdProposta() {
+    return idProposta;
+  }
+  public void setIdProposta(Long idProposta) {
+    this.idProposta = idProposta;
+  }
+
+  
+  /**
+   * Indica o canal pelo qual o cadastro do cliente foi realizado
+   **/
+  public PessoaFisicaAprovadaResponse canalEntrada(String canalEntrada) {
+    this.canalEntrada = canalEntrada;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Indica o canal pelo qual o cadastro do cliente foi realizado")
+  @JsonProperty("canalEntrada")
+  public String getCanalEntrada() {
+    return canalEntrada;
+  }
+  public void setCanalEntrada(String canalEntrada) {
+    this.canalEntrada = canalEntrada;
+  }
+
+  
+  /**
+   * Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)
+   **/
+  public PessoaFisicaAprovadaResponse valorPontuacao(Integer valorPontuacao) {
+    this.valorPontuacao = valorPontuacao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)")
+  @JsonProperty("valorPontuacao")
+  public Integer getValorPontuacao() {
+    return valorPontuacao;
+  }
+  public void setValorPontuacao(Integer valorPontuacao) {
+    this.valorPontuacao = valorPontuacao;
   }
 
   
@@ -480,6 +558,78 @@ public class PessoaFisicaAprovadaResponse   {
   }
 
   
+  /**
+   * Valor do Limite Global
+   **/
+  public PessoaFisicaAprovadaResponse limiteGlobal(BigDecimal limiteGlobal) {
+    this.limiteGlobal = limiteGlobal;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "Valor do Limite Global")
+  @JsonProperty("limiteGlobal")
+  public BigDecimal getLimiteGlobal() {
+    return limiteGlobal;
+  }
+  public void setLimiteGlobal(BigDecimal limiteGlobal) {
+    this.limiteGlobal = limiteGlobal;
+  }
+
+  
+  /**
+   * Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es
+   **/
+  public PessoaFisicaAprovadaResponse limiteMaximo(BigDecimal limiteMaximo) {
+    this.limiteMaximo = limiteMaximo;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es")
+  @JsonProperty("limiteMaximo")
+  public BigDecimal getLimiteMaximo() {
+    return limiteMaximo;
+  }
+  public void setLimiteMaximo(BigDecimal limiteMaximo) {
+    this.limiteMaximo = limiteMaximo;
+  }
+
+  
+  /**
+   * Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras
+   **/
+  public PessoaFisicaAprovadaResponse limiteParcelas(BigDecimal limiteParcelas) {
+    this.limiteParcelas = limiteParcelas;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras")
+  @JsonProperty("limiteParcelas")
+  public BigDecimal getLimiteParcelas() {
+    return limiteParcelas;
+  }
+  public void setLimiteParcelas(BigDecimal limiteParcelas) {
+    this.limiteParcelas = limiteParcelas;
+  }
+
+  
+  /**
+   * Valor do limite de margem consignado
+   **/
+  public PessoaFisicaAprovadaResponse limiteConsignado(BigDecimal limiteConsignado) {
+    this.limiteConsignado = limiteConsignado;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "Valor do limite de margem consignado")
+  @JsonProperty("limiteConsignado")
+  public BigDecimal getLimiteConsignado() {
+    return limiteConsignado;
+  }
+  public void setLimiteConsignado(BigDecimal limiteConsignado) {
+    this.limiteConsignado = limiteConsignado;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -501,7 +651,7 @@ public class PessoaFisicaAprovadaResponse   {
         Objects.equals(this.unidadeFederativaIdentidade, pessoaFisicaAprovadaResponse.unidadeFederativaIdentidade) &&
         Objects.equals(this.dataEmissaoIdentidade, pessoaFisicaAprovadaResponse.dataEmissaoIdentidade) &&
         Objects.equals(this.idEstadoCivil, pessoaFisicaAprovadaResponse.idEstadoCivil) &&
-        Objects.equals(this.profissao, pessoaFisicaAprovadaResponse.profissao) &&
+        Objects.equals(this.idProfissao, pessoaFisicaAprovadaResponse.idProfissao) &&
         Objects.equals(this.idNaturezaOcupacao, pessoaFisicaAprovadaResponse.idNaturezaOcupacao) &&
         Objects.equals(this.idNacionalidade, pessoaFisicaAprovadaResponse.idNacionalidade) &&
         Objects.equals(this.idOrigemComercial, pessoaFisicaAprovadaResponse.idOrigemComercial) &&
@@ -512,13 +662,21 @@ public class PessoaFisicaAprovadaResponse   {
         Objects.equals(this.diaVencimento, pessoaFisicaAprovadaResponse.diaVencimento) &&
         Objects.equals(this.nomeImpresso, pessoaFisicaAprovadaResponse.nomeImpresso) &&
         Objects.equals(this.nomeEmpresa, pessoaFisicaAprovadaResponse.nomeEmpresa) &&
+        Objects.equals(this.idConta, pessoaFisicaAprovadaResponse.idConta) &&
+        Objects.equals(this.idProposta, pessoaFisicaAprovadaResponse.idProposta) &&
+        Objects.equals(this.canalEntrada, pessoaFisicaAprovadaResponse.canalEntrada) &&
+        Objects.equals(this.valorPontuacao, pessoaFisicaAprovadaResponse.valorPontuacao) &&
         Objects.equals(this.telefones, pessoaFisicaAprovadaResponse.telefones) &&
-        Objects.equals(this.enderecos, pessoaFisicaAprovadaResponse.enderecos);
+        Objects.equals(this.enderecos, pessoaFisicaAprovadaResponse.enderecos) &&
+        Objects.equals(this.limiteGlobal, pessoaFisicaAprovadaResponse.limiteGlobal) &&
+        Objects.equals(this.limiteMaximo, pessoaFisicaAprovadaResponse.limiteMaximo) &&
+        Objects.equals(this.limiteParcelas, pessoaFisicaAprovadaResponse.limiteParcelas) &&
+        Objects.equals(this.limiteConsignado, pessoaFisicaAprovadaResponse.limiteConsignado);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, nome, nomeMae, dataNascimento, sexo, cpf, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, idEstadoCivil, profissao, idNaturezaOcupacao, idNacionalidade, idOrigemComercial, idProduto, numeroAgencia, numeroContaCorrente, email, diaVencimento, nomeImpresso, nomeEmpresa, telefones, enderecos);
+    return Objects.hash(id, nome, nomeMae, dataNascimento, sexo, cpf, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, idOrigemComercial, idProduto, numeroAgencia, numeroContaCorrente, email, diaVencimento, nomeImpresso, nomeEmpresa, idConta, idProposta, canalEntrada, valorPontuacao, telefones, enderecos, limiteGlobal, limiteMaximo, limiteParcelas, limiteConsignado);
   }
 
   @Override
@@ -537,7 +695,7 @@ public class PessoaFisicaAprovadaResponse   {
     sb.append("    unidadeFederativaIdentidade: ").append(toIndentedString(unidadeFederativaIdentidade)).append("\n");
     sb.append("    dataEmissaoIdentidade: ").append(toIndentedString(dataEmissaoIdentidade)).append("\n");
     sb.append("    idEstadoCivil: ").append(toIndentedString(idEstadoCivil)).append("\n");
-    sb.append("    profissao: ").append(toIndentedString(profissao)).append("\n");
+    sb.append("    idProfissao: ").append(toIndentedString(idProfissao)).append("\n");
     sb.append("    idNaturezaOcupacao: ").append(toIndentedString(idNaturezaOcupacao)).append("\n");
     sb.append("    idNacionalidade: ").append(toIndentedString(idNacionalidade)).append("\n");
     sb.append("    idOrigemComercial: ").append(toIndentedString(idOrigemComercial)).append("\n");
@@ -548,8 +706,16 @@ public class PessoaFisicaAprovadaResponse   {
     sb.append("    diaVencimento: ").append(toIndentedString(diaVencimento)).append("\n");
     sb.append("    nomeImpresso: ").append(toIndentedString(nomeImpresso)).append("\n");
     sb.append("    nomeEmpresa: ").append(toIndentedString(nomeEmpresa)).append("\n");
+    sb.append("    idConta: ").append(toIndentedString(idConta)).append("\n");
+    sb.append("    idProposta: ").append(toIndentedString(idProposta)).append("\n");
+    sb.append("    canalEntrada: ").append(toIndentedString(canalEntrada)).append("\n");
+    sb.append("    valorPontuacao: ").append(toIndentedString(valorPontuacao)).append("\n");
     sb.append("    telefones: ").append(toIndentedString(telefones)).append("\n");
     sb.append("    enderecos: ").append(toIndentedString(enderecos)).append("\n");
+    sb.append("    limiteGlobal: ").append(toIndentedString(limiteGlobal)).append("\n");
+    sb.append("    limiteMaximo: ").append(toIndentedString(limiteMaximo)).append("\n");
+    sb.append("    limiteParcelas: ").append(toIndentedString(limiteParcelas)).append("\n");
+    sb.append("    limiteConsignado: ").append(toIndentedString(limiteConsignado)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -565,6 +731,4 @@ public class PessoaFisicaAprovadaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

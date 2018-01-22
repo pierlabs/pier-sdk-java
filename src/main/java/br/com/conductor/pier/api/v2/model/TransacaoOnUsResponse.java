@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Objeto de Resposta de Autoriza\u00C3\u00A7\u00C3\u00A3o
  **/
@@ -26,6 +24,7 @@ public class TransacaoOnUsResponse   {
   private String codigoAutorizacao = null;
   private String numeroMascaradoCartao = null;
   private String nomePortadorCartao = null;
+  private String terminalRequisitante = null;
 
   
   /**
@@ -136,6 +135,24 @@ public class TransacaoOnUsResponse   {
   }
 
   
+  /**
+   * Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
+   **/
+  public TransacaoOnUsResponse terminalRequisitante(String terminalRequisitante) {
+    this.terminalRequisitante = terminalRequisitante;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante")
+  @JsonProperty("terminalRequisitante")
+  public String getTerminalRequisitante() {
+    return terminalRequisitante;
+  }
+  public void setTerminalRequisitante(String terminalRequisitante) {
+    this.terminalRequisitante = terminalRequisitante;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -151,12 +168,13 @@ public class TransacaoOnUsResponse   {
         Objects.equals(this.planoDeParcelamento, transacaoOnUsResponse.planoDeParcelamento) &&
         Objects.equals(this.codigoAutorizacao, transacaoOnUsResponse.codigoAutorizacao) &&
         Objects.equals(this.numeroMascaradoCartao, transacaoOnUsResponse.numeroMascaradoCartao) &&
-        Objects.equals(this.nomePortadorCartao, transacaoOnUsResponse.nomePortadorCartao);
+        Objects.equals(this.nomePortadorCartao, transacaoOnUsResponse.nomePortadorCartao) &&
+        Objects.equals(this.terminalRequisitante, transacaoOnUsResponse.terminalRequisitante);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(nsuOrigem, nsuAutorizacao, planoDeParcelamento, codigoAutorizacao, numeroMascaradoCartao, nomePortadorCartao);
+    return Objects.hash(nsuOrigem, nsuAutorizacao, planoDeParcelamento, codigoAutorizacao, numeroMascaradoCartao, nomePortadorCartao, terminalRequisitante);
   }
 
   @Override
@@ -170,6 +188,7 @@ public class TransacaoOnUsResponse   {
     sb.append("    codigoAutorizacao: ").append(toIndentedString(codigoAutorizacao)).append("\n");
     sb.append("    numeroMascaradoCartao: ").append(toIndentedString(numeroMascaradoCartao)).append("\n");
     sb.append("    nomePortadorCartao: ").append(toIndentedString(nomePortadorCartao)).append("\n");
+    sb.append("    terminalRequisitante: ").append(toIndentedString(terminalRequisitante)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -185,6 +204,4 @@ public class TransacaoOnUsResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 
