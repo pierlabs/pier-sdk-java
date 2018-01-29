@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o do  recurso Dispositivo
  **/
@@ -183,6 +181,4 @@ public class EmprestimoPessoalRequest   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

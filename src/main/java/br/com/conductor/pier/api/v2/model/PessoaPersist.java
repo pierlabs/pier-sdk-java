@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * PessoaPersist
  **/
@@ -332,6 +330,4 @@ public class PessoaPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

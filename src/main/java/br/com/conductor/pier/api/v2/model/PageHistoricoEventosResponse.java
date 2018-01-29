@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista de historivoEventos
  **/
@@ -339,6 +337,4 @@ public class PageHistoricoEventosResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * RefenciaAprovadoPersist
  **/
@@ -161,6 +159,4 @@ public class RefenciaComercialAprovadoPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Representa\u00C3\u00A7\u00C3\u00A3o do template do documento.
  **/
@@ -122,6 +120,4 @@ public class DocumentoTemplatePersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

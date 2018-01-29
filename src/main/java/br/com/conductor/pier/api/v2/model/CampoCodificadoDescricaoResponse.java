@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Objeto Campo Condificado
  **/
@@ -98,6 +96,4 @@ public class CampoCodificadoDescricaoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

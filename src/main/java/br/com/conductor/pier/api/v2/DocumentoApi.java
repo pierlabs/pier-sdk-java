@@ -19,16 +19,12 @@ import br.com.conductor.pier.api.v2.model.PageDocumentoTemplateResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoTemplateResponse;
 import br.com.conductor.pier.api.v2.model.DocumentoParametrosRequest;
 
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-
 public class DocumentoApi {
   private ApiClient apiClient;
 
@@ -652,4 +648,3 @@ public class DocumentoApi {
   }
   
 }
-

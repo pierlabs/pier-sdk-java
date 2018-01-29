@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Objeto de resposta para a valida\u00C3\u00A7\u00C3\u00A3o de senha do cart\u00C3\u00A3o
  **/
@@ -161,6 +159,4 @@ public class ValidaSenhaCartaoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

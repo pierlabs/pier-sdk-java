@@ -12,8 +12,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * PessoaJuridicaAprovadaPersist
  **/
@@ -691,6 +689,4 @@ public class PessoaFisicaAprovadaPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

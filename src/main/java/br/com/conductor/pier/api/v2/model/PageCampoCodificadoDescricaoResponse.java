@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista de Campos Codificados
  **/
@@ -339,6 +337,4 @@ public class PageCampoCodificadoDescricaoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Objeto de Resposta de Telefone Estabelecimento
  **/
@@ -161,6 +159,4 @@ public class TelefoneEstabelecimentoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista de C\u00C3\u00B3digos de Seguran\u00C3\u00A7a
  **/
@@ -339,6 +337,4 @@ public class PageCodigoSegurancaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

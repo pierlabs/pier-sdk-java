@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista de Tipo Template
  **/
@@ -339,6 +337,4 @@ public class PageTipoTemplateResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

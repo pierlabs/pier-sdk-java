@@ -9,8 +9,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * Objeto de Resposta Par\u00C3\u00A2metro Produto
  **/
@@ -182,6 +180,4 @@ public class ParametroProdutoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

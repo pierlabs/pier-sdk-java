@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Objeto que representa a atribui\u00C3\u00A7\u00C3\u00A3o da assinatura do cliente
  **/
@@ -77,6 +75,4 @@ public class AtribuirAssinaturaClientePersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

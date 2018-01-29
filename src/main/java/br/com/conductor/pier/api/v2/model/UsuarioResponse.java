@@ -8,8 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Representa\u00C3\u00A7\u00C3\u00A3o do recurso Usuario
  **/
@@ -286,6 +284,4 @@ public class UsuarioResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -11,16 +11,12 @@ import br.com.conductor.pier.api.v2.model.AjusteFinanceiroResponse;
 import java.math.BigDecimal;
 import br.com.conductor.pier.api.v2.model.PageAjusteResponse;
 
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-
 public class AjusteFinanceiroApi {
   private ApiClient apiClient;
 
@@ -231,4 +227,3 @@ public class AjusteFinanceiroApi {
   }
   
 }
-

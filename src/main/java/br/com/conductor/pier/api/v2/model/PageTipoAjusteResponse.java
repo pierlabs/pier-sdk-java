@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista dos tipos de ajustes
  **/
@@ -339,6 +337,4 @@ public class PageTipoAjusteResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

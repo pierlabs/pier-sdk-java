@@ -12,16 +12,12 @@ import br.com.conductor.pier.api.v2.model.UsuarioResponse;
 import br.com.conductor.pier.api.v2.model.PageUsuarioResponse;
 import br.com.conductor.pier.api.v2.model.UsuarioPersist;
 
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-
 public class UsuarioApi {
   private ApiClient apiClient;
 
@@ -630,4 +626,3 @@ public class UsuarioApi {
   }
   
 }
-

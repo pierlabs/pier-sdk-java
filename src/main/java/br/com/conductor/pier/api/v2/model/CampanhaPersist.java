@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Campanha
  **/
@@ -122,6 +120,4 @@ public class CampanhaPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

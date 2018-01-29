@@ -8,8 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Objeto de Notifica\u00C3\u00A7\u00C3\u00A3o EMAIL
  **/
@@ -289,6 +287,4 @@ public class TemplateNotificacaoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

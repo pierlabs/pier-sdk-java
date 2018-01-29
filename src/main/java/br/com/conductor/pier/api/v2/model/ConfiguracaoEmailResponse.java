@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Objeto Configura\u00C3\u00A7\u00C3\u00A3o EMAIL
  **/
@@ -329,6 +327,4 @@ public class ConfiguracaoEmailResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

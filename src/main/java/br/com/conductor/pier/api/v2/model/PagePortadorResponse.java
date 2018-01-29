@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista de Portadores
  **/
@@ -339,6 +337,4 @@ public class PagePortadorResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

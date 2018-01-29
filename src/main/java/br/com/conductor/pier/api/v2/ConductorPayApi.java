@@ -17,16 +17,12 @@ import br.com.conductor.pier.api.v2.model.PageCartaoPayResponse;
 import br.com.conductor.pier.api.v2.model.CartaoPayCadastroResponse;
 import br.com.conductor.pier.api.v2.model.CartaoPayPersist;
 
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-
 public class ConductorPayApi {
   private ApiClient apiClient;
 
@@ -603,4 +599,3 @@ public class ConductorPayApi {
   }
   
 }
-

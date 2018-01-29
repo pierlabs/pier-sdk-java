@@ -9,8 +9,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class GradePendenteRequest   {
   
@@ -95,6 +93,4 @@ public class GradePendenteRequest   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

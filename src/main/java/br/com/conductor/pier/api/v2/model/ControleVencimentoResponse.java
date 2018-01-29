@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Objeto de Resposta dos Vencimentos
  **/
@@ -182,6 +180,4 @@ public class ControleVencimentoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

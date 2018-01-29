@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Tipo de ajuste
  **/
@@ -98,6 +96,4 @@ public class TipoAjusteResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * Representa\u00C3\u00A7\u00C3\u00A3o do recurso transacao
  **/
@@ -434,6 +432,4 @@ public class TransacaoCorrenteResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

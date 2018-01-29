@@ -9,8 +9,6 @@ import java.util.Date;
 
 
 
-
-
 /**
  * Representa\u00C3\u00A7\u00C3\u00A3o do recurso token
  **/
@@ -267,6 +265,4 @@ public class TokenResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

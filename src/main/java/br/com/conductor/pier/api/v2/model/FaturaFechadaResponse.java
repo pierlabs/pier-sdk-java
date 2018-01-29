@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * Fatura
  **/
@@ -645,6 +643,4 @@ public class FaturaFechadaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

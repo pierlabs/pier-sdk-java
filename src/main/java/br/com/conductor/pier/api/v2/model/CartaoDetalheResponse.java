@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Objeto Cart\u00C3\u00A3o com mais informa\u00C3\u00A7\u00C3\u00B5es
  **/
@@ -560,6 +558,4 @@ public class CartaoDetalheResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

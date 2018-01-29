@@ -12,16 +12,12 @@ import br.com.conductor.pier.api.v2.model.PlataformaMobileResponse;
 import br.com.conductor.pier.api.v2.model.PagePlataformaMobileResponse;
 import br.com.conductor.pier.api.v2.model.PlataformaMobilePersist;
 
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-
 public class PlataformaMobileApi {
   private ApiClient apiClient;
 
@@ -197,4 +193,3 @@ public class PlataformaMobileApi {
   }
   
 }
-
