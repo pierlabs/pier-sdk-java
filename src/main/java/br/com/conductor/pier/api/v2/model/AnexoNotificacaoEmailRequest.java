@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Representa\u00C3\u00A7\u00C3\u00A3o de um documento anexo para uma notifica\u00C3\u00A7\u00C3\u00A3o.
  **/
@@ -77,6 +75,4 @@ public class AnexoNotificacaoEmailRequest   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

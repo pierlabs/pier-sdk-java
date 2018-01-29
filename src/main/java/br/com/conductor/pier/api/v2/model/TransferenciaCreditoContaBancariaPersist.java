@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * Transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para conta banc\u00C3\u00A1ria
  **/
@@ -246,6 +244,4 @@ public class TransferenciaCreditoContaBancariaPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

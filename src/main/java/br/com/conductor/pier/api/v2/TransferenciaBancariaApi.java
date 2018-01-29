@@ -20,16 +20,12 @@ import br.com.conductor.pier.api.v2.model.PlanoParcelamentoTransferenciaCreditoC
 import br.com.conductor.pier.api.v2.model.TransferenciaCreditoContaBancariaPersist;
 import br.com.conductor.pier.api.v2.model.TransferenciaBancariaPersist;
 
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-
 public class TransferenciaBancariaApi {
   private ApiClient apiClient;
 
@@ -647,4 +643,3 @@ public class TransferenciaBancariaApi {
   }
   
 }
-

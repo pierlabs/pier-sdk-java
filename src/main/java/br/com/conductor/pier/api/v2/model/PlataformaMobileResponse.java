@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Plataforma Mobile
  **/
@@ -98,6 +96,4 @@ public class PlataformaMobileResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

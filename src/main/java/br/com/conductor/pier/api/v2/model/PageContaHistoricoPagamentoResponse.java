@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista de pagamentos da conta
  **/
@@ -339,6 +337,4 @@ public class PageContaHistoricoPagamentoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

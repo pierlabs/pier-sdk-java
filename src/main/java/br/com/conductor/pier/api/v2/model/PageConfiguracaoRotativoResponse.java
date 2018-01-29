@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Listar Configura\u00C3\u00A7\u00C3\u00A3o Rotativo
  **/
@@ -339,6 +337,4 @@ public class PageConfiguracaoRotativoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

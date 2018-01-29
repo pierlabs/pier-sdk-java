@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Representa\u00C3\u00A7\u00C3\u00A3o do objeto que abstrai o hist\u00C3\u00B3rico de eventos
  **/
@@ -161,6 +159,4 @@ public class HistoricoEventosResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

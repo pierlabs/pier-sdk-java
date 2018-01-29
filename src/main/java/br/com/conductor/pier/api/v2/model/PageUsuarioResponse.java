@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista de Usu\u00C3\u00A1rios
  **/
@@ -339,6 +337,4 @@ public class PageUsuarioResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

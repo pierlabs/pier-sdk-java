@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista documento templates
  **/
@@ -339,6 +337,4 @@ public class PageDocumentoTemplateResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

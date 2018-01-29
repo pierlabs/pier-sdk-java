@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista dos tipos de boletos
  **/
@@ -339,6 +337,4 @@ public class PageTipoBoletoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

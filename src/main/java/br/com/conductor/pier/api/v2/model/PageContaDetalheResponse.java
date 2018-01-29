@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista detalhes contas
  **/
@@ -339,6 +337,4 @@ public class PageContaDetalheResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

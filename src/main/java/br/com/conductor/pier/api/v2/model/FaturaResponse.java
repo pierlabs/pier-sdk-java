@@ -9,8 +9,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * Fatura futura
  **/
@@ -267,6 +265,4 @@ public class FaturaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

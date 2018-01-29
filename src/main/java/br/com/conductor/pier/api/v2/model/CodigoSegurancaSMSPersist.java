@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o do recurso gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a.
  **/
@@ -98,6 +96,4 @@ public class CodigoSegurancaSMSPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Aplicacao Mobile
  **/
@@ -224,6 +222,4 @@ public class AplicacaoMobileResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

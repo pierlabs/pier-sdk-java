@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista de tipos oportunidades
  **/
@@ -339,6 +337,4 @@ public class PageTipoOportunidadeResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

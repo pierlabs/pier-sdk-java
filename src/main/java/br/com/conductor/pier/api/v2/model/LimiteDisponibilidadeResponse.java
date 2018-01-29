@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * Limite Disponibilidade
  **/
@@ -519,6 +517,4 @@ public class LimiteDisponibilidadeResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

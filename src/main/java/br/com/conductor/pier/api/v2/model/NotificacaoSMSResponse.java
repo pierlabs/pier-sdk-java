@@ -8,8 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Objeto SMS
  **/
@@ -458,6 +456,4 @@ public class NotificacaoSMSResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

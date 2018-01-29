@@ -11,8 +11,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Objeto contendo os detalhes de uma fatura
  **/
@@ -102,6 +100,4 @@ public class DetalhesFaturaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

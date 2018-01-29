@@ -9,16 +9,12 @@ import br.com.conductor.pier.api.v2.invoker.Pair;
 
 import br.com.conductor.pier.api.v2.model.BoletoResponse;
 
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-
 public class BoletoApi {
   private ApiClient apiClient;
 
@@ -88,4 +84,3 @@ public class BoletoApi {
   }
   
 }
-

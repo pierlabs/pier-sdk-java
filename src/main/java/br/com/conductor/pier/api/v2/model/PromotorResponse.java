@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Objeto Promotor
  **/
@@ -161,6 +159,4 @@ public class PromotorResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

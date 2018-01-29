@@ -8,8 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Objeto FAQ
  **/
@@ -223,6 +221,4 @@ public class FaqResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

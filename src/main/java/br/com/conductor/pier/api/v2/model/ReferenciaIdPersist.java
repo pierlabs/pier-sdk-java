@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Representa\u00C3\u00A7\u00C3\u00A3o de objeto de refer\u00C3\u00AAncia por Id.
  **/
@@ -76,6 +74,4 @@ public class ReferenciaIdPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

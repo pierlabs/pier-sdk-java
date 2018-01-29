@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista de Cart\u00C3\u00B5es
  **/
@@ -339,6 +337,4 @@ public class PageCartaoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

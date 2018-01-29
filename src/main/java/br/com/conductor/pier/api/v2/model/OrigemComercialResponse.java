@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Origem Comercial
  **/
@@ -269,6 +267,4 @@ public class OrigemComercialResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

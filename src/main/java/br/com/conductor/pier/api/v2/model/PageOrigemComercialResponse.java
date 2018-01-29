@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista de Origens Comerciais
  **/
@@ -339,6 +337,4 @@ public class PageOrigemComercialResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

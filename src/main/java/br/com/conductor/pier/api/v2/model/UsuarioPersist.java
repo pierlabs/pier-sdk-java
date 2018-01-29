@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Objeto Usuario
  **/
@@ -161,6 +159,4 @@ public class UsuarioPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

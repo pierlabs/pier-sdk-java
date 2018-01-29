@@ -9,8 +9,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class BeneficioPagamentoAtrasoResponse   {
   
@@ -74,6 +72,4 @@ public class BeneficioPagamentoAtrasoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

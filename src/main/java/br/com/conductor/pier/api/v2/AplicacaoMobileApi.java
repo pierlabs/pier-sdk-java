@@ -12,16 +12,12 @@ import br.com.conductor.pier.api.v2.model.AplicacaoMobileResponse;
 import br.com.conductor.pier.api.v2.model.PageAplicacaoMobileResponse;
 import br.com.conductor.pier.api.v2.model.AplicacaoMobilePersist;
 
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-
 public class AplicacaoMobileApi {
   private ApiClient apiClient;
 
@@ -200,4 +196,3 @@ public class AplicacaoMobileApi {
   }
   
 }
-

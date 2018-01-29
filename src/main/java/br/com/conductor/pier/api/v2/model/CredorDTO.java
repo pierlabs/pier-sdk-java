@@ -9,8 +9,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * Par\u00C3\u00A2metros de requisi\u00C3\u00A7\u00C3\u00A3o para cadastrar ou alterar credor
  **/
@@ -607,6 +605,4 @@ public class CredorDTO   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

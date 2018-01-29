@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * Objeto transacao N\u00C3\u00A3o Processada
  **/
@@ -813,6 +811,4 @@ public class TransacaoNaoProcessadaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

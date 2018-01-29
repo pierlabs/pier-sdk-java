@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista de tipos telefones
  **/
@@ -339,6 +337,4 @@ public class PageTipoTelefoneResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

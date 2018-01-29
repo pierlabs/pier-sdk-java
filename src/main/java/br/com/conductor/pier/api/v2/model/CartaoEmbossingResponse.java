@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Objeto Cart\u00C3\u00A3o para Impress\u00C3\u00A3o pela Gr\u00C3\u00A1fica
  **/
@@ -266,6 +264,4 @@ public class CartaoEmbossingResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

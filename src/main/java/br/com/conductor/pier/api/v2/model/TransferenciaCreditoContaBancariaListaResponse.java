@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * Listagem de Transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para contas banc\u00C3\u00A1rias
  **/
@@ -162,6 +160,4 @@ public class TransferenciaCreditoContaBancariaListaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

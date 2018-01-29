@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista das taxas e tarifas
  **/
@@ -339,6 +337,4 @@ public class PageTaxasRefinanciamentoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

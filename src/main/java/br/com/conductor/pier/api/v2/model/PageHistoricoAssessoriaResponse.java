@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista de Historicos Assessorias
  **/
@@ -339,6 +337,4 @@ public class PageHistoricoAssessoriaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

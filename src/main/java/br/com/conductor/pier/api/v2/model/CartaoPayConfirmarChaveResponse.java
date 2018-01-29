@@ -8,8 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Resposta da requisi\u00C3\u00A7\u00C3\u00A3o para confirma\u00C3\u00A7\u00C3\u00A3o da chave de criptograma
  **/
@@ -266,6 +264,4 @@ public class CartaoPayConfirmarChaveResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

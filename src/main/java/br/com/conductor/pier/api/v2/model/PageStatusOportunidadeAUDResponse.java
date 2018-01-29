@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista de auditorias dos status oportunidades
  **/
@@ -339,6 +337,4 @@ public class PageStatusOportunidadeAUDResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

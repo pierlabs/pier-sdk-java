@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista de Ajustes
  **/
@@ -339,6 +337,4 @@ public class PageAjusteResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

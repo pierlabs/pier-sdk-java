@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Objeto de resposta para historico de telefones
  **/
@@ -161,6 +159,4 @@ public class HistoricoTelefoneResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

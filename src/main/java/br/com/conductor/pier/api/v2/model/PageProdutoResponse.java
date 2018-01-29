@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista de Produtos
  **/
@@ -339,6 +337,4 @@ public class PageProdutoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

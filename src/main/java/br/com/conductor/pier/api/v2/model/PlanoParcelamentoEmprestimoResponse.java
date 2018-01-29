@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * Detalhe da resposta do recurso de simular empr\u00C3\u00A9stimos/financiamentos
  **/
@@ -162,6 +160,4 @@ public class PlanoParcelamentoEmprestimoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

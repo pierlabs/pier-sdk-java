@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista de Transfer\u00C3\u00AAncias de cr\u00C3\u00A9dito conta banc\u00C3\u00A1ria
  **/
@@ -339,6 +337,4 @@ public class PageTransferenciaCreditoContaBancariaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

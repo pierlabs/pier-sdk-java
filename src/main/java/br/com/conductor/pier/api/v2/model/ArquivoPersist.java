@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Objeto Arquivo para persist\u00C3\u00AAncia de dados.
  **/
@@ -164,6 +162,4 @@ public class ArquivoPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista atendimento clientes
  **/
@@ -339,6 +337,4 @@ public class PageAtendimentoClienteResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

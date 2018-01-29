@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * Transfer\u00C3\u00AAncia banc\u00C3\u00A1ria
  **/
@@ -267,6 +265,4 @@ public class TransferenciaBancariaPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

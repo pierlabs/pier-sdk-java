@@ -11,8 +11,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Objeto contendo os detalhes de uma fatura consignada
  **/
@@ -102,6 +100,4 @@ public class DetalhesFaturaConsignadaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

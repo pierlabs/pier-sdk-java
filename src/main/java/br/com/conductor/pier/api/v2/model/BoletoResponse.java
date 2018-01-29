@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do boleto de fatura
  **/
@@ -689,6 +687,4 @@ public class BoletoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 
