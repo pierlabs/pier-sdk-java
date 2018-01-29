@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Objeto ContaBancariaPortador
  **/
@@ -308,6 +306,4 @@ public class ContaBancariaPortadorUpdate   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

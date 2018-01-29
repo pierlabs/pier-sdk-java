@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * Objeto de Requisi\u00C3\u00A7\u00C3\u00A3o de Cancelamento de transa\u00C3\u00A7\u00C3\u00A3o por idCartao
  **/
@@ -267,6 +265,4 @@ public class CancelamentoTransacaoPorIdCartaoRequest   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

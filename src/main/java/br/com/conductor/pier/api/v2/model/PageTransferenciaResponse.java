@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista de Transfer\u00C3\u00AAncias
  **/
@@ -339,6 +337,4 @@ public class PageTransferenciaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

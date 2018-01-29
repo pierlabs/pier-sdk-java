@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista de Configura\u00C3\u00A7\u00C3\u00B5es de E-mail
  **/
@@ -339,6 +337,4 @@ public class PageConfiguracaoEmailResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

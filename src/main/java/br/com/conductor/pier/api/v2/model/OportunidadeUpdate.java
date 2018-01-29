@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Objeto Oportunidade
  **/
@@ -206,6 +204,4 @@ public class OportunidadeUpdate   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

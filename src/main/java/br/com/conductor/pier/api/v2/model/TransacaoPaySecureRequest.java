@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o do recurso de transa\u00C3\u00A7\u00C3\u00A3o segura conductorPay
  **/
@@ -353,6 +351,4 @@ public class TransacaoPaySecureRequest   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

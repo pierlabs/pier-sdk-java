@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * PessoaPersist
  **/
@@ -353,6 +351,4 @@ public class SocioAprovadoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

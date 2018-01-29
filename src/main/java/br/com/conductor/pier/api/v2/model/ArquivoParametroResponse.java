@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Objeto Response de par\u00C3\u00A2metros do arquivo.
  **/
@@ -119,6 +117,4 @@ public class ArquivoParametroResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -8,8 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de configura\u00C3\u00A7\u00C3\u00A3o de registro de cobran\u00C3\u00A7a.
  **/
@@ -391,6 +389,4 @@ public class ConfiguracaoRegistroCobrancaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

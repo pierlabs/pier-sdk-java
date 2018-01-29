@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * PlanoCampanha
  **/
@@ -117,6 +115,4 @@ public class PlanoCampanhaPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

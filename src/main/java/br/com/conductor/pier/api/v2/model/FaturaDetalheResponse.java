@@ -12,8 +12,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Detalhes da fatura
  **/
@@ -291,6 +289,4 @@ public class FaturaDetalheResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

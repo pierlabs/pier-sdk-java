@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Portador
  **/
@@ -266,6 +264,4 @@ public class PortadorResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

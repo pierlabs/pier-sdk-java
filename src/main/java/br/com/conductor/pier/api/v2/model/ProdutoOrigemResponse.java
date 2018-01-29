@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Representa\u00C3\u00A7\u00C3\u00A3o da resposta dos produtosOrigem do recurso de Origem Comercial
  **/
@@ -77,6 +75,4 @@ public class ProdutoOrigemResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

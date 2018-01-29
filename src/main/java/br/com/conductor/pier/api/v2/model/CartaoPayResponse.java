@@ -8,8 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Resposta da requisi\u00C3\u00A7\u00C3\u00A3o de listagem de cart\u00C3\u00A3o
  **/
@@ -245,6 +243,4 @@ public class CartaoPayResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

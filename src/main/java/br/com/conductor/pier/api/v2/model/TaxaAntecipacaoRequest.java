@@ -9,8 +9,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * Objeto de Requisi\u00C3\u00A7\u00C3\u00A3o de Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o
  **/
@@ -119,6 +117,4 @@ public class TaxaAntecipacaoRequest   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

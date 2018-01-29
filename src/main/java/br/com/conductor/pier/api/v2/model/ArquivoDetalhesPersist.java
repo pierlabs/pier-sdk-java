@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Objeto ArquivoParametros para persist\u00C3\u00AAncia de dados.
  **/
@@ -98,6 +96,4 @@ public class ArquivoDetalhesPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

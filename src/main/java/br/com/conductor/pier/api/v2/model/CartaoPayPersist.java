@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Representa\u00C3\u00A7\u00C3\u00A3o do recurso atualizar cart\u00C3\u00A3o
  **/
@@ -182,6 +180,4 @@ public class CartaoPayPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

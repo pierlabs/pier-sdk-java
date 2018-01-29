@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de campanha
  **/
@@ -143,6 +141,4 @@ public class CampanhaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

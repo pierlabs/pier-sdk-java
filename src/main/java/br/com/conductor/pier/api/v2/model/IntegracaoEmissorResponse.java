@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Resposta do recurso de inclus\u00C3\u00A3o de registro para integra\u00C3\u00A7\u00C3\u00A3o
  **/
@@ -182,6 +180,4 @@ public class IntegracaoEmissorResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

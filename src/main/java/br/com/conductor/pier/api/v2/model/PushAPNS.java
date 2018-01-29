@@ -8,8 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Objeto Push Notifica\u00C3\u00A7\u00C3\u00A3o APNS
  **/
@@ -287,6 +285,4 @@ public class PushAPNS   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

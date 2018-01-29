@@ -42,16 +42,12 @@ import br.com.conductor.pier.api.v2.model.PageBancoResponse;
 import br.com.conductor.pier.api.v2.model.PageControleVencimentoResponse;
 import br.com.conductor.pier.api.v2.model.CampanhaPersist;
 
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-
 public class CadastroGeralApi {
   private ApiClient apiClient;
 
@@ -2324,4 +2320,3 @@ public class CadastroGeralApi {
   }
   
 }
-

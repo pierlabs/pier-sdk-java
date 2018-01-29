@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista de terminais
  **/
@@ -339,6 +337,4 @@ public class PageTerminalResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista de Status Impress\u00C3\u00A3o
  **/
@@ -339,6 +337,4 @@ public class PageStatusImpressaoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

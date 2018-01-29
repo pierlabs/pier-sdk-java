@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Resposta do recurso de cadastrar adicional
  **/
@@ -371,6 +369,4 @@ public class AdicionalResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

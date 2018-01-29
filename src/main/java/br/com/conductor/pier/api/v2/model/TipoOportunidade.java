@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Objeto TipoOportunidade
  **/
@@ -98,6 +96,4 @@ public class TipoOportunidade   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

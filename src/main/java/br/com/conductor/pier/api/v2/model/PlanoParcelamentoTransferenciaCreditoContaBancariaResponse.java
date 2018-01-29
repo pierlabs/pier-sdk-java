@@ -11,8 +11,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Plano de Parcelamentos para Transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para contas banc\u00C3\u00A1rias
  **/
@@ -165,6 +163,4 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

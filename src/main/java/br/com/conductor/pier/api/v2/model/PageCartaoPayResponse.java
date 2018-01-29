@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * P\u00C3\u00A1gina de resposta da listagem de cart\u00C3\u00B5es tokenizados
  **/
@@ -339,6 +337,4 @@ public class PageCartaoPayResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * Parametros de requisi\u00C3\u00A7\u00C3\u00A3o da gera\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o embossing
  **/
@@ -98,6 +96,4 @@ public class CartaoEmbossingRequest   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

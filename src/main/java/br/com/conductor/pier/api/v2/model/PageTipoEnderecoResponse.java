@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista de Tipos Endere\u00C3\u00A7o
  **/
@@ -339,6 +337,4 @@ public class PageTipoEnderecoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

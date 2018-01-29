@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista de Status Contas
  **/
@@ -339,6 +337,4 @@ public class PageStatusContaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

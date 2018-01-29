@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista de Bases
  **/
@@ -339,6 +337,4 @@ public class PageBaseResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

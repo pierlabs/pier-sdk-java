@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Objeto que encapsula os par\u00C3\u00A2metros para gera\u00C3\u00A7\u00C3\u00A3o de um documento
  **/
@@ -122,6 +120,4 @@ public class DocumentoParametrosRequest   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 
