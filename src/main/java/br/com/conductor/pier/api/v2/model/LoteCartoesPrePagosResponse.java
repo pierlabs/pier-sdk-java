@@ -25,6 +25,7 @@ public class LoteCartoesPrePagosResponse   {
   private String dataCadastro = null;
   private String usuarioCadastro = null;
   private Integer statusProcessamento = null;
+  private String identificadorExterno = null;
 
   
   /**
@@ -207,6 +208,24 @@ public class LoteCartoesPrePagosResponse   {
   }
 
   
+  /**
+   * N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor).
+   **/
+  public LoteCartoesPrePagosResponse identificadorExterno(String identificadorExterno) {
+    this.identificadorExterno = identificadorExterno;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o externo (utilizado pelo emissor).")
+  @JsonProperty("identificadorExterno")
+  public String getIdentificadorExterno() {
+    return identificadorExterno;
+  }
+  public void setIdentificadorExterno(String identificadorExterno) {
+    this.identificadorExterno = identificadorExterno;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -226,12 +245,13 @@ public class LoteCartoesPrePagosResponse   {
         Objects.equals(this.quantidade, loteCartoesPrePagosResponse.quantidade) &&
         Objects.equals(this.dataCadastro, loteCartoesPrePagosResponse.dataCadastro) &&
         Objects.equals(this.usuarioCadastro, loteCartoesPrePagosResponse.usuarioCadastro) &&
-        Objects.equals(this.statusProcessamento, loteCartoesPrePagosResponse.statusProcessamento);
+        Objects.equals(this.statusProcessamento, loteCartoesPrePagosResponse.statusProcessamento) &&
+        Objects.equals(this.identificadorExterno, loteCartoesPrePagosResponse.identificadorExterno);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idOrigemComercial, idProduto, idTipoCartao, idImagem, idEndereco, quantidade, dataCadastro, usuarioCadastro, statusProcessamento);
+    return Objects.hash(id, idOrigemComercial, idProduto, idTipoCartao, idImagem, idEndereco, quantidade, dataCadastro, usuarioCadastro, statusProcessamento, identificadorExterno);
   }
 
   @Override
@@ -249,6 +269,7 @@ public class LoteCartoesPrePagosResponse   {
     sb.append("    dataCadastro: ").append(toIndentedString(dataCadastro)).append("\n");
     sb.append("    usuarioCadastro: ").append(toIndentedString(usuarioCadastro)).append("\n");
     sb.append("    statusProcessamento: ").append(toIndentedString(statusProcessamento)).append("\n");
+    sb.append("    identificadorExterno: ").append(toIndentedString(identificadorExterno)).append("\n");
     sb.append("}");
     return sb.toString();
   }

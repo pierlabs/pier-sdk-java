@@ -6,7 +6,7 @@
   <artifactId>pier-sdk-java</artifactId>
   <packaging>jar</packaging>
   <name>pier-sdk-java</name>
-  <version>2.50.18</version>
+  <version>2.50.19</version>
 
   <prerequisites>
     <maven>2.2.0</maven>
