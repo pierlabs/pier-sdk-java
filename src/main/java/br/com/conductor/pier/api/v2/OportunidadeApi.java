@@ -9,10 +9,10 @@ import br.com.conductor.pier.api.v2.invoker.Pair;
 
 import br.com.conductor.pier.api.v2.model.StatusOportunidadeResponse;
 import br.com.conductor.pier.api.v2.model.StatusOportunidade;
-import br.com.conductor.pier.api.v2.model.TipoOportunidade;
-import br.com.conductor.pier.api.v2.model.TipoOportunidadeResponse;
 import br.com.conductor.pier.api.v2.model.OportunidadeResponse;
 import br.com.conductor.pier.api.v2.model.OportunidadeUpdate;
+import br.com.conductor.pier.api.v2.model.TipoOportunidade;
+import br.com.conductor.pier.api.v2.model.TipoOportunidadeResponse;
 import br.com.conductor.pier.api.v2.model.PageStatusOportunidadeAUDResponse;
 import br.com.conductor.pier.api.v2.model.PageOportunidadeAUDResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoOportunidadeAUDResponse;
@@ -109,77 +109,23 @@ public class OportunidadeApi {
   }
   
   /**
-   * Altera os tipos oportunidades
-   * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos tipos oportunidades.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
-   * @param persist persist
-   * @return TipoOportunidadeResponse
-   */
-  public TipoOportunidadeResponse alterarUsingPUT16(Long id, TipoOportunidade persist) throws ApiException {
-    Object postBody = persist;
-    
-     // verify the required parameter 'id' is set
-     if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT16");
-     }
-     
-     // verify the required parameter 'persist' is set
-     if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling alterarUsingPUT16");
-     }
-     
-    // create path and map variables
-    String path = "/api/tipos-oportunidades/{id}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<TipoOportunidadeResponse> returnType = new GenericType<TipoOportunidadeResponse>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
    * Altera as oportunidades
    * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o das oportunidades.
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).
    * @param update update
    * @return OportunidadeResponse
    */
-  public OportunidadeResponse alterarUsingPUT9(Long id, OportunidadeUpdate update) throws ApiException {
+  public OportunidadeResponse alterarUsingPUT12(Long id, OportunidadeUpdate update) throws ApiException {
     Object postBody = update;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT9");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT12");
      }
      
      // verify the required parameter 'update' is set
      if (update == null) {
-        throw new ApiException(400, "Missing the required parameter 'update' when calling alterarUsingPUT9");
+        throw new ApiException(400, "Missing the required parameter 'update' when calling alterarUsingPUT12");
      }
      
     // create path and map variables
@@ -212,6 +158,60 @@ public class OportunidadeApi {
 
     
     GenericType<OportunidadeResponse> returnType = new GenericType<OportunidadeResponse>() {};
+    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Altera os tipos oportunidades
+   * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos tipos oportunidades.
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
+   * @param persist persist
+   * @return TipoOportunidadeResponse
+   */
+  public TipoOportunidadeResponse alterarUsingPUT18(Long id, TipoOportunidade persist) throws ApiException {
+    Object postBody = persist;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT18");
+     }
+     
+     // verify the required parameter 'persist' is set
+     if (persist == null) {
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling alterarUsingPUT18");
+     }
+     
+    // create path and map variables
+    String path = "/api/tipos-oportunidades/{id}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<TipoOportunidadeResponse> returnType = new GenericType<TipoOportunidadeResponse>() {};
     return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -277,12 +277,12 @@ public class OportunidadeApi {
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).
    * @return OportunidadeResponse
    */
-  public OportunidadeResponse consultarUsingGET19(Long id) throws ApiException {
+  public OportunidadeResponse consultarUsingGET21(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET19");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET21");
      }
      
     // create path and map variables
@@ -325,12 +325,12 @@ public class OportunidadeApi {
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
    * @return TipoOportunidadeResponse
    */
-  public TipoOportunidadeResponse consultarUsingGET34(Long id) throws ApiException {
+  public TipoOportunidadeResponse consultarUsingGET35(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET34");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET35");
      }
      
     // create path and map variables
@@ -670,7 +670,7 @@ public class OportunidadeApi {
    * @param flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
    * @return PageOportunidadeResponse
    */
-  public PageOportunidadeResponse listarUsingGET22(List<String> sort, Integer page, Integer limit, Long idStatusOportunidade, String dataCadastro, String dataAtualizacao, String numeroReceitaFederal, String dataInicioVigencia, String dataFimVigencia, Boolean flagAtivo) throws ApiException {
+  public PageOportunidadeResponse listarUsingGET25(List<String> sort, Integer page, Integer limit, Long idStatusOportunidade, String dataCadastro, String dataAtualizacao, String numeroReceitaFederal, String dataInicioVigencia, String dataFimVigencia, Boolean flagAtivo) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -736,7 +736,7 @@ public class OportunidadeApi {
    * @param flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo
    * @return PageTipoOportunidadeResponse
    */
-  public PageTipoOportunidadeResponse listarUsingGET38(List<String> sort, Integer page, Integer limit, String descricao, Boolean flagAtivo) throws ApiException {
+  public PageTipoOportunidadeResponse listarUsingGET40(List<String> sort, Integer page, Integer limit, String descricao, Boolean flagAtivo) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -842,12 +842,12 @@ public class OportunidadeApi {
    * @param persist persist
    * @return OportunidadeResponse
    */
-  public OportunidadeResponse salvarUsingPOST15(OportunidadePersist persist) throws ApiException {
+  public OportunidadeResponse salvarUsingPOST17(OportunidadePersist persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST15");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST17");
      }
      
     // create path and map variables
@@ -889,12 +889,12 @@ public class OportunidadeApi {
    * @param persist persist
    * @return TipoOportunidadeResponse
    */
-  public TipoOportunidadeResponse salvarUsingPOST22(TipoOportunidade persist) throws ApiException {
+  public TipoOportunidadeResponse salvarUsingPOST24(TipoOportunidade persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST22");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST24");
      }
      
     // create path and map variables

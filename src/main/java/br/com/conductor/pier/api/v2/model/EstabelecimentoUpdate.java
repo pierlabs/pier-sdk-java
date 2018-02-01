@@ -6,35 +6,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 
 
 
 /**
- * Objeto Estabelecimento
+ * Par\u00C3\u00A2metros de requisi\u00C3\u00A7\u00C3\u00A3o de um estabelecimento
  **/
 
-@ApiModel(description = "Objeto Estabelecimento")
+@ApiModel(description = "Par\u00C3\u00A2metros de requisi\u00C3\u00A7\u00C3\u00A3o de um estabelecimento")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class EstabelecimentoResponse   {
+public class EstabelecimentoUpdate   {
   
-  private Long id = null;
-  private String numeroEstabelecimento = null;
   private Integer flagMatriz = null;
-  private Long idCredor = null;
-  private Long numeroReceitaFederal = null;
   private String nome = null;
   private String descricao = null;
   private String nomeFantasia = null;
   private String cep = null;
   private String nomeLogradouro = null;
-  private String numeroEndereco = null;
+  private Integer numeroEndereco = null;
   private String bairro = null;
   private String cidade = null;
   private String complemento = null;
   private String uf = null;
   private String cep2 = null;
   private String nomeLogradouro2 = null;
-  private String numeroEndereco2 = null;
+  private Integer numeroEndereco2 = null;
   private String bairro2 = null;
   private String cidade2 = null;
   private String complemento2 = null;
@@ -94,51 +92,13 @@ public class EstabelecimentoResponse   {
   private ConsultaCadastroEstabelecimentoDTO consulta = null;
   private ConsultaCadastroEstabelecimentoDTO consulta2 = null;
   private ConsultaCadastroEstabelecimentoDTO consulta3 = null;
-  private String terminal = null;
-  private String dataCadastramento = null;
-  private String usuario = null;
-
-  
-  /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).
-   **/
-  public EstabelecimentoResponse id(Long id) {
-    this.id = id;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).")
-  @JsonProperty("id")
-  public Long getId() {
-    return id;
-  }
-  public void setId(Long id) {
-    this.id = id;
-  }
-
-  
-  /**
-   * N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor.
-   **/
-  public EstabelecimentoResponse numeroEstabelecimento(String numeroEstabelecimento) {
-    this.numeroEstabelecimento = numeroEstabelecimento;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor.")
-  @JsonProperty("numeroEstabelecimento")
-  public String getNumeroEstabelecimento() {
-    return numeroEstabelecimento;
-  }
-  public void setNumeroEstabelecimento(String numeroEstabelecimento) {
-    this.numeroEstabelecimento = numeroEstabelecimento;
-  }
+  private List<String> sort = new ArrayList<String>();
 
   
   /**
    * Indica se \u00C3\u00A9 matriz ou filial.
    **/
-  public EstabelecimentoResponse flagMatriz(Integer flagMatriz) {
+  public EstabelecimentoUpdate flagMatriz(Integer flagMatriz) {
     this.flagMatriz = flagMatriz;
     return this;
   }
@@ -154,45 +114,9 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Credor.
-   **/
-  public EstabelecimentoResponse idCredor(Long idCredor) {
-    this.idCredor = idCredor;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Credor.")
-  @JsonProperty("idCredor")
-  public Long getIdCredor() {
-    return idCredor;
-  }
-  public void setIdCredor(Long idCredor) {
-    this.idCredor = idCredor;
-  }
-
-  
-  /**
-   * Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal.
-   **/
-  public EstabelecimentoResponse numeroReceitaFederal(Long numeroReceitaFederal) {
-    this.numeroReceitaFederal = numeroReceitaFederal;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal.")
-  @JsonProperty("numeroReceitaFederal")
-  public Long getNumeroReceitaFederal() {
-    return numeroReceitaFederal;
-  }
-  public void setNumeroReceitaFederal(Long numeroReceitaFederal) {
-    this.numeroReceitaFederal = numeroReceitaFederal;
-  }
-
-  
-  /**
    * Nome do Estabelecimento.
    **/
-  public EstabelecimentoResponse nome(String nome) {
+  public EstabelecimentoUpdate nome(String nome) {
     this.nome = nome;
     return this;
   }
@@ -210,7 +134,7 @@ public class EstabelecimentoResponse   {
   /**
    * Raz\u00C3\u00A3o Social do Estabelecimento.
    **/
-  public EstabelecimentoResponse descricao(String descricao) {
+  public EstabelecimentoUpdate descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
@@ -228,7 +152,7 @@ public class EstabelecimentoResponse   {
   /**
    * T\u00C3\u00ADtulo Comercial do Estabelecimento.
    **/
-  public EstabelecimentoResponse nomeFantasia(String nomeFantasia) {
+  public EstabelecimentoUpdate nomeFantasia(String nomeFantasia) {
     this.nomeFantasia = nomeFantasia;
     return this;
   }
@@ -246,7 +170,7 @@ public class EstabelecimentoResponse   {
   /**
    * C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).
    **/
-  public EstabelecimentoResponse cep(String cep) {
+  public EstabelecimentoUpdate cep(String cep) {
     this.cep = cep;
     return this;
   }
@@ -264,7 +188,7 @@ public class EstabelecimentoResponse   {
   /**
    * Nome do Logradouro.
    **/
-  public EstabelecimentoResponse nomeLogradouro(String nomeLogradouro) {
+  public EstabelecimentoUpdate nomeLogradouro(String nomeLogradouro) {
     this.nomeLogradouro = nomeLogradouro;
     return this;
   }
@@ -282,17 +206,17 @@ public class EstabelecimentoResponse   {
   /**
    * N\u00C3\u00BAmero do endere\u00C3\u00A7o.
    **/
-  public EstabelecimentoResponse numeroEndereco(String numeroEndereco) {
+  public EstabelecimentoUpdate numeroEndereco(Integer numeroEndereco) {
     this.numeroEndereco = numeroEndereco;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero do endere\u00C3\u00A7o.")
   @JsonProperty("numeroEndereco")
-  public String getNumeroEndereco() {
+  public Integer getNumeroEndereco() {
     return numeroEndereco;
   }
-  public void setNumeroEndereco(String numeroEndereco) {
+  public void setNumeroEndereco(Integer numeroEndereco) {
     this.numeroEndereco = numeroEndereco;
   }
 
@@ -300,7 +224,7 @@ public class EstabelecimentoResponse   {
   /**
    * Nome do bairro do endere\u00C3\u00A7o.
    **/
-  public EstabelecimentoResponse bairro(String bairro) {
+  public EstabelecimentoUpdate bairro(String bairro) {
     this.bairro = bairro;
     return this;
   }
@@ -318,7 +242,7 @@ public class EstabelecimentoResponse   {
   /**
    * Nome da cidade do endere\u00C3\u00A7o.
    **/
-  public EstabelecimentoResponse cidade(String cidade) {
+  public EstabelecimentoUpdate cidade(String cidade) {
     this.cidade = cidade;
     return this;
   }
@@ -336,7 +260,7 @@ public class EstabelecimentoResponse   {
   /**
    * Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.
    **/
-  public EstabelecimentoResponse complemento(String complemento) {
+  public EstabelecimentoUpdate complemento(String complemento) {
     this.complemento = complemento;
     return this;
   }
@@ -354,7 +278,7 @@ public class EstabelecimentoResponse   {
   /**
    * Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.
    **/
-  public EstabelecimentoResponse uf(String uf) {
+  public EstabelecimentoUpdate uf(String uf) {
     this.uf = uf;
     return this;
   }
@@ -372,7 +296,7 @@ public class EstabelecimentoResponse   {
   /**
    * C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).
    **/
-  public EstabelecimentoResponse cep2(String cep2) {
+  public EstabelecimentoUpdate cep2(String cep2) {
     this.cep2 = cep2;
     return this;
   }
@@ -390,7 +314,7 @@ public class EstabelecimentoResponse   {
   /**
    * Nome do Logradouro .
    **/
-  public EstabelecimentoResponse nomeLogradouro2(String nomeLogradouro2) {
+  public EstabelecimentoUpdate nomeLogradouro2(String nomeLogradouro2) {
     this.nomeLogradouro2 = nomeLogradouro2;
     return this;
   }
@@ -408,17 +332,17 @@ public class EstabelecimentoResponse   {
   /**
    * N\u00C3\u00BAmero do endere\u00C3\u00A7o.
    **/
-  public EstabelecimentoResponse numeroEndereco2(String numeroEndereco2) {
+  public EstabelecimentoUpdate numeroEndereco2(Integer numeroEndereco2) {
     this.numeroEndereco2 = numeroEndereco2;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero do endere\u00C3\u00A7o.")
   @JsonProperty("numeroEndereco2")
-  public String getNumeroEndereco2() {
+  public Integer getNumeroEndereco2() {
     return numeroEndereco2;
   }
-  public void setNumeroEndereco2(String numeroEndereco2) {
+  public void setNumeroEndereco2(Integer numeroEndereco2) {
     this.numeroEndereco2 = numeroEndereco2;
   }
 
@@ -426,7 +350,7 @@ public class EstabelecimentoResponse   {
   /**
    * Nome do bairro do endere\u00C3\u00A7o.
    **/
-  public EstabelecimentoResponse bairro2(String bairro2) {
+  public EstabelecimentoUpdate bairro2(String bairro2) {
     this.bairro2 = bairro2;
     return this;
   }
@@ -444,7 +368,7 @@ public class EstabelecimentoResponse   {
   /**
    * Nome da cidade do endere\u00C3\u00A7o.
    **/
-  public EstabelecimentoResponse cidade2(String cidade2) {
+  public EstabelecimentoUpdate cidade2(String cidade2) {
     this.cidade2 = cidade2;
     return this;
   }
@@ -462,7 +386,7 @@ public class EstabelecimentoResponse   {
   /**
    * Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.
    **/
-  public EstabelecimentoResponse complemento2(String complemento2) {
+  public EstabelecimentoUpdate complemento2(String complemento2) {
     this.complemento2 = complemento2;
     return this;
   }
@@ -480,7 +404,7 @@ public class EstabelecimentoResponse   {
   /**
    * Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.
    **/
-  public EstabelecimentoResponse uf2(String uf2) {
+  public EstabelecimentoUpdate uf2(String uf2) {
     this.uf2 = uf2;
     return this;
   }
@@ -498,7 +422,7 @@ public class EstabelecimentoResponse   {
   /**
    * Detalhes espec\u00C3\u00ADficos quanto ao Cadastro do Estabelecimento.
    **/
-  public EstabelecimentoResponse obs(String obs) {
+  public EstabelecimentoUpdate obs(String obs) {
     this.obs = obs;
     return this;
   }
@@ -516,7 +440,7 @@ public class EstabelecimentoResponse   {
   /**
    * Nome da pessoa para contato com o Estabelecimento.
    **/
-  public EstabelecimentoResponse contato(String contato) {
+  public EstabelecimentoUpdate contato(String contato) {
     this.contato = contato;
     return this;
   }
@@ -534,7 +458,7 @@ public class EstabelecimentoResponse   {
   /**
    * E-mail da pessoa para contato com o Estabelecimento.
    **/
-  public EstabelecimentoResponse email(String email) {
+  public EstabelecimentoUpdate email(String email) {
     this.email = email;
     return this;
   }
@@ -552,7 +476,7 @@ public class EstabelecimentoResponse   {
   /**
    * Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual.
    **/
-  public EstabelecimentoResponse flagArquivoSecrFazenda(Integer flagArquivoSecrFazenda) {
+  public EstabelecimentoUpdate flagArquivoSecrFazenda(Integer flagArquivoSecrFazenda) {
     this.flagArquivoSecrFazenda = flagArquivoSecrFazenda;
     return this;
   }
@@ -570,7 +494,7 @@ public class EstabelecimentoResponse   {
   /**
    * Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o.
    **/
-  public EstabelecimentoResponse flagCartaoDigitado(Integer flagCartaoDigitado) {
+  public EstabelecimentoUpdate flagCartaoDigitado(Integer flagCartaoDigitado) {
     this.flagCartaoDigitado = flagCartaoDigitado;
     return this;
   }
@@ -588,7 +512,7 @@ public class EstabelecimentoResponse   {
   /**
    * Indica se o estabelecimento est\u00C3\u00A1 inativo.
    **/
-  public EstabelecimentoResponse inativo(Integer inativo) {
+  public EstabelecimentoUpdate inativo(Integer inativo) {
     this.inativo = inativo;
     return this;
   }
@@ -606,7 +530,7 @@ public class EstabelecimentoResponse   {
   /**
    * C\u00C3\u00B3digo identificador da moeda.
    **/
-  public EstabelecimentoResponse idMoeda(Long idMoeda) {
+  public EstabelecimentoUpdate idMoeda(Long idMoeda) {
     this.idMoeda = idMoeda;
     return this;
   }
@@ -624,7 +548,7 @@ public class EstabelecimentoResponse   {
   /**
    * Identificador de Pa\u00C3\u00ADs.
    **/
-  public EstabelecimentoResponse idPais(Long idPais) {
+  public EstabelecimentoUpdate idPais(Long idPais) {
     this.idPais = idPais;
     return this;
   }
@@ -642,7 +566,7 @@ public class EstabelecimentoResponse   {
   /**
    * N\u00C3\u00BAmero do associado ao SPCBrasil.
    **/
-  public EstabelecimentoResponse associadoSPCBrasil(Integer associadoSPCBrasil) {
+  public EstabelecimentoUpdate associadoSPCBrasil(Integer associadoSPCBrasil) {
     this.associadoSPCBrasil = associadoSPCBrasil;
     return this;
   }
@@ -660,7 +584,7 @@ public class EstabelecimentoResponse   {
   /**
    * C\u00C3\u00B3digo de Categoria de Mercado.
    **/
-  public EstabelecimentoResponse mcc(Long mcc) {
+  public EstabelecimentoUpdate mcc(Long mcc) {
     this.mcc = mcc;
     return this;
   }
@@ -678,7 +602,7 @@ public class EstabelecimentoResponse   {
   /**
    * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento.
    **/
-  public EstabelecimentoResponse idTipoEstabelecimento(Long idTipoEstabelecimento) {
+  public EstabelecimentoUpdate idTipoEstabelecimento(Long idTipoEstabelecimento) {
     this.idTipoEstabelecimento = idTipoEstabelecimento;
     return this;
   }
@@ -696,7 +620,7 @@ public class EstabelecimentoResponse   {
   /**
    * Tipo da Correspond\u00C3\u00AAncia (ORIGEM, CORRESPONDENCIA).
    **/
-  public EstabelecimentoResponse tipoCorrespondencia(TipoCorrespondenciaEnum tipoCorrespondencia) {
+  public EstabelecimentoUpdate tipoCorrespondencia(TipoCorrespondenciaEnum tipoCorrespondencia) {
     this.tipoCorrespondencia = tipoCorrespondencia;
     return this;
   }
@@ -714,7 +638,7 @@ public class EstabelecimentoResponse   {
   /**
    * Cargo do contato do estabelecimento.
    **/
-  public EstabelecimentoResponse cargoContato(String cargoContato) {
+  public EstabelecimentoUpdate cargoContato(String cargoContato) {
     this.cargoContato = cargoContato;
     return this;
   }
@@ -732,7 +656,7 @@ public class EstabelecimentoResponse   {
   /**
    * Tipo do regime de pagamento do estabelecimento.
    **/
-  public EstabelecimentoResponse tipoPagamento(TipoPagamentoEnum tipoPagamento) {
+  public EstabelecimentoUpdate tipoPagamento(TipoPagamentoEnum tipoPagamento) {
     this.tipoPagamento = tipoPagamento;
     return this;
   }
@@ -750,7 +674,7 @@ public class EstabelecimentoResponse   {
   /**
    * Consulta de cadastro n\u00C3\u00BAmero um.
    **/
-  public EstabelecimentoResponse consulta(ConsultaCadastroEstabelecimentoDTO consulta) {
+  public EstabelecimentoUpdate consulta(ConsultaCadastroEstabelecimentoDTO consulta) {
     this.consulta = consulta;
     return this;
   }
@@ -768,7 +692,7 @@ public class EstabelecimentoResponse   {
   /**
    * Consulta de cadastro n\u00C3\u00BAmero um.
    **/
-  public EstabelecimentoResponse consulta2(ConsultaCadastroEstabelecimentoDTO consulta2) {
+  public EstabelecimentoUpdate consulta2(ConsultaCadastroEstabelecimentoDTO consulta2) {
     this.consulta2 = consulta2;
     return this;
   }
@@ -786,7 +710,7 @@ public class EstabelecimentoResponse   {
   /**
    * Consulta de cadastro n\u00C3\u00BAmero um.
    **/
-  public EstabelecimentoResponse consulta3(ConsultaCadastroEstabelecimentoDTO consulta3) {
+  public EstabelecimentoUpdate consulta3(ConsultaCadastroEstabelecimentoDTO consulta3) {
     this.consulta3 = consulta3;
     return this;
   }
@@ -802,56 +726,20 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * Terminal do estabelecimento.
+   * Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
    **/
-  public EstabelecimentoResponse terminal(String terminal) {
-    this.terminal = terminal;
+  public EstabelecimentoUpdate sort(List<String> sort) {
+    this.sort = sort;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Terminal do estabelecimento.")
-  @JsonProperty("terminal")
-  public String getTerminal() {
-    return terminal;
+  @ApiModelProperty(example = "null", value = "Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.")
+  @JsonProperty("sort")
+  public List<String> getSort() {
+    return sort;
   }
-  public void setTerminal(String terminal) {
-    this.terminal = terminal;
-  }
-
-  
-  /**
-   * Data de Cadastro do Estabelecimento.
-   **/
-  public EstabelecimentoResponse dataCadastramento(String dataCadastramento) {
-    this.dataCadastramento = dataCadastramento;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Data de Cadastro do Estabelecimento.")
-  @JsonProperty("dataCadastramento")
-  public String getDataCadastramento() {
-    return dataCadastramento;
-  }
-  public void setDataCadastramento(String dataCadastramento) {
-    this.dataCadastramento = dataCadastramento;
-  }
-
-  
-  /**
-   * Usu\u00C3\u00A1rio da aplica\u00C3\u00A7\u00C3\u00A3o.
-   **/
-  public EstabelecimentoResponse usuario(String usuario) {
-    this.usuario = usuario;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Usu\u00C3\u00A1rio da aplica\u00C3\u00A7\u00C3\u00A3o.")
-  @JsonProperty("usuario")
-  public String getUsuario() {
-    return usuario;
-  }
-  public void setUsuario(String usuario) {
-    this.usuario = usuario;
+  public void setSort(List<String> sort) {
+    this.sort = sort;
   }
 
   
@@ -864,66 +752,56 @@ public class EstabelecimentoResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    EstabelecimentoResponse estabelecimentoResponse = (EstabelecimentoResponse) o;
-    return Objects.equals(this.id, estabelecimentoResponse.id) &&
-        Objects.equals(this.numeroEstabelecimento, estabelecimentoResponse.numeroEstabelecimento) &&
-        Objects.equals(this.flagMatriz, estabelecimentoResponse.flagMatriz) &&
-        Objects.equals(this.idCredor, estabelecimentoResponse.idCredor) &&
-        Objects.equals(this.numeroReceitaFederal, estabelecimentoResponse.numeroReceitaFederal) &&
-        Objects.equals(this.nome, estabelecimentoResponse.nome) &&
-        Objects.equals(this.descricao, estabelecimentoResponse.descricao) &&
-        Objects.equals(this.nomeFantasia, estabelecimentoResponse.nomeFantasia) &&
-        Objects.equals(this.cep, estabelecimentoResponse.cep) &&
-        Objects.equals(this.nomeLogradouro, estabelecimentoResponse.nomeLogradouro) &&
-        Objects.equals(this.numeroEndereco, estabelecimentoResponse.numeroEndereco) &&
-        Objects.equals(this.bairro, estabelecimentoResponse.bairro) &&
-        Objects.equals(this.cidade, estabelecimentoResponse.cidade) &&
-        Objects.equals(this.complemento, estabelecimentoResponse.complemento) &&
-        Objects.equals(this.uf, estabelecimentoResponse.uf) &&
-        Objects.equals(this.cep2, estabelecimentoResponse.cep2) &&
-        Objects.equals(this.nomeLogradouro2, estabelecimentoResponse.nomeLogradouro2) &&
-        Objects.equals(this.numeroEndereco2, estabelecimentoResponse.numeroEndereco2) &&
-        Objects.equals(this.bairro2, estabelecimentoResponse.bairro2) &&
-        Objects.equals(this.cidade2, estabelecimentoResponse.cidade2) &&
-        Objects.equals(this.complemento2, estabelecimentoResponse.complemento2) &&
-        Objects.equals(this.uf2, estabelecimentoResponse.uf2) &&
-        Objects.equals(this.obs, estabelecimentoResponse.obs) &&
-        Objects.equals(this.contato, estabelecimentoResponse.contato) &&
-        Objects.equals(this.email, estabelecimentoResponse.email) &&
-        Objects.equals(this.flagArquivoSecrFazenda, estabelecimentoResponse.flagArquivoSecrFazenda) &&
-        Objects.equals(this.flagCartaoDigitado, estabelecimentoResponse.flagCartaoDigitado) &&
-        Objects.equals(this.inativo, estabelecimentoResponse.inativo) &&
-        Objects.equals(this.idMoeda, estabelecimentoResponse.idMoeda) &&
-        Objects.equals(this.idPais, estabelecimentoResponse.idPais) &&
-        Objects.equals(this.associadoSPCBrasil, estabelecimentoResponse.associadoSPCBrasil) &&
-        Objects.equals(this.mcc, estabelecimentoResponse.mcc) &&
-        Objects.equals(this.idTipoEstabelecimento, estabelecimentoResponse.idTipoEstabelecimento) &&
-        Objects.equals(this.tipoCorrespondencia, estabelecimentoResponse.tipoCorrespondencia) &&
-        Objects.equals(this.cargoContato, estabelecimentoResponse.cargoContato) &&
-        Objects.equals(this.tipoPagamento, estabelecimentoResponse.tipoPagamento) &&
-        Objects.equals(this.consulta, estabelecimentoResponse.consulta) &&
-        Objects.equals(this.consulta2, estabelecimentoResponse.consulta2) &&
-        Objects.equals(this.consulta3, estabelecimentoResponse.consulta3) &&
-        Objects.equals(this.terminal, estabelecimentoResponse.terminal) &&
-        Objects.equals(this.dataCadastramento, estabelecimentoResponse.dataCadastramento) &&
-        Objects.equals(this.usuario, estabelecimentoResponse.usuario);
+    EstabelecimentoUpdate estabelecimentoUpdate = (EstabelecimentoUpdate) o;
+    return Objects.equals(this.flagMatriz, estabelecimentoUpdate.flagMatriz) &&
+        Objects.equals(this.nome, estabelecimentoUpdate.nome) &&
+        Objects.equals(this.descricao, estabelecimentoUpdate.descricao) &&
+        Objects.equals(this.nomeFantasia, estabelecimentoUpdate.nomeFantasia) &&
+        Objects.equals(this.cep, estabelecimentoUpdate.cep) &&
+        Objects.equals(this.nomeLogradouro, estabelecimentoUpdate.nomeLogradouro) &&
+        Objects.equals(this.numeroEndereco, estabelecimentoUpdate.numeroEndereco) &&
+        Objects.equals(this.bairro, estabelecimentoUpdate.bairro) &&
+        Objects.equals(this.cidade, estabelecimentoUpdate.cidade) &&
+        Objects.equals(this.complemento, estabelecimentoUpdate.complemento) &&
+        Objects.equals(this.uf, estabelecimentoUpdate.uf) &&
+        Objects.equals(this.cep2, estabelecimentoUpdate.cep2) &&
+        Objects.equals(this.nomeLogradouro2, estabelecimentoUpdate.nomeLogradouro2) &&
+        Objects.equals(this.numeroEndereco2, estabelecimentoUpdate.numeroEndereco2) &&
+        Objects.equals(this.bairro2, estabelecimentoUpdate.bairro2) &&
+        Objects.equals(this.cidade2, estabelecimentoUpdate.cidade2) &&
+        Objects.equals(this.complemento2, estabelecimentoUpdate.complemento2) &&
+        Objects.equals(this.uf2, estabelecimentoUpdate.uf2) &&
+        Objects.equals(this.obs, estabelecimentoUpdate.obs) &&
+        Objects.equals(this.contato, estabelecimentoUpdate.contato) &&
+        Objects.equals(this.email, estabelecimentoUpdate.email) &&
+        Objects.equals(this.flagArquivoSecrFazenda, estabelecimentoUpdate.flagArquivoSecrFazenda) &&
+        Objects.equals(this.flagCartaoDigitado, estabelecimentoUpdate.flagCartaoDigitado) &&
+        Objects.equals(this.inativo, estabelecimentoUpdate.inativo) &&
+        Objects.equals(this.idMoeda, estabelecimentoUpdate.idMoeda) &&
+        Objects.equals(this.idPais, estabelecimentoUpdate.idPais) &&
+        Objects.equals(this.associadoSPCBrasil, estabelecimentoUpdate.associadoSPCBrasil) &&
+        Objects.equals(this.mcc, estabelecimentoUpdate.mcc) &&
+        Objects.equals(this.idTipoEstabelecimento, estabelecimentoUpdate.idTipoEstabelecimento) &&
+        Objects.equals(this.tipoCorrespondencia, estabelecimentoUpdate.tipoCorrespondencia) &&
+        Objects.equals(this.cargoContato, estabelecimentoUpdate.cargoContato) &&
+        Objects.equals(this.tipoPagamento, estabelecimentoUpdate.tipoPagamento) &&
+        Objects.equals(this.consulta, estabelecimentoUpdate.consulta) &&
+        Objects.equals(this.consulta2, estabelecimentoUpdate.consulta2) &&
+        Objects.equals(this.consulta3, estabelecimentoUpdate.consulta3) &&
+        Objects.equals(this.sort, estabelecimentoUpdate.sort);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, numeroEstabelecimento, flagMatriz, idCredor, numeroReceitaFederal, nome, descricao, nomeFantasia, cep, nomeLogradouro, numeroEndereco, bairro, cidade, complemento, uf, cep2, nomeLogradouro2, numeroEndereco2, bairro2, cidade2, complemento2, uf2, obs, contato, email, flagArquivoSecrFazenda, flagCartaoDigitado, inativo, idMoeda, idPais, associadoSPCBrasil, mcc, idTipoEstabelecimento, tipoCorrespondencia, cargoContato, tipoPagamento, consulta, consulta2, consulta3, terminal, dataCadastramento, usuario);
+    return Objects.hash(flagMatriz, nome, descricao, nomeFantasia, cep, nomeLogradouro, numeroEndereco, bairro, cidade, complemento, uf, cep2, nomeLogradouro2, numeroEndereco2, bairro2, cidade2, complemento2, uf2, obs, contato, email, flagArquivoSecrFazenda, flagCartaoDigitado, inativo, idMoeda, idPais, associadoSPCBrasil, mcc, idTipoEstabelecimento, tipoCorrespondencia, cargoContato, tipoPagamento, consulta, consulta2, consulta3, sort);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class EstabelecimentoResponse {\n");
+    sb.append("class EstabelecimentoUpdate {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    numeroEstabelecimento: ").append(toIndentedString(numeroEstabelecimento)).append("\n");
     sb.append("    flagMatriz: ").append(toIndentedString(flagMatriz)).append("\n");
-    sb.append("    idCredor: ").append(toIndentedString(idCredor)).append("\n");
-    sb.append("    numeroReceitaFederal: ").append(toIndentedString(numeroReceitaFederal)).append("\n");
     sb.append("    nome: ").append(toIndentedString(nome)).append("\n");
     sb.append("    descricao: ").append(toIndentedString(descricao)).append("\n");
     sb.append("    nomeFantasia: ").append(toIndentedString(nomeFantasia)).append("\n");
@@ -958,9 +836,7 @@ public class EstabelecimentoResponse   {
     sb.append("    consulta: ").append(toIndentedString(consulta)).append("\n");
     sb.append("    consulta2: ").append(toIndentedString(consulta2)).append("\n");
     sb.append("    consulta3: ").append(toIndentedString(consulta3)).append("\n");
-    sb.append("    terminal: ").append(toIndentedString(terminal)).append("\n");
-    sb.append("    dataCadastramento: ").append(toIndentedString(dataCadastramento)).append("\n");
-    sb.append("    usuario: ").append(toIndentedString(usuario)).append("\n");
+    sb.append("    sort: ").append(toIndentedString(sort)).append("\n");
     sb.append("}");
     return sb.toString();
   }

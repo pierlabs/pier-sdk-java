@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v2.model.CredorResponse;
+import br.com.conductor.pier.api.v2.model.TipoTerminalResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -11,14 +11,14 @@ import java.util.List;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de credores
+ * Lista dos tipos de terminais
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de credores")
+@ApiModel(description = "Lista dos tipos de terminais")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class PageCredorResponse   {
+public class PageTipoTerminalResponse   {
   
-  private List<CredorResponse> content = new ArrayList<CredorResponse>();
+  private List<TipoTerminalResponse> content = new ArrayList<TipoTerminalResponse>();
   private Boolean first = null;
   private Boolean firstPage = null;
   private Boolean hasContent = null;
@@ -36,24 +36,24 @@ public class PageCredorResponse   {
   
   /**
    **/
-  public PageCredorResponse content(List<CredorResponse> content) {
+  public PageTipoTerminalResponse content(List<TipoTerminalResponse> content) {
     this.content = content;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("content")
-  public List<CredorResponse> getContent() {
+  public List<TipoTerminalResponse> getContent() {
     return content;
   }
-  public void setContent(List<CredorResponse> content) {
+  public void setContent(List<TipoTerminalResponse> content) {
     this.content = content;
   }
 
   
   /**
    **/
-  public PageCredorResponse first(Boolean first) {
+  public PageTipoTerminalResponse first(Boolean first) {
     this.first = first;
     return this;
   }
@@ -70,7 +70,7 @@ public class PageCredorResponse   {
   
   /**
    **/
-  public PageCredorResponse firstPage(Boolean firstPage) {
+  public PageTipoTerminalResponse firstPage(Boolean firstPage) {
     this.firstPage = firstPage;
     return this;
   }
@@ -87,7 +87,7 @@ public class PageCredorResponse   {
   
   /**
    **/
-  public PageCredorResponse hasContent(Boolean hasContent) {
+  public PageTipoTerminalResponse hasContent(Boolean hasContent) {
     this.hasContent = hasContent;
     return this;
   }
@@ -104,7 +104,7 @@ public class PageCredorResponse   {
   
   /**
    **/
-  public PageCredorResponse hasNextPage(Boolean hasNextPage) {
+  public PageTipoTerminalResponse hasNextPage(Boolean hasNextPage) {
     this.hasNextPage = hasNextPage;
     return this;
   }
@@ -121,7 +121,7 @@ public class PageCredorResponse   {
   
   /**
    **/
-  public PageCredorResponse hasPreviousPage(Boolean hasPreviousPage) {
+  public PageTipoTerminalResponse hasPreviousPage(Boolean hasPreviousPage) {
     this.hasPreviousPage = hasPreviousPage;
     return this;
   }
@@ -138,7 +138,7 @@ public class PageCredorResponse   {
   
   /**
    **/
-  public PageCredorResponse last(Boolean last) {
+  public PageTipoTerminalResponse last(Boolean last) {
     this.last = last;
     return this;
   }
@@ -155,7 +155,7 @@ public class PageCredorResponse   {
   
   /**
    **/
-  public PageCredorResponse nextPage(Integer nextPage) {
+  public PageTipoTerminalResponse nextPage(Integer nextPage) {
     this.nextPage = nextPage;
     return this;
   }
@@ -172,7 +172,7 @@ public class PageCredorResponse   {
   
   /**
    **/
-  public PageCredorResponse number(Integer number) {
+  public PageTipoTerminalResponse number(Integer number) {
     this.number = number;
     return this;
   }
@@ -189,7 +189,7 @@ public class PageCredorResponse   {
   
   /**
    **/
-  public PageCredorResponse numberOfElements(Integer numberOfElements) {
+  public PageTipoTerminalResponse numberOfElements(Integer numberOfElements) {
     this.numberOfElements = numberOfElements;
     return this;
   }
@@ -206,7 +206,7 @@ public class PageCredorResponse   {
   
   /**
    **/
-  public PageCredorResponse previousPage(Integer previousPage) {
+  public PageTipoTerminalResponse previousPage(Integer previousPage) {
     this.previousPage = previousPage;
     return this;
   }
@@ -223,7 +223,7 @@ public class PageCredorResponse   {
   
   /**
    **/
-  public PageCredorResponse size(Integer size) {
+  public PageTipoTerminalResponse size(Integer size) {
     this.size = size;
     return this;
   }
@@ -240,7 +240,7 @@ public class PageCredorResponse   {
   
   /**
    **/
-  public PageCredorResponse totalElements(Long totalElements) {
+  public PageTipoTerminalResponse totalElements(Long totalElements) {
     this.totalElements = totalElements;
     return this;
   }
@@ -257,7 +257,7 @@ public class PageCredorResponse   {
   
   /**
    **/
-  public PageCredorResponse totalPages(Integer totalPages) {
+  public PageTipoTerminalResponse totalPages(Integer totalPages) {
     this.totalPages = totalPages;
     return this;
   }
@@ -281,21 +281,21 @@ public class PageCredorResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    PageCredorResponse pageCredorResponse = (PageCredorResponse) o;
-    return Objects.equals(this.content, pageCredorResponse.content) &&
-        Objects.equals(this.first, pageCredorResponse.first) &&
-        Objects.equals(this.firstPage, pageCredorResponse.firstPage) &&
-        Objects.equals(this.hasContent, pageCredorResponse.hasContent) &&
-        Objects.equals(this.hasNextPage, pageCredorResponse.hasNextPage) &&
-        Objects.equals(this.hasPreviousPage, pageCredorResponse.hasPreviousPage) &&
-        Objects.equals(this.last, pageCredorResponse.last) &&
-        Objects.equals(this.nextPage, pageCredorResponse.nextPage) &&
-        Objects.equals(this.number, pageCredorResponse.number) &&
-        Objects.equals(this.numberOfElements, pageCredorResponse.numberOfElements) &&
-        Objects.equals(this.previousPage, pageCredorResponse.previousPage) &&
-        Objects.equals(this.size, pageCredorResponse.size) &&
-        Objects.equals(this.totalElements, pageCredorResponse.totalElements) &&
-        Objects.equals(this.totalPages, pageCredorResponse.totalPages);
+    PageTipoTerminalResponse pageTipoTerminalResponse = (PageTipoTerminalResponse) o;
+    return Objects.equals(this.content, pageTipoTerminalResponse.content) &&
+        Objects.equals(this.first, pageTipoTerminalResponse.first) &&
+        Objects.equals(this.firstPage, pageTipoTerminalResponse.firstPage) &&
+        Objects.equals(this.hasContent, pageTipoTerminalResponse.hasContent) &&
+        Objects.equals(this.hasNextPage, pageTipoTerminalResponse.hasNextPage) &&
+        Objects.equals(this.hasPreviousPage, pageTipoTerminalResponse.hasPreviousPage) &&
+        Objects.equals(this.last, pageTipoTerminalResponse.last) &&
+        Objects.equals(this.nextPage, pageTipoTerminalResponse.nextPage) &&
+        Objects.equals(this.number, pageTipoTerminalResponse.number) &&
+        Objects.equals(this.numberOfElements, pageTipoTerminalResponse.numberOfElements) &&
+        Objects.equals(this.previousPage, pageTipoTerminalResponse.previousPage) &&
+        Objects.equals(this.size, pageTipoTerminalResponse.size) &&
+        Objects.equals(this.totalElements, pageTipoTerminalResponse.totalElements) &&
+        Objects.equals(this.totalPages, pageTipoTerminalResponse.totalPages);
   }
 
   @Override
@@ -306,7 +306,7 @@ public class PageCredorResponse   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PageCredorResponse {\n");
+    sb.append("class PageTipoTerminalResponse {\n");
     
     sb.append("    content: ").append(toIndentedString(content)).append("\n");
     sb.append("    first: ").append(toIndentedString(first)).append("\n");

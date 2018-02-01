@@ -8,26 +8,45 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * TerminalUpdate
+ * Objeto Terminal
  **/
 
-@ApiModel(description = "TerminalUpdate")
+@ApiModel(description = "Objeto Terminal")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class TerminalUpdate   {
+public class TerminalPersist   {
   
+  private Long idEstabelecimento = null;
   private Boolean flagConsultaExtrato = null;
   private Boolean flagTerminalVirtual = null;
 
   
   /**
-   * Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+   * Apresenta o id do estabelecimento.
    **/
-  public TerminalUpdate flagConsultaExtrato(Boolean flagConsultaExtrato) {
+  public TerminalPersist idEstabelecimento(Long idEstabelecimento) {
+    this.idEstabelecimento = idEstabelecimento;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta o id do estabelecimento.")
+  @JsonProperty("idEstabelecimento")
+  public Long getIdEstabelecimento() {
+    return idEstabelecimento;
+  }
+  public void setIdEstabelecimento(Long idEstabelecimento) {
+    this.idEstabelecimento = idEstabelecimento;
+  }
+
+  
+  /**
+   * Flag indicando se permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+   **/
+  public TerminalPersist flagConsultaExtrato(Boolean flagConsultaExtrato) {
     this.flagConsultaExtrato = flagConsultaExtrato;
     return this;
   }
   
-  @ApiModelProperty(example = "false", required = true, value = "Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).")
+  @ApiModelProperty(example = "false", required = true, value = "Flag indicando se permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).")
   @JsonProperty("flagConsultaExtrato")
   public Boolean getFlagConsultaExtrato() {
     return flagConsultaExtrato;
@@ -40,7 +59,7 @@ public class TerminalUpdate   {
   /**
    * Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
    **/
-  public TerminalUpdate flagTerminalVirtual(Boolean flagTerminalVirtual) {
+  public TerminalPersist flagTerminalVirtual(Boolean flagTerminalVirtual) {
     this.flagTerminalVirtual = flagTerminalVirtual;
     return this;
   }
@@ -64,21 +83,23 @@ public class TerminalUpdate   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    TerminalUpdate terminalUpdate = (TerminalUpdate) o;
-    return Objects.equals(this.flagConsultaExtrato, terminalUpdate.flagConsultaExtrato) &&
-        Objects.equals(this.flagTerminalVirtual, terminalUpdate.flagTerminalVirtual);
+    TerminalPersist terminalPersist = (TerminalPersist) o;
+    return Objects.equals(this.idEstabelecimento, terminalPersist.idEstabelecimento) &&
+        Objects.equals(this.flagConsultaExtrato, terminalPersist.flagConsultaExtrato) &&
+        Objects.equals(this.flagTerminalVirtual, terminalPersist.flagTerminalVirtual);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(flagConsultaExtrato, flagTerminalVirtual);
+    return Objects.hash(idEstabelecimento, flagConsultaExtrato, flagTerminalVirtual);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class TerminalUpdate {\n");
+    sb.append("class TerminalPersist {\n");
     
+    sb.append("    idEstabelecimento: ").append(toIndentedString(idEstabelecimento)).append("\n");
     sb.append("    flagConsultaExtrato: ").append(toIndentedString(flagConsultaExtrato)).append("\n");
     sb.append("    flagTerminalVirtual: ").append(toIndentedString(flagTerminalVirtual)).append("\n");
     sb.append("}");

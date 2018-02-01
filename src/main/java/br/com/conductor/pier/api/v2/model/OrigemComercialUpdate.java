@@ -1,33 +1,26 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v2.model.ProdutoOrigemResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.List;
 
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de origem comercial
+ * Par\u00C3\u00A2metros de requisi\u00C3\u00A7\u00C3\u00A3o para alterar origem comercial
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de origem comercial")
+@ApiModel(description = "Par\u00C3\u00A2metros de requisi\u00C3\u00A7\u00C3\u00A3o para alterar origem comercial")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class OrigemComercialResponse   {
+public class OrigemComercialUpdate   {
   
-  private Long id = null;
   private String nome = null;
   private String descricao = null;
-  private List<ProdutoOrigemResponse> produtosOrigem = new ArrayList<ProdutoOrigemResponse>();
   private Long idEstabelecimento = null;
   private Long idTipoOrigemComercial = null;
-  private String nomeTipoOrigemComercial = null;
   private Long idGrupoOrigemComercial = null;
-  private String nomeGrupoOrigemComercial = null;
   private Integer status = null;
   private Boolean flagPreAprovado = null;
   private Boolean flagAprovacaoImediata = null;
@@ -67,27 +60,9 @@ public class OrigemComercialResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do OrigemComercial
-   **/
-  public OrigemComercialResponse id(Long id) {
-    this.id = id;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "10", value = "C\u00C3\u00B3digo identificador do OrigemComercial")
-  @JsonProperty("id")
-  public Long getId() {
-    return id;
-  }
-  public void setId(Long id) {
-    this.id = id;
-  }
-
-  
-  /**
    * Nome da origem comercial
    **/
-  public OrigemComercialResponse nome(String nome) {
+  public OrigemComercialUpdate nome(String nome) {
     this.nome = nome;
     return this;
   }
@@ -103,14 +78,14 @@ public class OrigemComercialResponse   {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o completa do nome da Origem Comercial
+   * Descri\u00C3\u00A7\u00C3\u00A3o da origem comercial
    **/
-  public OrigemComercialResponse descricao(String descricao) {
+  public OrigemComercialUpdate descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "DESCRIÃÃO DA ORIGEM COMERCIAL", value = "Descri\u00C3\u00A7\u00C3\u00A3o completa do nome da Origem Comercial")
+  @ApiModelProperty(example = "DESCRIÃÃO DA ORIGEM COMERCIAL", value = "Descri\u00C3\u00A7\u00C3\u00A3o da origem comercial")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -121,32 +96,14 @@ public class OrigemComercialResponse   {
 
   
   /**
-   * Produtos da origem comercial
+   * Identificador do estabelecimento
    **/
-  public OrigemComercialResponse produtosOrigem(List<ProdutoOrigemResponse> produtosOrigem) {
-    this.produtosOrigem = produtosOrigem;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Produtos da origem comercial")
-  @JsonProperty("produtosOrigem")
-  public List<ProdutoOrigemResponse> getProdutosOrigem() {
-    return produtosOrigem;
-  }
-  public void setProdutosOrigem(List<ProdutoOrigemResponse> produtosOrigem) {
-    this.produtosOrigem = produtosOrigem;
-  }
-
-  
-  /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento
-   **/
-  public OrigemComercialResponse idEstabelecimento(Long idEstabelecimento) {
+  public OrigemComercialUpdate idEstabelecimento(Long idEstabelecimento) {
     this.idEstabelecimento = idEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "1", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento")
+  @ApiModelProperty(example = "10", value = "Identificador do estabelecimento")
   @JsonProperty("idEstabelecimento")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
@@ -157,14 +114,14 @@ public class OrigemComercialResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Tipo da Origem Comercial
+   * Identificador do tipo de origem comercial
    **/
-  public OrigemComercialResponse idTipoOrigemComercial(Long idTipoOrigemComercial) {
+  public OrigemComercialUpdate idTipoOrigemComercial(Long idTipoOrigemComercial) {
     this.idTipoOrigemComercial = idTipoOrigemComercial;
     return this;
   }
   
-  @ApiModelProperty(example = "1", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Tipo da Origem Comercial")
+  @ApiModelProperty(example = "1", value = "Identificador do tipo de origem comercial")
   @JsonProperty("idTipoOrigemComercial")
   public Long getIdTipoOrigemComercial() {
     return idTipoOrigemComercial;
@@ -175,32 +132,14 @@ public class OrigemComercialResponse   {
 
   
   /**
-   * Nome do Tipo da Origem Comercial
+   * Identificador do grupo de origem comercial
    **/
-  public OrigemComercialResponse nomeTipoOrigemComercial(String nomeTipoOrigemComercial) {
-    this.nomeTipoOrigemComercial = nomeTipoOrigemComercial;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "NOME DO TIPO DE ORIGEM COMERCIAL", value = "Nome do Tipo da Origem Comercial")
-  @JsonProperty("nomeTipoOrigemComercial")
-  public String getNomeTipoOrigemComercial() {
-    return nomeTipoOrigemComercial;
-  }
-  public void setNomeTipoOrigemComercial(String nomeTipoOrigemComercial) {
-    this.nomeTipoOrigemComercial = nomeTipoOrigemComercial;
-  }
-
-  
-  /**
-   * Identificador do grupo da origem comercial
-   **/
-  public OrigemComercialResponse idGrupoOrigemComercial(Long idGrupoOrigemComercial) {
+  public OrigemComercialUpdate idGrupoOrigemComercial(Long idGrupoOrigemComercial) {
     this.idGrupoOrigemComercial = idGrupoOrigemComercial;
     return this;
   }
   
-  @ApiModelProperty(example = "1", value = "Identificador do grupo da origem comercial")
+  @ApiModelProperty(example = "1", value = "Identificador do grupo de origem comercial")
   @JsonProperty("idGrupoOrigemComercial")
   public Long getIdGrupoOrigemComercial() {
     return idGrupoOrigemComercial;
@@ -211,27 +150,9 @@ public class OrigemComercialResponse   {
 
   
   /**
-   * Nome do grupo da origem comercial
-   **/
-  public OrigemComercialResponse nomeGrupoOrigemComercial(String nomeGrupoOrigemComercial) {
-    this.nomeGrupoOrigemComercial = nomeGrupoOrigemComercial;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "NOME DO GRUPO DA ORIGEM COMERCIAL", value = "Nome do grupo da origem comercial")
-  @JsonProperty("nomeGrupoOrigemComercial")
-  public String getNomeGrupoOrigemComercial() {
-    return nomeGrupoOrigemComercial;
-  }
-  public void setNomeGrupoOrigemComercial(String nomeGrupoOrigemComercial) {
-    this.nomeGrupoOrigemComercial = nomeGrupoOrigemComercial;
-  }
-
-  
-  /**
    * Indica o status da origem comercial
    **/
-  public OrigemComercialResponse status(Integer status) {
+  public OrigemComercialUpdate status(Integer status) {
     this.status = status;
     return this;
   }
@@ -249,7 +170,7 @@ public class OrigemComercialResponse   {
   /**
    * Indica se permite pr\u00C3\u00A9 aprova\u00C3\u00A7\u00C3\u00A3o
    **/
-  public OrigemComercialResponse flagPreAprovado(Boolean flagPreAprovado) {
+  public OrigemComercialUpdate flagPreAprovado(Boolean flagPreAprovado) {
     this.flagPreAprovado = flagPreAprovado;
     return this;
   }
@@ -267,7 +188,7 @@ public class OrigemComercialResponse   {
   /**
    * Indica se permite aprova\u00C3\u00A7\u00C3\u00A3o imediata
    **/
-  public OrigemComercialResponse flagAprovacaoImediata(Boolean flagAprovacaoImediata) {
+  public OrigemComercialUpdate flagAprovacaoImediata(Boolean flagAprovacaoImediata) {
     this.flagAprovacaoImediata = flagAprovacaoImediata;
     return this;
   }
@@ -285,7 +206,7 @@ public class OrigemComercialResponse   {
   /**
    * Nome fantasia impresso no pl\u00C3\u00A1stico
    **/
-  public OrigemComercialResponse nomeFantasiaPlastico(String nomeFantasiaPlastico) {
+  public OrigemComercialUpdate nomeFantasiaPlastico(String nomeFantasiaPlastico) {
     this.nomeFantasiaPlastico = nomeFantasiaPlastico;
     return this;
   }
@@ -303,7 +224,7 @@ public class OrigemComercialResponse   {
   /**
    * Indica se permite cart\u00C3\u00A3o provis\u00C3\u00B3rio
    **/
-  public OrigemComercialResponse flagCartaoProvisorio(Boolean flagCartaoProvisorio) {
+  public OrigemComercialUpdate flagCartaoProvisorio(Boolean flagCartaoProvisorio) {
     this.flagCartaoProvisorio = flagCartaoProvisorio;
     return this;
   }
@@ -321,7 +242,7 @@ public class OrigemComercialResponse   {
   /**
    * Indica se permite cart\u00C3\u00A3o definitivo
    **/
-  public OrigemComercialResponse flagCartaoDefinitivo(Boolean flagCartaoDefinitivo) {
+  public OrigemComercialUpdate flagCartaoDefinitivo(Boolean flagCartaoDefinitivo) {
     this.flagCartaoDefinitivo = flagCartaoDefinitivo;
     return this;
   }
@@ -339,7 +260,7 @@ public class OrigemComercialResponse   {
   /**
    * Usu\u00C3\u00A1rio para autentica\u00C3\u00A7\u00C3\u00A3o
    **/
-  public OrigemComercialResponse usuario(String usuario) {
+  public OrigemComercialUpdate usuario(String usuario) {
     this.usuario = usuario;
     return this;
   }
@@ -357,7 +278,7 @@ public class OrigemComercialResponse   {
   /**
    * Senha para autentica\u00C3\u00A7\u00C3\u00A3o
    **/
-  public OrigemComercialResponse senha(String senha) {
+  public OrigemComercialUpdate senha(String senha) {
     this.senha = senha;
     return this;
   }
@@ -375,7 +296,7 @@ public class OrigemComercialResponse   {
   /**
    * Indica se \u00C3\u00A9 origem externa
    **/
-  public OrigemComercialResponse flagOrigemExterna(Boolean flagOrigemExterna) {
+  public OrigemComercialUpdate flagOrigemExterna(Boolean flagOrigemExterna) {
     this.flagOrigemExterna = flagOrigemExterna;
     return this;
   }
@@ -393,7 +314,7 @@ public class OrigemComercialResponse   {
   /**
    * Indica se h\u00C3\u00A1 modifica\u00C3\u00A7\u00C3\u00A3o
    **/
-  public OrigemComercialResponse flagModificado(Boolean flagModificado) {
+  public OrigemComercialUpdate flagModificado(Boolean flagModificado) {
     this.flagModificado = flagModificado;
     return this;
   }
@@ -411,7 +332,7 @@ public class OrigemComercialResponse   {
   /**
    * Indica se envia fatura
    **/
-  public OrigemComercialResponse flagEnviaFaturaUsuario(Boolean flagEnviaFaturaUsuario) {
+  public OrigemComercialUpdate flagEnviaFaturaUsuario(Boolean flagEnviaFaturaUsuario) {
     this.flagEnviaFaturaUsuario = flagEnviaFaturaUsuario;
     return this;
   }
@@ -429,7 +350,7 @@ public class OrigemComercialResponse   {
   /**
    * Indica se permite cr\u00C3\u00A9dito de faturamento
    **/
-  public OrigemComercialResponse flagCreditoFaturamento(Boolean flagCreditoFaturamento) {
+  public OrigemComercialUpdate flagCreditoFaturamento(Boolean flagCreditoFaturamento) {
     this.flagCreditoFaturamento = flagCreditoFaturamento;
     return this;
   }
@@ -447,7 +368,7 @@ public class OrigemComercialResponse   {
   /**
    * Indica se concede limite provis\u00C3\u00B3rio
    **/
-  public OrigemComercialResponse flagConcedeLimiteProvisorio(Boolean flagConcedeLimiteProvisorio) {
+  public OrigemComercialUpdate flagConcedeLimiteProvisorio(Boolean flagConcedeLimiteProvisorio) {
     this.flagConcedeLimiteProvisorio = flagConcedeLimiteProvisorio;
     return this;
   }
@@ -465,7 +386,7 @@ public class OrigemComercialResponse   {
   /**
    * Indica se digitaliza documento
    **/
-  public OrigemComercialResponse flagDigitalizarDoc(Boolean flagDigitalizarDoc) {
+  public OrigemComercialUpdate flagDigitalizarDoc(Boolean flagDigitalizarDoc) {
     this.flagDigitalizarDoc = flagDigitalizarDoc;
     return this;
   }
@@ -483,7 +404,7 @@ public class OrigemComercialResponse   {
   /**
    * Indica se realiza embossing em loja
    **/
-  public OrigemComercialResponse flagEmbossingLoja(Boolean flagEmbossingLoja) {
+  public OrigemComercialUpdate flagEmbossingLoja(Boolean flagEmbossingLoja) {
     this.flagEmbossingLoja = flagEmbossingLoja;
     return this;
   }
@@ -501,7 +422,7 @@ public class OrigemComercialResponse   {
   /**
    * Indica se realiza consulta pr\u00C3\u00A9via
    **/
-  public OrigemComercialResponse flagConsultaPrevia(Boolean flagConsultaPrevia) {
+  public OrigemComercialUpdate flagConsultaPrevia(Boolean flagConsultaPrevia) {
     this.flagConsultaPrevia = flagConsultaPrevia;
     return this;
   }
@@ -519,7 +440,7 @@ public class OrigemComercialResponse   {
   /**
    * Tipo de pessoa
    **/
-  public OrigemComercialResponse tipoPessoa(TipoPessoaEnum tipoPessoa) {
+  public OrigemComercialUpdate tipoPessoa(TipoPessoaEnum tipoPessoa) {
     this.tipoPessoa = tipoPessoa;
     return this;
   }
@@ -543,54 +464,46 @@ public class OrigemComercialResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    OrigemComercialResponse origemComercialResponse = (OrigemComercialResponse) o;
-    return Objects.equals(this.id, origemComercialResponse.id) &&
-        Objects.equals(this.nome, origemComercialResponse.nome) &&
-        Objects.equals(this.descricao, origemComercialResponse.descricao) &&
-        Objects.equals(this.produtosOrigem, origemComercialResponse.produtosOrigem) &&
-        Objects.equals(this.idEstabelecimento, origemComercialResponse.idEstabelecimento) &&
-        Objects.equals(this.idTipoOrigemComercial, origemComercialResponse.idTipoOrigemComercial) &&
-        Objects.equals(this.nomeTipoOrigemComercial, origemComercialResponse.nomeTipoOrigemComercial) &&
-        Objects.equals(this.idGrupoOrigemComercial, origemComercialResponse.idGrupoOrigemComercial) &&
-        Objects.equals(this.nomeGrupoOrigemComercial, origemComercialResponse.nomeGrupoOrigemComercial) &&
-        Objects.equals(this.status, origemComercialResponse.status) &&
-        Objects.equals(this.flagPreAprovado, origemComercialResponse.flagPreAprovado) &&
-        Objects.equals(this.flagAprovacaoImediata, origemComercialResponse.flagAprovacaoImediata) &&
-        Objects.equals(this.nomeFantasiaPlastico, origemComercialResponse.nomeFantasiaPlastico) &&
-        Objects.equals(this.flagCartaoProvisorio, origemComercialResponse.flagCartaoProvisorio) &&
-        Objects.equals(this.flagCartaoDefinitivo, origemComercialResponse.flagCartaoDefinitivo) &&
-        Objects.equals(this.usuario, origemComercialResponse.usuario) &&
-        Objects.equals(this.senha, origemComercialResponse.senha) &&
-        Objects.equals(this.flagOrigemExterna, origemComercialResponse.flagOrigemExterna) &&
-        Objects.equals(this.flagModificado, origemComercialResponse.flagModificado) &&
-        Objects.equals(this.flagEnviaFaturaUsuario, origemComercialResponse.flagEnviaFaturaUsuario) &&
-        Objects.equals(this.flagCreditoFaturamento, origemComercialResponse.flagCreditoFaturamento) &&
-        Objects.equals(this.flagConcedeLimiteProvisorio, origemComercialResponse.flagConcedeLimiteProvisorio) &&
-        Objects.equals(this.flagDigitalizarDoc, origemComercialResponse.flagDigitalizarDoc) &&
-        Objects.equals(this.flagEmbossingLoja, origemComercialResponse.flagEmbossingLoja) &&
-        Objects.equals(this.flagConsultaPrevia, origemComercialResponse.flagConsultaPrevia) &&
-        Objects.equals(this.tipoPessoa, origemComercialResponse.tipoPessoa);
+    OrigemComercialUpdate origemComercialUpdate = (OrigemComercialUpdate) o;
+    return Objects.equals(this.nome, origemComercialUpdate.nome) &&
+        Objects.equals(this.descricao, origemComercialUpdate.descricao) &&
+        Objects.equals(this.idEstabelecimento, origemComercialUpdate.idEstabelecimento) &&
+        Objects.equals(this.idTipoOrigemComercial, origemComercialUpdate.idTipoOrigemComercial) &&
+        Objects.equals(this.idGrupoOrigemComercial, origemComercialUpdate.idGrupoOrigemComercial) &&
+        Objects.equals(this.status, origemComercialUpdate.status) &&
+        Objects.equals(this.flagPreAprovado, origemComercialUpdate.flagPreAprovado) &&
+        Objects.equals(this.flagAprovacaoImediata, origemComercialUpdate.flagAprovacaoImediata) &&
+        Objects.equals(this.nomeFantasiaPlastico, origemComercialUpdate.nomeFantasiaPlastico) &&
+        Objects.equals(this.flagCartaoProvisorio, origemComercialUpdate.flagCartaoProvisorio) &&
+        Objects.equals(this.flagCartaoDefinitivo, origemComercialUpdate.flagCartaoDefinitivo) &&
+        Objects.equals(this.usuario, origemComercialUpdate.usuario) &&
+        Objects.equals(this.senha, origemComercialUpdate.senha) &&
+        Objects.equals(this.flagOrigemExterna, origemComercialUpdate.flagOrigemExterna) &&
+        Objects.equals(this.flagModificado, origemComercialUpdate.flagModificado) &&
+        Objects.equals(this.flagEnviaFaturaUsuario, origemComercialUpdate.flagEnviaFaturaUsuario) &&
+        Objects.equals(this.flagCreditoFaturamento, origemComercialUpdate.flagCreditoFaturamento) &&
+        Objects.equals(this.flagConcedeLimiteProvisorio, origemComercialUpdate.flagConcedeLimiteProvisorio) &&
+        Objects.equals(this.flagDigitalizarDoc, origemComercialUpdate.flagDigitalizarDoc) &&
+        Objects.equals(this.flagEmbossingLoja, origemComercialUpdate.flagEmbossingLoja) &&
+        Objects.equals(this.flagConsultaPrevia, origemComercialUpdate.flagConsultaPrevia) &&
+        Objects.equals(this.tipoPessoa, origemComercialUpdate.tipoPessoa);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, nome, descricao, produtosOrigem, idEstabelecimento, idTipoOrigemComercial, nomeTipoOrigemComercial, idGrupoOrigemComercial, nomeGrupoOrigemComercial, status, flagPreAprovado, flagAprovacaoImediata, nomeFantasiaPlastico, flagCartaoProvisorio, flagCartaoDefinitivo, usuario, senha, flagOrigemExterna, flagModificado, flagEnviaFaturaUsuario, flagCreditoFaturamento, flagConcedeLimiteProvisorio, flagDigitalizarDoc, flagEmbossingLoja, flagConsultaPrevia, tipoPessoa);
+    return Objects.hash(nome, descricao, idEstabelecimento, idTipoOrigemComercial, idGrupoOrigemComercial, status, flagPreAprovado, flagAprovacaoImediata, nomeFantasiaPlastico, flagCartaoProvisorio, flagCartaoDefinitivo, usuario, senha, flagOrigemExterna, flagModificado, flagEnviaFaturaUsuario, flagCreditoFaturamento, flagConcedeLimiteProvisorio, flagDigitalizarDoc, flagEmbossingLoja, flagConsultaPrevia, tipoPessoa);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class OrigemComercialResponse {\n");
+    sb.append("class OrigemComercialUpdate {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    nome: ").append(toIndentedString(nome)).append("\n");
     sb.append("    descricao: ").append(toIndentedString(descricao)).append("\n");
-    sb.append("    produtosOrigem: ").append(toIndentedString(produtosOrigem)).append("\n");
     sb.append("    idEstabelecimento: ").append(toIndentedString(idEstabelecimento)).append("\n");
     sb.append("    idTipoOrigemComercial: ").append(toIndentedString(idTipoOrigemComercial)).append("\n");
-    sb.append("    nomeTipoOrigemComercial: ").append(toIndentedString(nomeTipoOrigemComercial)).append("\n");
     sb.append("    idGrupoOrigemComercial: ").append(toIndentedString(idGrupoOrigemComercial)).append("\n");
-    sb.append("    nomeGrupoOrigemComercial: ").append(toIndentedString(nomeGrupoOrigemComercial)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    flagPreAprovado: ").append(toIndentedString(flagPreAprovado)).append("\n");
     sb.append("    flagAprovacaoImediata: ").append(toIndentedString(flagAprovacaoImediata)).append("\n");

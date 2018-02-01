@@ -52,17 +52,17 @@ public class DocumentoApi {
    * @param persist persist
    * @return TipoTemplateResponse
    */
-  public TipoTemplateResponse alterarUsingPUT17(Long id, TipoTemplateRequest persist) throws ApiException {
+  public TipoTemplateResponse alterarUsingPUT19(Long id, TipoTemplateRequest persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT17");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT19");
      }
      
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling alterarUsingPUT17");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling alterarUsingPUT19");
      }
      
     // create path and map variables
@@ -159,12 +159,12 @@ public class DocumentoApi {
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento (id).
    * @return DocumentoDetalhadoResponse
    */
-  public DocumentoDetalhadoResponse consultarUsingGET13(Long id) throws ApiException {
+  public DocumentoDetalhadoResponse consultarUsingGET12(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET13");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET12");
      }
      
     // create path and map variables
@@ -207,12 +207,12 @@ public class DocumentoApi {
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento template (id).
    * @return DocumentoTemplateResponse
    */
-  public DocumentoTemplateResponse consultarUsingGET14(Long id) throws ApiException {
+  public DocumentoTemplateResponse consultarUsingGET13(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET14");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET13");
      }
      
     // create path and map variables
@@ -255,12 +255,12 @@ public class DocumentoApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id).
    * @return TipoTemplateResponse
    */
-  public TipoTemplateResponse consultarUsingGET36(Long id) throws ApiException {
+  public TipoTemplateResponse consultarUsingGET37(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET36");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET37");
      }
      
     // create path and map variables
@@ -355,7 +355,7 @@ public class DocumentoApi {
    * @param extensao Extensao do documento.
    * @return PageDocumentoResponse
    */
-  public PageDocumentoResponse listarUsingGET16(List<String> sort, Integer page, Integer limit, Long idTemplateDocumento, String nome, String extensao) throws ApiException {
+  public PageDocumentoResponse listarUsingGET15(List<String> sort, Integer page, Integer limit, Long idTemplateDocumento, String nome, String extensao) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -412,7 +412,7 @@ public class DocumentoApi {
    * @param idTipoTemplate C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do template.
    * @return PageDocumentoTemplateResponse
    */
-  public PageDocumentoTemplateResponse listarUsingGET17(List<String> sort, Integer page, Integer limit, Long idTipoTemplate) throws ApiException {
+  public PageDocumentoTemplateResponse listarUsingGET16(List<String> sort, Integer page, Integer limit, Long idTipoTemplate) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -464,7 +464,7 @@ public class DocumentoApi {
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @return PageTipoTemplateResponse
    */
-  public PageTipoTemplateResponse listarUsingGET40(List<String> sort, Integer page, Integer limit) throws ApiException {
+  public PageTipoTemplateResponse listarUsingGET42(List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -559,12 +559,12 @@ public class DocumentoApi {
    * @param persist persist
    * @return TipoTemplateResponse
    */
-  public TipoTemplateResponse salvarUsingPOST23(TipoTemplateRequest persist) throws ApiException {
+  public TipoTemplateResponse salvarUsingPOST25(TipoTemplateRequest persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST23");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST25");
      }
      
     // create path and map variables
