@@ -3,6 +3,7 @@ package br.com.conductor.pier.api.v2.model;
 import java.util.Objects;
 import br.com.conductor.pier.api.v2.model.ArquivoDetalhesPersist;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
@@ -22,6 +23,26 @@ public class ArquivoPersist   {
   private String arquivo = null;
   private String nome = null;
   private String extensao = null;
+
+
+  public enum TipoComunicacaoEnum {
+    SOAP("SOAP"),
+    REST("REST");
+
+    private String value;
+
+    TipoComunicacaoEnum(String value) {
+      this.value = value;
+    }
+
+    @Override
+    @JsonValue
+    public String toString() {
+      return value;
+    }
+  }
+
+  private TipoComunicacaoEnum tipoComunicacao = null;
   private List<ArquivoDetalhesPersist> detalhes = new ArrayList<ArquivoDetalhesPersist>();
 
   
@@ -51,7 +72,7 @@ public class ArquivoPersist   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Conte\u00C3\u00BAdo do arquivo convertido em Base 64")
+  @ApiModelProperty(example = "null", required = true, value = "Conte\u00C3\u00BAdo do arquivo convertido em Base 64")
   @JsonProperty("arquivo")
   public String getArquivo() {
     return arquivo;
@@ -98,6 +119,24 @@ public class ArquivoPersist   {
 
   
   /**
+   * Tipo de comunica\u00C3\u00A7\u00C3\u00A3o.
+   **/
+  public ArquivoPersist tipoComunicacao(TipoComunicacaoEnum tipoComunicacao) {
+    this.tipoComunicacao = tipoComunicacao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "SOAP", value = "Tipo de comunica\u00C3\u00A7\u00C3\u00A3o.")
+  @JsonProperty("tipoComunicacao")
+  public TipoComunicacaoEnum getTipoComunicacao() {
+    return tipoComunicacao;
+  }
+  public void setTipoComunicacao(TipoComunicacaoEnum tipoComunicacao) {
+    this.tipoComunicacao = tipoComunicacao;
+  }
+
+  
+  /**
    * Detalhes contendo informa\u00C3\u00A7\u00C3\u00B5es adicionais, relacionadas ao arquivo
    **/
   public ArquivoPersist detalhes(List<ArquivoDetalhesPersist> detalhes) {
@@ -129,12 +168,13 @@ public class ArquivoPersist   {
         Objects.equals(this.arquivo, arquivoPersist.arquivo) &&
         Objects.equals(this.nome, arquivoPersist.nome) &&
         Objects.equals(this.extensao, arquivoPersist.extensao) &&
+        Objects.equals(this.tipoComunicacao, arquivoPersist.tipoComunicacao) &&
         Objects.equals(this.detalhes, arquivoPersist.detalhes);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idTipoArquivo, arquivo, nome, extensao, detalhes);
+    return Objects.hash(idTipoArquivo, arquivo, nome, extensao, tipoComunicacao, detalhes);
   }
 
   @Override
@@ -146,6 +186,7 @@ public class ArquivoPersist   {
     sb.append("    arquivo: ").append(toIndentedString(arquivo)).append("\n");
     sb.append("    nome: ").append(toIndentedString(nome)).append("\n");
     sb.append("    extensao: ").append(toIndentedString(extensao)).append("\n");
+    sb.append("    tipoComunicacao: ").append(toIndentedString(tipoComunicacao)).append("\n");
     sb.append("    detalhes: ").append(toIndentedString(detalhes)).append("\n");
     sb.append("}");
     return sb.toString();

@@ -303,12 +303,12 @@ public class DocumentoApi {
    * @param integrarDocumentoRequest integrarDocumentoRequest
    * @return DocumentoIntegracaoResponse
    */
-  public DocumentoIntegracaoResponse integrarUsingPOST(IntegrarDocumentoRequest integrarDocumentoRequest) throws ApiException {
+  public DocumentoIntegracaoResponse integrarUsingPOST1(IntegrarDocumentoRequest integrarDocumentoRequest) throws ApiException {
     Object postBody = integrarDocumentoRequest;
     
      // verify the required parameter 'integrarDocumentoRequest' is set
      if (integrarDocumentoRequest == null) {
-        throw new ApiException(400, "Missing the required parameter 'integrarDocumentoRequest' when calling integrarUsingPOST");
+        throw new ApiException(400, "Missing the required parameter 'integrarDocumentoRequest' when calling integrarUsingPOST1");
      }
      
     // create path and map variables
@@ -355,7 +355,7 @@ public class DocumentoApi {
    * @param extensao Extensao do documento.
    * @return PageDocumentoResponse
    */
-  public PageDocumentoResponse listarUsingGET15(List<String> sort, Integer page, Integer limit, Long idTemplateDocumento, String nome, String extensao) throws ApiException {
+  public PageDocumentoResponse listarUsingGET16(List<String> sort, Integer page, Integer limit, Long idTemplateDocumento, String nome, String extensao) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -412,7 +412,7 @@ public class DocumentoApi {
    * @param idTipoTemplate C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do template.
    * @return PageDocumentoTemplateResponse
    */
-  public PageDocumentoTemplateResponse listarUsingGET16(List<String> sort, Integer page, Integer limit, Long idTipoTemplate) throws ApiException {
+  public PageDocumentoTemplateResponse listarUsingGET17(List<String> sort, Integer page, Integer limit, Long idTipoTemplate) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -464,7 +464,7 @@ public class DocumentoApi {
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @return PageTipoTemplateResponse
    */
-  public PageTipoTemplateResponse listarUsingGET42(List<String> sort, Integer page, Integer limit) throws ApiException {
+  public PageTipoTemplateResponse listarUsingGET43(List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

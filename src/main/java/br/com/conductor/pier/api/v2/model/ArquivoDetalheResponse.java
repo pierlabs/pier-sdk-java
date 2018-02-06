@@ -16,11 +16,12 @@ import java.util.List;
 
 @ApiModel(description = "Objeto Response do arquivo.")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class ArquivoResponse   {
+public class ArquivoDetalheResponse   {
   
   private Long id = null;
   private Long idTipoArquivo = null;
   private String nomeTipoArquivo = null;
+  private String arquivo = null;
   private Long idStatusArquivo = null;
   private String nomeStatusArquivo = null;
   private String nome = null;
@@ -33,7 +34,7 @@ public class ArquivoResponse   {
   /**
    * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do arquivo
    **/
-  public ArquivoResponse id(Long id) {
+  public ArquivoDetalheResponse id(Long id) {
     this.id = id;
     return this;
   }
@@ -51,7 +52,7 @@ public class ArquivoResponse   {
   /**
    * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do arquivo
    **/
-  public ArquivoResponse idTipoArquivo(Long idTipoArquivo) {
+  public ArquivoDetalheResponse idTipoArquivo(Long idTipoArquivo) {
     this.idTipoArquivo = idTipoArquivo;
     return this;
   }
@@ -69,7 +70,7 @@ public class ArquivoResponse   {
   /**
    * Descri\u00C3\u00A7\u00C3\u00A3o do tipo do arquivo
    **/
-  public ArquivoResponse nomeTipoArquivo(String nomeTipoArquivo) {
+  public ArquivoDetalheResponse nomeTipoArquivo(String nomeTipoArquivo) {
     this.nomeTipoArquivo = nomeTipoArquivo;
     return this;
   }
@@ -85,9 +86,27 @@ public class ArquivoResponse   {
 
   
   /**
+   * Conte\u00C3\u00BAdo do arquivo convertido em Base 64
+   **/
+  public ArquivoDetalheResponse arquivo(String arquivo) {
+    this.arquivo = arquivo;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Conte\u00C3\u00BAdo do arquivo convertido em Base 64")
+  @JsonProperty("arquivo")
+  public String getArquivo() {
+    return arquivo;
+  }
+  public void setArquivo(String arquivo) {
+    this.arquivo = arquivo;
+  }
+
+  
+  /**
    * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Status do arquivo
    **/
-  public ArquivoResponse idStatusArquivo(Long idStatusArquivo) {
+  public ArquivoDetalheResponse idStatusArquivo(Long idStatusArquivo) {
     this.idStatusArquivo = idStatusArquivo;
     return this;
   }
@@ -105,7 +124,7 @@ public class ArquivoResponse   {
   /**
    * Desci\u00C3\u00A7\u00C3\u00A3o do status do arquivo
    **/
-  public ArquivoResponse nomeStatusArquivo(String nomeStatusArquivo) {
+  public ArquivoDetalheResponse nomeStatusArquivo(String nomeStatusArquivo) {
     this.nomeStatusArquivo = nomeStatusArquivo;
     return this;
   }
@@ -123,7 +142,7 @@ public class ArquivoResponse   {
   /**
    * Nome do arquivo
    **/
-  public ArquivoResponse nome(String nome) {
+  public ArquivoDetalheResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
@@ -141,7 +160,7 @@ public class ArquivoResponse   {
   /**
    * Formato/Extens\u00C3\u00A3o do arquivo
    **/
-  public ArquivoResponse extensao(String extensao) {
+  public ArquivoDetalheResponse extensao(String extensao) {
     this.extensao = extensao;
     return this;
   }
@@ -159,7 +178,7 @@ public class ArquivoResponse   {
   /**
    * Data de inclus\u00C3\u00A3o do arquivo.
    **/
-  public ArquivoResponse dataInclusao(String dataInclusao) {
+  public ArquivoDetalheResponse dataInclusao(String dataInclusao) {
     this.dataInclusao = dataInclusao;
     return this;
   }
@@ -177,7 +196,7 @@ public class ArquivoResponse   {
   /**
    * Data da \u00C3\u00BAltima altera\u00C3\u00A7\u00C3\u00A3o do aquivo.
    **/
-  public ArquivoResponse dataAlteracao(String dataAlteracao) {
+  public ArquivoDetalheResponse dataAlteracao(String dataAlteracao) {
     this.dataAlteracao = dataAlteracao;
     return this;
   }
@@ -195,7 +214,7 @@ public class ArquivoResponse   {
   /**
    * Detalhes contendo informa\u00C3\u00A7\u00C3\u00B5es adicionais, relacionadas ao arquivo.
    **/
-  public ArquivoResponse detalhes(List<ArquivoParametroResponse> detalhes) {
+  public ArquivoDetalheResponse detalhes(List<ArquivoParametroResponse> detalhes) {
     this.detalhes = detalhes;
     return this;
   }
@@ -219,32 +238,34 @@ public class ArquivoResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ArquivoResponse arquivoResponse = (ArquivoResponse) o;
-    return Objects.equals(this.id, arquivoResponse.id) &&
-        Objects.equals(this.idTipoArquivo, arquivoResponse.idTipoArquivo) &&
-        Objects.equals(this.nomeTipoArquivo, arquivoResponse.nomeTipoArquivo) &&
-        Objects.equals(this.idStatusArquivo, arquivoResponse.idStatusArquivo) &&
-        Objects.equals(this.nomeStatusArquivo, arquivoResponse.nomeStatusArquivo) &&
-        Objects.equals(this.nome, arquivoResponse.nome) &&
-        Objects.equals(this.extensao, arquivoResponse.extensao) &&
-        Objects.equals(this.dataInclusao, arquivoResponse.dataInclusao) &&
-        Objects.equals(this.dataAlteracao, arquivoResponse.dataAlteracao) &&
-        Objects.equals(this.detalhes, arquivoResponse.detalhes);
+    ArquivoDetalheResponse arquivoDetalheResponse = (ArquivoDetalheResponse) o;
+    return Objects.equals(this.id, arquivoDetalheResponse.id) &&
+        Objects.equals(this.idTipoArquivo, arquivoDetalheResponse.idTipoArquivo) &&
+        Objects.equals(this.nomeTipoArquivo, arquivoDetalheResponse.nomeTipoArquivo) &&
+        Objects.equals(this.arquivo, arquivoDetalheResponse.arquivo) &&
+        Objects.equals(this.idStatusArquivo, arquivoDetalheResponse.idStatusArquivo) &&
+        Objects.equals(this.nomeStatusArquivo, arquivoDetalheResponse.nomeStatusArquivo) &&
+        Objects.equals(this.nome, arquivoDetalheResponse.nome) &&
+        Objects.equals(this.extensao, arquivoDetalheResponse.extensao) &&
+        Objects.equals(this.dataInclusao, arquivoDetalheResponse.dataInclusao) &&
+        Objects.equals(this.dataAlteracao, arquivoDetalheResponse.dataAlteracao) &&
+        Objects.equals(this.detalhes, arquivoDetalheResponse.detalhes);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idTipoArquivo, nomeTipoArquivo, idStatusArquivo, nomeStatusArquivo, nome, extensao, dataInclusao, dataAlteracao, detalhes);
+    return Objects.hash(id, idTipoArquivo, nomeTipoArquivo, arquivo, idStatusArquivo, nomeStatusArquivo, nome, extensao, dataInclusao, dataAlteracao, detalhes);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ArquivoResponse {\n");
+    sb.append("class ArquivoDetalheResponse {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idTipoArquivo: ").append(toIndentedString(idTipoArquivo)).append("\n");
     sb.append("    nomeTipoArquivo: ").append(toIndentedString(nomeTipoArquivo)).append("\n");
+    sb.append("    arquivo: ").append(toIndentedString(arquivo)).append("\n");
     sb.append("    idStatusArquivo: ").append(toIndentedString(idStatusArquivo)).append("\n");
     sb.append("    nomeStatusArquivo: ").append(toIndentedString(nomeStatusArquivo)).append("\n");
     sb.append("    nome: ").append(toIndentedString(nome)).append("\n");

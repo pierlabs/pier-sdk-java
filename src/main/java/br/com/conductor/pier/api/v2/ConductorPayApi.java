@@ -495,7 +495,7 @@ public class ConductorPayApi {
    * @param numeroCartao Numero do cart\u00C3\u00A3o tokenizado
    * @return PageCartaoPayResponse
    */
-  public PageCartaoPayResponse listarUsingGET6(String deviceId, List<String> sort, Integer page, Integer limit, String status, String numeroCartao) throws ApiException {
+  public PageCartaoPayResponse listarUsingGET7(String deviceId, List<String> sort, Integer page, Integer limit, String status, String numeroCartao) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
