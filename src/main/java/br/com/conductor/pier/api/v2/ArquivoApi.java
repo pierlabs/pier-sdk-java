@@ -9,6 +9,7 @@ import br.com.conductor.pier.api.v2.invoker.Pair;
 
 import br.com.conductor.pier.api.v2.model.ArquivoDetalheResponse;
 import br.com.conductor.pier.api.v2.model.IntegrarArquivoRequest;
+import br.com.conductor.pier.api.v2.model.PageArquivoAUDResponse;
 import br.com.conductor.pier.api.v2.model.PageArquivoResponse;
 import br.com.conductor.pier.api.v2.model.ArquivoPersist;
 
@@ -134,6 +135,60 @@ public class ArquivoApi {
   }
   
   /**
+   * Lista as auditorias do arquivo
+   * Este recurso permite listar as auditorias de um determinado arquivo a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do arquivo
+   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @return PageArquivoAUDResponse
+   */
+  public PageArquivoAUDResponse listarUsingGET3(Long id, Integer page, Integer limit) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET3");
+     }
+     
+    // create path and map variables
+    String path = "/api/arquivos/{id}/auditorias".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PageArquivoAUDResponse> returnType = new GenericType<PageArquivoAUDResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Listar arquivos do Pier Cloud
    * Este recurso permite a listagem de todos os arquivos dispon\u00C3\u00ADveis no Pier Cloud.
    * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
@@ -145,7 +200,7 @@ public class ArquivoApi {
    * @param extensao Extens\u00C3\u00A3o do arquivo
    * @return PageArquivoResponse
    */
-  public PageArquivoResponse listarUsingGET3(List<String> sort, Integer page, Integer limit, String nome, Long idTipoArquivo, Long idStatusArquivo, String extensao) throws ApiException {
+  public PageArquivoResponse listarUsingGET4(List<String> sort, Integer page, Integer limit, String nome, Long idTipoArquivo, Long idStatusArquivo, String extensao) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

@@ -45,7 +45,7 @@ public class RiscoFraudeDetalhadoResponse   {
   private String cpf = null;
   private String cnpj = null;
   private String email = null;
-  private List<TelefoneResponse> tefefones = new ArrayList<TelefoneResponse>();
+  private List<TelefoneResponse> telefones = new ArrayList<TelefoneResponse>();
 
   
   /**
@@ -519,18 +519,18 @@ public class RiscoFraudeDetalhadoResponse   {
   /**
    * Lista de telefones associados ao portador do Cart\u00C3\u00A3o
    **/
-  public RiscoFraudeDetalhadoResponse tefefones(List<TelefoneResponse> tefefones) {
-    this.tefefones = tefefones;
+  public RiscoFraudeDetalhadoResponse telefones(List<TelefoneResponse> telefones) {
+    this.telefones = telefones;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Lista de telefones associados ao portador do Cart\u00C3\u00A3o")
-  @JsonProperty("tefefones")
-  public List<TelefoneResponse> getTefefones() {
-    return tefefones;
+  @JsonProperty("telefones")
+  public List<TelefoneResponse> getTelefones() {
+    return telefones;
   }
-  public void setTefefones(List<TelefoneResponse> tefefones) {
-    this.tefefones = tefefones;
+  public void setTelefones(List<TelefoneResponse> telefones) {
+    this.telefones = telefones;
   }
 
   
@@ -570,12 +570,12 @@ public class RiscoFraudeDetalhadoResponse   {
         Objects.equals(this.cpf, riscoFraudeDetalhadoResponse.cpf) &&
         Objects.equals(this.cnpj, riscoFraudeDetalhadoResponse.cnpj) &&
         Objects.equals(this.email, riscoFraudeDetalhadoResponse.email) &&
-        Objects.equals(this.tefefones, riscoFraudeDetalhadoResponse.tefefones);
+        Objects.equals(this.telefones, riscoFraudeDetalhadoResponse.telefones);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idTipoResolucao, descricaoTipoResolucao, flagAltoRisco, idConta, idCartao, idProduto, idTransacao, dataTransacao, valorTransacao, codigoMoedaOrigem, valorOrigem, codigoMoedaDestino, valorDestino, nomeEstabelecimento, idPais, codigoRespostaAutorizador, descricaoRespostaAutorizador, codigoRespostaFraude, descricaoRespostaFraude, origemTransacao, codigoModoEntradaTerminal, descricaoModoEntradaTerminal, cpf, cnpj, email, tefefones);
+    return Objects.hash(id, idTipoResolucao, descricaoTipoResolucao, flagAltoRisco, idConta, idCartao, idProduto, idTransacao, dataTransacao, valorTransacao, codigoMoedaOrigem, valorOrigem, codigoMoedaDestino, valorDestino, nomeEstabelecimento, idPais, codigoRespostaAutorizador, descricaoRespostaAutorizador, codigoRespostaFraude, descricaoRespostaFraude, origemTransacao, codigoModoEntradaTerminal, descricaoModoEntradaTerminal, cpf, cnpj, email, telefones);
   }
 
   @Override
@@ -609,7 +609,7 @@ public class RiscoFraudeDetalhadoResponse   {
     sb.append("    cpf: ").append(toIndentedString(cpf)).append("\n");
     sb.append("    cnpj: ").append(toIndentedString(cnpj)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
-    sb.append("    tefefones: ").append(toIndentedString(tefefones)).append("\n");
+    sb.append("    telefones: ").append(toIndentedString(telefones)).append("\n");
     sb.append("}");
     return sb.toString();
   }

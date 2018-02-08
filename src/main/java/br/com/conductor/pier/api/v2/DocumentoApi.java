@@ -159,12 +159,12 @@ public class DocumentoApi {
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento (id).
    * @return DocumentoDetalhadoResponse
    */
-  public DocumentoDetalhadoResponse consultarUsingGET12(Long id) throws ApiException {
+  public DocumentoDetalhadoResponse consultarUsingGET13(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET12");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET13");
      }
      
     // create path and map variables
@@ -207,12 +207,12 @@ public class DocumentoApi {
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento template (id).
    * @return DocumentoTemplateResponse
    */
-  public DocumentoTemplateResponse consultarUsingGET13(Long id) throws ApiException {
+  public DocumentoTemplateResponse consultarUsingGET14(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET13");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET14");
      }
      
     // create path and map variables
@@ -255,12 +255,12 @@ public class DocumentoApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id).
    * @return TipoTemplateResponse
    */
-  public TipoTemplateResponse consultarUsingGET37(Long id) throws ApiException {
+  public TipoTemplateResponse consultarUsingGET38(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET37");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET38");
      }
      
     // create path and map variables
@@ -355,7 +355,7 @@ public class DocumentoApi {
    * @param extensao Extensao do documento.
    * @return PageDocumentoResponse
    */
-  public PageDocumentoResponse listarUsingGET16(List<String> sort, Integer page, Integer limit, Long idTemplateDocumento, String nome, String extensao) throws ApiException {
+  public PageDocumentoResponse listarUsingGET18(List<String> sort, Integer page, Integer limit, Long idTemplateDocumento, String nome, String extensao) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -412,7 +412,7 @@ public class DocumentoApi {
    * @param idTipoTemplate C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do template.
    * @return PageDocumentoTemplateResponse
    */
-  public PageDocumentoTemplateResponse listarUsingGET17(List<String> sort, Integer page, Integer limit, Long idTipoTemplate) throws ApiException {
+  public PageDocumentoTemplateResponse listarUsingGET19(List<String> sort, Integer page, Integer limit, Long idTipoTemplate) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -464,7 +464,7 @@ public class DocumentoApi {
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @return PageTipoTemplateResponse
    */
-  public PageTipoTemplateResponse listarUsingGET43(List<String> sort, Integer page, Integer limit) throws ApiException {
+  public PageTipoTemplateResponse listarUsingGET45(List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -507,17 +507,64 @@ public class DocumentoApi {
   }
   
   /**
-   * Cadastra os templates dos documentos
-   * Esse recurso permite cadastrar templates dos documentos.
+   * Cadastra documentos
+   * Esse recurso permite cadastrar documentos.
    * @param persist persist
-   * @return DocumentoTemplateResponse
+   * @return DocumentoDetalhadoResponse
    */
-  public DocumentoTemplateResponse salvarUsingPOST10(DocumentoTemplatePersist persist) throws ApiException {
+  public DocumentoDetalhadoResponse salvarUsingPOST10(DocumentoParametrosRequest persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'persist' is set
      if (persist == null) {
         throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST10");
+     }
+     
+    // create path and map variables
+    String path = "/api/documentos".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<DocumentoDetalhadoResponse> returnType = new GenericType<DocumentoDetalhadoResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Cadastra os templates dos documentos
+   * Esse recurso permite cadastrar templates dos documentos.
+   * @param persist persist
+   * @return DocumentoTemplateResponse
+   */
+  public DocumentoTemplateResponse salvarUsingPOST11(DocumentoTemplatePersist persist) throws ApiException {
+    Object postBody = persist;
+    
+     // verify the required parameter 'persist' is set
+     if (persist == null) {
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST11");
      }
      
     // create path and map variables
@@ -559,12 +606,12 @@ public class DocumentoApi {
    * @param persist persist
    * @return TipoTemplateResponse
    */
-  public TipoTemplateResponse salvarUsingPOST25(TipoTemplateRequest persist) throws ApiException {
+  public TipoTemplateResponse salvarUsingPOST26(TipoTemplateRequest persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST25");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST26");
      }
      
     // create path and map variables
@@ -596,53 +643,6 @@ public class DocumentoApi {
 
     
     GenericType<TipoTemplateResponse> returnType = new GenericType<TipoTemplateResponse>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
-   * Cadastra documentos
-   * Esse recurso permite cadastrar documentos.
-   * @param persist persist
-   * @return DocumentoDetalhadoResponse
-   */
-  public DocumentoDetalhadoResponse salvarUsingPOST9(DocumentoParametrosRequest persist) throws ApiException {
-    Object postBody = persist;
-    
-     // verify the required parameter 'persist' is set
-     if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST9");
-     }
-     
-    // create path and map variables
-    String path = "/api/documentos".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<DocumentoDetalhadoResponse> returnType = new GenericType<DocumentoDetalhadoResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

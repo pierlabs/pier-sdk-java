@@ -154,12 +154,12 @@ public class TransferenciaBancariaApi {
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria (id).
    * @return ContaBancariaPortadorResponse
    */
-  public ContaBancariaPortadorResponse consultarUsingGET10(Long id) throws ApiException {
+  public ContaBancariaPortadorResponse consultarUsingGET11(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET10");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET11");
      }
      
     // create path and map variables
@@ -204,17 +204,17 @@ public class TransferenciaBancariaApi {
    * @param idContaBancariaDestino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
    * @return TransferenciaBancariaResponse
    */
-  public TransferenciaBancariaResponse consultarUsingGET39(Long id, Long idTransferencia, Long idContaBancariaDestino) throws ApiException {
+  public TransferenciaBancariaResponse consultarUsingGET40(Long id, Long idTransferencia, Long idContaBancariaDestino) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET39");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET40");
      }
      
      // verify the required parameter 'idTransferencia' is set
      if (idTransferencia == null) {
-        throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET39");
+        throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET40");
      }
      
     // create path and map variables
@@ -329,7 +329,7 @@ public class TransferenciaBancariaApi {
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @return PageContaBancariaPortadorResponse
    */
-  public PageContaBancariaPortadorResponse listarUsingGET12(Long idConta, String nomeAgencia, String numeroAgencia, String numeroConta, Integer flagContaOrigemDoc, Long idPessoaFisica, String favorecido, String numeroReceiraFederal, List<String> sort, Integer page, Integer limit) throws ApiException {
+  public PageContaBancariaPortadorResponse listarUsingGET14(Long idConta, String nomeAgencia, String numeroAgencia, String numeroConta, Integer flagContaOrigemDoc, Long idPessoaFisica, String favorecido, String numeroReceiraFederal, List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -397,12 +397,12 @@ public class TransferenciaBancariaApi {
    * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
    * @return PageTransferenciaBancariaResponse
    */
-  public PageTransferenciaBancariaResponse listarUsingGET45(Long id, Long idContaBancariaDestino, List<String> sort, Integer page, Integer limit) throws ApiException {
+  public PageTransferenciaBancariaResponse listarUsingGET47(Long id, Long idContaBancariaDestino, List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET45");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET47");
      }
      
     // create path and map variables
@@ -453,12 +453,12 @@ public class TransferenciaBancariaApi {
    * @param persist persist
    * @return ContaBancariaPortadorResponse
    */
-  public ContaBancariaPortadorResponse salvarUsingPOST7(ContaBancariaPortadorPersist persist) throws ApiException {
+  public ContaBancariaPortadorResponse salvarUsingPOST8(ContaBancariaPortadorPersist persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST7");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST8");
      }
      
     // create path and map variables

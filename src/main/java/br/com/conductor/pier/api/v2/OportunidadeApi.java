@@ -277,12 +277,12 @@ public class OportunidadeApi {
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).
    * @return OportunidadeResponse
    */
-  public OportunidadeResponse consultarUsingGET21(Long id) throws ApiException {
+  public OportunidadeResponse consultarUsingGET22(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET21");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET22");
      }
      
     // create path and map variables
@@ -325,12 +325,12 @@ public class OportunidadeApi {
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
    * @return TipoOportunidadeResponse
    */
-  public TipoOportunidadeResponse consultarUsingGET35(Long id) throws ApiException {
+  public TipoOportunidadeResponse consultarUsingGET36(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET35");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET36");
      }
      
     // create path and map variables
@@ -670,7 +670,7 @@ public class OportunidadeApi {
    * @param flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
    * @return PageOportunidadeResponse
    */
-  public PageOportunidadeResponse listarUsingGET26(List<String> sort, Integer page, Integer limit, Long idStatusOportunidade, String dataCadastro, String dataAtualizacao, String numeroReceitaFederal, String dataInicioVigencia, String dataFimVigencia, Boolean flagAtivo) throws ApiException {
+  public PageOportunidadeResponse listarUsingGET28(List<String> sort, Integer page, Integer limit, Long idStatusOportunidade, String dataCadastro, String dataAtualizacao, String numeroReceitaFederal, String dataInicioVigencia, String dataFimVigencia, Boolean flagAtivo) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -736,7 +736,7 @@ public class OportunidadeApi {
    * @param flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo
    * @return PageTipoOportunidadeResponse
    */
-  public PageTipoOportunidadeResponse listarUsingGET41(List<String> sort, Integer page, Integer limit, String descricao, Boolean flagAtivo) throws ApiException {
+  public PageTipoOportunidadeResponse listarUsingGET43(List<String> sort, Integer page, Integer limit, String descricao, Boolean flagAtivo) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -842,12 +842,12 @@ public class OportunidadeApi {
    * @param persist persist
    * @return OportunidadeResponse
    */
-  public OportunidadeResponse salvarUsingPOST17(OportunidadePersist persist) throws ApiException {
+  public OportunidadeResponse salvarUsingPOST18(OportunidadePersist persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST17");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST18");
      }
      
     // create path and map variables
@@ -889,12 +889,12 @@ public class OportunidadeApi {
    * @param persist persist
    * @return TipoOportunidadeResponse
    */
-  public TipoOportunidadeResponse salvarUsingPOST24(TipoOportunidade persist) throws ApiException {
+  public TipoOportunidadeResponse salvarUsingPOST25(TipoOportunidade persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST24");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST25");
      }
      
     // create path and map variables

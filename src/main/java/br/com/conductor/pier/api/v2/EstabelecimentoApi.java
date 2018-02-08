@@ -706,12 +706,12 @@ public class EstabelecimentoApi {
    * @param id Id
    * @return EstabelecimentoResponse
    */
-  public EstabelecimentoResponse consultarUsingGET15(Long id) throws ApiException {
+  public EstabelecimentoResponse consultarUsingGET16(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET15");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET16");
      }
      
     // create path and map variables
@@ -754,12 +754,12 @@ public class EstabelecimentoApi {
    * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo econ\u00C3\u00B4mico
    * @return GrupoEconomicoResponse
    */
-  public GrupoEconomicoResponse consultarUsingGET17(Long id) throws ApiException {
+  public GrupoEconomicoResponse consultarUsingGET18(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET17");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET18");
      }
      
     // create path and map variables
@@ -802,12 +802,12 @@ public class EstabelecimentoApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta (id).
    * @return MaquinetaResponse
    */
-  public MaquinetaResponse consultarUsingGET19(Long id) throws ApiException {
+  public MaquinetaResponse consultarUsingGET20(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET19");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET20");
      }
      
     // create path and map variables
@@ -850,12 +850,12 @@ public class EstabelecimentoApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Regra Opera\u00C3\u00A7\u00C3\u00A3o (id).
    * @return OperacaoCredorResponse
    */
-  public OperacaoCredorResponse consultarUsingGET20(Long id) throws ApiException {
+  public OperacaoCredorResponse consultarUsingGET21(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET20");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET21");
      }
      
     // create path and map variables
@@ -898,12 +898,12 @@ public class EstabelecimentoApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).
    * @return TelefoneEstabelecimentoResponse
    */
-  public TelefoneEstabelecimentoResponse consultarUsingGET28(Long id) throws ApiException {
+  public TelefoneEstabelecimentoResponse consultarUsingGET29(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET28");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET29");
      }
      
     // create path and map variables
@@ -946,12 +946,12 @@ public class EstabelecimentoApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
    * @return TerminalResponse
    */
-  public TerminalResponse consultarUsingGET30(Long id) throws ApiException {
+  public TerminalResponse consultarUsingGET31(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET30");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET31");
      }
      
     // create path and map variables
@@ -994,12 +994,12 @@ public class EstabelecimentoApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u008Dnculo (id).
    * @return VinculoEstabelecimentoAdquirenteResponse
    */
-  public VinculoEstabelecimentoAdquirenteResponse consultarUsingGET42(Long id) throws ApiException {
+  public VinculoEstabelecimentoAdquirenteResponse consultarUsingGET43(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET42");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET43");
      }
      
     // create path and map variables
@@ -1660,7 +1660,7 @@ public class EstabelecimentoApi {
    * @param flagMatriz Indica se \u00C3\u00A9 matriz ou filial.
    * @return PageEstabelecimentoResponse
    */
-  public PageEstabelecimentoResponse listarUsingGET19(List<String> sort, Integer page, Integer limit, Long id, Long idCredor, String numeroReceitaFederal, String nome, String descricao, String nomeFantasia, String cep, String nomeLogradouro, Integer numeroEndereco, String complemento, String bairro, String cidade, String uf, String pais, String dataCadastramento, String contato, String email, Integer flagArquivoSecrFazenda, Integer flagCartaoDigitado, Integer inativo, Long idPais, Long mcc, Long idTipoEstabelecimento, Long idMoeda, String tipoPagamento, String numeroEstabelecimento, String cep2, String nomeLogradouro2, Integer numeroEndereco2, String complemento2, String bairro2, String cidade2, String uf2, Integer flagMatriz) throws ApiException {
+  public PageEstabelecimentoResponse listarUsingGET21(List<String> sort, Integer page, Integer limit, Long id, Long idCredor, String numeroReceitaFederal, String nome, String descricao, String nomeFantasia, String cep, String nomeLogradouro, Integer numeroEndereco, String complemento, String bairro, String cidade, String uf, String pais, String dataCadastramento, String contato, String email, Integer flagArquivoSecrFazenda, Integer flagCartaoDigitado, Integer inativo, Long idPais, Long mcc, Long idTipoEstabelecimento, Long idMoeda, String tipoPagamento, String numeroEstabelecimento, String cep2, String nomeLogradouro2, Integer numeroEndereco2, String complemento2, String bairro2, String cidade2, String uf2, Integer flagMatriz) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -1803,7 +1803,7 @@ public class EstabelecimentoApi {
    * @param idCredorRAV C\u00C3\u00B3digo identificador do credor RAV
    * @return PageGrupoEconomicoResponse
    */
-  public PageGrupoEconomicoResponse listarUsingGET21(List<String> sort, Integer page, Integer limit, String razaoSocial, String nomeCredor, String numeroReceitaFederal, String inscricaoEstadual, String contato, Integer banco, Integer agencia, String digitoAgencia, String contaCorrente, String digitoContaCorrente, String periodicidade, String pagamentoSemanal, Integer pagamentoMensal, Integer pagamentoDecendialPrimeiro, Integer pagamentoDecendialSegundo, Integer pagamentoDecendialTerceiro, Integer pagamentoQuinzenalPrimeiro, Integer pagamentoQuinzenalSegundo, BigDecimal percentualRAV, String recebeRAV, BigDecimal percentualMultiplica, BigDecimal taxaAdm, BigDecimal taxaBanco, BigDecimal limiteRAV, Long idCredorRAV) throws ApiException {
+  public PageGrupoEconomicoResponse listarUsingGET23(List<String> sort, Integer page, Integer limit, String razaoSocial, String nomeCredor, String numeroReceitaFederal, String inscricaoEstadual, String contato, Integer banco, Integer agencia, String digitoAgencia, String contaCorrente, String digitoContaCorrente, String periodicidade, String pagamentoSemanal, Integer pagamentoMensal, Integer pagamentoDecendialPrimeiro, Integer pagamentoDecendialSegundo, Integer pagamentoDecendialTerceiro, Integer pagamentoQuinzenalPrimeiro, Integer pagamentoQuinzenalSegundo, BigDecimal percentualRAV, String recebeRAV, BigDecimal percentualMultiplica, BigDecimal taxaAdm, BigDecimal taxaBanco, BigDecimal limiteRAV, Long idCredorRAV) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -1904,7 +1904,7 @@ public class EstabelecimentoApi {
    * @param idEstabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id).
    * @return PageMaquinetaResponse
    */
-  public PageMaquinetaResponse listarUsingGET23(List<String> sort, Integer page, Integer limit, Long idEstabelecimento) throws ApiException {
+  public PageMaquinetaResponse listarUsingGET25(List<String> sort, Integer page, Integer limit, Long idEstabelecimento) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -1959,7 +1959,7 @@ public class EstabelecimentoApi {
    * @param descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo da moeda.
    * @return PageMoedaResponse
    */
-  public PageMoedaResponse listarUsingGET24(List<String> sort, Integer page, Integer limit, String codigoMoeda, String simbolo, String descricao) throws ApiException {
+  public PageMoedaResponse listarUsingGET26(List<String> sort, Integer page, Integer limit, String codigoMoeda, String simbolo, String descricao) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -2018,7 +2018,7 @@ public class EstabelecimentoApi {
    * @param idProduto Apresenta o id do produto que vai ser alterado.
    * @return PageOperacaoCredorResponse
    */
-  public PageOperacaoCredorResponse listarUsingGET25(List<String> sort, Integer page, Integer limit, Long idOperacao, Long idCredor, Long idProduto) throws ApiException {
+  public PageOperacaoCredorResponse listarUsingGET27(List<String> sort, Integer page, Integer limit, Long idOperacao, Long idCredor, Long idProduto) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -2075,7 +2075,7 @@ public class EstabelecimentoApi {
    * @param idEstabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id).
    * @return PageTelefoneEstabelecimentoResponse
    */
-  public PageTelefoneEstabelecimentoResponse listarUsingGET36(List<String> sort, Integer page, Integer limit, Long idEstabelecimento) throws ApiException {
+  public PageTelefoneEstabelecimentoResponse listarUsingGET38(List<String> sort, Integer page, Integer limit, Long idEstabelecimento) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -2131,7 +2131,7 @@ public class EstabelecimentoApi {
    * @param idEstabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
    * @return PageTerminalResponse
    */
-  public PageTerminalResponse listarUsingGET38(List<String> sort, Integer page, Integer limit, Long id, String terminal, Long numeroEstabelecimento, Long idEstabelecimento) throws ApiException {
+  public PageTerminalResponse listarUsingGET40(List<String> sort, Integer page, Integer limit, Long id, String terminal, Long numeroEstabelecimento, Long idEstabelecimento) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -2192,7 +2192,7 @@ public class EstabelecimentoApi {
    * @param codigoEstabelecimentoAdquirente C\u00C3\u00B3digo do v\u00C3\u00ADnculo entre o estabelecimento e o adquirente.
    * @return PageVinculoEstabelecimentoAdquirenteResponse
    */
-  public PageVinculoEstabelecimentoAdquirenteResponse listarUsingGET49(List<String> sort, Integer page, Integer limit, Long idAdquirente, Long idEstabelecimento, String codigoEstabelecimentoAdquirente) throws ApiException {
+  public PageVinculoEstabelecimentoAdquirenteResponse listarUsingGET51(List<String> sort, Integer page, Integer limit, Long idAdquirente, Long idEstabelecimento, String codigoEstabelecimentoAdquirente) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -2252,12 +2252,12 @@ public class EstabelecimentoApi {
    * @param codigoMCC C\u00C3\u00B3digo MCC.
    * @return PageVinculoOperacaoResponse
    */
-  public PageVinculoOperacaoResponse listarUsingGET50(Long id, List<String> sort, Integer page, Integer limit, Long idProduto, Long idOperacao, Integer codigoMCC) throws ApiException {
+  public PageVinculoOperacaoResponse listarUsingGET52(Long id, List<String> sort, Integer page, Integer limit, Long idProduto, Long idOperacao, Integer codigoMCC) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET50");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET52");
      }
      
     // create path and map variables
@@ -2312,12 +2312,12 @@ public class EstabelecimentoApi {
    * @param maquinetaPersist maquinetaPersist
    * @return MaquinetaResponse
    */
-  public MaquinetaResponse salvarUsingPOST15(MaquinetaPersist maquinetaPersist) throws ApiException {
+  public MaquinetaResponse salvarUsingPOST16(MaquinetaPersist maquinetaPersist) throws ApiException {
     Object postBody = maquinetaPersist;
     
      // verify the required parameter 'maquinetaPersist' is set
      if (maquinetaPersist == null) {
-        throw new ApiException(400, "Missing the required parameter 'maquinetaPersist' when calling salvarUsingPOST15");
+        throw new ApiException(400, "Missing the required parameter 'maquinetaPersist' when calling salvarUsingPOST16");
      }
      
     // create path and map variables
@@ -2359,12 +2359,12 @@ public class EstabelecimentoApi {
    * @param oprecaoCredorPersist oprecaoCredorPersist
    * @return OperacaoCredorResponse
    */
-  public OperacaoCredorResponse salvarUsingPOST16(OperacaoCredorPersist oprecaoCredorPersist) throws ApiException {
+  public OperacaoCredorResponse salvarUsingPOST17(OperacaoCredorPersist oprecaoCredorPersist) throws ApiException {
     Object postBody = oprecaoCredorPersist;
     
      // verify the required parameter 'oprecaoCredorPersist' is set
      if (oprecaoCredorPersist == null) {
-        throw new ApiException(400, "Missing the required parameter 'oprecaoCredorPersist' when calling salvarUsingPOST16");
+        throw new ApiException(400, "Missing the required parameter 'oprecaoCredorPersist' when calling salvarUsingPOST17");
      }
      
     // create path and map variables
@@ -2409,22 +2409,22 @@ public class EstabelecimentoApi {
    * @param ramal N\u00C3\u00BAmero do ramal.
    * @return TelefoneEstabelecimentoResponse
    */
-  public TelefoneEstabelecimentoResponse salvarUsingPOST21(Long idEstabelecimento, String ddd, String telefone, String ramal) throws ApiException {
+  public TelefoneEstabelecimentoResponse salvarUsingPOST22(Long idEstabelecimento, String ddd, String telefone, String ramal) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idEstabelecimento' is set
      if (idEstabelecimento == null) {
-        throw new ApiException(400, "Missing the required parameter 'idEstabelecimento' when calling salvarUsingPOST21");
+        throw new ApiException(400, "Missing the required parameter 'idEstabelecimento' when calling salvarUsingPOST22");
      }
      
      // verify the required parameter 'ddd' is set
      if (ddd == null) {
-        throw new ApiException(400, "Missing the required parameter 'ddd' when calling salvarUsingPOST21");
+        throw new ApiException(400, "Missing the required parameter 'ddd' when calling salvarUsingPOST22");
      }
      
      // verify the required parameter 'telefone' is set
      if (telefone == null) {
-        throw new ApiException(400, "Missing the required parameter 'telefone' when calling salvarUsingPOST21");
+        throw new ApiException(400, "Missing the required parameter 'telefone' when calling salvarUsingPOST22");
      }
      
     // create path and map variables
@@ -2474,12 +2474,12 @@ public class EstabelecimentoApi {
    * @param terminalPersist terminalPersist
    * @return TerminalResponse
    */
-  public TerminalResponse salvarUsingPOST23(TerminalPersist terminalPersist) throws ApiException {
+  public TerminalResponse salvarUsingPOST24(TerminalPersist terminalPersist) throws ApiException {
     Object postBody = terminalPersist;
     
      // verify the required parameter 'terminalPersist' is set
      if (terminalPersist == null) {
-        throw new ApiException(400, "Missing the required parameter 'terminalPersist' when calling salvarUsingPOST23");
+        throw new ApiException(400, "Missing the required parameter 'terminalPersist' when calling salvarUsingPOST24");
      }
      
     // create path and map variables
@@ -2521,12 +2521,12 @@ public class EstabelecimentoApi {
    * @param vinculoEstabelecimentoAdquirentePersist vinculoEstabelecimentoAdquirentePersist
    * @return VinculoEstabelecimentoAdquirenteResponse
    */
-  public VinculoEstabelecimentoAdquirenteResponse salvarUsingPOST28(VinculoEstabelecimentoAdquirentePersist vinculoEstabelecimentoAdquirentePersist) throws ApiException {
+  public VinculoEstabelecimentoAdquirenteResponse salvarUsingPOST29(VinculoEstabelecimentoAdquirentePersist vinculoEstabelecimentoAdquirentePersist) throws ApiException {
     Object postBody = vinculoEstabelecimentoAdquirentePersist;
     
      // verify the required parameter 'vinculoEstabelecimentoAdquirentePersist' is set
      if (vinculoEstabelecimentoAdquirentePersist == null) {
-        throw new ApiException(400, "Missing the required parameter 'vinculoEstabelecimentoAdquirentePersist' when calling salvarUsingPOST28");
+        throw new ApiException(400, "Missing the required parameter 'vinculoEstabelecimentoAdquirentePersist' when calling salvarUsingPOST29");
      }
      
     // create path and map variables

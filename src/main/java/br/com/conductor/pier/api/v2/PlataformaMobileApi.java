@@ -101,7 +101,7 @@ public class PlataformaMobileApi {
    * @param nome Nome da Plataforma Mobile
    * @return PagePlataformaMobileResponse
    */
-  public PagePlataformaMobileResponse listarUsingGET29(List<String> sort, Integer page, Integer limit, String nome) throws ApiException {
+  public PagePlataformaMobileResponse listarUsingGET31(List<String> sort, Integer page, Integer limit, String nome) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -151,12 +151,12 @@ public class PlataformaMobileApi {
    * @param persist persist
    * @return PlataformaMobileResponse
    */
-  public PlataformaMobileResponse salvarUsingPOST20(PlataformaMobilePersist persist) throws ApiException {
+  public PlataformaMobileResponse salvarUsingPOST21(PlataformaMobilePersist persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST20");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST21");
      }
      
     // create path and map variables

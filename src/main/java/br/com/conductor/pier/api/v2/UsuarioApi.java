@@ -266,12 +266,12 @@ public class UsuarioApi {
    * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
    * @return UsuarioResponse
    */
-  public UsuarioResponse consultarUsingGET41(Long id) throws ApiException {
+  public UsuarioResponse consultarUsingGET42(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET41");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET42");
      }
      
     // create path and map variables
@@ -368,7 +368,7 @@ public class UsuarioApi {
    * @param status Status do Usuario
    * @return PageUsuarioResponse
    */
-  public PageUsuarioResponse listarUsingGET47(List<String> sort, Integer page, Integer limit, String nome, String cpf, String email, String status) throws ApiException {
+  public PageUsuarioResponse listarUsingGET49(List<String> sort, Integer page, Integer limit, String nome, String cpf, String email, String status) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -472,12 +472,12 @@ public class UsuarioApi {
    * @param persist persist
    * @return UsuarioResponse
    */
-  public UsuarioResponse salvarUsingPOST27(UsuarioPersist persist) throws ApiException {
+  public UsuarioResponse salvarUsingPOST28(UsuarioPersist persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST27");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST28");
      }
      
     // create path and map variables

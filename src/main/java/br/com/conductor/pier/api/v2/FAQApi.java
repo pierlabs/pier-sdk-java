@@ -187,12 +187,12 @@ public class FAQApi {
    * @param id Id
    * @return FaqResponse
    */
-  public FaqResponse consultarUsingGET16(Long id) throws ApiException {
+  public FaqResponse consultarUsingGET17(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET16");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET17");
      }
      
     // create path and map variables
@@ -244,7 +244,7 @@ public class FAQApi {
    * @param status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
    * @return PageFaqResponse
    */
-  public PageFaqResponse listarUsingGET20(List<String> sort, Integer page, Integer limit, Long idFaq, String pergunta, String resposta, Integer relevancia, String plataforma, String categoria, String status) throws ApiException {
+  public PageFaqResponse listarUsingGET22(List<String> sort, Integer page, Integer limit, Long idFaq, String pergunta, String resposta, Integer relevancia, String plataforma, String categoria, String status) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
