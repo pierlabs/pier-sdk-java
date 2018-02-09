@@ -48,26 +48,7 @@ public class EstabelecimentoUpdate   {
   private Integer associadoSPCBrasil = null;
   private Long mcc = null;
   private Long idTipoEstabelecimento = null;
-
-
-  public enum TipoCorrespondenciaEnum {
-    ORIGEM("ORIGEM"),
-    CORRESPONDENCIA("CORRESPONDENCIA");
-
-    private String value;
-
-    TipoCorrespondenciaEnum(String value) {
-      this.value = value;
-    }
-
-    @Override
-    @JsonValue
-    public String toString() {
-      return value;
-    }
-  }
-
-  private TipoCorrespondenciaEnum tipoCorrespondencia = null;
+  private Integer correspondencia = null;
   private String cargoContato = null;
 
 
@@ -618,20 +599,20 @@ public class EstabelecimentoUpdate   {
 
   
   /**
-   * Tipo da Correspond\u00C3\u00AAncia (ORIGEM, CORRESPONDENCIA).
+   * Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA.
    **/
-  public EstabelecimentoUpdate tipoCorrespondencia(TipoCorrespondenciaEnum tipoCorrespondencia) {
-    this.tipoCorrespondencia = tipoCorrespondencia;
+  public EstabelecimentoUpdate correspondencia(Integer correspondencia) {
+    this.correspondencia = correspondencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Tipo da Correspond\u00C3\u00AAncia (ORIGEM, CORRESPONDENCIA).")
-  @JsonProperty("tipoCorrespondencia")
-  public TipoCorrespondenciaEnum getTipoCorrespondencia() {
-    return tipoCorrespondencia;
+  @ApiModelProperty(example = "null", value = "Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA.")
+  @JsonProperty("correspondencia")
+  public Integer getCorrespondencia() {
+    return correspondencia;
   }
-  public void setTipoCorrespondencia(TipoCorrespondenciaEnum tipoCorrespondencia) {
-    this.tipoCorrespondencia = tipoCorrespondencia;
+  public void setCorrespondencia(Integer correspondencia) {
+    this.correspondencia = correspondencia;
   }
 
   
@@ -782,7 +763,7 @@ public class EstabelecimentoUpdate   {
         Objects.equals(this.associadoSPCBrasil, estabelecimentoUpdate.associadoSPCBrasil) &&
         Objects.equals(this.mcc, estabelecimentoUpdate.mcc) &&
         Objects.equals(this.idTipoEstabelecimento, estabelecimentoUpdate.idTipoEstabelecimento) &&
-        Objects.equals(this.tipoCorrespondencia, estabelecimentoUpdate.tipoCorrespondencia) &&
+        Objects.equals(this.correspondencia, estabelecimentoUpdate.correspondencia) &&
         Objects.equals(this.cargoContato, estabelecimentoUpdate.cargoContato) &&
         Objects.equals(this.tipoPagamento, estabelecimentoUpdate.tipoPagamento) &&
         Objects.equals(this.consulta, estabelecimentoUpdate.consulta) &&
@@ -793,7 +774,7 @@ public class EstabelecimentoUpdate   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(flagMatriz, nome, descricao, nomeFantasia, cep, nomeLogradouro, numeroEndereco, bairro, cidade, complemento, uf, cep2, nomeLogradouro2, numeroEndereco2, bairro2, cidade2, complemento2, uf2, obs, contato, email, flagArquivoSecrFazenda, flagCartaoDigitado, inativo, idMoeda, idPais, associadoSPCBrasil, mcc, idTipoEstabelecimento, tipoCorrespondencia, cargoContato, tipoPagamento, consulta, consulta2, consulta3, sort);
+    return Objects.hash(flagMatriz, nome, descricao, nomeFantasia, cep, nomeLogradouro, numeroEndereco, bairro, cidade, complemento, uf, cep2, nomeLogradouro2, numeroEndereco2, bairro2, cidade2, complemento2, uf2, obs, contato, email, flagArquivoSecrFazenda, flagCartaoDigitado, inativo, idMoeda, idPais, associadoSPCBrasil, mcc, idTipoEstabelecimento, correspondencia, cargoContato, tipoPagamento, consulta, consulta2, consulta3, sort);
   }
 
   @Override
@@ -830,7 +811,7 @@ public class EstabelecimentoUpdate   {
     sb.append("    associadoSPCBrasil: ").append(toIndentedString(associadoSPCBrasil)).append("\n");
     sb.append("    mcc: ").append(toIndentedString(mcc)).append("\n");
     sb.append("    idTipoEstabelecimento: ").append(toIndentedString(idTipoEstabelecimento)).append("\n");
-    sb.append("    tipoCorrespondencia: ").append(toIndentedString(tipoCorrespondencia)).append("\n");
+    sb.append("    correspondencia: ").append(toIndentedString(correspondencia)).append("\n");
     sb.append("    cargoContato: ").append(toIndentedString(cargoContato)).append("\n");
     sb.append("    tipoPagamento: ").append(toIndentedString(tipoPagamento)).append("\n");
     sb.append("    consulta: ").append(toIndentedString(consulta)).append("\n");

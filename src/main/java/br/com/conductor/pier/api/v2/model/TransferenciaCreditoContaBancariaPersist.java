@@ -24,7 +24,7 @@ public class TransferenciaCreditoContaBancariaPersist   {
   private Integer numeroMesesCarencia = null;
   private String dataHoraTerminal = null;
   private String terminalRequisitante = null;
-  private Long numeroEstabelecimento = null;
+  private String numeroEstabelecimento = null;
 
   
   /**
@@ -174,17 +174,17 @@ public class TransferenciaCreditoContaBancariaPersist   {
   /**
    * Representa a identifica\u00C3\u00A7\u00C3\u00A3o do n\u00C3\u00BAmero do estabelecimento.
    **/
-  public TransferenciaCreditoContaBancariaPersist numeroEstabelecimento(Long numeroEstabelecimento) {
+  public TransferenciaCreditoContaBancariaPersist numeroEstabelecimento(String numeroEstabelecimento) {
     this.numeroEstabelecimento = numeroEstabelecimento;
     return this;
   }
   
   @ApiModelProperty(example = "null", required = true, value = "Representa a identifica\u00C3\u00A7\u00C3\u00A3o do n\u00C3\u00BAmero do estabelecimento.")
   @JsonProperty("numeroEstabelecimento")
-  public Long getNumeroEstabelecimento() {
+  public String getNumeroEstabelecimento() {
     return numeroEstabelecimento;
   }
-  public void setNumeroEstabelecimento(Long numeroEstabelecimento) {
+  public void setNumeroEstabelecimento(String numeroEstabelecimento) {
     this.numeroEstabelecimento = numeroEstabelecimento;
   }
 
