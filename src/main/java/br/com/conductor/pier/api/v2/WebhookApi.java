@@ -8,6 +8,7 @@ import br.com.conductor.pier.api.v2.invoker.Configuration;
 import br.com.conductor.pier.api.v2.invoker.Pair;
 
 import br.com.conductor.pier.api.v2.model.WebHookResponse;
+import br.com.conductor.pier.api.v2.model.WebHook;
 import br.com.conductor.pier.api.v2.model.PageWebHookResponse;
 
 import java.util.ArrayList;
@@ -40,27 +41,21 @@ public class WebhookApi {
    * Alterar Webhook
    * Este m\u00C3\u00A9todo permite que seja modificado um webhooks j\u00C3\u00A1 cadastrado
    * @param id C\u00C3\u00B3digo identificador do Webhook
-   * @param tipoEvento TipoEvento a ser chamado pelo WebHook
-   * @param url URL que a ser consumida pelo WebHook
+   * @param webhook webhook
    * @param status Status
    * @return WebHookResponse
    */
-  public WebHookResponse alterarUsingPUT22(Long id, String tipoEvento, String url, String status) throws ApiException {
-    Object postBody = null;
+  public WebHookResponse alterarUsingPUT22(Long id, WebHook webhook, String status) throws ApiException {
+    Object postBody = webhook;
     
      // verify the required parameter 'id' is set
      if (id == null) {
         throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT22");
      }
      
-     // verify the required parameter 'tipoEvento' is set
-     if (tipoEvento == null) {
-        throw new ApiException(400, "Missing the required parameter 'tipoEvento' when calling alterarUsingPUT22");
-     }
-     
-     // verify the required parameter 'url' is set
-     if (url == null) {
-        throw new ApiException(400, "Missing the required parameter 'url' when calling alterarUsingPUT22");
+     // verify the required parameter 'webhook' is set
+     if (webhook == null) {
+        throw new ApiException(400, "Missing the required parameter 'webhook' when calling alterarUsingPUT22");
      }
      
     // create path and map variables
@@ -74,10 +69,6 @@ public class WebhookApi {
 
     
     queryParams.addAll(apiClient.parameterToPairs("", "status", status));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "tipoEvento", tipoEvento));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "url", url));
     
 
     
@@ -216,21 +207,15 @@ public class WebhookApi {
   /**
    * Salvar Webhook
    * Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
-   * @param tipoEvento TipoEvento a ser chamado pelo WebHook
-   * @param url URL que a ser consumida pelo WebHook
+   * @param webhook webhook
    * @return WebHookResponse
    */
-  public WebHookResponse salvarUsingPOST30(String tipoEvento, String url) throws ApiException {
-    Object postBody = null;
+  public WebHookResponse salvarUsingPOST30(WebHook webhook) throws ApiException {
+    Object postBody = webhook;
     
-     // verify the required parameter 'tipoEvento' is set
-     if (tipoEvento == null) {
-        throw new ApiException(400, "Missing the required parameter 'tipoEvento' when calling salvarUsingPOST30");
-     }
-     
-     // verify the required parameter 'url' is set
-     if (url == null) {
-        throw new ApiException(400, "Missing the required parameter 'url' when calling salvarUsingPOST30");
+     // verify the required parameter 'webhook' is set
+     if (webhook == null) {
+        throw new ApiException(400, "Missing the required parameter 'webhook' when calling salvarUsingPOST30");
      }
      
     // create path and map variables
@@ -241,10 +226,6 @@ public class WebhookApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     Map<String, Object> formParams = new HashMap<String, Object>();
 
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "tipoEvento", tipoEvento));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "url", url));
     
 
     
