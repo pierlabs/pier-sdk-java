@@ -37,25 +37,25 @@ public class DebitoRecorrenteApi {
 
   
   /**
-   * Lista os d\u00C3\u00A9bitos recorrentes de uma Conta
-   * A entidade D\u00C3\u00A9bito Recorrente trata dos registros contratados por um determinado cliente (idConta) onde a cobran\u00C3\u00A7a dele se d\u00C3\u00A1 de forma cont\u00C3\u00ADnua, consistindo em uma \u00E2\u0080\u009Cassinatura\u00E2\u0080\u009D ou pagamento de mensalidades. Isso significa que, enquanto o servi\u00C3\u00A7o continuar a ser prestado, o cliente dever\u00C3\u00A1 continuar realizando os pagamentos. A determina\u00C3\u00A7\u00C3\u00A3o de quanto tempo essa rela\u00C3\u00A7\u00C3\u00A3o ir\u00C3\u00A1 durar \u00C3\u00A9 feita em contrato. Na maioria das vezes, existe um per\u00C3\u00ADodo m\u00C3\u00ADnimo e, caso o servi\u00C3\u00A7o seja cancelado ou o pagamento n\u00C3\u00A3o seja realizado, o status do D\u00C3\u00A9bito Recorrente ter\u00C3\u00A1 a FlagAtivo com valor false. Assim, este m\u00C3\u00A9todo lista todas as opera\u00C3\u00A7\u00C3\u00B5es de D\u00C3\u00A9bitos Recorrentes que um determinado idConta j\u00C3\u00A1 contratou, esteja ele ativo ou n\u00C3\u00A3o.
-   * @param idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id)
-   * @param idTipoDebitoRecorrente C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de d\u00C3\u00A9bito recorrente (id)
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param dataHoraInicio Data inicio do d\u00C3\u00A9bito recorrente.
-   * @param dataHoraFim Data fim do d\u00C3\u00A9bito recorrente.
-   * @param ativo Identifica se o d\u00C3\u00A9bito recorrente est\u00C3\u00A1 ativo.
-   * @param dataHoraUltimoPagamento Data do \u00C3\u00BAltimo pagamento efetuado.
+   * Lista os d\u00E9bitos recorrentes de uma Conta
+   * A entidade D\u00E9bito Recorrente trata dos registros contratados por um determinado cliente (idConta) onde a cobran\u00E7a dele se d\u00E1 de forma cont\u00EDnua, consistindo em uma \u201Cassinatura\u201D ou pagamento de mensalidades. Isso significa que, enquanto o servi\u00E7o continuar a ser prestado, o cliente dever\u00E1 continuar realizando os pagamentos. A determina\u00E7\u00E3o de quanto tempo essa rela\u00E7\u00E3o ir\u00E1 durar \u00E9 feita em contrato. Na maioria das vezes, existe um per\u00EDodo m\u00EDnimo e, caso o servi\u00E7o seja cancelado ou o pagamento n\u00E3o seja realizado, o status do D\u00E9bito Recorrente ter\u00E1 a FlagAtivo com valor false. Assim, este m\u00E9todo lista todas as opera\u00E7\u00F5es de D\u00E9bitos Recorrentes que um determinado idConta j\u00E1 contratou, esteja ele ativo ou n\u00E3o.
+   * @param idConta C\u00F3digo de identifica\u00E7\u00E3o da Conta (id)
+   * @param idTipoDebitoRecorrente C\u00F3digo de identifica\u00E7\u00E3o do tipo de d\u00E9bito recorrente (id)
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @param dataHoraInicio Data inicio do d\u00E9bito recorrente.
+   * @param dataHoraFim Data fim do d\u00E9bito recorrente.
+   * @param ativo Identifica se o d\u00E9bito recorrente est\u00E1 ativo.
+   * @param dataHoraUltimoPagamento Data do \u00FAltimo pagamento efetuado.
    * @return PageTipoDebitoRecorrenteResponse
    */
-  public PageTipoDebitoRecorrenteResponse listarUsingGET15(Long idConta, Long idTipoDebitoRecorrente, List<String> sort, Integer page, Integer limit, String dataHoraInicio, String dataHoraFim, Boolean ativo, String dataHoraUltimoPagamento) throws ApiException {
+  public PageTipoDebitoRecorrenteResponse listarUsingGET16(Long idConta, Long idTipoDebitoRecorrente, List<String> sort, Integer page, Integer limit, String dataHoraInicio, String dataHoraFim, Boolean ativo, String dataHoraUltimoPagamento) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idConta' is set
      if (idConta == null) {
-        throw new ApiException(400, "Missing the required parameter 'idConta' when calling listarUsingGET15");
+        throw new ApiException(400, "Missing the required parameter 'idConta' when calling listarUsingGET16");
      }
      
     // create path and map variables
@@ -111,17 +111,17 @@ public class DebitoRecorrenteApi {
   
   /**
    * Listar Tipos Debitos Recorrentes
-   * Para os emissores que utilizam a entidade Debitos Recorrentes precisam previamente solicitar a Conductor o cadastro de quais Tipos eles poder\u00C3\u00A3o comercializar. Por isso, este recurso tem como objetivo apresentar todos os Tipos de D\u00C3\u00A9bitos Recorrentes que est\u00C3\u00A3o cadastrados para um determinado Emissor, independente do status dele.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de d\u00C3\u00A9bito recorrente (id).
-   * @param descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de d\u00C3\u00A9bito recorrente.
-   * @param valor Valor do tipo de d\u00C3\u00A9bito recorrente.
-   * @param flagAtivo Flag que identifica se o tipo d\u00C3\u00A9bito recorrente est\u00C3\u00A1 ativo.
+   * Para os emissores que utilizam a entidade Debitos Recorrentes precisam previamente solicitar a Conductor o cadastro de quais Tipos eles poder\u00E3o comercializar. Por isso, este recurso tem como objetivo apresentar todos os Tipos de D\u00E9bitos Recorrentes que est\u00E3o cadastrados para um determinado Emissor, independente do status dele.
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o do tipo de d\u00E9bito recorrente (id).
+   * @param descricao Descri\u00E7\u00E3o do tipo de d\u00E9bito recorrente.
+   * @param valor Valor do tipo de d\u00E9bito recorrente.
+   * @param flagAtivo Flag que identifica se o tipo d\u00E9bito recorrente est\u00E1 ativo.
    * @return PageTipoDebitoRecorrenteResponse
    */
-  public PageTipoDebitoRecorrenteResponse listarUsingGET41(List<String> sort, Integer page, Integer limit, Long id, String descricao, BigDecimal valor, Boolean flagAtivo) throws ApiException {
+  public PageTipoDebitoRecorrenteResponse listarUsingGET43(List<String> sort, Integer page, Integer limit, Long id, String descricao, BigDecimal valor, Boolean flagAtivo) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

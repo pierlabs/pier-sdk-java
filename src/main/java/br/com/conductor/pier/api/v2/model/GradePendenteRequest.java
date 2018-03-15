@@ -17,14 +17,14 @@ public class GradePendenteRequest   {
 
   
   /**
-   * C\u00C3\u00B3digo identificador da conta.
+   * C\u00F3digo identificador da conta.
    **/
   public GradePendenteRequest idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador da conta.")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador da conta.")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;

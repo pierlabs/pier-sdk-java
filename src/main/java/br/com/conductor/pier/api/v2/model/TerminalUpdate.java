@@ -20,14 +20,14 @@ public class TerminalUpdate   {
 
   
   /**
-   * Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+   * Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o)).
    **/
   public TerminalUpdate flagConsultaExtrato(Boolean flagConsultaExtrato) {
     this.flagConsultaExtrato = flagConsultaExtrato;
     return this;
   }
   
-  @ApiModelProperty(example = "false", required = true, value = "Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00C3\u00A3o)).")
+  @ApiModelProperty(example = "false", required = true, value = "Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o)).")
   @JsonProperty("flagConsultaExtrato")
   public Boolean getFlagConsultaExtrato() {
     return flagConsultaExtrato;
@@ -38,14 +38,14 @@ public class TerminalUpdate   {
 
   
   /**
-   * Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).
+   * Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o)).
    **/
   public TerminalUpdate flagTerminalVirtual(Boolean flagTerminalVirtual) {
     this.flagTerminalVirtual = flagTerminalVirtual;
     return this;
   }
   
-  @ApiModelProperty(example = "false", required = true, value = "Flag indicando se o terminal \u00C3\u00A9 f\u00C3\u00ADsico ou virtual, sendo: (true: Sim), (false: N\u00C3\u00A3o)).")
+  @ApiModelProperty(example = "false", required = true, value = "Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o)).")
   @JsonProperty("flagTerminalVirtual")
   public Boolean getFlagTerminalVirtual() {
     return flagTerminalVirtual;

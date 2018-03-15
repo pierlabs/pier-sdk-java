@@ -52,14 +52,14 @@ public class PessoaPersist   {
 
   
   /**
-   * N\u00C3\u00BAmero do CPF, quando PF.
+   * N\u00FAmero do CPF, quando PF.
    **/
   public PessoaPersist cpf(String cpf) {
     this.cpf = cpf;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero do CPF, quando PF.")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero do CPF, quando PF.")
   @JsonProperty("cpf")
   public String getCpf() {
     return cpf;
@@ -88,14 +88,14 @@ public class PessoaPersist   {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino).
+   * C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino).
    **/
   public PessoaPersist sexo(String sexo) {
     this.sexo = sexo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino).")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino).")
   @JsonProperty("sexo")
   public String getSexo() {
     return sexo;
@@ -106,14 +106,14 @@ public class PessoaPersist   {
 
   
   /**
-   * N\u00C3\u00BAmero da Identidade.
+   * N\u00FAmero da Identidade.
    **/
   public PessoaPersist numeroIdentidade(String numeroIdentidade) {
     this.numeroIdentidade = numeroIdentidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero da Identidade.")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero da Identidade.")
   @JsonProperty("numeroIdentidade")
   public String getNumeroIdentidade() {
     return numeroIdentidade;
@@ -124,14 +124,14 @@ public class PessoaPersist   {
 
   
   /**
-   * Org\u00C3\u00A3o expedidor da Identidade.
+   * Org\u00E3o expedidor da Identidade.
    **/
   public PessoaPersist orgaoExpedidorIdentidade(String orgaoExpedidorIdentidade) {
     this.orgaoExpedidorIdentidade = orgaoExpedidorIdentidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Org\u00C3\u00A3o expedidor da Identidade.")
+  @ApiModelProperty(example = "null", value = "Org\u00E3o expedidor da Identidade.")
   @JsonProperty("orgaoExpedidorIdentidade")
   public String getOrgaoExpedidorIdentidade() {
     return orgaoExpedidorIdentidade;
@@ -160,14 +160,14 @@ public class PessoaPersist   {
 
   
   /**
-   * Data emiss\u00C3\u00A3o da Identidade
+   * Data emiss\u00E3o da Identidade
    **/
   public PessoaPersist dataEmissaoIdentidade(String dataEmissaoIdentidade) {
     this.dataEmissaoIdentidade = dataEmissaoIdentidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data emiss\u00C3\u00A3o da Identidade")
+  @ApiModelProperty(example = "null", value = "Data emiss\u00E3o da Identidade")
   @JsonProperty("dataEmissaoIdentidade")
   public String getDataEmissaoIdentidade() {
     return dataEmissaoIdentidade;
@@ -178,14 +178,14 @@ public class PessoaPersist   {
 
   
   /**
-   * Estado civil do s\u00C3\u00B3cio
+   * Estado civil do s\u00F3cio
    **/
   public PessoaPersist estadoCivil(String estadoCivil) {
     this.estadoCivil = estadoCivil;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Estado civil do s\u00C3\u00B3cio")
+  @ApiModelProperty(example = "null", value = "Estado civil do s\u00F3cio")
   @JsonProperty("estadoCivil")
   public String getEstadoCivil() {
     return estadoCivil;
@@ -196,14 +196,14 @@ public class PessoaPersist   {
 
   
   /**
-   * Profiss\u00C3\u00A3o do s\u00C3\u00B3cio
+   * Profiss\u00E3o do s\u00F3cio
    **/
   public PessoaPersist profissao(String profissao) {
     this.profissao = profissao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Profiss\u00C3\u00A3o do s\u00C3\u00B3cio")
+  @ApiModelProperty(example = "null", value = "Profiss\u00E3o do s\u00F3cio")
   @JsonProperty("profissao")
   public String getProfissao() {
     return profissao;
@@ -214,14 +214,14 @@ public class PessoaPersist   {
 
   
   /**
-   * Nacionalidade do s\u00C3\u00B3cio
+   * Nacionalidade do s\u00F3cio
    **/
   public PessoaPersist nacionalidade(String nacionalidade) {
     this.nacionalidade = nacionalidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nacionalidade do s\u00C3\u00B3cio")
+  @ApiModelProperty(example = "null", value = "Nacionalidade do s\u00F3cio")
   @JsonProperty("nacionalidade")
   public String getNacionalidade() {
     return nacionalidade;
@@ -232,14 +232,14 @@ public class PessoaPersist   {
 
   
   /**
-   * Email do s\u00C3\u00B3cio
+   * Email do s\u00F3cio
    **/
   public PessoaPersist email(String email) {
     this.email = email;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Email do s\u00C3\u00B3cio")
+  @ApiModelProperty(example = "null", value = "Email do s\u00F3cio")
   @JsonProperty("email")
   public String getEmail() {
     return email;
@@ -250,14 +250,14 @@ public class PessoaPersist   {
 
   
   /**
-   * Informa os telefones do s\u00C3\u00B3cio
+   * Informa os telefones do s\u00F3cio
    **/
   public PessoaPersist telefones(List<TelefonePessoaAprovadaPersist> telefones) {
     this.telefones = telefones;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Informa os telefones do s\u00C3\u00B3cio")
+  @ApiModelProperty(example = "null", value = "Informa os telefones do s\u00F3cio")
   @JsonProperty("telefones")
   public List<TelefonePessoaAprovadaPersist> getTelefones() {
     return telefones;

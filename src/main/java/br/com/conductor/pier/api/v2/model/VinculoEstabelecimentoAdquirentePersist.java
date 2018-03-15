@@ -57,14 +57,14 @@ public class VinculoEstabelecimentoAdquirentePersist   {
 
   
   /**
-   * Apresenta o c\u00C3\u00B3digo de v\u00C3\u00ADnculo entre o estabelecimento e o adquirente.
+   * Apresenta o c\u00F3digo de v\u00EDnculo entre o estabelecimento e o adquirente.
    **/
   public VinculoEstabelecimentoAdquirentePersist codigoEstabelecimentoAdquirente(String codigoEstabelecimentoAdquirente) {
     this.codigoEstabelecimentoAdquirente = codigoEstabelecimentoAdquirente;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Apresenta o c\u00C3\u00B3digo de v\u00C3\u00ADnculo entre o estabelecimento e o adquirente.")
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta o c\u00F3digo de v\u00EDnculo entre o estabelecimento e o adquirente.")
   @JsonProperty("codigoEstabelecimentoAdquirente")
   public String getCodigoEstabelecimentoAdquirente() {
     return codigoEstabelecimentoAdquirente;

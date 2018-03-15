@@ -24,19 +24,18 @@ public class HistoricoPagamentoResponse   {
   private BigDecimal valorPagamento = null;
   private String dataHoraPagamento = null;
   private String dataHoraEntradaPagamento = null;
-  private String dataVencimentoParcelaAcordo = null;
   private Long status = null;
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Conta
    **/
   public HistoricoPagamentoResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o da Conta")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -47,14 +46,14 @@ public class HistoricoPagamentoResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Pagamento
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Pagamento
    **/
   public HistoricoPagamentoResponse idPagamento(Long idPagamento) {
     this.idPagamento = idPagamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Pagamento")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Pagamento")
   @JsonProperty("idPagamento")
   public Long getIdPagamento() {
     return idPagamento;
@@ -65,14 +64,14 @@ public class HistoricoPagamentoResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento onde o Pagamento foi realizado, quando este for o local de pagamento.
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento onde o Pagamento foi realizado, quando este for o local de pagamento.
    **/
   public HistoricoPagamentoResponse idEstabelecimento(Long idEstabelecimento) {
     this.idEstabelecimento = idEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento onde o Pagamento foi realizado, quando este for o local de pagamento.")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento onde o Pagamento foi realizado, quando este for o local de pagamento.")
   @JsonProperty("idEstabelecimento")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
@@ -83,14 +82,14 @@ public class HistoricoPagamentoResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Institui\u00C3\u00A7\u00C3\u00A3o Banc\u00C3\u00A1ria onde o Pagamento foi realizado, quando este for o local de pagamento
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Institui\u00E7\u00E3o Banc\u00E1ria onde o Pagamento foi realizado, quando este for o local de pagamento
    **/
   public HistoricoPagamentoResponse idBanco(Long idBanco) {
     this.idBanco = idBanco;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Institui\u00C3\u00A7\u00C3\u00A3o Banc\u00C3\u00A1ria onde o Pagamento foi realizado, quando este for o local de pagamento")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o da Institui\u00E7\u00E3o Banc\u00E1ria onde o Pagamento foi realizado, quando este for o local de pagamento")
   @JsonProperty("idBanco")
   public Long getIdBanco() {
     return idBanco;
@@ -101,14 +100,14 @@ public class HistoricoPagamentoResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o
    **/
   public HistoricoPagamentoResponse idCartao(Long idCartao) {
     this.idCartao = idCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Cart\u00C3\u00A3o")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o")
   @JsonProperty("idCartao")
   public Long getIdCartao() {
     return idCartao;
@@ -137,14 +136,14 @@ public class HistoricoPagamentoResponse   {
 
   
   /**
-   * Data e Hora da realiza\u00C3\u00A7\u00C3\u00A3o do Pagamento. Quando feito em Institui\u00C3\u00A7\u00C3\u00A3o Banc\u00C3\u00A1ria, o hor\u00C3\u00A1rio do pagamento \u00C3\u00A9 exibido com valor zero
+   * Data e Hora da realiza\u00E7\u00E3o do Pagamento. Quando feito em Institui\u00E7\u00E3o Banc\u00E1ria, o hor\u00E1rio do pagamento \u00E9 exibido com valor zero
    **/
   public HistoricoPagamentoResponse dataHoraPagamento(String dataHoraPagamento) {
     this.dataHoraPagamento = dataHoraPagamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data e Hora da realiza\u00C3\u00A7\u00C3\u00A3o do Pagamento. Quando feito em Institui\u00C3\u00A7\u00C3\u00A3o Banc\u00C3\u00A1ria, o hor\u00C3\u00A1rio do pagamento \u00C3\u00A9 exibido com valor zero")
+  @ApiModelProperty(example = "null", value = "Data e Hora da realiza\u00E7\u00E3o do Pagamento. Quando feito em Institui\u00E7\u00E3o Banc\u00E1ria, o hor\u00E1rio do pagamento \u00E9 exibido com valor zero")
   @JsonProperty("dataHoraPagamento")
   public String getDataHoraPagamento() {
     return dataHoraPagamento;
@@ -173,32 +172,14 @@ public class HistoricoPagamentoResponse   {
 
   
   /**
-   * Data e Hora do vencimento da parcela do acordo
-   **/
-  public HistoricoPagamentoResponse dataVencimentoParcelaAcordo(String dataVencimentoParcelaAcordo) {
-    this.dataVencimentoParcelaAcordo = dataVencimentoParcelaAcordo;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Data e Hora do vencimento da parcela do acordo")
-  @JsonProperty("dataVencimentoParcelaAcordo")
-  public String getDataVencimentoParcelaAcordo() {
-    return dataVencimentoParcelaAcordo;
-  }
-  public void setDataVencimentoParcelaAcordo(String dataVencimentoParcelaAcordo) {
-    this.dataVencimentoParcelaAcordo = dataVencimentoParcelaAcordo;
-  }
-
-  
-  /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Pagamento
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Status do Pagamento
    **/
   public HistoricoPagamentoResponse status(Long status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Status do Pagamento")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Status do Pagamento")
   @JsonProperty("status")
   public Long getStatus() {
     return status;
@@ -226,13 +207,12 @@ public class HistoricoPagamentoResponse   {
         Objects.equals(this.valorPagamento, historicoPagamentoResponse.valorPagamento) &&
         Objects.equals(this.dataHoraPagamento, historicoPagamentoResponse.dataHoraPagamento) &&
         Objects.equals(this.dataHoraEntradaPagamento, historicoPagamentoResponse.dataHoraEntradaPagamento) &&
-        Objects.equals(this.dataVencimentoParcelaAcordo, historicoPagamentoResponse.dataVencimentoParcelaAcordo) &&
         Objects.equals(this.status, historicoPagamentoResponse.status);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idConta, idPagamento, idEstabelecimento, idBanco, idCartao, valorPagamento, dataHoraPagamento, dataHoraEntradaPagamento, dataVencimentoParcelaAcordo, status);
+    return Objects.hash(idConta, idPagamento, idEstabelecimento, idBanco, idCartao, valorPagamento, dataHoraPagamento, dataHoraEntradaPagamento, status);
   }
 
   @Override
@@ -248,7 +228,6 @@ public class HistoricoPagamentoResponse   {
     sb.append("    valorPagamento: ").append(toIndentedString(valorPagamento)).append("\n");
     sb.append("    dataHoraPagamento: ").append(toIndentedString(dataHoraPagamento)).append("\n");
     sb.append("    dataHoraEntradaPagamento: ").append(toIndentedString(dataHoraEntradaPagamento)).append("\n");
-    sb.append("    dataVencimentoParcelaAcordo: ").append(toIndentedString(dataVencimentoParcelaAcordo)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("}");
     return sb.toString();

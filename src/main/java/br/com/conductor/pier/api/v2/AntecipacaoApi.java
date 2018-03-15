@@ -41,8 +41,8 @@ public class AntecipacaoApi {
 
   
   /**
-   * Configura a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
-   * Este recurso permite configurar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+   * Configura a Taxa de Antecipa\u00E7\u00E3o de um Produto
+   * Este recurso permite configurar a Taxa de Antecipa\u00E7\u00E3o de um Produto, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
    * @param id Id Produto
    * @param taxaAntecipacaoRequest taxaAntecipacaoRequest
    * @return ParametroProdutoResponse
@@ -95,10 +95,10 @@ public class AntecipacaoApi {
   }
   
   /**
-   * Consulta a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto
-   * Este recurso permite consultar a Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o de um Produto, a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
+   * Consulta a Taxa de Antecipa\u00E7\u00E3o de um Produto
+   * Este recurso permite consultar a Taxa de Antecipa\u00E7\u00E3o de um Produto, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
    * @param id Id Produto
-   * @param tipoTransacao Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON-US ou OFF-US)
+   * @param tipoTransacao Tipo da Transa\u00E7\u00E3o (ON-US ou OFF-US)
    * @return ParametroProdutoResponse
    */
   public ParametroProdutoResponse consultarTaxaAntecipacaoUsingGET(Long id, String tipoTransacao) throws ApiException {
@@ -151,12 +151,12 @@ public class AntecipacaoApi {
   }
   
   /**
-   * Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
-   * M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
-   * @param idConta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.
+   * Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
+   * M\u00E9todo responsavel pela efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto.
+   * @param idConta C\u00F3digo de Identifica\u00E7\u00E3o da Conta.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do evento.
    * @param quantidadeParcelas Quantidade de parcelas para serem antecipadas.
-   * @param complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
+   * @param complemento Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o.
    * @return AntecipacaoResponse
    */
   public AntecipacaoResponse efetivarAntecipacaoUsingPOST(Long idConta, Long id, Long quantidadeParcelas, String complemento) throws ApiException {
@@ -218,10 +218,10 @@ public class AntecipacaoApi {
   }
   
   /**
-   * Faz a efetiva\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o
-   * M\u00C3\u00A9todo responsavel pela efetiva\u00C3\u00A7\u00C3\u00A3o de todas as compras antecip\u00C3\u00A1veis com todas as parcelas de uma conta.
-   * @param idConta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta.
-   * @param complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
+   * Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
+   * M\u00E9todo responsavel pela efetiva\u00E7\u00E3o de todas as compras antecip\u00E1veis com todas as parcelas de uma conta.
+   * @param idConta C\u00F3digo de Identifica\u00E7\u00E3o da Conta.
+   * @param complemento Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o.
    * @return AntecipacaoResponse
    */
   public AntecipacaoResponse efetivarAntecipacoesUsingPOST(Long idConta, String complemento) throws ApiException {
@@ -270,24 +270,24 @@ public class AntecipacaoApi {
   }
   
   /**
-   * Listar compras com parcelas antecip\u00C3\u00A1veis
-   * Lista as compras antecip\u00C3\u00A1veis de uma conta.
-   * @param idConta C\u00C3\u00B3digo identificador da conta da Compra.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param idCompra C\u00C3\u00B3digo identificador da Compra.
-   * @param parcelada Indica se a compra \u00C3\u00A9 parcelada.
-   * @param juros Indica se a compra \u00C3\u00A9 com ou sem juros.
-   * @param tipoOrigemTransacao Indica se a compra \u00C3\u00A9 ON-US ou OFF-US
+   * Listar compras com parcelas antecip\u00E1veis
+   * Lista as compras antecip\u00E1veis de uma conta.
+   * @param idConta C\u00F3digo identificador da conta da Compra.
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @param idCompra C\u00F3digo identificador da Compra.
+   * @param parcelada Indica se a compra \u00E9 parcelada.
+   * @param juros Indica se a compra \u00E9 com ou sem juros.
+   * @param tipoOrigemTransacao Indica se a compra \u00E9 ON-US ou OFF-US
    * @return PageCompraResponse
    */
-  public PageCompraResponse listarUsingGET11(Long idConta, List<String> sort, Integer page, Integer limit, Long idCompra, Boolean parcelada, Boolean juros, String tipoOrigemTransacao) throws ApiException {
+  public PageCompraResponse listarUsingGET12(Long idConta, List<String> sort, Integer page, Integer limit, Long idCompra, Boolean parcelada, Boolean juros, String tipoOrigemTransacao) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idConta' is set
      if (idConta == null) {
-        throw new ApiException(400, "Missing the required parameter 'idConta' when calling listarUsingGET11");
+        throw new ApiException(400, "Missing the required parameter 'idConta' when calling listarUsingGET12");
      }
      
     // create path and map variables
@@ -340,11 +340,11 @@ public class AntecipacaoApi {
   }
   
   /**
-   * Simular antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas
-   * Simula a antecipa\u00C3\u00A7\u00C3\u00A3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00C3\u00ADveis, cujo desconto \u00C3\u00A9 calculado baseado na data da \u00C3\u00BAltima parcela em aberto.
-   * @param idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do evento.
-   * @param complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
+   * Simular antecipa\u00E7\u00E3o de parcelas
+   * Simula a antecipa\u00E7\u00E3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00EDveis, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto.
+   * @param idConta C\u00F3digo de identifica\u00E7\u00E3o da conta.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do evento.
+   * @param complemento Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o.
    * @return AntecipacaoSimuladaResponse
    */
   public AntecipacaoSimuladaResponse simularAntecipacaoUsingGET(Long idConta, Long id, String complemento) throws ApiException {
@@ -399,10 +399,10 @@ public class AntecipacaoApi {
   }
   
   /**
-   * Simular antecipa\u00C3\u00A7\u00C3\u00A3o de todas as parcelas antecip\u00C3\u00A1veis
-   * O recurso permite realizar a simula\u00C3\u00A7\u00C3\u00A3o da antecipa\u00C3\u00A7\u00C3\u00A3o de todas as compras antecip\u00C3\u00A1veis de todas as parcelas de uma determinada conta.
-   * @param idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
-   * @param complemento Dados complementares sobre a realiza\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o.
+   * Simular antecipa\u00E7\u00E3o de todas as parcelas antecip\u00E1veis
+   * O recurso permite realizar a simula\u00E7\u00E3o da antecipa\u00E7\u00E3o de todas as compras antecip\u00E1veis de todas as parcelas de uma determinada conta.
+   * @param idConta C\u00F3digo de identifica\u00E7\u00E3o da conta.
+   * @param complemento Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o.
    * @return AntecipacaoSimuladaLoteResponse
    */
   public AntecipacaoSimuladaLoteResponse simularAntecipacoesUsingGET(Long idConta, String complemento) throws ApiException {

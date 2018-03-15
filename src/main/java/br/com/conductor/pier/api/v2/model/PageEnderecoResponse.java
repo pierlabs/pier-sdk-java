@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * Lista de Endere\u00C3\u00A7os
+ * Lista de Endere\u00E7os
  **/
 
-@ApiModel(description = "Lista de Endere\u00C3\u00A7os")
+@ApiModel(description = "Lista de Endere\u00E7os")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageEnderecoResponse   {
   

@@ -39,12 +39,12 @@ public class FAQApi {
   /**
    * Adiciona uma nova FAQ
    * Adiciona uma nova FAQ
-   * @param pergunta Conte\u00C3\u00BAdo da pergunta.
-   * @param resposta Conte\u00C3\u00BAdo da resposta.
-   * @param relevancia N\u00C3\u00ADvel de relev\u00C3\u00A2ncia da pergunta.
+   * @param pergunta Conte\u00FAdo da pergunta.
+   * @param resposta Conte\u00FAdo da resposta.
+   * @param relevancia N\u00EDvel de relev\u00E2ncia da pergunta.
    * @param plataforma Plataforma em que a FAQ se encaixa.
    * @param categoria Categoria de assunto do qual a FAQ se trata.
-   * @param status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
+   * @param status Status descrevendo a situa\u00E7\u00E3o atual da FAQ.
    * @return FaqResponse
    */
   public FaqResponse adicionarUsingPOST(String pergunta, String resposta, Integer relevancia, String plataforma, String categoria, String status) throws ApiException {
@@ -109,12 +109,12 @@ public class FAQApi {
    * Alterar FAQ
    * Alterar FAQ
    * @param id Id
-   * @param pergunta Conte\u00C3\u00BAdo da pergunta.
-   * @param resposta Conte\u00C3\u00BAdo da resposta.
-   * @param relevancia N\u00C3\u00ADvel de relev\u00C3\u00A2ncia da pergunta.
+   * @param pergunta Conte\u00FAdo da pergunta.
+   * @param resposta Conte\u00FAdo da resposta.
+   * @param relevancia N\u00EDvel de relev\u00E2ncia da pergunta.
    * @param plataforma Plataforma em que a FAQ se encaixa.
    * @param categoria Categoria de assunto do qual a FAQ se trata.
-   * @param status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
+   * @param status Status descrevendo a situa\u00E7\u00E3o atual da FAQ.
    * @return FaqResponse
    */
   public FaqResponse alterarUsingPUT7(Long id, String pergunta, String resposta, Integer relevancia, String plataforma, String categoria, String status) throws ApiException {
@@ -187,12 +187,12 @@ public class FAQApi {
    * @param id Id
    * @return FaqResponse
    */
-  public FaqResponse consultarUsingGET17(Long id) throws ApiException {
+  public FaqResponse consultarUsingGET18(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET17");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET18");
      }
      
     // create path and map variables
@@ -232,19 +232,19 @@ public class FAQApi {
   /**
    * Lista FAQs
    * Lista todas as FAQs
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param idFaq C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da FAQ (id).
-   * @param pergunta Conte\u00C3\u00BAdo da pergunta.
-   * @param resposta Conte\u00C3\u00BAdo da resposta.
-   * @param relevancia N\u00C3\u00ADvel de relev\u00C3\u00A2ncia da pergunta.
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @param idFaq C\u00F3digo de identifica\u00E7\u00E3o da FAQ (id).
+   * @param pergunta Conte\u00FAdo da pergunta.
+   * @param resposta Conte\u00FAdo da resposta.
+   * @param relevancia N\u00EDvel de relev\u00E2ncia da pergunta.
    * @param plataforma Plataforma em que a FAQ se encaixa.
    * @param categoria Categoria de assunto do qual a FAQ se trata.
-   * @param status Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da FAQ.
+   * @param status Status descrevendo a situa\u00E7\u00E3o atual da FAQ.
    * @return PageFaqResponse
    */
-  public PageFaqResponse listarUsingGET22(List<String> sort, Integer page, Integer limit, Long idFaq, String pergunta, String resposta, Integer relevancia, String plataforma, String categoria, String status) throws ApiException {
+  public PageFaqResponse listarUsingGET23(List<String> sort, Integer page, Integer limit, Long idFaq, String pergunta, String resposta, Integer relevancia, String plataforma, String categoria, String status) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

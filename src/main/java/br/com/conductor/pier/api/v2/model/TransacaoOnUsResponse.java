@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * Objeto de Resposta de Autoriza\u00C3\u00A7\u00C3\u00A3o
+ * Objeto de Resposta de Autoriza\u00E7\u00E3o
  **/
 
-@ApiModel(description = "Objeto de Resposta de Autoriza\u00C3\u00A7\u00C3\u00A3o")
+@ApiModel(description = "Objeto de Resposta de Autoriza\u00E7\u00E3o")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TransacaoOnUsResponse   {
   
@@ -28,14 +28,14 @@ public class TransacaoOnUsResponse   {
 
   
   /**
-   * N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.
+   * N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou.
    **/
   public TransacaoOnUsResponse nsuOrigem(String nsuOrigem) {
     this.nsuOrigem = nsuOrigem;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou.")
   @JsonProperty("nsuOrigem")
   public String getNsuOrigem() {
     return nsuOrigem;
@@ -46,14 +46,14 @@ public class TransacaoOnUsResponse   {
 
   
   /**
-   * N\u00C3\u00BAmero Sequencial \u00C3\u009Anico gerado pelo Autorizador a cada Transa\u00C3\u00A7\u00C3\u00A3o.
+   * N\u00FAmero Sequencial \u00DAnico gerado pelo Autorizador a cada Transa\u00E7\u00E3o.
    **/
   public TransacaoOnUsResponse nsuAutorizacao(String nsuAutorizacao) {
     this.nsuAutorizacao = nsuAutorizacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero Sequencial \u00C3\u009Anico gerado pelo Autorizador a cada Transa\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero Sequencial \u00DAnico gerado pelo Autorizador a cada Transa\u00E7\u00E3o.")
   @JsonProperty("nsuAutorizacao")
   public String getNsuAutorizacao() {
     return nsuAutorizacao;
@@ -64,14 +64,14 @@ public class TransacaoOnUsResponse   {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do Plano de Parcelamento atribu\u00C3\u00ADdo a Transa\u00C3\u00A7\u00C3\u00A3o.
+   * Descri\u00E7\u00E3o do Plano de Parcelamento atribu\u00EDdo a Transa\u00E7\u00E3o.
    **/
   public TransacaoOnUsResponse planoDeParcelamento(List<MapOfstringAndstring> planoDeParcelamento) {
     this.planoDeParcelamento = planoDeParcelamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o do Plano de Parcelamento atribu\u00C3\u00ADdo a Transa\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do Plano de Parcelamento atribu\u00EDdo a Transa\u00E7\u00E3o.")
   @JsonProperty("planoDeParcelamento")
   public List<MapOfstringAndstring> getPlanoDeParcelamento() {
     return planoDeParcelamento;
@@ -82,14 +82,14 @@ public class TransacaoOnUsResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de Autoriza\u00C3\u00A7\u00C3\u00A3o gerado pelo Autorizador.
+   * C\u00F3digo de Autoriza\u00E7\u00E3o gerado pelo Autorizador.
    **/
   public TransacaoOnUsResponse codigoAutorizacao(String codigoAutorizacao) {
     this.codigoAutorizacao = codigoAutorizacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Autoriza\u00C3\u00A7\u00C3\u00A3o gerado pelo Autorizador.")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Autoriza\u00E7\u00E3o gerado pelo Autorizador.")
   @JsonProperty("codigoAutorizacao")
   public String getCodigoAutorizacao() {
     return codigoAutorizacao;
@@ -100,14 +100,14 @@ public class TransacaoOnUsResponse   {
 
   
   /**
-   * N\u00C3\u00BAmero do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o em formato mascarado.
+   * N\u00FAmero do Cart\u00E3o que originou a transa\u00E7\u00E3o em formato mascarado.
    **/
   public TransacaoOnUsResponse numeroMascaradoCartao(String numeroMascaradoCartao) {
     this.numeroMascaradoCartao = numeroMascaradoCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o em formato mascarado.")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero do Cart\u00E3o que originou a transa\u00E7\u00E3o em formato mascarado.")
   @JsonProperty("numeroMascaradoCartao")
   public String getNumeroMascaradoCartao() {
     return numeroMascaradoCartao;
@@ -118,14 +118,14 @@ public class TransacaoOnUsResponse   {
 
   
   /**
-   * Nome do Portador do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o.
+   * Nome do Portador do Cart\u00E3o que originou a transa\u00E7\u00E3o.
    **/
   public TransacaoOnUsResponse nomePortadorCartao(String nomePortadorCartao) {
     this.nomePortadorCartao = nomePortadorCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome do Portador do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(example = "null", value = "Nome do Portador do Cart\u00E3o que originou a transa\u00E7\u00E3o.")
   @JsonProperty("nomePortadorCartao")
   public String getNomePortadorCartao() {
     return nomePortadorCartao;
@@ -136,14 +136,14 @@ public class TransacaoOnUsResponse   {
 
   
   /**
-   * Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
+   * Apresenta a identifica\u00E7\u00E3o do terminal requisitante
    **/
   public TransacaoOnUsResponse terminalRequisitante(String terminalRequisitante) {
     this.terminalRequisitante = terminalRequisitante;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante")
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta a identifica\u00E7\u00E3o do terminal requisitante")
   @JsonProperty("terminalRequisitante")
   public String getTerminalRequisitante() {
     return terminalRequisitante;

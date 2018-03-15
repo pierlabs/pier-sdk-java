@@ -42,7 +42,7 @@ public class FaturamentoApi {
   
   /**
    * Alterar Faturamento
-   * Alterar as configura\u00C3\u00A7\u00C3\u00B5es de um determinado tipo de faturamento
+   * Alterar as configura\u00E7\u00F5es de um determinado tipo de faturamento
    * @param id Id
    * @param tipoFaturamentoPersist tipoFaturamentoPersist
    * @return TipoFaturamentoResponse
@@ -95,8 +95,8 @@ public class FaturamentoApi {
   }
   
   /**
-   * Adiciona uma nova configura\u00C3\u00A7\u00C3\u00A3o de faturamento para uma conta
-   * Este m\u00C3\u00A9todo permite adicionar uma nova configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento para um conta espec\u00C3\u00ADfica.
+   * Adiciona uma nova configura\u00E7\u00E3o de faturamento para uma conta
+   * Este m\u00E9todo permite adicionar uma nova configura\u00E7\u00E3o de tipo de faturamento para um conta espec\u00EDfica.
    * @param tipoFaturamentoPorContaPersist tipoFaturamentoPorContaPersist
    * @return TipoFaturamentoPorContaResponse
    */
@@ -143,7 +143,7 @@ public class FaturamentoApi {
   
   /**
    * Adiciona um novo faturamento
-   * Adiciona uma nova configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento
+   * Adiciona uma nova configura\u00E7\u00E3o de tipo de faturamento
    * @param tipoFaturamentoPersist tipoFaturamentoPersist
    * @return TipoFaturamentoResponse
    */
@@ -237,8 +237,8 @@ public class FaturamentoApi {
   }
   
   /**
-   * Desativar uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento por conta atrav\u00C3\u00A9s do id
-   * Desativa uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento de uma determinada conta.
+   * Desativar uma configura\u00E7\u00E3o de tipo de faturamento por conta atrav\u00E9s do id
+   * Desativa uma configura\u00E7\u00E3o de tipo de faturamento de uma determinada conta.
    * @param id Id
    * @param modificadoPor modificadoPor
    * @return TipoFaturamentoPorContaResponse
@@ -291,8 +291,8 @@ public class FaturamentoApi {
   }
   
   /**
-   * Desativar uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento atrav\u00C3\u00A9s do id
-   * Desativa uma configura\u00C3\u00A7\u00C3\u00A3o de tipo de faturamento.
+   * Desativar uma configura\u00E7\u00E3o de tipo de faturamento atrav\u00E9s do id
+   * Desativa uma configura\u00E7\u00E3o de tipo de faturamento.
    * @param id Id
    * @return TipoFaturamentoResponse
    */
@@ -339,18 +339,18 @@ public class FaturamentoApi {
   }
   
   /**
-   * Lista as configura\u00C3\u00A7\u00C3\u00B5es de tipos de faturamento por conta
-   * Este m\u00C3\u00A9todo permite listar as configura\u00C3\u00A7\u00C3\u00B5es de tipos de faturamento registrados a uma conta.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param idTipoFaturamentoPorConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento por conta (id).
-   * @param status Representa se a configura\u00C3\u00A7\u00C3\u00A3o est\u00C3\u00A1 ativada ou desativada para a conta.
-   * @param idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento por conta (id).
-   * @param idTipoFaturamento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento relacionada (id).
-   * @param dataHoraInclusao Data da inclus\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
-   * @param dataHoraCancelamento Data do cancelamento da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
-   * @param modificadoPor Identificador do respons\u00C3\u00A1vel pela modifica\u00C3\u00A7\u00C3\u00A3o do registro.
+   * Lista as configura\u00E7\u00F5es de tipos de faturamento por conta
+   * Este m\u00E9todo permite listar as configura\u00E7\u00F5es de tipos de faturamento registrados a uma conta.
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @param idTipoFaturamentoPorConta C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id).
+   * @param status Representa se a configura\u00E7\u00E3o est\u00E1 ativada ou desativada para a conta.
+   * @param idConta C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id).
+   * @param idTipoFaturamento C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento relacionada (id).
+   * @param dataHoraInclusao Data da inclus\u00E3o da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
+   * @param dataHoraCancelamento Data do cancelamento da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;.
+   * @param modificadoPor Identificador do respons\u00E1vel pela modifica\u00E7\u00E3o do registro.
    * @return PageTipoFaturamentoPorContaResponse
    */
   public PageTipoFaturamentoPorContaResponse listarFaturamentoPorContaUsingGET(List<String> sort, Integer page, Integer limit, Long idTipoFaturamentoPorConta, Boolean status, Long idConta, Long idTipoFaturamento, String dataHoraInclusao, String dataHoraCancelamento, String modificadoPor) throws ApiException {
@@ -411,14 +411,14 @@ public class FaturamentoApi {
   
   /**
    * Lista Tipos de Faturamento
-   * Lista todas as configura\u00C3\u00A7\u00C3\u00B5es dos tipos de faturamento
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param idTipoFaturamento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento (id).
-   * @param descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento.
-   * @param flagApenasDemonstrativo Flag que representa que o faturamento ser\u00C3\u00A1 apenas demonstrativo.
-   * @param idConvenio C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do conv\u00C3\u00AAnio relacionado ao tipo de faturamento.
+   * Lista todas as configura\u00E7\u00F5es dos tipos de faturamento
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @param idTipoFaturamento C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento (id).
+   * @param descricao Descri\u00E7\u00E3o do tipo de faturamento.
+   * @param flagApenasDemonstrativo Flag que representa que o faturamento ser\u00E1 apenas demonstrativo.
+   * @param idConvenio C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio relacionado ao tipo de faturamento.
    * @return PageTipoFaturamentoResponse
    */
   public PageTipoFaturamentoResponse listarTipoFaturamentoUsingGET(List<String> sort, Integer page, Integer limit, Long idTipoFaturamento, String descricao, Boolean flagApenasDemonstrativo, Long idConvenio) throws ApiException {

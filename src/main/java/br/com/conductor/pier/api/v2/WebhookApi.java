@@ -39,8 +39,8 @@ public class WebhookApi {
   
   /**
    * Alterar Webhook
-   * Este m\u00C3\u00A9todo permite que seja modificado um webhooks j\u00C3\u00A1 cadastrado
-   * @param id C\u00C3\u00B3digo identificador do Webhook
+   * Este m\u00E9todo permite que seja modificado um webhooks j\u00E1 cadastrado
+   * @param id C\u00F3digo identificador do Webhook
    * @param webhook webhook
    * @param status Status
    * @return WebHookResponse
@@ -96,16 +96,16 @@ public class WebhookApi {
   
   /**
    * Consultar Webhook
-   * Este m\u00C3\u00A9todo permite que sejam consultado um webhook do emissor atrav\u00C3\u00A9s de um id especifico
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Webhook (id).
+   * Este m\u00E9todo permite que sejam consultado um webhook do emissor atrav\u00E9s de um id especifico
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Webhook (id).
    * @return WebHookResponse
    */
-  public WebHookResponse consultarUsingGET44(Long id) throws ApiException {
+  public WebHookResponse consultarUsingGET45(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET44");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET45");
      }
      
     // create path and map variables
@@ -144,17 +144,17 @@ public class WebhookApi {
   
   /**
    * Lista os Webhooks
-   * Este m\u00C3\u00A9todo permite que sejam listados os webhooks existentes
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * Este m\u00E9todo permite que sejam listados os webhooks existentes
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
    * @param id Id do WebHook
    * @param tipoEvento TipoEvento a ser chamado pelo WebHook
-   * @param metodo M\u00C3\u00A9todo que a ser chamado pelo WebHook
+   * @param metodo M\u00E9todo que a ser chamado pelo WebHook
    * @param url URL que a ser consumida pelo WebHook
    * @return PageWebHookResponse
    */
-  public PageWebHookResponse listarUsingGET53(List<String> sort, Integer page, Integer limit, Long id, String tipoEvento, String metodo, String url) throws ApiException {
+  public PageWebHookResponse listarUsingGET55(List<String> sort, Integer page, Integer limit, Long id, String tipoEvento, String metodo, String url) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -206,7 +206,7 @@ public class WebhookApi {
   
   /**
    * Salvar Webhook
-   * Este m\u00C3\u00A9todo permite que seja adicionado um novo webhook
+   * Este m\u00E9todo permite que seja adicionado um novo webhook
    * @param webhook webhook
    * @return WebHookResponse
    */

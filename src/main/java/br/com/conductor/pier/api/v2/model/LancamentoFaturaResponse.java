@@ -44,14 +44,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o
+   * C\u00F3digo de identifica\u00E7\u00E3o da transa\u00E7\u00E3o
    **/
   public LancamentoFaturaResponse idTransacao(Long idTransacao) {
     this.idTransacao = idTransacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o da transa\u00E7\u00E3o")
   @JsonProperty("idTransacao")
   public Long getIdTransacao() {
     return idTransacao;
@@ -62,14 +62,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do tipo da transa\u00C3\u00A7\u00C3\u00A3o
+   * Descri\u00E7\u00E3o do tipo da transa\u00E7\u00E3o
    **/
   public LancamentoFaturaResponse descricaoTipoTransacao(String descricaoTipoTransacao) {
     this.descricaoTipoTransacao = descricaoTipoTransacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o do tipo da transa\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do tipo da transa\u00E7\u00E3o")
   @JsonProperty("descricaoTipoTransacao")
   public String getDescricaoTipoTransacao() {
     return descricaoTipoTransacao;
@@ -80,14 +80,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do tipo do evento
+   * C\u00F3digo identificador do tipo do evento
    **/
   public LancamentoFaturaResponse idTipoEvento(Long idTipoEvento) {
     this.idTipoEvento = idTipoEvento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador do tipo do evento")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador do tipo do evento")
   @JsonProperty("idTipoEvento")
   public Long getIdTipoEvento() {
     return idTipoEvento;
@@ -98,14 +98,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do tipo do evento
+   * Descri\u00E7\u00E3o do tipo do evento
    **/
   public LancamentoFaturaResponse descricaoTipoEvento(String descricaoTipoEvento) {
     this.descricaoTipoEvento = descricaoTipoEvento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o do tipo do evento")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do tipo do evento")
   @JsonProperty("descricaoTipoEvento")
   public String getDescricaoTipoEvento() {
     return descricaoTipoEvento;
@@ -116,14 +116,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do evento
+   * C\u00F3digo identificador do evento
    **/
   public LancamentoFaturaResponse idEvento(Long idEvento) {
     this.idEvento = idEvento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador do evento")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador do evento")
   @JsonProperty("idEvento")
   public Long getIdEvento() {
     return idEvento;
@@ -134,14 +134,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
+   * C\u00F3digo de identifica\u00E7\u00E3o da conta.
    **/
   public LancamentoFaturaResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o da conta.")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -152,14 +152,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o complementar do evento
+   * Descri\u00E7\u00E3o complementar do evento
    **/
   public LancamentoFaturaResponse complemento(String complemento) {
     this.complemento = complemento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o complementar do evento")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o complementar do evento")
   @JsonProperty("complemento")
   public String getComplemento() {
     return complemento;
@@ -206,14 +206,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * N\u00C3\u00BAmero da parcela
+   * N\u00FAmero da parcela
    **/
   public LancamentoFaturaResponse numeroParcela(Integer numeroParcela) {
     this.numeroParcela = numeroParcela;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero da parcela")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero da parcela")
   @JsonProperty("numeroParcela")
   public Integer getNumeroParcela() {
     return numeroParcela;
@@ -242,14 +242,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * Data da transa\u00C3\u00A7\u00C3\u00A3o
+   * Data da transa\u00E7\u00E3o
    **/
   public LancamentoFaturaResponse dataHoraTransacao(String dataHoraTransacao) {
     this.dataHoraTransacao = dataHoraTransacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data da transa\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(example = "null", value = "Data da transa\u00E7\u00E3o")
   @JsonProperty("dataHoraTransacao")
   public String getDataHoraTransacao() {
     return dataHoraTransacao;
@@ -278,14 +278,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do estabelecimento
+   * Descri\u00E7\u00E3o do estabelecimento
    **/
   public LancamentoFaturaResponse descricaoEstabelecimento(String descricaoEstabelecimento) {
     this.descricaoEstabelecimento = descricaoEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o do estabelecimento")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do estabelecimento")
   @JsonProperty("descricaoEstabelecimento")
   public String getDescricaoEstabelecimento() {
     return descricaoEstabelecimento;
@@ -314,14 +314,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * Flag que indica se o lan\u00C3\u00A7amento \u00C3\u00A9 de cr\u00C3\u00A9dito
+   * Flag que indica se o lan\u00E7amento \u00E9 de cr\u00E9dito
    **/
   public LancamentoFaturaResponse flagCredito(Boolean flagCredito) {
     this.flagCredito = flagCredito;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Flag que indica se o lan\u00C3\u00A7amento \u00C3\u00A9 de cr\u00C3\u00A9dito")
+  @ApiModelProperty(example = "false", value = "Flag que indica se o lan\u00E7amento \u00E9 de cr\u00E9dito")
   @JsonProperty("flagCredito")
   public Boolean getFlagCredito() {
     return flagCredito;
@@ -332,14 +332,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do MCC (Merchant Category Codes)
+   * C\u00F3digo identificador do MCC (Merchant Category Codes)
    **/
   public LancamentoFaturaResponse idMCC(Long idMCC) {
     this.idMCC = idMCC;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador do MCC (Merchant Category Codes)")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador do MCC (Merchant Category Codes)")
   @JsonProperty("idMCC")
   public Long getIdMCC() {
     return idMCC;
@@ -350,14 +350,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do grupo MCC
+   * C\u00F3digo identificador do grupo MCC
    **/
   public LancamentoFaturaResponse idGrupoMCC(Long idGrupoMCC) {
     this.idGrupoMCC = idGrupoMCC;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador do grupo MCC")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador do grupo MCC")
   @JsonProperty("idGrupoMCC")
   public Long getIdGrupoMCC() {
     return idGrupoMCC;
@@ -368,14 +368,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do grupo MCC
+   * Descri\u00E7\u00E3o do grupo MCC
    **/
   public LancamentoFaturaResponse descricaoGrupoMCC(String descricaoGrupoMCC) {
     this.descricaoGrupoMCC = descricaoGrupoMCC;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o do grupo MCC")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do grupo MCC")
   @JsonProperty("descricaoGrupoMCC")
   public String getDescricaoGrupoMCC() {
     return descricaoGrupoMCC;
@@ -386,14 +386,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * Indica se o portador do cart\u00C3\u00A3o \u00C3\u00A9 o titular da conta
+   * Indica se o portador do cart\u00E3o \u00E9 o titular da conta
    **/
   public LancamentoFaturaResponse titular(Boolean titular) {
     this.titular = titular;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Indica se o portador do cart\u00C3\u00A3o \u00C3\u00A9 o titular da conta")
+  @ApiModelProperty(example = "false", value = "Indica se o portador do cart\u00E3o \u00E9 o titular da conta")
   @JsonProperty("titular")
   public Boolean getTitular() {
     return titular;
@@ -404,14 +404,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * Nome impresso no cart\u00C3\u00A3o
+   * Nome impresso no cart\u00E3o
    **/
   public LancamentoFaturaResponse nomePortador(String nomePortador) {
     this.nomePortador = nomePortador;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome impresso no cart\u00C3\u00A3o")
+  @ApiModelProperty(example = "null", value = "Nome impresso no cart\u00E3o")
   @JsonProperty("nomePortador")
   public String getNomePortador() {
     return nomePortador;
@@ -422,14 +422,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * N\u00C3\u00BAmero do cart\u00C3\u00A3o mascarado
+   * N\u00FAmero do cart\u00E3o mascarado
    **/
   public LancamentoFaturaResponse numeroCartaoMascarado(String numeroCartaoMascarado) {
     this.numeroCartaoMascarado = numeroCartaoMascarado;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero do cart\u00C3\u00A3o mascarado")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero do cart\u00E3o mascarado")
   @JsonProperty("numeroCartaoMascarado")
   public String getNumeroCartaoMascarado() {
     return numeroCartaoMascarado;
@@ -440,14 +440,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * Flag que indica se o cliente solicitou contesta\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o
+   * Flag que indica se o cliente solicitou contesta\u00E7\u00E3o da transa\u00E7\u00E3o
    **/
   public LancamentoFaturaResponse flagSolicitouContestacao(Boolean flagSolicitouContestacao) {
     this.flagSolicitouContestacao = flagSolicitouContestacao;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Flag que indica se o cliente solicitou contesta\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(example = "false", value = "Flag que indica se o cliente solicitou contesta\u00E7\u00E3o da transa\u00E7\u00E3o")
   @JsonProperty("flagSolicitouContestacao")
   public Boolean getFlagSolicitouContestacao() {
     return flagSolicitouContestacao;
@@ -476,14 +476,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o abreviada da transa\u00C3\u00A7\u00C3\u00A3o
+   * Descri\u00E7\u00E3o abreviada da transa\u00E7\u00E3o
    **/
   public LancamentoFaturaResponse descricaoAbreviada(String descricaoAbreviada) {
     this.descricaoAbreviada = descricaoAbreviada;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o abreviada da transa\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o abreviada da transa\u00E7\u00E3o")
   @JsonProperty("descricaoAbreviada")
   public String getDescricaoAbreviada() {
     return descricaoAbreviada;

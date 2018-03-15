@@ -76,14 +76,14 @@ public class OperacaoCredorPersist   {
 
   
   /**
-   * Apresenta o id da Opera\u00C3\u00A7\u00C3\u00A3o.
+   * Apresenta o id da Opera\u00E7\u00E3o.
    **/
   public OperacaoCredorPersist idOperacao(Long idOperacao) {
     this.idOperacao = idOperacao;
     return this;
   }
   
-  @ApiModelProperty(example = "2", value = "Apresenta o id da Opera\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(example = "2", value = "Apresenta o id da Opera\u00E7\u00E3o.")
   @JsonProperty("idOperacao")
   public Long getIdOperacao() {
     return idOperacao;
@@ -112,14 +112,14 @@ public class OperacaoCredorPersist   {
 
   
   /**
-   * Apresenta a lista de ids produtos que v\u00C3\u00A3o ter regras cadastradas.
+   * Apresenta a lista de ids produtos que v\u00E3o ter regras cadastradas.
    **/
   public OperacaoCredorPersist idsProduto(List<Long> idsProduto) {
     this.idsProduto = idsProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta a lista de ids produtos que v\u00C3\u00A3o ter regras cadastradas.")
+  @ApiModelProperty(example = "null", value = "Apresenta a lista de ids produtos que v\u00E3o ter regras cadastradas.")
   @JsonProperty("idsProduto")
   public List<Long> getIdsProduto() {
     return idsProduto;
@@ -130,14 +130,14 @@ public class OperacaoCredorPersist   {
 
   
   /**
-   * Remunera\u00C3\u00A7\u00C3\u00A3o Percentual.
+   * Remunera\u00E7\u00E3o Percentual.
    **/
   public OperacaoCredorPersist remuneracaoPercentual(BigDecimal remuneracaoPercentual) {
     this.remuneracaoPercentual = remuneracaoPercentual;
     return this;
   }
   
-  @ApiModelProperty(example = "0.04", value = "Remunera\u00C3\u00A7\u00C3\u00A3o Percentual.")
+  @ApiModelProperty(example = "0.04", value = "Remunera\u00E7\u00E3o Percentual.")
   @JsonProperty("remuneracaoPercentual")
   public BigDecimal getRemuneracaoPercentual() {
     return remuneracaoPercentual;
@@ -148,14 +148,14 @@ public class OperacaoCredorPersist   {
 
   
   /**
-   * Remunera\u00C3\u00A7\u00C3\u00A3o Fixa.
+   * Remunera\u00E7\u00E3o Fixa.
    **/
   public OperacaoCredorPersist remuneracaoFixa(BigDecimal remuneracaoFixa) {
     this.remuneracaoFixa = remuneracaoFixa;
     return this;
   }
   
-  @ApiModelProperty(example = "0.0", value = "Remunera\u00C3\u00A7\u00C3\u00A3o Fixa.")
+  @ApiModelProperty(example = "0.0", value = "Remunera\u00E7\u00E3o Fixa.")
   @JsonProperty("remuneracaoFixa")
   public BigDecimal getRemuneracaoFixa() {
     return remuneracaoFixa;
@@ -256,14 +256,14 @@ public class OperacaoCredorPersist   {
 
   
   /**
-   * Plano m\u00C3\u00ADnimo da regra.
+   * Plano m\u00EDnimo da regra.
    **/
   public OperacaoCredorPersist planoMinimo(Integer planoMinimo) {
     this.planoMinimo = planoMinimo;
     return this;
   }
   
-  @ApiModelProperty(example = "1", value = "Plano m\u00C3\u00ADnimo da regra.")
+  @ApiModelProperty(example = "1", value = "Plano m\u00EDnimo da regra.")
   @JsonProperty("planoMinimo")
   public Integer getPlanoMinimo() {
     return planoMinimo;
@@ -274,14 +274,14 @@ public class OperacaoCredorPersist   {
 
   
   /**
-   * Plano m\u00C3\u00A1ximo da regra.
+   * Plano m\u00E1ximo da regra.
    **/
   public OperacaoCredorPersist planoMaximo(Integer planoMaximo) {
     this.planoMaximo = planoMaximo;
     return this;
   }
   
-  @ApiModelProperty(example = "5", value = "Plano m\u00C3\u00A1ximo da regra.")
+  @ApiModelProperty(example = "5", value = "Plano m\u00E1ximo da regra.")
   @JsonProperty("planoMaximo")
   public Integer getPlanoMaximo() {
     return planoMaximo;

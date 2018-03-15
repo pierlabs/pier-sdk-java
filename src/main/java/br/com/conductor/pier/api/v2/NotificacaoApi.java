@@ -53,9 +53,9 @@ public class NotificacaoApi {
 
   
   /**
-   * Altera configura\u00C3\u00A7\u00C3\u00B5es de E-mail
-   * Esse recurso permite salvar altera\u00C3\u00A7\u00C3\u00B5es de configura\u00C3\u00A7\u00C3\u00B5es de E-mail.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.
+   * Altera configura\u00E7\u00F5es de E-mail
+   * Esse recurso permite salvar altera\u00E7\u00F5es de configura\u00E7\u00F5es de E-mail.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.
    * @param persist persist
    * @return ConfiguracaoEmailResponse
    */
@@ -107,16 +107,16 @@ public class NotificacaoApi {
   }
   
   /**
-   * Alterar template de notifica\u00C3\u00A7\u00C3\u00A3o
-   * Esse recurso permite salvar altera\u00C3\u00A7\u00C3\u00B5es de templates notifica\u00C3\u00A7\u00C3\u00B5es.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail.
+   * Alterar template de notifica\u00E7\u00E3o
+   * Esse recurso permite salvar altera\u00E7\u00F5es de templates notifica\u00E7\u00F5es.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do layout de e-mail.
    * @param conteudo Template HTML
-   * @param idConfiguracaoEmail C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL.
+   * @param idConfiguracaoEmail C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de EMAIL.
    * @param tipoLayout Tipo do layout.
-   * @param tipoNotificacao Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+   * @param tipoNotificacao Tipo da notifica\u00E7\u00E3o.
    * @param remetente Remetente
-   * @param assunto Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
-   * @param templatePadrao Template Padr\u00C3\u00A3o.
+   * @param assunto Assunto da Notificaca\u00E7\u00E3o.
+   * @param templatePadrao Template Padr\u00E3o.
    * @return TemplateNotificacaoDetalheResponse
    */
   public TemplateNotificacaoDetalheResponse alterarTemplateNotificacaoUsingPUT(Long id, String conteudo, Long idConfiguracaoEmail, String tipoLayout, String tipoNotificacao, String remetente, String assunto, Boolean templatePadrao) throws ApiException {
@@ -181,7 +181,7 @@ public class NotificacaoApi {
   /**
    * Atualizar SMS
    * Esse recurso permite atualizar o status do SMS do emissor
-   * @param nsu Seu n\u00C3\u00BAmero
+   * @param nsu Seu n\u00FAmero
    * @param status Status
    * @param data Data
    * @param textoStatus TextoStatus
@@ -235,9 +235,9 @@ public class NotificacaoApi {
   }
   
   /**
-   * Consulta configura\u00C3\u00A7\u00C3\u00A3o de E-mail
-   * Esse recurso permite consultar uma configura\u00C3\u00A7\u00C3\u00A3o espec\u00C3\u00ADfica por id.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.
+   * Consulta configura\u00E7\u00E3o de E-mail
+   * Esse recurso permite consultar uma configura\u00E7\u00E3o espec\u00EDfica por id.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.
    * @return ConfiguracaoEmailResponse
    */
   public ConfiguracaoEmailResponse consultarConfiguracaoUsingGET(Long id) throws ApiException {
@@ -283,9 +283,9 @@ public class NotificacaoApi {
   }
   
   /**
-   * Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail
-   * Esse recurso permite consultar um c\u00C3\u00B3digo de seguran\u00C3\u00A7a E-mail espec\u00C3\u00ADfico por id.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.
+   * Consulta c\u00F3digo de seguran\u00E7a E-mail
+   * Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a E-mail espec\u00EDfico por id.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.
    * @return CodigoSegurancaResponse
    */
   public CodigoSegurancaResponse consultarPorEmailUsingGET(Long id) throws ApiException {
@@ -331,9 +331,9 @@ public class NotificacaoApi {
   }
   
   /**
-   * Consulta c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS
-   * Esse recurso permite consultar um c\u00C3\u00B3digo de seguran\u00C3\u00A7a SMS espec\u00C3\u00ADfico por id.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o de e-mail.
+   * Consulta c\u00F3digo de seguran\u00E7a SMS
+   * Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a SMS espec\u00EDfico por id.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail.
    * @return CodigoSegurancaResponse
    */
   public CodigoSegurancaResponse consultarPorSMSUsingGET(Long id) throws ApiException {
@@ -379,9 +379,9 @@ public class NotificacaoApi {
   }
   
   /**
-   * Consulta template de notifica\u00C3\u00A7\u00C3\u00A3o
-   * Esse recurso permite consultar uma configura\u00C3\u00A7\u00C3\u00A3o espec\u00C3\u00ADfica por id.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do layout de e-mail.
+   * Consulta template de notifica\u00E7\u00E3o
+   * Esse recurso permite consultar uma configura\u00E7\u00E3o espec\u00EDfica por id.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do layout de e-mail.
    * @return TemplateNotificacaoDetalheResponse
    */
   public TemplateNotificacaoDetalheResponse consultarTemplateNotificacaoUsingGET(Long id) throws ApiException {
@@ -427,8 +427,8 @@ public class NotificacaoApi {
   }
   
   /**
-   * Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por e-mail
-   * Esse recurso permite gerar e enviar c\u00C3\u00B3digos de seguran\u00C3\u00A7a por e-mail, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+   * Gerar c\u00F3digo de seguran\u00E7a e enviar por e-mail
+   * Esse recurso permite gerar e enviar c\u00F3digos de seguran\u00E7a por e-mail, para valida\u00E7\u00E3o de dispositivos.
    * @param email email
    * @return String
    */
@@ -474,8 +474,8 @@ public class NotificacaoApi {
   }
   
   /**
-   * Gerar c\u00C3\u00B3digo de seguran\u00C3\u00A7a e enviar por sms
-   * Esse recurso permite gerar e enviar c\u00C3\u00B3digos de seguran\u00C3\u00A7a por sms, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+   * Gerar c\u00F3digo de seguran\u00E7a e enviar por sms
+   * Esse recurso permite gerar e enviar c\u00F3digos de seguran\u00E7a por sms, para valida\u00E7\u00E3o de dispositivos.
    * @param persist persist
    * @return String
    */
@@ -521,11 +521,11 @@ public class NotificacaoApi {
   }
   
   /**
-   * Lista configura\u00C3\u00A7\u00C3\u00B5es de E-mails
-   * Esse recurso permite listar as configura\u00C3\u00A7\u00C3\u00B5es de E-mails.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * Lista configura\u00E7\u00F5es de E-mails
+   * Esse recurso permite listar as configura\u00E7\u00F5es de E-mails.
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
    * @return PageConfiguracaoEmailResponse
    */
   public PageConfiguracaoEmailResponse listarConfiguracaoUsingGET(List<String> sort, Integer page, Integer limit) throws ApiException {
@@ -571,11 +571,11 @@ public class NotificacaoApi {
   }
   
   /**
-   * Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a E-Mail
-   * Esse recurso permite listar os codigos de seguran\u00C3\u00A7a por E-Mail.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * Lista os c\u00F3digos de seguran\u00E7a E-Mail
+   * Esse recurso permite listar os codigos de seguran\u00E7a por E-Mail.
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
    * @return PageCodigoSegurancaResponse
    */
   public PageCodigoSegurancaResponse listarPorEmailUsingGET(List<String> sort, Integer page, Integer limit) throws ApiException {
@@ -621,11 +621,11 @@ public class NotificacaoApi {
   }
   
   /**
-   * Lista os c\u00C3\u00B3digos de seguran\u00C3\u00A7a SMS
-   * Esse recurso permite listar os codigos de seguran\u00C3\u00A7a por SMS.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * Lista os c\u00F3digos de seguran\u00E7a SMS
+   * Esse recurso permite listar os codigos de seguran\u00E7a por SMS.
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
    * @return PageCodigoSegurancaResponse
    */
   public PageCodigoSegurancaResponse listarPorSMSUsingGET(List<String> sort, Integer page, Integer limit) throws ApiException {
@@ -673,14 +673,14 @@ public class NotificacaoApi {
   /**
    * Listar Push
    * Esse recurso permite listar os Pushes do emissor
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
    * @param dataEnvio Apresenta a data e em que o registro foi enviado para o dispositivo.
-   * @param tipoEvento Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
-   * @param status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+   * @param tipoEvento Nome do tipoEvento da notifica\u00E7\u00E3o
+   * @param status Status de envio da notifica\u00E7\u00E3o
    * @param plataforma Plataforma de Push notifications.
-   * @param protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
+   * @param protocolo N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es
    * @return PagePushResponse
    */
   public PagePushResponse listarPushUsingGET(List<String> sort, Integer page, Integer limit, String dataEnvio, String tipoEvento, String status, String plataforma, String protocolo) throws ApiException {
@@ -738,15 +738,15 @@ public class NotificacaoApi {
   /**
    * Listar SMS
    * Esse recurso permite listar os SMS do emissor
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param dataInclusao Apresenta a data e em que o registro foi inclu\u00C3\u00ADdo na base para ser enviado
-   * @param tipoEvento Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
-   * @param status Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
-   * @param operadora Nome da operadora a qual a notifica\u00C3\u00A7\u00C3\u00A3o foi enviada.
-   * @param protocolo N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
-   * @param nsu Apresenta o nsu da notifica\u00C3\u00A7\u00C3\u00A3o
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @param dataInclusao Apresenta a data e em que o registro foi inclu\u00EDdo na base para ser enviado
+   * @param tipoEvento Nome do tipoEvento da notifica\u00E7\u00E3o
+   * @param status Status de envio da notifica\u00E7\u00E3o
+   * @param operadora Nome da operadora a qual a notifica\u00E7\u00E3o foi enviada.
+   * @param protocolo N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es
+   * @param nsu Apresenta o nsu da notifica\u00E7\u00E3o
    * @return PageSMSResponse
    */
   public PageSMSResponse listarSMSUsingGET(List<String> sort, Integer page, Integer limit, String dataInclusao, String tipoEvento, String status, String operadora, String protocolo, Long nsu) throws ApiException {
@@ -804,11 +804,11 @@ public class NotificacaoApi {
   }
   
   /**
-   * Lista templates de notifica\u00C3\u00A7\u00C3\u00B5es
-   * Esse recurso permite listar templates notifica\u00C3\u00A7\u00C3\u00B5es.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * Lista templates de notifica\u00E7\u00F5es
+   * Esse recurso permite listar templates notifica\u00E7\u00F5es.
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
    * @return PageTemplateNotificacaoResponse
    */
   public PageTemplateNotificacaoResponse listarTemplateNotificacaoUsingGET(List<String> sort, Integer page, Integer limit) throws ApiException {
@@ -854,8 +854,8 @@ public class NotificacaoApi {
   }
   
   /**
-   * Lista os tipos templates de notifica\u00C3\u00A7\u00C3\u00A3o
-   * Esse recurso permite listar os tipos de templates dispon\u00C3\u00ADveis os par\u00C3\u00A2metros devem ser usados entre chaves. Ex: {{nomeParametro}} .
+   * Lista os tipos templates de notifica\u00E7\u00E3o
+   * Esse recurso permite listar os tipos de templates dispon\u00EDveis os par\u00E2metros devem ser usados entre chaves. Ex: {{nomeParametro}} .
    * @return List<Object>
    */
   public List<Object> listarTiposLayoutsUsingGET() throws ApiException {
@@ -895,8 +895,8 @@ public class NotificacaoApi {
   }
   
   /**
-   * Enviar notifica\u00C3\u00A7\u00C3\u00A3o por email
-   * Esse recurso permite enviar uma mensagem de notifica\u00C3\u00A7\u00C3\u00A3o por email
+   * Enviar notifica\u00E7\u00E3o por email
+   * Esse recurso permite enviar uma mensagem de notifica\u00E7\u00E3o por email
    * @param request request
    * @return Object
    */
@@ -942,8 +942,8 @@ public class NotificacaoApi {
   }
   
   /**
-   * Reenviar c\u00C3\u00B3digo de seguran\u00C3\u00A7a por sms
-   * Esse recurso permite que seja reenviado para um determinado n\u00C3\u00BAmero de telefone, atrav\u00C3\u00A9s de SMS, o c\u00C3\u00B3digo de seguran\u00C3\u00A7a gerado previamente para ele. Caso o c\u00C3\u00B3digo de seguran\u00C3\u00A7a j\u00C3\u00A1 n\u00C3\u00A3o esteja mais v\u00C3\u00A1lido, o recurso retornar\u00C3\u00A1 uma mensagem orientando que seja solicitada uma nova gera\u00C3\u00A7\u00C3\u00A3o para o telefone em quest\u00C3\u00A3o.
+   * Reenviar c\u00F3digo de seguran\u00E7a por sms
+   * Esse recurso permite que seja reenviado para um determinado n\u00FAmero de telefone, atrav\u00E9s de SMS, o c\u00F3digo de seguran\u00E7a gerado previamente para ele. Caso o c\u00F3digo de seguran\u00E7a j\u00E1 n\u00E3o esteja mais v\u00E1lido, o recurso retornar\u00E1 uma mensagem orientando que seja solicitada uma nova gera\u00E7\u00E3o para o telefone em quest\u00E3o.
    * @param persist persist
    * @return String
    */
@@ -990,8 +990,8 @@ public class NotificacaoApi {
   
   /**
    * Responder SMS
-   * Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00C3\u00A1rio
-   * @param nsu Seu n\u00C3\u00BAmero
+   * Esse recurso permite atualizar a resposta do SMS, fornecida pedo usu\u00E1rio
+   * @param nsu Seu n\u00FAmero
    * @param data Data
    * @param resposta TextoStatus
    * @return NotificacaoSMSResponse
@@ -1039,8 +1039,8 @@ public class NotificacaoApi {
   }
   
   /**
-   * Salva configura\u00C3\u00A7\u00C3\u00B5es de E-mail
-   * Esse recurso salvar configura\u00C3\u00A7\u00C3\u00B5es de E-mail.
+   * Salva configura\u00E7\u00F5es de E-mail
+   * Esse recurso salvar configura\u00E7\u00F5es de E-mail.
    * @param persist persist
    * @return ConfiguracaoEmailResponse
    */
@@ -1087,7 +1087,7 @@ public class NotificacaoApi {
   
   /**
    * Enviar Push FCM
-   * Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma FCM (Firebase Cloud Messaging).
+   * Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00E9s da plataforma FCM (Firebase Cloud Messaging).
    * @param pushPersists pushPersists
    * @return NotificacaoResponse
    */
@@ -1134,7 +1134,7 @@ public class NotificacaoApi {
   
   /**
    * Enviar Push GCM
-   * Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma GCM (Google Cloud Messaging).
+   * Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00E9s da plataforma GCM (Google Cloud Messaging).
    * @param pushPersists pushPersists
    * @return NotificacaoResponse
    */
@@ -1181,7 +1181,7 @@ public class NotificacaoApi {
   
   /**
    * Enviar Push APNS
-   * Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00C3\u00A9s da plataforma APNS (Apple Push Notification Service).
+   * Esse recurso permite enviar Push para um determinado dipositivo movel atrav\u00E9s da plataforma APNS (Apple Push Notification Service).
    * @param pushPersists pushPersists
    * @return NotificacaoResponse
    */
@@ -1274,15 +1274,15 @@ public class NotificacaoApi {
   }
   
   /**
-   * Salva template de notifica\u00C3\u00A7\u00C3\u00A3o
-   * Esse recurso salvar template notifica\u00C3\u00A7\u00C3\u00B5e.
+   * Salva template de notifica\u00E7\u00E3o
+   * Esse recurso salvar template notifica\u00E7\u00F5e.
    * @param conteudo Template HTML
-   * @param idConfiguracaoEmail C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de EMAIL.
+   * @param idConfiguracaoEmail C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de EMAIL.
    * @param tipoLayout Tipo do layout.
-   * @param tipoNotificacao Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+   * @param tipoNotificacao Tipo da notifica\u00E7\u00E3o.
    * @param remetente Remetente
-   * @param assunto Assunto da Notificaca\u00C3\u00A7\u00C3\u00A3o.
-   * @param templatePadrao Template Padr\u00C3\u00A3o.
+   * @param assunto Assunto da Notificaca\u00E7\u00E3o.
+   * @param templatePadrao Template Padr\u00E3o.
    * @return TemplateNotificacaoDetalheResponse
    */
   public TemplateNotificacaoDetalheResponse salvarTemplateNotificacaoUsingPOST(String conteudo, Long idConfiguracaoEmail, String tipoLayout, String tipoNotificacao, String remetente, String assunto, Boolean templatePadrao) throws ApiException {
@@ -1339,8 +1339,8 @@ public class NotificacaoApi {
   }
   
   /**
-   * Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por e-mail
-   * Esse recurso permite validar os c\u00C3\u00B3digos de seguran\u00C3\u00A7a enviador por e-mail, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+   * Validar c\u00F3digo de seguran\u00E7a enviado por e-mail
+   * Esse recurso permite validar os c\u00F3digos de seguran\u00E7a enviador por e-mail, para valida\u00E7\u00E3o de dispositivos.
    * @param request request
    * @return String
    */
@@ -1386,8 +1386,8 @@ public class NotificacaoApi {
   }
   
   /**
-   * Validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a enviado por sms
-   * Esse recurso permite validar os c\u00C3\u00B3digos de seguran\u00C3\u00A7a enviador por sms, para valida\u00C3\u00A7\u00C3\u00A3o de dispositivos.
+   * Validar c\u00F3digo de seguran\u00E7a enviado por sms
+   * Esse recurso permite validar os c\u00F3digos de seguran\u00E7a enviador por sms, para valida\u00E7\u00E3o de dispositivos.
    * @param request request
    * @return String
    */

@@ -9,10 +9,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o do recurso Configura\u00C3\u00A7\u00C3\u00A3o Registro de Cobran\u00C3\u00A7a Online
+ * Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso Configura\u00E7\u00E3o Registro de Cobran\u00E7a Online
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o do recurso Configura\u00C3\u00A7\u00C3\u00A3o Registro de Cobran\u00C3\u00A7a Online")
+@ApiModel(description = "Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso Configura\u00E7\u00E3o Registro de Cobran\u00E7a Online")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ConfiguracaoRegistroCobrancaPersist   {
   
@@ -51,14 +51,14 @@ public class ConfiguracaoRegistroCobrancaPersist   {
 
   
   /**
-   * C\u00C3\u00B3digo do Banco.
+   * C\u00F3digo do Banco.
    **/
   public ConfiguracaoRegistroCobrancaPersist codigoBanco(Long codigoBanco) {
     this.codigoBanco = codigoBanco;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "C\u00C3\u00B3digo do Banco.")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo do Banco.")
   @JsonProperty("codigoBanco")
   public Long getCodigoBanco() {
     return codigoBanco;
@@ -267,14 +267,14 @@ public class ConfiguracaoRegistroCobrancaPersist   {
 
   
   /**
-   * Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da configura\u00C3\u00A7\u00C3\u00A3o.
+   * Status descrevendo a situa\u00E7\u00E3o atual da configura\u00E7\u00E3o.
    **/
   public ConfiguracaoRegistroCobrancaPersist status(StatusEnum status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Status descrevendo a situa\u00C3\u00A7\u00C3\u00A3o atual da configura\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(example = "null", required = true, value = "Status descrevendo a situa\u00E7\u00E3o atual da configura\u00E7\u00E3o.")
   @JsonProperty("status")
   public StatusEnum getStatus() {
     return status;

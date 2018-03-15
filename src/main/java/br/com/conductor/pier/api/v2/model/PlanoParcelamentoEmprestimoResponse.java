@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * Detalhe da resposta do recurso de simular empr\u00C3\u00A9stimos/financiamentos
+ * Detalhe da resposta do recurso de simular empr\u00E9stimos/financiamentos
  **/
 
-@ApiModel(description = "Detalhe da resposta do recurso de simular empr\u00C3\u00A9stimos/financiamentos")
+@ApiModel(description = "Detalhe da resposta do recurso de simular empr\u00E9stimos/financiamentos")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PlanoParcelamentoEmprestimoResponse   {
   
@@ -24,14 +24,14 @@ public class PlanoParcelamentoEmprestimoResponse   {
 
   
   /**
-   * N\u00C3\u00BAmeros de parcelas do empr\u00C3\u00A9stimo/financiamento
+   * N\u00FAmeros de parcelas do empr\u00E9stimo/financiamento
    **/
   public PlanoParcelamentoEmprestimoResponse numeroParcelas(Integer numeroParcelas) {
     this.numeroParcelas = numeroParcelas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmeros de parcelas do empr\u00C3\u00A9stimo/financiamento")
+  @ApiModelProperty(example = "null", value = "N\u00FAmeros de parcelas do empr\u00E9stimo/financiamento")
   @JsonProperty("numeroParcelas")
   public Integer getNumeroParcelas() {
     return numeroParcelas;
@@ -60,14 +60,14 @@ public class PlanoParcelamentoEmprestimoResponse   {
 
   
   /**
-   * Taxa de juros aplicado no empr\u00C3\u00A9stimo/financiamento
+   * Taxa de juros aplicado no empr\u00E9stimo/financiamento
    **/
   public PlanoParcelamentoEmprestimoResponse taxaJuros(BigDecimal taxaJuros) {
     this.taxaJuros = taxaJuros;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Taxa de juros aplicado no empr\u00C3\u00A9stimo/financiamento")
+  @ApiModelProperty(example = "null", value = "Taxa de juros aplicado no empr\u00E9stimo/financiamento")
   @JsonProperty("taxaJuros")
   public BigDecimal getTaxaJuros() {
     return taxaJuros;
@@ -78,14 +78,14 @@ public class PlanoParcelamentoEmprestimoResponse   {
 
   
   /**
-   * valor total estimado dos tributos do Imposto sobre Opera\u00C3\u00A7\u00C3\u00B5es Financeiras
+   * valor total estimado dos tributos do Imposto sobre Opera\u00E7\u00F5es Financeiras
    **/
   public PlanoParcelamentoEmprestimoResponse valorTributosIOF(BigDecimal valorTributosIOF) {
     this.valorTributosIOF = valorTributosIOF;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "valor total estimado dos tributos do Imposto sobre Opera\u00C3\u00A7\u00C3\u00B5es Financeiras")
+  @ApiModelProperty(example = "null", value = "valor total estimado dos tributos do Imposto sobre Opera\u00E7\u00F5es Financeiras")
   @JsonProperty("valorTributosIOF")
   public BigDecimal getValorTributosIOF() {
     return valorTributosIOF;
@@ -96,14 +96,14 @@ public class PlanoParcelamentoEmprestimoResponse   {
 
   
   /**
-   * valor percentual do Custo Efetivo Total, ao ano, do empr\u00C3\u00A9stimo / financiamento
+   * valor percentual do Custo Efetivo Total, ao ano, do empr\u00E9stimo / financiamento
    **/
   public PlanoParcelamentoEmprestimoResponse valorPercentualCET(BigDecimal valorPercentualCET) {
     this.valorPercentualCET = valorPercentualCET;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "valor percentual do Custo Efetivo Total, ao ano, do empr\u00C3\u00A9stimo / financiamento")
+  @ApiModelProperty(example = "null", value = "valor percentual do Custo Efetivo Total, ao ano, do empr\u00E9stimo / financiamento")
   @JsonProperty("valorPercentualCET")
   public BigDecimal getValorPercentualCET() {
     return valorPercentualCET;

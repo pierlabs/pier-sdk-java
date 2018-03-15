@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * Objeto de requisi\u00C3\u00A7\u00C3\u00A3o.
+ * Objeto de requisi\u00E7\u00E3o.
  **/
 
-@ApiModel(description = "Objeto de requisi\u00C3\u00A7\u00C3\u00A3o.")
+@ApiModel(description = "Objeto de requisi\u00E7\u00E3o.")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class IntegrarDocumentoRequest   {
   
@@ -43,14 +43,14 @@ public class IntegrarDocumentoRequest   {
 
   
   /**
-   * Conte\u00C3\u00BAdo do arquivo convertido em Base 64
+   * Conte\u00FAdo do arquivo convertido em Base 64
    **/
   public IntegrarDocumentoRequest arquivo(String arquivo) {
     this.arquivo = arquivo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Conte\u00C3\u00BAdo do arquivo convertido em Base 64")
+  @ApiModelProperty(example = "null", value = "Conte\u00FAdo do arquivo convertido em Base 64")
   @JsonProperty("arquivo")
   public String getArquivo() {
     return arquivo;
@@ -79,14 +79,14 @@ public class IntegrarDocumentoRequest   {
 
   
   /**
-   * Lista de par\u00C3\u00A2metros para montagem do documento.
+   * Lista de par\u00E2metros para montagem do documento.
    **/
   public IntegrarDocumentoRequest propriedades(List<PropriedadeDocumentoRequest> propriedades) {
     this.propriedades = propriedades;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Lista de par\u00C3\u00A2metros para montagem do documento.")
+  @ApiModelProperty(example = "null", value = "Lista de par\u00E2metros para montagem do documento.")
   @JsonProperty("propriedades")
   public List<PropriedadeDocumentoRequest> getPropriedades() {
     return propriedades;

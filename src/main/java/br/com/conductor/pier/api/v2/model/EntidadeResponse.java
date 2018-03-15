@@ -21,14 +21,14 @@ public class EntidadeResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da entidade.
+   * C\u00F3digo de Identifica\u00E7\u00E3o da entidade.
    **/
   public EntidadeResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da entidade.")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o da entidade.")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -39,14 +39,14 @@ public class EntidadeResponse   {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o da entidade.
+   * Descri\u00E7\u00E3o da entidade.
    **/
   public EntidadeResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o da entidade.")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o da entidade.")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -57,14 +57,14 @@ public class EntidadeResponse   {
 
   
   /**
-   * Flag que indica se a entidade est\u00C3\u00A1 ativa.
+   * Flag que indica se a entidade est\u00E1 ativa.
    **/
   public EntidadeResponse flagAtivo(Boolean flagAtivo) {
     this.flagAtivo = flagAtivo;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Flag que indica se a entidade est\u00C3\u00A1 ativa.")
+  @ApiModelProperty(example = "false", value = "Flag que indica se a entidade est\u00E1 ativa.")
   @JsonProperty("flagAtivo")
   public Boolean getFlagAtivo() {
     return flagAtivo;

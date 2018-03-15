@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Objeto ArquivoParametros para persist\u00C3\u00AAncia de dados.
+ * Objeto ArquivoParametros para persist\u00EAncia de dados.
  **/
 
-@ApiModel(description = "Objeto ArquivoParametros para persist\u00C3\u00AAncia de dados.")
+@ApiModel(description = "Objeto ArquivoParametros para persist\u00EAncia de dados.")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ArquivoDetalhesPersist   {
   
@@ -38,14 +38,14 @@ public class ArquivoDetalhesPersist   {
 
   
   /**
-   * Conte\u00C3\u00BAdo do nomeCampo
+   * Conte\u00FAdo do nomeCampo
    **/
   public ArquivoDetalhesPersist conteudo(String conteudo) {
     this.conteudo = conteudo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Conte\u00C3\u00BAdo do nomeCampo")
+  @ApiModelProperty(example = "null", required = true, value = "Conte\u00FAdo do nomeCampo")
   @JsonProperty("conteudo")
   public String getConteudo() {
     return conteudo;

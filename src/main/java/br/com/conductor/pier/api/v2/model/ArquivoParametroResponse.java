@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Objeto Response de par\u00C3\u00A2metros do arquivo.
+ * Objeto Response de par\u00E2metros do arquivo.
  **/
 
-@ApiModel(description = "Objeto Response de par\u00C3\u00A2metros do arquivo.")
+@ApiModel(description = "Objeto Response de par\u00E2metros do arquivo.")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ArquivoParametroResponse   {
   
@@ -21,14 +21,14 @@ public class ArquivoParametroResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do detalhe do arquivo.
+   * C\u00F3digo de identifica\u00E7\u00E3o do detalhe do arquivo.
    **/
   public ArquivoParametroResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do detalhe do arquivo.")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do detalhe do arquivo.")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -57,14 +57,14 @@ public class ArquivoParametroResponse   {
 
   
   /**
-   * Conte\u00C3\u00BAdo do nomeCampo
+   * Conte\u00FAdo do nomeCampo
    **/
   public ArquivoParametroResponse conteudo(String conteudo) {
     this.conteudo = conteudo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Conte\u00C3\u00BAdo do nomeCampo")
+  @ApiModelProperty(example = "null", required = true, value = "Conte\u00FAdo do nomeCampo")
   @JsonProperty("conteudo")
   public String getConteudo() {
     return conteudo;

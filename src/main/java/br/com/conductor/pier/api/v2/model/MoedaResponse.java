@@ -40,14 +40,14 @@ public class MoedaResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do tipo de moeda.
+   * C\u00F3digo identificador do tipo de moeda.
    **/
   public MoedaResponse codigoMoeda(String codigoMoeda) {
     this.codigoMoeda = codigoMoeda;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador do tipo de moeda.")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador do tipo de moeda.")
   @JsonProperty("codigoMoeda")
   public String getCodigoMoeda() {
     return codigoMoeda;
@@ -58,14 +58,14 @@ public class MoedaResponse   {
 
   
   /**
-   * S\u00C3\u00ADmbolo da Moeda.
+   * S\u00EDmbolo da Moeda.
    **/
   public MoedaResponse simbolo(String simbolo) {
     this.simbolo = simbolo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "S\u00C3\u00ADmbolo da Moeda.")
+  @ApiModelProperty(example = "null", value = "S\u00EDmbolo da Moeda.")
   @JsonProperty("simbolo")
   public String getSimbolo() {
     return simbolo;
@@ -76,14 +76,14 @@ public class MoedaResponse   {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do tipo da moeda.
+   * Descri\u00E7\u00E3o do tipo da moeda.
    **/
   public MoedaResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o do tipo da moeda.")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do tipo da moeda.")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;

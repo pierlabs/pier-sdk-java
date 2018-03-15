@@ -10,10 +10,10 @@ import java.math.BigDecimal;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de grupo econ\u00C3\u00B4mico
+ * Representa\u00E7\u00E3o da resposta do recurso de grupo econ\u00F4mico
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de grupo econ\u00C3\u00B4mico")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de grupo econ\u00F4mico")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class GrupoEconomicoResponse   {
   
@@ -83,6 +83,7 @@ public class GrupoEconomicoResponse   {
   private Integer pagamentoDecendialTerceiro = null;
   private Integer pagamentoQuinzenalPrimeiro = null;
   private Integer pagamentoQuinzenalSegundo = null;
+  private Long idCredorRAV = null;
   private BigDecimal percentualRAV = null;
 
 
@@ -112,14 +113,14 @@ public class GrupoEconomicoResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do grupo econ\u00C3\u00B4mico
+   * C\u00F3digo identificador do grupo econ\u00F4mico
    **/
   public GrupoEconomicoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador do grupo econ\u00C3\u00B4mico")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador do grupo econ\u00F4mico")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -130,14 +131,14 @@ public class GrupoEconomicoResponse   {
 
   
   /**
-   * Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
+   * Raz\u00E3o social da pessoa jur\u00EDdica
    **/
   public GrupoEconomicoResponse razaoSocial(String razaoSocial) {
     this.razaoSocial = razaoSocial;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica")
+  @ApiModelProperty(example = "null", value = "Raz\u00E3o social da pessoa jur\u00EDdica")
   @JsonProperty("razaoSocial")
   public String getRazaoSocial() {
     return razaoSocial;
@@ -166,14 +167,14 @@ public class GrupoEconomicoResponse   {
 
   
   /**
-   * N\u00C3\u00BAmero da Receita Federal
+   * N\u00FAmero da Receita Federal
    **/
   public GrupoEconomicoResponse numeroReceitaFederal(String numeroReceitaFederal) {
     this.numeroReceitaFederal = numeroReceitaFederal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero da Receita Federal")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero da Receita Federal")
   @JsonProperty("numeroReceitaFederal")
   public String getNumeroReceitaFederal() {
     return numeroReceitaFederal;
@@ -184,14 +185,14 @@ public class GrupoEconomicoResponse   {
 
   
   /**
-   * N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual
+   * N\u00FAmero da inscri\u00E7\u00E3o estadual
    **/
   public GrupoEconomicoResponse inscricaoEstadual(String inscricaoEstadual) {
     this.inscricaoEstadual = inscricaoEstadual;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero da inscri\u00E7\u00E3o estadual")
   @JsonProperty("inscricaoEstadual")
   public String getInscricaoEstadual() {
     return inscricaoEstadual;
@@ -220,14 +221,14 @@ public class GrupoEconomicoResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo do banco
+   * C\u00F3digo do banco
    **/
   public GrupoEconomicoResponse banco(Integer banco) {
     this.banco = banco;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo do banco")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo do banco")
   @JsonProperty("banco")
   public Integer getBanco() {
     return banco;
@@ -238,14 +239,14 @@ public class GrupoEconomicoResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo da ag\u00C3\u00AAncia
+   * C\u00F3digo da ag\u00EAncia
    **/
   public GrupoEconomicoResponse agencia(Integer agencia) {
     this.agencia = agencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo da ag\u00C3\u00AAncia")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo da ag\u00EAncia")
   @JsonProperty("agencia")
   public Integer getAgencia() {
     return agencia;
@@ -256,14 +257,14 @@ public class GrupoEconomicoResponse   {
 
   
   /**
-   * D\u00C3\u00ADgito verificador da ag\u00C3\u00AAncia
+   * D\u00EDgito verificador da ag\u00EAncia
    **/
   public GrupoEconomicoResponse digitoAgencia(String digitoAgencia) {
     this.digitoAgencia = digitoAgencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "D\u00C3\u00ADgito verificador da ag\u00C3\u00AAncia")
+  @ApiModelProperty(example = "null", value = "D\u00EDgito verificador da ag\u00EAncia")
   @JsonProperty("digitoAgencia")
   public String getDigitoAgencia() {
     return digitoAgencia;
@@ -274,14 +275,14 @@ public class GrupoEconomicoResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo da Conta Corrente
+   * C\u00F3digo da Conta Corrente
    **/
   public GrupoEconomicoResponse contaCorrente(String contaCorrente) {
     this.contaCorrente = contaCorrente;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo da Conta Corrente")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo da Conta Corrente")
   @JsonProperty("contaCorrente")
   public String getContaCorrente() {
     return contaCorrente;
@@ -292,14 +293,14 @@ public class GrupoEconomicoResponse   {
 
   
   /**
-   * D\u00C3\u00ADgito Verificador da Conta Corrente
+   * D\u00EDgito Verificador da Conta Corrente
    **/
   public GrupoEconomicoResponse digitoContaCorrente(String digitoContaCorrente) {
     this.digitoContaCorrente = digitoContaCorrente;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "D\u00C3\u00ADgito Verificador da Conta Corrente")
+  @ApiModelProperty(example = "null", value = "D\u00EDgito Verificador da Conta Corrente")
   @JsonProperty("digitoContaCorrente")
   public String getDigitoContaCorrente() {
     return digitoContaCorrente;
@@ -310,14 +311,14 @@ public class GrupoEconomicoResponse   {
 
   
   /**
-   * Login do usu\u00C3\u00A1rio para registro da inser\u00C3\u00A7\u00C3\u00A3o
+   * Login do usu\u00E1rio para registro da inser\u00E7\u00E3o
    **/
   public GrupoEconomicoResponse usuario(String usuario) {
     this.usuario = usuario;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Login do usu\u00C3\u00A1rio para registro da inser\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(example = "null", value = "Login do usu\u00E1rio para registro da inser\u00E7\u00E3o")
   @JsonProperty("usuario")
   public String getUsuario() {
     return usuario;
@@ -472,6 +473,24 @@ public class GrupoEconomicoResponse   {
 
   
   /**
+   * Identificador do credor RAV
+   **/
+  public GrupoEconomicoResponse idCredorRAV(Long idCredorRAV) {
+    this.idCredorRAV = idCredorRAV;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "1", value = "Identificador do credor RAV")
+  @JsonProperty("idCredorRAV")
+  public Long getIdCredorRAV() {
+    return idCredorRAV;
+  }
+  public void setIdCredorRAV(Long idCredorRAV) {
+    this.idCredorRAV = idCredorRAV;
+  }
+
+  
+  /**
    * Valor percentual do RAV do credor
    **/
   public GrupoEconomicoResponse percentualRAV(BigDecimal percentualRAV) {
@@ -609,6 +628,7 @@ public class GrupoEconomicoResponse   {
         Objects.equals(this.pagamentoDecendialTerceiro, grupoEconomicoResponse.pagamentoDecendialTerceiro) &&
         Objects.equals(this.pagamentoQuinzenalPrimeiro, grupoEconomicoResponse.pagamentoQuinzenalPrimeiro) &&
         Objects.equals(this.pagamentoQuinzenalSegundo, grupoEconomicoResponse.pagamentoQuinzenalSegundo) &&
+        Objects.equals(this.idCredorRAV, grupoEconomicoResponse.idCredorRAV) &&
         Objects.equals(this.percentualRAV, grupoEconomicoResponse.percentualRAV) &&
         Objects.equals(this.recebeRAV, grupoEconomicoResponse.recebeRAV) &&
         Objects.equals(this.percentualMultiplica, grupoEconomicoResponse.percentualMultiplica) &&
@@ -619,7 +639,7 @@ public class GrupoEconomicoResponse   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, razaoSocial, nomeCredor, numeroReceitaFederal, inscricaoEstadual, contato, banco, agencia, digitoAgencia, contaCorrente, digitoContaCorrente, usuario, periodicidade, pagamentoSemanal, pagamentoMensal, pagamentoDecendialPrimeiro, pagamentoDecendialSegundo, pagamentoDecendialTerceiro, pagamentoQuinzenalPrimeiro, pagamentoQuinzenalSegundo, percentualRAV, recebeRAV, percentualMultiplica, taxaAdm, taxaBanco, limiteRAV);
+    return Objects.hash(id, razaoSocial, nomeCredor, numeroReceitaFederal, inscricaoEstadual, contato, banco, agencia, digitoAgencia, contaCorrente, digitoContaCorrente, usuario, periodicidade, pagamentoSemanal, pagamentoMensal, pagamentoDecendialPrimeiro, pagamentoDecendialSegundo, pagamentoDecendialTerceiro, pagamentoQuinzenalPrimeiro, pagamentoQuinzenalSegundo, idCredorRAV, percentualRAV, recebeRAV, percentualMultiplica, taxaAdm, taxaBanco, limiteRAV);
   }
 
   @Override
@@ -647,6 +667,7 @@ public class GrupoEconomicoResponse   {
     sb.append("    pagamentoDecendialTerceiro: ").append(toIndentedString(pagamentoDecendialTerceiro)).append("\n");
     sb.append("    pagamentoQuinzenalPrimeiro: ").append(toIndentedString(pagamentoQuinzenalPrimeiro)).append("\n");
     sb.append("    pagamentoQuinzenalSegundo: ").append(toIndentedString(pagamentoQuinzenalSegundo)).append("\n");
+    sb.append("    idCredorRAV: ").append(toIndentedString(idCredorRAV)).append("\n");
     sb.append("    percentualRAV: ").append(toIndentedString(percentualRAV)).append("\n");
     sb.append("    recebeRAV: ").append(toIndentedString(recebeRAV)).append("\n");
     sb.append("    percentualMultiplica: ").append(toIndentedString(percentualMultiplica)).append("\n");

@@ -22,14 +22,14 @@ public class BancoResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Banco (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Banco (id).
    **/
   public BancoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Banco (id).")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Banco (id).")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -58,14 +58,14 @@ public class BancoResponse   {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do banco
+   * Descri\u00E7\u00E3o do banco
    **/
   public BancoResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o do banco")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do banco")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;

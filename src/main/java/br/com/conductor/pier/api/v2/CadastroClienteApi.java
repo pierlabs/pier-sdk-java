@@ -55,9 +55,9 @@ public class CadastroClienteApi {
   
   /**
    * Altera Adicional de uma Conta
-   * Este m\u00C3\u00A9todo permite que seja alterado um portador Adicional de uma determinada Conta.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-   * @param idPessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
+   * Este m\u00E9todo permite que seja alterado um portador Adicional de uma determinada Conta.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
+   * @param idPessoa C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id).
    * @param adicionalUpdate adicionalUpdate
    * @return AdicionalDetalheResponse
    */
@@ -116,18 +116,18 @@ public class CadastroClienteApi {
   
   /**
    * Atualiza os detalhes de uma determinada Pessoa
-   * Este m\u00C3\u00A9todo permite que seja alterado na base do emissor os detalhes de uma determinada Pessoa.
+   * Este m\u00E9todo permite que seja alterado na base do emissor os detalhes de uma determinada Pessoa.
    * @param id ID da Pessoa
-   * @param nomeMae Apresenta o nome da m\u00C3\u00A3e da pessoa fisica
+   * @param nomeMae Apresenta o nome da m\u00E3e da pessoa fisica
    * @param idEstadoCivil Id Estado civil da pessoa fisica
-   * @param idProfissao Profiss\u00C3\u00A3o da pessoa fisica
-   * @param idNaturezaOcupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
+   * @param idProfissao Profiss\u00E3o da pessoa fisica
+   * @param idNaturezaOcupacao Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica
    * @param idNacionalidade Id Nacionalidade da pessoa fisica
-   * @param numeroBanco N\u00C3\u00BAmero do banco.
-   * @param numeroAgencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
-   * @param numeroContaCorrente N\u00C3\u00BAmero da conta corrente.
+   * @param numeroBanco N\u00FAmero do banco.
+   * @param numeroAgencia N\u00FAmero da ag\u00EAncia.
+   * @param numeroContaCorrente N\u00FAmero da conta corrente.
    * @param email Email da pessoa fisica
-   * @param nomeEmpresa Nome que deve ser impresso no cart\u00C3\u00A3o
+   * @param nomeEmpresa Nome que deve ser impresso no cart\u00E3o
    * @return PessoaDetalheResponse
    */
   public PessoaDetalheResponse alterarUsingPUT13(Long id, String nomeMae, Long idEstadoCivil, String idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroBanco, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa) throws ApiException {
@@ -194,18 +194,18 @@ public class CadastroClienteApi {
   
   /**
    * Atualiza os dados de uma determinada Pessoa
-   * Este m\u00C3\u00A9todo permite que seja alterado na base do emissor um registro de determinada Pessoa.
+   * Este m\u00E9todo permite que seja alterado na base do emissor um registro de determinada Pessoa.
    * @param id ID da Pessoa
-   * @param nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
-   * @param tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica).
+   * @param nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39;.
+   * @param tipo C\u00F3digo de identifica\u00E7\u00E3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00EDsica), (\&quot;PJ\&quot;: Pessoa Jur\u00EDdica).
    * @param dataNascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.
-   * @param cpf N\u00C3\u00BAmero do CPF, quando PF.
-   * @param cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
-   * @param sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
-   * @param numeroIdentidade N\u00C3\u00BAmero da Identidade.
-   * @param orgaoExpedidorIdentidade Org\u00C3\u00A3o expedidor do Identidade.
+   * @param cpf N\u00FAmero do CPF, quando PF.
+   * @param cnpj N\u00FAmero do CNPJ, quando PJ.
+   * @param sexo C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00E3o Especificado).
+   * @param numeroIdentidade N\u00FAmero da Identidade.
+   * @param orgaoExpedidorIdentidade Org\u00E3o expedidor do Identidade.
    * @param unidadeFederativaIdentidade Sigla da Unidade Federativa de onde foi expedido a Identidade
-   * @param dataEmissaoIdentidade Data emiss\u00C3\u00A3o da Identidade.
+   * @param dataEmissaoIdentidade Data emiss\u00E3o da Identidade.
    * @return PessoaResponse
    */
   public PessoaResponse alterarUsingPUT14(Long id, String nome, String tipo, String dataNascimento, String cpf, String cnpj, String sexo, String numeroIdentidade, String orgaoExpedidorIdentidade, String unidadeFederativaIdentidade, String dataEmissaoIdentidade) throws ApiException {
@@ -286,13 +286,13 @@ public class CadastroClienteApi {
   }
   
   /**
-   * Realiza a altera\u00C3\u00A7\u00C3\u00A3o de um determinado Telefone
-   * Este m\u00C3\u00A9todo permite que seja alterado um determinado Telefone na base de dados do Emissor.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
-   * @param idTipoTelefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
-   * @param ddd C\u00C3\u00B3digo DDD do telefone (id).
-   * @param telefone N\u00C3\u00BAmero do telefone.
-   * @param ramal N\u00C3\u00BAmero do ramal.
+   * Realiza a altera\u00E7\u00E3o de um determinado Telefone
+   * Este m\u00E9todo permite que seja alterado um determinado Telefone na base de dados do Emissor.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Telefone (id).
+   * @param idTipoTelefone C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id).
+   * @param ddd C\u00F3digo DDD do telefone (id).
+   * @param telefone N\u00FAmero do telefone.
+   * @param ramal N\u00FAmero do ramal.
    * @return TelefoneResponse
    */
   public TelefoneResponse alterarUsingPUT16(Long id, Long idTipoTelefone, String ddd, String telefone, String ramal) throws ApiException {
@@ -347,16 +347,16 @@ public class CadastroClienteApi {
   }
   
   /**
-   * Atualiza os dados de um determinado Endere\u00C3\u00A7o
-   * Este m\u00C3\u00A9todo permite que seja alterado na base do emissor um ou mais registros ligados a um determinado Endere\u00C3\u00A7o.
+   * Atualiza os dados de um determinado Endere\u00E7o
+   * Este m\u00E9todo permite que seja alterado na base do emissor um ou mais registros ligados a um determinado Endere\u00E7o.
    * @param id id
-   * @param idPessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)
-   * @param idTipoEndereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
-   * @param cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39;
+   * @param idPessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id)
+   * @param idTipoEndereco C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)
+   * @param cep Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro &#39;58800000&#39;
    * @param logradouro Apresenta o nome do Logradouro
-   * @param numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
-   * @param complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
-   * @param pontoReferencia Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
+   * @param numero Apresenta o n\u00FAmero do endere\u00E7o
+   * @param complemento Apresenta descri\u00E7oes complementares referente ao endere\u00E7o
+   * @param pontoReferencia Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o
    * @param bairro Apresenta nome do bairro
    * @param cidade Apresenta nome da cidade
    * @param uf Apresenta sigla da Unidade Federativa
@@ -430,9 +430,9 @@ public class CadastroClienteApi {
   
   /**
    * Permite atribuir um documento para uma Conta
-   * Este m\u00C3\u00A9todo permite que seja atribu\u00C3\u00ADdo a uma determinada Conta um documento que esteja armazenado no PIER Cloud, informando qual o tipo do documento e o seu respectivo id.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta
-   * @param body C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Arquivo
+   * Este m\u00E9todo permite que seja atribu\u00EDdo a uma determinada Conta um documento que esteja armazenado no PIER Cloud, informando qual o tipo do documento e o seu respectivo id.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da Conta
+   * @param body C\u00F3digo de Identifica\u00E7\u00E3o do Arquivo
    * @return Object
    */
   public Object atribuirAssinaturaClienteUsingPOST(Long id, AtribuirAssinaturaClientePersist body) throws ApiException {
@@ -484,9 +484,9 @@ public class CadastroClienteApi {
   
   /**
    * Atualiza conta integrada com o emissor
-   * Este recurso permite a atualiza\u00C3\u00A7\u00C3\u00A3o de uma conta integrada com o emissor.
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-   * @param body Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada
+   * Este recurso permite a atualiza\u00E7\u00E3o de uma conta integrada com o emissor.
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
+   * @param body Descri\u00E7\u00E3o do canal de entrada
    * @return IntegracaoEmissorResponse
    */
   public IntegracaoEmissorResponse atualizarUsingPOST(Long id, IntegracaoEmissorPersist body) throws ApiException {
@@ -533,8 +533,8 @@ public class CadastroClienteApi {
   
   /**
    * Realiza o cadastro de Adicionais para uma Conta
-   * Este m\u00C3\u00A9todo permite que sejam cadastrados um portador Adicional para uma determinada Conta.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * Este m\u00E9todo permite que sejam cadastrados um portador Adicional para uma determinada Conta.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
    * @param persist persist
    * @return AdicionalDetalheResponse
    */
@@ -587,22 +587,22 @@ public class CadastroClienteApi {
   
   /**
    * Consulta Adicional de uma Conta
-   * Este m\u00C3\u00A9todo permite que seja consultado um portador Adicional de uma determinada Conta.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-   * @param idPessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
+   * Este m\u00E9todo permite que seja consultado um portador Adicional de uma determinada Conta.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
+   * @param idPessoa C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id).
    * @return AdicionalDetalheResponse
    */
-  public AdicionalDetalheResponse consultarUsingGET(Long id, Long idPessoa) throws ApiException {
+  public AdicionalDetalheResponse consultarUsingGET1(Long id, Long idPessoa) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET1");
      }
      
      // verify the required parameter 'idPessoa' is set
      if (idPessoa == null) {
-        throw new ApiException(400, "Missing the required parameter 'idPessoa' when calling consultarUsingGET");
+        throw new ApiException(400, "Missing the required parameter 'idPessoa' when calling consultarUsingGET1");
      }
      
     // create path and map variables
@@ -641,17 +641,17 @@ public class CadastroClienteApi {
   }
   
   /**
-   * Apresenta os dados de um determinado Endere\u00C3\u00A7o
-   * Este m\u00C3\u00A9todo permite consultar um determinado Endere\u00C3\u00A7o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
+   * Apresenta os dados de um determinado Endere\u00E7o
+   * Este m\u00E9todo permite consultar um determinado Endere\u00E7o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id).
    * @return EnderecoResponse
    */
-  public EnderecoResponse consultarUsingGET15(Long id) throws ApiException {
+  public EnderecoResponse consultarUsingGET16(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET15");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET16");
      }
      
     // create path and map variables
@@ -690,16 +690,16 @@ public class CadastroClienteApi {
   
   /**
    * Apresenta os detalhes de uma determinada Pessoa
-   * Este m\u00C3\u00A9todo permite a consulta dos detalhes de uma Pessoa existentes na base de dados do Emissor.
+   * Este m\u00E9todo permite a consulta dos detalhes de uma Pessoa existentes na base de dados do Emissor.
    * @param id ID da Pessoa
    * @return PessoaDetalheResponse
    */
-  public PessoaDetalheResponse consultarUsingGET23(Long id) throws ApiException {
+  public PessoaDetalheResponse consultarUsingGET24(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET23");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET24");
      }
      
     // create path and map variables
@@ -738,16 +738,16 @@ public class CadastroClienteApi {
   
   /**
    * Apresenta os dados de uma determinada Pessoa
-   * Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
+   * Este m\u00E9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
    * @param id ID da Pessoa
    * @return PessoaResponse
    */
-  public PessoaResponse consultarUsingGET24(Long id) throws ApiException {
+  public PessoaResponse consultarUsingGET25(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET24");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET25");
      }
      
     // create path and map variables
@@ -786,16 +786,16 @@ public class CadastroClienteApi {
   
   /**
    * Apresenta os dados de um determinado Telefone
-   * Este m\u00C3\u00A9todo permite consultar um determinado Telefone a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
+   * Este m\u00E9todo permite consultar um determinado Telefone a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Telefone (id).
    * @return TelefoneResponse
    */
-  public TelefoneResponse consultarUsingGET30(Long id) throws ApiException {
+  public TelefoneResponse consultarUsingGET31(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET30");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET31");
      }
      
     // create path and map variables
@@ -834,9 +834,9 @@ public class CadastroClienteApi {
   
   /**
    * Inativa Adicional de uma Conta
-   * Este m\u00C3\u00A9todo permite que seja inativado um portador Adicional de uma determinada Conta.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-   * @param idPessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
+   * Este m\u00E9todo permite que seja inativado um portador Adicional de uma determinada Conta.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
+   * @param idPessoa C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id).
    * @return String
    */
   public String inativarUsingPOST(Long id, Long idPessoa) throws ApiException {
@@ -888,12 +888,12 @@ public class CadastroClienteApi {
   }
   
   /**
-   * Listar s\u00C3\u00B3cios de uma pessoa jur\u00C3\u00ADdica
-   * Lista os s\u00C3\u00B3cios vinculados \u00C3\u00A0 uma Pessoa Jur\u00C3\u00ADdica cadastrada.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Jur\u00C3\u00ADdica
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * Listar s\u00F3cios de uma pessoa jur\u00EDdica
+   * Lista os s\u00F3cios vinculados \u00E0 uma Pessoa Jur\u00EDdica cadastrada.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Jur\u00EDdica
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
    * @return PagePessoaResponse
    */
   public PagePessoaResponse listarSociosUsingGET(Long id, List<String> sort, Integer page, Integer limit) throws ApiException {
@@ -946,19 +946,19 @@ public class CadastroClienteApi {
   
   /**
    * Lista os Adicionais de uma Conta
-   * Este m\u00C3\u00A9todo permite que sejam listados portadores Adicionais de uma determinada Conta.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * Este m\u00E9todo permite que sejam listados portadores Adicionais de uma determinada Conta.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
    * @return AdicionalResponse
    */
-  public AdicionalResponse listarUsingGET(Long id, List<String> sort, Integer page, Integer limit) throws ApiException {
+  public AdicionalResponse listarUsingGET1(Long id, List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET1");
      }
      
     // create path and map variables
@@ -1002,28 +1002,28 @@ public class CadastroClienteApi {
   }
   
   /**
-   * Lista os Endere\u00C3\u00A7os cadastrados para o Emissor
-   * Este m\u00C3\u00A9todo permite que sejam listados os Endere\u00C3\u00A7os existentes na base de dados do Emissor.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Endere\u00C3\u00A7o (id).
-   * @param idPessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)
-   * @param idTipoEndereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
-   * @param cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP)
+   * Lista os Endere\u00E7os cadastrados para o Emissor
+   * Este m\u00E9todo permite que sejam listados os Endere\u00E7os existentes na base de dados do Emissor.
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id).
+   * @param idPessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id)
+   * @param idTipoEndereco C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)
+   * @param cep Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP)
    * @param logradouro Apresenta o nome do Logradouro
-   * @param numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
-   * @param complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
-   * @param pontoReferencia Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
+   * @param numero Apresenta o n\u00FAmero do endere\u00E7o
+   * @param complemento Apresenta descri\u00E7oes complementares referente ao endere\u00E7o
+   * @param pontoReferencia Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o
    * @param bairro Apresenta nome do bairro
    * @param cidade Apresenta nome da cidade
    * @param uf Apresenta sigla da Unidade Federativa
    * @param pais Apresenta nome do Pais
-   * @param dataInclusao Apresenta a data em que fora cadastrado o Endere\u00C3\u00A7o
-   * @param dataUltimaAtualizacao Data em que fora realizada a \u00C3\u00BAltima mudan\u00C3\u00A7a neste registro de endere\u00C3\u00A7o. Quando n\u00C3\u00A3o tiver ocorrido mudan\u00C3\u00A7a, conter\u00C3\u00A1 a mesma informa\u00C3\u00A7\u00C3\u00A3o que o campo dataInclusao
+   * @param dataInclusao Apresenta a data em que fora cadastrado o Endere\u00E7o
+   * @param dataUltimaAtualizacao Data em que fora realizada a \u00FAltima mudan\u00E7a neste registro de endere\u00E7o. Quando n\u00E3o tiver ocorrido mudan\u00E7a, conter\u00E1 a mesma informa\u00E7\u00E3o que o campo dataInclusao
    * @return PageEnderecoResponse
    */
-  public PageEnderecoResponse listarUsingGET20(List<String> sort, Integer page, Integer limit, Long id, Long idPessoa, Long idTipoEndereco, String cep, String logradouro, Integer numero, String complemento, String pontoReferencia, String bairro, String cidade, String uf, String pais, String dataInclusao, String dataUltimaAtualizacao) throws ApiException {
+  public PageEnderecoResponse listarUsingGET21(List<String> sort, Integer page, Integer limit, Long id, Long idPessoa, Long idTipoEndereco, String cep, String logradouro, Integer numero, String complemento, String pontoReferencia, String bairro, String cidade, String uf, String pais, String dataInclusao, String dataUltimaAtualizacao) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -1095,24 +1095,24 @@ public class CadastroClienteApi {
   
   /**
    * Lista os Detalhes das Pessoas cadastradas no Emissor
-   * Este m\u00C3\u00A9todo permite que sejam listadas od detalhes das Pessoas existentes na base de dados do Emissor.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param idPessoa C\u00C3\u00B3digo identificador da pessoa
-   * @param nomeMae Apresenta o nome da m\u00C3\u00A3e da pessoa fisica
+   * Este m\u00E9todo permite que sejam listadas od detalhes das Pessoas existentes na base de dados do Emissor.
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @param idPessoa C\u00F3digo identificador da pessoa
+   * @param nomeMae Apresenta o nome da m\u00E3e da pessoa fisica
    * @param idEstadoCivil Id Estado civil da pessoa fisica
-   * @param idProfissao Profiss\u00C3\u00A3o da pessoa fisica
-   * @param idNaturezaOcupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
+   * @param idProfissao Profiss\u00E3o da pessoa fisica
+   * @param idNaturezaOcupacao Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica
    * @param idNacionalidade Id Nacionalidade da pessoa fisica
-   * @param numeroBanco N\u00C3\u00BAmero do Banco.
-   * @param numeroAgencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
-   * @param numeroContaCorrente N\u00C3\u00BAmero da conta corrente.
+   * @param numeroBanco N\u00FAmero do Banco.
+   * @param numeroAgencia N\u00FAmero da ag\u00EAncia.
+   * @param numeroContaCorrente N\u00FAmero da conta corrente.
    * @param email Email da pessoa fisica
-   * @param nomeEmpresa Nome que deve ser impresso no cart\u00C3\u00A3o
+   * @param nomeEmpresa Nome que deve ser impresso no cart\u00E3o
    * @return PagePessoaDetalheResponse
    */
-  public PagePessoaDetalheResponse listarUsingGET29(List<String> sort, Integer page, Integer limit, Long idPessoa, String nomeMae, Long idEstadoCivil, String idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroBanco, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa) throws ApiException {
+  public PagePessoaDetalheResponse listarUsingGET31(List<String> sort, Integer page, Integer limit, Long idPessoa, String nomeMae, Long idEstadoCivil, String idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroBanco, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -1178,24 +1178,24 @@ public class CadastroClienteApi {
   
   /**
    * Lista as Pessoas cadastradas no Emissor
-   * Este m\u00C3\u00A9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id).
-   * @param nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
-   * @param tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica).
-   * @param cpf N\u00C3\u00BAmero do CPF, quando PF.
-   * @param cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
+   * Este m\u00E9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor.
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id).
+   * @param nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39;.
+   * @param tipo C\u00F3digo de identifica\u00E7\u00E3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00EDsica), (\&quot;PJ\&quot;: Pessoa Jur\u00EDdica).
+   * @param cpf N\u00FAmero do CPF, quando PF.
+   * @param cnpj N\u00FAmero do CNPJ, quando PJ.
    * @param dataNascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
-   * @param sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
-   * @param numeroIdentidade N\u00C3\u00BAmero da Identidade
-   * @param orgaoExpedidorIdentidade Org\u00C3\u00A3o expedidor do RG.
+   * @param sexo C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00E3o Especificado).
+   * @param numeroIdentidade N\u00FAmero da Identidade
+   * @param orgaoExpedidorIdentidade Org\u00E3o expedidor do RG.
    * @param unidadeFederativaIdentidade Sigla da Unidade Federativa de onde foi expedido a Identidade
-   * @param dataEmissaoIdentidade Data emiss\u00C3\u00A3o da identidade no formato aaaa-MM-dd
+   * @param dataEmissaoIdentidade Data emiss\u00E3o da identidade no formato aaaa-MM-dd
    * @return PagePessoaResponse
    */
-  public PagePessoaResponse listarUsingGET30(List<String> sort, Integer page, Integer limit, Long id, String nome, String tipo, String cpf, String cnpj, String dataNascimento, String sexo, String numeroIdentidade, String orgaoExpedidorIdentidade, String unidadeFederativaIdentidade, String dataEmissaoIdentidade) throws ApiException {
+  public PagePessoaResponse listarUsingGET32(List<String> sort, Integer page, Integer limit, Long id, String nome, String tipo, String cpf, String cnpj, String dataNascimento, String sexo, String numeroIdentidade, String orgaoExpedidorIdentidade, String unidadeFederativaIdentidade, String dataEmissaoIdentidade) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -1261,20 +1261,20 @@ public class CadastroClienteApi {
   
   /**
    * Lista os Telefones cadastrados no Emissor
-   * Este m\u00C3\u00A9todo permite que sejam listados os Telefones existentes na base de dados do Emissor.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone (id).
-   * @param idTipoTelefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
-   * @param idPessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) a qual o telefone pertence.
-   * @param ddd C\u00C3\u00B3digo DDD do telefone (id).
-   * @param telefone N\u00C3\u00BAmero do telefone.
-   * @param ramal N\u00C3\u00BAmero do ramal.
+   * Este m\u00E9todo permite que sejam listados os Telefones existentes na base de dados do Emissor.
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Telefone (id).
+   * @param idTipoTelefone C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id).
+   * @param idPessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) a qual o telefone pertence.
+   * @param ddd C\u00F3digo DDD do telefone (id).
+   * @param telefone N\u00FAmero do telefone.
+   * @param ramal N\u00FAmero do ramal.
    * @param status Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo
    * @return PageTelefoneResponse
    */
-  public PageTelefoneResponse listarUsingGET39(List<String> sort, Integer page, Integer limit, Long id, Long idTipoTelefone, Long idPessoa, String ddd, String telefone, String ramal, Integer status) throws ApiException {
+  public PageTelefoneResponse listarUsingGET41(List<String> sort, Integer page, Integer limit, Long id, Long idTipoTelefone, Long idPessoa, String ddd, String telefone, String ramal, Integer status) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -1332,7 +1332,7 @@ public class CadastroClienteApi {
   
   /**
    * Cadastro de Conta e Pessoa Fisica
-   * Permite realizar o cadastro de uma Conta para um cliente do tipo Pessoa F\u00C3\u00ADsica, recebendo nesta opera\u00C3\u00A7\u00C3\u00A3o todos os dados cadastrais que se fazem necess\u00C3\u00A1rios para isso. Uma vez criado, poder\u00C3\u00A1 ser acionado o m\u00C3\u00A9todo de &#39;Gera\u00C3\u00A7\u00C3\u00A3o de Cart\u00C3\u00A3o&#39; para o cliente e seus adicionais.
+   * Permite realizar o cadastro de uma Conta para um cliente do tipo Pessoa F\u00EDsica, recebendo nesta opera\u00E7\u00E3o todos os dados cadastrais que se fazem necess\u00E1rios para isso. Uma vez criado, poder\u00E1 ser acionado o m\u00E9todo de &#39;Gera\u00E7\u00E3o de Cart\u00E3o&#39; para o cliente e seus adicionais.
    * @param pessoaPersist pessoaPersist
    * @return PessoaFisicaAprovadaResponse
    */
@@ -1378,8 +1378,8 @@ public class CadastroClienteApi {
   }
   
   /**
-   * Cadastro de Conta e Pessoa Jur\u00C3\u00ADdica
-   * Cadastro de Conta e Pessoa Jur\u00C3\u00ADdica Permite realizar o cadastro de uma Conta para um cliente do tipo Pessoa Jur\u00C3\u00ADdica, recebendo nesta opera\u00C3\u00A7\u00C3\u00A3o todos os dados cadastrais que se fazem necess\u00C3\u00A1rios para isso, inclu\u00C3\u00ADndo o registro de cada um dos s\u00C3\u00B3cios. Uma vez criado, poder\u00C3\u00A1 ser acionado o m\u00C3\u00A9todo de &#39;Gera\u00C3\u00A7\u00C3\u00A3o de Cart\u00C3\u00A3o&#39; para o cliente e cada um dos s\u00C3\u00B3cios vinculados.
+   * Cadastro de Conta e Pessoa Jur\u00EDdica
+   * Cadastro de Conta e Pessoa Jur\u00EDdica Permite realizar o cadastro de uma Conta para um cliente do tipo Pessoa Jur\u00EDdica, recebendo nesta opera\u00E7\u00E3o todos os dados cadastrais que se fazem necess\u00E1rios para isso, inclu\u00EDndo o registro de cada um dos s\u00F3cios. Uma vez criado, poder\u00E1 ser acionado o m\u00E9todo de &#39;Gera\u00E7\u00E3o de Cart\u00E3o&#39; para o cliente e cada um dos s\u00F3cios vinculados.
    * @param pessoaPersist pessoaPersist
    * @return PessoaJuridicaAprovadaResponse
    */
@@ -1425,15 +1425,15 @@ public class CadastroClienteApi {
   }
   
   /**
-   * Realiza o cadastro de um novo Endere\u00C3\u00A7o
-   * Este m\u00C3\u00A9todo permite que seja cadastrado um novo Endere\u00C3\u00A7o na base de dados do Emissor.
-   * @param idPessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa a qual o endere\u00C3\u00A7o pertence (id)
-   * @param idTipoEndereco C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Tipo Endere\u00C3\u00A7o (id)
-   * @param cep Apresenta o C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP) no formaro &#39;58800000&#39;
+   * Realiza o cadastro de um novo Endere\u00E7o
+   * Este m\u00E9todo permite que seja cadastrado um novo Endere\u00E7o na base de dados do Emissor.
+   * @param idPessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id)
+   * @param idTipoEndereco C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)
+   * @param cep Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro &#39;58800000&#39;
    * @param logradouro Apresenta o nome do Logradouro
-   * @param numero Apresenta o n\u00C3\u00BAmero do endere\u00C3\u00A7o
-   * @param complemento Apresenta descri\u00C3\u00A7oes complementares referente ao endere\u00C3\u00A7o
-   * @param pontoReferencia Apresenta a descri\u00C3\u00A7\u00C3\u00A3o de ponto de refer\u00C3\u00AAncia do endere\u00C3\u00A7o
+   * @param numero Apresenta o n\u00FAmero do endere\u00E7o
+   * @param complemento Apresenta descri\u00E7oes complementares referente ao endere\u00E7o
+   * @param pontoReferencia Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o
    * @param bairro Apresenta nome do bairro
    * @param cidade Apresenta nome da cidade
    * @param uf Apresenta sigla da Unidade Federativa
@@ -1499,10 +1499,10 @@ public class CadastroClienteApi {
   }
   
   /**
-   * Inclui a conta como registro para integra\u00C3\u00A7\u00C3\u00A3o
-   * Este recurso permite incluir uma conta como registro para integra\u00C3\u00A7\u00C3\u00A3o.
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-   * @param body Descri\u00C3\u00A7\u00C3\u00A3o do canal de entrada
+   * Inclui a conta como registro para integra\u00E7\u00E3o
+   * Este recurso permite incluir uma conta como registro para integra\u00E7\u00E3o.
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
+   * @param body Descri\u00E7\u00E3o do canal de entrada
    * @return IntegracaoEmissorResponse
    */
   public IntegracaoEmissorResponse salvarUsingPOST14(Long id, IntegracaoEmissorPersist body) throws ApiException {
@@ -1549,18 +1549,18 @@ public class CadastroClienteApi {
   
   /**
    * Salvar os detalhes de uma determinada Pessoa
-   * Este m\u00C3\u00A9todo permite que seja incluido na base do emissor os detalhes de uma determinada Pessoa.
-   * @param idPessoa Apresenta o c\u00C3\u00B3digo identificador da pessoa
-   * @param nomeMae Apresenta o nome da m\u00C3\u00A3e da pessoa fisica
+   * Este m\u00E9todo permite que seja incluido na base do emissor os detalhes de uma determinada Pessoa.
+   * @param idPessoa Apresenta o c\u00F3digo identificador da pessoa
+   * @param nomeMae Apresenta o nome da m\u00E3e da pessoa fisica
    * @param idEstadoCivil Id Estado civil da pessoa fisica
-   * @param idProfissao Profiss\u00C3\u00A3o da pessoa fisica
-   * @param idNaturezaOcupacao Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
+   * @param idProfissao Profiss\u00E3o da pessoa fisica
+   * @param idNaturezaOcupacao Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica
    * @param idNacionalidade Id Nacionalidade da pessoa fisica
-   * @param numeroBanco N\u00C3\u00BAmero do banco.
-   * @param numeroAgencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
-   * @param numeroContaCorrente N\u00C3\u00BAmero da conta corrente.
+   * @param numeroBanco N\u00FAmero do banco.
+   * @param numeroAgencia N\u00FAmero da ag\u00EAncia.
+   * @param numeroContaCorrente N\u00FAmero da conta corrente.
    * @param email Email da pessoa fisica
-   * @param nomeEmpresa Nome que deve ser impresso no cart\u00C3\u00A3o
+   * @param nomeEmpresa Nome que deve ser impresso no cart\u00E3o
    * @return PessoaDetalheResponse
    */
   public PessoaDetalheResponse salvarUsingPOST19(Long idPessoa, String nomeMae, Long idEstadoCivil, String idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroBanco, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa) throws ApiException {
@@ -1628,17 +1628,17 @@ public class CadastroClienteApi {
   
   /**
    * Realiza o cadastro de um nova Pessoa
-   * Este m\u00C3\u00A9todo permite que seja cadastrado uma nova Pessoa na base de dados do Emissor.
-   * @param nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)&#39;.
-   * @param tipo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00C3\u00ADsica), (\&quot;PJ\&quot;: Pessoa Jur\u00C3\u00ADdica).
+   * Este m\u00E9todo permite que seja cadastrado uma nova Pessoa na base de dados do Emissor.
+   * @param nome Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39;.
+   * @param tipo C\u00F3digo de identifica\u00E7\u00E3o do tipo da Pessoa, sendo: (\&quot;PF\&quot;: Pessoa F\u00EDsica), (\&quot;PJ\&quot;: Pessoa Jur\u00EDdica).
    * @param dataNascimento Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.
-   * @param cpf N\u00C3\u00BAmero do CPF, quando PF.
-   * @param cnpj N\u00C3\u00BAmero do CNPJ, quando PJ.
-   * @param sexo C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00C3\u00A3o Especificado).
-   * @param numeroIdentidade N\u00C3\u00BAmero da Identidade.
-   * @param orgaoExpedidorIdentidade Org\u00C3\u00A3o expedidor do Identidade.
+   * @param cpf N\u00FAmero do CPF, quando PF.
+   * @param cnpj N\u00FAmero do CNPJ, quando PJ.
+   * @param sexo C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\&quot;M\&quot;: Masculino), (\&quot;F\&quot;: Feminino), (\&quot;O\&quot;: Outro), (\&quot;N\&quot;: N\u00E3o Especificado).
+   * @param numeroIdentidade N\u00FAmero da Identidade.
+   * @param orgaoExpedidorIdentidade Org\u00E3o expedidor do Identidade.
    * @param unidadeFederativaIdentidade Sigla da Unidade Federativa de onde foi expedido a Identidade
-   * @param dataEmissaoIdentidade Data emiss\u00C3\u00A3o da Identidade.
+   * @param dataEmissaoIdentidade Data emiss\u00E3o da Identidade.
    * @return PessoaResponse
    */
   public PessoaResponse salvarUsingPOST20(String nome, String tipo, String dataNascimento, String cpf, String cnpj, String sexo, String numeroIdentidade, String orgaoExpedidorIdentidade, String unidadeFederativaIdentidade, String dataEmissaoIdentidade) throws ApiException {
@@ -1714,12 +1714,12 @@ public class CadastroClienteApi {
   
   /**
    * Realiza o cadastro de um novo Telefone
-   * Este m\u00C3\u00A9todo permite que seja cadastrado um novo Telefone na base de dados do Emissor.
-   * @param idTipoTelefone C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Telefone (id).
-   * @param idPessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa (id) a qual o telefone pertence.
-   * @param ddd C\u00C3\u00B3digo DDD do telefone (id).
-   * @param telefone N\u00C3\u00BAmero do telefone.
-   * @param ramal N\u00C3\u00BAmero do ramal.
+   * Este m\u00E9todo permite que seja cadastrado um novo Telefone na base de dados do Emissor.
+   * @param idTipoTelefone C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id).
+   * @param idPessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) a qual o telefone pertence.
+   * @param ddd C\u00F3digo DDD do telefone (id).
+   * @param telefone N\u00FAmero do telefone.
+   * @param ramal N\u00FAmero do ramal.
    * @return TelefoneResponse
    */
   public TelefoneResponse salvarUsingPOST23(Long idTipoTelefone, Long idPessoa, String ddd, String telefone, String ramal) throws ApiException {

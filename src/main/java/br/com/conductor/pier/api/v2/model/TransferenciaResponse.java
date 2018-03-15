@@ -24,14 +24,14 @@ public class TransferenciaResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id).
+   * C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id).
    **/
   public TransferenciaResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id).")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id).")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -42,14 +42,14 @@ public class TransferenciaResponse   {
 
   
   /**
-   * Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
+   * Data estabelecida para ocorrer a transfer\u00EAncia.
    **/
   public TransferenciaResponse dataTransferencia(String dataTransferencia) {
     this.dataTransferencia = dataTransferencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.")
+  @ApiModelProperty(example = "null", value = "Data estabelecida para ocorrer a transfer\u00EAncia.")
   @JsonProperty("dataTransferencia")
   public String getDataTransferencia() {
     return dataTransferencia;
@@ -60,14 +60,14 @@ public class TransferenciaResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id).
+   * C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id).
    **/
   public TransferenciaResponse idContaOrigem(Long idContaOrigem) {
     this.idContaOrigem = idContaOrigem;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id).")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id).")
   @JsonProperty("idContaOrigem")
   public Long getIdContaOrigem() {
     return idContaOrigem;
@@ -78,14 +78,14 @@ public class TransferenciaResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id).
+   * C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id).
    **/
   public TransferenciaResponse idContaDestino(Long idContaDestino) {
     this.idContaDestino = idContaDestino;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id).")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id).")
   @JsonProperty("idContaDestino")
   public Long getIdContaDestino() {
     return idContaDestino;

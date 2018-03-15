@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Hist\u00C3\u00B3rico Pagamento Fatura Atraso
+ * Hist\u00F3rico Pagamento Fatura Atraso
  **/
 
-@ApiModel(description = "Hist\u00C3\u00B3rico Pagamento Fatura Atraso")
+@ApiModel(description = "Hist\u00F3rico Pagamento Fatura Atraso")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class HistoricoAtrasoFaturaResponse   {
   

@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * Par\u00C3\u00A2metros de resposta de risco de fraude
+ * Par\u00E2metros de resposta de risco de fraude
  **/
 
-@ApiModel(description = "Par\u00C3\u00A2metros de resposta de risco de fraude")
+@ApiModel(description = "Par\u00E2metros de resposta de risco de fraude")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class RiscoFraudeResponse   {
   
@@ -29,14 +29,14 @@ public class RiscoFraudeResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude
+   * C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude
    **/
   public RiscoFraudeResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do risco de fraude")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -47,14 +47,14 @@ public class RiscoFraudeResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o atribu\u00EDdo ao registro
    **/
   public RiscoFraudeResponse idTipoResolucao(Long idTipoResolucao) {
     this.idTipoResolucao = idTipoResolucao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o atribu\u00EDdo ao registro")
   @JsonProperty("idTipoResolucao")
   public Long getIdTipoResolucao() {
     return idTipoResolucao;
@@ -65,14 +65,14 @@ public class RiscoFraudeResponse   {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro
+   * Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o atribu\u00EDdo ao registro
    **/
   public RiscoFraudeResponse descricaoTipoResolucao(String descricaoTipoResolucao) {
     this.descricaoTipoResolucao = descricaoTipoResolucao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o do tipo de resolu\u00C3\u00A7\u00C3\u00A3o atribu\u00C3\u00ADdo ao registro")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o atribu\u00EDdo ao registro")
   @JsonProperty("descricaoTipoResolucao")
   public String getDescricaoTipoResolucao() {
     return descricaoTipoResolucao;
@@ -83,14 +83,14 @@ public class RiscoFraudeResponse   {
 
   
   /**
-   * Quando ativa, indica que a transa\u00C3\u00A7\u00C3\u00A3o possui um alto risco de fraude e que todas as transa\u00C3\u00A7\u00C3\u00B5es seguintes a ela ser\u00C3\u00A3o negadas at\u00C3\u00A9 que todas as transa\u00C3\u00A7\u00C3\u00B5es classificadas com risco de fraude sejam analisadas
+   * Quando ativa, indica que a transa\u00E7\u00E3o possui um alto risco de fraude e que todas as transa\u00E7\u00F5es seguintes a ela ser\u00E3o negadas at\u00E9 que todas as transa\u00E7\u00F5es classificadas com risco de fraude sejam analisadas
    **/
   public RiscoFraudeResponse flagAltoRisco(Boolean flagAltoRisco) {
     this.flagAltoRisco = flagAltoRisco;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Quando ativa, indica que a transa\u00C3\u00A7\u00C3\u00A3o possui um alto risco de fraude e que todas as transa\u00C3\u00A7\u00C3\u00B5es seguintes a ela ser\u00C3\u00A3o negadas at\u00C3\u00A9 que todas as transa\u00C3\u00A7\u00C3\u00B5es classificadas com risco de fraude sejam analisadas")
+  @ApiModelProperty(example = "false", value = "Quando ativa, indica que a transa\u00E7\u00E3o possui um alto risco de fraude e que todas as transa\u00E7\u00F5es seguintes a ela ser\u00E3o negadas at\u00E9 que todas as transa\u00E7\u00F5es classificadas com risco de fraude sejam analisadas")
   @JsonProperty("flagAltoRisco")
   public Boolean getFlagAltoRisco() {
     return flagAltoRisco;
@@ -101,14 +101,14 @@ public class RiscoFraudeResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta
+   * C\u00F3digo de identifica\u00E7\u00E3o da conta
    **/
   public RiscoFraudeResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o da conta")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -119,14 +119,14 @@ public class RiscoFraudeResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o
+   * C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o
    **/
   public RiscoFraudeResponse idCartao(Long idCartao) {
     this.idCartao = idCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do cart\u00C3\u00A3o")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o")
   @JsonProperty("idCartao")
   public Long getIdCartao() {
     return idCartao;
@@ -137,14 +137,14 @@ public class RiscoFraudeResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o
+   * C\u00F3digo de identifica\u00E7\u00E3o da transa\u00E7\u00E3o
    **/
   public RiscoFraudeResponse idTransacao(Long idTransacao) {
     this.idTransacao = idTransacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transa\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o da transa\u00E7\u00E3o")
   @JsonProperty("idTransacao")
   public Long getIdTransacao() {
     return idTransacao;
@@ -155,14 +155,14 @@ public class RiscoFraudeResponse   {
 
   
   /**
-   * Data em que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada
+   * Data em que a transa\u00E7\u00E3o classificada com risco de fraude foi realizada
    **/
   public RiscoFraudeResponse dataTransacao(String dataTransacao) {
     this.dataTransacao = dataTransacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data em que a transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude foi realizada")
+  @ApiModelProperty(example = "null", value = "Data em que a transa\u00E7\u00E3o classificada com risco de fraude foi realizada")
   @JsonProperty("dataTransacao")
   public String getDataTransacao() {
     return dataTransacao;
@@ -173,14 +173,14 @@ public class RiscoFraudeResponse   {
 
   
   /**
-   * Valor da transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
+   * Valor da transa\u00E7\u00E3o classificada com risco de fraude
    **/
   public RiscoFraudeResponse valorTransacao(BigDecimal valorTransacao) {
     this.valorTransacao = valorTransacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor da transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude")
+  @ApiModelProperty(example = "null", value = "Valor da transa\u00E7\u00E3o classificada com risco de fraude")
   @JsonProperty("valorTransacao")
   public BigDecimal getValorTransacao() {
     return valorTransacao;
@@ -191,14 +191,14 @@ public class RiscoFraudeResponse   {
 
   
   /**
-   * Valor da transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude
+   * Valor da transa\u00E7\u00E3o classificada com risco de fraude
    **/
   public RiscoFraudeResponse nomeEstabelecimento(String nomeEstabelecimento) {
     this.nomeEstabelecimento = nomeEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor da transa\u00C3\u00A7\u00C3\u00A3o classificada com risco de fraude")
+  @ApiModelProperty(example = "null", value = "Valor da transa\u00E7\u00E3o classificada com risco de fraude")
   @JsonProperty("nomeEstabelecimento")
   public String getNomeEstabelecimento() {
     return nomeEstabelecimento;

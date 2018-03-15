@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * Lista de Transfer\u00C3\u00AAncias
+ * Lista de Transfer\u00EAncias
  **/
 
-@ApiModel(description = "Lista de Transfer\u00C3\u00AAncias")
+@ApiModel(description = "Lista de Transfer\u00EAncias")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageTransferenciaBancariaResponse   {
   

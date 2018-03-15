@@ -23,14 +23,14 @@ public class PromotorResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do promotor (id)
+   * C\u00F3digo de Identifica\u00E7\u00E3o do promotor (id)
    **/
   public PromotorResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do promotor (id)")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do promotor (id)")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -59,14 +59,14 @@ public class PromotorResponse   {
 
   
   /**
-   * Data da Inclus\u00C3\u00A3o
+   * Data da Inclus\u00E3o
    **/
   public PromotorResponse dataCadastro(String dataCadastro) {
     this.dataCadastro = dataCadastro;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data da Inclus\u00C3\u00A3o")
+  @ApiModelProperty(example = "null", value = "Data da Inclus\u00E3o")
   @JsonProperty("dataCadastro")
   public String getDataCadastro() {
     return dataCadastro;
@@ -77,14 +77,14 @@ public class PromotorResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento
    **/
   public PromotorResponse idEstabelecimento(Long idEstabelecimento) {
     this.idEstabelecimento = idEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento")
   @JsonProperty("idEstabelecimento")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
@@ -95,14 +95,14 @@ public class PromotorResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do usu\u00C3\u00A1rio
+   * C\u00F3digo de Identifica\u00E7\u00E3o do usu\u00E1rio
    **/
   public PromotorResponse idUsuario(Long idUsuario) {
     this.idUsuario = idUsuario;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do usu\u00C3\u00A1rio")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do usu\u00E1rio")
   @JsonProperty("idUsuario")
   public Long getIdUsuario() {
     return idUsuario;

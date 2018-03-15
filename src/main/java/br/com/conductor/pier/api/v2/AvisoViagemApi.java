@@ -38,16 +38,16 @@ public class AvisoViagemApi {
   
   /**
    * Consultar um aviso viagem de acordo com o id passado
-   * Este m\u00C3\u00A9todo permite que seja consultado um aviso viagen existente na base do emissor.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).
+   * Este m\u00E9todo permite que seja consultado um aviso viagen existente na base do emissor.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).
    * @return AvisoViagemResponse
    */
-  public AvisoViagemResponse consultarUsingGET4(Long id) throws ApiException {
+  public AvisoViagemResponse consultarUsingGET5(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET4");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET5");
      }
      
     // create path and map variables
@@ -86,8 +86,8 @@ public class AvisoViagemApi {
   
   /**
    * Desabilitar um aviso viagem de acordo com o id passado
-   * Este m\u00C3\u00A9todo permite que seja desabilitado um aviso viagen existente na base do emissor.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).
+   * Este m\u00E9todo permite que seja desabilitado um aviso viagen existente na base do emissor.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).
    * @return AvisoViagemResponse
    */
   public AvisoViagemResponse desabilitarUsingPOST(Long id) throws ApiException {
@@ -134,8 +134,8 @@ public class AvisoViagemApi {
   
   /**
    * Habilitar um aviso viagem de acordo com o id passado
-   * Este m\u00C3\u00A9todo permite que seja habilitado um aviso viagen existente na base do emissor.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Aviso Viagem (id).
+   * Este m\u00E9todo permite que seja habilitado um aviso viagen existente na base do emissor.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id).
    * @return AvisoViagemResponse
    */
   public AvisoViagemResponse habilitarUsingPOST(Long id) throws ApiException {
@@ -182,18 +182,18 @@ public class AvisoViagemApi {
   
   /**
    * Lista os avisos viagens gerados pelo Emissor
-   * Este m\u00C3\u00A9todo permite que sejam listados os avisos viagens existentes na base do emissor.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param idCartao C\u00C3\u00B3digo Identificador do cart\u00C3\u00A3o na base (id)
-   * @param codigoPais Codigo identificador do pa\u00C3\u00ADs na base (id)
+   * Este m\u00E9todo permite que sejam listados os avisos viagens existentes na base do emissor.
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @param idCartao C\u00F3digo Identificador do cart\u00E3o na base (id)
+   * @param codigoPais Codigo identificador do pa\u00EDs na base (id)
    * @param dataInicio Data inicio do aviso viagem
    * @param dataFim Data fim do aviso viagem
-   * @param flagAtivo Identifica se o aviso viagem esta ativo ou n\u00C3\u00A3o
+   * @param flagAtivo Identifica se o aviso viagem esta ativo ou n\u00E3o
    * @return PageAvisoViagemResponse
    */
-  public PageAvisoViagemResponse listarUsingGET6(List<String> sort, Integer page, Integer limit, Long idCartao, String codigoPais, String dataInicio, String dataFim, Integer flagAtivo) throws ApiException {
+  public PageAvisoViagemResponse listarUsingGET7(List<String> sort, Integer page, Integer limit, Long idCartao, String codigoPais, String dataInicio, String dataFim, Integer flagAtivo) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -247,9 +247,9 @@ public class AvisoViagemApi {
   
   /**
    * Realiza o cadastro de um novo Aviso Viagem
-   * Este m\u00C3\u00A9todo permite que seja cadastrado um novo Aviso Viagem na base de dados do Emissor.
-   * @param idCartao C\u00C3\u00B3digo Identificador do cart\u00C3\u00A3o na base (id)
-   * @param codigoPais Codigo identificador do pa\u00C3\u00ADs na base (id)
+   * Este m\u00E9todo permite que seja cadastrado um novo Aviso Viagem na base de dados do Emissor.
+   * @param idCartao C\u00F3digo Identificador do cart\u00E3o na base (id)
+   * @param codigoPais Codigo identificador do pa\u00EDs na base (id)
    * @param dataInicio Data inicio do aviso viagem
    * @param dataFim Data fim do aviso viagem
    * @return AvisoViagemResponse

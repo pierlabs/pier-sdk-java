@@ -12,10 +12,10 @@ import java.util.List;
 
 
 /**
- * Objeto Arquivo para persist\u00C3\u00AAncia de dados.
+ * Objeto Arquivo para persist\u00EAncia de dados.
  **/
 
-@ApiModel(description = "Objeto Arquivo para persist\u00C3\u00AAncia de dados.")
+@ApiModel(description = "Objeto Arquivo para persist\u00EAncia de dados.")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ArquivoPersist   {
   
@@ -65,14 +65,14 @@ public class ArquivoPersist   {
 
   
   /**
-   * Conte\u00C3\u00BAdo do arquivo convertido em Base 64
+   * Conte\u00FAdo do arquivo convertido em Base 64
    **/
   public ArquivoPersist arquivo(String arquivo) {
     this.arquivo = arquivo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Conte\u00C3\u00BAdo do arquivo convertido em Base 64")
+  @ApiModelProperty(example = "null", required = true, value = "Conte\u00FAdo do arquivo convertido em Base 64")
   @JsonProperty("arquivo")
   public String getArquivo() {
     return arquivo;
@@ -101,14 +101,14 @@ public class ArquivoPersist   {
 
   
   /**
-   * Formato/extens\u00C3\u00A3o do arquivo.
+   * Formato/extens\u00E3o do arquivo.
    **/
   public ArquivoPersist extensao(String extensao) {
     this.extensao = extensao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Formato/extens\u00C3\u00A3o do arquivo.")
+  @ApiModelProperty(example = "null", value = "Formato/extens\u00E3o do arquivo.")
   @JsonProperty("extensao")
   public String getExtensao() {
     return extensao;
@@ -119,14 +119,14 @@ public class ArquivoPersist   {
 
   
   /**
-   * Tipo de comunica\u00C3\u00A7\u00C3\u00A3o.
+   * Tipo de comunica\u00E7\u00E3o.
    **/
   public ArquivoPersist tipoComunicacao(TipoComunicacaoEnum tipoComunicacao) {
     this.tipoComunicacao = tipoComunicacao;
     return this;
   }
   
-  @ApiModelProperty(example = "SOAP", value = "Tipo de comunica\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(example = "SOAP", value = "Tipo de comunica\u00E7\u00E3o.")
   @JsonProperty("tipoComunicacao")
   public TipoComunicacaoEnum getTipoComunicacao() {
     return tipoComunicacao;
@@ -137,14 +137,14 @@ public class ArquivoPersist   {
 
   
   /**
-   * Detalhes contendo informa\u00C3\u00A7\u00C3\u00B5es adicionais, relacionadas ao arquivo
+   * Detalhes contendo informa\u00E7\u00F5es adicionais, relacionadas ao arquivo
    **/
   public ArquivoPersist detalhes(List<ArquivoDetalhesPersist> detalhes) {
     this.detalhes = detalhes;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Detalhes contendo informa\u00C3\u00A7\u00C3\u00B5es adicionais, relacionadas ao arquivo")
+  @ApiModelProperty(example = "null", required = true, value = "Detalhes contendo informa\u00E7\u00F5es adicionais, relacionadas ao arquivo")
   @JsonProperty("detalhes")
   public List<ArquivoDetalhesPersist> getDetalhes() {
     return detalhes;

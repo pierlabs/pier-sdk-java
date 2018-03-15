@@ -49,14 +49,14 @@ public class FaturaResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.
+   * C\u00F3digo de identifica\u00E7\u00E3o da conta.
    **/
   public FaturaResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta.")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o da conta.")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -67,14 +67,14 @@ public class FaturaResponse   {
 
   
   /**
-   * Situa\u00C3\u00A7\u00C3\u00A3o de Processamento da fatura.
+   * Situa\u00E7\u00E3o de Processamento da fatura.
    **/
   public FaturaResponse situacaoProcessamento(SituacaoProcessamentoEnum situacaoProcessamento) {
     this.situacaoProcessamento = situacaoProcessamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Situa\u00C3\u00A7\u00C3\u00A3o de Processamento da fatura.")
+  @ApiModelProperty(example = "null", value = "Situa\u00E7\u00E3o de Processamento da fatura.")
   @JsonProperty("situacaoProcessamento")
   public SituacaoProcessamentoEnum getSituacaoProcessamento() {
     return situacaoProcessamento;
@@ -175,14 +175,14 @@ public class FaturaResponse   {
 
   
   /**
-   * Valor do pagamento m\u00C3\u00ADnimo.
+   * Valor do pagamento m\u00EDnimo.
    **/
   public FaturaResponse valorPagamentoMinimo(BigDecimal valorPagamentoMinimo) {
     this.valorPagamentoMinimo = valorPagamentoMinimo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor do pagamento m\u00C3\u00ADnimo.")
+  @ApiModelProperty(example = "null", value = "Valor do pagamento m\u00EDnimo.")
   @JsonProperty("valorPagamentoMinimo")
   public BigDecimal getValorPagamentoMinimo() {
     return valorPagamentoMinimo;

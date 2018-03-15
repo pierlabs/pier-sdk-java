@@ -49,14 +49,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa jur\u00C3\u00ADdica (id)
+   * C\u00F3digo de Identifica\u00E7\u00E3o da pessoa jur\u00EDdica (id)
    **/
   public PessoaJuridicaAprovadaResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da pessoa jur\u00C3\u00ADdica (id)")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o da pessoa jur\u00EDdica (id)")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -67,14 +67,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * Apresenta o nome completo da raz\u00C3\u00A3o social (nome empresarial)'.
+   * Apresenta o nome completo da raz\u00E3o social (nome empresarial)'.
    **/
   public PessoaJuridicaAprovadaResponse razaoSocial(String razaoSocial) {
     this.razaoSocial = razaoSocial;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o nome completo da raz\u00C3\u00A3o social (nome empresarial)'.")
+  @ApiModelProperty(example = "null", value = "Apresenta o nome completo da raz\u00E3o social (nome empresarial)'.")
   @JsonProperty("razaoSocial")
   public String getRazaoSocial() {
     return razaoSocial;
@@ -103,14 +103,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * N\u00C3\u00BAmero do Cadastro Nacional de Pessoa Juridica (CNPJ)
+   * N\u00FAmero do Cadastro Nacional de Pessoa Juridica (CNPJ)
    **/
   public PessoaJuridicaAprovadaResponse cnpj(String cnpj) {
     this.cnpj = cnpj;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero do Cadastro Nacional de Pessoa Juridica (CNPJ)")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero do Cadastro Nacional de Pessoa Juridica (CNPJ)")
   @JsonProperty("cnpj")
   public String getCnpj() {
     return cnpj;
@@ -121,14 +121,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * N\u00C3\u00BAmero da Inscri\u00C3\u00A7\u00C3\u00A3o Estadual (IE).
+   * N\u00FAmero da Inscri\u00E7\u00E3o Estadual (IE).
    **/
   public PessoaJuridicaAprovadaResponse inscricaoEstadual(String inscricaoEstadual) {
     this.inscricaoEstadual = inscricaoEstadual;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero da Inscri\u00C3\u00A7\u00C3\u00A3o Estadual (IE).")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero da Inscri\u00E7\u00E3o Estadual (IE).")
   @JsonProperty("inscricaoEstadual")
   public String getInscricaoEstadual() {
     return inscricaoEstadual;
@@ -193,14 +193,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+   * N\u00FAmero da ag\u00EAncia.
    **/
   public PessoaJuridicaAprovadaResponse numeroAgencia(Integer numeroAgencia) {
     this.numeroAgencia = numeroAgencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero da ag\u00C3\u00AAncia.")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero da ag\u00EAncia.")
   @JsonProperty("numeroAgencia")
   public Integer getNumeroAgencia() {
     return numeroAgencia;
@@ -211,14 +211,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * N\u00C3\u00BAmero da conta corrente.
+   * N\u00FAmero da conta corrente.
    **/
   public PessoaJuridicaAprovadaResponse numeroContaCorrente(String numeroContaCorrente) {
     this.numeroContaCorrente = numeroContaCorrente;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero da conta corrente.")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero da conta corrente.")
   @JsonProperty("numeroContaCorrente")
   public String getNumeroContaCorrente() {
     return numeroContaCorrente;
@@ -265,14 +265,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * Nome que deve ser impresso no cart\u00C3\u00A3o
+   * Nome que deve ser impresso no cart\u00E3o
    **/
   public PessoaJuridicaAprovadaResponse nomeImpresso(String nomeImpresso) {
     this.nomeImpresso = nomeImpresso;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome que deve ser impresso no cart\u00C3\u00A3o")
+  @ApiModelProperty(example = "null", value = "Nome que deve ser impresso no cart\u00E3o")
   @JsonProperty("nomeImpresso")
   public String getNomeImpresso() {
     return nomeImpresso;
@@ -283,14 +283,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta cadastrada
+   * C\u00F3digo de identifica\u00E7\u00E3o da conta cadastrada
    **/
   public PessoaJuridicaAprovadaResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta cadastrada")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o da conta cadastrada")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -301,14 +301,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da proposta
+   * C\u00F3digo de identifica\u00E7\u00E3o da proposta
    **/
   public PessoaJuridicaAprovadaResponse idProposta(Long idProposta) {
     this.idProposta = idProposta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da proposta")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o da proposta")
   @JsonProperty("idProposta")
   public Long getIdProposta() {
     return idProposta;
@@ -337,14 +337,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)
+   * Indica o valor da pontua\u00E7\u00E3o atribuido ao cliente (caso n\u00E3o informado ser\u00E1 atribuido o valor = 0)
    **/
   public PessoaJuridicaAprovadaResponse valorPontuacao(Integer valorPontuacao) {
     this.valorPontuacao = valorPontuacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Indica o valor da pontua\u00C3\u00A7\u00C3\u00A3o atribuido ao cliente (caso n\u00C3\u00A3o informado ser\u00C3\u00A1 atribuido o valor = 0)")
+  @ApiModelProperty(example = "null", value = "Indica o valor da pontua\u00E7\u00E3o atribuido ao cliente (caso n\u00E3o informado ser\u00E1 atribuido o valor = 0)")
   @JsonProperty("valorPontuacao")
   public Integer getValorPontuacao() {
     return valorPontuacao;
@@ -373,14 +373,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * Pode ser informado os seguintes tipos de endere\u00C3\u00A7o: Residencial, Comercial, e Outros
+   * Pode ser informado os seguintes tipos de endere\u00E7o: Residencial, Comercial, e Outros
    **/
   public PessoaJuridicaAprovadaResponse enderecos(List<EnderecoAprovadoResponse> enderecos) {
     this.enderecos = enderecos;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Pode ser informado os seguintes tipos de endere\u00C3\u00A7o: Residencial, Comercial, e Outros")
+  @ApiModelProperty(example = "null", value = "Pode ser informado os seguintes tipos de endere\u00E7o: Residencial, Comercial, e Outros")
   @JsonProperty("enderecos")
   public List<EnderecoAprovadoResponse> getEnderecos() {
     return enderecos;
@@ -391,14 +391,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista
+   * Apresenta os dados dos s\u00F3cios da empresa, caso exista
    **/
   public PessoaJuridicaAprovadaResponse socios(List<SocioAprovadoResponse> socios) {
     this.socios = socios;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista")
+  @ApiModelProperty(example = "null", value = "Apresenta os dados dos s\u00F3cios da empresa, caso exista")
   @JsonProperty("socios")
   public List<SocioAprovadoResponse> getSocios() {
     return socios;
@@ -409,14 +409,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista
+   * Apresenta os dados dos s\u00F3cios da empresa, caso exista
    **/
   public PessoaJuridicaAprovadaResponse referencias(List<ReferenciaComercialAprovadoResponse> referencias) {
     this.referencias = referencias;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta os dados dos s\u00C3\u00B3cios da empresa, caso exista")
+  @ApiModelProperty(example = "null", value = "Apresenta os dados dos s\u00F3cios da empresa, caso exista")
   @JsonProperty("referencias")
   public List<ReferenciaComercialAprovadoResponse> getReferencias() {
     return referencias;
@@ -445,14 +445,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es
+   * Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es
    **/
   public PessoaJuridicaAprovadaResponse limiteMaximo(BigDecimal limiteMaximo) {
     this.limiteMaximo = limiteMaximo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Valor m\u00C3\u00A1ximo do limite de cr\u00C3\u00A9dito para realizar transa\u00C3\u00A7\u00C3\u00B5es")
+  @ApiModelProperty(example = "null", required = true, value = "Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es")
   @JsonProperty("limiteMaximo")
   public BigDecimal getLimiteMaximo() {
     return limiteMaximo;
@@ -463,14 +463,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras
+   * Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras
    **/
   public PessoaJuridicaAprovadaResponse limiteParcelas(BigDecimal limiteParcelas) {
     this.limiteParcelas = limiteParcelas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Valor do limite de cr\u00C3\u00A9dito acumulado da soma das parcelas das compras")
+  @ApiModelProperty(example = "null", required = true, value = "Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras")
   @JsonProperty("limiteParcelas")
   public BigDecimal getLimiteParcelas() {
     return limiteParcelas;

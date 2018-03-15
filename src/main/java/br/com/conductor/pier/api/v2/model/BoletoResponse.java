@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do boleto de fatura
+ * Representa\u00E7\u00E3o da resposta do boleto de fatura
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do boleto de fatura")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do boleto de fatura")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class BoletoResponse   {
   
@@ -51,14 +51,14 @@ public class BoletoResponse   {
 
   
   /**
-   * N\u00C3\u00BAmero do documento \u00C3\u00A9 o c\u00C3\u00B3digo informado pelo banco para identifica\u00C3\u00A7\u00C3\u00A3o do cliente
+   * N\u00FAmero do documento \u00E9 o c\u00F3digo informado pelo banco para identifica\u00E7\u00E3o do cliente
    **/
   public BoletoResponse numeroDoDocumento(String numeroDoDocumento) {
     this.numeroDoDocumento = numeroDoDocumento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero do documento \u00C3\u00A9 o c\u00C3\u00B3digo informado pelo banco para identifica\u00C3\u00A7\u00C3\u00A3o do cliente")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero do documento \u00E9 o c\u00F3digo informado pelo banco para identifica\u00E7\u00E3o do cliente")
   @JsonProperty("numeroDoDocumento")
   public String getNumeroDoDocumento() {
     return numeroDoDocumento;
@@ -69,14 +69,14 @@ public class BoletoResponse   {
 
   
   /**
-   * Data do processamento (emiss\u00C3\u00A3o ou faturamento) do boleto
+   * Data do processamento (emiss\u00E3o ou faturamento) do boleto
    **/
   public BoletoResponse dataProcessamento(String dataProcessamento) {
     this.dataProcessamento = dataProcessamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data do processamento (emiss\u00C3\u00A3o ou faturamento) do boleto")
+  @ApiModelProperty(example = "null", value = "Data do processamento (emiss\u00E3o ou faturamento) do boleto")
   @JsonProperty("dataProcessamento")
   public String getDataProcessamento() {
     return dataProcessamento;
@@ -87,14 +87,14 @@ public class BoletoResponse   {
 
   
   /**
-   * Data do documento (impress\u00C3\u00A3o)
+   * Data do documento (impress\u00E3o)
    **/
   public BoletoResponse dataDocumento(String dataDocumento) {
     this.dataDocumento = dataDocumento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data do documento (impress\u00C3\u00A3o)")
+  @ApiModelProperty(example = "null", value = "Data do documento (impress\u00E3o)")
   @JsonProperty("dataDocumento")
   public String getDataDocumento() {
     return dataDocumento;
@@ -159,14 +159,14 @@ public class BoletoResponse   {
 
   
   /**
-   * Benefici\u00C3\u00A1rio \u00C3\u00A9 a pessoa/empresa que gera o boleto
+   * Benefici\u00E1rio \u00E9 a pessoa/empresa que gera o boleto
    **/
   public BoletoResponse nomeBeneficiario(String nomeBeneficiario) {
     this.nomeBeneficiario = nomeBeneficiario;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Benefici\u00C3\u00A1rio \u00C3\u00A9 a pessoa/empresa que gera o boleto")
+  @ApiModelProperty(example = "null", value = "Benefici\u00E1rio \u00E9 a pessoa/empresa que gera o boleto")
   @JsonProperty("nomeBeneficiario")
   public String getNomeBeneficiario() {
     return nomeBeneficiario;
@@ -195,14 +195,14 @@ public class BoletoResponse   {
 
   
   /**
-   * Ag\u00C3\u00AAncia.
+   * Ag\u00EAncia.
    **/
   public BoletoResponse agencia(String agencia) {
     this.agencia = agencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Ag\u00C3\u00AAncia.")
+  @ApiModelProperty(example = "null", value = "Ag\u00EAncia.")
   @JsonProperty("agencia")
   public String getAgencia() {
     return agencia;
@@ -213,14 +213,14 @@ public class BoletoResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo do benefici\u00C3\u00A1rio
+   * C\u00F3digo do benefici\u00E1rio
    **/
   public BoletoResponse codigoBeneficiario(String codigoBeneficiario) {
     this.codigoBeneficiario = codigoBeneficiario;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo do benefici\u00C3\u00A1rio")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo do benefici\u00E1rio")
   @JsonProperty("codigoBeneficiario")
   public String getCodigoBeneficiario() {
     return codigoBeneficiario;
@@ -231,14 +231,14 @@ public class BoletoResponse   {
 
   
   /**
-   * N\u00C3\u00BAmero do conv\u00C3\u00AAnio fornecido pelo banco \u00C3\u00A9 o c\u00C3\u00B3digo que identifica um emissor junto ao seu banco para associar seus boletos.
+   * N\u00FAmero do conv\u00EAnio fornecido pelo banco \u00E9 o c\u00F3digo que identifica um emissor junto ao seu banco para associar seus boletos.
    **/
   public BoletoResponse numeroConvenio(String numeroConvenio) {
     this.numeroConvenio = numeroConvenio;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero do conv\u00C3\u00AAnio fornecido pelo banco \u00C3\u00A9 o c\u00C3\u00B3digo que identifica um emissor junto ao seu banco para associar seus boletos.")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero do conv\u00EAnio fornecido pelo banco \u00E9 o c\u00F3digo que identifica um emissor junto ao seu banco para associar seus boletos.")
   @JsonProperty("numeroConvenio")
   public String getNumeroConvenio() {
     return numeroConvenio;
@@ -249,14 +249,14 @@ public class BoletoResponse   {
 
   
   /**
-   * D\u00C3\u00ADgito do c\u00C3\u00B3digo do benefici\u00C3\u00A1rio
+   * D\u00EDgito do c\u00F3digo do benefici\u00E1rio
    **/
   public BoletoResponse digitoCodigoBeneficiario(String digitoCodigoBeneficiario) {
     this.digitoCodigoBeneficiario = digitoCodigoBeneficiario;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "D\u00C3\u00ADgito do c\u00C3\u00B3digo do benefici\u00C3\u00A1rio")
+  @ApiModelProperty(example = "null", value = "D\u00EDgito do c\u00F3digo do benefici\u00E1rio")
   @JsonProperty("digitoCodigoBeneficiario")
   public String getDigitoCodigoBeneficiario() {
     return digitoCodigoBeneficiario;
@@ -267,14 +267,14 @@ public class BoletoResponse   {
 
   
   /**
-   * Carteira \u00C3\u00A9 o c\u00C3\u00B3digo informado pelo banco pra identifica\u00C3\u00A7\u00C3\u00A3o do tipo do boleto
+   * Carteira \u00E9 o c\u00F3digo informado pelo banco pra identifica\u00E7\u00E3o do tipo do boleto
    **/
   public BoletoResponse carteira(String carteira) {
     this.carteira = carteira;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Carteira \u00C3\u00A9 o c\u00C3\u00B3digo informado pelo banco pra identifica\u00C3\u00A7\u00C3\u00A3o do tipo do boleto")
+  @ApiModelProperty(example = "null", value = "Carteira \u00E9 o c\u00F3digo informado pelo banco pra identifica\u00E7\u00E3o do tipo do boleto")
   @JsonProperty("carteira")
   public String getCarteira() {
     return carteira;
@@ -285,14 +285,14 @@ public class BoletoResponse   {
 
   
   /**
-   * Nosso n\u00C3\u00BAmero \u00C3\u00A9 o c\u00C3\u00B3digo que o benefici\u00C3\u00A1rio escolhe para manter controle sobre seus boletos. Esse valor serve para o cedente identificar quais boletos foram pagos ou n\u00C3\u00A3o. Recomenda-se o uso de n\u00C3\u00BAmeros sequ\u00C3\u00AAnciais, na gera\u00C3\u00A7\u00C3\u00A3o de diversos boletos, para facilitar a identifica\u00C3\u00A7\u00C3\u00A3o dos boletos pagos
+   * Nosso n\u00FAmero \u00E9 o c\u00F3digo que o benefici\u00E1rio escolhe para manter controle sobre seus boletos. Esse valor serve para o cedente identificar quais boletos foram pagos ou n\u00E3o. Recomenda-se o uso de n\u00FAmeros sequ\u00EAnciais, na gera\u00E7\u00E3o de diversos boletos, para facilitar a identifica\u00E7\u00E3o dos boletos pagos
    **/
   public BoletoResponse nossoNumero(String nossoNumero) {
     this.nossoNumero = nossoNumero;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nosso n\u00C3\u00BAmero \u00C3\u00A9 o c\u00C3\u00B3digo que o benefici\u00C3\u00A1rio escolhe para manter controle sobre seus boletos. Esse valor serve para o cedente identificar quais boletos foram pagos ou n\u00C3\u00A3o. Recomenda-se o uso de n\u00C3\u00BAmeros sequ\u00C3\u00AAnciais, na gera\u00C3\u00A7\u00C3\u00A3o de diversos boletos, para facilitar a identifica\u00C3\u00A7\u00C3\u00A3o dos boletos pagos")
+  @ApiModelProperty(example = "null", value = "Nosso n\u00FAmero \u00E9 o c\u00F3digo que o benefici\u00E1rio escolhe para manter controle sobre seus boletos. Esse valor serve para o cedente identificar quais boletos foram pagos ou n\u00E3o. Recomenda-se o uso de n\u00FAmeros sequ\u00EAnciais, na gera\u00E7\u00E3o de diversos boletos, para facilitar a identifica\u00E7\u00E3o dos boletos pagos")
   @JsonProperty("nossoNumero")
   public String getNossoNumero() {
     return nossoNumero;
@@ -303,14 +303,14 @@ public class BoletoResponse   {
 
   
   /**
-   * D\u00C3\u00ADgito do nosso n\u00C3\u00BAmero
+   * D\u00EDgito do nosso n\u00FAmero
    **/
   public BoletoResponse digitoNossoNumero(String digitoNossoNumero) {
     this.digitoNossoNumero = digitoNossoNumero;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "D\u00C3\u00ADgito do nosso n\u00C3\u00BAmero")
+  @ApiModelProperty(example = "null", value = "D\u00EDgito do nosso n\u00FAmero")
   @JsonProperty("digitoNossoNumero")
   public String getDigitoNossoNumero() {
     return digitoNossoNumero;
@@ -339,14 +339,14 @@ public class BoletoResponse   {
 
   
   /**
-   * Aceite informa ao banco se deve aceitar o boleto ap\u00C3\u00B3s a data de vencimento (padr\u00C3\u00A3o: \"N\")
+   * Aceite informa ao banco se deve aceitar o boleto ap\u00F3s a data de vencimento (padr\u00E3o: \"N\")
    **/
   public BoletoResponse aceite(Boolean aceite) {
     this.aceite = aceite;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Aceite informa ao banco se deve aceitar o boleto ap\u00C3\u00B3s a data de vencimento (padr\u00C3\u00A3o: \"N\")")
+  @ApiModelProperty(example = "false", value = "Aceite informa ao banco se deve aceitar o boleto ap\u00F3s a data de vencimento (padr\u00E3o: \"N\")")
   @JsonProperty("aceite")
   public Boolean getAceite() {
     return aceite;
@@ -357,14 +357,14 @@ public class BoletoResponse   {
 
   
   /**
-   * Esp\u00C3\u00A9cie do documento \u00C3\u00A9 o identificador do tipo de boleto (padr\u00C3\u00A3o: \"DV\")
+   * Esp\u00E9cie do documento \u00E9 o identificador do tipo de boleto (padr\u00E3o: \"DV\")
    **/
   public BoletoResponse especieDoDocumento(String especieDoDocumento) {
     this.especieDoDocumento = especieDoDocumento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Esp\u00C3\u00A9cie do documento \u00C3\u00A9 o identificador do tipo de boleto (padr\u00C3\u00A3o: \"DV\")")
+  @ApiModelProperty(example = "null", value = "Esp\u00E9cie do documento \u00E9 o identificador do tipo de boleto (padr\u00E3o: \"DV\")")
   @JsonProperty("especieDoDocumento")
   public String getEspecieDoDocumento() {
     return especieDoDocumento;
@@ -375,14 +375,14 @@ public class BoletoResponse   {
 
   
   /**
-   * Esp\u00C3\u00A9cie \u00C3\u00A9 o identificador da moeda do boleto (padr\u00C3\u00A3o: \"R$\")
+   * Esp\u00E9cie \u00E9 o identificador da moeda do boleto (padr\u00E3o: \"R$\")
    **/
   public BoletoResponse especie(String especie) {
     this.especie = especie;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Esp\u00C3\u00A9cie \u00C3\u00A9 o identificador da moeda do boleto (padr\u00C3\u00A3o: \"R$\")")
+  @ApiModelProperty(example = "null", value = "Esp\u00E9cie \u00E9 o identificador da moeda do boleto (padr\u00E3o: \"R$\")")
   @JsonProperty("especie")
   public String getEspecie() {
     return especie;
@@ -393,14 +393,14 @@ public class BoletoResponse   {
 
   
   /**
-   * Instru\u00C3\u00A7\u00C3\u00B5es para o benefici\u00C3\u00A1rio
+   * Instru\u00E7\u00F5es para o benefici\u00E1rio
    **/
   public BoletoResponse instrucoes(List<String> instrucoes) {
     this.instrucoes = instrucoes;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Instru\u00C3\u00A7\u00C3\u00B5es para o benefici\u00C3\u00A1rio")
+  @ApiModelProperty(example = "null", value = "Instru\u00E7\u00F5es para o benefici\u00E1rio")
   @JsonProperty("instrucoes")
   public List<String> getInstrucoes() {
     return instrucoes;
@@ -429,14 +429,14 @@ public class BoletoResponse   {
 
   
   /**
-   * Pagador \u00C3\u00A9 a pessoa/empresa que deve pagar o boleto
+   * Pagador \u00E9 a pessoa/empresa que deve pagar o boleto
    **/
   public BoletoResponse nomePagador(String nomePagador) {
     this.nomePagador = nomePagador;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Pagador \u00C3\u00A9 a pessoa/empresa que deve pagar o boleto")
+  @ApiModelProperty(example = "null", value = "Pagador \u00E9 a pessoa/empresa que deve pagar o boleto")
   @JsonProperty("nomePagador")
   public String getNomePagador() {
     return nomePagador;
@@ -555,14 +555,14 @@ public class BoletoResponse   {
 
   
   /**
-   * Valor num\u00C3\u00A9rico do c\u00C3\u00B3digo de barras
+   * Valor num\u00E9rico do c\u00F3digo de barras
    **/
   public BoletoResponse codigoDeBarras(String codigoDeBarras) {
     this.codigoDeBarras = codigoDeBarras;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor num\u00C3\u00A9rico do c\u00C3\u00B3digo de barras")
+  @ApiModelProperty(example = "null", value = "Valor num\u00E9rico do c\u00F3digo de barras")
   @JsonProperty("codigoDeBarras")
   public String getCodigoDeBarras() {
     return codigoDeBarras;
@@ -573,14 +573,14 @@ public class BoletoResponse   {
 
   
   /**
-   * Linha digit\u00C3\u00A1vel formatada
+   * Linha digit\u00E1vel formatada
    **/
   public BoletoResponse linhaDigitavel(String linhaDigitavel) {
     this.linhaDigitavel = linhaDigitavel;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Linha digit\u00C3\u00A1vel formatada")
+  @ApiModelProperty(example = "null", value = "Linha digit\u00E1vel formatada")
   @JsonProperty("linhaDigitavel")
   public String getLinhaDigitavel() {
     return linhaDigitavel;

@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de campanha
+ * Representa\u00E7\u00E3o da resposta do recurso de campanha
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de campanha")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de campanha")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class CampanhaResponse   {
   
@@ -61,14 +61,14 @@ public class CampanhaResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de campanha a qual a a Campanha pertence
+   * C\u00F3digo de Identifica\u00E7\u00E3o do tipo de campanha a qual a a Campanha pertence
    **/
   public CampanhaResponse idTipoCampanha(Long idTipoCampanha) {
     this.idTipoCampanha = idTipoCampanha;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de campanha a qual a a Campanha pertence")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do tipo de campanha a qual a a Campanha pertence")
   @JsonProperty("idTipoCampanha")
   public Long getIdTipoCampanha() {
     return idTipoCampanha;

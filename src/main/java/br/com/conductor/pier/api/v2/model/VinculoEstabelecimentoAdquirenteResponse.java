@@ -25,14 +25,14 @@ public class VinculoEstabelecimentoAdquirenteResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do VinculoEstabelecimentoAdquirente (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do VinculoEstabelecimentoAdquirente (id).
    **/
   public VinculoEstabelecimentoAdquirenteResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do VinculoEstabelecimentoAdquirente (id).")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do VinculoEstabelecimentoAdquirente (id).")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -43,14 +43,14 @@ public class VinculoEstabelecimentoAdquirenteResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id).
    **/
   public VinculoEstabelecimentoAdquirenteResponse idEstabelecimento(Long idEstabelecimento) {
     this.idEstabelecimento = idEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id).")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id).")
   @JsonProperty("idEstabelecimento")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
@@ -61,14 +61,14 @@ public class VinculoEstabelecimentoAdquirenteResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Adquirente (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Adquirente (id).
    **/
   public VinculoEstabelecimentoAdquirenteResponse idAdquirente(Long idAdquirente) {
     this.idAdquirente = idAdquirente;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Adquirente (id).")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Adquirente (id).")
   @JsonProperty("idAdquirente")
   public Long getIdAdquirente() {
     return idAdquirente;
@@ -79,14 +79,14 @@ public class VinculoEstabelecimentoAdquirenteResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo do v\u00C3\u00ADnculo entre o estabelecimento e o adquirente.
+   * C\u00F3digo do v\u00EDnculo entre o estabelecimento e o adquirente.
    **/
   public VinculoEstabelecimentoAdquirenteResponse codigoEstabelecimentoAdquirente(String codigoEstabelecimentoAdquirente) {
     this.codigoEstabelecimentoAdquirente = codigoEstabelecimentoAdquirente;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo do v\u00C3\u00ADnculo entre o estabelecimento e o adquirente.")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo do v\u00EDnculo entre o estabelecimento e o adquirente.")
   @JsonProperty("codigoEstabelecimentoAdquirente")
   public String getCodigoEstabelecimentoAdquirente() {
     return codigoEstabelecimentoAdquirente;
@@ -97,14 +97,14 @@ public class VinculoEstabelecimentoAdquirenteResponse   {
 
   
   /**
-   * Data de cadastro do v\u00C3\u00ADnculo.
+   * Data de cadastro do v\u00EDnculo.
    **/
   public VinculoEstabelecimentoAdquirenteResponse dataHoraCadastro(String dataHoraCadastro) {
     this.dataHoraCadastro = dataHoraCadastro;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data de cadastro do v\u00C3\u00ADnculo.")
+  @ApiModelProperty(example = "null", value = "Data de cadastro do v\u00EDnculo.")
   @JsonProperty("dataHoraCadastro")
   public String getDataHoraCadastro() {
     return dataHoraCadastro;
@@ -115,14 +115,14 @@ public class VinculoEstabelecimentoAdquirenteResponse   {
 
   
   /**
-   * Data de cadastro do v\u00C3\u00ADnculo.
+   * Data de cadastro do v\u00EDnculo.
    **/
   public VinculoEstabelecimentoAdquirenteResponse mensagem(String mensagem) {
     this.mensagem = mensagem;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data de cadastro do v\u00C3\u00ADnculo.")
+  @ApiModelProperty(example = "null", value = "Data de cadastro do v\u00EDnculo.")
   @JsonProperty("mensagem")
   public String getMensagem() {
     return mensagem;
@@ -133,14 +133,14 @@ public class VinculoEstabelecimentoAdquirenteResponse   {
 
   
   /**
-   * Data de cadastro do v\u00C3\u00ADnculo.
+   * Data de cadastro do v\u00EDnculo.
    **/
   public VinculoEstabelecimentoAdquirenteResponse status(Integer status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data de cadastro do v\u00C3\u00ADnculo.")
+  @ApiModelProperty(example = "null", value = "Data de cadastro do v\u00EDnculo.")
   @JsonProperty("status")
   public Integer getStatus() {
     return status;

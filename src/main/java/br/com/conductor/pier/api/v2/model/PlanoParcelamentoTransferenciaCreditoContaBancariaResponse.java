@@ -12,10 +12,10 @@ import java.util.List;
 
 
 /**
- * Plano de Parcelamentos para Transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para contas banc\u00C3\u00A1rias
+ * Plano de Parcelamentos para Transfer\u00EAncia de cr\u00E9dito para contas banc\u00E1rias
  **/
 
-@ApiModel(description = "Plano de Parcelamentos para Transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para contas banc\u00C3\u00A1rias")
+@ApiModel(description = "Plano de Parcelamentos para Transfer\u00EAncia de cr\u00E9dito para contas banc\u00E1rias")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse   {
   
@@ -27,14 +27,14 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse   {
 
   
   /**
-   * N\u00C3\u00BAmero do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o em formato mascarado.
+   * N\u00FAmero do Cart\u00E3o que originou a transa\u00E7\u00E3o em formato mascarado.
    **/
   public PlanoParcelamentoTransferenciaCreditoContaBancariaResponse numeroMascaradoCartao(String numeroMascaradoCartao) {
     this.numeroMascaradoCartao = numeroMascaradoCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o em formato mascarado.")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero do Cart\u00E3o que originou a transa\u00E7\u00E3o em formato mascarado.")
   @JsonProperty("numeroMascaradoCartao")
   public String getNumeroMascaradoCartao() {
     return numeroMascaradoCartao;
@@ -63,14 +63,14 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse   {
 
   
   /**
-   * Valor da solicita\u00C3\u00A7\u00C3\u00A3o de saque.
+   * Valor da solicita\u00E7\u00E3o de saque.
    **/
   public PlanoParcelamentoTransferenciaCreditoContaBancariaResponse valorTransacao(BigDecimal valorTransacao) {
     this.valorTransacao = valorTransacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor da solicita\u00C3\u00A7\u00C3\u00A3o de saque.")
+  @ApiModelProperty(example = "null", value = "Valor da solicita\u00E7\u00E3o de saque.")
   @JsonProperty("valorTransacao")
   public BigDecimal getValorTransacao() {
     return valorTransacao;
@@ -81,14 +81,14 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse   {
 
   
   /**
-   * N\u00C3\u00BAmero de meses para car\u00C3\u00AAncia.
+   * N\u00FAmero de meses para car\u00EAncia.
    **/
   public PlanoParcelamentoTransferenciaCreditoContaBancariaResponse numeroMesesCarencia(Integer numeroMesesCarencia) {
     this.numeroMesesCarencia = numeroMesesCarencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero de meses para car\u00C3\u00AAncia.")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero de meses para car\u00EAncia.")
   @JsonProperty("numeroMesesCarencia")
   public Integer getNumeroMesesCarencia() {
     return numeroMesesCarencia;

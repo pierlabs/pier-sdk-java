@@ -49,9 +49,9 @@ public class OportunidadeApi {
   
   /**
    * Altera o status do tipo oportunidade
-   * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o do status do tipo oportunidade.
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
-   * @param idStatus C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do status do tipo oportunidade (id).
+   * Este m\u00E9todo realiza a altera\u00E7\u00E3o do status do tipo oportunidade.
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o do tipo oportunidade (id).
+   * @param idStatus C\u00F3digo de identifica\u00E7\u00E3o do status do tipo oportunidade (id).
    * @param persist persist
    * @return StatusOportunidadeResponse
    */
@@ -110,8 +110,8 @@ public class OportunidadeApi {
   
   /**
    * Altera as oportunidades
-   * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o das oportunidades.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).
+   * Este m\u00E9todo realiza a altera\u00E7\u00E3o das oportunidades.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da oportunidade (id).
    * @param update update
    * @return OportunidadeResponse
    */
@@ -164,8 +164,8 @@ public class OportunidadeApi {
   
   /**
    * Altera os tipos oportunidades
-   * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos tipos oportunidades.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
+   * Este m\u00E9todo realiza a altera\u00E7\u00E3o dos tipos oportunidades.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do tipo oportunidade (id).
    * @param persist persist
    * @return TipoOportunidadeResponse
    */
@@ -218,9 +218,9 @@ public class OportunidadeApi {
   
   /**
    * Apresenta dados de um determinado status do tipo oportunidade
-   * Este recurso permite consultar dados de um determinado status do tipo oportunidade a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (idStatus).
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
-   * @param idStatus C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do status (idStatus).
+   * Este recurso permite consultar dados de um determinado status do tipo oportunidade a partir de seu codigo de identifica\u00E7\u00E3o (idStatus).
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o do tipo oportunidade (id).
+   * @param idStatus C\u00F3digo de identifica\u00E7\u00E3o do status (idStatus).
    * @return StatusOportunidadeResponse
    */
   public StatusOportunidadeResponse consultarStatusUsingGET(Long id, Long idStatus) throws ApiException {
@@ -273,16 +273,16 @@ public class OportunidadeApi {
   
   /**
    * Apresenta dados de uma determinada oportunidade
-   * Este recurso permite consultar dados de uma determinada oportunidade a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da oportunidade (id).
+   * Este recurso permite consultar dados de uma determinada oportunidade a partir de seu codigo de identifica\u00E7\u00E3o (id).
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o da oportunidade (id).
    * @return OportunidadeResponse
    */
-  public OportunidadeResponse consultarUsingGET22(Long id) throws ApiException {
+  public OportunidadeResponse consultarUsingGET23(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET22");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET23");
      }
      
     // create path and map variables
@@ -321,16 +321,16 @@ public class OportunidadeApi {
   
   /**
    * Apresenta dados de um determinado tipo oportunidade
-   * Este recurso permite consultar dados de um determinado tipo oportunidade a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
+   * Este recurso permite consultar dados de um determinado tipo oportunidade a partir de seu codigo de identifica\u00E7\u00E3o (id).
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o do tipo oportunidade (id).
    * @return TipoOportunidadeResponse
    */
-  public TipoOportunidadeResponse consultarUsingGET36(Long id) throws ApiException {
+  public TipoOportunidadeResponse consultarUsingGET37(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET36");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET37");
      }
      
     // create path and map variables
@@ -370,17 +370,17 @@ public class OportunidadeApi {
   /**
    * Lista as auditorias dos status oportunidades
    * Este recurso permite listar os status oportunidades.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param revType C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
-   * @param revDate Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
-   * @param id C\u00C3\u00B3digo identificador do status oportunidade
-   * @param idTipoOportunidade C\u00C3\u00B3digo identificador do tipo oportunidade
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @param revType C\u00F3digo que representa o tipo de a\u00E7\u00E3o realizada no recurso de tipos oportunidades
+   * @param revDate Data da a\u00E7\u00E3o realizada no recurso de tipos oportunidades
+   * @param id C\u00F3digo identificador do status oportunidade
+   * @param idTipoOportunidade C\u00F3digo identificador do tipo oportunidade
    * @param nome Nome do status oportunidade
-   * @param descricao Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade
-   * @param flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo
-   * @param revUser Usu\u00C3\u00A1rio da auditoria
+   * @param descricao Descri\u00E7\u00E3o do status oportunidade
+   * @param flagAtivo Flag de verifica\u00E7\u00E3o se o status oportunidade est\u00E1 ativo
+   * @param revUser Usu\u00E1rio da auditoria
    * @return PageStatusOportunidadeAUDResponse
    */
   public PageStatusOportunidadeAUDResponse listarAuditoriasStatusUsingGET(List<String> sort, Integer page, Integer limit, Long revType, String revDate, Long id, Long idTipoOportunidade, String nome, String descricao, Boolean flagAtivo, String revUser) throws ApiException {
@@ -444,19 +444,19 @@ public class OportunidadeApi {
   /**
    * Lista as auditorias das oportunidades
    * Este recurso permite listar as auditorias das oportunidades.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param idStatusOportunidade C\u00C3\u00B3digo identificador do status oportunidade
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @param idStatusOportunidade C\u00F3digo identificador do status oportunidade
    * @param dataCadastro Data do cadastro da oportunidade
-   * @param dataAtualizacao Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade
-   * @param numeroReceitaFederal N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade
-   * @param dataInicioVigencia In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
-   * @param datatFimVigencia Fim da vig\u00C3\u00AAncia da oportunidade
-   * @param flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
+   * @param dataAtualizacao Data da atualiza\u00E7\u00E3o da oportunidade
+   * @param numeroReceitaFederal N\u00FAmero receita federal do cliente ao qual ser\u00E1 ofertada a oportunidade
+   * @param dataInicioVigencia In\u00EDcio da vig\u00EAncia da oportunidade
+   * @param datatFimVigencia Fim da vig\u00EAncia da oportunidade
+   * @param flagAtivo Flag de verifica\u00E7\u00E3o se a oportunidade est\u00E1 ativa
    * @param revDate Data da auditoria
    * @param revType Tipo da auditoria
-   * @param revUser Usu\u00C3\u00A1rio da auditoria
+   * @param revUser Usu\u00E1rio da auditoria
    * @return PageOportunidadeAUDResponse
    */
   public PageOportunidadeAUDResponse listarAuditoriasUsingGET(List<String> sort, Integer page, Integer limit, Long idStatusOportunidade, String dataCadastro, String dataAtualizacao, String numeroReceitaFederal, String dataInicioVigencia, String datatFimVigencia, Boolean flagAtivo, String revDate, String revType, String revUser) throws ApiException {
@@ -524,15 +524,15 @@ public class OportunidadeApi {
   /**
    * Lista as auditorias dos tipos oportunidades
    * Este recurso permite listar os tipos oportunidades.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param revType C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
-   * @param revDate Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
-   * @param id C\u00C3\u00B3digo identificador do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o
-   * @param descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade no qual foi realizado a a\u00C3\u00A7\u00C3\u00A3o
-   * @param flagAtivo Atributo que representa se o tipo oportunidade est\u00C3\u00A1 ativo
-   * @param revUser Usu\u00C3\u00A1rio da auditoria
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @param revType C\u00F3digo que representa o tipo de a\u00E7\u00E3o realizada no recurso de tipos oportunidades
+   * @param revDate Data da a\u00E7\u00E3o realizada no recurso de tipos oportunidades
+   * @param id C\u00F3digo identificador do tipo oportunidade no qual foi realizado a a\u00E7\u00E3o
+   * @param descricao Descri\u00E7\u00E3o do tipo oportunidade no qual foi realizado a a\u00E7\u00E3o
+   * @param flagAtivo Atributo que representa se o tipo oportunidade est\u00E1 ativo
+   * @param revUser Usu\u00E1rio da auditoria
    * @return PageTipoOportunidadeAUDResponse
    */
   public PageTipoOportunidadeAUDResponse listarAuditoriasUsingGET1(List<String> sort, Integer page, Integer limit, Long revType, String revDate, Long id, String descricao, Boolean flagAtivo, String revUser) throws ApiException {
@@ -592,13 +592,13 @@ public class OportunidadeApi {
   /**
    * Lista os status do tipo oportunidades
    * Este recurso permite listar os status do tipo oportunidades.
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o do tipo oportunidade (id).
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
    * @param nome Nome do status oportunidade
-   * @param descricao Descri\u00C3\u00A7\u00C3\u00A3o do status oportunidade
-   * @param flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o status oportunidade est\u00C3\u00A1 ativo
+   * @param descricao Descri\u00E7\u00E3o do status oportunidade
+   * @param flagAtivo Flag de verifica\u00E7\u00E3o se o status oportunidade est\u00E1 ativo
    * @return PageStatusOportunidadeResponse
    */
   public PageStatusOportunidadeResponse listarStatusUsingGET(Long id, List<String> sort, Integer page, Integer limit, String nome, String descricao, Boolean flagAtivo) throws ApiException {
@@ -658,19 +658,19 @@ public class OportunidadeApi {
   /**
    * Lista as oportunidades
    * Este recurso permite listar as oportunidades.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param idStatusOportunidade C\u00C3\u00B3digo identificador do status oportunidade
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @param idStatusOportunidade C\u00F3digo identificador do status oportunidade
    * @param dataCadastro Data do cadastro da oportunidade
-   * @param dataAtualizacao Data da atualiza\u00C3\u00A7\u00C3\u00A3o da oportunidade
-   * @param numeroReceitaFederal N\u00C3\u00BAmero receita federal do cliente ao qual ser\u00C3\u00A1 ofertada a oportunidade
-   * @param dataInicioVigencia Data de in\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
-   * @param dataFimVigencia Data do fim da vig\u00C3\u00AAncia da oportunidade
-   * @param flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se a oportunidade est\u00C3\u00A1 ativa
+   * @param dataAtualizacao Data da atualiza\u00E7\u00E3o da oportunidade
+   * @param numeroReceitaFederal N\u00FAmero receita federal do cliente ao qual ser\u00E1 ofertada a oportunidade
+   * @param dataInicioVigencia Data de in\u00EDcio da vig\u00EAncia da oportunidade
+   * @param dataFimVigencia Data do fim da vig\u00EAncia da oportunidade
+   * @param flagAtivo Flag de verifica\u00E7\u00E3o se a oportunidade est\u00E1 ativa
    * @return PageOportunidadeResponse
    */
-  public PageOportunidadeResponse listarUsingGET28(List<String> sort, Integer page, Integer limit, Long idStatusOportunidade, String dataCadastro, String dataAtualizacao, String numeroReceitaFederal, String dataInicioVigencia, String dataFimVigencia, Boolean flagAtivo) throws ApiException {
+  public PageOportunidadeResponse listarUsingGET30(List<String> sort, Integer page, Integer limit, Long idStatusOportunidade, String dataCadastro, String dataAtualizacao, String numeroReceitaFederal, String dataInicioVigencia, String dataFimVigencia, Boolean flagAtivo) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -729,14 +729,14 @@ public class OportunidadeApi {
   /**
    * Lista os tipos oportunidades
    * Este recurso permite listar os tipos oportunidades.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade
-   * @param flagAtivo Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @param descricao Descri\u00E7\u00E3o do tipo oportunidade
+   * @param flagAtivo Flag de verifica\u00E7\u00E3o se o tipo oportunidade est\u00E1 ativo
    * @return PageTipoOportunidadeResponse
    */
-  public PageTipoOportunidadeResponse listarUsingGET43(List<String> sort, Integer page, Integer limit, String descricao, Boolean flagAtivo) throws ApiException {
+  public PageTipoOportunidadeResponse listarUsingGET45(List<String> sort, Integer page, Integer limit, String descricao, Boolean flagAtivo) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -785,7 +785,7 @@ public class OportunidadeApi {
   /**
    * Cadastra status para o tipo oportunidade
    * Esse recurso permite cadastrar status para o tipo oportunidade.
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade (id).
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o do tipo oportunidade (id).
    * @param persist persist
    * @return StatusOportunidadeResponse
    */

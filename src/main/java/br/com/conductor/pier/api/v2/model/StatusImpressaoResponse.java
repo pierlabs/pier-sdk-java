@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o do recurso Status Impress\u00C3\u00A3o
+ * Representa\u00E7\u00E3o do recurso Status Impress\u00E3o
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o do recurso Status Impress\u00C3\u00A3o")
+@ApiModel(description = "Representa\u00E7\u00E3o do recurso Status Impress\u00E3o")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class StatusImpressaoResponse   {
   
@@ -20,14 +20,14 @@ public class StatusImpressaoResponse   {
 
   
   /**
-   * Id do est\u00C3\u00A1gio cart\u00C3\u00A3o
+   * Id do est\u00E1gio cart\u00E3o
    **/
   public StatusImpressaoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Id do est\u00C3\u00A1gio cart\u00C3\u00A3o")
+  @ApiModelProperty(example = "null", value = "Id do est\u00E1gio cart\u00E3o")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -38,14 +38,14 @@ public class StatusImpressaoResponse   {
 
   
   /**
-   * Nome do status impress\u00C3\u00A3o
+   * Nome do status impress\u00E3o
    **/
   public StatusImpressaoResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome do status impress\u00C3\u00A3o")
+  @ApiModelProperty(example = "null", value = "Nome do status impress\u00E3o")
   @JsonProperty("nome")
   public String getNome() {
     return nome;

@@ -52,14 +52,14 @@ public class ArquivoAUDResponse   {
 
   
   /**
-   * Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00C3\u00ADdo)
+   * Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00EDdo)
    **/
   public ArquivoAUDResponse revType(Integer revType) {
     this.revType = revType;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00C3\u00ADdo)")
+  @ApiModelProperty(example = "null", value = "Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00EDdo)")
   @JsonProperty("revType")
   public Integer getRevType() {
     return revType;
@@ -196,14 +196,14 @@ public class ArquivoAUDResponse   {
 
   
   /**
-   * Data de inclus\u00C3\u00A3o do arquivo auditado
+   * Data de inclus\u00E3o do arquivo auditado
    **/
   public ArquivoAUDResponse dataHoraInclusao(String dataHoraInclusao) {
     this.dataHoraInclusao = dataHoraInclusao;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data de inclus\u00C3\u00A3o do arquivo auditado")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data de inclus\u00E3o do arquivo auditado")
   @JsonProperty("dataHoraInclusao")
   public String getDataHoraInclusao() {
     return dataHoraInclusao;
@@ -214,14 +214,14 @@ public class ArquivoAUDResponse   {
 
   
   /**
-   * Data de altera\u00C3\u00A7\u00C3\u00A3o do arquivo auditado
+   * Data de altera\u00E7\u00E3o do arquivo auditado
    **/
   public ArquivoAUDResponse dataHoraAlteracao(String dataHoraAlteracao) {
     this.dataHoraAlteracao = dataHoraAlteracao;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data de altera\u00C3\u00A7\u00C3\u00A3o do arquivo auditado")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data de altera\u00E7\u00E3o do arquivo auditado")
   @JsonProperty("dataHoraAlteracao")
   public String getDataHoraAlteracao() {
     return dataHoraAlteracao;
@@ -232,14 +232,14 @@ public class ArquivoAUDResponse   {
 
   
   /**
-   * Extens\u00C3\u00A3o do arquivo auditado
+   * Extens\u00E3o do arquivo auditado
    **/
   public ArquivoAUDResponse extensao(String extensao) {
     this.extensao = extensao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Extens\u00C3\u00A3o do arquivo auditado")
+  @ApiModelProperty(example = "null", value = "Extens\u00E3o do arquivo auditado")
   @JsonProperty("extensao")
   public String getExtensao() {
     return extensao;
@@ -250,14 +250,14 @@ public class ArquivoAUDResponse   {
 
   
   /**
-   * Lista  de par\u00C3\u00A2metros do arquivo auditado
+   * Lista  de par\u00E2metros do arquivo auditado
    **/
   public ArquivoAUDResponse parametros(List<ArquivoParametroAUDResponse> parametros) {
     this.parametros = parametros;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Lista  de par\u00C3\u00A2metros do arquivo auditado")
+  @ApiModelProperty(example = "null", value = "Lista  de par\u00E2metros do arquivo auditado")
   @JsonProperty("parametros")
   public List<ArquivoParametroAUDResponse> getParametros() {
     return parametros;

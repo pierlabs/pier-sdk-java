@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de Documento Integra\u00C3\u00A7\u00C3\u00A3o
+ * Representa\u00E7\u00E3o da resposta do recurso de Documento Integra\u00E7\u00E3o
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de Documento Integra\u00C3\u00A7\u00C3\u00A3o")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de Documento Integra\u00E7\u00E3o")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class DocumentoIntegracaoResponse   {
   

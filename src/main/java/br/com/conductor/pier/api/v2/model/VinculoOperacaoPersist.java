@@ -21,14 +21,14 @@ public class VinculoOperacaoPersist   {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
    **/
   public VinculoOperacaoPersist idProduto(Long idProduto) {
     this.idProduto = idProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).")
   @JsonProperty("idProduto")
   public Long getIdProduto() {
     return idProduto;
@@ -39,14 +39,14 @@ public class VinculoOperacaoPersist   {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Opera\u00C3\u00A7\u00C3\u00A3o (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id).
    **/
   public VinculoOperacaoPersist idOperacao(Long idOperacao) {
     this.idOperacao = idOperacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Opera\u00C3\u00A7\u00C3\u00A3o (id).")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id).")
   @JsonProperty("idOperacao")
   public Long getIdOperacao() {
     return idOperacao;
@@ -57,14 +57,14 @@ public class VinculoOperacaoPersist   {
 
   
   /**
-   * C\u00C3\u00B3digo MCC.
+   * C\u00F3digo MCC.
    **/
   public VinculoOperacaoPersist codigoMCC(Integer codigoMCC) {
     this.codigoMCC = codigoMCC;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo MCC.")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo MCC.")
   @JsonProperty("codigoMCC")
   public Integer getCodigoMCC() {
     return codigoMCC;

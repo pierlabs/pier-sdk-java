@@ -58,14 +58,14 @@ public class DispositivoResponse   {
 
   
   /**
-   * Identificador da Aplica\u00C3\u00A7\u00C3\u00A3o.
+   * Identificador da Aplica\u00E7\u00E3o.
    **/
   public DispositivoResponse idAplicacaoMobile(Long idAplicacaoMobile) {
     this.idAplicacaoMobile = idAplicacaoMobile;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identificador da Aplica\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(example = "null", value = "Identificador da Aplica\u00E7\u00E3o.")
   @JsonProperty("idAplicacaoMobile")
   public Long getIdAplicacaoMobile() {
     return idAplicacaoMobile;
@@ -76,14 +76,14 @@ public class DispositivoResponse   {
 
   
   /**
-   * Identificador do usu\u00C3\u00A1rio.
+   * Identificador do usu\u00E1rio.
    **/
   public DispositivoResponse idUsuario(Long idUsuario) {
     this.idUsuario = idUsuario;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identificador do usu\u00C3\u00A1rio.")
+  @ApiModelProperty(example = "null", value = "Identificador do usu\u00E1rio.")
   @JsonProperty("idUsuario")
   public Long getIdUsuario() {
     return idUsuario;

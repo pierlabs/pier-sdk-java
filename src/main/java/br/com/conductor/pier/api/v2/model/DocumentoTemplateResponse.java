@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso do Template de Documento
+ * Representa\u00E7\u00E3o da resposta do recurso do Template de Documento
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso do Template de Documento")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso do Template de Documento")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class DocumentoTemplateResponse   {
   

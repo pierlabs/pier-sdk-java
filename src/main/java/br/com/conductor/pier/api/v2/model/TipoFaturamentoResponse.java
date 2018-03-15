@@ -22,14 +22,14 @@ public class TipoFaturamentoResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento (id).
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento (id).
    **/
   public TipoFaturamentoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento (id).")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento (id).")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -40,14 +40,14 @@ public class TipoFaturamentoResponse   {
 
   
   /**
-   * Desci\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento.
+   * Desci\u00E7\u00E3o do tipo de faturamento.
    **/
   public TipoFaturamentoResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Desci\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento.")
+  @ApiModelProperty(example = "null", value = "Desci\u00E7\u00E3o do tipo de faturamento.")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -58,14 +58,14 @@ public class TipoFaturamentoResponse   {
 
   
   /**
-   * Flag que representa que o faturamento ser\u00C3\u00A1 apenas demonstrativo.
+   * Flag que representa que o faturamento ser\u00E1 apenas demonstrativo.
    **/
   public TipoFaturamentoResponse flagApenasDemonstrativo(Boolean flagApenasDemonstrativo) {
     this.flagApenasDemonstrativo = flagApenasDemonstrativo;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Flag que representa que o faturamento ser\u00C3\u00A1 apenas demonstrativo.")
+  @ApiModelProperty(example = "false", value = "Flag que representa que o faturamento ser\u00E1 apenas demonstrativo.")
   @JsonProperty("flagApenasDemonstrativo")
   public Boolean getFlagApenasDemonstrativo() {
     return flagApenasDemonstrativo;
@@ -76,14 +76,14 @@ public class TipoFaturamentoResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do conv\u00C3\u00AAnio relacionado ao tipo de faturamento.
+   * C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio relacionado ao tipo de faturamento.
    **/
   public TipoFaturamentoResponse idConvenio(Long idConvenio) {
     this.idConvenio = idConvenio;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do conv\u00C3\u00AAnio relacionado ao tipo de faturamento.")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio relacionado ao tipo de faturamento.")
   @JsonProperty("idConvenio")
   public Long getIdConvenio() {
     return idConvenio;

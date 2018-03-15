@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o do recurso de transa\u00C3\u00A7\u00C3\u00A3o segura conductorPay
+ * Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso de transa\u00E7\u00E3o segura conductorPay
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o do recurso de transa\u00C3\u00A7\u00C3\u00A3o segura conductorPay")
+@ApiModel(description = "Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso de transa\u00E7\u00E3o segura conductorPay")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TransacaoPaySecureRequest   {
   
@@ -35,14 +35,14 @@ public class TransacaoPaySecureRequest   {
 
   
   /**
-   * Data e hora utilizado na gera\u00C3\u00A7\u00C3\u00A3o do criptograma em GMT - 0
+   * Data e hora utilizado na gera\u00E7\u00E3o do criptograma em GMT - 0
    **/
   public TransacaoPaySecureRequest dataHoraTransacao(String dataHoraTransacao) {
     this.dataHoraTransacao = dataHoraTransacao;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data e hora utilizado na gera\u00C3\u00A7\u00C3\u00A3o do criptograma em GMT - 0")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data e hora utilizado na gera\u00E7\u00E3o do criptograma em GMT - 0")
   @JsonProperty("dataHoraTransacao")
   public String getDataHoraTransacao() {
     return dataHoraTransacao;
@@ -71,14 +71,14 @@ public class TransacaoPaySecureRequest   {
 
   
   /**
-   * Id do cart\u00C3\u00A3o
+   * Id do cart\u00E3o
    **/
   public TransacaoPaySecureRequest idCartao(Long idCartao) {
     this.idCartao = idCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Id do cart\u00C3\u00A3o")
+  @ApiModelProperty(example = "null", value = "Id do cart\u00E3o")
   @JsonProperty("idCartao")
   public Long getIdCartao() {
     return idCartao;
@@ -89,14 +89,14 @@ public class TransacaoPaySecureRequest   {
 
   
   /**
-   * Valor da transa\u00C3\u00A7\u00C3\u00A3o em moeda local
+   * Valor da transa\u00E7\u00E3o em moeda local
    **/
   public TransacaoPaySecureRequest valor(BigDecimal valor) {
     this.valor = valor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor da transa\u00C3\u00A7\u00C3\u00A3o em moeda local")
+  @ApiModelProperty(example = "null", value = "Valor da transa\u00E7\u00E3o em moeda local")
   @JsonProperty("valor")
   public BigDecimal getValor() {
     return valor;
@@ -107,14 +107,14 @@ public class TransacaoPaySecureRequest   {
 
   
   /**
-   * N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou (critografado).
+   * N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou (critografado).
    **/
   public TransacaoPaySecureRequest nsuOrigem(String nsuOrigem) {
     this.nsuOrigem = nsuOrigem;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou (critografado).")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou (critografado).")
   @JsonProperty("nsuOrigem")
   public String getNsuOrigem() {
     return nsuOrigem;
@@ -125,14 +125,14 @@ public class TransacaoPaySecureRequest   {
 
   
   /**
-   * Nome do Portador do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o (criptografado).
+   * Nome do Portador do Cart\u00E3o que originou a transa\u00E7\u00E3o (criptografado).
    **/
   public TransacaoPaySecureRequest nomePortadorCartao(String nomePortadorCartao) {
     this.nomePortadorCartao = nomePortadorCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome do Portador do Cart\u00C3\u00A3o que originou a transa\u00C3\u00A7\u00C3\u00A3o (criptografado).")
+  @ApiModelProperty(example = "null", value = "Nome do Portador do Cart\u00E3o que originou a transa\u00E7\u00E3o (criptografado).")
   @JsonProperty("nomePortadorCartao")
   public String getNomePortadorCartao() {
     return nomePortadorCartao;
@@ -143,14 +143,14 @@ public class TransacaoPaySecureRequest   {
 
   
   /**
-   * Origem da transa\u00C3\u00A7\u00C3\u00A3o
+   * Origem da transa\u00E7\u00E3o
    **/
   public TransacaoPaySecureRequest origem(String origem) {
     this.origem = origem;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Origem da transa\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(example = "null", value = "Origem da transa\u00E7\u00E3o")
   @JsonProperty("origem")
   public String getOrigem() {
     return origem;
@@ -161,14 +161,14 @@ public class TransacaoPaySecureRequest   {
 
   
   /**
-   * Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
+   * Apresenta a identifica\u00E7\u00E3o do terminal requisitante
    **/
   public TransacaoPaySecureRequest terminalRequisitante(String terminalRequisitante) {
     this.terminalRequisitante = terminalRequisitante;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante")
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta a identifica\u00E7\u00E3o do terminal requisitante")
   @JsonProperty("terminalRequisitante")
   public String getTerminalRequisitante() {
     return terminalRequisitante;
@@ -179,14 +179,14 @@ public class TransacaoPaySecureRequest   {
 
   
   /**
-   * C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.
+   * C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o.
    **/
   public TransacaoPaySecureRequest codigoProcessamento(String codigoProcessamento) {
     this.codigoProcessamento = codigoProcessamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o.")
   @JsonProperty("codigoProcessamento")
   public String getCodigoProcessamento() {
     return codigoProcessamento;
@@ -197,14 +197,14 @@ public class TransacaoPaySecureRequest   {
 
   
   /**
-   * Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM
+   * Data de Validade do Cart\u00E3o. Ex: AAMM
    **/
   public TransacaoPaySecureRequest dataValidadeCartao(String dataValidadeCartao) {
     this.dataValidadeCartao = dataValidadeCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "YYMM", required = true, value = "Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM")
+  @ApiModelProperty(example = "YYMM", required = true, value = "Data de Validade do Cart\u00E3o. Ex: AAMM")
   @JsonProperty("dataValidadeCartao")
   public String getDataValidadeCartao() {
     return dataValidadeCartao;
@@ -215,14 +215,14 @@ public class TransacaoPaySecureRequest   {
 
   
   /**
-   * N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV).
+   * N\u00FAmero do Estabelecimento (N\u00FAmero+DV).
    **/
   public TransacaoPaySecureRequest numeroEstabelecimento(String numeroEstabelecimento) {
     this.numeroEstabelecimento = numeroEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV).")
+  @ApiModelProperty(example = "null", required = true, value = "N\u00FAmero do Estabelecimento (N\u00FAmero+DV).")
   @JsonProperty("numeroEstabelecimento")
   public String getNumeroEstabelecimento() {
     return numeroEstabelecimento;
@@ -233,14 +233,14 @@ public class TransacaoPaySecureRequest   {
 
   
   /**
-   * N\u00C3\u00BAmero de Parcelas.
+   * N\u00FAmero de Parcelas.
    **/
   public TransacaoPaySecureRequest numeroParcelas(Long numeroParcelas) {
     this.numeroParcelas = numeroParcelas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "N\u00C3\u00BAmero de Parcelas.")
+  @ApiModelProperty(example = "null", required = true, value = "N\u00FAmero de Parcelas.")
   @JsonProperty("numeroParcelas")
   public Long getNumeroParcelas() {
     return numeroParcelas;
@@ -251,14 +251,14 @@ public class TransacaoPaySecureRequest   {
 
   
   /**
-   * C\u00C3\u00B3digo de Seguran\u00C3\u00A7a do Cart\u00C3\u00A3o (criptografado).
+   * C\u00F3digo de Seguran\u00E7a do Cart\u00E3o (criptografado).
    **/
   public TransacaoPaySecureRequest codigoSegurancaCartao(String codigoSegurancaCartao) {
     this.codigoSegurancaCartao = codigoSegurancaCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "C\u00C3\u00B3digo de Seguran\u00C3\u00A7a do Cart\u00C3\u00A3o (criptografado).")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo de Seguran\u00E7a do Cart\u00E3o (criptografado).")
   @JsonProperty("codigoSegurancaCartao")
   public String getCodigoSegurancaCartao() {
     return codigoSegurancaCartao;
@@ -269,14 +269,14 @@ public class TransacaoPaySecureRequest   {
 
   
   /**
-   * Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+   * Tipo de ordena\u00E7\u00E3o dos registros.
    **/
   public TransacaoPaySecureRequest sort(List<String> sort) {
     this.sort = sort;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.")
+  @ApiModelProperty(example = "null", value = "Tipo de ordena\u00E7\u00E3o dos registros.")
   @JsonProperty("sort")
   public List<String> getSort() {
     return sort;

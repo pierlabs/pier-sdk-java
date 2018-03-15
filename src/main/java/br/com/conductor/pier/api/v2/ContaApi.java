@@ -59,10 +59,10 @@ public class ContaApi {
 
   
   /**
-   * Lan\u00C3\u00A7a um ajuste para a conta do id informado
+   * Lan\u00E7a um ajuste para a conta do id informado
    * Este recurso insere um ajuste para a conta do id informado
    * @param id Id Conta
-   * @param idTipoAjuste C\u00C3\u00B3digo identificador do tipo de ajuste.
+   * @param idTipoAjuste C\u00F3digo identificador do tipo de ajuste.
    * @param dataAjuste Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ.
    * @param valorAjuste Valor do ajuste
    * @param identificadorExterno Identificador Externo
@@ -134,9 +134,9 @@ public class ContaApi {
   }
   
   /**
-   * Altera o produto associado \u00C3\u00A0 conta.
-   * O recurso permite fazer modifica\u00C3\u00A7\u00C3\u00A3o do produto associado \u00C3\u00A0 conta.
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * Altera o produto associado \u00E0 conta.
+   * O recurso permite fazer modifica\u00E7\u00E3o do produto associado \u00E0 conta.
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
    * @param request request
    * @return String
    */
@@ -188,10 +188,10 @@ public class ContaApi {
   }
   
   /**
-   * Realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma Pessoa tilular da conta
-   * Esta m\u00C3\u00A9todo permite altera a pessoa de uma conta.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id)
-   * @param idPessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o de uma Pessoa (id).
+   * Realiza a altera\u00E7\u00E3o de uma Pessoa tilular da conta
+   * Esta m\u00E9todo permite altera a pessoa de uma conta.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id)
+   * @param idPessoa C\u00F3digo de identifica\u00E7\u00E3o de uma Pessoa (id).
    * @return ContaResponse
    */
   public ContaResponse alterarTitularUsingPOST(Long id, Long idPessoa) throws ApiException {
@@ -244,9 +244,9 @@ public class ContaApi {
   }
   
   /**
-   * Realiza a altera\u00C3\u00A7\u00C3\u00A3o do dia de vencimento das faturas da conta
-   * Esse recurso permite alterar o vencimento para no m\u00C3\u00A1ximo at\u00C3\u00A9 30 dias ap\u00C3\u00B3s data atual de uma conta especifica no PIER, respeitando o par\u00C3\u00A2metro de intervalor entre as modifica\u00C3\u00A7\u00C3\u00B5es do vencimento informado pelo emissor.
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * Realiza a altera\u00E7\u00E3o do dia de vencimento das faturas da conta
+   * Esse recurso permite alterar o vencimento para no m\u00E1ximo at\u00E9 30 dias ap\u00F3s data atual de uma conta especifica no PIER, respeitando o par\u00E2metro de intervalor entre as modifica\u00E7\u00F5es do vencimento informado pelo emissor.
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
    * @param novoDiaVencimento Novo dia de vencimento.
    * @return ContaResponse
    */
@@ -301,14 +301,14 @@ public class ContaApi {
   
   /**
    * Atribuir Anuidade
-   * Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta.
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
    * @param idAnuidade Identificador da anuidade
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
    * @param DDD DDD do celular
-   * @param celular N\u00C3\u00BAmero do celular
+   * @param celular N\u00FAmero do celular
    * @param idOperadora Identificador da operadora do celular
    * @param idOrigemComercial Identificador da origem comercial
    * @return Object
@@ -377,9 +377,9 @@ public class ContaApi {
   }
   
   /**
-   *  Ativa o servi\u00C3\u00A7o de envio de fatura por email
-   * Este recurso ativa o servi\u00C3\u00A7o de envio de fatura por email
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   *  Ativa o servi\u00E7o de envio de fatura por email
+   * Este recurso ativa o servi\u00E7o de envio de fatura por email
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
    * @return Object
    */
   public Object ativarEnvioFaturaEmailUsingPOST(Long id) throws ApiException {
@@ -426,9 +426,9 @@ public class ContaApi {
   
   /**
    * Realiza o bloqueio de uma determinada Conta
-   * Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do bloqueio de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-   * @param idStatus C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.
+   * Este m\u00E9todo permite a realiza\u00E7\u00E3o do bloqueio de uma determinada conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
+   * @param idStatus C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta.
    * @return ContaResponse
    */
   public ContaResponse bloquearUsingPOST1(Long id, Long idStatus) throws ApiException {
@@ -482,9 +482,9 @@ public class ContaApi {
   
   /**
    * Realiza o cancelamento de uma determinada Conta
-   * Este m\u00C3\u00A9todo permite a realiza\u00C3\u00A7\u00C3\u00A3o do cancelamento de uma determinada conta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-   * @param idStatus C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Novo Status Conta.
+   * Este m\u00E9todo permite a realiza\u00E7\u00E3o do cancelamento de uma determinada conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
+   * @param idStatus C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta.
    * @return ContaResponse
    */
   public ContaResponse cancelarUsingPOST1(Long id, Long idStatus) throws ApiException {
@@ -537,9 +537,9 @@ public class ContaApi {
   }
   
   /**
-   * Apresenta a data m\u00C3\u00A1xima para pagamento da fatura em atraso para receber o benef\u00C3\u00ADcio.
-   * Este m\u00C3\u00A9todo permite consultar se o cliente tem direito ao benef\u00C3\u00ADcio de pagamento em atraso, em loja, at\u00C3\u00A9 o s\u00C3\u00A1bado subsequente ao vencimento, ficando isento do pagamento de multa, encargos, mora e IOF.
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * Apresenta a data m\u00E1xima para pagamento da fatura em atraso para receber o benef\u00EDcio.
+   * Este m\u00E9todo permite consultar se o cliente tem direito ao benef\u00EDcio de pagamento em atraso, em loja, at\u00E9 o s\u00E1bado subsequente ao vencimento, ficando isento do pagamento de multa, encargos, mora e IOF.
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
    * @return BeneficioPagamentoAtrasoResponse
    */
   public BeneficioPagamentoAtrasoResponse consultarBeneficioPagamentoAtrasoUsingGET(Long id) throws ApiException {
@@ -633,14 +633,14 @@ public class ContaApi {
   }
   
   /**
-   * Consulta a d\u00C3\u00ADvida atualizada do cliente
-   * Este recurso consulta a d\u00C3\u00ADvida atualizada do cliente
+   * Consulta a d\u00EDvida atualizada do cliente
+   * Este recurso consulta a d\u00EDvida atualizada do cliente
    * @param id Id Conta
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
    * @param dataVencimento Data do vencimento
-   * @param idEscritorioCobranca C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do escrit\u00C3\u00B3rio de cobran\u00C3\u00A7a
+   * @param idEscritorioCobranca C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a
    * @return DividaClienteResponse
    */
   public DividaClienteResponse consultarDividaAtualizadaClienteUsingGET(Long id, List<String> sort, Integer page, Integer limit, String dataVencimento, Long idEscritorioCobranca) throws ApiException {
@@ -697,11 +697,11 @@ public class ContaApi {
   
   /**
    * Permite consultar a partir do ID da conta as taxas e tarifas
-   * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir que os Emissores consultem as taxas e tarifas da conta
+   * Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores consultem as taxas e tarifas da conta
    * @param id ID da conta a ser consultada.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
    * @return PageTaxasRefinanciamentoResponse
    */
   public PageTaxasRefinanciamentoResponse consultarTaxasTarifasUsingGET(Long id, List<String> sort, Integer page, Integer limit) throws ApiException {
@@ -754,16 +754,16 @@ public class ContaApi {
   
   /**
    * Apresenta dados de uma determinada conta
-   * Este m\u00C3\u00A9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * Este m\u00E9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00E7\u00E3o (id).
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
    * @return ContaDetalheResponse
    */
-  public ContaDetalheResponse consultarUsingGET12(Long id) throws ApiException {
+  public ContaDetalheResponse consultarUsingGET13(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET12");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET13");
      }
      
     // create path and map variables
@@ -801,23 +801,23 @@ public class ContaApi {
   }
   
   /**
-   * Consulta os detalhes de uma determinada transfer\u00C3\u00AAncia
-   * Este m\u00C3\u00A9todo permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada entre contas.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-   * @param idTransferencia C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id_transferencia).
+   * Consulta os detalhes de uma determinada transfer\u00EAncia
+   * Este m\u00E9todo permite consultar os detalhes de uma determinada transfer\u00EAncia de cr\u00E9dito realizada entre contas.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
+   * @param idTransferencia C\u00F3digo de Identifica\u00E7\u00E3o da transfer\u00EAncia (id_transferencia).
    * @return TransferenciaDetalheResponse
    */
-  public TransferenciaDetalheResponse consultarUsingGET41(Long id, Long idTransferencia) throws ApiException {
+  public TransferenciaDetalheResponse consultarUsingGET42(Long id, Long idTransferencia) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET41");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET42");
      }
      
      // verify the required parameter 'idTransferencia' is set
      if (idTransferencia == null) {
-        throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET41");
+        throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET42");
      }
      
     // create path and map variables
@@ -856,9 +856,9 @@ public class ContaApi {
   }
   
   /**
-   * Desativa o servi\u00C3\u00A7o de envio de fatura por email
-   * Este recurso desativa o servi\u00C3\u00A7o de envio de fatura por email
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * Desativa o servi\u00E7o de envio de fatura por email
+   * Este recurso desativa o servi\u00E7o de envio de fatura por email
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
    * @return Object
    */
   public Object desativarEnvioFaturaEmailUsingPOST(Long id) throws ApiException {
@@ -968,9 +968,9 @@ public class ContaApi {
   }
   
   /**
-   * Realiza o envio para gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o na gr\u00C3\u00A1fica
-   * Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para impress\u00C3\u00A3o de cart\u00C3\u00B5es em gr\u00C3\u00A1fica.
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * Realiza o envio para gera\u00E7\u00E3o de um novo cart\u00E3o na gr\u00E1fica
+   * Este recurso permite que seja gerado um novo Cart\u00E3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00E3o que dever\u00E1 ser gerado para impress\u00E3o. Esta funcionalidade poder\u00E1 ser utilizada para impress\u00E3o de cart\u00F5es em gr\u00E1fica.
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
    * @param cartaoEmbossingRequest cartaoEmbossingRequest
    * @return CartaoEmbossingResponse
    */
@@ -1022,9 +1022,9 @@ public class ContaApi {
   }
   
   /**
-   * Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o provisorio
-   * Este recurso permite que seja gerado um cart\u00C3\u00A3o provis\u00C3\u00B3rio para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * Realiza a gera\u00E7\u00E3o de um cart\u00E3o provisorio
+   * Este recurso permite que seja gerado um cart\u00E3o provis\u00F3rio para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id).
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
    * @return CartaoImpressaoProvisorioResponse
    */
   public CartaoImpressaoProvisorioResponse gerarCartaoProvisorioUsingPOST(Long id) throws ApiException {
@@ -1070,11 +1070,11 @@ public class ContaApi {
   }
   
   /**
-   * Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um novo cart\u00C3\u00A3o para impress\u00C3\u00A3o avulsa
-   * Este recurso permite que seja gerado um novo Cart\u00C3\u00A3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00C3\u00A3o que dever\u00C3\u00A1 ser gerado para impress\u00C3\u00A3o. Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a impress\u00C3\u00A3o de cart\u00C3\u00B5es em Lojas, Quiosques, Escrit\u00C3\u00B3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00C3\u00B5es habilidade para o fazer, no local.
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-   * @param idPessoa C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da pessoa (id).
-   * @param idTipoPlastico C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do TipoPlastico (id).
+   * Realiza a gera\u00E7\u00E3o de um novo cart\u00E3o para impress\u00E3o avulsa
+   * Este recurso permite que seja gerado um novo Cart\u00E3o para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id), o idPessoa do Portador e o idTipoPlastico do Cart\u00E3o que dever\u00E1 ser gerado para impress\u00E3o. Esta funcionalidade poder\u00E1 ser utilizada para realizar a impress\u00E3o de cart\u00F5es em Lojas, Quiosques, Escrit\u00F3rios, Terminais de Auto Atendimento, ou outro local que o Emissor escolher, desde que se possua uma impressora de Cart\u00F5es habilidade para o fazer, no local.
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
+   * @param idPessoa C\u00F3digo de identifica\u00E7\u00E3o da pessoa (id).
+   * @param idTipoPlastico C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id).
    * @return CartaoImpressaoResponse
    */
   public CartaoImpressaoResponse gerarCartaoUsingPOST(Long id, Long idPessoa, Long idTipoPlastico) throws ApiException {
@@ -1128,9 +1128,9 @@ public class ContaApi {
   }
   
   /**
-   * Realiza a gera\u00C3\u00A7\u00C3\u00A3o de um cart\u00C3\u00A3o virtual
-   * Este recurso permite que seja gerado um Cart\u00C3\u00A3o virtual para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id). Esta funcionalidade poder\u00C3\u00A1 ser utilizada para realizar a cria\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es virtuaes atraves de um app.
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * Realiza a gera\u00E7\u00E3o de um cart\u00E3o virtual
+   * Este recurso permite que seja gerado um Cart\u00E3o virtual para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id). Esta funcionalidade poder\u00E1 ser utilizada para realizar a cria\u00E7\u00E3o de cart\u00F5es virtuaes atraves de um app.
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
    * @param dataValidade Data de Validade
    * @return CartaoImpressaoResponse
    */
@@ -1184,12 +1184,12 @@ public class ContaApi {
   }
   
   /**
-   * Lista o hist\u00C3\u00B3rico de altera\u00C3\u00A7\u00C3\u00B5es de limites da conta
-   * Este recurso consulta o hist\u00C3\u00B3rico com as altera\u00C3\u00A7\u00C3\u00B5es de limites da conta informada
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta
+   * Este recurso consulta o hist\u00F3rico com as altera\u00E7\u00F5es de limites da conta informada
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
    * @return PageHistoricoEventosResponse
    */
   public PageHistoricoEventosResponse listarHistoricoAlteracoesLimitesUsingGET(Long id, List<String> sort, Integer page, Integer limit) throws ApiException {
@@ -1241,12 +1241,12 @@ public class ContaApi {
   }
   
   /**
-   * Lista o hist\u00C3\u00B3rico de entradas/sa\u00C3\u00ADdas de assessorias de cobran\u00C3\u00A7a
-   * Permite listar todos os registros de entrada e sa\u00C3\u00ADda da Conta em arquivos de integra\u00C3\u00A7\u00C3\u00A3o com empresas de assessorias de cobran\u00C3\u00A7a a partir do c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (idConta).
+   * Lista o hist\u00F3rico de entradas/sa\u00EDdas de assessorias de cobran\u00E7a
+   * Permite listar todos os registros de entrada e sa\u00EDda da Conta em arquivos de integra\u00E7\u00E3o com empresas de assessorias de cobran\u00E7a a partir do c\u00F3digo de identifica\u00E7\u00E3o da conta (idConta).
    * @param id Id Conta
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
    * @return PageHistoricoAssessoriaResponse
    */
   public PageHistoricoAssessoriaResponse listarHistoricoAssessoriaUsingGET(Long id, List<String> sort, Integer page, Integer limit) throws ApiException {
@@ -1299,11 +1299,11 @@ public class ContaApi {
   
   /**
    * Lista o historico de atrasos das faturas
-   * Este recurso lista o hist\u00C3\u00B3rico do pagamento de faturas em atraso
+   * Este recurso lista o hist\u00F3rico do pagamento de faturas em atraso
    * @param id Id Conta
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
    * @return PageHistoricoAtrasoFaturaResponse
    */
   public PageHistoricoAtrasoFaturaResponse listarHistoricoAtrasosFaturasUsingGET(Long id, List<String> sort, Integer page, Integer limit) throws ApiException {
@@ -1355,14 +1355,14 @@ public class ContaApi {
   }
   
   /**
-   * Lista as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da conta
-   * Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u00C3\u00B5es n\u00C3\u00A3o processadas da Conta.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param dataInicio Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Par\u00C3\u00A2mentro Ignorado se dataFim n\u00C3\u00A3o for definida).
-   * @param dataFim Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00C3\u00A2mentro Ignorado se dataInicio n\u00C3\u00A3o for definida).
+   * Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta
+   * Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas da Conta.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @param dataInicio Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Par\u00E2mentro Ignorado se dataFim n\u00E3o for definida).
+   * @param dataFim Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00E2mentro Ignorado se dataInicio n\u00E3o for definida).
    * @return PageTransacaoNaoProcessadaResponse
    */
   public PageTransacaoNaoProcessadaResponse listarNaoProcessadasUsingGET(Long id, List<String> sort, Integer page, Integer limit, String dataInicio, String dataFim) throws ApiException {
@@ -1418,15 +1418,15 @@ public class ContaApi {
   }
   
   /**
-   * Lista as transa\u00C3\u00A7\u00C3\u00B5es processadas da conta
-   * Este m\u00C3\u00A9todo permite que sejam listadas todas as transa\u00C3\u00A7\u00C3\u00B5es processadas da Conta.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * Lista as transa\u00E7\u00F5es processadas da conta
+   * Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es processadas da Conta.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
    * @param dataVencimento Data de vencimento do extrato no formato yyyy-MM-dd.
-   * @param dataInicio Data de in\u00C3\u00ADcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado).
-   * @param dataFim Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00C3\u00A2mentro dataVencimento \u00C3\u00A9 usado).
+   * @param dataInicio Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado).
+   * @param dataFim Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado).
    * @return PageTransacoesCorrentesResponse
    */
   public PageTransacoesCorrentesResponse listarProcessadasUsingGET(Long id, List<String> sort, Integer page, Integer limit, String dataVencimento, String dataInicio, String dataFim) throws ApiException {
@@ -1486,21 +1486,21 @@ public class ContaApi {
   /**
    * Lista contas existentes na base de dados do Emissor
    * Este recurso permite listar contas existentes na base de dados do Emissor.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param idProduto C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do produto ao qual a conta faz parte. (id).
-   * @param idOrigemComercial C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Origem Comercial (id) que deu origem a Conta.
-   * @param idPessoa C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Pessoa Titular da Conta (id).
-   * @param idStatusConta C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do status da conta.
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @param idProduto C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id).
+   * @param idOrigemComercial C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta.
+   * @param idPessoa C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id).
+   * @param idStatusConta C\u00F3digo de Identifica\u00E7\u00E3o do status da conta.
    * @param diaVencimento Apresenta o dia de vencimento.
    * @param melhorDiaCompra Apresenta o melhor dia de compra.
-   * @param dataStatusConta Apresenta a data em que o idStatusConta atual fora atribu\u00C3\u00ADdo para ela.
-   * @param dataCadastro Apresenta a data em que o cart\u00C3\u00A3o foi gerado.
-   * @param dataUltimaAlteracaoVencimento Apresenta a data da ultima altera\u00C3\u00A7\u00C3\u00A3o de vencimento.
+   * @param dataStatusConta Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela.
+   * @param dataCadastro Apresenta a data em que o cart\u00E3o foi gerado.
+   * @param dataUltimaAlteracaoVencimento Apresenta a data da ultima altera\u00E7\u00E3o de vencimento.
    * @return PageContaResponse
    */
-  public PageContaResponse listarUsingGET16(List<String> sort, Integer page, Integer limit, Long idProduto, Long idOrigemComercial, Long idPessoa, Long idStatusConta, Integer diaVencimento, Integer melhorDiaCompra, String dataStatusConta, String dataCadastro, String dataUltimaAlteracaoVencimento) throws ApiException {
+  public PageContaResponse listarUsingGET17(List<String> sort, Integer page, Integer limit, Long idProduto, Long idOrigemComercial, Long idPessoa, Long idStatusConta, Integer diaVencimento, Integer melhorDiaCompra, String dataStatusConta, String dataCadastro, String dataUltimaAlteracaoVencimento) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -1561,25 +1561,25 @@ public class ContaApi {
   }
   
   /**
-   * Lista as transfer\u00C3\u00AAncias realizadas pela conta
-   * Este m\u00C3\u00A9todo permite que sejam listadas as transfer\u00C3\u00AAncias realizadas pela conta existentes na base do emissor.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param idTransferencia C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da transfer\u00C3\u00AAncia (id).
-   * @param idContaOrigem C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 debitado para a transfer\u00C3\u00AAncia. (id).
-   * @param idContaDestino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta em que o valor ser\u00C3\u00A1 creditado para a transfer\u00C3\u00AAncia. (id).
+   * Lista as transfer\u00EAncias realizadas pela conta
+   * Este m\u00E9todo permite que sejam listadas as transfer\u00EAncias realizadas pela conta existentes na base do emissor.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @param idTransferencia C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id).
+   * @param idContaOrigem C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id).
+   * @param idContaDestino C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id).
    * @param valorTransferencia Valor estabelecido para ser transferido.
-   * @param dataTransferencia Data estabelecida para ocorrer a transfer\u00C3\u00AAncia.
+   * @param dataTransferencia Data estabelecida para ocorrer a transfer\u00EAncia.
    * @return PageTransferenciaResponse
    */
-  public PageTransferenciaResponse listarUsingGET48(Long id, List<String> sort, Integer page, Integer limit, Long idTransferencia, Long idContaOrigem, Long idContaDestino, BigDecimal valorTransferencia, String dataTransferencia) throws ApiException {
+  public PageTransferenciaResponse listarUsingGET50(Long id, List<String> sort, Integer page, Integer limit, Long idTransferencia, Long idContaOrigem, Long idContaDestino, BigDecimal valorTransferencia, String dataTransferencia) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET48");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET50");
      }
      
     // create path and map variables
@@ -1633,8 +1633,8 @@ public class ContaApi {
   }
   
   /**
-   * Realiza a reativa\u00C3\u00A7\u00C3\u00A3o de contas.
-   * Este recurso permite reativar contas. Para isso, ser\u00C3\u00A1 preciso informar o c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta (id).
+   * Realiza a reativa\u00E7\u00E3o de contas.
+   * Este recurso permite reativar contas. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id).
    * @param id Id Conta
    * @return Object
    */
@@ -1681,9 +1681,9 @@ public class ContaApi {
   }
   
   /**
-   * Simula valores de presta\u00C3\u00A7\u00C3\u00B5es de empr\u00C3\u00A9stimos/financiamentos
-   * Esta opera\u00C3\u00A7\u00C3\u00A3o pode ser utilizada para simular opera\u00C3\u00A7\u00C3\u00B5es financeiras a partir de informa\u00C3\u00A7\u00C3\u00B5es fornecidas pelo usu\u00C3\u00A1rio. Os c\u00C3\u00A1lculos gerados devem ser considerados apenas como refer\u00C3\u00AAncia para as situa\u00C3\u00A7\u00C3\u00B5es reais e n\u00C3\u00A3o como valores oficiais.
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * Simula valores de presta\u00E7\u00F5es de empr\u00E9stimos/financiamentos
+   * Esta opera\u00E7\u00E3o pode ser utilizada para simular opera\u00E7\u00F5es financeiras a partir de informa\u00E7\u00F5es fornecidas pelo usu\u00E1rio. Os c\u00E1lculos gerados devem ser considerados apenas como refer\u00EAncia para as situa\u00E7\u00F5es reais e n\u00E3o como valores oficiais.
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
    * @param request request
    * @return EmprestimoPessoalResponse
    */
@@ -1736,11 +1736,11 @@ public class ContaApi {
   
   /**
    * Permite listar uma linha do tempo com os eventos da conta
-   * Esta opera\u00C3\u00A7\u00C3\u00A3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00C3\u00A7\u00C3\u00B5es, fechamento da fatura, pagamentos, gera\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00B5es e altera\u00C3\u00A7\u00C3\u00A3o de limite s\u00C3\u00A3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00C3\u00A9todo, as opera\u00C3\u00A7\u00C3\u00B5es s\u00C3\u00A3o ordenadas de forma decrescente.
+   * Esta opera\u00E7\u00E3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00E7\u00F5es, fechamento da fatura, pagamentos, gera\u00E7\u00E3o de cart\u00F5es e altera\u00E7\u00E3o de limite s\u00E3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00E9todo, as opera\u00E7\u00F5es s\u00E3o ordenadas de forma decrescente.
    * @param id Id Conta
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
    * @return PageTransacaoResponse
    */
   public PageTransacaoResponse transacoesUsingGET(Long id, List<String> sort, Integer page, Integer limit) throws ApiException {
@@ -1792,11 +1792,11 @@ public class ContaApi {
   }
   
   /**
-   * Realiza uma transfer\u00C3\u00AAncia de Cr\u00C3\u00A9dito para outro cliente do mesmo Emissor
-   * Este m\u00C3\u00A9todo permite que um portador de um cart\u00C3\u00A3o possa realizar auma transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para outro cliente do mesmo emissor.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da conta do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 debitado (id).
-   * @param idContaDestino C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do cliente portador do cart\u00C3\u00A3o que ser\u00C3\u00A1 creditado (id).
-   * @param valorTransferencia Valor da Transfer\u00C3\u00AAncia.
+   * Realiza uma transfer\u00EAncia de Cr\u00E9dito para outro cliente do mesmo Emissor
+   * Este m\u00E9todo permite que um portador de um cart\u00E3o possa realizar auma transfer\u00EAncia de cr\u00E9dito para outro cliente do mesmo emissor.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta do cliente portador do cart\u00E3o que ser\u00E1 debitado (id).
+   * @param idContaDestino C\u00F3digo de Identifica\u00E7\u00E3o do cliente portador do cart\u00E3o que ser\u00E1 creditado (id).
+   * @param valorTransferencia Valor da Transfer\u00EAncia.
    * @return TransferenciaDetalheResponse
    */
   public TransferenciaDetalheResponse transferirUsingPOST1(Long id, Long idContaDestino, BigDecimal valorTransferencia) throws ApiException {

@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * Lista de Notifica\u00C3\u00A7\u00C3\u00B5es (layouts) de E-mail
+ * Lista de Notifica\u00E7\u00F5es (layouts) de E-mail
  **/
 
-@ApiModel(description = "Lista de Notifica\u00C3\u00A7\u00C3\u00B5es (layouts) de E-mail")
+@ApiModel(description = "Lista de Notifica\u00E7\u00F5es (layouts) de E-mail")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageTemplateNotificacaoResponse   {
   

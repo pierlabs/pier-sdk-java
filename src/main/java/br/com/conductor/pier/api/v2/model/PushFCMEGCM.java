@@ -9,10 +9,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Objeto Notifica\u00C3\u00A7\u00C3\u00A3o Push FCM e GCM
+ * Objeto Notifica\u00E7\u00E3o Push FCM e GCM
  **/
 
-@ApiModel(description = "Objeto Notifica\u00C3\u00A7\u00C3\u00A3o Push FCM e GCM")
+@ApiModel(description = "Objeto Notifica\u00E7\u00E3o Push FCM e GCM")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PushFCMEGCM   {
   
@@ -49,14 +49,14 @@ public class PushFCMEGCM   {
 
   
   /**
-   * C\u00C3\u00B3digo identificado da pessoa
+   * C\u00F3digo identificado da pessoa
    **/
   public PushFCMEGCM idPessoa(Long idPessoa) {
     this.idPessoa = idPessoa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "C\u00C3\u00B3digo identificado da pessoa")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo identificado da pessoa")
   @JsonProperty("idPessoa")
   public Long getIdPessoa() {
     return idPessoa;
@@ -67,14 +67,14 @@ public class PushFCMEGCM   {
 
   
   /**
-   * C\u00C3\u00B3digo identificador da conta
+   * C\u00F3digo identificador da conta
    **/
   public PushFCMEGCM idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "C\u00C3\u00B3digo identificador da conta")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo identificador da conta")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -85,14 +85,14 @@ public class PushFCMEGCM   {
 
   
   /**
-   * Apresenta o token do dispositivo que dever\u00C3\u00A1 receber o push.
+   * Apresenta o token do dispositivo que dever\u00E1 receber o push.
    **/
   public PushFCMEGCM tokenDispositivo(String tokenDispositivo) {
     this.tokenDispositivo = tokenDispositivo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Apresenta o token do dispositivo que dever\u00C3\u00A1 receber o push.")
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta o token do dispositivo que dever\u00E1 receber o push.")
   @JsonProperty("tokenDispositivo")
   public String getTokenDispositivo() {
     return tokenDispositivo;
@@ -103,14 +103,14 @@ public class PushFCMEGCM   {
 
   
   /**
-   * Apresenta o token da sua aplica\u00C3\u00A7\u00C3\u00A3o Android gerada pela Google.
+   * Apresenta o token da sua aplica\u00E7\u00E3o Android gerada pela Google.
    **/
   public PushFCMEGCM tokenServidor(String tokenServidor) {
     this.tokenServidor = tokenServidor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Apresenta o token da sua aplica\u00C3\u00A7\u00C3\u00A3o Android gerada pela Google.")
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta o token da sua aplica\u00E7\u00E3o Android gerada pela Google.")
   @JsonProperty("tokenServidor")
   public String getTokenServidor() {
     return tokenServidor;
@@ -121,14 +121,14 @@ public class PushFCMEGCM   {
 
   
   /**
-   * Apresenta o t\u00C3\u00ADtulo da notifica\u00C3\u00A7\u00C3\u00A3o.
+   * Apresenta o t\u00EDtulo da notifica\u00E7\u00E3o.
    **/
   public PushFCMEGCM titulo(String titulo) {
     this.titulo = titulo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Apresenta o t\u00C3\u00ADtulo da notifica\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta o t\u00EDtulo da notifica\u00E7\u00E3o.")
   @JsonProperty("titulo")
   public String getTitulo() {
     return titulo;
@@ -139,14 +139,14 @@ public class PushFCMEGCM   {
 
   
   /**
-   * Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado.
+   * Apresenta o texto da notifica\u00E7\u00E3o a ser enviado.
    **/
   public PushFCMEGCM conteudo(String conteudo) {
     this.conteudo = conteudo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado.")
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta o texto da notifica\u00E7\u00E3o a ser enviado.")
   @JsonProperty("conteudo")
   public String getConteudo() {
     return conteudo;
@@ -157,14 +157,14 @@ public class PushFCMEGCM   {
 
   
   /**
-   * Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
+   * Apresenta o tipoEvento a qual pertence a notifica\u00E7\u00E3o
    **/
   public PushFCMEGCM tipoEvento(TipoEventoEnum tipoEvento) {
     this.tipoEvento = tipoEvento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta o tipoEvento a qual pertence a notifica\u00E7\u00E3o")
   @JsonProperty("tipoEvento")
   public TipoEventoEnum getTipoEvento() {
     return tipoEvento;
@@ -211,14 +211,14 @@ public class PushFCMEGCM   {
 
   
   /**
-   * Apresenta a cor do icone da notifica\u00C3\u00A7\u00C3\u00A3o. Essa cor dever\u00C3\u00A1 ser informada no formato RGB Ex. #000000.
+   * Apresenta a cor do icone da notifica\u00E7\u00E3o. Essa cor dever\u00E1 ser informada no formato RGB Ex. #000000.
    **/
   public PushFCMEGCM cor(String cor) {
     this.cor = cor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta a cor do icone da notifica\u00C3\u00A7\u00C3\u00A3o. Essa cor dever\u00C3\u00A1 ser informada no formato RGB Ex. #000000.")
+  @ApiModelProperty(example = "null", value = "Apresenta a cor do icone da notifica\u00E7\u00E3o. Essa cor dever\u00E1 ser informada no formato RGB Ex. #000000.")
   @JsonProperty("cor")
   public String getCor() {
     return cor;

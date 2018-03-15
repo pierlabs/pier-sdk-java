@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Objeto Configura\u00C3\u00A7\u00C3\u00A3o EMAIL
+ * Objeto Configura\u00E7\u00E3o EMAIL
  **/
 
-@ApiModel(description = "Objeto Configura\u00C3\u00A7\u00C3\u00A3o EMAIL")
+@ApiModel(description = "Objeto Configura\u00E7\u00E3o EMAIL")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ConfiguracaoEmailResponse   {
   
@@ -31,14 +31,14 @@ public class ConfiguracaoEmailResponse   {
 
   
   /**
-   * Id da Configura\u00C3\u00A7\u00C3\u00A3o EMAIL.
+   * Id da Configura\u00E7\u00E3o EMAIL.
    **/
   public ConfiguracaoEmailResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Id da Configura\u00C3\u00A7\u00C3\u00A3o EMAIL.")
+  @ApiModelProperty(example = "null", value = "Id da Configura\u00E7\u00E3o EMAIL.")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -85,14 +85,14 @@ public class ConfiguracaoEmailResponse   {
 
   
   /**
-   * Porta usada pelo servi\u00C3\u00A7o TLS/STARTTLS.
+   * Porta usada pelo servi\u00E7o TLS/STARTTLS.
    **/
   public ConfiguracaoEmailResponse portTLSSTARTTLS(String portTLSSTARTTLS) {
     this.portTLSSTARTTLS = portTLSSTARTTLS;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Porta usada pelo servi\u00C3\u00A7o TLS/STARTTLS.")
+  @ApiModelProperty(example = "null", value = "Porta usada pelo servi\u00E7o TLS/STARTTLS.")
   @JsonProperty("portTLSSTARTTLS")
   public String getPortTLSSTARTTLS() {
     return portTLSSTARTTLS;
@@ -103,14 +103,14 @@ public class ConfiguracaoEmailResponse   {
 
   
   /**
-   * Porta usada pelo servi\u00C3\u00A7o SSL.
+   * Porta usada pelo servi\u00E7o SSL.
    **/
   public ConfiguracaoEmailResponse portSSL(String portSSL) {
     this.portSSL = portSSL;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Porta usada pelo servi\u00C3\u00A7o SSL.")
+  @ApiModelProperty(example = "null", value = "Porta usada pelo servi\u00E7o SSL.")
   @JsonProperty("portSSL")
   public String getPortSSL() {
     return portSSL;
@@ -121,14 +121,14 @@ public class ConfiguracaoEmailResponse   {
 
   
   /**
-   * Protocolo de comunica\u00C3\u00A7\u00C3\u00A3o usado pelo servi\u00C3\u00A7o de e-mail (Ex: smtp).
+   * Protocolo de comunica\u00E7\u00E3o usado pelo servi\u00E7o de e-mail (Ex: smtp).
    **/
   public ConfiguracaoEmailResponse protocolo(String protocolo) {
     this.protocolo = protocolo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Protocolo de comunica\u00C3\u00A7\u00C3\u00A3o usado pelo servi\u00C3\u00A7o de e-mail (Ex: smtp).")
+  @ApiModelProperty(example = "null", value = "Protocolo de comunica\u00E7\u00E3o usado pelo servi\u00E7o de e-mail (Ex: smtp).")
   @JsonProperty("protocolo")
   public String getProtocolo() {
     return protocolo;
@@ -139,14 +139,14 @@ public class ConfiguracaoEmailResponse   {
 
   
   /**
-   * O servi\u00C3\u00A7o de e-mail requer autentica\u00C3\u00A7\u00C3\u00A3o.
+   * O servi\u00E7o de e-mail requer autentica\u00E7\u00E3o.
    **/
   public ConfiguracaoEmailResponse requerAutenticacao(Boolean requerAutenticacao) {
     this.requerAutenticacao = requerAutenticacao;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "O servi\u00C3\u00A7o de e-mail requer autentica\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(example = "false", value = "O servi\u00E7o de e-mail requer autentica\u00E7\u00E3o.")
   @JsonProperty("requerAutenticacao")
   public Boolean getRequerAutenticacao() {
     return requerAutenticacao;
@@ -157,14 +157,14 @@ public class ConfiguracaoEmailResponse   {
 
   
   /**
-   * O servi\u00C3\u00A7o de e-mail requer SSL.
+   * O servi\u00E7o de e-mail requer SSL.
    **/
   public ConfiguracaoEmailResponse requerSSL(Boolean requerSSL) {
     this.requerSSL = requerSSL;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "O servi\u00C3\u00A7o de e-mail requer SSL.")
+  @ApiModelProperty(example = "false", value = "O servi\u00E7o de e-mail requer SSL.")
   @JsonProperty("requerSSL")
   public Boolean getRequerSSL() {
     return requerSSL;
@@ -175,14 +175,14 @@ public class ConfiguracaoEmailResponse   {
 
   
   /**
-   * O servi\u00C3\u00A7o de e-mail requer TLS.
+   * O servi\u00E7o de e-mail requer TLS.
    **/
   public ConfiguracaoEmailResponse requerTLS(Boolean requerTLS) {
     this.requerTLS = requerTLS;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "O servi\u00C3\u00A7o de e-mail requer TLS.")
+  @ApiModelProperty(example = "false", value = "O servi\u00E7o de e-mail requer TLS.")
   @JsonProperty("requerTLS")
   public Boolean getRequerTLS() {
     return requerTLS;
@@ -193,14 +193,14 @@ public class ConfiguracaoEmailResponse   {
 
   
   /**
-   * Usuario do servi\u00C3\u00A7o de e-mail.
+   * Usuario do servi\u00E7o de e-mail.
    **/
   public ConfiguracaoEmailResponse usuario(String usuario) {
     this.usuario = usuario;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Usuario do servi\u00C3\u00A7o de e-mail.")
+  @ApiModelProperty(example = "null", value = "Usuario do servi\u00E7o de e-mail.")
   @JsonProperty("usuario")
   public String getUsuario() {
     return usuario;
@@ -211,14 +211,14 @@ public class ConfiguracaoEmailResponse   {
 
   
   /**
-   * Senha de usu\u00C3\u00A1rio do servi\u00C3\u00A7o de e-mail.
+   * Senha de usu\u00E1rio do servi\u00E7o de e-mail.
    **/
   public ConfiguracaoEmailResponse senha(String senha) {
     this.senha = senha;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Senha de usu\u00C3\u00A1rio do servi\u00C3\u00A7o de e-mail.")
+  @ApiModelProperty(example = "null", value = "Senha de usu\u00E1rio do servi\u00E7o de e-mail.")
   @JsonProperty("senha")
   public String getSenha() {
     return senha;
@@ -229,14 +229,14 @@ public class ConfiguracaoEmailResponse   {
 
   
   /**
-   * Data de inclus\u00C3\u00A3o.
+   * Data de inclus\u00E3o.
    **/
   public ConfiguracaoEmailResponse dataInclusao(String dataInclusao) {
     this.dataInclusao = dataInclusao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data de inclus\u00C3\u00A3o.")
+  @ApiModelProperty(example = "null", value = "Data de inclus\u00E3o.")
   @JsonProperty("dataInclusao")
   public String getDataInclusao() {
     return dataInclusao;
@@ -247,14 +247,14 @@ public class ConfiguracaoEmailResponse   {
 
   
   /**
-   * Data de altera\u00C3\u00A7\u00C3\u00A3o.
+   * Data de altera\u00E7\u00E3o.
    **/
   public ConfiguracaoEmailResponse dataAlteracao(String dataAlteracao) {
     this.dataAlteracao = dataAlteracao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data de altera\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(example = "null", value = "Data de altera\u00E7\u00E3o.")
   @JsonProperty("dataAlteracao")
   public String getDataAlteracao() {
     return dataAlteracao;

@@ -37,9 +37,9 @@ public class PermissaoPaisApi {
 
   
   /**
-   * Apresenta dados de um determinado pa\u00C3\u00ADs
-   * Este m\u00C3\u00A9todo permite consultar dados de um determinado pa\u00C3\u00ADs a partir de seu codigo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do pa\u00C3\u00ADs (id).
+   * Apresenta dados de um determinado pa\u00EDs
+   * Este m\u00E9todo permite consultar dados de um determinado pa\u00EDs a partir de seu codigo de identifica\u00E7\u00E3o (id).
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o do pa\u00EDs (id).
    * @return PaisResponse
    */
   public PaisResponse consultarPaisUsingGET(Long id) throws ApiException {
@@ -86,7 +86,7 @@ public class PermissaoPaisApi {
   
   /**
    * Lista os continentes
-   * Este recurso permite listar os continentes utilizados no recurso de permiss\u00C3\u00A3o de uso do cart\u00C3\u00A3o no exterior
+   * Este recurso permite listar os continentes utilizados no recurso de permiss\u00E3o de uso do cart\u00E3o no exterior
    * @return List<Object>
    */
   public List<Object> listarContinentesUsingGET() throws ApiException {
@@ -126,16 +126,16 @@ public class PermissaoPaisApi {
   }
   
   /**
-   * Lista os pa\u00C3\u00ADses
-   * Este recurso permite listar os pa\u00C3\u00ADses.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param codigo C\u00C3\u00B3digo do pa\u00C3\u00ADs
-   * @param sigla Sigla do pa\u00C3\u00ADs
-   * @param descricao Nome do pa\u00C3\u00ADs
-   * @param continente Continente no qual o pa\u00C3\u00ADs faz parte
-   * @param flagAtivo Atributo que representa se o pa\u00C3\u00ADs est\u00C3\u00A1 ativo
+   * Lista os pa\u00EDses
+   * Este recurso permite listar os pa\u00EDses.
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @param codigo C\u00F3digo do pa\u00EDs
+   * @param sigla Sigla do pa\u00EDs
+   * @param descricao Nome do pa\u00EDs
+   * @param continente Continente no qual o pa\u00EDs faz parte
+   * @param flagAtivo Atributo que representa se o pa\u00EDs est\u00E1 ativo
    * @return PagePaisResponse
    */
   public PagePaisResponse listarPaisesUsingGET(List<String> sort, Integer page, Integer limit, String codigo, String sigla, String descricao, String continente, Boolean flagAtivo) throws ApiException {

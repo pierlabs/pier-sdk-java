@@ -30,14 +30,14 @@ public class ContaBancariaPortadorUpdate   {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o da ag\u00C3\u00AAncia
+   * Descri\u00E7\u00E3o da ag\u00EAncia
    **/
   public ContaBancariaPortadorUpdate nomeAgencia(String nomeAgencia) {
     this.nomeAgencia = nomeAgencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o da ag\u00C3\u00AAncia")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o da ag\u00EAncia")
   @JsonProperty("nomeAgencia")
   public String getNomeAgencia() {
     return nomeAgencia;
@@ -48,14 +48,14 @@ public class ContaBancariaPortadorUpdate   {
 
   
   /**
-   * C\u00C3\u00B3digo do banco
+   * C\u00F3digo do banco
    **/
   public ContaBancariaPortadorUpdate banco(Long banco) {
     this.banco = banco;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "C\u00C3\u00B3digo do banco")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo do banco")
   @JsonProperty("banco")
   public Long getBanco() {
     return banco;
@@ -66,14 +66,14 @@ public class ContaBancariaPortadorUpdate   {
 
   
   /**
-   * N\u00C3\u00BAmero da ag\u00C3\u00AAncia
+   * N\u00FAmero da ag\u00EAncia
    **/
   public ContaBancariaPortadorUpdate numeroAgencia(String numeroAgencia) {
     this.numeroAgencia = numeroAgencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "N\u00C3\u00BAmero da ag\u00C3\u00AAncia")
+  @ApiModelProperty(example = "null", required = true, value = "N\u00FAmero da ag\u00EAncia")
   @JsonProperty("numeroAgencia")
   public String getNumeroAgencia() {
     return numeroAgencia;
@@ -84,14 +84,14 @@ public class ContaBancariaPortadorUpdate   {
 
   
   /**
-   * D\u00C3\u00ADgito da ag\u00C3\u00AAncia
+   * D\u00EDgito da ag\u00EAncia
    **/
   public ContaBancariaPortadorUpdate digitoAgencia(String digitoAgencia) {
     this.digitoAgencia = digitoAgencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "D\u00C3\u00ADgito da ag\u00C3\u00AAncia")
+  @ApiModelProperty(example = "null", value = "D\u00EDgito da ag\u00EAncia")
   @JsonProperty("digitoAgencia")
   public String getDigitoAgencia() {
     return digitoAgencia;
@@ -102,14 +102,14 @@ public class ContaBancariaPortadorUpdate   {
 
   
   /**
-   * N\u00C3\u00BAmero da conta
+   * N\u00FAmero da conta
    **/
   public ContaBancariaPortadorUpdate numeroConta(String numeroConta) {
     this.numeroConta = numeroConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "N\u00C3\u00BAmero da conta")
+  @ApiModelProperty(example = "null", required = true, value = "N\u00FAmero da conta")
   @JsonProperty("numeroConta")
   public String getNumeroConta() {
     return numeroConta;
@@ -120,14 +120,14 @@ public class ContaBancariaPortadorUpdate   {
 
   
   /**
-   * D\u00C3\u00ADgito da conta
+   * D\u00EDgito da conta
    **/
   public ContaBancariaPortadorUpdate digitoConta(String digitoConta) {
     this.digitoConta = digitoConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "D\u00C3\u00ADgito da conta")
+  @ApiModelProperty(example = "null", value = "D\u00EDgito da conta")
   @JsonProperty("digitoConta")
   public String getDigitoConta() {
     return digitoConta;
@@ -138,14 +138,14 @@ public class ContaBancariaPortadorUpdate   {
 
   
   /**
-   * Sinaliza se conta banc\u00C3\u00A1ria est\u00C3\u00A1 ativa ou n\u00C3\u00A3o (1: Ativa, 0: Inativa)
+   * Sinaliza se conta banc\u00E1ria est\u00E1 ativa ou n\u00E3o (1: Ativa, 0: Inativa)
    **/
   public ContaBancariaPortadorUpdate flagAtivo(Integer flagAtivo) {
     this.flagAtivo = flagAtivo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Sinaliza se conta banc\u00C3\u00A1ria est\u00C3\u00A1 ativa ou n\u00C3\u00A3o (1: Ativa, 0: Inativa)")
+  @ApiModelProperty(example = "null", required = true, value = "Sinaliza se conta banc\u00E1ria est\u00E1 ativa ou n\u00E3o (1: Ativa, 0: Inativa)")
   @JsonProperty("flagAtivo")
   public Integer getFlagAtivo() {
     return flagAtivo;
@@ -156,14 +156,14 @@ public class ContaBancariaPortadorUpdate   {
 
   
   /**
-   * Sinaliza se origem \u00C3\u00A9 DOC (1: DOC, 0: TED)
+   * Sinaliza se origem \u00E9 DOC (1: DOC, 0: TED)
    **/
   public ContaBancariaPortadorUpdate flagContaOrigemDoc(Integer flagContaOrigemDoc) {
     this.flagContaOrigemDoc = flagContaOrigemDoc;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Sinaliza se origem \u00C3\u00A9 DOC (1: DOC, 0: TED)")
+  @ApiModelProperty(example = "null", required = true, value = "Sinaliza se origem \u00E9 DOC (1: DOC, 0: TED)")
   @JsonProperty("flagContaOrigemDoc")
   public Integer getFlagContaOrigemDoc() {
     return flagContaOrigemDoc;
@@ -174,14 +174,14 @@ public class ContaBancariaPortadorUpdate   {
 
   
   /**
-   * Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente)
+   * Sinaliza se conta banc\u00E1ria \u00E9 poupan\u00E7a (1: Poupan\u00E7a, 0: Conta corrente)
    **/
   public ContaBancariaPortadorUpdate flagContaPoupanca(Integer flagContaPoupanca) {
     this.flagContaPoupanca = flagContaPoupanca;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente)")
+  @ApiModelProperty(example = "null", required = true, value = "Sinaliza se conta banc\u00E1ria \u00E9 poupan\u00E7a (1: Poupan\u00E7a, 0: Conta corrente)")
   @JsonProperty("flagContaPoupanca")
   public Integer getFlagContaPoupanca() {
     return flagContaPoupanca;
@@ -228,14 +228,14 @@ public class ContaBancariaPortadorUpdate   {
 
   
   /**
-   * Titularidade da conta (1:Portador \u00C3\u00A9 o titular, 0: Portador n\u00C3\u00A3o \u00C3\u00A9 o t\u00C3\u00ADtular
+   * Titularidade da conta (1:Portador \u00E9 o titular, 0: Portador n\u00E3o \u00E9 o t\u00EDtular
    **/
   public ContaBancariaPortadorUpdate titularidade(Integer titularidade) {
     this.titularidade = titularidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Titularidade da conta (1:Portador \u00C3\u00A9 o titular, 0: Portador n\u00C3\u00A3o \u00C3\u00A9 o t\u00C3\u00ADtular")
+  @ApiModelProperty(example = "null", value = "Titularidade da conta (1:Portador \u00E9 o titular, 0: Portador n\u00E3o \u00E9 o t\u00EDtular")
   @JsonProperty("titularidade")
   public Integer getTitularidade() {
     return titularidade;

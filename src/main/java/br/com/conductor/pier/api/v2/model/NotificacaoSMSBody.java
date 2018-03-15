@@ -9,10 +9,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Objeto Notifica\u00C3\u00A7\u00C3\u00A3o
+ * Objeto Notifica\u00E7\u00E3o
  **/
 
-@ApiModel(description = "Objeto Notifica\u00C3\u00A7\u00C3\u00A3o")
+@ApiModel(description = "Objeto Notifica\u00E7\u00E3o")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class NotificacaoSMSBody   {
   
@@ -46,14 +46,14 @@ public class NotificacaoSMSBody   {
 
   
   /**
-   * N\u00C3\u00BAmero sequencial \u00C3\u00BAnico
+   * N\u00FAmero sequencial \u00FAnico
    **/
   public NotificacaoSMSBody nsu(Long nsu) {
     this.nsu = nsu;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "N\u00C3\u00BAmero sequencial \u00C3\u00BAnico")
+  @ApiModelProperty(example = "null", required = true, value = "N\u00FAmero sequencial \u00FAnico")
   @JsonProperty("nsu")
   public Long getNsu() {
     return nsu;
@@ -64,14 +64,14 @@ public class NotificacaoSMSBody   {
 
   
   /**
-   * C\u00C3\u00B3digo identificado da pessoa
+   * C\u00F3digo identificado da pessoa
    **/
   public NotificacaoSMSBody idPessoa(Long idPessoa) {
     this.idPessoa = idPessoa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "C\u00C3\u00B3digo identificado da pessoa")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo identificado da pessoa")
   @JsonProperty("idPessoa")
   public Long getIdPessoa() {
     return idPessoa;
@@ -82,14 +82,14 @@ public class NotificacaoSMSBody   {
 
   
   /**
-   * C\u00C3\u00B3digo identificador da conta
+   * C\u00F3digo identificador da conta
    **/
   public NotificacaoSMSBody idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "C\u00C3\u00B3digo identificador da conta")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo identificador da conta")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -136,14 +136,14 @@ public class NotificacaoSMSBody   {
 
   
   /**
-   * Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o
+   * Apresenta a data e hora em que ser\u00E1 enviado a notifica\u00E7\u00E3o
    **/
   public NotificacaoSMSBody dataAgendamento(String dataAgendamento) {
     this.dataAgendamento = dataAgendamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta a data e hora em que ser\u00C3\u00A1 enviado a notifica\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(example = "null", value = "Apresenta a data e hora em que ser\u00E1 enviado a notifica\u00E7\u00E3o")
   @JsonProperty("dataAgendamento")
   public String getDataAgendamento() {
     return dataAgendamento;
@@ -154,14 +154,14 @@ public class NotificacaoSMSBody   {
 
   
   /**
-   * Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
+   * Apresenta o tipoEvento a qual pertence a notifica\u00E7\u00E3o
    **/
   public NotificacaoSMSBody tipoEvento(TipoEventoEnum tipoEvento) {
     this.tipoEvento = tipoEvento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta o tipoEvento a qual pertence a notifica\u00E7\u00E3o")
   @JsonProperty("tipoEvento")
   public TipoEventoEnum getTipoEvento() {
     return tipoEvento;

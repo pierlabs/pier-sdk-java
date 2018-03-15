@@ -8,34 +8,36 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o do recurso Base
+ * Representa\u00E7\u00E3o do recurso Base
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o do recurso Base")
+@ApiModel(description = "Representa\u00E7\u00E3o do recurso Base")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class BaseResponse   {
   
   private Long id = null;
   private String servidor = null;
   private String usuario = null;
-  private String senha = null;
   private String nomeBase = null;
   private Boolean senhaCriptografada = null;
   private String domain = null;
   private String nomeBaseControleAcesso = null;
   private Long idEmissor = null;
   private String servidorControleAcesso = null;
+  private String nomeBaseUsuarios = null;
+  private String servidorUsuarios = null;
+  private Boolean flagCluster = null;
 
   
   /**
-   * C\u00C3\u00B3digo identificador da base
+   * C\u00F3digo identificador da base
    **/
   public BaseResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "C\u00C3\u00B3digo identificador da base")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo identificador da base")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -64,38 +66,20 @@ public class BaseResponse   {
 
   
   /**
-   * Nome do usu\u00C3\u00A1rio
+   * Nome do usu\u00E1rio
    **/
   public BaseResponse usuario(String usuario) {
     this.usuario = usuario;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Nome do usu\u00C3\u00A1rio")
+  @ApiModelProperty(example = "null", required = true, value = "Nome do usu\u00E1rio")
   @JsonProperty("usuario")
   public String getUsuario() {
     return usuario;
   }
   public void setUsuario(String usuario) {
     this.usuario = usuario;
-  }
-
-  
-  /**
-   * Senha
-   **/
-  public BaseResponse senha(String senha) {
-    this.senha = senha;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", required = true, value = "Senha")
-  @JsonProperty("senha")
-  public String getSenha() {
-    return senha;
-  }
-  public void setSenha(String senha) {
-    this.senha = senha;
   }
 
   
@@ -136,14 +120,14 @@ public class BaseResponse   {
 
   
   /**
-   * Dom\u00C3\u00ADnio da base
+   * Dom\u00EDnio da base
    **/
   public BaseResponse domain(String domain) {
     this.domain = domain;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Dom\u00C3\u00ADnio da base")
+  @ApiModelProperty(example = "null", required = true, value = "Dom\u00EDnio da base")
   @JsonProperty("domain")
   public String getDomain() {
     return domain;
@@ -172,14 +156,14 @@ public class BaseResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo do identificador do emissor
+   * C\u00F3digo do identificador do emissor
    **/
   public BaseResponse idEmissor(Long idEmissor) {
     this.idEmissor = idEmissor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo do identificador do emissor")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo do identificador do emissor")
   @JsonProperty("idEmissor")
   public Long getIdEmissor() {
     return idEmissor;
@@ -207,6 +191,60 @@ public class BaseResponse   {
   }
 
   
+  /**
+   * Nome da base de usu\u00E1rios
+   **/
+  public BaseResponse nomeBaseUsuarios(String nomeBaseUsuarios) {
+    this.nomeBaseUsuarios = nomeBaseUsuarios;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "Nome da base de usu\u00E1rios")
+  @JsonProperty("nomeBaseUsuarios")
+  public String getNomeBaseUsuarios() {
+    return nomeBaseUsuarios;
+  }
+  public void setNomeBaseUsuarios(String nomeBaseUsuarios) {
+    this.nomeBaseUsuarios = nomeBaseUsuarios;
+  }
+
+  
+  /**
+   * Servidor do controle de acesso
+   **/
+  public BaseResponse servidorUsuarios(String servidorUsuarios) {
+    this.servidorUsuarios = servidorUsuarios;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "Servidor do controle de acesso")
+  @JsonProperty("servidorUsuarios")
+  public String getServidorUsuarios() {
+    return servidorUsuarios;
+  }
+  public void setServidorUsuarios(String servidorUsuarios) {
+    this.servidorUsuarios = servidorUsuarios;
+  }
+
+  
+  /**
+   * Flag Cluester
+   **/
+  public BaseResponse flagCluster(Boolean flagCluster) {
+    this.flagCluster = flagCluster;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "Flag Cluester")
+  @JsonProperty("flagCluster")
+  public Boolean getFlagCluster() {
+    return flagCluster;
+  }
+  public void setFlagCluster(Boolean flagCluster) {
+    this.flagCluster = flagCluster;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -220,18 +258,20 @@ public class BaseResponse   {
     return Objects.equals(this.id, baseResponse.id) &&
         Objects.equals(this.servidor, baseResponse.servidor) &&
         Objects.equals(this.usuario, baseResponse.usuario) &&
-        Objects.equals(this.senha, baseResponse.senha) &&
         Objects.equals(this.nomeBase, baseResponse.nomeBase) &&
         Objects.equals(this.senhaCriptografada, baseResponse.senhaCriptografada) &&
         Objects.equals(this.domain, baseResponse.domain) &&
         Objects.equals(this.nomeBaseControleAcesso, baseResponse.nomeBaseControleAcesso) &&
         Objects.equals(this.idEmissor, baseResponse.idEmissor) &&
-        Objects.equals(this.servidorControleAcesso, baseResponse.servidorControleAcesso);
+        Objects.equals(this.servidorControleAcesso, baseResponse.servidorControleAcesso) &&
+        Objects.equals(this.nomeBaseUsuarios, baseResponse.nomeBaseUsuarios) &&
+        Objects.equals(this.servidorUsuarios, baseResponse.servidorUsuarios) &&
+        Objects.equals(this.flagCluster, baseResponse.flagCluster);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, servidor, usuario, senha, nomeBase, senhaCriptografada, domain, nomeBaseControleAcesso, idEmissor, servidorControleAcesso);
+    return Objects.hash(id, servidor, usuario, nomeBase, senhaCriptografada, domain, nomeBaseControleAcesso, idEmissor, servidorControleAcesso, nomeBaseUsuarios, servidorUsuarios, flagCluster);
   }
 
   @Override
@@ -242,13 +282,15 @@ public class BaseResponse   {
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    servidor: ").append(toIndentedString(servidor)).append("\n");
     sb.append("    usuario: ").append(toIndentedString(usuario)).append("\n");
-    sb.append("    senha: ").append(toIndentedString(senha)).append("\n");
     sb.append("    nomeBase: ").append(toIndentedString(nomeBase)).append("\n");
     sb.append("    senhaCriptografada: ").append(toIndentedString(senhaCriptografada)).append("\n");
     sb.append("    domain: ").append(toIndentedString(domain)).append("\n");
     sb.append("    nomeBaseControleAcesso: ").append(toIndentedString(nomeBaseControleAcesso)).append("\n");
     sb.append("    idEmissor: ").append(toIndentedString(idEmissor)).append("\n");
     sb.append("    servidorControleAcesso: ").append(toIndentedString(servidorControleAcesso)).append("\n");
+    sb.append("    nomeBaseUsuarios: ").append(toIndentedString(nomeBaseUsuarios)).append("\n");
+    sb.append("    servidorUsuarios: ").append(toIndentedString(servidorUsuarios)).append("\n");
+    sb.append("    flagCluster: ").append(toIndentedString(flagCluster)).append("\n");
     sb.append("}");
     return sb.toString();
   }

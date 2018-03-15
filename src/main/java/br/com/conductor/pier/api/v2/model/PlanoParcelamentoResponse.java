@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de planos de parcelamento
+ * Representa\u00E7\u00E3o da resposta do recurso de planos de parcelamento
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de planos de parcelamento")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de planos de parcelamento")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PlanoParcelamentoResponse   {
   
@@ -32,6 +32,7 @@ public class PlanoParcelamentoResponse   {
   private String dataInclusao = null;
   private String dataProcessamentoAdesao = null;
   private Long idConta = null;
+  private Long idServicoTipo = null;
   private String descricaoServicoTipo = null;
   private Boolean comEntrada = null;
   private String nomeCampanha = null;
@@ -74,14 +75,14 @@ public class PlanoParcelamentoResponse   {
 
   
   /**
-   * Data de vencimento padr\u00C3\u00A3o
+   * Data de vencimento padr\u00E3o
    **/
   public PlanoParcelamentoResponse dataVencimentoPadrao(String dataVencimentoPadrao) {
     this.dataVencimentoPadrao = dataVencimentoPadrao;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd", value = "Data de vencimento padr\u00C3\u00A3o")
+  @ApiModelProperty(example = "yyyy-MM-dd", value = "Data de vencimento padr\u00E3o")
   @JsonProperty("dataVencimentoPadrao")
   public String getDataVencimentoPadrao() {
     return dataVencimentoPadrao;
@@ -254,14 +255,14 @@ public class PlanoParcelamentoResponse   {
 
   
   /**
-   * Status da ades\u00C3\u00A3o
+   * Status da ades\u00E3o
    **/
   public PlanoParcelamentoResponse statusAdesao(Integer statusAdesao) {
     this.statusAdesao = statusAdesao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Status da ades\u00C3\u00A3o")
+  @ApiModelProperty(example = "null", value = "Status da ades\u00E3o")
   @JsonProperty("statusAdesao")
   public Integer getStatusAdesao() {
     return statusAdesao;
@@ -272,14 +273,14 @@ public class PlanoParcelamentoResponse   {
 
   
   /**
-   * Data de inclus\u00C3\u00A3o
+   * Data de inclus\u00E3o
    **/
   public PlanoParcelamentoResponse dataInclusao(String dataInclusao) {
     this.dataInclusao = dataInclusao;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data de inclus\u00C3\u00A3o")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data de inclus\u00E3o")
   @JsonProperty("dataInclusao")
   public String getDataInclusao() {
     return dataInclusao;
@@ -290,14 +291,14 @@ public class PlanoParcelamentoResponse   {
 
   
   /**
-   * Data de processamento da ades\u00C3\u00A3o
+   * Data de processamento da ades\u00E3o
    **/
   public PlanoParcelamentoResponse dataProcessamentoAdesao(String dataProcessamentoAdesao) {
     this.dataProcessamentoAdesao = dataProcessamentoAdesao;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data de processamento da ades\u00C3\u00A3o")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data de processamento da ades\u00E3o")
   @JsonProperty("dataProcessamentoAdesao")
   public String getDataProcessamentoAdesao() {
     return dataProcessamentoAdesao;
@@ -326,14 +327,32 @@ public class PlanoParcelamentoResponse   {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do tipo de servi\u00C3\u00A7o
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de servi\u00E7o
+   **/
+  public PlanoParcelamentoResponse idServicoTipo(Long idServicoTipo) {
+    this.idServicoTipo = idServicoTipo;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo de servi\u00E7o")
+  @JsonProperty("idServicoTipo")
+  public Long getIdServicoTipo() {
+    return idServicoTipo;
+  }
+  public void setIdServicoTipo(Long idServicoTipo) {
+    this.idServicoTipo = idServicoTipo;
+  }
+
+  
+  /**
+   * Descri\u00E7\u00E3o do tipo de servi\u00E7o
    **/
   public PlanoParcelamentoResponse descricaoServicoTipo(String descricaoServicoTipo) {
     this.descricaoServicoTipo = descricaoServicoTipo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o do tipo de servi\u00C3\u00A7o")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do tipo de servi\u00E7o")
   @JsonProperty("descricaoServicoTipo")
   public String getDescricaoServicoTipo() {
     return descricaoServicoTipo;
@@ -405,6 +424,7 @@ public class PlanoParcelamentoResponse   {
         Objects.equals(this.dataInclusao, planoParcelamentoResponse.dataInclusao) &&
         Objects.equals(this.dataProcessamentoAdesao, planoParcelamentoResponse.dataProcessamentoAdesao) &&
         Objects.equals(this.idConta, planoParcelamentoResponse.idConta) &&
+        Objects.equals(this.idServicoTipo, planoParcelamentoResponse.idServicoTipo) &&
         Objects.equals(this.descricaoServicoTipo, planoParcelamentoResponse.descricaoServicoTipo) &&
         Objects.equals(this.comEntrada, planoParcelamentoResponse.comEntrada) &&
         Objects.equals(this.nomeCampanha, planoParcelamentoResponse.nomeCampanha);
@@ -412,7 +432,7 @@ public class PlanoParcelamentoResponse   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, dataFechamentoFatura, dataVencimentoPadrao, valorTotalFatura, quantidadeParcelas, valorParcela, valorEntrada, taxaRefinanciamento, custoEfetivoTotal, valorTotalRefinanciamento, valorIOF, valorTAC, statusAdesao, dataInclusao, dataProcessamentoAdesao, idConta, descricaoServicoTipo, comEntrada, nomeCampanha);
+    return Objects.hash(id, dataFechamentoFatura, dataVencimentoPadrao, valorTotalFatura, quantidadeParcelas, valorParcela, valorEntrada, taxaRefinanciamento, custoEfetivoTotal, valorTotalRefinanciamento, valorIOF, valorTAC, statusAdesao, dataInclusao, dataProcessamentoAdesao, idConta, idServicoTipo, descricaoServicoTipo, comEntrada, nomeCampanha);
   }
 
   @Override
@@ -436,6 +456,7 @@ public class PlanoParcelamentoResponse   {
     sb.append("    dataInclusao: ").append(toIndentedString(dataInclusao)).append("\n");
     sb.append("    dataProcessamentoAdesao: ").append(toIndentedString(dataProcessamentoAdesao)).append("\n");
     sb.append("    idConta: ").append(toIndentedString(idConta)).append("\n");
+    sb.append("    idServicoTipo: ").append(toIndentedString(idServicoTipo)).append("\n");
     sb.append("    descricaoServicoTipo: ").append(toIndentedString(descricaoServicoTipo)).append("\n");
     sb.append("    comEntrada: ").append(toIndentedString(comEntrada)).append("\n");
     sb.append("    nomeCampanha: ").append(toIndentedString(nomeCampanha)).append("\n");

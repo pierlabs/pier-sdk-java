@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o do recurso atualizar cart\u00C3\u00A3o
+ * Representa\u00E7\u00E3o do recurso atualizar cart\u00E3o
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o do recurso atualizar cart\u00C3\u00A3o")
+@ApiModel(description = "Representa\u00E7\u00E3o do recurso atualizar cart\u00E3o")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class CartaoPayPersist   {
   
@@ -24,14 +24,14 @@ public class CartaoPayPersist   {
 
   
   /**
-   * N\u00C3\u00BAmero do cart\u00C3\u00A3o criptografado
+   * N\u00FAmero do cart\u00E3o criptografado
    **/
   public CartaoPayPersist numeroCartao(String numeroCartao) {
     this.numeroCartao = numeroCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "N\u00C3\u00BAmero do cart\u00C3\u00A3o criptografado")
+  @ApiModelProperty(example = "null", required = true, value = "N\u00FAmero do cart\u00E3o criptografado")
   @JsonProperty("numeroCartao")
   public String getNumeroCartao() {
     return numeroCartao;
@@ -42,14 +42,14 @@ public class CartaoPayPersist   {
 
   
   /**
-   * Data de validade do cart\u00C3\u00A3o
+   * Data de validade do cart\u00E3o
    **/
   public CartaoPayPersist dataValidade(String dataValidade) {
     this.dataValidade = dataValidade;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data de validade do cart\u00C3\u00A3o")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data de validade do cart\u00E3o")
   @JsonProperty("dataValidade")
   public String getDataValidade() {
     return dataValidade;
@@ -60,14 +60,14 @@ public class CartaoPayPersist   {
 
   
   /**
-   * CVV do cart\u00C3\u00A3o criptografado
+   * CVV do cart\u00E3o criptografado
    **/
   public CartaoPayPersist cvv(String cvv) {
     this.cvv = cvv;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "CVV do cart\u00C3\u00A3o criptografado")
+  @ApiModelProperty(example = "null", value = "CVV do cart\u00E3o criptografado")
   @JsonProperty("cvv")
   public String getCvv() {
     return cvv;
@@ -78,14 +78,14 @@ public class CartaoPayPersist   {
 
   
   /**
-   * CPF do portador do cart\u00C3\u00A3o criptografado
+   * CPF do portador do cart\u00E3o criptografado
    **/
   public CartaoPayPersist numeroReceitaFederal(String numeroReceitaFederal) {
     this.numeroReceitaFederal = numeroReceitaFederal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "CPF do portador do cart\u00C3\u00A3o criptografado")
+  @ApiModelProperty(example = "null", value = "CPF do portador do cart\u00E3o criptografado")
   @JsonProperty("numeroReceitaFederal")
   public String getNumeroReceitaFederal() {
     return numeroReceitaFederal;
@@ -96,14 +96,14 @@ public class CartaoPayPersist   {
 
   
   /**
-   * Nome impresso no cart\u00C3\u00A3o criptografado
+   * Nome impresso no cart\u00E3o criptografado
    **/
   public CartaoPayPersist nomeImpresso(String nomeImpresso) {
     this.nomeImpresso = nomeImpresso;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome impresso no cart\u00C3\u00A3o criptografado")
+  @ApiModelProperty(example = "null", value = "Nome impresso no cart\u00E3o criptografado")
   @JsonProperty("nomeImpresso")
   public String getNomeImpresso() {
     return nomeImpresso;
@@ -114,14 +114,14 @@ public class CartaoPayPersist   {
 
   
   /**
-   * Chave p\u00C3\u00BAblica do dispositivo criptografada
+   * Chave p\u00FAblica do dispositivo criptografada
    **/
   public CartaoPayPersist chavePublicaDevice(String chavePublicaDevice) {
     this.chavePublicaDevice = chavePublicaDevice;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Chave p\u00C3\u00BAblica do dispositivo criptografada")
+  @ApiModelProperty(example = "null", required = true, value = "Chave p\u00FAblica do dispositivo criptografada")
   @JsonProperty("chavePublicaDevice")
   public String getChavePublicaDevice() {
     return chavePublicaDevice;

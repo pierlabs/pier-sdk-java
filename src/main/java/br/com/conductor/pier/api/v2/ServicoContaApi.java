@@ -38,14 +38,14 @@ public class ServicoContaApi {
   
   /**
    * Atribuir Anuidade
-   * Esse recurso permite configurar qual a regra de Anuidade que ser\u00C3\u00A1 atribu\u00C3\u00ADda a uma determinada Conta.
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta.
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
    * @param idAnuidade Identificador da anuidade
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
    * @param DDD DDD do celular
-   * @param celular N\u00C3\u00BAmero do celular
+   * @param celular N\u00FAmero do celular
    * @param idOperadora Identificador da operadora do celular
    * @param idOrigemComercial Identificador da origem comercial
    * @return Object
@@ -114,9 +114,9 @@ public class ServicoContaApi {
   }
   
   /**
-   *  Ativa o servi\u00C3\u00A7o de envio de fatura por email
-   * Este recurso ativa o servi\u00C3\u00A7o de envio de fatura por email
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   *  Ativa o servi\u00E7o de envio de fatura por email
+   * Este recurso ativa o servi\u00E7o de envio de fatura por email
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
    * @return Object
    */
   public Object ativarEnvioFaturaEmailUsingPOST(Long id) throws ApiException {
@@ -162,9 +162,9 @@ public class ServicoContaApi {
   }
   
   /**
-   * Desativa o servi\u00C3\u00A7o de envio de fatura por email
-   * Este recurso desativa o servi\u00C3\u00A7o de envio de fatura por email
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (id).
+   * Desativa o servi\u00E7o de envio de fatura por email
+   * Este recurso desativa o servi\u00E7o de envio de fatura por email
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id).
    * @return Object
    */
   public Object desativarEnvioFaturaEmailUsingPOST(Long id) throws ApiException {
@@ -212,9 +212,9 @@ public class ServicoContaApi {
   /**
    * Listar Anuidades
    * Lista as anuidades
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
    * @return PageAnuidadeResponse
    */
   public PageAnuidadeResponse listarAnuidadesUsingGET(List<String> sort, Integer page, Integer limit) throws ApiException {
@@ -262,9 +262,9 @@ public class ServicoContaApi {
   /**
    * Listar Operadoras
    * Lista as operadoras.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
    * @return PageOperadoraResponse
    */
   public PageOperadoraResponse listarOperadorasTelefonicasUsingGET(List<String> sort, Integer page, Integer limit) throws ApiException {

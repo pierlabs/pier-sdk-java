@@ -23,14 +23,14 @@ public class RefenciaComercialAprovadoPersist   {
 
   
   /**
-   * Apresenta o nome completo da raz\u00C3\u00A3o social da refer\u00C3\u00AAncia comercial (nome empresarial)
+   * Apresenta o nome completo da raz\u00E3o social da refer\u00EAncia comercial (nome empresarial)
    **/
   public RefenciaComercialAprovadoPersist razaoSocial(String razaoSocial) {
     this.razaoSocial = razaoSocial;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o nome completo da raz\u00C3\u00A3o social da refer\u00C3\u00AAncia comercial (nome empresarial)")
+  @ApiModelProperty(example = "null", value = "Apresenta o nome completo da raz\u00E3o social da refer\u00EAncia comercial (nome empresarial)")
   @JsonProperty("razaoSocial")
   public String getRazaoSocial() {
     return razaoSocial;
@@ -41,14 +41,14 @@ public class RefenciaComercialAprovadoPersist   {
 
   
   /**
-   * Nome do respons\u00C3\u00A1vel pela refer\u00C3\u00AAncia comercial
+   * Nome do respons\u00E1vel pela refer\u00EAncia comercial
    **/
   public RefenciaComercialAprovadoPersist nomeContrato(String nomeContrato) {
     this.nomeContrato = nomeContrato;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome do respons\u00C3\u00A1vel pela refer\u00C3\u00AAncia comercial")
+  @ApiModelProperty(example = "null", value = "Nome do respons\u00E1vel pela refer\u00EAncia comercial")
   @JsonProperty("nomeContrato")
   public String getNomeContrato() {
     return nomeContrato;
@@ -59,14 +59,14 @@ public class RefenciaComercialAprovadoPersist   {
 
   
   /**
-   * DDD do contato da refer\u00C3\u00AAncia comercial
+   * DDD do contato da refer\u00EAncia comercial
    **/
   public RefenciaComercialAprovadoPersist ddd(String ddd) {
     this.ddd = ddd;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "DDD do contato da refer\u00C3\u00AAncia comercial")
+  @ApiModelProperty(example = "null", value = "DDD do contato da refer\u00EAncia comercial")
   @JsonProperty("ddd")
   public String getDdd() {
     return ddd;
@@ -77,14 +77,14 @@ public class RefenciaComercialAprovadoPersist   {
 
   
   /**
-   * N\u00C3\u00BAmero de contato da refer\u00C3\u00AAncia comercial
+   * N\u00FAmero de contato da refer\u00EAncia comercial
    **/
   public RefenciaComercialAprovadoPersist telefone(String telefone) {
     this.telefone = telefone;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero de contato da refer\u00C3\u00AAncia comercial")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero de contato da refer\u00EAncia comercial")
   @JsonProperty("telefone")
   public String getTelefone() {
     return telefone;
@@ -95,14 +95,14 @@ public class RefenciaComercialAprovadoPersist   {
 
   
   /**
-   * E-mail de contato da refer\u00C3\u00AAncia comercial
+   * E-mail de contato da refer\u00EAncia comercial
    **/
   public RefenciaComercialAprovadoPersist email(String email) {
     this.email = email;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "E-mail de contato da refer\u00C3\u00AAncia comercial")
+  @ApiModelProperty(example = "null", value = "E-mail de contato da refer\u00EAncia comercial")
   @JsonProperty("email")
   public String getEmail() {
     return email;

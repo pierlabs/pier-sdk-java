@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta resumida para o recurso de Documento
+ * Representa\u00E7\u00E3o da resposta resumida para o recurso de Documento
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta resumida para o recurso de Documento")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta resumida para o recurso de Documento")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class DocumentoResponse   {
   
@@ -76,14 +76,14 @@ public class DocumentoResponse   {
 
   
   /**
-   * Extens\u00C3\u00A3o do Documento.
+   * Extens\u00E3o do Documento.
    **/
   public DocumentoResponse extensao(String extensao) {
     this.extensao = extensao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Extens\u00C3\u00A3o do Documento.")
+  @ApiModelProperty(example = "null", value = "Extens\u00E3o do Documento.")
   @JsonProperty("extensao")
   public String getExtensao() {
     return extensao;

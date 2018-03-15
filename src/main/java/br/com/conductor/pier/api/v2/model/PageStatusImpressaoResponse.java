@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * Lista de Status Impress\u00C3\u00A3o
+ * Lista de Status Impress\u00E3o
  **/
 
-@ApiModel(description = "Lista de Status Impress\u00C3\u00A3o")
+@ApiModel(description = "Lista de Status Impress\u00E3o")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageStatusImpressaoResponse   {
   

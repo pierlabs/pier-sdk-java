@@ -23,14 +23,14 @@ public class TelefoneEstabelecimentoResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone.
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Telefone.
    **/
   public TelefoneEstabelecimentoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone.")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Telefone.")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -41,14 +41,14 @@ public class TelefoneEstabelecimentoResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento.
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento.
    **/
   public TelefoneEstabelecimentoResponse idEstabelecimento(Long idEstabelecimento) {
     this.idEstabelecimento = idEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento.")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento.")
   @JsonProperty("idEstabelecimento")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
@@ -59,14 +59,14 @@ public class TelefoneEstabelecimentoResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo DDD do telefone.
+   * C\u00F3digo DDD do telefone.
    **/
   public TelefoneEstabelecimentoResponse ddd(String ddd) {
     this.ddd = ddd;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo DDD do telefone.")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo DDD do telefone.")
   @JsonProperty("ddd")
   public String getDdd() {
     return ddd;
@@ -77,14 +77,14 @@ public class TelefoneEstabelecimentoResponse   {
 
   
   /**
-   * N\u00C3\u00BAmero do telefone.
+   * N\u00FAmero do telefone.
    **/
   public TelefoneEstabelecimentoResponse telefone(String telefone) {
     this.telefone = telefone;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero do telefone.")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero do telefone.")
   @JsonProperty("telefone")
   public String getTelefone() {
     return telefone;
@@ -95,14 +95,14 @@ public class TelefoneEstabelecimentoResponse   {
 
   
   /**
-   * N\u00C3\u00BAmero do ramal.
+   * N\u00FAmero do ramal.
    **/
   public TelefoneEstabelecimentoResponse ramal(String ramal) {
     this.ramal = ramal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero do ramal.")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero do ramal.")
   @JsonProperty("ramal")
   public String getRamal() {
     return ramal;

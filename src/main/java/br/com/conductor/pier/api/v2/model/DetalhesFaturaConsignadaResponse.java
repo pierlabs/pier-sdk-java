@@ -42,14 +42,14 @@ public class DetalhesFaturaConsignadaResponse   {
 
   
   /**
-   * Apresenta as transa\u00C3\u00A7\u00C3\u00B5es relacionadas a fatura.
+   * Apresenta as transa\u00E7\u00F5es relacionadas a fatura.
    **/
   public DetalhesFaturaConsignadaResponse transacoes(List<TransacoesCorrentesResponse> transacoes) {
     this.transacoes = transacoes;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta as transa\u00C3\u00A7\u00C3\u00B5es relacionadas a fatura.")
+  @ApiModelProperty(example = "null", value = "Apresenta as transa\u00E7\u00F5es relacionadas a fatura.")
   @JsonProperty("transacoes")
   public List<TransacoesCorrentesResponse> getTransacoes() {
     return transacoes;

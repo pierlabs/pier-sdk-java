@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * Configura\u00C3\u00A7\u00C3\u00A3o Rotativo
+ * Configura\u00E7\u00E3o Rotativo
  **/
 
-@ApiModel(description = "Configura\u00C3\u00A7\u00C3\u00A3o Rotativo")
+@ApiModel(description = "Configura\u00E7\u00E3o Rotativo")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ConfiguracaoRotativoPersist   {
   
@@ -34,14 +34,14 @@ public class ConfiguracaoRotativoPersist   {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (idProduto).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Produto (idProduto).
    **/
   public ConfiguracaoRotativoPersist idProduto(Long idProduto) {
     this.idProduto = idProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (idProduto).")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Produto (idProduto).")
   @JsonProperty("idProduto")
   public Long getIdProduto() {
     return idProduto;
@@ -70,14 +70,14 @@ public class ConfiguracaoRotativoPersist   {
 
   
   /**
-   * Quando verdadeiro, indica que o valor n\u00C3\u00A3o financi\u00C3\u00A1vel deve compor a oferta de parcelamento.
+   * Quando verdadeiro, indica que o valor n\u00E3o financi\u00E1vel deve compor a oferta de parcelamento.
    **/
   public ConfiguracaoRotativoPersist compoeOfertaValorNaoFinanciavel(Boolean compoeOfertaValorNaoFinanciavel) {
     this.compoeOfertaValorNaoFinanciavel = compoeOfertaValorNaoFinanciavel;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Quando verdadeiro, indica que o valor n\u00C3\u00A3o financi\u00C3\u00A1vel deve compor a oferta de parcelamento.")
+  @ApiModelProperty(example = "false", value = "Quando verdadeiro, indica que o valor n\u00E3o financi\u00E1vel deve compor a oferta de parcelamento.")
   @JsonProperty("compoeOfertaValorNaoFinanciavel")
   public Boolean getCompoeOfertaValorNaoFinanciavel() {
     return compoeOfertaValorNaoFinanciavel;
@@ -88,14 +88,14 @@ public class ConfiguracaoRotativoPersist   {
 
   
   /**
-   * Quando verdadeiro, indica que o valor de novos lan\u00C3\u00A7amentos deve compor a oferta de parcelamento
+   * Quando verdadeiro, indica que o valor de novos lan\u00E7amentos deve compor a oferta de parcelamento
    **/
   public ConfiguracaoRotativoPersist compoeOfertaValorNovosLancamentos(Boolean compoeOfertaValorNovosLancamentos) {
     this.compoeOfertaValorNovosLancamentos = compoeOfertaValorNovosLancamentos;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Quando verdadeiro, indica que o valor de novos lan\u00C3\u00A7amentos deve compor a oferta de parcelamento")
+  @ApiModelProperty(example = "false", value = "Quando verdadeiro, indica que o valor de novos lan\u00E7amentos deve compor a oferta de parcelamento")
   @JsonProperty("compoeOfertaValorNovosLancamentos")
   public Boolean getCompoeOfertaValorNovosLancamentos() {
     return compoeOfertaValorNovosLancamentos;
@@ -124,14 +124,14 @@ public class ConfiguracaoRotativoPersist   {
 
   
   /**
-   * Indica o m\u00C3\u00ADnimo de parcelas que ser\u00C3\u00A1 acatado no rec\u00C3\u00A1lculo do parcelamento.
+   * Indica o m\u00EDnimo de parcelas que ser\u00E1 acatado no rec\u00E1lculo do parcelamento.
    **/
   public ConfiguracaoRotativoPersist minimoParcelasRecalculoParcelamento(Boolean minimoParcelasRecalculoParcelamento) {
     this.minimoParcelasRecalculoParcelamento = minimoParcelasRecalculoParcelamento;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Indica o m\u00C3\u00ADnimo de parcelas que ser\u00C3\u00A1 acatado no rec\u00C3\u00A1lculo do parcelamento.")
+  @ApiModelProperty(example = "false", value = "Indica o m\u00EDnimo de parcelas que ser\u00E1 acatado no rec\u00E1lculo do parcelamento.")
   @JsonProperty("minimoParcelasRecalculoParcelamento")
   public Boolean getMinimoParcelasRecalculoParcelamento() {
     return minimoParcelasRecalculoParcelamento;
@@ -142,14 +142,14 @@ public class ConfiguracaoRotativoPersist   {
 
   
   /**
-   * Quando verdadeiro, indica que o parcelamento deve ser recalculado caso o valor calculado da oferta seja inferior ao valor configurado m\u00C3\u00ADnimo da parcela (valorMinimoParcela) e de percentual aberto
+   * Quando verdadeiro, indica que o parcelamento deve ser recalculado caso o valor calculado da oferta seja inferior ao valor configurado m\u00EDnimo da parcela (valorMinimoParcela) e de percentual aberto
    **/
   public ConfiguracaoRotativoPersist recalculaParcelamento(Boolean recalculaParcelamento) {
     this.recalculaParcelamento = recalculaParcelamento;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Quando verdadeiro, indica que o parcelamento deve ser recalculado caso o valor calculado da oferta seja inferior ao valor configurado m\u00C3\u00ADnimo da parcela (valorMinimoParcela) e de percentual aberto")
+  @ApiModelProperty(example = "false", value = "Quando verdadeiro, indica que o parcelamento deve ser recalculado caso o valor calculado da oferta seja inferior ao valor configurado m\u00EDnimo da parcela (valorMinimoParcela) e de percentual aberto")
   @JsonProperty("recalculaParcelamento")
   public Boolean getRecalculaParcelamento() {
     return recalculaParcelamento;
@@ -160,14 +160,14 @@ public class ConfiguracaoRotativoPersist   {
 
   
   /**
-   * N\u00C3\u00BAmero m\u00C3\u00ADnimo de parcelas que ser\u00C3\u00A1 acatado no recalculo da oferta.
+   * N\u00FAmero m\u00EDnimo de parcelas que ser\u00E1 acatado no recalculo da oferta.
    **/
   public ConfiguracaoRotativoPersist numeroMinimoOfertas(Boolean numeroMinimoOfertas) {
     this.numeroMinimoOfertas = numeroMinimoOfertas;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "N\u00C3\u00BAmero m\u00C3\u00ADnimo de parcelas que ser\u00C3\u00A1 acatado no recalculo da oferta.")
+  @ApiModelProperty(example = "false", value = "N\u00FAmero m\u00EDnimo de parcelas que ser\u00E1 acatado no recalculo da oferta.")
   @JsonProperty("numeroMinimoOfertas")
   public Boolean getNumeroMinimoOfertas() {
     return numeroMinimoOfertas;
@@ -178,14 +178,14 @@ public class ConfiguracaoRotativoPersist   {
 
   
   /**
-   * Quando verdadeiro, indica que valores pagos entre o valor da entrada e o m\u00C3\u00ADnimo da fatura ser\u00C3\u00A3o acatados para a ades\u00C3\u00A3o ao parcelamento
+   * Quando verdadeiro, indica que valores pagos entre o valor da entrada e o m\u00EDnimo da fatura ser\u00E3o acatados para a ades\u00E3o ao parcelamento
    **/
   public ConfiguracaoRotativoPersist aceitaPagamentoMaiorQueEntrada(Boolean aceitaPagamentoMaiorQueEntrada) {
     this.aceitaPagamentoMaiorQueEntrada = aceitaPagamentoMaiorQueEntrada;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Quando verdadeiro, indica que valores pagos entre o valor da entrada e o m\u00C3\u00ADnimo da fatura ser\u00C3\u00A3o acatados para a ades\u00C3\u00A3o ao parcelamento")
+  @ApiModelProperty(example = "false", value = "Quando verdadeiro, indica que valores pagos entre o valor da entrada e o m\u00EDnimo da fatura ser\u00E3o acatados para a ades\u00E3o ao parcelamento")
   @JsonProperty("aceitaPagamentoMaiorQueEntrada")
   public Boolean getAceitaPagamentoMaiorQueEntrada() {
     return aceitaPagamentoMaiorQueEntrada;
@@ -214,14 +214,14 @@ public class ConfiguracaoRotativoPersist   {
 
   
   /**
-   * Valor m\u00C3\u00ADnimo da parcela que deve ser aceito na oferta.
+   * Valor m\u00EDnimo da parcela que deve ser aceito na oferta.
    **/
   public ConfiguracaoRotativoPersist valorMinimoParcela(BigDecimal valorMinimoParcela) {
     this.valorMinimoParcela = valorMinimoParcela;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor m\u00C3\u00ADnimo da parcela que deve ser aceito na oferta.")
+  @ApiModelProperty(example = "null", value = "Valor m\u00EDnimo da parcela que deve ser aceito na oferta.")
   @JsonProperty("valorMinimoParcela")
   public BigDecimal getValorMinimoParcela() {
     return valorMinimoParcela;
@@ -250,14 +250,14 @@ public class ConfiguracaoRotativoPersist   {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da regra de campanha.
+   * C\u00F3digo de Identifica\u00E7\u00E3o da regra de campanha.
    **/
   public ConfiguracaoRotativoPersist idRegraCampanha(Long idRegraCampanha) {
     this.idRegraCampanha = idRegraCampanha;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da regra de campanha.")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o da regra de campanha.")
   @JsonProperty("idRegraCampanha")
   public Long getIdRegraCampanha() {
     return idRegraCampanha;
@@ -268,14 +268,14 @@ public class ConfiguracaoRotativoPersist   {
 
   
   /**
-   * Quando verdadeiro, indica que parcelamento ofertado ter\u00C3\u00A1 como valor base o valor m\u00C3\u00ADnimo das transa\u00C3\u00A7\u00C3\u00B5es.
+   * Quando verdadeiro, indica que parcelamento ofertado ter\u00E1 como valor base o valor m\u00EDnimo das transa\u00E7\u00F5es.
    **/
   public ConfiguracaoRotativoPersist parcelarApenasMinimo(Boolean parcelarApenasMinimo) {
     this.parcelarApenasMinimo = parcelarApenasMinimo;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Quando verdadeiro, indica que parcelamento ofertado ter\u00C3\u00A1 como valor base o valor m\u00C3\u00ADnimo das transa\u00C3\u00A7\u00C3\u00B5es.")
+  @ApiModelProperty(example = "false", value = "Quando verdadeiro, indica que parcelamento ofertado ter\u00E1 como valor base o valor m\u00EDnimo das transa\u00E7\u00F5es.")
   @JsonProperty("parcelarApenasMinimo")
   public Boolean getParcelarApenasMinimo() {
     return parcelarApenasMinimo;
@@ -286,14 +286,14 @@ public class ConfiguracaoRotativoPersist   {
 
   
   /**
-   * Nome do usu\u00C3\u00A1rio
+   * Nome do usu\u00E1rio
    **/
   public ConfiguracaoRotativoPersist usuario(String usuario) {
     this.usuario = usuario;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome do usu\u00C3\u00A1rio")
+  @ApiModelProperty(example = "null", value = "Nome do usu\u00E1rio")
   @JsonProperty("usuario")
   public String getUsuario() {
     return usuario;

@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o do recurso de atualiza\u00C3\u00A7\u00C3\u00A3o de chave
+ * Representa\u00E7\u00E3o do recurso de atualiza\u00E7\u00E3o de chave
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o do recurso de atualiza\u00C3\u00A7\u00C3\u00A3o de chave")
+@ApiModel(description = "Representa\u00E7\u00E3o do recurso de atualiza\u00E7\u00E3o de chave")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class CartaoPayKeyUpdate   {
   
@@ -19,14 +19,14 @@ public class CartaoPayKeyUpdate   {
 
   
   /**
-   * Chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o criptografada
+   * Chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o criptografada
    **/
   public CartaoPayKeyUpdate chaveCriptograma(String chaveCriptograma) {
     this.chaveCriptograma = chaveCriptograma;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Chave de gera\u00C3\u00A7\u00C3\u00A3o de transa\u00C3\u00A7\u00C3\u00A3o criptografada")
+  @ApiModelProperty(example = "null", required = true, value = "Chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o criptografada")
   @JsonProperty("chaveCriptograma")
   public String getChaveCriptograma() {
     return chaveCriptograma;

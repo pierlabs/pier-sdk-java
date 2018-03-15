@@ -109,14 +109,14 @@ public class NotificacaoPushResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do emissor (id).
+   * C\u00F3digo de identifica\u00E7\u00E3o do emissor (id).
    **/
   public NotificacaoPushResponse idEmissor(Long idEmissor) {
     this.idEmissor = idEmissor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do emissor (id).")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do emissor (id).")
   @JsonProperty("idEmissor")
   public Long getIdEmissor() {
     return idEmissor;
@@ -127,14 +127,14 @@ public class NotificacaoPushResponse   {
 
   
   /**
-   * Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o
+   * Nome do tipoEvento da notifica\u00E7\u00E3o
    **/
   public NotificacaoPushResponse tipoEvento(TipoEventoEnum tipoEvento) {
     this.tipoEvento = tipoEvento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome do tipoEvento da notifica\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(example = "null", value = "Nome do tipoEvento da notifica\u00E7\u00E3o")
   @JsonProperty("tipoEvento")
   public TipoEventoEnum getTipoEvento() {
     return tipoEvento;
@@ -145,14 +145,14 @@ public class NotificacaoPushResponse   {
 
   
   /**
-   * Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o
+   * Status de envio da notifica\u00E7\u00E3o
    **/
   public NotificacaoPushResponse status(StatusEnum status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Status de envio da notifica\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(example = "null", value = "Status de envio da notifica\u00E7\u00E3o")
   @JsonProperty("status")
   public StatusEnum getStatus() {
     return status;
@@ -163,14 +163,14 @@ public class NotificacaoPushResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo identificado da pessoa
+   * C\u00F3digo identificado da pessoa
    **/
   public NotificacaoPushResponse idPessoa(Long idPessoa) {
     this.idPessoa = idPessoa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "C\u00C3\u00B3digo identificado da pessoa")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo identificado da pessoa")
   @JsonProperty("idPessoa")
   public Long getIdPessoa() {
     return idPessoa;
@@ -181,14 +181,14 @@ public class NotificacaoPushResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo identificador da conta
+   * C\u00F3digo identificador da conta
    **/
   public NotificacaoPushResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "C\u00C3\u00B3digo identificador da conta")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo identificador da conta")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -199,14 +199,14 @@ public class NotificacaoPushResponse   {
 
   
   /**
-   * Token do dispositivo a qual foi destinado a notifica\u00C3\u00A7\u00C3\u00A3o (device_token)
+   * Token do dispositivo a qual foi destinado a notifica\u00E7\u00E3o (device_token)
    **/
   public NotificacaoPushResponse tokenDispositivo(String tokenDispositivo) {
     this.tokenDispositivo = tokenDispositivo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Token do dispositivo a qual foi destinado a notifica\u00C3\u00A7\u00C3\u00A3o (device_token)")
+  @ApiModelProperty(example = "null", required = true, value = "Token do dispositivo a qual foi destinado a notifica\u00E7\u00E3o (device_token)")
   @JsonProperty("tokenDispositivo")
   public String getTokenDispositivo() {
     return tokenDispositivo;
@@ -217,14 +217,14 @@ public class NotificacaoPushResponse   {
 
   
   /**
-   * T\u00C3\u00ADtulo da notifica\u00C3\u00A7\u00C3\u00A3o enviada.
+   * T\u00EDtulo da notifica\u00E7\u00E3o enviada.
    **/
   public NotificacaoPushResponse titulo(String titulo) {
     this.titulo = titulo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "T\u00C3\u00ADtulo da notifica\u00C3\u00A7\u00C3\u00A3o enviada.")
+  @ApiModelProperty(example = "null", required = true, value = "T\u00EDtulo da notifica\u00E7\u00E3o enviada.")
   @JsonProperty("titulo")
   public String getTitulo() {
     return titulo;
@@ -235,14 +235,14 @@ public class NotificacaoPushResponse   {
 
   
   /**
-   * Conte\u00C3\u00BAdo da notifica\u00C3\u00A7\u00C3\u00A3o enviada.
+   * Conte\u00FAdo da notifica\u00E7\u00E3o enviada.
    **/
   public NotificacaoPushResponse conteudo(String conteudo) {
     this.conteudo = conteudo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Conte\u00C3\u00BAdo da notifica\u00C3\u00A7\u00C3\u00A3o enviada.")
+  @ApiModelProperty(example = "null", required = true, value = "Conte\u00FAdo da notifica\u00E7\u00E3o enviada.")
   @JsonProperty("conteudo")
   public String getConteudo() {
     return conteudo;
@@ -271,14 +271,14 @@ public class NotificacaoPushResponse   {
 
   
   /**
-   * N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es
+   * N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es
    **/
   public NotificacaoPushResponse protocolo(String protocolo) {
     this.protocolo = protocolo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero do protocolo de envio de notifica\u00C3\u00A7\u00C3\u00B5es")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es")
   @JsonProperty("protocolo")
   public String getProtocolo() {
     return protocolo;

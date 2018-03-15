@@ -20,14 +20,14 @@ public class DetalheOportunidadePersist   {
 
   
   /**
-   * Nome do conte\u00C3\u00BAdo
+   * Nome do conte\u00FAdo
    **/
   public DetalheOportunidadePersist nomeCampo(String nomeCampo) {
     this.nomeCampo = nomeCampo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Nome do conte\u00C3\u00BAdo")
+  @ApiModelProperty(example = "null", required = true, value = "Nome do conte\u00FAdo")
   @JsonProperty("nomeCampo")
   public String getNomeCampo() {
     return nomeCampo;
@@ -38,14 +38,14 @@ public class DetalheOportunidadePersist   {
 
   
   /**
-   * Conte\u00C3\u00BAdo do detalhe
+   * Conte\u00FAdo do detalhe
    **/
   public DetalheOportunidadePersist conteudo(String conteudo) {
     this.conteudo = conteudo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Conte\u00C3\u00BAdo do detalhe")
+  @ApiModelProperty(example = "null", required = true, value = "Conte\u00FAdo do detalhe")
   @JsonProperty("conteudo")
   public String getConteudo() {
     return conteudo;

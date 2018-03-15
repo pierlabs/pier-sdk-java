@@ -39,7 +39,7 @@ public class JobApi {
   /**
    * Ativar Job
    * Este recurso adiciona o job ao agendador de tarefas.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).
    * @return JobResponse
    */
   public JobResponse ativarJobUsingPOST(Long id) throws ApiException {
@@ -87,7 +87,7 @@ public class JobApi {
   /**
    * Atualizar Job
    * Este recurso permite atualizar os dados de um job cadastrado.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).
    * @param descricao descricao.
    * @param cron Cron do Job.
    * @param groovy groovy
@@ -157,7 +157,7 @@ public class JobApi {
   /**
    * Desativar Job
    * Este recurso retira o job do agendador de tarefas.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Job (id).
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Job (id).
    * @return JobResponse
    */
   public JobResponse desativarJobUsingPOST(Long id) throws ApiException {
@@ -206,14 +206,14 @@ public class JobApi {
    * Listar Jobs
    * Este recurso permite que sejam listados os jobs existentes na base do PIER.
    * @param groovy Script Groovy do Job
-   * @param descricao Descri\u00C3\u00A7\u00C3\u00A3o do Job
+   * @param descricao Descri\u00E7\u00E3o do Job
    * @param cron Cron do Job
    * @param status Status do Job
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
    * @return PageJobResponse
    */
-  public PageJobResponse listarUsingGET24(String groovy, String descricao, String cron, String status, Integer page, Integer limit) throws ApiException {
+  public PageJobResponse listarUsingGET26(String groovy, String descricao, String cron, String status, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

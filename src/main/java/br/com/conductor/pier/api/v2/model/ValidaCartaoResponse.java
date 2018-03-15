@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Objeto de resposta para a valida\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o
+ * Objeto de resposta para a valida\u00E7\u00E3o de cart\u00E3o
  **/
 
-@ApiModel(description = "Objeto de resposta para a valida\u00C3\u00A7\u00C3\u00A3o de cart\u00C3\u00A3o")
+@ApiModel(description = "Objeto de resposta para a valida\u00E7\u00E3o de cart\u00E3o")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ValidaCartaoResponse   {
   
@@ -26,14 +26,14 @@ public class ValidaCartaoResponse   {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o
+   * Descri\u00E7\u00E3o do status do cart\u00E3o
    **/
   public ValidaCartaoResponse idStatusCartao(Long idStatusCartao) {
     this.idStatusCartao = idStatusCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do status do cart\u00E3o")
   @JsonProperty("idStatusCartao")
   public Long getIdStatusCartao() {
     return idStatusCartao;
@@ -44,14 +44,14 @@ public class ValidaCartaoResponse   {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o
+   * Descri\u00E7\u00E3o do status do cart\u00E3o
    **/
   public ValidaCartaoResponse statusCartao(String statusCartao) {
     this.statusCartao = statusCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do status do cart\u00E3o")
   @JsonProperty("statusCartao")
   public String getStatusCartao() {
     return statusCartao;
@@ -62,14 +62,14 @@ public class ValidaCartaoResponse   {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do status da conta
+   * Descri\u00E7\u00E3o do status da conta
    **/
   public ValidaCartaoResponse idStatusConta(Long idStatusConta) {
     this.idStatusConta = idStatusConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o do status da conta")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do status da conta")
   @JsonProperty("idStatusConta")
   public Long getIdStatusConta() {
     return idStatusConta;
@@ -80,14 +80,14 @@ public class ValidaCartaoResponse   {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do status da conta
+   * Descri\u00E7\u00E3o do status da conta
    **/
   public ValidaCartaoResponse statusConta(String statusConta) {
     this.statusConta = statusConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o do status da conta")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do status da conta")
   @JsonProperty("statusConta")
   public String getStatusConta() {
     return statusConta;
@@ -98,14 +98,14 @@ public class ValidaCartaoResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo identificador da conta.
+   * C\u00F3digo identificador da conta.
    **/
   public ValidaCartaoResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador da conta.")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador da conta.")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -116,14 +116,14 @@ public class ValidaCartaoResponse   {
 
   
   /**
-   * N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+   * N\u00FAmero da ag\u00EAncia.
    **/
   public ValidaCartaoResponse numeroAgencia(Integer numeroAgencia) {
     this.numeroAgencia = numeroAgencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero da ag\u00C3\u00AAncia.")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero da ag\u00EAncia.")
   @JsonProperty("numeroAgencia")
   public Integer getNumeroAgencia() {
     return numeroAgencia;
@@ -134,14 +134,14 @@ public class ValidaCartaoResponse   {
 
   
   /**
-   * N\u00C3\u00BAmero da conta corrente.
+   * N\u00FAmero da conta corrente.
    **/
   public ValidaCartaoResponse numeroContaCorrente(String numeroContaCorrente) {
     this.numeroContaCorrente = numeroContaCorrente;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero da conta corrente.")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero da conta corrente.")
   @JsonProperty("numeroContaCorrente")
   public String getNumeroContaCorrente() {
     return numeroContaCorrente;

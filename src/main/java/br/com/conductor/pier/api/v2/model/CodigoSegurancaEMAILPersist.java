@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o do recurso validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a.
+ * Representa\u00E7\u00E3o do recurso validar c\u00F3digo de seguran\u00E7a.
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o do recurso validar c\u00C3\u00B3digo de seguran\u00C3\u00A7a.")
+@ApiModel(description = "Representa\u00E7\u00E3o do recurso validar c\u00F3digo de seguran\u00E7a.")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class CodigoSegurancaEMAILPersist   {
   
@@ -20,14 +20,14 @@ public class CodigoSegurancaEMAILPersist   {
 
   
   /**
-   * E-mail usado para envio do c\u00C3\u00B3digo de seguran\u00C3\u00A7a.
+   * E-mail usado para envio do c\u00F3digo de seguran\u00E7a.
    **/
   public CodigoSegurancaEMAILPersist email(String email) {
     this.email = email;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "E-mail usado para envio do c\u00C3\u00B3digo de seguran\u00C3\u00A7a.")
+  @ApiModelProperty(example = "null", value = "E-mail usado para envio do c\u00F3digo de seguran\u00E7a.")
   @JsonProperty("email")
   public String getEmail() {
     return email;
@@ -38,14 +38,14 @@ public class CodigoSegurancaEMAILPersist   {
 
   
   /**
-   * Token para valida\u00C3\u00A7\u00C3\u00A3o.
+   * Token para valida\u00E7\u00E3o.
    **/
   public CodigoSegurancaEMAILPersist codigoSeguranca(String codigoSeguranca) {
     this.codigoSeguranca = codigoSeguranca;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Token para valida\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(example = "null", value = "Token para valida\u00E7\u00E3o.")
   @JsonProperty("codigoSeguranca")
   public String getCodigoSeguranca() {
     return codigoSeguranca;

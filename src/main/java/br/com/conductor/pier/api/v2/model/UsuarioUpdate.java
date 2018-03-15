@@ -23,14 +23,14 @@ public class UsuarioUpdate   {
 
   
   /**
-   * Apresenta o nome do usu\u00C3\u00A1rio.
+   * Apresenta o nome do usu\u00E1rio.
    **/
   public UsuarioUpdate nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o nome do usu\u00C3\u00A1rio.")
+  @ApiModelProperty(example = "null", value = "Apresenta o nome do usu\u00E1rio.")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -41,14 +41,14 @@ public class UsuarioUpdate   {
 
   
   /**
-   * Apresenta o login do usu\u00C3\u00A1rio.
+   * Apresenta o login do usu\u00E1rio.
    **/
   public UsuarioUpdate login(String login) {
     this.login = login;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o login do usu\u00C3\u00A1rio.")
+  @ApiModelProperty(example = "null", value = "Apresenta o login do usu\u00E1rio.")
   @JsonProperty("login")
   public String getLogin() {
     return login;
@@ -59,14 +59,14 @@ public class UsuarioUpdate   {
 
   
   /**
-   * N\u00C3\u00BAmero do CPF.
+   * N\u00FAmero do CPF.
    **/
   public UsuarioUpdate cpf(String cpf) {
     this.cpf = cpf;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero do CPF.")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero do CPF.")
   @JsonProperty("cpf")
   public String getCpf() {
     return cpf;
@@ -77,14 +77,14 @@ public class UsuarioUpdate   {
 
   
   /**
-   * Apresenta o email do usu\u00C3\u00A1rio.
+   * Apresenta o email do usu\u00E1rio.
    **/
   public UsuarioUpdate email(String email) {
     this.email = email;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o email do usu\u00C3\u00A1rio.")
+  @ApiModelProperty(example = "null", value = "Apresenta o email do usu\u00E1rio.")
   @JsonProperty("email")
   public String getEmail() {
     return email;
@@ -95,14 +95,14 @@ public class UsuarioUpdate   {
 
   
   /**
-   * Apresenta o status do usu\u00C3\u00A1rio.
+   * Apresenta o status do usu\u00E1rio.
    **/
   public UsuarioUpdate status(String status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o status do usu\u00C3\u00A1rio.")
+  @ApiModelProperty(example = "null", value = "Apresenta o status do usu\u00E1rio.")
   @JsonProperty("status")
   public String getStatus() {
     return status;

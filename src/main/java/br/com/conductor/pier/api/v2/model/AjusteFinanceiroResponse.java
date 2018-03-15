@@ -23,14 +23,14 @@ public class AjusteFinanceiroResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id)
+   * C\u00F3digo de identifica\u00E7\u00E3o do ajuste (id)
    **/
   public AjusteFinanceiroResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do ajuste (id)")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do ajuste (id)")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -41,14 +41,14 @@ public class AjusteFinanceiroResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do ajuste
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo do ajuste
    **/
   public AjusteFinanceiroResponse idTipoAjuste(Long idTipoAjuste) {
     this.idTipoAjuste = idTipoAjuste;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do ajuste")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo do ajuste")
   @JsonProperty("idTipoAjuste")
   public Long getIdTipoAjuste() {
     return idTipoAjuste;
@@ -59,14 +59,14 @@ public class AjusteFinanceiroResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (idConta)
+   * C\u00F3digo de identifica\u00E7\u00E3o da conta (idConta)
    **/
   public AjusteFinanceiroResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta (idConta)")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o da conta (idConta)")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -113,14 +113,14 @@ public class AjusteFinanceiroResponse   {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do status da autoriza\u00C3\u00A7\u00C3\u00A3o da compra.
+   * Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra.
    **/
   public AjusteFinanceiroResponse identificadorExterno(String identificadorExterno) {
     this.identificadorExterno = identificadorExterno;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o do status da autoriza\u00C3\u00A7\u00C3\u00A3o da compra.")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra.")
   @JsonProperty("identificadorExterno")
   public String getIdentificadorExterno() {
     return identificadorExterno;

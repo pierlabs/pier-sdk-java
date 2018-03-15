@@ -21,14 +21,14 @@ public class DetalheOportunidadeUpdate   {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do detalhe
+   * C\u00F3digo identificador do detalhe
    **/
   public DetalheOportunidadeUpdate id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador do detalhe")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador do detalhe")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -39,14 +39,14 @@ public class DetalheOportunidadeUpdate   {
 
   
   /**
-   * Nome do conte\u00C3\u00BAdo
+   * Nome do conte\u00FAdo
    **/
   public DetalheOportunidadeUpdate nomeCampo(String nomeCampo) {
     this.nomeCampo = nomeCampo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome do conte\u00C3\u00BAdo")
+  @ApiModelProperty(example = "null", value = "Nome do conte\u00FAdo")
   @JsonProperty("nomeCampo")
   public String getNomeCampo() {
     return nomeCampo;
@@ -57,14 +57,14 @@ public class DetalheOportunidadeUpdate   {
 
   
   /**
-   * Conte\u00C3\u00BAdo do detalhe
+   * Conte\u00FAdo do detalhe
    **/
   public DetalheOportunidadeUpdate conteudo(String conteudo) {
     this.conteudo = conteudo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Conte\u00C3\u00BAdo do detalhe")
+  @ApiModelProperty(example = "null", value = "Conte\u00FAdo do detalhe")
   @JsonProperty("conteudo")
   public String getConteudo() {
     return conteudo;

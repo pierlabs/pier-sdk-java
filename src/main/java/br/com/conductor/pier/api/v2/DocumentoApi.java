@@ -48,7 +48,7 @@ public class DocumentoApi {
   /**
    * Altera o tipo de template
    * Esse recurso permite alterar os dados do tipo de template.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id).
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do tipo de template (id).
    * @param persist persist
    * @return TipoTemplateResponse
    */
@@ -102,7 +102,7 @@ public class DocumentoApi {
   /**
    * Atualizar templates dos documentos
    * Esse recurso permite atualizar templates dos documentos.
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento template (id).
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o do documento template (id).
    * @param persist persist
    * @return DocumentoTemplateResponse
    */
@@ -155,16 +155,16 @@ public class DocumentoApi {
   
   /**
    * Consulta documentos
-   * Esse recurso permite consultar um documento espec\u00C3\u00ADfico a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento (id).
+   * Esse recurso permite consultar um documento espec\u00EDfico a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o do documento (id).
    * @return DocumentoDetalhadoResponse
    */
-  public DocumentoDetalhadoResponse consultarUsingGET13(Long id) throws ApiException {
+  public DocumentoDetalhadoResponse consultarUsingGET14(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET13");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET14");
      }
      
     // create path and map variables
@@ -204,15 +204,15 @@ public class DocumentoApi {
   /**
    * Consultar templates dos documentos
    * Esse recurso permite consultar templates dos documentos.
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do documento template (id).
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o do documento template (id).
    * @return DocumentoTemplateResponse
    */
-  public DocumentoTemplateResponse consultarUsingGET14(Long id) throws ApiException {
+  public DocumentoTemplateResponse consultarUsingGET15(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET14");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET15");
      }
      
     // create path and map variables
@@ -252,15 +252,15 @@ public class DocumentoApi {
   /**
    * Consultar tipo de template
    * Esse recurso permite consultar um determinado tipo de template a partir do id recebido e do id do emissor.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do tipo de template (id).
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do tipo de template (id).
    * @return TipoTemplateResponse
    */
-  public TipoTemplateResponse consultarUsingGET38(Long id) throws ApiException {
+  public TipoTemplateResponse consultarUsingGET39(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET38");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET39");
      }
      
     // create path and map variables
@@ -298,8 +298,8 @@ public class DocumentoApi {
   }
   
   /**
-   * Integra um arquivo a reposit\u00C3\u00B3rios remotos.
-   * Este recurso permite integrar um documento ao reposit\u00C3\u00B3rio pre-configurado.
+   * Integra um arquivo a reposit\u00F3rios remotos.
+   * Este recurso permite integrar um documento ao reposit\u00F3rio pre-configurado.
    * @param integrarDocumentoRequest integrarDocumentoRequest
    * @return DocumentoIntegracaoResponse
    */
@@ -347,15 +347,15 @@ public class DocumentoApi {
   /**
    * Lista documentos
    * Esse recurso permite listar documentos.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param idTemplateDocumento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do template do documento.
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @param idTemplateDocumento C\u00F3digo de identifica\u00E7\u00E3o do template do documento.
    * @param nome Nome do documento.
    * @param extensao Extensao do documento.
    * @return PageDocumentoResponse
    */
-  public PageDocumentoResponse listarUsingGET18(List<String> sort, Integer page, Integer limit, Long idTemplateDocumento, String nome, String extensao) throws ApiException {
+  public PageDocumentoResponse listarUsingGET19(List<String> sort, Integer page, Integer limit, Long idTemplateDocumento, String nome, String extensao) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -406,13 +406,13 @@ public class DocumentoApi {
   /**
    * Lista os templates dos documentos
    * Esse recurso permite listar os templates dos documentos.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param idTipoTemplate C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo do template.
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @param idTipoTemplate C\u00F3digo de identifica\u00E7\u00E3o do tipo do template.
    * @return PageDocumentoTemplateResponse
    */
-  public PageDocumentoTemplateResponse listarUsingGET19(List<String> sort, Integer page, Integer limit, Long idTipoTemplate) throws ApiException {
+  public PageDocumentoTemplateResponse listarUsingGET20(List<String> sort, Integer page, Integer limit, Long idTipoTemplate) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -459,12 +459,12 @@ public class DocumentoApi {
   /**
    * Lista os tipos de templates
    * Esse recurso permite listar os tipos de templates associados ao emissor.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
    * @return PageTipoTemplateResponse
    */
-  public PageTipoTemplateResponse listarUsingGET45(List<String> sort, Integer page, Integer limit) throws ApiException {
+  public PageTipoTemplateResponse listarUsingGET47(List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

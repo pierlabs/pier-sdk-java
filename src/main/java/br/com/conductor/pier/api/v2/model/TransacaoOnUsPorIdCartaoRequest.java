@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * Objeto de Requisi\u00C3\u00A7\u00C3\u00A3o de Transa\u00C3\u00A7\u00C3\u00A3o On Us por idCartao
+ * Objeto de Requisi\u00E7\u00E3o de Transa\u00E7\u00E3o On Us por idCartao
  **/
 
-@ApiModel(description = "Objeto de Requisi\u00C3\u00A7\u00C3\u00A3o de Transa\u00C3\u00A7\u00C3\u00A3o On Us por idCartao")
+@ApiModel(description = "Objeto de Requisi\u00E7\u00E3o de Transa\u00E7\u00E3o On Us por idCartao")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TransacaoOnUsPorIdCartaoRequest   {
   
@@ -26,14 +26,14 @@ public class TransacaoOnUsPorIdCartaoRequest   {
 
   
   /**
-   * N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.
+   * N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou.
    **/
   public TransacaoOnUsPorIdCartaoRequest nsuOrigem(String nsuOrigem) {
     this.nsuOrigem = nsuOrigem;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.")
+  @ApiModelProperty(example = "null", required = true, value = "N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou.")
   @JsonProperty("nsuOrigem")
   public String getNsuOrigem() {
     return nsuOrigem;
@@ -44,14 +44,14 @@ public class TransacaoOnUsPorIdCartaoRequest   {
 
   
   /**
-   * C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.
+   * C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o.
    **/
   public TransacaoOnUsPorIdCartaoRequest codigoProcessamento(String codigoProcessamento) {
     this.codigoProcessamento = codigoProcessamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o.")
   @JsonProperty("codigoProcessamento")
   public String getCodigoProcessamento() {
     return codigoProcessamento;
@@ -62,14 +62,14 @@ public class TransacaoOnUsPorIdCartaoRequest   {
 
   
   /**
-   * Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos.
+   * Valor da transa\u00E7\u00E3o com duas casas decimais para os centavos.
    **/
   public TransacaoOnUsPorIdCartaoRequest valorTransacao(BigDecimal valorTransacao) {
     this.valorTransacao = valorTransacao;
     return this;
   }
   
-  @ApiModelProperty(example = "10.25", required = true, value = "Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos.")
+  @ApiModelProperty(example = "10.25", required = true, value = "Valor da transa\u00E7\u00E3o com duas casas decimais para os centavos.")
   @JsonProperty("valorTransacao")
   public BigDecimal getValorTransacao() {
     return valorTransacao;
@@ -80,14 +80,14 @@ public class TransacaoOnUsPorIdCartaoRequest   {
 
   
   /**
-   * N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV).
+   * N\u00FAmero do Estabelecimento (N\u00FAmero+DV).
    **/
   public TransacaoOnUsPorIdCartaoRequest numeroEstabelecimento(Long numeroEstabelecimento) {
     this.numeroEstabelecimento = numeroEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV).")
+  @ApiModelProperty(example = "null", required = true, value = "N\u00FAmero do Estabelecimento (N\u00FAmero+DV).")
   @JsonProperty("numeroEstabelecimento")
   public Long getNumeroEstabelecimento() {
     return numeroEstabelecimento;
@@ -116,14 +116,14 @@ public class TransacaoOnUsPorIdCartaoRequest   {
 
   
   /**
-   * Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
+   * Apresenta a identifica\u00E7\u00E3o do terminal requisitante
    **/
   public TransacaoOnUsPorIdCartaoRequest terminalRequisitante(String terminalRequisitante) {
     this.terminalRequisitante = terminalRequisitante;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante")
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta a identifica\u00E7\u00E3o do terminal requisitante")
   @JsonProperty("terminalRequisitante")
   public String getTerminalRequisitante() {
     return terminalRequisitante;
@@ -134,14 +134,14 @@ public class TransacaoOnUsPorIdCartaoRequest   {
 
   
   /**
-   * N\u00C3\u00BAmero de Parcelas.
+   * N\u00FAmero de Parcelas.
    **/
   public TransacaoOnUsPorIdCartaoRequest numeroParcelas(Long numeroParcelas) {
     this.numeroParcelas = numeroParcelas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "N\u00C3\u00BAmero de Parcelas.")
+  @ApiModelProperty(example = "null", required = true, value = "N\u00FAmero de Parcelas.")
   @JsonProperty("numeroParcelas")
   public Long getNumeroParcelas() {
     return numeroParcelas;

@@ -29,14 +29,14 @@ public class PessoaDetalheResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo identificador da pessoa
+   * C\u00F3digo identificador da pessoa
    **/
   public PessoaDetalheResponse idPessoa(Long idPessoa) {
     this.idPessoa = idPessoa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador da pessoa")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador da pessoa")
   @JsonProperty("idPessoa")
   public Long getIdPessoa() {
     return idPessoa;
@@ -47,14 +47,14 @@ public class PessoaDetalheResponse   {
 
   
   /**
-   * Apresenta o nome da m\u00C3\u00A3e da pessoa fisica
+   * Apresenta o nome da m\u00E3e da pessoa fisica
    **/
   public PessoaDetalheResponse nomeMae(String nomeMae) {
     this.nomeMae = nomeMae;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o nome da m\u00C3\u00A3e da pessoa fisica")
+  @ApiModelProperty(example = "null", value = "Apresenta o nome da m\u00E3e da pessoa fisica")
   @JsonProperty("nomeMae")
   public String getNomeMae() {
     return nomeMae;
@@ -83,14 +83,14 @@ public class PessoaDetalheResponse   {
 
   
   /**
-   * Profiss\u00C3\u00A3o da pessoa fisica
+   * Profiss\u00E3o da pessoa fisica
    **/
   public PessoaDetalheResponse idProfissao(String idProfissao) {
     this.idProfissao = idProfissao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Profiss\u00C3\u00A3o da pessoa fisica")
+  @ApiModelProperty(example = "null", value = "Profiss\u00E3o da pessoa fisica")
   @JsonProperty("idProfissao")
   public String getIdProfissao() {
     return idProfissao;
@@ -101,14 +101,14 @@ public class PessoaDetalheResponse   {
 
   
   /**
-   * Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica
+   * Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica
    **/
   public PessoaDetalheResponse idNaturezaOcupacao(Long idNaturezaOcupacao) {
     this.idNaturezaOcupacao = idNaturezaOcupacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Id Natureza Ocupa\u00C3\u00A7\u00C3\u00A3o da pessoa fisica")
+  @ApiModelProperty(example = "null", value = "Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica")
   @JsonProperty("idNaturezaOcupacao")
   public Long getIdNaturezaOcupacao() {
     return idNaturezaOcupacao;
@@ -137,14 +137,14 @@ public class PessoaDetalheResponse   {
 
   
   /**
-   * N\u00C3\u00BAmero do banco.
+   * N\u00FAmero do banco.
    **/
   public PessoaDetalheResponse numeroBanco(Integer numeroBanco) {
     this.numeroBanco = numeroBanco;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero do banco.")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero do banco.")
   @JsonProperty("numeroBanco")
   public Integer getNumeroBanco() {
     return numeroBanco;
@@ -155,14 +155,14 @@ public class PessoaDetalheResponse   {
 
   
   /**
-   * N\u00C3\u00BAmero da ag\u00C3\u00AAncia.
+   * N\u00FAmero da ag\u00EAncia.
    **/
   public PessoaDetalheResponse numeroAgencia(Integer numeroAgencia) {
     this.numeroAgencia = numeroAgencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero da ag\u00C3\u00AAncia.")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero da ag\u00EAncia.")
   @JsonProperty("numeroAgencia")
   public Integer getNumeroAgencia() {
     return numeroAgencia;
@@ -173,14 +173,14 @@ public class PessoaDetalheResponse   {
 
   
   /**
-   * N\u00C3\u00BAmero da conta corrente.
+   * N\u00FAmero da conta corrente.
    **/
   public PessoaDetalheResponse numeroContaCorrente(String numeroContaCorrente) {
     this.numeroContaCorrente = numeroContaCorrente;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero da conta corrente.")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero da conta corrente.")
   @JsonProperty("numeroContaCorrente")
   public String getNumeroContaCorrente() {
     return numeroContaCorrente;
@@ -209,14 +209,14 @@ public class PessoaDetalheResponse   {
 
   
   /**
-   * Nome que deve ser impresso no cart\u00C3\u00A3o
+   * Nome que deve ser impresso no cart\u00E3o
    **/
   public PessoaDetalheResponse nomeEmpresa(String nomeEmpresa) {
     this.nomeEmpresa = nomeEmpresa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome que deve ser impresso no cart\u00C3\u00A3o")
+  @ApiModelProperty(example = "null", value = "Nome que deve ser impresso no cart\u00E3o")
   @JsonProperty("nomeEmpresa")
   public String getNomeEmpresa() {
     return nomeEmpresa;

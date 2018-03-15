@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso StatusTipoOportunidadeAUD
+ * Representa\u00E7\u00E3o da resposta do recurso StatusTipoOportunidadeAUD
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso StatusTipoOportunidadeAUD")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso StatusTipoOportunidadeAUD")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class StatusOportunidadeAUDResponse   {
   
@@ -26,14 +26,14 @@ public class StatusOportunidadeAUDResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo identificador da auditoria dos tipos oportunidades
+   * C\u00F3digo identificador da auditoria dos tipos oportunidades
    **/
   public StatusOportunidadeAUDResponse rev(Long rev) {
     this.rev = rev;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador da auditoria dos tipos oportunidades")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador da auditoria dos tipos oportunidades")
   @JsonProperty("rev")
   public Long getRev() {
     return rev;
@@ -44,14 +44,14 @@ public class StatusOportunidadeAUDResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
+   * C\u00F3digo que representa o tipo de a\u00E7\u00E3o realizada no recurso de tipos oportunidades
    **/
   public StatusOportunidadeAUDResponse revType(Long revType) {
     this.revType = revType;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo que representa o tipo de a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo que representa o tipo de a\u00E7\u00E3o realizada no recurso de tipos oportunidades")
   @JsonProperty("revType")
   public Long getRevType() {
     return revType;
@@ -62,14 +62,14 @@ public class StatusOportunidadeAUDResponse   {
 
   
   /**
-   * Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades
+   * Data da a\u00E7\u00E3o realizada no recurso de tipos oportunidades
    **/
   public StatusOportunidadeAUDResponse revDate(String revDate) {
     this.revDate = revDate;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data da a\u00C3\u00A7\u00C3\u00A3o realizada no recurso de tipos oportunidades")
+  @ApiModelProperty(example = "null", value = "Data da a\u00E7\u00E3o realizada no recurso de tipos oportunidades")
   @JsonProperty("revDate")
   public String getRevDate() {
     return revDate;
@@ -80,14 +80,14 @@ public class StatusOportunidadeAUDResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do StatusOportunidade
+   * C\u00F3digo identificador do StatusOportunidade
    **/
   public StatusOportunidadeAUDResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador do StatusOportunidade")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador do StatusOportunidade")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -98,14 +98,14 @@ public class StatusOportunidadeAUDResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do TipoOportunidade
+   * C\u00F3digo identificador do TipoOportunidade
    **/
   public StatusOportunidadeAUDResponse idTipoOportunidade(Long idTipoOportunidade) {
     this.idTipoOportunidade = idTipoOportunidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador do TipoOportunidade")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador do TipoOportunidade")
   @JsonProperty("idTipoOportunidade")
   public Long getIdTipoOportunidade() {
     return idTipoOportunidade;
@@ -152,14 +152,14 @@ public class StatusOportunidadeAUDResponse   {
 
   
   /**
-   * Flag que representa se o tipo oportunidade est\u00C3\u00A1 ativo
+   * Flag que representa se o tipo oportunidade est\u00E1 ativo
    **/
   public StatusOportunidadeAUDResponse flagAtivo(Boolean flagAtivo) {
     this.flagAtivo = flagAtivo;
     return this;
   }
   
-  @ApiModelProperty(example = "true", value = "Flag que representa se o tipo oportunidade est\u00C3\u00A1 ativo")
+  @ApiModelProperty(example = "true", value = "Flag que representa se o tipo oportunidade est\u00E1 ativo")
   @JsonProperty("flagAtivo")
   public Boolean getFlagAtivo() {
     return flagAtivo;

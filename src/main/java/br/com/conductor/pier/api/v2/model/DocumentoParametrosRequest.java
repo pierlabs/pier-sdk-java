@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * Objeto que encapsula os par\u00C3\u00A2metros para gera\u00C3\u00A7\u00C3\u00A3o de um documento
+ * Objeto que encapsula os par\u00E2metros para gera\u00E7\u00E3o de um documento
  **/
 
-@ApiModel(description = "Objeto que encapsula os par\u00C3\u00A2metros para gera\u00C3\u00A7\u00C3\u00A3o de um documento")
+@ApiModel(description = "Objeto que encapsula os par\u00E2metros para gera\u00E7\u00E3o de um documento")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class DocumentoParametrosRequest   {
   
@@ -60,14 +60,14 @@ public class DocumentoParametrosRequest   {
 
   
   /**
-   * Lista de par\u00C3\u00A2metros para montagem do documento.
+   * Lista de par\u00E2metros para montagem do documento.
    **/
   public DocumentoParametrosRequest parametrosConteudo(List<PropriedadeDocumentoRequest> parametrosConteudo) {
     this.parametrosConteudo = parametrosConteudo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Lista de par\u00C3\u00A2metros para montagem do documento.")
+  @ApiModelProperty(example = "null", value = "Lista de par\u00E2metros para montagem do documento.")
   @JsonProperty("parametrosConteudo")
   public List<PropriedadeDocumentoRequest> getParametrosConteudo() {
     return parametrosConteudo;

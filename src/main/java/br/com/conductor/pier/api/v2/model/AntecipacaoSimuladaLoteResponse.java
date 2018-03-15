@@ -12,10 +12,10 @@ import java.util.List;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso Antecipacao Simulada
+ * Representa\u00E7\u00E3o da resposta do recurso Antecipacao Simulada
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso Antecipacao Simulada")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso Antecipacao Simulada")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class AntecipacaoSimuladaLoteResponse   {
   
@@ -80,14 +80,14 @@ public class AntecipacaoSimuladaLoteResponse   {
 
   
   /**
-   * Antecipa\u00C3\u00A7\u00C3\u00B5es Simuladas.
+   * Antecipa\u00E7\u00F5es Simuladas.
    **/
   public AntecipacaoSimuladaLoteResponse antecipacoesSimuladas(List<AntecipacaoSimuladaResponse> antecipacoesSimuladas) {
     this.antecipacoesSimuladas = antecipacoesSimuladas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Antecipa\u00C3\u00A7\u00C3\u00B5es Simuladas.")
+  @ApiModelProperty(example = "null", value = "Antecipa\u00E7\u00F5es Simuladas.")
   @JsonProperty("antecipacoesSimuladas")
   public List<AntecipacaoSimuladaResponse> getAntecipacoesSimuladas() {
     return antecipacoesSimuladas;

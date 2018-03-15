@@ -10,15 +10,14 @@ import java.util.Date;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o do recurso token
+ * Representa\u00E7\u00E3o do recurso token
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o do recurso token")
+@ApiModel(description = "Representa\u00E7\u00E3o do recurso token")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TokenResponse   {
   
   private Long id = null;
-  private String token = null;
   private Long base = null;
   private String owner = null;
 
@@ -49,14 +48,14 @@ public class TokenResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do token
+   * C\u00F3digo identificador do token
    **/
   public TokenResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador do token")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador do token")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -67,32 +66,14 @@ public class TokenResponse   {
 
   
   /**
-   * Token
-   **/
-  public TokenResponse token(String token) {
-    this.token = token;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Token")
-  @JsonProperty("token")
-  public String getToken() {
-    return token;
-  }
-  public void setToken(String token) {
-    this.token = token;
-  }
-
-  
-  /**
-   * C\u00C3\u00B3digo identificador da base
+   * C\u00F3digo identificador da base
    **/
   public TokenResponse base(Long base) {
     this.base = base;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador da base")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador da base")
   @JsonProperty("base")
   public Long getBase() {
     return base;
@@ -139,14 +120,14 @@ public class TokenResponse   {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o de quem criou o token
+   * Descri\u00E7\u00E3o de quem criou o token
    **/
   public TokenResponse criadoPor(String criadoPor) {
     this.criadoPor = criadoPor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o de quem criou o token")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o de quem criou o token")
   @JsonProperty("criadoPor")
   public String getCriadoPor() {
     return criadoPor;
@@ -157,14 +138,14 @@ public class TokenResponse   {
 
   
   /**
-   * Data de cria\u00C3\u00A7\u00C3\u00A3o do token
+   * Data de cria\u00E7\u00E3o do token
    **/
   public TokenResponse dataCriacao(Date dataCriacao) {
     this.dataCriacao = dataCriacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data de cria\u00C3\u00A7\u00C3\u00A3o do token")
+  @ApiModelProperty(example = "null", value = "Data de cria\u00E7\u00E3o do token")
   @JsonProperty("dataCriacao")
   public Date getDataCriacao() {
     return dataCriacao;
@@ -175,14 +156,14 @@ public class TokenResponse   {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o de quem alterou o token
+   * Descri\u00E7\u00E3o de quem alterou o token
    **/
   public TokenResponse alteradoPor(String alteradoPor) {
     this.alteradoPor = alteradoPor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o de quem alterou o token")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o de quem alterou o token")
   @JsonProperty("alteradoPor")
   public String getAlteradoPor() {
     return alteradoPor;
@@ -193,14 +174,14 @@ public class TokenResponse   {
 
   
   /**
-   * Data de modifica\u00C3\u00A7\u00C3\u00A3o do token
+   * Data de modifica\u00E7\u00E3o do token
    **/
   public TokenResponse dataModificacao(Date dataModificacao) {
     this.dataModificacao = dataModificacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data de modifica\u00C3\u00A7\u00C3\u00A3o do token")
+  @ApiModelProperty(example = "null", value = "Data de modifica\u00E7\u00E3o do token")
   @JsonProperty("dataModificacao")
   public Date getDataModificacao() {
     return dataModificacao;
@@ -221,7 +202,6 @@ public class TokenResponse   {
     }
     TokenResponse tokenResponse = (TokenResponse) o;
     return Objects.equals(this.id, tokenResponse.id) &&
-        Objects.equals(this.token, tokenResponse.token) &&
         Objects.equals(this.base, tokenResponse.base) &&
         Objects.equals(this.owner, tokenResponse.owner) &&
         Objects.equals(this.status, tokenResponse.status) &&
@@ -233,7 +213,7 @@ public class TokenResponse   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, token, base, owner, status, criadoPor, dataCriacao, alteradoPor, dataModificacao);
+    return Objects.hash(id, base, owner, status, criadoPor, dataCriacao, alteradoPor, dataModificacao);
   }
 
   @Override
@@ -242,7 +222,6 @@ public class TokenResponse   {
     sb.append("class TokenResponse {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    token: ").append(toIndentedString(token)).append("\n");
     sb.append("    base: ").append(toIndentedString(base)).append("\n");
     sb.append("    owner: ").append(toIndentedString(owner)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");

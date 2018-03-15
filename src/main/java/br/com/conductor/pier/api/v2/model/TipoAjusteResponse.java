@@ -20,14 +20,14 @@ public class TipoAjusteResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do tipo de ajuste.
+   * C\u00F3digo identificador do tipo de ajuste.
    **/
   public TipoAjusteResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador do tipo de ajuste.")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador do tipo de ajuste.")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -38,14 +38,14 @@ public class TipoAjusteResponse   {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do tipo de ajuste.
+   * Descri\u00E7\u00E3o do tipo de ajuste.
    **/
   public TipoAjusteResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o do tipo de ajuste.")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do tipo de ajuste.")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;

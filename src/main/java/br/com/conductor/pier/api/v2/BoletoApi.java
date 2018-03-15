@@ -38,7 +38,7 @@ public class BoletoApi {
   /**
    * Registra uma cobranca na entidade banco relacionada a cobranca informado.
    * Este recurso registra uma cobranca emitido.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Cobranca (id)
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da Cobranca (id)
    * @return BoletoResponse
    */
   public BoletoResponse registrarBoletoUsingPOST(Long id) throws ApiException {

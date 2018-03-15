@@ -28,14 +28,14 @@ public class OportunidadeUpdate   {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do tipo oportunidade
+   * C\u00F3digo identificador do tipo oportunidade
    **/
   public OportunidadeUpdate idTipoOportunidade(Long idTipoOportunidade) {
     this.idTipoOportunidade = idTipoOportunidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "C\u00C3\u00B3digo identificador do tipo oportunidade")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo identificador do tipo oportunidade")
   @JsonProperty("idTipoOportunidade")
   public Long getIdTipoOportunidade() {
     return idTipoOportunidade;
@@ -46,14 +46,14 @@ public class OportunidadeUpdate   {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do status oportunidade
+   * C\u00F3digo identificador do status oportunidade
    **/
   public OportunidadeUpdate idStatusOportunidade(Long idStatusOportunidade) {
     this.idStatusOportunidade = idStatusOportunidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "C\u00C3\u00B3digo identificador do status oportunidade")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo identificador do status oportunidade")
   @JsonProperty("idStatusOportunidade")
   public Long getIdStatusOportunidade() {
     return idStatusOportunidade;
@@ -64,14 +64,14 @@ public class OportunidadeUpdate   {
 
   
   /**
-   * N\u00C3\u00BAmero receita federal do cliente
+   * N\u00FAmero receita federal do cliente
    **/
   public OportunidadeUpdate numeroReceitaFederal(String numeroReceitaFederal) {
     this.numeroReceitaFederal = numeroReceitaFederal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "N\u00C3\u00BAmero receita federal do cliente")
+  @ApiModelProperty(example = "null", required = true, value = "N\u00FAmero receita federal do cliente")
   @JsonProperty("numeroReceitaFederal")
   public String getNumeroReceitaFederal() {
     return numeroReceitaFederal;
@@ -82,14 +82,14 @@ public class OportunidadeUpdate   {
 
   
   /**
-   * In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade
+   * In\u00EDcio da vig\u00EAncia da oportunidade
    **/
   public OportunidadeUpdate dataInicioVigencia(String dataInicioVigencia) {
     this.dataInicioVigencia = dataInicioVigencia;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", required = true, value = "In\u00C3\u00ADcio da vig\u00C3\u00AAncia da oportunidade")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", required = true, value = "In\u00EDcio da vig\u00EAncia da oportunidade")
   @JsonProperty("dataInicioVigencia")
   public String getDataInicioVigencia() {
     return dataInicioVigencia;
@@ -100,14 +100,14 @@ public class OportunidadeUpdate   {
 
   
   /**
-   * Fim da vig\u00C3\u00AAncia da oportunidade
+   * Fim da vig\u00EAncia da oportunidade
    **/
   public OportunidadeUpdate dataFimVigencia(String dataFimVigencia) {
     this.dataFimVigencia = dataFimVigencia;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", required = true, value = "Fim da vig\u00C3\u00AAncia da oportunidade")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", required = true, value = "Fim da vig\u00EAncia da oportunidade")
   @JsonProperty("dataFimVigencia")
   public String getDataFimVigencia() {
     return dataFimVigencia;
@@ -118,14 +118,14 @@ public class OportunidadeUpdate   {
 
   
   /**
-   * Atributo que indica se a oportunidade est\u00C3\u00A1 ativa
+   * Atributo que indica se a oportunidade est\u00E1 ativa
    **/
   public OportunidadeUpdate flagAtivo(Boolean flagAtivo) {
     this.flagAtivo = flagAtivo;
     return this;
   }
   
-  @ApiModelProperty(example = "true", required = true, value = "Atributo que indica se a oportunidade est\u00C3\u00A1 ativa")
+  @ApiModelProperty(example = "true", required = true, value = "Atributo que indica se a oportunidade est\u00E1 ativa")
   @JsonProperty("flagAtivo")
   public Boolean getFlagAtivo() {
     return flagAtivo;

@@ -10,10 +10,10 @@ import java.math.BigDecimal;
 
 
 /**
- * Objeto de Requisi\u00C3\u00A7\u00C3\u00A3o de Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o
+ * Objeto de Requisi\u00E7\u00E3o de Taxa de Antecipa\u00E7\u00E3o
  **/
 
-@ApiModel(description = "Objeto de Requisi\u00C3\u00A7\u00C3\u00A3o de Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o")
+@ApiModel(description = "Objeto de Requisi\u00E7\u00E3o de Taxa de Antecipa\u00E7\u00E3o")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TaxaAntecipacaoRequest   {
   
@@ -41,14 +41,14 @@ public class TaxaAntecipacaoRequest   {
 
   
   /**
-   * C\u00C3\u00B3digo que identifica se um par\u00C3\u00A2metro refere-se a uma transa\u00C3\u00A7\u00C3\u00A3o On-Us ou Off-Us.
+   * C\u00F3digo que identifica se um par\u00E2metro refere-se a uma transa\u00E7\u00E3o On-Us ou Off-Us.
    **/
   public TaxaAntecipacaoRequest tipoTransacao(TipoTransacaoEnum tipoTransacao) {
     this.tipoTransacao = tipoTransacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo que identifica se um par\u00C3\u00A2metro refere-se a uma transa\u00C3\u00A7\u00C3\u00A3o On-Us ou Off-Us.")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo que identifica se um par\u00E2metro refere-se a uma transa\u00E7\u00E3o On-Us ou Off-Us.")
   @JsonProperty("tipoTransacao")
   public TipoTransacaoEnum getTipoTransacao() {
     return tipoTransacao;
@@ -59,14 +59,14 @@ public class TaxaAntecipacaoRequest   {
 
   
   /**
-   * Valor da Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o.
+   * Valor da Taxa de Antecipa\u00E7\u00E3o.
    **/
   public TaxaAntecipacaoRequest valorTaxa(BigDecimal valorTaxa) {
     this.valorTaxa = valorTaxa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor da Taxa de Antecipa\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(example = "null", value = "Valor da Taxa de Antecipa\u00E7\u00E3o.")
   @JsonProperty("valorTaxa")
   public BigDecimal getValorTaxa() {
     return valorTaxa;

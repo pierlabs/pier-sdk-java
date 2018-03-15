@@ -9,10 +9,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o do recurso WebHook
+ * Representa\u00E7\u00E3o do recurso WebHook
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o do recurso WebHook")
+@ApiModel(description = "Representa\u00E7\u00E3o do recurso WebHook")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class WebHookResponse   {
   
@@ -120,14 +120,14 @@ public class WebHookResponse   {
 
   
   /**
-   * M\u00C3\u00A9todo que a ser chamado pelo WebHook
+   * M\u00E9todo que a ser chamado pelo WebHook
    **/
   public WebHookResponse metodo(MetodoEnum metodo) {
     this.metodo = metodo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "M\u00C3\u00A9todo que a ser chamado pelo WebHook")
+  @ApiModelProperty(example = "null", required = true, value = "M\u00E9todo que a ser chamado pelo WebHook")
   @JsonProperty("metodo")
   public MetodoEnum getMetodo() {
     return metodo;

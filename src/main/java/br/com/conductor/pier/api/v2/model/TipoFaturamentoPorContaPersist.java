@@ -24,14 +24,14 @@ public class TipoFaturamentoPorContaPersist   {
 
   
   /**
-   * Representa se a configura\u00C3\u00A7\u00C3\u00A3o est\u00C3\u00A1 ativada ou desativada para a conta.
+   * Representa se a configura\u00E7\u00E3o est\u00E1 ativada ou desativada para a conta.
    **/
   public TipoFaturamentoPorContaPersist status(Boolean status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "false", required = true, value = "Representa se a configura\u00C3\u00A7\u00C3\u00A3o est\u00C3\u00A1 ativada ou desativada para a conta.")
+  @ApiModelProperty(example = "false", required = true, value = "Representa se a configura\u00E7\u00E3o est\u00E1 ativada ou desativada para a conta.")
   @JsonProperty("status")
   public Boolean getStatus() {
     return status;
@@ -42,14 +42,14 @@ public class TipoFaturamentoPorContaPersist   {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta relacionada.
+   * C\u00F3digo de identifica\u00E7\u00E3o da conta relacionada.
    **/
   public TipoFaturamentoPorContaPersist idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta relacionada.")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo de identifica\u00E7\u00E3o da conta relacionada.")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -60,14 +60,14 @@ public class TipoFaturamentoPorContaPersist   {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento relacionada.
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento relacionada.
    **/
   public TipoFaturamentoPorContaPersist idTipoFaturamento(Long idTipoFaturamento) {
     this.idTipoFaturamento = idTipoFaturamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento relacionada.")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento relacionada.")
   @JsonProperty("idTipoFaturamento")
   public Long getIdTipoFaturamento() {
     return idTipoFaturamento;
@@ -78,14 +78,14 @@ public class TipoFaturamentoPorContaPersist   {
 
   
   /**
-   * Data da inclus\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
+   * Data da inclus\u00E3o da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
    **/
   public TipoFaturamentoPorContaPersist dataHoraInclusao(String dataHoraInclusao) {
     this.dataHoraInclusao = dataHoraInclusao;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data da inclus\u00C3\u00A3o da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data da inclus\u00E3o da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.")
   @JsonProperty("dataHoraInclusao")
   public String getDataHoraInclusao() {
     return dataHoraInclusao;
@@ -96,14 +96,14 @@ public class TipoFaturamentoPorContaPersist   {
 
   
   /**
-   * Data do cancelamento da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
+   * Data do cancelamento da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
    **/
   public TipoFaturamentoPorContaPersist dataHoraCancelamento(String dataHoraCancelamento) {
     this.dataHoraCancelamento = dataHoraCancelamento;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data do cancelamento da configura\u00C3\u00A7\u00C3\u00A3o, deve ser informada no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data do cancelamento da configura\u00E7\u00E3o, deve ser informada no formato yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.")
   @JsonProperty("dataHoraCancelamento")
   public String getDataHoraCancelamento() {
     return dataHoraCancelamento;
@@ -114,14 +114,14 @@ public class TipoFaturamentoPorContaPersist   {
 
   
   /**
-   * Identificador do respons\u00C3\u00A1vel pela modifica\u00C3\u00A7\u00C3\u00A3o do registro.
+   * Identificador do respons\u00E1vel pela modifica\u00E7\u00E3o do registro.
    **/
   public TipoFaturamentoPorContaPersist modificadoPor(String modificadoPor) {
     this.modificadoPor = modificadoPor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Identificador do respons\u00C3\u00A1vel pela modifica\u00C3\u00A7\u00C3\u00A3o do registro.")
+  @ApiModelProperty(example = "null", required = true, value = "Identificador do respons\u00E1vel pela modifica\u00E7\u00E3o do registro.")
   @JsonProperty("modificadoPor")
   public String getModificadoPor() {
     return modificadoPor;

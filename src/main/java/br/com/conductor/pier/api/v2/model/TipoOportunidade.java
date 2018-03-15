@@ -20,14 +20,14 @@ public class TipoOportunidade   {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade
+   * Descri\u00E7\u00E3o do tipo oportunidade
    **/
   public TipoOportunidade descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Descri\u00C3\u00A7\u00C3\u00A3o do tipo oportunidade")
+  @ApiModelProperty(example = "null", required = true, value = "Descri\u00E7\u00E3o do tipo oportunidade")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -38,14 +38,14 @@ public class TipoOportunidade   {
 
   
   /**
-   * Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo
+   * Flag de verifica\u00E7\u00E3o se o tipo oportunidade est\u00E1 ativo
    **/
   public TipoOportunidade flagAtivo(Boolean flagAtivo) {
     this.flagAtivo = flagAtivo;
     return this;
   }
   
-  @ApiModelProperty(example = "false", required = true, value = "Flag de verifica\u00C3\u00A7\u00C3\u00A3o se o tipo oportunidade est\u00C3\u00A1 ativo")
+  @ApiModelProperty(example = "false", required = true, value = "Flag de verifica\u00E7\u00E3o se o tipo oportunidade est\u00E1 ativo")
   @JsonProperty("flagAtivo")
   public Boolean getFlagAtivo() {
     return flagAtivo;

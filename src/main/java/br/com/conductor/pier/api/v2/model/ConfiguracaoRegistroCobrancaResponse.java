@@ -9,10 +9,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de configura\u00C3\u00A7\u00C3\u00A3o de registro de cobran\u00C3\u00A7a.
+ * Representa\u00E7\u00E3o da resposta do recurso de configura\u00E7\u00E3o de registro de cobran\u00E7a.
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de configura\u00C3\u00A7\u00C3\u00A3o de registro de cobran\u00C3\u00A7a.")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de configura\u00E7\u00E3o de registro de cobran\u00E7a.")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ConfiguracaoRegistroCobrancaResponse   {
   
@@ -53,14 +53,14 @@ public class ConfiguracaoRegistroCobrancaResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo identificador da configura\u00C3\u00A7\u00C3\u00A3o.
+   * C\u00F3digo identificador da configura\u00E7\u00E3o.
    **/
   public ConfiguracaoRegistroCobrancaResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador da configura\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador da configura\u00E7\u00E3o.")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -71,14 +71,14 @@ public class ConfiguracaoRegistroCobrancaResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo do emissor.
+   * C\u00F3digo do emissor.
    **/
   public ConfiguracaoRegistroCobrancaResponse idEmissor(Long idEmissor) {
     this.idEmissor = idEmissor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo do emissor.")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo do emissor.")
   @JsonProperty("idEmissor")
   public Long getIdEmissor() {
     return idEmissor;
@@ -89,14 +89,14 @@ public class ConfiguracaoRegistroCobrancaResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo do Banco.
+   * C\u00F3digo do Banco.
    **/
   public ConfiguracaoRegistroCobrancaResponse codigoBanco(Long codigoBanco) {
     this.codigoBanco = codigoBanco;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo do Banco.")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo do Banco.")
   @JsonProperty("codigoBanco")
   public Long getCodigoBanco() {
     return codigoBanco;
@@ -305,14 +305,14 @@ public class ConfiguracaoRegistroCobrancaResponse   {
 
   
   /**
-   * Status indicador se a configura\u00C3\u00A7\u00C3\u00A3o est\u00C3\u00A1 ativa.
+   * Status indicador se a configura\u00E7\u00E3o est\u00E1 ativa.
    **/
   public ConfiguracaoRegistroCobrancaResponse status(StatusEnum status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Status indicador se a configura\u00C3\u00A7\u00C3\u00A3o est\u00C3\u00A1 ativa.")
+  @ApiModelProperty(example = "null", value = "Status indicador se a configura\u00E7\u00E3o est\u00E1 ativa.")
   @JsonProperty("status")
   public StatusEnum getStatus() {
     return status;

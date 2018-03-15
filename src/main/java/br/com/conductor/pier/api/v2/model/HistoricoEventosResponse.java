@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o do objeto que abstrai o hist\u00C3\u00B3rico de eventos
+ * Representa\u00E7\u00E3o do objeto que abstrai o hist\u00F3rico de eventos
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o do objeto que abstrai o hist\u00C3\u00B3rico de eventos")
+@ApiModel(description = "Representa\u00E7\u00E3o do objeto que abstrai o hist\u00F3rico de eventos")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class HistoricoEventosResponse   {
   
@@ -23,14 +23,14 @@ public class HistoricoEventosResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do evento
+   * C\u00F3digo identificador do evento
    **/
   public HistoricoEventosResponse idHistorico(Long idHistorico) {
     this.idHistorico = idHistorico;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "C\u00C3\u00B3digo identificador do evento")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo identificador do evento")
   @JsonProperty("idHistorico")
   public Long getIdHistorico() {
     return idHistorico;
@@ -77,14 +77,14 @@ public class HistoricoEventosResponse   {
 
   
   /**
-   * Valor anterior a modifica\u00C3\u00A7\u00C3\u00A3o
+   * Valor anterior a modifica\u00E7\u00E3o
    **/
   public HistoricoEventosResponse valorAnterior(String valorAnterior) {
     this.valorAnterior = valorAnterior;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor anterior a modifica\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(example = "null", value = "Valor anterior a modifica\u00E7\u00E3o")
   @JsonProperty("valorAnterior")
   public String getValorAnterior() {
     return valorAnterior;
@@ -95,14 +95,14 @@ public class HistoricoEventosResponse   {
 
   
   /**
-   * Valor atribu\u00C3\u00ADdo na modifica\u00C3\u00A7\u00C3\u00A3o
+   * Valor atribu\u00EDdo na modifica\u00E7\u00E3o
    **/
   public HistoricoEventosResponse valorAtribuido(String valorAtribuido) {
     this.valorAtribuido = valorAtribuido;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Valor atribu\u00C3\u00ADdo na modifica\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(example = "null", required = true, value = "Valor atribu\u00EDdo na modifica\u00E7\u00E3o")
   @JsonProperty("valorAtribuido")
   public String getValorAtribuido() {
     return valorAtribuido;

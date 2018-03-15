@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de Tipo Debito Recorrente
+ * Representa\u00E7\u00E3o da resposta do recurso de Tipo Debito Recorrente
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de Tipo Debito Recorrente")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de Tipo Debito Recorrente")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TipoDebitoRecorrenteResponse   {
   
@@ -23,14 +23,14 @@ public class TipoDebitoRecorrenteResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de d\u00C3\u00A9bito recorrente (id).
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de d\u00E9bito recorrente (id).
    **/
   public TipoDebitoRecorrenteResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do tipo de d\u00C3\u00A9bito recorrente (id).")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo de d\u00E9bito recorrente (id).")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -41,14 +41,14 @@ public class TipoDebitoRecorrenteResponse   {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do tipo de d\u00C3\u00A9bito recorrente.
+   * Descri\u00E7\u00E3o do tipo de d\u00E9bito recorrente.
    **/
   public TipoDebitoRecorrenteResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o do tipo de d\u00C3\u00A9bito recorrente.")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do tipo de d\u00E9bito recorrente.")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -59,14 +59,14 @@ public class TipoDebitoRecorrenteResponse   {
 
   
   /**
-   * Valor do tipo de d\u00C3\u00A9bito recorrente.
+   * Valor do tipo de d\u00E9bito recorrente.
    **/
   public TipoDebitoRecorrenteResponse valor(BigDecimal valor) {
     this.valor = valor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor do tipo de d\u00C3\u00A9bito recorrente.")
+  @ApiModelProperty(example = "null", value = "Valor do tipo de d\u00E9bito recorrente.")
   @JsonProperty("valor")
   public BigDecimal getValor() {
     return valor;
@@ -77,14 +77,14 @@ public class TipoDebitoRecorrenteResponse   {
 
   
   /**
-   * Flag que identifica se o tipo d\u00C3\u00A9bito recorrente est\u00C3\u00A1 ativo.
+   * Flag que identifica se o tipo d\u00E9bito recorrente est\u00E1 ativo.
    **/
   public TipoDebitoRecorrenteResponse flagAtivo(Boolean flagAtivo) {
     this.flagAtivo = flagAtivo;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Flag que identifica se o tipo d\u00C3\u00A9bito recorrente est\u00C3\u00A1 ativo.")
+  @ApiModelProperty(example = "false", value = "Flag que identifica se o tipo d\u00E9bito recorrente est\u00E1 ativo.")
   @JsonProperty("flagAtivo")
   public Boolean getFlagAtivo() {
     return flagAtivo;

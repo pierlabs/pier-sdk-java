@@ -93,14 +93,14 @@ public class OperacaoCredorResponse   {
 
   
   /**
-   * Apresenta o id da Opera\u00C3\u00A7\u00C3\u00A3o.
+   * Apresenta o id da Opera\u00E7\u00E3o.
    **/
   public OperacaoCredorResponse idOperacao(Long idOperacao) {
     this.idOperacao = idOperacao;
     return this;
   }
   
-  @ApiModelProperty(example = "2", value = "Apresenta o id da Opera\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(example = "2", value = "Apresenta o id da Opera\u00E7\u00E3o.")
   @JsonProperty("idOperacao")
   public Long getIdOperacao() {
     return idOperacao;
@@ -147,14 +147,14 @@ public class OperacaoCredorResponse   {
 
   
   /**
-   * Remunera\u00C3\u00A7\u00C3\u00A3o Percentual.
+   * Remunera\u00E7\u00E3o Percentual.
    **/
   public OperacaoCredorResponse remuneracaoPercentual(BigDecimal remuneracaoPercentual) {
     this.remuneracaoPercentual = remuneracaoPercentual;
     return this;
   }
   
-  @ApiModelProperty(example = "0.04", value = "Remunera\u00C3\u00A7\u00C3\u00A3o Percentual.")
+  @ApiModelProperty(example = "0.04", value = "Remunera\u00E7\u00E3o Percentual.")
   @JsonProperty("remuneracaoPercentual")
   public BigDecimal getRemuneracaoPercentual() {
     return remuneracaoPercentual;
@@ -165,14 +165,14 @@ public class OperacaoCredorResponse   {
 
   
   /**
-   * Remunera\u00C3\u00A7\u00C3\u00A3o Fixa.
+   * Remunera\u00E7\u00E3o Fixa.
    **/
   public OperacaoCredorResponse remuneracaoFixa(BigDecimal remuneracaoFixa) {
     this.remuneracaoFixa = remuneracaoFixa;
     return this;
   }
   
-  @ApiModelProperty(example = "0.0", value = "Remunera\u00C3\u00A7\u00C3\u00A3o Fixa.")
+  @ApiModelProperty(example = "0.0", value = "Remunera\u00E7\u00E3o Fixa.")
   @JsonProperty("remuneracaoFixa")
   public BigDecimal getRemuneracaoFixa() {
     return remuneracaoFixa;
@@ -273,14 +273,14 @@ public class OperacaoCredorResponse   {
 
   
   /**
-   * Plano m\u00C3\u00ADnimo da regra.
+   * Plano m\u00EDnimo da regra.
    **/
   public OperacaoCredorResponse planoMinimo(Integer planoMinimo) {
     this.planoMinimo = planoMinimo;
     return this;
   }
   
-  @ApiModelProperty(example = "1", value = "Plano m\u00C3\u00ADnimo da regra.")
+  @ApiModelProperty(example = "1", value = "Plano m\u00EDnimo da regra.")
   @JsonProperty("planoMinimo")
   public Integer getPlanoMinimo() {
     return planoMinimo;
@@ -291,14 +291,14 @@ public class OperacaoCredorResponse   {
 
   
   /**
-   * Plano m\u00C3\u00A1ximo da regra.
+   * Plano m\u00E1ximo da regra.
    **/
   public OperacaoCredorResponse planoMaximo(Integer planoMaximo) {
     this.planoMaximo = planoMaximo;
     return this;
   }
   
-  @ApiModelProperty(example = "5", value = "Plano m\u00C3\u00A1ximo da regra.")
+  @ApiModelProperty(example = "5", value = "Plano m\u00E1ximo da regra.")
   @JsonProperty("planoMaximo")
   public Integer getPlanoMaximo() {
     return planoMaximo;

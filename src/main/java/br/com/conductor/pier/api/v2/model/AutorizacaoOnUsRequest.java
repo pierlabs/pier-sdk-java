@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * Objeto de Requisi\u00C3\u00A7\u00C3\u00A3o de Autoriza\u00C3\u00A7\u00C3\u00A3o
+ * Objeto de Requisi\u00E7\u00E3o de Autoriza\u00E7\u00E3o
  **/
 
-@ApiModel(description = "Objeto de Requisi\u00C3\u00A7\u00C3\u00A3o de Autoriza\u00C3\u00A7\u00C3\u00A3o")
+@ApiModel(description = "Objeto de Requisi\u00E7\u00E3o de Autoriza\u00E7\u00E3o")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class AutorizacaoOnUsRequest   {
   
@@ -29,14 +29,14 @@ public class AutorizacaoOnUsRequest   {
 
   
   /**
-   * N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.
+   * N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou.
    **/
   public AutorizacaoOnUsRequest nsuOrigem(String nsuOrigem) {
     this.nsuOrigem = nsuOrigem;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "N\u00C3\u00BAmero Sequencial \u00C3\u009Anico que identifica a transa\u00C3\u00A7\u00C3\u00A3o no sistema que a originou.")
+  @ApiModelProperty(example = "null", required = true, value = "N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou.")
   @JsonProperty("nsuOrigem")
   public String getNsuOrigem() {
     return nsuOrigem;
@@ -47,14 +47,14 @@ public class AutorizacaoOnUsRequest   {
 
   
   /**
-   * N\u00C3\u00BAmero de Parcelas.
+   * N\u00FAmero de Parcelas.
    **/
   public AutorizacaoOnUsRequest numeroParcelas(Long numeroParcelas) {
     this.numeroParcelas = numeroParcelas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "N\u00C3\u00BAmero de Parcelas.")
+  @ApiModelProperty(example = "null", required = true, value = "N\u00FAmero de Parcelas.")
   @JsonProperty("numeroParcelas")
   public Long getNumeroParcelas() {
     return numeroParcelas;
@@ -65,14 +65,14 @@ public class AutorizacaoOnUsRequest   {
 
   
   /**
-   * C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.
+   * C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o.
    **/
   public AutorizacaoOnUsRequest codigoProcessamento(String codigoProcessamento) {
     this.codigoProcessamento = codigoProcessamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "C\u00C3\u00B3digo de Processamento que identifica o Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o.")
   @JsonProperty("codigoProcessamento")
   public String getCodigoProcessamento() {
     return codigoProcessamento;
@@ -83,14 +83,14 @@ public class AutorizacaoOnUsRequest   {
 
   
   /**
-   * C\u00C3\u00B3digo de Seguran\u00C3\u00A7a do Cart\u00C3\u00A3o.
+   * C\u00F3digo de Seguran\u00E7a do Cart\u00E3o.
    **/
   public AutorizacaoOnUsRequest codigoSegurancaCartao(String codigoSegurancaCartao) {
     this.codigoSegurancaCartao = codigoSegurancaCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Seguran\u00C3\u00A7a do Cart\u00C3\u00A3o.")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Seguran\u00E7a do Cart\u00E3o.")
   @JsonProperty("codigoSegurancaCartao")
   public String getCodigoSegurancaCartao() {
     return codigoSegurancaCartao;
@@ -101,14 +101,14 @@ public class AutorizacaoOnUsRequest   {
 
   
   /**
-   * Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos.
+   * Valor da transa\u00E7\u00E3o com duas casas decimais para os centavos.
    **/
   public AutorizacaoOnUsRequest valorTransacao(BigDecimal valorTransacao) {
     this.valorTransacao = valorTransacao;
     return this;
   }
   
-  @ApiModelProperty(example = "10.25", required = true, value = "Valor da transa\u00C3\u00A7\u00C3\u00A3o com duas casas decimais para os centavos.")
+  @ApiModelProperty(example = "10.25", required = true, value = "Valor da transa\u00E7\u00E3o com duas casas decimais para os centavos.")
   @JsonProperty("valorTransacao")
   public BigDecimal getValorTransacao() {
     return valorTransacao;
@@ -119,14 +119,14 @@ public class AutorizacaoOnUsRequest   {
 
   
   /**
-   * N\u00C3\u00BAmero Real do Cart\u00C3\u00A3o.
+   * N\u00FAmero Real do Cart\u00E3o.
    **/
   public AutorizacaoOnUsRequest numeroRealCartao(String numeroRealCartao) {
     this.numeroRealCartao = numeroRealCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "N\u00C3\u00BAmero Real do Cart\u00C3\u00A3o.")
+  @ApiModelProperty(example = "null", required = true, value = "N\u00FAmero Real do Cart\u00E3o.")
   @JsonProperty("numeroRealCartao")
   public String getNumeroRealCartao() {
     return numeroRealCartao;
@@ -137,14 +137,14 @@ public class AutorizacaoOnUsRequest   {
 
   
   /**
-   * Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM
+   * Data de Validade do Cart\u00E3o. Ex: AAMM
    **/
   public AutorizacaoOnUsRequest dataValidadeCartao(String dataValidadeCartao) {
     this.dataValidadeCartao = dataValidadeCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Data de Validade do Cart\u00C3\u00A3o. Ex: AAMM")
+  @ApiModelProperty(example = "null", required = true, value = "Data de Validade do Cart\u00E3o. Ex: AAMM")
   @JsonProperty("dataValidadeCartao")
   public String getDataValidadeCartao() {
     return dataValidadeCartao;
@@ -155,14 +155,14 @@ public class AutorizacaoOnUsRequest   {
 
   
   /**
-   * N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV).
+   * N\u00FAmero do Estabelecimento (N\u00FAmero+DV).
    **/
   public AutorizacaoOnUsRequest numeroEstabelecimento(Long numeroEstabelecimento) {
     this.numeroEstabelecimento = numeroEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "N\u00C3\u00BAmero do Estabelecimento (N\u00C3\u00BAmero+DV).")
+  @ApiModelProperty(example = "null", required = true, value = "N\u00FAmero do Estabelecimento (N\u00FAmero+DV).")
   @JsonProperty("numeroEstabelecimento")
   public Long getNumeroEstabelecimento() {
     return numeroEstabelecimento;
@@ -191,14 +191,14 @@ public class AutorizacaoOnUsRequest   {
 
   
   /**
-   * Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante
+   * Apresenta a identifica\u00E7\u00E3o do terminal requisitante
    **/
   public AutorizacaoOnUsRequest terminalRequisitante(String terminalRequisitante) {
     this.terminalRequisitante = terminalRequisitante;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Apresenta a identifica\u00C3\u00A7\u00C3\u00A3o do terminal requisitante")
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta a identifica\u00E7\u00E3o do terminal requisitante")
   @JsonProperty("terminalRequisitante")
   public String getTerminalRequisitante() {
     return terminalRequisitante;

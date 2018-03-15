@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de plano de campanha
+ * Representa\u00E7\u00E3o da resposta do recurso de plano de campanha
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de plano de campanha")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de plano de campanha")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PlanoCampanhaResponse   {
   
@@ -77,14 +77,14 @@ public class PlanoCampanhaResponse   {
 
   
   /**
-   * Nome do usu\u00C3\u00A1rio
+   * Nome do usu\u00E1rio
    **/
   public PlanoCampanhaResponse usuario(String usuario) {
     this.usuario = usuario;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome do usu\u00C3\u00A1rio")
+  @ApiModelProperty(example = "null", value = "Nome do usu\u00E1rio")
   @JsonProperty("usuario")
   public String getUsuario() {
     return usuario;

@@ -40,7 +40,7 @@ public class DispositivoApi {
   /**
    * Ativa Dispositivo
    * Esse recurso permite ativar dispositivo.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da Plataforma (id).
    * @return DispositivoResponse
    */
   public DispositivoResponse ativarUsingPOST(Long id) throws ApiException {
@@ -88,7 +88,7 @@ public class DispositivoApi {
   /**
    * Desativa Dispositivo
    * Esse recurso permite desativar dispositivo.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Plataforma (id).
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da Plataforma (id).
    * @return DispositivoResponse
    */
   public DispositivoResponse desativarUsingPOST(Long id) throws ApiException {
@@ -135,18 +135,18 @@ public class DispositivoApi {
   
   /**
    * Lista os dispositivos cadastrados
-   * Este m\u00C3\u00A9todo permite que sejam listados os dispositivos existentes na base do PIER.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * Este m\u00E9todo permite que sejam listados os dispositivos existentes na base do PIER.
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
    * @param token Token do Dispositivo
-   * @param idUsuario Identificador do Usu\u00C3\u00A1rio
-   * @param idAplicacaoMobile Identificador da aplica\u00C3\u00A7\u00C3\u00A3o
+   * @param idUsuario Identificador do Usu\u00E1rio
+   * @param idAplicacaoMobile Identificador da aplica\u00E7\u00E3o
    * @param dataCriacao Apresenta a data e em que o registro foi criado.
    * @param dataDesativacao Apresenta a data e em que o registro foi desativado.
    * @return PageDispositivoResponse
    */
-  public PageDispositivoResponse listarUsingGET17(List<String> sort, Integer page, Integer limit, String token, Long idUsuario, Long idAplicacaoMobile, String dataCriacao, String dataDesativacao) throws ApiException {
+  public PageDispositivoResponse listarUsingGET18(List<String> sort, Integer page, Integer limit, String token, Long idUsuario, Long idAplicacaoMobile, String dataCriacao, String dataDesativacao) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

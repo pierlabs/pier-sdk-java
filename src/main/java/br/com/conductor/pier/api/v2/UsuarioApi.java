@@ -39,9 +39,9 @@ public class UsuarioApi {
 
   
   /**
-   * Alterar senha do usu\u00C3\u00A1rio.
-   * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
-   * @param login Login do usu\u00C3\u00A1rio.
+   * Alterar senha do usu\u00E1rio.
+   * Este m\u00E9todo realiza a altera\u00E7\u00E3o da senha do usu\u00E1rio.
+   * @param login Login do usu\u00E1rio.
    * @param senhaNova Senha Nova
    * @return String
    */
@@ -95,9 +95,9 @@ public class UsuarioApi {
   }
   
   /**
-   * Alterar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
-   * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o da senha do usu\u00C3\u00A1rio.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+   * Alterar senha do usu\u00E1rio na base do PIER ou WS.
+   * Este m\u00E9todo realiza a altera\u00E7\u00E3o da senha do usu\u00E1rio.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
    * @param senhaAtual Senha Atual
    * @param senhaNova Senha Nova
    * @return String
@@ -159,9 +159,9 @@ public class UsuarioApi {
   }
   
   /**
-   * Altera os usu\u00C3\u00A1rios cadastrados na base.
-   * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+   * Altera os usu\u00E1rios cadastrados na base.
+   * Este m\u00E9todo realiza a altera\u00E7\u00E3o dos usu\u00E1rios.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
    * @param update update
    * @return UsuarioResponse
    */
@@ -213,9 +213,9 @@ public class UsuarioApi {
   }
   
   /**
-   * Ativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-   * Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+   * Ativa os usu\u00E1rios cadastrados na base do PIER ou WS.
+   * Este m\u00E9todo realiza a ativa\u00E7\u00E3o dos usu\u00E1rios.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
    * @return UsuarioResponse
    */
   public UsuarioResponse ativarUsuarioUsingPOST(Long id) throws ApiException {
@@ -261,17 +261,17 @@ public class UsuarioApi {
   }
   
   /**
-   * Apresenta os dados de um determinado Usu\u00C3\u00A1rio na base do PIER ou WS.
-   * Este m\u00C3\u00A9todo permite consultar as informa\u00C3\u00A7\u00C3\u00B5es de um determinado Usu\u00C3\u00A1rio a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+   * Apresenta os dados de um determinado Usu\u00E1rio na base do PIER ou WS.
+   * Este m\u00E9todo permite consultar as informa\u00E7\u00F5es de um determinado Usu\u00E1rio a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
    * @return UsuarioResponse
    */
-  public UsuarioResponse consultarUsingGET42(Long id) throws ApiException {
+  public UsuarioResponse consultarUsingGET43(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET42");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET43");
      }
      
     // create path and map variables
@@ -309,9 +309,9 @@ public class UsuarioApi {
   }
   
   /**
-   * Desativa os usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-   * Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o dos usu\u00C3\u00A1rios.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+   * Desativa os usu\u00E1rios cadastrados na base do PIER ou WS.
+   * Este m\u00E9todo realiza a desativa\u00E7\u00E3o dos usu\u00E1rios.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
    * @return UsuarioResponse
    */
   public UsuarioResponse desativarUsuarioUsingPOST(Long id) throws ApiException {
@@ -357,18 +357,18 @@ public class UsuarioApi {
   }
   
   /**
-   * Lista os Usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-   * Este m\u00C3\u00A9todo permite que sejam listados os usu\u00C3\u00A1rios existentes na base do PIER.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * Lista os Usu\u00E1rios cadastrados na base do PIER ou WS.
+   * Este m\u00E9todo permite que sejam listados os usu\u00E1rios existentes na base do PIER.
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
    * @param nome Nome do Usuario
    * @param cpf CPF do Usuario
    * @param email Email do Usuario
    * @param status Status do Usuario
    * @return PageUsuarioResponse
    */
-  public PageUsuarioResponse listarUsingGET49(List<String> sort, Integer page, Integer limit, String nome, String cpf, String email, String status) throws ApiException {
+  public PageUsuarioResponse listarUsingGET51(List<String> sort, Integer page, Integer limit, String nome, String cpf, String email, String status) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -419,9 +419,9 @@ public class UsuarioApi {
   }
   
   /**
-   * Recuperar senha do usu\u00C3\u00A1rio na base do PIER ou WS.
-   * Esse recurso permite recuperar a senha do usu\u00C3\u00A1rio.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+   * Recuperar senha do usu\u00E1rio na base do PIER ou WS.
+   * Esse recurso permite recuperar a senha do usu\u00E1rio.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
    * @return String
    */
   public String recuperarSenhaUsingPOST(Long id) throws ApiException {
@@ -467,8 +467,8 @@ public class UsuarioApi {
   }
   
   /**
-   * Cadastra Usu\u00C3\u00A1rio na base.
-   * Esse recurso permite cadastrar usu\u00C3\u00A1rios.
+   * Cadastra Usu\u00E1rio na base.
+   * Esse recurso permite cadastrar usu\u00E1rios.
    * @param persist persist
    * @return UsuarioResponse
    */
@@ -514,10 +514,10 @@ public class UsuarioApi {
   }
   
   /**
-   * Realiza login com valida\u00C3\u00A7\u00C3\u00A3o de senha dos usu\u00C3\u00A1rios cadastrados na base do PIER ou WS.
-   * O recurso permite fazer login do usu\u00C3\u00A1rio atrav\u00C3\u00A9s da senha definida pelo emissor.
-   * @param login Login identificador do usu\u00C3\u00A1rio (login).
-   * @param senha Senha do usu\u00C3\u00A1rio
+   * Realiza login com valida\u00E7\u00E3o de senha dos usu\u00E1rios cadastrados na base do PIER ou WS.
+   * O recurso permite fazer login do usu\u00E1rio atrav\u00E9s da senha definida pelo emissor.
+   * @param login Login identificador do usu\u00E1rio (login).
+   * @param senha Senha do usu\u00E1rio
    * @return Object
    */
   public Object validarSenhaLoginUsingPOST(String login, String senha) throws ApiException {
@@ -570,10 +570,10 @@ public class UsuarioApi {
   }
   
   /**
-   * Validar a senha do usu\u00C3\u00A1rio na base do PIER ou WS.
-   * Este m\u00C3\u00A9todo permite validar a senha do usu\u00C3\u00A1rio).
-   * @param senha Senha do usu\u00C3\u00A1rio
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Usu\u00C3\u00A1rio (id).
+   * Validar a senha do usu\u00E1rio na base do PIER ou WS.
+   * Este m\u00E9todo permite validar a senha do usu\u00E1rio).
+   * @param senha Senha do usu\u00E1rio
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Usu\u00E1rio (id).
    * @return String
    */
   public String validarSenhaUsingGET1(String senha, Long id) throws ApiException {

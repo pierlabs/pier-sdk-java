@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o do template do documento.
+ * Representa\u00E7\u00E3o do template do documento.
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o do template do documento.")
+@ApiModel(description = "Representa\u00E7\u00E3o do template do documento.")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class DocumentoTemplatePersist   {
   
@@ -42,14 +42,14 @@ public class DocumentoTemplatePersist   {
 
   
   /**
-   * Template para o conte\u00C3\u00BAdo do documento.
+   * Template para o conte\u00FAdo do documento.
    **/
   public DocumentoTemplatePersist template(String template) {
     this.template = template;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Template para o conte\u00C3\u00BAdo do documento.")
+  @ApiModelProperty(example = "null", value = "Template para o conte\u00FAdo do documento.")
   @JsonProperty("template")
   public String getTemplate() {
     return template;
@@ -60,14 +60,14 @@ public class DocumentoTemplatePersist   {
 
   
   /**
-   * Lista de configura\u00C3\u00A7\u00C3\u00B5es de integra\u00C3\u00A7\u00C3\u00A3o
+   * Lista de configura\u00E7\u00F5es de integra\u00E7\u00E3o
    **/
   public DocumentoTemplatePersist integracoes(List<ReferenciaIdPersist> integracoes) {
     this.integracoes = integracoes;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Lista de configura\u00C3\u00A7\u00C3\u00B5es de integra\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(example = "null", value = "Lista de configura\u00E7\u00F5es de integra\u00E7\u00E3o")
   @JsonProperty("integracoes")
   public List<ReferenciaIdPersist> getIntegracoes() {
     return integracoes;

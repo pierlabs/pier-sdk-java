@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso Operacao
+ * Representa\u00E7\u00E3o da resposta do recurso Operacao
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso Operacao")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso Operacao")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class OperacaoResponse   {
   
@@ -26,14 +26,14 @@ public class OperacaoResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o
+   * C\u00F3digo que identifica a opera\u00E7\u00E3o
    **/
   public OperacaoResponse idOperacao(Long idOperacao) {
     this.idOperacao = idOperacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo que identifica a opera\u00E7\u00E3o")
   @JsonProperty("idOperacao")
   public Long getIdOperacao() {
     return idOperacao;
@@ -44,14 +44,14 @@ public class OperacaoResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador
+   * C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador
    **/
   public OperacaoResponse codigoProcessamento(String codigoProcessamento) {
     this.codigoProcessamento = codigoProcessamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador")
   @JsonProperty("codigoProcessamento")
   public String getCodigoProcessamento() {
     return codigoProcessamento;
@@ -62,14 +62,14 @@ public class OperacaoResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de processamento usado para cancelar transa\u00C3\u00A7\u00C3\u00B5es no autorizador
+   * C\u00F3digo de processamento usado para cancelar transa\u00E7\u00F5es no autorizador
    **/
   public OperacaoResponse codigoProcessamentoCancelamento(String codigoProcessamentoCancelamento) {
     this.codigoProcessamentoCancelamento = codigoProcessamentoCancelamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de processamento usado para cancelar transa\u00C3\u00A7\u00C3\u00B5es no autorizador")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de processamento usado para cancelar transa\u00E7\u00F5es no autorizador")
   @JsonProperty("codigoProcessamentoCancelamento")
   public String getCodigoProcessamentoCancelamento() {
     return codigoProcessamentoCancelamento;
@@ -80,14 +80,14 @@ public class OperacaoResponse   {
 
   
   /**
-   * Nome da opera\u00C3\u00A7\u00C3\u00A3o
+   * Nome da opera\u00E7\u00E3o
    **/
   public OperacaoResponse nomeOperacao(String nomeOperacao) {
     this.nomeOperacao = nomeOperacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome da opera\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(example = "null", value = "Nome da opera\u00E7\u00E3o")
   @JsonProperty("nomeOperacao")
   public String getNomeOperacao() {
     return nomeOperacao;
@@ -98,14 +98,14 @@ public class OperacaoResponse   {
 
   
   /**
-   * Flag indicativa para crobran\u00C3\u00A7a de juros
+   * Flag indicativa para crobran\u00E7a de juros
    **/
   public OperacaoResponse flagCobraJuros(Boolean flagCobraJuros) {
     this.flagCobraJuros = flagCobraJuros;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Flag indicativa para crobran\u00C3\u00A7a de juros")
+  @ApiModelProperty(example = "false", value = "Flag indicativa para crobran\u00E7a de juros")
   @JsonProperty("flagCobraJuros")
   public Boolean getFlagCobraJuros() {
     return flagCobraJuros;
@@ -116,14 +116,14 @@ public class OperacaoResponse   {
 
   
   /**
-   * Flag indicativa para crobran\u00C3\u00A7a de tarifas
+   * Flag indicativa para crobran\u00E7a de tarifas
    **/
   public OperacaoResponse flagCobraTarifa(Boolean flagCobraTarifa) {
     this.flagCobraTarifa = flagCobraTarifa;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Flag indicativa para crobran\u00C3\u00A7a de tarifas")
+  @ApiModelProperty(example = "false", value = "Flag indicativa para crobran\u00E7a de tarifas")
   @JsonProperty("flagCobraTarifa")
   public Boolean getFlagCobraTarifa() {
     return flagCobraTarifa;
@@ -134,14 +134,14 @@ public class OperacaoResponse   {
 
   
   /**
-   * Quantidade de meses para car\u00C3\u00AAncia
+   * Quantidade de meses para car\u00EAncia
    **/
   public OperacaoResponse carencia(Integer carencia) {
     this.carencia = carencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Quantidade de meses para car\u00C3\u00AAncia")
+  @ApiModelProperty(example = "null", value = "Quantidade de meses para car\u00EAncia")
   @JsonProperty("carencia")
   public Integer getCarencia() {
     return carencia;
@@ -152,14 +152,14 @@ public class OperacaoResponse   {
 
   
   /**
-   * Permitir transa\u00C3\u00A7\u00C3\u00B5es parceladas
+   * Permitir transa\u00E7\u00F5es parceladas
    **/
   public OperacaoResponse flagPermitirParcelamento(Boolean flagPermitirParcelamento) {
     this.flagPermitirParcelamento = flagPermitirParcelamento;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Permitir transa\u00C3\u00A7\u00C3\u00B5es parceladas")
+  @ApiModelProperty(example = "false", value = "Permitir transa\u00E7\u00F5es parceladas")
   @JsonProperty("flagPermitirParcelamento")
   public Boolean getFlagPermitirParcelamento() {
     return flagPermitirParcelamento;

@@ -10,10 +10,10 @@ import java.math.BigDecimal;
 
 
 /**
- * Objeto de Resposta Par\u00C3\u00A2metro Produto
+ * Objeto de Resposta Par\u00E2metro Produto
  **/
 
-@ApiModel(description = "Objeto de Resposta Par\u00C3\u00A2metro Produto")
+@ApiModel(description = "Objeto de Resposta Par\u00E2metro Produto")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ParametroProdutoResponse   {
   
@@ -44,14 +44,14 @@ public class ParametroProdutoResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
    **/
   public ParametroProdutoResponse idProduto(Long idProduto) {
     this.idProduto = idProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).")
   @JsonProperty("idProduto")
   public Long getIdProduto() {
     return idProduto;
@@ -62,14 +62,14 @@ public class ParametroProdutoResponse   {
 
   
   /**
-   * Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON_US ou OFF_US).
+   * Tipo da Transa\u00E7\u00E3o (ON_US ou OFF_US).
    **/
   public ParametroProdutoResponse tipoOrigemTransacao(TipoOrigemTransacaoEnum tipoOrigemTransacao) {
     this.tipoOrigemTransacao = tipoOrigemTransacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Tipo da Transa\u00C3\u00A7\u00C3\u00A3o (ON_US ou OFF_US).")
+  @ApiModelProperty(example = "null", required = true, value = "Tipo da Transa\u00E7\u00E3o (ON_US ou OFF_US).")
   @JsonProperty("tipoOrigemTransacao")
   public TipoOrigemTransacaoEnum getTipoOrigemTransacao() {
     return tipoOrigemTransacao;
@@ -80,14 +80,14 @@ public class ParametroProdutoResponse   {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.
+   * Descri\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o.
    **/
   public ParametroProdutoResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Descri\u00C3\u00A7\u00C3\u00A3o do Tipo da Transa\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(example = "null", required = true, value = "Descri\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o.")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -98,14 +98,14 @@ public class ParametroProdutoResponse   {
 
   
   /**
-   * Valor do Par\u00C3\u00A2metro.
+   * Valor do Par\u00E2metro.
    **/
   public ParametroProdutoResponse valorParametro(BigDecimal valorParametro) {
     this.valorParametro = valorParametro;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Valor do Par\u00C3\u00A2metro.")
+  @ApiModelProperty(example = "null", required = true, value = "Valor do Par\u00E2metro.")
   @JsonProperty("valorParametro")
   public BigDecimal getValorParametro() {
     return valorParametro;
@@ -116,14 +116,14 @@ public class ParametroProdutoResponse   {
 
   
   /**
-   * Data de Validade do Par\u00C3\u00A2metro do Produto.
+   * Data de Validade do Par\u00E2metro do Produto.
    **/
   public ParametroProdutoResponse dataValidade(String dataValidade) {
     this.dataValidade = dataValidade;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", required = true, value = "Data de Validade do Par\u00C3\u00A2metro do Produto.")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", required = true, value = "Data de Validade do Par\u00E2metro do Produto.")
   @JsonProperty("dataValidade")
   public String getDataValidade() {
     return dataValidade;

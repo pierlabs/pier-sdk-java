@@ -8,31 +8,31 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Objeto de requisi\u00C3\u00A7\u00C3\u00A3o da integra\u00C3\u00A7\u00C3\u00A3o de Arquivos.
+ * Objeto de requisi\u00E7\u00E3o da integra\u00E7\u00E3o de Arquivos.
  **/
 
-@ApiModel(description = "Objeto de requisi\u00C3\u00A7\u00C3\u00A3o da integra\u00C3\u00A7\u00C3\u00A3o de Arquivos.")
+@ApiModel(description = "Objeto de requisi\u00E7\u00E3o da integra\u00E7\u00E3o de Arquivos.")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class IntegrarArquivoRequest   {
   
-  private String cpf = null;
+  private String numeroReceitaFederal = null;
 
   
   /**
-   * CPF do cliente de Arquivos a serem integrados
+   * N\u00FAmero Receita Federal (CPF) vinculado a um ou mais arquivos que ser\u00E3o enviados para realizar integra\u00E7\u00E3o
    **/
-  public IntegrarArquivoRequest cpf(String cpf) {
-    this.cpf = cpf;
+  public IntegrarArquivoRequest numeroReceitaFederal(String numeroReceitaFederal) {
+    this.numeroReceitaFederal = numeroReceitaFederal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "CPF do cliente de Arquivos a serem integrados")
-  @JsonProperty("cpf")
-  public String getCpf() {
-    return cpf;
+  @ApiModelProperty(example = "null", value = "N\u00FAmero Receita Federal (CPF) vinculado a um ou mais arquivos que ser\u00E3o enviados para realizar integra\u00E7\u00E3o")
+  @JsonProperty("numeroReceitaFederal")
+  public String getNumeroReceitaFederal() {
+    return numeroReceitaFederal;
   }
-  public void setCpf(String cpf) {
-    this.cpf = cpf;
+  public void setNumeroReceitaFederal(String numeroReceitaFederal) {
+    this.numeroReceitaFederal = numeroReceitaFederal;
   }
 
   
@@ -46,12 +46,12 @@ public class IntegrarArquivoRequest   {
       return false;
     }
     IntegrarArquivoRequest integrarArquivoRequest = (IntegrarArquivoRequest) o;
-    return Objects.equals(this.cpf, integrarArquivoRequest.cpf);
+    return Objects.equals(this.numeroReceitaFederal, integrarArquivoRequest.numeroReceitaFederal);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(cpf);
+    return Objects.hash(numeroReceitaFederal);
   }
 
   @Override
@@ -59,7 +59,7 @@ public class IntegrarArquivoRequest   {
     StringBuilder sb = new StringBuilder();
     sb.append("class IntegrarArquivoRequest {\n");
     
-    sb.append("    cpf: ").append(toIndentedString(cpf)).append("\n");
+    sb.append("    numeroReceitaFederal: ").append(toIndentedString(numeroReceitaFederal)).append("\n");
     sb.append("}");
     return sb.toString();
   }

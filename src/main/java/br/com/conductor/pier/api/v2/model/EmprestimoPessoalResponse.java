@@ -12,10 +12,10 @@ import java.util.List;
 
 
 /**
- * Resposta do recurso de simular empr\u00C3\u00A9stimos/financiamentos
+ * Resposta do recurso de simular empr\u00E9stimos/financiamentos
  **/
 
-@ApiModel(description = "Resposta do recurso de simular empr\u00C3\u00A9stimos/financiamentos")
+@ApiModel(description = "Resposta do recurso de simular empr\u00E9stimos/financiamentos")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class EmprestimoPessoalResponse   {
   
@@ -48,14 +48,14 @@ public class EmprestimoPessoalResponse   {
 
   
   /**
-   * Valor solicitado do empr\u00C3\u00A9stimo/financiamento
+   * Valor solicitado do empr\u00E9stimo/financiamento
    **/
   public EmprestimoPessoalResponse valorSolicitado(BigDecimal valorSolicitado) {
     this.valorSolicitado = valorSolicitado;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor solicitado do empr\u00C3\u00A9stimo/financiamento")
+  @ApiModelProperty(example = "null", value = "Valor solicitado do empr\u00E9stimo/financiamento")
   @JsonProperty("valorSolicitado")
   public BigDecimal getValorSolicitado() {
     return valorSolicitado;
@@ -66,14 +66,14 @@ public class EmprestimoPessoalResponse   {
 
   
   /**
-   * Valor m\u00C3\u00A1ximo de empr\u00C3\u00A9stimo pelo valor limite de parcela
+   * Valor m\u00E1ximo de empr\u00E9stimo pelo valor limite de parcela
    **/
   public EmprestimoPessoalResponse valorMaximoSolicitacao(BigDecimal valorMaximoSolicitacao) {
     this.valorMaximoSolicitacao = valorMaximoSolicitacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor m\u00C3\u00A1ximo de empr\u00C3\u00A9stimo pelo valor limite de parcela")
+  @ApiModelProperty(example = "null", value = "Valor m\u00E1ximo de empr\u00E9stimo pelo valor limite de parcela")
   @JsonProperty("valorMaximoSolicitacao")
   public BigDecimal getValorMaximoSolicitacao() {
     return valorMaximoSolicitacao;
@@ -84,14 +84,14 @@ public class EmprestimoPessoalResponse   {
 
   
   /**
-   * N\u00C3\u00BAmero de parcelas solicitado
+   * N\u00FAmero de parcelas solicitado
    **/
   public EmprestimoPessoalResponse numeroParcelas(Integer numeroParcelas) {
     this.numeroParcelas = numeroParcelas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero de parcelas solicitado")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero de parcelas solicitado")
   @JsonProperty("numeroParcelas")
   public Integer getNumeroParcelas() {
     return numeroParcelas;
@@ -102,14 +102,14 @@ public class EmprestimoPessoalResponse   {
 
   
   /**
-   * Limite m\u00C3\u00A1ximo de parcela permitido
+   * Limite m\u00E1ximo de parcela permitido
    **/
   public EmprestimoPessoalResponse valorMaximoParcela(BigDecimal valorMaximoParcela) {
     this.valorMaximoParcela = valorMaximoParcela;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Limite m\u00C3\u00A1ximo de parcela permitido")
+  @ApiModelProperty(example = "null", value = "Limite m\u00E1ximo de parcela permitido")
   @JsonProperty("valorMaximoParcela")
   public BigDecimal getValorMaximoParcela() {
     return valorMaximoParcela;
@@ -138,14 +138,14 @@ public class EmprestimoPessoalResponse   {
 
   
   /**
-   * Per\u00C3\u00ADodo de aplica da taxa de juros
+   * Per\u00EDodo de aplica da taxa de juros
    **/
   public EmprestimoPessoalResponse periodoTaxa(String periodoTaxa) {
     this.periodoTaxa = periodoTaxa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Per\u00C3\u00ADodo de aplica da taxa de juros")
+  @ApiModelProperty(example = "null", value = "Per\u00EDodo de aplica da taxa de juros")
   @JsonProperty("periodoTaxa")
   public String getPeriodoTaxa() {
     return periodoTaxa;
@@ -156,14 +156,14 @@ public class EmprestimoPessoalResponse   {
 
   
   /**
-   * Sistema para amortiza\u00C3\u00A7\u00C3\u00A3o do valor das parcelas
+   * Sistema para amortiza\u00E7\u00E3o do valor das parcelas
    **/
   public EmprestimoPessoalResponse sistemaAmortizacao(String sistemaAmortizacao) {
     this.sistemaAmortizacao = sistemaAmortizacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Sistema para amortiza\u00C3\u00A7\u00C3\u00A3o do valor das parcelas")
+  @ApiModelProperty(example = "null", value = "Sistema para amortiza\u00E7\u00E3o do valor das parcelas")
   @JsonProperty("sistemaAmortizacao")
   public String getSistemaAmortizacao() {
     return sistemaAmortizacao;

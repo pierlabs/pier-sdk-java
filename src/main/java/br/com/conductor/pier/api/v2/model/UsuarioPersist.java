@@ -23,14 +23,14 @@ public class UsuarioPersist   {
 
   
   /**
-   * Apresenta o nome do usu\u00C3\u00A1rio.
+   * Apresenta o nome do usu\u00E1rio.
    **/
   public UsuarioPersist nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o nome do usu\u00C3\u00A1rio.")
+  @ApiModelProperty(example = "null", value = "Apresenta o nome do usu\u00E1rio.")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -41,14 +41,14 @@ public class UsuarioPersist   {
 
   
   /**
-   * Apresenta o login do usu\u00C3\u00A1rio.
+   * Apresenta o login do usu\u00E1rio.
    **/
   public UsuarioPersist login(String login) {
     this.login = login;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o login do usu\u00C3\u00A1rio.")
+  @ApiModelProperty(example = "null", value = "Apresenta o login do usu\u00E1rio.")
   @JsonProperty("login")
   public String getLogin() {
     return login;
@@ -59,14 +59,14 @@ public class UsuarioPersist   {
 
   
   /**
-   * N\u00C3\u00BAmero do CPF.
+   * N\u00FAmero do CPF.
    **/
   public UsuarioPersist cpf(String cpf) {
     this.cpf = cpf;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero do CPF.")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero do CPF.")
   @JsonProperty("cpf")
   public String getCpf() {
     return cpf;
@@ -77,14 +77,14 @@ public class UsuarioPersist   {
 
   
   /**
-   * Apresenta o email do usu\u00C3\u00A1rio.
+   * Apresenta o email do usu\u00E1rio.
    **/
   public UsuarioPersist email(String email) {
     this.email = email;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o email do usu\u00C3\u00A1rio.")
+  @ApiModelProperty(example = "null", value = "Apresenta o email do usu\u00E1rio.")
   @JsonProperty("email")
   public String getEmail() {
     return email;
@@ -95,14 +95,14 @@ public class UsuarioPersist   {
 
   
   /**
-   * Apresenta a senha do usu\u00C3\u00A1rio.
+   * Apresenta a senha do usu\u00E1rio.
    **/
   public UsuarioPersist senha(String senha) {
     this.senha = senha;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta a senha do usu\u00C3\u00A1rio.")
+  @ApiModelProperty(example = "null", value = "Apresenta a senha do usu\u00E1rio.")
   @JsonProperty("senha")
   public String getSenha() {
     return senha;

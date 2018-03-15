@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * Transfer\u00C3\u00AAncia banc\u00C3\u00A1ria
+ * Transfer\u00EAncia banc\u00E1ria
  **/
 
-@ApiModel(description = "Transfer\u00C3\u00AAncia banc\u00C3\u00A1ria")
+@ApiModel(description = "Transfer\u00EAncia banc\u00E1ria")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TransferenciaBancariaPersist   {
   
@@ -29,14 +29,14 @@ public class TransferenciaBancariaPersist   {
 
   
   /**
-   * Valor da transfer\u00C3\u00AAncia
+   * Valor da transfer\u00EAncia
    **/
   public TransferenciaBancariaPersist valorCompra(BigDecimal valorCompra) {
     this.valorCompra = valorCompra;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Valor da transfer\u00C3\u00AAncia")
+  @ApiModelProperty(example = "null", required = true, value = "Valor da transfer\u00EAncia")
   @JsonProperty("valorCompra")
   public BigDecimal getValorCompra() {
     return valorCompra;
@@ -47,14 +47,14 @@ public class TransferenciaBancariaPersist   {
 
   
   /**
-   * Valor da transfer\u00C3\u00AAncia
+   * Valor da transfer\u00EAncia
    **/
   public TransferenciaBancariaPersist valor(BigDecimal valor) {
     this.valor = valor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Valor da transfer\u00C3\u00AAncia")
+  @ApiModelProperty(example = "null", required = true, value = "Valor da transfer\u00EAncia")
   @JsonProperty("valor")
   public BigDecimal getValor() {
     return valor;
@@ -65,14 +65,14 @@ public class TransferenciaBancariaPersist   {
 
   
   /**
-   * N\u00C3\u00BAmero do CPF ou CNPJ.
+   * N\u00FAmero do CPF ou CNPJ.
    **/
   public TransferenciaBancariaPersist documentoFavorecido(String documentoFavorecido) {
     this.documentoFavorecido = documentoFavorecido;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "N\u00C3\u00BAmero do CPF ou CNPJ.")
+  @ApiModelProperty(example = "null", required = true, value = "N\u00FAmero do CPF ou CNPJ.")
   @JsonProperty("documentoFavorecido")
   public String getDocumentoFavorecido() {
     return documentoFavorecido;
@@ -83,14 +83,14 @@ public class TransferenciaBancariaPersist   {
 
   
   /**
-   * C\u00C3\u00B3digo do banco
+   * C\u00F3digo do banco
    **/
   public TransferenciaBancariaPersist banco(Long banco) {
     this.banco = banco;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "C\u00C3\u00B3digo do banco")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo do banco")
   @JsonProperty("banco")
   public Long getBanco() {
     return banco;
@@ -101,14 +101,14 @@ public class TransferenciaBancariaPersist   {
 
   
   /**
-   * N\u00C3\u00BAmero da ag\u00C3\u00AAncia
+   * N\u00FAmero da ag\u00EAncia
    **/
   public TransferenciaBancariaPersist numeroAgencia(String numeroAgencia) {
     this.numeroAgencia = numeroAgencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "N\u00C3\u00BAmero da ag\u00C3\u00AAncia")
+  @ApiModelProperty(example = "null", required = true, value = "N\u00FAmero da ag\u00EAncia")
   @JsonProperty("numeroAgencia")
   public String getNumeroAgencia() {
     return numeroAgencia;
@@ -119,14 +119,14 @@ public class TransferenciaBancariaPersist   {
 
   
   /**
-   * D\u00C3\u00ADgito da ag\u00C3\u00AAncia
+   * D\u00EDgito da ag\u00EAncia
    **/
   public TransferenciaBancariaPersist digitoAgencia(String digitoAgencia) {
     this.digitoAgencia = digitoAgencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "D\u00C3\u00ADgito da ag\u00C3\u00AAncia")
+  @ApiModelProperty(example = "null", value = "D\u00EDgito da ag\u00EAncia")
   @JsonProperty("digitoAgencia")
   public String getDigitoAgencia() {
     return digitoAgencia;
@@ -137,14 +137,14 @@ public class TransferenciaBancariaPersist   {
 
   
   /**
-   * N\u00C3\u00BAmero da conta
+   * N\u00FAmero da conta
    **/
   public TransferenciaBancariaPersist numeroConta(String numeroConta) {
     this.numeroConta = numeroConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "N\u00C3\u00BAmero da conta")
+  @ApiModelProperty(example = "null", required = true, value = "N\u00FAmero da conta")
   @JsonProperty("numeroConta")
   public String getNumeroConta() {
     return numeroConta;
@@ -155,14 +155,14 @@ public class TransferenciaBancariaPersist   {
 
   
   /**
-   * D\u00C3\u00ADgito da conta
+   * D\u00EDgito da conta
    **/
   public TransferenciaBancariaPersist digitoConta(String digitoConta) {
     this.digitoConta = digitoConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "D\u00C3\u00ADgito da conta")
+  @ApiModelProperty(example = "null", value = "D\u00EDgito da conta")
   @JsonProperty("digitoConta")
   public String getDigitoConta() {
     return digitoConta;
@@ -173,14 +173,14 @@ public class TransferenciaBancariaPersist   {
 
   
   /**
-   * Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente)
+   * Sinaliza se conta banc\u00E1ria \u00E9 poupan\u00E7a (1: Poupan\u00E7a, 0: Conta corrente)
    **/
   public TransferenciaBancariaPersist flagContaPoupanca(Integer flagContaPoupanca) {
     this.flagContaPoupanca = flagContaPoupanca;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Sinaliza se conta banc\u00C3\u00A1ria \u00C3\u00A9 poupan\u00C3\u00A7a (1: Poupan\u00C3\u00A7a, 0: Conta corrente)")
+  @ApiModelProperty(example = "null", required = true, value = "Sinaliza se conta banc\u00E1ria \u00E9 poupan\u00E7a (1: Poupan\u00E7a, 0: Conta corrente)")
   @JsonProperty("flagContaPoupanca")
   public Integer getFlagContaPoupanca() {
     return flagContaPoupanca;
@@ -191,14 +191,14 @@ public class TransferenciaBancariaPersist   {
 
   
   /**
-   * Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.
+   * Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00E3o Social (Nome Empresarial)'.
    **/
   public TransferenciaBancariaPersist nomeFavorecido(String nomeFavorecido) {
     this.nomeFavorecido = nomeFavorecido;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00C3\u00A3o Social (Nome Empresarial)'.")
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00E3o Social (Nome Empresarial)'.")
   @JsonProperty("nomeFavorecido")
   public String getNomeFavorecido() {
     return nomeFavorecido;

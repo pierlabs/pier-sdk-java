@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta para o recurso de Documento
+ * Representa\u00E7\u00E3o da resposta para o recurso de Documento
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta para o recurso de Documento")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta para o recurso de Documento")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class DocumentoDetalhadoResponse   {
   
@@ -81,14 +81,14 @@ public class DocumentoDetalhadoResponse   {
 
   
   /**
-   * Representa\u00C3\u00A7\u00C3\u00A3o do documento em Base64.
+   * Representa\u00E7\u00E3o do documento em Base64.
    **/
   public DocumentoDetalhadoResponse documento(String documento) {
     this.documento = documento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Representa\u00C3\u00A7\u00C3\u00A3o do documento em Base64.")
+  @ApiModelProperty(example = "null", value = "Representa\u00E7\u00E3o do documento em Base64.")
   @JsonProperty("documento")
   public String getDocumento() {
     return documento;
@@ -99,14 +99,14 @@ public class DocumentoDetalhadoResponse   {
 
   
   /**
-   * Extens\u00C3\u00A3o do Documento.
+   * Extens\u00E3o do Documento.
    **/
   public DocumentoDetalhadoResponse extensao(String extensao) {
     this.extensao = extensao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Extens\u00C3\u00A3o do Documento.")
+  @ApiModelProperty(example = "null", value = "Extens\u00E3o do Documento.")
   @JsonProperty("extensao")
   public String getExtensao() {
     return extensao;

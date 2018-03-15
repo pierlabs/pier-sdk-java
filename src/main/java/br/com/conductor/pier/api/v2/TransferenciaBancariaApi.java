@@ -47,9 +47,9 @@ public class TransferenciaBancariaApi {
 
   
   /**
-   * Atualiza conta banc\u00C3\u00A1ria portador
-   * Esse recurso permite atualizar uma conta banc\u00C3\u00A1ria do portador.
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria do portador (id).
+   * Atualiza conta banc\u00E1ria portador
+   * Esse recurso permite atualizar uma conta banc\u00E1ria do portador.
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria do portador (id).
    * @param update update
    * @return ContaBancariaPortadorResponse
    */
@@ -101,9 +101,105 @@ public class TransferenciaBancariaApi {
   }
   
   /**
-   * Realiza a consulta de uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias de um portador
-   * Recurso utilizado para recuperar uma transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1ria de um portador, utiliza o ID da transfer\u00C3\u00AAncia banc\u00C3\u00A1riae o idConta para realizar a consulta.
-   * @param idTransferencia Id Transfer\u00C3\u00AAncia
+   * Realizar o cancelamento de uma transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias que esteja pendente de confirma\u00E7\u00E3o.
+   * Este recurso tem como objetivo permitir o canelamento de uma transfer\u00EAncia de cr\u00E9dito entre contas.
+   * @param idTransferencia Id Transfer\u00EAncia
+   * @return String
+   */
+  public String cancelarTransferenciaCreditoContaBancariaUsingPOST(Long idTransferencia) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'idTransferencia' is set
+     if (idTransferencia == null) {
+        throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling cancelarTransferenciaCreditoContaBancariaUsingPOST");
+     }
+     
+    // create path and map variables
+    String path = "/api/transferencias-creditos-contas-bancarias/{idTransferencia}/cancelar".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "idTransferencia" + "\\}", apiClient.escapeString(idTransferencia.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<String> returnType = new GenericType<String>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Realizar a confirma\u00E7\u00E3o de uma transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias que esteja pendente de confirma\u00E7\u00E3o.
+   * Este recurso tem como objetivo permitir a confirma\u00E7\u00E3o da transfer\u00EAncia de cr\u00E9dito entre contas.
+   * @param idTransferencia Id Transfer\u00EAncia
+   * @return String
+   */
+  public String confirmarTransferenciaCreditoContaBancariaUsingPOST(Long idTransferencia) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'idTransferencia' is set
+     if (idTransferencia == null) {
+        throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling confirmarTransferenciaCreditoContaBancariaUsingPOST");
+     }
+     
+    // create path and map variables
+    String path = "/api/transferencias-creditos-contas-bancarias/{idTransferencia}/confirmar".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "idTransferencia" + "\\}", apiClient.escapeString(idTransferencia.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<String> returnType = new GenericType<String>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Realiza a consulta de uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias de um portador
+   * Recurso utilizado para recuperar uma transfer\u00EAncia de cr\u00E9dito entre contas banc\u00E1ria de um portador, utiliza o ID da transfer\u00EAncia banc\u00E1riae o idConta para realizar a consulta.
+   * @param idTransferencia Id Transfer\u00EAncia
    * @return TransferenciaCreditoContaBancariaResponse
    */
   public TransferenciaCreditoContaBancariaResponse consultarTransferenciaBancariaUsingGET(Long idTransferencia) throws ApiException {
@@ -149,17 +245,17 @@ public class TransferenciaBancariaApi {
   }
   
   /**
-   * Consulta conta banc\u00C3\u00A1ria portador
-   * Esse recurso permite consultar uma conta banc\u00C3\u00A1ria do portador a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria (id).
+   * Consulta conta banc\u00E1ria portador
+   * Esse recurso permite consultar uma conta banc\u00E1ria do portador a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria (id).
    * @return ContaBancariaPortadorResponse
    */
-  public ContaBancariaPortadorResponse consultarUsingGET11(Long id) throws ApiException {
+  public ContaBancariaPortadorResponse consultarUsingGET12(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET11");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET12");
      }
      
     // create path and map variables
@@ -197,24 +293,24 @@ public class TransferenciaBancariaApi {
   }
   
   /**
-   * Consultar uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria para um banco
-   * Este recurso permite consultar os detalhes de uma determinada transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito realizada para uma conta banc\u00C3\u00A1ria. De modo geral, esta opera\u00C3\u00A7\u00C3\u00A3o poder\u00C3\u00A1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00C2\u00AA via de transfer\u00C3\u00AAncia entre contas.
+   * Consultar uma transfer\u00EAncia banc\u00E1ria para um banco
+   * Este recurso permite consultar os detalhes de uma determinada transfer\u00EAncia de cr\u00E9dito realizada para uma conta banc\u00E1ria. De modo geral, esta opera\u00E7\u00E3o poder\u00E1 ser utilizada para uma consulta simples destes detalhes ou para realizar a montagem de um comprovante de 2\u00AA via de transfer\u00EAncia entre contas.
    * @param id Id Conta
-   * @param idTransferencia Id Transfer\u00C3\u00AAncia
-   * @param idContaBancariaDestino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
+   * @param idTransferencia Id Transfer\u00EAncia
+   * @param idContaBancariaDestino C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id)
    * @return TransferenciaBancariaResponse
    */
-  public TransferenciaBancariaResponse consultarUsingGET40(Long id, Long idTransferencia, Long idContaBancariaDestino) throws ApiException {
+  public TransferenciaBancariaResponse consultarUsingGET41(Long id, Long idTransferencia, Long idContaBancariaDestino) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET40");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET41");
      }
      
      // verify the required parameter 'idTransferencia' is set
      if (idTransferencia == null) {
-        throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET40");
+        throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET41");
      }
      
     // create path and map variables
@@ -255,17 +351,18 @@ public class TransferenciaBancariaApi {
   }
   
   /**
-   * Realiza a listagem das transfer\u00C3\u00AAncias banc\u00C3\u00A1rias de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
-   * Recurso utilizado para listar as transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1ria de um portador solicitadas.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param idConta C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da Conta.
-   * @param dataSolicitacaoInicial Data inicial da solicita\u00C3\u00A7\u00C3\u00A3o de transfer\u00C3\u00AAncia.
-   * @param dataSolicitacaoFinal Data final da solicita\u00C3\u00A7\u00C3\u00A3o de transfer\u00C3\u00AAncia
+   * Realiza a listagem das transfer\u00EAncias banc\u00E1rias de cr\u00E9dito entre contas banc\u00E1rias
+   * Recurso utilizado para listar as transfer\u00EAncia de cr\u00E9dito entre contas banc\u00E1ria de um portador solicitadas.
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @param idConta C\u00F3digo de identifica\u00E7\u00E3o da Conta.
+   * @param dataSolicitacaoInicial Data inicial da solicita\u00E7\u00E3o de transfer\u00EAncia.
+   * @param dataSolicitacaoFinal Data final da solicita\u00E7\u00E3o de transfer\u00EAncia
+   * @param status C\u00F3digo do status do processamento
    * @return PageTransferenciaCreditoContaBancariaResponse
    */
-  public PageTransferenciaCreditoContaBancariaResponse listarTransferenciaBancariaUsingGET(List<String> sort, Integer page, Integer limit, Long idConta, String dataSolicitacaoInicial, String dataSolicitacaoFinal) throws ApiException {
+  public PageTransferenciaCreditoContaBancariaResponse listarTransferenciaBancariaUsingGET(List<String> sort, Integer page, Integer limit, Long idConta, String dataSolicitacaoInicial, String dataSolicitacaoFinal, Integer status) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -288,6 +385,8 @@ public class TransferenciaBancariaApi {
     queryParams.addAll(apiClient.parameterToPairs("", "dataSolicitacaoInicial", dataSolicitacaoInicial));
     
     queryParams.addAll(apiClient.parameterToPairs("", "dataSolicitacaoFinal", dataSolicitacaoFinal));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "status", status));
     
 
     
@@ -314,22 +413,22 @@ public class TransferenciaBancariaApi {
   }
   
   /**
-   * Lista contas banc\u00C3\u00A1rias portador
-   * Esse recurso permite listar contas banc\u00C3\u00A1rias do portador.
-   * @param idConta C\u00C3\u00B3digo identificador da conta cart\u00C3\u00A3o
-   * @param nomeAgencia Descri\u00C3\u00A7\u00C3\u00A3o da ag\u00C3\u00AAncia
-   * @param numeroAgencia N\u00C3\u00BAmero da ag\u00C3\u00AAncia
-   * @param numeroConta N\u00C3\u00BAmero da conta
-   * @param flagContaOrigemDoc Sinaliza se origem \u00C3\u00A9 DOC (1: DOC, 0: TED)
-   * @param idPessoaFisica C\u00C3\u00B3digo da pessoa
+   * Lista contas banc\u00E1rias portador
+   * Esse recurso permite listar contas banc\u00E1rias do portador.
+   * @param idConta C\u00F3digo identificador da conta cart\u00E3o
+   * @param nomeAgencia Descri\u00E7\u00E3o da ag\u00EAncia
+   * @param numeroAgencia N\u00FAmero da ag\u00EAncia
+   * @param numeroConta N\u00FAmero da conta
+   * @param flagContaOrigemDoc Sinaliza se origem \u00E9 DOC (1: DOC, 0: TED)
+   * @param idPessoaFisica C\u00F3digo da pessoa
    * @param favorecido Nome do favorecido
    * @param numeroReceiraFederal Documento do favorecido
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
    * @return PageContaBancariaPortadorResponse
    */
-  public PageContaBancariaPortadorResponse listarUsingGET14(Long idConta, String nomeAgencia, String numeroAgencia, String numeroConta, Integer flagContaOrigemDoc, Long idPessoaFisica, String favorecido, String numeroReceiraFederal, List<String> sort, Integer page, Integer limit) throws ApiException {
+  public PageContaBancariaPortadorResponse listarUsingGET15(Long idConta, String nomeAgencia, String numeroAgencia, String numeroConta, Integer flagContaOrigemDoc, Long idPessoaFisica, String favorecido, String numeroReceiraFederal, List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -388,21 +487,21 @@ public class TransferenciaBancariaApi {
   }
   
   /**
-   * Listar as transfer\u00C3\u00AAncias banc\u00C3\u00A1rias realizadas
-   * Este recurso tem como objetivo permitir que o portador de um Cart\u00C3\u00A3o possa consultar uma lista das Transfer\u00C3\u00AAncias Banc\u00C3\u00A1rias para os Favorecidos cadastrados.
+   * Listar as transfer\u00EAncias banc\u00E1rias realizadas
+   * Este recurso tem como objetivo permitir que o portador de um Cart\u00E3o possa consultar uma lista das Transfer\u00EAncias Banc\u00E1rias para os Favorecidos cadastrados.
    * @param id Id Conta
-   * @param idContaBancariaDestino C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da conta banc\u00C3\u00A1ria de destino (id)
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @param idContaBancariaDestino C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id)
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
    * @return PageTransferenciaBancariaResponse
    */
-  public PageTransferenciaBancariaResponse listarUsingGET47(Long id, Long idContaBancariaDestino, List<String> sort, Integer page, Integer limit) throws ApiException {
+  public PageTransferenciaBancariaResponse listarUsingGET49(Long id, Long idContaBancariaDestino, List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET47");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET49");
      }
      
     // create path and map variables
@@ -448,8 +547,8 @@ public class TransferenciaBancariaApi {
   }
   
   /**
-   * Cadastra uma conta banc\u00C3\u00A1ria do portador
-   * Esse recurso permite cadastrar contas banc\u00C3\u00A1rias do portador.
+   * Cadastra uma conta banc\u00E1ria do portador
+   * Esse recurso permite cadastrar contas banc\u00E1rias do portador.
    * @param persist persist
    * @return ContaBancariaPortadorResponse
    */
@@ -495,8 +594,8 @@ public class TransferenciaBancariaApi {
   }
   
   /**
-   * Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias
-   * Realiza a simula\u00C3\u00A7\u00C3\u00A3o dos planos de parcelamentos para uma transfer\u00C3\u00AAncia banc\u00C3\u00A1ria de cr\u00C3\u00A9dito entre contas banc\u00C3\u00A1rias.
+   * Realiza a simula\u00E7\u00E3o dos planos de parcelamentos para uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias
+   * Realiza a simula\u00E7\u00E3o dos planos de parcelamentos para uma transfer\u00EAncia banc\u00E1ria de cr\u00E9dito entre contas banc\u00E1rias.
    * @param request request
    * @return PlanoParcelamentoTransferenciaCreditoContaBancariaResponse
    */
@@ -542,8 +641,8 @@ public class TransferenciaBancariaApi {
   }
   
   /**
-   * Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
-   * Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para uma conta banc\u00C3\u00A1ria. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta banc\u00C3\u00A1ria de destino.
+   * Realizar transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias
+   * Este recurso tem como objetivo permitir que o portador de um cart\u00E3o possa realizar a transfer\u00EAncia de cr\u00E9dito para uma conta banc\u00E1ria. Assim, o valor do cr\u00E9dito somado a tarifa para transfer\u00EAncia, quando praticada pelo emissor, ser\u00E1 debitado da conta de origem, se houver saldo suficiente, e ser\u00E1 creditado na conta banc\u00E1ria de destino.
    * @param persist persist
    * @return TransferenciaCreditoContaBancariaResponse
    */
@@ -589,8 +688,8 @@ public class TransferenciaBancariaApi {
   }
   
   /**
-   * Realizar transfer\u00C3\u00AAncia banc\u00C3\u00A1ria do cart\u00C3\u00A3o para contas banc\u00C3\u00A1rias
-   * Este recurso tem como objetivo permitir que o portador de um cart\u00C3\u00A3o possa realizar a transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para uma conta banc\u00C3\u00A1ria. Assim, o valor do cr\u00C3\u00A9dito somado a tarifa para transfer\u00C3\u00AAncia, quando praticada pelo emissor, ser\u00C3\u00A1 debitado da conta de origem, se houver saldo suficiente, e ser\u00C3\u00A1 creditado na conta banc\u00C3\u00A1ria de destino.
+   * Realizar transfer\u00EAncia banc\u00E1ria do cart\u00E3o para contas banc\u00E1rias
+   * Este recurso tem como objetivo permitir que o portador de um cart\u00E3o possa realizar a transfer\u00EAncia de cr\u00E9dito para uma conta banc\u00E1ria. Assim, o valor do cr\u00E9dito somado a tarifa para transfer\u00EAncia, quando praticada pelo emissor, ser\u00E1 debitado da conta de origem, se houver saldo suficiente, e ser\u00E1 creditado na conta banc\u00E1ria de destino.
    * @param id Id Conta
    * @param transferenciaBancariaPersist transferenciaBancariaPersist
    * @return TransferenciaBancariaResponse

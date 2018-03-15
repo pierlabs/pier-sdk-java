@@ -116,14 +116,14 @@ public class AplicacaoMobileResponse   {
 
   
   /**
-   * Apresenta o icone da mensagem da aplica\u00C3\u00A7\u00C3\u00A3o.
+   * Apresenta o icone da mensagem da aplica\u00E7\u00E3o.
    **/
   public AplicacaoMobileResponse icone(String icone) {
     this.icone = icone;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o icone da mensagem da aplica\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(example = "null", value = "Apresenta o icone da mensagem da aplica\u00E7\u00E3o.")
   @JsonProperty("icone")
   public String getIcone() {
     return icone;
@@ -134,14 +134,14 @@ public class AplicacaoMobileResponse   {
 
   
   /**
-   * Apresenta o certificado da aplica\u00C3\u00A7\u00C3\u00A3o.
+   * Apresenta o certificado da aplica\u00E7\u00E3o.
    **/
   public AplicacaoMobileResponse certificadoBase64(String certificadoBase64) {
     this.certificadoBase64 = certificadoBase64;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o certificado da aplica\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(example = "null", value = "Apresenta o certificado da aplica\u00E7\u00E3o.")
   @JsonProperty("certificadoBase64")
   public String getCertificadoBase64() {
     return certificadoBase64;
@@ -152,14 +152,14 @@ public class AplicacaoMobileResponse   {
 
   
   /**
-   * Apresenta a senha da aplica\u00C3\u00A7\u00C3\u00A3o.
+   * Apresenta a senha da aplica\u00E7\u00E3o.
    **/
   public AplicacaoMobileResponse senha(String senha) {
     this.senha = senha;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta a senha da aplica\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(example = "null", value = "Apresenta a senha da aplica\u00E7\u00E3o.")
   @JsonProperty("senha")
   public String getSenha() {
     return senha;

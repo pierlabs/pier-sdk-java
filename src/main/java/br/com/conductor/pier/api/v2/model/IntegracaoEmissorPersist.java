@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representa a requisi\u00C3\u00A7\u00C3\u00A3o do recurso de incluir integra\u00C3\u00A7\u00C3\u00A3o emissor
+ * Representa a requisi\u00E7\u00E3o do recurso de incluir integra\u00E7\u00E3o emissor
  **/
 
-@ApiModel(description = "Representa a requisi\u00C3\u00A7\u00C3\u00A3o do recurso de incluir integra\u00C3\u00A7\u00C3\u00A3o emissor")
+@ApiModel(description = "Representa a requisi\u00E7\u00E3o do recurso de incluir integra\u00E7\u00E3o emissor")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class IntegracaoEmissorPersist   {
   
@@ -19,14 +19,14 @@ public class IntegracaoEmissorPersist   {
 
   
   /**
-   * Canal de entrada onde deve ser informado o dispositivo usado na comunica\u00C3\u00A7\u00C3\u00A3o.
+   * Canal de entrada onde deve ser informado o dispositivo usado na comunica\u00E7\u00E3o.
    **/
   public IntegracaoEmissorPersist canalEntrada(String canalEntrada) {
     this.canalEntrada = canalEntrada;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Canal de entrada onde deve ser informado o dispositivo usado na comunica\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(example = "null", value = "Canal de entrada onde deve ser informado o dispositivo usado na comunica\u00E7\u00E3o.")
   @JsonProperty("canalEntrada")
   public String getCanalEntrada() {
     return canalEntrada;

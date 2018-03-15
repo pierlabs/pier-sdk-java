@@ -39,14 +39,14 @@ public class DispositivoPersist   {
 
   
   /**
-   * Apresenta o identificador da aplica\u00C3\u00A7\u00C3\u00A3o.
+   * Apresenta o identificador da aplica\u00E7\u00E3o.
    **/
   public DispositivoPersist idAplicacaoMobile(Long idAplicacaoMobile) {
     this.idAplicacaoMobile = idAplicacaoMobile;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o identificador da aplica\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(example = "null", value = "Apresenta o identificador da aplica\u00E7\u00E3o.")
   @JsonProperty("idAplicacaoMobile")
   public Long getIdAplicacaoMobile() {
     return idAplicacaoMobile;
@@ -57,14 +57,14 @@ public class DispositivoPersist   {
 
   
   /**
-   * Apresenta o identificador do usu\u00C3\u00A1rio.
+   * Apresenta o identificador do usu\u00E1rio.
    **/
   public DispositivoPersist idUsuario(Long idUsuario) {
     this.idUsuario = idUsuario;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o identificador do usu\u00C3\u00A1rio.")
+  @ApiModelProperty(example = "null", value = "Apresenta o identificador do usu\u00E1rio.")
   @JsonProperty("idUsuario")
   public Long getIdUsuario() {
     return idUsuario;

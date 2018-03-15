@@ -20,14 +20,14 @@ public class CampoCodificadoDescricaoResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da descri\u00C3\u00A7\u00C3\u00A3o.
+   * C\u00F3digo de Identifica\u00E7\u00E3o da descri\u00E7\u00E3o.
    **/
   public CampoCodificadoDescricaoResponse codigo(Long codigo) {
     this.codigo = codigo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da descri\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o da descri\u00E7\u00E3o.")
   @JsonProperty("codigo")
   public Long getCodigo() {
     return codigo;
@@ -38,14 +38,14 @@ public class CampoCodificadoDescricaoResponse   {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do campo codificado.
+   * Descri\u00E7\u00E3o do campo codificado.
    **/
   public CampoCodificadoDescricaoResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o do campo codificado.")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do campo codificado.")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;

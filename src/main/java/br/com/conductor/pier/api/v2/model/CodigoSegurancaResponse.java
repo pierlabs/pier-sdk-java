@@ -24,14 +24,14 @@ public class CodigoSegurancaResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do c\u00C3\u00B3digo de seguranca (id).
+   * C\u00F3digo de identifica\u00E7\u00E3o do c\u00F3digo de seguranca (id).
    **/
   public CodigoSegurancaResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do c\u00C3\u00B3digo de seguranca (id).")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do c\u00F3digo de seguranca (id).")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -42,14 +42,14 @@ public class CodigoSegurancaResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Emissor (idEmissor).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Emissor (idEmissor).
    **/
   public CodigoSegurancaResponse idEmissor(Long idEmissor) {
     this.idEmissor = idEmissor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Emissor (idEmissor).")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Emissor (idEmissor).")
   @JsonProperty("idEmissor")
   public Long getIdEmissor() {
     return idEmissor;
@@ -60,14 +60,14 @@ public class CodigoSegurancaResponse   {
 
   
   /**
-   * Apresenta o Modo de Envio do C\u00C3\u00B3digo de Seguran\u00C3\u00A7a.
+   * Apresenta o Modo de Envio do C\u00F3digo de Seguran\u00E7a.
    **/
   public CodigoSegurancaResponse modoEnvio(String modoEnvio) {
     this.modoEnvio = modoEnvio;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o Modo de Envio do C\u00C3\u00B3digo de Seguran\u00C3\u00A7a.")
+  @ApiModelProperty(example = "null", value = "Apresenta o Modo de Envio do C\u00F3digo de Seguran\u00E7a.")
   @JsonProperty("modoEnvio")
   public String getModoEnvio() {
     return modoEnvio;
@@ -78,14 +78,14 @@ public class CodigoSegurancaResponse   {
 
   
   /**
-   * Apresenta o contato do c\u00C3\u00B3digo de seguran\u00C3\u00A7a.
+   * Apresenta o contato do c\u00F3digo de seguran\u00E7a.
    **/
   public CodigoSegurancaResponse contato(String contato) {
     this.contato = contato;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o contato do c\u00C3\u00B3digo de seguran\u00C3\u00A7a.")
+  @ApiModelProperty(example = "null", value = "Apresenta o contato do c\u00F3digo de seguran\u00E7a.")
   @JsonProperty("contato")
   public String getContato() {
     return contato;
@@ -96,14 +96,14 @@ public class CodigoSegurancaResponse   {
 
   
   /**
-   * Apresenta o status do c\u00C3\u00B3digo de seguran\u00C3\u00A7a.
+   * Apresenta o status do c\u00F3digo de seguran\u00E7a.
    **/
   public CodigoSegurancaResponse ativo(Boolean ativo) {
     this.ativo = ativo;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Apresenta o status do c\u00C3\u00B3digo de seguran\u00C3\u00A7a.")
+  @ApiModelProperty(example = "false", value = "Apresenta o status do c\u00F3digo de seguran\u00E7a.")
   @JsonProperty("ativo")
   public Boolean getAtivo() {
     return ativo;
@@ -114,14 +114,14 @@ public class CodigoSegurancaResponse   {
 
   
   /**
-   * Apresenta a data de validade do c\u00C3\u00B3digo de seguran\u00C3\u00A7a gerado.
+   * Apresenta a data de validade do c\u00F3digo de seguran\u00E7a gerado.
    **/
   public CodigoSegurancaResponse dataValidade(String dataValidade) {
     this.dataValidade = dataValidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta a data de validade do c\u00C3\u00B3digo de seguran\u00C3\u00A7a gerado.")
+  @ApiModelProperty(example = "null", value = "Apresenta a data de validade do c\u00F3digo de seguran\u00E7a gerado.")
   @JsonProperty("dataValidade")
   public String getDataValidade() {
     return dataValidade;

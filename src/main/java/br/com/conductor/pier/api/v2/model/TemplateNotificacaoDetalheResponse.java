@@ -9,10 +9,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Objeto de detalhes do Template de Notifica\u00C3\u00A7\u00C3\u00A3o
+ * Objeto de detalhes do Template de Notifica\u00E7\u00E3o
  **/
 
-@ApiModel(description = "Objeto de detalhes do Template de Notifica\u00C3\u00A7\u00C3\u00A3o")
+@ApiModel(description = "Objeto de detalhes do Template de Notifica\u00E7\u00E3o")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TemplateNotificacaoDetalheResponse   {
   
@@ -72,14 +72,14 @@ public class TemplateNotificacaoDetalheResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo Identificador.
+   * C\u00F3digo Identificador.
    **/
   public TemplateNotificacaoDetalheResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo Identificador.")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo Identificador.")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -90,14 +90,14 @@ public class TemplateNotificacaoDetalheResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de e-mail.
+   * C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de e-mail.
    **/
   public TemplateNotificacaoDetalheResponse idConfiguracaoEmail(Long idConfiguracaoEmail) {
     this.idConfiguracaoEmail = idConfiguracaoEmail;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da configra\u00C3\u00A7\u00C3\u00A3o de e-mail.")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de e-mail.")
   @JsonProperty("idConfiguracaoEmail")
   public Long getIdConfiguracaoEmail() {
     return idConfiguracaoEmail;
@@ -126,14 +126,14 @@ public class TemplateNotificacaoDetalheResponse   {
 
   
   /**
-   * Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.
+   * Tipo da notifica\u00E7\u00E3o.
    **/
   public TemplateNotificacaoDetalheResponse tipoNotificacao(TipoNotificacaoEnum tipoNotificacao) {
     this.tipoNotificacao = tipoNotificacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Tipo da notifica\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(example = "null", value = "Tipo da notifica\u00E7\u00E3o.")
   @JsonProperty("tipoNotificacao")
   public TipoNotificacaoEnum getTipoNotificacao() {
     return tipoNotificacao;
@@ -144,14 +144,14 @@ public class TemplateNotificacaoDetalheResponse   {
 
   
   /**
-   * Template padr\u00C3\u00A3o.
+   * Template padr\u00E3o.
    **/
   public TemplateNotificacaoDetalheResponse templatePadrao(String templatePadrao) {
     this.templatePadrao = templatePadrao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Template padr\u00C3\u00A3o.")
+  @ApiModelProperty(example = "null", value = "Template padr\u00E3o.")
   @JsonProperty("templatePadrao")
   public String getTemplatePadrao() {
     return templatePadrao;
@@ -198,14 +198,14 @@ public class TemplateNotificacaoDetalheResponse   {
 
   
   /**
-   * Data da inclus\u00C3\u00A3o.
+   * Data da inclus\u00E3o.
    **/
   public TemplateNotificacaoDetalheResponse dataInclusao(String dataInclusao) {
     this.dataInclusao = dataInclusao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data da inclus\u00C3\u00A3o.")
+  @ApiModelProperty(example = "null", value = "Data da inclus\u00E3o.")
   @JsonProperty("dataInclusao")
   public String getDataInclusao() {
     return dataInclusao;
@@ -216,14 +216,14 @@ public class TemplateNotificacaoDetalheResponse   {
 
   
   /**
-   * Data altera\u00C3\u00A7\u00C3\u00A3o.
+   * Data altera\u00E7\u00E3o.
    **/
   public TemplateNotificacaoDetalheResponse dataAlteracao(String dataAlteracao) {
     this.dataAlteracao = dataAlteracao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data altera\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(example = "null", value = "Data altera\u00E7\u00E3o.")
   @JsonProperty("dataAlteracao")
   public String getDataAlteracao() {
     return dataAlteracao;

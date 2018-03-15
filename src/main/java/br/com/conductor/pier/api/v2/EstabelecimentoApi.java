@@ -14,6 +14,7 @@ import br.com.conductor.pier.api.v2.model.MaquinetaUpdate;
 import br.com.conductor.pier.api.v2.model.OperacaoCredorUpdate;
 import br.com.conductor.pier.api.v2.model.OperacaoCredorResponse;
 import br.com.conductor.pier.api.v2.model.TelefoneEstabelecimentoResponse;
+import br.com.conductor.pier.api.v2.model.TelefoneEstabelecimentoUpdate;
 import br.com.conductor.pier.api.v2.model.TerminalUpdate;
 import br.com.conductor.pier.api.v2.model.TerminalResponse;
 import br.com.conductor.pier.api.v2.model.EstabelecimentoUpdate;
@@ -29,11 +30,14 @@ import br.com.conductor.pier.api.v2.model.PageOperacaoResponse;
 import br.com.conductor.pier.api.v2.model.PageMCCResponse;
 import br.com.conductor.pier.api.v2.model.PageOrigemComercialResponse;
 import br.com.conductor.pier.api.v2.model.PageEntidadeResponse;
+import br.com.conductor.pier.api.v2.model.PageTipoEstabelecimentoResponse;
 import br.com.conductor.pier.api.v2.model.PageCampoCodificadoDescricaoResponse;
+import br.com.conductor.pier.api.v2.model.PageTipoOrigemComercialResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoTerminalResponse;
 import br.com.conductor.pier.api.v2.model.PageEstabelecimentoResponse;
 import br.com.conductor.pier.api.v2.model.PageGrupoEconomicoResponse;
 import java.math.BigDecimal;
+import br.com.conductor.pier.api.v2.model.PageGrupoOrigemComercialResponse;
 import br.com.conductor.pier.api.v2.model.PageMaquinetaResponse;
 import br.com.conductor.pier.api.v2.model.PageMoedaResponse;
 import br.com.conductor.pier.api.v2.model.PageOperacaoCredorResponse;
@@ -43,6 +47,7 @@ import br.com.conductor.pier.api.v2.model.PageVinculoEstabelecimentoAdquirenteRe
 import br.com.conductor.pier.api.v2.model.PageVinculoOperacaoResponse;
 import br.com.conductor.pier.api.v2.model.MaquinetaPersist;
 import br.com.conductor.pier.api.v2.model.OperacaoCredorPersist;
+import br.com.conductor.pier.api.v2.model.TelefoneEstabelecimentoPersist;
 import br.com.conductor.pier.api.v2.model.TerminalPersist;
 import br.com.conductor.pier.api.v2.model.VinculoEstabelecimentoAdquirentePersist;
 
@@ -75,7 +80,7 @@ public class EstabelecimentoApi {
   /**
    * Alterar Origem Comercial
    * Altera uma origem comercial.
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da origem comercial
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o da origem comercial
    * @param origemComercialUpdate origemComercialUpdate
    * @return OrigemComercialResponse
    */
@@ -128,8 +133,8 @@ public class EstabelecimentoApi {
   
   /**
    * Altera uma Maquineta
-   * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o das maquinetas dos estabelecimentos.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta (id).
+   * Este m\u00E9todo realiza a altera\u00E7\u00E3o das maquinetas dos estabelecimentos.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta (id).
    * @param maquinetaUpdate maquinetaUpdate
    * @return MaquinetaResponse
    */
@@ -181,9 +186,9 @@ public class EstabelecimentoApi {
   }
   
   /**
-   * Altera uma Regra Opera\u00C3\u00A7\u00C3\u00A3o
-   * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o de uma regra opera\u00C3\u00A7\u00C3\u00A3o.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Regra Opera\u00C3\u00A7\u00C3\u00A3o (id).
+   * Altera uma Regra Opera\u00E7\u00E3o
+   * Este m\u00E9todo realiza a altera\u00E7\u00E3o de uma regra opera\u00E7\u00E3o.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da Regra Opera\u00E7\u00E3o (id).
    * @param operacaoCredorUpdate operacaoCredorUpdate
    * @return OperacaoCredorResponse
    */
@@ -236,29 +241,22 @@ public class EstabelecimentoApi {
   
   /**
    * Altera um Telefone do estabelecimento
-   * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos telefones dos estabelecimentos.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).
-   * @param ddd C\u00C3\u00B3digo DDD do telefone (id).
-   * @param telefone N\u00C3\u00BAmero do telefone.
-   * @param ramal N\u00C3\u00BAmero do ramal.
+   * Este m\u00E9todo realiza a altera\u00E7\u00E3o dos telefones dos estabelecimentos.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Telefone Estabelecimento (id).
+   * @param telefoneEstabelecimentoUpdate telefoneEstabelecimentoUpdate
    * @return TelefoneEstabelecimentoResponse
    */
-  public TelefoneEstabelecimentoResponse alterarUsingPUT15(Long id, String ddd, String telefone, String ramal) throws ApiException {
-    Object postBody = null;
+  public TelefoneEstabelecimentoResponse alterarUsingPUT15(Long id, TelefoneEstabelecimentoUpdate telefoneEstabelecimentoUpdate) throws ApiException {
+    Object postBody = telefoneEstabelecimentoUpdate;
     
      // verify the required parameter 'id' is set
      if (id == null) {
         throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT15");
      }
      
-     // verify the required parameter 'ddd' is set
-     if (ddd == null) {
-        throw new ApiException(400, "Missing the required parameter 'ddd' when calling alterarUsingPUT15");
-     }
-     
-     // verify the required parameter 'telefone' is set
-     if (telefone == null) {
-        throw new ApiException(400, "Missing the required parameter 'telefone' when calling alterarUsingPUT15");
+     // verify the required parameter 'telefoneEstabelecimentoUpdate' is set
+     if (telefoneEstabelecimentoUpdate == null) {
+        throw new ApiException(400, "Missing the required parameter 'telefoneEstabelecimentoUpdate' when calling alterarUsingPUT15");
      }
      
     // create path and map variables
@@ -270,12 +268,6 @@ public class EstabelecimentoApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     Map<String, Object> formParams = new HashMap<String, Object>();
 
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "ddd", ddd));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "telefone", telefone));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "ramal", ramal));
     
 
     
@@ -303,8 +295,8 @@ public class EstabelecimentoApi {
   
   /**
    * Altera um Terminal
-   * Este m\u00C3\u00A9todo realiza a altera\u00C3\u00A7\u00C3\u00A3o dos Terminais.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal (id).
+   * Este m\u00E9todo realiza a altera\u00E7\u00E3o dos Terminais.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do terminal (id).
    * @param terminalUpdate terminalUpdate
    * @return TerminalResponse
    */
@@ -410,9 +402,9 @@ public class EstabelecimentoApi {
   }
   
   /**
-   * Alterar Grupo Econ\u00C3\u00B4mico
-   * Altera um grupo econ\u00C3\u00B4mico.
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo econ\u00C3\u00B4mico
+   * Alterar Grupo Econ\u00F4mico
+   * Altera um grupo econ\u00F4mico.
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o do grupo econ\u00F4mico
    * @param grupoEconomicoDTO grupoEconomicoDTO
    * @return GrupoEconomicoResponse
    */
@@ -558,8 +550,8 @@ public class EstabelecimentoApi {
   }
   
   /**
-   * Cadastrar Grupo Econ\u00C3\u00B4mico
-   * Cadastra um grupo econ\u00C3\u00B4mico.
+   * Cadastrar Grupo Econ\u00F4mico
+   * Cadastra um grupo econ\u00F4mico.
    * @param grupoEconomicoDTO GrupoEconomicoDTO
    * @return GrupoEconomicoResponse
    */
@@ -605,9 +597,9 @@ public class EstabelecimentoApi {
   }
   
   /**
-   * Apresenta dados de um determinado tipo de opera\u00C3\u00A7\u00C3\u00A3o
-   * Este recurso permite consultar dados de um determinado tipo opera\u00C3\u00A7\u00C3\u00A3o a partir do idoperacao
-   * @param id C\u00C3\u00B3digo de processamento da opera\u00C3\u00A7\u00C3\u00A3o (idOperacao).
+   * Apresenta dados de um determinado tipo de opera\u00E7\u00E3o
+   * Este recurso permite consultar dados de um determinado tipo opera\u00E7\u00E3o a partir do idoperacao
+   * @param id C\u00F3digo de processamento da opera\u00E7\u00E3o (idOperacao).
    * @return DetalheOperacaoResponse
    */
   public DetalheOperacaoResponse consultaOperacaoUsingGET(Long id) throws ApiException {
@@ -654,8 +646,8 @@ public class EstabelecimentoApi {
   
   /**
    * Consultar Origem Comercial
-   * Consulta uma origem comercial atrav\u00C3\u00A9s do seu identificador.
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o da origem comercial
+   * Consulta uma origem comercial atrav\u00E9s do seu identificador.
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o da origem comercial
    * @return OrigemComercialResponse
    */
   public OrigemComercialResponse consultarOrigemComercialUsingGET(Long id) throws ApiException {
@@ -706,12 +698,12 @@ public class EstabelecimentoApi {
    * @param id Id
    * @return EstabelecimentoResponse
    */
-  public EstabelecimentoResponse consultarUsingGET16(Long id) throws ApiException {
+  public EstabelecimentoResponse consultarUsingGET17(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET16");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET17");
      }
      
     // create path and map variables
@@ -749,17 +741,17 @@ public class EstabelecimentoApi {
   }
   
   /**
-   * Consultar grupo econ\u00C3\u00B4mico
-   * Consulta um grupo econ\u00C3\u00B4mico atrav\u00C3\u00A9s do seu identificador.
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do grupo econ\u00C3\u00B4mico
+   * Consultar grupo econ\u00F4mico
+   * Consulta um grupo econ\u00F4mico atrav\u00E9s do seu identificador.
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o do grupo econ\u00F4mico
    * @return GrupoEconomicoResponse
    */
-  public GrupoEconomicoResponse consultarUsingGET18(Long id) throws ApiException {
+  public GrupoEconomicoResponse consultarUsingGET19(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET18");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET19");
      }
      
     // create path and map variables
@@ -798,16 +790,16 @@ public class EstabelecimentoApi {
   
   /**
    * Apresenta os dados de uma determinada maquineta
-   * Este m\u00C3\u00A9todo permite consultar uma determinada maquineta a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta (id).
+   * Este m\u00E9todo permite consultar uma determinada maquineta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta (id).
    * @return MaquinetaResponse
    */
-  public MaquinetaResponse consultarUsingGET20(Long id) throws ApiException {
+  public MaquinetaResponse consultarUsingGET21(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET20");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET21");
      }
      
     // create path and map variables
@@ -845,17 +837,17 @@ public class EstabelecimentoApi {
   }
   
   /**
-   * Apresenta os dados de uma determinada Regra Opera\u00C3\u00A7\u00C3\u00A3o
-   * Este m\u00C3\u00A9todo permite consultar uma determinada regra opera\u00C3\u00A7\u00C3\u00A3o a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Regra Opera\u00C3\u00A7\u00C3\u00A3o (id).
+   * Apresenta os dados de uma determinada Regra Opera\u00E7\u00E3o
+   * Este m\u00E9todo permite consultar uma determinada regra opera\u00E7\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da Regra Opera\u00E7\u00E3o (id).
    * @return OperacaoCredorResponse
    */
-  public OperacaoCredorResponse consultarUsingGET21(Long id) throws ApiException {
+  public OperacaoCredorResponse consultarUsingGET22(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET21");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET22");
      }
      
     // create path and map variables
@@ -894,16 +886,16 @@ public class EstabelecimentoApi {
   
   /**
    * Apresenta os dados de um determinado telefone de um estabelecimento
-   * Este m\u00C3\u00A9todo permite consultar um determinado telefone de um estabelecimento a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Telefone Estabelecimento (id).
+   * Este m\u00E9todo permite consultar um determinado telefone de um estabelecimento a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Telefone Estabelecimento (id).
    * @return TelefoneEstabelecimentoResponse
    */
-  public TelefoneEstabelecimentoResponse consultarUsingGET29(Long id) throws ApiException {
+  public TelefoneEstabelecimentoResponse consultarUsingGET30(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET29");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET30");
      }
      
     // create path and map variables
@@ -942,16 +934,16 @@ public class EstabelecimentoApi {
   
   /**
    * Apresenta os dados de um determinado Terminal
-   * Este m\u00C3\u00A9todo permite consultar um determinado Terminal a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
+   * Este m\u00E9todo permite consultar um determinado Terminal a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).
    * @return TerminalResponse
    */
-  public TerminalResponse consultarUsingGET31(Long id) throws ApiException {
+  public TerminalResponse consultarUsingGET32(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET31");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET32");
      }
      
     // create path and map variables
@@ -989,17 +981,17 @@ public class EstabelecimentoApi {
   }
   
   /**
-   * Apresenta os dados de um determinado V\u00C3\u00ADnculo
-   * Este m\u00C3\u00A9todo permite consultar um determinado V\u00C3\u00ADnculo a partir do seu c\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o (id).
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u008Dnculo (id).
+   * Apresenta os dados de um determinado V\u00EDnculo
+   * Este m\u00E9todo permite consultar um determinado V\u00EDnculo a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do V\u00CDnculo (id).
    * @return VinculoEstabelecimentoAdquirenteResponse
    */
-  public VinculoEstabelecimentoAdquirenteResponse consultarUsingGET43(Long id) throws ApiException {
+  public VinculoEstabelecimentoAdquirenteResponse consultarUsingGET44(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET43");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET44");
      }
      
     // create path and map variables
@@ -1037,9 +1029,9 @@ public class EstabelecimentoApi {
   }
   
   /**
-   * Desabilitar um V\u00C3\u00ADnculo
-   * Este m\u00C3\u00A9todo realiza a desativa\u00C3\u00A7\u00C3\u00A3o de um v\u00C3\u00ADnculo.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u00ADnculo (id).
+   * Desabilitar um V\u00EDnculo
+   * Este m\u00E9todo realiza a desativa\u00E7\u00E3o de um v\u00EDnculo.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do V\u00EDnculo (id).
    * @return Object
    */
   public Object desabilitarVinculoUsingPOST(Long id) throws ApiException {
@@ -1085,9 +1077,9 @@ public class EstabelecimentoApi {
   }
   
   /**
-   * Desabilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o
-   * Este m\u00C3\u00A9todo permite desabilitar um v\u00C3\u00ADnculo.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).
+   * Desabilitar um v\u00EDnculo opera\u00E7\u00E3o
+   * Este m\u00E9todo permite desabilitar um v\u00EDnculo.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).
    * @param vinculoOperacaoPersist vinculoOperacaoPersist
    * @return Object
    */
@@ -1139,9 +1131,9 @@ public class EstabelecimentoApi {
   }
   
   /**
-   * Habilitar um V\u00C3\u00ADnculo
-   * Este m\u00C3\u00A9todo realiza a ativa\u00C3\u00A7\u00C3\u00A3o de um v\u00C3\u00ADnculo.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do V\u00C3\u00ADnculo (id).
+   * Habilitar um V\u00EDnculo
+   * Este m\u00E9todo realiza a ativa\u00E7\u00E3o de um v\u00EDnculo.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do V\u00EDnculo (id).
    * @return Object
    */
   public Object habilitarVinculoUsingPOST(Long id) throws ApiException {
@@ -1187,9 +1179,9 @@ public class EstabelecimentoApi {
   }
   
   /**
-   * Habilitar um v\u00C3\u00ADnculo opera\u00C3\u00A7\u00C3\u00A3o
-   * Este m\u00C3\u00A9todo permite habilitar um v\u00C3\u00ADnculo.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).
+   * Habilitar um v\u00EDnculo opera\u00E7\u00E3o
+   * Este m\u00E9todo permite habilitar um v\u00EDnculo.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).
    * @param vinculoOperacaoPersist vinculoOperacaoPersist
    * @return Object
    */
@@ -1241,13 +1233,13 @@ public class EstabelecimentoApi {
   }
   
   /**
-   * Apresenta dados de opera\u00C3\u00A7\u00C3\u00B5es em uma lista
-   * Este recurso permite listar as opera\u00C3\u00A7\u00C3\u00A3o
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param idOperacao C\u00C3\u00B3digo que identifica a opera\u00C3\u00A7\u00C3\u00A3o
-   * @param codigoProcessamento C\u00C3\u00B3digo de processamento usado em transa\u00C3\u00A7\u00C3\u00B5es com o autorizador
+   * Apresenta dados de opera\u00E7\u00F5es em uma lista
+   * Este recurso permite listar as opera\u00E7\u00E3o
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @param idOperacao C\u00F3digo que identifica a opera\u00E7\u00E3o
+   * @param codigoProcessamento C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador
    * @return PageOperacaoResponse
    */
   public PageOperacaoResponse listaOperacaoUsingGET(List<String> sort, Integer page, Integer limit, Long idOperacao, String codigoProcessamento) throws ApiException {
@@ -1298,10 +1290,10 @@ public class EstabelecimentoApi {
   
   /**
    * Lista os MCCs
-   * Este m\u00C3\u00A9todo permite que sejam listados os MCCs existentes na base de dados do Emissor.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * Este m\u00E9todo permite que sejam listados os MCCs existentes na base de dados do Emissor.
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
    * @return PageMCCResponse
    */
   public PageMCCResponse listarMCCUsingGET(List<String> sort, Integer page, Integer limit) throws ApiException {
@@ -1349,32 +1341,32 @@ public class EstabelecimentoApi {
   /**
    * Listar Origens Comerciais
    * Lista origens comerciais cadastradas.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
    * @param id Id da origem comercial
    * @param nome Nome da origem comercial
    * @param status Indica o status da origem comercial
    * @param idEstabelecimento Identificador do estabelecimento
    * @param idProduto Identificador do produto
-   * @param descricao Descri\u00C3\u00A7\u00C3\u00A3o da origem comercial
+   * @param descricao Descri\u00E7\u00E3o da origem comercial
    * @param idTipoOrigemComercial Identificador do tipo de origem comercial
    * @param idGrupoOrigemComercial Identificador do grupo de origem comercial
-   * @param flagPreAprovado Indica se permite pr\u00C3\u00A9 aprova\u00C3\u00A7\u00C3\u00A3o
-   * @param flagAprovacaoImediata Indica se permite aprova\u00C3\u00A7\u00C3\u00A3o imediata
-   * @param nomeFantasiaPlastico Nome fantasia impresso no pl\u00C3\u00A1stico
-   * @param flagCartaoProvisorio Indica se permite cart\u00C3\u00A3o provis\u00C3\u00B3rio
-   * @param flagCartaoDefinitivo Indica se permite cart\u00C3\u00A3o definitivo
-   * @param usuario Usu\u00C3\u00A1rio para autentica\u00C3\u00A7\u00C3\u00A3o
-   * @param senha Senha para autentica\u00C3\u00A7\u00C3\u00A3o
-   * @param flagOrigemExterna Indica se \u00C3\u00A9 origem externa
-   * @param flagModificado Indica se h\u00C3\u00A1 modifica\u00C3\u00A7\u00C3\u00A3o
+   * @param flagPreAprovado Indica se permite pr\u00E9 aprova\u00E7\u00E3o
+   * @param flagAprovacaoImediata Indica se permite aprova\u00E7\u00E3o imediata
+   * @param nomeFantasiaPlastico Nome fantasia impresso no pl\u00E1stico
+   * @param flagCartaoProvisorio Indica se permite cart\u00E3o provis\u00F3rio
+   * @param flagCartaoDefinitivo Indica se permite cart\u00E3o definitivo
+   * @param usuario Usu\u00E1rio para autentica\u00E7\u00E3o
+   * @param senha Senha para autentica\u00E7\u00E3o
+   * @param flagOrigemExterna Indica se \u00E9 origem externa
+   * @param flagModificado Indica se h\u00E1 modifica\u00E7\u00E3o
    * @param flagEnviaFaturaUsuario Indica se envia fatura
-   * @param flagCreditoFaturamento Indica se permite cr\u00C3\u00A9dito de faturamento
-   * @param flagConcedeLimiteProvisorio Indica se concede limite provis\u00C3\u00B3rio
+   * @param flagCreditoFaturamento Indica se permite cr\u00E9dito de faturamento
+   * @param flagConcedeLimiteProvisorio Indica se concede limite provis\u00F3rio
    * @param flagDigitalizarDoc Indica se digitaliza documento
    * @param flagEmbossingLoja Indica se realiza embossing em loja
-   * @param flagConsultaPrevia Indica se realiza consulta pr\u00C3\u00A9via
+   * @param flagConsultaPrevia Indica se realiza consulta pr\u00E9via
    * @param tipoPessoa Tipo de pessoa
    * @return PageOrigemComercialResponse
    */
@@ -1470,10 +1462,10 @@ public class EstabelecimentoApi {
   
   /**
    * Lista os Tipos de adquirentes
-   * Este m\u00C3\u00A9todo permite que sejam listados os tipos de adquirentes.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * Este m\u00E9todo permite que sejam listados os tipos de adquirentes.
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
    * @return PageEntidadeResponse
    */
   public PageEntidadeResponse listarTiposAdquirentesUsingGET(List<String> sort, Integer page, Integer limit) throws ApiException {
@@ -1519,11 +1511,64 @@ public class EstabelecimentoApi {
   }
   
   /**
+   * Lista os tipos de estabelecimentos
+   * Lista os tipos de estabelecimentos
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @param descricao Descri\u00E7\u00E3o do tipo de estabelecimento.
+   * @return PageTipoEstabelecimentoResponse
+   */
+  public PageTipoEstabelecimentoResponse listarTiposEstabelecimentosUsingGET(List<String> sort, Integer page, Integer limit, String descricao) throws ApiException {
+    Object postBody = null;
+    
+    // create path and map variables
+    String path = "/api/tipos-estabelecimentos".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "descricao", descricao));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PageTipoEstabelecimentoResponse> returnType = new GenericType<PageTipoEstabelecimentoResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Lista os Tipos de  Maquinetas
-   * Este m\u00C3\u00A9todo permite que sejam listadas os Tipos de maquinetas existentes na base de dados do Emissor.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * Este m\u00E9todo permite que sejam listadas os Tipos de maquinetas existentes na base de dados do Emissor.
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
    * @return PageCampoCodificadoDescricaoResponse
    */
   public PageCampoCodificadoDescricaoResponse listarTiposMaquinetasUsingGET(List<String> sort, Integer page, Integer limit) throws ApiException {
@@ -1569,11 +1614,64 @@ public class EstabelecimentoApi {
   }
   
   /**
+   * Listar tipos de origens comerciais
+   * Lista os tipos de origens comerciais
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @param nome Nome do tipo de origem comercial
+   * @return PageTipoOrigemComercialResponse
+   */
+  public PageTipoOrigemComercialResponse listarTiposOrigensComerciaisUsingGET(List<String> sort, Integer page, Integer limit, String nome) throws ApiException {
+    Object postBody = null;
+    
+    // create path and map variables
+    String path = "/api/tipos-origens-comerciais".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "nome", nome));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PageTipoOrigemComercialResponse> returnType = new GenericType<PageTipoOrigemComercialResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Lista os Tipos Terminais
-   * Este m\u00C3\u00A9todo permite que sejam listados os tipos de terminais existentes na base de dados do Emissor.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
+   * Este m\u00E9todo permite que sejam listados os tipos de terminais existentes na base de dados do Emissor.
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
    * @return PageTipoTerminalResponse
    */
   public PageTipoTerminalResponse listarTiposTerminaisUsingGET1(List<String> sort, Integer page, Integer limit) throws ApiException {
@@ -1620,48 +1718,48 @@ public class EstabelecimentoApi {
   
   /**
    * Lista Estabelecimentos
-   * Lista todas os Estabelecimentos
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param id C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).
-   * @param idCredor Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Credor.
-   * @param numeroReceitaFederal Apresenta o n\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Receita Federal.
+   * Lista todos os Estabelecimentos
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o do estabelecimento (id).
+   * @param idGrupoEconomico Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Grupo Econ\u00F4mico.
+   * @param numeroReceitaFederal Apresenta o n\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Receita Federal.
    * @param nome Nome do Estabelecimento.
-   * @param descricao Raz\u00C3\u00A3o Social do Estabelecimento.
-   * @param nomeFantasia T\u00C3\u00ADtulo Comercial do Estabelecimento.
-   * @param cep C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).
+   * @param descricao Raz\u00E3o Social do Estabelecimento.
+   * @param nomeFantasia T\u00EDtulo Comercial do Estabelecimento.
+   * @param cep C\u00F3digo de Endere\u00E7amento Postal (CEP).
    * @param nomeLogradouro Nome do Logradouro.
-   * @param numeroEndereco N\u00C3\u00BAmero do endere\u00C3\u00A7o.
-   * @param complemento Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.
-   * @param bairro Nome do bairro do endere\u00C3\u00A7o.
-   * @param cidade Nome da cidade do endere\u00C3\u00A7o.
-   * @param uf Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.
-   * @param pais Nome do pa\u00C3\u00ADs.
+   * @param numeroEndereco N\u00FAmero do endere\u00E7o.
+   * @param complemento Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.
+   * @param bairro Nome do bairro do endere\u00E7o.
+   * @param cidade Nome da cidade do endere\u00E7o.
+   * @param uf Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.
+   * @param pais Nome do pa\u00EDs.
    * @param dataCadastramento Data de Cadastro do Estabelecimento, no formato yyyy-MM-dd.
    * @param contato Nome da pessoa para contato com o Estabelecimento.
    * @param email E-mail da pessoa para contato com o Estabelecimento.
-   * @param flagArquivoSecrFazenda Indica se o estabelecimento ser\u00C3\u00A1 inclu\u00C3\u00ADdo no arquivo de registro para a Secretaria da Fazenda Estadual.
-   * @param flagCartaoDigitado Indica se o estabelecimento poder\u00C3\u00A1 originar transa\u00C3\u00A7\u00C3\u00B5es sem a leitura da tarja ou do chip do cart\u00C3\u00A3o.
-   * @param inativo Indica se o estabelecimento est\u00C3\u00A1 inativo.
-   * @param idPais Identificador de Pa\u00C3\u00ADs.
-   * @param mcc C\u00C3\u00B3digo de Categoria de Mercado
-   * @param idTipoEstabelecimento C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento.
-   * @param correspondencia Indicador para qual endere\u00C3\u00A7o as correspond\u00C3\u00AAncias ser\u00C3\u00A3o enviadas, onde 1 \u00C3\u00A9 ORIGEM e 2 ENDERE\u00C3\u0087O DE CORRESPOND\u00C3\u008ANCIA.
-   * @param idMoeda C\u00C3\u00B3digo identificador da moeda.
+   * @param flagArquivoSecrFazenda Indica se o estabelecimento ser\u00E1 inclu\u00EDdo no arquivo de registro para a Secretaria da Fazenda Estadual.
+   * @param flagCartaoDigitado Indica se o estabelecimento poder\u00E1 originar transa\u00E7\u00F5es sem a leitura da tarja ou do chip do cart\u00E3o.
+   * @param inativo Indica se o estabelecimento est\u00E1 inativo.
+   * @param idPais Identificador de Pa\u00EDs.
+   * @param mcc C\u00F3digo de Categoria de Mercado
+   * @param idTipoEstabelecimento C\u00F3digo de identifica\u00E7\u00E3o do tipo de Estabelecimento.
+   * @param correspondencia Indicador para qual endere\u00E7o as correspond\u00EAncias ser\u00E3o enviadas, onde 1 \u00E9 ORIGEM e 2 ENDERE\u00C7O DE CORRESPOND\u00CANCIA.
+   * @param idMoeda C\u00F3digo identificador da moeda.
    * @param tipoPagamento Tipo do regime de pagamento do estabelecimento.
-   * @param numeroEstabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento na Conductor.
-   * @param cep2 C\u00C3\u00B3digo de Endere\u00C3\u00A7amento Postal (CEP).
+   * @param numeroEstabelecimento N\u00FAmero de identifica\u00E7\u00E3o do Estabelecimento na Conductor.
+   * @param cep2 C\u00F3digo de Endere\u00E7amento Postal (CEP).
    * @param nomeLogradouro2 Nome do Logradouro.
-   * @param numeroEndereco2 N\u00C3\u00BAmero do endere\u00C3\u00A7o.
-   * @param complemento2 Descri\u00C3\u00A7\u00C3\u00B5es complementares referente ao endere\u00C3\u00A7o.
-   * @param bairro2 Nome do bairro do endere\u00C3\u00A7o.
-   * @param cidade2 Nome da cidade do endere\u00C3\u00A7o.
-   * @param uf2 Sigla de identifica\u00C3\u00A7\u00C3\u00A3o da Unidade Federativa do endere\u00C3\u00A7o.
-   * @param flagMatriz Indica se \u00C3\u00A9 matriz ou filial.
+   * @param numeroEndereco2 N\u00FAmero do endere\u00E7o.
+   * @param complemento2 Descri\u00E7\u00F5es complementares referente ao endere\u00E7o.
+   * @param bairro2 Nome do bairro do endere\u00E7o.
+   * @param cidade2 Nome da cidade do endere\u00E7o.
+   * @param uf2 Sigla de identifica\u00E7\u00E3o da Unidade Federativa do endere\u00E7o.
+   * @param flagMatriz Indica se \u00E9 matriz ou filial.
    * @return PageEstabelecimentoResponse
    */
-  public PageEstabelecimentoResponse listarUsingGET21(List<String> sort, Integer page, Integer limit, Long id, Long idCredor, String numeroReceitaFederal, String nome, String descricao, String nomeFantasia, String cep, String nomeLogradouro, Integer numeroEndereco, String complemento, String bairro, String cidade, String uf, String pais, String dataCadastramento, String contato, String email, Integer flagArquivoSecrFazenda, Integer flagCartaoDigitado, Integer inativo, Long idPais, Long mcc, Long idTipoEstabelecimento, Integer correspondencia, Long idMoeda, String tipoPagamento, String numeroEstabelecimento, String cep2, String nomeLogradouro2, Integer numeroEndereco2, String complemento2, String bairro2, String cidade2, String uf2, Integer flagMatriz) throws ApiException {
+  public PageEstabelecimentoResponse listarUsingGET22(List<String> sort, Integer page, Integer limit, Long id, Long idGrupoEconomico, String numeroReceitaFederal, String nome, String descricao, String nomeFantasia, String cep, String nomeLogradouro, Integer numeroEndereco, String complemento, String bairro, String cidade, String uf, String pais, String dataCadastramento, String contato, String email, Integer flagArquivoSecrFazenda, Integer flagCartaoDigitado, Integer inativo, Long idPais, Long mcc, Long idTipoEstabelecimento, Integer correspondencia, Long idMoeda, String tipoPagamento, String numeroEstabelecimento, String cep2, String nomeLogradouro2, Integer numeroEndereco2, String complemento2, String bairro2, String cidade2, String uf2, Integer flagMatriz) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -1681,7 +1779,7 @@ public class EstabelecimentoApi {
     
     queryParams.addAll(apiClient.parameterToPairs("", "id", id));
     
-    queryParams.addAll(apiClient.parameterToPairs("", "idCredor", idCredor));
+    queryParams.addAll(apiClient.parameterToPairs("", "idGrupoEconomico", idGrupoEconomico));
     
     queryParams.addAll(apiClient.parameterToPairs("", "numeroReceitaFederal", numeroReceitaFederal));
     
@@ -1774,21 +1872,21 @@ public class EstabelecimentoApi {
   }
   
   /**
-   * Listar grupos econ\u00C3\u00B4micos
-   * Lista grupos econ\u00C3\u00B4micos cadastrados. 
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param razaoSocial Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
+   * Listar grupos econ\u00F4micos
+   * Lista grupos econ\u00F4micos cadastrados. 
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @param razaoSocial Raz\u00E3o social da pessoa jur\u00EDdica
    * @param nomeCredor Nome do credor
-   * @param numeroReceitaFederal N\u00C3\u00BAmero da Receita Federal
-   * @param inscricaoEstadual N\u00C3\u00BAmero da inscri\u00C3\u00A7\u00C3\u00A3o estadual
+   * @param numeroReceitaFederal N\u00FAmero da Receita Federal
+   * @param inscricaoEstadual N\u00FAmero da inscri\u00E7\u00E3o estadual
    * @param contato Nome da pessoa para entrar em contato
-   * @param banco C\u00C3\u00B3digo do banco
-   * @param agencia Raz\u00C3\u00A3o social da pessoa jur\u00C3\u00ADdica
-   * @param digitoAgencia D\u00C3\u00ADgito Verificador da ag\u00C3\u00AAncia
-   * @param contaCorrente C\u00C3\u00B3digo da Conta Corrente
-   * @param digitoContaCorrente D\u00C3\u00ADgito Verificador da Conta Corrente
+   * @param banco C\u00F3digo do banco
+   * @param agencia Raz\u00E3o social da pessoa jur\u00EDdica
+   * @param digitoAgencia D\u00EDgito Verificador da ag\u00EAncia
+   * @param contaCorrente C\u00F3digo da Conta Corrente
+   * @param digitoContaCorrente D\u00EDgito Verificador da Conta Corrente
    * @param periodicidade Periodicidade do pagamento
    * @param pagamentoSemanal Dia para pagamento semanal
    * @param pagamentoMensal Dia da data para o pagamento mensal
@@ -1803,10 +1901,10 @@ public class EstabelecimentoApi {
    * @param taxaAdm Taxa Administrativa
    * @param taxaBanco Taxa do Banco
    * @param limiteRAV Valor limite do RAV
-   * @param idCredorRAV C\u00C3\u00B3digo identificador do credor RAV
+   * @param idCredorRAV C\u00F3digo identificador do credor RAV
    * @return PageGrupoEconomicoResponse
    */
-  public PageGrupoEconomicoResponse listarUsingGET23(List<String> sort, Integer page, Integer limit, String razaoSocial, String nomeCredor, String numeroReceitaFederal, String inscricaoEstadual, String contato, Integer banco, Integer agencia, String digitoAgencia, String contaCorrente, String digitoContaCorrente, String periodicidade, String pagamentoSemanal, Integer pagamentoMensal, Integer pagamentoDecendialPrimeiro, Integer pagamentoDecendialSegundo, Integer pagamentoDecendialTerceiro, Integer pagamentoQuinzenalPrimeiro, Integer pagamentoQuinzenalSegundo, BigDecimal percentualRAV, String recebeRAV, BigDecimal percentualMultiplica, BigDecimal taxaAdm, BigDecimal taxaBanco, BigDecimal limiteRAV, Long idCredorRAV) throws ApiException {
+  public PageGrupoEconomicoResponse listarUsingGET24(List<String> sort, Integer page, Integer limit, String razaoSocial, String nomeCredor, String numeroReceitaFederal, String inscricaoEstadual, String contato, Integer banco, Integer agencia, String digitoAgencia, String contaCorrente, String digitoContaCorrente, String periodicidade, String pagamentoSemanal, Integer pagamentoMensal, Integer pagamentoDecendialPrimeiro, Integer pagamentoDecendialSegundo, Integer pagamentoDecendialTerceiro, Integer pagamentoQuinzenalPrimeiro, Integer pagamentoQuinzenalSegundo, BigDecimal percentualRAV, String recebeRAV, BigDecimal percentualMultiplica, BigDecimal taxaAdm, BigDecimal taxaBanco, BigDecimal limiteRAV, Long idCredorRAV) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -1899,15 +1997,68 @@ public class EstabelecimentoApi {
   }
   
   /**
+   * Listar grupos de origens comerciais
+   * Lista os grupos de origens comerciais
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @param nome Nome do grupo de origem comercial
+   * @return PageGrupoOrigemComercialResponse
+   */
+  public PageGrupoOrigemComercialResponse listarUsingGET25(List<String> sort, Integer page, Integer limit, String nome) throws ApiException {
+    Object postBody = null;
+    
+    // create path and map variables
+    String path = "/api/grupos-origens-comerciais".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "nome", nome));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PageGrupoOrigemComercialResponse> returnType = new GenericType<PageGrupoOrigemComercialResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Lista as Maquinetas
-   * Este m\u00C3\u00A9todo permite que sejam listadas as maquinetas existentes na base de dados do Emissor.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param idEstabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id).
+   * Este m\u00E9todo permite que sejam listadas as maquinetas existentes na base de dados do Emissor.
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @param idEstabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento (id).
    * @return PageMaquinetaResponse
    */
-  public PageMaquinetaResponse listarUsingGET25(List<String> sort, Integer page, Integer limit, Long idEstabelecimento) throws ApiException {
+  public PageMaquinetaResponse listarUsingGET27(List<String> sort, Integer page, Integer limit, Long idEstabelecimento) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -1954,15 +2105,15 @@ public class EstabelecimentoApi {
   /**
    * Lista os tipos de moedas do emissor 
    * Este recurso permite que sejam listados os tipos de moedas existentes na base de dados do emissor.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param codigoMoeda C\u00C3\u00B3digo identificador do tipo de moeda.
-   * @param simbolo S\u00C3\u00ADmbolo da Moeda.
-   * @param descricao Descri\u00C3\u00A7\u00C3\u00A3o do tipo da moeda.
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @param codigoMoeda C\u00F3digo identificador do tipo de moeda.
+   * @param simbolo S\u00EDmbolo da Moeda.
+   * @param descricao Descri\u00E7\u00E3o do tipo da moeda.
    * @return PageMoedaResponse
    */
-  public PageMoedaResponse listarUsingGET26(List<String> sort, Integer page, Integer limit, String codigoMoeda, String simbolo, String descricao) throws ApiException {
+  public PageMoedaResponse listarUsingGET28(List<String> sort, Integer page, Integer limit, String codigoMoeda, String simbolo, String descricao) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -2011,17 +2162,17 @@ public class EstabelecimentoApi {
   }
   
   /**
-   * Lista as Regras Opera\u00C3\u00A7\u00C3\u00B5es
-   * Este m\u00C3\u00A9todo permite que sejam listados as Regras opera\u00C3\u00A7\u00C3\u00B5es existentes na base de dados do Emissor.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param idOperacao Apresenta o id da Opera\u00C3\u00A7\u00C3\u00A3o.
+   * Lista as Regras Opera\u00E7\u00F5es
+   * Este m\u00E9todo permite que sejam listados as Regras opera\u00E7\u00F5es existentes na base de dados do Emissor.
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @param idOperacao Apresenta o id da Opera\u00E7\u00E3o.
    * @param idCredor Apresenta o id do Credor.
    * @param idProduto Apresenta o id do produto que vai ser alterado.
    * @return PageOperacaoCredorResponse
    */
-  public PageOperacaoCredorResponse listarUsingGET27(List<String> sort, Integer page, Integer limit, Long idOperacao, Long idCredor, Long idProduto) throws ApiException {
+  public PageOperacaoCredorResponse listarUsingGET29(List<String> sort, Integer page, Integer limit, Long idOperacao, Long idCredor, Long idProduto) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -2071,14 +2222,14 @@ public class EstabelecimentoApi {
   
   /**
    * Lista os Telefones Estabelecimentos
-   * Este m\u00C3\u00A9todo permite que sejam listados os telefones dos estabelecimentos existentes na base de dados do Emissor.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param idEstabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Estabelecimento (id).
+   * Este m\u00E9todo permite que sejam listados os telefones dos estabelecimentos existentes na base de dados do Emissor.
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @param idEstabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Estabelecimento (id).
    * @return PageTelefoneEstabelecimentoResponse
    */
-  public PageTelefoneEstabelecimentoResponse listarUsingGET38(List<String> sort, Integer page, Integer limit, Long idEstabelecimento) throws ApiException {
+  public PageTelefoneEstabelecimentoResponse listarUsingGET40(List<String> sort, Integer page, Integer limit, Long idEstabelecimento) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -2124,17 +2275,17 @@ public class EstabelecimentoApi {
   
   /**
    * Lista os Terminais cadastrados no Emissor
-   * Este m\u00C3\u00A9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Terminal (id).
-   * @param terminal C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do terminal.
-   * @param numeroEstabelecimento N\u00C3\u00BAmero do estabelecimento a qual o terminal pertence.
-   * @param idEstabelecimento N\u00C3\u00BAmero de identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento a qual o terminal pertence.
+   * Este m\u00E9todo permite que sejam listados os terminais existentes na base de dados do Emissor.
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).
+   * @param terminal C\u00F3digo de Identifica\u00E7\u00E3o do terminal.
+   * @param numeroEstabelecimento N\u00FAmero do estabelecimento a qual o terminal pertence.
+   * @param idEstabelecimento N\u00FAmero de identifica\u00E7\u00E3o do estabelecimento a qual o terminal pertence.
    * @return PageTerminalResponse
    */
-  public PageTerminalResponse listarUsingGET40(List<String> sort, Integer page, Integer limit, Long id, String terminal, Long numeroEstabelecimento, Long idEstabelecimento) throws ApiException {
+  public PageTerminalResponse listarUsingGET42(List<String> sort, Integer page, Integer limit, Long id, String terminal, Long numeroEstabelecimento, Long idEstabelecimento) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -2185,17 +2336,17 @@ public class EstabelecimentoApi {
   }
   
   /**
-   * Lista os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes
-   * Este m\u00C3\u00A9todo permite que sejam listados os V\u00C3\u00ADnculos dos estabelecimento com os adquirentes.
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param idAdquirente C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do adquirente (id).
-   * @param idEstabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento.
-   * @param codigoEstabelecimentoAdquirente C\u00C3\u00B3digo do v\u00C3\u00ADnculo entre o estabelecimento e o adquirente.
+   * Lista os V\u00EDnculos dos estabelecimento com os adquirentes
+   * Este m\u00E9todo permite que sejam listados os V\u00EDnculos dos estabelecimento com os adquirentes.
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @param idAdquirente C\u00F3digo de Identifica\u00E7\u00E3o do adquirente (id).
+   * @param idEstabelecimento C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento.
+   * @param codigoEstabelecimentoAdquirente C\u00F3digo do v\u00EDnculo entre o estabelecimento e o adquirente.
    * @return PageVinculoEstabelecimentoAdquirenteResponse
    */
-  public PageVinculoEstabelecimentoAdquirenteResponse listarUsingGET51(List<String> sort, Integer page, Integer limit, Long idAdquirente, Long idEstabelecimento, String codigoEstabelecimentoAdquirente) throws ApiException {
+  public PageVinculoEstabelecimentoAdquirenteResponse listarUsingGET53(List<String> sort, Integer page, Integer limit, Long idAdquirente, Long idEstabelecimento, String codigoEstabelecimentoAdquirente) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -2244,23 +2395,23 @@ public class EstabelecimentoApi {
   }
   
   /**
-   * Lista os v\u00C3\u00ADnculos cadastrados no Emissor
-   * Este m\u00C3\u00A9todo permite que sejam listados os v\u00C3\u00ADnculos opera\u00C3\u00A7\u00C3\u00B5es existentes na base de dados do Emissor.
-   * @param id C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do estabelecimento (id).
-   * @param sort Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
-   * @param page P\u00C3\u00A1gina solicitada (Default = 0)
-   * @param limit Limite de elementos por solicita\u00C3\u00A7\u00C3\u00A3o (Default = 50, Max = 50)
-   * @param idProduto C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
-   * @param idOperacao C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Opera\u00C3\u00A7\u00C3\u00A3o (id).
-   * @param codigoMCC C\u00C3\u00B3digo MCC.
+   * Listar v\u00EDnculos de opera\u00E7\u00F5es do estabelecimento
+   * Lista os v\u00EDnculos de opera\u00E7\u00F5es do estabelecimento. 
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id).
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros.
+   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @param idProduto C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
+   * @param idOperacao C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id).
+   * @param codigoMCC C\u00F3digo MCC.
    * @return PageVinculoOperacaoResponse
    */
-  public PageVinculoOperacaoResponse listarUsingGET52(Long id, List<String> sort, Integer page, Integer limit, Long idProduto, Long idOperacao, Integer codigoMCC) throws ApiException {
+  public PageVinculoOperacaoResponse listarUsingGET54(Long id, List<String> sort, Integer page, Integer limit, Long idProduto, Long idOperacao, Integer codigoMCC) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET52");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET54");
      }
      
     // create path and map variables
@@ -2311,7 +2462,7 @@ public class EstabelecimentoApi {
   
   /**
    * Realiza o cadastro de uma nova maquineta para um estabelecimento 
-   * Este m\u00C3\u00A9todo permite que seja cadastrada uma nova maquineta para um estabelecimento.
+   * Este m\u00E9todo permite que seja cadastrada uma nova maquineta para um estabelecimento.
    * @param maquinetaPersist maquinetaPersist
    * @return MaquinetaResponse
    */
@@ -2357,8 +2508,8 @@ public class EstabelecimentoApi {
   }
   
   /**
-   * Realiza o cadastro de uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o
-   * Este m\u00C3\u00A9todo permite que seja cadastrada uma nova Regra Opera\u00C3\u00A7\u00C3\u00A3o.
+   * Realiza o cadastro de uma nova Regra Opera\u00E7\u00E3o
+   * Este m\u00E9todo permite que seja cadastrada uma nova Regra Opera\u00E7\u00E3o.
    * @param oprecaoCredorPersist oprecaoCredorPersist
    * @return OperacaoCredorResponse
    */
@@ -2405,29 +2556,16 @@ public class EstabelecimentoApi {
   
   /**
    * Realiza o cadastro de um novo telefone para um estabelecimento 
-   * Este m\u00C3\u00A9todo permite que seja cadastrado um novo telefone para um estabelecimento.
-   * @param idEstabelecimento C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Estabelecimento (id).
-   * @param ddd C\u00C3\u00B3digo DDD do telefone (id).
-   * @param telefone N\u00C3\u00BAmero do telefone.
-   * @param ramal N\u00C3\u00BAmero do ramal.
+   * Este m\u00E9todo permite que seja cadastrado um novo telefone para um estabelecimento.
+   * @param telefoneEstabelecimentoPersist telefoneEstabelecimentoPersist
    * @return TelefoneEstabelecimentoResponse
    */
-  public TelefoneEstabelecimentoResponse salvarUsingPOST22(Long idEstabelecimento, String ddd, String telefone, String ramal) throws ApiException {
-    Object postBody = null;
+  public TelefoneEstabelecimentoResponse salvarUsingPOST22(TelefoneEstabelecimentoPersist telefoneEstabelecimentoPersist) throws ApiException {
+    Object postBody = telefoneEstabelecimentoPersist;
     
-     // verify the required parameter 'idEstabelecimento' is set
-     if (idEstabelecimento == null) {
-        throw new ApiException(400, "Missing the required parameter 'idEstabelecimento' when calling salvarUsingPOST22");
-     }
-     
-     // verify the required parameter 'ddd' is set
-     if (ddd == null) {
-        throw new ApiException(400, "Missing the required parameter 'ddd' when calling salvarUsingPOST22");
-     }
-     
-     // verify the required parameter 'telefone' is set
-     if (telefone == null) {
-        throw new ApiException(400, "Missing the required parameter 'telefone' when calling salvarUsingPOST22");
+     // verify the required parameter 'telefoneEstabelecimentoPersist' is set
+     if (telefoneEstabelecimentoPersist == null) {
+        throw new ApiException(400, "Missing the required parameter 'telefoneEstabelecimentoPersist' when calling salvarUsingPOST22");
      }
      
     // create path and map variables
@@ -2438,14 +2576,6 @@ public class EstabelecimentoApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     Map<String, Object> formParams = new HashMap<String, Object>();
 
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "idEstabelecimento", idEstabelecimento));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "ddd", ddd));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "telefone", telefone));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "ramal", ramal));
     
 
     
@@ -2473,7 +2603,7 @@ public class EstabelecimentoApi {
   
   /**
    * Realiza o cadastro de um novo Terminal
-   * Este m\u00C3\u00A9todo permite que seja cadastrado um novo Terminal.
+   * Este m\u00E9todo permite que seja cadastrado um novo Terminal.
    * @param terminalPersist terminalPersist
    * @return TerminalResponse
    */
@@ -2520,7 +2650,7 @@ public class EstabelecimentoApi {
   
   /**
    * Realiza o cadastro de um novo VinculoEstabelecimentoAdquirente
-   * Este m\u00C3\u00A9todo permite que seja cadastrado um novo VinculoEstabelecimentoAdquirente.
+   * Este m\u00E9todo permite que seja cadastrado um novo VinculoEstabelecimentoAdquirente.
    * @param vinculoEstabelecimentoAdquirentePersist vinculoEstabelecimentoAdquirentePersist
    * @return VinculoEstabelecimentoAdquirenteResponse
    */

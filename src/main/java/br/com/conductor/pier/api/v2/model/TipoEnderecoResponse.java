@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o do recurso Tipo Endere\u00C3\u00A7o
+ * Representa\u00E7\u00E3o do recurso Tipo Endere\u00E7o
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o do recurso Tipo Endere\u00C3\u00A7o")
+@ApiModel(description = "Representa\u00E7\u00E3o do recurso Tipo Endere\u00E7o")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TipoEnderecoResponse   {
   
@@ -20,14 +20,14 @@ public class TipoEnderecoResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Endere\u00E7o (id)
    **/
   public TipoEnderecoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo do Endere\u00C3\u00A7o (id)")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Endere\u00E7o (id)")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -38,14 +38,14 @@ public class TipoEnderecoResponse   {
 
   
   /**
-   * Nome do Tipo do Endere\u00C3\u00A7o
+   * Nome do Tipo do Endere\u00E7o
    **/
   public TipoEnderecoResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome do Tipo do Endere\u00C3\u00A7o")
+  @ApiModelProperty(example = "null", value = "Nome do Tipo do Endere\u00E7o")
   @JsonProperty("nome")
   public String getNome() {
     return nome;

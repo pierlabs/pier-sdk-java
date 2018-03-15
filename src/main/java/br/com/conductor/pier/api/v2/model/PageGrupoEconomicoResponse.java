@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de grupos encon\u00C3\u00B4micos
+ * Representa\u00E7\u00E3o da resposta do recurso de grupos encon\u00F4micos
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de grupos encon\u00C3\u00B4micos")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de grupos encon\u00F4micos")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageGrupoEconomicoResponse   {
   

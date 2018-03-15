@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de campanhas
+ * Representa\u00E7\u00E3o da resposta do recurso de campanhas
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso de campanhas")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de campanhas")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageCampanhaResponse   {
   

@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Objeto de resposta para a valida\u00C3\u00A7\u00C3\u00A3o de senha do cart\u00C3\u00A3o
+ * Objeto de resposta para a valida\u00E7\u00E3o de senha do cart\u00E3o
  **/
 
-@ApiModel(description = "Objeto de resposta para a valida\u00C3\u00A7\u00C3\u00A3o de senha do cart\u00C3\u00A3o")
+@ApiModel(description = "Objeto de resposta para a valida\u00E7\u00E3o de senha do cart\u00E3o")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ValidaSenhaCartaoResponse   {
   
@@ -41,14 +41,14 @@ public class ValidaSenhaCartaoResponse   {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o
+   * Descri\u00E7\u00E3o do status do cart\u00E3o
    **/
   public ValidaSenhaCartaoResponse idStatusCartao(Long idStatusCartao) {
     this.idStatusCartao = idStatusCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do status do cart\u00E3o")
   @JsonProperty("idStatusCartao")
   public Long getIdStatusCartao() {
     return idStatusCartao;
@@ -59,14 +59,14 @@ public class ValidaSenhaCartaoResponse   {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o
+   * Descri\u00E7\u00E3o do status do cart\u00E3o
    **/
   public ValidaSenhaCartaoResponse statusCartao(String statusCartao) {
     this.statusCartao = statusCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o do status do cart\u00C3\u00A3o")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do status do cart\u00E3o")
   @JsonProperty("statusCartao")
   public String getStatusCartao() {
     return statusCartao;
@@ -95,14 +95,14 @@ public class ValidaSenhaCartaoResponse   {
 
   
   /**
-   * Quantidade m\u00C3\u00A1xima tentativas permitidas
+   * Quantidade m\u00E1xima tentativas permitidas
    **/
   public ValidaSenhaCartaoResponse quantidadeMaximaTentativas(Integer quantidadeMaximaTentativas) {
     this.quantidadeMaximaTentativas = quantidadeMaximaTentativas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Quantidade m\u00C3\u00A1xima tentativas permitidas")
+  @ApiModelProperty(example = "null", value = "Quantidade m\u00E1xima tentativas permitidas")
   @JsonProperty("quantidadeMaximaTentativas")
   public Integer getQuantidadeMaximaTentativas() {
     return quantidadeMaximaTentativas;

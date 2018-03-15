@@ -9,10 +9,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Objeto Push Notifica\u00C3\u00A7\u00C3\u00A3o APNS
+ * Objeto Push Notifica\u00E7\u00E3o APNS
  **/
 
-@ApiModel(description = "Objeto Push Notifica\u00C3\u00A7\u00C3\u00A3o APNS")
+@ApiModel(description = "Objeto Push Notifica\u00E7\u00E3o APNS")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PushAPNS   {
   
@@ -49,14 +49,14 @@ public class PushAPNS   {
 
   
   /**
-   * C\u00C3\u00B3digo identificado da pessoa
+   * C\u00F3digo identificado da pessoa
    **/
   public PushAPNS idPessoa(Long idPessoa) {
     this.idPessoa = idPessoa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "C\u00C3\u00B3digo identificado da pessoa")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo identificado da pessoa")
   @JsonProperty("idPessoa")
   public Long getIdPessoa() {
     return idPessoa;
@@ -67,14 +67,14 @@ public class PushAPNS   {
 
   
   /**
-   * C\u00C3\u00B3digo identificador da conta
+   * C\u00F3digo identificador da conta
    **/
   public PushAPNS idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "C\u00C3\u00B3digo identificador da conta")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo identificador da conta")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -85,14 +85,14 @@ public class PushAPNS   {
 
   
   /**
-   * Apresenta o token do dispositivo que dever\u00C3\u00A1 receber o push.
+   * Apresenta o token do dispositivo que dever\u00E1 receber o push.
    **/
   public PushAPNS tokenDispositivo(String tokenDispositivo) {
     this.tokenDispositivo = tokenDispositivo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Apresenta o token do dispositivo que dever\u00C3\u00A1 receber o push.")
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta o token do dispositivo que dever\u00E1 receber o push.")
   @JsonProperty("tokenDispositivo")
   public String getTokenDispositivo() {
     return tokenDispositivo;
@@ -103,14 +103,14 @@ public class PushAPNS   {
 
   
   /**
-   * Apresenta o certificado APNs que est\u00C3\u00A1 cadastrado para o aplicativo na loja da Apple. Esse certificado dever\u00C3\u00A1 ser enviado no formado Base64.
+   * Apresenta o certificado APNs que est\u00E1 cadastrado para o aplicativo na loja da Apple. Esse certificado dever\u00E1 ser enviado no formado Base64.
    **/
   public PushAPNS certificado(String certificado) {
     this.certificado = certificado;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Apresenta o certificado APNs que est\u00C3\u00A1 cadastrado para o aplicativo na loja da Apple. Esse certificado dever\u00C3\u00A1 ser enviado no formado Base64.")
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta o certificado APNs que est\u00E1 cadastrado para o aplicativo na loja da Apple. Esse certificado dever\u00E1 ser enviado no formado Base64.")
   @JsonProperty("certificado")
   public String getCertificado() {
     return certificado;
@@ -121,14 +121,14 @@ public class PushAPNS   {
 
   
   /**
-   * Apresenta a senha para o certificado APNs que est\u00C3\u00A1 cadastrado para o aplicativo na loja da Apple.
+   * Apresenta a senha para o certificado APNs que est\u00E1 cadastrado para o aplicativo na loja da Apple.
    **/
   public PushAPNS senha(String senha) {
     this.senha = senha;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Apresenta a senha para o certificado APNs que est\u00C3\u00A1 cadastrado para o aplicativo na loja da Apple.")
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta a senha para o certificado APNs que est\u00E1 cadastrado para o aplicativo na loja da Apple.")
   @JsonProperty("senha")
   public String getSenha() {
     return senha;
@@ -139,14 +139,14 @@ public class PushAPNS   {
 
   
   /**
-   * Apresenta o t\u00C3\u00ADtulo da notifica\u00C3\u00A7\u00C3\u00A3o.
+   * Apresenta o t\u00EDtulo da notifica\u00E7\u00E3o.
    **/
   public PushAPNS titulo(String titulo) {
     this.titulo = titulo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Apresenta o t\u00C3\u00ADtulo da notifica\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta o t\u00EDtulo da notifica\u00E7\u00E3o.")
   @JsonProperty("titulo")
   public String getTitulo() {
     return titulo;
@@ -157,14 +157,14 @@ public class PushAPNS   {
 
   
   /**
-   * Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado.
+   * Apresenta o texto da notifica\u00E7\u00E3o a ser enviado.
    **/
   public PushAPNS conteudo(String conteudo) {
     this.conteudo = conteudo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Apresenta o texto da notifica\u00C3\u00A7\u00C3\u00A3o a ser enviado.")
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta o texto da notifica\u00E7\u00E3o a ser enviado.")
   @JsonProperty("conteudo")
   public String getConteudo() {
     return conteudo;
@@ -175,14 +175,14 @@ public class PushAPNS   {
 
   
   /**
-   * Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o
+   * Apresenta o tipoEvento a qual pertence a notifica\u00E7\u00E3o
    **/
   public PushAPNS tipoEvento(TipoEventoEnum tipoEvento) {
     this.tipoEvento = tipoEvento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Apresenta o tipoEvento a qual pertence a notifica\u00C3\u00A7\u00C3\u00A3o")
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta o tipoEvento a qual pertence a notifica\u00E7\u00E3o")
   @JsonProperty("tipoEvento")
   public TipoEventoEnum getTipoEvento() {
     return tipoEvento;

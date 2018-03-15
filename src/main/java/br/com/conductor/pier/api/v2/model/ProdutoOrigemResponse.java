@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta dos produtosOrigem do recurso de Origem Comercial
+ * Representa\u00E7\u00E3o da resposta dos produtosOrigem do recurso de Origem Comercial
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta dos produtosOrigem do recurso de Origem Comercial")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta dos produtosOrigem do recurso de Origem Comercial")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ProdutoOrigemResponse   {
   
@@ -19,14 +19,14 @@ public class ProdutoOrigemResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do produto
+   * C\u00F3digo identificador do produto
    **/
   public ProdutoOrigemResponse idProduto(Long idProduto) {
     this.idProduto = idProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador do produto")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador do produto")
   @JsonProperty("idProduto")
   public Long getIdProduto() {
     return idProduto;

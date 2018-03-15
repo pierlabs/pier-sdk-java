@@ -20,14 +20,14 @@ public class TipoTerminalResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo Terminal (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Terminal (id).
    **/
   public TipoTerminalResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo Terminal (id).")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Terminal (id).")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -38,14 +38,14 @@ public class TipoTerminalResponse   {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do Tipo Terminal.
+   * Descri\u00E7\u00E3o do Tipo Terminal.
    **/
   public TipoTerminalResponse descricaoTerminal(String descricaoTerminal) {
     this.descricaoTerminal = descricaoTerminal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o do Tipo Terminal.")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do Tipo Terminal.")
   @JsonProperty("descricaoTerminal")
   public String getDescricaoTerminal() {
     return descricaoTerminal;

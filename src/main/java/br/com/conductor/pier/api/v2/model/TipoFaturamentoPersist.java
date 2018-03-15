@@ -21,14 +21,14 @@ public class TipoFaturamentoPersist   {
 
   
   /**
-   * Desci\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento.
+   * Desci\u00E7\u00E3o do tipo de faturamento.
    **/
   public TipoFaturamentoPersist descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Desci\u00C3\u00A7\u00C3\u00A3o do tipo de faturamento.")
+  @ApiModelProperty(example = "null", required = true, value = "Desci\u00E7\u00E3o do tipo de faturamento.")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -39,14 +39,14 @@ public class TipoFaturamentoPersist   {
 
   
   /**
-   * Flag que representa que o faturamento ser\u00C3\u00A1 apenas demonstrativo.
+   * Flag que representa que o faturamento ser\u00E1 apenas demonstrativo.
    **/
   public TipoFaturamentoPersist flagApenasDemonstrativo(Boolean flagApenasDemonstrativo) {
     this.flagApenasDemonstrativo = flagApenasDemonstrativo;
     return this;
   }
   
-  @ApiModelProperty(example = "false", required = true, value = "Flag que representa que o faturamento ser\u00C3\u00A1 apenas demonstrativo.")
+  @ApiModelProperty(example = "false", required = true, value = "Flag que representa que o faturamento ser\u00E1 apenas demonstrativo.")
   @JsonProperty("flagApenasDemonstrativo")
   public Boolean getFlagApenasDemonstrativo() {
     return flagApenasDemonstrativo;
@@ -57,14 +57,14 @@ public class TipoFaturamentoPersist   {
 
   
   /**
-   * C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do convenio relacionado ao tipo de faturamento.
+   * C\u00F3digo de identifica\u00E7\u00E3o do convenio relacionado ao tipo de faturamento.
    **/
   public TipoFaturamentoPersist idConvenio(Long idConvenio) {
     this.idConvenio = idConvenio;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de identifica\u00C3\u00A7\u00C3\u00A3o do convenio relacionado ao tipo de faturamento.")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do convenio relacionado ao tipo de faturamento.")
   @JsonProperty("idConvenio")
   public Long getIdConvenio() {
     return idConvenio;

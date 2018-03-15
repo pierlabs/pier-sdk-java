@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o do tipo de template.
+ * Representa\u00E7\u00E3o do tipo de template.
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o do tipo de template.")
+@ApiModel(description = "Representa\u00E7\u00E3o do tipo de template.")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TipoTemplateRequest   {
   
@@ -39,14 +39,14 @@ public class TipoTemplateRequest   {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do tipo de template.
+   * Descri\u00E7\u00E3o do tipo de template.
    **/
   public TipoTemplateRequest descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o do tipo de template.")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do tipo de template.")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;

@@ -10,10 +10,10 @@ import java.util.List;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o do recurso de consultar conta
+ * Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso de consultar conta
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da requisi\u00C3\u00A7\u00C3\u00A3o do recurso de consultar conta")
+@ApiModel(description = "Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso de consultar conta")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TransacaoPayQueryRequest   {
   
@@ -42,14 +42,14 @@ public class TransacaoPayQueryRequest   {
 
   
   /**
-   * Id do cart\u00C3\u00A3o
+   * Id do cart\u00E3o
    **/
   public TransacaoPayQueryRequest idCartao(Long idCartao) {
     this.idCartao = idCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Id do cart\u00C3\u00A3o")
+  @ApiModelProperty(example = "null", value = "Id do cart\u00E3o")
   @JsonProperty("idCartao")
   public Long getIdCartao() {
     return idCartao;
@@ -78,14 +78,14 @@ public class TransacaoPayQueryRequest   {
 
   
   /**
-   * Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.
+   * Tipo de ordena\u00E7\u00E3o dos registros.
    **/
   public TransacaoPayQueryRequest sort(List<String> sort) {
     this.sort = sort;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Tipo de ordena\u00C3\u00A7\u00C3\u00A3o dos registros.")
+  @ApiModelProperty(example = "null", value = "Tipo de ordena\u00E7\u00E3o dos registros.")
   @JsonProperty("sort")
   public List<String> getSort() {
     return sort;

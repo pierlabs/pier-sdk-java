@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso StatusOportunidade
+ * Representa\u00E7\u00E3o da resposta do recurso StatusOportunidade
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso StatusOportunidade")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso StatusOportunidade")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class StatusOportunidadeResponse   {
   
@@ -23,14 +23,14 @@ public class StatusOportunidadeResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do StatusOportunidade
+   * C\u00F3digo identificador do StatusOportunidade
    **/
   public StatusOportunidadeResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador do StatusOportunidade")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador do StatusOportunidade")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -41,14 +41,14 @@ public class StatusOportunidadeResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo identificador do TipoOportunidade
+   * C\u00F3digo identificador do TipoOportunidade
    **/
   public StatusOportunidadeResponse idTipoOportunidade(Long idTipoOportunidade) {
     this.idTipoOportunidade = idTipoOportunidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo identificador do TipoOportunidade")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador do TipoOportunidade")
   @JsonProperty("idTipoOportunidade")
   public Long getIdTipoOportunidade() {
     return idTipoOportunidade;
@@ -95,14 +95,14 @@ public class StatusOportunidadeResponse   {
 
   
   /**
-   * Flag que representa se o tipo oportunidade est\u00C3\u00A1 ativo
+   * Flag que representa se o tipo oportunidade est\u00E1 ativo
    **/
   public StatusOportunidadeResponse flagAtivo(Boolean flagAtivo) {
     this.flagAtivo = flagAtivo;
     return this;
   }
   
-  @ApiModelProperty(example = "true", value = "Flag que representa se o tipo oportunidade est\u00C3\u00A1 ativo")
+  @ApiModelProperty(example = "true", value = "Flag que representa se o tipo oportunidade est\u00E1 ativo")
   @JsonProperty("flagAtivo")
   public Boolean getFlagAtivo() {
     return flagAtivo;

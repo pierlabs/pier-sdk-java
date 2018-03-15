@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * Detalhe do plano de parcelamento para Transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para contas banc\u00C3\u00A1rias
+ * Detalhe do plano de parcelamento para Transfer\u00EAncia de cr\u00E9dito para contas banc\u00E1rias
  **/
 
-@ApiModel(description = "Detalhe do plano de parcelamento para Transfer\u00C3\u00AAncia de cr\u00C3\u00A9dito para contas banc\u00C3\u00A1rias")
+@ApiModel(description = "Detalhe do plano de parcelamento para Transfer\u00EAncia de cr\u00E9dito para contas banc\u00E1rias")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ParcelamentoTransferenciaResponse   {
   
@@ -26,14 +26,14 @@ public class ParcelamentoTransferenciaResponse   {
 
   
   /**
-   * N\u00C3\u00BAmero de parcelas dispon\u00C3\u00ADveis.
+   * N\u00FAmero de parcelas dispon\u00EDveis.
    **/
   public ParcelamentoTransferenciaResponse numeroParcela(Integer numeroParcela) {
     this.numeroParcela = numeroParcela;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero de parcelas dispon\u00C3\u00ADveis.")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero de parcelas dispon\u00EDveis.")
   @JsonProperty("numeroParcela")
   public Integer getNumeroParcela() {
     return numeroParcela;
@@ -80,14 +80,14 @@ public class ParcelamentoTransferenciaResponse   {
 
   
   /**
-   * Valor da tarifa de contrata\u00C3\u00A7\u00C3\u00A3o.
+   * Valor da tarifa de contrata\u00E7\u00E3o.
    **/
   public ParcelamentoTransferenciaResponse valorTAC(BigDecimal valorTAC) {
     this.valorTAC = valorTAC;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor da tarifa de contrata\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(example = "null", value = "Valor da tarifa de contrata\u00E7\u00E3o.")
   @JsonProperty("valorTAC")
   public BigDecimal getValorTAC() {
     return valorTAC;
@@ -98,14 +98,14 @@ public class ParcelamentoTransferenciaResponse   {
 
   
   /**
-   * IOF
+   * IOF calculado para o cliente
    **/
   public ParcelamentoTransferenciaResponse valorIOF(BigDecimal valorIOF) {
     this.valorIOF = valorIOF;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "IOF")
+  @ApiModelProperty(example = "null", value = "IOF calculado para o cliente")
   @JsonProperty("valorIOF")
   public BigDecimal getValorIOF() {
     return valorIOF;

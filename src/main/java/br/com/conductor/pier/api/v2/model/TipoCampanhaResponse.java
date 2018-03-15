@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso do tipo de campanha
+ * Representa\u00E7\u00E3o da resposta do recurso do tipo de campanha
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do recurso do tipo de campanha")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso do tipo de campanha")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TipoCampanhaResponse   {
   
@@ -38,14 +38,14 @@ public class TipoCampanhaResponse   {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do tipo de campanha
+   * Descri\u00E7\u00E3o do tipo de campanha
    **/
   public TipoCampanhaResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o do tipo de campanha")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do tipo de campanha")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;

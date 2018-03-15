@@ -24,14 +24,14 @@ public class ProdutoDetalhesResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
    **/
   public ProdutoDetalhesResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Produto (id).")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -42,14 +42,14 @@ public class ProdutoDetalhesResponse   {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.
+   * Descri\u00E7\u00E3o do Nome do Produto.
    **/
   public ProdutoDetalhesResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Descri\u00C3\u00A7\u00C3\u00A3o do Nome do Produto.")
+  @ApiModelProperty(example = "null", required = true, value = "Descri\u00E7\u00E3o do Nome do Produto.")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -78,14 +78,14 @@ public class ProdutoDetalhesResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia B\u00E1sica (id) a qual o produto pertence.
    **/
   public ProdutoDetalhesResponse idFantasiaBasica(Long idFantasiaBasica) {
     this.idFantasiaBasica = idFantasiaBasica;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica (id) a qual o produto pertence.")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia B\u00E1sica (id) a qual o produto pertence.")
   @JsonProperty("idFantasiaBasica")
   public Long getIdFantasiaBasica() {
     return idFantasiaBasica;
@@ -96,14 +96,14 @@ public class ProdutoDetalhesResponse   {
 
   
   /**
-   * Descri\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica a qual o produto pertence.
+   * Descri\u00E7\u00E3o da Fantasia B\u00E1sica a qual o produto pertence.
    **/
   public ProdutoDetalhesResponse fantasiaBasica(String fantasiaBasica) {
     this.fantasiaBasica = fantasiaBasica;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00C3\u00A7\u00C3\u00A3o da Fantasia B\u00C3\u00A1sica a qual o produto pertence.")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o da Fantasia B\u00E1sica a qual o produto pertence.")
   @JsonProperty("fantasiaBasica")
   public String getFantasiaBasica() {
     return fantasiaBasica;
@@ -114,14 +114,14 @@ public class ProdutoDetalhesResponse   {
 
   
   /**
-   * Par\u00C3\u00A2metro que indica se o produto est\u00C3\u00A1 habilitado para compras no exterior.
+   * Par\u00E2metro que indica se o produto est\u00E1 habilitado para compras no exterior.
    **/
   public ProdutoDetalhesResponse usoExterior(Boolean usoExterior) {
     this.usoExterior = usoExterior;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Par\u00C3\u00A2metro que indica se o produto est\u00C3\u00A1 habilitado para compras no exterior.")
+  @ApiModelProperty(example = "false", value = "Par\u00E2metro que indica se o produto est\u00E1 habilitado para compras no exterior.")
   @JsonProperty("usoExterior")
   public Boolean getUsoExterior() {
     return usoExterior;

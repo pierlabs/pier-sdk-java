@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representa\u00C3\u00A7\u00C3\u00A3o da resposta do {@link HistoricoAssessoriaResponse}
+ * Representa\u00E7\u00E3o da resposta do {@link HistoricoAssessoriaResponse}
  **/
 
-@ApiModel(description = "Representa\u00C3\u00A7\u00C3\u00A3o da resposta do {@link HistoricoAssessoriaResponse}")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do {@link HistoricoAssessoriaResponse}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class HistoricoAssessoriaResponse   {
   
@@ -21,14 +21,14 @@ public class HistoricoAssessoriaResponse   {
 
   
   /**
-   * Apresenta a data e hora do hist\u00C3\u00B3rico
+   * Apresenta a data e hora do hist\u00F3rico
    **/
   public HistoricoAssessoriaResponse dataHoraHistorico(String dataHoraHistorico) {
     this.dataHoraHistorico = dataHoraHistorico;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta a data e hora do hist\u00C3\u00B3rico")
+  @ApiModelProperty(example = "null", value = "Apresenta a data e hora do hist\u00F3rico")
   @JsonProperty("dataHoraHistorico")
   public String getDataHoraHistorico() {
     return dataHoraHistorico;
@@ -39,14 +39,14 @@ public class HistoricoAssessoriaResponse   {
 
   
   /**
-   * Apresenta o tipo do hist\u00C3\u00B3rico podendo ser ENTRADA ou SAIDA
+   * Apresenta o tipo do hist\u00F3rico podendo ser ENTRADA ou SAIDA
    **/
   public HistoricoAssessoriaResponse tipoHistorico(String tipoHistorico) {
     this.tipoHistorico = tipoHistorico;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o tipo do hist\u00C3\u00B3rico podendo ser ENTRADA ou SAIDA")
+  @ApiModelProperty(example = "null", value = "Apresenta o tipo do hist\u00F3rico podendo ser ENTRADA ou SAIDA")
   @JsonProperty("tipoHistorico")
   public String getTipoHistorico() {
     return tipoHistorico;
@@ -57,14 +57,14 @@ public class HistoricoAssessoriaResponse   {
 
   
   /**
-   * Apresenta o nome da Assessoria de Cobran\u00C3\u00A7a relacionada ao hist\u00C3\u00B3rico
+   * Apresenta o nome da Assessoria de Cobran\u00E7a relacionada ao hist\u00F3rico
    **/
   public HistoricoAssessoriaResponse nomeAssessoria(String nomeAssessoria) {
     this.nomeAssessoria = nomeAssessoria;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o nome da Assessoria de Cobran\u00C3\u00A7a relacionada ao hist\u00C3\u00B3rico")
+  @ApiModelProperty(example = "null", value = "Apresenta o nome da Assessoria de Cobran\u00E7a relacionada ao hist\u00F3rico")
   @JsonProperty("nomeAssessoria")
   public String getNomeAssessoria() {
     return nomeAssessoria;

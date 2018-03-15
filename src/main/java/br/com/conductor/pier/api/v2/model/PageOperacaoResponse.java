@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * Lista de Opera\u00C3\u00A7\u00C3\u00B5es
+ * Lista de Opera\u00E7\u00F5es
  **/
 
-@ApiModel(description = "Lista de Opera\u00C3\u00A7\u00C3\u00B5es")
+@ApiModel(description = "Lista de Opera\u00E7\u00F5es")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageOperacaoResponse   {
   

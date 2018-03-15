@@ -42,14 +42,14 @@ public class ControleVencimentoResponse   {
 
   
   /**
-   *  Indica a data prevista para a realiza\u00C3\u00A7\u00C3\u00A3o do Corte das faturas
+   *  Indica a data prevista para a realiza\u00E7\u00E3o do Corte das faturas
    **/
   public ControleVencimentoResponse dataPrevistaCorte(String dataPrevistaCorte) {
     this.dataPrevistaCorte = dataPrevistaCorte;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = " Indica a data prevista para a realiza\u00C3\u00A7\u00C3\u00A3o do Corte das faturas")
+  @ApiModelProperty(example = "null", value = " Indica a data prevista para a realiza\u00E7\u00E3o do Corte das faturas")
   @JsonProperty("dataPrevistaCorte")
   public String getDataPrevistaCorte() {
     return dataPrevistaCorte;
@@ -60,14 +60,14 @@ public class ControleVencimentoResponse   {
 
   
   /**
-   * Indica a data e a hora que fora realizada a realiza\u00C3\u00A7\u00C3\u00A3o do Corte das faturas
+   * Indica a data e a hora que fora realizada a realiza\u00E7\u00E3o do Corte das faturas
    **/
   public ControleVencimentoResponse dataHoraRealizacaoCorte(String dataHoraRealizacaoCorte) {
     this.dataHoraRealizacaoCorte = dataHoraRealizacaoCorte;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Indica a data e a hora que fora realizada a realiza\u00C3\u00A7\u00C3\u00A3o do Corte das faturas")
+  @ApiModelProperty(example = "null", value = "Indica a data e a hora que fora realizada a realiza\u00E7\u00E3o do Corte das faturas")
   @JsonProperty("dataHoraRealizacaoCorte")
   public String getDataHoraRealizacaoCorte() {
     return dataHoraRealizacaoCorte;
@@ -78,14 +78,14 @@ public class ControleVencimentoResponse   {
 
   
   /**
-   * Indica a data prevista para a realiza\u00C3\u00A7\u00C3\u00A3o do faturamento
+   * Indica a data prevista para a realiza\u00E7\u00E3o do faturamento
    **/
   public ControleVencimentoResponse dataPrevistaFaturamento(String dataPrevistaFaturamento) {
     this.dataPrevistaFaturamento = dataPrevistaFaturamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Indica a data prevista para a realiza\u00C3\u00A7\u00C3\u00A3o do faturamento")
+  @ApiModelProperty(example = "null", value = "Indica a data prevista para a realiza\u00E7\u00E3o do faturamento")
   @JsonProperty("dataPrevistaFaturamento")
   public String getDataPrevistaFaturamento() {
     return dataPrevistaFaturamento;
@@ -114,14 +114,14 @@ public class ControleVencimentoResponse   {
 
   
   /**
-   * Indica o dia \u00C3\u00BAtil que ser\u00C3\u00A1 considerado como a data de vencimento
+   * Indica o dia \u00FAtil que ser\u00E1 considerado como a data de vencimento
    **/
   public ControleVencimentoResponse dataRealVencimento(String dataRealVencimento) {
     this.dataRealVencimento = dataRealVencimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Indica o dia \u00C3\u00BAtil que ser\u00C3\u00A1 considerado como a data de vencimento")
+  @ApiModelProperty(example = "null", value = "Indica o dia \u00FAtil que ser\u00E1 considerado como a data de vencimento")
   @JsonProperty("dataRealVencimento")
   public String getDataRealVencimento() {
     return dataRealVencimento;

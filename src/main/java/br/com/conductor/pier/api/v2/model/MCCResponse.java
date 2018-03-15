@@ -20,14 +20,14 @@ public class MCCResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do MCC (id).
+   * C\u00F3digo de Identifica\u00E7\u00E3o do MCC (id).
    **/
   public MCCResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do MCC (id).")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do MCC (id).")
   @JsonProperty("id")
   public Long getId() {
     return id;

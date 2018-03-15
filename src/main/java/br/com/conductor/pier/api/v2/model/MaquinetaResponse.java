@@ -27,14 +27,14 @@ public class MaquinetaResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta.
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta.
    **/
   public MaquinetaResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o da Maquineta.")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta.")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -45,14 +45,14 @@ public class MaquinetaResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do EStabelecimento.
+   * C\u00F3digo de Identifica\u00E7\u00E3o do EStabelecimento.
    **/
   public MaquinetaResponse idEstabelecimento(Long idEstabelecimento) {
     this.idEstabelecimento = idEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do EStabelecimento.")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do EStabelecimento.")
   @JsonProperty("idEstabelecimento")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
@@ -63,14 +63,14 @@ public class MaquinetaResponse   {
 
   
   /**
-   * C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo Maquineta.
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Maquineta.
    **/
   public MaquinetaResponse idTipoMaquineta(Long idTipoMaquineta) {
     this.idTipoMaquineta = idTipoMaquineta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00C3\u00B3digo de Identifica\u00C3\u00A7\u00C3\u00A3o do Tipo Maquineta.")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Maquineta.")
   @JsonProperty("idTipoMaquineta")
   public Long getIdTipoMaquineta() {
     return idTipoMaquineta;
@@ -81,14 +81,14 @@ public class MaquinetaResponse   {
 
   
   /**
-   * Valor de manuten\u00C3\u00A7\u00C3\u00A3o da Maquineta.
+   * Valor de manuten\u00E7\u00E3o da Maquineta.
    **/
   public MaquinetaResponse valor(BigDecimal valor) {
     this.valor = valor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor de manuten\u00C3\u00A7\u00C3\u00A3o da Maquineta.")
+  @ApiModelProperty(example = "null", value = "Valor de manuten\u00E7\u00E3o da Maquineta.")
   @JsonProperty("valor")
   public BigDecimal getValor() {
     return valor;
@@ -99,14 +99,14 @@ public class MaquinetaResponse   {
 
   
   /**
-   * Data de implanta\u00C3\u00A7\u00C3\u00A3o da Maquineta.
+   * Data de implanta\u00E7\u00E3o da Maquineta.
    **/
   public MaquinetaResponse dataHoraImplantacao(String dataHoraImplantacao) {
     this.dataHoraImplantacao = dataHoraImplantacao;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data de implanta\u00C3\u00A7\u00C3\u00A3o da Maquineta.")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data de implanta\u00E7\u00E3o da Maquineta.")
   @JsonProperty("dataHoraImplantacao")
   public String getDataHoraImplantacao() {
     return dataHoraImplantacao;
@@ -135,14 +135,14 @@ public class MaquinetaResponse   {
 
   
   /**
-   * N\u00C3\u00BAmero do terminal vinculado a Maquineta.
+   * N\u00FAmero do terminal vinculado a Maquineta.
    **/
   public MaquinetaResponse terminal(String terminal) {
     this.terminal = terminal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00C3\u00BAmero do terminal vinculado a Maquineta.")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero do terminal vinculado a Maquineta.")
   @JsonProperty("terminal")
   public String getTerminal() {
     return terminal;
@@ -153,14 +153,14 @@ public class MaquinetaResponse   {
 
   
   /**
-   * Usu\u00C3\u00A1rio da aplica\u00C3\u00A7\u00C3\u00A3o.
+   * Usu\u00E1rio da aplica\u00E7\u00E3o.
    **/
   public MaquinetaResponse usuarioApl(String usuarioApl) {
     this.usuarioApl = usuarioApl;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Usu\u00C3\u00A1rio da aplica\u00C3\u00A7\u00C3\u00A3o.")
+  @ApiModelProperty(example = "null", value = "Usu\u00E1rio da aplica\u00E7\u00E3o.")
   @JsonProperty("usuarioApl")
   public String getUsuarioApl() {
     return usuarioApl;

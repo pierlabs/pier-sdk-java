@@ -64,7 +64,7 @@ public class ConsultaCadastroEstabelecimentoDTO   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data hora de cadastro.")
+  @ApiModelProperty(example = "2018-03-02T14:02:33.824Z", value = "Data hora de cadastro.")
   @JsonProperty("dataHoraConsulta")
   public String getDataHoraConsulta() {
     return dataHoraConsulta;
