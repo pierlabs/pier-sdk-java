@@ -9,11 +9,13 @@ import java.util.List;
 
 
 
+
+
 /**
- * Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso de consultar conta
+ * {{{transacao_pay_query_request_description}}}
  **/
 
-@ApiModel(description = "Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso de consultar conta")
+@ApiModel(description = "{{{transacao_pay_query_request_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TransacaoPayQueryRequest   {
   
@@ -24,14 +26,14 @@ public class TransacaoPayQueryRequest   {
 
   
   /**
-   * Numero do cartao (criptografado)
+   * {{{transacao_pay_generic_request_numero_cartao_value}}}
    **/
   public TransacaoPayQueryRequest numeroCartao(String numeroCartao) {
     this.numeroCartao = numeroCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Numero do cartao (criptografado)")
+  @ApiModelProperty(example = "null", value = "{{{transacao_pay_generic_request_numero_cartao_value}}}")
   @JsonProperty("numeroCartao")
   public String getNumeroCartao() {
     return numeroCartao;
@@ -42,14 +44,14 @@ public class TransacaoPayQueryRequest   {
 
   
   /**
-   * Id do cart\u00E3o
+   * {{{transacao_pay_generic_request_id_cartao_value}}}
    **/
   public TransacaoPayQueryRequest idCartao(Long idCartao) {
     this.idCartao = idCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Id do cart\u00E3o")
+  @ApiModelProperty(example = "null", value = "{{{transacao_pay_generic_request_id_cartao_value}}}")
   @JsonProperty("idCartao")
   public Long getIdCartao() {
     return idCartao;
@@ -60,14 +62,14 @@ public class TransacaoPayQueryRequest   {
 
   
   /**
-   * Origem
+   * {{{transacao_pay_query_request_origem_value}}}
    **/
   public TransacaoPayQueryRequest origem(String origem) {
     this.origem = origem;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Origem")
+  @ApiModelProperty(example = "null", value = "{{{transacao_pay_query_request_origem_value}}}")
   @JsonProperty("origem")
   public String getOrigem() {
     return origem;
@@ -78,14 +80,14 @@ public class TransacaoPayQueryRequest   {
 
   
   /**
-   * Tipo de ordena\u00E7\u00E3o dos registros.
+   * {{{global_menssagem_sort_sort}}}
    **/
   public TransacaoPayQueryRequest sort(List<String> sort) {
     this.sort = sort;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Tipo de ordena\u00E7\u00E3o dos registros.")
+  @ApiModelProperty(example = "null", value = "{{{global_menssagem_sort_sort}}}")
   @JsonProperty("sort")
   public List<String> getSort() {
     return sort;
@@ -140,4 +142,6 @@ public class TransacaoPayQueryRequest   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

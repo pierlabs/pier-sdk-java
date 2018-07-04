@@ -10,11 +10,13 @@ import java.util.List;
 
 
 
+
+
 /**
- * Lista dos MCCs
+ * {{{page_m_c_c_response_description}}}
  **/
 
-@ApiModel(description = "Lista dos MCCs")
+@ApiModel(description = "{{{page_m_c_c_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageMCCResponse   {
   
@@ -337,4 +339,6 @@ public class PageMCCResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

@@ -7,11 +7,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Hist\u00F3rico Pagamento Fatura Atraso
+ * {{{historico_atraso_fatura_response_description}}}
  **/
 
-@ApiModel(description = "Hist\u00F3rico Pagamento Fatura Atraso")
+@ApiModel(description = "{{{historico_atraso_fatura_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class HistoricoAtrasoFaturaResponse   {
   
@@ -20,14 +22,14 @@ public class HistoricoAtrasoFaturaResponse   {
 
   
   /**
-   * Data vencimento fatura.
+   * {{{historico_atraso_fatura_response_data_vencimento_value}}}
    **/
   public HistoricoAtrasoFaturaResponse dataVencimento(String dataVencimento) {
     this.dataVencimento = dataVencimento;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data vencimento fatura.")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{historico_atraso_fatura_response_data_vencimento_value}}}")
   @JsonProperty("dataVencimento")
   public String getDataVencimento() {
     return dataVencimento;
@@ -38,14 +40,14 @@ public class HistoricoAtrasoFaturaResponse   {
 
   
   /**
-   * Quantidade de dias em atraso.
+   * {{{historico_atraso_fatura_response_dias_pagamento_apos_vencimento_value}}}
    **/
   public HistoricoAtrasoFaturaResponse diasPagamentoAposVencimento(Long diasPagamentoAposVencimento) {
     this.diasPagamentoAposVencimento = diasPagamentoAposVencimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Quantidade de dias em atraso.")
+  @ApiModelProperty(example = "null", value = "{{{historico_atraso_fatura_response_dias_pagamento_apos_vencimento_value}}}")
   @JsonProperty("diasPagamentoAposVencimento")
   public Long getDiasPagamentoAposVencimento() {
     return diasPagamentoAposVencimento;
@@ -96,4 +98,6 @@ public class HistoricoAtrasoFaturaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

@@ -10,11 +10,13 @@ import java.util.List;
 
 
 
+
+
 /**
- * Lista de Dispositivos
+ * {{{page_dispositivo_response_description}}}
  **/
 
-@ApiModel(description = "Lista de Dispositivos")
+@ApiModel(description = "{{{page_dispositivo_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageDispositivoResponse   {
   
@@ -337,4 +339,6 @@ public class PageDispositivoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

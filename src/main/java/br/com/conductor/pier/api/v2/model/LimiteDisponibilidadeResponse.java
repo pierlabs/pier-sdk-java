@@ -8,11 +8,13 @@ import java.math.BigDecimal;
 
 
 
+
+
 /**
- * Limite Disponibilidade
+ * {{{limite_disponibilidade_response_description}}}
  **/
 
-@ApiModel(description = "Limite Disponibilidade")
+@ApiModel(description = "{{{limite_disponibilidade_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class LimiteDisponibilidadeResponse   {
   
@@ -41,14 +43,14 @@ public class LimiteDisponibilidadeResponse   {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o de Limite e Disponibilidade (id).
+   * {{{limite_disponibilidade_response_id_value}}}
    **/
   public LimiteDisponibilidadeResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o de Limite e Disponibilidade (id).")
+  @ApiModelProperty(example = "null", value = "{{{limite_disponibilidade_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -59,14 +61,14 @@ public class LimiteDisponibilidadeResponse   {
 
   
   /**
-   * Valor do limite de cr\u00E9dito.
+   * {{{limite_disponibilidade_response_limite_global_value}}}
    **/
   public LimiteDisponibilidadeResponse limiteGlobal(BigDecimal limiteGlobal) {
     this.limiteGlobal = limiteGlobal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor do limite de cr\u00E9dito.")
+  @ApiModelProperty(example = "null", value = "{{{limite_disponibilidade_response_limite_global_value}}}")
   @JsonProperty("limiteGlobal")
   public BigDecimal getLimiteGlobal() {
     return limiteGlobal;
@@ -77,14 +79,14 @@ public class LimiteDisponibilidadeResponse   {
 
   
   /**
-   * Valor do limite de cr\u00E9dito para uso exclusivo em compras nacionais.
+   * {{{limite_disponibilidade_response_limite_compra_value}}}
    **/
   public LimiteDisponibilidadeResponse limiteCompra(BigDecimal limiteCompra) {
     this.limiteCompra = limiteCompra;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor do limite de cr\u00E9dito para uso exclusivo em compras nacionais.")
+  @ApiModelProperty(example = "null", value = "{{{limite_disponibilidade_response_limite_compra_value}}}")
   @JsonProperty("limiteCompra")
   public BigDecimal getLimiteCompra() {
     return limiteCompra;
@@ -95,14 +97,14 @@ public class LimiteDisponibilidadeResponse   {
 
   
   /**
-   * Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de compras parceladas.
+   * {{{limite_disponibilidade_response_limite_parcelado_value}}}
    **/
   public LimiteDisponibilidadeResponse limiteParcelado(BigDecimal limiteParcelado) {
     this.limiteParcelado = limiteParcelado;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de compras parceladas.")
+  @ApiModelProperty(example = "null", value = "{{{limite_disponibilidade_response_limite_parcelado_value}}}")
   @JsonProperty("limiteParcelado")
   public BigDecimal getLimiteParcelado() {
     return limiteParcelado;
@@ -113,14 +115,14 @@ public class LimiteDisponibilidadeResponse   {
 
   
   /**
-   * Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras que forem realizadas nesta modalidade.
+   * {{{limite_disponibilidade_response_limite_parcelas_value}}}
    **/
   public LimiteDisponibilidadeResponse limiteParcelas(BigDecimal limiteParcelas) {
     this.limiteParcelas = limiteParcelas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras que forem realizadas nesta modalidade.")
+  @ApiModelProperty(example = "null", value = "{{{limite_disponibilidade_response_limite_parcelas_value}}}")
   @JsonProperty("limiteParcelas")
   public BigDecimal getLimiteParcelas() {
     return limiteParcelas;
@@ -131,14 +133,14 @@ public class LimiteDisponibilidadeResponse   {
 
   
   /**
-   * Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de Saque Nacional.
+   * {{{limite_disponibilidade_response_limite_saque_global_value}}}
    **/
   public LimiteDisponibilidadeResponse limiteSaqueGlobal(BigDecimal limiteSaqueGlobal) {
     this.limiteSaqueGlobal = limiteSaqueGlobal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de Saque Nacional.")
+  @ApiModelProperty(example = "null", value = "{{{limite_disponibilidade_response_limite_saque_global_value}}}")
   @JsonProperty("limiteSaqueGlobal")
   public BigDecimal getLimiteSaqueGlobal() {
     return limiteSaqueGlobal;
@@ -149,14 +151,14 @@ public class LimiteDisponibilidadeResponse   {
 
   
   /**
-   * Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento.
+   * {{{limite_disponibilidade_response_limite_saque_periodo_value}}}
    **/
   public LimiteDisponibilidadeResponse limiteSaquePeriodo(BigDecimal limiteSaquePeriodo) {
     this.limiteSaquePeriodo = limiteSaquePeriodo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento.")
+  @ApiModelProperty(example = "null", value = "{{{limite_disponibilidade_response_limite_saque_periodo_value}}}")
   @JsonProperty("limiteSaquePeriodo")
   public BigDecimal getLimiteSaquePeriodo() {
     return limiteSaquePeriodo;
@@ -167,14 +169,14 @@ public class LimiteDisponibilidadeResponse   {
 
   
   /**
-   * Valor da margem de cr\u00E9dito para consigna\u00E7\u00F5es (desconto em folha).
+   * {{{limite_disponibilidade_response_limite_consignado_value}}}
    **/
   public LimiteDisponibilidadeResponse limiteConsignado(BigDecimal limiteConsignado) {
     this.limiteConsignado = limiteConsignado;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor da margem de cr\u00E9dito para consigna\u00E7\u00F5es (desconto em folha).")
+  @ApiModelProperty(example = "null", value = "{{{limite_disponibilidade_response_limite_consignado_value}}}")
   @JsonProperty("limiteConsignado")
   public BigDecimal getLimiteConsignado() {
     return limiteConsignado;
@@ -185,14 +187,14 @@ public class LimiteDisponibilidadeResponse   {
 
   
   /**
-   * Valor do limite de cr\u00E9dito para uso exclusivo em compras internacionais.
+   * {{{limite_disponibilidade_response_limite_internacional_compra_value}}}
    **/
   public LimiteDisponibilidadeResponse limiteInternacionalCompra(BigDecimal limiteInternacionalCompra) {
     this.limiteInternacionalCompra = limiteInternacionalCompra;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor do limite de cr\u00E9dito para uso exclusivo em compras internacionais.")
+  @ApiModelProperty(example = "null", value = "{{{limite_disponibilidade_response_limite_internacional_compra_value}}}")
   @JsonProperty("limiteInternacionalCompra")
   public BigDecimal getLimiteInternacionalCompra() {
     return limiteInternacionalCompra;
@@ -203,14 +205,14 @@ public class LimiteDisponibilidadeResponse   {
 
   
   /**
-   * Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es internacionais de compras parceladas.
+   * {{{limite_disponibilidade_response_limite_internacional_parcelado_value}}}
    **/
   public LimiteDisponibilidadeResponse limiteInternacionalParcelado(BigDecimal limiteInternacionalParcelado) {
     this.limiteInternacionalParcelado = limiteInternacionalParcelado;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es internacionais de compras parceladas.")
+  @ApiModelProperty(example = "null", value = "{{{limite_disponibilidade_response_limite_internacional_parcelado_value}}}")
   @JsonProperty("limiteInternacionalParcelado")
   public BigDecimal getLimiteInternacionalParcelado() {
     return limiteInternacionalParcelado;
@@ -221,14 +223,14 @@ public class LimiteDisponibilidadeResponse   {
 
   
   /**
-   * Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.
+   * {{{limite_disponibilidade_response_limite_internacional_parcelas_value}}}
    **/
   public LimiteDisponibilidadeResponse limiteInternacionalParcelas(BigDecimal limiteInternacionalParcelas) {
     this.limiteInternacionalParcelas = limiteInternacionalParcelas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras internacionais que forem realizadas nesta modalidade.")
+  @ApiModelProperty(example = "null", value = "{{{limite_disponibilidade_response_limite_internacional_parcelas_value}}}")
   @JsonProperty("limiteInternacionalParcelas")
   public BigDecimal getLimiteInternacionalParcelas() {
     return limiteInternacionalParcelas;
@@ -239,14 +241,14 @@ public class LimiteDisponibilidadeResponse   {
 
   
   /**
-   * Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de saque internacional.
+   * {{{limite_disponibilidade_response_limite_internacional_saque_global_value}}}
    **/
   public LimiteDisponibilidadeResponse limiteInternacionalSaqueGlobal(BigDecimal limiteInternacionalSaqueGlobal) {
     this.limiteInternacionalSaqueGlobal = limiteInternacionalSaqueGlobal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de saque internacional.")
+  @ApiModelProperty(example = "null", value = "{{{limite_disponibilidade_response_limite_internacional_saque_global_value}}}")
   @JsonProperty("limiteInternacionalSaqueGlobal")
   public BigDecimal getLimiteInternacionalSaqueGlobal() {
     return limiteInternacionalSaqueGlobal;
@@ -257,14 +259,14 @@ public class LimiteDisponibilidadeResponse   {
 
   
   /**
-   * Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de saque internacional dentro de cada ciclo de faturamento.
+   * {{{limite_disponibilidade_response_limite_internacional_saque_periodo_value}}}
    **/
   public LimiteDisponibilidadeResponse limiteInternacionalSaquePeriodo(BigDecimal limiteInternacionalSaquePeriodo) {
     this.limiteInternacionalSaquePeriodo = limiteInternacionalSaquePeriodo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de saque internacional dentro de cada ciclo de faturamento.")
+  @ApiModelProperty(example = "null", value = "{{{limite_disponibilidade_response_limite_internacional_saque_periodo_value}}}")
   @JsonProperty("limiteInternacionalSaquePeriodo")
   public BigDecimal getLimiteInternacionalSaquePeriodo() {
     return limiteInternacionalSaquePeriodo;
@@ -275,14 +277,14 @@ public class LimiteDisponibilidadeResponse   {
 
   
   /**
-   * Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es.
+   * {{{limite_disponibilidade_response_limite_maximo_value}}}
    **/
   public LimiteDisponibilidadeResponse limiteMaximo(BigDecimal limiteMaximo) {
     this.limiteMaximo = limiteMaximo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es.")
+  @ApiModelProperty(example = "null", value = "{{{limite_disponibilidade_response_limite_maximo_value}}}")
   @JsonProperty("limiteMaximo")
   public BigDecimal getLimiteMaximo() {
     return limiteMaximo;
@@ -293,14 +295,14 @@ public class LimiteDisponibilidadeResponse   {
 
   
   /**
-   * Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es.
+   * {{{limite_disponibilidade_response_saldo_disponivel_global_value}}}
    **/
   public LimiteDisponibilidadeResponse saldoDisponivelGlobal(BigDecimal saldoDisponivelGlobal) {
     this.saldoDisponivelGlobal = saldoDisponivelGlobal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es.")
+  @ApiModelProperty(example = "null", value = "{{{limite_disponibilidade_response_saldo_disponivel_global_value}}}")
   @JsonProperty("saldoDisponivelGlobal")
   public BigDecimal getSaldoDisponivelGlobal() {
     return saldoDisponivelGlobal;
@@ -311,14 +313,14 @@ public class LimiteDisponibilidadeResponse   {
 
   
   /**
-   * Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es de compra nacional.
+   * {{{limite_disponibilidade_response_saldo_disponivel_compra_value}}}
    **/
   public LimiteDisponibilidadeResponse saldoDisponivelCompra(BigDecimal saldoDisponivelCompra) {
     this.saldoDisponivelCompra = saldoDisponivelCompra;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es de compra nacional.")
+  @ApiModelProperty(example = "null", value = "{{{limite_disponibilidade_response_saldo_disponivel_compra_value}}}")
   @JsonProperty("saldoDisponivelCompra")
   public BigDecimal getSaldoDisponivelCompra() {
     return saldoDisponivelCompra;
@@ -329,14 +331,14 @@ public class LimiteDisponibilidadeResponse   {
 
   
   /**
-   * Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es de compra nacional parcelada.
+   * {{{limite_disponibilidade_response_saldo_disponivel_parcelado_value}}}
    **/
   public LimiteDisponibilidadeResponse saldoDisponivelParcelado(BigDecimal saldoDisponivelParcelado) {
     this.saldoDisponivelParcelado = saldoDisponivelParcelado;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es de compra nacional parcelada.")
+  @ApiModelProperty(example = "null", value = "{{{limite_disponibilidade_response_saldo_disponivel_parcelado_value}}}")
   @JsonProperty("saldoDisponivelParcelado")
   public BigDecimal getSaldoDisponivelParcelado() {
     return saldoDisponivelParcelado;
@@ -347,14 +349,14 @@ public class LimiteDisponibilidadeResponse   {
 
   
   /**
-   * Valor de cr\u00E9dito dispon\u00EDvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento.
+   * {{{limite_disponibilidade_response_saldo_disponivel_parcelas_value}}}
    **/
   public LimiteDisponibilidadeResponse saldoDisponivelParcelas(BigDecimal saldoDisponivelParcelas) {
     this.saldoDisponivelParcelas = saldoDisponivelParcelas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor de cr\u00E9dito dispon\u00EDvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento.")
+  @ApiModelProperty(example = "null", value = "{{{limite_disponibilidade_response_saldo_disponivel_parcelas_value}}}")
   @JsonProperty("saldoDisponivelParcelas")
   public BigDecimal getSaldoDisponivelParcelas() {
     return saldoDisponivelParcelas;
@@ -365,14 +367,14 @@ public class LimiteDisponibilidadeResponse   {
 
   
   /**
-   * Valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de Saque Nacional.
+   * {{{limite_disponibilidade_response_saldo_disponivel_saque_value}}}
    **/
   public LimiteDisponibilidadeResponse saldoDisponivelSaque(BigDecimal saldoDisponivelSaque) {
     this.saldoDisponivelSaque = saldoDisponivelSaque;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de Saque Nacional.")
+  @ApiModelProperty(example = "null", value = "{{{limite_disponibilidade_response_saldo_disponivel_saque_value}}}")
   @JsonProperty("saldoDisponivelSaque")
   public BigDecimal getSaldoDisponivelSaque() {
     return saldoDisponivelSaque;
@@ -383,14 +385,14 @@ public class LimiteDisponibilidadeResponse   {
 
   
   /**
-   * Saldo atual de pontos do programa de fidelidade.
+   * {{{limite_disponibilidade_response_saldo_pontos_fidelidade_value}}}
    **/
   public LimiteDisponibilidadeResponse saldoPontosFidelidade(BigDecimal saldoPontosFidelidade) {
     this.saldoPontosFidelidade = saldoPontosFidelidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Saldo atual de pontos do programa de fidelidade.")
+  @ApiModelProperty(example = "null", value = "{{{limite_disponibilidade_response_saldo_pontos_fidelidade_value}}}")
   @JsonProperty("saldoPontosFidelidade")
   public BigDecimal getSaldoPontosFidelidade() {
     return saldoPontosFidelidade;
@@ -401,14 +403,14 @@ public class LimiteDisponibilidadeResponse   {
 
   
   /**
-   * Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es de compra internacional.
+   * {{{limite_disponibilidade_response_saldo_disponivel_compra_internacional_value}}}
    **/
   public LimiteDisponibilidadeResponse saldoDisponivelCompraInternacional(BigDecimal saldoDisponivelCompraInternacional) {
     this.saldoDisponivelCompraInternacional = saldoDisponivelCompraInternacional;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es de compra internacional.")
+  @ApiModelProperty(example = "null", value = "{{{limite_disponibilidade_response_saldo_disponivel_compra_internacional_value}}}")
   @JsonProperty("saldoDisponivelCompraInternacional")
   public BigDecimal getSaldoDisponivelCompraInternacional() {
     return saldoDisponivelCompraInternacional;
@@ -419,14 +421,14 @@ public class LimiteDisponibilidadeResponse   {
 
   
   /**
-   * Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es de saque internacional.
+   * {{{limite_disponibilidade_response_saldo_disponivel_saque_internacional_value}}}
    **/
   public LimiteDisponibilidadeResponse saldoDisponivelSaqueInternacional(BigDecimal saldoDisponivelSaqueInternacional) {
     this.saldoDisponivelSaqueInternacional = saldoDisponivelSaqueInternacional;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor de cr\u00E9dito dispon\u00EDvel para transa\u00E7\u00F5es de saque internacional.")
+  @ApiModelProperty(example = "null", value = "{{{limite_disponibilidade_response_saldo_disponivel_saque_internacional_value}}}")
   @JsonProperty("saldoDisponivelSaqueInternacional")
   public BigDecimal getSaldoDisponivelSaqueInternacional() {
     return saldoDisponivelSaqueInternacional;
@@ -517,4 +519,6 @@ public class LimiteDisponibilidadeResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

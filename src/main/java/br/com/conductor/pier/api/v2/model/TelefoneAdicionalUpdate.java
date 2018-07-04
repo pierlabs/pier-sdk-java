@@ -7,11 +7,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Objeto Telefone
+ * {{{telefone_adicional_update_description}}}
  **/
 
-@ApiModel(description = "Objeto Telefone")
+@ApiModel(description = "{{{telefone_adicional_update_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TelefoneAdicionalUpdate   {
   
@@ -23,14 +25,14 @@ public class TelefoneAdicionalUpdate   {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Telefone.
+   * {{{telefone_adicional_update_id_value}}}
    **/
   public TelefoneAdicionalUpdate id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Telefone.")
+  @ApiModelProperty(example = "null", value = "{{{telefone_adicional_update_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -41,14 +43,14 @@ public class TelefoneAdicionalUpdate   {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone.
+   * {{{telefone_adicional_update_id_tipo_telefone_value}}}
    **/
   public TelefoneAdicionalUpdate idTipoTelefone(Long idTipoTelefone) {
     this.idTipoTelefone = idTipoTelefone;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone.")
+  @ApiModelProperty(example = "null", value = "{{{telefone_adicional_update_id_tipo_telefone_value}}}")
   @JsonProperty("idTipoTelefone")
   public Long getIdTipoTelefone() {
     return idTipoTelefone;
@@ -59,14 +61,14 @@ public class TelefoneAdicionalUpdate   {
 
   
   /**
-   * C\u00F3digo DDD do telefone.
+   * {{{telefone_adicional_update_ddd_value}}}
    **/
   public TelefoneAdicionalUpdate ddd(String ddd) {
     this.ddd = ddd;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo DDD do telefone.")
+  @ApiModelProperty(example = "null", value = "{{{telefone_adicional_update_ddd_value}}}")
   @JsonProperty("ddd")
   public String getDdd() {
     return ddd;
@@ -77,14 +79,14 @@ public class TelefoneAdicionalUpdate   {
 
   
   /**
-   * N\u00FAmero do telefone.
+   * {{{telefone_adicional_update_telefone_value}}}
    **/
   public TelefoneAdicionalUpdate telefone(String telefone) {
     this.telefone = telefone;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00FAmero do telefone.")
+  @ApiModelProperty(example = "null", value = "{{{telefone_adicional_update_telefone_value}}}")
   @JsonProperty("telefone")
   public String getTelefone() {
     return telefone;
@@ -95,14 +97,14 @@ public class TelefoneAdicionalUpdate   {
 
   
   /**
-   * N\u00FAmero do ramal.
+   * {{{telefone_adicional_update_ramal_value}}}
    **/
   public TelefoneAdicionalUpdate ramal(String ramal) {
     this.ramal = ramal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00FAmero do ramal.")
+  @ApiModelProperty(example = "null", value = "{{{telefone_adicional_update_ramal_value}}}")
   @JsonProperty("ramal")
   public String getRamal() {
     return ramal;
@@ -159,4 +161,6 @@ public class TelefoneAdicionalUpdate   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

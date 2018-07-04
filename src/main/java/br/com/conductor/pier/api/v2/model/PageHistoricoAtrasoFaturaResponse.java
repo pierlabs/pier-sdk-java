@@ -10,11 +10,13 @@ import java.util.List;
 
 
 
+
+
 /**
- * Lista historicos atraso pagamento
+ * {{{page_historico_atraso_fatura_response_description}}}
  **/
 
-@ApiModel(description = "Lista historicos atraso pagamento")
+@ApiModel(description = "{{{page_historico_atraso_fatura_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageHistoricoAtrasoFaturaResponse   {
   
@@ -337,4 +339,6 @@ public class PageHistoricoAtrasoFaturaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

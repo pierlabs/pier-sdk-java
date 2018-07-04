@@ -10,11 +10,13 @@ import java.util.List;
 
 
 
+
+
 /**
- * Lista de auditorias do arquivo
+ * {{{page_arquivo_a_u_d_response_description}}}
  **/
 
-@ApiModel(description = "Lista de auditorias do arquivo")
+@ApiModel(description = "{{{page_arquivo_a_u_d_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageArquivoAUDResponse   {
   
@@ -337,4 +339,6 @@ public class PageArquivoAUDResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

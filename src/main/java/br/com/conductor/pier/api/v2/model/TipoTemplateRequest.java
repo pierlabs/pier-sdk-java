@@ -7,11 +7,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Representa\u00E7\u00E3o do tipo de template.
+ * {{{tipo_template_request_description}}}
  **/
 
-@ApiModel(description = "Representa\u00E7\u00E3o do tipo de template.")
+@ApiModel(description = "{{{tipo_template_request_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TipoTemplateRequest   {
   
@@ -21,14 +23,14 @@ public class TipoTemplateRequest   {
 
   
   /**
-   * Nome do tipo de template.
+   * {{{tipo_template_request_nome_value}}}
    **/
   public TipoTemplateRequest nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome do tipo de template.")
+  @ApiModelProperty(example = "null", value = "{{{tipo_template_request_nome_value}}}")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -39,14 +41,14 @@ public class TipoTemplateRequest   {
 
   
   /**
-   * Descri\u00E7\u00E3o do tipo de template.
+   * {{{tipo_template_request_descricao_value}}}
    **/
   public TipoTemplateRequest descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do tipo de template.")
+  @ApiModelProperty(example = "null", value = "{{{tipo_template_request_descricao_value}}}")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -57,14 +59,14 @@ public class TipoTemplateRequest   {
 
   
   /**
-   * Sigla do tipo de template.
+   * {{{tipo_template_request_sigla_value}}}
    **/
   public TipoTemplateRequest sigla(String sigla) {
     this.sigla = sigla;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Sigla do tipo de template.")
+  @ApiModelProperty(example = "null", value = "{{{tipo_template_request_sigla_value}}}")
   @JsonProperty("sigla")
   public String getSigla() {
     return sigla;
@@ -117,4 +119,6 @@ public class TipoTemplateRequest   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

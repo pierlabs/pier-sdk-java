@@ -7,11 +7,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Objeto Telefone
+ * {{{telefone_estabelecimento_persist_description}}}
  **/
 
-@ApiModel(description = "Objeto Telefone")
+@ApiModel(description = "{{{telefone_estabelecimento_persist_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TelefoneEstabelecimentoPersist   {
   
@@ -22,14 +24,14 @@ public class TelefoneEstabelecimentoPersist   {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id).
+   * {{{telefone_estabelecimento_persist_id_estabelecimento_value}}}
    **/
   public TelefoneEstabelecimentoPersist idEstabelecimento(Long idEstabelecimento) {
     this.idEstabelecimento = idEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "1", required = true, value = "C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id).")
+  @ApiModelProperty(example = "1", required = true, value = "{{{telefone_estabelecimento_persist_id_estabelecimento_value}}}")
   @JsonProperty("idEstabelecimento")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
@@ -40,14 +42,14 @@ public class TelefoneEstabelecimentoPersist   {
 
   
   /**
-   * C\u00F3digo DDD do telefone.
+   * {{{telefone_estabelecimento_persist_ddd_value}}}
    **/
   public TelefoneEstabelecimentoPersist ddd(String ddd) {
     this.ddd = ddd;
     return this;
   }
   
-  @ApiModelProperty(example = "83", required = true, value = "C\u00F3digo DDD do telefone.")
+  @ApiModelProperty(example = "83", required = true, value = "{{{telefone_estabelecimento_persist_ddd_value}}}")
   @JsonProperty("ddd")
   public String getDdd() {
     return ddd;
@@ -58,14 +60,14 @@ public class TelefoneEstabelecimentoPersist   {
 
   
   /**
-   * N\u00FAmero do telefone.
+   * {{{telefone_estabelecimento_persist_telefone_value}}}
    **/
   public TelefoneEstabelecimentoPersist telefone(String telefone) {
     this.telefone = telefone;
     return this;
   }
   
-  @ApiModelProperty(example = "987654321", required = true, value = "N\u00FAmero do telefone.")
+  @ApiModelProperty(example = "987654321", required = true, value = "{{{telefone_estabelecimento_persist_telefone_value}}}")
   @JsonProperty("telefone")
   public String getTelefone() {
     return telefone;
@@ -76,14 +78,14 @@ public class TelefoneEstabelecimentoPersist   {
 
   
   /**
-   * N\u00FAmero do ramal.
+   * {{{telefone_estabelecimento_persist_ramal_value}}}
    **/
   public TelefoneEstabelecimentoPersist ramal(String ramal) {
     this.ramal = ramal;
     return this;
   }
   
-  @ApiModelProperty(example = "1234", value = "N\u00FAmero do ramal.")
+  @ApiModelProperty(example = "1234", value = "{{{telefone_estabelecimento_persist_ramal_value}}}")
   @JsonProperty("ramal")
   public String getRamal() {
     return ramal;
@@ -138,4 +140,6 @@ public class TelefoneEstabelecimentoPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

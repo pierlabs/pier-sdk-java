@@ -7,11 +7,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Representa\u00E7\u00E3o da resposta do recurso de operadora telef\u00F4nica
+ * {{{fantasia_basica_response_description}}}
  **/
 
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de operadora telef\u00F4nica")
+@ApiModel(description = "{{{fantasia_basica_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class FantasiaBasicaResponse   {
   
@@ -21,14 +23,14 @@ public class FantasiaBasicaResponse   {
 
   
   /**
-   * Identificador da fantasia b\u00E1sica
+   * {{{fantasia_basica_response_id_value}}}
    **/
   public FantasiaBasicaResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identificador da fantasia b\u00E1sica")
+  @ApiModelProperty(example = "null", value = "{{{fantasia_basica_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -39,14 +41,14 @@ public class FantasiaBasicaResponse   {
 
   
   /**
-   * Nome da fantasia b\u00E1sica
+   * {{{fantasia_basica_response_nome_value}}}
    **/
   public FantasiaBasicaResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome da fantasia b\u00E1sica")
+  @ApiModelProperty(example = "null", value = "{{{fantasia_basica_response_nome_value}}}")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -57,14 +59,14 @@ public class FantasiaBasicaResponse   {
 
   
   /**
-   * Descri\u00E7\u00E3o da fantasia b\u00E1sica
+   * {{{fantasia_basica_response_descricao_value}}}
    **/
   public FantasiaBasicaResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o da fantasia b\u00E1sica")
+  @ApiModelProperty(example = "null", value = "{{{fantasia_basica_response_descricao_value}}}")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -117,4 +119,6 @@ public class FantasiaBasicaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

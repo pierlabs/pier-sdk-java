@@ -7,11 +7,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Objeto Endere\u00E7o Aprovado
+ * {{{endereco_aprovado_response_description}}}
  **/
 
-@ApiModel(description = "Objeto Endere\u00E7o Aprovado")
+@ApiModel(description = "{{{endereco_aprovado_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class EnderecoAprovadoResponse   {
   
@@ -30,14 +32,14 @@ public class EnderecoAprovadoResponse   {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)
+   * {{{endereco_aprovado_response_id_value}}}
    **/
   public EnderecoAprovadoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)")
+  @ApiModelProperty(example = "null", value = "{{{endereco_aprovado_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -48,14 +50,14 @@ public class EnderecoAprovadoResponse   {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)
+   * {{{endereco_aprovado_response_id_tipo_endereco_value}}}
    **/
   public EnderecoAprovadoResponse idTipoEndereco(Long idTipoEndereco) {
     this.idTipoEndereco = idTipoEndereco;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)")
+  @ApiModelProperty(example = "null", value = "{{{endereco_aprovado_response_id_tipo_endereco_value}}}")
   @JsonProperty("idTipoEndereco")
   public Long getIdTipoEndereco() {
     return idTipoEndereco;
@@ -66,14 +68,14 @@ public class EnderecoAprovadoResponse   {
 
   
   /**
-   * Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro '58800000'
+   * {{{endereco_aprovado_response_cep_value}}}
    **/
   public EnderecoAprovadoResponse cep(String cep) {
     this.cep = cep;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP) no formaro '58800000'")
+  @ApiModelProperty(example = "null", value = "{{{endereco_aprovado_response_cep_value}}}")
   @JsonProperty("cep")
   public String getCep() {
     return cep;
@@ -84,14 +86,14 @@ public class EnderecoAprovadoResponse   {
 
   
   /**
-   * Apresenta o nome do Logradouro
+   * {{{endereco_aprovado_response_logradouro_value}}}
    **/
   public EnderecoAprovadoResponse logradouro(String logradouro) {
     this.logradouro = logradouro;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o nome do Logradouro")
+  @ApiModelProperty(example = "null", value = "{{{endereco_aprovado_response_logradouro_value}}}")
   @JsonProperty("logradouro")
   public String getLogradouro() {
     return logradouro;
@@ -102,14 +104,14 @@ public class EnderecoAprovadoResponse   {
 
   
   /**
-   * Apresenta o n\u00FAmero do endere\u00E7o
+   * {{{endereco_aprovado_response_numero_value}}}
    **/
   public EnderecoAprovadoResponse numero(Integer numero) {
     this.numero = numero;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o n\u00FAmero do endere\u00E7o")
+  @ApiModelProperty(example = "null", value = "{{{endereco_aprovado_response_numero_value}}}")
   @JsonProperty("numero")
   public Integer getNumero() {
     return numero;
@@ -120,14 +122,14 @@ public class EnderecoAprovadoResponse   {
 
   
   /**
-   * Apresenta descri\u00E7oes complementares referente ao endere\u00E7o
+   * {{{endereco_aprovado_response_complemento_value}}}
    **/
   public EnderecoAprovadoResponse complemento(String complemento) {
     this.complemento = complemento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta descri\u00E7oes complementares referente ao endere\u00E7o")
+  @ApiModelProperty(example = "null", value = "{{{endereco_aprovado_response_complemento_value}}}")
   @JsonProperty("complemento")
   public String getComplemento() {
     return complemento;
@@ -138,14 +140,14 @@ public class EnderecoAprovadoResponse   {
 
   
   /**
-   * Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o
+   * {{{endereco_aprovado_response_ponto_referencia_value}}}
    **/
   public EnderecoAprovadoResponse pontoReferencia(String pontoReferencia) {
     this.pontoReferencia = pontoReferencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o")
+  @ApiModelProperty(example = "null", value = "{{{endereco_aprovado_response_ponto_referencia_value}}}")
   @JsonProperty("pontoReferencia")
   public String getPontoReferencia() {
     return pontoReferencia;
@@ -156,14 +158,14 @@ public class EnderecoAprovadoResponse   {
 
   
   /**
-   * Apresenta nome do bairro
+   * {{{endereco_aprovado_response_bairro_value}}}
    **/
   public EnderecoAprovadoResponse bairro(String bairro) {
     this.bairro = bairro;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta nome do bairro")
+  @ApiModelProperty(example = "null", value = "{{{endereco_aprovado_response_bairro_value}}}")
   @JsonProperty("bairro")
   public String getBairro() {
     return bairro;
@@ -174,14 +176,14 @@ public class EnderecoAprovadoResponse   {
 
   
   /**
-   * Apresenta nome da cidade
+   * {{{endereco_aprovado_response_cidade_value}}}
    **/
   public EnderecoAprovadoResponse cidade(String cidade) {
     this.cidade = cidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta nome da cidade")
+  @ApiModelProperty(example = "null", value = "{{{endereco_aprovado_response_cidade_value}}}")
   @JsonProperty("cidade")
   public String getCidade() {
     return cidade;
@@ -192,14 +194,14 @@ public class EnderecoAprovadoResponse   {
 
   
   /**
-   * Apresenta sigla da Unidade Federativa
+   * {{{endereco_aprovado_response_uf_value}}}
    **/
   public EnderecoAprovadoResponse uf(String uf) {
     this.uf = uf;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta sigla da Unidade Federativa")
+  @ApiModelProperty(example = "null", value = "{{{endereco_aprovado_response_uf_value}}}")
   @JsonProperty("uf")
   public String getUf() {
     return uf;
@@ -210,14 +212,14 @@ public class EnderecoAprovadoResponse   {
 
   
   /**
-   * Apresenta nome do Pais
+   * {{{endereco_aprovado_response_pais_value}}}
    **/
   public EnderecoAprovadoResponse pais(String pais) {
     this.pais = pais;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta nome do Pais")
+  @ApiModelProperty(example = "null", value = "{{{endereco_aprovado_response_pais_value}}}")
   @JsonProperty("pais")
   public String getPais() {
     return pais;
@@ -228,14 +230,14 @@ public class EnderecoAprovadoResponse   {
 
   
   /**
-   * Indica se o endere\u00E7o informado \u00E9 o de correspond\u00EAncia
+   * {{{endereco_aprovado_response_endereco_correspondencia_value}}}
    **/
   public EnderecoAprovadoResponse enderecoCorrespondencia(Boolean enderecoCorrespondencia) {
     this.enderecoCorrespondencia = enderecoCorrespondencia;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Indica se o endere\u00E7o informado \u00E9 o de correspond\u00EAncia")
+  @ApiModelProperty(example = "false", value = "{{{endereco_aprovado_response_endereco_correspondencia_value}}}")
   @JsonProperty("enderecoCorrespondencia")
   public Boolean getEnderecoCorrespondencia() {
     return enderecoCorrespondencia;
@@ -306,4 +308,6 @@ public class EnderecoAprovadoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

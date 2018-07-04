@@ -8,11 +8,13 @@ import java.math.BigDecimal;
 
 
 
+
+
 /**
- * Transfer\u00EAncia banc\u00E1ria
+ * {{{transferencia_bancaria_response_description}}}
  **/
 
-@ApiModel(description = "Transfer\u00EAncia banc\u00E1ria")
+@ApiModel(description = "{{{transferencia_bancaria_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TransferenciaBancariaResponse   {
   
@@ -71,14 +73,14 @@ public class TransferenciaBancariaResponse   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da autoriza\u00E7\u00E3o (id)
+   * {{{transferencia_bancaria_response_id_autorizacao_value}}}
    **/
   public TransferenciaBancariaResponse idAutorizacao(Long idAutorizacao) {
     this.idAutorizacao = idAutorizacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o da autoriza\u00E7\u00E3o (id)")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_bancaria_response_id_autorizacao_value}}}")
   @JsonProperty("idAutorizacao")
   public Long getIdAutorizacao() {
     return idAutorizacao;
@@ -89,14 +91,14 @@ public class TransferenciaBancariaResponse   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da transferencia (id)
+   * {{{transferencia_bancaria_response_id_transferencia_value}}}
    **/
   public TransferenciaBancariaResponse idTransferencia(Long idTransferencia) {
     this.idTransferencia = idTransferencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o da transferencia (id)")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_bancaria_response_id_transferencia_value}}}")
   @JsonProperty("idTransferencia")
   public Long getIdTransferencia() {
     return idTransferencia;
@@ -107,14 +109,14 @@ public class TransferenciaBancariaResponse   {
 
   
   /**
-   * C\u00F3digo da autoriza\u00E7\u00E3o
+   * {{{transferencia_bancaria_response_codigo_autorizacao_value}}}
    **/
   public TransferenciaBancariaResponse codigoAutorizacao(String codigoAutorizacao) {
     this.codigoAutorizacao = codigoAutorizacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo da autoriza\u00E7\u00E3o")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_bancaria_response_codigo_autorizacao_value}}}")
   @JsonProperty("codigoAutorizacao")
   public String getCodigoAutorizacao() {
     return codigoAutorizacao;
@@ -125,14 +127,14 @@ public class TransferenciaBancariaResponse   {
 
   
   /**
-   * Data da autoriza\u00E7\u00E3o
+   * {{{transferencia_bancaria_response_data_autorizacao_value}}}
    **/
   public TransferenciaBancariaResponse dataAutorizacao(String dataAutorizacao) {
     this.dataAutorizacao = dataAutorizacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data da autoriza\u00E7\u00E3o")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_bancaria_response_data_autorizacao_value}}}")
   @JsonProperty("dataAutorizacao")
   public String getDataAutorizacao() {
     return dataAutorizacao;
@@ -143,14 +145,14 @@ public class TransferenciaBancariaResponse   {
 
   
   /**
-   * Origem
+   * {{{transferencia_bancaria_response_origem_value}}}
    **/
   public TransferenciaBancariaResponse origem(String origem) {
     this.origem = origem;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Origem")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_bancaria_response_origem_value}}}")
   @JsonProperty("origem")
   public String getOrigem() {
     return origem;
@@ -161,14 +163,14 @@ public class TransferenciaBancariaResponse   {
 
   
   /**
-   * Valor
+   * {{{transferencia_bancaria_response_valor_value}}}
    **/
   public TransferenciaBancariaResponse valor(BigDecimal valor) {
     this.valor = valor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_bancaria_response_valor_value}}}")
   @JsonProperty("valor")
   public BigDecimal getValor() {
     return valor;
@@ -179,14 +181,14 @@ public class TransferenciaBancariaResponse   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de opera\u00E7\u00E3o (id)
+   * {{{transferencia_bancaria_response_id_operacao_value}}}
    **/
   public TransferenciaBancariaResponse idOperacao(Long idOperacao) {
     this.idOperacao = idOperacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo de opera\u00E7\u00E3o (id)")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_bancaria_response_id_operacao_value}}}")
   @JsonProperty("idOperacao")
   public Long getIdOperacao() {
     return idOperacao;
@@ -197,14 +199,14 @@ public class TransferenciaBancariaResponse   {
 
   
   /**
-   * Terminal
+   * {{{transferencia_bancaria_response_terminal_value}}}
    **/
   public TransferenciaBancariaResponse terminal(String terminal) {
     this.terminal = terminal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Terminal")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_bancaria_response_terminal_value}}}")
   @JsonProperty("terminal")
   public String getTerminal() {
     return terminal;
@@ -215,14 +217,14 @@ public class TransferenciaBancariaResponse   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)
+   * {{{transferencia_bancaria_response_id_cartao_value}}}
    **/
   public TransferenciaBancariaResponse idCartao(Long idCartao) {
     this.idCartao = idCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_bancaria_response_id_cartao_value}}}")
   @JsonProperty("idCartao")
   public Long getIdCartao() {
     return idCartao;
@@ -233,14 +235,14 @@ public class TransferenciaBancariaResponse   {
 
   
   /**
-   * Data da transfer\u00EAncia
+   * {{{transferencia_bancaria_response_data_compra_value}}}
    **/
   public TransferenciaBancariaResponse dataCompra(String dataCompra) {
     this.dataCompra = dataCompra;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data da transfer\u00EAncia")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_bancaria_response_data_compra_value}}}")
   @JsonProperty("dataCompra")
   public String getDataCompra() {
     return dataCompra;
@@ -251,14 +253,14 @@ public class TransferenciaBancariaResponse   {
 
   
   /**
-   * Valor da transfer\u00EAncia
+   * {{{transferencia_bancaria_response_valor_compra_value}}}
    **/
   public TransferenciaBancariaResponse valorCompra(BigDecimal valorCompra) {
     this.valorCompra = valorCompra;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor da transfer\u00EAncia")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_bancaria_response_valor_compra_value}}}")
   @JsonProperty("valorCompra")
   public BigDecimal getValorCompra() {
     return valorCompra;
@@ -269,14 +271,14 @@ public class TransferenciaBancariaResponse   {
 
   
   /**
-   * N\u00FAmero de parcelas
+   * {{{transferencia_bancaria_response_numero_parcelas_value}}}
    **/
   public TransferenciaBancariaResponse numeroParcelas(Integer numeroParcelas) {
     this.numeroParcelas = numeroParcelas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00FAmero de parcelas")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_bancaria_response_numero_parcelas_value}}}")
   @JsonProperty("numeroParcelas")
   public Integer getNumeroParcelas() {
     return numeroParcelas;
@@ -287,14 +289,14 @@ public class TransferenciaBancariaResponse   {
 
   
   /**
-   * Valor da parcela
+   * {{{transferencia_bancaria_response_valor_parcela_value}}}
    **/
   public TransferenciaBancariaResponse valorParcela(BigDecimal valorParcela) {
     this.valorParcela = valorParcela;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor da parcela")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_bancaria_response_valor_parcela_value}}}")
   @JsonProperty("valorParcela")
   public BigDecimal getValorParcela() {
     return valorParcela;
@@ -305,14 +307,14 @@ public class TransferenciaBancariaResponse   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do estabelecimento (id)
+   * {{{transferencia_bancaria_response_id_estabelecimento_value}}}
    **/
   public TransferenciaBancariaResponse idEstabelecimento(Long idEstabelecimento) {
     this.idEstabelecimento = idEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do estabelecimento (id)")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_bancaria_response_id_estabelecimento_value}}}")
   @JsonProperty("idEstabelecimento")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
@@ -323,14 +325,14 @@ public class TransferenciaBancariaResponse   {
 
   
   /**
-   * Data do movimento
+   * {{{transferencia_bancaria_response_data_movimento_value}}}
    **/
   public TransferenciaBancariaResponse dataMovimento(String dataMovimento) {
     this.dataMovimento = dataMovimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data do movimento")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_bancaria_response_data_movimento_value}}}")
   @JsonProperty("dataMovimento")
   public String getDataMovimento() {
     return dataMovimento;
@@ -341,14 +343,14 @@ public class TransferenciaBancariaResponse   {
 
   
   /**
-   * Valor da transfer\u00EAncia acrescido do valor da tarifa de saque se houver tarifa de saque
+   * {{{transferencia_bancaria_response_valor_contrato_value}}}
    **/
   public TransferenciaBancariaResponse valorContrato(BigDecimal valorContrato) {
     this.valorContrato = valorContrato;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor da transfer\u00EAncia acrescido do valor da tarifa de saque se houver tarifa de saque")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_bancaria_response_valor_contrato_value}}}")
   @JsonProperty("valorContrato")
   public BigDecimal getValorContrato() {
     return valorContrato;
@@ -359,14 +361,14 @@ public class TransferenciaBancariaResponse   {
 
   
   /**
-   * Percentual de juros
+   * {{{transferencia_bancaria_response_taxa_juros_value}}}
    **/
   public TransferenciaBancariaResponse taxaJuros(BigDecimal taxaJuros) {
     this.taxaJuros = taxaJuros;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Percentual de juros")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_bancaria_response_taxa_juros_value}}}")
   @JsonProperty("taxaJuros")
   public BigDecimal getTaxaJuros() {
     return taxaJuros;
@@ -377,14 +379,14 @@ public class TransferenciaBancariaResponse   {
 
   
   /**
-   * Valor do IOF
+   * {{{transferencia_bancaria_response_valor_i_o_f_value}}}
    **/
   public TransferenciaBancariaResponse valorIOF(BigDecimal valorIOF) {
     this.valorIOF = valorIOF;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor do IOF")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_bancaria_response_valor_i_o_f_value}}}")
   @JsonProperty("valorIOF")
   public BigDecimal getValorIOF() {
     return valorIOF;
@@ -395,14 +397,14 @@ public class TransferenciaBancariaResponse   {
 
   
   /**
-   * Valor da TAC
+   * {{{transferencia_bancaria_response_valor_t_a_c_value}}}
    **/
   public TransferenciaBancariaResponse valorTAC(BigDecimal valorTAC) {
     this.valorTAC = valorTAC;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor da TAC")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_bancaria_response_valor_t_a_c_value}}}")
   @JsonProperty("valorTAC")
   public BigDecimal getValorTAC() {
     return valorTAC;
@@ -413,14 +415,14 @@ public class TransferenciaBancariaResponse   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da conta (id)
+   * {{{transferencia_bancaria_response_id_conta_value}}}
    **/
   public TransferenciaBancariaResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o da conta (id)")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_bancaria_response_id_conta_value}}}")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -431,14 +433,14 @@ public class TransferenciaBancariaResponse   {
 
   
   /**
-   * Valor da entrada (primeira parcela)
+   * {{{transferencia_bancaria_response_valor_entrada_value}}}
    **/
   public TransferenciaBancariaResponse valorEntrada(BigDecimal valorEntrada) {
     this.valorEntrada = valorEntrada;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor da entrada (primeira parcela)")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_bancaria_response_valor_entrada_value}}}")
   @JsonProperty("valorEntrada")
   public BigDecimal getValorEntrada() {
     return valorEntrada;
@@ -449,14 +451,14 @@ public class TransferenciaBancariaResponse   {
 
   
   /**
-   * Data do vencimento real da fatura
+   * {{{transferencia_bancaria_response_data_vencimento_real_value}}}
    **/
   public TransferenciaBancariaResponse dataVencimentoReal(String dataVencimentoReal) {
     this.dataVencimentoReal = dataVencimentoReal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data do vencimento real da fatura")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_bancaria_response_data_vencimento_real_value}}}")
   @JsonProperty("dataVencimentoReal")
   public String getDataVencimentoReal() {
     return dataVencimentoReal;
@@ -467,14 +469,14 @@ public class TransferenciaBancariaResponse   {
 
   
   /**
-   * Dia do vencimento padr\u00E3o da fatura
+   * {{{transferencia_bancaria_response_data_vencimento_padrao_value}}}
    **/
   public TransferenciaBancariaResponse dataVencimentoPadrao(String dataVencimentoPadrao) {
     this.dataVencimentoPadrao = dataVencimentoPadrao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Dia do vencimento padr\u00E3o da fatura")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_bancaria_response_data_vencimento_padrao_value}}}")
   @JsonProperty("dataVencimentoPadrao")
   public String getDataVencimentoPadrao() {
     return dataVencimentoPadrao;
@@ -485,14 +487,14 @@ public class TransferenciaBancariaResponse   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id)
+   * {{{transferencia_bancaria_response_id_conta_portador_value}}}
    **/
   public TransferenciaBancariaResponse idContaPortador(Long idContaPortador) {
     this.idContaPortador = idContaPortador;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o da conta banc\u00E1ria de destino (id)")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_bancaria_response_id_conta_portador_value}}}")
   @JsonProperty("idContaPortador")
   public Long getIdContaPortador() {
     return idContaPortador;
@@ -503,14 +505,14 @@ public class TransferenciaBancariaResponse   {
 
   
   /**
-   * Atributo que representa o numero do estabelecimento.
+   * {{{transferencia_bancaria_response_numero_estabelecimento_value}}}
    **/
   public TransferenciaBancariaResponse numeroEstabelecimento(Long numeroEstabelecimento) {
     this.numeroEstabelecimento = numeroEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Atributo que representa o numero do estabelecimento.")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_bancaria_response_numero_estabelecimento_value}}}")
   @JsonProperty("numeroEstabelecimento")
   public Long getNumeroEstabelecimento() {
     return numeroEstabelecimento;
@@ -521,14 +523,14 @@ public class TransferenciaBancariaResponse   {
 
   
   /**
-   * Valor da taxa saque.
+   * {{{transferencia_bancaria_response_valor_taxa_saque_value}}}
    **/
   public TransferenciaBancariaResponse valorTaxaSaque(BigDecimal valorTaxaSaque) {
     this.valorTaxaSaque = valorTaxaSaque;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor da taxa saque.")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_bancaria_response_valor_taxa_saque_value}}}")
   @JsonProperty("valorTaxaSaque")
   public BigDecimal getValorTaxaSaque() {
     return valorTaxaSaque;
@@ -539,14 +541,14 @@ public class TransferenciaBancariaResponse   {
 
   
   /**
-   * C\u00F3digo do Banco
+   * {{{transferencia_bancaria_response_banco_value}}}
    **/
   public TransferenciaBancariaResponse banco(Long banco) {
     this.banco = banco;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo do Banco")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_bancaria_response_banco_value}}}")
   @JsonProperty("banco")
   public Long getBanco() {
     return banco;
@@ -557,14 +559,14 @@ public class TransferenciaBancariaResponse   {
 
   
   /**
-   * N\u00FAmero da Ag\u00EAncia
+   * {{{transferencia_bancaria_response_numero_agencia_value}}}
    **/
   public TransferenciaBancariaResponse numeroAgencia(String numeroAgencia) {
     this.numeroAgencia = numeroAgencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00FAmero da Ag\u00EAncia")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_bancaria_response_numero_agencia_value}}}")
   @JsonProperty("numeroAgencia")
   public String getNumeroAgencia() {
     return numeroAgencia;
@@ -575,14 +577,14 @@ public class TransferenciaBancariaResponse   {
 
   
   /**
-   * D\u00EDgito da Ag\u00EAncia
+   * {{{transferencia_bancaria_response_digito_agencia_value}}}
    **/
   public TransferenciaBancariaResponse digitoAgencia(String digitoAgencia) {
     this.digitoAgencia = digitoAgencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "D\u00EDgito da Ag\u00EAncia")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_bancaria_response_digito_agencia_value}}}")
   @JsonProperty("digitoAgencia")
   public String getDigitoAgencia() {
     return digitoAgencia;
@@ -593,14 +595,14 @@ public class TransferenciaBancariaResponse   {
 
   
   /**
-   * N\u00FAmero da Conta
+   * {{{transferencia_bancaria_response_numero_conta_value}}}
    **/
   public TransferenciaBancariaResponse numeroConta(String numeroConta) {
     this.numeroConta = numeroConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00FAmero da Conta")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_bancaria_response_numero_conta_value}}}")
   @JsonProperty("numeroConta")
   public String getNumeroConta() {
     return numeroConta;
@@ -611,14 +613,14 @@ public class TransferenciaBancariaResponse   {
 
   
   /**
-   * D\u00EDgito da Conta
+   * {{{transferencia_bancaria_response_digito_conta_value}}}
    **/
   public TransferenciaBancariaResponse digitoConta(String digitoConta) {
     this.digitoConta = digitoConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "D\u00EDgito da Conta")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_bancaria_response_digito_conta_value}}}")
   @JsonProperty("digitoConta")
   public String getDigitoConta() {
     return digitoConta;
@@ -629,14 +631,14 @@ public class TransferenciaBancariaResponse   {
 
   
   /**
-   * Tipo da Conta
+   * {{{transferencia_bancaria_response_flag_conta_poupanca_value}}}
    **/
   public TransferenciaBancariaResponse flagContaPoupanca(Integer flagContaPoupanca) {
     this.flagContaPoupanca = flagContaPoupanca;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Tipo da Conta")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_bancaria_response_flag_conta_poupanca_value}}}")
   @JsonProperty("flagContaPoupanca")
   public Integer getFlagContaPoupanca() {
     return flagContaPoupanca;
@@ -647,14 +649,14 @@ public class TransferenciaBancariaResponse   {
 
   
   /**
-   * Documento do Favorecido
+   * {{{transferencia_bancaria_response_documento_favorecido_value}}}
    **/
   public TransferenciaBancariaResponse documentoFavorecido(String documentoFavorecido) {
     this.documentoFavorecido = documentoFavorecido;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Documento do Favorecido")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_bancaria_response_documento_favorecido_value}}}")
   @JsonProperty("documentoFavorecido")
   public String getDocumentoFavorecido() {
     return documentoFavorecido;
@@ -665,14 +667,14 @@ public class TransferenciaBancariaResponse   {
 
   
   /**
-   * Nome do Favorecido
+   * {{{transferencia_bancaria_response_nome_favorecido_value}}}
    **/
   public TransferenciaBancariaResponse nomeFavorecido(String nomeFavorecido) {
     this.nomeFavorecido = nomeFavorecido;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome do Favorecido")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_bancaria_response_nome_favorecido_value}}}")
   @JsonProperty("nomeFavorecido")
   public String getNomeFavorecido() {
     return nomeFavorecido;
@@ -789,4 +791,6 @@ public class TransferenciaBancariaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

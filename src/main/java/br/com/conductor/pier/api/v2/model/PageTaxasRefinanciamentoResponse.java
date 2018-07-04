@@ -10,11 +10,13 @@ import java.util.List;
 
 
 
+
+
 /**
- * Lista das taxas e tarifas
+ * {{{page_taxas_refinanciamento_response_description}}}
  **/
 
-@ApiModel(description = "Lista das taxas e tarifas")
+@ApiModel(description = "{{{page_taxas_refinanciamento_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageTaxasRefinanciamentoResponse   {
   
@@ -337,4 +339,6 @@ public class PageTaxasRefinanciamentoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

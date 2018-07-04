@@ -7,11 +7,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * ProdutoDetalhes
+ * {{{produto_detalhes_response_description}}}
  **/
 
-@ApiModel(description = "ProdutoDetalhes")
+@ApiModel(description = "{{{produto_detalhes_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ProdutoDetalhesResponse   {
   
@@ -24,14 +26,14 @@ public class ProdutoDetalhesResponse   {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
+   * {{{produto_response_id_value}}}
    **/
   public ProdutoDetalhesResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).")
+  @ApiModelProperty(example = "null", required = true, value = "{{{produto_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -42,14 +44,14 @@ public class ProdutoDetalhesResponse   {
 
   
   /**
-   * Descri\u00E7\u00E3o do Nome do Produto.
+   * {{{produto_response_nome_value}}}
    **/
   public ProdutoDetalhesResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Descri\u00E7\u00E3o do Nome do Produto.")
+  @ApiModelProperty(example = "null", required = true, value = "{{{produto_response_nome_value}}}")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -60,14 +62,14 @@ public class ProdutoDetalhesResponse   {
 
   
   /**
-   * Representa o Status do Produto, onde: (\"0\": Inativo), (\"1\": Ativo).
+   * {{{produto_response_status_value}}}
    **/
   public ProdutoDetalhesResponse status(Integer status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Representa o Status do Produto, onde: (\"0\": Inativo), (\"1\": Ativo).")
+  @ApiModelProperty(example = "null", required = true, value = "{{{produto_response_status_value}}}")
   @JsonProperty("status")
   public Integer getStatus() {
     return status;
@@ -78,14 +80,14 @@ public class ProdutoDetalhesResponse   {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia B\u00E1sica (id) a qual o produto pertence.
+   * {{{produto_response_id_fantasia_basica_value}}}
    **/
   public ProdutoDetalhesResponse idFantasiaBasica(Long idFantasiaBasica) {
     this.idFantasiaBasica = idFantasiaBasica;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia B\u00E1sica (id) a qual o produto pertence.")
+  @ApiModelProperty(example = "null", value = "{{{produto_response_id_fantasia_basica_value}}}")
   @JsonProperty("idFantasiaBasica")
   public Long getIdFantasiaBasica() {
     return idFantasiaBasica;
@@ -96,14 +98,14 @@ public class ProdutoDetalhesResponse   {
 
   
   /**
-   * Descri\u00E7\u00E3o da Fantasia B\u00E1sica a qual o produto pertence.
+   * {{{produto_detalhes_response_fantasia_basica_value}}}
    **/
   public ProdutoDetalhesResponse fantasiaBasica(String fantasiaBasica) {
     this.fantasiaBasica = fantasiaBasica;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o da Fantasia B\u00E1sica a qual o produto pertence.")
+  @ApiModelProperty(example = "null", value = "{{{produto_detalhes_response_fantasia_basica_value}}}")
   @JsonProperty("fantasiaBasica")
   public String getFantasiaBasica() {
     return fantasiaBasica;
@@ -114,14 +116,14 @@ public class ProdutoDetalhesResponse   {
 
   
   /**
-   * Par\u00E2metro que indica se o produto est\u00E1 habilitado para compras no exterior.
+   * {{{produto_detalhes_response_uso_exterior_value}}}
    **/
   public ProdutoDetalhesResponse usoExterior(Boolean usoExterior) {
     this.usoExterior = usoExterior;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Par\u00E2metro que indica se o produto est\u00E1 habilitado para compras no exterior.")
+  @ApiModelProperty(example = "false", value = "{{{produto_detalhes_response_uso_exterior_value}}}")
   @JsonProperty("usoExterior")
   public Boolean getUsoExterior() {
     return usoExterior;
@@ -180,4 +182,6 @@ public class ProdutoDetalhesResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

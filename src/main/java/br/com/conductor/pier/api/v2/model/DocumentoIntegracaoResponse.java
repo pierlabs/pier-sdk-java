@@ -7,11 +7,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Representa\u00E7\u00E3o da resposta do recurso de Documento Integra\u00E7\u00E3o
+ * {{{documento_integracao_response_description}}}
  **/
 
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de Documento Integra\u00E7\u00E3o")
+@ApiModel(description = "{{{documento_integracao_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class DocumentoIntegracaoResponse   {
   
@@ -21,14 +23,14 @@ public class DocumentoIntegracaoResponse   {
 
   
   /**
-   * ID do Documento Integrado.
+   * {{{documento_integracao_response_id_value}}}
    **/
   public DocumentoIntegracaoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "ID do Documento Integrado.")
+  @ApiModelProperty(example = "null", value = "{{{documento_integracao_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -39,14 +41,14 @@ public class DocumentoIntegracaoResponse   {
 
   
   /**
-   * ID do Template de Documento associado.
+   * {{{documento_integracao_response_id_template_value}}}
    **/
   public DocumentoIntegracaoResponse idTemplate(Long idTemplate) {
     this.idTemplate = idTemplate;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "ID do Template de Documento associado.")
+  @ApiModelProperty(example = "null", value = "{{{documento_integracao_response_id_template_value}}}")
   @JsonProperty("idTemplate")
   public Long getIdTemplate() {
     return idTemplate;
@@ -57,14 +59,14 @@ public class DocumentoIntegracaoResponse   {
 
   
   /**
-   * Nome do Documento.
+   * {{{documento_integracao_response_nome_value}}}
    **/
   public DocumentoIntegracaoResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome do Documento.")
+  @ApiModelProperty(example = "null", value = "{{{documento_integracao_response_nome_value}}}")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -117,4 +119,6 @@ public class DocumentoIntegracaoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

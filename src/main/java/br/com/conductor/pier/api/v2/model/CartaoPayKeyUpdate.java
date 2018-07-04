@@ -7,11 +7,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Representa\u00E7\u00E3o do recurso de atualiza\u00E7\u00E3o de chave
+ * {{{cartao_pay_key_update_description}}}
  **/
 
-@ApiModel(description = "Representa\u00E7\u00E3o do recurso de atualiza\u00E7\u00E3o de chave")
+@ApiModel(description = "{{{cartao_pay_key_update_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class CartaoPayKeyUpdate   {
   
@@ -19,14 +21,14 @@ public class CartaoPayKeyUpdate   {
 
   
   /**
-   * Chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o criptografada
+   * {{{cartao_pay_key_update_chave_criptograma_value}}}
    **/
   public CartaoPayKeyUpdate chaveCriptograma(String chaveCriptograma) {
     this.chaveCriptograma = chaveCriptograma;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o criptografada")
+  @ApiModelProperty(example = "null", required = true, value = "{{{cartao_pay_key_update_chave_criptograma_value}}}")
   @JsonProperty("chaveCriptograma")
   public String getChaveCriptograma() {
     return chaveCriptograma;
@@ -75,4 +77,6 @@ public class CartaoPayKeyUpdate   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

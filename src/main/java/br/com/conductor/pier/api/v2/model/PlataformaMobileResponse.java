@@ -7,11 +7,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Plataforma Mobile
+ * {{{plataforma_mobile_response_description}}}
  **/
 
-@ApiModel(description = "Plataforma Mobile")
+@ApiModel(description = "{{{plataforma_mobile_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PlataformaMobileResponse   {
   
@@ -20,14 +22,14 @@ public class PlataformaMobileResponse   {
 
   
   /**
-   * Identificador da Plataforma
+   * {{{plataforma_mobile_response_id_value}}}
    **/
   public PlataformaMobileResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identificador da Plataforma")
+  @ApiModelProperty(example = "null", value = "{{{plataforma_mobile_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -38,14 +40,14 @@ public class PlataformaMobileResponse   {
 
   
   /**
-   * Nome da Plataforma
+   * {{{plataforma_mobile_response_nome_value}}}
    **/
   public PlataformaMobileResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome da Plataforma")
+  @ApiModelProperty(example = "null", value = "{{{plataforma_mobile_response_nome_value}}}")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -96,4 +98,6 @@ public class PlataformaMobileResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

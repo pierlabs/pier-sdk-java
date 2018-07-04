@@ -7,11 +7,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Status Conta
+ * {{{status_conta_response_description}}}
  **/
 
-@ApiModel(description = "Status Conta")
+@ApiModel(description = "{{{status_conta_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class StatusContaResponse   {
   
@@ -29,14 +31,14 @@ public class StatusContaResponse   {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id).
+   * {{{status_conta_response_id_value}}}
    **/
   public StatusContaResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id).")
+  @ApiModelProperty(example = "null", required = true, value = "{{{status_conta_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -47,14 +49,14 @@ public class StatusContaResponse   {
 
   
   /**
-   * Nome atribu\u00EDdo ao Status da Conta.
+   * {{{status_conta_response_nome_value}}}
    **/
   public StatusContaResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Nome atribu\u00EDdo ao Status da Conta.")
+  @ApiModelProperty(example = "null", required = true, value = "{{{status_conta_response_nome_value}}}")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -65,14 +67,14 @@ public class StatusContaResponse   {
 
   
   /**
-   * Par\u00E2metro que define se o Status da conta permite a solicita\u00E7\u00E3o da altera\u00E7\u00E3o do Dia para Vencimento das Faturas, sendo: 0: Inativo e 1: Ativo.
+   * {{{status_conta_response_permite_alterar_vencimento_value}}}
    **/
   public StatusContaResponse permiteAlterarVencimento(Integer permiteAlterarVencimento) {
     this.permiteAlterarVencimento = permiteAlterarVencimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Par\u00E2metro que define se o Status da conta permite a solicita\u00E7\u00E3o da altera\u00E7\u00E3o do Dia para Vencimento das Faturas, sendo: 0: Inativo e 1: Ativo.")
+  @ApiModelProperty(example = "null", value = "{{{status_conta_response_permite_alterar_vencimento_value}}}")
   @JsonProperty("permiteAlterarVencimento")
   public Integer getPermiteAlterarVencimento() {
     return permiteAlterarVencimento;
@@ -83,14 +85,14 @@ public class StatusContaResponse   {
 
   
   /**
-   * Par\u00E2metro que define se o Status da conta permite altera\u00E7\u00E3o de Limites, sendo: 0: Inativo e 1: Ativo.
+   * {{{status_conta_response_permite_alterar_limite_value}}}
    **/
   public StatusContaResponse permiteAlterarLimite(Integer permiteAlterarLimite) {
     this.permiteAlterarLimite = permiteAlterarLimite;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Par\u00E2metro que define se o Status da conta permite altera\u00E7\u00E3o de Limites, sendo: 0: Inativo e 1: Ativo.")
+  @ApiModelProperty(example = "null", value = "{{{status_conta_response_permite_alterar_limite_value}}}")
   @JsonProperty("permiteAlterarLimite")
   public Integer getPermiteAlterarLimite() {
     return permiteAlterarLimite;
@@ -101,14 +103,14 @@ public class StatusContaResponse   {
 
   
   /**
-   * Par\u00E2metro que define se o Status da conta permite solicitar uma nova via de Cart\u00E3o, sendo: 0: Inativo e 1: Ativo.
+   * {{{status_conta_response_permite_emitir_nova_via_cartao_value}}}
    **/
   public StatusContaResponse permiteEmitirNovaViaCartao(Integer permiteEmitirNovaViaCartao) {
     this.permiteEmitirNovaViaCartao = permiteEmitirNovaViaCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Par\u00E2metro que define se o Status da conta permite solicitar uma nova via de Cart\u00E3o, sendo: 0: Inativo e 1: Ativo.")
+  @ApiModelProperty(example = "null", value = "{{{status_conta_response_permite_emitir_nova_via_cartao_value}}}")
   @JsonProperty("permiteEmitirNovaViaCartao")
   public Integer getPermiteEmitirNovaViaCartao() {
     return permiteEmitirNovaViaCartao;
@@ -119,14 +121,14 @@ public class StatusContaResponse   {
 
   
   /**
-   * Par\u00E2metro que define se o Status da conta permite originar Transfer\u00EAncias de Cr\u00E9dito para outras Contas do mesmo Emissor ou para uma Conta Banc\u00E1ria, sendo: 0: Inativo e 1: Ativo.
+   * {{{status_conta_response_permite_fazer_transferencia_value}}}
    **/
   public StatusContaResponse permiteFazerTransferencia(Integer permiteFazerTransferencia) {
     this.permiteFazerTransferencia = permiteFazerTransferencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Par\u00E2metro que define se o Status da conta permite originar Transfer\u00EAncias de Cr\u00E9dito para outras Contas do mesmo Emissor ou para uma Conta Banc\u00E1ria, sendo: 0: Inativo e 1: Ativo.")
+  @ApiModelProperty(example = "null", value = "{{{status_conta_response_permite_fazer_transferencia_value}}}")
   @JsonProperty("permiteFazerTransferencia")
   public Integer getPermiteFazerTransferencia() {
     return permiteFazerTransferencia;
@@ -137,14 +139,14 @@ public class StatusContaResponse   {
 
   
   /**
-   * Par\u00E2metro que define se o Status da conta permite  receber Transfer\u00EAncias de Cr\u00E9dito originadas de outras Contas do mesmo emissor, sendo: 0: Inativo e 1: Ativo.
+   * {{{status_conta_response_permite_receber_transferencia_value}}}
    **/
   public StatusContaResponse permiteReceberTransferencia(Integer permiteReceberTransferencia) {
     this.permiteReceberTransferencia = permiteReceberTransferencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Par\u00E2metro que define se o Status da conta permite  receber Transfer\u00EAncias de Cr\u00E9dito originadas de outras Contas do mesmo emissor, sendo: 0: Inativo e 1: Ativo.")
+  @ApiModelProperty(example = "null", value = "{{{status_conta_response_permite_receber_transferencia_value}}}")
   @JsonProperty("permiteReceberTransferencia")
   public Integer getPermiteReceberTransferencia() {
     return permiteReceberTransferencia;
@@ -155,14 +157,14 @@ public class StatusContaResponse   {
 
   
   /**
-   * Par\u00E2metro que define se o Status da conta permite ter um Acordo de Cobran\u00E7a de D\u00EDvida criado para ela, sendo: 0: Inativo e 1: Ativo.
+   * {{{status_conta_response_permite_criar_acordo_cobranca_value}}}
    **/
   public StatusContaResponse permiteCriarAcordoCobranca(Integer permiteCriarAcordoCobranca) {
     this.permiteCriarAcordoCobranca = permiteCriarAcordoCobranca;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Par\u00E2metro que define se o Status da conta permite ter um Acordo de Cobran\u00E7a de D\u00EDvida criado para ela, sendo: 0: Inativo e 1: Ativo.")
+  @ApiModelProperty(example = "null", value = "{{{status_conta_response_permite_criar_acordo_cobranca_value}}}")
   @JsonProperty("permiteCriarAcordoCobranca")
   public Integer getPermiteCriarAcordoCobranca() {
     return permiteCriarAcordoCobranca;
@@ -173,14 +175,14 @@ public class StatusContaResponse   {
 
   
   /**
-   * Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo.
+   * {{{status_conta_response_permite_atribuir_como_bloqueio_value}}}
    **/
   public StatusContaResponse permiteAtribuirComoBloqueio(Integer permiteAtribuirComoBloqueio) {
     this.permiteAtribuirComoBloqueio = permiteAtribuirComoBloqueio;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo.")
+  @ApiModelProperty(example = "null", value = "{{{status_conta_response_permite_atribuir_como_bloqueio_value}}}")
   @JsonProperty("permiteAtribuirComoBloqueio")
   public Integer getPermiteAtribuirComoBloqueio() {
     return permiteAtribuirComoBloqueio;
@@ -191,14 +193,14 @@ public class StatusContaResponse   {
 
   
   /**
-   * Par\u00E2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo.
+   * {{{status_conta_response_permite_desbloquear_value}}}
    **/
   public StatusContaResponse permiteDesbloquear(Integer permiteDesbloquear) {
     this.permiteDesbloquear = permiteDesbloquear;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Par\u00E2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo.")
+  @ApiModelProperty(example = "null", value = "{{{status_conta_response_permite_desbloquear_value}}}")
   @JsonProperty("permiteDesbloquear")
   public Integer getPermiteDesbloquear() {
     return permiteDesbloquear;
@@ -209,14 +211,14 @@ public class StatusContaResponse   {
 
   
   /**
-   * Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo.
+   * {{{status_conta_response_permite_atribuir_como_cancelamento_value}}}
    **/
   public StatusContaResponse permiteAtribuirComoCancelamento(Integer permiteAtribuirComoCancelamento) {
     this.permiteAtribuirComoCancelamento = permiteAtribuirComoCancelamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo.")
+  @ApiModelProperty(example = "null", value = "{{{status_conta_response_permite_atribuir_como_cancelamento_value}}}")
   @JsonProperty("permiteAtribuirComoCancelamento")
   public Integer getPermiteAtribuirComoCancelamento() {
     return permiteAtribuirComoCancelamento;
@@ -285,4 +287,6 @@ public class StatusContaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

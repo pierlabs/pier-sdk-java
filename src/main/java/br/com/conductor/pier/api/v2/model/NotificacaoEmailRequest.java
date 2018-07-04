@@ -12,11 +12,13 @@ import java.util.Map;
 
 
 
+
+
 /**
- * Representa\u00E7\u00E3o do recurso para envio de uma notifica\u00E7\u00E3o por email.
+ * {{{notificacao_email_request_description}}}
  **/
 
-@ApiModel(description = "Representa\u00E7\u00E3o do recurso para envio de uma notifica\u00E7\u00E3o por email.")
+@ApiModel(description = "{{{notificacao_email_request_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class NotificacaoEmailRequest   {
   
@@ -27,14 +29,14 @@ public class NotificacaoEmailRequest   {
 
   
   /**
-   * ID para o template da notifica\u00E7\u00E3o.
+   * {{{notificacao_email_request_id_template_notificacao_value}}}
    **/
   public NotificacaoEmailRequest idTemplateNotificacao(Long idTemplateNotificacao) {
     this.idTemplateNotificacao = idTemplateNotificacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "ID para o template da notifica\u00E7\u00E3o.")
+  @ApiModelProperty(example = "null", value = "{{{notificacao_email_request_id_template_notificacao_value}}}")
   @JsonProperty("idTemplateNotificacao")
   public Long getIdTemplateNotificacao() {
     return idTemplateNotificacao;
@@ -45,14 +47,14 @@ public class NotificacaoEmailRequest   {
 
   
   /**
-   * Lista de email(s) do(s) destinat\u00E1rio(s).
+   * {{{notificacao_email_request_destinatarios_value}}}
    **/
   public NotificacaoEmailRequest destinatarios(List<String> destinatarios) {
     this.destinatarios = destinatarios;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Lista de email(s) do(s) destinat\u00E1rio(s).")
+  @ApiModelProperty(example = "null", value = "{{{notificacao_email_request_destinatarios_value}}}")
   @JsonProperty("destinatarios")
   public List<String> getDestinatarios() {
     return destinatarios;
@@ -63,14 +65,14 @@ public class NotificacaoEmailRequest   {
 
   
   /**
-   * Lista de ids dos anexos a serem enviados.
+   * {{{notificacao_email_request_anexos_value}}}
    **/
   public NotificacaoEmailRequest anexos(List<AnexoNotificacaoEmailRequest> anexos) {
     this.anexos = anexos;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Lista de ids dos anexos a serem enviados.")
+  @ApiModelProperty(example = "null", value = "{{{notificacao_email_request_anexos_value}}}")
   @JsonProperty("anexos")
   public List<AnexoNotificacaoEmailRequest> getAnexos() {
     return anexos;
@@ -81,14 +83,14 @@ public class NotificacaoEmailRequest   {
 
   
   /**
-   * Mapa de par\u00E2metros para montagem da notifica\u00E7\u00E3o.
+   * {{{notificacao_email_request_parametros_conteudo_value}}}
    **/
   public NotificacaoEmailRequest parametrosConteudo(Map<String, Object> parametrosConteudo) {
     this.parametrosConteudo = parametrosConteudo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Mapa de par\u00E2metros para montagem da notifica\u00E7\u00E3o.")
+  @ApiModelProperty(example = "null", value = "{{{notificacao_email_request_parametros_conteudo_value}}}")
   @JsonProperty("parametrosConteudo")
   public Map<String, Object> getParametrosConteudo() {
     return parametrosConteudo;
@@ -143,4 +145,6 @@ public class NotificacaoEmailRequest   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

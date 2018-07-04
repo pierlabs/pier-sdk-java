@@ -7,11 +7,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Resposta do recurso de inclus\u00E3o de registro para integra\u00E7\u00E3o
+ * {{{integracao_emissor_response_description}}}
  **/
 
-@ApiModel(description = "Resposta do recurso de inclus\u00E3o de registro para integra\u00E7\u00E3o")
+@ApiModel(description = "{{{integracao_emissor_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class IntegracaoEmissorResponse   {
   
@@ -24,14 +26,14 @@ public class IntegracaoEmissorResponse   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do registro na tabela Integra\u00E7\u00E3oEmissor.
+   * {{{integracao_emissor_response_id_value}}}
    **/
   public IntegracaoEmissorResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do registro na tabela Integra\u00E7\u00E3oEmissor.")
+  @ApiModelProperty(example = "null", value = "{{{integracao_emissor_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -42,14 +44,14 @@ public class IntegracaoEmissorResponse   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da conta.
+   * {{{integracao_emissor_response_id_conta_value}}}
    **/
   public IntegracaoEmissorResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o da conta.")
+  @ApiModelProperty(example = "null", value = "{{{integracao_emissor_response_id_conta_value}}}")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -60,14 +62,14 @@ public class IntegracaoEmissorResponse   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do arquivo.
+   * {{{integracao_emissor_response_id_arquivo_value}}}
    **/
   public IntegracaoEmissorResponse idArquivo(Long idArquivo) {
     this.idArquivo = idArquivo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do arquivo.")
+  @ApiModelProperty(example = "null", value = "{{{integracao_emissor_response_id_arquivo_value}}}")
   @JsonProperty("idArquivo")
   public Long getIdArquivo() {
     return idArquivo;
@@ -78,14 +80,14 @@ public class IntegracaoEmissorResponse   {
 
   
   /**
-   * Status do registro.
+   * {{{integracao_emissor_response_status_value}}}
    **/
   public IntegracaoEmissorResponse status(String status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Status do registro.")
+  @ApiModelProperty(example = "null", value = "{{{integracao_emissor_response_status_value}}}")
   @JsonProperty("status")
   public String getStatus() {
     return status;
@@ -96,14 +98,14 @@ public class IntegracaoEmissorResponse   {
 
   
   /**
-   * Data de inclus\u00E3o do registro.
+   * {{{integracao_emissor_response_data_inclusao_value}}}
    **/
   public IntegracaoEmissorResponse dataInclusao(String dataInclusao) {
     this.dataInclusao = dataInclusao;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data de inclus\u00E3o do registro.")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{integracao_emissor_response_data_inclusao_value}}}")
   @JsonProperty("dataInclusao")
   public String getDataInclusao() {
     return dataInclusao;
@@ -114,14 +116,14 @@ public class IntegracaoEmissorResponse   {
 
   
   /**
-   * Data da ultima altera\u00E7\u00E3o do registro.
+   * {{{integracao_emissor_response_data_alteracao_value}}}
    **/
   public IntegracaoEmissorResponse dataAlteracao(String dataAlteracao) {
     this.dataAlteracao = dataAlteracao;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data da ultima altera\u00E7\u00E3o do registro.")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{integracao_emissor_response_data_alteracao_value}}}")
   @JsonProperty("dataAlteracao")
   public String getDataAlteracao() {
     return dataAlteracao;
@@ -180,4 +182,6 @@ public class IntegracaoEmissorResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

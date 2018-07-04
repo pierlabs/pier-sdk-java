@@ -7,11 +7,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Objeto de resposta do grupo de origem comercial
+ * {{{grupo_origem_comercial_response_description}}}
  **/
 
-@ApiModel(description = "Objeto de resposta do grupo de origem comercial")
+@ApiModel(description = "{{{grupo_origem_comercial_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class GrupoOrigemComercialResponse   {
   
@@ -20,14 +22,14 @@ public class GrupoOrigemComercialResponse   {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do grupo de origem comercial.
+   * {{{grupo_origem_comercial_response_id_value}}}
    **/
   public GrupoOrigemComercialResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do grupo de origem comercial.")
+  @ApiModelProperty(example = "null", value = "{{{grupo_origem_comercial_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -38,14 +40,14 @@ public class GrupoOrigemComercialResponse   {
 
   
   /**
-   * Nome do grupo da origem comercial
+   * {{{grupo_origem_comercial_response_nome_value}}}
    **/
   public GrupoOrigemComercialResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome do grupo da origem comercial")
+  @ApiModelProperty(example = "null", value = "{{{grupo_origem_comercial_response_nome_value}}}")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -96,4 +98,6 @@ public class GrupoOrigemComercialResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

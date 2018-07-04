@@ -9,11 +9,13 @@ import java.math.BigDecimal;
 
 
 
+
+
 /**
- * Representa\u00E7\u00E3o da resposta do recurso de grupo econ\u00F4mico
+ * {{{grupo_economico_response_description}}}
  **/
 
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de grupo econ\u00F4mico")
+@ApiModel(description = "{{{grupo_economico_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class GrupoEconomicoResponse   {
   
@@ -113,14 +115,14 @@ public class GrupoEconomicoResponse   {
 
   
   /**
-   * C\u00F3digo identificador do grupo econ\u00F4mico
+   * {{{grupo_economico_response_id_value}}}
    **/
   public GrupoEconomicoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador do grupo econ\u00F4mico")
+  @ApiModelProperty(example = "null", value = "{{{grupo_economico_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -131,14 +133,14 @@ public class GrupoEconomicoResponse   {
 
   
   /**
-   * Raz\u00E3o social da pessoa jur\u00EDdica
+   * {{{grupo_economico_response_razao_social_value}}}
    **/
   public GrupoEconomicoResponse razaoSocial(String razaoSocial) {
     this.razaoSocial = razaoSocial;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Raz\u00E3o social da pessoa jur\u00EDdica")
+  @ApiModelProperty(example = "null", value = "{{{grupo_economico_response_razao_social_value}}}")
   @JsonProperty("razaoSocial")
   public String getRazaoSocial() {
     return razaoSocial;
@@ -149,14 +151,14 @@ public class GrupoEconomicoResponse   {
 
   
   /**
-   * Nome do credor
+   * {{{grupo_economico_response_nome_credor_value}}}
    **/
   public GrupoEconomicoResponse nomeCredor(String nomeCredor) {
     this.nomeCredor = nomeCredor;
     return this;
   }
   
-  @ApiModelProperty(example = "Exemplo", value = "Nome do credor")
+  @ApiModelProperty(example = "Exemplo", value = "{{{grupo_economico_response_nome_credor_value}}}")
   @JsonProperty("nomeCredor")
   public String getNomeCredor() {
     return nomeCredor;
@@ -167,14 +169,14 @@ public class GrupoEconomicoResponse   {
 
   
   /**
-   * N\u00FAmero da Receita Federal
+   * {{{grupo_economico_response_numero_receita_federal_value}}}
    **/
   public GrupoEconomicoResponse numeroReceitaFederal(String numeroReceitaFederal) {
     this.numeroReceitaFederal = numeroReceitaFederal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00FAmero da Receita Federal")
+  @ApiModelProperty(example = "null", value = "{{{grupo_economico_response_numero_receita_federal_value}}}")
   @JsonProperty("numeroReceitaFederal")
   public String getNumeroReceitaFederal() {
     return numeroReceitaFederal;
@@ -185,14 +187,14 @@ public class GrupoEconomicoResponse   {
 
   
   /**
-   * N\u00FAmero da inscri\u00E7\u00E3o estadual
+   * {{{grupo_economico_response_inscricao_estadual_value}}}
    **/
   public GrupoEconomicoResponse inscricaoEstadual(String inscricaoEstadual) {
     this.inscricaoEstadual = inscricaoEstadual;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00FAmero da inscri\u00E7\u00E3o estadual")
+  @ApiModelProperty(example = "null", value = "{{{grupo_economico_response_inscricao_estadual_value}}}")
   @JsonProperty("inscricaoEstadual")
   public String getInscricaoEstadual() {
     return inscricaoEstadual;
@@ -203,14 +205,14 @@ public class GrupoEconomicoResponse   {
 
   
   /**
-   * Nome da pessoa para entrar em contato
+   * {{{grupo_economico_response_contato_value}}}
    **/
   public GrupoEconomicoResponse contato(String contato) {
     this.contato = contato;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome da pessoa para entrar em contato")
+  @ApiModelProperty(example = "null", value = "{{{grupo_economico_response_contato_value}}}")
   @JsonProperty("contato")
   public String getContato() {
     return contato;
@@ -221,14 +223,14 @@ public class GrupoEconomicoResponse   {
 
   
   /**
-   * C\u00F3digo do banco
+   * {{{grupo_economico_response_banco_value}}}
    **/
   public GrupoEconomicoResponse banco(Integer banco) {
     this.banco = banco;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo do banco")
+  @ApiModelProperty(example = "null", value = "{{{grupo_economico_response_banco_value}}}")
   @JsonProperty("banco")
   public Integer getBanco() {
     return banco;
@@ -239,14 +241,14 @@ public class GrupoEconomicoResponse   {
 
   
   /**
-   * C\u00F3digo da ag\u00EAncia
+   * {{{grupo_economico_response_agencia_value}}}
    **/
   public GrupoEconomicoResponse agencia(Integer agencia) {
     this.agencia = agencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo da ag\u00EAncia")
+  @ApiModelProperty(example = "null", value = "{{{grupo_economico_response_agencia_value}}}")
   @JsonProperty("agencia")
   public Integer getAgencia() {
     return agencia;
@@ -257,14 +259,14 @@ public class GrupoEconomicoResponse   {
 
   
   /**
-   * D\u00EDgito verificador da ag\u00EAncia
+   * {{{grupo_economico_response_digito_agencia_value}}}
    **/
   public GrupoEconomicoResponse digitoAgencia(String digitoAgencia) {
     this.digitoAgencia = digitoAgencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "D\u00EDgito verificador da ag\u00EAncia")
+  @ApiModelProperty(example = "null", value = "{{{grupo_economico_response_digito_agencia_value}}}")
   @JsonProperty("digitoAgencia")
   public String getDigitoAgencia() {
     return digitoAgencia;
@@ -275,14 +277,14 @@ public class GrupoEconomicoResponse   {
 
   
   /**
-   * C\u00F3digo da Conta Corrente
+   * {{{grupo_economico_response_conta_corrente_value}}}
    **/
   public GrupoEconomicoResponse contaCorrente(String contaCorrente) {
     this.contaCorrente = contaCorrente;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo da Conta Corrente")
+  @ApiModelProperty(example = "null", value = "{{{grupo_economico_response_conta_corrente_value}}}")
   @JsonProperty("contaCorrente")
   public String getContaCorrente() {
     return contaCorrente;
@@ -293,14 +295,14 @@ public class GrupoEconomicoResponse   {
 
   
   /**
-   * D\u00EDgito Verificador da Conta Corrente
+   * {{{grupo_economico_response_digito_conta_corrente_value}}}
    **/
   public GrupoEconomicoResponse digitoContaCorrente(String digitoContaCorrente) {
     this.digitoContaCorrente = digitoContaCorrente;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "D\u00EDgito Verificador da Conta Corrente")
+  @ApiModelProperty(example = "null", value = "{{{grupo_economico_response_digito_conta_corrente_value}}}")
   @JsonProperty("digitoContaCorrente")
   public String getDigitoContaCorrente() {
     return digitoContaCorrente;
@@ -311,14 +313,14 @@ public class GrupoEconomicoResponse   {
 
   
   /**
-   * Login do usu\u00E1rio para registro da inser\u00E7\u00E3o
+   * {{{grupo_economico_response_usuario_value}}}
    **/
   public GrupoEconomicoResponse usuario(String usuario) {
     this.usuario = usuario;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Login do usu\u00E1rio para registro da inser\u00E7\u00E3o")
+  @ApiModelProperty(example = "null", value = "{{{grupo_economico_response_usuario_value}}}")
   @JsonProperty("usuario")
   public String getUsuario() {
     return usuario;
@@ -329,14 +331,14 @@ public class GrupoEconomicoResponse   {
 
   
   /**
-   * Periodicidade do pagamento
+   * {{{grupo_economico_response_periodicidade_value}}}
    **/
   public GrupoEconomicoResponse periodicidade(PeriodicidadeEnum periodicidade) {
     this.periodicidade = periodicidade;
     return this;
   }
   
-  @ApiModelProperty(example = "DIARIO", value = "Periodicidade do pagamento")
+  @ApiModelProperty(example = "DIARIO", value = "{{{grupo_economico_response_periodicidade_value}}}")
   @JsonProperty("periodicidade")
   public PeriodicidadeEnum getPeriodicidade() {
     return periodicidade;
@@ -347,14 +349,14 @@ public class GrupoEconomicoResponse   {
 
   
   /**
-   * Dia para pagamento semanal
+   * {{{grupo_economico_response_pagamento_semanal_value}}}
    **/
   public GrupoEconomicoResponse pagamentoSemanal(PagamentoSemanalEnum pagamentoSemanal) {
     this.pagamentoSemanal = pagamentoSemanal;
     return this;
   }
   
-  @ApiModelProperty(example = "SEGUNDA", value = "Dia para pagamento semanal")
+  @ApiModelProperty(example = "SEGUNDA", value = "{{{grupo_economico_response_pagamento_semanal_value}}}")
   @JsonProperty("pagamentoSemanal")
   public PagamentoSemanalEnum getPagamentoSemanal() {
     return pagamentoSemanal;
@@ -365,14 +367,14 @@ public class GrupoEconomicoResponse   {
 
   
   /**
-   * Dia da data para o pagamento mensal
+   * {{{grupo_economico_response_pagamento_mensal_value}}}
    **/
   public GrupoEconomicoResponse pagamentoMensal(Integer pagamentoMensal) {
     this.pagamentoMensal = pagamentoMensal;
     return this;
   }
   
-  @ApiModelProperty(example = "10", value = "Dia da data para o pagamento mensal")
+  @ApiModelProperty(example = "10", value = "{{{grupo_economico_response_pagamento_mensal_value}}}")
   @JsonProperty("pagamentoMensal")
   public Integer getPagamentoMensal() {
     return pagamentoMensal;
@@ -383,14 +385,14 @@ public class GrupoEconomicoResponse   {
 
   
   /**
-   * Dia da data para o primeiro pagamento decendial
+   * {{{grupo_economico_response_pagamento_decendial_primeiro_value}}}
    **/
   public GrupoEconomicoResponse pagamentoDecendialPrimeiro(Integer pagamentoDecendialPrimeiro) {
     this.pagamentoDecendialPrimeiro = pagamentoDecendialPrimeiro;
     return this;
   }
   
-  @ApiModelProperty(example = "5", value = "Dia da data para o primeiro pagamento decendial")
+  @ApiModelProperty(example = "5", value = "{{{grupo_economico_response_pagamento_decendial_primeiro_value}}}")
   @JsonProperty("pagamentoDecendialPrimeiro")
   public Integer getPagamentoDecendialPrimeiro() {
     return pagamentoDecendialPrimeiro;
@@ -401,14 +403,14 @@ public class GrupoEconomicoResponse   {
 
   
   /**
-   * Dia da data para o segundo pagamento decendial
+   * {{{grupo_economico_response_pagamento_decendial_segundo_value}}}
    **/
   public GrupoEconomicoResponse pagamentoDecendialSegundo(Integer pagamentoDecendialSegundo) {
     this.pagamentoDecendialSegundo = pagamentoDecendialSegundo;
     return this;
   }
   
-  @ApiModelProperty(example = "15", value = "Dia da data para o segundo pagamento decendial")
+  @ApiModelProperty(example = "15", value = "{{{grupo_economico_response_pagamento_decendial_segundo_value}}}")
   @JsonProperty("pagamentoDecendialSegundo")
   public Integer getPagamentoDecendialSegundo() {
     return pagamentoDecendialSegundo;
@@ -419,14 +421,14 @@ public class GrupoEconomicoResponse   {
 
   
   /**
-   * Dia da data para o terceiro pagamento decendial
+   * {{{grupo_economico_response_pagamento_decendial_terceiro_value}}}
    **/
   public GrupoEconomicoResponse pagamentoDecendialTerceiro(Integer pagamentoDecendialTerceiro) {
     this.pagamentoDecendialTerceiro = pagamentoDecendialTerceiro;
     return this;
   }
   
-  @ApiModelProperty(example = "25", value = "Dia da data para o terceiro pagamento decendial")
+  @ApiModelProperty(example = "25", value = "{{{grupo_economico_response_pagamento_decendial_terceiro_value}}}")
   @JsonProperty("pagamentoDecendialTerceiro")
   public Integer getPagamentoDecendialTerceiro() {
     return pagamentoDecendialTerceiro;
@@ -437,14 +439,14 @@ public class GrupoEconomicoResponse   {
 
   
   /**
-   * Dia da data para o primeiro pagamento quinzenal
+   * {{{grupo_economico_response_pagamento_quinzenal_primeiro_value}}}
    **/
   public GrupoEconomicoResponse pagamentoQuinzenalPrimeiro(Integer pagamentoQuinzenalPrimeiro) {
     this.pagamentoQuinzenalPrimeiro = pagamentoQuinzenalPrimeiro;
     return this;
   }
   
-  @ApiModelProperty(example = "5", value = "Dia da data para o primeiro pagamento quinzenal")
+  @ApiModelProperty(example = "5", value = "{{{grupo_economico_response_pagamento_quinzenal_primeiro_value}}}")
   @JsonProperty("pagamentoQuinzenalPrimeiro")
   public Integer getPagamentoQuinzenalPrimeiro() {
     return pagamentoQuinzenalPrimeiro;
@@ -455,14 +457,14 @@ public class GrupoEconomicoResponse   {
 
   
   /**
-   * Dia da data para o segundo pagamento quinzenal
+   * {{{grupo_economico_response_pagamento_quinzenal_segundo_value}}}
    **/
   public GrupoEconomicoResponse pagamentoQuinzenalSegundo(Integer pagamentoQuinzenalSegundo) {
     this.pagamentoQuinzenalSegundo = pagamentoQuinzenalSegundo;
     return this;
   }
   
-  @ApiModelProperty(example = "20", value = "Dia da data para o segundo pagamento quinzenal")
+  @ApiModelProperty(example = "20", value = "{{{grupo_economico_response_pagamento_quinzenal_segundo_value}}}")
   @JsonProperty("pagamentoQuinzenalSegundo")
   public Integer getPagamentoQuinzenalSegundo() {
     return pagamentoQuinzenalSegundo;
@@ -473,14 +475,14 @@ public class GrupoEconomicoResponse   {
 
   
   /**
-   * Identificador do credor RAV
+   * {{{grupo_economico_response_id_credor_r_a_v_value}}}
    **/
   public GrupoEconomicoResponse idCredorRAV(Long idCredorRAV) {
     this.idCredorRAV = idCredorRAV;
     return this;
   }
   
-  @ApiModelProperty(example = "1", value = "Identificador do credor RAV")
+  @ApiModelProperty(example = "1", value = "{{{grupo_economico_response_id_credor_r_a_v_value}}}")
   @JsonProperty("idCredorRAV")
   public Long getIdCredorRAV() {
     return idCredorRAV;
@@ -491,14 +493,14 @@ public class GrupoEconomicoResponse   {
 
   
   /**
-   * Valor percentual do RAV do credor
+   * {{{grupo_economico_response_percentual_r_a_v_value}}}
    **/
   public GrupoEconomicoResponse percentualRAV(BigDecimal percentualRAV) {
     this.percentualRAV = percentualRAV;
     return this;
   }
   
-  @ApiModelProperty(example = "0.015", value = "Valor percentual do RAV do credor")
+  @ApiModelProperty(example = "0.015", value = "{{{grupo_economico_response_percentual_r_a_v_value}}}")
   @JsonProperty("percentualRAV")
   public BigDecimal getPercentualRAV() {
     return percentualRAV;
@@ -509,14 +511,14 @@ public class GrupoEconomicoResponse   {
 
   
   /**
-   * Indica se o credor recebe RAV e o tipo
+   * {{{grupo_economico_response_recebe_r_a_v_value}}}
    **/
   public GrupoEconomicoResponse recebeRAV(RecebeRAVEnum recebeRAV) {
     this.recebeRAV = recebeRAV;
     return this;
   }
   
-  @ApiModelProperty(example = "NAO_TEM_PERMISSAO_RAV", value = "Indica se o credor recebe RAV e o tipo")
+  @ApiModelProperty(example = "NAO_TEM_PERMISSAO_RAV", value = "{{{grupo_economico_response_recebe_r_a_v_value}}}")
   @JsonProperty("recebeRAV")
   public RecebeRAVEnum getRecebeRAV() {
     return recebeRAV;
@@ -527,14 +529,14 @@ public class GrupoEconomicoResponse   {
 
   
   /**
-   * Percentual Multiplica
+   * {{{grupo_economico_response_percentual_multiplica_value}}}
    **/
   public GrupoEconomicoResponse percentualMultiplica(BigDecimal percentualMultiplica) {
     this.percentualMultiplica = percentualMultiplica;
     return this;
   }
   
-  @ApiModelProperty(example = "0.1", value = "Percentual Multiplica")
+  @ApiModelProperty(example = "0.1", value = "{{{grupo_economico_response_percentual_multiplica_value}}}")
   @JsonProperty("percentualMultiplica")
   public BigDecimal getPercentualMultiplica() {
     return percentualMultiplica;
@@ -545,14 +547,14 @@ public class GrupoEconomicoResponse   {
 
   
   /**
-   * Taxa Administrativa
+   * {{{grupo_economico_response_taxa_adm_value}}}
    **/
   public GrupoEconomicoResponse taxaAdm(BigDecimal taxaAdm) {
     this.taxaAdm = taxaAdm;
     return this;
   }
   
-  @ApiModelProperty(example = "0.1", value = "Taxa Administrativa")
+  @ApiModelProperty(example = "0.1", value = "{{{grupo_economico_response_taxa_adm_value}}}")
   @JsonProperty("taxaAdm")
   public BigDecimal getTaxaAdm() {
     return taxaAdm;
@@ -563,14 +565,14 @@ public class GrupoEconomicoResponse   {
 
   
   /**
-   * Taxa do Banco
+   * {{{grupo_economico_response_taxa_banco_value}}}
    **/
   public GrupoEconomicoResponse taxaBanco(BigDecimal taxaBanco) {
     this.taxaBanco = taxaBanco;
     return this;
   }
   
-  @ApiModelProperty(example = "0.1", value = "Taxa do Banco")
+  @ApiModelProperty(example = "0.1", value = "{{{grupo_economico_response_taxa_banco_value}}}")
   @JsonProperty("taxaBanco")
   public BigDecimal getTaxaBanco() {
     return taxaBanco;
@@ -581,14 +583,14 @@ public class GrupoEconomicoResponse   {
 
   
   /**
-   * Valor limite do RAV
+   * {{{grupo_economico_response_limite_r_a_v_value}}}
    **/
   public GrupoEconomicoResponse limiteRAV(BigDecimal limiteRAV) {
     this.limiteRAV = limiteRAV;
     return this;
   }
   
-  @ApiModelProperty(example = "0.015", value = "Valor limite do RAV")
+  @ApiModelProperty(example = "0.015", value = "{{{grupo_economico_response_limite_r_a_v_value}}}")
   @JsonProperty("limiteRAV")
   public BigDecimal getLimiteRAV() {
     return limiteRAV;
@@ -689,4 +691,6 @@ public class GrupoEconomicoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

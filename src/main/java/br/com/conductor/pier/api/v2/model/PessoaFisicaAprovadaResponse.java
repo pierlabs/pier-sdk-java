@@ -12,11 +12,13 @@ import java.util.List;
 
 
 
+
+
 /**
- * PessoaFisicaAprovadaResponse
+ * {{{pessoa_fisica_aprovada_response_description}}}
  **/
 
-@ApiModel(description = "PessoaFisicaAprovadaResponse")
+@ApiModel(description = "{{{pessoa_fisica_aprovada_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PessoaFisicaAprovadaResponse   {
   
@@ -55,14 +57,14 @@ public class PessoaFisicaAprovadaResponse   {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da pessoa fisica (id)
+   * {{{pessoa_fisica_aprovada_response_id_value}}}
    **/
   public PessoaFisicaAprovadaResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o da pessoa fisica (id)")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -73,14 +75,14 @@ public class PessoaFisicaAprovadaResponse   {
 
   
   /**
-   * Apresenta o nome completo da pessoa fisica.
+   * {{{pessoa_fisica_aprovada_response_nome_value}}}
    **/
   public PessoaFisicaAprovadaResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Apresenta o nome completo da pessoa fisica.")
+  @ApiModelProperty(example = "null", required = true, value = "{{{pessoa_fisica_aprovada_response_nome_value}}}")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -91,14 +93,14 @@ public class PessoaFisicaAprovadaResponse   {
 
   
   /**
-   * Apresenta o nome da m\u00E3e da pessoa fisica
+   * {{{pessoa_fisica_aprovada_response_nome_mae_value}}}
    **/
   public PessoaFisicaAprovadaResponse nomeMae(String nomeMae) {
     this.nomeMae = nomeMae;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o nome da m\u00E3e da pessoa fisica")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_response_nome_mae_value}}}")
   @JsonProperty("nomeMae")
   public String getNomeMae() {
     return nomeMae;
@@ -109,14 +111,14 @@ public class PessoaFisicaAprovadaResponse   {
 
   
   /**
-   * Data de Nascimento da Pessoa. Essa data deve ser informada no formato aaaa-MM-dd.
+   * {{{pessoa_fisica_aprovada_response_data_nascimento_value}}}
    **/
   public PessoaFisicaAprovadaResponse dataNascimento(String dataNascimento) {
     this.dataNascimento = dataNascimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data de Nascimento da Pessoa. Essa data deve ser informada no formato aaaa-MM-dd.")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_response_data_nascimento_value}}}")
   @JsonProperty("dataNascimento")
   public String getDataNascimento() {
     return dataNascimento;
@@ -127,14 +129,14 @@ public class PessoaFisicaAprovadaResponse   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino).
+   * {{{pessoa_fisica_aprovada_response_sexo_value}}}
    **/
   public PessoaFisicaAprovadaResponse sexo(String sexo) {
     this.sexo = sexo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (\"M\": Masculino), (\"F\": Feminino).")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_response_sexo_value}}}")
   @JsonProperty("sexo")
   public String getSexo() {
     return sexo;
@@ -145,14 +147,14 @@ public class PessoaFisicaAprovadaResponse   {
 
   
   /**
-   * N\u00FAmero do Cadastro de Pessoa Fisica (CPF)
+   * {{{pessoa_fisica_aprovada_response_cpf_value}}}
    **/
   public PessoaFisicaAprovadaResponse cpf(String cpf) {
     this.cpf = cpf;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "N\u00FAmero do Cadastro de Pessoa Fisica (CPF)")
+  @ApiModelProperty(example = "null", required = true, value = "{{{pessoa_fisica_aprovada_response_cpf_value}}}")
   @JsonProperty("cpf")
   public String getCpf() {
     return cpf;
@@ -163,14 +165,14 @@ public class PessoaFisicaAprovadaResponse   {
 
   
   /**
-   * N\u00FAmero da identidade.
+   * {{{pessoa_fisica_aprovada_response_numero_identidade_value}}}
    **/
   public PessoaFisicaAprovadaResponse numeroIdentidade(String numeroIdentidade) {
     this.numeroIdentidade = numeroIdentidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00FAmero da identidade.")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_response_numero_identidade_value}}}")
   @JsonProperty("numeroIdentidade")
   public String getNumeroIdentidade() {
     return numeroIdentidade;
@@ -181,14 +183,14 @@ public class PessoaFisicaAprovadaResponse   {
 
   
   /**
-   * Org\u00E3o expedidor da Identidade.
+   * {{{pessoa_fisica_aprovada_response_orgao_expedidor_identidade_value}}}
    **/
   public PessoaFisicaAprovadaResponse orgaoExpedidorIdentidade(String orgaoExpedidorIdentidade) {
     this.orgaoExpedidorIdentidade = orgaoExpedidorIdentidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Org\u00E3o expedidor da Identidade.")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_response_orgao_expedidor_identidade_value}}}")
   @JsonProperty("orgaoExpedidorIdentidade")
   public String getOrgaoExpedidorIdentidade() {
     return orgaoExpedidorIdentidade;
@@ -199,14 +201,14 @@ public class PessoaFisicaAprovadaResponse   {
 
   
   /**
-   * Sigla da Unidade Federativa de onde foi expedido a Identidade
+   * {{{pessoa_fisica_aprovada_response_unidade_federativa_identidade_value}}}
    **/
   public PessoaFisicaAprovadaResponse unidadeFederativaIdentidade(String unidadeFederativaIdentidade) {
     this.unidadeFederativaIdentidade = unidadeFederativaIdentidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Sigla da Unidade Federativa de onde foi expedido a Identidade")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_response_unidade_federativa_identidade_value}}}")
   @JsonProperty("unidadeFederativaIdentidade")
   public String getUnidadeFederativaIdentidade() {
     return unidadeFederativaIdentidade;
@@ -217,14 +219,14 @@ public class PessoaFisicaAprovadaResponse   {
 
   
   /**
-   * Data emiss\u00E3o da Identidade no formato aaaa-MM-dd
+   * {{{pessoa_fisica_aprovada_response_data_emissao_identidade_value}}}
    **/
   public PessoaFisicaAprovadaResponse dataEmissaoIdentidade(String dataEmissaoIdentidade) {
     this.dataEmissaoIdentidade = dataEmissaoIdentidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data emiss\u00E3o da Identidade no formato aaaa-MM-dd")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_response_data_emissao_identidade_value}}}")
   @JsonProperty("dataEmissaoIdentidade")
   public String getDataEmissaoIdentidade() {
     return dataEmissaoIdentidade;
@@ -235,14 +237,14 @@ public class PessoaFisicaAprovadaResponse   {
 
   
   /**
-   * Id Estado civil da pessoa fisica
+   * {{{pessoa_fisica_aprovada_response_id_estado_civil_value}}}
    **/
   public PessoaFisicaAprovadaResponse idEstadoCivil(Long idEstadoCivil) {
     this.idEstadoCivil = idEstadoCivil;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Id Estado civil da pessoa fisica")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_response_id_estado_civil_value}}}")
   @JsonProperty("idEstadoCivil")
   public Long getIdEstadoCivil() {
     return idEstadoCivil;
@@ -253,14 +255,14 @@ public class PessoaFisicaAprovadaResponse   {
 
   
   /**
-   * Profiss\u00E3o da pessoa fisica
+   * {{{pessoa_fisica_aprovada_response_id_profissao_value}}}
    **/
   public PessoaFisicaAprovadaResponse idProfissao(String idProfissao) {
     this.idProfissao = idProfissao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Profiss\u00E3o da pessoa fisica")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_response_id_profissao_value}}}")
   @JsonProperty("idProfissao")
   public String getIdProfissao() {
     return idProfissao;
@@ -271,14 +273,14 @@ public class PessoaFisicaAprovadaResponse   {
 
   
   /**
-   * Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica
+   * {{{pessoa_fisica_aprovada_response_id_natureza_ocupacao_value}}}
    **/
   public PessoaFisicaAprovadaResponse idNaturezaOcupacao(Long idNaturezaOcupacao) {
     this.idNaturezaOcupacao = idNaturezaOcupacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_response_id_natureza_ocupacao_value}}}")
   @JsonProperty("idNaturezaOcupacao")
   public Long getIdNaturezaOcupacao() {
     return idNaturezaOcupacao;
@@ -289,14 +291,14 @@ public class PessoaFisicaAprovadaResponse   {
 
   
   /**
-   * Id Nacionalidade da pessoa fisica
+   * {{{pessoa_fisica_aprovada_response_id_nacionalidade_value}}}
    **/
   public PessoaFisicaAprovadaResponse idNacionalidade(Long idNacionalidade) {
     this.idNacionalidade = idNacionalidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Id Nacionalidade da pessoa fisica")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_response_id_nacionalidade_value}}}")
   @JsonProperty("idNacionalidade")
   public Long getIdNacionalidade() {
     return idNacionalidade;
@@ -307,14 +309,14 @@ public class PessoaFisicaAprovadaResponse   {
 
   
   /**
-   * Id da origem comercial
+   * {{{pessoa_fisica_aprovada_response_id_origem_comercial_value}}}
    **/
   public PessoaFisicaAprovadaResponse idOrigemComercial(Long idOrigemComercial) {
     this.idOrigemComercial = idOrigemComercial;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Id da origem comercial")
+  @ApiModelProperty(example = "null", required = true, value = "{{{pessoa_fisica_aprovada_response_id_origem_comercial_value}}}")
   @JsonProperty("idOrigemComercial")
   public Long getIdOrigemComercial() {
     return idOrigemComercial;
@@ -325,14 +327,14 @@ public class PessoaFisicaAprovadaResponse   {
 
   
   /**
-   * Id do produto
+   * {{{pessoa_fisica_aprovada_response_id_produto_value}}}
    **/
   public PessoaFisicaAprovadaResponse idProduto(Long idProduto) {
     this.idProduto = idProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Id do produto")
+  @ApiModelProperty(example = "null", required = true, value = "{{{pessoa_fisica_aprovada_response_id_produto_value}}}")
   @JsonProperty("idProduto")
   public Long getIdProduto() {
     return idProduto;
@@ -343,14 +345,14 @@ public class PessoaFisicaAprovadaResponse   {
 
   
   /**
-   * N\u00FAmero da ag\u00EAncia.
+   * {{{pessoa_fisica_aprovada_response_numero_agencia_value}}}
    **/
   public PessoaFisicaAprovadaResponse numeroAgencia(Integer numeroAgencia) {
     this.numeroAgencia = numeroAgencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00FAmero da ag\u00EAncia.")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_response_numero_agencia_value}}}")
   @JsonProperty("numeroAgencia")
   public Integer getNumeroAgencia() {
     return numeroAgencia;
@@ -361,14 +363,14 @@ public class PessoaFisicaAprovadaResponse   {
 
   
   /**
-   * N\u00FAmero da conta corrente.
+   * {{{pessoa_fisica_aprovada_response_numero_conta_corrente_value}}}
    **/
   public PessoaFisicaAprovadaResponse numeroContaCorrente(String numeroContaCorrente) {
     this.numeroContaCorrente = numeroContaCorrente;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00FAmero da conta corrente.")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_response_numero_conta_corrente_value}}}")
   @JsonProperty("numeroContaCorrente")
   public String getNumeroContaCorrente() {
     return numeroContaCorrente;
@@ -379,14 +381,14 @@ public class PessoaFisicaAprovadaResponse   {
 
   
   /**
-   * Email da pessoa fisica
+   * {{{pessoa_fisica_aprovada_response_email_value}}}
    **/
   public PessoaFisicaAprovadaResponse email(String email) {
     this.email = email;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Email da pessoa fisica")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_response_email_value}}}")
   @JsonProperty("email")
   public String getEmail() {
     return email;
@@ -397,14 +399,14 @@ public class PessoaFisicaAprovadaResponse   {
 
   
   /**
-   * Dia vencimento
+   * {{{pessoa_fisica_aprovada_response_dia_vencimento_value}}}
    **/
   public PessoaFisicaAprovadaResponse diaVencimento(Integer diaVencimento) {
     this.diaVencimento = diaVencimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Dia vencimento")
+  @ApiModelProperty(example = "null", required = true, value = "{{{pessoa_fisica_aprovada_response_dia_vencimento_value}}}")
   @JsonProperty("diaVencimento")
   public Integer getDiaVencimento() {
     return diaVencimento;
@@ -415,14 +417,14 @@ public class PessoaFisicaAprovadaResponse   {
 
   
   /**
-   * Nome que deve ser impresso no cart\u00E3o
+   * {{{pessoa_fisica_aprovada_response_nome_impresso_value}}}
    **/
   public PessoaFisicaAprovadaResponse nomeImpresso(String nomeImpresso) {
     this.nomeImpresso = nomeImpresso;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome que deve ser impresso no cart\u00E3o")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_response_nome_impresso_value}}}")
   @JsonProperty("nomeImpresso")
   public String getNomeImpresso() {
     return nomeImpresso;
@@ -433,14 +435,14 @@ public class PessoaFisicaAprovadaResponse   {
 
   
   /**
-   * Nome da empresa
+   * {{{pessoa_fisica_aprovada_response_nome_empresa_value}}}
    **/
   public PessoaFisicaAprovadaResponse nomeEmpresa(String nomeEmpresa) {
     this.nomeEmpresa = nomeEmpresa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome da empresa")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_response_nome_empresa_value}}}")
   @JsonProperty("nomeEmpresa")
   public String getNomeEmpresa() {
     return nomeEmpresa;
@@ -451,14 +453,14 @@ public class PessoaFisicaAprovadaResponse   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da conta cadastrada
+   * {{{pessoa_fisica_aprovada_response_id_conta_value}}}
    **/
   public PessoaFisicaAprovadaResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o da conta cadastrada")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_response_id_conta_value}}}")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -469,14 +471,14 @@ public class PessoaFisicaAprovadaResponse   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da proposta
+   * {{{pessoa_fisica_aprovada_response_id_proposta_value}}}
    **/
   public PessoaFisicaAprovadaResponse idProposta(Long idProposta) {
     this.idProposta = idProposta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o da proposta")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_response_id_proposta_value}}}")
   @JsonProperty("idProposta")
   public Long getIdProposta() {
     return idProposta;
@@ -487,14 +489,14 @@ public class PessoaFisicaAprovadaResponse   {
 
   
   /**
-   * Indica o canal pelo qual o cadastro do cliente foi realizado
+   * {{{pessoa_fisica_aprovada_response_canal_entrada_value}}}
    **/
   public PessoaFisicaAprovadaResponse canalEntrada(String canalEntrada) {
     this.canalEntrada = canalEntrada;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Indica o canal pelo qual o cadastro do cliente foi realizado")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_response_canal_entrada_value}}}")
   @JsonProperty("canalEntrada")
   public String getCanalEntrada() {
     return canalEntrada;
@@ -505,14 +507,14 @@ public class PessoaFisicaAprovadaResponse   {
 
   
   /**
-   * Indica o valor da pontua\u00E7\u00E3o atribuido ao cliente (caso n\u00E3o informado ser\u00E1 atribuido o valor = 0)
+   * {{{pessoa_fisica_aprovada_response_valor_pontuacao_value}}}
    **/
   public PessoaFisicaAprovadaResponse valorPontuacao(Integer valorPontuacao) {
     this.valorPontuacao = valorPontuacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Indica o valor da pontua\u00E7\u00E3o atribuido ao cliente (caso n\u00E3o informado ser\u00E1 atribuido o valor = 0)")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_response_valor_pontuacao_value}}}")
   @JsonProperty("valorPontuacao")
   public Integer getValorPontuacao() {
     return valorPontuacao;
@@ -523,14 +525,14 @@ public class PessoaFisicaAprovadaResponse   {
 
   
   /**
-   * Apresenta os telefones da empresa
+   * {{{pessoa_fisica_aprovada_response_telefones_value}}}
    **/
   public PessoaFisicaAprovadaResponse telefones(List<TelefonePessoaAprovadaResponse> telefones) {
     this.telefones = telefones;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta os telefones da empresa")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_response_telefones_value}}}")
   @JsonProperty("telefones")
   public List<TelefonePessoaAprovadaResponse> getTelefones() {
     return telefones;
@@ -541,14 +543,14 @@ public class PessoaFisicaAprovadaResponse   {
 
   
   /**
-   * Pode ser informado os seguintes tipos de endere\u00E7o: Residencial, Comercial, e Outros
+   * {{{pessoa_fisica_aprovada_response_enderecos_value}}}
    **/
   public PessoaFisicaAprovadaResponse enderecos(List<EnderecoAprovadoResponse> enderecos) {
     this.enderecos = enderecos;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Pode ser informado os seguintes tipos de endere\u00E7o: Residencial, Comercial, e Outros")
+  @ApiModelProperty(example = "null", required = true, value = "{{{pessoa_fisica_aprovada_response_enderecos_value}}}")
   @JsonProperty("enderecos")
   public List<EnderecoAprovadoResponse> getEnderecos() {
     return enderecos;
@@ -559,14 +561,14 @@ public class PessoaFisicaAprovadaResponse   {
 
   
   /**
-   * Valor do Limite Global
+   * {{{pessoa_fisica_aprovada_response_limite_global_value}}}
    **/
   public PessoaFisicaAprovadaResponse limiteGlobal(BigDecimal limiteGlobal) {
     this.limiteGlobal = limiteGlobal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Valor do Limite Global")
+  @ApiModelProperty(example = "null", required = true, value = "{{{pessoa_fisica_aprovada_response_limite_global_value}}}")
   @JsonProperty("limiteGlobal")
   public BigDecimal getLimiteGlobal() {
     return limiteGlobal;
@@ -577,14 +579,14 @@ public class PessoaFisicaAprovadaResponse   {
 
   
   /**
-   * Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es
+   * {{{pessoa_fisica_aprovada_response_limite_maximo_value}}}
    **/
   public PessoaFisicaAprovadaResponse limiteMaximo(BigDecimal limiteMaximo) {
     this.limiteMaximo = limiteMaximo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es")
+  @ApiModelProperty(example = "null", required = true, value = "{{{pessoa_fisica_aprovada_response_limite_maximo_value}}}")
   @JsonProperty("limiteMaximo")
   public BigDecimal getLimiteMaximo() {
     return limiteMaximo;
@@ -595,14 +597,14 @@ public class PessoaFisicaAprovadaResponse   {
 
   
   /**
-   * Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras
+   * {{{pessoa_fisica_aprovada_response_limite_parcelas_value}}}
    **/
   public PessoaFisicaAprovadaResponse limiteParcelas(BigDecimal limiteParcelas) {
     this.limiteParcelas = limiteParcelas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras")
+  @ApiModelProperty(example = "null", required = true, value = "{{{pessoa_fisica_aprovada_response_limite_parcelas_value}}}")
   @JsonProperty("limiteParcelas")
   public BigDecimal getLimiteParcelas() {
     return limiteParcelas;
@@ -613,14 +615,14 @@ public class PessoaFisicaAprovadaResponse   {
 
   
   /**
-   * Valor do limite de margem consignado
+   * {{{pessoa_fisica_aprovada_response_limite_consignado_value}}}
    **/
   public PessoaFisicaAprovadaResponse limiteConsignado(BigDecimal limiteConsignado) {
     this.limiteConsignado = limiteConsignado;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Valor do limite de margem consignado")
+  @ApiModelProperty(example = "null", required = true, value = "{{{pessoa_fisica_aprovada_response_limite_consignado_value}}}")
   @JsonProperty("limiteConsignado")
   public BigDecimal getLimiteConsignado() {
     return limiteConsignado;
@@ -731,4 +733,6 @@ public class PessoaFisicaAprovadaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

@@ -7,11 +7,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Objeto de Resposta da Entidade
+ * {{{entidade_response_description}}}
  **/
 
-@ApiModel(description = "Objeto de Resposta da Entidade")
+@ApiModel(description = "{{{entidade_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class EntidadeResponse   {
   
@@ -21,14 +23,14 @@ public class EntidadeResponse   {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da entidade.
+   * {{{entidade_response_id_value}}}
    **/
   public EntidadeResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o da entidade.")
+  @ApiModelProperty(example = "null", value = "{{{entidade_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -39,14 +41,14 @@ public class EntidadeResponse   {
 
   
   /**
-   * Descri\u00E7\u00E3o da entidade.
+   * {{{entidade_response_descricao_value}}}
    **/
   public EntidadeResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o da entidade.")
+  @ApiModelProperty(example = "null", value = "{{{entidade_response_descricao_value}}}")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -57,14 +59,14 @@ public class EntidadeResponse   {
 
   
   /**
-   * Flag que indica se a entidade est\u00E1 ativa.
+   * {{{entidade_response_flag_ativo_value}}}
    **/
   public EntidadeResponse flagAtivo(Boolean flagAtivo) {
     this.flagAtivo = flagAtivo;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Flag que indica se a entidade est\u00E1 ativa.")
+  @ApiModelProperty(example = "false", value = "{{{entidade_response_flag_ativo_value}}}")
   @JsonProperty("flagAtivo")
   public Boolean getFlagAtivo() {
     return flagAtivo;
@@ -117,4 +119,6 @@ public class EntidadeResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

@@ -7,11 +7,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Representa\u00E7\u00E3o do recurso Status Cart\u00E3o
+ * {{{status_cartao_response_description}}}
  **/
 
-@ApiModel(description = "Representa\u00E7\u00E3o do recurso Status Cart\u00E3o")
+@ApiModel(description = "{{{status_cartao_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class StatusCartaoResponse   {
   
@@ -24,14 +26,14 @@ public class StatusCartaoResponse   {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Status do Cart\u00E3o (id) 
+   * {{{status_cartao_response_id_value}}}
    **/
   public StatusCartaoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo de Identifica\u00E7\u00E3o do Status do Cart\u00E3o (id) ")
+  @ApiModelProperty(example = "null", required = true, value = "{{{status_cartao_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -42,14 +44,14 @@ public class StatusCartaoResponse   {
 
   
   /**
-   * Nome atribu\u00EDdo ao Status de Entrega do Cart\u00E3o.
+   * {{{status_cartao_response_nome_value}}}
    **/
   public StatusCartaoResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Nome atribu\u00EDdo ao Status de Entrega do Cart\u00E3o.")
+  @ApiModelProperty(example = "null", required = true, value = "{{{status_cartao_response_nome_value}}}")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -60,14 +62,14 @@ public class StatusCartaoResponse   {
 
   
   /**
-   * Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.
+   * {{{status_cartao_response_permite_desbloquear_value}}}
    **/
   public StatusCartaoResponse permiteDesbloquear(Integer permiteDesbloquear) {
     this.permiteDesbloquear = permiteDesbloquear;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.")
+  @ApiModelProperty(example = "null", value = "{{{status_cartao_response_permite_desbloquear_value}}}")
   @JsonProperty("permiteDesbloquear")
   public Integer getPermiteDesbloquear() {
     return permiteDesbloquear;
@@ -78,14 +80,14 @@ public class StatusCartaoResponse   {
 
   
   /**
-   * Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.
+   * {{{status_cartao_response_permite_atribuir_como_bloqueio_value}}}
    **/
   public StatusCartaoResponse permiteAtribuirComoBloqueio(Integer permiteAtribuirComoBloqueio) {
     this.permiteAtribuirComoBloqueio = permiteAtribuirComoBloqueio;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.")
+  @ApiModelProperty(example = "null", value = "{{{status_cartao_response_permite_atribuir_como_bloqueio_value}}}")
   @JsonProperty("permiteAtribuirComoBloqueio")
   public Integer getPermiteAtribuirComoBloqueio() {
     return permiteAtribuirComoBloqueio;
@@ -96,14 +98,14 @@ public class StatusCartaoResponse   {
 
   
   /**
-   * Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.
+   * {{{status_cartao_response_permite_atribuir_como_cancelamento_value}}}
    **/
   public StatusCartaoResponse permiteAtribuirComoCancelamento(Integer permiteAtribuirComoCancelamento) {
     this.permiteAtribuirComoCancelamento = permiteAtribuirComoCancelamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.")
+  @ApiModelProperty(example = "null", value = "{{{status_cartao_response_permite_atribuir_como_cancelamento_value}}}")
   @JsonProperty("permiteAtribuirComoCancelamento")
   public Integer getPermiteAtribuirComoCancelamento() {
     return permiteAtribuirComoCancelamento;
@@ -114,14 +116,14 @@ public class StatusCartaoResponse   {
 
   
   /**
-   * Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.
+   * {{{status_cartao_response_cobrar_tarifa_ao_emitir_nova_via_value}}}
    **/
   public StatusCartaoResponse cobrarTarifaAoEmitirNovaVia(Integer cobrarTarifaAoEmitirNovaVia) {
     this.cobrarTarifaAoEmitirNovaVia = cobrarTarifaAoEmitirNovaVia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.")
+  @ApiModelProperty(example = "null", value = "{{{status_cartao_response_cobrar_tarifa_ao_emitir_nova_via_value}}}")
   @JsonProperty("cobrarTarifaAoEmitirNovaVia")
   public Integer getCobrarTarifaAoEmitirNovaVia() {
     return cobrarTarifaAoEmitirNovaVia;
@@ -180,4 +182,6 @@ public class StatusCartaoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

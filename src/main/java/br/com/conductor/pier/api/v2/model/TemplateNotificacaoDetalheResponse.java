@@ -8,11 +8,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Objeto de detalhes do Template de Notifica\u00E7\u00E3o
+ * {{{template_notificacao_detalhe_response_description}}}
  **/
 
-@ApiModel(description = "Objeto de detalhes do Template de Notifica\u00E7\u00E3o")
+@ApiModel(description = "{{{template_notificacao_detalhe_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TemplateNotificacaoDetalheResponse   {
   
@@ -72,14 +74,14 @@ public class TemplateNotificacaoDetalheResponse   {
 
   
   /**
-   * C\u00F3digo Identificador.
+   * {{{template_notificacao_response_id_value}}}
    **/
   public TemplateNotificacaoDetalheResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo Identificador.")
+  @ApiModelProperty(example = "null", value = "{{{template_notificacao_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -90,14 +92,14 @@ public class TemplateNotificacaoDetalheResponse   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de e-mail.
+   * {{{template_notificacao_response_id_configuracao_email_value}}}
    **/
   public TemplateNotificacaoDetalheResponse idConfiguracaoEmail(Long idConfiguracaoEmail) {
     this.idConfiguracaoEmail = idConfiguracaoEmail;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o da configra\u00E7\u00E3o de e-mail.")
+  @ApiModelProperty(example = "null", value = "{{{template_notificacao_response_id_configuracao_email_value}}}")
   @JsonProperty("idConfiguracaoEmail")
   public Long getIdConfiguracaoEmail() {
     return idConfiguracaoEmail;
@@ -108,14 +110,14 @@ public class TemplateNotificacaoDetalheResponse   {
 
   
   /**
-   * Tipo do layout de e-mail.
+   * {{{template_notificacao_response_tipo_layout_value}}}
    **/
   public TemplateNotificacaoDetalheResponse tipoLayout(TipoLayoutEnum tipoLayout) {
     this.tipoLayout = tipoLayout;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Tipo do layout de e-mail.")
+  @ApiModelProperty(example = "null", value = "{{{template_notificacao_response_tipo_layout_value}}}")
   @JsonProperty("tipoLayout")
   public TipoLayoutEnum getTipoLayout() {
     return tipoLayout;
@@ -126,14 +128,14 @@ public class TemplateNotificacaoDetalheResponse   {
 
   
   /**
-   * Tipo da notifica\u00E7\u00E3o.
+   * {{{template_notificacao_response_tipo_notificacao_value}}}
    **/
   public TemplateNotificacaoDetalheResponse tipoNotificacao(TipoNotificacaoEnum tipoNotificacao) {
     this.tipoNotificacao = tipoNotificacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Tipo da notifica\u00E7\u00E3o.")
+  @ApiModelProperty(example = "null", value = "{{{template_notificacao_response_tipo_notificacao_value}}}")
   @JsonProperty("tipoNotificacao")
   public TipoNotificacaoEnum getTipoNotificacao() {
     return tipoNotificacao;
@@ -144,14 +146,14 @@ public class TemplateNotificacaoDetalheResponse   {
 
   
   /**
-   * Template padr\u00E3o.
+   * {{{template_notificacao_response_template_padrao_value}}}
    **/
   public TemplateNotificacaoDetalheResponse templatePadrao(String templatePadrao) {
     this.templatePadrao = templatePadrao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Template padr\u00E3o.")
+  @ApiModelProperty(example = "null", value = "{{{template_notificacao_response_template_padrao_value}}}")
   @JsonProperty("templatePadrao")
   public String getTemplatePadrao() {
     return templatePadrao;
@@ -162,14 +164,14 @@ public class TemplateNotificacaoDetalheResponse   {
 
   
   /**
-   * Remetente.
+   * {{{template_notificacao_response_remetente_value}}}
    **/
   public TemplateNotificacaoDetalheResponse remetente(String remetente) {
     this.remetente = remetente;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Remetente.")
+  @ApiModelProperty(example = "null", value = "{{{template_notificacao_response_remetente_value}}}")
   @JsonProperty("remetente")
   public String getRemetente() {
     return remetente;
@@ -180,14 +182,14 @@ public class TemplateNotificacaoDetalheResponse   {
 
   
   /**
-   * Assunto do e-mail.
+   * {{{template_notificacao_response_assunto_value}}}
    **/
   public TemplateNotificacaoDetalheResponse assunto(String assunto) {
     this.assunto = assunto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Assunto do e-mail.")
+  @ApiModelProperty(example = "null", value = "{{{template_notificacao_response_assunto_value}}}")
   @JsonProperty("assunto")
   public String getAssunto() {
     return assunto;
@@ -198,14 +200,14 @@ public class TemplateNotificacaoDetalheResponse   {
 
   
   /**
-   * Data da inclus\u00E3o.
+   * {{{template_notificacao_response_data_inclusao_value}}}
    **/
   public TemplateNotificacaoDetalheResponse dataInclusao(String dataInclusao) {
     this.dataInclusao = dataInclusao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data da inclus\u00E3o.")
+  @ApiModelProperty(example = "null", value = "{{{template_notificacao_response_data_inclusao_value}}}")
   @JsonProperty("dataInclusao")
   public String getDataInclusao() {
     return dataInclusao;
@@ -216,14 +218,14 @@ public class TemplateNotificacaoDetalheResponse   {
 
   
   /**
-   * Data altera\u00E7\u00E3o.
+   * {{{template_notificacao_response_data_alteracao_value}}}
    **/
   public TemplateNotificacaoDetalheResponse dataAlteracao(String dataAlteracao) {
     this.dataAlteracao = dataAlteracao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data altera\u00E7\u00E3o.")
+  @ApiModelProperty(example = "null", value = "{{{template_notificacao_response_data_alteracao_value}}}")
   @JsonProperty("dataAlteracao")
   public String getDataAlteracao() {
     return dataAlteracao;
@@ -234,14 +236,14 @@ public class TemplateNotificacaoDetalheResponse   {
 
   
   /**
-   * Conteudo do e-mail.
+   * {{{template_notificacao_detalhe_response_conteudo_value}}}
    **/
   public TemplateNotificacaoDetalheResponse conteudo(String conteudo) {
     this.conteudo = conteudo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Conteudo do e-mail.")
+  @ApiModelProperty(example = "null", value = "{{{template_notificacao_detalhe_response_conteudo_value}}}")
   @JsonProperty("conteudo")
   public String getConteudo() {
     return conteudo;
@@ -308,4 +310,6 @@ public class TemplateNotificacaoDetalheResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

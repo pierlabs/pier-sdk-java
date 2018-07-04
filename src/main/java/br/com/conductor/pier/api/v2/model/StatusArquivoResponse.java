@@ -7,11 +7,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Objeto Response do status arquivo.
+ * {{{status_arquivo_response_description}}}
  **/
 
-@ApiModel(description = "Objeto Response do status arquivo.")
+@ApiModel(description = "{{{status_arquivo_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class StatusArquivoResponse   {
   
@@ -21,14 +23,14 @@ public class StatusArquivoResponse   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do status do arquivo
+   * {{{status_arquivo_response_id_value}}}
    **/
   public StatusArquivoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do status do arquivo")
+  @ApiModelProperty(example = "null", value = "{{{status_arquivo_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -39,14 +41,14 @@ public class StatusArquivoResponse   {
 
   
   /**
-   * Nome do status do arquivo
+   * {{{status_arquivo_response_nome_value}}}
    **/
   public StatusArquivoResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome do status do arquivo")
+  @ApiModelProperty(example = "null", value = "{{{status_arquivo_response_nome_value}}}")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -57,14 +59,14 @@ public class StatusArquivoResponse   {
 
   
   /**
-   * Descri\u00E7\u00E3o do status do arquivo
+   * {{{status_arquivo_response_descricao_value}}}
    **/
   public StatusArquivoResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do status do arquivo")
+  @ApiModelProperty(example = "null", value = "{{{status_arquivo_response_descricao_value}}}")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -117,4 +119,6 @@ public class StatusArquivoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

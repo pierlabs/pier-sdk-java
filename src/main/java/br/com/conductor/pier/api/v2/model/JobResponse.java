@@ -8,11 +8,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Job
+ * {{{job_response_description}}}
  **/
 
-@ApiModel(description = "Job")
+@ApiModel(description = "{{{job_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class JobResponse   {
   
@@ -43,14 +45,14 @@ public class JobResponse   {
 
   
   /**
-   * Identificador do Job
+   * {{{job_response_id_value}}}
    **/
   public JobResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identificador do Job")
+  @ApiModelProperty(example = "null", value = "{{{job_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -61,14 +63,14 @@ public class JobResponse   {
 
   
   /**
-   * Descricao do Job
+   * {{{job_response_descricao_value}}}
    **/
   public JobResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descricao do Job")
+  @ApiModelProperty(example = "null", value = "{{{job_response_descricao_value}}}")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -79,14 +81,14 @@ public class JobResponse   {
 
   
   /**
-   * Script Groovy do Job
+   * {{{job_response_groovy_value}}}
    **/
   public JobResponse groovy(String groovy) {
     this.groovy = groovy;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Script Groovy do Job")
+  @ApiModelProperty(example = "null", value = "{{{job_response_groovy_value}}}")
   @JsonProperty("groovy")
   public String getGroovy() {
     return groovy;
@@ -97,14 +99,14 @@ public class JobResponse   {
 
   
   /**
-   * Cron do Job
+   * {{{job_response_cron_value}}}
    **/
   public JobResponse cron(String cron) {
     this.cron = cron;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Cron do Job")
+  @ApiModelProperty(example = "null", value = "{{{job_response_cron_value}}}")
   @JsonProperty("cron")
   public String getCron() {
     return cron;
@@ -115,14 +117,14 @@ public class JobResponse   {
 
   
   /**
-   * Status do Job no agendador de tarefas
+   * {{{job_response_status_value}}}
    **/
   public JobResponse status(StatusEnum status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Status do Job no agendador de tarefas")
+  @ApiModelProperty(example = "null", value = "{{{job_response_status_value}}}")
   @JsonProperty("status")
   public StatusEnum getStatus() {
     return status;
@@ -179,4 +181,6 @@ public class JobResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

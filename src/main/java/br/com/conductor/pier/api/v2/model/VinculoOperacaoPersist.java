@@ -7,11 +7,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Objeto VinculoOperacao
+ * {{{vinculo_operacao_persist_description}}}
  **/
 
-@ApiModel(description = "Objeto VinculoOperacao")
+@ApiModel(description = "{{{vinculo_operacao_persist_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class VinculoOperacaoPersist   {
   
@@ -21,14 +23,14 @@ public class VinculoOperacaoPersist   {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).
+   * {{{vinculo_operacao_persist_id_produto_value}}}
    **/
   public VinculoOperacaoPersist idProduto(Long idProduto) {
     this.idProduto = idProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).")
+  @ApiModelProperty(example = "null", value = "{{{vinculo_operacao_persist_id_produto_value}}}")
   @JsonProperty("idProduto")
   public Long getIdProduto() {
     return idProduto;
@@ -39,14 +41,14 @@ public class VinculoOperacaoPersist   {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id).
+   * {{{vinculo_operacao_persist_id_operacao_value}}}
    **/
   public VinculoOperacaoPersist idOperacao(Long idOperacao) {
     this.idOperacao = idOperacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id).")
+  @ApiModelProperty(example = "null", value = "{{{vinculo_operacao_persist_id_operacao_value}}}")
   @JsonProperty("idOperacao")
   public Long getIdOperacao() {
     return idOperacao;
@@ -57,14 +59,14 @@ public class VinculoOperacaoPersist   {
 
   
   /**
-   * C\u00F3digo MCC.
+   * {{{vinculo_operacao_persist_codigo_m_c_c_value}}}
    **/
   public VinculoOperacaoPersist codigoMCC(Integer codigoMCC) {
     this.codigoMCC = codigoMCC;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo MCC.")
+  @ApiModelProperty(example = "null", value = "{{{vinculo_operacao_persist_codigo_m_c_c_value}}}")
   @JsonProperty("codigoMCC")
   public Integer getCodigoMCC() {
     return codigoMCC;
@@ -117,4 +119,6 @@ public class VinculoOperacaoPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

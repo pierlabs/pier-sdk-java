@@ -10,11 +10,13 @@ import java.util.List;
 
 
 
+
+
 /**
- * Lista de WebHooks
+ * {{{page_web_hook_response_description}}}
  **/
 
-@ApiModel(description = "Lista de WebHooks")
+@ApiModel(description = "{{{page_web_hook_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageWebHookResponse   {
   
@@ -337,4 +339,6 @@ public class PageWebHookResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

@@ -7,11 +7,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Objeto codigo seguranca
+ * {{{codigo_seguranca_response_description}}}
  **/
 
-@ApiModel(description = "Objeto codigo seguranca")
+@ApiModel(description = "{{{codigo_seguranca_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class CodigoSegurancaResponse   {
   
@@ -24,14 +26,14 @@ public class CodigoSegurancaResponse   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do c\u00F3digo de seguranca (id).
+   * {{{codigo_seguranca_response_id_value}}}
    **/
   public CodigoSegurancaResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do c\u00F3digo de seguranca (id).")
+  @ApiModelProperty(example = "null", value = "{{{codigo_seguranca_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -42,14 +44,14 @@ public class CodigoSegurancaResponse   {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Emissor (idEmissor).
+   * {{{codigo_seguranca_response_id_emissor_value}}}
    **/
   public CodigoSegurancaResponse idEmissor(Long idEmissor) {
     this.idEmissor = idEmissor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Emissor (idEmissor).")
+  @ApiModelProperty(example = "null", value = "{{{codigo_seguranca_response_id_emissor_value}}}")
   @JsonProperty("idEmissor")
   public Long getIdEmissor() {
     return idEmissor;
@@ -60,14 +62,14 @@ public class CodigoSegurancaResponse   {
 
   
   /**
-   * Apresenta o Modo de Envio do C\u00F3digo de Seguran\u00E7a.
+   * {{{codigo_seguranca_response_modo_envio_value}}}
    **/
   public CodigoSegurancaResponse modoEnvio(String modoEnvio) {
     this.modoEnvio = modoEnvio;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o Modo de Envio do C\u00F3digo de Seguran\u00E7a.")
+  @ApiModelProperty(example = "null", value = "{{{codigo_seguranca_response_modo_envio_value}}}")
   @JsonProperty("modoEnvio")
   public String getModoEnvio() {
     return modoEnvio;
@@ -78,14 +80,14 @@ public class CodigoSegurancaResponse   {
 
   
   /**
-   * Apresenta o contato do c\u00F3digo de seguran\u00E7a.
+   * {{{codigo_seguranca_response_contato_value}}}
    **/
   public CodigoSegurancaResponse contato(String contato) {
     this.contato = contato;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o contato do c\u00F3digo de seguran\u00E7a.")
+  @ApiModelProperty(example = "null", value = "{{{codigo_seguranca_response_contato_value}}}")
   @JsonProperty("contato")
   public String getContato() {
     return contato;
@@ -96,14 +98,14 @@ public class CodigoSegurancaResponse   {
 
   
   /**
-   * Apresenta o status do c\u00F3digo de seguran\u00E7a.
+   * {{{codigo_seguranca_response_ativo_value}}}
    **/
   public CodigoSegurancaResponse ativo(Boolean ativo) {
     this.ativo = ativo;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Apresenta o status do c\u00F3digo de seguran\u00E7a.")
+  @ApiModelProperty(example = "false", value = "{{{codigo_seguranca_response_ativo_value}}}")
   @JsonProperty("ativo")
   public Boolean getAtivo() {
     return ativo;
@@ -114,14 +116,14 @@ public class CodigoSegurancaResponse   {
 
   
   /**
-   * Apresenta a data de validade do c\u00F3digo de seguran\u00E7a gerado.
+   * {{{codigo_seguranca_response_data_validade_value}}}
    **/
   public CodigoSegurancaResponse dataValidade(String dataValidade) {
     this.dataValidade = dataValidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta a data de validade do c\u00F3digo de seguran\u00E7a gerado.")
+  @ApiModelProperty(example = "null", value = "{{{codigo_seguranca_response_data_validade_value}}}")
   @JsonProperty("dataValidade")
   public String getDataValidade() {
     return dataValidade;
@@ -180,4 +182,6 @@ public class CodigoSegurancaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

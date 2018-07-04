@@ -8,11 +8,13 @@ import java.math.BigDecimal;
 
 
 
+
+
 /**
- * Objeto Acordo
+ * {{{acordo_response_description}}}
  **/
 
-@ApiModel(description = "Objeto Acordo")
+@ApiModel(description = "{{{acordo_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class AcordoResponse   {
   
@@ -27,14 +29,14 @@ public class AcordoResponse   {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do acordo (id).
+   * {{{acordo_response_id_value}}}
    **/
   public AcordoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do acordo (id).")
+  @ApiModelProperty(example = "null", value = "{{{acordo_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -45,14 +47,14 @@ public class AcordoResponse   {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da conta.
+   * {{{acordo_response_id_conta_value}}}
    **/
   public AcordoResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o da conta.")
+  @ApiModelProperty(example = "null", value = "{{{acordo_response_id_conta_value}}}")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -63,14 +65,14 @@ public class AcordoResponse   {
 
   
   /**
-   * Status do acordo.
+   * {{{acordo_response_status_acordo_value}}}
    **/
   public AcordoResponse statusAcordo(Long statusAcordo) {
     this.statusAcordo = statusAcordo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Status do acordo.")
+  @ApiModelProperty(example = "null", value = "{{{acordo_response_status_acordo_value}}}")
   @JsonProperty("statusAcordo")
   public Long getStatusAcordo() {
     return statusAcordo;
@@ -81,14 +83,14 @@ public class AcordoResponse   {
 
   
   /**
-   * Valor do Acordo.
+   * {{{acordo_response_valor_acordo_value}}}
    **/
   public AcordoResponse valorAcordo(BigDecimal valorAcordo) {
     this.valorAcordo = valorAcordo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor do Acordo.")
+  @ApiModelProperty(example = "null", value = "{{{acordo_response_valor_acordo_value}}}")
   @JsonProperty("valorAcordo")
   public BigDecimal getValorAcordo() {
     return valorAcordo;
@@ -99,14 +101,14 @@ public class AcordoResponse   {
 
   
   /**
-   * Data e Hora do acordo.
+   * {{{acordo_response_data_acordo_value}}}
    **/
   public AcordoResponse dataAcordo(String dataAcordo) {
     this.dataAcordo = dataAcordo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data e Hora do acordo.")
+  @ApiModelProperty(example = "null", value = "{{{acordo_response_data_acordo_value}}}")
   @JsonProperty("dataAcordo")
   public String getDataAcordo() {
     return dataAcordo;
@@ -117,14 +119,14 @@ public class AcordoResponse   {
 
   
   /**
-   * Quantidade de parcelas do acordo.
+   * {{{acordo_response_quantidade_parcelas_value}}}
    **/
   public AcordoResponse quantidadeParcelas(Integer quantidadeParcelas) {
     this.quantidadeParcelas = quantidadeParcelas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Quantidade de parcelas do acordo.")
+  @ApiModelProperty(example = "null", value = "{{{acordo_response_quantidade_parcelas_value}}}")
   @JsonProperty("quantidadeParcelas")
   public Integer getQuantidadeParcelas() {
     return quantidadeParcelas;
@@ -135,14 +137,14 @@ public class AcordoResponse   {
 
   
   /**
-   * Saldo atual final.
+   * {{{acordo_response_saldo_atual_final_value}}}
    **/
   public AcordoResponse saldoAtualFinal(BigDecimal saldoAtualFinal) {
     this.saldoAtualFinal = saldoAtualFinal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Saldo atual final.")
+  @ApiModelProperty(example = "null", value = "{{{acordo_response_saldo_atual_final_value}}}")
   @JsonProperty("saldoAtualFinal")
   public BigDecimal getSaldoAtualFinal() {
     return saldoAtualFinal;
@@ -153,14 +155,14 @@ public class AcordoResponse   {
 
   
   /**
-   * Dias em atraso.
+   * {{{acordo_response_dias_em_atraso_value}}}
    **/
   public AcordoResponse diasEmAtraso(Integer diasEmAtraso) {
     this.diasEmAtraso = diasEmAtraso;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Dias em atraso.")
+  @ApiModelProperty(example = "null", value = "{{{acordo_response_dias_em_atraso_value}}}")
   @JsonProperty("diasEmAtraso")
   public Integer getDiasEmAtraso() {
     return diasEmAtraso;
@@ -223,4 +225,6 @@ public class AcordoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

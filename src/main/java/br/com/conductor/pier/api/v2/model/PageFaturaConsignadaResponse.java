@@ -10,11 +10,13 @@ import java.util.List;
 
 
 
+
+
 /**
- * Lista de faturas
+ * {{{page_fatura_consignada_response_description}}}
  **/
 
-@ApiModel(description = "Lista de faturas")
+@ApiModel(description = "{{{page_fatura_consignada_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageFaturaConsignadaResponse   {
   
@@ -337,4 +339,6 @@ public class PageFaturaConsignadaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

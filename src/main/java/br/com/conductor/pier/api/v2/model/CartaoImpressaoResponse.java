@@ -7,11 +7,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Objeto Cart\u00E3o para Impresso
+ * {{{cartao_impressao_response_description}}}
  **/
 
-@ApiModel(description = "Objeto Cart\u00E3o para Impresso")
+@ApiModel(description = "{{{cartao_impressao_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class CartaoImpressaoResponse   {
   
@@ -42,14 +44,14 @@ public class CartaoImpressaoResponse   {
 
   
   /**
-   * Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence.
+   * {{{cartao_impressao_response_id_conta_value}}}
    **/
   public CartaoImpressaoResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence.")
+  @ApiModelProperty(example = "null", value = "{{{cartao_impressao_response_id_conta_value}}}")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -60,14 +62,14 @@ public class CartaoImpressaoResponse   {
 
   
   /**
-   * Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado.
+   * {{{cartao_impressao_response_id_pessoa_value}}}
    **/
   public CartaoImpressaoResponse idPessoa(Long idPessoa) {
     this.idPessoa = idPessoa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado.")
+  @ApiModelProperty(example = "null", value = "{{{cartao_impressao_response_id_pessoa_value}}}")
   @JsonProperty("idPessoa")
   public Long getIdPessoa() {
     return idPessoa;
@@ -78,14 +80,14 @@ public class CartaoImpressaoResponse   {
 
   
   /**
-   * Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado.
+   * {{{cartao_impressao_response_id_cartao_value}}}
    **/
   public CartaoImpressaoResponse idCartao(Long idCartao) {
     this.idCartao = idCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado.")
+  @ApiModelProperty(example = "null", value = "{{{cartao_impressao_response_id_cartao_value}}}")
   @JsonProperty("idCartao")
   public Long getIdCartao() {
     return idCartao;
@@ -96,14 +98,14 @@ public class CartaoImpressaoResponse   {
 
   
   /**
-   * Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Bandeira (id) a qual o Cart\u00E3o pertence, quando bandeirado.
+   * {{{cartao_impressao_response_id_bandeira_value}}}
    **/
   public CartaoImpressaoResponse idBandeira(Long idBandeira) {
     this.idBandeira = idBandeira;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Bandeira (id) a qual o Cart\u00E3o pertence, quando bandeirado.")
+  @ApiModelProperty(example = "null", value = "{{{cartao_impressao_response_id_bandeira_value}}}")
   @JsonProperty("idBandeira")
   public Long getIdBandeira() {
     return idBandeira;
@@ -114,14 +116,14 @@ public class CartaoImpressaoResponse   {
 
   
   /**
-   * Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id) atribu\u00EDdo ao Cart\u00E3o.
+   * {{{cartao_impressao_response_id_tipo_cartao_value}}}
    **/
   public CartaoImpressaoResponse idTipoCartao(Long idTipoCartao) {
     this.idTipoCartao = idTipoCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id) atribu\u00EDdo ao Cart\u00E3o.")
+  @ApiModelProperty(example = "null", value = "{{{cartao_impressao_response_id_tipo_cartao_value}}}")
   @JsonProperty("idTipoCartao")
   public Long getIdTipoCartao() {
     return idTipoCartao;
@@ -132,14 +134,14 @@ public class CartaoImpressaoResponse   {
 
   
   /**
-   * Apresenta o n\u00FAmero do cart\u00E3o.
+   * {{{cartao_impressao_response_numero_cartao_value}}}
    **/
   public CartaoImpressaoResponse numeroCartao(String numeroCartao) {
     this.numeroCartao = numeroCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o n\u00FAmero do cart\u00E3o.")
+  @ApiModelProperty(example = "null", value = "{{{cartao_impressao_response_numero_cartao_value}}}")
   @JsonProperty("numeroCartao")
   public String getNumeroCartao() {
     return numeroCartao;
@@ -150,14 +152,14 @@ public class CartaoImpressaoResponse   {
 
   
   /**
-   * Apresenta o nome do Portador do Cart\u00E3o.
+   * {{{cartao_impressao_response_nome_plastico_value}}}
    **/
   public CartaoImpressaoResponse nomePlastico(String nomePlastico) {
     this.nomePlastico = nomePlastico;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o nome do Portador do Cart\u00E3o.")
+  @ApiModelProperty(example = "null", value = "{{{cartao_impressao_response_nome_plastico_value}}}")
   @JsonProperty("nomePlastico")
   public String getNomePlastico() {
     return nomePlastico;
@@ -168,14 +170,14 @@ public class CartaoImpressaoResponse   {
 
   
   /**
-   * Apresenta o n\u00FAmero do CVV a ser impresso no Cart\u00E3o
+   * {{{cartao_impressao_response_cvv2_value}}}
    **/
   public CartaoImpressaoResponse cvv2(String cvv2) {
     this.cvv2 = cvv2;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o n\u00FAmero do CVV a ser impresso no Cart\u00E3o")
+  @ApiModelProperty(example = "null", value = "{{{cartao_impressao_response_cvv2_value}}}")
   @JsonProperty("cvv2")
   public String getCvv2() {
     return cvv2;
@@ -186,14 +188,14 @@ public class CartaoImpressaoResponse   {
 
   
   /**
-   * Apresenta a data de emiss\u00E3o do Cart\u00E3o.
+   * {{{cartao_impressao_response_data_geracao_value}}}
    **/
   public CartaoImpressaoResponse dataGeracao(String dataGeracao) {
     this.dataGeracao = dataGeracao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta a data de emiss\u00E3o do Cart\u00E3o.")
+  @ApiModelProperty(example = "null", value = "{{{cartao_impressao_response_data_geracao_value}}}")
   @JsonProperty("dataGeracao")
   public String getDataGeracao() {
     return dataGeracao;
@@ -204,14 +206,14 @@ public class CartaoImpressaoResponse   {
 
   
   /**
-   * Apresenta a data de Validade do Cart\u00E3o.
+   * {{{cartao_impressao_response_data_validade_value}}}
    **/
   public CartaoImpressaoResponse dataValidade(String dataValidade) {
     this.dataValidade = dataValidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta a data de Validade do Cart\u00E3o.")
+  @ApiModelProperty(example = "null", value = "{{{cartao_impressao_response_data_validade_value}}}")
   @JsonProperty("dataValidade")
   public String getDataValidade() {
     return dataValidade;
@@ -222,14 +224,14 @@ public class CartaoImpressaoResponse   {
 
   
   /**
-   * Apresenta o nome da Origem Comercial que realizou o cadastro do Titular da Conta a qual o Cart\u00E3o pertence.
+   * {{{cartao_impressao_response_nome_origem_comercial_value}}}
    **/
   public CartaoImpressaoResponse nomeOrigemComercial(String nomeOrigemComercial) {
     this.nomeOrigemComercial = nomeOrigemComercial;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o nome da Origem Comercial que realizou o cadastro do Titular da Conta a qual o Cart\u00E3o pertence.")
+  @ApiModelProperty(example = "null", value = "{{{cartao_impressao_response_nome_origem_comercial_value}}}")
   @JsonProperty("nomeOrigemComercial")
   public String getNomeOrigemComercial() {
     return nomeOrigemComercial;
@@ -240,14 +242,14 @@ public class CartaoImpressaoResponse   {
 
   
   /**
-   * Apresenta o nome da Empresa (Pessoa Jur\u00EDdica) titular do Cart\u00E3o, quando aplic\u00E1vel.
+   * {{{cartao_impressao_response_nome_empresa_value}}}
    **/
   public CartaoImpressaoResponse nomeEmpresa(String nomeEmpresa) {
     this.nomeEmpresa = nomeEmpresa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o nome da Empresa (Pessoa Jur\u00EDdica) titular do Cart\u00E3o, quando aplic\u00E1vel.")
+  @ApiModelProperty(example = "null", value = "{{{cartao_impressao_response_nome_empresa_value}}}")
   @JsonProperty("nomeEmpresa")
   public String getNomeEmpresa() {
     return nomeEmpresa;
@@ -258,14 +260,14 @@ public class CartaoImpressaoResponse   {
 
   
   /**
-   * Apresenta o n\u00FAmero da Ag\u00EAncia a ser impresso no Cart\u00E3o, quando aplic\u00E1vel.
+   * {{{cartao_impressao_response_numero_agencia_value}}}
    **/
   public CartaoImpressaoResponse numeroAgencia(Integer numeroAgencia) {
     this.numeroAgencia = numeroAgencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o n\u00FAmero da Ag\u00EAncia a ser impresso no Cart\u00E3o, quando aplic\u00E1vel.")
+  @ApiModelProperty(example = "null", value = "{{{cartao_impressao_response_numero_agencia_value}}}")
   @JsonProperty("numeroAgencia")
   public Integer getNumeroAgencia() {
     return numeroAgencia;
@@ -276,14 +278,14 @@ public class CartaoImpressaoResponse   {
 
   
   /**
-   * Apresenta o n\u00FAmero da Conta Corrente a ser impresso no Cart\u00E3o, quando aplic\u00E1vel.
+   * {{{cartao_impressao_response_numero_conta_corente_value}}}
    **/
   public CartaoImpressaoResponse numeroContaCorente(String numeroContaCorente) {
     this.numeroContaCorente = numeroContaCorente;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o n\u00FAmero da Conta Corrente a ser impresso no Cart\u00E3o, quando aplic\u00E1vel.")
+  @ApiModelProperty(example = "null", value = "{{{cartao_impressao_response_numero_conta_corente_value}}}")
   @JsonProperty("numeroContaCorente")
   public String getNumeroContaCorente() {
     return numeroContaCorente;
@@ -294,14 +296,14 @@ public class CartaoImpressaoResponse   {
 
   
   /**
-   * Apresenta o nome da Pessoa F\u00EDsica ou Jur\u00EDdica que contratou servi\u00E7os de benef\u00EDcio para o portador do cart\u00E3o, quando aplic\u00E1vel.
+   * {{{cartao_impressao_response_nome_empresa_beneficio_value}}}
    **/
   public CartaoImpressaoResponse nomeEmpresaBeneficio(String nomeEmpresaBeneficio) {
     this.nomeEmpresaBeneficio = nomeEmpresaBeneficio;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o nome da Pessoa F\u00EDsica ou Jur\u00EDdica que contratou servi\u00E7os de benef\u00EDcio para o portador do cart\u00E3o, quando aplic\u00E1vel.")
+  @ApiModelProperty(example = "null", value = "{{{cartao_impressao_response_nome_empresa_beneficio_value}}}")
   @JsonProperty("nomeEmpresaBeneficio")
   public String getNomeEmpresaBeneficio() {
     return nomeEmpresaBeneficio;
@@ -312,14 +314,14 @@ public class CartaoImpressaoResponse   {
 
   
   /**
-   * Apresenta o CPF do Portador do Cart\u00E3o.
+   * {{{cartao_impressao_response_cpf_value}}}
    **/
   public CartaoImpressaoResponse cpf(String cpf) {
     this.cpf = cpf;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o CPF do Portador do Cart\u00E3o.")
+  @ApiModelProperty(example = "null", value = "{{{cartao_impressao_response_cpf_value}}}")
   @JsonProperty("cpf")
   public String getCpf() {
     return cpf;
@@ -330,14 +332,14 @@ public class CartaoImpressaoResponse   {
 
   
   /**
-   * Apresenta o tipo do Portador do cart\u00E3o, sendo: ('T': Titular, 'A': Adicional).
+   * {{{cartao_impressao_response_tipo_portador_value}}}
    **/
   public CartaoImpressaoResponse tipoPortador(String tipoPortador) {
     this.tipoPortador = tipoPortador;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o tipo do Portador do cart\u00E3o, sendo: ('T': Titular, 'A': Adicional).")
+  @ApiModelProperty(example = "null", value = "{{{cartao_impressao_response_tipo_portador_value}}}")
   @JsonProperty("tipoPortador")
   public String getTipoPortador() {
     return tipoPortador;
@@ -348,14 +350,14 @@ public class CartaoImpressaoResponse   {
 
   
   /**
-   * Apresenta o nome da Pessoa F\u00EDsica ou Jur\u00EDdica a ser impresso no cart\u00E3o, quando aplic\u00E1vel.
+   * {{{cartao_impressao_response_nome_empregador_value}}}
    **/
   public CartaoImpressaoResponse nomeEmpregador(String nomeEmpregador) {
     this.nomeEmpregador = nomeEmpregador;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o nome da Pessoa F\u00EDsica ou Jur\u00EDdica a ser impresso no cart\u00E3o, quando aplic\u00E1vel.")
+  @ApiModelProperty(example = "null", value = "{{{cartao_impressao_response_nome_empregador_value}}}")
   @JsonProperty("nomeEmpregador")
   public String getNomeEmpregador() {
     return nomeEmpregador;
@@ -366,14 +368,14 @@ public class CartaoImpressaoResponse   {
 
   
   /**
-   * Apresenta os dados da Trilha1, seguindo as regras de trilha do emissor.
+   * {{{cartao_impressao_response_trilha1_value}}}
    **/
   public CartaoImpressaoResponse trilha1(String trilha1) {
     this.trilha1 = trilha1;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta os dados da Trilha1, seguindo as regras de trilha do emissor.")
+  @ApiModelProperty(example = "null", value = "{{{cartao_impressao_response_trilha1_value}}}")
   @JsonProperty("trilha1")
   public String getTrilha1() {
     return trilha1;
@@ -384,14 +386,14 @@ public class CartaoImpressaoResponse   {
 
   
   /**
-   * Apresenta os dados da Trilha2, seguindo as regras de trilha do emissor.
+   * {{{cartao_impressao_response_trilha2_value}}}
    **/
   public CartaoImpressaoResponse trilha2(String trilha2) {
     this.trilha2 = trilha2;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta os dados da Trilha2, seguindo as regras de trilha do emissor.")
+  @ApiModelProperty(example = "null", value = "{{{cartao_impressao_response_trilha2_value}}}")
   @JsonProperty("trilha2")
   public String getTrilha2() {
     return trilha2;
@@ -402,14 +404,14 @@ public class CartaoImpressaoResponse   {
 
   
   /**
-   * Apresenta os dados da TrilhaCVV01, seguindo as regras de trilha do emissor.
+   * {{{cartao_impressao_response_trilha_c_v_v1_value}}}
    **/
   public CartaoImpressaoResponse trilhaCVV1(String trilhaCVV1) {
     this.trilhaCVV1 = trilhaCVV1;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta os dados da TrilhaCVV01, seguindo as regras de trilha do emissor.")
+  @ApiModelProperty(example = "null", value = "{{{cartao_impressao_response_trilha_c_v_v1_value}}}")
   @JsonProperty("trilhaCVV1")
   public String getTrilhaCVV1() {
     return trilhaCVV1;
@@ -420,14 +422,14 @@ public class CartaoImpressaoResponse   {
 
   
   /**
-   * Apresenta os dados da TrilhaCVV02, seguindo as regras de trilha do emissor.
+   * {{{cartao_impressao_response_trilha_c_v_v2_value}}}
    **/
   public CartaoImpressaoResponse trilhaCVV2(String trilhaCVV2) {
     this.trilhaCVV2 = trilhaCVV2;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta os dados da TrilhaCVV02, seguindo as regras de trilha do emissor.")
+  @ApiModelProperty(example = "null", value = "{{{cartao_impressao_response_trilha_c_v_v2_value}}}")
   @JsonProperty("trilhaCVV2")
   public String getTrilhaCVV2() {
     return trilhaCVV2;
@@ -438,14 +440,14 @@ public class CartaoImpressaoResponse   {
 
   
   /**
-   * Apresenta o status que informa se o cart\u00E3o \u00E9 virtual 
+   * {{{cartao_impressao_response_flag_virtual_value}}}
    **/
   public CartaoImpressaoResponse flagVirtual(Integer flagVirtual) {
     this.flagVirtual = flagVirtual;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o status que informa se o cart\u00E3o \u00E9 virtual ")
+  @ApiModelProperty(example = "null", value = "{{{cartao_impressao_response_flag_virtual_value}}}")
   @JsonProperty("flagVirtual")
   public Integer getFlagVirtual() {
     return flagVirtual;
@@ -456,14 +458,14 @@ public class CartaoImpressaoResponse   {
 
   
   /**
-   * Apresenta o numero da hash do cart\u00E3o 
+   * {{{cartao_impressao_response_numero_cartao_hash_value}}}
    **/
   public CartaoImpressaoResponse numeroCartaoHash(Long numeroCartaoHash) {
     this.numeroCartaoHash = numeroCartaoHash;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o numero da hash do cart\u00E3o ")
+  @ApiModelProperty(example = "null", value = "{{{cartao_impressao_response_numero_cartao_hash_value}}}")
   @JsonProperty("numeroCartaoHash")
   public Long getNumeroCartaoHash() {
     return numeroCartaoHash;
@@ -558,4 +560,6 @@ public class CartaoImpressaoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

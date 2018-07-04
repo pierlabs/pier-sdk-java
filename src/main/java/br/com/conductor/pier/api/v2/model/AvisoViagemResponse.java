@@ -7,11 +7,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Representa\u00E7\u00E3o da resposta do recurso aviso viagens
+ * {{{aviso_viagem_response_description}}}
  **/
 
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso aviso viagens")
+@ApiModel(description = "{{{aviso_viagem_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class AvisoViagemResponse   {
   
@@ -24,14 +26,14 @@ public class AvisoViagemResponse   {
 
   
   /**
-   * C\u00F3digo identificador \u00FAnico do aviso viagem na base (id)
+   * {{{aviso_viagem_response_id_value}}}
    **/
   public AvisoViagemResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador \u00FAnico do aviso viagem na base (id)")
+  @ApiModelProperty(example = "null", value = "{{{aviso_viagem_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -42,14 +44,14 @@ public class AvisoViagemResponse   {
 
   
   /**
-   * C\u00F3digo identificador do cart\u00E3o na base (id)
+   * {{{aviso_viagem_response_id_cartao_value}}}
    **/
   public AvisoViagemResponse idCartao(Long idCartao) {
     this.idCartao = idCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador do cart\u00E3o na base (id)")
+  @ApiModelProperty(example = "null", value = "{{{aviso_viagem_response_id_cartao_value}}}")
   @JsonProperty("idCartao")
   public Long getIdCartao() {
     return idCartao;
@@ -60,14 +62,14 @@ public class AvisoViagemResponse   {
 
   
   /**
-   * Codigo identificador do pa\u00EDs na base (id)
+   * {{{aviso_viagem_response_codigo_pais_value}}}
    **/
   public AvisoViagemResponse codigoPais(String codigoPais) {
     this.codigoPais = codigoPais;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Codigo identificador do pa\u00EDs na base (id)")
+  @ApiModelProperty(example = "null", value = "{{{aviso_viagem_response_codigo_pais_value}}}")
   @JsonProperty("codigoPais")
   public String getCodigoPais() {
     return codigoPais;
@@ -78,14 +80,14 @@ public class AvisoViagemResponse   {
 
   
   /**
-   * Data inicio do aviso viagem
+   * {{{aviso_viagem_response_data_inicio_value}}}
    **/
   public AvisoViagemResponse dataInicio(String dataInicio) {
     this.dataInicio = dataInicio;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data inicio do aviso viagem")
+  @ApiModelProperty(example = "null", value = "{{{aviso_viagem_response_data_inicio_value}}}")
   @JsonProperty("dataInicio")
   public String getDataInicio() {
     return dataInicio;
@@ -96,14 +98,14 @@ public class AvisoViagemResponse   {
 
   
   /**
-   * Data fim do aviso viagem
+   * {{{aviso_viagem_response_data_fim_value}}}
    **/
   public AvisoViagemResponse dataFim(String dataFim) {
     this.dataFim = dataFim;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data fim do aviso viagem")
+  @ApiModelProperty(example = "null", value = "{{{aviso_viagem_response_data_fim_value}}}")
   @JsonProperty("dataFim")
   public String getDataFim() {
     return dataFim;
@@ -114,14 +116,14 @@ public class AvisoViagemResponse   {
 
   
   /**
-   * Identifica se o aviso viagem esta ativo ou n\u00E3o
+   * {{{aviso_viagem_response_flag_ativo_value}}}
    **/
   public AvisoViagemResponse flagAtivo(Integer flagAtivo) {
     this.flagAtivo = flagAtivo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identifica se o aviso viagem esta ativo ou n\u00E3o")
+  @ApiModelProperty(example = "null", value = "{{{aviso_viagem_response_flag_ativo_value}}}")
   @JsonProperty("flagAtivo")
   public Integer getFlagAtivo() {
     return flagAtivo;
@@ -180,4 +182,6 @@ public class AvisoViagemResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

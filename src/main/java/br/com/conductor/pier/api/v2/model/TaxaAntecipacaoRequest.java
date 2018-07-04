@@ -9,11 +9,13 @@ import java.math.BigDecimal;
 
 
 
+
+
 /**
- * Objeto de Requisi\u00E7\u00E3o de Taxa de Antecipa\u00E7\u00E3o
+ * {{{taxa_antecipacao_request_description}}}
  **/
 
-@ApiModel(description = "Objeto de Requisi\u00E7\u00E3o de Taxa de Antecipa\u00E7\u00E3o")
+@ApiModel(description = "{{{taxa_antecipacao_request_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TaxaAntecipacaoRequest   {
   
@@ -41,14 +43,14 @@ public class TaxaAntecipacaoRequest   {
 
   
   /**
-   * C\u00F3digo que identifica se um par\u00E2metro refere-se a uma transa\u00E7\u00E3o On-Us ou Off-Us.
+   * {{{taxa_antecipacao_request_tipo_transacao_value}}}
    **/
   public TaxaAntecipacaoRequest tipoTransacao(TipoTransacaoEnum tipoTransacao) {
     this.tipoTransacao = tipoTransacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo que identifica se um par\u00E2metro refere-se a uma transa\u00E7\u00E3o On-Us ou Off-Us.")
+  @ApiModelProperty(example = "null", value = "{{{taxa_antecipacao_request_tipo_transacao_value}}}")
   @JsonProperty("tipoTransacao")
   public TipoTransacaoEnum getTipoTransacao() {
     return tipoTransacao;
@@ -59,14 +61,14 @@ public class TaxaAntecipacaoRequest   {
 
   
   /**
-   * Valor da Taxa de Antecipa\u00E7\u00E3o.
+   * {{{taxa_antecipacao_request_valor_taxa_value}}}
    **/
   public TaxaAntecipacaoRequest valorTaxa(BigDecimal valorTaxa) {
     this.valorTaxa = valorTaxa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor da Taxa de Antecipa\u00E7\u00E3o.")
+  @ApiModelProperty(example = "null", value = "{{{taxa_antecipacao_request_valor_taxa_value}}}")
   @JsonProperty("valorTaxa")
   public BigDecimal getValorTaxa() {
     return valorTaxa;
@@ -117,4 +119,6 @@ public class TaxaAntecipacaoRequest   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

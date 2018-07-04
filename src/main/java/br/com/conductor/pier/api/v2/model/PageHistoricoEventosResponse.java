@@ -10,11 +10,13 @@ import java.util.List;
 
 
 
+
+
 /**
- * Lista de historivoEventos
+ * {{{page_historico_eventos_response_description}}}
  **/
 
-@ApiModel(description = "Lista de historivoEventos")
+@ApiModel(description = "{{{page_historico_eventos_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageHistoricoEventosResponse   {
   
@@ -337,4 +339,6 @@ public class PageHistoricoEventosResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

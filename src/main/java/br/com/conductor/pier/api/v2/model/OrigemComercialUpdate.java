@@ -8,11 +8,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Par\u00E2metros de requisi\u00E7\u00E3o para alterar origem comercial
+ * {{{origem_comercial_update_description}}}
  **/
 
-@ApiModel(description = "Par\u00E2metros de requisi\u00E7\u00E3o para alterar origem comercial")
+@ApiModel(description = "{{{origem_comercial_update_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class OrigemComercialUpdate   {
   
@@ -60,14 +62,14 @@ public class OrigemComercialUpdate   {
 
   
   /**
-   * Nome da origem comercial
+   * {{{origem_comercial_update_nome_value}}}
    **/
   public OrigemComercialUpdate nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "COMÉRCIO LTDA", value = "Nome da origem comercial")
+  @ApiModelProperty(example = "COMÉRCIO LTDA", value = "{{{origem_comercial_update_nome_value}}}")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -78,14 +80,14 @@ public class OrigemComercialUpdate   {
 
   
   /**
-   * Descri\u00E7\u00E3o da origem comercial
+   * {{{origem_comercial_update_descricao_value}}}
    **/
   public OrigemComercialUpdate descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "DESCRIÇÃO DA ORIGEM COMERCIAL", value = "Descri\u00E7\u00E3o da origem comercial")
+  @ApiModelProperty(example = "DESCRIÇÃO DA ORIGEM COMERCIAL", value = "{{{origem_comercial_update_descricao_value}}}")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -96,14 +98,14 @@ public class OrigemComercialUpdate   {
 
   
   /**
-   * Identificador do estabelecimento
+   * {{{origem_comercial_update_id_estabelecimento_value}}}
    **/
   public OrigemComercialUpdate idEstabelecimento(Long idEstabelecimento) {
     this.idEstabelecimento = idEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "10", value = "Identificador do estabelecimento")
+  @ApiModelProperty(example = "10", value = "{{{origem_comercial_update_id_estabelecimento_value}}}")
   @JsonProperty("idEstabelecimento")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
@@ -114,14 +116,14 @@ public class OrigemComercialUpdate   {
 
   
   /**
-   * Identificador do tipo de origem comercial
+   * {{{origem_comercial_update_id_tipo_origem_comercial_value}}}
    **/
   public OrigemComercialUpdate idTipoOrigemComercial(Long idTipoOrigemComercial) {
     this.idTipoOrigemComercial = idTipoOrigemComercial;
     return this;
   }
   
-  @ApiModelProperty(example = "1", value = "Identificador do tipo de origem comercial")
+  @ApiModelProperty(example = "1", value = "{{{origem_comercial_update_id_tipo_origem_comercial_value}}}")
   @JsonProperty("idTipoOrigemComercial")
   public Long getIdTipoOrigemComercial() {
     return idTipoOrigemComercial;
@@ -132,14 +134,14 @@ public class OrigemComercialUpdate   {
 
   
   /**
-   * Identificador do grupo de origem comercial
+   * {{{origem_comercial_update_id_grupo_origem_comercial_value}}}
    **/
   public OrigemComercialUpdate idGrupoOrigemComercial(Long idGrupoOrigemComercial) {
     this.idGrupoOrigemComercial = idGrupoOrigemComercial;
     return this;
   }
   
-  @ApiModelProperty(example = "1", value = "Identificador do grupo de origem comercial")
+  @ApiModelProperty(example = "1", value = "{{{origem_comercial_update_id_grupo_origem_comercial_value}}}")
   @JsonProperty("idGrupoOrigemComercial")
   public Long getIdGrupoOrigemComercial() {
     return idGrupoOrigemComercial;
@@ -150,14 +152,14 @@ public class OrigemComercialUpdate   {
 
   
   /**
-   * Indica o status da origem comercial
+   * {{{origem_comercial_update_status_value}}}
    **/
   public OrigemComercialUpdate status(Integer status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "1", value = "Indica o status da origem comercial")
+  @ApiModelProperty(example = "1", value = "{{{origem_comercial_update_status_value}}}")
   @JsonProperty("status")
   public Integer getStatus() {
     return status;
@@ -168,14 +170,14 @@ public class OrigemComercialUpdate   {
 
   
   /**
-   * Indica se permite pr\u00E9 aprova\u00E7\u00E3o
+   * {{{origem_comercial_update_flag_pre_aprovado_value}}}
    **/
   public OrigemComercialUpdate flagPreAprovado(Boolean flagPreAprovado) {
     this.flagPreAprovado = flagPreAprovado;
     return this;
   }
   
-  @ApiModelProperty(example = "true", value = "Indica se permite pr\u00E9 aprova\u00E7\u00E3o")
+  @ApiModelProperty(example = "true", value = "{{{origem_comercial_update_flag_pre_aprovado_value}}}")
   @JsonProperty("flagPreAprovado")
   public Boolean getFlagPreAprovado() {
     return flagPreAprovado;
@@ -186,14 +188,14 @@ public class OrigemComercialUpdate   {
 
   
   /**
-   * Indica se permite aprova\u00E7\u00E3o imediata
+   * {{{origem_comercial_update_flag_aprovacao_imediata_value}}}
    **/
   public OrigemComercialUpdate flagAprovacaoImediata(Boolean flagAprovacaoImediata) {
     this.flagAprovacaoImediata = flagAprovacaoImediata;
     return this;
   }
   
-  @ApiModelProperty(example = "true", value = "Indica se permite aprova\u00E7\u00E3o imediata")
+  @ApiModelProperty(example = "true", value = "{{{origem_comercial_update_flag_aprovacao_imediata_value}}}")
   @JsonProperty("flagAprovacaoImediata")
   public Boolean getFlagAprovacaoImediata() {
     return flagAprovacaoImediata;
@@ -204,14 +206,14 @@ public class OrigemComercialUpdate   {
 
   
   /**
-   * Nome fantasia impresso no pl\u00E1stico
+   * {{{origem_comercial_update_nome_fantasia_plastico_value}}}
    **/
   public OrigemComercialUpdate nomeFantasiaPlastico(String nomeFantasiaPlastico) {
     this.nomeFantasiaPlastico = nomeFantasiaPlastico;
     return this;
   }
   
-  @ApiModelProperty(example = "COMÉRCIO LTDA", value = "Nome fantasia impresso no pl\u00E1stico")
+  @ApiModelProperty(example = "COMÉRCIO LTDA", value = "{{{origem_comercial_update_nome_fantasia_plastico_value}}}")
   @JsonProperty("nomeFantasiaPlastico")
   public String getNomeFantasiaPlastico() {
     return nomeFantasiaPlastico;
@@ -222,14 +224,14 @@ public class OrigemComercialUpdate   {
 
   
   /**
-   * Indica se permite cart\u00E3o provis\u00F3rio
+   * {{{origem_comercial_update_flag_cartao_provisorio_value}}}
    **/
   public OrigemComercialUpdate flagCartaoProvisorio(Boolean flagCartaoProvisorio) {
     this.flagCartaoProvisorio = flagCartaoProvisorio;
     return this;
   }
   
-  @ApiModelProperty(example = "true", value = "Indica se permite cart\u00E3o provis\u00F3rio")
+  @ApiModelProperty(example = "true", value = "{{{origem_comercial_update_flag_cartao_provisorio_value}}}")
   @JsonProperty("flagCartaoProvisorio")
   public Boolean getFlagCartaoProvisorio() {
     return flagCartaoProvisorio;
@@ -240,14 +242,14 @@ public class OrigemComercialUpdate   {
 
   
   /**
-   * Indica se permite cart\u00E3o definitivo
+   * {{{origem_comercial_update_flag_cartao_definitivo_value}}}
    **/
   public OrigemComercialUpdate flagCartaoDefinitivo(Boolean flagCartaoDefinitivo) {
     this.flagCartaoDefinitivo = flagCartaoDefinitivo;
     return this;
   }
   
-  @ApiModelProperty(example = "true", value = "Indica se permite cart\u00E3o definitivo")
+  @ApiModelProperty(example = "true", value = "{{{origem_comercial_update_flag_cartao_definitivo_value}}}")
   @JsonProperty("flagCartaoDefinitivo")
   public Boolean getFlagCartaoDefinitivo() {
     return flagCartaoDefinitivo;
@@ -258,14 +260,14 @@ public class OrigemComercialUpdate   {
 
   
   /**
-   * Usu\u00E1rio para autentica\u00E7\u00E3o
+   * {{{origem_comercial_update_usuario_value}}}
    **/
   public OrigemComercialUpdate usuario(String usuario) {
     this.usuario = usuario;
     return this;
   }
   
-  @ApiModelProperty(example = "usuario01", value = "Usu\u00E1rio para autentica\u00E7\u00E3o")
+  @ApiModelProperty(example = "usuario01", value = "{{{origem_comercial_update_usuario_value}}}")
   @JsonProperty("usuario")
   public String getUsuario() {
     return usuario;
@@ -276,14 +278,14 @@ public class OrigemComercialUpdate   {
 
   
   /**
-   * Senha para autentica\u00E7\u00E3o
+   * {{{origem_comercial_update_senha_value}}}
    **/
   public OrigemComercialUpdate senha(String senha) {
     this.senha = senha;
     return this;
   }
   
-  @ApiModelProperty(example = "21031408", value = "Senha para autentica\u00E7\u00E3o")
+  @ApiModelProperty(example = "21031408", value = "{{{origem_comercial_update_senha_value}}}")
   @JsonProperty("senha")
   public String getSenha() {
     return senha;
@@ -294,14 +296,14 @@ public class OrigemComercialUpdate   {
 
   
   /**
-   * Indica se \u00E9 origem externa
+   * {{{origem_comercial_update_flag_origem_externa_value}}}
    **/
   public OrigemComercialUpdate flagOrigemExterna(Boolean flagOrigemExterna) {
     this.flagOrigemExterna = flagOrigemExterna;
     return this;
   }
   
-  @ApiModelProperty(example = "true", value = "Indica se \u00E9 origem externa")
+  @ApiModelProperty(example = "true", value = "{{{origem_comercial_update_flag_origem_externa_value}}}")
   @JsonProperty("flagOrigemExterna")
   public Boolean getFlagOrigemExterna() {
     return flagOrigemExterna;
@@ -312,14 +314,14 @@ public class OrigemComercialUpdate   {
 
   
   /**
-   * Indica se h\u00E1 modifica\u00E7\u00E3o
+   * {{{origem_comercial_update_flag_modificado_value}}}
    **/
   public OrigemComercialUpdate flagModificado(Boolean flagModificado) {
     this.flagModificado = flagModificado;
     return this;
   }
   
-  @ApiModelProperty(example = "true", value = "Indica se h\u00E1 modifica\u00E7\u00E3o")
+  @ApiModelProperty(example = "true", value = "{{{origem_comercial_update_flag_modificado_value}}}")
   @JsonProperty("flagModificado")
   public Boolean getFlagModificado() {
     return flagModificado;
@@ -330,14 +332,14 @@ public class OrigemComercialUpdate   {
 
   
   /**
-   * Indica se envia fatura
+   * {{{origem_comercial_update_flag_envia_fatura_usuario_value}}}
    **/
   public OrigemComercialUpdate flagEnviaFaturaUsuario(Boolean flagEnviaFaturaUsuario) {
     this.flagEnviaFaturaUsuario = flagEnviaFaturaUsuario;
     return this;
   }
   
-  @ApiModelProperty(example = "true", value = "Indica se envia fatura")
+  @ApiModelProperty(example = "true", value = "{{{origem_comercial_update_flag_envia_fatura_usuario_value}}}")
   @JsonProperty("flagEnviaFaturaUsuario")
   public Boolean getFlagEnviaFaturaUsuario() {
     return flagEnviaFaturaUsuario;
@@ -348,14 +350,14 @@ public class OrigemComercialUpdate   {
 
   
   /**
-   * Indica se permite cr\u00E9dito de faturamento
+   * {{{origem_comercial_update_flag_credito_faturamento_value}}}
    **/
   public OrigemComercialUpdate flagCreditoFaturamento(Boolean flagCreditoFaturamento) {
     this.flagCreditoFaturamento = flagCreditoFaturamento;
     return this;
   }
   
-  @ApiModelProperty(example = "true", value = "Indica se permite cr\u00E9dito de faturamento")
+  @ApiModelProperty(example = "true", value = "{{{origem_comercial_update_flag_credito_faturamento_value}}}")
   @JsonProperty("flagCreditoFaturamento")
   public Boolean getFlagCreditoFaturamento() {
     return flagCreditoFaturamento;
@@ -366,14 +368,14 @@ public class OrigemComercialUpdate   {
 
   
   /**
-   * Indica se concede limite provis\u00F3rio
+   * {{{origem_comercial_update_flag_concede_limite_provisorio_value}}}
    **/
   public OrigemComercialUpdate flagConcedeLimiteProvisorio(Boolean flagConcedeLimiteProvisorio) {
     this.flagConcedeLimiteProvisorio = flagConcedeLimiteProvisorio;
     return this;
   }
   
-  @ApiModelProperty(example = "true", value = "Indica se concede limite provis\u00F3rio")
+  @ApiModelProperty(example = "true", value = "{{{origem_comercial_update_flag_concede_limite_provisorio_value}}}")
   @JsonProperty("flagConcedeLimiteProvisorio")
   public Boolean getFlagConcedeLimiteProvisorio() {
     return flagConcedeLimiteProvisorio;
@@ -384,14 +386,14 @@ public class OrigemComercialUpdate   {
 
   
   /**
-   * Indica se digitaliza documento
+   * {{{origem_comercial_update_flag_digitalizar_doc_value}}}
    **/
   public OrigemComercialUpdate flagDigitalizarDoc(Boolean flagDigitalizarDoc) {
     this.flagDigitalizarDoc = flagDigitalizarDoc;
     return this;
   }
   
-  @ApiModelProperty(example = "true", value = "Indica se digitaliza documento")
+  @ApiModelProperty(example = "true", value = "{{{origem_comercial_update_flag_digitalizar_doc_value}}}")
   @JsonProperty("flagDigitalizarDoc")
   public Boolean getFlagDigitalizarDoc() {
     return flagDigitalizarDoc;
@@ -402,14 +404,14 @@ public class OrigemComercialUpdate   {
 
   
   /**
-   * Indica se realiza embossing em loja
+   * {{{origem_comercial_update_flag_embossing_loja_value}}}
    **/
   public OrigemComercialUpdate flagEmbossingLoja(Boolean flagEmbossingLoja) {
     this.flagEmbossingLoja = flagEmbossingLoja;
     return this;
   }
   
-  @ApiModelProperty(example = "true", value = "Indica se realiza embossing em loja")
+  @ApiModelProperty(example = "true", value = "{{{origem_comercial_update_flag_embossing_loja_value}}}")
   @JsonProperty("flagEmbossingLoja")
   public Boolean getFlagEmbossingLoja() {
     return flagEmbossingLoja;
@@ -420,14 +422,14 @@ public class OrigemComercialUpdate   {
 
   
   /**
-   * Indica se realiza consulta pr\u00E9via
+   * {{{origem_comercial_update_flag_consulta_previa_value}}}
    **/
   public OrigemComercialUpdate flagConsultaPrevia(Boolean flagConsultaPrevia) {
     this.flagConsultaPrevia = flagConsultaPrevia;
     return this;
   }
   
-  @ApiModelProperty(example = "true", value = "Indica se realiza consulta pr\u00E9via")
+  @ApiModelProperty(example = "true", value = "{{{origem_comercial_update_flag_consulta_previa_value}}}")
   @JsonProperty("flagConsultaPrevia")
   public Boolean getFlagConsultaPrevia() {
     return flagConsultaPrevia;
@@ -438,14 +440,14 @@ public class OrigemComercialUpdate   {
 
   
   /**
-   * Tipo de pessoa
+   * {{{origem_comercial_update_tipo_pessoa_value}}}
    **/
   public OrigemComercialUpdate tipoPessoa(TipoPessoaEnum tipoPessoa) {
     this.tipoPessoa = tipoPessoa;
     return this;
   }
   
-  @ApiModelProperty(example = "PESSOA_FISICA", value = "Tipo de pessoa")
+  @ApiModelProperty(example = "PESSOA_FISICA", value = "{{{origem_comercial_update_tipo_pessoa_value}}}")
   @JsonProperty("tipoPessoa")
   public TipoPessoaEnum getTipoPessoa() {
     return tipoPessoa;
@@ -536,4 +538,6 @@ public class OrigemComercialUpdate   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

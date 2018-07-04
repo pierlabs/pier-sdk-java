@@ -10,11 +10,13 @@ import java.util.List;
 
 
 
+
+
 /**
- * P\u00E1gina de resposta da listagem de cart\u00F5es tokenizados
+ * {{{page_cartao_pay_response_description}}}
  **/
 
-@ApiModel(description = "P\u00E1gina de resposta da listagem de cart\u00F5es tokenizados")
+@ApiModel(description = "{{{page_cartao_pay_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageCartaoPayResponse   {
   
@@ -337,4 +339,6 @@ public class PageCartaoPayResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

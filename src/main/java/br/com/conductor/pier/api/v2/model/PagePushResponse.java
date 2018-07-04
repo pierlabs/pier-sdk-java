@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v2.model.NotificacaoPushResponse;
+import br.com.conductor.pier.api.v2.model.NotificacaoPushResponseValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -10,15 +10,17 @@ import java.util.List;
 
 
 
+
+
 /**
- * Lista de Push
+ * {{{page_push_response_description}}}
  **/
 
-@ApiModel(description = "Lista de Push")
+@ApiModel(description = "{{{page_push_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PagePushResponse   {
   
-  private List<NotificacaoPushResponse> content = new ArrayList<NotificacaoPushResponse>();
+  private List<NotificacaoPushResponseValue> content = new ArrayList<NotificacaoPushResponseValue>();
   private Boolean first = null;
   private Boolean firstPage = null;
   private Boolean hasContent = null;
@@ -36,17 +38,17 @@ public class PagePushResponse   {
   
   /**
    **/
-  public PagePushResponse content(List<NotificacaoPushResponse> content) {
+  public PagePushResponse content(List<NotificacaoPushResponseValue> content) {
     this.content = content;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("content")
-  public List<NotificacaoPushResponse> getContent() {
+  public List<NotificacaoPushResponseValue> getContent() {
     return content;
   }
-  public void setContent(List<NotificacaoPushResponse> content) {
+  public void setContent(List<NotificacaoPushResponseValue> content) {
     this.content = content;
   }
 
@@ -337,4 +339,6 @@ public class PagePushResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

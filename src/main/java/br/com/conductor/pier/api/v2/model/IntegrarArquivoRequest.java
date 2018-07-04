@@ -7,11 +7,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Objeto de requisi\u00E7\u00E3o da integra\u00E7\u00E3o de Arquivos.
+ * {{{integrar_arquivo_request_description}}}
  **/
 
-@ApiModel(description = "Objeto de requisi\u00E7\u00E3o da integra\u00E7\u00E3o de Arquivos.")
+@ApiModel(description = "{{{integrar_arquivo_request_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class IntegrarArquivoRequest   {
   
@@ -19,14 +21,14 @@ public class IntegrarArquivoRequest   {
 
   
   /**
-   * N\u00FAmero Receita Federal (CPF) vinculado a um ou mais arquivos que ser\u00E3o enviados para realizar integra\u00E7\u00E3o
+   * {{{integrar_arquivo_request_numero_receita_federal_value}}}
    **/
   public IntegrarArquivoRequest numeroReceitaFederal(String numeroReceitaFederal) {
     this.numeroReceitaFederal = numeroReceitaFederal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00FAmero Receita Federal (CPF) vinculado a um ou mais arquivos que ser\u00E3o enviados para realizar integra\u00E7\u00E3o")
+  @ApiModelProperty(example = "null", value = "{{{integrar_arquivo_request_numero_receita_federal_value}}}")
   @JsonProperty("numeroReceitaFederal")
   public String getNumeroReceitaFederal() {
     return numeroReceitaFederal;
@@ -75,4 +77,6 @@ public class IntegrarArquivoRequest   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

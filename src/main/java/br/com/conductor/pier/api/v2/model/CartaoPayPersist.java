@@ -7,11 +7,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Representa\u00E7\u00E3o do recurso atualizar cart\u00E3o
+ * {{{cartao_pay_persist_description}}}
  **/
 
-@ApiModel(description = "Representa\u00E7\u00E3o do recurso atualizar cart\u00E3o")
+@ApiModel(description = "{{{cartao_pay_persist_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class CartaoPayPersist   {
   
@@ -24,14 +26,14 @@ public class CartaoPayPersist   {
 
   
   /**
-   * N\u00FAmero do cart\u00E3o criptografado
+   * {{{cartao_pay_persist_numero_cartao_value}}}
    **/
   public CartaoPayPersist numeroCartao(String numeroCartao) {
     this.numeroCartao = numeroCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "N\u00FAmero do cart\u00E3o criptografado")
+  @ApiModelProperty(example = "null", required = true, value = "{{{cartao_pay_persist_numero_cartao_value}}}")
   @JsonProperty("numeroCartao")
   public String getNumeroCartao() {
     return numeroCartao;
@@ -42,14 +44,14 @@ public class CartaoPayPersist   {
 
   
   /**
-   * Data de validade do cart\u00E3o
+   * {{{cartao_pay_persist_data_validade_value}}}
    **/
   public CartaoPayPersist dataValidade(String dataValidade) {
     this.dataValidade = dataValidade;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data de validade do cart\u00E3o")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{cartao_pay_persist_data_validade_value}}}")
   @JsonProperty("dataValidade")
   public String getDataValidade() {
     return dataValidade;
@@ -60,14 +62,14 @@ public class CartaoPayPersist   {
 
   
   /**
-   * CVV do cart\u00E3o criptografado
+   * {{{cartao_pay_persist_cvv_value}}}
    **/
   public CartaoPayPersist cvv(String cvv) {
     this.cvv = cvv;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "CVV do cart\u00E3o criptografado")
+  @ApiModelProperty(example = "null", value = "{{{cartao_pay_persist_cvv_value}}}")
   @JsonProperty("cvv")
   public String getCvv() {
     return cvv;
@@ -78,14 +80,14 @@ public class CartaoPayPersist   {
 
   
   /**
-   * CPF do portador do cart\u00E3o criptografado
+   * {{{cartao_pay_persist_numero_receita_federal_value}}}
    **/
   public CartaoPayPersist numeroReceitaFederal(String numeroReceitaFederal) {
     this.numeroReceitaFederal = numeroReceitaFederal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "CPF do portador do cart\u00E3o criptografado")
+  @ApiModelProperty(example = "null", value = "{{{cartao_pay_persist_numero_receita_federal_value}}}")
   @JsonProperty("numeroReceitaFederal")
   public String getNumeroReceitaFederal() {
     return numeroReceitaFederal;
@@ -96,14 +98,14 @@ public class CartaoPayPersist   {
 
   
   /**
-   * Nome impresso no cart\u00E3o criptografado
+   * {{{cartao_pay_persist_nome_impresso_value}}}
    **/
   public CartaoPayPersist nomeImpresso(String nomeImpresso) {
     this.nomeImpresso = nomeImpresso;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome impresso no cart\u00E3o criptografado")
+  @ApiModelProperty(example = "null", value = "{{{cartao_pay_persist_nome_impresso_value}}}")
   @JsonProperty("nomeImpresso")
   public String getNomeImpresso() {
     return nomeImpresso;
@@ -114,14 +116,14 @@ public class CartaoPayPersist   {
 
   
   /**
-   * Chave p\u00FAblica do dispositivo criptografada
+   * {{{cartao_pay_persist_chave_publica_device_value}}}
    **/
   public CartaoPayPersist chavePublicaDevice(String chavePublicaDevice) {
     this.chavePublicaDevice = chavePublicaDevice;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Chave p\u00FAblica do dispositivo criptografada")
+  @ApiModelProperty(example = "null", required = true, value = "{{{cartao_pay_persist_chave_publica_device_value}}}")
   @JsonProperty("chavePublicaDevice")
   public String getChavePublicaDevice() {
     return chavePublicaDevice;
@@ -180,4 +182,6 @@ public class CartaoPayPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

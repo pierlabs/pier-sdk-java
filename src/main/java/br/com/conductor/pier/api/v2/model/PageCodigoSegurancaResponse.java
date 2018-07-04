@@ -10,11 +10,13 @@ import java.util.List;
 
 
 
+
+
 /**
- * Lista de C\u00F3digos de Seguran\u00E7a
+ * {{{page_codigo_seguranca_response_description}}}
  **/
 
-@ApiModel(description = "Lista de C\u00F3digos de Seguran\u00E7a")
+@ApiModel(description = "{{{page_codigo_seguranca_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageCodigoSegurancaResponse   {
   
@@ -337,4 +339,6 @@ public class PageCodigoSegurancaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

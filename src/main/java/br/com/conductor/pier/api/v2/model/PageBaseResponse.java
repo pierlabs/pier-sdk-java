@@ -10,11 +10,13 @@ import java.util.List;
 
 
 
+
+
 /**
- * Lista de Bases
+ * {{{page_base_response_description}}}
  **/
 
-@ApiModel(description = "Lista de Bases")
+@ApiModel(description = "{{{page_base_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageBaseResponse   {
   
@@ -337,4 +339,6 @@ public class PageBaseResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

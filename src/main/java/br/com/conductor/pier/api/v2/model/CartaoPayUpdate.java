@@ -8,11 +8,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Represneta\u00E7\u00E3o do recurso atualizar cart\u00E3o
+ * {{{cartao_pay_update_description}}}
  **/
 
-@ApiModel(description = "Represneta\u00E7\u00E3o do recurso atualizar cart\u00E3o")
+@ApiModel(description = "{{{cartao_pay_update_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class CartaoPayUpdate   {
   
@@ -40,14 +42,14 @@ public class CartaoPayUpdate   {
 
   
   /**
-   * Status do cart\u00E3o
+   * {{{cartao_pay_update_status_value}}}
    **/
   public CartaoPayUpdate status(StatusEnum status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Status do cart\u00E3o")
+  @ApiModelProperty(example = "null", required = true, value = "{{{cartao_pay_update_status_value}}}")
   @JsonProperty("status")
   public StatusEnum getStatus() {
     return status;
@@ -96,4 +98,6 @@ public class CartaoPayUpdate   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 
