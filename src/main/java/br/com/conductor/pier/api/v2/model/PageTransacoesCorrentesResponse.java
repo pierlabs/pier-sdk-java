@@ -10,11 +10,13 @@ import java.util.List;
 
 
 
+
+
 /**
- * Lista de Transa\u00E7\u00F5es Correntes
+ * {{{page_transacoes_correntes_response_description}}}
  **/
 
-@ApiModel(description = "Lista de Transa\u00E7\u00F5es Correntes")
+@ApiModel(description = "{{{page_transacoes_correntes_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageTransacoesCorrentesResponse   {
   
@@ -337,4 +339,6 @@ public class PageTransacoesCorrentesResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

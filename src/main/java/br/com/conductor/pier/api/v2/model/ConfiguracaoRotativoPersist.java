@@ -8,11 +8,13 @@ import java.math.BigDecimal;
 
 
 
+
+
 /**
- * Configura\u00E7\u00E3o Rotativo
+ * {{{configuracao_rotativo_persist_description}}}
  **/
 
-@ApiModel(description = "Configura\u00E7\u00E3o Rotativo")
+@ApiModel(description = "{{{configuracao_rotativo_persist_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ConfiguracaoRotativoPersist   {
   
@@ -34,14 +36,14 @@ public class ConfiguracaoRotativoPersist   {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Produto (idProduto).
+   * {{{configuracao_rotativo_persist_id_produto_value}}}
    **/
   public ConfiguracaoRotativoPersist idProduto(Long idProduto) {
     this.idProduto = idProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Produto (idProduto).")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_rotativo_persist_id_produto_value}}}")
   @JsonProperty("idProduto")
   public Long getIdProduto() {
     return idProduto;
@@ -52,14 +54,14 @@ public class ConfiguracaoRotativoPersist   {
 
   
   /**
-   * Quando verdadeiro, indica que o valor do rotativo deve compor a oferta de parcelamento.
+   * {{{configuracao_rotativo_persist_compoe_oferta_valor_rotativo_value}}}
    **/
   public ConfiguracaoRotativoPersist compoeOfertaValorRotativo(Boolean compoeOfertaValorRotativo) {
     this.compoeOfertaValorRotativo = compoeOfertaValorRotativo;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Quando verdadeiro, indica que o valor do rotativo deve compor a oferta de parcelamento.")
+  @ApiModelProperty(example = "false", value = "{{{configuracao_rotativo_persist_compoe_oferta_valor_rotativo_value}}}")
   @JsonProperty("compoeOfertaValorRotativo")
   public Boolean getCompoeOfertaValorRotativo() {
     return compoeOfertaValorRotativo;
@@ -70,14 +72,14 @@ public class ConfiguracaoRotativoPersist   {
 
   
   /**
-   * Quando verdadeiro, indica que o valor n\u00E3o financi\u00E1vel deve compor a oferta de parcelamento.
+   * {{{configuracao_rotativo_persist_compoe_oferta_valor_nao_financiavel_value}}}
    **/
   public ConfiguracaoRotativoPersist compoeOfertaValorNaoFinanciavel(Boolean compoeOfertaValorNaoFinanciavel) {
     this.compoeOfertaValorNaoFinanciavel = compoeOfertaValorNaoFinanciavel;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Quando verdadeiro, indica que o valor n\u00E3o financi\u00E1vel deve compor a oferta de parcelamento.")
+  @ApiModelProperty(example = "false", value = "{{{configuracao_rotativo_persist_compoe_oferta_valor_nao_financiavel_value}}}")
   @JsonProperty("compoeOfertaValorNaoFinanciavel")
   public Boolean getCompoeOfertaValorNaoFinanciavel() {
     return compoeOfertaValorNaoFinanciavel;
@@ -88,14 +90,14 @@ public class ConfiguracaoRotativoPersist   {
 
   
   /**
-   * Quando verdadeiro, indica que o valor de novos lan\u00E7amentos deve compor a oferta de parcelamento
+   * {{{configuracao_rotativo_persist_compoe_oferta_valor_novos_lancamentos_value}}}
    **/
   public ConfiguracaoRotativoPersist compoeOfertaValorNovosLancamentos(Boolean compoeOfertaValorNovosLancamentos) {
     this.compoeOfertaValorNovosLancamentos = compoeOfertaValorNovosLancamentos;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Quando verdadeiro, indica que o valor de novos lan\u00E7amentos deve compor a oferta de parcelamento")
+  @ApiModelProperty(example = "false", value = "{{{configuracao_rotativo_persist_compoe_oferta_valor_novos_lancamentos_value}}}")
   @JsonProperty("compoeOfertaValorNovosLancamentos")
   public Boolean getCompoeOfertaValorNovosLancamentos() {
     return compoeOfertaValorNovosLancamentos;
@@ -106,14 +108,14 @@ public class ConfiguracaoRotativoPersist   {
 
   
   /**
-   * Quando verdadeiro, indica que deve recalcular o parcelamento caso o valor pago de entrada seja maior que o valor esperado
+   * {{{configuracao_rotativo_persist_recalcula_parcelamento_para_entrada_maior_value}}}
    **/
   public ConfiguracaoRotativoPersist recalculaParcelamentoParaEntradaMaior(Boolean recalculaParcelamentoParaEntradaMaior) {
     this.recalculaParcelamentoParaEntradaMaior = recalculaParcelamentoParaEntradaMaior;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Quando verdadeiro, indica que deve recalcular o parcelamento caso o valor pago de entrada seja maior que o valor esperado")
+  @ApiModelProperty(example = "false", value = "{{{configuracao_rotativo_persist_recalcula_parcelamento_para_entrada_maior_value}}}")
   @JsonProperty("recalculaParcelamentoParaEntradaMaior")
   public Boolean getRecalculaParcelamentoParaEntradaMaior() {
     return recalculaParcelamentoParaEntradaMaior;
@@ -124,14 +126,14 @@ public class ConfiguracaoRotativoPersist   {
 
   
   /**
-   * Indica o m\u00EDnimo de parcelas que ser\u00E1 acatado no rec\u00E1lculo do parcelamento.
+   * {{{configuracao_rotativo_persist_minimo_parcelas_recalculo_parcelamento_value}}}
    **/
   public ConfiguracaoRotativoPersist minimoParcelasRecalculoParcelamento(Boolean minimoParcelasRecalculoParcelamento) {
     this.minimoParcelasRecalculoParcelamento = minimoParcelasRecalculoParcelamento;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Indica o m\u00EDnimo de parcelas que ser\u00E1 acatado no rec\u00E1lculo do parcelamento.")
+  @ApiModelProperty(example = "false", value = "{{{configuracao_rotativo_persist_minimo_parcelas_recalculo_parcelamento_value}}}")
   @JsonProperty("minimoParcelasRecalculoParcelamento")
   public Boolean getMinimoParcelasRecalculoParcelamento() {
     return minimoParcelasRecalculoParcelamento;
@@ -142,14 +144,14 @@ public class ConfiguracaoRotativoPersist   {
 
   
   /**
-   * Quando verdadeiro, indica que o parcelamento deve ser recalculado caso o valor calculado da oferta seja inferior ao valor configurado m\u00EDnimo da parcela (valorMinimoParcela) e de percentual aberto
+   * {{{configuracao_rotativo_persist_recalcula_parcelamento_value}}}
    **/
   public ConfiguracaoRotativoPersist recalculaParcelamento(Boolean recalculaParcelamento) {
     this.recalculaParcelamento = recalculaParcelamento;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Quando verdadeiro, indica que o parcelamento deve ser recalculado caso o valor calculado da oferta seja inferior ao valor configurado m\u00EDnimo da parcela (valorMinimoParcela) e de percentual aberto")
+  @ApiModelProperty(example = "false", value = "{{{configuracao_rotativo_persist_recalcula_parcelamento_value}}}")
   @JsonProperty("recalculaParcelamento")
   public Boolean getRecalculaParcelamento() {
     return recalculaParcelamento;
@@ -160,14 +162,14 @@ public class ConfiguracaoRotativoPersist   {
 
   
   /**
-   * N\u00FAmero m\u00EDnimo de parcelas que ser\u00E1 acatado no recalculo da oferta.
+   * {{{configuracao_rotativo_persist_numero_minimo_ofertas_value}}}
    **/
   public ConfiguracaoRotativoPersist numeroMinimoOfertas(Boolean numeroMinimoOfertas) {
     this.numeroMinimoOfertas = numeroMinimoOfertas;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "N\u00FAmero m\u00EDnimo de parcelas que ser\u00E1 acatado no recalculo da oferta.")
+  @ApiModelProperty(example = "false", value = "{{{configuracao_rotativo_persist_numero_minimo_ofertas_value}}}")
   @JsonProperty("numeroMinimoOfertas")
   public Boolean getNumeroMinimoOfertas() {
     return numeroMinimoOfertas;
@@ -178,14 +180,14 @@ public class ConfiguracaoRotativoPersist   {
 
   
   /**
-   * Quando verdadeiro, indica que valores pagos entre o valor da entrada e o m\u00EDnimo da fatura ser\u00E3o acatados para a ades\u00E3o ao parcelamento
+   * {{{configuracao_rotativo_persist_aceita_pagamento_maior_que_entrada_value}}}
    **/
   public ConfiguracaoRotativoPersist aceitaPagamentoMaiorQueEntrada(Boolean aceitaPagamentoMaiorQueEntrada) {
     this.aceitaPagamentoMaiorQueEntrada = aceitaPagamentoMaiorQueEntrada;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Quando verdadeiro, indica que valores pagos entre o valor da entrada e o m\u00EDnimo da fatura ser\u00E3o acatados para a ades\u00E3o ao parcelamento")
+  @ApiModelProperty(example = "false", value = "{{{configuracao_rotativo_persist_aceita_pagamento_maior_que_entrada_value}}}")
   @JsonProperty("aceitaPagamentoMaiorQueEntrada")
   public Boolean getAceitaPagamentoMaiorQueEntrada() {
     return aceitaPagamentoMaiorQueEntrada;
@@ -196,14 +198,14 @@ public class ConfiguracaoRotativoPersist   {
 
   
   /**
-   * Quando verdadeiro, indica que deve-se incluir o valor presente dos parcelamentos em aberto.
+   * {{{configuracao_rotativo_persist_antecipa_parcelamentos_abertos_value}}}
    **/
   public ConfiguracaoRotativoPersist antecipaParcelamentosAbertos(Boolean antecipaParcelamentosAbertos) {
     this.antecipaParcelamentosAbertos = antecipaParcelamentosAbertos;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Quando verdadeiro, indica que deve-se incluir o valor presente dos parcelamentos em aberto.")
+  @ApiModelProperty(example = "false", value = "{{{configuracao_rotativo_persist_antecipa_parcelamentos_abertos_value}}}")
   @JsonProperty("antecipaParcelamentosAbertos")
   public Boolean getAntecipaParcelamentosAbertos() {
     return antecipaParcelamentosAbertos;
@@ -214,14 +216,14 @@ public class ConfiguracaoRotativoPersist   {
 
   
   /**
-   * Valor m\u00EDnimo da parcela que deve ser aceito na oferta.
+   * {{{configuracao_rotativo_persist_valor_minimo_parcela_value}}}
    **/
   public ConfiguracaoRotativoPersist valorMinimoParcela(BigDecimal valorMinimoParcela) {
     this.valorMinimoParcela = valorMinimoParcela;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor m\u00EDnimo da parcela que deve ser aceito na oferta.")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_rotativo_persist_valor_minimo_parcela_value}}}")
   @JsonProperty("valorMinimoParcela")
   public BigDecimal getValorMinimoParcela() {
     return valorMinimoParcela;
@@ -232,14 +234,14 @@ public class ConfiguracaoRotativoPersist   {
 
   
   /**
-   * Percentual sobre os valores de parcelamento anteriores em aberto que deve ser considerado para limitar valorMinimoParcela.
+   * {{{configuracao_rotativo_persist_percentual_limitar_valor_minimo_parcela_value}}}
    **/
   public ConfiguracaoRotativoPersist percentualLimitarValorMinimoParcela(BigDecimal percentualLimitarValorMinimoParcela) {
     this.percentualLimitarValorMinimoParcela = percentualLimitarValorMinimoParcela;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Percentual sobre os valores de parcelamento anteriores em aberto que deve ser considerado para limitar valorMinimoParcela.")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_rotativo_persist_percentual_limitar_valor_minimo_parcela_value}}}")
   @JsonProperty("percentualLimitarValorMinimoParcela")
   public BigDecimal getPercentualLimitarValorMinimoParcela() {
     return percentualLimitarValorMinimoParcela;
@@ -250,14 +252,14 @@ public class ConfiguracaoRotativoPersist   {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da regra de campanha.
+   * {{{configuracao_rotativo_persist_id_regra_campanha_value}}}
    **/
   public ConfiguracaoRotativoPersist idRegraCampanha(Long idRegraCampanha) {
     this.idRegraCampanha = idRegraCampanha;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o da regra de campanha.")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_rotativo_persist_id_regra_campanha_value}}}")
   @JsonProperty("idRegraCampanha")
   public Long getIdRegraCampanha() {
     return idRegraCampanha;
@@ -268,14 +270,14 @@ public class ConfiguracaoRotativoPersist   {
 
   
   /**
-   * Quando verdadeiro, indica que parcelamento ofertado ter\u00E1 como valor base o valor m\u00EDnimo das transa\u00E7\u00F5es.
+   * {{{configuracao_rotativo_persist_parcelar_apenas_minimo_value}}}
    **/
   public ConfiguracaoRotativoPersist parcelarApenasMinimo(Boolean parcelarApenasMinimo) {
     this.parcelarApenasMinimo = parcelarApenasMinimo;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Quando verdadeiro, indica que parcelamento ofertado ter\u00E1 como valor base o valor m\u00EDnimo das transa\u00E7\u00F5es.")
+  @ApiModelProperty(example = "false", value = "{{{configuracao_rotativo_persist_parcelar_apenas_minimo_value}}}")
   @JsonProperty("parcelarApenasMinimo")
   public Boolean getParcelarApenasMinimo() {
     return parcelarApenasMinimo;
@@ -286,14 +288,14 @@ public class ConfiguracaoRotativoPersist   {
 
   
   /**
-   * Nome do usu\u00E1rio
+   * {{{configuracao_rotativo_persist_usuario_value}}}
    **/
   public ConfiguracaoRotativoPersist usuario(String usuario) {
     this.usuario = usuario;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome do usu\u00E1rio")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_rotativo_persist_usuario_value}}}")
   @JsonProperty("usuario")
   public String getUsuario() {
     return usuario;
@@ -370,4 +372,6 @@ public class ConfiguracaoRotativoPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

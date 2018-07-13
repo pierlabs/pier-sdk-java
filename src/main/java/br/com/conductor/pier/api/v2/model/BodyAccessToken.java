@@ -11,6 +11,8 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class BodyAccessToken   {
   
@@ -133,4 +135,6 @@ public class BodyAccessToken   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

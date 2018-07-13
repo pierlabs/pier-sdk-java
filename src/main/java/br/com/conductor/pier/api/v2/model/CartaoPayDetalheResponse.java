@@ -8,11 +8,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Resposta da requisi\u00E7\u00E3o de consulta de cart\u00E3o
+ * {{{cartao_pay_detalhe_response_description}}}
  **/
 
-@ApiModel(description = "Resposta da requisi\u00E7\u00E3o de consulta de cart\u00E3o")
+@ApiModel(description = "{{{cartao_pay_detalhe_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class CartaoPayDetalheResponse   {
   
@@ -48,14 +50,14 @@ public class CartaoPayDetalheResponse   {
 
   
   /**
-   * Id do cart\u00E3o
+   * {{{cartao_pay_base_response_id_value}}}
    **/
   public CartaoPayDetalheResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Id do cart\u00E3o")
+  @ApiModelProperty(example = "null", value = "{{{cartao_pay_base_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -66,14 +68,14 @@ public class CartaoPayDetalheResponse   {
 
   
   /**
-   * N\u00FAmero do cart\u00E3o real criptografado
+   * {{{cartao_pay_base_response_numero_cartao_value}}}
    **/
   public CartaoPayDetalheResponse numeroCartao(String numeroCartao) {
     this.numeroCartao = numeroCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00FAmero do cart\u00E3o real criptografado")
+  @ApiModelProperty(example = "null", value = "{{{cartao_pay_base_response_numero_cartao_value}}}")
   @JsonProperty("numeroCartao")
   public String getNumeroCartao() {
     return numeroCartao;
@@ -84,14 +86,14 @@ public class CartaoPayDetalheResponse   {
 
   
   /**
-   * Data de validade do cart\u00E3o
+   * {{{cartao_pay_base_response_data_validade_cartao_value}}}
    **/
   public CartaoPayDetalheResponse dataValidadeCartao(String dataValidadeCartao) {
     this.dataValidadeCartao = dataValidadeCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data de validade do cart\u00E3o")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{cartao_pay_base_response_data_validade_cartao_value}}}")
   @JsonProperty("dataValidadeCartao")
   public String getDataValidadeCartao() {
     return dataValidadeCartao;
@@ -102,14 +104,14 @@ public class CartaoPayDetalheResponse   {
 
   
   /**
-   * Nome impresso no cart\u00E3o criptografado
+   * {{{cartao_pay_base_response_nome_impresso_value}}}
    **/
   public CartaoPayDetalheResponse nomeImpresso(String nomeImpresso) {
     this.nomeImpresso = nomeImpresso;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome impresso no cart\u00E3o criptografado")
+  @ApiModelProperty(example = "null", value = "{{{cartao_pay_base_response_nome_impresso_value}}}")
   @JsonProperty("nomeImpresso")
   public String getNomeImpresso() {
     return nomeImpresso;
@@ -120,14 +122,14 @@ public class CartaoPayDetalheResponse   {
 
   
   /**
-   * Identificador do emissor do cart\u00E3o
+   * {{{cartao_pay_base_response_id_entidade_value}}}
    **/
   public CartaoPayDetalheResponse idEntidade(Long idEntidade) {
     this.idEntidade = idEntidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identificador do emissor do cart\u00E3o")
+  @ApiModelProperty(example = "null", value = "{{{cartao_pay_base_response_id_entidade_value}}}")
   @JsonProperty("idEntidade")
   public Long getIdEntidade() {
     return idEntidade;
@@ -138,14 +140,14 @@ public class CartaoPayDetalheResponse   {
 
   
   /**
-   * Nome do emissor do cart\u00E3o
+   * {{{cartao_pay_base_response_nome_entidade_value}}}
    **/
   public CartaoPayDetalheResponse nomeEntidade(String nomeEntidade) {
     this.nomeEntidade = nomeEntidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome do emissor do cart\u00E3o")
+  @ApiModelProperty(example = "null", value = "{{{cartao_pay_base_response_nome_entidade_value}}}")
   @JsonProperty("nomeEntidade")
   public String getNomeEntidade() {
     return nomeEntidade;
@@ -156,14 +158,14 @@ public class CartaoPayDetalheResponse   {
 
   
   /**
-   * Status do cart\u00E3o
+   * {{{cartao_pay_base_response_status_value}}}
    **/
   public CartaoPayDetalheResponse status(StatusEnum status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Status do cart\u00E3o")
+  @ApiModelProperty(example = "null", value = "{{{cartao_pay_base_response_status_value}}}")
   @JsonProperty("status")
   public StatusEnum getStatus() {
     return status;
@@ -174,14 +176,14 @@ public class CartaoPayDetalheResponse   {
 
   
   /**
-   * CVV do cart\u00E3o criptografado
+   * {{{cartao_pay_detalhe_response_cvv_value}}}
    **/
   public CartaoPayDetalheResponse cvv(String cvv) {
     this.cvv = cvv;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "CVV do cart\u00E3o criptografado")
+  @ApiModelProperty(example = "null", value = "{{{cartao_pay_detalhe_response_cvv_value}}}")
   @JsonProperty("cvv")
   public String getCvv() {
     return cvv;
@@ -192,14 +194,14 @@ public class CartaoPayDetalheResponse   {
 
   
   /**
-   * Data de validade da chave do criptograma
+   * {{{cartao_pay_detalhe_response_data_validade_chave_criptograma_value}}}
    **/
   public CartaoPayDetalheResponse dataValidadeChaveCriptograma(String dataValidadeChaveCriptograma) {
     this.dataValidadeChaveCriptograma = dataValidadeChaveCriptograma;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data de validade da chave do criptograma")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{cartao_pay_detalhe_response_data_validade_chave_criptograma_value}}}")
   @JsonProperty("dataValidadeChaveCriptograma")
   public String getDataValidadeChaveCriptograma() {
     return dataValidadeChaveCriptograma;
@@ -264,4 +266,6 @@ public class CartaoPayDetalheResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

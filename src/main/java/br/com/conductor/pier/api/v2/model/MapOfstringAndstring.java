@@ -8,6 +8,8 @@ import java.util.Map;
 
 
 
+
+
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class MapOfstringAndstring extends HashMap<String, String>  {
   
@@ -50,4 +52,6 @@ public class MapOfstringAndstring extends HashMap<String, String>  {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

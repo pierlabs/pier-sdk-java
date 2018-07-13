@@ -10,11 +10,13 @@ import java.util.List;
 
 
 
+
+
 /**
- * Representa\u00E7\u00E3o da resposta do recurso de conta banc\u00E1ria portador.
+ * {{{page_conta_bancaria_portador_response_description}}}
  **/
 
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de conta banc\u00E1ria portador.")
+@ApiModel(description = "{{{page_conta_bancaria_portador_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageContaBancariaPortadorResponse   {
   
@@ -337,4 +339,6 @@ public class PageContaBancariaPortadorResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

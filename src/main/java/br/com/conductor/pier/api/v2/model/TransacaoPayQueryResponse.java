@@ -7,11 +7,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Representa\u00E7\u00E3o da resposta do recurso de consultar cart\u00E3o
+ * {{{transacao_pay_query_response_description}}}
  **/
 
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de consultar cart\u00E3o")
+@ApiModel(description = "{{{transacao_pay_query_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TransacaoPayQueryResponse   {
   
@@ -20,14 +22,14 @@ public class TransacaoPayQueryResponse   {
 
   
   /**
-   * Resultado de consulta de conta
+   * {{{transacao_pay_query_response_codigo_value}}}
    **/
   public TransacaoPayQueryResponse codigo(String codigo) {
     this.codigo = codigo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Resultado de consulta de conta")
+  @ApiModelProperty(example = "null", value = "{{{transacao_pay_query_response_codigo_value}}}")
   @JsonProperty("codigo")
   public String getCodigo() {
     return codigo;
@@ -38,14 +40,14 @@ public class TransacaoPayQueryResponse   {
 
   
   /**
-   * Mensagem descrevendo resposta.
+   * {{{transacao_pay_query_response_descricao_value}}}
    **/
   public TransacaoPayQueryResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Mensagem descrevendo resposta.")
+  @ApiModelProperty(example = "null", value = "{{{transacao_pay_query_response_descricao_value}}}")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -96,4 +98,6 @@ public class TransacaoPayQueryResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

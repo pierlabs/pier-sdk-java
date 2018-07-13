@@ -5,15 +5,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.Date;
+
+
 
 
 
 /**
- * Representa\u00E7\u00E3o do recurso token
+ * {{{token_response_description}}}
  **/
 
-@ApiModel(description = "Representa\u00E7\u00E3o do recurso token")
+@ApiModel(description = "{{{token_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TokenResponse   {
   
@@ -42,20 +43,20 @@ public class TokenResponse   {
 
   private StatusEnum status = null;
   private String criadoPor = null;
-  private Date dataCriacao = null;
+  private String dataCriacao = null;
   private String alteradoPor = null;
-  private Date dataModificacao = null;
+  private String dataModificacao = null;
 
   
   /**
-   * C\u00F3digo identificador do token
+   * {{{token_dto_id_value}}}
    **/
   public TokenResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador do token")
+  @ApiModelProperty(example = "1", value = "{{{token_dto_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -66,14 +67,14 @@ public class TokenResponse   {
 
   
   /**
-   * C\u00F3digo identificador da base
+   * {{{token_dto_base_value}}}
    **/
   public TokenResponse base(Long base) {
     this.base = base;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador da base")
+  @ApiModelProperty(example = "10", value = "{{{token_dto_base_value}}}")
   @JsonProperty("base")
   public Long getBase() {
     return base;
@@ -84,14 +85,14 @@ public class TokenResponse   {
 
   
   /**
-   * Owner do token
+   * {{{token_dto_owner_value}}}
    **/
   public TokenResponse owner(String owner) {
     this.owner = owner;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Owner do token")
+  @ApiModelProperty(example = "[Produção] Emissor Tal", value = "{{{token_dto_owner_value}}}")
   @JsonProperty("owner")
   public String getOwner() {
     return owner;
@@ -102,14 +103,14 @@ public class TokenResponse   {
 
   
   /**
-   * Status do token
+   * {{{token_dto_status_value}}}
    **/
   public TokenResponse status(StatusEnum status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Status do token")
+  @ApiModelProperty(example = "ACTIVE", value = "{{{token_dto_status_value}}}")
   @JsonProperty("status")
   public StatusEnum getStatus() {
     return status;
@@ -120,14 +121,14 @@ public class TokenResponse   {
 
   
   /**
-   * Descri\u00E7\u00E3o de quem criou o token
+   * {{{token_dto_criado_por_value}}}
    **/
   public TokenResponse criadoPor(String criadoPor) {
     this.criadoPor = criadoPor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o de quem criou o token")
+  @ApiModelProperty(example = "fulano.detal", value = "{{{token_dto_criado_por_value}}}")
   @JsonProperty("criadoPor")
   public String getCriadoPor() {
     return criadoPor;
@@ -138,32 +139,32 @@ public class TokenResponse   {
 
   
   /**
-   * Data de cria\u00E7\u00E3o do token
+   * {{{token_dto_data_criacao_value}}}
    **/
-  public TokenResponse dataCriacao(Date dataCriacao) {
+  public TokenResponse dataCriacao(String dataCriacao) {
     this.dataCriacao = dataCriacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data de cria\u00E7\u00E3o do token")
+  @ApiModelProperty(example = "2018-01-01", value = "{{{token_dto_data_criacao_value}}}")
   @JsonProperty("dataCriacao")
-  public Date getDataCriacao() {
+  public String getDataCriacao() {
     return dataCriacao;
   }
-  public void setDataCriacao(Date dataCriacao) {
+  public void setDataCriacao(String dataCriacao) {
     this.dataCriacao = dataCriacao;
   }
 
   
   /**
-   * Descri\u00E7\u00E3o de quem alterou o token
+   * {{{token_dto_alterado_por_value}}}
    **/
   public TokenResponse alteradoPor(String alteradoPor) {
     this.alteradoPor = alteradoPor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o de quem alterou o token")
+  @ApiModelProperty(example = "sicrano.detal", value = "{{{token_dto_alterado_por_value}}}")
   @JsonProperty("alteradoPor")
   public String getAlteradoPor() {
     return alteradoPor;
@@ -174,19 +175,19 @@ public class TokenResponse   {
 
   
   /**
-   * Data de modifica\u00E7\u00E3o do token
+   * {{{token_dto_data_modificacao_value}}}
    **/
-  public TokenResponse dataModificacao(Date dataModificacao) {
+  public TokenResponse dataModificacao(String dataModificacao) {
     this.dataModificacao = dataModificacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data de modifica\u00E7\u00E3o do token")
+  @ApiModelProperty(example = "2018-06-01", value = "{{{token_dto_data_modificacao_value}}}")
   @JsonProperty("dataModificacao")
-  public Date getDataModificacao() {
+  public String getDataModificacao() {
     return dataModificacao;
   }
-  public void setDataModificacao(Date dataModificacao) {
+  public void setDataModificacao(String dataModificacao) {
     this.dataModificacao = dataModificacao;
   }
 
@@ -244,4 +245,6 @@ public class TokenResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

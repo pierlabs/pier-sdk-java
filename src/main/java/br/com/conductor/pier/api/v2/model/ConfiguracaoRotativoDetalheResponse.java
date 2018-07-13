@@ -8,11 +8,13 @@ import java.math.BigDecimal;
 
 
 
+
+
 /**
- * Objeto conta
+ * {{{configuracao_rotativo_detalhe_response_description}}}
  **/
 
-@ApiModel(description = "Objeto conta")
+@ApiModel(description = "{{{configuracao_rotativo_detalhe_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ConfiguracaoRotativoDetalheResponse   {
   
@@ -35,14 +37,14 @@ public class ConfiguracaoRotativoDetalheResponse   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o de ConfiguracaoRotativo (id).
+   * {{{configuracao_rotativo_detalhe_response_id_value}}}
    **/
   public ConfiguracaoRotativoDetalheResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o de ConfiguracaoRotativo (id).")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_rotativo_detalhe_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -53,14 +55,14 @@ public class ConfiguracaoRotativoDetalheResponse   {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Produto (idProduto).
+   * {{{configuracao_rotativo_detalhe_response_id_produto_value}}}
    **/
   public ConfiguracaoRotativoDetalheResponse idProduto(Long idProduto) {
     this.idProduto = idProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Produto (idProduto).")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_rotativo_detalhe_response_id_produto_value}}}")
   @JsonProperty("idProduto")
   public Long getIdProduto() {
     return idProduto;
@@ -71,14 +73,14 @@ public class ConfiguracaoRotativoDetalheResponse   {
 
   
   /**
-   * Quando verdadeiro, indica que o valor do rotativo deve compor a oferta de parcelamento.
+   * {{{configuracao_rotativo_detalhe_response_compoe_oferta_valor_rotativo_value}}}
    **/
   public ConfiguracaoRotativoDetalheResponse compoeOfertaValorRotativo(Boolean compoeOfertaValorRotativo) {
     this.compoeOfertaValorRotativo = compoeOfertaValorRotativo;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Quando verdadeiro, indica que o valor do rotativo deve compor a oferta de parcelamento.")
+  @ApiModelProperty(example = "false", value = "{{{configuracao_rotativo_detalhe_response_compoe_oferta_valor_rotativo_value}}}")
   @JsonProperty("compoeOfertaValorRotativo")
   public Boolean getCompoeOfertaValorRotativo() {
     return compoeOfertaValorRotativo;
@@ -89,14 +91,14 @@ public class ConfiguracaoRotativoDetalheResponse   {
 
   
   /**
-   * Quando verdadeiro, indica que o valor n\u00E3o financi\u00E1vel deve compor a oferta de parcelamento.
+   * {{{configuracao_rotativo_detalhe_response_compoe_oferta_valor_nao_financiavel_value}}}
    **/
   public ConfiguracaoRotativoDetalheResponse compoeOfertaValorNaoFinanciavel(Boolean compoeOfertaValorNaoFinanciavel) {
     this.compoeOfertaValorNaoFinanciavel = compoeOfertaValorNaoFinanciavel;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Quando verdadeiro, indica que o valor n\u00E3o financi\u00E1vel deve compor a oferta de parcelamento.")
+  @ApiModelProperty(example = "false", value = "{{{configuracao_rotativo_detalhe_response_compoe_oferta_valor_nao_financiavel_value}}}")
   @JsonProperty("compoeOfertaValorNaoFinanciavel")
   public Boolean getCompoeOfertaValorNaoFinanciavel() {
     return compoeOfertaValorNaoFinanciavel;
@@ -107,14 +109,14 @@ public class ConfiguracaoRotativoDetalheResponse   {
 
   
   /**
-   * Quando verdadeiro, indica que o valor de novos lan\u00E7amentos deve compor a oferta de parcelamento
+   * {{{configuracao_rotativo_detalhe_response_compoe_oferta_valor_novos_lancamentos_value}}}
    **/
   public ConfiguracaoRotativoDetalheResponse compoeOfertaValorNovosLancamentos(Boolean compoeOfertaValorNovosLancamentos) {
     this.compoeOfertaValorNovosLancamentos = compoeOfertaValorNovosLancamentos;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Quando verdadeiro, indica que o valor de novos lan\u00E7amentos deve compor a oferta de parcelamento")
+  @ApiModelProperty(example = "false", value = "{{{configuracao_rotativo_detalhe_response_compoe_oferta_valor_novos_lancamentos_value}}}")
   @JsonProperty("compoeOfertaValorNovosLancamentos")
   public Boolean getCompoeOfertaValorNovosLancamentos() {
     return compoeOfertaValorNovosLancamentos;
@@ -125,14 +127,14 @@ public class ConfiguracaoRotativoDetalheResponse   {
 
   
   /**
-   * Quando verdadeiro, indica que deve recalcular o parcelamento caso o valor pago de entrada seja maior que o valor esperado
+   * {{{configuracao_rotativo_detalhe_response_recalcula_parcelamento_para_entrada_maior_value}}}
    **/
   public ConfiguracaoRotativoDetalheResponse recalculaParcelamentoParaEntradaMaior(Boolean recalculaParcelamentoParaEntradaMaior) {
     this.recalculaParcelamentoParaEntradaMaior = recalculaParcelamentoParaEntradaMaior;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Quando verdadeiro, indica que deve recalcular o parcelamento caso o valor pago de entrada seja maior que o valor esperado")
+  @ApiModelProperty(example = "false", value = "{{{configuracao_rotativo_detalhe_response_recalcula_parcelamento_para_entrada_maior_value}}}")
   @JsonProperty("recalculaParcelamentoParaEntradaMaior")
   public Boolean getRecalculaParcelamentoParaEntradaMaior() {
     return recalculaParcelamentoParaEntradaMaior;
@@ -143,14 +145,14 @@ public class ConfiguracaoRotativoDetalheResponse   {
 
   
   /**
-   * Indica o m\u00EDnimo de parcelas que ser\u00E1 acatado no rec\u00E1lculo do parcelamento.
+   * {{{configuracao_rotativo_detalhe_response_minimo_parcelas_recalculo_parcelamento_value}}}
    **/
   public ConfiguracaoRotativoDetalheResponse minimoParcelasRecalculoParcelamento(Boolean minimoParcelasRecalculoParcelamento) {
     this.minimoParcelasRecalculoParcelamento = minimoParcelasRecalculoParcelamento;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Indica o m\u00EDnimo de parcelas que ser\u00E1 acatado no rec\u00E1lculo do parcelamento.")
+  @ApiModelProperty(example = "false", value = "{{{configuracao_rotativo_detalhe_response_minimo_parcelas_recalculo_parcelamento_value}}}")
   @JsonProperty("minimoParcelasRecalculoParcelamento")
   public Boolean getMinimoParcelasRecalculoParcelamento() {
     return minimoParcelasRecalculoParcelamento;
@@ -161,14 +163,14 @@ public class ConfiguracaoRotativoDetalheResponse   {
 
   
   /**
-   * Quando verdadeiro, indica que o parcelamento deve ser recalculado caso o valor calculado da oferta seja inferior ao valor configurado m\u00EDnimo da parcela (valorMinimoParcela) e de percentual aberto
+   * {{{configuracao_rotativo_detalhe_response_recalcula_parcelamento_value}}}
    **/
   public ConfiguracaoRotativoDetalheResponse recalculaParcelamento(Boolean recalculaParcelamento) {
     this.recalculaParcelamento = recalculaParcelamento;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Quando verdadeiro, indica que o parcelamento deve ser recalculado caso o valor calculado da oferta seja inferior ao valor configurado m\u00EDnimo da parcela (valorMinimoParcela) e de percentual aberto")
+  @ApiModelProperty(example = "false", value = "{{{configuracao_rotativo_detalhe_response_recalcula_parcelamento_value}}}")
   @JsonProperty("recalculaParcelamento")
   public Boolean getRecalculaParcelamento() {
     return recalculaParcelamento;
@@ -179,14 +181,14 @@ public class ConfiguracaoRotativoDetalheResponse   {
 
   
   /**
-   * N\u00FAmero m\u00EDnimo de parcelas que ser\u00E1 acatado no recalculo da oferta.
+   * {{{configuracao_rotativo_detalhe_response_numero_minimo_ofertas_value}}}
    **/
   public ConfiguracaoRotativoDetalheResponse numeroMinimoOfertas(Boolean numeroMinimoOfertas) {
     this.numeroMinimoOfertas = numeroMinimoOfertas;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "N\u00FAmero m\u00EDnimo de parcelas que ser\u00E1 acatado no recalculo da oferta.")
+  @ApiModelProperty(example = "false", value = "{{{configuracao_rotativo_detalhe_response_numero_minimo_ofertas_value}}}")
   @JsonProperty("numeroMinimoOfertas")
   public Boolean getNumeroMinimoOfertas() {
     return numeroMinimoOfertas;
@@ -197,14 +199,14 @@ public class ConfiguracaoRotativoDetalheResponse   {
 
   
   /**
-   * Quando verdadeiro, indica que valores pagos entre o valor da entrada e o m\u00EDnimo da fatura ser\u00E3o acatados para a ades\u00E3o ao parcelamento
+   * {{{configuracao_rotativo_detalhe_response_aceita_pagamento_maior_que_entrada_value}}}
    **/
   public ConfiguracaoRotativoDetalheResponse aceitaPagamentoMaiorQueEntrada(Boolean aceitaPagamentoMaiorQueEntrada) {
     this.aceitaPagamentoMaiorQueEntrada = aceitaPagamentoMaiorQueEntrada;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Quando verdadeiro, indica que valores pagos entre o valor da entrada e o m\u00EDnimo da fatura ser\u00E3o acatados para a ades\u00E3o ao parcelamento")
+  @ApiModelProperty(example = "false", value = "{{{configuracao_rotativo_detalhe_response_aceita_pagamento_maior_que_entrada_value}}}")
   @JsonProperty("aceitaPagamentoMaiorQueEntrada")
   public Boolean getAceitaPagamentoMaiorQueEntrada() {
     return aceitaPagamentoMaiorQueEntrada;
@@ -215,14 +217,14 @@ public class ConfiguracaoRotativoDetalheResponse   {
 
   
   /**
-   * Quando verdadeiro, indica que deve-se incluir o valor presente dos parcelamentos em aberto.
+   * {{{configuracao_rotativo_detalhe_response_antecipa_parcelamentos_abertos_value}}}
    **/
   public ConfiguracaoRotativoDetalheResponse antecipaParcelamentosAbertos(Boolean antecipaParcelamentosAbertos) {
     this.antecipaParcelamentosAbertos = antecipaParcelamentosAbertos;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Quando verdadeiro, indica que deve-se incluir o valor presente dos parcelamentos em aberto.")
+  @ApiModelProperty(example = "false", value = "{{{configuracao_rotativo_detalhe_response_antecipa_parcelamentos_abertos_value}}}")
   @JsonProperty("antecipaParcelamentosAbertos")
   public Boolean getAntecipaParcelamentosAbertos() {
     return antecipaParcelamentosAbertos;
@@ -233,14 +235,14 @@ public class ConfiguracaoRotativoDetalheResponse   {
 
   
   /**
-   * Valor m\u00EDnimo da parcela que deve ser aceito na oferta.
+   * {{{configuracao_rotativo_detalhe_response_valor_minimo_parcela_value}}}
    **/
   public ConfiguracaoRotativoDetalheResponse valorMinimoParcela(BigDecimal valorMinimoParcela) {
     this.valorMinimoParcela = valorMinimoParcela;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor m\u00EDnimo da parcela que deve ser aceito na oferta.")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_rotativo_detalhe_response_valor_minimo_parcela_value}}}")
   @JsonProperty("valorMinimoParcela")
   public BigDecimal getValorMinimoParcela() {
     return valorMinimoParcela;
@@ -251,14 +253,14 @@ public class ConfiguracaoRotativoDetalheResponse   {
 
   
   /**
-   * Percentual sobre os valores de parcelamento anteriores em aberto que deve ser considerado para limitar valorMinimoParcela.
+   * {{{configuracao_rotativo_detalhe_response_percentual_limitar_valor_minimo_parcela_value}}}
    **/
   public ConfiguracaoRotativoDetalheResponse percentualLimitarValorMinimoParcela(BigDecimal percentualLimitarValorMinimoParcela) {
     this.percentualLimitarValorMinimoParcela = percentualLimitarValorMinimoParcela;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Percentual sobre os valores de parcelamento anteriores em aberto que deve ser considerado para limitar valorMinimoParcela.")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_rotativo_detalhe_response_percentual_limitar_valor_minimo_parcela_value}}}")
   @JsonProperty("percentualLimitarValorMinimoParcela")
   public BigDecimal getPercentualLimitarValorMinimoParcela() {
     return percentualLimitarValorMinimoParcela;
@@ -269,14 +271,14 @@ public class ConfiguracaoRotativoDetalheResponse   {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da regra de campanha.
+   * {{{configuracao_rotativo_detalhe_response_id_regra_campanha_value}}}
    **/
   public ConfiguracaoRotativoDetalheResponse idRegraCampanha(Long idRegraCampanha) {
     this.idRegraCampanha = idRegraCampanha;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o da regra de campanha.")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_rotativo_detalhe_response_id_regra_campanha_value}}}")
   @JsonProperty("idRegraCampanha")
   public Long getIdRegraCampanha() {
     return idRegraCampanha;
@@ -287,14 +289,14 @@ public class ConfiguracaoRotativoDetalheResponse   {
 
   
   /**
-   * Quando verdadeiro, indica que parcelamento ofertado ter\u00E1 como valor base o valor m\u00EDnimo das transa\u00E7\u00F5es.
+   * {{{configuracao_rotativo_detalhe_response_parcelar_apenas_minimo_value}}}
    **/
   public ConfiguracaoRotativoDetalheResponse parcelarApenasMinimo(Boolean parcelarApenasMinimo) {
     this.parcelarApenasMinimo = parcelarApenasMinimo;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Quando verdadeiro, indica que parcelamento ofertado ter\u00E1 como valor base o valor m\u00EDnimo das transa\u00E7\u00F5es.")
+  @ApiModelProperty(example = "false", value = "{{{configuracao_rotativo_detalhe_response_parcelar_apenas_minimo_value}}}")
   @JsonProperty("parcelarApenasMinimo")
   public Boolean getParcelarApenasMinimo() {
     return parcelarApenasMinimo;
@@ -305,14 +307,14 @@ public class ConfiguracaoRotativoDetalheResponse   {
 
   
   /**
-   * Nome do usu\u00E1rio.
+   * {{{configuracao_rotativo_detalhe_response_usuario_value}}}
    **/
   public ConfiguracaoRotativoDetalheResponse usuario(String usuario) {
     this.usuario = usuario;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome do usu\u00E1rio.")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_rotativo_detalhe_response_usuario_value}}}")
   @JsonProperty("usuario")
   public String getUsuario() {
     return usuario;
@@ -391,4 +393,6 @@ public class ConfiguracaoRotativoDetalheResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

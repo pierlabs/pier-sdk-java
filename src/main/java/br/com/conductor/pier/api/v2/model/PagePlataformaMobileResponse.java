@@ -10,11 +10,13 @@ import java.util.List;
 
 
 
+
+
 /**
- * Lista de Plataformas Mobile
+ * {{{page_plataforma_mobile_response_description}}}
  **/
 
-@ApiModel(description = "Lista de Plataformas Mobile")
+@ApiModel(description = "{{{page_plataforma_mobile_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PagePlataformaMobileResponse   {
   
@@ -337,4 +339,6 @@ public class PagePlataformaMobileResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

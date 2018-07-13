@@ -8,11 +8,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Resposta da requisi\u00E7\u00E3o para atualizar a chave do criptograma
+ * {{{cartao_pay_atualizar_chave_response_description}}}
  **/
 
-@ApiModel(description = "Resposta da requisi\u00E7\u00E3o para atualizar a chave do criptograma")
+@ApiModel(description = "{{{cartao_pay_atualizar_chave_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class CartaoPayAtualizarChaveResponse   {
   
@@ -47,14 +49,14 @@ public class CartaoPayAtualizarChaveResponse   {
 
   
   /**
-   * Id do cart\u00E3o
+   * {{{cartao_pay_base_response_id_value}}}
    **/
   public CartaoPayAtualizarChaveResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Id do cart\u00E3o")
+  @ApiModelProperty(example = "null", value = "{{{cartao_pay_base_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -65,14 +67,14 @@ public class CartaoPayAtualizarChaveResponse   {
 
   
   /**
-   * N\u00FAmero do cart\u00E3o real criptografado
+   * {{{cartao_pay_base_response_numero_cartao_value}}}
    **/
   public CartaoPayAtualizarChaveResponse numeroCartao(String numeroCartao) {
     this.numeroCartao = numeroCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00FAmero do cart\u00E3o real criptografado")
+  @ApiModelProperty(example = "null", value = "{{{cartao_pay_base_response_numero_cartao_value}}}")
   @JsonProperty("numeroCartao")
   public String getNumeroCartao() {
     return numeroCartao;
@@ -83,14 +85,14 @@ public class CartaoPayAtualizarChaveResponse   {
 
   
   /**
-   * Data de validade do cart\u00E3o
+   * {{{cartao_pay_base_response_data_validade_cartao_value}}}
    **/
   public CartaoPayAtualizarChaveResponse dataValidadeCartao(String dataValidadeCartao) {
     this.dataValidadeCartao = dataValidadeCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data de validade do cart\u00E3o")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{cartao_pay_base_response_data_validade_cartao_value}}}")
   @JsonProperty("dataValidadeCartao")
   public String getDataValidadeCartao() {
     return dataValidadeCartao;
@@ -101,14 +103,14 @@ public class CartaoPayAtualizarChaveResponse   {
 
   
   /**
-   * Nome impresso no cart\u00E3o criptografado
+   * {{{cartao_pay_base_response_nome_impresso_value}}}
    **/
   public CartaoPayAtualizarChaveResponse nomeImpresso(String nomeImpresso) {
     this.nomeImpresso = nomeImpresso;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome impresso no cart\u00E3o criptografado")
+  @ApiModelProperty(example = "null", value = "{{{cartao_pay_base_response_nome_impresso_value}}}")
   @JsonProperty("nomeImpresso")
   public String getNomeImpresso() {
     return nomeImpresso;
@@ -119,14 +121,14 @@ public class CartaoPayAtualizarChaveResponse   {
 
   
   /**
-   * Identificador do emissor do cart\u00E3o
+   * {{{cartao_pay_base_response_id_entidade_value}}}
    **/
   public CartaoPayAtualizarChaveResponse idEntidade(Long idEntidade) {
     this.idEntidade = idEntidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identificador do emissor do cart\u00E3o")
+  @ApiModelProperty(example = "null", value = "{{{cartao_pay_base_response_id_entidade_value}}}")
   @JsonProperty("idEntidade")
   public Long getIdEntidade() {
     return idEntidade;
@@ -137,14 +139,14 @@ public class CartaoPayAtualizarChaveResponse   {
 
   
   /**
-   * Nome do emissor do cart\u00E3o
+   * {{{cartao_pay_base_response_nome_entidade_value}}}
    **/
   public CartaoPayAtualizarChaveResponse nomeEntidade(String nomeEntidade) {
     this.nomeEntidade = nomeEntidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome do emissor do cart\u00E3o")
+  @ApiModelProperty(example = "null", value = "{{{cartao_pay_base_response_nome_entidade_value}}}")
   @JsonProperty("nomeEntidade")
   public String getNomeEntidade() {
     return nomeEntidade;
@@ -155,14 +157,14 @@ public class CartaoPayAtualizarChaveResponse   {
 
   
   /**
-   * Status do cart\u00E3o
+   * {{{cartao_pay_base_response_status_value}}}
    **/
   public CartaoPayAtualizarChaveResponse status(StatusEnum status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Status do cart\u00E3o")
+  @ApiModelProperty(example = "null", value = "{{{cartao_pay_base_response_status_value}}}")
   @JsonProperty("status")
   public StatusEnum getStatus() {
     return status;
@@ -173,14 +175,14 @@ public class CartaoPayAtualizarChaveResponse   {
 
   
   /**
-   * Chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o criptograda
+   * {{{cartao_pay_atualizar_chave_response_chave_criptograma_value}}}
    **/
   public CartaoPayAtualizarChaveResponse chaveCriptograma(String chaveCriptograma) {
     this.chaveCriptograma = chaveCriptograma;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Chave de gera\u00E7\u00E3o de transa\u00E7\u00E3o criptograda")
+  @ApiModelProperty(example = "null", value = "{{{cartao_pay_atualizar_chave_response_chave_criptograma_value}}}")
   @JsonProperty("chaveCriptograma")
   public String getChaveCriptograma() {
     return chaveCriptograma;
@@ -243,4 +245,6 @@ public class CartaoPayAtualizarChaveResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

@@ -10,11 +10,13 @@ import java.util.List;
 
 
 
+
+
 /**
- * Lista arquivos armazenados na contig\u00EAncia
+ * {{{page_arquivo_response_description}}}
  **/
 
-@ApiModel(description = "Lista arquivos armazenados na contig\u00EAncia")
+@ApiModel(description = "{{{page_arquivo_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageArquivoResponse   {
   
@@ -337,4 +339,6 @@ public class PageArquivoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

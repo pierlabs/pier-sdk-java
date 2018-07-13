@@ -7,11 +7,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Objeto ArquivoParametros para persist\u00EAncia de dados.
+ * {{{arquivo_detalhes_persist_description}}}
  **/
 
-@ApiModel(description = "Objeto ArquivoParametros para persist\u00EAncia de dados.")
+@ApiModel(description = "{{{arquivo_detalhes_persist_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ArquivoDetalhesPersist   {
   
@@ -20,14 +22,14 @@ public class ArquivoDetalhesPersist   {
 
   
   /**
-   * Nome que identifica o detalhe do arquivo
+   * {{{arquivo_detalhes_persist_nome_campo_value}}}
    **/
   public ArquivoDetalhesPersist nomeCampo(String nomeCampo) {
     this.nomeCampo = nomeCampo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Nome que identifica o detalhe do arquivo")
+  @ApiModelProperty(example = "null", required = true, value = "{{{arquivo_detalhes_persist_nome_campo_value}}}")
   @JsonProperty("nomeCampo")
   public String getNomeCampo() {
     return nomeCampo;
@@ -38,14 +40,14 @@ public class ArquivoDetalhesPersist   {
 
   
   /**
-   * Conte\u00FAdo do nomeCampo
+   * {{{arquivo_detalhes_persist_conteudo_value}}}
    **/
   public ArquivoDetalhesPersist conteudo(String conteudo) {
     this.conteudo = conteudo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Conte\u00FAdo do nomeCampo")
+  @ApiModelProperty(example = "null", required = true, value = "{{{arquivo_detalhes_persist_conteudo_value}}}")
   @JsonProperty("conteudo")
   public String getConteudo() {
     return conteudo;
@@ -96,4 +98,6 @@ public class ArquivoDetalhesPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

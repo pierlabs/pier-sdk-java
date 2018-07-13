@@ -7,11 +7,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Parametros de requisi\u00E7\u00E3o da gera\u00E7\u00E3o do cart\u00E3o embossing
+ * {{{cartao_embossing_request_description}}}
  **/
 
-@ApiModel(description = "Parametros de requisi\u00E7\u00E3o da gera\u00E7\u00E3o do cart\u00E3o embossing")
+@ApiModel(description = "{{{cartao_embossing_request_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class CartaoEmbossingRequest   {
   
@@ -20,14 +22,14 @@ public class CartaoEmbossingRequest   {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence (id)
+   * {{{cartao_embossing_request_id_pessoa_value}}}
    **/
   public CartaoEmbossingRequest idPessoa(Long idPessoa) {
     this.idPessoa = idPessoa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence (id)")
+  @ApiModelProperty(example = "null", value = "{{{cartao_embossing_request_id_pessoa_value}}}")
   @JsonProperty("id_pessoa")
   public Long getIdPessoa() {
     return idPessoa;
@@ -38,14 +40,14 @@ public class CartaoEmbossingRequest   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id).
+   * {{{cartao_embossing_request_id_tipo_plastico_value}}}
    **/
   public CartaoEmbossingRequest idTipoPlastico(Long idTipoPlastico) {
     this.idTipoPlastico = idTipoPlastico;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id).")
+  @ApiModelProperty(example = "null", value = "{{{cartao_embossing_request_id_tipo_plastico_value}}}")
   @JsonProperty("id_tipo_plastico")
   public Long getIdTipoPlastico() {
     return idTipoPlastico;
@@ -96,4 +98,6 @@ public class CartaoEmbossingRequest   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

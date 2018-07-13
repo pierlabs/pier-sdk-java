@@ -10,11 +10,13 @@ import java.util.List;
 
 
 
+
+
 /**
- * Lista de Tipos de Faturamentos por Conta
+ * {{{page_tipo_faturamento_por_conta_response_description}}}
  **/
 
-@ApiModel(description = "Lista de Tipos de Faturamentos por Conta")
+@ApiModel(description = "{{{page_tipo_faturamento_por_conta_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageTipoFaturamentoPorContaResponse   {
   
@@ -337,4 +339,6 @@ public class PageTipoFaturamentoPorContaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

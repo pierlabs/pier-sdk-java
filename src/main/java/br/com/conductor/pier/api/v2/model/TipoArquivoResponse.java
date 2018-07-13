@@ -7,11 +7,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Objeto Response do tipo arquivo.
+ * {{{tipo_arquivo_response_description}}}
  **/
 
-@ApiModel(description = "Objeto Response do tipo arquivo.")
+@ApiModel(description = "{{{tipo_arquivo_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TipoArquivoResponse   {
   
@@ -21,14 +23,14 @@ public class TipoArquivoResponse   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do tipo arquivo
+   * {{{tipo_arquivo_response_id_value}}}
    **/
   public TipoArquivoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo arquivo")
+  @ApiModelProperty(example = "null", value = "{{{tipo_arquivo_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -39,14 +41,14 @@ public class TipoArquivoResponse   {
 
   
   /**
-   * Nome do tipo do arquivo
+   * {{{tipo_arquivo_response_nome_value}}}
    **/
   public TipoArquivoResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome do tipo do arquivo")
+  @ApiModelProperty(example = "null", value = "{{{tipo_arquivo_response_nome_value}}}")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -57,14 +59,14 @@ public class TipoArquivoResponse   {
 
   
   /**
-   * Descri\u00E7\u00E3o do tipo do arquivo
+   * {{{tipo_arquivo_response_descricao_value}}}
    **/
   public TipoArquivoResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do tipo do arquivo")
+  @ApiModelProperty(example = "null", value = "{{{tipo_arquivo_response_descricao_value}}}")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -117,4 +119,6 @@ public class TipoArquivoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

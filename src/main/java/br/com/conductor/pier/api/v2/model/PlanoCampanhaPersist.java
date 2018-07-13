@@ -8,11 +8,13 @@ import java.math.BigDecimal;
 
 
 
+
+
 /**
- * PlanoCampanha
+ * {{{plano_campanha_persist_description}}}
  **/
 
-@ApiModel(description = "PlanoCampanha")
+@ApiModel(description = "{{{plano_campanha_persist_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PlanoCampanhaPersist   {
   
@@ -115,4 +117,6 @@ public class PlanoCampanhaPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

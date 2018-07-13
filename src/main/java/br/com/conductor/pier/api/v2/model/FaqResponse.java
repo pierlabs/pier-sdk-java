@@ -8,11 +8,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Objeto FAQ
+ * {{{faq_response_description}}}
  **/
 
-@ApiModel(description = "Objeto FAQ")
+@ApiModel(description = "{{{faq_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class FaqResponse   {
   
@@ -45,14 +47,14 @@ public class FaqResponse   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da FAQ (id).
+   * {{{faq_response_id_value}}}
    **/
   public FaqResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o da FAQ (id).")
+  @ApiModelProperty(example = "null", value = "{{{faq_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -63,14 +65,14 @@ public class FaqResponse   {
 
   
   /**
-   * Conte\u00FAdo da pergunta.
+   * {{{faq_response_pergunta_value}}}
    **/
   public FaqResponse pergunta(String pergunta) {
     this.pergunta = pergunta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Conte\u00FAdo da pergunta.")
+  @ApiModelProperty(example = "null", value = "{{{faq_response_pergunta_value}}}")
   @JsonProperty("pergunta")
   public String getPergunta() {
     return pergunta;
@@ -81,14 +83,14 @@ public class FaqResponse   {
 
   
   /**
-   * Conte\u00FAdo da resposta.
+   * {{{faq_response_resposta_value}}}
    **/
   public FaqResponse resposta(String resposta) {
     this.resposta = resposta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Conte\u00FAdo da resposta.")
+  @ApiModelProperty(example = "null", value = "{{{faq_response_resposta_value}}}")
   @JsonProperty("resposta")
   public String getResposta() {
     return resposta;
@@ -99,14 +101,14 @@ public class FaqResponse   {
 
   
   /**
-   * N\u00EDvel de relev\u00E2ncia da pergunta.
+   * {{{faq_response_relevancia_value}}}
    **/
   public FaqResponse relevancia(Integer relevancia) {
     this.relevancia = relevancia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00EDvel de relev\u00E2ncia da pergunta.")
+  @ApiModelProperty(example = "null", value = "{{{faq_response_relevancia_value}}}")
   @JsonProperty("relevancia")
   public Integer getRelevancia() {
     return relevancia;
@@ -117,14 +119,14 @@ public class FaqResponse   {
 
   
   /**
-   * Plataforma em que a FAQ se encaixa.
+   * {{{faq_response_plataforma_value}}}
    **/
   public FaqResponse plataforma(String plataforma) {
     this.plataforma = plataforma;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Plataforma em que a FAQ se encaixa.")
+  @ApiModelProperty(example = "null", value = "{{{faq_response_plataforma_value}}}")
   @JsonProperty("plataforma")
   public String getPlataforma() {
     return plataforma;
@@ -135,14 +137,14 @@ public class FaqResponse   {
 
   
   /**
-   * Categoria de assunto do qual a FAQ se trata.
+   * {{{faq_response_categoria_value}}}
    **/
   public FaqResponse categoria(String categoria) {
     this.categoria = categoria;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Categoria de assunto do qual a FAQ se trata.")
+  @ApiModelProperty(example = "null", value = "{{{faq_response_categoria_value}}}")
   @JsonProperty("categoria")
   public String getCategoria() {
     return categoria;
@@ -153,14 +155,14 @@ public class FaqResponse   {
 
   
   /**
-   * Status descrevendo a situa\u00E7\u00E3o atual da FAQ.
+   * {{{faq_response_status_value}}}
    **/
   public FaqResponse status(StatusEnum status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Status descrevendo a situa\u00E7\u00E3o atual da FAQ.")
+  @ApiModelProperty(example = "null", value = "{{{faq_response_status_value}}}")
   @JsonProperty("status")
   public StatusEnum getStatus() {
     return status;
@@ -221,4 +223,6 @@ public class FaqResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

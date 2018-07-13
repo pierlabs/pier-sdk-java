@@ -7,11 +7,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Objeto AtendimentoCliente
+ * {{{atendimento_cliente_response_description}}}
  **/
 
-@ApiModel(description = "Objeto AtendimentoCliente")
+@ApiModel(description = "{{{atendimento_cliente_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class AtendimentoClienteResponse   {
   
@@ -32,14 +34,14 @@ public class AtendimentoClienteResponse   {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Atendimento (id)
+   * {{{atendimento_cliente_response_id_atendimento_value}}}
    **/
   public AtendimentoClienteResponse idAtendimento(Long idAtendimento) {
     this.idAtendimento = idAtendimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Atendimento (id)")
+  @ApiModelProperty(example = "null", value = "{{{atendimento_cliente_response_id_atendimento_value}}}")
   @JsonProperty("idAtendimento")
   public Long getIdAtendimento() {
     return idAtendimento;
@@ -50,14 +52,14 @@ public class AtendimentoClienteResponse   {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Conta a qual o Atendimento est\u00E1 associado
+   * {{{atendimento_cliente_response_id_conta_value}}}
    **/
   public AtendimentoClienteResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o da Conta a qual o Atendimento est\u00E1 associado")
+  @ApiModelProperty(example = "null", value = "{{{atendimento_cliente_response_id_conta_value}}}")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -68,14 +70,14 @@ public class AtendimentoClienteResponse   {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo de Atendimento (id)
+   * {{{atendimento_cliente_response_id_tipo_atendimento_value}}}
    **/
   public AtendimentoClienteResponse idTipoAtendimento(Long idTipoAtendimento) {
     this.idTipoAtendimento = idTipoAtendimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Tipo de Atendimento (id)")
+  @ApiModelProperty(example = "null", value = "{{{atendimento_cliente_response_id_tipo_atendimento_value}}}")
   @JsonProperty("idTipoAtendimento")
   public Long getIdTipoAtendimento() {
     return idTipoAtendimento;
@@ -86,14 +88,14 @@ public class AtendimentoClienteResponse   {
 
   
   /**
-   * Apresenta a descri\u00E7\u00E3o do Tipo de Atendimento
+   * {{{atendimento_cliente_response_descricao_tipo_atendimento_value}}}
    **/
   public AtendimentoClienteResponse descricaoTipoAtendimento(String descricaoTipoAtendimento) {
     this.descricaoTipoAtendimento = descricaoTipoAtendimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta a descri\u00E7\u00E3o do Tipo de Atendimento")
+  @ApiModelProperty(example = "null", value = "{{{atendimento_cliente_response_descricao_tipo_atendimento_value}}}")
   @JsonProperty("descricaoTipoAtendimento")
   public String getDescricaoTipoAtendimento() {
     return descricaoTipoAtendimento;
@@ -104,14 +106,14 @@ public class AtendimentoClienteResponse   {
 
   
   /**
-   * Apresenta as informa\u00E7\u00F5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00E7\u00F5es relacionadas ao Atendimento.
+   * {{{atendimento_cliente_response_conteudo_atendimento_value}}}
    **/
   public AtendimentoClienteResponse conteudoAtendimento(String conteudoAtendimento) {
     this.conteudoAtendimento = conteudoAtendimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta as informa\u00E7\u00F5es que foram utilizadas para consultar, cadastrar ou alterar informa\u00E7\u00F5es relacionadas ao Atendimento.")
+  @ApiModelProperty(example = "null", value = "{{{atendimento_cliente_response_conteudo_atendimento_value}}}")
   @JsonProperty("conteudoAtendimento")
   public String getConteudoAtendimento() {
     return conteudoAtendimento;
@@ -122,14 +124,14 @@ public class AtendimentoClienteResponse   {
 
   
   /**
-   * Apresenta os detalhes lan\u00E7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento.
+   * {{{atendimento_cliente_response_detalhes_atendimento_value}}}
    **/
   public AtendimentoClienteResponse detalhesAtendimento(String detalhesAtendimento) {
     this.detalhesAtendimento = detalhesAtendimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta os detalhes lan\u00E7ados pelo sistema ou pelo Atendente durante relacionados ao Atendimento.")
+  @ApiModelProperty(example = "null", value = "{{{atendimento_cliente_response_detalhes_atendimento_value}}}")
   @JsonProperty("detalhesAtendimento")
   public String getDetalhesAtendimento() {
     return detalhesAtendimento;
@@ -140,14 +142,14 @@ public class AtendimentoClienteResponse   {
 
   
   /**
-   * Apresenta o nome do Atendente que registrou o Atendimento.
+   * {{{atendimento_cliente_response_nome_atendente_value}}}
    **/
   public AtendimentoClienteResponse nomeAtendente(String nomeAtendente) {
     this.nomeAtendente = nomeAtendente;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o nome do Atendente que registrou o Atendimento.")
+  @ApiModelProperty(example = "null", value = "{{{atendimento_cliente_response_nome_atendente_value}}}")
   @JsonProperty("nomeAtendente")
   public String getNomeAtendente() {
     return nomeAtendente;
@@ -158,14 +160,14 @@ public class AtendimentoClienteResponse   {
 
   
   /**
-   * Apresenta o nome do Sistema, Servidor, M\u00F3dulo ou M\u00E9todo REST que originou o registro do Atendimento.
+   * {{{atendimento_cliente_response_nome_sistema_value}}}
    **/
   public AtendimentoClienteResponse nomeSistema(String nomeSistema) {
     this.nomeSistema = nomeSistema;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o nome do Sistema, Servidor, M\u00F3dulo ou M\u00E9todo REST que originou o registro do Atendimento.")
+  @ApiModelProperty(example = "null", value = "{{{atendimento_cliente_response_nome_sistema_value}}}")
   @JsonProperty("nomeSistema")
   public String getNomeSistema() {
     return nomeSistema;
@@ -176,14 +178,14 @@ public class AtendimentoClienteResponse   {
 
   
   /**
-   * Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.
+   * {{{atendimento_cliente_response_data_hora_inicio_atendimento_value}}}
    **/
   public AtendimentoClienteResponse dataHoraInicioAtendimento(String dataHoraInicioAtendimento) {
     this.dataHoraInicioAtendimento = dataHoraInicioAtendimento;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{atendimento_cliente_response_data_hora_inicio_atendimento_value}}}")
   @JsonProperty("dataHoraInicioAtendimento")
   public String getDataHoraInicioAtendimento() {
     return dataHoraInicioAtendimento;
@@ -194,14 +196,14 @@ public class AtendimentoClienteResponse   {
 
   
   /**
-   * Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.
+   * {{{atendimento_cliente_response_data_hora_fim_atendimento_value}}}
    **/
   public AtendimentoClienteResponse dataHoraFimAtendimento(String dataHoraFimAtendimento) {
     this.dataHoraFimAtendimento = dataHoraFimAtendimento;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Apresenta a data e hora em que o Atendimento foi iniciado. Quando utilizado, serve para medir a performance dos Atendimentos.")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{atendimento_cliente_response_data_hora_fim_atendimento_value}}}")
   @JsonProperty("dataHoraFimAtendimento")
   public String getDataHoraFimAtendimento() {
     return dataHoraFimAtendimento;
@@ -212,14 +214,14 @@ public class AtendimentoClienteResponse   {
 
   
   /**
-   * Apresenta a data e hora em que o Atendimento foi realizado.
+   * {{{atendimento_cliente_response_data_atendimento_value}}}
    **/
   public AtendimentoClienteResponse dataAtendimento(String dataAtendimento) {
     this.dataAtendimento = dataAtendimento;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Apresenta a data e hora em que o Atendimento foi realizado.")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{atendimento_cliente_response_data_atendimento_value}}}")
   @JsonProperty("dataAtendimento")
   public String getDataAtendimento() {
     return dataAtendimento;
@@ -230,14 +232,14 @@ public class AtendimentoClienteResponse   {
 
   
   /**
-   * Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data para retorno do Atendimento.
+   * {{{atendimento_cliente_response_data_agendamento_value}}}
    **/
   public AtendimentoClienteResponse dataAgendamento(String dataAgendamento) {
     this.dataAgendamento = dataAgendamento;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Quando utilizado, de acordo com o Tipo de Atendimento, apresenta a data e hora para processamento ou a data para retorno do Atendimento.")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{atendimento_cliente_response_data_agendamento_value}}}")
   @JsonProperty("dataAgendamento")
   public String getDataAgendamento() {
     return dataAgendamento;
@@ -248,14 +250,14 @@ public class AtendimentoClienteResponse   {
 
   
   /**
-   * Quando utilizado, apresenta a data e hora em que a solicita\u00E7\u00E3o registrada no Atendimento fora processada.
+   * {{{atendimento_cliente_response_data_processamento_value}}}
    **/
   public AtendimentoClienteResponse dataProcessamento(String dataProcessamento) {
     this.dataProcessamento = dataProcessamento;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Quando utilizado, apresenta a data e hora em que a solicita\u00E7\u00E3o registrada no Atendimento fora processada.")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{atendimento_cliente_response_data_processamento_value}}}")
   @JsonProperty("dataProcessamento")
   public String getDataProcessamento() {
     return dataProcessamento;
@@ -266,14 +268,14 @@ public class AtendimentoClienteResponse   {
 
   
   /**
-   * Quando aplic\u00E1vel, de acordo com o Indica se o Processamento da solicita\u00E7\u00E3o fora realizado.
+   * {{{atendimento_cliente_response_flag_processamento_value}}}
    **/
   public AtendimentoClienteResponse flagProcessamento(Integer flagProcessamento) {
     this.flagProcessamento = flagProcessamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Quando aplic\u00E1vel, de acordo com o Indica se o Processamento da solicita\u00E7\u00E3o fora realizado.")
+  @ApiModelProperty(example = "null", value = "{{{atendimento_cliente_response_flag_processamento_value}}}")
   @JsonProperty("flagProcessamento")
   public Integer getFlagProcessamento() {
     return flagProcessamento;
@@ -348,4 +350,6 @@ public class AtendimentoClienteResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

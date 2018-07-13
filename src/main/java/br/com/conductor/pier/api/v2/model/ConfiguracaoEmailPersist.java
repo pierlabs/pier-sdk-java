@@ -7,11 +7,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso Configura\u00E7\u00E3o Email
+ * {{{configuracao_email_persist_description}}}
  **/
 
-@ApiModel(description = "Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso Configura\u00E7\u00E3o Email")
+@ApiModel(description = "{{{configuracao_email_persist_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ConfiguracaoEmailPersist   {
   
@@ -28,14 +30,14 @@ public class ConfiguracaoEmailPersist   {
 
   
   /**
-   * IP (Host) do servidor de e-mail.
+   * {{{configuracao_email_persist_host_value}}}
    **/
   public ConfiguracaoEmailPersist host(String host) {
     this.host = host;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "IP (Host) do servidor de e-mail.")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_email_persist_host_value}}}")
   @JsonProperty("host")
   public String getHost() {
     return host;
@@ -46,14 +48,14 @@ public class ConfiguracaoEmailPersist   {
 
   
   /**
-   * Porta usada pelo servidor de e-mail.
+   * {{{configuracao_email_persist_port_value}}}
    **/
   public ConfiguracaoEmailPersist port(String port) {
     this.port = port;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Porta usada pelo servidor de e-mail.")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_email_persist_port_value}}}")
   @JsonProperty("port")
   public String getPort() {
     return port;
@@ -64,14 +66,14 @@ public class ConfiguracaoEmailPersist   {
 
   
   /**
-   * Porta usada pelo servi\u00E7o TLS/STARTTLS.
+   * {{{configuracao_email_persist_port_t_l_s_s_t_a_r_t_t_l_s_value}}}
    **/
   public ConfiguracaoEmailPersist portTLSSTARTTLS(String portTLSSTARTTLS) {
     this.portTLSSTARTTLS = portTLSSTARTTLS;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Porta usada pelo servi\u00E7o TLS/STARTTLS.")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_email_persist_port_t_l_s_s_t_a_r_t_t_l_s_value}}}")
   @JsonProperty("portTLSSTARTTLS")
   public String getPortTLSSTARTTLS() {
     return portTLSSTARTTLS;
@@ -82,14 +84,14 @@ public class ConfiguracaoEmailPersist   {
 
   
   /**
-   * Porta usada pelo servi\u00E7o SSL.
+   * {{{configuracao_email_persist_port_s_s_l_value}}}
    **/
   public ConfiguracaoEmailPersist portSSL(String portSSL) {
     this.portSSL = portSSL;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Porta usada pelo servi\u00E7o SSL.")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_email_persist_port_s_s_l_value}}}")
   @JsonProperty("portSSL")
   public String getPortSSL() {
     return portSSL;
@@ -100,14 +102,14 @@ public class ConfiguracaoEmailPersist   {
 
   
   /**
-   * Protocolo de comunica\u00E7\u00E3o usado pelo servi\u00E7o de e-mail.
+   * {{{configuracao_email_persist_protocolo_value}}}
    **/
   public ConfiguracaoEmailPersist protocolo(String protocolo) {
     this.protocolo = protocolo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Protocolo de comunica\u00E7\u00E3o usado pelo servi\u00E7o de e-mail.")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_email_persist_protocolo_value}}}")
   @JsonProperty("protocolo")
   public String getProtocolo() {
     return protocolo;
@@ -118,14 +120,14 @@ public class ConfiguracaoEmailPersist   {
 
   
   /**
-   * O servi\u00E7o de e-mail requer autentica\u00E7\u00E3o.
+   * {{{configuracao_email_persist_requer_autenticacao_value}}}
    **/
   public ConfiguracaoEmailPersist requerAutenticacao(Boolean requerAutenticacao) {
     this.requerAutenticacao = requerAutenticacao;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "O servi\u00E7o de e-mail requer autentica\u00E7\u00E3o.")
+  @ApiModelProperty(example = "false", value = "{{{configuracao_email_persist_requer_autenticacao_value}}}")
   @JsonProperty("requerAutenticacao")
   public Boolean getRequerAutenticacao() {
     return requerAutenticacao;
@@ -136,14 +138,14 @@ public class ConfiguracaoEmailPersist   {
 
   
   /**
-   * O servi\u00E7o de e-mail requer SSL.
+   * {{{configuracao_email_persist_requer_s_s_l_value}}}
    **/
   public ConfiguracaoEmailPersist requerSSL(Boolean requerSSL) {
     this.requerSSL = requerSSL;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "O servi\u00E7o de e-mail requer SSL.")
+  @ApiModelProperty(example = "false", value = "{{{configuracao_email_persist_requer_s_s_l_value}}}")
   @JsonProperty("requerSSL")
   public Boolean getRequerSSL() {
     return requerSSL;
@@ -154,14 +156,14 @@ public class ConfiguracaoEmailPersist   {
 
   
   /**
-   * O servi\u00E7o de e-mail requer TLS.
+   * {{{configuracao_email_persist_requer_t_l_s_value}}}
    **/
   public ConfiguracaoEmailPersist requerTLS(Boolean requerTLS) {
     this.requerTLS = requerTLS;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "O servi\u00E7o de e-mail requer TLS.")
+  @ApiModelProperty(example = "false", value = "{{{configuracao_email_persist_requer_t_l_s_value}}}")
   @JsonProperty("requerTLS")
   public Boolean getRequerTLS() {
     return requerTLS;
@@ -172,14 +174,14 @@ public class ConfiguracaoEmailPersist   {
 
   
   /**
-   * Usuario do servi\u00E7o de e-mail.
+   * {{{configuracao_email_persist_usuario_value}}}
    **/
   public ConfiguracaoEmailPersist usuario(String usuario) {
     this.usuario = usuario;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Usuario do servi\u00E7o de e-mail.")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_email_persist_usuario_value}}}")
   @JsonProperty("usuario")
   public String getUsuario() {
     return usuario;
@@ -190,14 +192,14 @@ public class ConfiguracaoEmailPersist   {
 
   
   /**
-   * Senha de usu\u00E1rio do servi\u00E7o de e-mail.
+   * {{{configuracao_email_persist_senha_value}}}
    **/
   public ConfiguracaoEmailPersist senha(String senha) {
     this.senha = senha;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Senha de usu\u00E1rio do servi\u00E7o de e-mail.")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_email_persist_senha_value}}}")
   @JsonProperty("senha")
   public String getSenha() {
     return senha;
@@ -264,4 +266,6 @@ public class ConfiguracaoEmailPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

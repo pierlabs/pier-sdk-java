@@ -10,11 +10,13 @@ import java.util.List;
 
 
 
+
+
 /**
- * Representa\u00E7\u00E3o da resposta para o recurso de Documento
+ * {{{documento_detalhado_response_description}}}
  **/
 
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta para o recurso de Documento")
+@ApiModel(description = "{{{documento_detalhado_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class DocumentoDetalhadoResponse   {
   
@@ -27,14 +29,14 @@ public class DocumentoDetalhadoResponse   {
 
   
   /**
-   * ID do Documento.
+   * {{{documento_detalhado_response_id_value}}}
    **/
   public DocumentoDetalhadoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "ID do Documento.")
+  @ApiModelProperty(example = "null", value = "{{{documento_detalhado_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -45,14 +47,14 @@ public class DocumentoDetalhadoResponse   {
 
   
   /**
-   * ID do Template de Documento associado.
+   * {{{documento_detalhado_response_id_template_documento_value}}}
    **/
   public DocumentoDetalhadoResponse idTemplateDocumento(Long idTemplateDocumento) {
     this.idTemplateDocumento = idTemplateDocumento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "ID do Template de Documento associado.")
+  @ApiModelProperty(example = "null", value = "{{{documento_detalhado_response_id_template_documento_value}}}")
   @JsonProperty("idTemplateDocumento")
   public Long getIdTemplateDocumento() {
     return idTemplateDocumento;
@@ -63,14 +65,14 @@ public class DocumentoDetalhadoResponse   {
 
   
   /**
-   * Nome do Documento.
+   * {{{documento_detalhado_response_nome_value}}}
    **/
   public DocumentoDetalhadoResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome do Documento.")
+  @ApiModelProperty(example = "null", value = "{{{documento_detalhado_response_nome_value}}}")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -81,14 +83,14 @@ public class DocumentoDetalhadoResponse   {
 
   
   /**
-   * Representa\u00E7\u00E3o do documento em Base64.
+   * {{{documento_detalhado_response_documento_value}}}
    **/
   public DocumentoDetalhadoResponse documento(String documento) {
     this.documento = documento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Representa\u00E7\u00E3o do documento em Base64.")
+  @ApiModelProperty(example = "null", value = "{{{documento_detalhado_response_documento_value}}}")
   @JsonProperty("documento")
   public String getDocumento() {
     return documento;
@@ -99,14 +101,14 @@ public class DocumentoDetalhadoResponse   {
 
   
   /**
-   * Extens\u00E3o do Documento.
+   * {{{documento_detalhado_response_extensao_value}}}
    **/
   public DocumentoDetalhadoResponse extensao(String extensao) {
     this.extensao = extensao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Extens\u00E3o do Documento.")
+  @ApiModelProperty(example = "null", value = "{{{documento_detalhado_response_extensao_value}}}")
   @JsonProperty("extensao")
   public String getExtensao() {
     return extensao;
@@ -117,14 +119,14 @@ public class DocumentoDetalhadoResponse   {
 
   
   /**
-   * Detalhamento do documento.
+   * {{{documento_detalhado_response_documento_detalhes_value}}}
    **/
   public DocumentoDetalhadoResponse documentoDetalhes(List<DocumentoDetalheResponse> documentoDetalhes) {
     this.documentoDetalhes = documentoDetalhes;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Detalhamento do documento.")
+  @ApiModelProperty(example = "null", value = "{{{documento_detalhado_response_documento_detalhes_value}}}")
   @JsonProperty("documentoDetalhes")
   public List<DocumentoDetalheResponse> getDocumentoDetalhes() {
     return documentoDetalhes;
@@ -183,4 +185,6 @@ public class DocumentoDetalhadoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

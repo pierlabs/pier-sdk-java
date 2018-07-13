@@ -7,11 +7,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Objeto Faturamento
+ * {{{tipo_faturamento_response_description}}}
  **/
 
-@ApiModel(description = "Objeto Faturamento")
+@ApiModel(description = "{{{tipo_faturamento_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TipoFaturamentoResponse   {
   
@@ -22,14 +24,14 @@ public class TipoFaturamentoResponse   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento (id).
+   * {{{tipo_faturamento_response_id_value}}}
    **/
   public TipoFaturamentoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento (id).")
+  @ApiModelProperty(example = "null", value = "{{{tipo_faturamento_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -40,14 +42,14 @@ public class TipoFaturamentoResponse   {
 
   
   /**
-   * Desci\u00E7\u00E3o do tipo de faturamento.
+   * {{{tipo_faturamento_response_descricao_value}}}
    **/
   public TipoFaturamentoResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Desci\u00E7\u00E3o do tipo de faturamento.")
+  @ApiModelProperty(example = "null", value = "{{{tipo_faturamento_response_descricao_value}}}")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -58,14 +60,14 @@ public class TipoFaturamentoResponse   {
 
   
   /**
-   * Flag que representa que o faturamento ser\u00E1 apenas demonstrativo.
+   * {{{tipo_faturamento_response_flag_apenas_demonstrativo_value}}}
    **/
   public TipoFaturamentoResponse flagApenasDemonstrativo(Boolean flagApenasDemonstrativo) {
     this.flagApenasDemonstrativo = flagApenasDemonstrativo;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Flag que representa que o faturamento ser\u00E1 apenas demonstrativo.")
+  @ApiModelProperty(example = "false", value = "{{{tipo_faturamento_response_flag_apenas_demonstrativo_value}}}")
   @JsonProperty("flagApenasDemonstrativo")
   public Boolean getFlagApenasDemonstrativo() {
     return flagApenasDemonstrativo;
@@ -76,14 +78,14 @@ public class TipoFaturamentoResponse   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio relacionado ao tipo de faturamento.
+   * {{{tipo_faturamento_response_id_convenio_value}}}
    **/
   public TipoFaturamentoResponse idConvenio(Long idConvenio) {
     this.idConvenio = idConvenio;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio relacionado ao tipo de faturamento.")
+  @ApiModelProperty(example = "null", value = "{{{tipo_faturamento_response_id_convenio_value}}}")
   @JsonProperty("idConvenio")
   public Long getIdConvenio() {
     return idConvenio;
@@ -138,4 +140,6 @@ public class TipoFaturamentoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

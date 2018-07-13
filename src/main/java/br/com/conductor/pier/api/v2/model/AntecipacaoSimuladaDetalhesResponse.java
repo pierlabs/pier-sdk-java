@@ -8,11 +8,13 @@ import java.math.BigDecimal;
 
 
 
+
+
 /**
- * Representa\u00E7\u00E3o da resposta dos detalhes do recurso Antecipacao Simulada
+ * {{{antecipacao_simulada_detalhes_response_description}}}
  **/
 
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta dos detalhes do recurso Antecipacao Simulada")
+@ApiModel(description = "{{{antecipacao_simulada_detalhes_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class AntecipacaoSimuladaDetalhesResponse   {
   
@@ -23,14 +25,14 @@ public class AntecipacaoSimuladaDetalhesResponse   {
 
   
   /**
-   * Quantidade de parcelas do plano de parcelamento simulado.
+   * {{{antecipacao_simulada_detalhes_response_quantidade_parcelas_value}}}
    **/
   public AntecipacaoSimuladaDetalhesResponse quantidadeParcelas(Integer quantidadeParcelas) {
     this.quantidadeParcelas = quantidadeParcelas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Quantidade de parcelas do plano de parcelamento simulado.")
+  @ApiModelProperty(example = "null", value = "{{{antecipacao_simulada_detalhes_response_quantidade_parcelas_value}}}")
   @JsonProperty("quantidadeParcelas")
   public Integer getQuantidadeParcelas() {
     return quantidadeParcelas;
@@ -41,14 +43,14 @@ public class AntecipacaoSimuladaDetalhesResponse   {
 
   
   /**
-   * Valor total das parcelas do plano de parcelamento.
+   * {{{antecipacao_simulada_detalhes_response_valor_parcelas_value}}}
    **/
   public AntecipacaoSimuladaDetalhesResponse valorParcelas(BigDecimal valorParcelas) {
     this.valorParcelas = valorParcelas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor total das parcelas do plano de parcelamento.")
+  @ApiModelProperty(example = "null", value = "{{{antecipacao_simulada_detalhes_response_valor_parcelas_value}}}")
   @JsonProperty("valorParcelas")
   public BigDecimal getValorParcelas() {
     return valorParcelas;
@@ -59,14 +61,14 @@ public class AntecipacaoSimuladaDetalhesResponse   {
 
   
   /**
-   * Valor do desconto para o plano de parcelamento.
+   * {{{antecipacao_simulada_detalhes_response_valor_desconto_value}}}
    **/
   public AntecipacaoSimuladaDetalhesResponse valorDesconto(BigDecimal valorDesconto) {
     this.valorDesconto = valorDesconto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor do desconto para o plano de parcelamento.")
+  @ApiModelProperty(example = "null", value = "{{{antecipacao_simulada_detalhes_response_valor_desconto_value}}}")
   @JsonProperty("valorDesconto")
   public BigDecimal getValorDesconto() {
     return valorDesconto;
@@ -77,14 +79,14 @@ public class AntecipacaoSimuladaDetalhesResponse   {
 
   
   /**
-   * Valor total da parcela ap\u00F3s a aplica\u00E7\u00E3o do desconto.
+   * {{{antecipacao_simulada_detalhes_response_valor_parcelas_desconto_value}}}
    **/
   public AntecipacaoSimuladaDetalhesResponse valorParcelasDesconto(BigDecimal valorParcelasDesconto) {
     this.valorParcelasDesconto = valorParcelasDesconto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor total da parcela ap\u00F3s a aplica\u00E7\u00E3o do desconto.")
+  @ApiModelProperty(example = "null", value = "{{{antecipacao_simulada_detalhes_response_valor_parcelas_desconto_value}}}")
   @JsonProperty("valorParcelasDesconto")
   public BigDecimal getValorParcelasDesconto() {
     return valorParcelasDesconto;
@@ -139,4 +141,6 @@ public class AntecipacaoSimuladaDetalhesResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

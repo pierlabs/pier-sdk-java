@@ -10,11 +10,13 @@ import java.util.List;
 
 
 
+
+
 /**
- * Listar Configura\u00E7\u00E3o Rotativo
+ * {{{page_configuracao_rotativo_response_description}}}
  **/
 
-@ApiModel(description = "Listar Configura\u00E7\u00E3o Rotativo")
+@ApiModel(description = "{{{page_configuracao_rotativo_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageConfiguracaoRotativoResponse   {
   
@@ -337,4 +339,6 @@ public class PageConfiguracaoRotativoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

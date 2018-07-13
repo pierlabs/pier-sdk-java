@@ -7,11 +7,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Tipo de moeda
+ * {{{moeda_response_description}}}
  **/
 
-@ApiModel(description = "Tipo de moeda")
+@ApiModel(description = "{{{moeda_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class MoedaResponse   {
   
@@ -22,14 +24,14 @@ public class MoedaResponse   {
 
   
   /**
-   * Identificador do tipo de moeda.
+   * {{{moeda_response_id_value}}}
    **/
   public MoedaResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identificador do tipo de moeda.")
+  @ApiModelProperty(example = "null", value = "{{{moeda_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -40,14 +42,14 @@ public class MoedaResponse   {
 
   
   /**
-   * C\u00F3digo identificador do tipo de moeda.
+   * {{{moeda_response_codigo_moeda_value}}}
    **/
   public MoedaResponse codigoMoeda(String codigoMoeda) {
     this.codigoMoeda = codigoMoeda;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador do tipo de moeda.")
+  @ApiModelProperty(example = "null", value = "{{{moeda_response_codigo_moeda_value}}}")
   @JsonProperty("codigoMoeda")
   public String getCodigoMoeda() {
     return codigoMoeda;
@@ -58,14 +60,14 @@ public class MoedaResponse   {
 
   
   /**
-   * S\u00EDmbolo da Moeda.
+   * {{{moeda_response_simbolo_value}}}
    **/
   public MoedaResponse simbolo(String simbolo) {
     this.simbolo = simbolo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "S\u00EDmbolo da Moeda.")
+  @ApiModelProperty(example = "null", value = "{{{moeda_response_simbolo_value}}}")
   @JsonProperty("simbolo")
   public String getSimbolo() {
     return simbolo;
@@ -76,14 +78,14 @@ public class MoedaResponse   {
 
   
   /**
-   * Descri\u00E7\u00E3o do tipo da moeda.
+   * {{{moeda_response_descricao_value}}}
    **/
   public MoedaResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do tipo da moeda.")
+  @ApiModelProperty(example = "null", value = "{{{moeda_response_descricao_value}}}")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -138,4 +140,6 @@ public class MoedaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

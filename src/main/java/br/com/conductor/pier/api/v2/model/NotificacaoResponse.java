@@ -7,11 +7,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Objeto Notifica\u00E7\u00E3o SMS
+ * {{{notificacao_response_description}}}
  **/
 
-@ApiModel(description = "Objeto Notifica\u00E7\u00E3o SMS")
+@ApiModel(description = "{{{notificacao_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class NotificacaoResponse   {
   
@@ -20,14 +22,14 @@ public class NotificacaoResponse   {
 
   
   /**
-   * N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es
+   * {{{notificacao_response_protocolo_value}}}
    **/
   public NotificacaoResponse protocolo(String protocolo) {
     this.protocolo = protocolo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es")
+  @ApiModelProperty(example = "null", value = "{{{notificacao_response_protocolo_value}}}")
   @JsonProperty("protocolo")
   public String getProtocolo() {
     return protocolo;
@@ -38,14 +40,14 @@ public class NotificacaoResponse   {
 
   
   /**
-   * Mensagem de resposta da solicita\u00E7\u00F5es de envio
+   * {{{notificacao_response_mensagem_value}}}
    **/
   public NotificacaoResponse mensagem(String mensagem) {
     this.mensagem = mensagem;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Mensagem de resposta da solicita\u00E7\u00F5es de envio")
+  @ApiModelProperty(example = "null", value = "{{{notificacao_response_mensagem_value}}}")
   @JsonProperty("mensagem")
   public String getMensagem() {
     return mensagem;
@@ -96,4 +98,6 @@ public class NotificacaoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

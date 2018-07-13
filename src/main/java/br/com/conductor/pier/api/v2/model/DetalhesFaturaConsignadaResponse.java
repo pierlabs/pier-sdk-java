@@ -11,11 +11,13 @@ import java.util.List;
 
 
 
+
+
 /**
- * Objeto contendo os detalhes de uma fatura consignada
+ * {{{detalhes_fatura_consignada_response_description}}}
  **/
 
-@ApiModel(description = "Objeto contendo os detalhes de uma fatura consignada")
+@ApiModel(description = "{{{detalhes_fatura_consignada_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class DetalhesFaturaConsignadaResponse   {
   
@@ -24,14 +26,14 @@ public class DetalhesFaturaConsignadaResponse   {
 
   
   /**
-   * Apresenta os detalhes da fatura
+   * {{{detalhes_fatura_consignada_response_fatura_consignada_response_value}}}
    **/
   public DetalhesFaturaConsignadaResponse faturaConsignadaResponse(FaturaConsignadaResponse faturaConsignadaResponse) {
     this.faturaConsignadaResponse = faturaConsignadaResponse;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta os detalhes da fatura")
+  @ApiModelProperty(example = "null", value = "{{{detalhes_fatura_consignada_response_fatura_consignada_response_value}}}")
   @JsonProperty("faturaConsignadaResponse")
   public FaturaConsignadaResponse getFaturaConsignadaResponse() {
     return faturaConsignadaResponse;
@@ -42,14 +44,14 @@ public class DetalhesFaturaConsignadaResponse   {
 
   
   /**
-   * Apresenta as transa\u00E7\u00F5es relacionadas a fatura.
+   * {{{detalhes_fatura_consignada_response_transacoes_value}}}
    **/
   public DetalhesFaturaConsignadaResponse transacoes(List<TransacoesCorrentesResponse> transacoes) {
     this.transacoes = transacoes;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta as transa\u00E7\u00F5es relacionadas a fatura.")
+  @ApiModelProperty(example = "null", value = "{{{detalhes_fatura_consignada_response_transacoes_value}}}")
   @JsonProperty("transacoes")
   public List<TransacoesCorrentesResponse> getTransacoes() {
     return transacoes;
@@ -100,4 +102,6 @@ public class DetalhesFaturaConsignadaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

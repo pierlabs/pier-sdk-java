@@ -10,11 +10,13 @@ import java.util.List;
 
 
 
+
+
 /**
- * Representa\u00E7\u00E3o da resposta do recurso de campanha
+ * {{{campanha_response_description}}}
  **/
 
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de campanha")
+@ApiModel(description = "{{{campanha_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class CampanhaResponse   {
   
@@ -25,14 +27,14 @@ public class CampanhaResponse   {
 
   
   /**
-   * Identificador da campanha
+   * {{{campanha_response_id_value}}}
    **/
   public CampanhaResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identificador da campanha")
+  @ApiModelProperty(example = "null", value = "{{{campanha_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -43,14 +45,14 @@ public class CampanhaResponse   {
 
   
   /**
-   * Nome da campanha
+   * {{{campanha_response_nome_value}}}
    **/
   public CampanhaResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome da campanha")
+  @ApiModelProperty(example = "null", value = "{{{campanha_response_nome_value}}}")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -61,14 +63,14 @@ public class CampanhaResponse   {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do tipo de campanha a qual a a Campanha pertence
+   * {{{campanha_response_id_tipo_campanha_value}}}
    **/
   public CampanhaResponse idTipoCampanha(Long idTipoCampanha) {
     this.idTipoCampanha = idTipoCampanha;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do tipo de campanha a qual a a Campanha pertence")
+  @ApiModelProperty(example = "null", value = "{{{campanha_response_id_tipo_campanha_value}}}")
   @JsonProperty("idTipoCampanha")
   public Long getIdTipoCampanha() {
     return idTipoCampanha;
@@ -79,14 +81,14 @@ public class CampanhaResponse   {
 
   
   /**
-   * Lista de planos associados a Campanha
+   * {{{campanha_response_planos_campanhas_value}}}
    **/
   public CampanhaResponse planosCampanhas(List<PlanoCampanhaResponse> planosCampanhas) {
     this.planosCampanhas = planosCampanhas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Lista de planos associados a Campanha")
+  @ApiModelProperty(example = "null", required = true, value = "{{{campanha_response_planos_campanhas_value}}}")
   @JsonProperty("planosCampanhas")
   public List<PlanoCampanhaResponse> getPlanosCampanhas() {
     return planosCampanhas;
@@ -141,4 +143,6 @@ public class CampanhaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

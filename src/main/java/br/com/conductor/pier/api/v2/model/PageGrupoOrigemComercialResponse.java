@@ -10,11 +10,13 @@ import java.util.List;
 
 
 
+
+
 /**
- * Listar grupos de origens comerciais
+ * {{{page_grupo_origem_comercial_response_description}}}
  **/
 
-@ApiModel(description = "Listar grupos de origens comerciais")
+@ApiModel(description = "{{{page_grupo_origem_comercial_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageGrupoOrigemComercialResponse   {
   
@@ -337,4 +339,6 @@ public class PageGrupoOrigemComercialResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

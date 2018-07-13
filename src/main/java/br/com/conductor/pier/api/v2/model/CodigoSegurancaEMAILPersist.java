@@ -7,11 +7,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Representa\u00E7\u00E3o do recurso validar c\u00F3digo de seguran\u00E7a.
+ * {{{codigo_seguranca_e_m_a_i_l_persist_description}}}
  **/
 
-@ApiModel(description = "Representa\u00E7\u00E3o do recurso validar c\u00F3digo de seguran\u00E7a.")
+@ApiModel(description = "{{{codigo_seguranca_e_m_a_i_l_persist_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class CodigoSegurancaEMAILPersist   {
   
@@ -20,14 +22,14 @@ public class CodigoSegurancaEMAILPersist   {
 
   
   /**
-   * E-mail usado para envio do c\u00F3digo de seguran\u00E7a.
+   * {{{codigo_seguranca_e_m_a_i_l_persist_email_value}}}
    **/
   public CodigoSegurancaEMAILPersist email(String email) {
     this.email = email;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "E-mail usado para envio do c\u00F3digo de seguran\u00E7a.")
+  @ApiModelProperty(example = "null", value = "{{{codigo_seguranca_e_m_a_i_l_persist_email_value}}}")
   @JsonProperty("email")
   public String getEmail() {
     return email;
@@ -38,14 +40,14 @@ public class CodigoSegurancaEMAILPersist   {
 
   
   /**
-   * Token para valida\u00E7\u00E3o.
+   * {{{codigo_seguranca_e_m_a_i_l_persist_codigo_seguranca_value}}}
    **/
   public CodigoSegurancaEMAILPersist codigoSeguranca(String codigoSeguranca) {
     this.codigoSeguranca = codigoSeguranca;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Token para valida\u00E7\u00E3o.")
+  @ApiModelProperty(example = "null", value = "{{{codigo_seguranca_e_m_a_i_l_persist_codigo_seguranca_value}}}")
   @JsonProperty("codigoSeguranca")
   public String getCodigoSeguranca() {
     return codigoSeguranca;
@@ -96,4 +98,6 @@ public class CodigoSegurancaEMAILPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

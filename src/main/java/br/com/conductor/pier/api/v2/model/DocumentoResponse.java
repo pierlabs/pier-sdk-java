@@ -7,11 +7,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Representa\u00E7\u00E3o da resposta resumida para o recurso de Documento
+ * {{{documento_response_description}}}
  **/
 
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta resumida para o recurso de Documento")
+@ApiModel(description = "{{{documento_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class DocumentoResponse   {
   
@@ -22,14 +24,14 @@ public class DocumentoResponse   {
 
   
   /**
-   * ID do Documento.
+   * {{{documento_response_id_value}}}
    **/
   public DocumentoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "ID do Documento.")
+  @ApiModelProperty(example = "null", value = "{{{documento_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -40,14 +42,14 @@ public class DocumentoResponse   {
 
   
   /**
-   * ID do Template de Documento associado.
+   * {{{documento_response_id_template_documento_value}}}
    **/
   public DocumentoResponse idTemplateDocumento(Long idTemplateDocumento) {
     this.idTemplateDocumento = idTemplateDocumento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "ID do Template de Documento associado.")
+  @ApiModelProperty(example = "null", value = "{{{documento_response_id_template_documento_value}}}")
   @JsonProperty("idTemplateDocumento")
   public Long getIdTemplateDocumento() {
     return idTemplateDocumento;
@@ -58,14 +60,14 @@ public class DocumentoResponse   {
 
   
   /**
-   * Nome do Documento.
+   * {{{documento_response_nome_value}}}
    **/
   public DocumentoResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome do Documento.")
+  @ApiModelProperty(example = "null", value = "{{{documento_response_nome_value}}}")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -76,14 +78,14 @@ public class DocumentoResponse   {
 
   
   /**
-   * Extens\u00E3o do Documento.
+   * {{{documento_response_extensao_value}}}
    **/
   public DocumentoResponse extensao(String extensao) {
     this.extensao = extensao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Extens\u00E3o do Documento.")
+  @ApiModelProperty(example = "null", value = "{{{documento_response_extensao_value}}}")
   @JsonProperty("extensao")
   public String getExtensao() {
     return extensao;
@@ -138,4 +140,6 @@ public class DocumentoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

@@ -8,11 +8,13 @@ import java.math.BigDecimal;
 
 
 
+
+
 /**
- * Representa\u00E7\u00E3o da resposta do recurso de plano de campanha
+ * {{{plano_campanha_response_description}}}
  **/
 
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de plano de campanha")
+@ApiModel(description = "{{{plano_campanha_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PlanoCampanhaResponse   {
   
@@ -23,14 +25,14 @@ public class PlanoCampanhaResponse   {
 
   
   /**
-   * Identificador do plano de campanha
+   * {{{plano_campanha_response_id_value}}}
    **/
   public PlanoCampanhaResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identificador do plano de campanha")
+  @ApiModelProperty(example = "null", value = "{{{plano_campanha_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -41,14 +43,14 @@ public class PlanoCampanhaResponse   {
 
   
   /**
-   * Quantidade de parcelas
+   * {{{plano_campanha_response_parcelas_value}}}
    **/
   public PlanoCampanhaResponse parcelas(Integer parcelas) {
     this.parcelas = parcelas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Quantidade de parcelas")
+  @ApiModelProperty(example = "null", value = "{{{plano_campanha_response_parcelas_value}}}")
   @JsonProperty("parcelas")
   public Integer getParcelas() {
     return parcelas;
@@ -59,14 +61,14 @@ public class PlanoCampanhaResponse   {
 
   
   /**
-   * Taxa de juros
+   * {{{plano_campanha_response_taxa_value}}}
    **/
   public PlanoCampanhaResponse taxa(BigDecimal taxa) {
     this.taxa = taxa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Taxa de juros")
+  @ApiModelProperty(example = "null", value = "{{{plano_campanha_response_taxa_value}}}")
   @JsonProperty("taxa")
   public BigDecimal getTaxa() {
     return taxa;
@@ -77,14 +79,14 @@ public class PlanoCampanhaResponse   {
 
   
   /**
-   * Nome do usu\u00E1rio
+   * {{{plano_campanha_response_usuario_value}}}
    **/
   public PlanoCampanhaResponse usuario(String usuario) {
     this.usuario = usuario;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome do usu\u00E1rio")
+  @ApiModelProperty(example = "null", value = "{{{plano_campanha_response_usuario_value}}}")
   @JsonProperty("usuario")
   public String getUsuario() {
     return usuario;
@@ -139,4 +141,6 @@ public class PlanoCampanhaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

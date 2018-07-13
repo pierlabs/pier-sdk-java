@@ -8,11 +8,13 @@ import java.math.BigDecimal;
 
 
 
+
+
 /**
- * D\u00EDvida do cliente
+ * {{{divida_cliente_response_description}}}
  **/
 
-@ApiModel(description = "D\u00EDvida do cliente")
+@ApiModel(description = "{{{divida_cliente_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class DividaClienteResponse   {
   
@@ -36,14 +38,14 @@ public class DividaClienteResponse   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da conta (id)
+   * {{{divida_cliente_response_id_value}}}
    **/
   public DividaClienteResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o da conta (id)")
+  @ApiModelProperty(example = "null", value = "{{{divida_cliente_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -54,14 +56,14 @@ public class DividaClienteResponse   {
 
   
   /**
-   * Data de vencimento da cobran\u00E7a
+   * {{{divida_cliente_response_data_vencimento_fatura_atraso_value}}}
    **/
   public DividaClienteResponse dataVencimentoFaturaAtraso(String dataVencimentoFaturaAtraso) {
     this.dataVencimentoFaturaAtraso = dataVencimentoFaturaAtraso;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data de vencimento da cobran\u00E7a")
+  @ApiModelProperty(example = "null", value = "{{{divida_cliente_response_data_vencimento_fatura_atraso_value}}}")
   @JsonProperty("dataVencimentoFaturaAtraso")
   public String getDataVencimentoFaturaAtraso() {
     return dataVencimentoFaturaAtraso;
@@ -72,14 +74,14 @@ public class DividaClienteResponse   {
 
   
   /**
-   * Quantidade de dias em atraso at\u00E9 a data de vencimento da cobran\u00E7a
+   * {{{divida_cliente_response_quantidade_dias_atraso_value}}}
    **/
   public DividaClienteResponse quantidadeDiasAtraso(Long quantidadeDiasAtraso) {
     this.quantidadeDiasAtraso = quantidadeDiasAtraso;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Quantidade de dias em atraso at\u00E9 a data de vencimento da cobran\u00E7a")
+  @ApiModelProperty(example = "null", value = "{{{divida_cliente_response_quantidade_dias_atraso_value}}}")
   @JsonProperty("quantidadeDiasAtraso")
   public Long getQuantidadeDiasAtraso() {
     return quantidadeDiasAtraso;
@@ -90,14 +92,14 @@ public class DividaClienteResponse   {
 
   
   /**
-   * Data de vencimento do acordo
+   * {{{divida_cliente_response_data_vencimento_acordo_value}}}
    **/
   public DividaClienteResponse dataVencimentoAcordo(String dataVencimentoAcordo) {
     this.dataVencimentoAcordo = dataVencimentoAcordo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data de vencimento do acordo")
+  @ApiModelProperty(example = "null", value = "{{{divida_cliente_response_data_vencimento_acordo_value}}}")
   @JsonProperty("dataVencimentoAcordo")
   public String getDataVencimentoAcordo() {
     return dataVencimentoAcordo;
@@ -108,14 +110,14 @@ public class DividaClienteResponse   {
 
   
   /**
-   * Quantidade de dias em atraso at\u00E9 a data de vencimento do acordo
+   * {{{divida_cliente_response_quantidade_dias_atraso_corrigido_value}}}
    **/
   public DividaClienteResponse quantidadeDiasAtrasoCorrigido(Long quantidadeDiasAtrasoCorrigido) {
     this.quantidadeDiasAtrasoCorrigido = quantidadeDiasAtrasoCorrigido;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Quantidade de dias em atraso at\u00E9 a data de vencimento do acordo")
+  @ApiModelProperty(example = "null", value = "{{{divida_cliente_response_quantidade_dias_atraso_corrigido_value}}}")
   @JsonProperty("quantidadeDiasAtrasoCorrigido")
   public Long getQuantidadeDiasAtrasoCorrigido() {
     return quantidadeDiasAtrasoCorrigido;
@@ -126,14 +128,14 @@ public class DividaClienteResponse   {
 
   
   /**
-   * Valor do saldo devedor at\u00E9 a data de vencimento da cobran\u00E7a
+   * {{{divida_cliente_response_valor_saldo_devedor_value}}}
    **/
   public DividaClienteResponse valorSaldoDevedor(BigDecimal valorSaldoDevedor) {
     this.valorSaldoDevedor = valorSaldoDevedor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor do saldo devedor at\u00E9 a data de vencimento da cobran\u00E7a")
+  @ApiModelProperty(example = "null", value = "{{{divida_cliente_response_valor_saldo_devedor_value}}}")
   @JsonProperty("valorSaldoDevedor")
   public BigDecimal getValorSaldoDevedor() {
     return valorSaldoDevedor;
@@ -144,14 +146,14 @@ public class DividaClienteResponse   {
 
   
   /**
-   * Percentual de corre\u00E7\u00E3o
+   * {{{divida_cliente_response_taxa_correcao_value}}}
    **/
   public DividaClienteResponse taxaCorrecao(BigDecimal taxaCorrecao) {
     this.taxaCorrecao = taxaCorrecao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Percentual de corre\u00E7\u00E3o")
+  @ApiModelProperty(example = "null", value = "{{{divida_cliente_response_taxa_correcao_value}}}")
   @JsonProperty("taxaCorrecao")
   public BigDecimal getTaxaCorrecao() {
     return taxaCorrecao;
@@ -162,14 +164,14 @@ public class DividaClienteResponse   {
 
   
   /**
-   * Valor da corre\u00E7\u00E3o
+   * {{{divida_cliente_response_valor_correcao_value}}}
    **/
   public DividaClienteResponse valorCorrecao(BigDecimal valorCorrecao) {
     this.valorCorrecao = valorCorrecao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor da corre\u00E7\u00E3o")
+  @ApiModelProperty(example = "null", value = "{{{divida_cliente_response_valor_correcao_value}}}")
   @JsonProperty("valorCorrecao")
   public BigDecimal getValorCorrecao() {
     return valorCorrecao;
@@ -180,14 +182,14 @@ public class DividaClienteResponse   {
 
   
   /**
-   * Valor do IOF devido
+   * {{{divida_cliente_response_valor_i_o_f_value}}}
    **/
   public DividaClienteResponse valorIOF(BigDecimal valorIOF) {
     this.valorIOF = valorIOF;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor do IOF devido")
+  @ApiModelProperty(example = "null", value = "{{{divida_cliente_response_valor_i_o_f_value}}}")
   @JsonProperty("valorIOF")
   public BigDecimal getValorIOF() {
     return valorIOF;
@@ -198,14 +200,14 @@ public class DividaClienteResponse   {
 
   
   /**
-   * Valor do saldo devedor corrido da d\u00EDvida at\u00E9 a data de vencimento do acordo
+   * {{{divida_cliente_response_valor_saldo_corrigido_value}}}
    **/
   public DividaClienteResponse valorSaldoCorrigido(BigDecimal valorSaldoCorrigido) {
     this.valorSaldoCorrigido = valorSaldoCorrigido;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor do saldo devedor corrido da d\u00EDvida at\u00E9 a data de vencimento do acordo")
+  @ApiModelProperty(example = "null", value = "{{{divida_cliente_response_valor_saldo_corrigido_value}}}")
   @JsonProperty("valorSaldoCorrigido")
   public BigDecimal getValorSaldoCorrigido() {
     return valorSaldoCorrigido;
@@ -216,14 +218,14 @@ public class DividaClienteResponse   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do status da conta (id)
+   * {{{divida_cliente_response_id_status_conta_value}}}
    **/
   public DividaClienteResponse idStatusConta(Long idStatusConta) {
     this.idStatusConta = idStatusConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do status da conta (id)")
+  @ApiModelProperty(example = "null", value = "{{{divida_cliente_response_id_status_conta_value}}}")
   @JsonProperty("idStatusConta")
   public Long getIdStatusConta() {
     return idStatusConta;
@@ -234,14 +236,14 @@ public class DividaClienteResponse   {
 
   
   /**
-   * Descri\u00E7\u00E3o do status da conta
+   * {{{divida_cliente_response_descricao_status_conta_value}}}
    **/
   public DividaClienteResponse descricaoStatusConta(String descricaoStatusConta) {
     this.descricaoStatusConta = descricaoStatusConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do status da conta")
+  @ApiModelProperty(example = "null", value = "{{{divida_cliente_response_descricao_status_conta_value}}}")
   @JsonProperty("descricaoStatusConta")
   public String getDescricaoStatusConta() {
     return descricaoStatusConta;
@@ -252,14 +254,14 @@ public class DividaClienteResponse   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do status do acordo (id)
+   * {{{divida_cliente_response_id_status_acordo_value}}}
    **/
   public DividaClienteResponse idStatusAcordo(Long idStatusAcordo) {
     this.idStatusAcordo = idStatusAcordo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do status do acordo (id)")
+  @ApiModelProperty(example = "null", value = "{{{divida_cliente_response_id_status_acordo_value}}}")
   @JsonProperty("idStatusAcordo")
   public Long getIdStatusAcordo() {
     return idStatusAcordo;
@@ -270,14 +272,14 @@ public class DividaClienteResponse   {
 
   
   /**
-   * Descri\u00E7\u00E3o do status do acordo
+   * {{{divida_cliente_response_descricao_status_acordo_value}}}
    **/
   public DividaClienteResponse descricaoStatusAcordo(String descricaoStatusAcordo) {
     this.descricaoStatusAcordo = descricaoStatusAcordo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do status do acordo")
+  @ApiModelProperty(example = "null", value = "{{{divida_cliente_response_descricao_status_acordo_value}}}")
   @JsonProperty("descricaoStatusAcordo")
   public String getDescricaoStatusAcordo() {
     return descricaoStatusAcordo;
@@ -288,14 +290,14 @@ public class DividaClienteResponse   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a
+   * {{{divida_cliente_response_id_escritorio_cobranca_value}}}
    **/
   public DividaClienteResponse idEscritorioCobranca(Long idEscritorioCobranca) {
     this.idEscritorioCobranca = idEscritorioCobranca;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a")
+  @ApiModelProperty(example = "null", value = "{{{divida_cliente_response_id_escritorio_cobranca_value}}}")
   @JsonProperty("idEscritorioCobranca")
   public Long getIdEscritorioCobranca() {
     return idEscritorioCobranca;
@@ -306,14 +308,14 @@ public class DividaClienteResponse   {
 
   
   /**
-   * Nome do escrit\u00F3rio de cobran\u00E7a
+   * {{{divida_cliente_response_nome_escritorio_cobranca_value}}}
    **/
   public DividaClienteResponse nomeEscritorioCobranca(String nomeEscritorioCobranca) {
     this.nomeEscritorioCobranca = nomeEscritorioCobranca;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome do escrit\u00F3rio de cobran\u00E7a")
+  @ApiModelProperty(example = "null", value = "{{{divida_cliente_response_nome_escritorio_cobranca_value}}}")
   @JsonProperty("nomeEscritorioCobranca")
   public String getNomeEscritorioCobranca() {
     return nomeEscritorioCobranca;
@@ -324,14 +326,14 @@ public class DividaClienteResponse   {
 
   
   /**
-   * Email do devedor
+   * {{{divida_cliente_response_email_pessoa_conta_value}}}
    **/
   public DividaClienteResponse emailPessoaConta(String emailPessoaConta) {
     this.emailPessoaConta = emailPessoaConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Email do devedor")
+  @ApiModelProperty(example = "null", value = "{{{divida_cliente_response_email_pessoa_conta_value}}}")
   @JsonProperty("emailPessoaConta")
   public String getEmailPessoaConta() {
     return emailPessoaConta;
@@ -412,4 +414,6 @@ public class DividaClienteResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

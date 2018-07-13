@@ -7,11 +7,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+
+
 /**
- * Objeto Telefone
+ * {{{telefone_estabelecimento_update_description}}}
  **/
 
-@ApiModel(description = "Objeto Telefone")
+@ApiModel(description = "{{{telefone_estabelecimento_update_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TelefoneEstabelecimentoUpdate   {
   
@@ -21,14 +23,14 @@ public class TelefoneEstabelecimentoUpdate   {
 
   
   /**
-   * C\u00F3digo DDD do telefone.
+   * {{{telefone_estabelecimento_update_ddd_value}}}
    **/
   public TelefoneEstabelecimentoUpdate ddd(String ddd) {
     this.ddd = ddd;
     return this;
   }
   
-  @ApiModelProperty(example = "83", required = true, value = "C\u00F3digo DDD do telefone.")
+  @ApiModelProperty(example = "83", required = true, value = "{{{telefone_estabelecimento_update_ddd_value}}}")
   @JsonProperty("ddd")
   public String getDdd() {
     return ddd;
@@ -39,14 +41,14 @@ public class TelefoneEstabelecimentoUpdate   {
 
   
   /**
-   * N\u00FAmero do telefone.
+   * {{{telefone_estabelecimento_update_telefone_value}}}
    **/
   public TelefoneEstabelecimentoUpdate telefone(String telefone) {
     this.telefone = telefone;
     return this;
   }
   
-  @ApiModelProperty(example = "987654321", required = true, value = "N\u00FAmero do telefone.")
+  @ApiModelProperty(example = "987654321", required = true, value = "{{{telefone_estabelecimento_update_telefone_value}}}")
   @JsonProperty("telefone")
   public String getTelefone() {
     return telefone;
@@ -57,14 +59,14 @@ public class TelefoneEstabelecimentoUpdate   {
 
   
   /**
-   * N\u00FAmero do ramal.
+   * {{{telefone_estabelecimento_update_ramal_value}}}
    **/
   public TelefoneEstabelecimentoUpdate ramal(String ramal) {
     this.ramal = ramal;
     return this;
   }
   
-  @ApiModelProperty(example = "1234", value = "N\u00FAmero do ramal.")
+  @ApiModelProperty(example = "1234", value = "{{{telefone_estabelecimento_update_ramal_value}}}")
   @JsonProperty("ramal")
   public String getRamal() {
     return ramal;
@@ -117,4 +119,6 @@ public class TelefoneEstabelecimentoUpdate   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 

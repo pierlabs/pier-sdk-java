@@ -8,133 +8,62 @@ import java.math.BigDecimal;
 
 
 
+
+
 /**
- * Objeto transacao N\u00E3o Processada
+ * {{{transacao_nao_processada_response_description}}}
  **/
 
-@ApiModel(description = "Objeto transacao N\u00E3o Processada")
+@ApiModel(description = "{{{transacao_nao_processada_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TransacaoNaoProcessadaResponse   {
   
-  private Long idTipoTransacaoNaoProcessada = null;
-  private String descricaoTipoTransacaoNaoProcessada = null;
-  private String descricaoAbreviada = null;
-  private Long idConta = null;
   private String cartaoMascarado = null;
-  private String nomePortador = null;
-  private String dataOrigem = null;
-  private String dataFaturamento = null;
-  private String dataVencimento = null;
-  private String modoEntradaTransacao = null;
-  private BigDecimal valorTaxaEmbarque = null;
-  private BigDecimal valorEntrada = null;
-  private BigDecimal valorBRL = null;
-  private BigDecimal valorUSD = null;
-  private BigDecimal cotacaoUSD = null;
-  private String dataCotacaoUSD = null;
-  private String codigoMoedaOrigem = null;
-  private String codigoMoedaDestino = null;
   private String codigoAutorizacao = null;
+  private Long codigoMCC = null;
+  private String codigoMoedaDestino = null;
+  private String codigoMoedaOrigem = null;
   private String codigoReferencia = null;
   private String codigoTerminal = null;
-  private Long codigoMCC = null;
-  private Long grupoMCC = null;
-  private String grupoDescricaoMCC = null;
-  private Long idEstabelecimento = null;
-  private String nomeEstabelecimento = null;
-  private String nomeFantasiaEstabelecimento = null;
-  private String localidadeEstabelecimento = null;
-  private Long planoParcelamento = null;
-  private Long numeroParcela = null;
+  private BigDecimal cotacaoUSD = null;
+  private String dataCotacaoUSD = null;
+  private String dataFaturamento = null;
+  private String dataOrigem = null;
+  private String dataVencimentoReal = null;
+  private String descricaoAbreviada = null;
+  private String descricaoTipoTransacaoNaoProcessada = null;
   private String detalhesTransacao = null;
   private Integer flagCredito = null;
   private Integer flagFaturado = null;
-  private Integer flagEstorno = null;
+  private String grupoDescricaoMCC = null;
+  private Long grupoMCC = null;
+  private Long idConta = null;
+  private Long idEstabelecimento = null;
+  private Long idTipoTransacaoNaoProcessada = null;
   private Long idTransacaoEstorno = null;
+  private String localidadeEstabelecimento = null;
+  private String modoEntradaTransacao = null;
+  private String nomeEstabelecimento = null;
+  private String nomeFantasiaEstabelecimento = null;
+  private String nomePortador = null;
+  private Long parcela = null;
+  private Long plano = null;
   private Integer status = null;
+  private BigDecimal taxaEmbarque = null;
+  private BigDecimal valorBRL = null;
+  private BigDecimal valorEntrada = null;
+  private BigDecimal valorUSD = null;
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o.
-   **/
-  public TransacaoNaoProcessadaResponse idTipoTransacaoNaoProcessada(Long idTipoTransacaoNaoProcessada) {
-    this.idTipoTransacaoNaoProcessada = idTipoTransacaoNaoProcessada;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o.")
-  @JsonProperty("idTipoTransacaoNaoProcessada")
-  public Long getIdTipoTransacaoNaoProcessada() {
-    return idTipoTransacaoNaoProcessada;
-  }
-  public void setIdTipoTransacaoNaoProcessada(Long idTipoTransacaoNaoProcessada) {
-    this.idTipoTransacaoNaoProcessada = idTipoTransacaoNaoProcessada;
-  }
-
-  
-  /**
-   * Descri\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o n\u00E3o Processada.
-   **/
-  public TransacaoNaoProcessadaResponse descricaoTipoTransacaoNaoProcessada(String descricaoTipoTransacaoNaoProcessada) {
-    this.descricaoTipoTransacaoNaoProcessada = descricaoTipoTransacaoNaoProcessada;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o n\u00E3o Processada.")
-  @JsonProperty("descricaoTipoTransacaoNaoProcessada")
-  public String getDescricaoTipoTransacaoNaoProcessada() {
-    return descricaoTipoTransacaoNaoProcessada;
-  }
-  public void setDescricaoTipoTransacaoNaoProcessada(String descricaoTipoTransacaoNaoProcessada) {
-    this.descricaoTipoTransacaoNaoProcessada = descricaoTipoTransacaoNaoProcessada;
-  }
-
-  
-  /**
-   * Descri\u00E7\u00E3o Abreviada da Transa\u00E7\u00E3o.
-   **/
-  public TransacaoNaoProcessadaResponse descricaoAbreviada(String descricaoAbreviada) {
-    this.descricaoAbreviada = descricaoAbreviada;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o Abreviada da Transa\u00E7\u00E3o.")
-  @JsonProperty("descricaoAbreviada")
-  public String getDescricaoAbreviada() {
-    return descricaoAbreviada;
-  }
-  public void setDescricaoAbreviada(String descricaoAbreviada) {
-    this.descricaoAbreviada = descricaoAbreviada;
-  }
-
-  
-  /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id).
-   **/
-  public TransacaoNaoProcessadaResponse idConta(Long idConta) {
-    this.idConta = idConta;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id).")
-  @JsonProperty("idConta")
-  public Long getIdConta() {
-    return idConta;
-  }
-  public void setIdConta(Long idConta) {
-    this.idConta = idConta;
-  }
-
-  
-  /**
-   * N\u00FAmero do Cart\u00E3o em Formato 0000XXXXXXXX0000.
+   * {{{transacao_nao_processada_response_cartao_mascarado_value}}}
    **/
   public TransacaoNaoProcessadaResponse cartaoMascarado(String cartaoMascarado) {
     this.cartaoMascarado = cartaoMascarado;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00FAmero do Cart\u00E3o em Formato 0000XXXXXXXX0000.")
+  @ApiModelProperty(example = "null", value = "{{{transacao_nao_processada_response_cartao_mascarado_value}}}")
   @JsonProperty("cartaoMascarado")
   public String getCartaoMascarado() {
     return cartaoMascarado;
@@ -145,248 +74,14 @@ public class TransacaoNaoProcessadaResponse   {
 
   
   /**
-   * Nome completo do Portador do Cart\u00E3o.
-   **/
-  public TransacaoNaoProcessadaResponse nomePortador(String nomePortador) {
-    this.nomePortador = nomePortador;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Nome completo do Portador do Cart\u00E3o.")
-  @JsonProperty("nomePortador")
-  public String getNomePortador() {
-    return nomePortador;
-  }
-  public void setNomePortador(String nomePortador) {
-    this.nomePortador = nomePortador;
-  }
-
-  
-  /**
-   * Data em que a Transa\u00E7\u00E3o foi realizada.
-   **/
-  public TransacaoNaoProcessadaResponse dataOrigem(String dataOrigem) {
-    this.dataOrigem = dataOrigem;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Data em que a Transa\u00E7\u00E3o foi realizada.")
-  @JsonProperty("dataOrigem")
-  public String getDataOrigem() {
-    return dataOrigem;
-  }
-  public void setDataOrigem(String dataOrigem) {
-    this.dataOrigem = dataOrigem;
-  }
-
-  
-  /**
-   * Data de Faturamento da Transa\u00E7\u00E3o.
-   **/
-  public TransacaoNaoProcessadaResponse dataFaturamento(String dataFaturamento) {
-    this.dataFaturamento = dataFaturamento;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Data de Faturamento da Transa\u00E7\u00E3o.")
-  @JsonProperty("dataFaturamento")
-  public String getDataFaturamento() {
-    return dataFaturamento;
-  }
-  public void setDataFaturamento(String dataFaturamento) {
-    this.dataFaturamento = dataFaturamento;
-  }
-
-  
-  /**
-   * Data de Vencimento da Fatura.
-   **/
-  public TransacaoNaoProcessadaResponse dataVencimento(String dataVencimento) {
-    this.dataVencimento = dataVencimento;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Data de Vencimento da Fatura.")
-  @JsonProperty("dataVencimento")
-  public String getDataVencimento() {
-    return dataVencimento;
-  }
-  public void setDataVencimento(String dataVencimento) {
-    this.dataVencimento = dataVencimento;
-  }
-
-  
-  /**
-   * Descreve o modo utilizado para realizar a leitura dos dados do cart\u00E3o para realizar a Transa\u00E7\u00E3o.
-   **/
-  public TransacaoNaoProcessadaResponse modoEntradaTransacao(String modoEntradaTransacao) {
-    this.modoEntradaTransacao = modoEntradaTransacao;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Descreve o modo utilizado para realizar a leitura dos dados do cart\u00E3o para realizar a Transa\u00E7\u00E3o.")
-  @JsonProperty("modoEntradaTransacao")
-  public String getModoEntradaTransacao() {
-    return modoEntradaTransacao;
-  }
-  public void setModoEntradaTransacao(String modoEntradaTransacao) {
-    this.modoEntradaTransacao = modoEntradaTransacao;
-  }
-
-  
-  /**
-   * Valor da Taxa de Embarque em Real (BRL) quando a transa\u00E7\u00E3o for relacionada a Compra de Passagens A\u00E9reas.
-   **/
-  public TransacaoNaoProcessadaResponse valorTaxaEmbarque(BigDecimal valorTaxaEmbarque) {
-    this.valorTaxaEmbarque = valorTaxaEmbarque;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Valor da Taxa de Embarque em Real (BRL) quando a transa\u00E7\u00E3o for relacionada a Compra de Passagens A\u00E9reas.")
-  @JsonProperty("valorTaxaEmbarque")
-  public BigDecimal getValorTaxaEmbarque() {
-    return valorTaxaEmbarque;
-  }
-  public void setValorTaxaEmbarque(BigDecimal valorTaxaEmbarque) {
-    this.valorTaxaEmbarque = valorTaxaEmbarque;
-  }
-
-  
-  /**
-   * Valor da Entrada em Real (BRL) quando a transa\u00E7\u00E3o for do tipo Parcelada com o pagamento de um valor de Entrada.
-   **/
-  public TransacaoNaoProcessadaResponse valorEntrada(BigDecimal valorEntrada) {
-    this.valorEntrada = valorEntrada;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Valor da Entrada em Real (BRL) quando a transa\u00E7\u00E3o for do tipo Parcelada com o pagamento de um valor de Entrada.")
-  @JsonProperty("valorEntrada")
-  public BigDecimal getValorEntrada() {
-    return valorEntrada;
-  }
-  public void setValorEntrada(BigDecimal valorEntrada) {
-    this.valorEntrada = valorEntrada;
-  }
-
-  
-  /**
-   * Valor da Transa\u00E7\u00E3o em Real (BRL).
-   **/
-  public TransacaoNaoProcessadaResponse valorBRL(BigDecimal valorBRL) {
-    this.valorBRL = valorBRL;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Valor da Transa\u00E7\u00E3o em Real (BRL).")
-  @JsonProperty("valorBRL")
-  public BigDecimal getValorBRL() {
-    return valorBRL;
-  }
-  public void setValorBRL(BigDecimal valorBRL) {
-    this.valorBRL = valorBRL;
-  }
-
-  
-  /**
-   * Valor da Transa\u00E7\u00E3o em D\u00F3lar Americano (USD).
-   **/
-  public TransacaoNaoProcessadaResponse valorUSD(BigDecimal valorUSD) {
-    this.valorUSD = valorUSD;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Valor da Transa\u00E7\u00E3o em D\u00F3lar Americano (USD).")
-  @JsonProperty("valorUSD")
-  public BigDecimal getValorUSD() {
-    return valorUSD;
-  }
-  public void setValorUSD(BigDecimal valorUSD) {
-    this.valorUSD = valorUSD;
-  }
-
-  
-  /**
-   * Valor do D\u00F3lar Americano (USD) convertido em Real (BRL).
-   **/
-  public TransacaoNaoProcessadaResponse cotacaoUSD(BigDecimal cotacaoUSD) {
-    this.cotacaoUSD = cotacaoUSD;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Valor do D\u00F3lar Americano (USD) convertido em Real (BRL).")
-  @JsonProperty("cotacaoUSD")
-  public BigDecimal getCotacaoUSD() {
-    return cotacaoUSD;
-  }
-  public void setCotacaoUSD(BigDecimal cotacaoUSD) {
-    this.cotacaoUSD = cotacaoUSD;
-  }
-
-  
-  /**
-   * Data de Fechamento da Cota\u00E7\u00E3o do D\u00F3lar Americano (USD).
-   **/
-  public TransacaoNaoProcessadaResponse dataCotacaoUSD(String dataCotacaoUSD) {
-    this.dataCotacaoUSD = dataCotacaoUSD;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Data de Fechamento da Cota\u00E7\u00E3o do D\u00F3lar Americano (USD).")
-  @JsonProperty("dataCotacaoUSD")
-  public String getDataCotacaoUSD() {
-    return dataCotacaoUSD;
-  }
-  public void setDataCotacaoUSD(String dataCotacaoUSD) {
-    this.dataCotacaoUSD = dataCotacaoUSD;
-  }
-
-  
-  /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Moeda utilizada na Transa\u00E7\u00E3o, seguindo padr\u00E3o ISO 4217.
-   **/
-  public TransacaoNaoProcessadaResponse codigoMoedaOrigem(String codigoMoedaOrigem) {
-    this.codigoMoedaOrigem = codigoMoedaOrigem;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o da Moeda utilizada na Transa\u00E7\u00E3o, seguindo padr\u00E3o ISO 4217.")
-  @JsonProperty("codigoMoedaOrigem")
-  public String getCodigoMoedaOrigem() {
-    return codigoMoedaOrigem;
-  }
-  public void setCodigoMoedaOrigem(String codigoMoedaOrigem) {
-    this.codigoMoedaOrigem = codigoMoedaOrigem;
-  }
-
-  
-  /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Moeda da Transa\u00E7\u00E3o ap\u00F3s a convers\u00E3o, seguindo padr\u00E3o ISO 4217.
-   **/
-  public TransacaoNaoProcessadaResponse codigoMoedaDestino(String codigoMoedaDestino) {
-    this.codigoMoedaDestino = codigoMoedaDestino;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o da Moeda da Transa\u00E7\u00E3o ap\u00F3s a convers\u00E3o, seguindo padr\u00E3o ISO 4217.")
-  @JsonProperty("codigoMoedaDestino")
-  public String getCodigoMoedaDestino() {
-    return codigoMoedaDestino;
-  }
-  public void setCodigoMoedaDestino(String codigoMoedaDestino) {
-    this.codigoMoedaDestino = codigoMoedaDestino;
-  }
-
-  
-  /**
-   * C\u00F3digo de Autoriza\u00E7\u00E3o da Transa\u00E7\u00E3o.
+   * {{{transacao_nao_processada_response_codigo_autorizacao_value}}}
    **/
   public TransacaoNaoProcessadaResponse codigoAutorizacao(String codigoAutorizacao) {
     this.codigoAutorizacao = codigoAutorizacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Autoriza\u00E7\u00E3o da Transa\u00E7\u00E3o.")
+  @ApiModelProperty(example = "null", value = "{{{transacao_nao_processada_response_codigo_autorizacao_value}}}")
   @JsonProperty("codigoAutorizacao")
   public String getCodigoAutorizacao() {
     return codigoAutorizacao;
@@ -397,50 +92,14 @@ public class TransacaoNaoProcessadaResponse   {
 
   
   /**
-   * C\u00F3digo de Refer\u00EAncia da Transa\u00E7\u00E3o quando utilizado Cart\u00E3o Bandeirado.
-   **/
-  public TransacaoNaoProcessadaResponse codigoReferencia(String codigoReferencia) {
-    this.codigoReferencia = codigoReferencia;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Refer\u00EAncia da Transa\u00E7\u00E3o quando utilizado Cart\u00E3o Bandeirado.")
-  @JsonProperty("codigoReferencia")
-  public String getCodigoReferencia() {
-    return codigoReferencia;
-  }
-  public void setCodigoReferencia(String codigoReferencia) {
-    this.codigoReferencia = codigoReferencia;
-  }
-
-  
-  /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da origem da captura da Transa\u00E7\u00E3o.
-   **/
-  public TransacaoNaoProcessadaResponse codigoTerminal(String codigoTerminal) {
-    this.codigoTerminal = codigoTerminal;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o da origem da captura da Transa\u00E7\u00E3o.")
-  @JsonProperty("codigoTerminal")
-  public String getCodigoTerminal() {
-    return codigoTerminal;
-  }
-  public void setCodigoTerminal(String codigoTerminal) {
-    this.codigoTerminal = codigoTerminal;
-  }
-
-  
-  /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da categoria do Estabelecimento.
+   * {{{transacao_nao_processada_response_codigo_mcc_value}}}
    **/
   public TransacaoNaoProcessadaResponse codigoMCC(Long codigoMCC) {
     this.codigoMCC = codigoMCC;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o da categoria do Estabelecimento.")
+  @ApiModelProperty(example = "null", value = "{{{transacao_nao_processada_response_codigo_mcc_value}}}")
   @JsonProperty("codigoMCC")
   public Long getCodigoMCC() {
     return codigoMCC;
@@ -451,158 +110,212 @@ public class TransacaoNaoProcessadaResponse   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do grupo do Estabelecimento.
+   * {{{transacao_nao_processada_response_codigo_moeda_destino_value}}}
    **/
-  public TransacaoNaoProcessadaResponse grupoMCC(Long grupoMCC) {
-    this.grupoMCC = grupoMCC;
+  public TransacaoNaoProcessadaResponse codigoMoedaDestino(String codigoMoedaDestino) {
+    this.codigoMoedaDestino = codigoMoedaDestino;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do grupo do Estabelecimento.")
-  @JsonProperty("grupoMCC")
-  public Long getGrupoMCC() {
-    return grupoMCC;
+  @ApiModelProperty(example = "null", value = "{{{transacao_nao_processada_response_codigo_moeda_destino_value}}}")
+  @JsonProperty("codigoMoedaDestino")
+  public String getCodigoMoedaDestino() {
+    return codigoMoedaDestino;
   }
-  public void setGrupoMCC(Long grupoMCC) {
-    this.grupoMCC = grupoMCC;
+  public void setCodigoMoedaDestino(String codigoMoedaDestino) {
+    this.codigoMoedaDestino = codigoMoedaDestino;
   }
 
   
   /**
-   * Descri\u00E7\u00E3o do grupo do Estabelecimento.
+   * {{{transacao_nao_processada_response_codigo_moeda_origem_value}}}
    **/
-  public TransacaoNaoProcessadaResponse grupoDescricaoMCC(String grupoDescricaoMCC) {
-    this.grupoDescricaoMCC = grupoDescricaoMCC;
+  public TransacaoNaoProcessadaResponse codigoMoedaOrigem(String codigoMoedaOrigem) {
+    this.codigoMoedaOrigem = codigoMoedaOrigem;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do grupo do Estabelecimento.")
-  @JsonProperty("grupoDescricaoMCC")
-  public String getGrupoDescricaoMCC() {
-    return grupoDescricaoMCC;
+  @ApiModelProperty(example = "null", value = "{{{transacao_nao_processada_response_codigo_moeda_origem_value}}}")
+  @JsonProperty("codigoMoedaOrigem")
+  public String getCodigoMoedaOrigem() {
+    return codigoMoedaOrigem;
   }
-  public void setGrupoDescricaoMCC(String grupoDescricaoMCC) {
-    this.grupoDescricaoMCC = grupoDescricaoMCC;
+  public void setCodigoMoedaOrigem(String codigoMoedaOrigem) {
+    this.codigoMoedaOrigem = codigoMoedaOrigem;
   }
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id).
+   * {{{transacao_nao_processada_response_codigo_referencia_value}}}
    **/
-  public TransacaoNaoProcessadaResponse idEstabelecimento(Long idEstabelecimento) {
-    this.idEstabelecimento = idEstabelecimento;
+  public TransacaoNaoProcessadaResponse codigoReferencia(String codigoReferencia) {
+    this.codigoReferencia = codigoReferencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id).")
-  @JsonProperty("idEstabelecimento")
-  public Long getIdEstabelecimento() {
-    return idEstabelecimento;
+  @ApiModelProperty(example = "null", value = "{{{transacao_nao_processada_response_codigo_referencia_value}}}")
+  @JsonProperty("codigoReferencia")
+  public String getCodigoReferencia() {
+    return codigoReferencia;
   }
-  public void setIdEstabelecimento(Long idEstabelecimento) {
-    this.idEstabelecimento = idEstabelecimento;
+  public void setCodigoReferencia(String codigoReferencia) {
+    this.codigoReferencia = codigoReferencia;
   }
 
   
   /**
-   * Nome do Estabelecimento.
+   * {{{transacao_nao_processada_response_codigo_terminal_value}}}
    **/
-  public TransacaoNaoProcessadaResponse nomeEstabelecimento(String nomeEstabelecimento) {
-    this.nomeEstabelecimento = nomeEstabelecimento;
+  public TransacaoNaoProcessadaResponse codigoTerminal(String codigoTerminal) {
+    this.codigoTerminal = codigoTerminal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome do Estabelecimento.")
-  @JsonProperty("nomeEstabelecimento")
-  public String getNomeEstabelecimento() {
-    return nomeEstabelecimento;
+  @ApiModelProperty(example = "null", value = "{{{transacao_nao_processada_response_codigo_terminal_value}}}")
+  @JsonProperty("codigoTerminal")
+  public String getCodigoTerminal() {
+    return codigoTerminal;
   }
-  public void setNomeEstabelecimento(String nomeEstabelecimento) {
-    this.nomeEstabelecimento = nomeEstabelecimento;
+  public void setCodigoTerminal(String codigoTerminal) {
+    this.codigoTerminal = codigoTerminal;
   }
 
   
   /**
-   * Nome Fantasia do Estabelecimento.
+   * {{{transacao_nao_processada_response_cotacao_usd_value}}}
    **/
-  public TransacaoNaoProcessadaResponse nomeFantasiaEstabelecimento(String nomeFantasiaEstabelecimento) {
-    this.nomeFantasiaEstabelecimento = nomeFantasiaEstabelecimento;
+  public TransacaoNaoProcessadaResponse cotacaoUSD(BigDecimal cotacaoUSD) {
+    this.cotacaoUSD = cotacaoUSD;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome Fantasia do Estabelecimento.")
-  @JsonProperty("nomeFantasiaEstabelecimento")
-  public String getNomeFantasiaEstabelecimento() {
-    return nomeFantasiaEstabelecimento;
+  @ApiModelProperty(example = "null", value = "{{{transacao_nao_processada_response_cotacao_usd_value}}}")
+  @JsonProperty("cotacaoUSD")
+  public BigDecimal getCotacaoUSD() {
+    return cotacaoUSD;
   }
-  public void setNomeFantasiaEstabelecimento(String nomeFantasiaEstabelecimento) {
-    this.nomeFantasiaEstabelecimento = nomeFantasiaEstabelecimento;
+  public void setCotacaoUSD(BigDecimal cotacaoUSD) {
+    this.cotacaoUSD = cotacaoUSD;
   }
 
   
   /**
-   * Localidade do Estabelecimento.
+   * {{{transacao_nao_processada_response_data_cotacao_usd_value}}}
    **/
-  public TransacaoNaoProcessadaResponse localidadeEstabelecimento(String localidadeEstabelecimento) {
-    this.localidadeEstabelecimento = localidadeEstabelecimento;
+  public TransacaoNaoProcessadaResponse dataCotacaoUSD(String dataCotacaoUSD) {
+    this.dataCotacaoUSD = dataCotacaoUSD;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Localidade do Estabelecimento.")
-  @JsonProperty("localidadeEstabelecimento")
-  public String getLocalidadeEstabelecimento() {
-    return localidadeEstabelecimento;
+  @ApiModelProperty(example = "null", value = "{{{transacao_nao_processada_response_data_cotacao_usd_value}}}")
+  @JsonProperty("dataCotacaoUSD")
+  public String getDataCotacaoUSD() {
+    return dataCotacaoUSD;
   }
-  public void setLocalidadeEstabelecimento(String localidadeEstabelecimento) {
-    this.localidadeEstabelecimento = localidadeEstabelecimento;
+  public void setDataCotacaoUSD(String dataCotacaoUSD) {
+    this.dataCotacaoUSD = dataCotacaoUSD;
   }
 
   
   /**
-   * Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero total de Parcelas.
+   * {{{transacao_nao_processada_response_data_faturamento_value}}}
    **/
-  public TransacaoNaoProcessadaResponse planoParcelamento(Long planoParcelamento) {
-    this.planoParcelamento = planoParcelamento;
+  public TransacaoNaoProcessadaResponse dataFaturamento(String dataFaturamento) {
+    this.dataFaturamento = dataFaturamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero total de Parcelas.")
-  @JsonProperty("planoParcelamento")
-  public Long getPlanoParcelamento() {
-    return planoParcelamento;
+  @ApiModelProperty(example = "null", value = "{{{transacao_nao_processada_response_data_faturamento_value}}}")
+  @JsonProperty("dataFaturamento")
+  public String getDataFaturamento() {
+    return dataFaturamento;
   }
-  public void setPlanoParcelamento(Long planoParcelamento) {
-    this.planoParcelamento = planoParcelamento;
+  public void setDataFaturamento(String dataFaturamento) {
+    this.dataFaturamento = dataFaturamento;
   }
 
   
   /**
-   * Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero da Parcela.
+   * {{{transacao_nao_processada_response_data_origem_value}}}
    **/
-  public TransacaoNaoProcessadaResponse numeroParcela(Long numeroParcela) {
-    this.numeroParcela = numeroParcela;
+  public TransacaoNaoProcessadaResponse dataOrigem(String dataOrigem) {
+    this.dataOrigem = dataOrigem;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero da Parcela.")
-  @JsonProperty("numeroParcela")
-  public Long getNumeroParcela() {
-    return numeroParcela;
+  @ApiModelProperty(example = "null", value = "{{{transacao_nao_processada_response_data_origem_value}}}")
+  @JsonProperty("dataOrigem")
+  public String getDataOrigem() {
+    return dataOrigem;
   }
-  public void setNumeroParcela(Long numeroParcela) {
-    this.numeroParcela = numeroParcela;
+  public void setDataOrigem(String dataOrigem) {
+    this.dataOrigem = dataOrigem;
   }
 
   
   /**
-   * Detalhes complementares a respeito da Transa\u00E7\u00E3o.
+   * {{{transacao_nao_processada_response_data_vencimento_value}}}
+   **/
+  public TransacaoNaoProcessadaResponse dataVencimentoReal(String dataVencimentoReal) {
+    this.dataVencimentoReal = dataVencimentoReal;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{transacao_nao_processada_response_data_vencimento_value}}}")
+  @JsonProperty("dataVencimentoReal")
+  public String getDataVencimentoReal() {
+    return dataVencimentoReal;
+  }
+  public void setDataVencimentoReal(String dataVencimentoReal) {
+    this.dataVencimentoReal = dataVencimentoReal;
+  }
+
+  
+  /**
+   * {{{transacao_nao_processada_response_descricao_abreviada_value}}}
+   **/
+  public TransacaoNaoProcessadaResponse descricaoAbreviada(String descricaoAbreviada) {
+    this.descricaoAbreviada = descricaoAbreviada;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{transacao_nao_processada_response_descricao_abreviada_value}}}")
+  @JsonProperty("descricaoAbreviada")
+  public String getDescricaoAbreviada() {
+    return descricaoAbreviada;
+  }
+  public void setDescricaoAbreviada(String descricaoAbreviada) {
+    this.descricaoAbreviada = descricaoAbreviada;
+  }
+
+  
+  /**
+   * {{{transacao_nao_processada_response_descricao_tipo_transacao_nao_processada_value}}}
+   **/
+  public TransacaoNaoProcessadaResponse descricaoTipoTransacaoNaoProcessada(String descricaoTipoTransacaoNaoProcessada) {
+    this.descricaoTipoTransacaoNaoProcessada = descricaoTipoTransacaoNaoProcessada;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{transacao_nao_processada_response_descricao_tipo_transacao_nao_processada_value}}}")
+  @JsonProperty("descricaoTipoTransacaoNaoProcessada")
+  public String getDescricaoTipoTransacaoNaoProcessada() {
+    return descricaoTipoTransacaoNaoProcessada;
+  }
+  public void setDescricaoTipoTransacaoNaoProcessada(String descricaoTipoTransacaoNaoProcessada) {
+    this.descricaoTipoTransacaoNaoProcessada = descricaoTipoTransacaoNaoProcessada;
+  }
+
+  
+  /**
+   * {{{transacao_nao_processada_response_detalhes_transacao_value}}}
    **/
   public TransacaoNaoProcessadaResponse detalhesTransacao(String detalhesTransacao) {
     this.detalhesTransacao = detalhesTransacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Detalhes complementares a respeito da Transa\u00E7\u00E3o.")
+  @ApiModelProperty(example = "null", value = "{{{transacao_nao_processada_response_detalhes_transacao_value}}}")
   @JsonProperty("detalhesTransacao")
   public String getDetalhesTransacao() {
     return detalhesTransacao;
@@ -613,14 +326,14 @@ public class TransacaoNaoProcessadaResponse   {
 
   
   /**
-   * Quando ativa, indica que a Transa\u00E7\u00E3o \u00E9 do Tipo 'Cr\u00E9dito'.
+   * {{{transacao_nao_processada_response_flag_credito_value}}}
    **/
   public TransacaoNaoProcessadaResponse flagCredito(Integer flagCredito) {
     this.flagCredito = flagCredito;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Quando ativa, indica que a Transa\u00E7\u00E3o \u00E9 do Tipo 'Cr\u00E9dito'.")
+  @ApiModelProperty(example = "null", value = "{{{transacao_nao_processada_response_flag_credito_value}}}")
   @JsonProperty("flagCredito")
   public Integer getFlagCredito() {
     return flagCredito;
@@ -631,14 +344,14 @@ public class TransacaoNaoProcessadaResponse   {
 
   
   /**
-   * Quando ativa, indica que a Transa\u00E7\u00E3o foi consolidada em uma Fatura.
+   * {{{transacao_nao_processada_response_flag_faturado_value}}}
    **/
   public TransacaoNaoProcessadaResponse flagFaturado(Integer flagFaturado) {
     this.flagFaturado = flagFaturado;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Quando ativa, indica que a Transa\u00E7\u00E3o foi consolidada em uma Fatura.")
+  @ApiModelProperty(example = "null", value = "{{{transacao_nao_processada_response_flag_faturado_value}}}")
   @JsonProperty("flagFaturado")
   public Integer getFlagFaturado() {
     return flagFaturado;
@@ -649,32 +362,104 @@ public class TransacaoNaoProcessadaResponse   {
 
   
   /**
-   * Quando ativa, indica que a Transa\u00E7\u00E3o foi estornada.
+   * {{{transacao_nao_processada_response_grupo_descricao_mcc_value}}}
    **/
-  public TransacaoNaoProcessadaResponse flagEstorno(Integer flagEstorno) {
-    this.flagEstorno = flagEstorno;
+  public TransacaoNaoProcessadaResponse grupoDescricaoMCC(String grupoDescricaoMCC) {
+    this.grupoDescricaoMCC = grupoDescricaoMCC;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Quando ativa, indica que a Transa\u00E7\u00E3o foi estornada.")
-  @JsonProperty("flagEstorno")
-  public Integer getFlagEstorno() {
-    return flagEstorno;
+  @ApiModelProperty(example = "null", value = "{{{transacao_nao_processada_response_grupo_descricao_mcc_value}}}")
+  @JsonProperty("grupoDescricaoMCC")
+  public String getGrupoDescricaoMCC() {
+    return grupoDescricaoMCC;
   }
-  public void setFlagEstorno(Integer flagEstorno) {
-    this.flagEstorno = flagEstorno;
+  public void setGrupoDescricaoMCC(String grupoDescricaoMCC) {
+    this.grupoDescricaoMCC = grupoDescricaoMCC;
   }
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Transa\u00E7\u00E3o (id) que gerou o estorno.
+   * {{{transacao_nao_processada_response_grupo_mcc_value}}}
+   **/
+  public TransacaoNaoProcessadaResponse grupoMCC(Long grupoMCC) {
+    this.grupoMCC = grupoMCC;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{transacao_nao_processada_response_grupo_mcc_value}}}")
+  @JsonProperty("grupoMCC")
+  public Long getGrupoMCC() {
+    return grupoMCC;
+  }
+  public void setGrupoMCC(Long grupoMCC) {
+    this.grupoMCC = grupoMCC;
+  }
+
+  
+  /**
+   * {{{transacao_nao_processada_response_id_conta_value}}}
+   **/
+  public TransacaoNaoProcessadaResponse idConta(Long idConta) {
+    this.idConta = idConta;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{transacao_nao_processada_response_id_conta_value}}}")
+  @JsonProperty("idConta")
+  public Long getIdConta() {
+    return idConta;
+  }
+  public void setIdConta(Long idConta) {
+    this.idConta = idConta;
+  }
+
+  
+  /**
+   * {{{transacao_nao_processada_response_id_estabelecimento_value}}}
+   **/
+  public TransacaoNaoProcessadaResponse idEstabelecimento(Long idEstabelecimento) {
+    this.idEstabelecimento = idEstabelecimento;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{transacao_nao_processada_response_id_estabelecimento_value}}}")
+  @JsonProperty("idEstabelecimento")
+  public Long getIdEstabelecimento() {
+    return idEstabelecimento;
+  }
+  public void setIdEstabelecimento(Long idEstabelecimento) {
+    this.idEstabelecimento = idEstabelecimento;
+  }
+
+  
+  /**
+   * {{{transacao_nao_processada_response_id_tipo_transacao_nao_processada_value}}}
+   **/
+  public TransacaoNaoProcessadaResponse idTipoTransacaoNaoProcessada(Long idTipoTransacaoNaoProcessada) {
+    this.idTipoTransacaoNaoProcessada = idTipoTransacaoNaoProcessada;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{transacao_nao_processada_response_id_tipo_transacao_nao_processada_value}}}")
+  @JsonProperty("idTipoTransacaoNaoProcessada")
+  public Long getIdTipoTransacaoNaoProcessada() {
+    return idTipoTransacaoNaoProcessada;
+  }
+  public void setIdTipoTransacaoNaoProcessada(Long idTipoTransacaoNaoProcessada) {
+    this.idTipoTransacaoNaoProcessada = idTipoTransacaoNaoProcessada;
+  }
+
+  
+  /**
+   * {{{transacao_nao_processada_response_id_transacao_estorno_value}}}
    **/
   public TransacaoNaoProcessadaResponse idTransacaoEstorno(Long idTransacaoEstorno) {
     this.idTransacaoEstorno = idTransacaoEstorno;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o da Transa\u00E7\u00E3o (id) que gerou o estorno.")
+  @ApiModelProperty(example = "null", value = "{{{transacao_nao_processada_response_id_transacao_estorno_value}}}")
   @JsonProperty("idTransacaoEstorno")
   public Long getIdTransacaoEstorno() {
     return idTransacaoEstorno;
@@ -685,20 +470,218 @@ public class TransacaoNaoProcessadaResponse   {
 
   
   /**
-   * Atributo que representa o c\u00F3digo identificador do status da transa\u00E7\u00E3o.
+   * {{{transacao_nao_processada_response_localidade_estabelecimento_value}}}
+   **/
+  public TransacaoNaoProcessadaResponse localidadeEstabelecimento(String localidadeEstabelecimento) {
+    this.localidadeEstabelecimento = localidadeEstabelecimento;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{transacao_nao_processada_response_localidade_estabelecimento_value}}}")
+  @JsonProperty("localidadeEstabelecimento")
+  public String getLocalidadeEstabelecimento() {
+    return localidadeEstabelecimento;
+  }
+  public void setLocalidadeEstabelecimento(String localidadeEstabelecimento) {
+    this.localidadeEstabelecimento = localidadeEstabelecimento;
+  }
+
+  
+  /**
+   * {{{transacao_nao_processada_response_modo_entrada_transacao_value}}}
+   **/
+  public TransacaoNaoProcessadaResponse modoEntradaTransacao(String modoEntradaTransacao) {
+    this.modoEntradaTransacao = modoEntradaTransacao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{transacao_nao_processada_response_modo_entrada_transacao_value}}}")
+  @JsonProperty("modoEntradaTransacao")
+  public String getModoEntradaTransacao() {
+    return modoEntradaTransacao;
+  }
+  public void setModoEntradaTransacao(String modoEntradaTransacao) {
+    this.modoEntradaTransacao = modoEntradaTransacao;
+  }
+
+  
+  /**
+   * {{{transacao_nao_processada_response_nome_estabelecimento_value}}}
+   **/
+  public TransacaoNaoProcessadaResponse nomeEstabelecimento(String nomeEstabelecimento) {
+    this.nomeEstabelecimento = nomeEstabelecimento;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{transacao_nao_processada_response_nome_estabelecimento_value}}}")
+  @JsonProperty("nomeEstabelecimento")
+  public String getNomeEstabelecimento() {
+    return nomeEstabelecimento;
+  }
+  public void setNomeEstabelecimento(String nomeEstabelecimento) {
+    this.nomeEstabelecimento = nomeEstabelecimento;
+  }
+
+  
+  /**
+   * {{{transacao_nao_processada_response_nome_fantasia_estabelecimento_value}}}
+   **/
+  public TransacaoNaoProcessadaResponse nomeFantasiaEstabelecimento(String nomeFantasiaEstabelecimento) {
+    this.nomeFantasiaEstabelecimento = nomeFantasiaEstabelecimento;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{transacao_nao_processada_response_nome_fantasia_estabelecimento_value}}}")
+  @JsonProperty("nomeFantasiaEstabelecimento")
+  public String getNomeFantasiaEstabelecimento() {
+    return nomeFantasiaEstabelecimento;
+  }
+  public void setNomeFantasiaEstabelecimento(String nomeFantasiaEstabelecimento) {
+    this.nomeFantasiaEstabelecimento = nomeFantasiaEstabelecimento;
+  }
+
+  
+  /**
+   * {{{transacao_nao_processada_response_nome_portador_value}}}
+   **/
+  public TransacaoNaoProcessadaResponse nomePortador(String nomePortador) {
+    this.nomePortador = nomePortador;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{transacao_nao_processada_response_nome_portador_value}}}")
+  @JsonProperty("nomePortador")
+  public String getNomePortador() {
+    return nomePortador;
+  }
+  public void setNomePortador(String nomePortador) {
+    this.nomePortador = nomePortador;
+  }
+
+  
+  /**
+   * {{{transacao_nao_processada_response_numero_parcela_value}}}
+   **/
+  public TransacaoNaoProcessadaResponse parcela(Long parcela) {
+    this.parcela = parcela;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{transacao_nao_processada_response_numero_parcela_value}}}")
+  @JsonProperty("parcela")
+  public Long getParcela() {
+    return parcela;
+  }
+  public void setParcela(Long parcela) {
+    this.parcela = parcela;
+  }
+
+  
+  /**
+   * {{{transacao_nao_processada_response_plano_parcelamento_value}}}
+   **/
+  public TransacaoNaoProcessadaResponse plano(Long plano) {
+    this.plano = plano;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{transacao_nao_processada_response_plano_parcelamento_value}}}")
+  @JsonProperty("plano")
+  public Long getPlano() {
+    return plano;
+  }
+  public void setPlano(Long plano) {
+    this.plano = plano;
+  }
+
+  
+  /**
+   * {{{transacao_nao_processada_response_status_value}}}
    **/
   public TransacaoNaoProcessadaResponse status(Integer status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Atributo que representa o c\u00F3digo identificador do status da transa\u00E7\u00E3o.")
+  @ApiModelProperty(example = "null", value = "{{{transacao_nao_processada_response_status_value}}}")
   @JsonProperty("status")
   public Integer getStatus() {
     return status;
   }
   public void setStatus(Integer status) {
     this.status = status;
+  }
+
+  
+  /**
+   * {{{transacao_nao_processada_response_valor_taxa_embarque_value}}}
+   **/
+  public TransacaoNaoProcessadaResponse taxaEmbarque(BigDecimal taxaEmbarque) {
+    this.taxaEmbarque = taxaEmbarque;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{transacao_nao_processada_response_valor_taxa_embarque_value}}}")
+  @JsonProperty("taxaEmbarque")
+  public BigDecimal getTaxaEmbarque() {
+    return taxaEmbarque;
+  }
+  public void setTaxaEmbarque(BigDecimal taxaEmbarque) {
+    this.taxaEmbarque = taxaEmbarque;
+  }
+
+  
+  /**
+   * {{{transacao_nao_processada_response_valor_brl_value}}}
+   **/
+  public TransacaoNaoProcessadaResponse valorBRL(BigDecimal valorBRL) {
+    this.valorBRL = valorBRL;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{transacao_nao_processada_response_valor_brl_value}}}")
+  @JsonProperty("valorBRL")
+  public BigDecimal getValorBRL() {
+    return valorBRL;
+  }
+  public void setValorBRL(BigDecimal valorBRL) {
+    this.valorBRL = valorBRL;
+  }
+
+  
+  /**
+   * {{{transacao_nao_processada_response_valor_entrada_value}}}
+   **/
+  public TransacaoNaoProcessadaResponse valorEntrada(BigDecimal valorEntrada) {
+    this.valorEntrada = valorEntrada;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{transacao_nao_processada_response_valor_entrada_value}}}")
+  @JsonProperty("valorEntrada")
+  public BigDecimal getValorEntrada() {
+    return valorEntrada;
+  }
+  public void setValorEntrada(BigDecimal valorEntrada) {
+    this.valorEntrada = valorEntrada;
+  }
+
+  
+  /**
+   * {{{transacao_nao_processada_response_valor_usd_value}}}
+   **/
+  public TransacaoNaoProcessadaResponse valorUSD(BigDecimal valorUSD) {
+    this.valorUSD = valorUSD;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{transacao_nao_processada_response_valor_usd_value}}}")
+  @JsonProperty("valorUSD")
+  public BigDecimal getValorUSD() {
+    return valorUSD;
+  }
+  public void setValorUSD(BigDecimal valorUSD) {
+    this.valorUSD = valorUSD;
   }
 
   
@@ -712,47 +695,46 @@ public class TransacaoNaoProcessadaResponse   {
       return false;
     }
     TransacaoNaoProcessadaResponse transacaoNaoProcessadaResponse = (TransacaoNaoProcessadaResponse) o;
-    return Objects.equals(this.idTipoTransacaoNaoProcessada, transacaoNaoProcessadaResponse.idTipoTransacaoNaoProcessada) &&
-        Objects.equals(this.descricaoTipoTransacaoNaoProcessada, transacaoNaoProcessadaResponse.descricaoTipoTransacaoNaoProcessada) &&
-        Objects.equals(this.descricaoAbreviada, transacaoNaoProcessadaResponse.descricaoAbreviada) &&
-        Objects.equals(this.idConta, transacaoNaoProcessadaResponse.idConta) &&
-        Objects.equals(this.cartaoMascarado, transacaoNaoProcessadaResponse.cartaoMascarado) &&
-        Objects.equals(this.nomePortador, transacaoNaoProcessadaResponse.nomePortador) &&
-        Objects.equals(this.dataOrigem, transacaoNaoProcessadaResponse.dataOrigem) &&
-        Objects.equals(this.dataFaturamento, transacaoNaoProcessadaResponse.dataFaturamento) &&
-        Objects.equals(this.dataVencimento, transacaoNaoProcessadaResponse.dataVencimento) &&
-        Objects.equals(this.modoEntradaTransacao, transacaoNaoProcessadaResponse.modoEntradaTransacao) &&
-        Objects.equals(this.valorTaxaEmbarque, transacaoNaoProcessadaResponse.valorTaxaEmbarque) &&
-        Objects.equals(this.valorEntrada, transacaoNaoProcessadaResponse.valorEntrada) &&
-        Objects.equals(this.valorBRL, transacaoNaoProcessadaResponse.valorBRL) &&
-        Objects.equals(this.valorUSD, transacaoNaoProcessadaResponse.valorUSD) &&
-        Objects.equals(this.cotacaoUSD, transacaoNaoProcessadaResponse.cotacaoUSD) &&
-        Objects.equals(this.dataCotacaoUSD, transacaoNaoProcessadaResponse.dataCotacaoUSD) &&
-        Objects.equals(this.codigoMoedaOrigem, transacaoNaoProcessadaResponse.codigoMoedaOrigem) &&
-        Objects.equals(this.codigoMoedaDestino, transacaoNaoProcessadaResponse.codigoMoedaDestino) &&
+    return Objects.equals(this.cartaoMascarado, transacaoNaoProcessadaResponse.cartaoMascarado) &&
         Objects.equals(this.codigoAutorizacao, transacaoNaoProcessadaResponse.codigoAutorizacao) &&
+        Objects.equals(this.codigoMCC, transacaoNaoProcessadaResponse.codigoMCC) &&
+        Objects.equals(this.codigoMoedaDestino, transacaoNaoProcessadaResponse.codigoMoedaDestino) &&
+        Objects.equals(this.codigoMoedaOrigem, transacaoNaoProcessadaResponse.codigoMoedaOrigem) &&
         Objects.equals(this.codigoReferencia, transacaoNaoProcessadaResponse.codigoReferencia) &&
         Objects.equals(this.codigoTerminal, transacaoNaoProcessadaResponse.codigoTerminal) &&
-        Objects.equals(this.codigoMCC, transacaoNaoProcessadaResponse.codigoMCC) &&
-        Objects.equals(this.grupoMCC, transacaoNaoProcessadaResponse.grupoMCC) &&
-        Objects.equals(this.grupoDescricaoMCC, transacaoNaoProcessadaResponse.grupoDescricaoMCC) &&
-        Objects.equals(this.idEstabelecimento, transacaoNaoProcessadaResponse.idEstabelecimento) &&
-        Objects.equals(this.nomeEstabelecimento, transacaoNaoProcessadaResponse.nomeEstabelecimento) &&
-        Objects.equals(this.nomeFantasiaEstabelecimento, transacaoNaoProcessadaResponse.nomeFantasiaEstabelecimento) &&
-        Objects.equals(this.localidadeEstabelecimento, transacaoNaoProcessadaResponse.localidadeEstabelecimento) &&
-        Objects.equals(this.planoParcelamento, transacaoNaoProcessadaResponse.planoParcelamento) &&
-        Objects.equals(this.numeroParcela, transacaoNaoProcessadaResponse.numeroParcela) &&
+        Objects.equals(this.cotacaoUSD, transacaoNaoProcessadaResponse.cotacaoUSD) &&
+        Objects.equals(this.dataCotacaoUSD, transacaoNaoProcessadaResponse.dataCotacaoUSD) &&
+        Objects.equals(this.dataFaturamento, transacaoNaoProcessadaResponse.dataFaturamento) &&
+        Objects.equals(this.dataOrigem, transacaoNaoProcessadaResponse.dataOrigem) &&
+        Objects.equals(this.dataVencimentoReal, transacaoNaoProcessadaResponse.dataVencimentoReal) &&
+        Objects.equals(this.descricaoAbreviada, transacaoNaoProcessadaResponse.descricaoAbreviada) &&
+        Objects.equals(this.descricaoTipoTransacaoNaoProcessada, transacaoNaoProcessadaResponse.descricaoTipoTransacaoNaoProcessada) &&
         Objects.equals(this.detalhesTransacao, transacaoNaoProcessadaResponse.detalhesTransacao) &&
         Objects.equals(this.flagCredito, transacaoNaoProcessadaResponse.flagCredito) &&
         Objects.equals(this.flagFaturado, transacaoNaoProcessadaResponse.flagFaturado) &&
-        Objects.equals(this.flagEstorno, transacaoNaoProcessadaResponse.flagEstorno) &&
+        Objects.equals(this.grupoDescricaoMCC, transacaoNaoProcessadaResponse.grupoDescricaoMCC) &&
+        Objects.equals(this.grupoMCC, transacaoNaoProcessadaResponse.grupoMCC) &&
+        Objects.equals(this.idConta, transacaoNaoProcessadaResponse.idConta) &&
+        Objects.equals(this.idEstabelecimento, transacaoNaoProcessadaResponse.idEstabelecimento) &&
+        Objects.equals(this.idTipoTransacaoNaoProcessada, transacaoNaoProcessadaResponse.idTipoTransacaoNaoProcessada) &&
         Objects.equals(this.idTransacaoEstorno, transacaoNaoProcessadaResponse.idTransacaoEstorno) &&
-        Objects.equals(this.status, transacaoNaoProcessadaResponse.status);
+        Objects.equals(this.localidadeEstabelecimento, transacaoNaoProcessadaResponse.localidadeEstabelecimento) &&
+        Objects.equals(this.modoEntradaTransacao, transacaoNaoProcessadaResponse.modoEntradaTransacao) &&
+        Objects.equals(this.nomeEstabelecimento, transacaoNaoProcessadaResponse.nomeEstabelecimento) &&
+        Objects.equals(this.nomeFantasiaEstabelecimento, transacaoNaoProcessadaResponse.nomeFantasiaEstabelecimento) &&
+        Objects.equals(this.nomePortador, transacaoNaoProcessadaResponse.nomePortador) &&
+        Objects.equals(this.parcela, transacaoNaoProcessadaResponse.parcela) &&
+        Objects.equals(this.plano, transacaoNaoProcessadaResponse.plano) &&
+        Objects.equals(this.status, transacaoNaoProcessadaResponse.status) &&
+        Objects.equals(this.taxaEmbarque, transacaoNaoProcessadaResponse.taxaEmbarque) &&
+        Objects.equals(this.valorBRL, transacaoNaoProcessadaResponse.valorBRL) &&
+        Objects.equals(this.valorEntrada, transacaoNaoProcessadaResponse.valorEntrada) &&
+        Objects.equals(this.valorUSD, transacaoNaoProcessadaResponse.valorUSD);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idTipoTransacaoNaoProcessada, descricaoTipoTransacaoNaoProcessada, descricaoAbreviada, idConta, cartaoMascarado, nomePortador, dataOrigem, dataFaturamento, dataVencimento, modoEntradaTransacao, valorTaxaEmbarque, valorEntrada, valorBRL, valorUSD, cotacaoUSD, dataCotacaoUSD, codigoMoedaOrigem, codigoMoedaDestino, codigoAutorizacao, codigoReferencia, codigoTerminal, codigoMCC, grupoMCC, grupoDescricaoMCC, idEstabelecimento, nomeEstabelecimento, nomeFantasiaEstabelecimento, localidadeEstabelecimento, planoParcelamento, numeroParcela, detalhesTransacao, flagCredito, flagFaturado, flagEstorno, idTransacaoEstorno, status);
+    return Objects.hash(cartaoMascarado, codigoAutorizacao, codigoMCC, codigoMoedaDestino, codigoMoedaOrigem, codigoReferencia, codigoTerminal, cotacaoUSD, dataCotacaoUSD, dataFaturamento, dataOrigem, dataVencimentoReal, descricaoAbreviada, descricaoTipoTransacaoNaoProcessada, detalhesTransacao, flagCredito, flagFaturado, grupoDescricaoMCC, grupoMCC, idConta, idEstabelecimento, idTipoTransacaoNaoProcessada, idTransacaoEstorno, localidadeEstabelecimento, modoEntradaTransacao, nomeEstabelecimento, nomeFantasiaEstabelecimento, nomePortador, parcela, plano, status, taxaEmbarque, valorBRL, valorEntrada, valorUSD);
   }
 
   @Override
@@ -760,42 +742,41 @@ public class TransacaoNaoProcessadaResponse   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TransacaoNaoProcessadaResponse {\n");
     
-    sb.append("    idTipoTransacaoNaoProcessada: ").append(toIndentedString(idTipoTransacaoNaoProcessada)).append("\n");
-    sb.append("    descricaoTipoTransacaoNaoProcessada: ").append(toIndentedString(descricaoTipoTransacaoNaoProcessada)).append("\n");
-    sb.append("    descricaoAbreviada: ").append(toIndentedString(descricaoAbreviada)).append("\n");
-    sb.append("    idConta: ").append(toIndentedString(idConta)).append("\n");
     sb.append("    cartaoMascarado: ").append(toIndentedString(cartaoMascarado)).append("\n");
-    sb.append("    nomePortador: ").append(toIndentedString(nomePortador)).append("\n");
-    sb.append("    dataOrigem: ").append(toIndentedString(dataOrigem)).append("\n");
-    sb.append("    dataFaturamento: ").append(toIndentedString(dataFaturamento)).append("\n");
-    sb.append("    dataVencimento: ").append(toIndentedString(dataVencimento)).append("\n");
-    sb.append("    modoEntradaTransacao: ").append(toIndentedString(modoEntradaTransacao)).append("\n");
-    sb.append("    valorTaxaEmbarque: ").append(toIndentedString(valorTaxaEmbarque)).append("\n");
-    sb.append("    valorEntrada: ").append(toIndentedString(valorEntrada)).append("\n");
-    sb.append("    valorBRL: ").append(toIndentedString(valorBRL)).append("\n");
-    sb.append("    valorUSD: ").append(toIndentedString(valorUSD)).append("\n");
-    sb.append("    cotacaoUSD: ").append(toIndentedString(cotacaoUSD)).append("\n");
-    sb.append("    dataCotacaoUSD: ").append(toIndentedString(dataCotacaoUSD)).append("\n");
-    sb.append("    codigoMoedaOrigem: ").append(toIndentedString(codigoMoedaOrigem)).append("\n");
-    sb.append("    codigoMoedaDestino: ").append(toIndentedString(codigoMoedaDestino)).append("\n");
     sb.append("    codigoAutorizacao: ").append(toIndentedString(codigoAutorizacao)).append("\n");
+    sb.append("    codigoMCC: ").append(toIndentedString(codigoMCC)).append("\n");
+    sb.append("    codigoMoedaDestino: ").append(toIndentedString(codigoMoedaDestino)).append("\n");
+    sb.append("    codigoMoedaOrigem: ").append(toIndentedString(codigoMoedaOrigem)).append("\n");
     sb.append("    codigoReferencia: ").append(toIndentedString(codigoReferencia)).append("\n");
     sb.append("    codigoTerminal: ").append(toIndentedString(codigoTerminal)).append("\n");
-    sb.append("    codigoMCC: ").append(toIndentedString(codigoMCC)).append("\n");
-    sb.append("    grupoMCC: ").append(toIndentedString(grupoMCC)).append("\n");
-    sb.append("    grupoDescricaoMCC: ").append(toIndentedString(grupoDescricaoMCC)).append("\n");
-    sb.append("    idEstabelecimento: ").append(toIndentedString(idEstabelecimento)).append("\n");
-    sb.append("    nomeEstabelecimento: ").append(toIndentedString(nomeEstabelecimento)).append("\n");
-    sb.append("    nomeFantasiaEstabelecimento: ").append(toIndentedString(nomeFantasiaEstabelecimento)).append("\n");
-    sb.append("    localidadeEstabelecimento: ").append(toIndentedString(localidadeEstabelecimento)).append("\n");
-    sb.append("    planoParcelamento: ").append(toIndentedString(planoParcelamento)).append("\n");
-    sb.append("    numeroParcela: ").append(toIndentedString(numeroParcela)).append("\n");
+    sb.append("    cotacaoUSD: ").append(toIndentedString(cotacaoUSD)).append("\n");
+    sb.append("    dataCotacaoUSD: ").append(toIndentedString(dataCotacaoUSD)).append("\n");
+    sb.append("    dataFaturamento: ").append(toIndentedString(dataFaturamento)).append("\n");
+    sb.append("    dataOrigem: ").append(toIndentedString(dataOrigem)).append("\n");
+    sb.append("    dataVencimentoReal: ").append(toIndentedString(dataVencimentoReal)).append("\n");
+    sb.append("    descricaoAbreviada: ").append(toIndentedString(descricaoAbreviada)).append("\n");
+    sb.append("    descricaoTipoTransacaoNaoProcessada: ").append(toIndentedString(descricaoTipoTransacaoNaoProcessada)).append("\n");
     sb.append("    detalhesTransacao: ").append(toIndentedString(detalhesTransacao)).append("\n");
     sb.append("    flagCredito: ").append(toIndentedString(flagCredito)).append("\n");
     sb.append("    flagFaturado: ").append(toIndentedString(flagFaturado)).append("\n");
-    sb.append("    flagEstorno: ").append(toIndentedString(flagEstorno)).append("\n");
+    sb.append("    grupoDescricaoMCC: ").append(toIndentedString(grupoDescricaoMCC)).append("\n");
+    sb.append("    grupoMCC: ").append(toIndentedString(grupoMCC)).append("\n");
+    sb.append("    idConta: ").append(toIndentedString(idConta)).append("\n");
+    sb.append("    idEstabelecimento: ").append(toIndentedString(idEstabelecimento)).append("\n");
+    sb.append("    idTipoTransacaoNaoProcessada: ").append(toIndentedString(idTipoTransacaoNaoProcessada)).append("\n");
     sb.append("    idTransacaoEstorno: ").append(toIndentedString(idTransacaoEstorno)).append("\n");
+    sb.append("    localidadeEstabelecimento: ").append(toIndentedString(localidadeEstabelecimento)).append("\n");
+    sb.append("    modoEntradaTransacao: ").append(toIndentedString(modoEntradaTransacao)).append("\n");
+    sb.append("    nomeEstabelecimento: ").append(toIndentedString(nomeEstabelecimento)).append("\n");
+    sb.append("    nomeFantasiaEstabelecimento: ").append(toIndentedString(nomeFantasiaEstabelecimento)).append("\n");
+    sb.append("    nomePortador: ").append(toIndentedString(nomePortador)).append("\n");
+    sb.append("    parcela: ").append(toIndentedString(parcela)).append("\n");
+    sb.append("    plano: ").append(toIndentedString(plano)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    taxaEmbarque: ").append(toIndentedString(taxaEmbarque)).append("\n");
+    sb.append("    valorBRL: ").append(toIndentedString(valorBRL)).append("\n");
+    sb.append("    valorEntrada: ").append(toIndentedString(valorEntrada)).append("\n");
+    sb.append("    valorUSD: ").append(toIndentedString(valorUSD)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -811,4 +792,6 @@ public class TransacaoNaoProcessadaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
+
+
 
