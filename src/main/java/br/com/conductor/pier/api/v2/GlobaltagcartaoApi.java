@@ -742,12 +742,12 @@ public class GlobaltagcartaoApi {
    * @param authorization Authorization
    * @return CartaoDetalheResponse
    */
-  public CartaoDetalheResponse consultarUsingGET9(Long id, String authorization) throws ApiException {
+  public CartaoDetalheResponse consultarUsingGET10(Long id, String authorization) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET9");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET10");
      }
      
     // create path and map variables

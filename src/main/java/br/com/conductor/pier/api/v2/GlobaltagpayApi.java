@@ -234,17 +234,17 @@ public class GlobaltagpayApi {
    * @param id {{{cartao_pay_resource_consultar_param_id}}}
    * @return CartaoPayDetalheResponse
    */
-  public CartaoPayDetalheResponse consultarUsingGET8(String deviceId, Long id) throws ApiException {
+  public CartaoPayDetalheResponse consultarUsingGET9(String deviceId, Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'deviceId' is set
      if (deviceId == null) {
-        throw new ApiException(400, "Missing the required parameter 'deviceId' when calling consultarUsingGET8");
+        throw new ApiException(400, "Missing the required parameter 'deviceId' when calling consultarUsingGET9");
      }
      
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET8");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET9");
      }
      
     // create path and map variables

@@ -126,12 +126,12 @@ public class GlobaltagajustefinanceiroApi {
    * @param id {{{ajuste_financeiro_resource_consultar_param_id}}}
    * @return AjusteFinanceiroResponse
    */
-  public AjusteFinanceiroResponse consultarUsingGET2(Long id) throws ApiException {
+  public AjusteFinanceiroResponse consultarUsingGET3(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET2");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET3");
      }
      
     // create path and map variables

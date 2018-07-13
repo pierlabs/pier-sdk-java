@@ -24,6 +24,7 @@ public class SMSEnvioResponse   {
   private String conteudo = null;
   private Integer quantidadeTentativasEnvio = null;
   private String dataInclusao = null;
+  private String cpf = null;
 
   
   /**
@@ -152,6 +153,24 @@ public class SMSEnvioResponse   {
   }
 
   
+  /**
+   * {{{sms_envio_response_cpf_value}}}
+   **/
+  public SMSEnvioResponse cpf(String cpf) {
+    this.cpf = cpf;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{sms_envio_response_cpf_value}}}")
+  @JsonProperty("cpf")
+  public String getCpf() {
+    return cpf;
+  }
+  public void setCpf(String cpf) {
+    this.cpf = cpf;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -168,12 +187,13 @@ public class SMSEnvioResponse   {
         Objects.equals(this.celular, sMSEnvioResponse.celular) &&
         Objects.equals(this.conteudo, sMSEnvioResponse.conteudo) &&
         Objects.equals(this.quantidadeTentativasEnvio, sMSEnvioResponse.quantidadeTentativasEnvio) &&
-        Objects.equals(this.dataInclusao, sMSEnvioResponse.dataInclusao);
+        Objects.equals(this.dataInclusao, sMSEnvioResponse.dataInclusao) &&
+        Objects.equals(this.cpf, sMSEnvioResponse.cpf);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, status, idConta, celular, conteudo, quantidadeTentativasEnvio, dataInclusao);
+    return Objects.hash(id, status, idConta, celular, conteudo, quantidadeTentativasEnvio, dataInclusao, cpf);
   }
 
   @Override
@@ -188,6 +208,7 @@ public class SMSEnvioResponse   {
     sb.append("    conteudo: ").append(toIndentedString(conteudo)).append("\n");
     sb.append("    quantidadeTentativasEnvio: ").append(toIndentedString(quantidadeTentativasEnvio)).append("\n");
     sb.append("    dataInclusao: ").append(toIndentedString(dataInclusao)).append("\n");
+    sb.append("    cpf: ").append(toIndentedString(cpf)).append("\n");
     sb.append("}");
     return sb.toString();
   }

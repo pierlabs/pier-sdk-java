@@ -7,6 +7,8 @@ import br.com.conductor.pier.api.v2.invoker.ApiClient;
 import br.com.conductor.pier.api.v2.invoker.Configuration;
 import br.com.conductor.pier.api.v2.invoker.Pair;
 
+import br.com.conductor.pier.api.v2.model.TaxaJurosContaPersistValue;
+import br.com.conductor.pier.api.v2.model.TaxaJurosContaResponse;
 import br.com.conductor.pier.api.v2.model.ContaBancariaPortadorUpdateValue;
 import br.com.conductor.pier.api.v2.model.ContaBancariaPortadorResponse;
 import br.com.conductor.pier.api.v2.model.TransferenciaCreditoContaBancariaResponse;
@@ -49,6 +51,60 @@ public class GlobaltagtransferenciabancariaApi {
     this.apiClient = apiClient;
   }
 
+  
+  /**
+   * {{{transferencia_bancaria_resource_atualizar_taxas_juros_contas}}}
+   * {{{transferencia_bancaria_resource_atualizar_taxas_juros_contas_notes}}}
+   * @param id {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}
+   * @param update update
+   * @return TaxaJurosContaResponse
+   */
+  public TaxaJurosContaResponse atualizarTaxasJurosContasUsingPUT(Long id, TaxaJurosContaPersistValue update) throws ApiException {
+    Object postBody = update;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling atualizarTaxasJurosContasUsingPUT");
+     }
+     
+     // verify the required parameter 'update' is set
+     if (update == null) {
+        throw new ApiException(400, "Missing the required parameter 'update' when calling atualizarTaxasJurosContasUsingPUT");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/{id}/taxas-transferencias".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<TaxaJurosContaResponse> returnType = new GenericType<TaxaJurosContaResponse>() {};
+    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
   
   /**
    * {{{conta_bancaria_resource_atualizar}}}
@@ -201,6 +257,62 @@ public class GlobaltagtransferenciabancariaApi {
   }
   
   /**
+   * {{{transferencia_bancaria_resource_consultar_taxas_juros_contas}}}
+   * {{{transferencia_bancaria_resource_consultar_taxas_juros_contas_notes}}}
+   * @param id {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}
+   * @param numeroMesesCarencia numeroMesesCarencia
+   * @return TaxaJurosContaResponse
+   */
+  public TaxaJurosContaResponse consultarTaxasJurosContasUsingGET(Long id, Integer numeroMesesCarencia) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarTaxasJurosContasUsingGET");
+     }
+     
+     // verify the required parameter 'numeroMesesCarencia' is set
+     if (numeroMesesCarencia == null) {
+        throw new ApiException(400, "Missing the required parameter 'numeroMesesCarencia' when calling consultarTaxasJurosContasUsingGET");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/{id}/taxas-transferencias".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "numeroMesesCarencia", numeroMesesCarencia));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<TaxaJurosContaResponse> returnType = new GenericType<TaxaJurosContaResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * {{{transferencia_bancaria_resource_consultar_transferencia_bancaria}}}
    * {{{transferencia_bancaria_resource_consultar_transferencia_bancaria_notes}}}
    * @param idTransferencia {{{transferencia_bancaria_resource_consultar_transferencia_bancaria_param_id_transferencia}}}
@@ -254,12 +366,12 @@ public class GlobaltagtransferenciabancariaApi {
    * @param id {{{conta_bancaria_resource_consultar_param_id}}}
    * @return ContaBancariaPortadorResponse
    */
-  public ContaBancariaPortadorResponse consultarUsingGET12(Long id) throws ApiException {
+  public ContaBancariaPortadorResponse consultarUsingGET13(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET12");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET13");
      }
      
     // create path and map variables
@@ -304,17 +416,17 @@ public class GlobaltagtransferenciabancariaApi {
    * @param idContaBancariaDestino {{{transferencia_bancaria_resource_consultar_param_id_conta_portador}}}
    * @return TransferenciaBancariaResponse
    */
-  public TransferenciaBancariaResponse consultarUsingGET47(Long id, Long idTransferencia, Long idContaBancariaDestino) throws ApiException {
+  public TransferenciaBancariaResponse consultarUsingGET48(Long id, Long idTransferencia, Long idContaBancariaDestino) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET47");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET48");
      }
      
      // verify the required parameter 'idTransferencia' is set
      if (idTransferencia == null) {
-        throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET47");
+        throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET48");
      }
      
     // create path and map variables
@@ -553,6 +665,60 @@ public class GlobaltagtransferenciabancariaApi {
     
     GenericType<PageTransferenciaBancariaResponse> returnType = new GenericType<PageTransferenciaBancariaResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * {{{transferencia_bancaria_resource_salvar_taxas_juros_contas}}}
+   * {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_notes}}}
+   * @param id {{{transferencia_bancaria_resource_salvar_taxas_juros_contas_param_id}}}
+   * @param persist persist
+   * @return TaxaJurosContaResponse
+   */
+  public TaxaJurosContaResponse salvarTaxasJurosContasUsingPOST(Long id, TaxaJurosContaPersistValue persist) throws ApiException {
+    Object postBody = persist;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling salvarTaxasJurosContasUsingPOST");
+     }
+     
+     // verify the required parameter 'persist' is set
+     if (persist == null) {
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarTaxasJurosContasUsingPOST");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/{id}/taxas-transferencias".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<TaxaJurosContaResponse> returnType = new GenericType<TaxaJurosContaResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   

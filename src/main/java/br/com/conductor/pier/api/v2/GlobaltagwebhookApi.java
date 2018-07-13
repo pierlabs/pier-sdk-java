@@ -104,12 +104,12 @@ public class GlobaltagwebhookApi {
    * @param id {{{web_hook_resource_consultar_param_id}}}
    * @return WebHookResponse
    */
-  public WebHookResponse consultarUsingGET52(Long id) throws ApiException {
+  public WebHookResponse consultarUsingGET53(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET52");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET53");
      }
      
     // create path and map variables

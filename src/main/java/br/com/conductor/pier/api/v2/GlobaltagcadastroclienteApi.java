@@ -598,17 +598,17 @@ public class GlobaltagcadastroclienteApi {
    * @param persist persist
    * @return AdicionalDetalheResponse
    */
-  public AdicionalDetalheResponse cadastrarUsingPOST(Long id, AdicionalPersist persist) throws ApiException {
+  public AdicionalDetalheResponse cadastrarUsingPOST1(Long id, AdicionalPersist persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling cadastrarUsingPOST");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling cadastrarUsingPOST1");
      }
      
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling cadastrarUsingPOST");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling cadastrarUsingPOST1");
      }
      
     // create path and map variables
@@ -646,23 +646,71 @@ public class GlobaltagcadastroclienteApi {
   }
   
   /**
+   * {{{endereco_resource_consultar}}}
+   * {{{endereco_resource_consultar_notes}}}
+   * @param id {{{endereco_resource_consultar_param_id}}}
+   * @return EnderecoResponse
+   */
+  public EnderecoResponse consultarUsingGET19(Long id) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET19");
+     }
+     
+    // create path and map variables
+    String path = "/api/enderecos/{id}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<EnderecoResponse> returnType = new GenericType<EnderecoResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * {{{adicional_resource_consultar}}}
    * {{{adicional_resource_consultar_notes}}}
    * @param id {{{adicional_resource_consultar_param_id_conta}}}
    * @param idPessoa {{{adicional_resource_consultar_param_id_pessoa}}}
    * @return AdicionalDetalheResponse
    */
-  public AdicionalDetalheResponse consultarUsingGET1(Long id, Long idPessoa) throws ApiException {
+  public AdicionalDetalheResponse consultarUsingGET2(Long id, Long idPessoa) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET1");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET2");
      }
      
      // verify the required parameter 'idPessoa' is set
      if (idPessoa == null) {
-        throw new ApiException(400, "Missing the required parameter 'idPessoa' when calling consultarUsingGET1");
+        throw new ApiException(400, "Missing the required parameter 'idPessoa' when calling consultarUsingGET2");
      }
      
     // create path and map variables
@@ -701,65 +749,17 @@ public class GlobaltagcadastroclienteApi {
   }
   
   /**
-   * {{{endereco_resource_consultar}}}
-   * {{{endereco_resource_consultar_notes}}}
-   * @param id {{{endereco_resource_consultar_param_id}}}
-   * @return EnderecoResponse
-   */
-  public EnderecoResponse consultarUsingGET18(Long id) throws ApiException {
-    Object postBody = null;
-    
-     // verify the required parameter 'id' is set
-     if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET18");
-     }
-     
-    // create path and map variables
-    String path = "/api/enderecos/{id}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<EnderecoResponse> returnType = new GenericType<EnderecoResponse>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
    * {{{pessoa_detalhe_resource_consultar}}}
    * {{{pessoa_detalhe_resource_consultar_notes}}}
    * @param id {{{pessoa_detalhe_resource_consultar_param_id}}}
    * @return PessoaDetalheResponse
    */
-  public PessoaDetalheResponse consultarUsingGET29(Long id) throws ApiException {
+  public PessoaDetalheResponse consultarUsingGET30(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET29");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET30");
      }
      
     // create path and map variables
@@ -802,12 +802,12 @@ public class GlobaltagcadastroclienteApi {
    * @param id {{{pessoa_resource_consultar_param_id}}}
    * @return PessoaResponse
    */
-  public PessoaResponse consultarUsingGET30(Long id) throws ApiException {
+  public PessoaResponse consultarUsingGET31(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET30");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET31");
      }
      
     // create path and map variables
@@ -850,12 +850,12 @@ public class GlobaltagcadastroclienteApi {
    * @param id {{{telefone_resource_consultar_param_id}}}
    * @return TelefoneResponse
    */
-  public TelefoneResponse consultarUsingGET38(Long id) throws ApiException {
+  public TelefoneResponse consultarUsingGET39(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET38");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET39");
      }
      
     // create path and map variables

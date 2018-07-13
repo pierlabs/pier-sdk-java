@@ -11,6 +11,7 @@ import br.com.conductor.pier.api.v2.model.AjusteFinanceiroResponse;
 import java.math.BigDecimal;
 import br.com.conductor.pier.api.v2.model.AlterarProdutoRequest;
 import br.com.conductor.pier.api.v2.model.ContaResponse;
+import br.com.conductor.pier.api.v2.model.AdesaoPagamentoSabadoResponse;
 import br.com.conductor.pier.api.v2.model.BeneficioPagamentoAtrasoResponse;
 import br.com.conductor.pier.api.v2.model.BoletoResponse;
 import br.com.conductor.pier.api.v2.model.DividaClienteResponse;
@@ -511,6 +512,55 @@ public class GlobaltagcontaApi {
   }
   
   /**
+   * {{{aderir_pagamento_sabado_recurso_cadastrar}}}
+   * {{{aderir_pagamento_sabado_recurso_cadastrar_notas}}}
+   * @param id {{{aderir_pagamento_sabado_recurso_cadastrar_param_id}}}
+   * @return AdesaoPagamentoSabadoResponse
+   */
+  public AdesaoPagamentoSabadoResponse cadastrarUsingPOST(Long id) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling cadastrarUsingPOST");
+     }
+     
+    // create path and map variables
+    String path = "/api/adesoes-pagamentos-sabados".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "id", id));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<AdesaoPagamentoSabadoResponse> returnType = new GenericType<AdesaoPagamentoSabadoResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * {{{conta_resource_cancelar}}}
    * {{{conta_resource_cancelar_notes}}}
    * @param id {{{conta_resource_cancelar_param_id}}}
@@ -798,18 +848,75 @@ public class GlobaltagcontaApi {
   }
   
   /**
+   * {{{aderir_pagamento_sabado_recurso_consultar}}}
+   * {{{aderir_pagamento_sabado_recurso_consultar_notas}}}
+   * @param id {{{aderir_pagamento_sabado_recurso_consultar_param_id}}}
+   * @param dataVencimento {{{aderir_pagamento_sabado_recurso_consultar_param_data_vencimento}}}
+   * @return AdesaoPagamentoSabadoResponse
+   */
+  public AdesaoPagamentoSabadoResponse consultarUsingGET1(Long id, String dataVencimento) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET1");
+     }
+     
+     // verify the required parameter 'dataVencimento' is set
+     if (dataVencimento == null) {
+        throw new ApiException(400, "Missing the required parameter 'dataVencimento' when calling consultarUsingGET1");
+     }
+     
+    // create path and map variables
+    String path = "/api/adesoes-pagamentos-sabados".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "id", id));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "dataVencimento", dataVencimento));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<AdesaoPagamentoSabadoResponse> returnType = new GenericType<AdesaoPagamentoSabadoResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * {{{conta_resource_consultar}}}
    * {{{conta_resource_consultar_notes}}}
    * @param id {{{conta_resource_consultar_param_id}}}
    * @param authorization Authorization
    * @return ContaDetalheResponse
    */
-  public ContaDetalheResponse consultarUsingGET13(Long id, String authorization) throws ApiException {
+  public ContaDetalheResponse consultarUsingGET14(Long id, String authorization) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET13");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET14");
      }
      
     // create path and map variables
@@ -855,17 +962,17 @@ public class GlobaltagcontaApi {
    * @param idTransferencia {{{transferencia_resource_consultar_param_id_transferencia}}}
    * @return TransferenciaDetalheResponse
    */
-  public TransferenciaDetalheResponse consultarUsingGET48(Long id, Long idTransferencia) throws ApiException {
+  public TransferenciaDetalheResponse consultarUsingGET49(Long id, Long idTransferencia) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET48");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET49");
      }
      
      // verify the required parameter 'idTransferencia' is set
      if (idTransferencia == null) {
-        throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET48");
+        throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET49");
      }
      
     // create path and map variables
@@ -1503,9 +1610,10 @@ public class GlobaltagcontaApi {
    * @param dataInicio {{{transacoes_processadas_request_data_inicio_value}}}
    * @param dataFim {{{transacoes_processadas_request_data_fim_value}}}
    * @param idTipoTransacao {{{transacoes_processadas_request_tipo_transacao}}}
+   * @param recuperaEncargos {{{transacoes_processadas_request_recupera_encargos}}}
    * @return PageTransacoesCorrentesResponse
    */
-  public PageTransacoesCorrentesResponse listarProcessadasUsingGET(Long id, List<String> sort, Integer page, Integer limit, String dataVencimento, String dataInicio, String dataFim, Long idTipoTransacao) throws ApiException {
+  public PageTransacoesCorrentesResponse listarProcessadasUsingGET(Long id, List<String> sort, Integer page, Integer limit, String dataVencimento, String dataInicio, String dataFim, Long idTipoTransacao, Integer recuperaEncargos) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -1536,6 +1644,8 @@ public class GlobaltagcontaApi {
     queryParams.addAll(apiClient.parameterToPairs("", "dataFim", dataFim));
     
     queryParams.addAll(apiClient.parameterToPairs("", "idTipoTransacao", idTipoTransacao));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "recuperaEncargos", recuperaEncargos));
     
 
     

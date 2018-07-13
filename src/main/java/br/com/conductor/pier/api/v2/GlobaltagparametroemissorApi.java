@@ -45,12 +45,12 @@ public class GlobaltagparametroemissorApi {
    * @param codigo {{{parametro_emissor_recurso_pesquisa_codigo_param}}}
    * @return ParametroEmissorResponse
    */
-  public ParametroEmissorResponse consultarUsingGET26(String codigo) throws ApiException {
+  public ParametroEmissorResponse consultarUsingGET27(String codigo) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'codigo' is set
      if (codigo == null) {
-        throw new ApiException(400, "Missing the required parameter 'codigo' when calling consultarUsingGET26");
+        throw new ApiException(400, "Missing the required parameter 'codigo' when calling consultarUsingGET27");
      }
      
     // create path and map variables

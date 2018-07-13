@@ -134,12 +134,12 @@ public class GlobaltaglimitedisponibilidadeApi {
    * @param idConta {{{limite_disponibilidade_resource_consultar_param_id_conta}}}
    * @return LimiteDisponibilidadeResponse
    */
-  public LimiteDisponibilidadeResponse consultarUsingGET22(Long idConta) throws ApiException {
+  public LimiteDisponibilidadeResponse consultarUsingGET23(Long idConta) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idConta' is set
      if (idConta == null) {
-        throw new ApiException(400, "Missing the required parameter 'idConta' when calling consultarUsingGET22");
+        throw new ApiException(400, "Missing the required parameter 'idConta' when calling consultarUsingGET23");
      }
      
     // create path and map variables

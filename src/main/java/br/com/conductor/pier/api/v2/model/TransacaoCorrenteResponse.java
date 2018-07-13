@@ -36,6 +36,7 @@ public class TransacaoCorrenteResponse   {
   private String tipoEstabelecimento = null;
   private Integer idGrupoMCC = null;
   private Integer flagSolicitouContestacao = null;
+  private Integer tipoTransacao = null;
 
   
   /**
@@ -361,6 +362,24 @@ public class TransacaoCorrenteResponse   {
   }
 
   
+  /**
+   * {{{transacao_corrente_response_tipo_transacao_value}}}
+   **/
+  public TransacaoCorrenteResponse tipoTransacao(Integer tipoTransacao) {
+    this.tipoTransacao = tipoTransacao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{transacao_corrente_response_tipo_transacao_value}}}")
+  @JsonProperty("tipoTransacao")
+  public Integer getTipoTransacao() {
+    return tipoTransacao;
+  }
+  public void setTipoTransacao(Integer tipoTransacao) {
+    this.tipoTransacao = tipoTransacao;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -388,12 +407,13 @@ public class TransacaoCorrenteResponse   {
         Objects.equals(this.flagCredito, transacaoCorrenteResponse.flagCredito) &&
         Objects.equals(this.tipoEstabelecimento, transacaoCorrenteResponse.tipoEstabelecimento) &&
         Objects.equals(this.idGrupoMCC, transacaoCorrenteResponse.idGrupoMCC) &&
-        Objects.equals(this.flagSolicitouContestacao, transacaoCorrenteResponse.flagSolicitouContestacao);
+        Objects.equals(this.flagSolicitouContestacao, transacaoCorrenteResponse.flagSolicitouContestacao) &&
+        Objects.equals(this.tipoTransacao, transacaoCorrenteResponse.tipoTransacao);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(ultimaParcelaLancada, idConta, idTipoRegistro, ordem, idTransacao, descricao, status, descricaoStatus, valor, valorDolar, quantidadeParcelas, valorParcela, dataEvento, estabelecimento, flagCredito, tipoEstabelecimento, idGrupoMCC, flagSolicitouContestacao);
+    return Objects.hash(ultimaParcelaLancada, idConta, idTipoRegistro, ordem, idTransacao, descricao, status, descricaoStatus, valor, valorDolar, quantidadeParcelas, valorParcela, dataEvento, estabelecimento, flagCredito, tipoEstabelecimento, idGrupoMCC, flagSolicitouContestacao, tipoTransacao);
   }
 
   @Override
@@ -419,6 +439,7 @@ public class TransacaoCorrenteResponse   {
     sb.append("    tipoEstabelecimento: ").append(toIndentedString(tipoEstabelecimento)).append("\n");
     sb.append("    idGrupoMCC: ").append(toIndentedString(idGrupoMCC)).append("\n");
     sb.append("    flagSolicitouContestacao: ").append(toIndentedString(flagSolicitouContestacao)).append("\n");
+    sb.append("    tipoTransacao: ").append(toIndentedString(tipoTransacao)).append("\n");
     sb.append("}");
     return sb.toString();
   }

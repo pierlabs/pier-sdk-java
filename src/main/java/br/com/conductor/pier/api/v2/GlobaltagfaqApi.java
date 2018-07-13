@@ -191,12 +191,12 @@ public class GlobaltagfaqApi {
    * @param id {{{faq_resource_consultar_param_id_faq}}}
    * @return FaqResponse
    */
-  public FaqResponse consultarUsingGET20(Long id) throws ApiException {
+  public FaqResponse consultarUsingGET21(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET20");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET21");
      }
      
     // create path and map variables

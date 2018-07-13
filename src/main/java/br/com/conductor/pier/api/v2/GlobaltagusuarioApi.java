@@ -383,12 +383,12 @@ public class GlobaltagusuarioApi {
    * @param limit {{{global_menssagem_sort_limit}}}
    * @return PageControleSegurancaDispositivoResponse
    */
-  public PageControleSegurancaDispositivoResponse consultarUsingGET14(Long idUsuario, List<String> sort, Integer page, Integer limit) throws ApiException {
+  public PageControleSegurancaDispositivoResponse consultarUsingGET15(Long idUsuario, List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idUsuario' is set
      if (idUsuario == null) {
-        throw new ApiException(400, "Missing the required parameter 'idUsuario' when calling consultarUsingGET14");
+        throw new ApiException(400, "Missing the required parameter 'idUsuario' when calling consultarUsingGET15");
      }
      
     // create path and map variables
@@ -438,12 +438,12 @@ public class GlobaltagusuarioApi {
    * @param id {{{usuario_resource_consultar_param_id}}}
    * @return UsuarioResponse
    */
-  public UsuarioResponse consultarUsingGET50(Long id) throws ApiException {
+  public UsuarioResponse consultarUsingGET51(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET50");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET51");
      }
      
     // create path and map variables

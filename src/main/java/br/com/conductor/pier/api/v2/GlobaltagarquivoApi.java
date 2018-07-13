@@ -51,12 +51,12 @@ public class GlobaltagarquivoApi {
    * @param id {{{arquivo_resource_consultar_param_id}}}
    * @return ArquivoDetalheResponse
    */
-  public ArquivoDetalheResponse consultarUsingGET4(Long id) throws ApiException {
+  public ArquivoDetalheResponse consultarUsingGET5(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET4");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET5");
      }
      
     // create path and map variables

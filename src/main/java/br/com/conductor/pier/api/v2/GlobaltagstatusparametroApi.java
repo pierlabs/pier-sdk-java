@@ -148,12 +148,12 @@ public class GlobaltagstatusparametroApi {
    * @param id {{{status_conta_resource_consultar_param_id}}}
    * @return StatusContaResponse
    */
-  public StatusContaResponse consultarUsingGET35(Long id) throws ApiException {
+  public StatusContaResponse consultarUsingGET36(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET35");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET36");
      }
      
     // create path and map variables
@@ -196,12 +196,12 @@ public class GlobaltagstatusparametroApi {
    * @param id {{{status_impressao_resource_consultar_param_id}}}
    * @return StatusImpressaoResponse
    */
-  public StatusImpressaoResponse consultarUsingGET36(Long id) throws ApiException {
+  public StatusImpressaoResponse consultarUsingGET37(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET36");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET37");
      }
      
     // create path and map variables

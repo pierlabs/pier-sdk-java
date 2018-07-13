@@ -49,12 +49,12 @@ public class GlobaltagboletoApi {
    * @param id {{{boleto_resource_consultar_param_id}}}
    * @return BoletoResponse
    */
-  public BoletoResponse consultarUsingGET33(Long id) throws ApiException {
+  public BoletoResponse consultarUsingGET34(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET33");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET34");
      }
      
     // create path and map variables

@@ -163,12 +163,12 @@ public class GlobaltagdocumentoApi {
    * @param id {{{documento_resource_consultar_param_id}}}
    * @return DocumentoDetalhadoResponse
    */
-  public DocumentoDetalhadoResponse consultarUsingGET16(Long id) throws ApiException {
+  public DocumentoDetalhadoResponse consultarUsingGET17(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET16");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET17");
      }
      
     // create path and map variables
@@ -211,12 +211,12 @@ public class GlobaltagdocumentoApi {
    * @param id {{{documento_template_resource_consultar_param_id}}}
    * @return DocumentoTemplateResponse
    */
-  public DocumentoTemplateResponse consultarUsingGET17(Long id) throws ApiException {
+  public DocumentoTemplateResponse consultarUsingGET18(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET17");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET18");
      }
      
     // create path and map variables
@@ -259,12 +259,12 @@ public class GlobaltagdocumentoApi {
    * @param id {{{tipo_template_resource_consultar_param_id}}}
    * @return TipoTemplateResponse
    */
-  public TipoTemplateResponse consultarUsingGET46(Long id) throws ApiException {
+  public TipoTemplateResponse consultarUsingGET47(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET46");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET47");
      }
      
     // create path and map variables

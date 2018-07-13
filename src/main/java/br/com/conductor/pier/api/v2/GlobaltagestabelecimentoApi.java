@@ -512,12 +512,12 @@ public class GlobaltagestabelecimentoApi {
    * @param persist persist
    * @return EstabelecimentoResponse
    */
-  public EstabelecimentoResponse cadastrarUsingPOST2(EstabelecimentoPersist persist) throws ApiException {
+  public EstabelecimentoResponse cadastrarUsingPOST3(EstabelecimentoPersist persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling cadastrarUsingPOST2");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling cadastrarUsingPOST3");
      }
      
     // create path and map variables
@@ -559,12 +559,12 @@ public class GlobaltagestabelecimentoApi {
    * @param grupoEconomicoDTO GrupoEconomicoDTO
    * @return GrupoEconomicoResponse
    */
-  public GrupoEconomicoResponse cadastrarUsingPOST3(GrupoEconomicoDTO grupoEconomicoDTO) throws ApiException {
+  public GrupoEconomicoResponse cadastrarUsingPOST4(GrupoEconomicoDTO grupoEconomicoDTO) throws ApiException {
     Object postBody = grupoEconomicoDTO;
     
      // verify the required parameter 'grupoEconomicoDTO' is set
      if (grupoEconomicoDTO == null) {
-        throw new ApiException(400, "Missing the required parameter 'grupoEconomicoDTO' when calling cadastrarUsingPOST3");
+        throw new ApiException(400, "Missing the required parameter 'grupoEconomicoDTO' when calling cadastrarUsingPOST4");
      }
      
     // create path and map variables
@@ -702,12 +702,12 @@ public class GlobaltagestabelecimentoApi {
    * @param id {{{estabelecimento_resource_consultar_param_id_estabelecimento}}}
    * @return EstabelecimentoResponse
    */
-  public EstabelecimentoResponse consultarUsingGET19(Long id) throws ApiException {
+  public EstabelecimentoResponse consultarUsingGET20(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET19");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET20");
      }
      
     // create path and map variables
@@ -750,12 +750,12 @@ public class GlobaltagestabelecimentoApi {
    * @param id {{{grupo_economico_resource_consultar_param_id}}}
    * @return GrupoEconomicoResponse
    */
-  public GrupoEconomicoResponse consultarUsingGET21(Long id) throws ApiException {
+  public GrupoEconomicoResponse consultarUsingGET22(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET21");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET22");
      }
      
     // create path and map variables
@@ -798,12 +798,12 @@ public class GlobaltagestabelecimentoApi {
    * @param id {{{maquineta_resource_consultar_param_id}}}
    * @return MaquinetaResponse
    */
-  public MaquinetaResponse consultarUsingGET23(Long id) throws ApiException {
+  public MaquinetaResponse consultarUsingGET24(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET23");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET24");
      }
      
     // create path and map variables
@@ -846,12 +846,12 @@ public class GlobaltagestabelecimentoApi {
    * @param id {{{operacao_credor_resource_consultar_param_id}}}
    * @return OperacaoCredorResponse
    */
-  public OperacaoCredorResponse consultarUsingGET24(Long id) throws ApiException {
+  public OperacaoCredorResponse consultarUsingGET25(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET24");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET25");
      }
      
     // create path and map variables
@@ -894,12 +894,12 @@ public class GlobaltagestabelecimentoApi {
    * @param id {{{telefone_estabelecimento_resource_consultar_param_id}}}
    * @return TelefoneEstabelecimentoResponse
    */
-  public TelefoneEstabelecimentoResponse consultarUsingGET37(Long id) throws ApiException {
+  public TelefoneEstabelecimentoResponse consultarUsingGET38(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET37");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET38");
      }
      
     // create path and map variables
@@ -942,12 +942,12 @@ public class GlobaltagestabelecimentoApi {
    * @param id {{{terminal_resource_consultar_param_id}}}
    * @return TerminalResponse
    */
-  public TerminalResponse consultarUsingGET39(Long id) throws ApiException {
+  public TerminalResponse consultarUsingGET40(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET39");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET40");
      }
      
     // create path and map variables
@@ -990,12 +990,12 @@ public class GlobaltagestabelecimentoApi {
    * @param id {{{vinculo_estabelecimento_adquirente_resource_consultar_param_id}}}
    * @return VinculoEstabelecimentoAdquirenteResponse
    */
-  public VinculoEstabelecimentoAdquirenteResponse consultarUsingGET51(Long id) throws ApiException {
+  public VinculoEstabelecimentoAdquirenteResponse consultarUsingGET52(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET51");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET52");
      }
      
     // create path and map variables
