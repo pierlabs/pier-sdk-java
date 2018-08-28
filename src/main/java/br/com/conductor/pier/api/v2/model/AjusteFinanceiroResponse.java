@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{ajuste_financeiro_response_description}}}
  **/
@@ -204,6 +202,4 @@ public class AjusteFinanceiroResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

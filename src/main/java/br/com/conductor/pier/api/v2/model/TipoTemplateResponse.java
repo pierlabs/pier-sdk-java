@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{tipo_template_response_description}}}
  **/
@@ -140,6 +138,4 @@ public class TipoTemplateResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

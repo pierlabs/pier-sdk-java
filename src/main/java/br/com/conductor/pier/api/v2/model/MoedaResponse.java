@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{moeda_response_description}}}
  **/
@@ -140,6 +138,4 @@ public class MoedaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

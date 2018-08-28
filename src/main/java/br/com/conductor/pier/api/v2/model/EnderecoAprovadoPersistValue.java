@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{endereco_aprovado_persist_description}}}
  **/
@@ -287,6 +285,4 @@ public class EnderecoAprovadoPersistValue   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

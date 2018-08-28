@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_transacao_nao_processada_response_description}}}
  **/
@@ -339,6 +337,4 @@ public class PageTransacaoNaoProcessadaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

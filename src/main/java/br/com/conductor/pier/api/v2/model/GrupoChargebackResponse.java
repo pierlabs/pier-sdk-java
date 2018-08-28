@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{grupo_chargeback_response_description}}}
  **/
@@ -98,6 +96,4 @@ public class GrupoChargebackResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

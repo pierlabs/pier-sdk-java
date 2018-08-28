@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{taxa_juros_conta_persist_value}}}
  **/
@@ -99,6 +97,4 @@ public class TaxaJurosContaPersistValue   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

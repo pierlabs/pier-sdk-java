@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{plano_campanha_response_description}}}
  **/
@@ -141,6 +139,4 @@ public class PlanoCampanhaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

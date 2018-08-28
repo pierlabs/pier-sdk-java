@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{compra_contestada_cartao_response_description}}}
  **/
@@ -18,10 +16,12 @@ import io.swagger.annotations.ApiModelProperty;
 public class CompraContestadaCartaoResponse   {
   
   private Long idCartao = null;
+  private Long agingCompras = null;
   private Long agingContestacao = null;
   private String cartao = null;
   private String nome = null;
   private String bandeira = null;
+  private String valorCompra = null;
 
   
   /**
@@ -39,6 +39,24 @@ public class CompraContestadaCartaoResponse   {
   }
   public void setIdCartao(Long idCartao) {
     this.idCartao = idCartao;
+  }
+
+  
+  /**
+   * {{{compra_contestada_cartao_response_aging_compras_value}}}
+   **/
+  public CompraContestadaCartaoResponse agingCompras(Long agingCompras) {
+    this.agingCompras = agingCompras;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{compra_contestada_cartao_response_aging_compras_value}}}")
+  @JsonProperty("agingCompras")
+  public Long getAgingCompras() {
+    return agingCompras;
+  }
+  public void setAgingCompras(Long agingCompras) {
+    this.agingCompras = agingCompras;
   }
 
   
@@ -114,6 +132,24 @@ public class CompraContestadaCartaoResponse   {
   }
 
   
+  /**
+   * {{{compra_contestada_cartao_response_valor_compra_value}}}
+   **/
+  public CompraContestadaCartaoResponse valorCompra(String valorCompra) {
+    this.valorCompra = valorCompra;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{compra_contestada_cartao_response_valor_compra_value}}}")
+  @JsonProperty("valorCompra")
+  public String getValorCompra() {
+    return valorCompra;
+  }
+  public void setValorCompra(String valorCompra) {
+    this.valorCompra = valorCompra;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -125,15 +161,17 @@ public class CompraContestadaCartaoResponse   {
     }
     CompraContestadaCartaoResponse compraContestadaCartaoResponse = (CompraContestadaCartaoResponse) o;
     return Objects.equals(this.idCartao, compraContestadaCartaoResponse.idCartao) &&
+        Objects.equals(this.agingCompras, compraContestadaCartaoResponse.agingCompras) &&
         Objects.equals(this.agingContestacao, compraContestadaCartaoResponse.agingContestacao) &&
         Objects.equals(this.cartao, compraContestadaCartaoResponse.cartao) &&
         Objects.equals(this.nome, compraContestadaCartaoResponse.nome) &&
-        Objects.equals(this.bandeira, compraContestadaCartaoResponse.bandeira);
+        Objects.equals(this.bandeira, compraContestadaCartaoResponse.bandeira) &&
+        Objects.equals(this.valorCompra, compraContestadaCartaoResponse.valorCompra);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idCartao, agingContestacao, cartao, nome, bandeira);
+    return Objects.hash(idCartao, agingCompras, agingContestacao, cartao, nome, bandeira, valorCompra);
   }
 
   @Override
@@ -142,10 +180,12 @@ public class CompraContestadaCartaoResponse   {
     sb.append("class CompraContestadaCartaoResponse {\n");
     
     sb.append("    idCartao: ").append(toIndentedString(idCartao)).append("\n");
+    sb.append("    agingCompras: ").append(toIndentedString(agingCompras)).append("\n");
     sb.append("    agingContestacao: ").append(toIndentedString(agingContestacao)).append("\n");
     sb.append("    cartao: ").append(toIndentedString(cartao)).append("\n");
     sb.append("    nome: ").append(toIndentedString(nome)).append("\n");
     sb.append("    bandeira: ").append(toIndentedString(bandeira)).append("\n");
+    sb.append("    valorCompra: ").append(toIndentedString(valorCompra)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -161,6 +201,4 @@ public class CompraContestadaCartaoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

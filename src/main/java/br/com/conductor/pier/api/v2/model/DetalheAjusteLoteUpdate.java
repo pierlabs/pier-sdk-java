@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{arquivo_ajuste_lote_request_description}}}
  **/
@@ -77,6 +75,4 @@ public class DetalheAjusteLoteUpdate   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

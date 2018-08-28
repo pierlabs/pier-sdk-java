@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{valida_cartao_response_description}}}
  **/
@@ -224,6 +222,4 @@ public class ValidaCartaoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

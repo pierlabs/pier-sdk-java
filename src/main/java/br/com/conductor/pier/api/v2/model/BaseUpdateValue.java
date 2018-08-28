@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{base_update_description}}}
  **/
@@ -329,6 +327,4 @@ public class BaseUpdateValue   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{plano_parcelamento_emprestimo_response_description}}}
  **/
@@ -162,6 +160,4 @@ public class PlanoParcelamentoEmprestimoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -14,20 +14,16 @@ import br.com.conductor.pier.api.v2.model.ControleSegurancaDispositivoUpdateValo
 import br.com.conductor.pier.api.v2.model.PageUsuarioContasResponse;
 import br.com.conductor.pier.api.v2.model.PageControleSegurancaDispositivoResponse;
 import br.com.conductor.pier.api.v2.model.PageUsuarioResponse;
-import br.com.conductor.pier.api.v2.model.UsuarioPersistencia;
 import br.com.conductor.pier.api.v2.model.ControleSegurancaDispositivoPersistencia;
+import br.com.conductor.pier.api.v2.model.UsuarioPersistencia;
 import br.com.conductor.pier.api.v2.model.UsuarioSenhaFortePersistencia;
-
-
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-
 public class GlobaltagusuarioApi {
   private ApiClient apiClient;
 
@@ -276,12 +272,12 @@ public class GlobaltagusuarioApi {
    * @param update update
    * @return ControleSegurancaDispositivoResponse
    */
-  public ControleSegurancaDispositivoResponse atualizarUsingPUT2(ControleSegurancaDispositivoUpdateValor update) throws ApiException {
+  public ControleSegurancaDispositivoResponse atualizarUsingPUT3(ControleSegurancaDispositivoUpdateValor update) throws ApiException {
     Object postBody = update;
     
      // verify the required parameter 'update' is set
      if (update == null) {
-        throw new ApiException(400, "Missing the required parameter 'update' when calling atualizarUsingPUT2");
+        throw new ApiException(400, "Missing the required parameter 'update' when calling atualizarUsingPUT3");
      }
      
     // create path and map variables
@@ -383,12 +379,12 @@ public class GlobaltagusuarioApi {
    * @param limit {{{global_menssagem_sort_limit}}}
    * @return PageControleSegurancaDispositivoResponse
    */
-  public PageControleSegurancaDispositivoResponse consultarUsingGET15(Long idUsuario, List<String> sort, Integer page, Integer limit) throws ApiException {
+  public PageControleSegurancaDispositivoResponse consultarUsingGET17(Long idUsuario, List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idUsuario' is set
      if (idUsuario == null) {
-        throw new ApiException(400, "Missing the required parameter 'idUsuario' when calling consultarUsingGET15");
+        throw new ApiException(400, "Missing the required parameter 'idUsuario' when calling consultarUsingGET17");
      }
      
     // create path and map variables
@@ -438,12 +434,12 @@ public class GlobaltagusuarioApi {
    * @param id {{{usuario_resource_consultar_param_id}}}
    * @return UsuarioResponse
    */
-  public UsuarioResponse consultarUsingGET51(Long id) throws ApiException {
+  public UsuarioResponse consultarUsingGET53(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET51");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET53");
      }
      
     // create path and map variables
@@ -540,7 +536,7 @@ public class GlobaltagusuarioApi {
    * @param status {{{usuario_request_status_value}}}
    * @return PageUsuarioResponse
    */
-  public PageUsuarioResponse listarUsingGET62(List<String> sort, Integer page, Integer limit, String nome, String cpf, String email, String status) throws ApiException {
+  public PageUsuarioResponse listarUsingGET65(List<String> sort, Integer page, Integer limit, String nome, String cpf, String email, String status) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -639,64 +635,17 @@ public class GlobaltagusuarioApi {
   }
   
   /**
-   * {{{usuario_resource_salvar}}}
-   * {{{usuario_resource_salvar_notes}}}
-   * @param persist persist
-   * @return UsuarioResponse
-   */
-  public UsuarioResponse salvarUsingPOST33(UsuarioPersistencia persist) throws ApiException {
-    Object postBody = persist;
-    
-     // verify the required parameter 'persist' is set
-     if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST33");
-     }
-     
-    // create path and map variables
-    String path = "/api/usuarios".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<UsuarioResponse> returnType = new GenericType<UsuarioResponse>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
    * {{{controle_seguranca_dispositivo_salvar}}}
    * {{{controle_seguranca_dispositivo_salvar_notas}}}
    * @param persist persist
    * @return ControleSegurancaDispositivoResponse
    */
-  public ControleSegurancaDispositivoResponse salvarUsingPOST9(ControleSegurancaDispositivoPersistencia persist) throws ApiException {
+  public ControleSegurancaDispositivoResponse salvarUsingPOST10(ControleSegurancaDispositivoPersistencia persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST9");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST10");
      }
      
     // create path and map variables
@@ -728,6 +677,53 @@ public class GlobaltagusuarioApi {
 
     
     GenericType<ControleSegurancaDispositivoResponse> returnType = new GenericType<ControleSegurancaDispositivoResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * {{{usuario_resource_salvar}}}
+   * {{{usuario_resource_salvar_notes}}}
+   * @param persist persist
+   * @return UsuarioResponse
+   */
+  public UsuarioResponse salvarUsingPOST34(UsuarioPersistencia persist) throws ApiException {
+    Object postBody = persist;
+    
+     // verify the required parameter 'persist' is set
+     if (persist == null) {
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST34");
+     }
+     
+    // create path and map variables
+    String path = "/api/usuarios".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<UsuarioResponse> returnType = new GenericType<UsuarioResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -948,4 +944,3 @@ public class GlobaltagusuarioApi {
   }
   
 }
-

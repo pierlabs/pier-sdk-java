@@ -9,8 +9,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class CdtTipoResolucaoContestacao   {
   
@@ -93,6 +91,4 @@ public class CdtTipoResolucaoContestacao   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

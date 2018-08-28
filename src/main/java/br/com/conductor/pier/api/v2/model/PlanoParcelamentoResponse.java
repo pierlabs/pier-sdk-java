@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{plano_parcelamento_response_description}}}
  **/
@@ -477,6 +475,4 @@ public class PlanoParcelamentoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

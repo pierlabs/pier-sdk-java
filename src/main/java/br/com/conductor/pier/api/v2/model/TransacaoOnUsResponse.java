@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{transacao_on_us_response_description}}}
  **/
@@ -206,6 +204,4 @@ public class TransacaoOnUsResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{documento_template_persist_description}}}
  **/
@@ -122,6 +120,4 @@ public class DocumentoTemplatePersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

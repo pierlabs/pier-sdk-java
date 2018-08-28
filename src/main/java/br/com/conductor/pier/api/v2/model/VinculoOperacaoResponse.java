@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{vinculo_operacao_response_description}}}
  **/
@@ -140,6 +138,4 @@ public class VinculoOperacaoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

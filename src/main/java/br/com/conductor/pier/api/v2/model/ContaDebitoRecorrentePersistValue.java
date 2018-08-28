@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{conta_debito_recorrente_persist_description}}}
  **/
@@ -161,6 +159,4 @@ public class ContaDebitoRecorrentePersistValue   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

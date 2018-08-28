@@ -10,16 +10,12 @@ import br.com.conductor.pier.api.v2.invoker.Pair;
 import br.com.conductor.pier.api.v2.model.PageCodigoChargebackResponse;
 import br.com.conductor.pier.api.v2.model.PageGrupoChargebackResponse;
 
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-
 public class GlobaltaggrupochagebackApi {
   private ApiClient apiClient;
 
@@ -43,26 +39,27 @@ public class GlobaltaggrupochagebackApi {
   /**
    * {{{codigo_chargeback_resource_listar}}}
    * {{{codigo_chargeback_resource_listar_notes}}}
-   * @param id id
+   * @param grupoChargebackId grupoChargebackId
    * @param sort {{{global_menssagem_sort_sort}}}
    * @param page {{{global_menssagem_sort_page_value}}}
    * @param limit {{{global_menssagem_sort_limit}}}
+   * @param id 
+   * @param descricao 
    * @param flagAtm 
-   * @param idBandeira 
-   * @param groupId 
+   * @param grupoChargebackId2 
    * @return PageCodigoChargebackResponse
    */
-  public PageCodigoChargebackResponse listarCodigosUsingGET(Long id, List<String> sort, Integer page, Integer limit, Boolean flagAtm, Long idBandeira, Long groupId) throws ApiException {
+  public PageCodigoChargebackResponse listarCodigosUsingGET(Long grupoChargebackId, List<String> sort, Integer page, Integer limit, Long id, String descricao, Boolean flagAtm, Long grupoChargebackId2) throws ApiException {
     Object postBody = null;
     
-     // verify the required parameter 'id' is set
-     if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling listarCodigosUsingGET");
+     // verify the required parameter 'grupoChargebackId' is set
+     if (grupoChargebackId == null) {
+        throw new ApiException(400, "Missing the required parameter 'grupoChargebackId' when calling listarCodigosUsingGET");
      }
      
     // create path and map variables
-    String path = "/api/grupos-chargeback/{id}/codigos".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+    String path = "/api/grupos-chargeback/{grupoChargebackId}/codigos".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "grupoChargebackId" + "\\}", apiClient.escapeString(grupoChargebackId.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -76,11 +73,13 @@ public class GlobaltaggrupochagebackApi {
     
     queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
     
+    queryParams.addAll(apiClient.parameterToPairs("", "id", id));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "descricao", descricao));
+    
     queryParams.addAll(apiClient.parameterToPairs("", "flagAtm", flagAtm));
     
-    queryParams.addAll(apiClient.parameterToPairs("", "idBandeira", idBandeira));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "groupId", groupId));
+    queryParams.addAll(apiClient.parameterToPairs("", "grupoChargebackId", grupoChargebackId2));
     
 
     
@@ -114,7 +113,7 @@ public class GlobaltaggrupochagebackApi {
    * @param limit {{{global_menssagem_sort_limit}}}
    * @return PageGrupoChargebackResponse
    */
-  public PageGrupoChargebackResponse listarUsingGET27(List<String> sort, Integer page, Integer limit) throws ApiException {
+  public PageGrupoChargebackResponse listarUsingGET28(List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -157,4 +156,3 @@ public class GlobaltaggrupochagebackApi {
   }
   
 }
-

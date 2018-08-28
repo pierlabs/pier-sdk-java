@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{permissao_update_object_description}}}
  **/
@@ -77,6 +75,4 @@ public class PermissaoUpdate   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

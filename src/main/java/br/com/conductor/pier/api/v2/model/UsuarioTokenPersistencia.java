@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{usuario_token_persistencia_descricao}}}
  **/
@@ -245,6 +243,4 @@ public class UsuarioTokenPersistencia   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

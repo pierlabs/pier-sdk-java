@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{campanha_response_description}}}
  **/
@@ -143,6 +141,4 @@ public class CampanhaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{dados_portador_request_description}}}
  **/
@@ -224,6 +222,4 @@ public class DadosPortadorRequest   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

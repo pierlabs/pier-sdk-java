@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_controle_seguranca_dispositivo_resposta_descricao}}}
  **/
@@ -339,6 +337,4 @@ public class PageControleSegurancaDispositivoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

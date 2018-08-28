@@ -9,8 +9,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{inscricao_apn_persistencia_descricao}}}
  **/
@@ -121,6 +119,4 @@ public class InscricaoApnPersistencia   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

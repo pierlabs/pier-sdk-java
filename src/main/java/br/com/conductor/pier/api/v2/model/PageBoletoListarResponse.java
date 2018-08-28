@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_boleto_listar_response_description}}}
  **/
@@ -339,6 +337,4 @@ public class PageBoletoListarResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

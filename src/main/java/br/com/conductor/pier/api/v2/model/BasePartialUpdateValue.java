@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{base_partial_update_description}}}
  **/
@@ -329,6 +327,4 @@ public class BasePartialUpdateValue   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

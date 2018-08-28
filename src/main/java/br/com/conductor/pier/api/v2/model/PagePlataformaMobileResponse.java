@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_plataforma_mobile_response_description}}}
  **/
@@ -339,6 +337,4 @@ public class PagePlataformaMobileResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

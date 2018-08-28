@@ -9,8 +9,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{inscricao_apn_resposta_descricao}}}
  **/
@@ -205,6 +203,4 @@ public class InscricaoAPNResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

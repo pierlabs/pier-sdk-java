@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{codigo_seguranca_response_description}}}
  **/
@@ -182,6 +180,4 @@ public class CodigoSegurancaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

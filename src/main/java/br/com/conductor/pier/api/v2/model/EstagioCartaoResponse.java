@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{estagio_cartao_response_description}}}
  **/
@@ -98,6 +96,4 @@ public class EstagioCartaoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{controle_vencimento_response_description}}}
  **/
@@ -182,6 +180,4 @@ public class ControleVencimentoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

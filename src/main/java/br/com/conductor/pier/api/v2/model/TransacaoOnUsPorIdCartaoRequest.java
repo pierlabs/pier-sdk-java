@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{transacao_on_us_por_id_cartao_request_description}}}
  **/
@@ -204,6 +202,4 @@ public class TransacaoOnUsPorIdCartaoRequest   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

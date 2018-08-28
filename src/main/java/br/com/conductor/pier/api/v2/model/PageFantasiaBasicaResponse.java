@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_fantasia_basica_response_description}}}
  **/
@@ -339,6 +337,4 @@ public class PageFantasiaBasicaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

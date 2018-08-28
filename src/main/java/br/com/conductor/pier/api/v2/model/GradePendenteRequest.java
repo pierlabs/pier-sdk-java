@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{grade_pendente_request_description}}}
  **/
@@ -98,6 +96,4 @@ public class GradePendenteRequest   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

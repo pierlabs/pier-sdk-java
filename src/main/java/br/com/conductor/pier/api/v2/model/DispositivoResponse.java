@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{dispositivo_response_description}}}
  **/
@@ -140,6 +138,4 @@ public class DispositivoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

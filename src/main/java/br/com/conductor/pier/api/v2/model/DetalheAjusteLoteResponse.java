@@ -8,8 +8,6 @@ import java.util.Date;
 
 
 
-
-
 /**
  * {{{detalhe_ajuste_lote_response_description}}}
  **/
@@ -288,6 +286,4 @@ public class DetalheAjusteLoteResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

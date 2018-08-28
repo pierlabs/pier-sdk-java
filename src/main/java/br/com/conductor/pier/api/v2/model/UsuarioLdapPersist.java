@@ -12,66 +12,25 @@ import java.util.List;
 
 
 
-/**
- * {{{usuario_persist_object_description}}}
- **/
-
-@ApiModel(description = "{{{usuario_persist_object_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class UsuarioLdapPersist   {
   
-  private String nome = null;
-  private String login = null;
   private String cpf = null;
   private String email = null;
+  private Long idEmissor = null;
+  private String login = null;
+  private String nome = null;
   private List<ReferenciaIdPersist> perfis = new ArrayList<ReferenciaIdPersist>();
 
   
   /**
-   * {{{usuario_persist_nome_value}}}
-   **/
-  public UsuarioLdapPersist nome(String nome) {
-    this.nome = nome;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "{{{usuario_persist_nome_value}}}")
-  @JsonProperty("nome")
-  public String getNome() {
-    return nome;
-  }
-  public void setNome(String nome) {
-    this.nome = nome;
-  }
-
-  
-  /**
-   * {{{usuario_persist_login_value}}}
-   **/
-  public UsuarioLdapPersist login(String login) {
-    this.login = login;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "{{{usuario_persist_login_value}}}")
-  @JsonProperty("login")
-  public String getLogin() {
-    return login;
-  }
-  public void setLogin(String login) {
-    this.login = login;
-  }
-
-  
-  /**
-   * {{{usuario_persist_cpf_value}}}
    **/
   public UsuarioLdapPersist cpf(String cpf) {
     this.cpf = cpf;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{usuario_persist_cpf_value}}}")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("cpf")
   public String getCpf() {
     return cpf;
@@ -82,14 +41,13 @@ public class UsuarioLdapPersist   {
 
   
   /**
-   * {{{usuario_persist_email_value}}}
    **/
   public UsuarioLdapPersist email(String email) {
     this.email = email;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{usuario_persist_email_value}}}")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("email")
   public String getEmail() {
     return email;
@@ -100,14 +58,64 @@ public class UsuarioLdapPersist   {
 
   
   /**
-   * {{{usuario_persist_perfis_value}}}
+   **/
+  public UsuarioLdapPersist idEmissor(Long idEmissor) {
+    this.idEmissor = idEmissor;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("idEmissor")
+  public Long getIdEmissor() {
+    return idEmissor;
+  }
+  public void setIdEmissor(Long idEmissor) {
+    this.idEmissor = idEmissor;
+  }
+
+  
+  /**
+   **/
+  public UsuarioLdapPersist login(String login) {
+    this.login = login;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("login")
+  public String getLogin() {
+    return login;
+  }
+  public void setLogin(String login) {
+    this.login = login;
+  }
+
+  
+  /**
+   **/
+  public UsuarioLdapPersist nome(String nome) {
+    this.nome = nome;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("nome")
+  public String getNome() {
+    return nome;
+  }
+  public void setNome(String nome) {
+    this.nome = nome;
+  }
+
+  
+  /**
    **/
   public UsuarioLdapPersist perfis(List<ReferenciaIdPersist> perfis) {
     this.perfis = perfis;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{usuario_persist_perfis_value}}}")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("perfis")
   public List<ReferenciaIdPersist> getPerfis() {
     return perfis;
@@ -127,16 +135,17 @@ public class UsuarioLdapPersist   {
       return false;
     }
     UsuarioLdapPersist usuarioLdapPersist = (UsuarioLdapPersist) o;
-    return Objects.equals(this.nome, usuarioLdapPersist.nome) &&
-        Objects.equals(this.login, usuarioLdapPersist.login) &&
-        Objects.equals(this.cpf, usuarioLdapPersist.cpf) &&
+    return Objects.equals(this.cpf, usuarioLdapPersist.cpf) &&
         Objects.equals(this.email, usuarioLdapPersist.email) &&
+        Objects.equals(this.idEmissor, usuarioLdapPersist.idEmissor) &&
+        Objects.equals(this.login, usuarioLdapPersist.login) &&
+        Objects.equals(this.nome, usuarioLdapPersist.nome) &&
         Objects.equals(this.perfis, usuarioLdapPersist.perfis);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(nome, login, cpf, email, perfis);
+    return Objects.hash(cpf, email, idEmissor, login, nome, perfis);
   }
 
   @Override
@@ -144,10 +153,11 @@ public class UsuarioLdapPersist   {
     StringBuilder sb = new StringBuilder();
     sb.append("class UsuarioLdapPersist {\n");
     
-    sb.append("    nome: ").append(toIndentedString(nome)).append("\n");
-    sb.append("    login: ").append(toIndentedString(login)).append("\n");
     sb.append("    cpf: ").append(toIndentedString(cpf)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    idEmissor: ").append(toIndentedString(idEmissor)).append("\n");
+    sb.append("    login: ").append(toIndentedString(login)).append("\n");
+    sb.append("    nome: ").append(toIndentedString(nome)).append("\n");
     sb.append("    perfis: ").append(toIndentedString(perfis)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -164,6 +174,4 @@ public class UsuarioLdapPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

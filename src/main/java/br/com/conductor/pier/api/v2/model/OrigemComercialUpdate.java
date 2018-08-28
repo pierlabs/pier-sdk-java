@@ -8,8 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{origem_comercial_update_description}}}
  **/
@@ -538,6 +536,4 @@ public class OrigemComercialUpdate   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

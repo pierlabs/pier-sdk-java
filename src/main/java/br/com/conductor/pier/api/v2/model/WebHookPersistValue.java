@@ -8,8 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{web_hook_persist_description}}}
  **/
@@ -23,7 +21,8 @@ public class WebHookPersistValue   {
   public enum TipoEventoEnum {
     RISCO_FRAUDE("RISCO_FRAUDE"),
     CODIGO_SEGURANCA("CODIGO_SEGURANCA"),
-    OUTROS("OUTROS");
+    OUTROS("OUTROS"),
+    OTP_3D_SECURE("OTP_3D_SECURE");
 
     private String value;
 
@@ -119,6 +118,4 @@ public class WebHookPersistValue   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

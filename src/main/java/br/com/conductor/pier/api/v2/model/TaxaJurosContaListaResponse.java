@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{taxa_juros_conta_lista_response_description}}}
  **/
@@ -99,6 +97,4 @@ public class TaxaJurosContaListaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

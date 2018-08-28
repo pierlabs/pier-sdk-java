@@ -8,8 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{propriedade_documento_request_description}}}
  **/
@@ -161,6 +159,4 @@ public class PropriedadeDocumentoRequest   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

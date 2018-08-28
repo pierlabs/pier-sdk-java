@@ -11,8 +11,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{operacao_credor_persist_description}}}
  **/
@@ -354,6 +352,4 @@ public class OperacaoCredorPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{tipo_endereco_response_description}}}
  **/
@@ -98,6 +96,4 @@ public class TipoEnderecoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

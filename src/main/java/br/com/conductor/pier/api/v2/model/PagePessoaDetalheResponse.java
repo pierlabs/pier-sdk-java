@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_pessoa_detalhe_response_description}}}
  **/
@@ -339,6 +337,4 @@ public class PagePessoaDetalheResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

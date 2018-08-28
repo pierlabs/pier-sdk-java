@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{integrar_arquivo_request_description}}}
  **/
@@ -77,6 +75,4 @@ public class IntegrarArquivoRequest   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -8,15 +8,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{notificacao_push_response_description}}}
  **/
 
 @ApiModel(description = "{{{notificacao_push_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class NotificacaoPushResponseValue   {
+public class NotificacaoPushResponse   {
   
   private String dataEnvio = null;
   private Long idEmissor = null;
@@ -25,7 +23,8 @@ public class NotificacaoPushResponseValue   {
   public enum TipoEventoEnum {
     RISCO_FRAUDE("RISCO_FRAUDE"),
     CODIGO_SEGURANCA("CODIGO_SEGURANCA"),
-    OUTROS("OUTROS");
+    OUTROS("OUTROS"),
+    OTP_3D_SECURE("OTP_3D_SECURE");
 
     private String value;
 
@@ -98,7 +97,7 @@ public class NotificacaoPushResponseValue   {
   /**
    * {{{notificacao_push_response_data_envio_value}}}
    **/
-  public NotificacaoPushResponseValue dataEnvio(String dataEnvio) {
+  public NotificacaoPushResponse dataEnvio(String dataEnvio) {
     this.dataEnvio = dataEnvio;
     return this;
   }
@@ -116,7 +115,7 @@ public class NotificacaoPushResponseValue   {
   /**
    * {{{notificacao_push_response_id_emissor_value}}}
    **/
-  public NotificacaoPushResponseValue idEmissor(Long idEmissor) {
+  public NotificacaoPushResponse idEmissor(Long idEmissor) {
     this.idEmissor = idEmissor;
     return this;
   }
@@ -134,7 +133,7 @@ public class NotificacaoPushResponseValue   {
   /**
    * {{{notificacao_push_response_tipo_evento_value}}}
    **/
-  public NotificacaoPushResponseValue tipoEvento(TipoEventoEnum tipoEvento) {
+  public NotificacaoPushResponse tipoEvento(TipoEventoEnum tipoEvento) {
     this.tipoEvento = tipoEvento;
     return this;
   }
@@ -152,7 +151,7 @@ public class NotificacaoPushResponseValue   {
   /**
    * {{{notificacao_push_response_status_value}}}
    **/
-  public NotificacaoPushResponseValue status(StatusEnum status) {
+  public NotificacaoPushResponse status(StatusEnum status) {
     this.status = status;
     return this;
   }
@@ -170,7 +169,7 @@ public class NotificacaoPushResponseValue   {
   /**
    * {{{notificacao_push_response_id_pessoa_value}}}
    **/
-  public NotificacaoPushResponseValue idPessoa(Long idPessoa) {
+  public NotificacaoPushResponse idPessoa(Long idPessoa) {
     this.idPessoa = idPessoa;
     return this;
   }
@@ -188,7 +187,7 @@ public class NotificacaoPushResponseValue   {
   /**
    * {{{notificacao_push_response_id_conta_value}}}
    **/
-  public NotificacaoPushResponseValue idConta(Long idConta) {
+  public NotificacaoPushResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
@@ -206,7 +205,7 @@ public class NotificacaoPushResponseValue   {
   /**
    * {{{notificacao_push_response_token_dispositivo_value}}}
    **/
-  public NotificacaoPushResponseValue tokenDispositivo(String tokenDispositivo) {
+  public NotificacaoPushResponse tokenDispositivo(String tokenDispositivo) {
     this.tokenDispositivo = tokenDispositivo;
     return this;
   }
@@ -224,7 +223,7 @@ public class NotificacaoPushResponseValue   {
   /**
    * {{{notificacao_push_response_titulo_value}}}
    **/
-  public NotificacaoPushResponseValue titulo(String titulo) {
+  public NotificacaoPushResponse titulo(String titulo) {
     this.titulo = titulo;
     return this;
   }
@@ -242,7 +241,7 @@ public class NotificacaoPushResponseValue   {
   /**
    * {{{notificacao_push_response_conteudo_value}}}
    **/
-  public NotificacaoPushResponseValue conteudo(String conteudo) {
+  public NotificacaoPushResponse conteudo(String conteudo) {
     this.conteudo = conteudo;
     return this;
   }
@@ -260,7 +259,7 @@ public class NotificacaoPushResponseValue   {
   /**
    * {{{notificacao_push_response_plataforma_value}}}
    **/
-  public NotificacaoPushResponseValue plataforma(PlataformaEnum plataforma) {
+  public NotificacaoPushResponse plataforma(PlataformaEnum plataforma) {
     this.plataforma = plataforma;
     return this;
   }
@@ -278,7 +277,7 @@ public class NotificacaoPushResponseValue   {
   /**
    * {{{notificacao_push_response_protocolo_value}}}
    **/
-  public NotificacaoPushResponseValue protocolo(String protocolo) {
+  public NotificacaoPushResponse protocolo(String protocolo) {
     this.protocolo = protocolo;
     return this;
   }
@@ -302,18 +301,18 @@ public class NotificacaoPushResponseValue   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    NotificacaoPushResponseValue notificacaoPushResponseValue = (NotificacaoPushResponseValue) o;
-    return Objects.equals(this.dataEnvio, notificacaoPushResponseValue.dataEnvio) &&
-        Objects.equals(this.idEmissor, notificacaoPushResponseValue.idEmissor) &&
-        Objects.equals(this.tipoEvento, notificacaoPushResponseValue.tipoEvento) &&
-        Objects.equals(this.status, notificacaoPushResponseValue.status) &&
-        Objects.equals(this.idPessoa, notificacaoPushResponseValue.idPessoa) &&
-        Objects.equals(this.idConta, notificacaoPushResponseValue.idConta) &&
-        Objects.equals(this.tokenDispositivo, notificacaoPushResponseValue.tokenDispositivo) &&
-        Objects.equals(this.titulo, notificacaoPushResponseValue.titulo) &&
-        Objects.equals(this.conteudo, notificacaoPushResponseValue.conteudo) &&
-        Objects.equals(this.plataforma, notificacaoPushResponseValue.plataforma) &&
-        Objects.equals(this.protocolo, notificacaoPushResponseValue.protocolo);
+    NotificacaoPushResponse notificacaoPushResponse = (NotificacaoPushResponse) o;
+    return Objects.equals(this.dataEnvio, notificacaoPushResponse.dataEnvio) &&
+        Objects.equals(this.idEmissor, notificacaoPushResponse.idEmissor) &&
+        Objects.equals(this.tipoEvento, notificacaoPushResponse.tipoEvento) &&
+        Objects.equals(this.status, notificacaoPushResponse.status) &&
+        Objects.equals(this.idPessoa, notificacaoPushResponse.idPessoa) &&
+        Objects.equals(this.idConta, notificacaoPushResponse.idConta) &&
+        Objects.equals(this.tokenDispositivo, notificacaoPushResponse.tokenDispositivo) &&
+        Objects.equals(this.titulo, notificacaoPushResponse.titulo) &&
+        Objects.equals(this.conteudo, notificacaoPushResponse.conteudo) &&
+        Objects.equals(this.plataforma, notificacaoPushResponse.plataforma) &&
+        Objects.equals(this.protocolo, notificacaoPushResponse.protocolo);
   }
 
   @Override
@@ -324,7 +323,7 @@ public class NotificacaoPushResponseValue   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class NotificacaoPushResponseValue {\n");
+    sb.append("class NotificacaoPushResponse {\n");
     
     sb.append("    dataEnvio: ").append(toIndentedString(dataEnvio)).append("\n");
     sb.append("    idEmissor: ").append(toIndentedString(idEmissor)).append("\n");
@@ -352,6 +351,4 @@ public class NotificacaoPushResponseValue   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{transferencia_bancaria_response_description}}}
  **/
@@ -791,6 +789,4 @@ public class TransferenciaBancariaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

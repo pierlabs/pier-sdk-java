@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{codigo_seguranca_s_m_s_persist_description}}}
  **/
@@ -98,6 +96,4 @@ public class CodigoSegurancaSMSPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

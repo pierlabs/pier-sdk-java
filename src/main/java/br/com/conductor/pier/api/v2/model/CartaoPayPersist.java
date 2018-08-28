@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{cartao_pay_persist_description}}}
  **/
@@ -182,6 +180,4 @@ public class CartaoPayPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

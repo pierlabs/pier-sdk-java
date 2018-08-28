@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{arquivo_a_u_d_response_description}}}
  **/
@@ -332,6 +330,4 @@ public class ArquivoAUDResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

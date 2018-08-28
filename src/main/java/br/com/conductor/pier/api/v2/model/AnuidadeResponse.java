@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{anuidade_response_description}}}
  **/
@@ -141,6 +139,4 @@ public class AnuidadeResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

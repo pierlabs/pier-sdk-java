@@ -8,8 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{job_response_description}}}
  **/
@@ -181,6 +179,4 @@ public class JobResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

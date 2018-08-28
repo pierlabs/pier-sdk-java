@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{token_persist_description}}}
  **/
@@ -21,6 +19,7 @@ public class TokenPersistValue   {
   private Long base = null;
   private String owner = null;
   private String criadoPor = null;
+  private Long idAplicacao = null;
 
   
   /**
@@ -95,6 +94,24 @@ public class TokenPersistValue   {
   }
 
   
+  /**
+   * {{{token_dto_id_application_value}}}
+   **/
+  public TokenPersistValue idAplicacao(Long idAplicacao) {
+    this.idAplicacao = idAplicacao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{token_dto_id_application_value}}}")
+  @JsonProperty("idAplicacao")
+  public Long getIdAplicacao() {
+    return idAplicacao;
+  }
+  public void setIdAplicacao(Long idAplicacao) {
+    this.idAplicacao = idAplicacao;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -108,12 +125,13 @@ public class TokenPersistValue   {
     return Objects.equals(this.token, tokenPersistValue.token) &&
         Objects.equals(this.base, tokenPersistValue.base) &&
         Objects.equals(this.owner, tokenPersistValue.owner) &&
-        Objects.equals(this.criadoPor, tokenPersistValue.criadoPor);
+        Objects.equals(this.criadoPor, tokenPersistValue.criadoPor) &&
+        Objects.equals(this.idAplicacao, tokenPersistValue.idAplicacao);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(token, base, owner, criadoPor);
+    return Objects.hash(token, base, owner, criadoPor, idAplicacao);
   }
 
   @Override
@@ -125,6 +143,7 @@ public class TokenPersistValue   {
     sb.append("    base: ").append(toIndentedString(base)).append("\n");
     sb.append("    owner: ").append(toIndentedString(owner)).append("\n");
     sb.append("    criadoPor: ").append(toIndentedString(criadoPor)).append("\n");
+    sb.append("    idAplicacao: ").append(toIndentedString(idAplicacao)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -140,6 +159,4 @@ public class TokenPersistValue   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

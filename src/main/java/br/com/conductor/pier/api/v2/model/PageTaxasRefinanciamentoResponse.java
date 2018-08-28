@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_taxas_refinanciamento_response_description}}}
  **/
@@ -339,6 +337,4 @@ public class PageTaxasRefinanciamentoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

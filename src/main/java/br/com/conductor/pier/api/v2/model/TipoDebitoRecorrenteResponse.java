@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{tipo_debito_recorrente_response_description}}}
  **/
@@ -644,6 +642,4 @@ public class TipoDebitoRecorrenteResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

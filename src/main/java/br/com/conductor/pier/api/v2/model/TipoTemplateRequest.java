@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{tipo_template_request_description}}}
  **/
@@ -119,6 +117,4 @@ public class TipoTemplateRequest   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

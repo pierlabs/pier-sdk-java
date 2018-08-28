@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_transacoes_correntes_response_description}}}
  **/
@@ -339,6 +337,4 @@ public class PageTransacoesCorrentesResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

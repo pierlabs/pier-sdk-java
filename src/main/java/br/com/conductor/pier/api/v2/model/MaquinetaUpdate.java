@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{maquineta_update_description}}}
  **/
@@ -141,6 +139,4 @@ public class MaquinetaUpdate   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{antecipacao_response_description}}}
  **/
@@ -580,6 +578,4 @@ public class AntecipacaoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

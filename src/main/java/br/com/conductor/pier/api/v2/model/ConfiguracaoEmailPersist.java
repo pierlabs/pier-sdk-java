@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{configuracao_email_persist_description}}}
  **/
@@ -266,6 +264,4 @@ public class ConfiguracaoEmailPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

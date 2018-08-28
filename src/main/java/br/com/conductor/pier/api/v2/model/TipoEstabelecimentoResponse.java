@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{tipo_estabelecimento_response_description}}}
  **/
@@ -98,6 +96,4 @@ public class TipoEstabelecimentoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

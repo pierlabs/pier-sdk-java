@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{transacao_nao_processada_response_description}}}
  **/
@@ -792,6 +790,4 @@ public class TransacaoNaoProcessadaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

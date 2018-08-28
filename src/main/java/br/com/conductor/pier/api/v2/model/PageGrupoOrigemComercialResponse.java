@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_grupo_origem_comercial_response_description}}}
  **/
@@ -339,6 +337,4 @@ public class PageGrupoOrigemComercialResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

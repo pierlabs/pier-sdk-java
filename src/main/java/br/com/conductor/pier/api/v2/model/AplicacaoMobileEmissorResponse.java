@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{aplicacao_mobile_emissor_resposta_descricao}}}
  **/
@@ -77,6 +75,4 @@ public class AplicacaoMobileEmissorResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

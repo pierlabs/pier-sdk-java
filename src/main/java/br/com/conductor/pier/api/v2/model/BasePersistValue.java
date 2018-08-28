@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{base_persist_description}}}
  **/
@@ -329,6 +327,4 @@ public class BasePersistValue   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

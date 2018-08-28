@@ -9,17 +9,14 @@ import br.com.conductor.pier.api.v2.invoker.Pair;
 
 import br.com.conductor.pier.api.v2.model.LimiteDisponibilidadeResponse;
 import java.math.BigDecimal;
-
-
+import br.com.conductor.pier.api.v2.model.SensibilizarSaldoGlobalUpdateValue;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-
 public class GlobaltaglimitedisponibilidadeApi {
   private ApiClient apiClient;
 
@@ -134,12 +131,12 @@ public class GlobaltaglimitedisponibilidadeApi {
    * @param idConta {{{limite_disponibilidade_resource_consultar_param_id_conta}}}
    * @return LimiteDisponibilidadeResponse
    */
-  public LimiteDisponibilidadeResponse consultarUsingGET23(Long idConta) throws ApiException {
+  public LimiteDisponibilidadeResponse consultarUsingGET25(Long idConta) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idConta' is set
      if (idConta == null) {
-        throw new ApiException(400, "Missing the required parameter 'idConta' when calling consultarUsingGET23");
+        throw new ApiException(400, "Missing the required parameter 'idConta' when calling consultarUsingGET25");
      }
      
     // create path and map variables
@@ -177,5 +174,58 @@ public class GlobaltaglimitedisponibilidadeApi {
     
   }
   
-}
+  /**
+   * {{{limite_disponibilidade_resource_sensibilizar_credito_disponivel}}}
+   * {{{limite_disponibilidade_resource_sensibilizar_credito_disponivel_notes}}}
+   * @param id {{{sensibilizar_saldo_global_param_id}}}
+   * @param sensibilizarSaldoGlobal sensibilizarSaldoGlobal
+   * @return LimiteDisponibilidadeResponse
+   */
+  public LimiteDisponibilidadeResponse sensibilizarSaldoDisponivelGlobalUsingPOST(Long id, SensibilizarSaldoGlobalUpdateValue sensibilizarSaldoGlobal) throws ApiException {
+    Object postBody = sensibilizarSaldoGlobal;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling sensibilizarSaldoDisponivelGlobalUsingPOST");
+     }
+     
+     // verify the required parameter 'sensibilizarSaldoGlobal' is set
+     if (sensibilizarSaldoGlobal == null) {
+        throw new ApiException(400, "Missing the required parameter 'sensibilizarSaldoGlobal' when calling sensibilizarSaldoDisponivelGlobalUsingPOST");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/{id}/limites-disponibilidades/sensibilizar-saldo-disponivel-global".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<LimiteDisponibilidadeResponse> returnType = new GenericType<LimiteDisponibilidadeResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+}

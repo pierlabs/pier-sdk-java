@@ -9,8 +9,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{grupo_economico_d_t_o_description}}}
  **/
@@ -649,6 +647,4 @@ public class GrupoEconomicoDTO   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

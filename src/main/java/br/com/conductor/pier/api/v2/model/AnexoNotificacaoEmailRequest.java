@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{anexo_notificacao_email_request_description}}}
  **/
@@ -77,6 +75,4 @@ public class AnexoNotificacaoEmailRequest   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{documento_detalhado_response_description}}}
  **/
@@ -185,6 +183,4 @@ public class DocumentoDetalhadoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

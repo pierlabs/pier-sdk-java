@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{historico_impressao_cartao_response_description}}}
  **/
@@ -161,6 +159,4 @@ public class HistoricoImpressaoCartaoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

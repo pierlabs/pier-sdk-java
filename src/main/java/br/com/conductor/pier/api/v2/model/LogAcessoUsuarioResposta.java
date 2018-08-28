@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{log_acesso_usuario_resposta_descricao}}}
  **/
@@ -77,6 +75,4 @@ public class LogAcessoUsuarioResposta   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

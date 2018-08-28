@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_endereco_response_description}}}
  **/
@@ -339,6 +337,4 @@ public class PageEnderecoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

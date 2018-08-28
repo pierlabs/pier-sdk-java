@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{emprestimo_pessoal_request_description}}}
  **/
@@ -183,6 +181,4 @@ public class EmprestimoPessoalRequest   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

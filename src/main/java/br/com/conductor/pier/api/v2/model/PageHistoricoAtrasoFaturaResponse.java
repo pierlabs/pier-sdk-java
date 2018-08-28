@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_historico_atraso_fatura_response_description}}}
  **/
@@ -339,6 +337,4 @@ public class PageHistoricoAtrasoFaturaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

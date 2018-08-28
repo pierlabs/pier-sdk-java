@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{parametro_emissor_resposta_descricao}}}
  **/
@@ -161,6 +159,4 @@ public class ParametroEmissorResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

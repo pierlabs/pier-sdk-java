@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_campo_codificado_descricao_response_description}}}
  **/
@@ -339,6 +337,4 @@ public class PageCampoCodificadoDescricaoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

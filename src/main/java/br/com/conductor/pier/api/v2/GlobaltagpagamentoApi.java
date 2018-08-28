@@ -11,16 +11,12 @@ import br.com.conductor.pier.api.v2.model.AcordoDetalheResponse;
 import br.com.conductor.pier.api.v2.model.PageHistoricoPagamentoResponse;
 import br.com.conductor.pier.api.v2.model.PageAcordoResponse;
 
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-
 public class GlobaltagpagamentoApi {
   private ApiClient apiClient;
 
@@ -223,4 +219,3 @@ public class GlobaltagpagamentoApi {
   }
   
 }
-

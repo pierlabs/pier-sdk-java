@@ -8,8 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{origem_comercial_persist_description}}}
  **/
@@ -559,6 +557,4 @@ public class OrigemComercialPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

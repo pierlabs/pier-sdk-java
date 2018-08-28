@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{cancelamento_transacao_on_us_request_description}}}
  **/
@@ -288,6 +286,4 @@ public class CancelamentoTransacaoOnUsRequest   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

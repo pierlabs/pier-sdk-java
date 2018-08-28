@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{fatura_consignada_response_description}}}
  **/
@@ -645,6 +643,4 @@ public class FaturaConsignadaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

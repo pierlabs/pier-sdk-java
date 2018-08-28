@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{m_c_c_response_description}}}
  **/
@@ -98,6 +96,4 @@ public class MCCResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

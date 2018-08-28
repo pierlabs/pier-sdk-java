@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{arquivo_detalhe_response_description}}}
  **/
@@ -290,6 +288,4 @@ public class ArquivoDetalheResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

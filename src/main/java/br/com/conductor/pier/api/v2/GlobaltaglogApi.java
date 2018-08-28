@@ -10,16 +10,12 @@ import br.com.conductor.pier.api.v2.invoker.Pair;
 import br.com.conductor.pier.api.v2.model.LogAcessoUsuarioPersistencia;
 import br.com.conductor.pier.api.v2.model.LogAcessoUsuarioResposta;
 
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-
 public class GlobaltaglogApi {
   private ApiClient apiClient;
 
@@ -46,12 +42,12 @@ public class GlobaltaglogApi {
    * @param logAcessoUsuarioPersist logAcessoUsuarioPersist
    * @return LogAcessoUsuarioResposta
    */
-  public LogAcessoUsuarioResposta salvarUsingPOST18(LogAcessoUsuarioPersistencia logAcessoUsuarioPersist) throws ApiException {
+  public LogAcessoUsuarioResposta salvarUsingPOST19(LogAcessoUsuarioPersistencia logAcessoUsuarioPersist) throws ApiException {
     Object postBody = logAcessoUsuarioPersist;
     
      // verify the required parameter 'logAcessoUsuarioPersist' is set
      if (logAcessoUsuarioPersist == null) {
-        throw new ApiException(400, "Missing the required parameter 'logAcessoUsuarioPersist' when calling salvarUsingPOST18");
+        throw new ApiException(400, "Missing the required parameter 'logAcessoUsuarioPersist' when calling salvarUsingPOST19");
      }
      
     // create path and map variables
@@ -88,4 +84,3 @@ public class GlobaltaglogApi {
   }
   
 }
-

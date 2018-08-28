@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_inscricao_apn_resposta_descricao}}}
  **/
@@ -339,6 +337,4 @@ public class PageInscricaoAPNResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

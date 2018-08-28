@@ -11,8 +11,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{plano_parcelamento_transferencia_credito_conta_bancaria_response_description}}}
  **/
@@ -165,6 +163,4 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -11,16 +11,12 @@ import br.com.conductor.pier.api.v2.model.RiscoFraudeDetalhadoResponse;
 import br.com.conductor.pier.api.v2.model.TipoResolucaoResponse;
 import br.com.conductor.pier.api.v2.model.DadosPortadorRequest;
 
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-
 public class GlobaltagriscofraudeApi {
   private ApiClient apiClient;
 
@@ -47,12 +43,12 @@ public class GlobaltagriscofraudeApi {
    * @param id {{{risco_fraude_resource_consultar_param_id_risco_fraude}}}
    * @return RiscoFraudeDetalhadoResponse
    */
-  public RiscoFraudeDetalhadoResponse consultarUsingGET35(Long id) throws ApiException {
+  public RiscoFraudeDetalhadoResponse consultarUsingGET37(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET35");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET37");
      }
      
     // create path and map variables
@@ -280,4 +276,3 @@ public class GlobaltagriscofraudeApi {
   }
   
 }
-

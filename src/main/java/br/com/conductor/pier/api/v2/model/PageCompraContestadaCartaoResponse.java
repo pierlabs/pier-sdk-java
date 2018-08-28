@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_page_compra_contestada_cartao_response_description}}}
  **/
@@ -339,6 +337,4 @@ public class PageCompraContestadaCartaoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

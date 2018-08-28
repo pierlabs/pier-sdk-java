@@ -12,8 +12,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{pessoa_fisica_aprovada_response_description}}}
  **/
@@ -733,6 +731,4 @@ public class PessoaFisicaAprovadaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{oportunidade_response_description}}}
  **/
@@ -269,6 +267,4 @@ public class OportunidadeResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

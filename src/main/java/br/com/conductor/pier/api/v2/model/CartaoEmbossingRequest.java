@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{cartao_embossing_request_description}}}
  **/
@@ -98,6 +96,4 @@ public class CartaoEmbossingRequest   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

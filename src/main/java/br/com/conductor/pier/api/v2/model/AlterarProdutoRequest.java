@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{alterar_produto_request_description}}}
  **/
@@ -140,6 +138,4 @@ public class AlterarProdutoRequest   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

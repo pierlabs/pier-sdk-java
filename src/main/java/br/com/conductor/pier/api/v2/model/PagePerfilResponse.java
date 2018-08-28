@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_perfil_response_object_description}}}
  **/
@@ -339,6 +337,4 @@ public class PagePerfilResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{token_update_description}}}
  **/
@@ -21,6 +19,7 @@ public class TokenUpdateValue   {
   private String owner = null;
   private String criadoPor = null;
   private String alteradoPor = null;
+  private Long idAplicacao = null;
 
   
   /**
@@ -95,6 +94,24 @@ public class TokenUpdateValue   {
   }
 
   
+  /**
+   * {{{token_dto_id_application_value}}}
+   **/
+  public TokenUpdateValue idAplicacao(Long idAplicacao) {
+    this.idAplicacao = idAplicacao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{token_dto_id_application_value}}}")
+  @JsonProperty("idAplicacao")
+  public Long getIdAplicacao() {
+    return idAplicacao;
+  }
+  public void setIdAplicacao(Long idAplicacao) {
+    this.idAplicacao = idAplicacao;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -108,12 +125,13 @@ public class TokenUpdateValue   {
     return Objects.equals(this.base, tokenUpdateValue.base) &&
         Objects.equals(this.owner, tokenUpdateValue.owner) &&
         Objects.equals(this.criadoPor, tokenUpdateValue.criadoPor) &&
-        Objects.equals(this.alteradoPor, tokenUpdateValue.alteradoPor);
+        Objects.equals(this.alteradoPor, tokenUpdateValue.alteradoPor) &&
+        Objects.equals(this.idAplicacao, tokenUpdateValue.idAplicacao);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(base, owner, criadoPor, alteradoPor);
+    return Objects.hash(base, owner, criadoPor, alteradoPor, idAplicacao);
   }
 
   @Override
@@ -125,6 +143,7 @@ public class TokenUpdateValue   {
     sb.append("    owner: ").append(toIndentedString(owner)).append("\n");
     sb.append("    criadoPor: ").append(toIndentedString(criadoPor)).append("\n");
     sb.append("    alteradoPor: ").append(toIndentedString(alteradoPor)).append("\n");
+    sb.append("    idAplicacao: ").append(toIndentedString(idAplicacao)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -140,6 +159,4 @@ public class TokenUpdateValue   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

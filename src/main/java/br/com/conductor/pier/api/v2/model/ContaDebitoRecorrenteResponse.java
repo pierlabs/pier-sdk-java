@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{conta_debito_recorrente_response_description}}}
  **/
@@ -308,6 +306,4 @@ public class ContaDebitoRecorrenteResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

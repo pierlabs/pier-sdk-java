@@ -12,6 +12,7 @@ import br.com.conductor.pier.api.v2.model.ConfiguracaoEmailPersist;
 import br.com.conductor.pier.api.v2.model.TemplateNotificacaoDetalheResponse;
 import br.com.conductor.pier.api.v2.model.NotificacaoSMSResponse;
 import br.com.conductor.pier.api.v2.model.CodigoSegurancaResponse;
+import br.com.conductor.pier.api.v2.model.Secure3dRequest;
 import br.com.conductor.pier.api.v2.model.CodigoSegurancaSMSPersist;
 import br.com.conductor.pier.api.v2.model.PageConfiguracaoEmailResponse;
 import br.com.conductor.pier.api.v2.model.PageCodigoSegurancaResponse;
@@ -26,16 +27,12 @@ import br.com.conductor.pier.api.v2.model.SMSPersistValue;
 import br.com.conductor.pier.api.v2.model.CodigoSegurancaEMAILPersist;
 import br.com.conductor.pier.api.v2.model.CodigoSegurancaSMSRequest;
 
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-
 public class GlobaltagnotificacaoApi {
   private ApiClient apiClient;
 
@@ -427,6 +424,53 @@ public class GlobaltagnotificacaoApi {
     
     GenericType<TemplateNotificacaoDetalheResponse> returnType = new GenericType<TemplateNotificacaoDetalheResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * {{{notificacao_resource_3d_secure}}}
+   * {{{notificacao_resource_3d_secure_notes}}}
+   * @param secure3dRequest secure3dRequest
+   * @return Object
+   */
+  public Object enviarOTPUsingPOST(Secure3dRequest secure3dRequest) throws ApiException {
+    Object postBody = secure3dRequest;
+    
+     // verify the required parameter 'secure3dRequest' is set
+     if (secure3dRequest == null) {
+        throw new ApiException(400, "Missing the required parameter 'secure3dRequest' when calling enviarOTPUsingPOST");
+     }
+     
+    // create path and map variables
+    String path = "/api/notificacoes/3d-secure".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<Object> returnType = new GenericType<Object>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
@@ -1437,4 +1481,3 @@ public class GlobaltagnotificacaoApi {
   }
   
 }
-

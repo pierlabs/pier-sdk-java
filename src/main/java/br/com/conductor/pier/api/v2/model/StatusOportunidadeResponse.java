@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{status_oportunidade_response_description}}}
  **/
@@ -161,6 +159,4 @@ public class StatusOportunidadeResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

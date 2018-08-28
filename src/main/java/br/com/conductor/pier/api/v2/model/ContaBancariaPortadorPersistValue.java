@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{conta_bancaria_portador_persist_description}}}
  **/
@@ -350,6 +348,4 @@ public class ContaBancariaPortadorPersistValue   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

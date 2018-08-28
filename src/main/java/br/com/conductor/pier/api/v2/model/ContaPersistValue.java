@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{conta_persist_description}}}
  **/
@@ -330,6 +328,4 @@ public class ContaPersistValue   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

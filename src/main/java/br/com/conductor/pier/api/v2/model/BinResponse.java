@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{Bin_response_description}}}
  **/
@@ -77,6 +75,4 @@ public class BinResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{historico_assessoria_response_description}}}
  **/
@@ -119,6 +117,4 @@ public class HistoricoAssessoriaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

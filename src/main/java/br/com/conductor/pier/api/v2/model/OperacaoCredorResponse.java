@@ -9,8 +9,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{operacao_credor_response_description}}}
  **/
@@ -373,6 +371,4 @@ public class OperacaoCredorResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

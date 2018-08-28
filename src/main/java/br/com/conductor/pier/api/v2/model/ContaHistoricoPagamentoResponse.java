@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{conta_historico_pagamento_response_description}}}
  **/
@@ -225,6 +223,4 @@ public class ContaHistoricoPagamentoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

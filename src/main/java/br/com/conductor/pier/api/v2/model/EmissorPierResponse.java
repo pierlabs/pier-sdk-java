@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{emissor_response_description}}}
  **/
@@ -119,6 +117,4 @@ public class EmissorPierResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

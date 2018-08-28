@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{taxas_refinanciamento_response_description}}}
  **/
@@ -519,6 +517,4 @@ public class TaxasRefinanciamentoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

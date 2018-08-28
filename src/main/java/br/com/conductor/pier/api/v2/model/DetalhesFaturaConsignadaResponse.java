@@ -11,8 +11,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{detalhes_fatura_consignada_response_description}}}
  **/
@@ -102,6 +100,4 @@ public class DetalhesFaturaConsignadaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

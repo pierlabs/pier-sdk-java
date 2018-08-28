@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{adicional_update_description}}}
  **/
@@ -290,6 +288,4 @@ public class AdicionalUpdate   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

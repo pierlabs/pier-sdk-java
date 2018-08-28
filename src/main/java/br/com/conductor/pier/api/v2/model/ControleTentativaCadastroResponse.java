@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{controle_tentativa_cadastro_resposta_descricao}}}
  **/
@@ -119,6 +117,4 @@ public class ControleTentativaCadastroResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{oportunidade_persist_description}}}
  **/
@@ -206,6 +204,4 @@ public class OportunidadePersistValue   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

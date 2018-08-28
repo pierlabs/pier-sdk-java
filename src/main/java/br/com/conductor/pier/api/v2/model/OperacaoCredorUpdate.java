@@ -9,8 +9,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{operacao_credor_update_description}}}
  **/
@@ -352,6 +350,4 @@ public class OperacaoCredorUpdate   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

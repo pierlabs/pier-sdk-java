@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{status_oportunidade_persist_description}}}
  **/
@@ -119,6 +117,4 @@ public class StatusOportunidadePersistValue   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

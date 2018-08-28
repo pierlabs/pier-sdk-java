@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{configuracao_rotativo_detalhe_response_description}}}
  **/
@@ -393,6 +391,4 @@ public class ConfiguracaoRotativoDetalheResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

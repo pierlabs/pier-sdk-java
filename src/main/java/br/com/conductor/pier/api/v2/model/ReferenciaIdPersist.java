@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{referencia_id_persist_description}}}
  **/
@@ -76,6 +74,4 @@ public class ReferenciaIdPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

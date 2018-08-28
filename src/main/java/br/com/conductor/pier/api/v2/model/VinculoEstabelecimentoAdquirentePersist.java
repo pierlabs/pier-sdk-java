@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{vinculo_estabelecimento_adquirente_persist_description}}}
  **/
@@ -119,6 +117,4 @@ public class VinculoEstabelecimentoAdquirentePersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

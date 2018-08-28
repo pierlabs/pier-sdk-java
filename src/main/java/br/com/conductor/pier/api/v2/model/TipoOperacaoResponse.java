@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{tipo_operacao_response_description}}}
  **/
@@ -393,6 +391,4 @@ public class TipoOperacaoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

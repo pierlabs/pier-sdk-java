@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{aviso_viagem_response_description}}}
  **/
@@ -182,6 +180,4 @@ public class AvisoViagemResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

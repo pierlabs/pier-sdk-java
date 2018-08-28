@@ -9,8 +9,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{estabelecimento_update_description}}}
  **/
@@ -812,6 +810,4 @@ public class EstabelecimentoUpdate   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

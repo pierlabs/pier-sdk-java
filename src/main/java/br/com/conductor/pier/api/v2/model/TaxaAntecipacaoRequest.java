@@ -9,8 +9,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{taxa_antecipacao_request_description}}}
  **/
@@ -119,6 +117,4 @@ public class TaxaAntecipacaoRequest   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{atribuir_assinatura_cliente_persist_description}}}
  **/
@@ -77,6 +75,4 @@ public class AtribuirAssinaturaClientePersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

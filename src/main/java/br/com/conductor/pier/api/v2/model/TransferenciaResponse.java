@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{transferencia_response_description}}}
  **/
@@ -162,6 +160,4 @@ public class TransferenciaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

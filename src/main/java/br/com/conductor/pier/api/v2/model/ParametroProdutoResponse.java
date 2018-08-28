@@ -9,8 +9,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{parametro_produto_response_description}}}
  **/
@@ -19,6 +17,7 @@ import java.math.BigDecimal;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ParametroProdutoResponse   {
   
+  private Long id = null;
   private Long idProduto = null;
 
 
@@ -43,6 +42,24 @@ public class ParametroProdutoResponse   {
   private String descricao = null;
   private BigDecimal valorParametro = null;
   private String dataValidade = null;
+
+  
+  /**
+   * {{{parametro_produto_response_id_value}}}
+   **/
+  public ParametroProdutoResponse id(Long id) {
+    this.id = id;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", required = true, value = "{{{parametro_produto_response_id_value}}}")
+  @JsonProperty("id")
+  public Long getId() {
+    return id;
+  }
+  public void setId(Long id) {
+    this.id = id;
+  }
 
   
   /**
@@ -145,7 +162,8 @@ public class ParametroProdutoResponse   {
       return false;
     }
     ParametroProdutoResponse parametroProdutoResponse = (ParametroProdutoResponse) o;
-    return Objects.equals(this.idProduto, parametroProdutoResponse.idProduto) &&
+    return Objects.equals(this.id, parametroProdutoResponse.id) &&
+        Objects.equals(this.idProduto, parametroProdutoResponse.idProduto) &&
         Objects.equals(this.tipoOrigemTransacao, parametroProdutoResponse.tipoOrigemTransacao) &&
         Objects.equals(this.descricao, parametroProdutoResponse.descricao) &&
         Objects.equals(this.valorParametro, parametroProdutoResponse.valorParametro) &&
@@ -154,7 +172,7 @@ public class ParametroProdutoResponse   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(idProduto, tipoOrigemTransacao, descricao, valorParametro, dataValidade);
+    return Objects.hash(id, idProduto, tipoOrigemTransacao, descricao, valorParametro, dataValidade);
   }
 
   @Override
@@ -162,6 +180,7 @@ public class ParametroProdutoResponse   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ParametroProdutoResponse {\n");
     
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idProduto: ").append(toIndentedString(idProduto)).append("\n");
     sb.append("    tipoOrigemTransacao: ").append(toIndentedString(tipoOrigemTransacao)).append("\n");
     sb.append("    descricao: ").append(toIndentedString(descricao)).append("\n");
@@ -182,6 +201,4 @@ public class ParametroProdutoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

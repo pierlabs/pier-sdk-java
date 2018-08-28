@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{permissao_persist_object_description}}}
  **/
@@ -77,6 +75,4 @@ public class PermissaoPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

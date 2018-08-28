@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_terminal_response_description}}}
  **/
@@ -339,6 +337,4 @@ public class PageTerminalResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

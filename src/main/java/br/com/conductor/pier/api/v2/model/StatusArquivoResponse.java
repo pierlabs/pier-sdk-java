@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{status_arquivo_response_description}}}
  **/
@@ -119,6 +117,4 @@ public class StatusArquivoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

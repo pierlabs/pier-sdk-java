@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{telefone_estabelecimento_update_description}}}
  **/
@@ -119,6 +117,4 @@ public class TelefoneEstabelecimentoUpdate   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{usuario_conta_resposta_descricao}}}
  **/
@@ -161,6 +159,4 @@ public class UsuarioContasResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

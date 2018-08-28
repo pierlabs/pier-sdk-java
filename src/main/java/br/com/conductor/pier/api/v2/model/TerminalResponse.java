@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{terminal_response_description}}}
  **/
@@ -182,6 +180,4 @@ public class TerminalResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{tipo_faturamento_persist_description}}}
  **/
@@ -119,6 +117,4 @@ public class TipoFaturamentoPersistValue   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

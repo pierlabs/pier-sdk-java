@@ -10,16 +10,12 @@ import br.com.conductor.pier.api.v2.invoker.Pair;
 import br.com.conductor.pier.api.v2.model.FaqResponse;
 import br.com.conductor.pier.api.v2.model.PageFaqResponse;
 
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-
 public class GlobaltagfaqApi {
   private ApiClient apiClient;
 
@@ -191,12 +187,12 @@ public class GlobaltagfaqApi {
    * @param id {{{faq_resource_consultar_param_id_faq}}}
    * @return FaqResponse
    */
-  public FaqResponse consultarUsingGET21(Long id) throws ApiException {
+  public FaqResponse consultarUsingGET23(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET21");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET23");
      }
      
     // create path and map variables
@@ -248,7 +244,7 @@ public class GlobaltagfaqApi {
    * @param status {{{faq_request_status_value}}}
    * @return PageFaqResponse
    */
-  public PageFaqResponse listarUsingGET26(List<String> sort, Integer page, Integer limit, Long idFaq, String pergunta, String resposta, Integer relevancia, String plataforma, String categoria, String status) throws ApiException {
+  public PageFaqResponse listarUsingGET27(List<String> sort, Integer page, Integer limit, Long idFaq, String pergunta, String resposta, Integer relevancia, String plataforma, String categoria, String status) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -305,4 +301,3 @@ public class GlobaltagfaqApi {
   }
   
 }
-

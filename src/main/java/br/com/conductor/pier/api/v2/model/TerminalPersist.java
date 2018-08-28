@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{terminal_persist_description}}}
  **/
@@ -119,6 +117,4 @@ public class TerminalPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

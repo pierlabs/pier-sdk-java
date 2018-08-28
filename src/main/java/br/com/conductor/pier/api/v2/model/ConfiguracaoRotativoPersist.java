@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{configuracao_rotativo_persist_description}}}
  **/
@@ -372,6 +370,4 @@ public class ConfiguracaoRotativoPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

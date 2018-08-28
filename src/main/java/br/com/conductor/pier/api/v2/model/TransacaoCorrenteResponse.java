@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{transacao_corrente_response_description}}}
  **/
@@ -455,6 +453,4 @@ public class TransacaoCorrenteResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

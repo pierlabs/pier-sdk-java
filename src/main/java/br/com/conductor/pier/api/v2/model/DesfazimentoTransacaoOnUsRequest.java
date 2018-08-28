@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{desfazimento_transacao_on_us_request_description}}}
  **/
@@ -267,6 +265,4 @@ public class DesfazimentoTransacaoOnUsRequest   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

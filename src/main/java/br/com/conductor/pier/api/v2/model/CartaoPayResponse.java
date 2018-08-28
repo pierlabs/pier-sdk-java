@@ -8,8 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{cartao_pay_response_description}}}
  **/
@@ -245,6 +243,4 @@ public class CartaoPayResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

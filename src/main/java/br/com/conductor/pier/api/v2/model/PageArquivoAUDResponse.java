@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_arquivo_a_u_d_response_description}}}
  **/
@@ -339,6 +337,4 @@ public class PageArquivoAUDResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

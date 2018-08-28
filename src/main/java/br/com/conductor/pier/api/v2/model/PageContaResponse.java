@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_conta_response_description}}}
  **/
@@ -339,6 +337,4 @@ public class PageContaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

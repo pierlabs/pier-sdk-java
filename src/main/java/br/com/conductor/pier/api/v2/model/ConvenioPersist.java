@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * ConvenioPersist
  **/
@@ -393,6 +391,4 @@ public class ConvenioPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

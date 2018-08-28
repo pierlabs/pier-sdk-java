@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{status_contestacao_response_description}}}
  **/
@@ -98,6 +96,4 @@ public class StatusContestacaoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{adesao_pagamento_sabado_resposta_descricao}}}
  **/
@@ -140,6 +138,4 @@ public class AdesaoPagamentoSabadoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_compra_response_description}}}
  **/
@@ -339,6 +337,4 @@ public class PageCompraResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -11,16 +11,12 @@ import br.com.conductor.pier.api.v2.model.WebHookResponse;
 import br.com.conductor.pier.api.v2.model.WebHookPersistValue;
 import br.com.conductor.pier.api.v2.model.PageWebHookResponse;
 
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-
 public class GlobaltagwebhookApi {
   private ApiClient apiClient;
 
@@ -104,12 +100,12 @@ public class GlobaltagwebhookApi {
    * @param id {{{web_hook_resource_consultar_param_id}}}
    * @return WebHookResponse
    */
-  public WebHookResponse consultarUsingGET53(Long id) throws ApiException {
+  public WebHookResponse consultarUsingGET55(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET53");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET55");
      }
      
     // create path and map variables
@@ -158,7 +154,7 @@ public class GlobaltagwebhookApi {
    * @param url {{{web_hook_request_url_value}}}
    * @return PageWebHookResponse
    */
-  public PageWebHookResponse listarUsingGET66(List<String> sort, Integer page, Integer limit, Long id, String tipoEvento, String metodo, String url) throws ApiException {
+  public PageWebHookResponse listarUsingGET69(List<String> sort, Integer page, Integer limit, Long id, String tipoEvento, String metodo, String url) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -214,12 +210,12 @@ public class GlobaltagwebhookApi {
    * @param webhook webhook
    * @return WebHookResponse
    */
-  public WebHookResponse salvarUsingPOST35(WebHookPersistValue webhook) throws ApiException {
+  public WebHookResponse salvarUsingPOST36(WebHookPersistValue webhook) throws ApiException {
     Object postBody = webhook;
     
      // verify the required parameter 'webhook' is set
      if (webhook == null) {
-        throw new ApiException(400, "Missing the required parameter 'webhook' when calling salvarUsingPOST35");
+        throw new ApiException(400, "Missing the required parameter 'webhook' when calling salvarUsingPOST36");
      }
      
     // create path and map variables
@@ -256,4 +252,3 @@ public class GlobaltagwebhookApi {
   }
   
 }
-

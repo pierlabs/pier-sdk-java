@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{status_cartao_response_description}}}
  **/
@@ -182,6 +180,4 @@ public class StatusCartaoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

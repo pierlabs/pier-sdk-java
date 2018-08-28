@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{fantasia_basica_response_description}}}
  **/
@@ -119,6 +117,4 @@ public class FantasiaBasicaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{historico_atraso_fatura_response_description}}}
  **/
@@ -98,6 +96,4 @@ public class HistoricoAtrasoFaturaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

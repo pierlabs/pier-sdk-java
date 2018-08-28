@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{tipo_boleto_response_description}}}
  **/
@@ -225,6 +223,4 @@ public class TipoBoletoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

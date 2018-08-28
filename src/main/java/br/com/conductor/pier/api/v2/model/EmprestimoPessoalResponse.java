@@ -11,8 +11,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{emprestimo_pessoal_response_description}}}
  **/
@@ -248,6 +246,4 @@ public class EmprestimoPessoalResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{controle_seguranca_dispositivo_resposta_descricao}}}
  **/
@@ -119,6 +117,4 @@ public class ControleSegurancaDispositivoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

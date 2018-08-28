@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{tipo_arquivo_response_description}}}
  **/
@@ -119,6 +117,4 @@ public class TipoArquivoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

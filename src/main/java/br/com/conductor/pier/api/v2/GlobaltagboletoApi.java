@@ -13,16 +13,12 @@ import br.com.conductor.pier.api.v2.model.BoletoRequest;
 import br.com.conductor.pier.api.v2.model.PageBoletoListarResponse;
 import java.math.BigDecimal;
 
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-
 public class GlobaltagboletoApi {
   private ApiClient apiClient;
 
@@ -47,14 +43,15 @@ public class GlobaltagboletoApi {
    * {{{boleto_resource_consultar}}}
    * {{{boleto_resource_consultar_notes}}}
    * @param id {{{boleto_resource_consultar_param_id}}}
+   * @param zeraValorCodigoBarras {{{boleto_resource_consultar_param_zera_valor_codigo_barras}}}
    * @return BoletoResponse
    */
-  public BoletoResponse consultarUsingGET34(Long id) throws ApiException {
+  public BoletoResponse consultarUsingGET36(Long id, Boolean zeraValorCodigoBarras) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET34");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET36");
      }
      
     // create path and map variables
@@ -66,6 +63,8 @@ public class GlobaltagboletoApi {
     Map<String, String> headerParams = new HashMap<String, String>();
     Map<String, Object> formParams = new HashMap<String, Object>();
 
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "zeraValorCodigoBarras", zeraValorCodigoBarras));
     
 
     
@@ -204,7 +203,7 @@ public class GlobaltagboletoApi {
    * @param idTipoBoleto {{{boleto_listar_request_id_tipo_boleto_value}}}
    * @return PageBoletoListarResponse
    */
-  public PageBoletoListarResponse listarUsingGET45(List<String> sort, Integer page, Integer limit, Long idConta, String dataVencimento, BigDecimal valorBoleto, Long idTipoBoleto) throws ApiException {
+  public PageBoletoListarResponse listarUsingGET47(List<String> sort, Integer page, Integer limit, Long idConta, String dataVencimento, BigDecimal valorBoleto, Long idTipoBoleto) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -351,4 +350,3 @@ public class GlobaltagboletoApi {
   }
   
 }
-

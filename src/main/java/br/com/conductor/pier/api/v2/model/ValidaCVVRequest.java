@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{valida_c_v_v_request_description}}}
  **/
@@ -98,6 +96,4 @@ public class ValidaCVVRequest   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

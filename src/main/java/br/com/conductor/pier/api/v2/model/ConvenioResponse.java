@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * Objeto Conv\u00EAnio
  **/
@@ -477,6 +475,4 @@ public class ConvenioResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

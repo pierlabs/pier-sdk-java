@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_tipo_debito_recorrente_response_description}}}
  **/
@@ -339,6 +337,4 @@ public class PageTipoDebitoRecorrenteResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

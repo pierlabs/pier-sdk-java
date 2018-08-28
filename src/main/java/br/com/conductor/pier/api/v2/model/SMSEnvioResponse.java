@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{sms_envio_response_description}}}
  **/
@@ -224,6 +222,4 @@ public class SMSEnvioResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

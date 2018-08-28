@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * Lista os dados banc\u00E1rios dos conv\u00EAnios existentes
  **/
@@ -339,6 +337,4 @@ public class PageConvenioResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{chave_criptografia_requisicao_descricao}}}
  **/
@@ -98,6 +96,4 @@ public class ChaveCriptografiaRequest   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

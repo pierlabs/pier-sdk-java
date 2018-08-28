@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{parcelamento_transferencia_response_description}}}
  **/
@@ -204,6 +202,4 @@ public class ParcelamentoTransferenciaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

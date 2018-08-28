@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{arquivo_parametro_a_u_d_response_description}}}
  **/
@@ -203,6 +201,4 @@ public class ArquivoParametroAUDResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

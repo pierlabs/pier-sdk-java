@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{detalhe_oportunidade_update_description}}}
  **/
@@ -119,6 +117,4 @@ public class DetalheOportunidadeUpdateValue   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

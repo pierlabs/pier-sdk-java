@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{integracao_emissor_response_description}}}
  **/
@@ -182,6 +180,4 @@ public class IntegracaoEmissorResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

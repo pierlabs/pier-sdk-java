@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{vinculo_operacao_persist_description}}}
  **/
@@ -119,6 +117,4 @@ public class VinculoOperacaoPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

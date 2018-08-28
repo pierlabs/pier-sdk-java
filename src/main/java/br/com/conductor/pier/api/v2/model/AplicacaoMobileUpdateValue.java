@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{aplicacao_mobile_update_description}}}
  **/
@@ -182,6 +180,4 @@ public class AplicacaoMobileUpdateValue   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

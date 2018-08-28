@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{usuario_persistencia_descricao}}}
  **/
@@ -52,7 +50,7 @@ public class UsuarioPersistencia   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{usuario_persistencia_login_descricao}}}")
+  @ApiModelProperty(example = "null", required = true, value = "{{{usuario_persistencia_login_descricao}}}")
   @JsonProperty("login")
   public String getLogin() {
     return login;
@@ -88,7 +86,7 @@ public class UsuarioPersistencia   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{usuario_persistencia_email_descricao}}}")
+  @ApiModelProperty(example = "null", required = true, value = "{{{usuario_persistencia_email_descricao}}}")
   @JsonProperty("email")
   public String getEmail() {
     return email;
@@ -106,7 +104,7 @@ public class UsuarioPersistencia   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{usuario_persistencia_senha_descricao}}}")
+  @ApiModelProperty(example = "null", required = true, value = "{{{usuario_persistencia_senha_descricao}}}")
   @JsonProperty("senha")
   public String getSenha() {
     return senha;
@@ -203,6 +201,4 @@ public class UsuarioPersistencia   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{historico_eventos_response_description}}}
  **/
@@ -161,6 +159,4 @@ public class HistoricoEventosResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

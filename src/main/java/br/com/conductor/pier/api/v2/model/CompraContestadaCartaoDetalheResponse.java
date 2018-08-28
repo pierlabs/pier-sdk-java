@@ -8,8 +8,6 @@ import java.util.Date;
 
 
 
-
-
 /**
  * {{{compra_contestada_cartao_detalhe_response_description}}}
  **/
@@ -183,6 +181,4 @@ public class CompraContestadaCartaoDetalheResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

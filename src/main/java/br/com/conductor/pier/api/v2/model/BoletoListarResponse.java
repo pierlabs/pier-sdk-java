@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{boleto_listar_response_description}}}
  **/
@@ -183,6 +181,4 @@ public class BoletoListarResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

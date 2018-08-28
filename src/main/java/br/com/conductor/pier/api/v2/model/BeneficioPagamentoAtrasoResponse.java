@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{beneficio_pagamento_atraso_response_description}}}
  **/
@@ -77,6 +75,4 @@ public class BeneficioPagamentoAtrasoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

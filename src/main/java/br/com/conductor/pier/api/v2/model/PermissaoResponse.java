@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{permissao_response_object_description}}}
  **/
@@ -96,6 +94,4 @@ public class PermissaoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

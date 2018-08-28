@@ -12,16 +12,12 @@ import br.com.conductor.pier.api.v2.model.StatusPropostaUpdate;
 import br.com.conductor.pier.api.v2.model.PageStatusPropostaResponse;
 import br.com.conductor.pier.api.v2.model.PagePropostaResponse;
 
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-
 public class GlobaltagpropostaApi {
   private ApiClient apiClient;
 
@@ -102,12 +98,12 @@ public class GlobaltagpropostaApi {
    * @param id {{{proposta_resource_consultar_param_id}}}
    * @return PropostaResponse
    */
-  public PropostaResponse consultarUsingGET33(Long id) throws ApiException {
+  public PropostaResponse consultarUsingGET35(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET33");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET35");
      }
      
     // create path and map variables
@@ -209,7 +205,7 @@ public class GlobaltagpropostaApi {
    * @param status {{{proposta_request_status_value}}}
    * @return PagePropostaResponse
    */
-  public PagePropostaResponse listarUsingGET44(List<String> sort, Integer page, Integer limit, Integer status) throws ApiException {
+  public PagePropostaResponse listarUsingGET46(List<String> sort, Integer page, Integer limit, Integer status) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -254,4 +250,3 @@ public class GlobaltagpropostaApi {
   }
   
 }
-

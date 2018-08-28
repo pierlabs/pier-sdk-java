@@ -8,8 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{configuracao_registro_cobranca_response_description}}}
  **/
@@ -471,6 +469,4 @@ public class ConfiguracaoRegistroCobrancaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

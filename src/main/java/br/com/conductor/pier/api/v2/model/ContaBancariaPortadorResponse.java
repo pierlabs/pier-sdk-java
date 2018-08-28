@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{conta_bancaria_portador_response_description}}}
  **/
@@ -371,6 +369,4 @@ public class ContaBancariaPortadorResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

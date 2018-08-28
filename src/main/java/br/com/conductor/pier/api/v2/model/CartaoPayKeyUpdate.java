@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{cartao_pay_key_update_description}}}
  **/
@@ -77,6 +75,4 @@ public class CartaoPayKeyUpdate   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

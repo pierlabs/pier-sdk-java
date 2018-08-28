@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{tipo_ajuste_response_description}}}
  **/
@@ -122,6 +120,4 @@ public class TipoAjusteResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

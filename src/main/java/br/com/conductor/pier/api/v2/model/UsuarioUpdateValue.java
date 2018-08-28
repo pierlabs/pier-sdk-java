@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{usuario_update_description}}}
  **/
@@ -51,7 +49,7 @@ public class UsuarioUpdateValue   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{usuario_update_login_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "{{{usuario_update_login_value}}}")
   @JsonProperty("login")
   public String getLogin() {
     return login;
@@ -87,7 +85,7 @@ public class UsuarioUpdateValue   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{usuario_update_email_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "{{{usuario_update_email_value}}}")
   @JsonProperty("email")
   public String getEmail() {
     return email;
@@ -182,6 +180,4 @@ public class UsuarioUpdateValue   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_permissao_response_object_description}}}
  **/
@@ -339,6 +337,4 @@ public class PagePermissaoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

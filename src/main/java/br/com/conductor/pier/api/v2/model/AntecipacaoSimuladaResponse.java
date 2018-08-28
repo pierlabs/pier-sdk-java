@@ -11,8 +11,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{antecipacao_simulada_response_description}}}
  **/
@@ -583,6 +581,4 @@ public class AntecipacaoSimuladaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

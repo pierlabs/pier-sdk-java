@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{documento_integracao_response_description}}}
  **/
@@ -119,6 +117,4 @@ public class DocumentoIntegracaoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

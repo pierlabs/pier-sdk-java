@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{tipo_campanha_response_description}}}
  **/
@@ -98,6 +96,4 @@ public class TipoCampanhaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -8,8 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{push_f_c_m_g_c_m_persist_description}}}
  **/
@@ -29,7 +27,8 @@ public class PushFCMGCMPersistValue   {
   public enum TipoEventoEnum {
     RISCO_FRAUDE("RISCO_FRAUDE"),
     CODIGO_SEGURANCA("CODIGO_SEGURANCA"),
-    OUTROS("OUTROS");
+    OUTROS("OUTROS"),
+    OTP_3D_SECURE("OTP_3D_SECURE");
 
     private String value;
 
@@ -51,14 +50,14 @@ public class PushFCMGCMPersistValue   {
 
   
   /**
-   * {{{push_f_c_m_g_c_m_persist_id_pessoa_value}}}
+   * {{{push_a_p_n_s_persist_id_pessoa_value}}}
    **/
   public PushFCMGCMPersistValue idPessoa(Long idPessoa) {
     this.idPessoa = idPessoa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{push_f_c_m_g_c_m_persist_id_pessoa_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "{{{push_a_p_n_s_persist_id_pessoa_value}}}")
   @JsonProperty("idPessoa")
   public Long getIdPessoa() {
     return idPessoa;
@@ -69,14 +68,14 @@ public class PushFCMGCMPersistValue   {
 
   
   /**
-   * {{{push_f_c_m_g_c_m_persist_id_conta_value}}}
+   * {{{push_a_p_n_s_persist_id_conta_value}}}
    **/
   public PushFCMGCMPersistValue idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{push_f_c_m_g_c_m_persist_id_conta_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "{{{push_a_p_n_s_persist_id_conta_value}}}")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -87,14 +86,14 @@ public class PushFCMGCMPersistValue   {
 
   
   /**
-   * {{{push_f_c_m_g_c_m_persist_token_dispositivo_value}}}
+   * {{{push_a_p_n_s_persist_token_dispositivo_value}}}
    **/
   public PushFCMGCMPersistValue tokenDispositivo(String tokenDispositivo) {
     this.tokenDispositivo = tokenDispositivo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{push_f_c_m_g_c_m_persist_token_dispositivo_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "{{{push_a_p_n_s_persist_token_dispositivo_value}}}")
   @JsonProperty("tokenDispositivo")
   public String getTokenDispositivo() {
     return tokenDispositivo;
@@ -123,14 +122,14 @@ public class PushFCMGCMPersistValue   {
 
   
   /**
-   * {{{push_f_c_m_g_c_m_persist_titulo_value}}}
+   * {{{push_a_p_n_s_persist_titulo_value}}}
    **/
   public PushFCMGCMPersistValue titulo(String titulo) {
     this.titulo = titulo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{push_f_c_m_g_c_m_persist_titulo_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "{{{push_a_p_n_s_persist_titulo_value}}}")
   @JsonProperty("titulo")
   public String getTitulo() {
     return titulo;
@@ -141,14 +140,14 @@ public class PushFCMGCMPersistValue   {
 
   
   /**
-   * {{{push_f_c_m_g_c_m_persist_conteudo_value}}}
+   * {{{push_a_p_n_s_persist_conteudo_value}}}
    **/
   public PushFCMGCMPersistValue conteudo(String conteudo) {
     this.conteudo = conteudo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{push_f_c_m_g_c_m_persist_conteudo_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "{{{push_a_p_n_s_persist_conteudo_value}}}")
   @JsonProperty("conteudo")
   public String getConteudo() {
     return conteudo;
@@ -287,6 +286,4 @@ public class PushFCMGCMPersistValue   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

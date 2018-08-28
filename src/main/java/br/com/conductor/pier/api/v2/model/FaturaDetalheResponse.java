@@ -12,8 +12,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{fatura_detalhe_response_description}}}
  **/
@@ -291,6 +289,4 @@ public class FaturaDetalheResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -9,8 +9,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{estabelecimento_persist_description}}}
  **/
@@ -896,6 +894,4 @@ public class EstabelecimentoPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

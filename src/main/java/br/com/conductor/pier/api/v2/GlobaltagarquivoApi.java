@@ -15,16 +15,12 @@ import br.com.conductor.pier.api.v2.model.PageTipoArquivoResponse;
 import br.com.conductor.pier.api.v2.model.PageArquivoResponse;
 import br.com.conductor.pier.api.v2.model.ArquivoPersist;
 
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-
 public class GlobaltagarquivoApi {
   private ApiClient apiClient;
 
@@ -51,12 +47,12 @@ public class GlobaltagarquivoApi {
    * @param id {{{arquivo_resource_consultar_param_id}}}
    * @return ArquivoDetalheResponse
    */
-  public ArquivoDetalheResponse consultarUsingGET5(Long id) throws ApiException {
+  public ArquivoDetalheResponse consultarUsingGET6(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET5");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET6");
      }
      
     // create path and map variables
@@ -315,12 +311,12 @@ public class GlobaltagarquivoApi {
    * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
    * @return PageArquivoAUDResponse
    */
-  public PageArquivoAUDResponse listarUsingGET5(Long id, Integer page, Integer limit) throws ApiException {
+  public PageArquivoAUDResponse listarUsingGET6(Long id, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET5");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET6");
      }
      
     // create path and map variables
@@ -373,7 +369,7 @@ public class GlobaltagarquivoApi {
    * @param extensao {{{arquivo_request_extensao_value}}}
    * @return PageArquivoResponse
    */
-  public PageArquivoResponse listarUsingGET6(List<String> sort, Integer page, Integer limit, String nome, Long idTipoArquivo, Long idStatusArquivo, String extensao) throws ApiException {
+  public PageArquivoResponse listarUsingGET7(List<String> sort, Integer page, Integer limit, String nome, Long idTipoArquivo, Long idStatusArquivo, String extensao) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -471,4 +467,3 @@ public class GlobaltagarquivoApi {
   }
   
 }
-

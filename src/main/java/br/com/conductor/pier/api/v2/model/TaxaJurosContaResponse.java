@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{taxa_juros_conta_response_description}}}
  **/
@@ -122,6 +120,4 @@ public class TaxaJurosContaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

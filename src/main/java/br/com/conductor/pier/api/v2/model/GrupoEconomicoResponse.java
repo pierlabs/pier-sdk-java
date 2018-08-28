@@ -9,8 +9,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{grupo_economico_response_description}}}
  **/
@@ -691,6 +689,4 @@ public class GrupoEconomicoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

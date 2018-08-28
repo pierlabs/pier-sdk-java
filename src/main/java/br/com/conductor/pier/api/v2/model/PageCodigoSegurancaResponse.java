@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_codigo_seguranca_response_description}}}
  **/
@@ -339,6 +337,4 @@ public class PageCodigoSegurancaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -11,8 +11,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{origem_comercial_response_description}}}
  **/
@@ -625,6 +623,4 @@ public class OrigemComercialResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

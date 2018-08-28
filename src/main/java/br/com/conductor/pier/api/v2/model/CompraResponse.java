@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{compra_response_description}}}
  **/
@@ -538,6 +536,4 @@ public class CompraResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

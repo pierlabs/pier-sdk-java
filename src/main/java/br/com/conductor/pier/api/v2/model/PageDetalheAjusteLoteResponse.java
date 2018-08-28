@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_detalhe_ajuste_lote_response_description}}}
  **/
@@ -339,6 +337,4 @@ public class PageDetalheAjusteLoteResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_tipo_resolucao_contestacao_response_description}}}
  **/
@@ -339,6 +337,4 @@ public class PageTipoResolucaoContestacaoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

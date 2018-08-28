@@ -8,8 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{cartao_impressao_multiapp_response_description}}}
  **/
@@ -99,6 +97,4 @@ public class CartaoMultiAppImpressaoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

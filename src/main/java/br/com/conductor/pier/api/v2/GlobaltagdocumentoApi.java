@@ -19,16 +19,12 @@ import br.com.conductor.pier.api.v2.model.PageDocumentoTemplateResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoTemplateResponse;
 import br.com.conductor.pier.api.v2.model.DocumentoParametrosRequest;
 
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-
 public class GlobaltagdocumentoApi {
   private ApiClient apiClient;
 
@@ -110,17 +106,17 @@ public class GlobaltagdocumentoApi {
    * @param persist persist
    * @return DocumentoTemplateResponse
    */
-  public DocumentoTemplateResponse atualizarUsingPUT3(Long id, DocumentoTemplatePersist persist) throws ApiException {
+  public DocumentoTemplateResponse atualizarUsingPUT4(Long id, DocumentoTemplatePersist persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling atualizarUsingPUT3");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling atualizarUsingPUT4");
      }
      
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling atualizarUsingPUT3");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling atualizarUsingPUT4");
      }
      
     // create path and map variables
@@ -163,12 +159,12 @@ public class GlobaltagdocumentoApi {
    * @param id {{{documento_resource_consultar_param_id}}}
    * @return DocumentoDetalhadoResponse
    */
-  public DocumentoDetalhadoResponse consultarUsingGET17(Long id) throws ApiException {
+  public DocumentoDetalhadoResponse consultarUsingGET19(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET17");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET19");
      }
      
     // create path and map variables
@@ -211,12 +207,12 @@ public class GlobaltagdocumentoApi {
    * @param id {{{documento_template_resource_consultar_param_id}}}
    * @return DocumentoTemplateResponse
    */
-  public DocumentoTemplateResponse consultarUsingGET18(Long id) throws ApiException {
+  public DocumentoTemplateResponse consultarUsingGET20(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET18");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET20");
      }
      
     // create path and map variables
@@ -259,12 +255,12 @@ public class GlobaltagdocumentoApi {
    * @param id {{{tipo_template_resource_consultar_param_id}}}
    * @return TipoTemplateResponse
    */
-  public TipoTemplateResponse consultarUsingGET47(Long id) throws ApiException {
+  public TipoTemplateResponse consultarUsingGET49(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET47");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET49");
      }
      
     // create path and map variables
@@ -359,7 +355,7 @@ public class GlobaltagdocumentoApi {
    * @param extensao {{{documento_request_extensao_value}}}
    * @return PageDocumentoResponse
    */
-  public PageDocumentoResponse listarUsingGET21(List<String> sort, Integer page, Integer limit, Long idTemplateDocumento, String nome, String extensao) throws ApiException {
+  public PageDocumentoResponse listarUsingGET22(List<String> sort, Integer page, Integer limit, Long idTemplateDocumento, String nome, String extensao) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -416,7 +412,7 @@ public class GlobaltagdocumentoApi {
    * @param idTipoTemplate {{{documento_template_request_id_tipo_template_value}}}
    * @return PageDocumentoTemplateResponse
    */
-  public PageDocumentoTemplateResponse listarUsingGET22(List<String> sort, Integer page, Integer limit, Long idTipoTemplate) throws ApiException {
+  public PageDocumentoTemplateResponse listarUsingGET23(List<String> sort, Integer page, Integer limit, Long idTipoTemplate) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -468,7 +464,7 @@ public class GlobaltagdocumentoApi {
    * @param limit {{{global_menssagem_sort_limit}}}
    * @return PageTipoTemplateResponse
    */
-  public PageTipoTemplateResponse listarUsingGET57(List<String> sort, Integer page, Integer limit) throws ApiException {
+  public PageTipoTemplateResponse listarUsingGET60(List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -516,12 +512,12 @@ public class GlobaltagdocumentoApi {
    * @param persist persist
    * @return DocumentoDetalhadoResponse
    */
-  public DocumentoDetalhadoResponse salvarUsingPOST11(DocumentoParametrosRequest persist) throws ApiException {
+  public DocumentoDetalhadoResponse salvarUsingPOST12(DocumentoParametrosRequest persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST11");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST12");
      }
      
     // create path and map variables
@@ -563,12 +559,12 @@ public class GlobaltagdocumentoApi {
    * @param persist persist
    * @return DocumentoTemplateResponse
    */
-  public DocumentoTemplateResponse salvarUsingPOST12(DocumentoTemplatePersist persist) throws ApiException {
+  public DocumentoTemplateResponse salvarUsingPOST13(DocumentoTemplatePersist persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST12");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST13");
      }
      
     // create path and map variables
@@ -610,12 +606,12 @@ public class GlobaltagdocumentoApi {
    * @param persist persist
    * @return TipoTemplateResponse
    */
-  public TipoTemplateResponse salvarUsingPOST31(TipoTemplateRequest persist) throws ApiException {
+  public TipoTemplateResponse salvarUsingPOST32(TipoTemplateRequest persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST31");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST32");
      }
      
     // create path and map variables
@@ -652,4 +648,3 @@ public class GlobaltagdocumentoApi {
   }
   
 }
-

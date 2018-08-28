@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_transferencia_credito_conta_bancaria_response_description}}}
  **/
@@ -339,6 +337,4 @@ public class PageTransferenciaCreditoContaBancariaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

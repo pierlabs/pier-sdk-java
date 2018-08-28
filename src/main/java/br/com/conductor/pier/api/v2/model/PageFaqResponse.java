@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_faq_response_description}}}
  **/
@@ -339,6 +337,4 @@ public class PageFaqResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

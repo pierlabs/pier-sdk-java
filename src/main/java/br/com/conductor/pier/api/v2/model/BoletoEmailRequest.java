@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{boleto_email_request_description}}}
  **/
@@ -119,6 +117,4 @@ public class BoletoEmailRequest   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

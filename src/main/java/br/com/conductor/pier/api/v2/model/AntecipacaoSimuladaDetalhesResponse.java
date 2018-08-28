@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{antecipacao_simulada_detalhes_response_description}}}
  **/
@@ -141,6 +139,4 @@ public class AntecipacaoSimuladaDetalhesResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

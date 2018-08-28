@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{transferencia_detalhe_response_description}}}
  **/
@@ -225,6 +223,4 @@ public class TransferenciaDetalheResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{cancelamento_transacao_por_id_cartao_request_description}}}
  **/
@@ -267,6 +265,4 @@ public class CancelamentoTransacaoPorIdCartaoRequest   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

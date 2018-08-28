@@ -9,8 +9,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{fatura_response_description}}}
  **/
@@ -267,6 +265,4 @@ public class FaturaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

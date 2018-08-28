@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{autorizacao_on_us_request_description}}}
  **/
@@ -267,6 +265,4 @@ public class AutorizacaoOnUsRequest   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

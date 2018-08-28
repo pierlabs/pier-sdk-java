@@ -9,16 +9,12 @@ import br.com.conductor.pier.api.v2.invoker.Pair;
 
 import br.com.conductor.pier.api.v2.model.ParametroEmissorResponse;
 
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-
 public class GlobaltagparametroemissorApi {
   private ApiClient apiClient;
 
@@ -45,12 +41,12 @@ public class GlobaltagparametroemissorApi {
    * @param codigo {{{parametro_emissor_recurso_pesquisa_codigo_param}}}
    * @return ParametroEmissorResponse
    */
-  public ParametroEmissorResponse consultarUsingGET27(String codigo) throws ApiException {
+  public ParametroEmissorResponse consultarUsingGET29(String codigo) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'codigo' is set
      if (codigo == null) {
-        throw new ApiException(400, "Missing the required parameter 'codigo' when calling consultarUsingGET27");
+        throw new ApiException(400, "Missing the required parameter 'codigo' when calling consultarUsingGET29");
      }
      
     // create path and map variables
@@ -88,4 +84,3 @@ public class GlobaltagparametroemissorApi {
   }
   
 }
-

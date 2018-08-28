@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{token_partial_update_description}}}
  **/
@@ -21,6 +19,7 @@ public class TokenPartialUpdateValue   {
   private String owner = null;
   private String criadoPor = null;
   private String alteradoPor = null;
+  private Long idAplicacao = null;
 
   
   /**
@@ -95,6 +94,24 @@ public class TokenPartialUpdateValue   {
   }
 
   
+  /**
+   * {{{token_dto_id_application_value}}}
+   **/
+  public TokenPartialUpdateValue idAplicacao(Long idAplicacao) {
+    this.idAplicacao = idAplicacao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{token_dto_id_application_value}}}")
+  @JsonProperty("idAplicacao")
+  public Long getIdAplicacao() {
+    return idAplicacao;
+  }
+  public void setIdAplicacao(Long idAplicacao) {
+    this.idAplicacao = idAplicacao;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -108,12 +125,13 @@ public class TokenPartialUpdateValue   {
     return Objects.equals(this.base, tokenPartialUpdateValue.base) &&
         Objects.equals(this.owner, tokenPartialUpdateValue.owner) &&
         Objects.equals(this.criadoPor, tokenPartialUpdateValue.criadoPor) &&
-        Objects.equals(this.alteradoPor, tokenPartialUpdateValue.alteradoPor);
+        Objects.equals(this.alteradoPor, tokenPartialUpdateValue.alteradoPor) &&
+        Objects.equals(this.idAplicacao, tokenPartialUpdateValue.idAplicacao);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(base, owner, criadoPor, alteradoPor);
+    return Objects.hash(base, owner, criadoPor, alteradoPor, idAplicacao);
   }
 
   @Override
@@ -125,6 +143,7 @@ public class TokenPartialUpdateValue   {
     sb.append("    owner: ").append(toIndentedString(owner)).append("\n");
     sb.append("    criadoPor: ").append(toIndentedString(criadoPor)).append("\n");
     sb.append("    alteradoPor: ").append(toIndentedString(alteradoPor)).append("\n");
+    sb.append("    idAplicacao: ").append(toIndentedString(idAplicacao)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -140,6 +159,4 @@ public class TokenPartialUpdateValue   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

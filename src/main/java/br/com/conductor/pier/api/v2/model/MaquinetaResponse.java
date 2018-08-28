@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{maquineta_response_description}}}
  **/
@@ -225,6 +223,4 @@ public class MaquinetaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

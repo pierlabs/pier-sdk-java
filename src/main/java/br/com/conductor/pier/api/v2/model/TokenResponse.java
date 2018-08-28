@@ -8,8 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{token_response_description}}}
  **/
@@ -245,6 +243,4 @@ public class TokenResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

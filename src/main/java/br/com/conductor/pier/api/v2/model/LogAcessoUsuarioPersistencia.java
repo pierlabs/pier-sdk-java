@@ -8,8 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{log_acesso_usuario_persistencia_descricao}}}
  **/
@@ -268,6 +266,4 @@ public class LogAcessoUsuarioPersistencia   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

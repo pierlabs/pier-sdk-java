@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{divida_cliente_response_description}}}
  **/
@@ -414,6 +412,4 @@ public class DividaClienteResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{acordo_response_description}}}
  **/
@@ -225,6 +223,4 @@ public class AcordoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

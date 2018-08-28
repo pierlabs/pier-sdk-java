@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{cartao_emissor_resposta_descricao}}}
  **/
@@ -77,6 +75,4 @@ public class CartaoEmissorResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

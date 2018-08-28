@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_vinculo_operacao_response_description}}}
  **/
@@ -339,6 +337,4 @@ public class PageVinculoOperacaoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

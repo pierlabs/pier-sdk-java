@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{conta_detalhe_response_description}}}
  **/
@@ -44,6 +42,7 @@ public class ContaDetalheResponse   {
   private BigDecimal saldoDisponivelGlobal = null;
   private BigDecimal saldoDisponivelSaque = null;
   private Long diasAtraso = null;
+  private String proximoVencimentoPadrao = null;
 
   
   /**
@@ -514,6 +513,24 @@ public class ContaDetalheResponse   {
   }
 
   
+  /**
+   * {{{conta_response_proximo_vencimento_padrao_value}}}
+   **/
+  public ContaDetalheResponse proximoVencimentoPadrao(String proximoVencimentoPadrao) {
+    this.proximoVencimentoPadrao = proximoVencimentoPadrao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{conta_response_proximo_vencimento_padrao_value}}}")
+  @JsonProperty("proximoVencimentoPadrao")
+  public String getProximoVencimentoPadrao() {
+    return proximoVencimentoPadrao;
+  }
+  public void setProximoVencimentoPadrao(String proximoVencimentoPadrao) {
+    this.proximoVencimentoPadrao = proximoVencimentoPadrao;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -549,12 +566,13 @@ public class ContaDetalheResponse   {
         Objects.equals(this.limiteSaqueGlobal, contaDetalheResponse.limiteSaqueGlobal) &&
         Objects.equals(this.saldoDisponivelGlobal, contaDetalheResponse.saldoDisponivelGlobal) &&
         Objects.equals(this.saldoDisponivelSaque, contaDetalheResponse.saldoDisponivelSaque) &&
-        Objects.equals(this.diasAtraso, contaDetalheResponse.diasAtraso);
+        Objects.equals(this.diasAtraso, contaDetalheResponse.diasAtraso) &&
+        Objects.equals(this.proximoVencimentoPadrao, contaDetalheResponse.proximoVencimentoPadrao);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idPessoa, nome, idProduto, idOrigemComercial, nomeOrigemComercial, idFantasiaBasica, nomeFantasiaBasica, idStatusConta, statusConta, diaVencimento, melhorDiaCompra, dataStatusConta, valorRenda, dataCadastro, dataUltimaAlteracaoVencimento, dataHoraUltimaCompra, numeroAgencia, numeroContaCorrente, formaEnvioFatura, titular, limiteGlobal, limiteSaqueGlobal, saldoDisponivelGlobal, saldoDisponivelSaque, diasAtraso);
+    return Objects.hash(id, idPessoa, nome, idProduto, idOrigemComercial, nomeOrigemComercial, idFantasiaBasica, nomeFantasiaBasica, idStatusConta, statusConta, diaVencimento, melhorDiaCompra, dataStatusConta, valorRenda, dataCadastro, dataUltimaAlteracaoVencimento, dataHoraUltimaCompra, numeroAgencia, numeroContaCorrente, formaEnvioFatura, titular, limiteGlobal, limiteSaqueGlobal, saldoDisponivelGlobal, saldoDisponivelSaque, diasAtraso, proximoVencimentoPadrao);
   }
 
   @Override
@@ -588,6 +606,7 @@ public class ContaDetalheResponse   {
     sb.append("    saldoDisponivelGlobal: ").append(toIndentedString(saldoDisponivelGlobal)).append("\n");
     sb.append("    saldoDisponivelSaque: ").append(toIndentedString(saldoDisponivelSaque)).append("\n");
     sb.append("    diasAtraso: ").append(toIndentedString(diasAtraso)).append("\n");
+    sb.append("    proximoVencimentoPadrao: ").append(toIndentedString(proximoVencimentoPadrao)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -603,6 +622,4 @@ public class ContaDetalheResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

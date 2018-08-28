@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{plano_parcelamento_transferencia_credito_conta_bancaria_request_description}}}
  **/
@@ -120,6 +118,4 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

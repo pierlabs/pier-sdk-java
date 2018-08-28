@@ -9,11 +9,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-/**
- * {{{perfil_response_object_description}}}
- **/
-
-@ApiModel(description = "{{{perfil_response_object_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PerfilResponse   {
   
@@ -96,6 +91,4 @@ public class PerfilResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{boleto_request_description}}}
  **/
@@ -141,6 +139,4 @@ public class BoletoRequest   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

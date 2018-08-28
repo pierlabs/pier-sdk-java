@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{tipo_faturamento_por_conta_response_description}}}
  **/
@@ -203,6 +201,4 @@ public class TipoFaturamentoPorContaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

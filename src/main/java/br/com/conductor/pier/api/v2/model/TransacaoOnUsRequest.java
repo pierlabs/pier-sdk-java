@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{transacao_on_us_request_description}}}
  **/
@@ -225,6 +223,4 @@ public class TransacaoOnUsRequest   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

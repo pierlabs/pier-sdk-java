@@ -8,8 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{consulta_cadastro_estabelecimento_d_t_o_description}}}
  **/
@@ -158,6 +156,4 @@ public class ConsultaCadastroEstabelecimentoDTO   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

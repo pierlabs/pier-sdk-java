@@ -12,8 +12,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{pessoa_fisica_aprovada_persist_description}}}
  **/
@@ -691,6 +689,4 @@ public class PessoaFisicaAprovadaPersistValue   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

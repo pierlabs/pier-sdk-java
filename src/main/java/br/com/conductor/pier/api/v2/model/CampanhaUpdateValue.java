@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{campanha_update_description}}}
  **/
@@ -122,6 +120,4 @@ public class CampanhaUpdateValue   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

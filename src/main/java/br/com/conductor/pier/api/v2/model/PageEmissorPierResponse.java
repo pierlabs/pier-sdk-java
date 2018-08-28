@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_emissorpier_response_object_description}}}
  **/
@@ -339,6 +337,4 @@ public class PageEmissorPierResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

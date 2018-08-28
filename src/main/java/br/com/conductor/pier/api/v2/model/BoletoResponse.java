@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{boleto_response_description}}}
  **/
@@ -54,6 +52,7 @@ public class BoletoResponse   {
   private Long idConta = null;
   private String enderecoCobrancaBeneficiario = null;
   private Long status = null;
+  private Boolean boletoRegistrado = null;
 
   
   /**
@@ -668,6 +667,24 @@ public class BoletoResponse   {
   }
 
   
+  /**
+   * {{{boleto_response_registrado_value}}}
+   **/
+  public BoletoResponse boletoRegistrado(Boolean boletoRegistrado) {
+    this.boletoRegistrado = boletoRegistrado;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "{{{boleto_response_registrado_value}}}")
+  @JsonProperty("boletoRegistrado")
+  public Boolean getBoletoRegistrado() {
+    return boletoRegistrado;
+  }
+  public void setBoletoRegistrado(Boolean boletoRegistrado) {
+    this.boletoRegistrado = boletoRegistrado;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -711,12 +728,13 @@ public class BoletoResponse   {
         Objects.equals(this.id, boletoResponse.id) &&
         Objects.equals(this.idConta, boletoResponse.idConta) &&
         Objects.equals(this.enderecoCobrancaBeneficiario, boletoResponse.enderecoCobrancaBeneficiario) &&
-        Objects.equals(this.status, boletoResponse.status);
+        Objects.equals(this.status, boletoResponse.status) &&
+        Objects.equals(this.boletoRegistrado, boletoResponse.boletoRegistrado);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(numeroDoDocumento, dataProcessamento, dataDocumento, dataVencimento, dataFechamento, valorBoleto, nomeBeneficiario, documentoBeneficiario, agencia, codigoBeneficiario, numeroConvenio, digitoCodigoBeneficiario, carteira, nossoNumero, digitoNossoNumero, banco, aceite, especieDoDocumento, especie, instrucoes, locaisDePagamento, nomePagador, documentoPagador, logradouroPagador, bairroPagador, cepPagador, cidadePagador, ufPagador, codigoDeBarras, linhaDigitavel, id, idConta, enderecoCobrancaBeneficiario, status);
+    return Objects.hash(numeroDoDocumento, dataProcessamento, dataDocumento, dataVencimento, dataFechamento, valorBoleto, nomeBeneficiario, documentoBeneficiario, agencia, codigoBeneficiario, numeroConvenio, digitoCodigoBeneficiario, carteira, nossoNumero, digitoNossoNumero, banco, aceite, especieDoDocumento, especie, instrucoes, locaisDePagamento, nomePagador, documentoPagador, logradouroPagador, bairroPagador, cepPagador, cidadePagador, ufPagador, codigoDeBarras, linhaDigitavel, id, idConta, enderecoCobrancaBeneficiario, status, boletoRegistrado);
   }
 
   @Override
@@ -758,6 +776,7 @@ public class BoletoResponse   {
     sb.append("    idConta: ").append(toIndentedString(idConta)).append("\n");
     sb.append("    enderecoCobrancaBeneficiario: ").append(toIndentedString(enderecoCobrancaBeneficiario)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    boletoRegistrado: ").append(toIndentedString(boletoRegistrado)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -773,6 +792,4 @@ public class BoletoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

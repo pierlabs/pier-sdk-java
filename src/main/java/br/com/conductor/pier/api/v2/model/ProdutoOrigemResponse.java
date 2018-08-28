@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{produto_origem_response_description}}}
  **/
@@ -77,6 +75,4 @@ public class ProdutoOrigemResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

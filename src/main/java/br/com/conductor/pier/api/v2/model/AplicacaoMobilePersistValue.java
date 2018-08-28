@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{aplicacao_mobile_persist_description}}}
  **/
@@ -203,6 +201,4 @@ public class AplicacaoMobilePersistValue   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

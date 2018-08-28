@@ -17,16 +17,12 @@ import br.com.conductor.pier.api.v2.model.PageCartaoPayResponse;
 import br.com.conductor.pier.api.v2.model.CartaoPayCadastroResponse;
 import br.com.conductor.pier.api.v2.model.CartaoPayPersist;
 
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-
 public class GlobaltagpayApi {
   private ApiClient apiClient;
 
@@ -111,22 +107,22 @@ public class GlobaltagpayApi {
    * @param update update
    * @return CartaoPayResponse
    */
-  public CartaoPayResponse atualizarUsingPUT(String deviceId, Long id, CartaoPayUpdate update) throws ApiException {
+  public CartaoPayResponse atualizarUsingPUT1(String deviceId, Long id, CartaoPayUpdate update) throws ApiException {
     Object postBody = update;
     
      // verify the required parameter 'deviceId' is set
      if (deviceId == null) {
-        throw new ApiException(400, "Missing the required parameter 'deviceId' when calling atualizarUsingPUT");
+        throw new ApiException(400, "Missing the required parameter 'deviceId' when calling atualizarUsingPUT1");
      }
      
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling atualizarUsingPUT");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling atualizarUsingPUT1");
      }
      
      // verify the required parameter 'update' is set
      if (update == null) {
-        throw new ApiException(400, "Missing the required parameter 'update' when calling atualizarUsingPUT");
+        throw new ApiException(400, "Missing the required parameter 'update' when calling atualizarUsingPUT1");
      }
      
     // create path and map variables
@@ -234,17 +230,17 @@ public class GlobaltagpayApi {
    * @param id {{{cartao_pay_resource_consultar_param_id}}}
    * @return CartaoPayDetalheResponse
    */
-  public CartaoPayDetalheResponse consultarUsingGET9(String deviceId, Long id) throws ApiException {
+  public CartaoPayDetalheResponse consultarUsingGET11(String deviceId, Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'deviceId' is set
      if (deviceId == null) {
-        throw new ApiException(400, "Missing the required parameter 'deviceId' when calling consultarUsingGET9");
+        throw new ApiException(400, "Missing the required parameter 'deviceId' when calling consultarUsingGET11");
      }
      
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET9");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET11");
      }
      
     // create path and map variables
@@ -499,7 +495,7 @@ public class GlobaltagpayApi {
    * @param numeroCartao {{{cartao_pay_request_numero_cartao_value}}}
    * @return PageCartaoPayResponse
    */
-  public PageCartaoPayResponse listarUsingGET10(String deviceId, List<String> sort, Integer page, Integer limit, String status, String numeroCartao) throws ApiException {
+  public PageCartaoPayResponse listarUsingGET11(String deviceId, List<String> sort, Integer page, Integer limit, String status, String numeroCartao) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -554,17 +550,17 @@ public class GlobaltagpayApi {
    * @param persist persist
    * @return CartaoPayCadastroResponse
    */
-  public CartaoPayCadastroResponse salvarUsingPOST5(String deviceId, CartaoPayPersist persist) throws ApiException {
+  public CartaoPayCadastroResponse salvarUsingPOST6(String deviceId, CartaoPayPersist persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'deviceId' is set
      if (deviceId == null) {
-        throw new ApiException(400, "Missing the required parameter 'deviceId' when calling salvarUsingPOST5");
+        throw new ApiException(400, "Missing the required parameter 'deviceId' when calling salvarUsingPOST6");
      }
      
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST5");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST6");
      }
      
     // create path and map variables
@@ -603,4 +599,3 @@ public class GlobaltagpayApi {
   }
   
 }
-

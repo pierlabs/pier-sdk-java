@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_dispositivo_response_description}}}
  **/
@@ -339,6 +337,4 @@ public class PageDispositivoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

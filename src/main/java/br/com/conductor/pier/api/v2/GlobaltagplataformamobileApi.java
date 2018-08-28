@@ -12,16 +12,12 @@ import br.com.conductor.pier.api.v2.model.PlataformaMobileUpdateValue;
 import br.com.conductor.pier.api.v2.model.PagePlataformaMobileResponse;
 import br.com.conductor.pier.api.v2.model.PlataformaMobilePersistValue;
 
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-
 public class GlobaltagplataformamobileApi {
   private ApiClient apiClient;
 
@@ -105,7 +101,7 @@ public class GlobaltagplataformamobileApi {
    * @param nome {{{plataforma_mobile_request_nome_value}}}
    * @return PagePlataformaMobileResponse
    */
-  public PagePlataformaMobileResponse listarUsingGET40(List<String> sort, Integer page, Integer limit, String nome) throws ApiException {
+  public PagePlataformaMobileResponse listarUsingGET42(List<String> sort, Integer page, Integer limit, String nome) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -155,12 +151,12 @@ public class GlobaltagplataformamobileApi {
    * @param persist persist
    * @return PlataformaMobileResponse
    */
-  public PlataformaMobileResponse salvarUsingPOST26(PlataformaMobilePersistValue persist) throws ApiException {
+  public PlataformaMobileResponse salvarUsingPOST27(PlataformaMobilePersistValue persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST26");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST27");
      }
      
     // create path and map variables
@@ -197,4 +193,3 @@ public class GlobaltagplataformamobileApi {
   }
   
 }
-

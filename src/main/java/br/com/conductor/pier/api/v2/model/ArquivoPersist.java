@@ -11,8 +11,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{arquivo_persist_description}}}
  **/
@@ -205,6 +203,4 @@ public class ArquivoPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

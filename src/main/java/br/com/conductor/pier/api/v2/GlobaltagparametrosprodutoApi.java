@@ -7,26 +7,22 @@ import br.com.conductor.pier.api.v2.invoker.ApiClient;
 import br.com.conductor.pier.api.v2.invoker.Configuration;
 import br.com.conductor.pier.api.v2.invoker.Pair;
 
-import br.com.conductor.pier.api.v2.model.PageStatusContestacaoResponse;
-
-
+import br.com.conductor.pier.api.v2.model.ParametroProdutoResponse;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-
-public class GlobaltagstatuscontestacaoApi {
+public class GlobaltagparametrosprodutoApi {
   private ApiClient apiClient;
 
-  public GlobaltagstatuscontestacaoApi() {
+  public GlobaltagparametrosprodutoApi() {
     this(Configuration.getDefaultApiClient());
   }
 
-  public GlobaltagstatuscontestacaoApi(ApiClient apiClient) {
+  public GlobaltagparametrosprodutoApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
@@ -40,24 +36,22 @@ public class GlobaltagstatuscontestacaoApi {
 
   
   /**
-   * {{{status_contestacao_resource_listar_status_contestacao}}}
-   * {{{status_contestacao_resource_listar_status_contestacao_notes}}}
+   * {{{parametro_produto_listar}}}
+   * {{{parametro_produto_listar_notes}}}
    * @param sort {{{global_menssagem_sort_sort}}}
    * @param page {{{global_menssagem_sort_page_value}}}
    * @param limit {{{global_menssagem_sort_limit}}}
-   * @param idStatusContestacao {{{status_contestacao_request_idstatuscontestacao_value}}}
-   * @param idStatusContestacaoOrigem {{{status_contestacao_request_idstatuscontestacaoOrigem_value}}}
-   * @param descricao {{{status_contestacao_request_descricao_value}}}
-   * @param flagPermiteAlteracao {{{status_contestacao_request_flagpermitealteracao_value}}}
-   * @param flagSistema {{{status_contestacao_request_flagsistema_value}}}
-   * @param flagAtivo {{{status_contestacao_request_flagativo_value}}}
-   * @return PageStatusContestacaoResponse
+   * @param id {{{parametro_produto_request_id_value}}}
+   * @param codigo {{{parametro_produto_request_codigo_value}}}
+   * @param tipo {{{parametro_produto_request_tipo_value}}}
+   * @param idProduto {{{parametro_produto_request_id_produto_value}}}
+   * @return ParametroProdutoResponse
    */
-  public PageStatusContestacaoResponse listarStatusContestacaoUsingGET(List<String> sort, Integer page, Integer limit, Long idStatusContestacao, Long idStatusContestacaoOrigem, String descricao, Integer flagPermiteAlteracao, Integer flagSistema, Integer flagAtivo) throws ApiException {
+  public ParametroProdutoResponse listarUsingGET37(List<String> sort, Integer page, Integer limit, Long id, String codigo, String tipo, Long idProduto) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
-    String path = "/api/status-contestacoes".replaceAll("\\{format\\}","json");
+    String path = "/api/parametros-produto".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -71,17 +65,13 @@ public class GlobaltagstatuscontestacaoApi {
     
     queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
     
-    queryParams.addAll(apiClient.parameterToPairs("", "idStatusContestacao", idStatusContestacao));
+    queryParams.addAll(apiClient.parameterToPairs("", "id", id));
     
-    queryParams.addAll(apiClient.parameterToPairs("", "idStatusContestacaoOrigem", idStatusContestacaoOrigem));
+    queryParams.addAll(apiClient.parameterToPairs("", "codigo", codigo));
     
-    queryParams.addAll(apiClient.parameterToPairs("", "descricao", descricao));
+    queryParams.addAll(apiClient.parameterToPairs("", "tipo", tipo));
     
-    queryParams.addAll(apiClient.parameterToPairs("", "flagPermiteAlteracao", flagPermiteAlteracao));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "flagSistema", flagSistema));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "flagAtivo", flagAtivo));
+    queryParams.addAll(apiClient.parameterToPairs("", "idProduto", idProduto));
     
 
     
@@ -102,10 +92,9 @@ public class GlobaltagstatuscontestacaoApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<PageStatusContestacaoResponse> returnType = new GenericType<PageStatusContestacaoResponse>() {};
+    GenericType<ParametroProdutoResponse> returnType = new GenericType<ParametroProdutoResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
 }
-

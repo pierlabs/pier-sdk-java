@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{Bin_response_description}}}
  **/
@@ -98,6 +96,4 @@ public class TipoChaveResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

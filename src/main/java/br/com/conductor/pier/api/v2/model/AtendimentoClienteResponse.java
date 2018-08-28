@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{atendimento_cliente_response_description}}}
  **/
@@ -350,6 +348,4 @@ public class AtendimentoClienteResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

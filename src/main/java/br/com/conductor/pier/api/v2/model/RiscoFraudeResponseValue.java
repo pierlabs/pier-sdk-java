@@ -8,8 +8,6 @@ import java.math.BigDecimal;
 
 
 
-
-
 /**
  * {{{risco_fraude_response_description}}}
  **/
@@ -267,6 +265,4 @@ public class RiscoFraudeResponseValue   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_configuracao_email_response_description}}}
  **/
@@ -339,6 +337,4 @@ public class PageConfiguracaoEmailResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

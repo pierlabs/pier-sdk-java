@@ -8,8 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{configuracao_registro_cobranca_persist_description}}}
  **/
@@ -391,6 +389,4 @@ public class ConfiguracaoRegistroCobrancaPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

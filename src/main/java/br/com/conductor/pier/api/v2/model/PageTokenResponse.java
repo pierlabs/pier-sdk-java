@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_token_response_description}}}
  **/
@@ -339,6 +337,4 @@ public class PageTokenResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

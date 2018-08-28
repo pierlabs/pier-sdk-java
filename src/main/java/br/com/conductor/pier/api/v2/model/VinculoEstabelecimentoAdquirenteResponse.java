@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{vinculo_estabelecimento_adquirente_response_description}}}
  **/
@@ -203,6 +201,4 @@ public class VinculoEstabelecimentoAdquirenteResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

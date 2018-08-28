@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{transacao_pay_secure_request_description}}}
  **/
@@ -353,6 +351,4 @@ public class TransacaoPaySecureRequest   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

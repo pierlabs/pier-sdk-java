@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_vinculo_estabelecimento_adquirente_response_description}}}
  **/
@@ -339,6 +337,4 @@ public class PageVinculoEstabelecimentoAdquirenteResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

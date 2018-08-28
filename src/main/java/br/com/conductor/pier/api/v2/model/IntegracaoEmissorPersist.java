@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{integracao_emissor_persist_description}}}
  **/
@@ -77,6 +75,4 @@ public class IntegracaoEmissorPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

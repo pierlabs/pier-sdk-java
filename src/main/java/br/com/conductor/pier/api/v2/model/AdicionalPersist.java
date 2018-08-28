@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{adicional_persist_description}}}
  **/
@@ -374,6 +372,4 @@ public class AdicionalPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_plano_parcelamento_response_description}}}
  **/
@@ -339,6 +337,4 @@ public class PagePlanoParcelamentoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

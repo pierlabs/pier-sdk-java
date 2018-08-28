@@ -8,8 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{template_notificacao_detalhe_response_description}}}
  **/
@@ -26,7 +24,8 @@ public class TemplateNotificacaoDetalheResponse   {
     RECUPERAR_SENHA("RECUPERAR_SENHA"),
     FATURA_POR_EMAIL("FATURA_POR_EMAIL"),
     VALIDAR_DISPOSITIVO("VALIDAR_DISPOSITIVO"),
-    NOTIFICACAO_EMAIL("NOTIFICACAO_EMAIL");
+    NOTIFICACAO_EMAIL("NOTIFICACAO_EMAIL"),
+    OTP_3D_SECURE("OTP_3D_SECURE");
 
     private String value;
 
@@ -49,6 +48,7 @@ public class TemplateNotificacaoDetalheResponse   {
     PUSH_APNS("PUSH_APNS"),
     PUSH_FCM("PUSH_FCM"),
     PUSH_GCM("PUSH_GCM"),
+    WEBHOOK("WEBHOOK"),
     EMAIL("EMAIL");
 
     private String value;
@@ -310,6 +310,4 @@ public class TemplateNotificacaoDetalheResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

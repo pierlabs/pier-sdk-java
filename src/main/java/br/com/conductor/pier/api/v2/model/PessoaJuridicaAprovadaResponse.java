@@ -14,8 +14,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{pessoa_juridica_aprovada_response_description}}}
  **/
@@ -588,6 +586,4 @@ public class PessoaJuridicaAprovadaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

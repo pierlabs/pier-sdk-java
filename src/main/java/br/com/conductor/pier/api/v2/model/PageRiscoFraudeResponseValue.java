@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_risco_fraude_response_description}}}
  **/
@@ -339,6 +337,4 @@ public class PageRiscoFraudeResponseValue   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

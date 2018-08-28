@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{conta_bancaria_portador_update_description}}}
  **/
@@ -308,6 +306,4 @@ public class ContaBancariaPortadorUpdateValue   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

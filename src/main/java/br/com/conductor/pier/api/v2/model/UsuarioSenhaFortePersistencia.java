@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{usuario_senha_forte_persistencia_descricao}}}
  **/
@@ -77,6 +75,4 @@ public class UsuarioSenhaFortePersistencia   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

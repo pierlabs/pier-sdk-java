@@ -8,8 +8,6 @@ import java.util.Date;
 
 
 
-
-
 /**
  * {{{arquivo_ajuste_lote_response_description}}}
  **/
@@ -203,6 +201,4 @@ public class ArquivoAjusteLoteResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

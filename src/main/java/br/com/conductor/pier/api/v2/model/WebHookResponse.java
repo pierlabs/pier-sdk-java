@@ -8,8 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{web_hook_response_description}}}
  **/
@@ -24,7 +22,8 @@ public class WebHookResponse   {
   public enum TipoEventoEnum {
     RISCO_FRAUDE("RISCO_FRAUDE"),
     CODIGO_SEGURANCA("CODIGO_SEGURANCA"),
-    OUTROS("OUTROS");
+    OUTROS("OUTROS"),
+    OTP_3D_SECURE("OTP_3D_SECURE");
 
     private String value;
 
@@ -222,6 +221,4 @@ public class WebHookResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -9,8 +9,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{transacao_pay_query_request_description}}}
  **/
@@ -142,6 +140,4 @@ public class TransacaoPayQueryRequest   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

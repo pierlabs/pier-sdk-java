@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_tipo_estabelecimento_response_description}}}
  **/
@@ -339,6 +337,4 @@ public class PageTipoEstabelecimentoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

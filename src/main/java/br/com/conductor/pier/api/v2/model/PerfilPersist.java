@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{perfil_persist_object_description}}}
  **/
@@ -101,6 +99,4 @@ public class PerfilPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

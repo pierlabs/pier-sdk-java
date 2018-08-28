@@ -8,8 +8,6 @@ import java.util.Date;
 
 
 
-
-
 /**
  * {{{codigo_chargeback_response_description}}}
  **/
@@ -30,6 +28,7 @@ public class CompraContestadaTransacaoResponse   {
   private Date dataContestacao = null;
   private String dataEnvioCB = null;
   private Date dataTransacao = null;
+  private String historico = null;
   private Long idCompraContestada = null;
   private Integer internacional = null;
   private String mcc = null;
@@ -253,6 +252,23 @@ public class CompraContestadaTransacaoResponse   {
   }
   public void setDataTransacao(Date dataTransacao) {
     this.dataTransacao = dataTransacao;
+  }
+
+  
+  /**
+   **/
+  public CompraContestadaTransacaoResponse historico(String historico) {
+    this.historico = historico;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("historico")
+  public String getHistorico() {
+    return historico;
+  }
+  public void setHistorico(String historico) {
+    this.historico = historico;
   }
 
   
@@ -618,6 +634,7 @@ public class CompraContestadaTransacaoResponse   {
         Objects.equals(this.dataContestacao, compraContestadaTransacaoResponse.dataContestacao) &&
         Objects.equals(this.dataEnvioCB, compraContestadaTransacaoResponse.dataEnvioCB) &&
         Objects.equals(this.dataTransacao, compraContestadaTransacaoResponse.dataTransacao) &&
+        Objects.equals(this.historico, compraContestadaTransacaoResponse.historico) &&
         Objects.equals(this.idCompraContestada, compraContestadaTransacaoResponse.idCompraContestada) &&
         Objects.equals(this.internacional, compraContestadaTransacaoResponse.internacional) &&
         Objects.equals(this.mcc, compraContestadaTransacaoResponse.mcc) &&
@@ -642,7 +659,7 @@ public class CompraContestadaTransacaoResponse   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(agingCompras, agingContestacao, bandeira, codigoAutorizacao, codigoContestacao, codigoEventoCompra, codigoMoedaDestino, data2Reapresentacao, dataAlteracao, dataContestacao, dataEnvioCB, dataTransacao, idCompraContestada, internacional, mcc, modoDeEntradaDescricao, modoEntrada, motivo2Reapresentacao, nomeEstabelecimento, numeroControle, razaoCB, referenceNumber, reporteBandeira, responsavelAbertuda, responsavelAlteracao, statusContestacao, texto2Reapresentacao, tipoTransacao, transacaoSegura, valorCompra, valorContrato, valorDestino);
+    return Objects.hash(agingCompras, agingContestacao, bandeira, codigoAutorizacao, codigoContestacao, codigoEventoCompra, codigoMoedaDestino, data2Reapresentacao, dataAlteracao, dataContestacao, dataEnvioCB, dataTransacao, historico, idCompraContestada, internacional, mcc, modoDeEntradaDescricao, modoEntrada, motivo2Reapresentacao, nomeEstabelecimento, numeroControle, razaoCB, referenceNumber, reporteBandeira, responsavelAbertuda, responsavelAlteracao, statusContestacao, texto2Reapresentacao, tipoTransacao, transacaoSegura, valorCompra, valorContrato, valorDestino);
   }
 
   @Override
@@ -662,6 +679,7 @@ public class CompraContestadaTransacaoResponse   {
     sb.append("    dataContestacao: ").append(toIndentedString(dataContestacao)).append("\n");
     sb.append("    dataEnvioCB: ").append(toIndentedString(dataEnvioCB)).append("\n");
     sb.append("    dataTransacao: ").append(toIndentedString(dataTransacao)).append("\n");
+    sb.append("    historico: ").append(toIndentedString(historico)).append("\n");
     sb.append("    idCompraContestada: ").append(toIndentedString(idCompraContestada)).append("\n");
     sb.append("    internacional: ").append(toIndentedString(internacional)).append("\n");
     sb.append("    mcc: ").append(toIndentedString(mcc)).append("\n");
@@ -697,6 +715,4 @@ public class CompraContestadaTransacaoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

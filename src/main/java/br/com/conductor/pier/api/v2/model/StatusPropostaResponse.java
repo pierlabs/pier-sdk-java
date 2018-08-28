@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{status_proposta_response_description}}}
  **/
@@ -140,6 +138,4 @@ public class StatusPropostaResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

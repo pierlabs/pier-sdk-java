@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_lote_cartoes_pre_pagos_response_description}}}
  **/
@@ -339,6 +337,4 @@ public class PageLoteCartoesPrePagosResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

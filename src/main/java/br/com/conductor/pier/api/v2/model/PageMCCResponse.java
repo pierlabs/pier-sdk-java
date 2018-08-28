@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_m_c_c_response_description}}}
  **/
@@ -339,6 +337,4 @@ public class PageMCCResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

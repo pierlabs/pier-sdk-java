@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{adicional_detalhe_response_description}}}
  **/
@@ -479,6 +477,4 @@ public class AdicionalDetalheResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

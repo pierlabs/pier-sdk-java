@@ -8,8 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{pais_response_description}}}
  **/
@@ -207,6 +205,4 @@ public class PaisResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

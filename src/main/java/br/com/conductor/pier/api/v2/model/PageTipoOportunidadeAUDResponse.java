@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_tipo_oportunidade_a_u_d_response_description}}}
  **/
@@ -339,6 +337,4 @@ public class PageTipoOportunidadeAUDResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

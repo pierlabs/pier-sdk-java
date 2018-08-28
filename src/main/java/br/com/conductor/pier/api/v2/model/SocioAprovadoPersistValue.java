@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{socio_aprovado_persist_description}}}
  **/
@@ -332,6 +330,4 @@ public class SocioAprovadoPersistValue   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

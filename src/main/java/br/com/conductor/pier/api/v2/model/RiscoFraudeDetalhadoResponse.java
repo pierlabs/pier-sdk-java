@@ -11,8 +11,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{risco_fraude_detalhado_response_description}}}
  **/
@@ -627,6 +625,4 @@ public class RiscoFraudeDetalhadoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -8,8 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{push_a_p_n_s_persist_description}}}
  **/
@@ -30,7 +28,8 @@ public class PushAPNSPersistValue   {
   public enum TipoEventoEnum {
     RISCO_FRAUDE("RISCO_FRAUDE"),
     CODIGO_SEGURANCA("CODIGO_SEGURANCA"),
-    OUTROS("OUTROS");
+    OUTROS("OUTROS"),
+    OTP_3D_SECURE("OTP_3D_SECURE");
 
     private String value;
 
@@ -177,14 +176,14 @@ public class PushAPNSPersistValue   {
 
   
   /**
-   * {{{push_a_p_n_s_persist_tipo_evento_value}}}
+   * {{{push_f_c_m_g_c_m_persist_tipo_evento_value}}}
    **/
   public PushAPNSPersistValue tipoEvento(TipoEventoEnum tipoEvento) {
     this.tipoEvento = tipoEvento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{push_a_p_n_s_persist_tipo_evento_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "{{{push_f_c_m_g_c_m_persist_tipo_evento_value}}}")
   @JsonProperty("tipoEvento")
   public TipoEventoEnum getTipoEvento() {
     return tipoEvento;
@@ -195,14 +194,14 @@ public class PushAPNSPersistValue   {
 
   
   /**
-   * {{{push_a_p_n_s_persist_icone_value}}}
+   * {{{push_f_c_m_g_c_m_persist_icone_value}}}
    **/
   public PushAPNSPersistValue icone(String icone) {
     this.icone = icone;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{push_a_p_n_s_persist_icone_value}}}")
+  @ApiModelProperty(example = "null", value = "{{{push_f_c_m_g_c_m_persist_icone_value}}}")
   @JsonProperty("icone")
   public String getIcone() {
     return icone;
@@ -213,14 +212,14 @@ public class PushAPNSPersistValue   {
 
   
   /**
-   * {{{push_a_p_n_s_persist_som_value}}}
+   * {{{push_f_c_m_g_c_m_persist_som_value}}}
    **/
   public PushAPNSPersistValue som(String som) {
     this.som = som;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{push_a_p_n_s_persist_som_value}}}")
+  @ApiModelProperty(example = "null", value = "{{{push_f_c_m_g_c_m_persist_som_value}}}")
   @JsonProperty("som")
   public String getSom() {
     return som;
@@ -287,6 +286,4 @@ public class PushAPNSPersistValue   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

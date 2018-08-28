@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_bin_response_description}}}
  **/
@@ -339,6 +337,4 @@ public class PageBinResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

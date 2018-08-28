@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{arquivo_detalhes_persist_description}}}
  **/
@@ -98,6 +96,4 @@ public class ArquivoDetalhesPersist   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

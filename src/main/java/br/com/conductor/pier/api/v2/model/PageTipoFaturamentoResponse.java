@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_tipo_faturamento_response_description}}}
  **/
@@ -339,6 +337,4 @@ public class PageTipoFaturamentoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{endereco_aprovado_response_description}}}
  **/
@@ -308,6 +306,4 @@ public class EnderecoAprovadoResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

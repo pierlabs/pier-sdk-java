@@ -10,8 +10,6 @@ import java.util.List;
 
 
 
-
-
 /**
  * {{{page_s_m_s_response_description}}}
  **/
@@ -339,6 +337,4 @@ public class PageSMSResponse   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 

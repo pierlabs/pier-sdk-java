@@ -7,8 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-
-
 /**
  * {{{estagio_cartao_update_id}}}
  **/
@@ -77,6 +75,4 @@ public class EstagioCartaoUpdate   {
     return o.toString().replace("\n", "\n    ");
   }
 }
-
-
 
