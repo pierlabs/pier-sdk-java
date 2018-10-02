@@ -23,6 +23,7 @@ public class OperacaoResponse   {
   private Boolean flagCobraTarifa = null;
   private Integer carencia = null;
   private Boolean flagPermitirParcelamento = null;
+  private Boolean flagManterTaxaJurosNoRotativo = null;
 
   
   /**
@@ -169,6 +170,24 @@ public class OperacaoResponse   {
   }
 
   
+  /**
+   * {{{operacao_response_flag_manter_taxa_juros_no_rotativo_value}}}
+   **/
+  public OperacaoResponse flagManterTaxaJurosNoRotativo(Boolean flagManterTaxaJurosNoRotativo) {
+    this.flagManterTaxaJurosNoRotativo = flagManterTaxaJurosNoRotativo;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "{{{operacao_response_flag_manter_taxa_juros_no_rotativo_value}}}")
+  @JsonProperty("flagManterTaxaJurosNoRotativo")
+  public Boolean getFlagManterTaxaJurosNoRotativo() {
+    return flagManterTaxaJurosNoRotativo;
+  }
+  public void setFlagManterTaxaJurosNoRotativo(Boolean flagManterTaxaJurosNoRotativo) {
+    this.flagManterTaxaJurosNoRotativo = flagManterTaxaJurosNoRotativo;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -186,12 +205,13 @@ public class OperacaoResponse   {
         Objects.equals(this.flagCobraJuros, operacaoResponse.flagCobraJuros) &&
         Objects.equals(this.flagCobraTarifa, operacaoResponse.flagCobraTarifa) &&
         Objects.equals(this.carencia, operacaoResponse.carencia) &&
-        Objects.equals(this.flagPermitirParcelamento, operacaoResponse.flagPermitirParcelamento);
+        Objects.equals(this.flagPermitirParcelamento, operacaoResponse.flagPermitirParcelamento) &&
+        Objects.equals(this.flagManterTaxaJurosNoRotativo, operacaoResponse.flagManterTaxaJurosNoRotativo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idOperacao, codigoProcessamento, codigoProcessamentoCancelamento, nomeOperacao, flagCobraJuros, flagCobraTarifa, carencia, flagPermitirParcelamento);
+    return Objects.hash(idOperacao, codigoProcessamento, codigoProcessamentoCancelamento, nomeOperacao, flagCobraJuros, flagCobraTarifa, carencia, flagPermitirParcelamento, flagManterTaxaJurosNoRotativo);
   }
 
   @Override
@@ -207,6 +227,7 @@ public class OperacaoResponse   {
     sb.append("    flagCobraTarifa: ").append(toIndentedString(flagCobraTarifa)).append("\n");
     sb.append("    carencia: ").append(toIndentedString(carencia)).append("\n");
     sb.append("    flagPermitirParcelamento: ").append(toIndentedString(flagPermitirParcelamento)).append("\n");
+    sb.append("    flagManterTaxaJurosNoRotativo: ").append(toIndentedString(flagManterTaxaJurosNoRotativo)).append("\n");
     sb.append("}");
     return sb.toString();
   }

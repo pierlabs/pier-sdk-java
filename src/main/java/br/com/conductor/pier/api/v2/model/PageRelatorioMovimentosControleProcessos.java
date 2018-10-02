@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v2.model.CartaoPayResponse;
+import br.com.conductor.pier.api.v2.model.RelatorioMovimentosControleProcessosResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -11,14 +11,14 @@ import java.util.List;
 
 
 /**
- * {{{page_cartao_pay_response_description}}}
+ * {{{page_relatorio_movimentos_controle_processos_response_description}}}
  **/
 
-@ApiModel(description = "{{{page_cartao_pay_response_description}}}")
+@ApiModel(description = "{{{page_relatorio_movimentos_controle_processos_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class PageCartaoPayResponse   {
+public class PageRelatorioMovimentosControleProcessos   {
   
-  private List<CartaoPayResponse> content = new ArrayList<CartaoPayResponse>();
+  private List<RelatorioMovimentosControleProcessosResponse> content = new ArrayList<RelatorioMovimentosControleProcessosResponse>();
   private Boolean first = null;
   private Boolean firstPage = null;
   private Boolean hasContent = null;
@@ -36,24 +36,24 @@ public class PageCartaoPayResponse   {
   
   /**
    **/
-  public PageCartaoPayResponse content(List<CartaoPayResponse> content) {
+  public PageRelatorioMovimentosControleProcessos content(List<RelatorioMovimentosControleProcessosResponse> content) {
     this.content = content;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("content")
-  public List<CartaoPayResponse> getContent() {
+  public List<RelatorioMovimentosControleProcessosResponse> getContent() {
     return content;
   }
-  public void setContent(List<CartaoPayResponse> content) {
+  public void setContent(List<RelatorioMovimentosControleProcessosResponse> content) {
     this.content = content;
   }
 
   
   /**
    **/
-  public PageCartaoPayResponse first(Boolean first) {
+  public PageRelatorioMovimentosControleProcessos first(Boolean first) {
     this.first = first;
     return this;
   }
@@ -70,7 +70,7 @@ public class PageCartaoPayResponse   {
   
   /**
    **/
-  public PageCartaoPayResponse firstPage(Boolean firstPage) {
+  public PageRelatorioMovimentosControleProcessos firstPage(Boolean firstPage) {
     this.firstPage = firstPage;
     return this;
   }
@@ -87,7 +87,7 @@ public class PageCartaoPayResponse   {
   
   /**
    **/
-  public PageCartaoPayResponse hasContent(Boolean hasContent) {
+  public PageRelatorioMovimentosControleProcessos hasContent(Boolean hasContent) {
     this.hasContent = hasContent;
     return this;
   }
@@ -104,7 +104,7 @@ public class PageCartaoPayResponse   {
   
   /**
    **/
-  public PageCartaoPayResponse hasNextPage(Boolean hasNextPage) {
+  public PageRelatorioMovimentosControleProcessos hasNextPage(Boolean hasNextPage) {
     this.hasNextPage = hasNextPage;
     return this;
   }
@@ -121,7 +121,7 @@ public class PageCartaoPayResponse   {
   
   /**
    **/
-  public PageCartaoPayResponse hasPreviousPage(Boolean hasPreviousPage) {
+  public PageRelatorioMovimentosControleProcessos hasPreviousPage(Boolean hasPreviousPage) {
     this.hasPreviousPage = hasPreviousPage;
     return this;
   }
@@ -138,7 +138,7 @@ public class PageCartaoPayResponse   {
   
   /**
    **/
-  public PageCartaoPayResponse last(Boolean last) {
+  public PageRelatorioMovimentosControleProcessos last(Boolean last) {
     this.last = last;
     return this;
   }
@@ -155,7 +155,7 @@ public class PageCartaoPayResponse   {
   
   /**
    **/
-  public PageCartaoPayResponse nextPage(Integer nextPage) {
+  public PageRelatorioMovimentosControleProcessos nextPage(Integer nextPage) {
     this.nextPage = nextPage;
     return this;
   }
@@ -172,7 +172,7 @@ public class PageCartaoPayResponse   {
   
   /**
    **/
-  public PageCartaoPayResponse number(Integer number) {
+  public PageRelatorioMovimentosControleProcessos number(Integer number) {
     this.number = number;
     return this;
   }
@@ -189,7 +189,7 @@ public class PageCartaoPayResponse   {
   
   /**
    **/
-  public PageCartaoPayResponse numberOfElements(Integer numberOfElements) {
+  public PageRelatorioMovimentosControleProcessos numberOfElements(Integer numberOfElements) {
     this.numberOfElements = numberOfElements;
     return this;
   }
@@ -206,7 +206,7 @@ public class PageCartaoPayResponse   {
   
   /**
    **/
-  public PageCartaoPayResponse previousPage(Integer previousPage) {
+  public PageRelatorioMovimentosControleProcessos previousPage(Integer previousPage) {
     this.previousPage = previousPage;
     return this;
   }
@@ -223,7 +223,7 @@ public class PageCartaoPayResponse   {
   
   /**
    **/
-  public PageCartaoPayResponse size(Integer size) {
+  public PageRelatorioMovimentosControleProcessos size(Integer size) {
     this.size = size;
     return this;
   }
@@ -240,7 +240,7 @@ public class PageCartaoPayResponse   {
   
   /**
    **/
-  public PageCartaoPayResponse totalElements(Long totalElements) {
+  public PageRelatorioMovimentosControleProcessos totalElements(Long totalElements) {
     this.totalElements = totalElements;
     return this;
   }
@@ -257,7 +257,7 @@ public class PageCartaoPayResponse   {
   
   /**
    **/
-  public PageCartaoPayResponse totalPages(Integer totalPages) {
+  public PageRelatorioMovimentosControleProcessos totalPages(Integer totalPages) {
     this.totalPages = totalPages;
     return this;
   }
@@ -281,21 +281,21 @@ public class PageCartaoPayResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    PageCartaoPayResponse pageCartaoPayResponse = (PageCartaoPayResponse) o;
-    return Objects.equals(this.content, pageCartaoPayResponse.content) &&
-        Objects.equals(this.first, pageCartaoPayResponse.first) &&
-        Objects.equals(this.firstPage, pageCartaoPayResponse.firstPage) &&
-        Objects.equals(this.hasContent, pageCartaoPayResponse.hasContent) &&
-        Objects.equals(this.hasNextPage, pageCartaoPayResponse.hasNextPage) &&
-        Objects.equals(this.hasPreviousPage, pageCartaoPayResponse.hasPreviousPage) &&
-        Objects.equals(this.last, pageCartaoPayResponse.last) &&
-        Objects.equals(this.nextPage, pageCartaoPayResponse.nextPage) &&
-        Objects.equals(this.number, pageCartaoPayResponse.number) &&
-        Objects.equals(this.numberOfElements, pageCartaoPayResponse.numberOfElements) &&
-        Objects.equals(this.previousPage, pageCartaoPayResponse.previousPage) &&
-        Objects.equals(this.size, pageCartaoPayResponse.size) &&
-        Objects.equals(this.totalElements, pageCartaoPayResponse.totalElements) &&
-        Objects.equals(this.totalPages, pageCartaoPayResponse.totalPages);
+    PageRelatorioMovimentosControleProcessos pageRelatorioMovimentosControleProcessos = (PageRelatorioMovimentosControleProcessos) o;
+    return Objects.equals(this.content, pageRelatorioMovimentosControleProcessos.content) &&
+        Objects.equals(this.first, pageRelatorioMovimentosControleProcessos.first) &&
+        Objects.equals(this.firstPage, pageRelatorioMovimentosControleProcessos.firstPage) &&
+        Objects.equals(this.hasContent, pageRelatorioMovimentosControleProcessos.hasContent) &&
+        Objects.equals(this.hasNextPage, pageRelatorioMovimentosControleProcessos.hasNextPage) &&
+        Objects.equals(this.hasPreviousPage, pageRelatorioMovimentosControleProcessos.hasPreviousPage) &&
+        Objects.equals(this.last, pageRelatorioMovimentosControleProcessos.last) &&
+        Objects.equals(this.nextPage, pageRelatorioMovimentosControleProcessos.nextPage) &&
+        Objects.equals(this.number, pageRelatorioMovimentosControleProcessos.number) &&
+        Objects.equals(this.numberOfElements, pageRelatorioMovimentosControleProcessos.numberOfElements) &&
+        Objects.equals(this.previousPage, pageRelatorioMovimentosControleProcessos.previousPage) &&
+        Objects.equals(this.size, pageRelatorioMovimentosControleProcessos.size) &&
+        Objects.equals(this.totalElements, pageRelatorioMovimentosControleProcessos.totalElements) &&
+        Objects.equals(this.totalPages, pageRelatorioMovimentosControleProcessos.totalPages);
   }
 
   @Override
@@ -306,7 +306,7 @@ public class PageCartaoPayResponse   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PageCartaoPayResponse {\n");
+    sb.append("class PageRelatorioMovimentosControleProcessos {\n");
     
     sb.append("    content: ").append(toIndentedString(content)).append("\n");
     sb.append("    first: ").append(toIndentedString(first)).append("\n");

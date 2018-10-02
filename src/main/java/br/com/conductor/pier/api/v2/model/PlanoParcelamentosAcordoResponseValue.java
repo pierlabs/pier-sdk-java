@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v2.model.EmissorPierResponse;
+import br.com.conductor.pier.api.v2.model.ParcelamentoAcordoResponseValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -11,14 +11,14 @@ import java.util.List;
 
 
 /**
- * {{{page_emissorpier_response_object_description}}}
+ * {{{plano_parcelamentos_acordo_response_description}}}
  **/
 
-@ApiModel(description = "{{{page_emissorpier_response_object_description}}}")
+@ApiModel(description = "{{{plano_parcelamentos_acordo_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class PageEmissorPierResponse   {
+public class PlanoParcelamentosAcordoResponseValue   {
   
-  private List<EmissorPierResponse> content = new ArrayList<EmissorPierResponse>();
+  private List<ParcelamentoAcordoResponseValue> content = new ArrayList<ParcelamentoAcordoResponseValue>();
   private Boolean first = null;
   private Boolean firstPage = null;
   private Boolean hasContent = null;
@@ -36,24 +36,24 @@ public class PageEmissorPierResponse   {
   
   /**
    **/
-  public PageEmissorPierResponse content(List<EmissorPierResponse> content) {
+  public PlanoParcelamentosAcordoResponseValue content(List<ParcelamentoAcordoResponseValue> content) {
     this.content = content;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("content")
-  public List<EmissorPierResponse> getContent() {
+  public List<ParcelamentoAcordoResponseValue> getContent() {
     return content;
   }
-  public void setContent(List<EmissorPierResponse> content) {
+  public void setContent(List<ParcelamentoAcordoResponseValue> content) {
     this.content = content;
   }
 
   
   /**
    **/
-  public PageEmissorPierResponse first(Boolean first) {
+  public PlanoParcelamentosAcordoResponseValue first(Boolean first) {
     this.first = first;
     return this;
   }
@@ -70,7 +70,7 @@ public class PageEmissorPierResponse   {
   
   /**
    **/
-  public PageEmissorPierResponse firstPage(Boolean firstPage) {
+  public PlanoParcelamentosAcordoResponseValue firstPage(Boolean firstPage) {
     this.firstPage = firstPage;
     return this;
   }
@@ -87,7 +87,7 @@ public class PageEmissorPierResponse   {
   
   /**
    **/
-  public PageEmissorPierResponse hasContent(Boolean hasContent) {
+  public PlanoParcelamentosAcordoResponseValue hasContent(Boolean hasContent) {
     this.hasContent = hasContent;
     return this;
   }
@@ -104,7 +104,7 @@ public class PageEmissorPierResponse   {
   
   /**
    **/
-  public PageEmissorPierResponse hasNextPage(Boolean hasNextPage) {
+  public PlanoParcelamentosAcordoResponseValue hasNextPage(Boolean hasNextPage) {
     this.hasNextPage = hasNextPage;
     return this;
   }
@@ -121,7 +121,7 @@ public class PageEmissorPierResponse   {
   
   /**
    **/
-  public PageEmissorPierResponse hasPreviousPage(Boolean hasPreviousPage) {
+  public PlanoParcelamentosAcordoResponseValue hasPreviousPage(Boolean hasPreviousPage) {
     this.hasPreviousPage = hasPreviousPage;
     return this;
   }
@@ -138,7 +138,7 @@ public class PageEmissorPierResponse   {
   
   /**
    **/
-  public PageEmissorPierResponse last(Boolean last) {
+  public PlanoParcelamentosAcordoResponseValue last(Boolean last) {
     this.last = last;
     return this;
   }
@@ -155,7 +155,7 @@ public class PageEmissorPierResponse   {
   
   /**
    **/
-  public PageEmissorPierResponse nextPage(Integer nextPage) {
+  public PlanoParcelamentosAcordoResponseValue nextPage(Integer nextPage) {
     this.nextPage = nextPage;
     return this;
   }
@@ -172,7 +172,7 @@ public class PageEmissorPierResponse   {
   
   /**
    **/
-  public PageEmissorPierResponse number(Integer number) {
+  public PlanoParcelamentosAcordoResponseValue number(Integer number) {
     this.number = number;
     return this;
   }
@@ -189,7 +189,7 @@ public class PageEmissorPierResponse   {
   
   /**
    **/
-  public PageEmissorPierResponse numberOfElements(Integer numberOfElements) {
+  public PlanoParcelamentosAcordoResponseValue numberOfElements(Integer numberOfElements) {
     this.numberOfElements = numberOfElements;
     return this;
   }
@@ -206,7 +206,7 @@ public class PageEmissorPierResponse   {
   
   /**
    **/
-  public PageEmissorPierResponse previousPage(Integer previousPage) {
+  public PlanoParcelamentosAcordoResponseValue previousPage(Integer previousPage) {
     this.previousPage = previousPage;
     return this;
   }
@@ -223,7 +223,7 @@ public class PageEmissorPierResponse   {
   
   /**
    **/
-  public PageEmissorPierResponse size(Integer size) {
+  public PlanoParcelamentosAcordoResponseValue size(Integer size) {
     this.size = size;
     return this;
   }
@@ -240,7 +240,7 @@ public class PageEmissorPierResponse   {
   
   /**
    **/
-  public PageEmissorPierResponse totalElements(Long totalElements) {
+  public PlanoParcelamentosAcordoResponseValue totalElements(Long totalElements) {
     this.totalElements = totalElements;
     return this;
   }
@@ -257,7 +257,7 @@ public class PageEmissorPierResponse   {
   
   /**
    **/
-  public PageEmissorPierResponse totalPages(Integer totalPages) {
+  public PlanoParcelamentosAcordoResponseValue totalPages(Integer totalPages) {
     this.totalPages = totalPages;
     return this;
   }
@@ -281,21 +281,21 @@ public class PageEmissorPierResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    PageEmissorPierResponse pageEmissorPierResponse = (PageEmissorPierResponse) o;
-    return Objects.equals(this.content, pageEmissorPierResponse.content) &&
-        Objects.equals(this.first, pageEmissorPierResponse.first) &&
-        Objects.equals(this.firstPage, pageEmissorPierResponse.firstPage) &&
-        Objects.equals(this.hasContent, pageEmissorPierResponse.hasContent) &&
-        Objects.equals(this.hasNextPage, pageEmissorPierResponse.hasNextPage) &&
-        Objects.equals(this.hasPreviousPage, pageEmissorPierResponse.hasPreviousPage) &&
-        Objects.equals(this.last, pageEmissorPierResponse.last) &&
-        Objects.equals(this.nextPage, pageEmissorPierResponse.nextPage) &&
-        Objects.equals(this.number, pageEmissorPierResponse.number) &&
-        Objects.equals(this.numberOfElements, pageEmissorPierResponse.numberOfElements) &&
-        Objects.equals(this.previousPage, pageEmissorPierResponse.previousPage) &&
-        Objects.equals(this.size, pageEmissorPierResponse.size) &&
-        Objects.equals(this.totalElements, pageEmissorPierResponse.totalElements) &&
-        Objects.equals(this.totalPages, pageEmissorPierResponse.totalPages);
+    PlanoParcelamentosAcordoResponseValue planoParcelamentosAcordoResponseValue = (PlanoParcelamentosAcordoResponseValue) o;
+    return Objects.equals(this.content, planoParcelamentosAcordoResponseValue.content) &&
+        Objects.equals(this.first, planoParcelamentosAcordoResponseValue.first) &&
+        Objects.equals(this.firstPage, planoParcelamentosAcordoResponseValue.firstPage) &&
+        Objects.equals(this.hasContent, planoParcelamentosAcordoResponseValue.hasContent) &&
+        Objects.equals(this.hasNextPage, planoParcelamentosAcordoResponseValue.hasNextPage) &&
+        Objects.equals(this.hasPreviousPage, planoParcelamentosAcordoResponseValue.hasPreviousPage) &&
+        Objects.equals(this.last, planoParcelamentosAcordoResponseValue.last) &&
+        Objects.equals(this.nextPage, planoParcelamentosAcordoResponseValue.nextPage) &&
+        Objects.equals(this.number, planoParcelamentosAcordoResponseValue.number) &&
+        Objects.equals(this.numberOfElements, planoParcelamentosAcordoResponseValue.numberOfElements) &&
+        Objects.equals(this.previousPage, planoParcelamentosAcordoResponseValue.previousPage) &&
+        Objects.equals(this.size, planoParcelamentosAcordoResponseValue.size) &&
+        Objects.equals(this.totalElements, planoParcelamentosAcordoResponseValue.totalElements) &&
+        Objects.equals(this.totalPages, planoParcelamentosAcordoResponseValue.totalPages);
   }
 
   @Override
@@ -306,7 +306,7 @@ public class PageEmissorPierResponse   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PageEmissorPierResponse {\n");
+    sb.append("class PlanoParcelamentosAcordoResponseValue {\n");
     
     sb.append("    content: ").append(toIndentedString(content)).append("\n");
     sb.append("    first: ").append(toIndentedString(first)).append("\n");

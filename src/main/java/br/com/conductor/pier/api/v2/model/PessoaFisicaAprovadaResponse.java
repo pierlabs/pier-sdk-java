@@ -50,7 +50,11 @@ public class PessoaFisicaAprovadaResponse   {
   private List<EnderecoAprovadoResponse> enderecos = new ArrayList<EnderecoAprovadoResponse>();
   private BigDecimal limiteGlobal = null;
   private BigDecimal limiteMaximo = null;
+  private String enderecoReferencia1 = null;
+  private String enderecoReferencia2 = null;
   private BigDecimal limiteParcelas = null;
+  private String nomeReferencia1 = null;
+  private String nomeReferencia2 = null;
   private BigDecimal limiteConsignado = null;
 
   
@@ -595,6 +599,42 @@ public class PessoaFisicaAprovadaResponse   {
 
   
   /**
+   * {{{pessoa_fisica_aprovada_response_endereco_referencia_1_value}}}
+   **/
+  public PessoaFisicaAprovadaResponse enderecoReferencia1(String enderecoReferencia1) {
+    this.enderecoReferencia1 = enderecoReferencia1;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_response_endereco_referencia_1_value}}}")
+  @JsonProperty("enderecoReferencia1")
+  public String getEnderecoReferencia1() {
+    return enderecoReferencia1;
+  }
+  public void setEnderecoReferencia1(String enderecoReferencia1) {
+    this.enderecoReferencia1 = enderecoReferencia1;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_response_endereco_referencia_2_value}}}
+   **/
+  public PessoaFisicaAprovadaResponse enderecoReferencia2(String enderecoReferencia2) {
+    this.enderecoReferencia2 = enderecoReferencia2;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_response_endereco_referencia_2_value}}}")
+  @JsonProperty("enderecoReferencia2")
+  public String getEnderecoReferencia2() {
+    return enderecoReferencia2;
+  }
+  public void setEnderecoReferencia2(String enderecoReferencia2) {
+    this.enderecoReferencia2 = enderecoReferencia2;
+  }
+
+  
+  /**
    * {{{pessoa_fisica_aprovada_response_limite_parcelas_value}}}
    **/
   public PessoaFisicaAprovadaResponse limiteParcelas(BigDecimal limiteParcelas) {
@@ -609,6 +649,42 @@ public class PessoaFisicaAprovadaResponse   {
   }
   public void setLimiteParcelas(BigDecimal limiteParcelas) {
     this.limiteParcelas = limiteParcelas;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_response_nome_referencia_1_value}}}
+   **/
+  public PessoaFisicaAprovadaResponse nomeReferencia1(String nomeReferencia1) {
+    this.nomeReferencia1 = nomeReferencia1;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_response_nome_referencia_1_value}}}")
+  @JsonProperty("nomeReferencia1")
+  public String getNomeReferencia1() {
+    return nomeReferencia1;
+  }
+  public void setNomeReferencia1(String nomeReferencia1) {
+    this.nomeReferencia1 = nomeReferencia1;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_response_nome_referencia_2_value}}}
+   **/
+  public PessoaFisicaAprovadaResponse nomeReferencia2(String nomeReferencia2) {
+    this.nomeReferencia2 = nomeReferencia2;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_response_nome_referencia_2_value}}}")
+  @JsonProperty("nomeReferencia2")
+  public String getNomeReferencia2() {
+    return nomeReferencia2;
+  }
+  public void setNomeReferencia2(String nomeReferencia2) {
+    this.nomeReferencia2 = nomeReferencia2;
   }
 
   
@@ -670,13 +746,17 @@ public class PessoaFisicaAprovadaResponse   {
         Objects.equals(this.enderecos, pessoaFisicaAprovadaResponse.enderecos) &&
         Objects.equals(this.limiteGlobal, pessoaFisicaAprovadaResponse.limiteGlobal) &&
         Objects.equals(this.limiteMaximo, pessoaFisicaAprovadaResponse.limiteMaximo) &&
+        Objects.equals(this.enderecoReferencia1, pessoaFisicaAprovadaResponse.enderecoReferencia1) &&
+        Objects.equals(this.enderecoReferencia2, pessoaFisicaAprovadaResponse.enderecoReferencia2) &&
         Objects.equals(this.limiteParcelas, pessoaFisicaAprovadaResponse.limiteParcelas) &&
+        Objects.equals(this.nomeReferencia1, pessoaFisicaAprovadaResponse.nomeReferencia1) &&
+        Objects.equals(this.nomeReferencia2, pessoaFisicaAprovadaResponse.nomeReferencia2) &&
         Objects.equals(this.limiteConsignado, pessoaFisicaAprovadaResponse.limiteConsignado);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, nome, nomeMae, dataNascimento, sexo, cpf, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, idOrigemComercial, idProduto, numeroAgencia, numeroContaCorrente, email, diaVencimento, nomeImpresso, nomeEmpresa, idConta, idProposta, canalEntrada, valorPontuacao, telefones, enderecos, limiteGlobal, limiteMaximo, limiteParcelas, limiteConsignado);
+    return Objects.hash(id, nome, nomeMae, dataNascimento, sexo, cpf, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, idOrigemComercial, idProduto, numeroAgencia, numeroContaCorrente, email, diaVencimento, nomeImpresso, nomeEmpresa, idConta, idProposta, canalEntrada, valorPontuacao, telefones, enderecos, limiteGlobal, limiteMaximo, enderecoReferencia1, enderecoReferencia2, limiteParcelas, nomeReferencia1, nomeReferencia2, limiteConsignado);
   }
 
   @Override
@@ -714,7 +794,11 @@ public class PessoaFisicaAprovadaResponse   {
     sb.append("    enderecos: ").append(toIndentedString(enderecos)).append("\n");
     sb.append("    limiteGlobal: ").append(toIndentedString(limiteGlobal)).append("\n");
     sb.append("    limiteMaximo: ").append(toIndentedString(limiteMaximo)).append("\n");
+    sb.append("    enderecoReferencia1: ").append(toIndentedString(enderecoReferencia1)).append("\n");
+    sb.append("    enderecoReferencia2: ").append(toIndentedString(enderecoReferencia2)).append("\n");
     sb.append("    limiteParcelas: ").append(toIndentedString(limiteParcelas)).append("\n");
+    sb.append("    nomeReferencia1: ").append(toIndentedString(nomeReferencia1)).append("\n");
+    sb.append("    nomeReferencia2: ").append(toIndentedString(nomeReferencia2)).append("\n");
     sb.append("    limiteConsignado: ").append(toIndentedString(limiteConsignado)).append("\n");
     sb.append("}");
     return sb.toString();

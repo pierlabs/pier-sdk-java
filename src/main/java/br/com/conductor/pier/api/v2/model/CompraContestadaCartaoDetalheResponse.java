@@ -18,6 +18,7 @@ public class CompraContestadaCartaoDetalheResponse   {
   
   private String numeroCartao = null;
   private String portador = null;
+  private Long idConta = null;
   private String nomePlastico = null;
   private Date dataValidade = null;
   private String statusCartao = null;
@@ -57,6 +58,24 @@ public class CompraContestadaCartaoDetalheResponse   {
   }
   public void setPortador(String portador) {
     this.portador = portador;
+  }
+
+  
+  /**
+   * {{{compra_contestada_cartao_detalhe_response_id_conta_value}}}
+   **/
+  public CompraContestadaCartaoDetalheResponse idConta(Long idConta) {
+    this.idConta = idConta;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{compra_contestada_cartao_detalhe_response_id_conta_value}}}")
+  @JsonProperty("idConta")
+  public Long getIdConta() {
+    return idConta;
+  }
+  public void setIdConta(Long idConta) {
+    this.idConta = idConta;
   }
 
   
@@ -144,6 +163,7 @@ public class CompraContestadaCartaoDetalheResponse   {
     CompraContestadaCartaoDetalheResponse compraContestadaCartaoDetalheResponse = (CompraContestadaCartaoDetalheResponse) o;
     return Objects.equals(this.numeroCartao, compraContestadaCartaoDetalheResponse.numeroCartao) &&
         Objects.equals(this.portador, compraContestadaCartaoDetalheResponse.portador) &&
+        Objects.equals(this.idConta, compraContestadaCartaoDetalheResponse.idConta) &&
         Objects.equals(this.nomePlastico, compraContestadaCartaoDetalheResponse.nomePlastico) &&
         Objects.equals(this.dataValidade, compraContestadaCartaoDetalheResponse.dataValidade) &&
         Objects.equals(this.statusCartao, compraContestadaCartaoDetalheResponse.statusCartao) &&
@@ -152,7 +172,7 @@ public class CompraContestadaCartaoDetalheResponse   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(numeroCartao, portador, nomePlastico, dataValidade, statusCartao, statusCartaoDescricao);
+    return Objects.hash(numeroCartao, portador, idConta, nomePlastico, dataValidade, statusCartao, statusCartaoDescricao);
   }
 
   @Override
@@ -162,6 +182,7 @@ public class CompraContestadaCartaoDetalheResponse   {
     
     sb.append("    numeroCartao: ").append(toIndentedString(numeroCartao)).append("\n");
     sb.append("    portador: ").append(toIndentedString(portador)).append("\n");
+    sb.append("    idConta: ").append(toIndentedString(idConta)).append("\n");
     sb.append("    nomePlastico: ").append(toIndentedString(nomePlastico)).append("\n");
     sb.append("    dataValidade: ").append(toIndentedString(dataValidade)).append("\n");
     sb.append("    statusCartao: ").append(toIndentedString(statusCartao)).append("\n");

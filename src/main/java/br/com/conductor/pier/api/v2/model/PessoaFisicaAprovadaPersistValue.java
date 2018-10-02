@@ -50,6 +50,10 @@ public class PessoaFisicaAprovadaPersistValue   {
   private BigDecimal limiteMaximo = null;
   private BigDecimal limiteParcelas = null;
   private BigDecimal limiteConsignado = null;
+  private String nomeReferencia1 = null;
+  private String enderecoReferencia1 = null;
+  private String nomeReferencia2 = null;
+  private String enderecoReferencia2 = null;
 
   
   /**
@@ -592,6 +596,78 @@ public class PessoaFisicaAprovadaPersistValue   {
   }
 
   
+  /**
+   * {{{pessoa_fisica_aprovada_persist_nome_referencia_1_value}}}
+   **/
+  public PessoaFisicaAprovadaPersistValue nomeReferencia1(String nomeReferencia1) {
+    this.nomeReferencia1 = nomeReferencia1;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_persist_nome_referencia_1_value}}}")
+  @JsonProperty("nomeReferencia1")
+  public String getNomeReferencia1() {
+    return nomeReferencia1;
+  }
+  public void setNomeReferencia1(String nomeReferencia1) {
+    this.nomeReferencia1 = nomeReferencia1;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_persist_endereco_referencia_1_value}}}
+   **/
+  public PessoaFisicaAprovadaPersistValue enderecoReferencia1(String enderecoReferencia1) {
+    this.enderecoReferencia1 = enderecoReferencia1;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_persist_endereco_referencia_1_value}}}")
+  @JsonProperty("enderecoReferencia1")
+  public String getEnderecoReferencia1() {
+    return enderecoReferencia1;
+  }
+  public void setEnderecoReferencia1(String enderecoReferencia1) {
+    this.enderecoReferencia1 = enderecoReferencia1;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_persist_nome_referencia_2_value}}}
+   **/
+  public PessoaFisicaAprovadaPersistValue nomeReferencia2(String nomeReferencia2) {
+    this.nomeReferencia2 = nomeReferencia2;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_persist_nome_referencia_2_value}}}")
+  @JsonProperty("nomeReferencia2")
+  public String getNomeReferencia2() {
+    return nomeReferencia2;
+  }
+  public void setNomeReferencia2(String nomeReferencia2) {
+    this.nomeReferencia2 = nomeReferencia2;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_persist_endereco_referencia_2_value}}}
+   **/
+  public PessoaFisicaAprovadaPersistValue enderecoReferencia2(String enderecoReferencia2) {
+    this.enderecoReferencia2 = enderecoReferencia2;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_persist_endereco_referencia_2_value}}}")
+  @JsonProperty("enderecoReferencia2")
+  public String getEnderecoReferencia2() {
+    return enderecoReferencia2;
+  }
+  public void setEnderecoReferencia2(String enderecoReferencia2) {
+    this.enderecoReferencia2 = enderecoReferencia2;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -631,12 +707,16 @@ public class PessoaFisicaAprovadaPersistValue   {
         Objects.equals(this.limiteGlobal, pessoaFisicaAprovadaPersistValue.limiteGlobal) &&
         Objects.equals(this.limiteMaximo, pessoaFisicaAprovadaPersistValue.limiteMaximo) &&
         Objects.equals(this.limiteParcelas, pessoaFisicaAprovadaPersistValue.limiteParcelas) &&
-        Objects.equals(this.limiteConsignado, pessoaFisicaAprovadaPersistValue.limiteConsignado);
+        Objects.equals(this.limiteConsignado, pessoaFisicaAprovadaPersistValue.limiteConsignado) &&
+        Objects.equals(this.nomeReferencia1, pessoaFisicaAprovadaPersistValue.nomeReferencia1) &&
+        Objects.equals(this.enderecoReferencia1, pessoaFisicaAprovadaPersistValue.enderecoReferencia1) &&
+        Objects.equals(this.nomeReferencia2, pessoaFisicaAprovadaPersistValue.nomeReferencia2) &&
+        Objects.equals(this.enderecoReferencia2, pessoaFisicaAprovadaPersistValue.enderecoReferencia2);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(nome, nomeMae, dataNascimento, sexo, cpf, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, idOrigemComercial, idProduto, numeroAgencia, numeroContaCorrente, email, diaVencimento, nomeImpresso, nomeEmpresa, valorRenda, canalEntrada, valorPontuacao, telefones, enderecos, limiteGlobal, limiteMaximo, limiteParcelas, limiteConsignado);
+    return Objects.hash(nome, nomeMae, dataNascimento, sexo, cpf, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, idOrigemComercial, idProduto, numeroAgencia, numeroContaCorrente, email, diaVencimento, nomeImpresso, nomeEmpresa, valorRenda, canalEntrada, valorPontuacao, telefones, enderecos, limiteGlobal, limiteMaximo, limiteParcelas, limiteConsignado, nomeReferencia1, enderecoReferencia1, nomeReferencia2, enderecoReferencia2);
   }
 
   @Override
@@ -674,6 +754,10 @@ public class PessoaFisicaAprovadaPersistValue   {
     sb.append("    limiteMaximo: ").append(toIndentedString(limiteMaximo)).append("\n");
     sb.append("    limiteParcelas: ").append(toIndentedString(limiteParcelas)).append("\n");
     sb.append("    limiteConsignado: ").append(toIndentedString(limiteConsignado)).append("\n");
+    sb.append("    nomeReferencia1: ").append(toIndentedString(nomeReferencia1)).append("\n");
+    sb.append("    enderecoReferencia1: ").append(toIndentedString(enderecoReferencia1)).append("\n");
+    sb.append("    nomeReferencia2: ").append(toIndentedString(nomeReferencia2)).append("\n");
+    sb.append("    enderecoReferencia2: ").append(toIndentedString(enderecoReferencia2)).append("\n");
     sb.append("}");
     return sb.toString();
   }

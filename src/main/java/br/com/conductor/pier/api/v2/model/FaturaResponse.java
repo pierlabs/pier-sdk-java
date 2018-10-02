@@ -46,6 +46,7 @@ public class FaturaResponse   {
   private BigDecimal valorTotal = null;
   private BigDecimal valorPagamentoMinimo = null;
   private BigDecimal saldoAnterior = null;
+  private Long idBoleto = null;
 
   
   /**
@@ -210,6 +211,24 @@ public class FaturaResponse   {
   }
 
   
+  /**
+   * {{{fatura_response_id_boleto_value}}}
+   **/
+  public FaturaResponse idBoleto(Long idBoleto) {
+    this.idBoleto = idBoleto;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{fatura_response_id_boleto_value}}}")
+  @JsonProperty("idBoleto")
+  public Long getIdBoleto() {
+    return idBoleto;
+  }
+  public void setIdBoleto(Long idBoleto) {
+    this.idBoleto = idBoleto;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -228,12 +247,13 @@ public class FaturaResponse   {
         Objects.equals(this.dataFechamento, faturaResponse.dataFechamento) &&
         Objects.equals(this.valorTotal, faturaResponse.valorTotal) &&
         Objects.equals(this.valorPagamentoMinimo, faturaResponse.valorPagamentoMinimo) &&
-        Objects.equals(this.saldoAnterior, faturaResponse.saldoAnterior);
+        Objects.equals(this.saldoAnterior, faturaResponse.saldoAnterior) &&
+        Objects.equals(this.idBoleto, faturaResponse.idBoleto);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idConta, situacaoProcessamento, pagamentoEfetuado, dataVencimentoFatura, dataVencimentoReal, dataFechamento, valorTotal, valorPagamentoMinimo, saldoAnterior);
+    return Objects.hash(idConta, situacaoProcessamento, pagamentoEfetuado, dataVencimentoFatura, dataVencimentoReal, dataFechamento, valorTotal, valorPagamentoMinimo, saldoAnterior, idBoleto);
   }
 
   @Override
@@ -250,6 +270,7 @@ public class FaturaResponse   {
     sb.append("    valorTotal: ").append(toIndentedString(valorTotal)).append("\n");
     sb.append("    valorPagamentoMinimo: ").append(toIndentedString(valorPagamentoMinimo)).append("\n");
     sb.append("    saldoAnterior: ").append(toIndentedString(saldoAnterior)).append("\n");
+    sb.append("    idBoleto: ").append(toIndentedString(idBoleto)).append("\n");
     sb.append("}");
     return sb.toString();
   }

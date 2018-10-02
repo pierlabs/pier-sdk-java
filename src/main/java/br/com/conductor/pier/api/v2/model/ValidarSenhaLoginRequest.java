@@ -8,31 +8,31 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{permissao_persist_object_description}}}
+ * {{{validar_senha_login_request_description}}}
  **/
 
-@ApiModel(description = "{{{permissao_persist_object_description}}}")
+@ApiModel(description = "{{{validar_senha_login_request_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class PermissaoPersist   {
+public class ValidarSenhaLoginRequest   {
   
-  private String nome = null;
+  private Integer idPlataforma = null;
 
   
   /**
-   * {{{permissao_persist_nome_value}}}
+   * {{{validar_senha_login_request_id_plataforma_value}}}
    **/
-  public PermissaoPersist nome(String nome) {
-    this.nome = nome;
+  public ValidarSenhaLoginRequest idPlataforma(Integer idPlataforma) {
+    this.idPlataforma = idPlataforma;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{permissao_persist_nome_value}}}")
-  @JsonProperty("nome")
-  public String getNome() {
-    return nome;
+  @ApiModelProperty(example = "null", value = "{{{validar_senha_login_request_id_plataforma_value}}}")
+  @JsonProperty("idPlataforma")
+  public Integer getIdPlataforma() {
+    return idPlataforma;
   }
-  public void setNome(String nome) {
-    this.nome = nome;
+  public void setIdPlataforma(Integer idPlataforma) {
+    this.idPlataforma = idPlataforma;
   }
 
   
@@ -45,21 +45,21 @@ public class PermissaoPersist   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    PermissaoPersist permissaoPersist = (PermissaoPersist) o;
-    return Objects.equals(this.nome, permissaoPersist.nome);
+    ValidarSenhaLoginRequest validarSenhaLoginRequest = (ValidarSenhaLoginRequest) o;
+    return Objects.equals(this.idPlataforma, validarSenhaLoginRequest.idPlataforma);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(nome);
+    return Objects.hash(idPlataforma);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PermissaoPersist {\n");
+    sb.append("class ValidarSenhaLoginRequest {\n");
     
-    sb.append("    nome: ").append(toIndentedString(nome)).append("\n");
+    sb.append("    idPlataforma: ").append(toIndentedString(idPlataforma)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -46,6 +46,8 @@ public class UsuarioResponse   {
   private String dataModificacao = null;
   private Long tentativasIncorretas = null;
   private Boolean bloquearAcesso = null;
+  private String dataValidade = null;
+  private Integer idPlataforma = null;
 
   
   /**
@@ -246,6 +248,42 @@ public class UsuarioResponse   {
   }
 
   
+  /**
+   * {{{usuario_response_data_validade_value}}}
+   **/
+  public UsuarioResponse dataValidade(String dataValidade) {
+    this.dataValidade = dataValidade;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{usuario_response_data_validade_value}}}")
+  @JsonProperty("dataValidade")
+  public String getDataValidade() {
+    return dataValidade;
+  }
+  public void setDataValidade(String dataValidade) {
+    this.dataValidade = dataValidade;
+  }
+
+  
+  /**
+   * {{{usuario_response_id_plataforma_value}}}
+   **/
+  public UsuarioResponse idPlataforma(Integer idPlataforma) {
+    this.idPlataforma = idPlataforma;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{usuario_response_id_plataforma_value}}}")
+  @JsonProperty("idPlataforma")
+  public Integer getIdPlataforma() {
+    return idPlataforma;
+  }
+  public void setIdPlataforma(Integer idPlataforma) {
+    this.idPlataforma = idPlataforma;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -266,12 +304,14 @@ public class UsuarioResponse   {
         Objects.equals(this.dataCriacao, usuarioResponse.dataCriacao) &&
         Objects.equals(this.dataModificacao, usuarioResponse.dataModificacao) &&
         Objects.equals(this.tentativasIncorretas, usuarioResponse.tentativasIncorretas) &&
-        Objects.equals(this.bloquearAcesso, usuarioResponse.bloquearAcesso);
+        Objects.equals(this.bloquearAcesso, usuarioResponse.bloquearAcesso) &&
+        Objects.equals(this.dataValidade, usuarioResponse.dataValidade) &&
+        Objects.equals(this.idPlataforma, usuarioResponse.idPlataforma);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, nome, login, idEmissor, cpf, email, status, dataCriacao, dataModificacao, tentativasIncorretas, bloquearAcesso);
+    return Objects.hash(id, nome, login, idEmissor, cpf, email, status, dataCriacao, dataModificacao, tentativasIncorretas, bloquearAcesso, dataValidade, idPlataforma);
   }
 
   @Override
@@ -290,6 +330,8 @@ public class UsuarioResponse   {
     sb.append("    dataModificacao: ").append(toIndentedString(dataModificacao)).append("\n");
     sb.append("    tentativasIncorretas: ").append(toIndentedString(tentativasIncorretas)).append("\n");
     sb.append("    bloquearAcesso: ").append(toIndentedString(bloquearAcesso)).append("\n");
+    sb.append("    dataValidade: ").append(toIndentedString(dataValidade)).append("\n");
+    sb.append("    idPlataforma: ").append(toIndentedString(idPlataforma)).append("\n");
     sb.append("}");
     return sb.toString();
   }

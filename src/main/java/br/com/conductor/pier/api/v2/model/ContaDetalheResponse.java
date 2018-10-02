@@ -43,6 +43,15 @@ public class ContaDetalheResponse   {
   private BigDecimal saldoDisponivelSaque = null;
   private Long diasAtraso = null;
   private String proximoVencimentoPadrao = null;
+  private Long idProposta = null;
+  private Integer quantidadePagamentos = null;
+  private Long correspondencia = null;
+  private String dataInicioAtraso = null;
+  private Boolean aceitaNovaContaPorGrupoProduto = null;
+  private BigDecimal rotativoPagaJuros = null;
+  private BigDecimal totalPosProx = null;
+  private BigDecimal saldoAtualFinal = null;
+  private BigDecimal saldoExtratoAnterior = null;
 
   
   /**
@@ -531,6 +540,168 @@ public class ContaDetalheResponse   {
   }
 
   
+  /**
+   * {{{conta_detalhe_response_id_proposta_value}}}
+   **/
+  public ContaDetalheResponse idProposta(Long idProposta) {
+    this.idProposta = idProposta;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{conta_detalhe_response_id_proposta_value}}}")
+  @JsonProperty("idProposta")
+  public Long getIdProposta() {
+    return idProposta;
+  }
+  public void setIdProposta(Long idProposta) {
+    this.idProposta = idProposta;
+  }
+
+  
+  /**
+   * {{{conta_detalhe_response_quantidade_pagamentos_value}}}
+   **/
+  public ContaDetalheResponse quantidadePagamentos(Integer quantidadePagamentos) {
+    this.quantidadePagamentos = quantidadePagamentos;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{conta_detalhe_response_quantidade_pagamentos_value}}}")
+  @JsonProperty("quantidadePagamentos")
+  public Integer getQuantidadePagamentos() {
+    return quantidadePagamentos;
+  }
+  public void setQuantidadePagamentos(Integer quantidadePagamentos) {
+    this.quantidadePagamentos = quantidadePagamentos;
+  }
+
+  
+  /**
+   * {{{conta_detalhe_response_correspondencia_value}}}
+   **/
+  public ContaDetalheResponse correspondencia(Long correspondencia) {
+    this.correspondencia = correspondencia;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{conta_detalhe_response_correspondencia_value}}}")
+  @JsonProperty("correspondencia")
+  public Long getCorrespondencia() {
+    return correspondencia;
+  }
+  public void setCorrespondencia(Long correspondencia) {
+    this.correspondencia = correspondencia;
+  }
+
+  
+  /**
+   * {{{conta_detalhe_response_data_inicio_atraso_value}}}
+   **/
+  public ContaDetalheResponse dataInicioAtraso(String dataInicioAtraso) {
+    this.dataInicioAtraso = dataInicioAtraso;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{conta_detalhe_response_data_inicio_atraso_value}}}")
+  @JsonProperty("dataInicioAtraso")
+  public String getDataInicioAtraso() {
+    return dataInicioAtraso;
+  }
+  public void setDataInicioAtraso(String dataInicioAtraso) {
+    this.dataInicioAtraso = dataInicioAtraso;
+  }
+
+  
+  /**
+   * {{{conta_detalhe_response_aceita_nova_conta_grupo_produto_value}}}
+   **/
+  public ContaDetalheResponse aceitaNovaContaPorGrupoProduto(Boolean aceitaNovaContaPorGrupoProduto) {
+    this.aceitaNovaContaPorGrupoProduto = aceitaNovaContaPorGrupoProduto;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "{{{conta_detalhe_response_aceita_nova_conta_grupo_produto_value}}}")
+  @JsonProperty("aceitaNovaContaPorGrupoProduto")
+  public Boolean getAceitaNovaContaPorGrupoProduto() {
+    return aceitaNovaContaPorGrupoProduto;
+  }
+  public void setAceitaNovaContaPorGrupoProduto(Boolean aceitaNovaContaPorGrupoProduto) {
+    this.aceitaNovaContaPorGrupoProduto = aceitaNovaContaPorGrupoProduto;
+  }
+
+  
+  /**
+   * {{{estado_conta_response_rotativo_paga_juros}}}
+   **/
+  public ContaDetalheResponse rotativoPagaJuros(BigDecimal rotativoPagaJuros) {
+    this.rotativoPagaJuros = rotativoPagaJuros;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{estado_conta_response_rotativo_paga_juros}}}")
+  @JsonProperty("rotativoPagaJuros")
+  public BigDecimal getRotativoPagaJuros() {
+    return rotativoPagaJuros;
+  }
+  public void setRotativoPagaJuros(BigDecimal rotativoPagaJuros) {
+    this.rotativoPagaJuros = rotativoPagaJuros;
+  }
+
+  
+  /**
+   * {{{estado_conta_response_total_pos_proximo}}}
+   **/
+  public ContaDetalheResponse totalPosProx(BigDecimal totalPosProx) {
+    this.totalPosProx = totalPosProx;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{estado_conta_response_total_pos_proximo}}}")
+  @JsonProperty("totalPosProx")
+  public BigDecimal getTotalPosProx() {
+    return totalPosProx;
+  }
+  public void setTotalPosProx(BigDecimal totalPosProx) {
+    this.totalPosProx = totalPosProx;
+  }
+
+  
+  /**
+   * {{{estado_conta_response_saldo_atual_final}}}
+   **/
+  public ContaDetalheResponse saldoAtualFinal(BigDecimal saldoAtualFinal) {
+    this.saldoAtualFinal = saldoAtualFinal;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{estado_conta_response_saldo_atual_final}}}")
+  @JsonProperty("saldoAtualFinal")
+  public BigDecimal getSaldoAtualFinal() {
+    return saldoAtualFinal;
+  }
+  public void setSaldoAtualFinal(BigDecimal saldoAtualFinal) {
+    this.saldoAtualFinal = saldoAtualFinal;
+  }
+
+  
+  /**
+   * {{{estado_conta_response_saldo_extrato_anterior}}}
+   **/
+  public ContaDetalheResponse saldoExtratoAnterior(BigDecimal saldoExtratoAnterior) {
+    this.saldoExtratoAnterior = saldoExtratoAnterior;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{estado_conta_response_saldo_extrato_anterior}}}")
+  @JsonProperty("saldoExtratoAnterior")
+  public BigDecimal getSaldoExtratoAnterior() {
+    return saldoExtratoAnterior;
+  }
+  public void setSaldoExtratoAnterior(BigDecimal saldoExtratoAnterior) {
+    this.saldoExtratoAnterior = saldoExtratoAnterior;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -567,12 +738,21 @@ public class ContaDetalheResponse   {
         Objects.equals(this.saldoDisponivelGlobal, contaDetalheResponse.saldoDisponivelGlobal) &&
         Objects.equals(this.saldoDisponivelSaque, contaDetalheResponse.saldoDisponivelSaque) &&
         Objects.equals(this.diasAtraso, contaDetalheResponse.diasAtraso) &&
-        Objects.equals(this.proximoVencimentoPadrao, contaDetalheResponse.proximoVencimentoPadrao);
+        Objects.equals(this.proximoVencimentoPadrao, contaDetalheResponse.proximoVencimentoPadrao) &&
+        Objects.equals(this.idProposta, contaDetalheResponse.idProposta) &&
+        Objects.equals(this.quantidadePagamentos, contaDetalheResponse.quantidadePagamentos) &&
+        Objects.equals(this.correspondencia, contaDetalheResponse.correspondencia) &&
+        Objects.equals(this.dataInicioAtraso, contaDetalheResponse.dataInicioAtraso) &&
+        Objects.equals(this.aceitaNovaContaPorGrupoProduto, contaDetalheResponse.aceitaNovaContaPorGrupoProduto) &&
+        Objects.equals(this.rotativoPagaJuros, contaDetalheResponse.rotativoPagaJuros) &&
+        Objects.equals(this.totalPosProx, contaDetalheResponse.totalPosProx) &&
+        Objects.equals(this.saldoAtualFinal, contaDetalheResponse.saldoAtualFinal) &&
+        Objects.equals(this.saldoExtratoAnterior, contaDetalheResponse.saldoExtratoAnterior);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idPessoa, nome, idProduto, idOrigemComercial, nomeOrigemComercial, idFantasiaBasica, nomeFantasiaBasica, idStatusConta, statusConta, diaVencimento, melhorDiaCompra, dataStatusConta, valorRenda, dataCadastro, dataUltimaAlteracaoVencimento, dataHoraUltimaCompra, numeroAgencia, numeroContaCorrente, formaEnvioFatura, titular, limiteGlobal, limiteSaqueGlobal, saldoDisponivelGlobal, saldoDisponivelSaque, diasAtraso, proximoVencimentoPadrao);
+    return Objects.hash(id, idPessoa, nome, idProduto, idOrigemComercial, nomeOrigemComercial, idFantasiaBasica, nomeFantasiaBasica, idStatusConta, statusConta, diaVencimento, melhorDiaCompra, dataStatusConta, valorRenda, dataCadastro, dataUltimaAlteracaoVencimento, dataHoraUltimaCompra, numeroAgencia, numeroContaCorrente, formaEnvioFatura, titular, limiteGlobal, limiteSaqueGlobal, saldoDisponivelGlobal, saldoDisponivelSaque, diasAtraso, proximoVencimentoPadrao, idProposta, quantidadePagamentos, correspondencia, dataInicioAtraso, aceitaNovaContaPorGrupoProduto, rotativoPagaJuros, totalPosProx, saldoAtualFinal, saldoExtratoAnterior);
   }
 
   @Override
@@ -607,6 +787,15 @@ public class ContaDetalheResponse   {
     sb.append("    saldoDisponivelSaque: ").append(toIndentedString(saldoDisponivelSaque)).append("\n");
     sb.append("    diasAtraso: ").append(toIndentedString(diasAtraso)).append("\n");
     sb.append("    proximoVencimentoPadrao: ").append(toIndentedString(proximoVencimentoPadrao)).append("\n");
+    sb.append("    idProposta: ").append(toIndentedString(idProposta)).append("\n");
+    sb.append("    quantidadePagamentos: ").append(toIndentedString(quantidadePagamentos)).append("\n");
+    sb.append("    correspondencia: ").append(toIndentedString(correspondencia)).append("\n");
+    sb.append("    dataInicioAtraso: ").append(toIndentedString(dataInicioAtraso)).append("\n");
+    sb.append("    aceitaNovaContaPorGrupoProduto: ").append(toIndentedString(aceitaNovaContaPorGrupoProduto)).append("\n");
+    sb.append("    rotativoPagaJuros: ").append(toIndentedString(rotativoPagaJuros)).append("\n");
+    sb.append("    totalPosProx: ").append(toIndentedString(totalPosProx)).append("\n");
+    sb.append("    saldoAtualFinal: ").append(toIndentedString(saldoAtualFinal)).append("\n");
+    sb.append("    saldoExtratoAnterior: ").append(toIndentedString(saldoExtratoAnterior)).append("\n");
     sb.append("}");
     return sb.toString();
   }

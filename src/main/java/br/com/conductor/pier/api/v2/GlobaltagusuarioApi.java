@@ -14,9 +14,10 @@ import br.com.conductor.pier.api.v2.model.ControleSegurancaDispositivoUpdateValo
 import br.com.conductor.pier.api.v2.model.PageUsuarioContasResponse;
 import br.com.conductor.pier.api.v2.model.PageControleSegurancaDispositivoResponse;
 import br.com.conductor.pier.api.v2.model.PageUsuarioResponse;
-import br.com.conductor.pier.api.v2.model.ControleSegurancaDispositivoPersistencia;
 import br.com.conductor.pier.api.v2.model.UsuarioPersistencia;
+import br.com.conductor.pier.api.v2.model.ControleSegurancaDispositivoPersistencia;
 import br.com.conductor.pier.api.v2.model.UsuarioSenhaFortePersistencia;
+import br.com.conductor.pier.api.v2.model.ValidarSenhaLoginRequest;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -171,17 +172,17 @@ public class GlobaltagusuarioApi {
    * @param update update
    * @return UsuarioResponse
    */
-  public UsuarioResponse alterarUsingPUT23(Long id, UsuarioUpdateValue update) throws ApiException {
+  public UsuarioResponse alterarUsingPUT19(Long id, UsuarioUpdateValue update) throws ApiException {
     Object postBody = update;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT23");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT19");
      }
      
      // verify the required parameter 'update' is set
      if (update == null) {
-        throw new ApiException(400, "Missing the required parameter 'update' when calling alterarUsingPUT23");
+        throw new ApiException(400, "Missing the required parameter 'update' when calling alterarUsingPUT19");
      }
      
     // create path and map variables
@@ -224,12 +225,12 @@ public class GlobaltagusuarioApi {
    * @param id {{{usuario_resource_ativar_usuario_param_id}}}
    * @return UsuarioResponse
    */
-  public UsuarioResponse ativarUsuarioUsingPOST1(Long id) throws ApiException {
+  public UsuarioResponse ativarUsuarioUsingPOST(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling ativarUsuarioUsingPOST1");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling ativarUsuarioUsingPOST");
      }
      
     // create path and map variables
@@ -269,19 +270,26 @@ public class GlobaltagusuarioApi {
   /**
    * {{{controle_seguranca_dispositivo_atualizar}}}
    * {{{controle_seguranca_dispositivo_atualizar_notas}}}
+   * @param id {{{controle_seguranca_dispositivo_resource_param_id}}}
    * @param update update
    * @return ControleSegurancaDispositivoResponse
    */
-  public ControleSegurancaDispositivoResponse atualizarUsingPUT3(ControleSegurancaDispositivoUpdateValor update) throws ApiException {
+  public ControleSegurancaDispositivoResponse atualizarUsingPUT2(Long id, ControleSegurancaDispositivoUpdateValor update) throws ApiException {
     Object postBody = update;
     
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling atualizarUsingPUT2");
+     }
+     
      // verify the required parameter 'update' is set
      if (update == null) {
-        throw new ApiException(400, "Missing the required parameter 'update' when calling atualizarUsingPUT3");
+        throw new ApiException(400, "Missing the required parameter 'update' when calling atualizarUsingPUT2");
      }
      
     // create path and map variables
-    String path = "/api/controles-seguranca-dispositivos".replaceAll("\\{format\\}","json");
+    String path = "/api/controles-seguranca-dispositivos/{id}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -379,12 +387,12 @@ public class GlobaltagusuarioApi {
    * @param limit {{{global_menssagem_sort_limit}}}
    * @return PageControleSegurancaDispositivoResponse
    */
-  public PageControleSegurancaDispositivoResponse consultarUsingGET17(Long idUsuario, List<String> sort, Integer page, Integer limit) throws ApiException {
+  public PageControleSegurancaDispositivoResponse consultarUsingGET14(Long idUsuario, List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idUsuario' is set
      if (idUsuario == null) {
-        throw new ApiException(400, "Missing the required parameter 'idUsuario' when calling consultarUsingGET17");
+        throw new ApiException(400, "Missing the required parameter 'idUsuario' when calling consultarUsingGET14");
      }
      
     // create path and map variables
@@ -434,12 +442,12 @@ public class GlobaltagusuarioApi {
    * @param id {{{usuario_resource_consultar_param_id}}}
    * @return UsuarioResponse
    */
-  public UsuarioResponse consultarUsingGET53(Long id) throws ApiException {
+  public UsuarioResponse consultarUsingGET46(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET53");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET46");
      }
      
     // create path and map variables
@@ -477,17 +485,65 @@ public class GlobaltagusuarioApi {
   }
   
   /**
+   * {{{controle_seguranca_dispositivo_deletar}}}
+   * {{{controle_seguranca_dispositivo_deletar_notes}}}
+   * @param id {{{controle_seguranca_dispositivo_resource_param_id}}}
+   * @return ControleSegurancaDispositivoResponse
+   */
+  public ControleSegurancaDispositivoResponse deletarUsingDELETE(Long id) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling deletarUsingDELETE");
+     }
+     
+    // create path and map variables
+    String path = "/api/controles-seguranca-dispositivos/{id}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<ControleSegurancaDispositivoResponse> returnType = new GenericType<ControleSegurancaDispositivoResponse>() {};
+    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * {{{usuario_resource_desativar_usuario}}}
    * {{{usuario_resource_desativar_usuario_notes}}}
    * @param id {{{usuario_resource_desativar_usuario_param_id}}}
    * @return UsuarioResponse
    */
-  public UsuarioResponse desativarUsuarioUsingPOST1(Long id) throws ApiException {
+  public UsuarioResponse desativarUsuarioUsingPOST(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling desativarUsuarioUsingPOST1");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling desativarUsuarioUsingPOST");
      }
      
     // create path and map variables
@@ -536,7 +592,7 @@ public class GlobaltagusuarioApi {
    * @param status {{{usuario_request_status_value}}}
    * @return PageUsuarioResponse
    */
-  public PageUsuarioResponse listarUsingGET65(List<String> sort, Integer page, Integer limit, String nome, String cpf, String email, String status) throws ApiException {
+  public PageUsuarioResponse listarUsingGET56(List<String> sort, Integer page, Integer limit, String nome, String cpf, String email, String status) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -635,64 +691,17 @@ public class GlobaltagusuarioApi {
   }
   
   /**
-   * {{{controle_seguranca_dispositivo_salvar}}}
-   * {{{controle_seguranca_dispositivo_salvar_notas}}}
-   * @param persist persist
-   * @return ControleSegurancaDispositivoResponse
-   */
-  public ControleSegurancaDispositivoResponse salvarUsingPOST10(ControleSegurancaDispositivoPersistencia persist) throws ApiException {
-    Object postBody = persist;
-    
-     // verify the required parameter 'persist' is set
-     if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST10");
-     }
-     
-    // create path and map variables
-    String path = "/api/controles-seguranca-dispositivos".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<ControleSegurancaDispositivoResponse> returnType = new GenericType<ControleSegurancaDispositivoResponse>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
    * {{{usuario_resource_salvar}}}
    * {{{usuario_resource_salvar_notes}}}
    * @param persist persist
    * @return UsuarioResponse
    */
-  public UsuarioResponse salvarUsingPOST34(UsuarioPersistencia persist) throws ApiException {
+  public UsuarioResponse salvarUsingPOST28(UsuarioPersistencia persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST34");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST28");
      }
      
     // create path and map variables
@@ -724,6 +733,53 @@ public class GlobaltagusuarioApi {
 
     
     GenericType<UsuarioResponse> returnType = new GenericType<UsuarioResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * {{{controle_seguranca_dispositivo_salvar}}}
+   * {{{controle_seguranca_dispositivo_salvar_notas}}}
+   * @param persist persist
+   * @return ControleSegurancaDispositivoResponse
+   */
+  public ControleSegurancaDispositivoResponse salvarUsingPOST8(ControleSegurancaDispositivoPersistencia persist) throws ApiException {
+    Object postBody = persist;
+    
+     // verify the required parameter 'persist' is set
+     if (persist == null) {
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST8");
+     }
+     
+    // create path and map variables
+    String path = "/api/controles-seguranca-dispositivos".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<ControleSegurancaDispositivoResponse> returnType = new GenericType<ControleSegurancaDispositivoResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -788,10 +844,11 @@ public class GlobaltagusuarioApi {
    * {{{usuario_resource_validar_senha_login_notes}}}
    * @param login {{{usuario_resource_validar_senha_login_param_login}}}
    * @param senha {{{usuario_resource_validar_senha_login_param_senha}}}
+   * @param request request
    * @return Object
    */
-  public Object validarSenhaLoginUsingPOST(String login, String senha) throws ApiException {
-    Object postBody = null;
+  public Object validarSenhaLoginUsingPOST(String login, String senha, ValidarSenhaLoginRequest request) throws ApiException {
+    Object postBody = request;
     
      // verify the required parameter 'login' is set
      if (login == null) {

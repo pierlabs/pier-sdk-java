@@ -35,6 +35,7 @@ public class DetalheOperacaoResponse   {
   private Integer carencia = null;
   private BigDecimal excedentePermitido = null;
   private Boolean flagPermitirParcelamento = null;
+  private Boolean flagManterTaxaJurosNoRotativo = null;
 
   
   /**
@@ -379,6 +380,24 @@ public class DetalheOperacaoResponse   {
   }
 
   
+  /**
+   * {{{detalhe_operacao_response_flag_manter_taxa_juros_no_rotativo_value}}}
+   **/
+  public DetalheOperacaoResponse flagManterTaxaJurosNoRotativo(Boolean flagManterTaxaJurosNoRotativo) {
+    this.flagManterTaxaJurosNoRotativo = flagManterTaxaJurosNoRotativo;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "{{{detalhe_operacao_response_flag_manter_taxa_juros_no_rotativo_value}}}")
+  @JsonProperty("flagManterTaxaJurosNoRotativo")
+  public Boolean getFlagManterTaxaJurosNoRotativo() {
+    return flagManterTaxaJurosNoRotativo;
+  }
+  public void setFlagManterTaxaJurosNoRotativo(Boolean flagManterTaxaJurosNoRotativo) {
+    this.flagManterTaxaJurosNoRotativo = flagManterTaxaJurosNoRotativo;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -407,12 +426,13 @@ public class DetalheOperacaoResponse   {
         Objects.equals(this.valorOperacao, detalheOperacaoResponse.valorOperacao) &&
         Objects.equals(this.carencia, detalheOperacaoResponse.carencia) &&
         Objects.equals(this.excedentePermitido, detalheOperacaoResponse.excedentePermitido) &&
-        Objects.equals(this.flagPermitirParcelamento, detalheOperacaoResponse.flagPermitirParcelamento);
+        Objects.equals(this.flagPermitirParcelamento, detalheOperacaoResponse.flagPermitirParcelamento) &&
+        Objects.equals(this.flagManterTaxaJurosNoRotativo, detalheOperacaoResponse.flagManterTaxaJurosNoRotativo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idOperacao, codigoProcessamento, codigoProcessamentoCancelamento, nomeOperacao, descricaoOperacao, planoMinimo, planoMaximo, valorMinimo, valorMaximo, flagCobraJuros, taxaJuros, flagCobraTarifa, taxaTarifa, valorTac, percentualTac, valorOperacao, carencia, excedentePermitido, flagPermitirParcelamento);
+    return Objects.hash(idOperacao, codigoProcessamento, codigoProcessamentoCancelamento, nomeOperacao, descricaoOperacao, planoMinimo, planoMaximo, valorMinimo, valorMaximo, flagCobraJuros, taxaJuros, flagCobraTarifa, taxaTarifa, valorTac, percentualTac, valorOperacao, carencia, excedentePermitido, flagPermitirParcelamento, flagManterTaxaJurosNoRotativo);
   }
 
   @Override
@@ -439,6 +459,7 @@ public class DetalheOperacaoResponse   {
     sb.append("    carencia: ").append(toIndentedString(carencia)).append("\n");
     sb.append("    excedentePermitido: ").append(toIndentedString(excedentePermitido)).append("\n");
     sb.append("    flagPermitirParcelamento: ").append(toIndentedString(flagPermitirParcelamento)).append("\n");
+    sb.append("    flagManterTaxaJurosNoRotativo: ").append(toIndentedString(flagManterTaxaJurosNoRotativo)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -50,6 +50,7 @@ public class ConfiguracaoRegistroCobrancaPersist   {
   private StatusEnum status = null;
   private String secret = null;
   private String clientID = null;
+  private String chave = null;
 
   
   /**
@@ -322,6 +323,24 @@ public class ConfiguracaoRegistroCobrancaPersist   {
   }
 
   
+  /**
+   * {{{configuracao_registro_cobranca_persist_chave_value}}}
+   **/
+  public ConfiguracaoRegistroCobrancaPersist chave(String chave) {
+    this.chave = chave;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{configuracao_registro_cobranca_persist_chave_value}}}")
+  @JsonProperty("chave")
+  public String getChave() {
+    return chave;
+  }
+  public void setChave(String chave) {
+    this.chave = chave;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -346,12 +365,13 @@ public class ConfiguracaoRegistroCobrancaPersist   {
         Objects.equals(this.uriAdicional, configuracaoRegistroCobrancaPersist.uriAdicional) &&
         Objects.equals(this.status, configuracaoRegistroCobrancaPersist.status) &&
         Objects.equals(this.secret, configuracaoRegistroCobrancaPersist.secret) &&
-        Objects.equals(this.clientID, configuracaoRegistroCobrancaPersist.clientID);
+        Objects.equals(this.clientID, configuracaoRegistroCobrancaPersist.clientID) &&
+        Objects.equals(this.chave, configuracaoRegistroCobrancaPersist.chave);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(codigoBanco, uri, keyStoreName, keyStorePassword, keystoreAlias, keyStorePrivateKeyPassword, typeKeystore, trustStoreName, trustStorePassword, truststoreAlias, typeTruststore, uriAdicional, status, secret, clientID);
+    return Objects.hash(codigoBanco, uri, keyStoreName, keyStorePassword, keystoreAlias, keyStorePrivateKeyPassword, typeKeystore, trustStoreName, trustStorePassword, truststoreAlias, typeTruststore, uriAdicional, status, secret, clientID, chave);
   }
 
   @Override
@@ -374,6 +394,7 @@ public class ConfiguracaoRegistroCobrancaPersist   {
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    secret: ").append(toIndentedString(secret)).append("\n");
     sb.append("    clientID: ").append(toIndentedString(clientID)).append("\n");
+    sb.append("    chave: ").append(toIndentedString(chave)).append("\n");
     sb.append("}");
     return sb.toString();
   }

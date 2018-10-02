@@ -50,6 +50,7 @@ public class FaturaDetalheResponse   {
   private BigDecimal valorPagamentoMinimo = null;
   private List<LancamentoFaturaResponse> lancamentosFaturaResponse = new ArrayList<LancamentoFaturaResponse>();
   private BigDecimal saldoAnterior = null;
+  private Long idBoleto = null;
 
   
   /**
@@ -232,6 +233,24 @@ public class FaturaDetalheResponse   {
   }
 
   
+  /**
+   * {{{fatura_response_id_boleto_value}}}
+   **/
+  public FaturaDetalheResponse idBoleto(Long idBoleto) {
+    this.idBoleto = idBoleto;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{fatura_response_id_boleto_value}}}")
+  @JsonProperty("idBoleto")
+  public Long getIdBoleto() {
+    return idBoleto;
+  }
+  public void setIdBoleto(Long idBoleto) {
+    this.idBoleto = idBoleto;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -251,12 +270,13 @@ public class FaturaDetalheResponse   {
         Objects.equals(this.valorTotal, faturaDetalheResponse.valorTotal) &&
         Objects.equals(this.valorPagamentoMinimo, faturaDetalheResponse.valorPagamentoMinimo) &&
         Objects.equals(this.lancamentosFaturaResponse, faturaDetalheResponse.lancamentosFaturaResponse) &&
-        Objects.equals(this.saldoAnterior, faturaDetalheResponse.saldoAnterior);
+        Objects.equals(this.saldoAnterior, faturaDetalheResponse.saldoAnterior) &&
+        Objects.equals(this.idBoleto, faturaDetalheResponse.idBoleto);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idConta, situacaoProcessamento, pagamentoEfetuado, dataVencimentoFatura, dataVencimentoReal, dataFechamento, valorTotal, valorPagamentoMinimo, lancamentosFaturaResponse, saldoAnterior);
+    return Objects.hash(idConta, situacaoProcessamento, pagamentoEfetuado, dataVencimentoFatura, dataVencimentoReal, dataFechamento, valorTotal, valorPagamentoMinimo, lancamentosFaturaResponse, saldoAnterior, idBoleto);
   }
 
   @Override
@@ -274,6 +294,7 @@ public class FaturaDetalheResponse   {
     sb.append("    valorPagamentoMinimo: ").append(toIndentedString(valorPagamentoMinimo)).append("\n");
     sb.append("    lancamentosFaturaResponse: ").append(toIndentedString(lancamentosFaturaResponse)).append("\n");
     sb.append("    saldoAnterior: ").append(toIndentedString(saldoAnterior)).append("\n");
+    sb.append("    idBoleto: ").append(toIndentedString(idBoleto)).append("\n");
     sb.append("}");
     return sb.toString();
   }

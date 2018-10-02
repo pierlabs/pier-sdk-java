@@ -56,12 +56,12 @@ public class GlobaltaglimitedisponibilidadeApi {
    * @param limiteMaximo {{{limite_disponibilidade_persist_limite_maximo_value}}}
    * @return LimiteDisponibilidadeResponse
    */
-  public LimiteDisponibilidadeResponse alterarUsingPUT9(Long idConta, BigDecimal limiteGlobal, BigDecimal limiteCompra, BigDecimal limiteParcelado, BigDecimal limiteParcelas, BigDecimal limiteSaqueGlobal, BigDecimal limiteSaquePeriodo, BigDecimal limiteConsignado, BigDecimal limiteInternacionalCompra, BigDecimal limiteInternacionalParcelado, BigDecimal limiteInternacionalParcelas, BigDecimal limiteInternacionalSaqueGlobal, BigDecimal limiteInternacionalSaquePeriodo, BigDecimal limiteMaximo) throws ApiException {
+  public LimiteDisponibilidadeResponse alterarUsingPUT8(Long idConta, BigDecimal limiteGlobal, BigDecimal limiteCompra, BigDecimal limiteParcelado, BigDecimal limiteParcelas, BigDecimal limiteSaqueGlobal, BigDecimal limiteSaquePeriodo, BigDecimal limiteConsignado, BigDecimal limiteInternacionalCompra, BigDecimal limiteInternacionalParcelado, BigDecimal limiteInternacionalParcelas, BigDecimal limiteInternacionalSaqueGlobal, BigDecimal limiteInternacionalSaquePeriodo, BigDecimal limiteMaximo) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idConta' is set
      if (idConta == null) {
-        throw new ApiException(400, "Missing the required parameter 'idConta' when calling alterarUsingPUT9");
+        throw new ApiException(400, "Missing the required parameter 'idConta' when calling alterarUsingPUT8");
      }
      
     // create path and map variables
@@ -131,12 +131,12 @@ public class GlobaltaglimitedisponibilidadeApi {
    * @param idConta {{{limite_disponibilidade_resource_consultar_param_id_conta}}}
    * @return LimiteDisponibilidadeResponse
    */
-  public LimiteDisponibilidadeResponse consultarUsingGET25(Long idConta) throws ApiException {
+  public LimiteDisponibilidadeResponse consultarUsingGET21(Long idConta) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idConta' is set
      if (idConta == null) {
-        throw new ApiException(400, "Missing the required parameter 'idConta' when calling consultarUsingGET25");
+        throw new ApiException(400, "Missing the required parameter 'idConta' when calling consultarUsingGET21");
      }
      
     // create path and map variables

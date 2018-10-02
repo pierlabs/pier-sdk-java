@@ -4,6 +4,7 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.math.BigDecimal;
 
 
 
@@ -26,6 +27,11 @@ public class PessoaDetalheResponse   {
   private String numeroContaCorrente = null;
   private String email = null;
   private String nomeEmpresa = null;
+  private String nomeReferencia1 = null;
+  private BigDecimal salario = null;
+  private String enderecoReferencia1 = null;
+  private String nomeReferencia2 = null;
+  private String enderecoReferencia2 = null;
 
   
   /**
@@ -226,6 +232,96 @@ public class PessoaDetalheResponse   {
   }
 
   
+  /**
+   * {{{pessoa_detalhe_response_nome_referencia_1_value}}}
+   **/
+  public PessoaDetalheResponse nomeReferencia1(String nomeReferencia1) {
+    this.nomeReferencia1 = nomeReferencia1;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{pessoa_detalhe_response_nome_referencia_1_value}}}")
+  @JsonProperty("nomeReferencia1")
+  public String getNomeReferencia1() {
+    return nomeReferencia1;
+  }
+  public void setNomeReferencia1(String nomeReferencia1) {
+    this.nomeReferencia1 = nomeReferencia1;
+  }
+
+  
+  /**
+   * {{{pessoa_detalhe_response_salario_value}}}
+   **/
+  public PessoaDetalheResponse salario(BigDecimal salario) {
+    this.salario = salario;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{pessoa_detalhe_response_salario_value}}}")
+  @JsonProperty("salario")
+  public BigDecimal getSalario() {
+    return salario;
+  }
+  public void setSalario(BigDecimal salario) {
+    this.salario = salario;
+  }
+
+  
+  /**
+   * {{{pessoa_detalhe_response_endereco_referencia_1_value}}}
+   **/
+  public PessoaDetalheResponse enderecoReferencia1(String enderecoReferencia1) {
+    this.enderecoReferencia1 = enderecoReferencia1;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{pessoa_detalhe_response_endereco_referencia_1_value}}}")
+  @JsonProperty("enderecoReferencia1")
+  public String getEnderecoReferencia1() {
+    return enderecoReferencia1;
+  }
+  public void setEnderecoReferencia1(String enderecoReferencia1) {
+    this.enderecoReferencia1 = enderecoReferencia1;
+  }
+
+  
+  /**
+   * {{{pessoa_detalhe_response_nome_referencia_2_value}}}
+   **/
+  public PessoaDetalheResponse nomeReferencia2(String nomeReferencia2) {
+    this.nomeReferencia2 = nomeReferencia2;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{pessoa_detalhe_response_nome_referencia_2_value}}}")
+  @JsonProperty("nomeReferencia2")
+  public String getNomeReferencia2() {
+    return nomeReferencia2;
+  }
+  public void setNomeReferencia2(String nomeReferencia2) {
+    this.nomeReferencia2 = nomeReferencia2;
+  }
+
+  
+  /**
+   * {{{pessoa_detalhe_response_endereco_referencia_2_value}}}
+   **/
+  public PessoaDetalheResponse enderecoReferencia2(String enderecoReferencia2) {
+    this.enderecoReferencia2 = enderecoReferencia2;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{pessoa_detalhe_response_endereco_referencia_2_value}}}")
+  @JsonProperty("enderecoReferencia2")
+  public String getEnderecoReferencia2() {
+    return enderecoReferencia2;
+  }
+  public void setEnderecoReferencia2(String enderecoReferencia2) {
+    this.enderecoReferencia2 = enderecoReferencia2;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -246,12 +342,17 @@ public class PessoaDetalheResponse   {
         Objects.equals(this.numeroAgencia, pessoaDetalheResponse.numeroAgencia) &&
         Objects.equals(this.numeroContaCorrente, pessoaDetalheResponse.numeroContaCorrente) &&
         Objects.equals(this.email, pessoaDetalheResponse.email) &&
-        Objects.equals(this.nomeEmpresa, pessoaDetalheResponse.nomeEmpresa);
+        Objects.equals(this.nomeEmpresa, pessoaDetalheResponse.nomeEmpresa) &&
+        Objects.equals(this.nomeReferencia1, pessoaDetalheResponse.nomeReferencia1) &&
+        Objects.equals(this.salario, pessoaDetalheResponse.salario) &&
+        Objects.equals(this.enderecoReferencia1, pessoaDetalheResponse.enderecoReferencia1) &&
+        Objects.equals(this.nomeReferencia2, pessoaDetalheResponse.nomeReferencia2) &&
+        Objects.equals(this.enderecoReferencia2, pessoaDetalheResponse.enderecoReferencia2);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa);
+    return Objects.hash(idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa, nomeReferencia1, salario, enderecoReferencia1, nomeReferencia2, enderecoReferencia2);
   }
 
   @Override
@@ -270,6 +371,11 @@ public class PessoaDetalheResponse   {
     sb.append("    numeroContaCorrente: ").append(toIndentedString(numeroContaCorrente)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    nomeEmpresa: ").append(toIndentedString(nomeEmpresa)).append("\n");
+    sb.append("    nomeReferencia1: ").append(toIndentedString(nomeReferencia1)).append("\n");
+    sb.append("    salario: ").append(toIndentedString(salario)).append("\n");
+    sb.append("    enderecoReferencia1: ").append(toIndentedString(enderecoReferencia1)).append("\n");
+    sb.append("    nomeReferencia2: ").append(toIndentedString(nomeReferencia2)).append("\n");
+    sb.append("    enderecoReferencia2: ").append(toIndentedString(enderecoReferencia2)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -392,6 +392,47 @@ public class GlobaltagautorizacaoApi {
   }
   
   /**
+   * {{{enum_resource_listar_tipos_eventos_transacoes}}}
+   * {{{enum_resource_listar_tipos_eventos_transacoes_notes}}}
+   * @return List<Object>
+   */
+  public List<Object> listarTiposEventosTransacoesUsingGET() throws ApiException {
+    Object postBody = null;
+    
+    // create path and map variables
+    String path = "/api/tipos-eventos-transacoes".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<List<Object>> returnType = new GenericType<List<Object>>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * {{{transacao_on_us_resource_simular}}}
    * {{{transacao_on_us_resource_simular_notes}}}
    * @param transacoesRequest transacoesRequest

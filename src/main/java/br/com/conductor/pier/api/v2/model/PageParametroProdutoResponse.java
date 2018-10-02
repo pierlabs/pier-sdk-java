@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v2.model.JobResponse;
+import br.com.conductor.pier.api.v2.model.ParametrosProdutoResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -11,14 +11,14 @@ import java.util.List;
 
 
 /**
- * {{{page_job_response_description}}}
+ * {{{page_parametro_produto_listar_response_description}}}
  **/
 
-@ApiModel(description = "{{{page_job_response_description}}}")
+@ApiModel(description = "{{{page_parametro_produto_listar_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class PageJobResponse   {
+public class PageParametroProdutoResponse   {
   
-  private List<JobResponse> content = new ArrayList<JobResponse>();
+  private List<ParametrosProdutoResponse> content = new ArrayList<ParametrosProdutoResponse>();
   private Boolean first = null;
   private Boolean firstPage = null;
   private Boolean hasContent = null;
@@ -36,24 +36,24 @@ public class PageJobResponse   {
   
   /**
    **/
-  public PageJobResponse content(List<JobResponse> content) {
+  public PageParametroProdutoResponse content(List<ParametrosProdutoResponse> content) {
     this.content = content;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("content")
-  public List<JobResponse> getContent() {
+  public List<ParametrosProdutoResponse> getContent() {
     return content;
   }
-  public void setContent(List<JobResponse> content) {
+  public void setContent(List<ParametrosProdutoResponse> content) {
     this.content = content;
   }
 
   
   /**
    **/
-  public PageJobResponse first(Boolean first) {
+  public PageParametroProdutoResponse first(Boolean first) {
     this.first = first;
     return this;
   }
@@ -70,7 +70,7 @@ public class PageJobResponse   {
   
   /**
    **/
-  public PageJobResponse firstPage(Boolean firstPage) {
+  public PageParametroProdutoResponse firstPage(Boolean firstPage) {
     this.firstPage = firstPage;
     return this;
   }
@@ -87,7 +87,7 @@ public class PageJobResponse   {
   
   /**
    **/
-  public PageJobResponse hasContent(Boolean hasContent) {
+  public PageParametroProdutoResponse hasContent(Boolean hasContent) {
     this.hasContent = hasContent;
     return this;
   }
@@ -104,7 +104,7 @@ public class PageJobResponse   {
   
   /**
    **/
-  public PageJobResponse hasNextPage(Boolean hasNextPage) {
+  public PageParametroProdutoResponse hasNextPage(Boolean hasNextPage) {
     this.hasNextPage = hasNextPage;
     return this;
   }
@@ -121,7 +121,7 @@ public class PageJobResponse   {
   
   /**
    **/
-  public PageJobResponse hasPreviousPage(Boolean hasPreviousPage) {
+  public PageParametroProdutoResponse hasPreviousPage(Boolean hasPreviousPage) {
     this.hasPreviousPage = hasPreviousPage;
     return this;
   }
@@ -138,7 +138,7 @@ public class PageJobResponse   {
   
   /**
    **/
-  public PageJobResponse last(Boolean last) {
+  public PageParametroProdutoResponse last(Boolean last) {
     this.last = last;
     return this;
   }
@@ -155,7 +155,7 @@ public class PageJobResponse   {
   
   /**
    **/
-  public PageJobResponse nextPage(Integer nextPage) {
+  public PageParametroProdutoResponse nextPage(Integer nextPage) {
     this.nextPage = nextPage;
     return this;
   }
@@ -172,7 +172,7 @@ public class PageJobResponse   {
   
   /**
    **/
-  public PageJobResponse number(Integer number) {
+  public PageParametroProdutoResponse number(Integer number) {
     this.number = number;
     return this;
   }
@@ -189,7 +189,7 @@ public class PageJobResponse   {
   
   /**
    **/
-  public PageJobResponse numberOfElements(Integer numberOfElements) {
+  public PageParametroProdutoResponse numberOfElements(Integer numberOfElements) {
     this.numberOfElements = numberOfElements;
     return this;
   }
@@ -206,7 +206,7 @@ public class PageJobResponse   {
   
   /**
    **/
-  public PageJobResponse previousPage(Integer previousPage) {
+  public PageParametroProdutoResponse previousPage(Integer previousPage) {
     this.previousPage = previousPage;
     return this;
   }
@@ -223,7 +223,7 @@ public class PageJobResponse   {
   
   /**
    **/
-  public PageJobResponse size(Integer size) {
+  public PageParametroProdutoResponse size(Integer size) {
     this.size = size;
     return this;
   }
@@ -240,7 +240,7 @@ public class PageJobResponse   {
   
   /**
    **/
-  public PageJobResponse totalElements(Long totalElements) {
+  public PageParametroProdutoResponse totalElements(Long totalElements) {
     this.totalElements = totalElements;
     return this;
   }
@@ -257,7 +257,7 @@ public class PageJobResponse   {
   
   /**
    **/
-  public PageJobResponse totalPages(Integer totalPages) {
+  public PageParametroProdutoResponse totalPages(Integer totalPages) {
     this.totalPages = totalPages;
     return this;
   }
@@ -281,21 +281,21 @@ public class PageJobResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    PageJobResponse pageJobResponse = (PageJobResponse) o;
-    return Objects.equals(this.content, pageJobResponse.content) &&
-        Objects.equals(this.first, pageJobResponse.first) &&
-        Objects.equals(this.firstPage, pageJobResponse.firstPage) &&
-        Objects.equals(this.hasContent, pageJobResponse.hasContent) &&
-        Objects.equals(this.hasNextPage, pageJobResponse.hasNextPage) &&
-        Objects.equals(this.hasPreviousPage, pageJobResponse.hasPreviousPage) &&
-        Objects.equals(this.last, pageJobResponse.last) &&
-        Objects.equals(this.nextPage, pageJobResponse.nextPage) &&
-        Objects.equals(this.number, pageJobResponse.number) &&
-        Objects.equals(this.numberOfElements, pageJobResponse.numberOfElements) &&
-        Objects.equals(this.previousPage, pageJobResponse.previousPage) &&
-        Objects.equals(this.size, pageJobResponse.size) &&
-        Objects.equals(this.totalElements, pageJobResponse.totalElements) &&
-        Objects.equals(this.totalPages, pageJobResponse.totalPages);
+    PageParametroProdutoResponse pageParametroProdutoResponse = (PageParametroProdutoResponse) o;
+    return Objects.equals(this.content, pageParametroProdutoResponse.content) &&
+        Objects.equals(this.first, pageParametroProdutoResponse.first) &&
+        Objects.equals(this.firstPage, pageParametroProdutoResponse.firstPage) &&
+        Objects.equals(this.hasContent, pageParametroProdutoResponse.hasContent) &&
+        Objects.equals(this.hasNextPage, pageParametroProdutoResponse.hasNextPage) &&
+        Objects.equals(this.hasPreviousPage, pageParametroProdutoResponse.hasPreviousPage) &&
+        Objects.equals(this.last, pageParametroProdutoResponse.last) &&
+        Objects.equals(this.nextPage, pageParametroProdutoResponse.nextPage) &&
+        Objects.equals(this.number, pageParametroProdutoResponse.number) &&
+        Objects.equals(this.numberOfElements, pageParametroProdutoResponse.numberOfElements) &&
+        Objects.equals(this.previousPage, pageParametroProdutoResponse.previousPage) &&
+        Objects.equals(this.size, pageParametroProdutoResponse.size) &&
+        Objects.equals(this.totalElements, pageParametroProdutoResponse.totalElements) &&
+        Objects.equals(this.totalPages, pageParametroProdutoResponse.totalPages);
   }
 
   @Override
@@ -306,7 +306,7 @@ public class PageJobResponse   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PageJobResponse {\n");
+    sb.append("class PageParametroProdutoResponse {\n");
     
     sb.append("    content: ").append(toIndentedString(content)).append("\n");
     sb.append("    first: ").append(toIndentedString(first)).append("\n");

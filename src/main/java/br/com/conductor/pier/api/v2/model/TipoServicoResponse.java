@@ -8,48 +8,49 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{permissao_response_object_description}}}
+ * {{{tipo_servico_response_description}}}
  **/
 
-@ApiModel(description = "{{{permissao_response_object_description}}}")
+@ApiModel(description = "{{{tipo_servico_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class PermissaoResponse   {
+public class TipoServicoResponse   {
   
+  private String descricao = null;
   private Long id = null;
-  private String nome = null;
 
   
   /**
    **/
-  public PermissaoResponse id(Long id) {
-    this.id = id;
+  public TipoServicoResponse descricao(String descricao) {
+    this.descricao = descricao;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("descricao")
+  public String getDescricao() {
+    return descricao;
+  }
+  public void setDescricao(String descricao) {
+    this.descricao = descricao;
+  }
+
+  
+  /**
+   * {{{tipo_servico_response_id_value}}}
+   **/
+  public TipoServicoResponse id(Long id) {
+    this.id = id;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{tipo_servico_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
   }
   public void setId(Long id) {
     this.id = id;
-  }
-
-  
-  /**
-   **/
-  public PermissaoResponse nome(String nome) {
-    this.nome = nome;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("nome")
-  public String getNome() {
-    return nome;
-  }
-  public void setNome(String nome) {
-    this.nome = nome;
   }
 
   
@@ -62,23 +63,23 @@ public class PermissaoResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    PermissaoResponse permissaoResponse = (PermissaoResponse) o;
-    return Objects.equals(this.id, permissaoResponse.id) &&
-        Objects.equals(this.nome, permissaoResponse.nome);
+    TipoServicoResponse tipoServicoResponse = (TipoServicoResponse) o;
+    return Objects.equals(this.descricao, tipoServicoResponse.descricao) &&
+        Objects.equals(this.id, tipoServicoResponse.id);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, nome);
+    return Objects.hash(descricao, id);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PermissaoResponse {\n");
+    sb.append("class TipoServicoResponse {\n");
     
+    sb.append("    descricao: ").append(toIndentedString(descricao)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    nome: ").append(toIndentedString(nome)).append("\n");
     sb.append("}");
     return sb.toString();
   }

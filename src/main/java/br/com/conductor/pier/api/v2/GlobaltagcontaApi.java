@@ -70,11 +70,12 @@ public class GlobaltagcontaApi {
    * @param idTipoAjuste {{{ajuste_persist_id_tipo_ajuste_value}}}
    * @param dataAjuste {{{ajuste_persist_data_ajuste_value}}}
    * @param valorAjuste {{{ajuste_persist_valor_ajuste_value}}}
+   * @param login login
    * @param identificadorExterno {{{ajuste_persist_identificador_externo_value}}}
    * @param idTransacaoOriginal {{{ajuste_persist_id_transacao_original}}}
    * @return AjusteFinanceiroResponse
    */
-  public AjusteFinanceiroResponse ajustarContaUsingPOST1(Long id, Long idTipoAjuste, String dataAjuste, BigDecimal valorAjuste, String identificadorExterno, Long idTransacaoOriginal) throws ApiException {
+  public AjusteFinanceiroResponse ajustarContaUsingPOST1(Long id, Long idTipoAjuste, String dataAjuste, BigDecimal valorAjuste, String login, String identificadorExterno, Long idTransacaoOriginal) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -118,6 +119,8 @@ public class GlobaltagcontaApi {
     queryParams.addAll(apiClient.parameterToPairs("", "idTransacaoOriginal", idTransacaoOriginal));
     
 
+    if (login != null)
+      headerParams.put("login", apiClient.parameterToString(login));
     
 
     
@@ -872,12 +875,12 @@ public class GlobaltagcontaApi {
    * @param id {{{conta_resource_consultar_param_id}}}
    * @return ContaDetalheResponse
    */
-  public ContaDetalheResponse consultarUsingGET16(Long id) throws ApiException {
+  public ContaDetalheResponse consultarUsingGET13(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET16");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET13");
      }
      
     // create path and map variables
@@ -921,17 +924,17 @@ public class GlobaltagcontaApi {
    * @param idTransferencia {{{transferencia_resource_consultar_param_id_transferencia}}}
    * @return TransferenciaDetalheResponse
    */
-  public TransferenciaDetalheResponse consultarUsingGET51(Long id, Long idTransferencia) throws ApiException {
+  public TransferenciaDetalheResponse consultarUsingGET45(Long id, Long idTransferencia) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET51");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET45");
      }
      
      // verify the required parameter 'idTransferencia' is set
      if (idTransferencia == null) {
-        throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET51");
+        throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET45");
      }
      
     // create path and map variables
@@ -1667,7 +1670,7 @@ public class GlobaltagcontaApi {
    * @param dataUltimaAlteracaoVencimento {{{conta_request_data_ultima_alteracao_vencimento_value}}}
    * @return PageContaResponse
    */
-  public PageContaResponse listarUsingGET19(List<String> sort, Integer page, Integer limit, Long idProduto, Long idOrigemComercial, Long idPessoa, Long idStatusConta, Integer diaVencimento, Integer melhorDiaCompra, String dataStatusConta, String dataCadastro, String dataUltimaAlteracaoVencimento) throws ApiException {
+  public PageContaResponse listarUsingGET17(List<String> sort, Integer page, Integer limit, Long idProduto, Long idOrigemComercial, Long idPessoa, Long idStatusConta, Integer diaVencimento, Integer melhorDiaCompra, String dataStatusConta, String dataCadastro, String dataUltimaAlteracaoVencimento) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -1738,14 +1741,21 @@ public class GlobaltagcontaApi {
    * @param dataInicio {{{transacoes_processadas_request_data_inicio_value}}}
    * @param dataFim {{{transacoes_processadas_request_data_fim_value}}}
    * @param idTipoTransacao {{{transacoes_processadas_request_tipo_transacao}}}
+   * @param flagCredito {{{transacoes_processadas_request_flag_credito}}}
+   * @param flagFaturado {{{transacoes_processadas_request_flag_faturado}}}
+   * @param flagProcessada {{{transacoes_processadas_request_flag_processada}}}
+   * @param status {{{transacoes_processadas_request_status}}}
+   * @param plano {{{transacoes_processadas_request_plano}}}
+   * @param codigoMCC {{{transacoes_processadas_request_codigo_mcc}}}
+   * @param grupoMCC {{{transacoes_processadas_request_grupo_mcc}}}
    * @return PageTransacaoProcessadaNaoProcessadaResponse
    */
-  public PageTransacaoProcessadaNaoProcessadaResponse listarUsingGET61(Long id, List<String> sort, Integer page, Integer limit, String dataVencimento, String dataInicio, String dataFim, Long idTipoTransacao) throws ApiException {
+  public PageTransacaoProcessadaNaoProcessadaResponse listarUsingGET53(Long id, List<String> sort, Integer page, Integer limit, String dataVencimento, String dataInicio, String dataFim, Long idTipoTransacao, Boolean flagCredito, Boolean flagFaturado, Boolean flagProcessada, Integer status, Integer plano, Long codigoMCC, Long grupoMCC) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET61");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET53");
      }
      
     // create path and map variables
@@ -1771,6 +1781,20 @@ public class GlobaltagcontaApi {
     queryParams.addAll(apiClient.parameterToPairs("", "dataFim", dataFim));
     
     queryParams.addAll(apiClient.parameterToPairs("", "idTipoTransacao", idTipoTransacao));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "flagCredito", flagCredito));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "flagFaturado", flagFaturado));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "flagProcessada", flagProcessada));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "status", status));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "plano", plano));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "codigoMCC", codigoMCC));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "grupoMCC", grupoMCC));
     
 
     
@@ -1810,12 +1834,12 @@ public class GlobaltagcontaApi {
    * @param dataTransferencia {{{transferencia_request_data_transferencia_value}}}
    * @return PageTransferenciaResponse
    */
-  public PageTransferenciaResponse listarUsingGET63(Long id, List<String> sort, Integer page, Integer limit, Long idTransferencia, Long idContaOrigem, Long idContaDestino, BigDecimal valorTransferencia, String dataTransferencia) throws ApiException {
+  public PageTransferenciaResponse listarUsingGET55(Long id, List<String> sort, Integer page, Integer limit, Long idTransferencia, Long idContaOrigem, Long idContaDestino, BigDecimal valorTransferencia, String dataTransferencia) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET63");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET55");
      }
      
     // create path and map variables
@@ -1922,12 +1946,12 @@ public class GlobaltagcontaApi {
    * @param contaPersist contaPersist
    * @return ContaResponse
    */
-  public ContaResponse salvarUsingPOST9(ContaPersistValue contaPersist) throws ApiException {
+  public ContaResponse salvarUsingPOST7(ContaPersistValue contaPersist) throws ApiException {
     Object postBody = contaPersist;
     
      // verify the required parameter 'contaPersist' is set
      if (contaPersist == null) {
-        throw new ApiException(400, "Missing the required parameter 'contaPersist' when calling salvarUsingPOST9");
+        throw new ApiException(400, "Missing the required parameter 'contaPersist' when calling salvarUsingPOST7");
      }
      
     // create path and map variables

@@ -15,27 +15,8 @@ import io.swagger.annotations.ApiModelProperty;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ControleSegurancaDispositivoUpdateValor   {
   
-  private Long id = null;
   private Long idUsuario = null;
   private String phoneId = null;
-
-  
-  /**
-   * {{{controle_seguranca_dispositivo_id_descricao}}}
-   **/
-  public ControleSegurancaDispositivoUpdateValor id(Long id) {
-    this.id = id;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", required = true, value = "{{{controle_seguranca_dispositivo_id_descricao}}}")
-  @JsonProperty("id")
-  public Long getId() {
-    return id;
-  }
-  public void setId(Long id) {
-    this.id = id;
-  }
 
   
   /**
@@ -84,14 +65,13 @@ public class ControleSegurancaDispositivoUpdateValor   {
       return false;
     }
     ControleSegurancaDispositivoUpdateValor controleSegurancaDispositivoUpdateValor = (ControleSegurancaDispositivoUpdateValor) o;
-    return Objects.equals(this.id, controleSegurancaDispositivoUpdateValor.id) &&
-        Objects.equals(this.idUsuario, controleSegurancaDispositivoUpdateValor.idUsuario) &&
+    return Objects.equals(this.idUsuario, controleSegurancaDispositivoUpdateValor.idUsuario) &&
         Objects.equals(this.phoneId, controleSegurancaDispositivoUpdateValor.phoneId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idUsuario, phoneId);
+    return Objects.hash(idUsuario, phoneId);
   }
 
   @Override
@@ -99,7 +79,6 @@ public class ControleSegurancaDispositivoUpdateValor   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ControleSegurancaDispositivoUpdateValor {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idUsuario: ").append(toIndentedString(idUsuario)).append("\n");
     sb.append("    phoneId: ").append(toIndentedString(phoneId)).append("\n");
     sb.append("}");
