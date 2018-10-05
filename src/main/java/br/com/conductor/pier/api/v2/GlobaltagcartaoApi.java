@@ -19,6 +19,7 @@ import br.com.conductor.pier.api.v2.model.CartaoDetalheResponse;
 import br.com.conductor.pier.api.v2.model.VinculoCartoesResponse;
 import br.com.conductor.pier.api.v2.model.CartaoMultiAppPersistValue;
 import br.com.conductor.pier.api.v2.model.CartaoMultiAppImpressaoResponse;
+import br.com.conductor.pier.api.v2.model.CartaoImpressaoResponse;
 import br.com.conductor.pier.api.v2.model.PageLoteCartoesPrePagosResponse;
 import br.com.conductor.pier.api.v2.model.PageCartaoResponse;
 import br.com.conductor.pier.api.v2.model.ValidaCVVRequest;
@@ -1002,9 +1003,9 @@ public class GlobaltagcartaoApi {
    * {{{cartao_resource_gerar_nova_via}}}
    * {{{cartao_resource_gerar_nova_via_notes}}}
    * @param id {{{cartao_resource_gerar_nova_via_param_id_cartao}}}
-   * @return CartaoResponse
+   * @return CartaoImpressaoResponse
    */
-  public CartaoResponse gerarNovaViaUsingPOST(Long id) throws ApiException {
+  public CartaoImpressaoResponse gerarNovaViaUsingPOST(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -1041,7 +1042,7 @@ public class GlobaltagcartaoApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<CartaoResponse> returnType = new GenericType<CartaoResponse>() {};
+    GenericType<CartaoImpressaoResponse> returnType = new GenericType<CartaoImpressaoResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
