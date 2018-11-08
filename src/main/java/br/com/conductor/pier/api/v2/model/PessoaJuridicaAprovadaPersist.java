@@ -45,6 +45,7 @@ public class PessoaJuridicaAprovadaPersist   {
   private BigDecimal limiteGlobal = null;
   private BigDecimal limiteMaximo = null;
   private BigDecimal limiteParcelas = null;
+  private Boolean impedidoFinanciamento = null;
 
   
   /**
@@ -461,6 +462,24 @@ public class PessoaJuridicaAprovadaPersist   {
   }
 
   
+  /**
+   * {{{pessoa_juridica_aprovada_persist_impedido_de_financiamento_value}}}
+   **/
+  public PessoaJuridicaAprovadaPersist impedidoFinanciamento(Boolean impedidoFinanciamento) {
+    this.impedidoFinanciamento = impedidoFinanciamento;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "{{{pessoa_juridica_aprovada_persist_impedido_de_financiamento_value}}}")
+  @JsonProperty("impedidoFinanciamento")
+  public Boolean getImpedidoFinanciamento() {
+    return impedidoFinanciamento;
+  }
+  public void setImpedidoFinanciamento(Boolean impedidoFinanciamento) {
+    this.impedidoFinanciamento = impedidoFinanciamento;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -493,12 +512,13 @@ public class PessoaJuridicaAprovadaPersist   {
         Objects.equals(this.referenciasComerciais, pessoaJuridicaAprovadaPersist.referenciasComerciais) &&
         Objects.equals(this.limiteGlobal, pessoaJuridicaAprovadaPersist.limiteGlobal) &&
         Objects.equals(this.limiteMaximo, pessoaJuridicaAprovadaPersist.limiteMaximo) &&
-        Objects.equals(this.limiteParcelas, pessoaJuridicaAprovadaPersist.limiteParcelas);
+        Objects.equals(this.limiteParcelas, pessoaJuridicaAprovadaPersist.limiteParcelas) &&
+        Objects.equals(this.impedidoFinanciamento, pessoaJuridicaAprovadaPersist.impedidoFinanciamento);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(razaoSocial, nomeFantasia, cnpj, inscricaoEstadual, dataAberturaEmpresa, idOrigemComercial, idProduto, numeroBanco, numeroAgencia, numeroContaCorrente, email, diaVencimento, nomeImpresso, valorRenda, canalEntrada, valorPontuacao, telefones, enderecos, socios, referenciasComerciais, limiteGlobal, limiteMaximo, limiteParcelas);
+    return Objects.hash(razaoSocial, nomeFantasia, cnpj, inscricaoEstadual, dataAberturaEmpresa, idOrigemComercial, idProduto, numeroBanco, numeroAgencia, numeroContaCorrente, email, diaVencimento, nomeImpresso, valorRenda, canalEntrada, valorPontuacao, telefones, enderecos, socios, referenciasComerciais, limiteGlobal, limiteMaximo, limiteParcelas, impedidoFinanciamento);
   }
 
   @Override
@@ -529,6 +549,7 @@ public class PessoaJuridicaAprovadaPersist   {
     sb.append("    limiteGlobal: ").append(toIndentedString(limiteGlobal)).append("\n");
     sb.append("    limiteMaximo: ").append(toIndentedString(limiteMaximo)).append("\n");
     sb.append("    limiteParcelas: ").append(toIndentedString(limiteParcelas)).append("\n");
+    sb.append("    impedidoFinanciamento: ").append(toIndentedString(impedidoFinanciamento)).append("\n");
     sb.append("}");
     return sb.toString();
   }

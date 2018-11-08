@@ -36,6 +36,7 @@ public class TransacaoProcessadaNaoProcessadaResponse   {
   private Long grupoMCC = null;
   private Long idConta = null;
   private Long idEstabelecimento = null;
+  private Long idEventoAjuste = null;
   private Long idTipoTransacaoNaoProcessada = null;
   private Long idTransacaoEstorno = null;
   private String localidadeEstabelecimento = null;
@@ -413,6 +414,24 @@ public class TransacaoProcessadaNaoProcessadaResponse   {
 
   
   /**
+   * {{{transacao_nao_processada_response_id_evento_ajuste_value}}}
+   **/
+  public TransacaoProcessadaNaoProcessadaResponse idEventoAjuste(Long idEventoAjuste) {
+    this.idEventoAjuste = idEventoAjuste;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{transacao_nao_processada_response_id_evento_ajuste_value}}}")
+  @JsonProperty("idEventoAjuste")
+  public Long getIdEventoAjuste() {
+    return idEventoAjuste;
+  }
+  public void setIdEventoAjuste(Long idEventoAjuste) {
+    this.idEventoAjuste = idEventoAjuste;
+  }
+
+  
+  /**
    * {{{transacao_nao_processada_response_id_tipo_transacao_nao_processada_value}}}
    **/
   public TransacaoProcessadaNaoProcessadaResponse idTipoTransacaoNaoProcessada(Long idTipoTransacaoNaoProcessada) {
@@ -694,6 +713,7 @@ public class TransacaoProcessadaNaoProcessadaResponse   {
         Objects.equals(this.grupoMCC, transacaoProcessadaNaoProcessadaResponse.grupoMCC) &&
         Objects.equals(this.idConta, transacaoProcessadaNaoProcessadaResponse.idConta) &&
         Objects.equals(this.idEstabelecimento, transacaoProcessadaNaoProcessadaResponse.idEstabelecimento) &&
+        Objects.equals(this.idEventoAjuste, transacaoProcessadaNaoProcessadaResponse.idEventoAjuste) &&
         Objects.equals(this.idTipoTransacaoNaoProcessada, transacaoProcessadaNaoProcessadaResponse.idTipoTransacaoNaoProcessada) &&
         Objects.equals(this.idTransacaoEstorno, transacaoProcessadaNaoProcessadaResponse.idTransacaoEstorno) &&
         Objects.equals(this.localidadeEstabelecimento, transacaoProcessadaNaoProcessadaResponse.localidadeEstabelecimento) &&
@@ -712,7 +732,7 @@ public class TransacaoProcessadaNaoProcessadaResponse   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(cartaoMascarado, codigoAutorizacao, codigoMCC, codigoMoedaDestino, codigoMoedaOrigem, codigoReferencia, codigoTerminal, cotacaoUSD, dataCotacaoUSD, dataFaturamento, dataOrigem, dataVencimentoReal, descricaoAbreviada, descricaoTipoTransacaoNaoProcessada, flagCredito, flagFaturado, grupoDescricaoMCC, grupoMCC, idConta, idEstabelecimento, idTipoTransacaoNaoProcessada, idTransacaoEstorno, localidadeEstabelecimento, modoEntradaTransacao, nomeEstabelecimento, nomeFantasiaEstabelecimento, nomePortador, parcela, plano, status, taxaEmbarque, valorBRL, valorEntrada, valorUSD);
+    return Objects.hash(cartaoMascarado, codigoAutorizacao, codigoMCC, codigoMoedaDestino, codigoMoedaOrigem, codigoReferencia, codigoTerminal, cotacaoUSD, dataCotacaoUSD, dataFaturamento, dataOrigem, dataVencimentoReal, descricaoAbreviada, descricaoTipoTransacaoNaoProcessada, flagCredito, flagFaturado, grupoDescricaoMCC, grupoMCC, idConta, idEstabelecimento, idEventoAjuste, idTipoTransacaoNaoProcessada, idTransacaoEstorno, localidadeEstabelecimento, modoEntradaTransacao, nomeEstabelecimento, nomeFantasiaEstabelecimento, nomePortador, parcela, plano, status, taxaEmbarque, valorBRL, valorEntrada, valorUSD);
   }
 
   @Override
@@ -740,6 +760,7 @@ public class TransacaoProcessadaNaoProcessadaResponse   {
     sb.append("    grupoMCC: ").append(toIndentedString(grupoMCC)).append("\n");
     sb.append("    idConta: ").append(toIndentedString(idConta)).append("\n");
     sb.append("    idEstabelecimento: ").append(toIndentedString(idEstabelecimento)).append("\n");
+    sb.append("    idEventoAjuste: ").append(toIndentedString(idEventoAjuste)).append("\n");
     sb.append("    idTipoTransacaoNaoProcessada: ").append(toIndentedString(idTipoTransacaoNaoProcessada)).append("\n");
     sb.append("    idTransacaoEstorno: ").append(toIndentedString(idTransacaoEstorno)).append("\n");
     sb.append("    localidadeEstabelecimento: ").append(toIndentedString(localidadeEstabelecimento)).append("\n");

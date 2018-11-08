@@ -12,11 +12,8 @@ import java.util.List;
 
 
 
-/**
- * {{{pessoa_fisica_aprovada_persist_description}}}
- **/
 
-@ApiModel(description = "{{{pessoa_fisica_aprovada_persist_description}}}")
+
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PessoaFisicaAprovadaPersistValue   {
   
@@ -54,6 +51,18 @@ public class PessoaFisicaAprovadaPersistValue   {
   private String enderecoReferencia1 = null;
   private String nomeReferencia2 = null;
   private String enderecoReferencia2 = null;
+  private Boolean impedidoFinanciamento = null;
+  private String funcaoAtiva = null;
+  private String naturalidadeCidade = null;
+  private String naturalidadeEstado = null;
+  private Integer grauInstrucao = null;
+  private Integer numeroDependentes = null;
+  private String nomePai = null;
+  private Integer chequeEspecial = null;
+  private Integer numeroBanco = null;
+  private String matricula = null;
+  private String responsavelDigitacao = null;
+  private Integer idPromotorVenda = null;
 
   
   /**
@@ -668,6 +677,222 @@ public class PessoaFisicaAprovadaPersistValue   {
   }
 
   
+  /**
+   * {{{pessoa_fisica_aprovada_persist_impedido_de_financiamento_value}}}
+   **/
+  public PessoaFisicaAprovadaPersistValue impedidoFinanciamento(Boolean impedidoFinanciamento) {
+    this.impedidoFinanciamento = impedidoFinanciamento;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "{{{pessoa_fisica_aprovada_persist_impedido_de_financiamento_value}}}")
+  @JsonProperty("impedidoFinanciamento")
+  public Boolean getImpedidoFinanciamento() {
+    return impedidoFinanciamento;
+  }
+  public void setImpedidoFinanciamento(Boolean impedidoFinanciamento) {
+    this.impedidoFinanciamento = impedidoFinanciamento;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_persist_funcao_ativa_value}}}
+   **/
+  public PessoaFisicaAprovadaPersistValue funcaoAtiva(String funcaoAtiva) {
+    this.funcaoAtiva = funcaoAtiva;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_persist_funcao_ativa_value}}}")
+  @JsonProperty("funcaoAtiva")
+  public String getFuncaoAtiva() {
+    return funcaoAtiva;
+  }
+  public void setFuncaoAtiva(String funcaoAtiva) {
+    this.funcaoAtiva = funcaoAtiva;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_persist_naturalidade_Cidade_value}}}
+   **/
+  public PessoaFisicaAprovadaPersistValue naturalidadeCidade(String naturalidadeCidade) {
+    this.naturalidadeCidade = naturalidadeCidade;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_persist_naturalidade_Cidade_value}}}")
+  @JsonProperty("naturalidadeCidade")
+  public String getNaturalidadeCidade() {
+    return naturalidadeCidade;
+  }
+  public void setNaturalidadeCidade(String naturalidadeCidade) {
+    this.naturalidadeCidade = naturalidadeCidade;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_persist_naturalidade_Estado_value}}}
+   **/
+  public PessoaFisicaAprovadaPersistValue naturalidadeEstado(String naturalidadeEstado) {
+    this.naturalidadeEstado = naturalidadeEstado;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_persist_naturalidade_Estado_value}}}")
+  @JsonProperty("naturalidadeEstado")
+  public String getNaturalidadeEstado() {
+    return naturalidadeEstado;
+  }
+  public void setNaturalidadeEstado(String naturalidadeEstado) {
+    this.naturalidadeEstado = naturalidadeEstado;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_persist_grau_Instrucao_value}}}
+   **/
+  public PessoaFisicaAprovadaPersistValue grauInstrucao(Integer grauInstrucao) {
+    this.grauInstrucao = grauInstrucao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_persist_grau_Instrucao_value}}}")
+  @JsonProperty("grauInstrucao")
+  public Integer getGrauInstrucao() {
+    return grauInstrucao;
+  }
+  public void setGrauInstrucao(Integer grauInstrucao) {
+    this.grauInstrucao = grauInstrucao;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_persist_numero_Dependentes_value}}}
+   **/
+  public PessoaFisicaAprovadaPersistValue numeroDependentes(Integer numeroDependentes) {
+    this.numeroDependentes = numeroDependentes;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_persist_numero_Dependentes_value}}}")
+  @JsonProperty("numeroDependentes")
+  public Integer getNumeroDependentes() {
+    return numeroDependentes;
+  }
+  public void setNumeroDependentes(Integer numeroDependentes) {
+    this.numeroDependentes = numeroDependentes;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_persist_nome_Pai_value}}}
+   **/
+  public PessoaFisicaAprovadaPersistValue nomePai(String nomePai) {
+    this.nomePai = nomePai;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_persist_nome_Pai_value}}}")
+  @JsonProperty("nomePai")
+  public String getNomePai() {
+    return nomePai;
+  }
+  public void setNomePai(String nomePai) {
+    this.nomePai = nomePai;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_persist_cheque_Especial_value}}}
+   **/
+  public PessoaFisicaAprovadaPersistValue chequeEspecial(Integer chequeEspecial) {
+    this.chequeEspecial = chequeEspecial;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_persist_cheque_Especial_value}}}")
+  @JsonProperty("chequeEspecial")
+  public Integer getChequeEspecial() {
+    return chequeEspecial;
+  }
+  public void setChequeEspecial(Integer chequeEspecial) {
+    this.chequeEspecial = chequeEspecial;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_persist_numero_Banco_value}}}
+   **/
+  public PessoaFisicaAprovadaPersistValue numeroBanco(Integer numeroBanco) {
+    this.numeroBanco = numeroBanco;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_persist_numero_Banco_value}}}")
+  @JsonProperty("numeroBanco")
+  public Integer getNumeroBanco() {
+    return numeroBanco;
+  }
+  public void setNumeroBanco(Integer numeroBanco) {
+    this.numeroBanco = numeroBanco;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_persist_matricula_value}}}
+   **/
+  public PessoaFisicaAprovadaPersistValue matricula(String matricula) {
+    this.matricula = matricula;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_persist_matricula_value}}}")
+  @JsonProperty("matricula")
+  public String getMatricula() {
+    return matricula;
+  }
+  public void setMatricula(String matricula) {
+    this.matricula = matricula;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_persist_responsavelDigitacao_value}}}
+   **/
+  public PessoaFisicaAprovadaPersistValue responsavelDigitacao(String responsavelDigitacao) {
+    this.responsavelDigitacao = responsavelDigitacao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_persist_responsavelDigitacao_value}}}")
+  @JsonProperty("responsavelDigitacao")
+  public String getResponsavelDigitacao() {
+    return responsavelDigitacao;
+  }
+  public void setResponsavelDigitacao(String responsavelDigitacao) {
+    this.responsavelDigitacao = responsavelDigitacao;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_persist_idPromotorVenda_value}}}
+   **/
+  public PessoaFisicaAprovadaPersistValue idPromotorVenda(Integer idPromotorVenda) {
+    this.idPromotorVenda = idPromotorVenda;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_persist_idPromotorVenda_value}}}")
+  @JsonProperty("idPromotorVenda")
+  public Integer getIdPromotorVenda() {
+    return idPromotorVenda;
+  }
+  public void setIdPromotorVenda(Integer idPromotorVenda) {
+    this.idPromotorVenda = idPromotorVenda;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -711,12 +936,24 @@ public class PessoaFisicaAprovadaPersistValue   {
         Objects.equals(this.nomeReferencia1, pessoaFisicaAprovadaPersistValue.nomeReferencia1) &&
         Objects.equals(this.enderecoReferencia1, pessoaFisicaAprovadaPersistValue.enderecoReferencia1) &&
         Objects.equals(this.nomeReferencia2, pessoaFisicaAprovadaPersistValue.nomeReferencia2) &&
-        Objects.equals(this.enderecoReferencia2, pessoaFisicaAprovadaPersistValue.enderecoReferencia2);
+        Objects.equals(this.enderecoReferencia2, pessoaFisicaAprovadaPersistValue.enderecoReferencia2) &&
+        Objects.equals(this.impedidoFinanciamento, pessoaFisicaAprovadaPersistValue.impedidoFinanciamento) &&
+        Objects.equals(this.funcaoAtiva, pessoaFisicaAprovadaPersistValue.funcaoAtiva) &&
+        Objects.equals(this.naturalidadeCidade, pessoaFisicaAprovadaPersistValue.naturalidadeCidade) &&
+        Objects.equals(this.naturalidadeEstado, pessoaFisicaAprovadaPersistValue.naturalidadeEstado) &&
+        Objects.equals(this.grauInstrucao, pessoaFisicaAprovadaPersistValue.grauInstrucao) &&
+        Objects.equals(this.numeroDependentes, pessoaFisicaAprovadaPersistValue.numeroDependentes) &&
+        Objects.equals(this.nomePai, pessoaFisicaAprovadaPersistValue.nomePai) &&
+        Objects.equals(this.chequeEspecial, pessoaFisicaAprovadaPersistValue.chequeEspecial) &&
+        Objects.equals(this.numeroBanco, pessoaFisicaAprovadaPersistValue.numeroBanco) &&
+        Objects.equals(this.matricula, pessoaFisicaAprovadaPersistValue.matricula) &&
+        Objects.equals(this.responsavelDigitacao, pessoaFisicaAprovadaPersistValue.responsavelDigitacao) &&
+        Objects.equals(this.idPromotorVenda, pessoaFisicaAprovadaPersistValue.idPromotorVenda);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(nome, nomeMae, dataNascimento, sexo, cpf, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, idOrigemComercial, idProduto, numeroAgencia, numeroContaCorrente, email, diaVencimento, nomeImpresso, nomeEmpresa, valorRenda, canalEntrada, valorPontuacao, telefones, enderecos, limiteGlobal, limiteMaximo, limiteParcelas, limiteConsignado, nomeReferencia1, enderecoReferencia1, nomeReferencia2, enderecoReferencia2);
+    return Objects.hash(nome, nomeMae, dataNascimento, sexo, cpf, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, idOrigemComercial, idProduto, numeroAgencia, numeroContaCorrente, email, diaVencimento, nomeImpresso, nomeEmpresa, valorRenda, canalEntrada, valorPontuacao, telefones, enderecos, limiteGlobal, limiteMaximo, limiteParcelas, limiteConsignado, nomeReferencia1, enderecoReferencia1, nomeReferencia2, enderecoReferencia2, impedidoFinanciamento, funcaoAtiva, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial, numeroBanco, matricula, responsavelDigitacao, idPromotorVenda);
   }
 
   @Override
@@ -758,6 +995,18 @@ public class PessoaFisicaAprovadaPersistValue   {
     sb.append("    enderecoReferencia1: ").append(toIndentedString(enderecoReferencia1)).append("\n");
     sb.append("    nomeReferencia2: ").append(toIndentedString(nomeReferencia2)).append("\n");
     sb.append("    enderecoReferencia2: ").append(toIndentedString(enderecoReferencia2)).append("\n");
+    sb.append("    impedidoFinanciamento: ").append(toIndentedString(impedidoFinanciamento)).append("\n");
+    sb.append("    funcaoAtiva: ").append(toIndentedString(funcaoAtiva)).append("\n");
+    sb.append("    naturalidadeCidade: ").append(toIndentedString(naturalidadeCidade)).append("\n");
+    sb.append("    naturalidadeEstado: ").append(toIndentedString(naturalidadeEstado)).append("\n");
+    sb.append("    grauInstrucao: ").append(toIndentedString(grauInstrucao)).append("\n");
+    sb.append("    numeroDependentes: ").append(toIndentedString(numeroDependentes)).append("\n");
+    sb.append("    nomePai: ").append(toIndentedString(nomePai)).append("\n");
+    sb.append("    chequeEspecial: ").append(toIndentedString(chequeEspecial)).append("\n");
+    sb.append("    numeroBanco: ").append(toIndentedString(numeroBanco)).append("\n");
+    sb.append("    matricula: ").append(toIndentedString(matricula)).append("\n");
+    sb.append("    responsavelDigitacao: ").append(toIndentedString(responsavelDigitacao)).append("\n");
+    sb.append("    idPromotorVenda: ").append(toIndentedString(idPromotorVenda)).append("\n");
     sb.append("}");
     return sb.toString();
   }

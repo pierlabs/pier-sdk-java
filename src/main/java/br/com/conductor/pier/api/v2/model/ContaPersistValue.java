@@ -29,6 +29,10 @@ public class ContaPersistValue   {
   private BigDecimal limiteParcelas = null;
   private BigDecimal limiteConsignado = null;
   private Integer flagFaturaPorEmail = null;
+  private String funcaoAtiva = null;
+  private String matricula = null;
+  private String responsavelDigitacao = null;
+  private Integer idPromotorVenda = null;
 
   
   /**
@@ -265,6 +269,78 @@ public class ContaPersistValue   {
   }
 
   
+  /**
+   * {{{conta_persist_funcao_ativa_value}}}
+   **/
+  public ContaPersistValue funcaoAtiva(String funcaoAtiva) {
+    this.funcaoAtiva = funcaoAtiva;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{conta_persist_funcao_ativa_value}}}")
+  @JsonProperty("funcaoAtiva")
+  public String getFuncaoAtiva() {
+    return funcaoAtiva;
+  }
+  public void setFuncaoAtiva(String funcaoAtiva) {
+    this.funcaoAtiva = funcaoAtiva;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_persist_matricula_value}}}
+   **/
+  public ContaPersistValue matricula(String matricula) {
+    this.matricula = matricula;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_persist_matricula_value}}}")
+  @JsonProperty("matricula")
+  public String getMatricula() {
+    return matricula;
+  }
+  public void setMatricula(String matricula) {
+    this.matricula = matricula;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_persist_responsavelDigitacao_value}}}
+   **/
+  public ContaPersistValue responsavelDigitacao(String responsavelDigitacao) {
+    this.responsavelDigitacao = responsavelDigitacao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_persist_responsavelDigitacao_value}}}")
+  @JsonProperty("responsavelDigitacao")
+  public String getResponsavelDigitacao() {
+    return responsavelDigitacao;
+  }
+  public void setResponsavelDigitacao(String responsavelDigitacao) {
+    this.responsavelDigitacao = responsavelDigitacao;
+  }
+
+  
+  /**
+   * {{{pessoa_fisica_aprovada_persist_idPromotorVenda_value}}}
+   **/
+  public ContaPersistValue idPromotorVenda(Integer idPromotorVenda) {
+    this.idPromotorVenda = idPromotorVenda;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{pessoa_fisica_aprovada_persist_idPromotorVenda_value}}}")
+  @JsonProperty("idPromotorVenda")
+  public Integer getIdPromotorVenda() {
+    return idPromotorVenda;
+  }
+  public void setIdPromotorVenda(Integer idPromotorVenda) {
+    this.idPromotorVenda = idPromotorVenda;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -287,12 +363,16 @@ public class ContaPersistValue   {
         Objects.equals(this.limiteMaximo, contaPersistValue.limiteMaximo) &&
         Objects.equals(this.limiteParcelas, contaPersistValue.limiteParcelas) &&
         Objects.equals(this.limiteConsignado, contaPersistValue.limiteConsignado) &&
-        Objects.equals(this.flagFaturaPorEmail, contaPersistValue.flagFaturaPorEmail);
+        Objects.equals(this.flagFaturaPorEmail, contaPersistValue.flagFaturaPorEmail) &&
+        Objects.equals(this.funcaoAtiva, contaPersistValue.funcaoAtiva) &&
+        Objects.equals(this.matricula, contaPersistValue.matricula) &&
+        Objects.equals(this.responsavelDigitacao, contaPersistValue.responsavelDigitacao) &&
+        Objects.equals(this.idPromotorVenda, contaPersistValue.idPromotorVenda);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idPessoa, idOrigemComercial, idProduto, diaVencimento, valorRenda, canalEntrada, valorPontuacao, idEnderecoCorrespondencia, limiteGlobal, limiteMaximo, limiteParcelas, limiteConsignado, flagFaturaPorEmail);
+    return Objects.hash(idPessoa, idOrigemComercial, idProduto, diaVencimento, valorRenda, canalEntrada, valorPontuacao, idEnderecoCorrespondencia, limiteGlobal, limiteMaximo, limiteParcelas, limiteConsignado, flagFaturaPorEmail, funcaoAtiva, matricula, responsavelDigitacao, idPromotorVenda);
   }
 
   @Override
@@ -313,6 +393,10 @@ public class ContaPersistValue   {
     sb.append("    limiteParcelas: ").append(toIndentedString(limiteParcelas)).append("\n");
     sb.append("    limiteConsignado: ").append(toIndentedString(limiteConsignado)).append("\n");
     sb.append("    flagFaturaPorEmail: ").append(toIndentedString(flagFaturaPorEmail)).append("\n");
+    sb.append("    funcaoAtiva: ").append(toIndentedString(funcaoAtiva)).append("\n");
+    sb.append("    matricula: ").append(toIndentedString(matricula)).append("\n");
+    sb.append("    responsavelDigitacao: ").append(toIndentedString(responsavelDigitacao)).append("\n");
+    sb.append("    idPromotorVenda: ").append(toIndentedString(idPromotorVenda)).append("\n");
     sb.append("}");
     return sb.toString();
   }

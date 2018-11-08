@@ -20,6 +20,7 @@ public class TipoAjusteResponse   {
   
   private Long id = null;
   private String descricao = null;
+  private Boolean flagPagamentoLojista = null;
   private List<TipoTransacaoAjusteResponse> transacoes = new ArrayList<TipoTransacaoAjusteResponse>();
 
   
@@ -60,6 +61,24 @@ public class TipoAjusteResponse   {
 
   
   /**
+   * {{{tipo_ajuste_response_flag_pagamento_lojista_value}}}
+   **/
+  public TipoAjusteResponse flagPagamentoLojista(Boolean flagPagamentoLojista) {
+    this.flagPagamentoLojista = flagPagamentoLojista;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "{{{tipo_ajuste_response_flag_pagamento_lojista_value}}}")
+  @JsonProperty("flagPagamentoLojista")
+  public Boolean getFlagPagamentoLojista() {
+    return flagPagamentoLojista;
+  }
+  public void setFlagPagamentoLojista(Boolean flagPagamentoLojista) {
+    this.flagPagamentoLojista = flagPagamentoLojista;
+  }
+
+  
+  /**
    * {{{tipo_ajuste_response_transacoes_value}}}
    **/
   public TipoAjusteResponse transacoes(List<TipoTransacaoAjusteResponse> transacoes) {
@@ -89,12 +108,13 @@ public class TipoAjusteResponse   {
     TipoAjusteResponse tipoAjusteResponse = (TipoAjusteResponse) o;
     return Objects.equals(this.id, tipoAjusteResponse.id) &&
         Objects.equals(this.descricao, tipoAjusteResponse.descricao) &&
+        Objects.equals(this.flagPagamentoLojista, tipoAjusteResponse.flagPagamentoLojista) &&
         Objects.equals(this.transacoes, tipoAjusteResponse.transacoes);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, descricao, transacoes);
+    return Objects.hash(id, descricao, flagPagamentoLojista, transacoes);
   }
 
   @Override
@@ -104,6 +124,7 @@ public class TipoAjusteResponse   {
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    descricao: ").append(toIndentedString(descricao)).append("\n");
+    sb.append("    flagPagamentoLojista: ").append(toIndentedString(flagPagamentoLojista)).append("\n");
     sb.append("    transacoes: ").append(toIndentedString(transacoes)).append("\n");
     sb.append("}");
     return sb.toString();

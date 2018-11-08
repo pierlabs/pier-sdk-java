@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * Objeto Conv\u00EAnio
+ * {{{convenio_response_description}}}
  **/
 
-@ApiModel(description = "Objeto Conv\u00EAnio")
+@ApiModel(description = "{{{convenio_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ConvenioResponse   {
   
@@ -39,14 +39,14 @@ public class ConvenioResponse   {
 
   
   /**
-   * Id do conv\u00EAnio.
+   * {{{convenio_response_id_convenio}}}
    **/
   public ConvenioResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Id do conv\u00EAnio.")
+  @ApiModelProperty(example = "null", value = "{{{convenio_response_id_convenio}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -57,14 +57,14 @@ public class ConvenioResponse   {
 
   
   /**
-   * Identifica\u00E7\u00E3o do banco.
+   * {{{convenio_response_banco_value}}}
    **/
   public ConvenioResponse banco(Long banco) {
     this.banco = banco;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identifica\u00E7\u00E3o do banco.")
+  @ApiModelProperty(example = "null", value = "{{{convenio_response_banco_value}}}")
   @JsonProperty("banco")
   public Long getBanco() {
     return banco;
@@ -75,14 +75,14 @@ public class ConvenioResponse   {
 
   
   /**
-   * N\u00FAmero da ag\u00EAncia.
+   * {{{convenio_response_agencia_value}}}
    **/
   public ConvenioResponse agencia(Long agencia) {
     this.agencia = agencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00FAmero da ag\u00EAncia.")
+  @ApiModelProperty(example = "null", value = "{{{convenio_response_agencia_value}}}")
   @JsonProperty("agencia")
   public Long getAgencia() {
     return agencia;
@@ -93,14 +93,14 @@ public class ConvenioResponse   {
 
   
   /**
-   * Conta corrente.
+   * {{{convenio_response_conta_corrente_value}}}
    **/
   public ConvenioResponse contaCorrente(String contaCorrente) {
     this.contaCorrente = contaCorrente;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Conta corrente.")
+  @ApiModelProperty(example = "null", value = "{{{convenio_response_conta_corrente_value}}}")
   @JsonProperty("contaCorrente")
   public String getContaCorrente() {
     return contaCorrente;
@@ -111,14 +111,14 @@ public class ConvenioResponse   {
 
   
   /**
-   * C\u00F3digo do tipo de esp\u00E9cie do documento.
+   * {{{convenio_response_especie_value}}}
    **/
   public ConvenioResponse especie(String especie) {
     this.especie = especie;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo do tipo de esp\u00E9cie do documento.")
+  @ApiModelProperty(example = "null", value = "{{{convenio_response_especie_value}}}")
   @JsonProperty("especie")
   public String getEspecie() {
     return especie;
@@ -129,14 +129,14 @@ public class ConvenioResponse   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio.
+   * {{{convenio_response_numero_convenio_value}}}
    **/
   public ConvenioResponse numeroConvenio(BigDecimal numeroConvenio) {
     this.numeroConvenio = numeroConvenio;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio.")
+  @ApiModelProperty(example = "null", value = "{{{convenio_response_numero_convenio_value}}}")
   @JsonProperty("numeroConvenio")
   public BigDecimal getNumeroConvenio() {
     return numeroConvenio;
@@ -147,14 +147,14 @@ public class ConvenioResponse   {
 
   
   /**
-   * C\u00F3digo da carteira de cobran\u00E7a.
+   * {{{convenio_response_carteira_value}}}
    **/
   public ConvenioResponse carteira(Long carteira) {
     this.carteira = carteira;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo da carteira de cobran\u00E7a.")
+  @ApiModelProperty(example = "null", value = "{{{convenio_response_carteira_value}}}")
   @JsonProperty("carteira")
   public Long getCarteira() {
     return carteira;
@@ -165,14 +165,14 @@ public class ConvenioResponse   {
 
   
   /**
-   * C\u00F3digo do cedente.
+   * {{{convenio_response_codigo_cedente_value}}}
    **/
   public ConvenioResponse codigoCedente(String codigoCedente) {
     this.codigoCedente = codigoCedente;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo do cedente.")
+  @ApiModelProperty(example = "null", value = "{{{convenio_response_codigo_cedente_value}}}")
   @JsonProperty("codigoCedente")
   public String getCodigoCedente() {
     return codigoCedente;
@@ -183,14 +183,14 @@ public class ConvenioResponse   {
 
   
   /**
-   * Tipo de esp\u00E9cie de t\u00EDtulo de cr\u00E9dito.
+   * {{{convenio_response_especie_tipo_value}}}
    **/
   public ConvenioResponse especieTipo(String especieTipo) {
     this.especieTipo = especieTipo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Tipo de esp\u00E9cie de t\u00EDtulo de cr\u00E9dito.")
+  @ApiModelProperty(example = "null", value = "{{{convenio_response_especie_tipo_value}}}")
   @JsonProperty("especieTipo")
   public String getEspecieTipo() {
     return especieTipo;
@@ -201,14 +201,14 @@ public class ConvenioResponse   {
 
   
   /**
-   * Esp\u00E9cie do documento.
+   * {{{convenio_response_especie_documento_value}}}
    **/
   public ConvenioResponse especieDocumento(String especieDocumento) {
     this.especieDocumento = especieDocumento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Esp\u00E9cie do documento.")
+  @ApiModelProperty(example = "null", value = "{{{convenio_response_especie_documento_value}}}")
   @JsonProperty("especieDocumento")
   public String getEspecieDocumento() {
     return especieDocumento;
@@ -219,14 +219,14 @@ public class ConvenioResponse   {
 
   
   /**
-   * Indica se o pagador assinou o documento de cobran\u00E7a que originou o boleto. O padr\u00E3o \u00E9 usar \"N\".
+   * {{{convenio_response_aceite_value}}}
    **/
   public ConvenioResponse aceite(String aceite) {
     this.aceite = aceite;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Indica se o pagador assinou o documento de cobran\u00E7a que originou o boleto. O padr\u00E3o \u00E9 usar \"N\".")
+  @ApiModelProperty(example = "null", value = "{{{convenio_response_aceite_value}}}")
   @JsonProperty("aceite")
   public String getAceite() {
     return aceite;
@@ -237,14 +237,14 @@ public class ConvenioResponse   {
 
   
   /**
-   * Instru\u00E7\u00F5es para pagamento.
+   * {{{convenio_response_instrucoes_value}}}
    **/
   public ConvenioResponse instrucoes(String instrucoes) {
     this.instrucoes = instrucoes;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Instru\u00E7\u00F5es para pagamento.")
+  @ApiModelProperty(example = "null", value = "{{{convenio_response_instrucoes_value}}}")
   @JsonProperty("instrucoes")
   public String getInstrucoes() {
     return instrucoes;
@@ -255,14 +255,14 @@ public class ConvenioResponse   {
 
   
   /**
-   * Local preferencial onde pode ser efetuado o pagamento.
+   * {{{convenio_response_local_pagamento1_value}}}
    **/
   public ConvenioResponse localPagamento1(String localPagamento1) {
     this.localPagamento1 = localPagamento1;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Local preferencial onde pode ser efetuado o pagamento.")
+  @ApiModelProperty(example = "null", value = "{{{convenio_response_local_pagamento1_value}}}")
   @JsonProperty("localPagamento1")
   public String getLocalPagamento1() {
     return localPagamento1;
@@ -273,14 +273,14 @@ public class ConvenioResponse   {
 
   
   /**
-   * Local para pagamento (campo adicional).
+   * {{{convenio_response_local_pagamento2_value}}}
    **/
   public ConvenioResponse localPagamento2(String localPagamento2) {
     this.localPagamento2 = localPagamento2;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Local para pagamento (campo adicional).")
+  @ApiModelProperty(example = "null", value = "{{{convenio_response_local_pagamento2_value}}}")
   @JsonProperty("localPagamento2")
   public String getLocalPagamento2() {
     return localPagamento2;
@@ -291,14 +291,14 @@ public class ConvenioResponse   {
 
   
   /**
-   * Endere\u00E7o de cobran\u00E7a do emissor.
+   * {{{convenio_response_endereco_cobranca_emissor_value}}}
    **/
   public ConvenioResponse enderecoCobrancaEmissor(String enderecoCobrancaEmissor) {
     this.enderecoCobrancaEmissor = enderecoCobrancaEmissor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Endere\u00E7o de cobran\u00E7a do emissor.")
+  @ApiModelProperty(example = "null", value = "{{{convenio_response_endereco_cobranca_emissor_value}}}")
   @JsonProperty("enderecoCobrancaEmissor")
   public String getEnderecoCobrancaEmissor() {
     return enderecoCobrancaEmissor;
@@ -309,14 +309,14 @@ public class ConvenioResponse   {
 
   
   /**
-   * Nome do benefici\u00E1rio/cedente da cobran\u00E7a.
+   * {{{convenio_response_nome_beneficiario_emissor_value}}}
    **/
   public ConvenioResponse nomeBeneficiario(String nomeBeneficiario) {
     this.nomeBeneficiario = nomeBeneficiario;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome do benefici\u00E1rio/cedente da cobran\u00E7a.")
+  @ApiModelProperty(example = "null", value = "{{{convenio_response_nome_beneficiario_emissor_value}}}")
   @JsonProperty("nomeBeneficiario")
   public String getNomeBeneficiario() {
     return nomeBeneficiario;
@@ -327,14 +327,14 @@ public class ConvenioResponse   {
 
   
   /**
-   * CNPJ do benefici\u00E1rio/cedente da cobran\u00E7a.
+   * {{{convenio_response_cnpj_beneficiario_emissor_value}}}
    **/
   public ConvenioResponse cnpjBeneficiario(String cnpjBeneficiario) {
     this.cnpjBeneficiario = cnpjBeneficiario;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "CNPJ do benefici\u00E1rio/cedente da cobran\u00E7a.")
+  @ApiModelProperty(example = "null", value = "{{{convenio_response_cnpj_beneficiario_emissor_value}}}")
   @JsonProperty("cnpjBeneficiario")
   public String getCnpjBeneficiario() {
     return cnpjBeneficiario;
@@ -345,14 +345,14 @@ public class ConvenioResponse   {
 
   
   /**
-   * Usu\u00E1rio responsavel pelo cadastro e/ou altera\u00E7\u00E3o do conv\u00EAnio.
+   * {{{convenio_response_operador_value}}}
    **/
   public ConvenioResponse operador(String operador) {
     this.operador = operador;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Usu\u00E1rio responsavel pelo cadastro e/ou altera\u00E7\u00E3o do conv\u00EAnio.")
+  @ApiModelProperty(example = "null", value = "{{{convenio_response_operador_value}}}")
   @JsonProperty("operador")
   public String getOperador() {
     return operador;
@@ -363,14 +363,14 @@ public class ConvenioResponse   {
 
   
   /**
-   * Data de cadastro/altera\u00E7\u00E3o do conv\u00EAnio.
+   * {{{convenio_response_data_value}}}
    **/
   public ConvenioResponse data(String data) {
     this.data = data;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data de cadastro/altera\u00E7\u00E3o do conv\u00EAnio.")
+  @ApiModelProperty(example = "null", value = "{{{convenio_response_data_value}}}")
   @JsonProperty("data")
   public String getData() {
     return data;
@@ -381,14 +381,14 @@ public class ConvenioResponse   {
 
   
   /**
-   * M\u00E1quina pela qual foi realizado o cadastro ou altera\u00E7\u00E3o.
+   * {{{convenio_response_maquina_value}}}
    **/
   public ConvenioResponse maquina(String maquina) {
     this.maquina = maquina;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "M\u00E1quina pela qual foi realizado o cadastro ou altera\u00E7\u00E3o.")
+  @ApiModelProperty(example = "null", value = "{{{convenio_response_maquina_value}}}")
   @JsonProperty("maquina")
   public String getMaquina() {
     return maquina;

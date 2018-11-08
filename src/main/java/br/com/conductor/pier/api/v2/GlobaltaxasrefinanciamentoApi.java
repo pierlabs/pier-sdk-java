@@ -47,7 +47,7 @@ public class GlobaltaxasrefinanciamentoApi {
    * @param vencimento {{{taxas_refinanciamento_request_vencimento_value}}}
    * @return PageTaxasRefinanciamentoResponse
    */
-  public PageTaxasRefinanciamentoResponse listarUsingGET43(List<String> sort, Integer page, Integer limit, Long id, Long idProduto, String dataEntrada, String vencimento) throws ApiException {
+  public PageTaxasRefinanciamentoResponse listarUsingGET44(List<String> sort, Integer page, Integer limit, Long id, Long idProduto, String dataEntrada, String vencimento) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

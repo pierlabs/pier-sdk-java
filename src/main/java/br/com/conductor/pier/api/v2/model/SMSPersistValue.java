@@ -54,7 +54,7 @@ public class SMSPersistValue   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{s_m_s_persist_nsu_value}}}")
+  @ApiModelProperty(example = "null", value = "{{{s_m_s_persist_nsu_value}}}")
   @JsonProperty("nsu")
   public Long getNsu() {
     return nsu;
@@ -72,7 +72,7 @@ public class SMSPersistValue   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{s_m_s_persist_id_pessoa_value}}}")
+  @ApiModelProperty(example = "null", value = "{{{s_m_s_persist_id_pessoa_value}}}")
   @JsonProperty("idPessoa")
   public Long getIdPessoa() {
     return idPessoa;
@@ -90,7 +90,7 @@ public class SMSPersistValue   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{s_m_s_persist_id_conta_value}}}")
+  @ApiModelProperty(example = "null", value = "{{{s_m_s_persist_id_conta_value}}}")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;

@@ -42,12 +42,12 @@ public class GlobaltagavisoviagemApi {
    * @param id {{{aviso_viagem_resource_consultar_param_id}}}
    * @return AvisoViagemResponse
    */
-  public AvisoViagemResponse consultarUsingGET7(Long id) throws ApiException {
+  public AvisoViagemResponse consultarUsingGET6(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET7");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET6");
      }
      
     // create path and map variables
@@ -193,7 +193,7 @@ public class GlobaltagavisoviagemApi {
    * @param flagAtivo {{{aviso_viagem_request_flag_ativo_value}}}
    * @return PageAvisoViagemResponse
    */
-  public PageAvisoViagemResponse listarUsingGET8(List<String> sort, Integer page, Integer limit, Long idCartao, String codigoPais, String dataInicio, String dataFim, Integer flagAtivo) throws ApiException {
+  public PageAvisoViagemResponse listarUsingGET7(List<String> sort, Integer page, Integer limit, Long idCartao, String codigoPais, String dataInicio, String dataFim, Integer flagAtivo) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

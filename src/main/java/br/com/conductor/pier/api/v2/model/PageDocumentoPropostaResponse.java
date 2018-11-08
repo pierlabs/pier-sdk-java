@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v2.model.AplicacaoResponse;
+import br.com.conductor.pier.api.v2.model.CdtDocumentoProposta;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -11,14 +11,14 @@ import java.util.List;
 
 
 /**
- * {{{page_aplicacao_response_description}}}
+ * {{{page_documento_proposta_response_description}}}
  **/
 
-@ApiModel(description = "{{{page_aplicacao_response_description}}}")
+@ApiModel(description = "{{{page_documento_proposta_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class PageAplicacaoResponse   {
+public class PageDocumentoPropostaResponse   {
   
-  private List<AplicacaoResponse> content = new ArrayList<AplicacaoResponse>();
+  private List<CdtDocumentoProposta> content = new ArrayList<CdtDocumentoProposta>();
   private Boolean first = null;
   private Boolean firstPage = null;
   private Boolean hasContent = null;
@@ -36,24 +36,24 @@ public class PageAplicacaoResponse   {
   
   /**
    **/
-  public PageAplicacaoResponse content(List<AplicacaoResponse> content) {
+  public PageDocumentoPropostaResponse content(List<CdtDocumentoProposta> content) {
     this.content = content;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("content")
-  public List<AplicacaoResponse> getContent() {
+  public List<CdtDocumentoProposta> getContent() {
     return content;
   }
-  public void setContent(List<AplicacaoResponse> content) {
+  public void setContent(List<CdtDocumentoProposta> content) {
     this.content = content;
   }
 
   
   /**
    **/
-  public PageAplicacaoResponse first(Boolean first) {
+  public PageDocumentoPropostaResponse first(Boolean first) {
     this.first = first;
     return this;
   }
@@ -70,7 +70,7 @@ public class PageAplicacaoResponse   {
   
   /**
    **/
-  public PageAplicacaoResponse firstPage(Boolean firstPage) {
+  public PageDocumentoPropostaResponse firstPage(Boolean firstPage) {
     this.firstPage = firstPage;
     return this;
   }
@@ -87,7 +87,7 @@ public class PageAplicacaoResponse   {
   
   /**
    **/
-  public PageAplicacaoResponse hasContent(Boolean hasContent) {
+  public PageDocumentoPropostaResponse hasContent(Boolean hasContent) {
     this.hasContent = hasContent;
     return this;
   }
@@ -104,7 +104,7 @@ public class PageAplicacaoResponse   {
   
   /**
    **/
-  public PageAplicacaoResponse hasNextPage(Boolean hasNextPage) {
+  public PageDocumentoPropostaResponse hasNextPage(Boolean hasNextPage) {
     this.hasNextPage = hasNextPage;
     return this;
   }
@@ -121,7 +121,7 @@ public class PageAplicacaoResponse   {
   
   /**
    **/
-  public PageAplicacaoResponse hasPreviousPage(Boolean hasPreviousPage) {
+  public PageDocumentoPropostaResponse hasPreviousPage(Boolean hasPreviousPage) {
     this.hasPreviousPage = hasPreviousPage;
     return this;
   }
@@ -138,7 +138,7 @@ public class PageAplicacaoResponse   {
   
   /**
    **/
-  public PageAplicacaoResponse last(Boolean last) {
+  public PageDocumentoPropostaResponse last(Boolean last) {
     this.last = last;
     return this;
   }
@@ -155,7 +155,7 @@ public class PageAplicacaoResponse   {
   
   /**
    **/
-  public PageAplicacaoResponse nextPage(Integer nextPage) {
+  public PageDocumentoPropostaResponse nextPage(Integer nextPage) {
     this.nextPage = nextPage;
     return this;
   }
@@ -172,7 +172,7 @@ public class PageAplicacaoResponse   {
   
   /**
    **/
-  public PageAplicacaoResponse number(Integer number) {
+  public PageDocumentoPropostaResponse number(Integer number) {
     this.number = number;
     return this;
   }
@@ -189,7 +189,7 @@ public class PageAplicacaoResponse   {
   
   /**
    **/
-  public PageAplicacaoResponse numberOfElements(Integer numberOfElements) {
+  public PageDocumentoPropostaResponse numberOfElements(Integer numberOfElements) {
     this.numberOfElements = numberOfElements;
     return this;
   }
@@ -206,7 +206,7 @@ public class PageAplicacaoResponse   {
   
   /**
    **/
-  public PageAplicacaoResponse previousPage(Integer previousPage) {
+  public PageDocumentoPropostaResponse previousPage(Integer previousPage) {
     this.previousPage = previousPage;
     return this;
   }
@@ -223,7 +223,7 @@ public class PageAplicacaoResponse   {
   
   /**
    **/
-  public PageAplicacaoResponse size(Integer size) {
+  public PageDocumentoPropostaResponse size(Integer size) {
     this.size = size;
     return this;
   }
@@ -240,7 +240,7 @@ public class PageAplicacaoResponse   {
   
   /**
    **/
-  public PageAplicacaoResponse totalElements(Long totalElements) {
+  public PageDocumentoPropostaResponse totalElements(Long totalElements) {
     this.totalElements = totalElements;
     return this;
   }
@@ -257,7 +257,7 @@ public class PageAplicacaoResponse   {
   
   /**
    **/
-  public PageAplicacaoResponse totalPages(Integer totalPages) {
+  public PageDocumentoPropostaResponse totalPages(Integer totalPages) {
     this.totalPages = totalPages;
     return this;
   }
@@ -281,21 +281,21 @@ public class PageAplicacaoResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    PageAplicacaoResponse pageAplicacaoResponse = (PageAplicacaoResponse) o;
-    return Objects.equals(this.content, pageAplicacaoResponse.content) &&
-        Objects.equals(this.first, pageAplicacaoResponse.first) &&
-        Objects.equals(this.firstPage, pageAplicacaoResponse.firstPage) &&
-        Objects.equals(this.hasContent, pageAplicacaoResponse.hasContent) &&
-        Objects.equals(this.hasNextPage, pageAplicacaoResponse.hasNextPage) &&
-        Objects.equals(this.hasPreviousPage, pageAplicacaoResponse.hasPreviousPage) &&
-        Objects.equals(this.last, pageAplicacaoResponse.last) &&
-        Objects.equals(this.nextPage, pageAplicacaoResponse.nextPage) &&
-        Objects.equals(this.number, pageAplicacaoResponse.number) &&
-        Objects.equals(this.numberOfElements, pageAplicacaoResponse.numberOfElements) &&
-        Objects.equals(this.previousPage, pageAplicacaoResponse.previousPage) &&
-        Objects.equals(this.size, pageAplicacaoResponse.size) &&
-        Objects.equals(this.totalElements, pageAplicacaoResponse.totalElements) &&
-        Objects.equals(this.totalPages, pageAplicacaoResponse.totalPages);
+    PageDocumentoPropostaResponse pageDocumentoPropostaResponse = (PageDocumentoPropostaResponse) o;
+    return Objects.equals(this.content, pageDocumentoPropostaResponse.content) &&
+        Objects.equals(this.first, pageDocumentoPropostaResponse.first) &&
+        Objects.equals(this.firstPage, pageDocumentoPropostaResponse.firstPage) &&
+        Objects.equals(this.hasContent, pageDocumentoPropostaResponse.hasContent) &&
+        Objects.equals(this.hasNextPage, pageDocumentoPropostaResponse.hasNextPage) &&
+        Objects.equals(this.hasPreviousPage, pageDocumentoPropostaResponse.hasPreviousPage) &&
+        Objects.equals(this.last, pageDocumentoPropostaResponse.last) &&
+        Objects.equals(this.nextPage, pageDocumentoPropostaResponse.nextPage) &&
+        Objects.equals(this.number, pageDocumentoPropostaResponse.number) &&
+        Objects.equals(this.numberOfElements, pageDocumentoPropostaResponse.numberOfElements) &&
+        Objects.equals(this.previousPage, pageDocumentoPropostaResponse.previousPage) &&
+        Objects.equals(this.size, pageDocumentoPropostaResponse.size) &&
+        Objects.equals(this.totalElements, pageDocumentoPropostaResponse.totalElements) &&
+        Objects.equals(this.totalPages, pageDocumentoPropostaResponse.totalPages);
   }
 
   @Override
@@ -306,7 +306,7 @@ public class PageAplicacaoResponse   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PageAplicacaoResponse {\n");
+    sb.append("class PageDocumentoPropostaResponse {\n");
     
     sb.append("    content: ").append(toIndentedString(content)).append("\n");
     sb.append("    first: ").append(toIndentedString(first)).append("\n");

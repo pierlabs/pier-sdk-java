@@ -13,7 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 @ApiModel(description = "{{{endereco_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class EnderecoNacionalResponse   {
+public class EnderecoResponseValue   {
   
   private String cep = null;
   private String endereco = null;
@@ -25,7 +25,7 @@ public class EnderecoNacionalResponse   {
   /**
    * {{{endereco_response_cep_value}}}
    **/
-  public EnderecoNacionalResponse cep(String cep) {
+  public EnderecoResponseValue cep(String cep) {
     this.cep = cep;
     return this;
   }
@@ -43,7 +43,7 @@ public class EnderecoNacionalResponse   {
   /**
    * {{{endereco_response_endereco_value}}}
    **/
-  public EnderecoNacionalResponse endereco(String endereco) {
+  public EnderecoResponseValue endereco(String endereco) {
     this.endereco = endereco;
     return this;
   }
@@ -61,7 +61,7 @@ public class EnderecoNacionalResponse   {
   /**
    * {{{endereco_response_bairro_value}}}
    **/
-  public EnderecoNacionalResponse bairro(String bairro) {
+  public EnderecoResponseValue bairro(String bairro) {
     this.bairro = bairro;
     return this;
   }
@@ -79,7 +79,7 @@ public class EnderecoNacionalResponse   {
   /**
    * {{{endereco_response_cidade_value}}}
    **/
-  public EnderecoNacionalResponse cidade(String cidade) {
+  public EnderecoResponseValue cidade(String cidade) {
     this.cidade = cidade;
     return this;
   }
@@ -97,7 +97,7 @@ public class EnderecoNacionalResponse   {
   /**
    * {{{endereco_response_uf_value}}}
    **/
-  public EnderecoNacionalResponse uf(String uf) {
+  public EnderecoResponseValue uf(String uf) {
     this.uf = uf;
     return this;
   }
@@ -121,12 +121,12 @@ public class EnderecoNacionalResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    EnderecoNacionalResponse enderecoNacionalResponse = (EnderecoNacionalResponse) o;
-    return Objects.equals(this.cep, enderecoNacionalResponse.cep) &&
-        Objects.equals(this.endereco, enderecoNacionalResponse.endereco) &&
-        Objects.equals(this.bairro, enderecoNacionalResponse.bairro) &&
-        Objects.equals(this.cidade, enderecoNacionalResponse.cidade) &&
-        Objects.equals(this.uf, enderecoNacionalResponse.uf);
+    EnderecoResponseValue enderecoResponseValue = (EnderecoResponseValue) o;
+    return Objects.equals(this.cep, enderecoResponseValue.cep) &&
+        Objects.equals(this.endereco, enderecoResponseValue.endereco) &&
+        Objects.equals(this.bairro, enderecoResponseValue.bairro) &&
+        Objects.equals(this.cidade, enderecoResponseValue.cidade) &&
+        Objects.equals(this.uf, enderecoResponseValue.uf);
   }
 
   @Override
@@ -137,7 +137,7 @@ public class EnderecoNacionalResponse   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class EnderecoNacionalResponse {\n");
+    sb.append("class EnderecoResponseValue {\n");
     
     sb.append("    cep: ").append(toIndentedString(cep)).append("\n");
     sb.append("    endereco: ").append(toIndentedString(endereco)).append("\n");

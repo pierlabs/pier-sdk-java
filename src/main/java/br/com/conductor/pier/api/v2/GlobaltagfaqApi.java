@@ -117,22 +117,22 @@ public class GlobaltagfaqApi {
    * @param status {{{faq_persist_status_value}}}
    * @return FaqResponse
    */
-  public FaqResponse alterarUsingPUT6(Long id, String pergunta, String resposta, Integer relevancia, String plataforma, String categoria, String status) throws ApiException {
+  public FaqResponse alterarUsingPUT7(Long id, String pergunta, String resposta, Integer relevancia, String plataforma, String categoria, String status) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT6");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT7");
      }
      
      // verify the required parameter 'pergunta' is set
      if (pergunta == null) {
-        throw new ApiException(400, "Missing the required parameter 'pergunta' when calling alterarUsingPUT6");
+        throw new ApiException(400, "Missing the required parameter 'pergunta' when calling alterarUsingPUT7");
      }
      
      // verify the required parameter 'resposta' is set
      if (resposta == null) {
-        throw new ApiException(400, "Missing the required parameter 'resposta' when calling alterarUsingPUT6");
+        throw new ApiException(400, "Missing the required parameter 'resposta' when calling alterarUsingPUT7");
      }
      
     // create path and map variables
@@ -244,7 +244,7 @@ public class GlobaltagfaqApi {
    * @param status {{{faq_request_status_value}}}
    * @return PageFaqResponse
    */
-  public PageFaqResponse listarUsingGET23(List<String> sort, Integer page, Integer limit, Long idFaq, String pergunta, String resposta, Integer relevancia, String plataforma, String categoria, String status) throws ApiException {
+  public PageFaqResponse listarUsingGET22(List<String> sort, Integer page, Integer limit, Long idFaq, String pergunta, String resposta, Integer relevancia, String plataforma, String categoria, String status) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

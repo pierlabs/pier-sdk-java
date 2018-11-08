@@ -172,17 +172,17 @@ public class GlobaltagusuarioApi {
    * @param update update
    * @return UsuarioResponse
    */
-  public UsuarioResponse alterarUsingPUT19(Long id, UsuarioUpdateValue update) throws ApiException {
+  public UsuarioResponse alterarUsingPUT20(Long id, UsuarioUpdateValue update) throws ApiException {
     Object postBody = update;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT19");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT20");
      }
      
      // verify the required parameter 'update' is set
      if (update == null) {
-        throw new ApiException(400, "Missing the required parameter 'update' when calling alterarUsingPUT19");
+        throw new ApiException(400, "Missing the required parameter 'update' when calling alterarUsingPUT20");
      }
      
     // create path and map variables
@@ -274,17 +274,17 @@ public class GlobaltagusuarioApi {
    * @param update update
    * @return ControleSegurancaDispositivoResponse
    */
-  public ControleSegurancaDispositivoResponse atualizarUsingPUT2(Long id, ControleSegurancaDispositivoUpdateValor update) throws ApiException {
+  public ControleSegurancaDispositivoResponse atualizarUsingPUT1(Long id, ControleSegurancaDispositivoUpdateValor update) throws ApiException {
     Object postBody = update;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling atualizarUsingPUT2");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling atualizarUsingPUT1");
      }
      
      // verify the required parameter 'update' is set
      if (update == null) {
-        throw new ApiException(400, "Missing the required parameter 'update' when calling atualizarUsingPUT2");
+        throw new ApiException(400, "Missing the required parameter 'update' when calling atualizarUsingPUT1");
      }
      
     // create path and map variables
@@ -387,12 +387,12 @@ public class GlobaltagusuarioApi {
    * @param limit {{{global_menssagem_sort_limit}}}
    * @return PageControleSegurancaDispositivoResponse
    */
-  public PageControleSegurancaDispositivoResponse consultarUsingGET14(Long idUsuario, List<String> sort, Integer page, Integer limit) throws ApiException {
+  public PageControleSegurancaDispositivoResponse consultarUsingGET13(Long idUsuario, List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idUsuario' is set
      if (idUsuario == null) {
-        throw new ApiException(400, "Missing the required parameter 'idUsuario' when calling consultarUsingGET14");
+        throw new ApiException(400, "Missing the required parameter 'idUsuario' when calling consultarUsingGET13");
      }
      
     // create path and map variables
@@ -442,12 +442,12 @@ public class GlobaltagusuarioApi {
    * @param id {{{usuario_resource_consultar_param_id}}}
    * @return UsuarioResponse
    */
-  public UsuarioResponse consultarUsingGET46(Long id) throws ApiException {
+  public UsuarioResponse consultarUsingGET48(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET46");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET48");
      }
      
     // create path and map variables
@@ -592,7 +592,7 @@ public class GlobaltagusuarioApi {
    * @param status {{{usuario_request_status_value}}}
    * @return PageUsuarioResponse
    */
-  public PageUsuarioResponse listarUsingGET56(List<String> sort, Integer page, Integer limit, String nome, String cpf, String email, String status) throws ApiException {
+  public PageUsuarioResponse listarUsingGET58(List<String> sort, Integer page, Integer limit, String nome, String cpf, String email, String status) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -696,12 +696,12 @@ public class GlobaltagusuarioApi {
    * @param persist persist
    * @return UsuarioResponse
    */
-  public UsuarioResponse salvarUsingPOST28(UsuarioPersistencia persist) throws ApiException {
+  public UsuarioResponse salvarUsingPOST30(UsuarioPersistencia persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST28");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST30");
      }
      
     // create path and map variables

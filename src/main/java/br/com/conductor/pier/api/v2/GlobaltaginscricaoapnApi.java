@@ -159,12 +159,12 @@ public class GlobaltaginscricaoapnApi {
    * @param inscricaoPersist inscricaoPersist
    * @return List<InscricaoAPNResponse>
    */
-  public List<InscricaoAPNResponse> salvarUsingPOST13(InscricaoApnPersistencia inscricaoPersist) throws ApiException {
+  public List<InscricaoAPNResponse> salvarUsingPOST14(InscricaoApnPersistencia inscricaoPersist) throws ApiException {
     Object postBody = inscricaoPersist;
     
      // verify the required parameter 'inscricaoPersist' is set
      if (inscricaoPersist == null) {
-        throw new ApiException(400, "Missing the required parameter 'inscricaoPersist' when calling salvarUsingPOST13");
+        throw new ApiException(400, "Missing the required parameter 'inscricaoPersist' when calling salvarUsingPOST14");
      }
      
     // create path and map variables

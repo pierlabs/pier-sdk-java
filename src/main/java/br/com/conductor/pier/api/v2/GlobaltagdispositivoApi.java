@@ -146,7 +146,7 @@ public class GlobaltagdispositivoApi {
    * @param dataDesativacao {{{dispositivo_request_data_desativacao_value}}}
    * @return PageDispositivoResponse
    */
-  public PageDispositivoResponse listarUsingGET18(List<String> sort, Integer page, Integer limit, String token, Long idUsuario, Long idAplicacaoMobile, String dataCriacao, String dataDesativacao) throws ApiException {
+  public PageDispositivoResponse listarUsingGET17(List<String> sort, Integer page, Integer limit, String token, Long idUsuario, Long idAplicacaoMobile, String dataCriacao, String dataDesativacao) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -204,12 +204,12 @@ public class GlobaltagdispositivoApi {
    * @param persist persist
    * @return DispositivoResponse
    */
-  public DispositivoResponse salvarUsingPOST9(DispositivoPersistValue persist) throws ApiException {
+  public DispositivoResponse salvarUsingPOST10(DispositivoPersistValue persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST9");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST10");
      }
      
     // create path and map variables

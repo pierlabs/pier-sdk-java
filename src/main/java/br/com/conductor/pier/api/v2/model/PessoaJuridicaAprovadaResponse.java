@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v2.model.EnderecoAprovadoResponse;
+import br.com.conductor.pier.api.v2.model.EnderecoAprovadoResponseValue;
 import br.com.conductor.pier.api.v2.model.ReferenciaComercialAprovadoResponse;
 import br.com.conductor.pier.api.v2.model.SocioAprovadoResponse;
 import br.com.conductor.pier.api.v2.model.TelefonePessoaAprovadaResponse;
@@ -41,12 +41,13 @@ public class PessoaJuridicaAprovadaResponse   {
   private String canalEntrada = null;
   private Integer valorPontuacao = null;
   private List<TelefonePessoaAprovadaResponse> telefones = new ArrayList<TelefonePessoaAprovadaResponse>();
-  private List<EnderecoAprovadoResponse> enderecos = new ArrayList<EnderecoAprovadoResponse>();
+  private List<EnderecoAprovadoResponseValue> enderecos = new ArrayList<EnderecoAprovadoResponseValue>();
   private List<SocioAprovadoResponse> socios = new ArrayList<SocioAprovadoResponse>();
   private List<ReferenciaComercialAprovadoResponse> referencias = new ArrayList<ReferenciaComercialAprovadoResponse>();
   private BigDecimal limiteGlobal = null;
   private BigDecimal limiteMaximo = null;
   private BigDecimal limiteParcelas = null;
+  private Boolean impedidoFinanciamento = null;
 
   
   /**
@@ -394,17 +395,17 @@ public class PessoaJuridicaAprovadaResponse   {
   /**
    * {{{pessoa_juridica_aprovada_response_enderecos_value}}}
    **/
-  public PessoaJuridicaAprovadaResponse enderecos(List<EnderecoAprovadoResponse> enderecos) {
+  public PessoaJuridicaAprovadaResponse enderecos(List<EnderecoAprovadoResponseValue> enderecos) {
     this.enderecos = enderecos;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "{{{pessoa_juridica_aprovada_response_enderecos_value}}}")
   @JsonProperty("enderecos")
-  public List<EnderecoAprovadoResponse> getEnderecos() {
+  public List<EnderecoAprovadoResponseValue> getEnderecos() {
     return enderecos;
   }
-  public void setEnderecos(List<EnderecoAprovadoResponse> enderecos) {
+  public void setEnderecos(List<EnderecoAprovadoResponseValue> enderecos) {
     this.enderecos = enderecos;
   }
 
@@ -499,6 +500,24 @@ public class PessoaJuridicaAprovadaResponse   {
   }
 
   
+  /**
+   * {{{pessoa_juridica_aprovada_response_impedido_de_financiamento_value}}}
+   **/
+  public PessoaJuridicaAprovadaResponse impedidoFinanciamento(Boolean impedidoFinanciamento) {
+    this.impedidoFinanciamento = impedidoFinanciamento;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "{{{pessoa_juridica_aprovada_response_impedido_de_financiamento_value}}}")
+  @JsonProperty("impedidoFinanciamento")
+  public Boolean getImpedidoFinanciamento() {
+    return impedidoFinanciamento;
+  }
+  public void setImpedidoFinanciamento(Boolean impedidoFinanciamento) {
+    this.impedidoFinanciamento = impedidoFinanciamento;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -533,12 +552,13 @@ public class PessoaJuridicaAprovadaResponse   {
         Objects.equals(this.referencias, pessoaJuridicaAprovadaResponse.referencias) &&
         Objects.equals(this.limiteGlobal, pessoaJuridicaAprovadaResponse.limiteGlobal) &&
         Objects.equals(this.limiteMaximo, pessoaJuridicaAprovadaResponse.limiteMaximo) &&
-        Objects.equals(this.limiteParcelas, pessoaJuridicaAprovadaResponse.limiteParcelas);
+        Objects.equals(this.limiteParcelas, pessoaJuridicaAprovadaResponse.limiteParcelas) &&
+        Objects.equals(this.impedidoFinanciamento, pessoaJuridicaAprovadaResponse.impedidoFinanciamento);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, razaoSocial, nomeFantasia, cnpj, inscricaoEstadual, dataAberturaEmpresa, idOrigemComercial, idProduto, numeroBanco, numeroAgencia, numeroContaCorrente, email, diaVencimento, nomeImpresso, idConta, idProposta, canalEntrada, valorPontuacao, telefones, enderecos, socios, referencias, limiteGlobal, limiteMaximo, limiteParcelas);
+    return Objects.hash(id, razaoSocial, nomeFantasia, cnpj, inscricaoEstadual, dataAberturaEmpresa, idOrigemComercial, idProduto, numeroBanco, numeroAgencia, numeroContaCorrente, email, diaVencimento, nomeImpresso, idConta, idProposta, canalEntrada, valorPontuacao, telefones, enderecos, socios, referencias, limiteGlobal, limiteMaximo, limiteParcelas, impedidoFinanciamento);
   }
 
   @Override
@@ -571,6 +591,7 @@ public class PessoaJuridicaAprovadaResponse   {
     sb.append("    limiteGlobal: ").append(toIndentedString(limiteGlobal)).append("\n");
     sb.append("    limiteMaximo: ").append(toIndentedString(limiteMaximo)).append("\n");
     sb.append("    limiteParcelas: ").append(toIndentedString(limiteParcelas)).append("\n");
+    sb.append("    impedidoFinanciamento: ").append(toIndentedString(impedidoFinanciamento)).append("\n");
     sb.append("}");
     return sb.toString();
   }

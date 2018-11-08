@@ -7,11 +7,8 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-/**
- * {{{endereco_aprovado_persist_description}}}
- **/
 
-@ApiModel(description = "{{{endereco_aprovado_persist_description}}}")
+
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class EnderecoAprovadoPersistValue   {
   
@@ -26,6 +23,8 @@ public class EnderecoAprovadoPersistValue   {
   private String uf = null;
   private String pais = null;
   private Boolean enderecoCorrespondencia = null;
+  private Integer tempoResidenciaAnos = null;
+  private Integer tempoResidenciaMeses = null;
 
   
   /**
@@ -226,6 +225,42 @@ public class EnderecoAprovadoPersistValue   {
   }
 
   
+  /**
+   * {{{endereco_aprovado_persist_tempo_residencia_anos_value}}}
+   **/
+  public EnderecoAprovadoPersistValue tempoResidenciaAnos(Integer tempoResidenciaAnos) {
+    this.tempoResidenciaAnos = tempoResidenciaAnos;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{endereco_aprovado_persist_tempo_residencia_anos_value}}}")
+  @JsonProperty("tempoResidenciaAnos")
+  public Integer getTempoResidenciaAnos() {
+    return tempoResidenciaAnos;
+  }
+  public void setTempoResidenciaAnos(Integer tempoResidenciaAnos) {
+    this.tempoResidenciaAnos = tempoResidenciaAnos;
+  }
+
+  
+  /**
+   * {{{endereco_aprovado_persist_tempo_residencia_meses_value}}}
+   **/
+  public EnderecoAprovadoPersistValue tempoResidenciaMeses(Integer tempoResidenciaMeses) {
+    this.tempoResidenciaMeses = tempoResidenciaMeses;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{endereco_aprovado_persist_tempo_residencia_meses_value}}}")
+  @JsonProperty("tempoResidenciaMeses")
+  public Integer getTempoResidenciaMeses() {
+    return tempoResidenciaMeses;
+  }
+  public void setTempoResidenciaMeses(Integer tempoResidenciaMeses) {
+    this.tempoResidenciaMeses = tempoResidenciaMeses;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -246,12 +281,14 @@ public class EnderecoAprovadoPersistValue   {
         Objects.equals(this.cidade, enderecoAprovadoPersistValue.cidade) &&
         Objects.equals(this.uf, enderecoAprovadoPersistValue.uf) &&
         Objects.equals(this.pais, enderecoAprovadoPersistValue.pais) &&
-        Objects.equals(this.enderecoCorrespondencia, enderecoAprovadoPersistValue.enderecoCorrespondencia);
+        Objects.equals(this.enderecoCorrespondencia, enderecoAprovadoPersistValue.enderecoCorrespondencia) &&
+        Objects.equals(this.tempoResidenciaAnos, enderecoAprovadoPersistValue.tempoResidenciaAnos) &&
+        Objects.equals(this.tempoResidenciaMeses, enderecoAprovadoPersistValue.tempoResidenciaMeses);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idTipoEndereco, cep, logradouro, numero, complemento, pontoReferencia, bairro, cidade, uf, pais, enderecoCorrespondencia);
+    return Objects.hash(idTipoEndereco, cep, logradouro, numero, complemento, pontoReferencia, bairro, cidade, uf, pais, enderecoCorrespondencia, tempoResidenciaAnos, tempoResidenciaMeses);
   }
 
   @Override
@@ -270,6 +307,8 @@ public class EnderecoAprovadoPersistValue   {
     sb.append("    uf: ").append(toIndentedString(uf)).append("\n");
     sb.append("    pais: ").append(toIndentedString(pais)).append("\n");
     sb.append("    enderecoCorrespondencia: ").append(toIndentedString(enderecoCorrespondencia)).append("\n");
+    sb.append("    tempoResidenciaAnos: ").append(toIndentedString(tempoResidenciaAnos)).append("\n");
+    sb.append("    tempoResidenciaMeses: ").append(toIndentedString(tempoResidenciaMeses)).append("\n");
     sb.append("}");
     return sb.toString();
   }

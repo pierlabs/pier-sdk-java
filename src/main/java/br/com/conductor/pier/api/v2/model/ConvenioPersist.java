@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * ConvenioPersist
+ * {{{convenio_persist_description}}} 
  **/
 
-@ApiModel(description = "ConvenioPersist")
+@ApiModel(description = "{{{convenio_persist_description}}} ")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ConvenioPersist   {
   
@@ -35,14 +35,14 @@ public class ConvenioPersist   {
 
   
   /**
-   * Identifica\u00E7\u00E3o do banco.
+   * {{{convenio_persist_banco_value}}}
    **/
   public ConvenioPersist banco(Long banco) {
     this.banco = banco;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Identifica\u00E7\u00E3o do banco.")
+  @ApiModelProperty(example = "null", required = true, value = "{{{convenio_persist_banco_value}}}")
   @JsonProperty("banco")
   public Long getBanco() {
     return banco;
@@ -53,14 +53,14 @@ public class ConvenioPersist   {
 
   
   /**
-   * N\u00FAmero da ag\u00EAncia.
+   * {{{convenio_persist_agencia_value}}}
    **/
   public ConvenioPersist agencia(Long agencia) {
     this.agencia = agencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "N\u00FAmero da ag\u00EAncia.")
+  @ApiModelProperty(example = "null", required = true, value = "{{{convenio_persist_agencia_value}}}")
   @JsonProperty("agencia")
   public Long getAgencia() {
     return agencia;
@@ -71,14 +71,14 @@ public class ConvenioPersist   {
 
   
   /**
-   * Conta corrente.
+   * {{{convenio_persist_conta_corrente_value}}}
    **/
   public ConvenioPersist contaCorrente(String contaCorrente) {
     this.contaCorrente = contaCorrente;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Conta corrente.")
+  @ApiModelProperty(example = "null", required = true, value = "{{{convenio_persist_conta_corrente_value}}}")
   @JsonProperty("contaCorrente")
   public String getContaCorrente() {
     return contaCorrente;
@@ -89,14 +89,14 @@ public class ConvenioPersist   {
 
   
   /**
-   * C\u00F3digo do tipo de esp\u00E9cie do documento.
+   * {{{convenio_persist_especie_value}}}
    **/
   public ConvenioPersist especie(String especie) {
     this.especie = especie;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo do tipo de esp\u00E9cie do documento.")
+  @ApiModelProperty(example = "null", value = "{{{convenio_persist_especie_value}}}")
   @JsonProperty("especie")
   public String getEspecie() {
     return especie;
@@ -107,14 +107,14 @@ public class ConvenioPersist   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio.
+   * {{{convenio_persist_numero_convenio_value}}}
    **/
   public ConvenioPersist numeroConvenio(BigDecimal numeroConvenio) {
     this.numeroConvenio = numeroConvenio;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio.")
+  @ApiModelProperty(example = "null", value = "{{{convenio_persist_numero_convenio_value}}}")
   @JsonProperty("numeroConvenio")
   public BigDecimal getNumeroConvenio() {
     return numeroConvenio;
@@ -125,14 +125,14 @@ public class ConvenioPersist   {
 
   
   /**
-   * C\u00F3digo da carteira de cobran\u00E7a.
+   * {{{convenio_persist_carteira_value}}}
    **/
   public ConvenioPersist carteira(Long carteira) {
     this.carteira = carteira;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo da carteira de cobran\u00E7a.")
+  @ApiModelProperty(example = "null", value = "{{{convenio_persist_carteira_value}}}")
   @JsonProperty("carteira")
   public Long getCarteira() {
     return carteira;
@@ -143,14 +143,14 @@ public class ConvenioPersist   {
 
   
   /**
-   * C\u00F3digo do cedente.
+   * {{{convenio_persist_codigo_cedente_value}}}
    **/
   public ConvenioPersist codigoCedente(String codigoCedente) {
     this.codigoCedente = codigoCedente;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo do cedente.")
+  @ApiModelProperty(example = "null", value = "{{{convenio_persist_codigo_cedente_value}}}")
   @JsonProperty("codigoCedente")
   public String getCodigoCedente() {
     return codigoCedente;
@@ -161,14 +161,14 @@ public class ConvenioPersist   {
 
   
   /**
-   * Tipo de esp\u00E9cie de t\u00EDtulo de cr\u00E9dito.
+   * {{{convenio_persist_especie_tipo_value}}}
    **/
   public ConvenioPersist especieTipo(String especieTipo) {
     this.especieTipo = especieTipo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Tipo de esp\u00E9cie de t\u00EDtulo de cr\u00E9dito.")
+  @ApiModelProperty(example = "null", value = "{{{convenio_persist_especie_tipo_value}}}")
   @JsonProperty("especieTipo")
   public String getEspecieTipo() {
     return especieTipo;
@@ -179,14 +179,14 @@ public class ConvenioPersist   {
 
   
   /**
-   * Esp\u00E9cie do documento.
+   * {{{convenio_persist_especie_documento_value}}}
    **/
   public ConvenioPersist especieDocumento(String especieDocumento) {
     this.especieDocumento = especieDocumento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Esp\u00E9cie do documento.")
+  @ApiModelProperty(example = "null", value = "{{{convenio_persist_especie_documento_value}}}")
   @JsonProperty("especieDocumento")
   public String getEspecieDocumento() {
     return especieDocumento;
@@ -197,14 +197,14 @@ public class ConvenioPersist   {
 
   
   /**
-   * Indica se o pagador assinou o documento de cobran\u00E7a que originou o boleto. O padr\u00E3o \u00E9 usar \"N\".
+   * {{{convenio_persist_aceite_value}}}
    **/
   public ConvenioPersist aceite(Boolean aceite) {
     this.aceite = aceite;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Indica se o pagador assinou o documento de cobran\u00E7a que originou o boleto. O padr\u00E3o \u00E9 usar \"N\".")
+  @ApiModelProperty(example = "false", value = "{{{convenio_persist_aceite_value}}}")
   @JsonProperty("aceite")
   public Boolean getAceite() {
     return aceite;
@@ -215,14 +215,14 @@ public class ConvenioPersist   {
 
   
   /**
-   * Instru\u00E7\u00F5es para pagamento.
+   * {{{convenio_persist_instrucoes_value}}}
    **/
   public ConvenioPersist instrucoes(String instrucoes) {
     this.instrucoes = instrucoes;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Instru\u00E7\u00F5es para pagamento.")
+  @ApiModelProperty(example = "null", value = "{{{convenio_persist_instrucoes_value}}}")
   @JsonProperty("instrucoes")
   public String getInstrucoes() {
     return instrucoes;
@@ -233,14 +233,14 @@ public class ConvenioPersist   {
 
   
   /**
-   * Local preferencial onde pode ser efetuado o pagamento.
+   * {{{convenio_persist_local_pagamento1_value}}}
    **/
   public ConvenioPersist localPagamento1(String localPagamento1) {
     this.localPagamento1 = localPagamento1;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Local preferencial onde pode ser efetuado o pagamento.")
+  @ApiModelProperty(example = "null", value = "{{{convenio_persist_local_pagamento1_value}}}")
   @JsonProperty("localPagamento1")
   public String getLocalPagamento1() {
     return localPagamento1;
@@ -251,14 +251,14 @@ public class ConvenioPersist   {
 
   
   /**
-   * Local para pagamento (campo adicional).
+   * {{{convenio_persist_local_pagamento2_value}}}
    **/
   public ConvenioPersist localPagamento2(String localPagamento2) {
     this.localPagamento2 = localPagamento2;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Local para pagamento (campo adicional).")
+  @ApiModelProperty(example = "null", value = "{{{convenio_persist_local_pagamento2_value}}}")
   @JsonProperty("localPagamento2")
   public String getLocalPagamento2() {
     return localPagamento2;
@@ -269,14 +269,14 @@ public class ConvenioPersist   {
 
   
   /**
-   * Endere\u00E7o de cobran\u00E7a do emissor.
+   * {{{convenio_persist_endereco_cobranca_emissor_value}}}
    **/
   public ConvenioPersist enderecoCobrancaEmissor(String enderecoCobrancaEmissor) {
     this.enderecoCobrancaEmissor = enderecoCobrancaEmissor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Endere\u00E7o de cobran\u00E7a do emissor.")
+  @ApiModelProperty(example = "null", value = "{{{convenio_persist_endereco_cobranca_emissor_value}}}")
   @JsonProperty("enderecoCobrancaEmissor")
   public String getEnderecoCobrancaEmissor() {
     return enderecoCobrancaEmissor;
@@ -287,14 +287,14 @@ public class ConvenioPersist   {
 
   
   /**
-   * Nome do benefici\u00E1rio/cedente da cobran\u00E7a.
+   * {{{convenio_persist_nome_beneficiario_emissor_value}}}
    **/
   public ConvenioPersist nomeBeneficiario(String nomeBeneficiario) {
     this.nomeBeneficiario = nomeBeneficiario;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome do benefici\u00E1rio/cedente da cobran\u00E7a.")
+  @ApiModelProperty(example = "null", value = "{{{convenio_persist_nome_beneficiario_emissor_value}}}")
   @JsonProperty("nomeBeneficiario")
   public String getNomeBeneficiario() {
     return nomeBeneficiario;
@@ -305,14 +305,14 @@ public class ConvenioPersist   {
 
   
   /**
-   * CNPJ do benefici\u00E1rio/cedente da cobran\u00E7a.
+   * {{{convenio_persist_cnpj_beneficiario_emissor_value}}}
    **/
   public ConvenioPersist cnpjBeneficiario(String cnpjBeneficiario) {
     this.cnpjBeneficiario = cnpjBeneficiario;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "CNPJ do benefici\u00E1rio/cedente da cobran\u00E7a.")
+  @ApiModelProperty(example = "null", value = "{{{convenio_persist_cnpj_beneficiario_emissor_value}}}")
   @JsonProperty("cnpjBeneficiario")
   public String getCnpjBeneficiario() {
     return cnpjBeneficiario;

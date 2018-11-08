@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{estagio_cartao_update_id}}}
+ * {{{estagio_cartao_update}}}
  **/
 
-@ApiModel(description = "{{{estagio_cartao_update_id}}}")
+@ApiModel(description = "{{{estagio_cartao_update}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class EstagioCartaoUpdate   {
   

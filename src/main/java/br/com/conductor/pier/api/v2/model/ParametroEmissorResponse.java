@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{parametro_emissor_resposta_descricao}}}
+ * {{{parametro_emissor_resposta_description}}}
  **/
 
-@ApiModel(description = "{{{parametro_emissor_resposta_descricao}}}")
+@ApiModel(description = "{{{parametro_emissor_resposta_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ParametroEmissorResponse   {
   
@@ -59,14 +59,14 @@ public class ParametroEmissorResponse   {
 
   
   /**
-   * {{{parametro_emissor_resposta_descricao_descricao}}}
+   * {{{parametro_emissor_resposta_descricao_description}}}
    **/
   public ParametroEmissorResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{parametro_emissor_resposta_descricao_descricao}}}")
+  @ApiModelProperty(example = "null", value = "{{{parametro_emissor_resposta_descricao_description}}}")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;

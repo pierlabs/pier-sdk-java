@@ -43,12 +43,12 @@ public class GlobaltagriscofraudeApi {
    * @param id {{{risco_fraude_resource_consultar_param_id_risco_fraude}}}
    * @return RiscoFraudeDetalhadoResponse
    */
-  public RiscoFraudeDetalhadoResponse consultarUsingGET31(Long id) throws ApiException {
+  public RiscoFraudeDetalhadoResponse consultarUsingGET32(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET31");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET32");
      }
      
     // create path and map variables
@@ -88,7 +88,7 @@ public class GlobaltagriscofraudeApi {
   /**
    * {{{risco_fraude_resource_listar_tipos_resolucao}}}
    * {{{risco_fraude_resource_listar_tipos_resolucao_notes}}}
-   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param page {{{pagable_page_value}}}
    * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
    * @return TipoResolucaoResponse
    */

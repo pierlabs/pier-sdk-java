@@ -12,6 +12,7 @@ import br.com.conductor.pier.api.v2.model.StatusCartaoResponse;
 import br.com.conductor.pier.api.v2.model.StatusContaResponse;
 import br.com.conductor.pier.api.v2.model.StatusImpressaoResponse;
 import br.com.conductor.pier.api.v2.model.PageEstagioCartaoResponse;
+import br.com.conductor.pier.api.v2.model.PageTipoBoletoResponse;
 import br.com.conductor.pier.api.v2.model.PageStatusCartaoResponse;
 import br.com.conductor.pier.api.v2.model.PageStatusContaResponse;
 import br.com.conductor.pier.api.v2.model.PageStatusImpressaoResponse;
@@ -144,12 +145,12 @@ public class GlobaltagstatusparametroApi {
    * @param id {{{status_conta_resource_consultar_param_id}}}
    * @return StatusContaResponse
    */
-  public StatusContaResponse consultarUsingGET32(Long id) throws ApiException {
+  public StatusContaResponse consultarUsingGET33(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET32");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET33");
      }
      
     // create path and map variables
@@ -192,12 +193,12 @@ public class GlobaltagstatusparametroApi {
    * @param id {{{status_impressao_resource_consultar_param_id}}}
    * @return StatusImpressaoResponse
    */
-  public StatusImpressaoResponse consultarUsingGET33(Long id) throws ApiException {
+  public StatusImpressaoResponse consultarUsingGET34(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET33");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET34");
      }
      
     // create path and map variables
@@ -291,6 +292,56 @@ public class GlobaltagstatusparametroApi {
   }
   
   /**
+   * {{{status_cnab_sumarizado_resource_listar}}}
+   * {{{status_cnab_sumarizado_resource_listar_notes}}}
+   * @param sort {{{global_menssagem_sort_sort}}}
+   * @param page {{{global_menssagem_sort_page_value}}}
+   * @param limit {{{global_menssagem_sort_limit}}}
+   * @return PageTipoBoletoResponse
+   */
+  public PageTipoBoletoResponse listarStatusCNABSumarizadosUsingGET(List<String> sort, Integer page, Integer limit) throws ApiException {
+    Object postBody = null;
+    
+    // create path and map variables
+    String path = "/api/status-cnab-sumarizados".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PageTipoBoletoResponse> returnType = new GenericType<PageTipoBoletoResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * {{{status_cartao_resource_listar_status_cartoes}}}
    * {{{status_cartao_resource_listar_status_cartoes_notes}}}
    * @param sort {{{global_menssagem_sort_sort}}}
@@ -377,7 +428,7 @@ public class GlobaltagstatusparametroApi {
    * @param permiteAtribuirComoCancelamento {{{status_conta_request_permite_atribuir_como_cancelamento_value}}}
    * @return PageStatusContaResponse
    */
-  public PageStatusContaResponse listarUsingGET41(List<String> sort, Integer page, Integer limit, Long id, String nome, Integer permiteAlterarVencimento, Integer permiteAlterarLimite, Integer permiteEmitirNovaViaCartao, Integer permiteFazerTransferencia, Integer permiteReceberTransferencia, Integer permiteCriarAcordoCobranca, Integer permiteAtribuirComoBloqueio, Integer permiteDesbloquear, Integer permiteAtribuirComoCancelamento) throws ApiException {
+  public PageStatusContaResponse listarUsingGET42(List<String> sort, Integer page, Integer limit, Long id, String nome, Integer permiteAlterarVencimento, Integer permiteAlterarLimite, Integer permiteEmitirNovaViaCartao, Integer permiteFazerTransferencia, Integer permiteReceberTransferencia, Integer permiteCriarAcordoCobranca, Integer permiteAtribuirComoBloqueio, Integer permiteDesbloquear, Integer permiteAtribuirComoCancelamento) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -451,7 +502,7 @@ public class GlobaltagstatusparametroApi {
    * @param nome {{{status_impressao_request_nome_value}}}
    * @return PageStatusImpressaoResponse
    */
-  public PageStatusImpressaoResponse listarUsingGET42(List<String> sort, Integer page, Integer limit, Long id, String nome) throws ApiException {
+  public PageStatusImpressaoResponse listarUsingGET43(List<String> sort, Integer page, Integer limit, Long id, String nome) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

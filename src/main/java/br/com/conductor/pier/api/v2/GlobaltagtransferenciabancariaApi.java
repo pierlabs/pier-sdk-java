@@ -109,17 +109,17 @@ public class GlobaltagtransferenciabancariaApi {
    * @param update update
    * @return ContaBancariaPortadorResponse
    */
-  public ContaBancariaPortadorResponse atualizarUsingPUT1(Long id, ContaBancariaPortadorUpdateValue update) throws ApiException {
+  public ContaBancariaPortadorResponse atualizarUsingPUT(Long id, ContaBancariaPortadorUpdateValue update) throws ApiException {
     Object postBody = update;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling atualizarUsingPUT1");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling atualizarUsingPUT");
      }
      
      // verify the required parameter 'update' is set
      if (update == null) {
-        throw new ApiException(400, "Missing the required parameter 'update' when calling atualizarUsingPUT1");
+        throw new ApiException(400, "Missing the required parameter 'update' when calling atualizarUsingPUT");
      }
      
     // create path and map variables
@@ -362,12 +362,12 @@ public class GlobaltagtransferenciabancariaApi {
    * @param id {{{conta_bancaria_resource_consultar_param_id}}}
    * @return ContaBancariaPortadorResponse
    */
-  public ContaBancariaPortadorResponse consultarUsingGET12(Long id) throws ApiException {
+  public ContaBancariaPortadorResponse consultarUsingGET11(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET12");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET11");
      }
      
     // create path and map variables
@@ -412,17 +412,17 @@ public class GlobaltagtransferenciabancariaApi {
    * @param idContaBancariaDestino {{{transferencia_bancaria_resource_consultar_param_id_conta_portador}}}
    * @return TransferenciaBancariaResponse
    */
-  public TransferenciaBancariaResponse consultarUsingGET44(Long id, Long idTransferencia, Long idContaBancariaDestino) throws ApiException {
+  public TransferenciaBancariaResponse consultarUsingGET46(Long id, Long idTransferencia, Long idContaBancariaDestino) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET44");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET46");
      }
      
      // verify the required parameter 'idTransferencia' is set
      if (idTransferencia == null) {
-        throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET44");
+        throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET46");
      }
      
     // create path and map variables
@@ -542,7 +542,7 @@ public class GlobaltagtransferenciabancariaApi {
    * @param limit {{{global_menssagem_sort_limit}}}
    * @return PageContaBancariaPortadorResponse
    */
-  public PageContaBancariaPortadorResponse listarUsingGET15(Long idConta, String nomeAgencia, Long banco, String numeroAgencia, String numeroConta, Integer flagAtivo, Integer flagContaOrigemDoc, Long idPessoaFisica, String favorecido, String numeroReceiraFederal, List<String> sort, Integer page, Integer limit) throws ApiException {
+  public PageContaBancariaPortadorResponse listarUsingGET13(Long idConta, String nomeAgencia, Long banco, String numeroAgencia, String numeroConta, Integer flagAtivo, Integer flagContaOrigemDoc, Long idPessoaFisica, String favorecido, String numeroReceiraFederal, List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -614,12 +614,12 @@ public class GlobaltagtransferenciabancariaApi {
    * @param limit {{{global_menssagem_sort_limit}}}
    * @return PageTransferenciaBancariaResponse
    */
-  public PageTransferenciaBancariaResponse listarUsingGET54(Long id, Long idContaBancariaDestino, List<String> sort, Integer page, Integer limit) throws ApiException {
+  public PageTransferenciaBancariaResponse listarUsingGET56(Long id, Long idContaBancariaDestino, List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET54");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET56");
      }
      
     // create path and map variables

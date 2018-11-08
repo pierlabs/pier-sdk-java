@@ -28,10 +28,17 @@ public class PessoaDetalheResponse   {
   private String email = null;
   private String nomeEmpresa = null;
   private String nomeReferencia1 = null;
-  private BigDecimal salario = null;
   private String enderecoReferencia1 = null;
   private String nomeReferencia2 = null;
   private String enderecoReferencia2 = null;
+  private BigDecimal salario = null;
+  private Boolean impedidoFinanciamento = null;
+  private String naturalidadeCidade = null;
+  private String naturalidadeEstado = null;
+  private Integer grauInstrucao = null;
+  private Integer numeroDependentes = null;
+  private String nomePai = null;
+  private Integer chequeEspecial = null;
 
   
   /**
@@ -251,24 +258,6 @@ public class PessoaDetalheResponse   {
 
   
   /**
-   * {{{pessoa_detalhe_response_salario_value}}}
-   **/
-  public PessoaDetalheResponse salario(BigDecimal salario) {
-    this.salario = salario;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "{{{pessoa_detalhe_response_salario_value}}}")
-  @JsonProperty("salario")
-  public BigDecimal getSalario() {
-    return salario;
-  }
-  public void setSalario(BigDecimal salario) {
-    this.salario = salario;
-  }
-
-  
-  /**
    * {{{pessoa_detalhe_response_endereco_referencia_1_value}}}
    **/
   public PessoaDetalheResponse enderecoReferencia1(String enderecoReferencia1) {
@@ -322,6 +311,150 @@ public class PessoaDetalheResponse   {
   }
 
   
+  /**
+   * {{{pessoa_detalhe_response_salario_value}}}
+   **/
+  public PessoaDetalheResponse salario(BigDecimal salario) {
+    this.salario = salario;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{pessoa_detalhe_response_salario_value}}}")
+  @JsonProperty("salario")
+  public BigDecimal getSalario() {
+    return salario;
+  }
+  public void setSalario(BigDecimal salario) {
+    this.salario = salario;
+  }
+
+  
+  /**
+   * {{{pessoa_detalhe_response_impedido_de_financiamento_value}}}
+   **/
+  public PessoaDetalheResponse impedidoFinanciamento(Boolean impedidoFinanciamento) {
+    this.impedidoFinanciamento = impedidoFinanciamento;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "{{{pessoa_detalhe_response_impedido_de_financiamento_value}}}")
+  @JsonProperty("impedidoFinanciamento")
+  public Boolean getImpedidoFinanciamento() {
+    return impedidoFinanciamento;
+  }
+  public void setImpedidoFinanciamento(Boolean impedidoFinanciamento) {
+    this.impedidoFinanciamento = impedidoFinanciamento;
+  }
+
+  
+  /**
+   * {{{pessoa_detalhe_response_naturalidade_Cidade_value}}}
+   **/
+  public PessoaDetalheResponse naturalidadeCidade(String naturalidadeCidade) {
+    this.naturalidadeCidade = naturalidadeCidade;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{pessoa_detalhe_response_naturalidade_Cidade_value}}}")
+  @JsonProperty("naturalidadeCidade")
+  public String getNaturalidadeCidade() {
+    return naturalidadeCidade;
+  }
+  public void setNaturalidadeCidade(String naturalidadeCidade) {
+    this.naturalidadeCidade = naturalidadeCidade;
+  }
+
+  
+  /**
+   * {{{pessoa_detalhe_response_naturalidade_Estado_value}}}
+   **/
+  public PessoaDetalheResponse naturalidadeEstado(String naturalidadeEstado) {
+    this.naturalidadeEstado = naturalidadeEstado;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{pessoa_detalhe_response_naturalidade_Estado_value}}}")
+  @JsonProperty("naturalidadeEstado")
+  public String getNaturalidadeEstado() {
+    return naturalidadeEstado;
+  }
+  public void setNaturalidadeEstado(String naturalidadeEstado) {
+    this.naturalidadeEstado = naturalidadeEstado;
+  }
+
+  
+  /**
+   * {{{pessoa_detalhe_response_grau_Instrucao_value}}}
+   **/
+  public PessoaDetalheResponse grauInstrucao(Integer grauInstrucao) {
+    this.grauInstrucao = grauInstrucao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{pessoa_detalhe_response_grau_Instrucao_value}}}")
+  @JsonProperty("grauInstrucao")
+  public Integer getGrauInstrucao() {
+    return grauInstrucao;
+  }
+  public void setGrauInstrucao(Integer grauInstrucao) {
+    this.grauInstrucao = grauInstrucao;
+  }
+
+  
+  /**
+   * {{{pessoa_detalhe_response_numero_Dependentes_value}}}
+   **/
+  public PessoaDetalheResponse numeroDependentes(Integer numeroDependentes) {
+    this.numeroDependentes = numeroDependentes;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{pessoa_detalhe_response_numero_Dependentes_value}}}")
+  @JsonProperty("numeroDependentes")
+  public Integer getNumeroDependentes() {
+    return numeroDependentes;
+  }
+  public void setNumeroDependentes(Integer numeroDependentes) {
+    this.numeroDependentes = numeroDependentes;
+  }
+
+  
+  /**
+   * {{{pessoa_detalhe_response_nome_Pai_value}}}
+   **/
+  public PessoaDetalheResponse nomePai(String nomePai) {
+    this.nomePai = nomePai;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{pessoa_detalhe_response_nome_Pai_value}}}")
+  @JsonProperty("nomePai")
+  public String getNomePai() {
+    return nomePai;
+  }
+  public void setNomePai(String nomePai) {
+    this.nomePai = nomePai;
+  }
+
+  
+  /**
+   * {{{pessoa_detalhe_response_cheque_Especial_value}}}
+   **/
+  public PessoaDetalheResponse chequeEspecial(Integer chequeEspecial) {
+    this.chequeEspecial = chequeEspecial;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{pessoa_detalhe_response_cheque_Especial_value}}}")
+  @JsonProperty("chequeEspecial")
+  public Integer getChequeEspecial() {
+    return chequeEspecial;
+  }
+  public void setChequeEspecial(Integer chequeEspecial) {
+    this.chequeEspecial = chequeEspecial;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -344,15 +477,22 @@ public class PessoaDetalheResponse   {
         Objects.equals(this.email, pessoaDetalheResponse.email) &&
         Objects.equals(this.nomeEmpresa, pessoaDetalheResponse.nomeEmpresa) &&
         Objects.equals(this.nomeReferencia1, pessoaDetalheResponse.nomeReferencia1) &&
-        Objects.equals(this.salario, pessoaDetalheResponse.salario) &&
         Objects.equals(this.enderecoReferencia1, pessoaDetalheResponse.enderecoReferencia1) &&
         Objects.equals(this.nomeReferencia2, pessoaDetalheResponse.nomeReferencia2) &&
-        Objects.equals(this.enderecoReferencia2, pessoaDetalheResponse.enderecoReferencia2);
+        Objects.equals(this.enderecoReferencia2, pessoaDetalheResponse.enderecoReferencia2) &&
+        Objects.equals(this.salario, pessoaDetalheResponse.salario) &&
+        Objects.equals(this.impedidoFinanciamento, pessoaDetalheResponse.impedidoFinanciamento) &&
+        Objects.equals(this.naturalidadeCidade, pessoaDetalheResponse.naturalidadeCidade) &&
+        Objects.equals(this.naturalidadeEstado, pessoaDetalheResponse.naturalidadeEstado) &&
+        Objects.equals(this.grauInstrucao, pessoaDetalheResponse.grauInstrucao) &&
+        Objects.equals(this.numeroDependentes, pessoaDetalheResponse.numeroDependentes) &&
+        Objects.equals(this.nomePai, pessoaDetalheResponse.nomePai) &&
+        Objects.equals(this.chequeEspecial, pessoaDetalheResponse.chequeEspecial);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa, nomeReferencia1, salario, enderecoReferencia1, nomeReferencia2, enderecoReferencia2);
+    return Objects.hash(idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa, nomeReferencia1, enderecoReferencia1, nomeReferencia2, enderecoReferencia2, salario, impedidoFinanciamento, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial);
   }
 
   @Override
@@ -372,10 +512,17 @@ public class PessoaDetalheResponse   {
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    nomeEmpresa: ").append(toIndentedString(nomeEmpresa)).append("\n");
     sb.append("    nomeReferencia1: ").append(toIndentedString(nomeReferencia1)).append("\n");
-    sb.append("    salario: ").append(toIndentedString(salario)).append("\n");
     sb.append("    enderecoReferencia1: ").append(toIndentedString(enderecoReferencia1)).append("\n");
     sb.append("    nomeReferencia2: ").append(toIndentedString(nomeReferencia2)).append("\n");
     sb.append("    enderecoReferencia2: ").append(toIndentedString(enderecoReferencia2)).append("\n");
+    sb.append("    salario: ").append(toIndentedString(salario)).append("\n");
+    sb.append("    impedidoFinanciamento: ").append(toIndentedString(impedidoFinanciamento)).append("\n");
+    sb.append("    naturalidadeCidade: ").append(toIndentedString(naturalidadeCidade)).append("\n");
+    sb.append("    naturalidadeEstado: ").append(toIndentedString(naturalidadeEstado)).append("\n");
+    sb.append("    grauInstrucao: ").append(toIndentedString(grauInstrucao)).append("\n");
+    sb.append("    numeroDependentes: ").append(toIndentedString(numeroDependentes)).append("\n");
+    sb.append("    nomePai: ").append(toIndentedString(nomePai)).append("\n");
+    sb.append("    chequeEspecial: ").append(toIndentedString(chequeEspecial)).append("\n");
     sb.append("}");
     return sb.toString();
   }

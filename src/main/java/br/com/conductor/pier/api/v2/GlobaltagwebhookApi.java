@@ -45,17 +45,17 @@ public class GlobaltagwebhookApi {
    * @param status {{{web_hook_resource_alterar_param_status}}}
    * @return WebHookResponse
    */
-  public WebHookResponse alterarUsingPUT20(Long id, WebHookPersistValue webhook, String status) throws ApiException {
+  public WebHookResponse alterarUsingPUT21(Long id, WebHookPersistValue webhook, String status) throws ApiException {
     Object postBody = webhook;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT20");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT21");
      }
      
      // verify the required parameter 'webhook' is set
      if (webhook == null) {
-        throw new ApiException(400, "Missing the required parameter 'webhook' when calling alterarUsingPUT20");
+        throw new ApiException(400, "Missing the required parameter 'webhook' when calling alterarUsingPUT21");
      }
      
     // create path and map variables
@@ -100,12 +100,12 @@ public class GlobaltagwebhookApi {
    * @param id {{{web_hook_resource_consultar_param_id}}}
    * @return WebHookResponse
    */
-  public WebHookResponse consultarUsingGET48(Long id) throws ApiException {
+  public WebHookResponse consultarUsingGET50(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET48");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET50");
      }
      
     // create path and map variables
@@ -154,7 +154,7 @@ public class GlobaltagwebhookApi {
    * @param url {{{web_hook_request_url_value}}}
    * @return PageWebHookResponse
    */
-  public PageWebHookResponse listarUsingGET60(List<String> sort, Integer page, Integer limit, Long id, String tipoEvento, String metodo, String url) throws ApiException {
+  public PageWebHookResponse listarUsingGET62(List<String> sort, Integer page, Integer limit, Long id, String tipoEvento, String metodo, String url) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -210,12 +210,12 @@ public class GlobaltagwebhookApi {
    * @param webhook webhook
    * @return WebHookResponse
    */
-  public WebHookResponse salvarUsingPOST30(WebHookPersistValue webhook) throws ApiException {
+  public WebHookResponse salvarUsingPOST32(WebHookPersistValue webhook) throws ApiException {
     Object postBody = webhook;
     
      // verify the required parameter 'webhook' is set
      if (webhook == null) {
-        throw new ApiException(400, "Missing the required parameter 'webhook' when calling salvarUsingPOST30");
+        throw new ApiException(400, "Missing the required parameter 'webhook' when calling salvarUsingPOST32");
      }
      
     // create path and map variables

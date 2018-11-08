@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{Bin_response_description}}}
+ * {{{bin_response_description}}}
  **/
 
-@ApiModel(description = "{{{Bin_response_description}}}")
+@ApiModel(description = "{{{bin_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class BinResponse   {
   
@@ -19,14 +19,14 @@ public class BinResponse   {
 
   
   /**
-   * {{{bin_request_id_value}}}
+   * {{{bin_response_id_value}}}
    **/
   public BinResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{bin_request_id_value}}}")
+  @ApiModelProperty(example = "null", value = "{{{bin_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;

@@ -20,6 +20,7 @@ public class BoletoRequest   {
   private Long tipoBoleto = null;
   private BigDecimal valor = null;
   private String dataVencimento = null;
+  private Long idConvenio = null;
 
   
   /**
@@ -94,6 +95,24 @@ public class BoletoRequest   {
   }
 
   
+  /**
+   * {{{boleto_request_id_convenio_value}}}
+   **/
+  public BoletoRequest idConvenio(Long idConvenio) {
+    this.idConvenio = idConvenio;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{boleto_request_id_convenio_value}}}")
+  @JsonProperty("idConvenio")
+  public Long getIdConvenio() {
+    return idConvenio;
+  }
+  public void setIdConvenio(Long idConvenio) {
+    this.idConvenio = idConvenio;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -107,12 +126,13 @@ public class BoletoRequest   {
     return Objects.equals(this.idConta, boletoRequest.idConta) &&
         Objects.equals(this.tipoBoleto, boletoRequest.tipoBoleto) &&
         Objects.equals(this.valor, boletoRequest.valor) &&
-        Objects.equals(this.dataVencimento, boletoRequest.dataVencimento);
+        Objects.equals(this.dataVencimento, boletoRequest.dataVencimento) &&
+        Objects.equals(this.idConvenio, boletoRequest.idConvenio);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idConta, tipoBoleto, valor, dataVencimento);
+    return Objects.hash(idConta, tipoBoleto, valor, dataVencimento, idConvenio);
   }
 
   @Override
@@ -124,6 +144,7 @@ public class BoletoRequest   {
     sb.append("    tipoBoleto: ").append(toIndentedString(tipoBoleto)).append("\n");
     sb.append("    valor: ").append(toIndentedString(valor)).append("\n");
     sb.append("    dataVencimento: ").append(toIndentedString(dataVencimento)).append("\n");
+    sb.append("    idConvenio: ").append(toIndentedString(idConvenio)).append("\n");
     sb.append("}");
     return sb.toString();
   }

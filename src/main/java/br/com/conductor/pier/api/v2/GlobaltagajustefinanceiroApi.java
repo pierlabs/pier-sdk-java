@@ -46,10 +46,11 @@ public class GlobaltagajustefinanceiroApi {
    * @param idConta {{{ajuste_financeiro_persist_id_conta_value}}}
    * @param login login
    * @param identificadorExterno {{{ajuste_financeiro_persist_identificador_externo_value}}}
-   * @param idTransacaoOriginal {{{ajuste_persist_id_transacao_original}}}
+   * @param idTransacaoOriginal {{{ajuste_fincanceiro_persist_id_transacao_original}}}
+   * @param idEstabelecimento {{{ajuste_fincanceiro_persist_id_estabelecimento_value}}}
    * @return AjusteFinanceiroResponse
    */
-  public AjusteFinanceiroResponse ajustarContaUsingPOST(Long idTipoAjuste, String dataAjuste, BigDecimal valorAjuste, Long idConta, String login, String identificadorExterno, Long idTransacaoOriginal) throws ApiException {
+  public AjusteFinanceiroResponse ajustarContaUsingPOST(Long idTipoAjuste, String dataAjuste, BigDecimal valorAjuste, Long idConta, String login, String identificadorExterno, Long idTransacaoOriginal, Long idEstabelecimento) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idTipoAjuste' is set
@@ -92,6 +93,8 @@ public class GlobaltagajustefinanceiroApi {
     queryParams.addAll(apiClient.parameterToPairs("", "idConta", idConta));
     
     queryParams.addAll(apiClient.parameterToPairs("", "idTransacaoOriginal", idTransacaoOriginal));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idEstabelecimento", idEstabelecimento));
     
 
     if (login != null)

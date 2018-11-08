@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v2.model.CompraContestadaTransacaoResponse;
+import br.com.conductor.pier.api.v2.model.ServicoContaResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -11,14 +11,14 @@ import java.util.List;
 
 
 /**
- * {{{page_compra_contestada_transacao_response_description}}}
+ * {{{page_servico_conta_response_description}}}
  **/
 
-@ApiModel(description = "{{{page_compra_contestada_transacao_response_description}}}")
+@ApiModel(description = "{{{page_servico_conta_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class PageCompraContestadaTransacaoResponse   {
+public class PageServicoContaResponse   {
   
-  private List<CompraContestadaTransacaoResponse> content = new ArrayList<CompraContestadaTransacaoResponse>();
+  private List<ServicoContaResponse> content = new ArrayList<ServicoContaResponse>();
   private Boolean first = null;
   private Boolean firstPage = null;
   private Boolean hasContent = null;
@@ -36,24 +36,24 @@ public class PageCompraContestadaTransacaoResponse   {
   
   /**
    **/
-  public PageCompraContestadaTransacaoResponse content(List<CompraContestadaTransacaoResponse> content) {
+  public PageServicoContaResponse content(List<ServicoContaResponse> content) {
     this.content = content;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("content")
-  public List<CompraContestadaTransacaoResponse> getContent() {
+  public List<ServicoContaResponse> getContent() {
     return content;
   }
-  public void setContent(List<CompraContestadaTransacaoResponse> content) {
+  public void setContent(List<ServicoContaResponse> content) {
     this.content = content;
   }
 
   
   /**
    **/
-  public PageCompraContestadaTransacaoResponse first(Boolean first) {
+  public PageServicoContaResponse first(Boolean first) {
     this.first = first;
     return this;
   }
@@ -70,7 +70,7 @@ public class PageCompraContestadaTransacaoResponse   {
   
   /**
    **/
-  public PageCompraContestadaTransacaoResponse firstPage(Boolean firstPage) {
+  public PageServicoContaResponse firstPage(Boolean firstPage) {
     this.firstPage = firstPage;
     return this;
   }
@@ -87,7 +87,7 @@ public class PageCompraContestadaTransacaoResponse   {
   
   /**
    **/
-  public PageCompraContestadaTransacaoResponse hasContent(Boolean hasContent) {
+  public PageServicoContaResponse hasContent(Boolean hasContent) {
     this.hasContent = hasContent;
     return this;
   }
@@ -104,7 +104,7 @@ public class PageCompraContestadaTransacaoResponse   {
   
   /**
    **/
-  public PageCompraContestadaTransacaoResponse hasNextPage(Boolean hasNextPage) {
+  public PageServicoContaResponse hasNextPage(Boolean hasNextPage) {
     this.hasNextPage = hasNextPage;
     return this;
   }
@@ -121,7 +121,7 @@ public class PageCompraContestadaTransacaoResponse   {
   
   /**
    **/
-  public PageCompraContestadaTransacaoResponse hasPreviousPage(Boolean hasPreviousPage) {
+  public PageServicoContaResponse hasPreviousPage(Boolean hasPreviousPage) {
     this.hasPreviousPage = hasPreviousPage;
     return this;
   }
@@ -138,7 +138,7 @@ public class PageCompraContestadaTransacaoResponse   {
   
   /**
    **/
-  public PageCompraContestadaTransacaoResponse last(Boolean last) {
+  public PageServicoContaResponse last(Boolean last) {
     this.last = last;
     return this;
   }
@@ -155,7 +155,7 @@ public class PageCompraContestadaTransacaoResponse   {
   
   /**
    **/
-  public PageCompraContestadaTransacaoResponse nextPage(Integer nextPage) {
+  public PageServicoContaResponse nextPage(Integer nextPage) {
     this.nextPage = nextPage;
     return this;
   }
@@ -172,7 +172,7 @@ public class PageCompraContestadaTransacaoResponse   {
   
   /**
    **/
-  public PageCompraContestadaTransacaoResponse number(Integer number) {
+  public PageServicoContaResponse number(Integer number) {
     this.number = number;
     return this;
   }
@@ -189,7 +189,7 @@ public class PageCompraContestadaTransacaoResponse   {
   
   /**
    **/
-  public PageCompraContestadaTransacaoResponse numberOfElements(Integer numberOfElements) {
+  public PageServicoContaResponse numberOfElements(Integer numberOfElements) {
     this.numberOfElements = numberOfElements;
     return this;
   }
@@ -206,7 +206,7 @@ public class PageCompraContestadaTransacaoResponse   {
   
   /**
    **/
-  public PageCompraContestadaTransacaoResponse previousPage(Integer previousPage) {
+  public PageServicoContaResponse previousPage(Integer previousPage) {
     this.previousPage = previousPage;
     return this;
   }
@@ -223,7 +223,7 @@ public class PageCompraContestadaTransacaoResponse   {
   
   /**
    **/
-  public PageCompraContestadaTransacaoResponse size(Integer size) {
+  public PageServicoContaResponse size(Integer size) {
     this.size = size;
     return this;
   }
@@ -240,7 +240,7 @@ public class PageCompraContestadaTransacaoResponse   {
   
   /**
    **/
-  public PageCompraContestadaTransacaoResponse totalElements(Long totalElements) {
+  public PageServicoContaResponse totalElements(Long totalElements) {
     this.totalElements = totalElements;
     return this;
   }
@@ -257,7 +257,7 @@ public class PageCompraContestadaTransacaoResponse   {
   
   /**
    **/
-  public PageCompraContestadaTransacaoResponse totalPages(Integer totalPages) {
+  public PageServicoContaResponse totalPages(Integer totalPages) {
     this.totalPages = totalPages;
     return this;
   }
@@ -281,21 +281,21 @@ public class PageCompraContestadaTransacaoResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    PageCompraContestadaTransacaoResponse pageCompraContestadaTransacaoResponse = (PageCompraContestadaTransacaoResponse) o;
-    return Objects.equals(this.content, pageCompraContestadaTransacaoResponse.content) &&
-        Objects.equals(this.first, pageCompraContestadaTransacaoResponse.first) &&
-        Objects.equals(this.firstPage, pageCompraContestadaTransacaoResponse.firstPage) &&
-        Objects.equals(this.hasContent, pageCompraContestadaTransacaoResponse.hasContent) &&
-        Objects.equals(this.hasNextPage, pageCompraContestadaTransacaoResponse.hasNextPage) &&
-        Objects.equals(this.hasPreviousPage, pageCompraContestadaTransacaoResponse.hasPreviousPage) &&
-        Objects.equals(this.last, pageCompraContestadaTransacaoResponse.last) &&
-        Objects.equals(this.nextPage, pageCompraContestadaTransacaoResponse.nextPage) &&
-        Objects.equals(this.number, pageCompraContestadaTransacaoResponse.number) &&
-        Objects.equals(this.numberOfElements, pageCompraContestadaTransacaoResponse.numberOfElements) &&
-        Objects.equals(this.previousPage, pageCompraContestadaTransacaoResponse.previousPage) &&
-        Objects.equals(this.size, pageCompraContestadaTransacaoResponse.size) &&
-        Objects.equals(this.totalElements, pageCompraContestadaTransacaoResponse.totalElements) &&
-        Objects.equals(this.totalPages, pageCompraContestadaTransacaoResponse.totalPages);
+    PageServicoContaResponse pageServicoContaResponse = (PageServicoContaResponse) o;
+    return Objects.equals(this.content, pageServicoContaResponse.content) &&
+        Objects.equals(this.first, pageServicoContaResponse.first) &&
+        Objects.equals(this.firstPage, pageServicoContaResponse.firstPage) &&
+        Objects.equals(this.hasContent, pageServicoContaResponse.hasContent) &&
+        Objects.equals(this.hasNextPage, pageServicoContaResponse.hasNextPage) &&
+        Objects.equals(this.hasPreviousPage, pageServicoContaResponse.hasPreviousPage) &&
+        Objects.equals(this.last, pageServicoContaResponse.last) &&
+        Objects.equals(this.nextPage, pageServicoContaResponse.nextPage) &&
+        Objects.equals(this.number, pageServicoContaResponse.number) &&
+        Objects.equals(this.numberOfElements, pageServicoContaResponse.numberOfElements) &&
+        Objects.equals(this.previousPage, pageServicoContaResponse.previousPage) &&
+        Objects.equals(this.size, pageServicoContaResponse.size) &&
+        Objects.equals(this.totalElements, pageServicoContaResponse.totalElements) &&
+        Objects.equals(this.totalPages, pageServicoContaResponse.totalPages);
   }
 
   @Override
@@ -306,7 +306,7 @@ public class PageCompraContestadaTransacaoResponse   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PageCompraContestadaTransacaoResponse {\n");
+    sb.append("class PageServicoContaResponse {\n");
     
     sb.append("    content: ").append(toIndentedString(content)).append("\n");
     sb.append("    first: ").append(toIndentedString(first)).append("\n");

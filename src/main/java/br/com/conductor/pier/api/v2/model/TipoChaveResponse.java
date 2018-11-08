@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{Bin_response_description}}}
+ * {{{tipo_chave_response_description}}}
  **/
 
-@ApiModel(description = "{{{Bin_response_description}}}")
+@ApiModel(description = "{{{tipo_chave_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TipoChaveResponse   {
   

@@ -7,7 +7,7 @@ import br.com.conductor.pier.api.v2.invoker.ApiClient;
 import br.com.conductor.pier.api.v2.invoker.Configuration;
 import br.com.conductor.pier.api.v2.invoker.Pair;
 
-import br.com.conductor.pier.api.v2.model.EnderecoNacionalResponse;
+import br.com.conductor.pier.api.v2.model.EnderecoResponseValue;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -39,9 +39,9 @@ public class GlobaltagendereconacionalApi {
    * {{{c_e_p_endereco_resource_consultar_endereco}}}
    * {{{c_e_p_endereco_resource_consultar_endereco_notes}}}
    * @param CEP CEP
-   * @return EnderecoNacionalResponse
+   * @return EnderecoResponseValue
    */
-  public EnderecoNacionalResponse consultarEnderecoUsingGET(String CEP) throws ApiException {
+  public EnderecoResponseValue consultarEnderecoUsingGET(String CEP) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'CEP' is set
@@ -79,7 +79,7 @@ public class GlobaltagendereconacionalApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<EnderecoNacionalResponse> returnType = new GenericType<EnderecoNacionalResponse>() {};
+    GenericType<EnderecoResponseValue> returnType = new GenericType<EnderecoResponseValue>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

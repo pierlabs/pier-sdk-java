@@ -2,6 +2,7 @@ package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
@@ -27,6 +28,27 @@ public class ContaResponse   {
   private String dataCadastro = null;
   private String dataUltimaAlteracaoVencimento = null;
   private BigDecimal valorRenda = null;
+  private Long idProposta = null;
+
+
+  public enum FuncaoAtivaEnum {
+    DEBITO_CREDITO("DEBITO_CREDITO"),
+    CREDITO("CREDITO");
+
+    private String value;
+
+    FuncaoAtivaEnum(String value) {
+      this.value = value;
+    }
+
+    @Override
+    @JsonValue
+    public String toString() {
+      return value;
+    }
+  }
+
+  private FuncaoAtivaEnum funcaoAtiva = null;
 
   
   /**
@@ -227,6 +249,42 @@ public class ContaResponse   {
   }
 
   
+  /**
+   * {{{conta_response_id_proposta}}}
+   **/
+  public ContaResponse idProposta(Long idProposta) {
+    this.idProposta = idProposta;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{conta_response_id_proposta}}}")
+  @JsonProperty("idProposta")
+  public Long getIdProposta() {
+    return idProposta;
+  }
+  public void setIdProposta(Long idProposta) {
+    this.idProposta = idProposta;
+  }
+
+  
+  /**
+   * {{{conta_response_funcao_ativa_value}}}
+   **/
+  public ContaResponse funcaoAtiva(FuncaoAtivaEnum funcaoAtiva) {
+    this.funcaoAtiva = funcaoAtiva;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{conta_response_funcao_ativa_value}}}")
+  @JsonProperty("funcaoAtiva")
+  public FuncaoAtivaEnum getFuncaoAtiva() {
+    return funcaoAtiva;
+  }
+  public void setFuncaoAtiva(FuncaoAtivaEnum funcaoAtiva) {
+    this.funcaoAtiva = funcaoAtiva;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -247,12 +305,14 @@ public class ContaResponse   {
         Objects.equals(this.dataStatusConta, contaResponse.dataStatusConta) &&
         Objects.equals(this.dataCadastro, contaResponse.dataCadastro) &&
         Objects.equals(this.dataUltimaAlteracaoVencimento, contaResponse.dataUltimaAlteracaoVencimento) &&
-        Objects.equals(this.valorRenda, contaResponse.valorRenda);
+        Objects.equals(this.valorRenda, contaResponse.valorRenda) &&
+        Objects.equals(this.idProposta, contaResponse.idProposta) &&
+        Objects.equals(this.funcaoAtiva, contaResponse.funcaoAtiva);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idProduto, idOrigemComercial, idPessoa, idStatusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, dataUltimaAlteracaoVencimento, valorRenda);
+    return Objects.hash(id, idProduto, idOrigemComercial, idPessoa, idStatusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, dataUltimaAlteracaoVencimento, valorRenda, idProposta, funcaoAtiva);
   }
 
   @Override
@@ -271,6 +331,8 @@ public class ContaResponse   {
     sb.append("    dataCadastro: ").append(toIndentedString(dataCadastro)).append("\n");
     sb.append("    dataUltimaAlteracaoVencimento: ").append(toIndentedString(dataUltimaAlteracaoVencimento)).append("\n");
     sb.append("    valorRenda: ").append(toIndentedString(valorRenda)).append("\n");
+    sb.append("    idProposta: ").append(toIndentedString(idProposta)).append("\n");
+    sb.append("    funcaoAtiva: ").append(toIndentedString(funcaoAtiva)).append("\n");
     sb.append("}");
     return sb.toString();
   }

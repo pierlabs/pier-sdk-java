@@ -7,13 +7,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-/**
- * {{{endereco_aprovado_response_description}}}
- **/
 
-@ApiModel(description = "{{{endereco_aprovado_response_description}}}")
+
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class EnderecoAprovadoResponse   {
+public class EnderecoAprovadoResponseValue   {
   
   private Long id = null;
   private Long idTipoEndereco = null;
@@ -27,12 +24,14 @@ public class EnderecoAprovadoResponse   {
   private String uf = null;
   private String pais = null;
   private Boolean enderecoCorrespondencia = null;
+  private Integer tempoResidenciaAnos = null;
+  private Integer tempoResidenciaMeses = null;
 
   
   /**
    * {{{endereco_aprovado_response_id_value}}}
    **/
-  public EnderecoAprovadoResponse id(Long id) {
+  public EnderecoAprovadoResponseValue id(Long id) {
     this.id = id;
     return this;
   }
@@ -50,7 +49,7 @@ public class EnderecoAprovadoResponse   {
   /**
    * {{{endereco_aprovado_response_id_tipo_endereco_value}}}
    **/
-  public EnderecoAprovadoResponse idTipoEndereco(Long idTipoEndereco) {
+  public EnderecoAprovadoResponseValue idTipoEndereco(Long idTipoEndereco) {
     this.idTipoEndereco = idTipoEndereco;
     return this;
   }
@@ -68,7 +67,7 @@ public class EnderecoAprovadoResponse   {
   /**
    * {{{endereco_aprovado_response_cep_value}}}
    **/
-  public EnderecoAprovadoResponse cep(String cep) {
+  public EnderecoAprovadoResponseValue cep(String cep) {
     this.cep = cep;
     return this;
   }
@@ -86,7 +85,7 @@ public class EnderecoAprovadoResponse   {
   /**
    * {{{endereco_aprovado_response_logradouro_value}}}
    **/
-  public EnderecoAprovadoResponse logradouro(String logradouro) {
+  public EnderecoAprovadoResponseValue logradouro(String logradouro) {
     this.logradouro = logradouro;
     return this;
   }
@@ -104,7 +103,7 @@ public class EnderecoAprovadoResponse   {
   /**
    * {{{endereco_aprovado_response_numero_value}}}
    **/
-  public EnderecoAprovadoResponse numero(Integer numero) {
+  public EnderecoAprovadoResponseValue numero(Integer numero) {
     this.numero = numero;
     return this;
   }
@@ -122,7 +121,7 @@ public class EnderecoAprovadoResponse   {
   /**
    * {{{endereco_aprovado_response_complemento_value}}}
    **/
-  public EnderecoAprovadoResponse complemento(String complemento) {
+  public EnderecoAprovadoResponseValue complemento(String complemento) {
     this.complemento = complemento;
     return this;
   }
@@ -140,7 +139,7 @@ public class EnderecoAprovadoResponse   {
   /**
    * {{{endereco_aprovado_response_ponto_referencia_value}}}
    **/
-  public EnderecoAprovadoResponse pontoReferencia(String pontoReferencia) {
+  public EnderecoAprovadoResponseValue pontoReferencia(String pontoReferencia) {
     this.pontoReferencia = pontoReferencia;
     return this;
   }
@@ -158,7 +157,7 @@ public class EnderecoAprovadoResponse   {
   /**
    * {{{endereco_aprovado_response_bairro_value}}}
    **/
-  public EnderecoAprovadoResponse bairro(String bairro) {
+  public EnderecoAprovadoResponseValue bairro(String bairro) {
     this.bairro = bairro;
     return this;
   }
@@ -176,7 +175,7 @@ public class EnderecoAprovadoResponse   {
   /**
    * {{{endereco_aprovado_response_cidade_value}}}
    **/
-  public EnderecoAprovadoResponse cidade(String cidade) {
+  public EnderecoAprovadoResponseValue cidade(String cidade) {
     this.cidade = cidade;
     return this;
   }
@@ -194,7 +193,7 @@ public class EnderecoAprovadoResponse   {
   /**
    * {{{endereco_aprovado_response_uf_value}}}
    **/
-  public EnderecoAprovadoResponse uf(String uf) {
+  public EnderecoAprovadoResponseValue uf(String uf) {
     this.uf = uf;
     return this;
   }
@@ -212,7 +211,7 @@ public class EnderecoAprovadoResponse   {
   /**
    * {{{endereco_aprovado_response_pais_value}}}
    **/
-  public EnderecoAprovadoResponse pais(String pais) {
+  public EnderecoAprovadoResponseValue pais(String pais) {
     this.pais = pais;
     return this;
   }
@@ -230,7 +229,7 @@ public class EnderecoAprovadoResponse   {
   /**
    * {{{endereco_aprovado_response_endereco_correspondencia_value}}}
    **/
-  public EnderecoAprovadoResponse enderecoCorrespondencia(Boolean enderecoCorrespondencia) {
+  public EnderecoAprovadoResponseValue enderecoCorrespondencia(Boolean enderecoCorrespondencia) {
     this.enderecoCorrespondencia = enderecoCorrespondencia;
     return this;
   }
@@ -245,6 +244,42 @@ public class EnderecoAprovadoResponse   {
   }
 
   
+  /**
+   * {{{endereco_aprovado_response_tempo_Residencia_Anos_value}}}
+   **/
+  public EnderecoAprovadoResponseValue tempoResidenciaAnos(Integer tempoResidenciaAnos) {
+    this.tempoResidenciaAnos = tempoResidenciaAnos;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{endereco_aprovado_response_tempo_Residencia_Anos_value}}}")
+  @JsonProperty("tempoResidenciaAnos")
+  public Integer getTempoResidenciaAnos() {
+    return tempoResidenciaAnos;
+  }
+  public void setTempoResidenciaAnos(Integer tempoResidenciaAnos) {
+    this.tempoResidenciaAnos = tempoResidenciaAnos;
+  }
+
+  
+  /**
+   * {{{endereco_aprovado_response_tempo_Residencia_Meses_value}}}
+   **/
+  public EnderecoAprovadoResponseValue tempoResidenciaMeses(Integer tempoResidenciaMeses) {
+    this.tempoResidenciaMeses = tempoResidenciaMeses;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{endereco_aprovado_response_tempo_Residencia_Meses_value}}}")
+  @JsonProperty("tempoResidenciaMeses")
+  public Integer getTempoResidenciaMeses() {
+    return tempoResidenciaMeses;
+  }
+  public void setTempoResidenciaMeses(Integer tempoResidenciaMeses) {
+    this.tempoResidenciaMeses = tempoResidenciaMeses;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -254,30 +289,32 @@ public class EnderecoAprovadoResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    EnderecoAprovadoResponse enderecoAprovadoResponse = (EnderecoAprovadoResponse) o;
-    return Objects.equals(this.id, enderecoAprovadoResponse.id) &&
-        Objects.equals(this.idTipoEndereco, enderecoAprovadoResponse.idTipoEndereco) &&
-        Objects.equals(this.cep, enderecoAprovadoResponse.cep) &&
-        Objects.equals(this.logradouro, enderecoAprovadoResponse.logradouro) &&
-        Objects.equals(this.numero, enderecoAprovadoResponse.numero) &&
-        Objects.equals(this.complemento, enderecoAprovadoResponse.complemento) &&
-        Objects.equals(this.pontoReferencia, enderecoAprovadoResponse.pontoReferencia) &&
-        Objects.equals(this.bairro, enderecoAprovadoResponse.bairro) &&
-        Objects.equals(this.cidade, enderecoAprovadoResponse.cidade) &&
-        Objects.equals(this.uf, enderecoAprovadoResponse.uf) &&
-        Objects.equals(this.pais, enderecoAprovadoResponse.pais) &&
-        Objects.equals(this.enderecoCorrespondencia, enderecoAprovadoResponse.enderecoCorrespondencia);
+    EnderecoAprovadoResponseValue enderecoAprovadoResponseValue = (EnderecoAprovadoResponseValue) o;
+    return Objects.equals(this.id, enderecoAprovadoResponseValue.id) &&
+        Objects.equals(this.idTipoEndereco, enderecoAprovadoResponseValue.idTipoEndereco) &&
+        Objects.equals(this.cep, enderecoAprovadoResponseValue.cep) &&
+        Objects.equals(this.logradouro, enderecoAprovadoResponseValue.logradouro) &&
+        Objects.equals(this.numero, enderecoAprovadoResponseValue.numero) &&
+        Objects.equals(this.complemento, enderecoAprovadoResponseValue.complemento) &&
+        Objects.equals(this.pontoReferencia, enderecoAprovadoResponseValue.pontoReferencia) &&
+        Objects.equals(this.bairro, enderecoAprovadoResponseValue.bairro) &&
+        Objects.equals(this.cidade, enderecoAprovadoResponseValue.cidade) &&
+        Objects.equals(this.uf, enderecoAprovadoResponseValue.uf) &&
+        Objects.equals(this.pais, enderecoAprovadoResponseValue.pais) &&
+        Objects.equals(this.enderecoCorrespondencia, enderecoAprovadoResponseValue.enderecoCorrespondencia) &&
+        Objects.equals(this.tempoResidenciaAnos, enderecoAprovadoResponseValue.tempoResidenciaAnos) &&
+        Objects.equals(this.tempoResidenciaMeses, enderecoAprovadoResponseValue.tempoResidenciaMeses);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idTipoEndereco, cep, logradouro, numero, complemento, pontoReferencia, bairro, cidade, uf, pais, enderecoCorrespondencia);
+    return Objects.hash(id, idTipoEndereco, cep, logradouro, numero, complemento, pontoReferencia, bairro, cidade, uf, pais, enderecoCorrespondencia, tempoResidenciaAnos, tempoResidenciaMeses);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class EnderecoAprovadoResponse {\n");
+    sb.append("class EnderecoAprovadoResponseValue {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idTipoEndereco: ").append(toIndentedString(idTipoEndereco)).append("\n");
@@ -291,6 +328,8 @@ public class EnderecoAprovadoResponse   {
     sb.append("    uf: ").append(toIndentedString(uf)).append("\n");
     sb.append("    pais: ").append(toIndentedString(pais)).append("\n");
     sb.append("    enderecoCorrespondencia: ").append(toIndentedString(enderecoCorrespondencia)).append("\n");
+    sb.append("    tempoResidenciaAnos: ").append(toIndentedString(tempoResidenciaAnos)).append("\n");
+    sb.append("    tempoResidenciaMeses: ").append(toIndentedString(tempoResidenciaMeses)).append("\n");
     sb.append("}");
     return sb.toString();
   }

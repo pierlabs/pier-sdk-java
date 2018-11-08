@@ -47,12 +47,12 @@ public class GlobaltagarquivoApi {
    * @param id {{{arquivo_resource_consultar_param_id}}}
    * @return ArquivoDetalheResponse
    */
-  public ArquivoDetalheResponse consultarUsingGET5(Long id) throws ApiException {
+  public ArquivoDetalheResponse consultarUsingGET4(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET5");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET4");
      }
      
     // create path and map variables
@@ -140,7 +140,7 @@ public class GlobaltagarquivoApi {
    * {{{arquivo_a_u_d_resource_listar_por_numero_receita_federal}}}
    * {{{arquivo_a_u_d_resource_listar_por_numero_receita_federal_notes}}}
    * @param numeroReceitaFederal {{{arquivo_a_u_d_resource_listar_por_numero_receita_federal_param_numero_receita_federal}}}
-   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param page {{{pagable_page_value}}}
    * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
    * @return PageArquivoAUDResponse
    */
@@ -307,16 +307,16 @@ public class GlobaltagarquivoApi {
    * {{{arquivo_a_u_d_resource_listar}}}
    * {{{arquivo_a_u_d_resource_listar_notes}}}
    * @param id {{{arquivo_a_u_d_resource_listar_param_id}}}
-   * @param page P\u00E1gina solicitada (Default = 0)
+   * @param page {{{pagable_page_value}}}
    * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
    * @return PageArquivoAUDResponse
    */
-  public PageArquivoAUDResponse listarUsingGET5(Long id, Integer page, Integer limit) throws ApiException {
+  public PageArquivoAUDResponse listarUsingGET4(Long id, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET5");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET4");
      }
      
     // create path and map variables
@@ -369,7 +369,7 @@ public class GlobaltagarquivoApi {
    * @param extensao {{{arquivo_request_extensao_value}}}
    * @return PageArquivoResponse
    */
-  public PageArquivoResponse listarUsingGET6(List<String> sort, Integer page, Integer limit, String nome, Long idTipoArquivo, Long idStatusArquivo, String extensao) throws ApiException {
+  public PageArquivoResponse listarUsingGET5(List<String> sort, Integer page, Integer limit, String nome, Long idTipoArquivo, Long idStatusArquivo, String extensao) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

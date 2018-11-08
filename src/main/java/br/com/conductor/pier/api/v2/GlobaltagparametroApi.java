@@ -42,12 +42,12 @@ public class GlobaltagparametroApi {
    * @param codigo {{{parametro_emissor_recurso_pesquisa_codigo_param}}}
    * @return ParametroEmissorResponse
    */
-  public ParametroEmissorResponse consultarUsingGET25(String codigo) throws ApiException {
+  public ParametroEmissorResponse consultarUsingGET26(String codigo) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'codigo' is set
      if (codigo == null) {
-        throw new ApiException(400, "Missing the required parameter 'codigo' when calling consultarUsingGET25");
+        throw new ApiException(400, "Missing the required parameter 'codigo' when calling consultarUsingGET26");
      }
      
     // create path and map variables
@@ -85,15 +85,15 @@ public class GlobaltagparametroApi {
   }
   
   /**
-   * {{{parametro_produto_recurso}}}
-   * {{{parametro_produto_recurso_notas}}}
+   * {{{parametro_produto_listar}}}
+   * {{{parametro_produto_listar_notas}}}
    * @param sort {{{global_menssagem_sort_sort}}}
    * @param page {{{global_menssagem_sort_page_value}}}
    * @param limit {{{global_menssagem_sort_limit}}}
-   * @param id {{{parametro_produto_request_id_value}}}
-   * @param codigo {{{parametro_produto_request_codigo_value}}}
-   * @param tipo {{{parametro_produto_request_tipo_value}}}
-   * @param idProduto {{{parametro_produto_request_id_produto_value}}}
+   * @param id {{{parametro_produto_dto_id_value}}}
+   * @param codigo {{{parametro_produto_dto_codigo_value}}}
+   * @param tipo {{{parametro_produto_dto_tipo_value}}}
+   * @param idProduto {{{parametro_produto_dto_id_produto_value}}}
    * @return PageParametroProdutoResponse
    */
   public PageParametroProdutoResponse listarParametrosProdutoUsingGET(List<String> sort, Integer page, Integer limit, Long id, String codigo, String tipo, Long idProduto) throws ApiException {

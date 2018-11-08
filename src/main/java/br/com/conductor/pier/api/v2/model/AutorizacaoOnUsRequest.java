@@ -20,6 +20,7 @@ public class AutorizacaoOnUsRequest   {
   private Long numeroParcelas = null;
   private String codigoProcessamento = null;
   private String codigoSegurancaCartao = null;
+  private String nomeEstabelecimento = null;
   private BigDecimal valorTransacao = null;
   private String numeroRealCartao = null;
   private String dataValidadeCartao = null;
@@ -97,6 +98,24 @@ public class AutorizacaoOnUsRequest   {
   }
   public void setCodigoSegurancaCartao(String codigoSegurancaCartao) {
     this.codigoSegurancaCartao = codigoSegurancaCartao;
+  }
+
+  
+  /**
+   * {{{autorizacao_on_us_request_nome_estabelecimento_value}}}
+   **/
+  public AutorizacaoOnUsRequest nomeEstabelecimento(String nomeEstabelecimento) {
+    this.nomeEstabelecimento = nomeEstabelecimento;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{autorizacao_on_us_request_nome_estabelecimento_value}}}")
+  @JsonProperty("nomeEstabelecimento")
+  public String getNomeEstabelecimento() {
+    return nomeEstabelecimento;
+  }
+  public void setNomeEstabelecimento(String nomeEstabelecimento) {
+    this.nomeEstabelecimento = nomeEstabelecimento;
   }
 
   
@@ -222,6 +241,7 @@ public class AutorizacaoOnUsRequest   {
         Objects.equals(this.numeroParcelas, autorizacaoOnUsRequest.numeroParcelas) &&
         Objects.equals(this.codigoProcessamento, autorizacaoOnUsRequest.codigoProcessamento) &&
         Objects.equals(this.codigoSegurancaCartao, autorizacaoOnUsRequest.codigoSegurancaCartao) &&
+        Objects.equals(this.nomeEstabelecimento, autorizacaoOnUsRequest.nomeEstabelecimento) &&
         Objects.equals(this.valorTransacao, autorizacaoOnUsRequest.valorTransacao) &&
         Objects.equals(this.numeroRealCartao, autorizacaoOnUsRequest.numeroRealCartao) &&
         Objects.equals(this.dataValidadeCartao, autorizacaoOnUsRequest.dataValidadeCartao) &&
@@ -232,7 +252,7 @@ public class AutorizacaoOnUsRequest   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(nsuOrigem, numeroParcelas, codigoProcessamento, codigoSegurancaCartao, valorTransacao, numeroRealCartao, dataValidadeCartao, numeroEstabelecimento, dataHoraTerminal, terminalRequisitante);
+    return Objects.hash(nsuOrigem, numeroParcelas, codigoProcessamento, codigoSegurancaCartao, nomeEstabelecimento, valorTransacao, numeroRealCartao, dataValidadeCartao, numeroEstabelecimento, dataHoraTerminal, terminalRequisitante);
   }
 
   @Override
@@ -244,6 +264,7 @@ public class AutorizacaoOnUsRequest   {
     sb.append("    numeroParcelas: ").append(toIndentedString(numeroParcelas)).append("\n");
     sb.append("    codigoProcessamento: ").append(toIndentedString(codigoProcessamento)).append("\n");
     sb.append("    codigoSegurancaCartao: ").append(toIndentedString(codigoSegurancaCartao)).append("\n");
+    sb.append("    nomeEstabelecimento: ").append(toIndentedString(nomeEstabelecimento)).append("\n");
     sb.append("    valorTransacao: ").append(toIndentedString(valorTransacao)).append("\n");
     sb.append("    numeroRealCartao: ").append(toIndentedString(numeroRealCartao)).append("\n");
     sb.append("    dataValidadeCartao: ").append(toIndentedString(dataValidadeCartao)).append("\n");

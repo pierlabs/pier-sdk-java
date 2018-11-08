@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v2.model.CompraContestadaCartaoResponse;
+import br.com.conductor.pier.api.v2.model.StatusBoletoResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -11,14 +11,14 @@ import java.util.List;
 
 
 /**
- * {{{page_page_compra_contestada_cartao_response_description}}}
+ * {{{status_boleto_dto_page_description}}}
  **/
 
-@ApiModel(description = "{{{page_page_compra_contestada_cartao_response_description}}}")
+@ApiModel(description = "{{{status_boleto_dto_page_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class PageCompraContestadaCartaoResponse   {
+public class PageStatusBoletoResponse   {
   
-  private List<CompraContestadaCartaoResponse> content = new ArrayList<CompraContestadaCartaoResponse>();
+  private List<StatusBoletoResponse> content = new ArrayList<StatusBoletoResponse>();
   private Boolean first = null;
   private Boolean firstPage = null;
   private Boolean hasContent = null;
@@ -36,24 +36,24 @@ public class PageCompraContestadaCartaoResponse   {
   
   /**
    **/
-  public PageCompraContestadaCartaoResponse content(List<CompraContestadaCartaoResponse> content) {
+  public PageStatusBoletoResponse content(List<StatusBoletoResponse> content) {
     this.content = content;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("content")
-  public List<CompraContestadaCartaoResponse> getContent() {
+  public List<StatusBoletoResponse> getContent() {
     return content;
   }
-  public void setContent(List<CompraContestadaCartaoResponse> content) {
+  public void setContent(List<StatusBoletoResponse> content) {
     this.content = content;
   }
 
   
   /**
    **/
-  public PageCompraContestadaCartaoResponse first(Boolean first) {
+  public PageStatusBoletoResponse first(Boolean first) {
     this.first = first;
     return this;
   }
@@ -70,7 +70,7 @@ public class PageCompraContestadaCartaoResponse   {
   
   /**
    **/
-  public PageCompraContestadaCartaoResponse firstPage(Boolean firstPage) {
+  public PageStatusBoletoResponse firstPage(Boolean firstPage) {
     this.firstPage = firstPage;
     return this;
   }
@@ -87,7 +87,7 @@ public class PageCompraContestadaCartaoResponse   {
   
   /**
    **/
-  public PageCompraContestadaCartaoResponse hasContent(Boolean hasContent) {
+  public PageStatusBoletoResponse hasContent(Boolean hasContent) {
     this.hasContent = hasContent;
     return this;
   }
@@ -104,7 +104,7 @@ public class PageCompraContestadaCartaoResponse   {
   
   /**
    **/
-  public PageCompraContestadaCartaoResponse hasNextPage(Boolean hasNextPage) {
+  public PageStatusBoletoResponse hasNextPage(Boolean hasNextPage) {
     this.hasNextPage = hasNextPage;
     return this;
   }
@@ -121,7 +121,7 @@ public class PageCompraContestadaCartaoResponse   {
   
   /**
    **/
-  public PageCompraContestadaCartaoResponse hasPreviousPage(Boolean hasPreviousPage) {
+  public PageStatusBoletoResponse hasPreviousPage(Boolean hasPreviousPage) {
     this.hasPreviousPage = hasPreviousPage;
     return this;
   }
@@ -138,7 +138,7 @@ public class PageCompraContestadaCartaoResponse   {
   
   /**
    **/
-  public PageCompraContestadaCartaoResponse last(Boolean last) {
+  public PageStatusBoletoResponse last(Boolean last) {
     this.last = last;
     return this;
   }
@@ -155,7 +155,7 @@ public class PageCompraContestadaCartaoResponse   {
   
   /**
    **/
-  public PageCompraContestadaCartaoResponse nextPage(Integer nextPage) {
+  public PageStatusBoletoResponse nextPage(Integer nextPage) {
     this.nextPage = nextPage;
     return this;
   }
@@ -172,7 +172,7 @@ public class PageCompraContestadaCartaoResponse   {
   
   /**
    **/
-  public PageCompraContestadaCartaoResponse number(Integer number) {
+  public PageStatusBoletoResponse number(Integer number) {
     this.number = number;
     return this;
   }
@@ -189,7 +189,7 @@ public class PageCompraContestadaCartaoResponse   {
   
   /**
    **/
-  public PageCompraContestadaCartaoResponse numberOfElements(Integer numberOfElements) {
+  public PageStatusBoletoResponse numberOfElements(Integer numberOfElements) {
     this.numberOfElements = numberOfElements;
     return this;
   }
@@ -206,7 +206,7 @@ public class PageCompraContestadaCartaoResponse   {
   
   /**
    **/
-  public PageCompraContestadaCartaoResponse previousPage(Integer previousPage) {
+  public PageStatusBoletoResponse previousPage(Integer previousPage) {
     this.previousPage = previousPage;
     return this;
   }
@@ -223,7 +223,7 @@ public class PageCompraContestadaCartaoResponse   {
   
   /**
    **/
-  public PageCompraContestadaCartaoResponse size(Integer size) {
+  public PageStatusBoletoResponse size(Integer size) {
     this.size = size;
     return this;
   }
@@ -240,7 +240,7 @@ public class PageCompraContestadaCartaoResponse   {
   
   /**
    **/
-  public PageCompraContestadaCartaoResponse totalElements(Long totalElements) {
+  public PageStatusBoletoResponse totalElements(Long totalElements) {
     this.totalElements = totalElements;
     return this;
   }
@@ -257,7 +257,7 @@ public class PageCompraContestadaCartaoResponse   {
   
   /**
    **/
-  public PageCompraContestadaCartaoResponse totalPages(Integer totalPages) {
+  public PageStatusBoletoResponse totalPages(Integer totalPages) {
     this.totalPages = totalPages;
     return this;
   }
@@ -281,21 +281,21 @@ public class PageCompraContestadaCartaoResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    PageCompraContestadaCartaoResponse pageCompraContestadaCartaoResponse = (PageCompraContestadaCartaoResponse) o;
-    return Objects.equals(this.content, pageCompraContestadaCartaoResponse.content) &&
-        Objects.equals(this.first, pageCompraContestadaCartaoResponse.first) &&
-        Objects.equals(this.firstPage, pageCompraContestadaCartaoResponse.firstPage) &&
-        Objects.equals(this.hasContent, pageCompraContestadaCartaoResponse.hasContent) &&
-        Objects.equals(this.hasNextPage, pageCompraContestadaCartaoResponse.hasNextPage) &&
-        Objects.equals(this.hasPreviousPage, pageCompraContestadaCartaoResponse.hasPreviousPage) &&
-        Objects.equals(this.last, pageCompraContestadaCartaoResponse.last) &&
-        Objects.equals(this.nextPage, pageCompraContestadaCartaoResponse.nextPage) &&
-        Objects.equals(this.number, pageCompraContestadaCartaoResponse.number) &&
-        Objects.equals(this.numberOfElements, pageCompraContestadaCartaoResponse.numberOfElements) &&
-        Objects.equals(this.previousPage, pageCompraContestadaCartaoResponse.previousPage) &&
-        Objects.equals(this.size, pageCompraContestadaCartaoResponse.size) &&
-        Objects.equals(this.totalElements, pageCompraContestadaCartaoResponse.totalElements) &&
-        Objects.equals(this.totalPages, pageCompraContestadaCartaoResponse.totalPages);
+    PageStatusBoletoResponse pageStatusBoletoResponse = (PageStatusBoletoResponse) o;
+    return Objects.equals(this.content, pageStatusBoletoResponse.content) &&
+        Objects.equals(this.first, pageStatusBoletoResponse.first) &&
+        Objects.equals(this.firstPage, pageStatusBoletoResponse.firstPage) &&
+        Objects.equals(this.hasContent, pageStatusBoletoResponse.hasContent) &&
+        Objects.equals(this.hasNextPage, pageStatusBoletoResponse.hasNextPage) &&
+        Objects.equals(this.hasPreviousPage, pageStatusBoletoResponse.hasPreviousPage) &&
+        Objects.equals(this.last, pageStatusBoletoResponse.last) &&
+        Objects.equals(this.nextPage, pageStatusBoletoResponse.nextPage) &&
+        Objects.equals(this.number, pageStatusBoletoResponse.number) &&
+        Objects.equals(this.numberOfElements, pageStatusBoletoResponse.numberOfElements) &&
+        Objects.equals(this.previousPage, pageStatusBoletoResponse.previousPage) &&
+        Objects.equals(this.size, pageStatusBoletoResponse.size) &&
+        Objects.equals(this.totalElements, pageStatusBoletoResponse.totalElements) &&
+        Objects.equals(this.totalPages, pageStatusBoletoResponse.totalPages);
   }
 
   @Override
@@ -306,7 +306,7 @@ public class PageCompraContestadaCartaoResponse   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PageCompraContestadaCartaoResponse {\n");
+    sb.append("class PageStatusBoletoResponse {\n");
     
     sb.append("    content: ").append(toIndentedString(content)).append("\n");
     sb.append("    first: ").append(toIndentedString(first)).append("\n");

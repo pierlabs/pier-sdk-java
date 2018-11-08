@@ -142,9 +142,9 @@ public class GlobaltagautorizacaoApi {
   }
   
   /**
-   * {{{transacao_on_us_resource_autorizar}}}
-   * {{{transacao_on_us_resource_autorizar_notes}}}
-   * @param id {{{transacao_on_us_resource_autorizar_param_id_cartao}}}
+   * {{{transacao_on_us_resource_autorizar_por_idcartao}}}
+   * {{{transacao_on_us_resource_autorizar_por_idcartao_notes}}}
+   * @param id {{{transacao_on_us_resource_autorizar_por_idcartao_param_id_cartao}}}
    * @param transacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest
    * @return TransacaoOnUsResponse
    */

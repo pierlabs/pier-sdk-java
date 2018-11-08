@@ -23,6 +23,7 @@ public class CancelamentoTransacaoPorIdCartaoRequest   {
   private String nsuAutorizacaoTransacaoCancelada = null;
   private BigDecimal valorTransacao = null;
   private Long numeroEstabelecimento = null;
+  private String nomeEstabelecimento = null;
   private String dataHoraTerminal = null;
   private String terminalRequisitante = null;
   private Long numeroParcelas = null;
@@ -155,6 +156,24 @@ public class CancelamentoTransacaoPorIdCartaoRequest   {
 
   
   /**
+   * {{{transacao_on_us_por_id_cartao_request_nome_estabelecimento_value}}}
+   **/
+  public CancelamentoTransacaoPorIdCartaoRequest nomeEstabelecimento(String nomeEstabelecimento) {
+    this.nomeEstabelecimento = nomeEstabelecimento;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{transacao_on_us_por_id_cartao_request_nome_estabelecimento_value}}}")
+  @JsonProperty("nomeEstabelecimento")
+  public String getNomeEstabelecimento() {
+    return nomeEstabelecimento;
+  }
+  public void setNomeEstabelecimento(String nomeEstabelecimento) {
+    this.nomeEstabelecimento = nomeEstabelecimento;
+  }
+
+  
+  /**
    * {{{transacao_on_us_por_id_cartao_request_data_hora_terminal_value}}}
    **/
   public CancelamentoTransacaoPorIdCartaoRequest dataHoraTerminal(String dataHoraTerminal) {
@@ -225,6 +244,7 @@ public class CancelamentoTransacaoPorIdCartaoRequest   {
         Objects.equals(this.nsuAutorizacaoTransacaoCancelada, cancelamentoTransacaoPorIdCartaoRequest.nsuAutorizacaoTransacaoCancelada) &&
         Objects.equals(this.valorTransacao, cancelamentoTransacaoPorIdCartaoRequest.valorTransacao) &&
         Objects.equals(this.numeroEstabelecimento, cancelamentoTransacaoPorIdCartaoRequest.numeroEstabelecimento) &&
+        Objects.equals(this.nomeEstabelecimento, cancelamentoTransacaoPorIdCartaoRequest.nomeEstabelecimento) &&
         Objects.equals(this.dataHoraTerminal, cancelamentoTransacaoPorIdCartaoRequest.dataHoraTerminal) &&
         Objects.equals(this.terminalRequisitante, cancelamentoTransacaoPorIdCartaoRequest.terminalRequisitante) &&
         Objects.equals(this.numeroParcelas, cancelamentoTransacaoPorIdCartaoRequest.numeroParcelas);
@@ -232,7 +252,7 @@ public class CancelamentoTransacaoPorIdCartaoRequest   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(nsuOrigem, nsuOrigemTransacaoCancelada, codigoProcessamento, dataHoraTransacaoCancelada, nsuAutorizacaoTransacaoCancelada, valorTransacao, numeroEstabelecimento, dataHoraTerminal, terminalRequisitante, numeroParcelas);
+    return Objects.hash(nsuOrigem, nsuOrigemTransacaoCancelada, codigoProcessamento, dataHoraTransacaoCancelada, nsuAutorizacaoTransacaoCancelada, valorTransacao, numeroEstabelecimento, nomeEstabelecimento, dataHoraTerminal, terminalRequisitante, numeroParcelas);
   }
 
   @Override
@@ -247,6 +267,7 @@ public class CancelamentoTransacaoPorIdCartaoRequest   {
     sb.append("    nsuAutorizacaoTransacaoCancelada: ").append(toIndentedString(nsuAutorizacaoTransacaoCancelada)).append("\n");
     sb.append("    valorTransacao: ").append(toIndentedString(valorTransacao)).append("\n");
     sb.append("    numeroEstabelecimento: ").append(toIndentedString(numeroEstabelecimento)).append("\n");
+    sb.append("    nomeEstabelecimento: ").append(toIndentedString(nomeEstabelecimento)).append("\n");
     sb.append("    dataHoraTerminal: ").append(toIndentedString(dataHoraTerminal)).append("\n");
     sb.append("    terminalRequisitante: ").append(toIndentedString(terminalRequisitante)).append("\n");
     sb.append("    numeroParcelas: ").append(toIndentedString(numeroParcelas)).append("\n");

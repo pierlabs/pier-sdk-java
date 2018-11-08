@@ -20,6 +20,7 @@ public class TransacaoOnUsPorIdCartaoRequest   {
   private String codigoProcessamento = null;
   private BigDecimal valorTransacao = null;
   private Long numeroEstabelecimento = null;
+  private String nomeEstabelecimento = null;
   private String dataHoraTerminal = null;
   private String terminalRequisitante = null;
   private Long numeroParcelas = null;
@@ -98,6 +99,24 @@ public class TransacaoOnUsPorIdCartaoRequest   {
 
   
   /**
+   * {{{transacao_on_us_por_id_cartao_request_nome_estabelecimento_value}}}
+   **/
+  public TransacaoOnUsPorIdCartaoRequest nomeEstabelecimento(String nomeEstabelecimento) {
+    this.nomeEstabelecimento = nomeEstabelecimento;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{transacao_on_us_por_id_cartao_request_nome_estabelecimento_value}}}")
+  @JsonProperty("nomeEstabelecimento")
+  public String getNomeEstabelecimento() {
+    return nomeEstabelecimento;
+  }
+  public void setNomeEstabelecimento(String nomeEstabelecimento) {
+    this.nomeEstabelecimento = nomeEstabelecimento;
+  }
+
+  
+  /**
    * {{{transacao_on_us_por_id_cartao_request_data_hora_terminal_value}}}
    **/
   public TransacaoOnUsPorIdCartaoRequest dataHoraTerminal(String dataHoraTerminal) {
@@ -165,6 +184,7 @@ public class TransacaoOnUsPorIdCartaoRequest   {
         Objects.equals(this.codigoProcessamento, transacaoOnUsPorIdCartaoRequest.codigoProcessamento) &&
         Objects.equals(this.valorTransacao, transacaoOnUsPorIdCartaoRequest.valorTransacao) &&
         Objects.equals(this.numeroEstabelecimento, transacaoOnUsPorIdCartaoRequest.numeroEstabelecimento) &&
+        Objects.equals(this.nomeEstabelecimento, transacaoOnUsPorIdCartaoRequest.nomeEstabelecimento) &&
         Objects.equals(this.dataHoraTerminal, transacaoOnUsPorIdCartaoRequest.dataHoraTerminal) &&
         Objects.equals(this.terminalRequisitante, transacaoOnUsPorIdCartaoRequest.terminalRequisitante) &&
         Objects.equals(this.numeroParcelas, transacaoOnUsPorIdCartaoRequest.numeroParcelas);
@@ -172,7 +192,7 @@ public class TransacaoOnUsPorIdCartaoRequest   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(nsuOrigem, codigoProcessamento, valorTransacao, numeroEstabelecimento, dataHoraTerminal, terminalRequisitante, numeroParcelas);
+    return Objects.hash(nsuOrigem, codigoProcessamento, valorTransacao, numeroEstabelecimento, nomeEstabelecimento, dataHoraTerminal, terminalRequisitante, numeroParcelas);
   }
 
   @Override
@@ -184,6 +204,7 @@ public class TransacaoOnUsPorIdCartaoRequest   {
     sb.append("    codigoProcessamento: ").append(toIndentedString(codigoProcessamento)).append("\n");
     sb.append("    valorTransacao: ").append(toIndentedString(valorTransacao)).append("\n");
     sb.append("    numeroEstabelecimento: ").append(toIndentedString(numeroEstabelecimento)).append("\n");
+    sb.append("    nomeEstabelecimento: ").append(toIndentedString(nomeEstabelecimento)).append("\n");
     sb.append("    dataHoraTerminal: ").append(toIndentedString(dataHoraTerminal)).append("\n");
     sb.append("    terminalRequisitante: ").append(toIndentedString(terminalRequisitante)).append("\n");
     sb.append("    numeroParcelas: ").append(toIndentedString(numeroParcelas)).append("\n");

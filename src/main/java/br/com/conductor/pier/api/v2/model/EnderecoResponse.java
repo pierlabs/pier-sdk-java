@@ -15,6 +15,8 @@ import io.swagger.annotations.ApiModelProperty;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class EnderecoResponse   {
   
+  private Integer tempoResidenciaAnos = null;
+  private Integer tempoResidenciaMeses = null;
   private Long id = null;
   private Long idPessoa = null;
   private Long idTipoEndereco = null;
@@ -30,6 +32,42 @@ public class EnderecoResponse   {
   private String dataInclusao = null;
   private String dataUltimaAtualizacao = null;
   private Boolean flagCorrespondencia = null;
+
+  
+  /**
+   * {{{endereco_response_tempo_residencia_anos_value}}}
+   **/
+  public EnderecoResponse tempoResidenciaAnos(Integer tempoResidenciaAnos) {
+    this.tempoResidenciaAnos = tempoResidenciaAnos;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{endereco_response_tempo_residencia_anos_value}}}")
+  @JsonProperty("tempoResidenciaAnos")
+  public Integer getTempoResidenciaAnos() {
+    return tempoResidenciaAnos;
+  }
+  public void setTempoResidenciaAnos(Integer tempoResidenciaAnos) {
+    this.tempoResidenciaAnos = tempoResidenciaAnos;
+  }
+
+  
+  /**
+   * {{{endereco_response_tempo_residencia_meses_value}}}
+   **/
+  public EnderecoResponse tempoResidenciaMeses(Integer tempoResidenciaMeses) {
+    this.tempoResidenciaMeses = tempoResidenciaMeses;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{endereco_response_tempo_residencia_meses_value}}}")
+  @JsonProperty("tempoResidenciaMeses")
+  public Integer getTempoResidenciaMeses() {
+    return tempoResidenciaMeses;
+  }
+  public void setTempoResidenciaMeses(Integer tempoResidenciaMeses) {
+    this.tempoResidenciaMeses = tempoResidenciaMeses;
+  }
 
   
   /**
@@ -312,7 +350,9 @@ public class EnderecoResponse   {
       return false;
     }
     EnderecoResponse enderecoResponse = (EnderecoResponse) o;
-    return Objects.equals(this.id, enderecoResponse.id) &&
+    return Objects.equals(this.tempoResidenciaAnos, enderecoResponse.tempoResidenciaAnos) &&
+        Objects.equals(this.tempoResidenciaMeses, enderecoResponse.tempoResidenciaMeses) &&
+        Objects.equals(this.id, enderecoResponse.id) &&
         Objects.equals(this.idPessoa, enderecoResponse.idPessoa) &&
         Objects.equals(this.idTipoEndereco, enderecoResponse.idTipoEndereco) &&
         Objects.equals(this.cep, enderecoResponse.cep) &&
@@ -331,7 +371,7 @@ public class EnderecoResponse   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idPessoa, idTipoEndereco, cep, logradouro, numero, complemento, pontoReferencia, bairro, cidade, uf, pais, dataInclusao, dataUltimaAtualizacao, flagCorrespondencia);
+    return Objects.hash(tempoResidenciaAnos, tempoResidenciaMeses, id, idPessoa, idTipoEndereco, cep, logradouro, numero, complemento, pontoReferencia, bairro, cidade, uf, pais, dataInclusao, dataUltimaAtualizacao, flagCorrespondencia);
   }
 
   @Override
@@ -339,6 +379,8 @@ public class EnderecoResponse   {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnderecoResponse {\n");
     
+    sb.append("    tempoResidenciaAnos: ").append(toIndentedString(tempoResidenciaAnos)).append("\n");
+    sb.append("    tempoResidenciaMeses: ").append(toIndentedString(tempoResidenciaMeses)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idPessoa: ").append(toIndentedString(idPessoa)).append("\n");
     sb.append("    idTipoEndereco: ").append(toIndentedString(idTipoEndereco)).append("\n");
