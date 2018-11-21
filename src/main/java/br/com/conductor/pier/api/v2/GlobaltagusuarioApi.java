@@ -172,17 +172,17 @@ public class GlobaltagusuarioApi {
    * @param update update
    * @return UsuarioResponse
    */
-  public UsuarioResponse alterarUsingPUT20(Long id, UsuarioUpdateValue update) throws ApiException {
+  public UsuarioResponse alterarUsingPUT21(Long id, UsuarioUpdateValue update) throws ApiException {
     Object postBody = update;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT20");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT21");
      }
      
      // verify the required parameter 'update' is set
      if (update == null) {
-        throw new ApiException(400, "Missing the required parameter 'update' when calling alterarUsingPUT20");
+        throw new ApiException(400, "Missing the required parameter 'update' when calling alterarUsingPUT21");
      }
      
     // create path and map variables
@@ -442,12 +442,12 @@ public class GlobaltagusuarioApi {
    * @param id {{{usuario_resource_consultar_param_id}}}
    * @return UsuarioResponse
    */
-  public UsuarioResponse consultarUsingGET48(Long id) throws ApiException {
+  public UsuarioResponse consultarUsingGET49(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET48");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET49");
      }
      
     // create path and map variables
@@ -696,12 +696,12 @@ public class GlobaltagusuarioApi {
    * @param persist persist
    * @return UsuarioResponse
    */
-  public UsuarioResponse salvarUsingPOST30(UsuarioPersistencia persist) throws ApiException {
+  public UsuarioResponse salvarUsingPOST31(UsuarioPersistencia persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST30");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST31");
      }
      
     // create path and map variables

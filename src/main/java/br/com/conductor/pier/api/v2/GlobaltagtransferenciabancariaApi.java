@@ -412,17 +412,17 @@ public class GlobaltagtransferenciabancariaApi {
    * @param idContaBancariaDestino {{{transferencia_bancaria_resource_consultar_param_id_conta_portador}}}
    * @return TransferenciaBancariaResponse
    */
-  public TransferenciaBancariaResponse consultarUsingGET46(Long id, Long idTransferencia, Long idContaBancariaDestino) throws ApiException {
+  public TransferenciaBancariaResponse consultarUsingGET47(Long id, Long idTransferencia, Long idContaBancariaDestino) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET46");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET47");
      }
      
      // verify the required parameter 'idTransferencia' is set
      if (idTransferencia == null) {
-        throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET46");
+        throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarUsingGET47");
      }
      
     // create path and map variables

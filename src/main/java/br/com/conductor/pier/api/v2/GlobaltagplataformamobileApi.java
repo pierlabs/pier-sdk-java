@@ -151,12 +151,12 @@ public class GlobaltagplataformamobileApi {
    * @param persist persist
    * @return PlataformaMobileResponse
    */
-  public PlataformaMobileResponse salvarUsingPOST23(PlataformaMobilePersistValue persist) throws ApiException {
+  public PlataformaMobileResponse salvarUsingPOST24(PlataformaMobilePersistValue persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST23");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST24");
      }
      
     // create path and map variables

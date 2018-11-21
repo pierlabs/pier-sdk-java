@@ -117,22 +117,22 @@ public class GlobaltagfaqApi {
    * @param status {{{faq_persist_status_value}}}
    * @return FaqResponse
    */
-  public FaqResponse alterarUsingPUT7(Long id, String pergunta, String resposta, Integer relevancia, String plataforma, String categoria, String status) throws ApiException {
+  public FaqResponse alterarUsingPUT8(Long id, String pergunta, String resposta, Integer relevancia, String plataforma, String categoria, String status) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT7");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT8");
      }
      
      // verify the required parameter 'pergunta' is set
      if (pergunta == null) {
-        throw new ApiException(400, "Missing the required parameter 'pergunta' when calling alterarUsingPUT7");
+        throw new ApiException(400, "Missing the required parameter 'pergunta' when calling alterarUsingPUT8");
      }
      
      // verify the required parameter 'resposta' is set
      if (resposta == null) {
-        throw new ApiException(400, "Missing the required parameter 'resposta' when calling alterarUsingPUT7");
+        throw new ApiException(400, "Missing the required parameter 'resposta' when calling alterarUsingPUT8");
      }
      
     // create path and map variables
@@ -187,12 +187,12 @@ public class GlobaltagfaqApi {
    * @param id {{{faq_resource_consultar_param_id_faq}}}
    * @return FaqResponse
    */
-  public FaqResponse consultarUsingGET19(Long id) throws ApiException {
+  public FaqResponse consultarUsingGET20(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET19");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET20");
      }
      
     // create path and map variables

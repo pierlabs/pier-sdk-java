@@ -45,17 +45,17 @@ public class GlobaltagwebhookApi {
    * @param status {{{web_hook_resource_alterar_param_status}}}
    * @return WebHookResponse
    */
-  public WebHookResponse alterarUsingPUT21(Long id, WebHookPersistValue webhook, String status) throws ApiException {
+  public WebHookResponse alterarUsingPUT22(Long id, WebHookPersistValue webhook, String status) throws ApiException {
     Object postBody = webhook;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT21");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT22");
      }
      
      // verify the required parameter 'webhook' is set
      if (webhook == null) {
-        throw new ApiException(400, "Missing the required parameter 'webhook' when calling alterarUsingPUT21");
+        throw new ApiException(400, "Missing the required parameter 'webhook' when calling alterarUsingPUT22");
      }
      
     // create path and map variables
@@ -100,12 +100,12 @@ public class GlobaltagwebhookApi {
    * @param id {{{web_hook_resource_consultar_param_id}}}
    * @return WebHookResponse
    */
-  public WebHookResponse consultarUsingGET50(Long id) throws ApiException {
+  public WebHookResponse consultarUsingGET51(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET50");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET51");
      }
      
     // create path and map variables
@@ -210,12 +210,12 @@ public class GlobaltagwebhookApi {
    * @param webhook webhook
    * @return WebHookResponse
    */
-  public WebHookResponse salvarUsingPOST32(WebHookPersistValue webhook) throws ApiException {
+  public WebHookResponse salvarUsingPOST33(WebHookPersistValue webhook) throws ApiException {
     Object postBody = webhook;
     
      // verify the required parameter 'webhook' is set
      if (webhook == null) {
-        throw new ApiException(400, "Missing the required parameter 'webhook' when calling salvarUsingPOST32");
+        throw new ApiException(400, "Missing the required parameter 'webhook' when calling salvarUsingPOST33");
      }
      
     // create path and map variables

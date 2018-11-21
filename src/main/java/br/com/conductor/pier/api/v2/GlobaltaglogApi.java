@@ -42,12 +42,12 @@ public class GlobaltaglogApi {
    * @param logAcessoUsuarioPersist logAcessoUsuarioPersist
    * @return LogAcessoUsuarioResposta
    */
-  public LogAcessoUsuarioResposta salvarUsingPOST17(LogAcessoUsuarioPersistencia logAcessoUsuarioPersist) throws ApiException {
+  public LogAcessoUsuarioResposta salvarUsingPOST18(LogAcessoUsuarioPersistencia logAcessoUsuarioPersist) throws ApiException {
     Object postBody = logAcessoUsuarioPersist;
     
      // verify the required parameter 'logAcessoUsuarioPersist' is set
      if (logAcessoUsuarioPersist == null) {
-        throw new ApiException(400, "Missing the required parameter 'logAcessoUsuarioPersist' when calling salvarUsingPOST17");
+        throw new ApiException(400, "Missing the required parameter 'logAcessoUsuarioPersist' when calling salvarUsingPOST18");
      }
      
     // create path and map variables

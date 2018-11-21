@@ -47,12 +47,12 @@ public class GlobaltagboletoApi {
    * @param zeraValorCodigoBarras {{{boleto_resource_consultar_param_zera_valor_codigo_barras}}}
    * @return BoletoResponse
    */
-  public BoletoResponse consultarUsingGET31(Long id, Boolean zeraValorCodigoBarras) throws ApiException {
+  public BoletoResponse consultarUsingGET32(Long id, Boolean zeraValorCodigoBarras) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET31");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET32");
      }
      
     // create path and map variables

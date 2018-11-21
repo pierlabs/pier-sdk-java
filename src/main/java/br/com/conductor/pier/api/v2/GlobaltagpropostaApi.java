@@ -102,12 +102,12 @@ public class GlobaltagpropostaApi {
    * @param id {{{proposta_resource_consultar_param_id}}}
    * @return PropostaResponse
    */
-  public PropostaResponse consultarUsingGET30(Long id) throws ApiException {
+  public PropostaResponse consultarUsingGET31(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET30");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET31");
      }
      
     // create path and map variables
@@ -414,9 +414,10 @@ public class GlobaltagpropostaApi {
    * @param page {{{global_menssagem_sort_page_value}}}
    * @param limit {{{global_menssagem_sort_limit}}}
    * @param status {{{proposta_request_status_value}}}
+   * @param idPessoaFisica {{{proposta_request_idPessoaFisica_value}}}
    * @return PagePropostaResponse
    */
-  public PagePropostaResponse listarUsingGET38(List<String> sort, Integer page, Integer limit, Integer status) throws ApiException {
+  public PagePropostaResponse listarUsingGET38(List<String> sort, Integer page, Integer limit, Integer status, Long idPessoaFisica) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -435,6 +436,8 @@ public class GlobaltagpropostaApi {
     queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
     
     queryParams.addAll(apiClient.parameterToPairs("", "status", status));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idPessoaFisica", idPessoaFisica));
     
 
     

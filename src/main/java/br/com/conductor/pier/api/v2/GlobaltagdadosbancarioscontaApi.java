@@ -46,17 +46,17 @@ public class GlobaltagdadosbancarioscontaApi {
    * @param update update
    * @return DadosBancariosContaResponse
    */
-  public DadosBancariosContaResponse alterarUsingPUT4(Long id, DadosBancariosContaUpdate update) throws ApiException {
+  public DadosBancariosContaResponse alterarUsingPUT5(Long id, DadosBancariosContaUpdate update) throws ApiException {
     Object postBody = update;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT4");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT5");
      }
      
      // verify the required parameter 'update' is set
      if (update == null) {
-        throw new ApiException(400, "Missing the required parameter 'update' when calling alterarUsingPUT4");
+        throw new ApiException(400, "Missing the required parameter 'update' when calling alterarUsingPUT5");
      }
      
     // create path and map variables
@@ -99,12 +99,12 @@ public class GlobaltagdadosbancarioscontaApi {
    * @param id {{{dados_bancarios_conta_consultar_param_id}}}
    * @return DadosBancariosContaResponse
    */
-  public DadosBancariosContaResponse consultarUsingGET14(Long id) throws ApiException {
+  public DadosBancariosContaResponse consultarUsingGET15(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET14");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET15");
      }
      
     // create path and map variables
@@ -147,12 +147,12 @@ public class GlobaltagdadosbancarioscontaApi {
    * @param id {{{tipo_conta_bancaria_resource_consultar_param_id}}}
    * @return CdtTipoContaBancaria
    */
-  public CdtTipoContaBancaria consultarUsingGET40(Long id) throws ApiException {
+  public CdtTipoContaBancaria consultarUsingGET41(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET40");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET41");
      }
      
     // create path and map variables
@@ -316,12 +316,12 @@ public class GlobaltagdadosbancarioscontaApi {
    * @param dadosBancariosContaPersist dadosBancariosContaPersist
    * @return DadosBancariosContaResponse
    */
-  public DadosBancariosContaResponse salvarUsingPOST9(DadosBancariosContaPersist dadosBancariosContaPersist) throws ApiException {
+  public DadosBancariosContaResponse salvarUsingPOST10(DadosBancariosContaPersist dadosBancariosContaPersist) throws ApiException {
     Object postBody = dadosBancariosContaPersist;
     
      // verify the required parameter 'dadosBancariosContaPersist' is set
      if (dadosBancariosContaPersist == null) {
-        throw new ApiException(400, "Missing the required parameter 'dadosBancariosContaPersist' when calling salvarUsingPOST9");
+        throw new ApiException(400, "Missing the required parameter 'dadosBancariosContaPersist' when calling salvarUsingPOST10");
      }
      
     // create path and map variables

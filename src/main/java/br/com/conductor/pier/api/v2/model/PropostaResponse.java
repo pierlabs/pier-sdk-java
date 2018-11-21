@@ -18,6 +18,7 @@ public class PropostaResponse   {
   private Long id = null;
   private Integer status = null;
   private String dataCadastramento = null;
+  private String dataAprovacaoNegacaoPendencia = null;
 
   
   /**
@@ -74,6 +75,24 @@ public class PropostaResponse   {
   }
 
   
+  /**
+   * {{{proposta_response_data_aprovacaoNegacaoPendencia_value}}}
+   **/
+  public PropostaResponse dataAprovacaoNegacaoPendencia(String dataAprovacaoNegacaoPendencia) {
+    this.dataAprovacaoNegacaoPendencia = dataAprovacaoNegacaoPendencia;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{proposta_response_data_aprovacaoNegacaoPendencia_value}}}")
+  @JsonProperty("dataAprovacaoNegacaoPendencia")
+  public String getDataAprovacaoNegacaoPendencia() {
+    return dataAprovacaoNegacaoPendencia;
+  }
+  public void setDataAprovacaoNegacaoPendencia(String dataAprovacaoNegacaoPendencia) {
+    this.dataAprovacaoNegacaoPendencia = dataAprovacaoNegacaoPendencia;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -86,12 +105,13 @@ public class PropostaResponse   {
     PropostaResponse propostaResponse = (PropostaResponse) o;
     return Objects.equals(this.id, propostaResponse.id) &&
         Objects.equals(this.status, propostaResponse.status) &&
-        Objects.equals(this.dataCadastramento, propostaResponse.dataCadastramento);
+        Objects.equals(this.dataCadastramento, propostaResponse.dataCadastramento) &&
+        Objects.equals(this.dataAprovacaoNegacaoPendencia, propostaResponse.dataAprovacaoNegacaoPendencia);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, status, dataCadastramento);
+    return Objects.hash(id, status, dataCadastramento, dataAprovacaoNegacaoPendencia);
   }
 
   @Override
@@ -102,6 +122,7 @@ public class PropostaResponse   {
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    dataCadastramento: ").append(toIndentedString(dataCadastramento)).append("\n");
+    sb.append("    dataAprovacaoNegacaoPendencia: ").append(toIndentedString(dataAprovacaoNegacaoPendencia)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -43,12 +43,12 @@ public class GlobaltagriscofraudeApi {
    * @param id {{{risco_fraude_resource_consultar_param_id_risco_fraude}}}
    * @return RiscoFraudeDetalhadoResponse
    */
-  public RiscoFraudeDetalhadoResponse consultarUsingGET32(Long id) throws ApiException {
+  public RiscoFraudeDetalhadoResponse consultarUsingGET33(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET32");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET33");
      }
      
     // create path and map variables

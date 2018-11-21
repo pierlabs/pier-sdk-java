@@ -52,17 +52,17 @@ public class GlobaltagdocumentoApi {
    * @param persist persist
    * @return TipoTemplateResponse
    */
-  public TipoTemplateResponse alterarUsingPUT19(Long id, TipoTemplateRequest persist) throws ApiException {
+  public TipoTemplateResponse alterarUsingPUT20(Long id, TipoTemplateRequest persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT19");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT20");
      }
      
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling alterarUsingPUT19");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling alterarUsingPUT20");
      }
      
     // create path and map variables
@@ -159,12 +159,12 @@ public class GlobaltagdocumentoApi {
    * @param id {{{documento_resource_consultar_param_id}}}
    * @return DocumentoDetalhadoResponse
    */
-  public DocumentoDetalhadoResponse consultarUsingGET15(Long id) throws ApiException {
+  public DocumentoDetalhadoResponse consultarUsingGET16(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET15");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET16");
      }
      
     // create path and map variables
@@ -207,12 +207,12 @@ public class GlobaltagdocumentoApi {
    * @param id {{{documento_template_resource_consultar_param_id}}}
    * @return DocumentoTemplateResponse
    */
-  public DocumentoTemplateResponse consultarUsingGET16(Long id) throws ApiException {
+  public DocumentoTemplateResponse consultarUsingGET17(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET16");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET17");
      }
      
     // create path and map variables
@@ -255,12 +255,12 @@ public class GlobaltagdocumentoApi {
    * @param id {{{tipo_template_resource_consultar_param_id}}}
    * @return TipoTemplateResponse
    */
-  public TipoTemplateResponse consultarUsingGET45(Long id) throws ApiException {
+  public TipoTemplateResponse consultarUsingGET46(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET45");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET46");
      }
      
     // create path and map variables
@@ -512,12 +512,12 @@ public class GlobaltagdocumentoApi {
    * @param persist persist
    * @return DocumentoDetalhadoResponse
    */
-  public DocumentoDetalhadoResponse salvarUsingPOST11(DocumentoParametrosRequest persist) throws ApiException {
+  public DocumentoDetalhadoResponse salvarUsingPOST12(DocumentoParametrosRequest persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST11");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST12");
      }
      
     // create path and map variables
@@ -559,12 +559,12 @@ public class GlobaltagdocumentoApi {
    * @param persist persist
    * @return DocumentoTemplateResponse
    */
-  public DocumentoTemplateResponse salvarUsingPOST12(DocumentoTemplatePersist persist) throws ApiException {
+  public DocumentoTemplateResponse salvarUsingPOST13(DocumentoTemplatePersist persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST12");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST13");
      }
      
     // create path and map variables
@@ -606,12 +606,12 @@ public class GlobaltagdocumentoApi {
    * @param persist persist
    * @return TipoTemplateResponse
    */
-  public TipoTemplateResponse salvarUsingPOST29(TipoTemplateRequest persist) throws ApiException {
+  public TipoTemplateResponse salvarUsingPOST30(TipoTemplateRequest persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST29");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST30");
      }
      
     // create path and map variables
