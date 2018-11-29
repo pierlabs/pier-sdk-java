@@ -20,13 +20,14 @@ public class StatusBoletoResponse   {
 
   
   /**
+   * {{{status_boleto_dto_status_value}}}
    **/
   public StatusBoletoResponse status(String status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(example = "null", value = "{{{status_boleto_dto_status_value}}}")
   @JsonProperty("status")
   public String getStatus() {
     return status;
@@ -37,13 +38,14 @@ public class StatusBoletoResponse   {
 
   
   /**
+   * {{{status_boleto_dto_data_value}}}
    **/
   public StatusBoletoResponse data(String data) {
     this.data = data;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(example = "null", value = "{{{status_boleto_dto_data_value}}}")
   @JsonProperty("data")
   public String getData() {
     return data;

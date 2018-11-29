@@ -47,12 +47,12 @@ public class GlobaltagboletoApi {
    * @param zeraValorCodigoBarras {{{boleto_resource_consultar_param_zera_valor_codigo_barras}}}
    * @return BoletoResponse
    */
-  public BoletoResponse consultarUsingGET32(Long id, Boolean zeraValorCodigoBarras) throws ApiException {
+  public BoletoResponse consultarUsingGET33(Long id, Boolean zeraValorCodigoBarras) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET32");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET33");
      }
      
     // create path and map variables
@@ -151,12 +151,12 @@ public class GlobaltagboletoApi {
    * @param boletoRequest boletoRequest
    * @return BoletoResponse
    */
-  public BoletoResponse gerarBoletoUsingPOST(BoletoRequest boletoRequest) throws ApiException {
+  public BoletoResponse gerarBoletoUsingPOST1(BoletoRequest boletoRequest) throws ApiException {
     Object postBody = boletoRequest;
     
      // verify the required parameter 'boletoRequest' is set
      if (boletoRequest == null) {
-        throw new ApiException(400, "Missing the required parameter 'boletoRequest' when calling gerarBoletoUsingPOST");
+        throw new ApiException(400, "Missing the required parameter 'boletoRequest' when calling gerarBoletoUsingPOST1");
      }
      
     // create path and map variables
@@ -262,7 +262,7 @@ public class GlobaltagboletoApi {
    * @param nossoNumero {{{boleto_listar_request_nosso_numero_value}}}
    * @return PageBoletoListarResponse
    */
-  public PageBoletoListarResponse listarUsingGET39(List<String> sort, Integer page, Integer limit, Long idConta, String dataVencimento, BigDecimal valorBoleto, Long idTipoBoleto, Long nossoNumero) throws ApiException {
+  public PageBoletoListarResponse listarUsingGET40(List<String> sort, Integer page, Integer limit, Long idConta, String dataVencimento, BigDecimal valorBoleto, Long idTipoBoleto, Long nossoNumero) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

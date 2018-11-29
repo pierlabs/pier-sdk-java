@@ -255,12 +255,12 @@ public class GlobaltagdocumentoApi {
    * @param id {{{tipo_template_resource_consultar_param_id}}}
    * @return TipoTemplateResponse
    */
-  public TipoTemplateResponse consultarUsingGET46(Long id) throws ApiException {
+  public TipoTemplateResponse consultarUsingGET47(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET46");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET47");
      }
      
     // create path and map variables
@@ -464,7 +464,7 @@ public class GlobaltagdocumentoApi {
    * @param limit {{{global_menssagem_sort_limit}}}
    * @return PageTipoTemplateResponse
    */
-  public PageTipoTemplateResponse listarUsingGET54(List<String> sort, Integer page, Integer limit) throws ApiException {
+  public PageTipoTemplateResponse listarUsingGET55(List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

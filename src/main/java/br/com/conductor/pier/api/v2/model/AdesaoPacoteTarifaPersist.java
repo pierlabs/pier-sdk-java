@@ -13,7 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 @ApiModel(description = "{{{adesao_pacote_tarifa_persistencia_descricao}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class AdesaoPacoteTarifaPersistencia   {
+public class AdesaoPacoteTarifaPersist   {
   
   private Long idPacoteTarifa = null;
   private Integer ciclo = null;
@@ -34,7 +34,7 @@ public class AdesaoPacoteTarifaPersistencia   {
   /**
    * {{{adesao_pacote_tarifa_persistencia_id_pacote_tarefa_descricao}}}
    **/
-  public AdesaoPacoteTarifaPersistencia idPacoteTarifa(Long idPacoteTarifa) {
+  public AdesaoPacoteTarifaPersist idPacoteTarifa(Long idPacoteTarifa) {
     this.idPacoteTarifa = idPacoteTarifa;
     return this;
   }
@@ -52,7 +52,7 @@ public class AdesaoPacoteTarifaPersistencia   {
   /**
    * {{{adesao_pacote_tarifa_persistencia_ciclo_descricao}}}
    **/
-  public AdesaoPacoteTarifaPersistencia ciclo(Integer ciclo) {
+  public AdesaoPacoteTarifaPersist ciclo(Integer ciclo) {
     this.ciclo = ciclo;
     return this;
   }
@@ -70,7 +70,7 @@ public class AdesaoPacoteTarifaPersistencia   {
   /**
    * {{{adesao_pacote_tarifa_persistencia_data_hora_ativacao_descricao}}}
    **/
-  public AdesaoPacoteTarifaPersistencia dataHoraAtivacao(String dataHoraAtivacao) {
+  public AdesaoPacoteTarifaPersist dataHoraAtivacao(String dataHoraAtivacao) {
     this.dataHoraAtivacao = dataHoraAtivacao;
     return this;
   }
@@ -88,7 +88,7 @@ public class AdesaoPacoteTarifaPersistencia   {
   /**
    * {{{adesao_pacote_tarifa_persistencia_data_hora_desativacao_descricao}}}
    **/
-  public AdesaoPacoteTarifaPersistencia dataHoraDesativacao(String dataHoraDesativacao) {
+  public AdesaoPacoteTarifaPersist dataHoraDesativacao(String dataHoraDesativacao) {
     this.dataHoraDesativacao = dataHoraDesativacao;
     return this;
   }
@@ -106,7 +106,7 @@ public class AdesaoPacoteTarifaPersistencia   {
   /**
    * {{{adesao_pacote_tarifa_persistencia_data_fim_ciclo_descricao}}}
    **/
-  public AdesaoPacoteTarifaPersistencia dataFimCiclo(String dataFimCiclo) {
+  public AdesaoPacoteTarifaPersist dataFimCiclo(String dataFimCiclo) {
     this.dataFimCiclo = dataFimCiclo;
     return this;
   }
@@ -124,7 +124,7 @@ public class AdesaoPacoteTarifaPersistencia   {
   /**
    * {{{adesao_pacote_tarifa_persistencia_recarga_celular_utilizado_descricao}}}
    **/
-  public AdesaoPacoteTarifaPersistencia recargaCelularUtilizado(Integer recargaCelularUtilizado) {
+  public AdesaoPacoteTarifaPersist recargaCelularUtilizado(Integer recargaCelularUtilizado) {
     this.recargaCelularUtilizado = recargaCelularUtilizado;
     return this;
   }
@@ -142,7 +142,7 @@ public class AdesaoPacoteTarifaPersistencia   {
   /**
    * {{{adesao_pacote_tarifa_persistencia_bilhete_unico_utilizado_descricao}}}
    **/
-  public AdesaoPacoteTarifaPersistencia bilheteUnicoUtilizado(Integer bilheteUnicoUtilizado) {
+  public AdesaoPacoteTarifaPersist bilheteUnicoUtilizado(Integer bilheteUnicoUtilizado) {
     this.bilheteUnicoUtilizado = bilheteUnicoUtilizado;
     return this;
   }
@@ -160,7 +160,7 @@ public class AdesaoPacoteTarifaPersistencia   {
   /**
    * {{{adesao_pacote_tarifa_persistencia_pagamento_conta_utilizado_descricao}}}
    **/
-  public AdesaoPacoteTarifaPersistencia pagamentoContaUtilizado(Integer pagamentoContaUtilizado) {
+  public AdesaoPacoteTarifaPersist pagamentoContaUtilizado(Integer pagamentoContaUtilizado) {
     this.pagamentoContaUtilizado = pagamentoContaUtilizado;
     return this;
   }
@@ -178,7 +178,7 @@ public class AdesaoPacoteTarifaPersistencia   {
   /**
    * {{{adesao_pacote_tarifa_persistencia_saque_utilizado_descricao}}}
    **/
-  public AdesaoPacoteTarifaPersistencia saqueUtilizado(Integer saqueUtilizado) {
+  public AdesaoPacoteTarifaPersist saqueUtilizado(Integer saqueUtilizado) {
     this.saqueUtilizado = saqueUtilizado;
     return this;
   }
@@ -196,7 +196,7 @@ public class AdesaoPacoteTarifaPersistencia   {
   /**
    * {{{adesao_pacote_tarifa_persistencia_transferencia_utilizado_descricao}}}
    **/
-  public AdesaoPacoteTarifaPersistencia transferenciaUtilizado(Integer transferenciaUtilizado) {
+  public AdesaoPacoteTarifaPersist transferenciaUtilizado(Integer transferenciaUtilizado) {
     this.transferenciaUtilizado = transferenciaUtilizado;
     return this;
   }
@@ -214,7 +214,7 @@ public class AdesaoPacoteTarifaPersistencia   {
   /**
    * {{{adesao_pacote_tarifa_persistencia_boleto_utilizado_descricao}}}
    **/
-  public AdesaoPacoteTarifaPersistencia boletoUtilizado(Integer boletoUtilizado) {
+  public AdesaoPacoteTarifaPersist boletoUtilizado(Integer boletoUtilizado) {
     this.boletoUtilizado = boletoUtilizado;
     return this;
   }
@@ -232,7 +232,7 @@ public class AdesaoPacoteTarifaPersistencia   {
   /**
    * {{{adesao_pacote_tarifa_persistencia_aplicacao_utilizado_descricao}}}
    **/
-  public AdesaoPacoteTarifaPersistencia aplicacaoUtilizado(Integer aplicacaoUtilizado) {
+  public AdesaoPacoteTarifaPersist aplicacaoUtilizado(Integer aplicacaoUtilizado) {
     this.aplicacaoUtilizado = aplicacaoUtilizado;
     return this;
   }
@@ -250,7 +250,7 @@ public class AdesaoPacoteTarifaPersistencia   {
   /**
    * {{{adesao_pacote_tarifa_persistencia_tarifa_manutencao_cobrada_descricao}}}
    **/
-  public AdesaoPacoteTarifaPersistencia tarifaManutencaoCobrada(Boolean tarifaManutencaoCobrada) {
+  public AdesaoPacoteTarifaPersist tarifaManutencaoCobrada(Boolean tarifaManutencaoCobrada) {
     this.tarifaManutencaoCobrada = tarifaManutencaoCobrada;
     return this;
   }
@@ -268,7 +268,7 @@ public class AdesaoPacoteTarifaPersistencia   {
   /**
    * {{{adesao_pacote_tarifa_persistencia_cobra_tarifa_descricao}}}
    **/
-  public AdesaoPacoteTarifaPersistencia cobraTarifa(Boolean cobraTarifa) {
+  public AdesaoPacoteTarifaPersist cobraTarifa(Boolean cobraTarifa) {
     this.cobraTarifa = cobraTarifa;
     return this;
   }
@@ -292,21 +292,21 @@ public class AdesaoPacoteTarifaPersistencia   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AdesaoPacoteTarifaPersistencia adesaoPacoteTarifaPersistencia = (AdesaoPacoteTarifaPersistencia) o;
-    return Objects.equals(this.idPacoteTarifa, adesaoPacoteTarifaPersistencia.idPacoteTarifa) &&
-        Objects.equals(this.ciclo, adesaoPacoteTarifaPersistencia.ciclo) &&
-        Objects.equals(this.dataHoraAtivacao, adesaoPacoteTarifaPersistencia.dataHoraAtivacao) &&
-        Objects.equals(this.dataHoraDesativacao, adesaoPacoteTarifaPersistencia.dataHoraDesativacao) &&
-        Objects.equals(this.dataFimCiclo, adesaoPacoteTarifaPersistencia.dataFimCiclo) &&
-        Objects.equals(this.recargaCelularUtilizado, adesaoPacoteTarifaPersistencia.recargaCelularUtilizado) &&
-        Objects.equals(this.bilheteUnicoUtilizado, adesaoPacoteTarifaPersistencia.bilheteUnicoUtilizado) &&
-        Objects.equals(this.pagamentoContaUtilizado, adesaoPacoteTarifaPersistencia.pagamentoContaUtilizado) &&
-        Objects.equals(this.saqueUtilizado, adesaoPacoteTarifaPersistencia.saqueUtilizado) &&
-        Objects.equals(this.transferenciaUtilizado, adesaoPacoteTarifaPersistencia.transferenciaUtilizado) &&
-        Objects.equals(this.boletoUtilizado, adesaoPacoteTarifaPersistencia.boletoUtilizado) &&
-        Objects.equals(this.aplicacaoUtilizado, adesaoPacoteTarifaPersistencia.aplicacaoUtilizado) &&
-        Objects.equals(this.tarifaManutencaoCobrada, adesaoPacoteTarifaPersistencia.tarifaManutencaoCobrada) &&
-        Objects.equals(this.cobraTarifa, adesaoPacoteTarifaPersistencia.cobraTarifa);
+    AdesaoPacoteTarifaPersist adesaoPacoteTarifaPersist = (AdesaoPacoteTarifaPersist) o;
+    return Objects.equals(this.idPacoteTarifa, adesaoPacoteTarifaPersist.idPacoteTarifa) &&
+        Objects.equals(this.ciclo, adesaoPacoteTarifaPersist.ciclo) &&
+        Objects.equals(this.dataHoraAtivacao, adesaoPacoteTarifaPersist.dataHoraAtivacao) &&
+        Objects.equals(this.dataHoraDesativacao, adesaoPacoteTarifaPersist.dataHoraDesativacao) &&
+        Objects.equals(this.dataFimCiclo, adesaoPacoteTarifaPersist.dataFimCiclo) &&
+        Objects.equals(this.recargaCelularUtilizado, adesaoPacoteTarifaPersist.recargaCelularUtilizado) &&
+        Objects.equals(this.bilheteUnicoUtilizado, adesaoPacoteTarifaPersist.bilheteUnicoUtilizado) &&
+        Objects.equals(this.pagamentoContaUtilizado, adesaoPacoteTarifaPersist.pagamentoContaUtilizado) &&
+        Objects.equals(this.saqueUtilizado, adesaoPacoteTarifaPersist.saqueUtilizado) &&
+        Objects.equals(this.transferenciaUtilizado, adesaoPacoteTarifaPersist.transferenciaUtilizado) &&
+        Objects.equals(this.boletoUtilizado, adesaoPacoteTarifaPersist.boletoUtilizado) &&
+        Objects.equals(this.aplicacaoUtilizado, adesaoPacoteTarifaPersist.aplicacaoUtilizado) &&
+        Objects.equals(this.tarifaManutencaoCobrada, adesaoPacoteTarifaPersist.tarifaManutencaoCobrada) &&
+        Objects.equals(this.cobraTarifa, adesaoPacoteTarifaPersist.cobraTarifa);
   }
 
   @Override
@@ -317,7 +317,7 @@ public class AdesaoPacoteTarifaPersistencia   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AdesaoPacoteTarifaPersistencia {\n");
+    sb.append("class AdesaoPacoteTarifaPersist {\n");
     
     sb.append("    idPacoteTarifa: ").append(toIndentedString(idPacoteTarifa)).append("\n");
     sb.append("    ciclo: ").append(toIndentedString(ciclo)).append("\n");

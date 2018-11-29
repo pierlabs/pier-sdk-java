@@ -325,12 +325,12 @@ public class GlobaltagoportunidadeApi {
    * @param id {{{tipo_oportunidade_resource_consultar_param_id}}}
    * @return TipoOportunidadeResponse
    */
-  public TipoOportunidadeResponse consultarUsingGET44(Long id) throws ApiException {
+  public TipoOportunidadeResponse consultarUsingGET45(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET44");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET45");
      }
      
     // create path and map variables
@@ -736,7 +736,7 @@ public class GlobaltagoportunidadeApi {
    * @param flagAtivo {{{tipo_oportunidade_request_flag_ativo_value}}}
    * @return PageTipoOportunidadeResponse
    */
-  public PageTipoOportunidadeResponse listarUsingGET52(List<String> sort, Integer page, Integer limit, String descricao, Boolean flagAtivo) throws ApiException {
+  public PageTipoOportunidadeResponse listarUsingGET53(List<String> sort, Integer page, Integer limit, String descricao, Boolean flagAtivo) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

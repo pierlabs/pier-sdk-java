@@ -7,7 +7,7 @@ import br.com.conductor.pier.api.v2.invoker.ApiClient;
 import br.com.conductor.pier.api.v2.invoker.Configuration;
 import br.com.conductor.pier.api.v2.invoker.Pair;
 
-import br.com.conductor.pier.api.v2.model.AdesaoPacoteTarifaPersistencia;
+import br.com.conductor.pier.api.v2.model.AdesaoPacoteTarifaPersist;
 import br.com.conductor.pier.api.v2.model.AdesaoPacoteTarifaResponse;
 import br.com.conductor.pier.api.v2.model.PageAnuidadeResponse;
 import br.com.conductor.pier.api.v2.model.PageOperadoraResponse;
@@ -48,7 +48,7 @@ public class GlobaltagservicocontaApi {
    * @param adesaoPacoteTarifaPersist adesaoPacoteTarifaPersist
    * @return AdesaoPacoteTarifaResponse
    */
-  public AdesaoPacoteTarifaResponse aderirPacoteTarifaUsingPOST(Long id, AdesaoPacoteTarifaPersistencia adesaoPacoteTarifaPersist) throws ApiException {
+  public AdesaoPacoteTarifaResponse aderirPacoteTarifaUsingPOST(Long id, AdesaoPacoteTarifaPersist adesaoPacoteTarifaPersist) throws ApiException {
     Object postBody = adesaoPacoteTarifaPersist;
     
      // verify the required parameter 'id' is set
@@ -476,7 +476,7 @@ public class GlobaltagservicocontaApi {
    * @param idTipoServico {{{servico_conta_request_id_tipo_servico_value}}}
    * @return PageServicoContaResponse
    */
-  public PageServicoContaResponse listarUsingGET41(List<String> sort, Integer page, Integer limit, Long idConta, Long idTipoServico) throws ApiException {
+  public PageServicoContaResponse listarUsingGET42(List<String> sort, Integer page, Integer limit, Long idConta, Long idTipoServico) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

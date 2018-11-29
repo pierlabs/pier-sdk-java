@@ -7,8 +7,11 @@ import br.com.conductor.pier.api.v2.invoker.ApiClient;
 import br.com.conductor.pier.api.v2.invoker.Configuration;
 import br.com.conductor.pier.api.v2.invoker.Pair;
 
+import br.com.conductor.pier.api.v2.model.ParcelaAcordoResponse;
 import br.com.conductor.pier.api.v2.model.AcordoDetalheResponse;
+import br.com.conductor.pier.api.v2.model.BoletoParcelaAcordoResponse;
 import br.com.conductor.pier.api.v2.model.PageAcordoResponse;
+import br.com.conductor.pier.api.v2.model.PageAcordoParcelaResponse;
 import br.com.conductor.pier.api.v2.model.AcordoQuebraResponse;
 import br.com.conductor.pier.api.v2.model.PlanoParcelamentoAcordoRequestValue;
 import br.com.conductor.pier.api.v2.model.PlanoParcelamentosAcordoResponseValue;
@@ -38,6 +41,54 @@ public class GlobaltagacordoApi {
     this.apiClient = apiClient;
   }
 
+  
+  /**
+   * {{parcela_acordo_resource_consultar}}
+   * {{parcela_acordo_resource_consultar_notes}}
+   * @param id {{parcela_acordo_resource_param_value_id}}
+   * @return ParcelaAcordoResponse
+   */
+  public ParcelaAcordoResponse consultarPorIdUsingGET(Long id) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarPorIdUsingGET");
+     }
+     
+    // create path and map variables
+    String path = "/api/parcelas-acordos/{id}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<ParcelaAcordoResponse> returnType = new GenericType<ParcelaAcordoResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
   
   /**
    * {{{acordo_resource_consultar}}}
@@ -84,6 +135,54 @@ public class GlobaltagacordoApi {
     
     GenericType<AcordoDetalheResponse> returnType = new GenericType<AcordoDetalheResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * {{parcela_acordo_resource_gerar_boleto}}
+   * {{parcela_acordo_resource_gerar_boleto_notes}}
+   * @param id {{parcela_acordo_resource_param_value_id}}
+   * @return BoletoParcelaAcordoResponse
+   */
+  public BoletoParcelaAcordoResponse gerarBoletoUsingPOST(Long id) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling gerarBoletoUsingPOST");
+     }
+     
+    // create path and map variables
+    String path = "/api/parcelas-acordos/{id}/boletos".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<BoletoParcelaAcordoResponse> returnType = new GenericType<BoletoParcelaAcordoResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
@@ -145,6 +244,68 @@ public class GlobaltagacordoApi {
 
     
     GenericType<PageAcordoResponse> returnType = new GenericType<PageAcordoResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * {{parcela_acordo_resource_listar}}
+   * {{parcela_acordo_resource_listar_notes}}
+   * @param sort {{{global_menssagem_sort_sort}}}
+   * @param page {{{global_menssagem_sort_page_value}}}
+   * @param limit {{{global_menssagem_sort_limit}}}
+   * @param idAcordo {{acordo_parcela_request_id_acordo_value}}
+   * @param nossoNumero {{acordo_parcela_request_nosso_numero_value}}
+   * @param numeroParcela {{acordo_parcela_request_numero_parcela_value}}
+   * @param dataVencimento {{acordo_parcela_request_data_vencimento_value}}
+   * @return PageAcordoParcelaResponse
+   */
+  public PageAcordoParcelaResponse listarUsingGET32(List<String> sort, Integer page, Integer limit, Long idAcordo, String nossoNumero, Integer numeroParcela, String dataVencimento) throws ApiException {
+    Object postBody = null;
+    
+    // create path and map variables
+    String path = "/api/parcelas-acordos".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idAcordo", idAcordo));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "nossoNumero", nossoNumero));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "numeroParcela", numeroParcela));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "dataVencimento", dataVencimento));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PageAcordoParcelaResponse> returnType = new GenericType<PageAcordoParcelaResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

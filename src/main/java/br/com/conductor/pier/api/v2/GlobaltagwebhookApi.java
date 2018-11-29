@@ -100,12 +100,12 @@ public class GlobaltagwebhookApi {
    * @param id {{{web_hook_resource_consultar_param_id}}}
    * @return WebHookResponse
    */
-  public WebHookResponse consultarUsingGET51(Long id) throws ApiException {
+  public WebHookResponse consultarUsingGET52(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET51");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET52");
      }
      
     // create path and map variables
@@ -154,7 +154,7 @@ public class GlobaltagwebhookApi {
    * @param url {{{web_hook_request_url_value}}}
    * @return PageWebHookResponse
    */
-  public PageWebHookResponse listarUsingGET62(List<String> sort, Integer page, Integer limit, Long id, String tipoEvento, String metodo, String url) throws ApiException {
+  public PageWebHookResponse listarUsingGET63(List<String> sort, Integer page, Integer limit, Long id, String tipoEvento, String metodo, String url) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
