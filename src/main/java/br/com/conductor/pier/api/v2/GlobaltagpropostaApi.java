@@ -8,6 +8,7 @@ import br.com.conductor.pier.api.v2.invoker.Configuration;
 import br.com.conductor.pier.api.v2.invoker.Pair;
 
 import br.com.conductor.pier.api.v2.model.PropostaResponse;
+import br.com.conductor.pier.api.v2.model.PropostaParcialUpdate;
 import br.com.conductor.pier.api.v2.model.StatusPropostaUpdate;
 import br.com.conductor.pier.api.v2.model.DocumentoPropostaResponse;
 import br.com.conductor.pier.api.v2.model.DocumentoPropostaPersist;
@@ -41,6 +42,60 @@ public class GlobaltagpropostaApi {
     this.apiClient = apiClient;
   }
 
+  
+  /**
+   * {{{proposta_resource_atualizar_parcial}}}
+   * {{{proposta_resource_atualizar_parcial_notes}}}
+   * @param id {{{proposta_resource_atualizar_parcial_param_id}}}
+   * @param propostaParcialUpdate propostaParcialUpdate
+   * @return PropostaResponse
+   */
+  public PropostaResponse alterarParcialUsingPATCH(Long id, PropostaParcialUpdate propostaParcialUpdate) throws ApiException {
+    Object postBody = propostaParcialUpdate;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarParcialUsingPATCH");
+     }
+     
+     // verify the required parameter 'propostaParcialUpdate' is set
+     if (propostaParcialUpdate == null) {
+        throw new ApiException(400, "Missing the required parameter 'propostaParcialUpdate' when calling alterarParcialUsingPATCH");
+     }
+     
+    // create path and map variables
+    String path = "/api/propostas/{id}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PropostaResponse> returnType = new GenericType<PropostaResponse>() {};
+    return apiClient.invokeAPI(path, "PATCH", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
   
   /**
    * {{{proposta_resource_alterar_status}}}

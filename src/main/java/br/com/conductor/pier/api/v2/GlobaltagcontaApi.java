@@ -16,6 +16,7 @@ import br.com.conductor.pier.api.v2.model.AdesaoPagamentoSabadoResponse;
 import br.com.conductor.pier.api.v2.model.BeneficioPagamentoAtrasoResponse;
 import br.com.conductor.pier.api.v2.model.BoletoResponse;
 import br.com.conductor.pier.api.v2.model.DividaClienteResponse;
+import br.com.conductor.pier.api.v2.model.TransacoesCorrentesResponse;
 import br.com.conductor.pier.api.v2.model.PageTaxasRefinanciamentoResponse;
 import br.com.conductor.pier.api.v2.model.ContaDetalheResponse;
 import br.com.conductor.pier.api.v2.model.TransferenciaDetalheResponse;
@@ -811,6 +812,61 @@ public class GlobaltagcontaApi {
 
     
     GenericType<DividaClienteResponse> returnType = new GenericType<DividaClienteResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * {{{transacoes_correntes_resource_consultar_processada}}}
+   * {{{transacoes_correntes_resource_consultar_processada_notes}}}
+   * @param id {{{transacoes_correntes_resource_consultar_processada_param_id}}}
+   * @param idTransacao {{{transacoes_correntes_resource_consultar_processada_param_id_transacao}}}
+   * @return TransacoesCorrentesResponse
+   */
+  public TransacoesCorrentesResponse consultarProcessadaUsingGET(Long id, Long idTransacao) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarProcessadaUsingGET");
+     }
+     
+     // verify the required parameter 'idTransacao' is set
+     if (idTransacao == null) {
+        throw new ApiException(400, "Missing the required parameter 'idTransacao' when calling consultarProcessadaUsingGET");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/{id}/transacoes-processadas/{idTransacao}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()))
+      .replaceAll("\\{" + "idTransacao" + "\\}", apiClient.escapeString(idTransacao.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<TransacoesCorrentesResponse> returnType = new GenericType<TransacoesCorrentesResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

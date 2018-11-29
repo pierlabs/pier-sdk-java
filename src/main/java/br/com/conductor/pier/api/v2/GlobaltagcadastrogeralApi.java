@@ -188,17 +188,17 @@ public class GlobaltagcadastrogeralApi {
    * @param tipoOperacaoParcialUpdate tipoOperacaoParcialUpdate
    * @return TipoOperacaoResponse
    */
-  public TipoOperacaoResponse alterarParcialUsingPATCH(Long id, TipoOperacaoParcialUpdate tipoOperacaoParcialUpdate) throws ApiException {
+  public TipoOperacaoResponse alterarParcialUsingPATCH1(Long id, TipoOperacaoParcialUpdate tipoOperacaoParcialUpdate) throws ApiException {
     Object postBody = tipoOperacaoParcialUpdate;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarParcialUsingPATCH");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarParcialUsingPATCH1");
      }
      
      // verify the required parameter 'tipoOperacaoParcialUpdate' is set
      if (tipoOperacaoParcialUpdate == null) {
-        throw new ApiException(400, "Missing the required parameter 'tipoOperacaoParcialUpdate' when calling alterarParcialUsingPATCH");
+        throw new ApiException(400, "Missing the required parameter 'tipoOperacaoParcialUpdate' when calling alterarParcialUsingPATCH1");
      }
      
     // create path and map variables
