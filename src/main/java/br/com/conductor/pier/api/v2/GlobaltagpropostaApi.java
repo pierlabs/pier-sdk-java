@@ -157,12 +157,12 @@ public class GlobaltagpropostaApi {
    * @param id {{{proposta_resource_consultar_param_id}}}
    * @return PropostaResponse
    */
-  public PropostaResponse consultarUsingGET32(Long id) throws ApiException {
+  public PropostaResponse consultarUsingGET33(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET32");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET33");
      }
      
     // create path and map variables
@@ -472,7 +472,7 @@ public class GlobaltagpropostaApi {
    * @param idPessoaFisica {{{proposta_request_idPessoaFisica_value}}}
    * @return PagePropostaResponse
    */
-  public PagePropostaResponse listarUsingGET39(List<String> sort, Integer page, Integer limit, Integer status, Long idPessoaFisica) throws ApiException {
+  public PagePropostaResponse listarUsingGET40(List<String> sort, Integer page, Integer limit, Integer status, Long idPessoaFisica) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

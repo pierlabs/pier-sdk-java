@@ -7,9 +7,10 @@ import br.com.conductor.pier.api.v2.invoker.ApiClient;
 import br.com.conductor.pier.api.v2.invoker.Configuration;
 import br.com.conductor.pier.api.v2.invoker.Pair;
 
-import br.com.conductor.pier.api.v2.model.WebHookResponse;
-import br.com.conductor.pier.api.v2.model.WebHookPersistValue;
-import br.com.conductor.pier.api.v2.model.PageWebHookResponse;
+import br.com.conductor.pier.api.v2.model.PessoaJuridicaUpdate;
+import br.com.conductor.pier.api.v2.model.PessoaJuridicaResponse;
+import br.com.conductor.pier.api.v2.model.PagePessoaJuridicaResponse;
+import br.com.conductor.pier.api.v2.model.PessoaJuridicaPersist;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -17,14 +18,14 @@ import java.util.List;
 import java.util.Map;
 
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class GlobaltagwebhookApi {
+public class GlobaltagpessoasjuridicasApi {
   private ApiClient apiClient;
 
-  public GlobaltagwebhookApi() {
+  public GlobaltagpessoasjuridicasApi() {
     this(Configuration.getDefaultApiClient());
   }
 
-  public GlobaltagwebhookApi(ApiClient apiClient) {
+  public GlobaltagpessoasjuridicasApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
@@ -38,28 +39,28 @@ public class GlobaltagwebhookApi {
 
   
   /**
-   * {{{web_hook_resource_alterar}}}
-   * {{{web_hook_resource_alterar_notes}}}
-   * @param id {{{web_hook_resource_alterar_param_id}}}
-   * @param webhook webhook
-   * @param status {{{web_hook_resource_alterar_param_status}}}
-   * @return WebHookResponse
+   * {{{pessoa_juridica_resource_alterar}}}
+   * {{{pessoa_juridica_resource_alterar_notes}}}
+   * @param id id
+   * @param request request
+   * @param login login
+   * @return PessoaJuridicaResponse
    */
-  public WebHookResponse alterarUsingPUT23(Long id, WebHookPersistValue webhook, String status) throws ApiException {
-    Object postBody = webhook;
+  public PessoaJuridicaResponse alterarUsingPUT15(Long id, PessoaJuridicaUpdate request, String login) throws ApiException {
+    Object postBody = request;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT23");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT15");
      }
      
-     // verify the required parameter 'webhook' is set
-     if (webhook == null) {
-        throw new ApiException(400, "Missing the required parameter 'webhook' when calling alterarUsingPUT23");
+     // verify the required parameter 'request' is set
+     if (request == null) {
+        throw new ApiException(400, "Missing the required parameter 'request' when calling alterarUsingPUT15");
      }
      
     // create path and map variables
-    String path = "/api/webhooks/{id}".replaceAll("\\{format\\}","json")
+    String path = "/api/pessoas-juridicas/{id}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
     // query params
@@ -68,9 +69,9 @@ public class GlobaltagwebhookApi {
     Map<String, Object> formParams = new HashMap<String, Object>();
 
     
-    queryParams.addAll(apiClient.parameterToPairs("", "status", status));
-    
 
+    if (login != null)
+      headerParams.put("login", apiClient.parameterToString(login));
     
 
     
@@ -89,27 +90,27 @@ public class GlobaltagwebhookApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<WebHookResponse> returnType = new GenericType<WebHookResponse>() {};
+    GenericType<PessoaJuridicaResponse> returnType = new GenericType<PessoaJuridicaResponse>() {};
     return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
   /**
-   * {{{web_hook_resource_consultar}}}
-   * {{{web_hook_resource_consultar_notes}}}
-   * @param id {{{web_hook_resource_consultar_param_id}}}
-   * @return WebHookResponse
+   * {{{pessoa_juridica_resource_consultar}}}
+   * {{{pessoa_juridica_resource_consultar_notes}}}
+   * @param id {{{pessoa_juridica_resource_consultar_param_id}}}
+   * @return PessoaJuridicaResponse
    */
-  public WebHookResponse consultarUsingGET53(Long id) throws ApiException {
+  public PessoaJuridicaResponse consultarUsingGET30(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET53");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET30");
      }
      
     // create path and map variables
-    String path = "/api/webhooks/{id}".replaceAll("\\{format\\}","json")
+    String path = "/api/pessoas-juridicas/{id}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
     // query params
@@ -137,28 +138,33 @@ public class GlobaltagwebhookApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<WebHookResponse> returnType = new GenericType<WebHookResponse>() {};
+    GenericType<PessoaJuridicaResponse> returnType = new GenericType<PessoaJuridicaResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
   /**
-   * {{{web_hook_resource_listar}}}
-   * {{{web_hook_resource_listar_notes}}}
+   * {{{pessoa_juridica_resource_listar}}}
+   * {{{pessoa_juridica_resource_listar_notes}}}
    * @param sort {{{global_menssagem_sort_sort}}}
    * @param page {{{global_menssagem_sort_page_value}}}
    * @param limit {{{global_menssagem_sort_limit}}}
-   * @param id {{{web_hook_request_id_value}}}
-   * @param tipoEvento {{{web_hook_request_tipo_evento_value}}}
-   * @param metodo {{{web_hook_request_metodo_value}}}
-   * @param url {{{web_hook_request_url_value}}}
-   * @return PageWebHookResponse
+   * @param contato {{{pessoa_juridica_request_contato_value}}}
+   * @param razaoSocial {{{pessoa_juridica_request_razao_social_value}}}
+   * @param numeroReceitaFederal {{{pessoa_juridica_request_CGC_value}}}
+   * @param inscricaoEstadual {{{pessoa_juridica_request_inscricao_estadual_value}}}
+   * @param banco {{{pessoa_juridica_request_banco_value}}}
+   * @param agencia {{{pessoa_juridica_request_agencia_value}}}
+   * @param digitoAgencia {{{pessoa_juridica_request_digito_agencia_value}}}
+   * @param contaCorrente {{{pessoa_juridica_request_conta_corrente_value}}}
+   * @param digitoContaCorrente {{{pessoa_juridica_request_digito_conta_corrente_value}}}
+   * @return PagePessoaJuridicaResponse
    */
-  public PageWebHookResponse listarUsingGET64(List<String> sort, Integer page, Integer limit, Long id, String tipoEvento, String metodo, String url) throws ApiException {
+  public PagePessoaJuridicaResponse listarUsingGET34(List<String> sort, Integer page, Integer limit, String contato, String razaoSocial, String numeroReceitaFederal, String inscricaoEstadual, Integer banco, Integer agencia, String digitoAgencia, String contaCorrente, String digitoContaCorrente) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
-    String path = "/api/webhooks".replaceAll("\\{format\\}","json");
+    String path = "/api/pessoas-juridicas".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -172,13 +178,23 @@ public class GlobaltagwebhookApi {
     
     queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
     
-    queryParams.addAll(apiClient.parameterToPairs("", "id", id));
+    queryParams.addAll(apiClient.parameterToPairs("", "contato", contato));
     
-    queryParams.addAll(apiClient.parameterToPairs("", "tipoEvento", tipoEvento));
+    queryParams.addAll(apiClient.parameterToPairs("", "razaoSocial", razaoSocial));
     
-    queryParams.addAll(apiClient.parameterToPairs("", "metodo", metodo));
+    queryParams.addAll(apiClient.parameterToPairs("", "numeroReceitaFederal", numeroReceitaFederal));
     
-    queryParams.addAll(apiClient.parameterToPairs("", "url", url));
+    queryParams.addAll(apiClient.parameterToPairs("", "inscricaoEstadual", inscricaoEstadual));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "banco", banco));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "agencia", agencia));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "digitoAgencia", digitoAgencia));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "contaCorrente", contaCorrente));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "digitoContaCorrente", digitoContaCorrente));
     
 
     
@@ -199,27 +215,28 @@ public class GlobaltagwebhookApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<PageWebHookResponse> returnType = new GenericType<PageWebHookResponse>() {};
+    GenericType<PagePessoaJuridicaResponse> returnType = new GenericType<PagePessoaJuridicaResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
   /**
-   * {{{web_hook_resource_salvar}}}
-   * {{{web_hook_resource_salvar_notes}}}
-   * @param webhook webhook
-   * @return WebHookResponse
+   * {{{pessoa_juridica_resource_salvar}}}
+   * {{{pessoa_juridica_resource_salvar_notes}}}
+   * @param pessoaJuridicaPersist pessoaJuridicaPersist
+   * @param login login
+   * @return PessoaJuridicaResponse
    */
-  public WebHookResponse salvarUsingPOST34(WebHookPersistValue webhook) throws ApiException {
-    Object postBody = webhook;
+  public PessoaJuridicaResponse salvarUsingPOST23(PessoaJuridicaPersist pessoaJuridicaPersist, String login) throws ApiException {
+    Object postBody = pessoaJuridicaPersist;
     
-     // verify the required parameter 'webhook' is set
-     if (webhook == null) {
-        throw new ApiException(400, "Missing the required parameter 'webhook' when calling salvarUsingPOST34");
+     // verify the required parameter 'pessoaJuridicaPersist' is set
+     if (pessoaJuridicaPersist == null) {
+        throw new ApiException(400, "Missing the required parameter 'pessoaJuridicaPersist' when calling salvarUsingPOST23");
      }
      
     // create path and map variables
-    String path = "/api/webhooks".replaceAll("\\{format\\}","json");
+    String path = "/api/pessoas-juridicas".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -228,6 +245,8 @@ public class GlobaltagwebhookApi {
 
     
 
+    if (login != null)
+      headerParams.put("login", apiClient.parameterToString(login));
     
 
     
@@ -246,7 +265,7 @@ public class GlobaltagwebhookApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<WebHookResponse> returnType = new GenericType<WebHookResponse>() {};
+    GenericType<PessoaJuridicaResponse> returnType = new GenericType<PessoaJuridicaResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

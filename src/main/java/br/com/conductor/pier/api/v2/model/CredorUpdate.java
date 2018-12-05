@@ -17,7 +17,7 @@ import java.util.List;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class CredorUpdate   {
   
-  private List<TelefoneEscritorioCobrancaDTO> telefoneEscritorioCobranca = new ArrayList<TelefoneEscritorioCobrancaDTO>();
+  private List<TelefoneEscritorioCobrancaDTO> telefonesEscritoriosCobranca = new ArrayList<TelefoneEscritorioCobrancaDTO>();
   private String nomeCredor = null;
   private Integer diaPagamentoSemanal = null;
   private Integer diaPagamentoMensal = null;
@@ -104,18 +104,18 @@ public class CredorUpdate   {
   /**
    * {{{credor_update_telefones_escritorio_cobranca_value}}}
    **/
-  public CredorUpdate telefoneEscritorioCobranca(List<TelefoneEscritorioCobrancaDTO> telefoneEscritorioCobranca) {
-    this.telefoneEscritorioCobranca = telefoneEscritorioCobranca;
+  public CredorUpdate telefonesEscritoriosCobranca(List<TelefoneEscritorioCobrancaDTO> telefonesEscritoriosCobranca) {
+    this.telefonesEscritoriosCobranca = telefonesEscritoriosCobranca;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "{{{credor_update_telefones_escritorio_cobranca_value}}}")
-  @JsonProperty("telefoneEscritorioCobranca")
-  public List<TelefoneEscritorioCobrancaDTO> getTelefoneEscritorioCobranca() {
-    return telefoneEscritorioCobranca;
+  @JsonProperty("telefonesEscritoriosCobranca")
+  public List<TelefoneEscritorioCobrancaDTO> getTelefonesEscritoriosCobranca() {
+    return telefonesEscritoriosCobranca;
   }
-  public void setTelefoneEscritorioCobranca(List<TelefoneEscritorioCobrancaDTO> telefoneEscritorioCobranca) {
-    this.telefoneEscritorioCobranca = telefoneEscritorioCobranca;
+  public void setTelefonesEscritoriosCobranca(List<TelefoneEscritorioCobrancaDTO> telefonesEscritoriosCobranca) {
+    this.telefonesEscritoriosCobranca = telefonesEscritoriosCobranca;
   }
 
   
@@ -831,7 +831,7 @@ public class CredorUpdate   {
       return false;
     }
     CredorUpdate credorUpdate = (CredorUpdate) o;
-    return Objects.equals(this.telefoneEscritorioCobranca, credorUpdate.telefoneEscritorioCobranca) &&
+    return Objects.equals(this.telefonesEscritoriosCobranca, credorUpdate.telefonesEscritoriosCobranca) &&
         Objects.equals(this.nomeCredor, credorUpdate.nomeCredor) &&
         Objects.equals(this.diaPagamentoSemanal, credorUpdate.diaPagamentoSemanal) &&
         Objects.equals(this.diaPagamentoMensal, credorUpdate.diaPagamentoMensal) &&
@@ -875,7 +875,7 @@ public class CredorUpdate   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(telefoneEscritorioCobranca, nomeCredor, diaPagamentoSemanal, diaPagamentoMensal, diaPagamentoDecendialPrimeiro, diaPagamentoDecendialSegundo, diaPagamentoDecendialTerceiro, diaPagamentoQuinzenalPrimeiro, diaPagamentoQuinzenalSegundo, banco, agencia, digitoAgencia, contaCorrente, digitoContaCorrente, credorBanco, percentualRAV, recebeRAV, percentualMultiplica, taxaAdministrativa, taxaBanco, limiteRAV, idCredorRAV, periodicidade, idPessoaJuridica, flagEscritorioCobranca, prefixo, ativo, nomeContato, email, nomeLogradouro, numeroEndereco, complementoEndereco, bairro, cidade, cep, uf, responsavel, flagSegundaViaAcordo, valorMinimoParcela, descontoMaximo);
+    return Objects.hash(telefonesEscritoriosCobranca, nomeCredor, diaPagamentoSemanal, diaPagamentoMensal, diaPagamentoDecendialPrimeiro, diaPagamentoDecendialSegundo, diaPagamentoDecendialTerceiro, diaPagamentoQuinzenalPrimeiro, diaPagamentoQuinzenalSegundo, banco, agencia, digitoAgencia, contaCorrente, digitoContaCorrente, credorBanco, percentualRAV, recebeRAV, percentualMultiplica, taxaAdministrativa, taxaBanco, limiteRAV, idCredorRAV, periodicidade, idPessoaJuridica, flagEscritorioCobranca, prefixo, ativo, nomeContato, email, nomeLogradouro, numeroEndereco, complementoEndereco, bairro, cidade, cep, uf, responsavel, flagSegundaViaAcordo, valorMinimoParcela, descontoMaximo);
   }
 
   @Override
@@ -883,7 +883,7 @@ public class CredorUpdate   {
     StringBuilder sb = new StringBuilder();
     sb.append("class CredorUpdate {\n");
     
-    sb.append("    telefoneEscritorioCobranca: ").append(toIndentedString(telefoneEscritorioCobranca)).append("\n");
+    sb.append("    telefonesEscritoriosCobranca: ").append(toIndentedString(telefonesEscritoriosCobranca)).append("\n");
     sb.append("    nomeCredor: ").append(toIndentedString(nomeCredor)).append("\n");
     sb.append("    diaPagamentoSemanal: ").append(toIndentedString(diaPagamentoSemanal)).append("\n");
     sb.append("    diaPagamentoMensal: ").append(toIndentedString(diaPagamentoMensal)).append("\n");

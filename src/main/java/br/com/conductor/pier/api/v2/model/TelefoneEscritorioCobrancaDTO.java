@@ -15,27 +15,27 @@ import io.swagger.annotations.ApiModelProperty;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TelefoneEscritorioCobrancaDTO   {
   
-  private Long idCredor = null;
+  private Long id = null;
   private String ddd = null;
   private String telefone = null;
   private String ramal = null;
 
   
   /**
-   * {{{telefone_escritorio_cobranca_d_t_o_id_credor_value}}}
+   * {{{telefone_escritorio_cobranca_d_t_o_id}}}
    **/
-  public TelefoneEscritorioCobrancaDTO idCredor(Long idCredor) {
-    this.idCredor = idCredor;
+  public TelefoneEscritorioCobrancaDTO id(Long id) {
+    this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{telefone_escritorio_cobranca_d_t_o_id_credor_value}}}")
-  @JsonProperty("idCredor")
-  public Long getIdCredor() {
-    return idCredor;
+  @ApiModelProperty(example = "null", value = "{{{telefone_escritorio_cobranca_d_t_o_id}}}")
+  @JsonProperty("id")
+  public Long getId() {
+    return id;
   }
-  public void setIdCredor(Long idCredor) {
-    this.idCredor = idCredor;
+  public void setId(Long id) {
+    this.id = id;
   }
 
   
@@ -103,7 +103,7 @@ public class TelefoneEscritorioCobrancaDTO   {
       return false;
     }
     TelefoneEscritorioCobrancaDTO telefoneEscritorioCobrancaDTO = (TelefoneEscritorioCobrancaDTO) o;
-    return Objects.equals(this.idCredor, telefoneEscritorioCobrancaDTO.idCredor) &&
+    return Objects.equals(this.id, telefoneEscritorioCobrancaDTO.id) &&
         Objects.equals(this.ddd, telefoneEscritorioCobrancaDTO.ddd) &&
         Objects.equals(this.telefone, telefoneEscritorioCobrancaDTO.telefone) &&
         Objects.equals(this.ramal, telefoneEscritorioCobrancaDTO.ramal);
@@ -111,7 +111,7 @@ public class TelefoneEscritorioCobrancaDTO   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(idCredor, ddd, telefone, ramal);
+    return Objects.hash(id, ddd, telefone, ramal);
   }
 
   @Override
@@ -119,7 +119,7 @@ public class TelefoneEscritorioCobrancaDTO   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TelefoneEscritorioCobrancaDTO {\n");
     
-    sb.append("    idCredor: ").append(toIndentedString(idCredor)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    ddd: ").append(toIndentedString(ddd)).append("\n");
     sb.append("    telefone: ").append(toIndentedString(telefone)).append("\n");
     sb.append("    ramal: ").append(toIndentedString(ramal)).append("\n");

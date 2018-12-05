@@ -1,7 +1,6 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v2.model.EscritorioCobrancaDTO;
 import br.com.conductor.pier.api.v2.model.TelefoneEscritorioCobrancaDTO;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
@@ -85,8 +84,22 @@ public class CredorResponse   {
   private PeriodicidadeEnum periodicidade = null;
   private Long idPessoaJuridica = null;
   private Boolean flagEscritorioCobranca = null;
-  private EscritorioCobrancaDTO escritoriosCobranca = null;
+  private String prefixo = null;
+  private Boolean ativo = null;
   private List<TelefoneEscritorioCobrancaDTO> telefonesEscritoriosCobranca = new ArrayList<TelefoneEscritorioCobrancaDTO>();
+  private String nomeContato = null;
+  private String email = null;
+  private String nomeLogradouro = null;
+  private Integer numeroEndereco = null;
+  private String complementoEndereco = null;
+  private String bairro = null;
+  private String cidade = null;
+  private String cep = null;
+  private String uf = null;
+  private String responsavel = null;
+  private Integer flagSegundaViaAcordo = null;
+  private BigDecimal valorMinimoParcela = null;
+  private BigDecimal descontoMaximo = null;
 
   
   /**
@@ -540,20 +553,38 @@ public class CredorResponse   {
 
   
   /**
-   * {{{credor_response_escritorio_cobranca_value}}}
+   * {{{credor_response_prefixo_value}}}
    **/
-  public CredorResponse escritoriosCobranca(EscritorioCobrancaDTO escritoriosCobranca) {
-    this.escritoriosCobranca = escritoriosCobranca;
+  public CredorResponse prefixo(String prefixo) {
+    this.prefixo = prefixo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{credor_response_escritorio_cobranca_value}}}")
-  @JsonProperty("escritoriosCobranca")
-  public EscritorioCobrancaDTO getEscritoriosCobranca() {
-    return escritoriosCobranca;
+  @ApiModelProperty(example = "null", value = "{{{credor_response_prefixo_value}}}")
+  @JsonProperty("prefixo")
+  public String getPrefixo() {
+    return prefixo;
   }
-  public void setEscritoriosCobranca(EscritorioCobrancaDTO escritoriosCobranca) {
-    this.escritoriosCobranca = escritoriosCobranca;
+  public void setPrefixo(String prefixo) {
+    this.prefixo = prefixo;
+  }
+
+  
+  /**
+   * {{{credor_response_ativo_value}}}
+   **/
+  public CredorResponse ativo(Boolean ativo) {
+    this.ativo = ativo;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "{{{credor_response_ativo_value}}}")
+  @JsonProperty("ativo")
+  public Boolean getAtivo() {
+    return ativo;
+  }
+  public void setAtivo(Boolean ativo) {
+    this.ativo = ativo;
   }
 
   
@@ -572,6 +603,240 @@ public class CredorResponse   {
   }
   public void setTelefonesEscritoriosCobranca(List<TelefoneEscritorioCobrancaDTO> telefonesEscritoriosCobranca) {
     this.telefonesEscritoriosCobranca = telefonesEscritoriosCobranca;
+  }
+
+  
+  /**
+   * {{{credor_response_nome_contato_value}}}
+   **/
+  public CredorResponse nomeContato(String nomeContato) {
+    this.nomeContato = nomeContato;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{credor_response_nome_contato_value}}}")
+  @JsonProperty("nomeContato")
+  public String getNomeContato() {
+    return nomeContato;
+  }
+  public void setNomeContato(String nomeContato) {
+    this.nomeContato = nomeContato;
+  }
+
+  
+  /**
+   * {{{credor_response_email_value}}}
+   **/
+  public CredorResponse email(String email) {
+    this.email = email;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{credor_response_email_value}}}")
+  @JsonProperty("email")
+  public String getEmail() {
+    return email;
+  }
+  public void setEmail(String email) {
+    this.email = email;
+  }
+
+  
+  /**
+   * {{{credor_response_nome_logradouro_value}}}
+   **/
+  public CredorResponse nomeLogradouro(String nomeLogradouro) {
+    this.nomeLogradouro = nomeLogradouro;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{credor_response_nome_logradouro_value}}}")
+  @JsonProperty("nomeLogradouro")
+  public String getNomeLogradouro() {
+    return nomeLogradouro;
+  }
+  public void setNomeLogradouro(String nomeLogradouro) {
+    this.nomeLogradouro = nomeLogradouro;
+  }
+
+  
+  /**
+   * {{{credor_response_numero_endereco_value}}}
+   **/
+  public CredorResponse numeroEndereco(Integer numeroEndereco) {
+    this.numeroEndereco = numeroEndereco;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{credor_response_numero_endereco_value}}}")
+  @JsonProperty("numeroEndereco")
+  public Integer getNumeroEndereco() {
+    return numeroEndereco;
+  }
+  public void setNumeroEndereco(Integer numeroEndereco) {
+    this.numeroEndereco = numeroEndereco;
+  }
+
+  
+  /**
+   * {{{credor_response_complemento_endereco_value}}}
+   **/
+  public CredorResponse complementoEndereco(String complementoEndereco) {
+    this.complementoEndereco = complementoEndereco;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{credor_response_complemento_endereco_value}}}")
+  @JsonProperty("complementoEndereco")
+  public String getComplementoEndereco() {
+    return complementoEndereco;
+  }
+  public void setComplementoEndereco(String complementoEndereco) {
+    this.complementoEndereco = complementoEndereco;
+  }
+
+  
+  /**
+   * {{{credor_response_bairro_value}}}
+   **/
+  public CredorResponse bairro(String bairro) {
+    this.bairro = bairro;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{credor_response_bairro_value}}}")
+  @JsonProperty("bairro")
+  public String getBairro() {
+    return bairro;
+  }
+  public void setBairro(String bairro) {
+    this.bairro = bairro;
+  }
+
+  
+  /**
+   * {{{credor_response_cidade_value}}}
+   **/
+  public CredorResponse cidade(String cidade) {
+    this.cidade = cidade;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{credor_response_cidade_value}}}")
+  @JsonProperty("cidade")
+  public String getCidade() {
+    return cidade;
+  }
+  public void setCidade(String cidade) {
+    this.cidade = cidade;
+  }
+
+  
+  /**
+   * {{{credor_response_cep_value}}}
+   **/
+  public CredorResponse cep(String cep) {
+    this.cep = cep;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{credor_response_cep_value}}}")
+  @JsonProperty("cep")
+  public String getCep() {
+    return cep;
+  }
+  public void setCep(String cep) {
+    this.cep = cep;
+  }
+
+  
+  /**
+   * {{{credor_response_uf_value}}}
+   **/
+  public CredorResponse uf(String uf) {
+    this.uf = uf;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{credor_response_uf_value}}}")
+  @JsonProperty("uf")
+  public String getUf() {
+    return uf;
+  }
+  public void setUf(String uf) {
+    this.uf = uf;
+  }
+
+  
+  /**
+   * {{{credor_response_responsavel_value}}}
+   **/
+  public CredorResponse responsavel(String responsavel) {
+    this.responsavel = responsavel;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{credor_response_responsavel_value}}}")
+  @JsonProperty("responsavel")
+  public String getResponsavel() {
+    return responsavel;
+  }
+  public void setResponsavel(String responsavel) {
+    this.responsavel = responsavel;
+  }
+
+  
+  /**
+   * {{{credor_response_flag_segunda_via_acordo_value}}}
+   **/
+  public CredorResponse flagSegundaViaAcordo(Integer flagSegundaViaAcordo) {
+    this.flagSegundaViaAcordo = flagSegundaViaAcordo;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{credor_response_flag_segunda_via_acordo_value}}}")
+  @JsonProperty("flagSegundaViaAcordo")
+  public Integer getFlagSegundaViaAcordo() {
+    return flagSegundaViaAcordo;
+  }
+  public void setFlagSegundaViaAcordo(Integer flagSegundaViaAcordo) {
+    this.flagSegundaViaAcordo = flagSegundaViaAcordo;
+  }
+
+  
+  /**
+   * {{{credor_response_valor_minimo_parcela_value}}}
+   **/
+  public CredorResponse valorMinimoParcela(BigDecimal valorMinimoParcela) {
+    this.valorMinimoParcela = valorMinimoParcela;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{credor_response_valor_minimo_parcela_value}}}")
+  @JsonProperty("valorMinimoParcela")
+  public BigDecimal getValorMinimoParcela() {
+    return valorMinimoParcela;
+  }
+  public void setValorMinimoParcela(BigDecimal valorMinimoParcela) {
+    this.valorMinimoParcela = valorMinimoParcela;
+  }
+
+  
+  /**
+   * {{{credor_response_desconto_maximo_value}}}
+   **/
+  public CredorResponse descontoMaximo(BigDecimal descontoMaximo) {
+    this.descontoMaximo = descontoMaximo;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "{{{credor_response_desconto_maximo_value}}}")
+  @JsonProperty("descontoMaximo")
+  public BigDecimal getDescontoMaximo() {
+    return descontoMaximo;
+  }
+  public void setDescontoMaximo(BigDecimal descontoMaximo) {
+    this.descontoMaximo = descontoMaximo;
   }
 
   
@@ -610,13 +875,27 @@ public class CredorResponse   {
         Objects.equals(this.periodicidade, credorResponse.periodicidade) &&
         Objects.equals(this.idPessoaJuridica, credorResponse.idPessoaJuridica) &&
         Objects.equals(this.flagEscritorioCobranca, credorResponse.flagEscritorioCobranca) &&
-        Objects.equals(this.escritoriosCobranca, credorResponse.escritoriosCobranca) &&
-        Objects.equals(this.telefonesEscritoriosCobranca, credorResponse.telefonesEscritoriosCobranca);
+        Objects.equals(this.prefixo, credorResponse.prefixo) &&
+        Objects.equals(this.ativo, credorResponse.ativo) &&
+        Objects.equals(this.telefonesEscritoriosCobranca, credorResponse.telefonesEscritoriosCobranca) &&
+        Objects.equals(this.nomeContato, credorResponse.nomeContato) &&
+        Objects.equals(this.email, credorResponse.email) &&
+        Objects.equals(this.nomeLogradouro, credorResponse.nomeLogradouro) &&
+        Objects.equals(this.numeroEndereco, credorResponse.numeroEndereco) &&
+        Objects.equals(this.complementoEndereco, credorResponse.complementoEndereco) &&
+        Objects.equals(this.bairro, credorResponse.bairro) &&
+        Objects.equals(this.cidade, credorResponse.cidade) &&
+        Objects.equals(this.cep, credorResponse.cep) &&
+        Objects.equals(this.uf, credorResponse.uf) &&
+        Objects.equals(this.responsavel, credorResponse.responsavel) &&
+        Objects.equals(this.flagSegundaViaAcordo, credorResponse.flagSegundaViaAcordo) &&
+        Objects.equals(this.valorMinimoParcela, credorResponse.valorMinimoParcela) &&
+        Objects.equals(this.descontoMaximo, credorResponse.descontoMaximo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, nomeCredor, diaPagamentoSemanal, diaPagamentoMensal, diaPagamentoDecendialPrimeiro, diaPagamentoDecendialSegundo, diaPagamentoDecendialTerceiro, diaPagamentoQuinzenalPrimeiro, diaPagamentoQuinzenalSegundo, banco, agencia, digitoAgencia, contaCorrente, digitoContaCorrente, credorBanco, percentualRAV, recebeRAV, percentualMultiplica, taxaAdministrativa, taxaBanco, limiteRAV, idCredorRAV, periodicidade, idPessoaJuridica, flagEscritorioCobranca, escritoriosCobranca, telefonesEscritoriosCobranca);
+    return Objects.hash(id, nomeCredor, diaPagamentoSemanal, diaPagamentoMensal, diaPagamentoDecendialPrimeiro, diaPagamentoDecendialSegundo, diaPagamentoDecendialTerceiro, diaPagamentoQuinzenalPrimeiro, diaPagamentoQuinzenalSegundo, banco, agencia, digitoAgencia, contaCorrente, digitoContaCorrente, credorBanco, percentualRAV, recebeRAV, percentualMultiplica, taxaAdministrativa, taxaBanco, limiteRAV, idCredorRAV, periodicidade, idPessoaJuridica, flagEscritorioCobranca, prefixo, ativo, telefonesEscritoriosCobranca, nomeContato, email, nomeLogradouro, numeroEndereco, complementoEndereco, bairro, cidade, cep, uf, responsavel, flagSegundaViaAcordo, valorMinimoParcela, descontoMaximo);
   }
 
   @Override
@@ -649,8 +928,22 @@ public class CredorResponse   {
     sb.append("    periodicidade: ").append(toIndentedString(periodicidade)).append("\n");
     sb.append("    idPessoaJuridica: ").append(toIndentedString(idPessoaJuridica)).append("\n");
     sb.append("    flagEscritorioCobranca: ").append(toIndentedString(flagEscritorioCobranca)).append("\n");
-    sb.append("    escritoriosCobranca: ").append(toIndentedString(escritoriosCobranca)).append("\n");
+    sb.append("    prefixo: ").append(toIndentedString(prefixo)).append("\n");
+    sb.append("    ativo: ").append(toIndentedString(ativo)).append("\n");
     sb.append("    telefonesEscritoriosCobranca: ").append(toIndentedString(telefonesEscritoriosCobranca)).append("\n");
+    sb.append("    nomeContato: ").append(toIndentedString(nomeContato)).append("\n");
+    sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    nomeLogradouro: ").append(toIndentedString(nomeLogradouro)).append("\n");
+    sb.append("    numeroEndereco: ").append(toIndentedString(numeroEndereco)).append("\n");
+    sb.append("    complementoEndereco: ").append(toIndentedString(complementoEndereco)).append("\n");
+    sb.append("    bairro: ").append(toIndentedString(bairro)).append("\n");
+    sb.append("    cidade: ").append(toIndentedString(cidade)).append("\n");
+    sb.append("    cep: ").append(toIndentedString(cep)).append("\n");
+    sb.append("    uf: ").append(toIndentedString(uf)).append("\n");
+    sb.append("    responsavel: ").append(toIndentedString(responsavel)).append("\n");
+    sb.append("    flagSegundaViaAcordo: ").append(toIndentedString(flagSegundaViaAcordo)).append("\n");
+    sb.append("    valorMinimoParcela: ").append(toIndentedString(valorMinimoParcela)).append("\n");
+    sb.append("    descontoMaximo: ").append(toIndentedString(descontoMaximo)).append("\n");
     sb.append("}");
     return sb.toString();
   }

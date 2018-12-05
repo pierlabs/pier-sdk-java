@@ -246,17 +246,17 @@ public class GlobaltagestabelecimentoApi {
    * @param telefoneEstabelecimentoUpdate telefoneEstabelecimentoUpdate
    * @return TelefoneEstabelecimentoResponse
    */
-  public TelefoneEstabelecimentoResponse alterarUsingPUT16(Long id, TelefoneEstabelecimentoUpdate telefoneEstabelecimentoUpdate) throws ApiException {
+  public TelefoneEstabelecimentoResponse alterarUsingPUT17(Long id, TelefoneEstabelecimentoUpdate telefoneEstabelecimentoUpdate) throws ApiException {
     Object postBody = telefoneEstabelecimentoUpdate;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT16");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT17");
      }
      
      // verify the required parameter 'telefoneEstabelecimentoUpdate' is set
      if (telefoneEstabelecimentoUpdate == null) {
-        throw new ApiException(400, "Missing the required parameter 'telefoneEstabelecimentoUpdate' when calling alterarUsingPUT16");
+        throw new ApiException(400, "Missing the required parameter 'telefoneEstabelecimentoUpdate' when calling alterarUsingPUT17");
      }
      
     // create path and map variables
@@ -300,17 +300,17 @@ public class GlobaltagestabelecimentoApi {
    * @param terminalUpdate terminalUpdate
    * @return TerminalResponse
    */
-  public TerminalResponse alterarUsingPUT18(Long id, TerminalUpdateValue terminalUpdate) throws ApiException {
+  public TerminalResponse alterarUsingPUT19(Long id, TerminalUpdateValue terminalUpdate) throws ApiException {
     Object postBody = terminalUpdate;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT18");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT19");
      }
      
      // verify the required parameter 'terminalUpdate' is set
      if (terminalUpdate == null) {
-        throw new ApiException(400, "Missing the required parameter 'terminalUpdate' when calling alterarUsingPUT18");
+        throw new ApiException(400, "Missing the required parameter 'terminalUpdate' when calling alterarUsingPUT19");
      }
      
     // create path and map variables
@@ -890,12 +890,12 @@ public class GlobaltagestabelecimentoApi {
    * @param id {{{telefone_estabelecimento_resource_consultar_param_id}}}
    * @return TelefoneEstabelecimentoResponse
    */
-  public TelefoneEstabelecimentoResponse consultarUsingGET37(Long id) throws ApiException {
+  public TelefoneEstabelecimentoResponse consultarUsingGET38(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET37");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET38");
      }
      
     // create path and map variables
@@ -938,12 +938,12 @@ public class GlobaltagestabelecimentoApi {
    * @param id {{{terminal_resource_consultar_param_id}}}
    * @return TerminalResponse
    */
-  public TerminalResponse consultarUsingGET39(Long id) throws ApiException {
+  public TerminalResponse consultarUsingGET40(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET39");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET40");
      }
      
     // create path and map variables
@@ -986,12 +986,12 @@ public class GlobaltagestabelecimentoApi {
    * @param id {{{vinculo_estabelecimento_adquirente_resource_consultar_param_id}}}
    * @return VinculoEstabelecimentoAdquirenteResponse
    */
-  public VinculoEstabelecimentoAdquirenteResponse consultarUsingGET51(Long id) throws ApiException {
+  public VinculoEstabelecimentoAdquirenteResponse consultarUsingGET52(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET51");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET52");
      }
      
     // create path and map variables
@@ -2232,7 +2232,7 @@ public class GlobaltagestabelecimentoApi {
    * @param idEstabelecimento {{{telefone_estabelecimento_request_id_estabelecimento_value}}}
    * @return PageTelefoneEstabelecimentoResponse
    */
-  public PageTelefoneEstabelecimentoResponse listarUsingGET46(List<String> sort, Integer page, Integer limit, Long idEstabelecimento) throws ApiException {
+  public PageTelefoneEstabelecimentoResponse listarUsingGET47(List<String> sort, Integer page, Integer limit, Long idEstabelecimento) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -2288,7 +2288,7 @@ public class GlobaltagestabelecimentoApi {
    * @param idEstabelecimento {{{terminal_request_id_estabelecimento_value}}}
    * @return PageTerminalResponse
    */
-  public PageTerminalResponse listarUsingGET48(List<String> sort, Integer page, Integer limit, Long id, String terminal, Long numeroEstabelecimento, Long idEstabelecimento) throws ApiException {
+  public PageTerminalResponse listarUsingGET49(List<String> sort, Integer page, Integer limit, Long id, String terminal, Long numeroEstabelecimento, Long idEstabelecimento) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -2349,7 +2349,7 @@ public class GlobaltagestabelecimentoApi {
    * @param codigoEstabelecimentoAdquirente {{{vinculo_estabelecimento_adquirente_request_codigo_estabelecimento_adquirente_value}}}
    * @return PageVinculoEstabelecimentoAdquirenteResponse
    */
-  public PageVinculoEstabelecimentoAdquirenteResponse listarUsingGET61(List<String> sort, Integer page, Integer limit, Long idAdquirente, Long idEstabelecimento, String codigoEstabelecimentoAdquirente) throws ApiException {
+  public PageVinculoEstabelecimentoAdquirenteResponse listarUsingGET62(List<String> sort, Integer page, Integer limit, Long idAdquirente, Long idEstabelecimento, String codigoEstabelecimentoAdquirente) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -2409,12 +2409,12 @@ public class GlobaltagestabelecimentoApi {
    * @param codigoMCC {{{vinculo_operacao_request_codigo_m_c_c_value}}}
    * @return PageVinculoOperacaoResponse
    */
-  public PageVinculoOperacaoResponse listarUsingGET62(Long id, List<String> sort, Integer page, Integer limit, Long idProduto, Long idOperacao, Integer codigoMCC) throws ApiException {
+  public PageVinculoOperacaoResponse listarUsingGET63(Long id, List<String> sort, Integer page, Integer limit, Long idProduto, Long idOperacao, Integer codigoMCC) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET62");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling listarUsingGET63");
      }
      
     // create path and map variables
@@ -2563,12 +2563,12 @@ public class GlobaltagestabelecimentoApi {
    * @param telefoneEstabelecimentoPersist telefoneEstabelecimentoPersist
    * @return TelefoneEstabelecimentoResponse
    */
-  public TelefoneEstabelecimentoResponse salvarUsingPOST26(TelefoneEstabelecimentoPersist telefoneEstabelecimentoPersist) throws ApiException {
+  public TelefoneEstabelecimentoResponse salvarUsingPOST27(TelefoneEstabelecimentoPersist telefoneEstabelecimentoPersist) throws ApiException {
     Object postBody = telefoneEstabelecimentoPersist;
     
      // verify the required parameter 'telefoneEstabelecimentoPersist' is set
      if (telefoneEstabelecimentoPersist == null) {
-        throw new ApiException(400, "Missing the required parameter 'telefoneEstabelecimentoPersist' when calling salvarUsingPOST26");
+        throw new ApiException(400, "Missing the required parameter 'telefoneEstabelecimentoPersist' when calling salvarUsingPOST27");
      }
      
     // create path and map variables
@@ -2610,12 +2610,12 @@ public class GlobaltagestabelecimentoApi {
    * @param terminalPersist terminalPersist
    * @return TerminalResponse
    */
-  public TerminalResponse salvarUsingPOST28(TerminalPersist terminalPersist) throws ApiException {
+  public TerminalResponse salvarUsingPOST29(TerminalPersist terminalPersist) throws ApiException {
     Object postBody = terminalPersist;
     
      // verify the required parameter 'terminalPersist' is set
      if (terminalPersist == null) {
-        throw new ApiException(400, "Missing the required parameter 'terminalPersist' when calling salvarUsingPOST28");
+        throw new ApiException(400, "Missing the required parameter 'terminalPersist' when calling salvarUsingPOST29");
      }
      
     // create path and map variables
@@ -2657,12 +2657,12 @@ public class GlobaltagestabelecimentoApi {
    * @param vinculoEstabelecimentoAdquirentePersist vinculoEstabelecimentoAdquirentePersist
    * @return VinculoEstabelecimentoAdquirenteResponse
    */
-  public VinculoEstabelecimentoAdquirenteResponse salvarUsingPOST32(VinculoEstabelecimentoAdquirentePersist vinculoEstabelecimentoAdquirentePersist) throws ApiException {
+  public VinculoEstabelecimentoAdquirenteResponse salvarUsingPOST33(VinculoEstabelecimentoAdquirentePersist vinculoEstabelecimentoAdquirentePersist) throws ApiException {
     Object postBody = vinculoEstabelecimentoAdquirentePersist;
     
      // verify the required parameter 'vinculoEstabelecimentoAdquirentePersist' is set
      if (vinculoEstabelecimentoAdquirentePersist == null) {
-        throw new ApiException(400, "Missing the required parameter 'vinculoEstabelecimentoAdquirentePersist' when calling salvarUsingPOST32");
+        throw new ApiException(400, "Missing the required parameter 'vinculoEstabelecimentoAdquirentePersist' when calling salvarUsingPOST33");
      }
      
     // create path and map variables

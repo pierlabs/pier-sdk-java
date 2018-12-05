@@ -249,27 +249,27 @@ public class GlobaltagcadastroclienteApi {
    * @param dataEmissaoIdentidade {{{pessoa_persist_data_emissao_identidade_value}}}
    * @return PessoaResponse
    */
-  public PessoaResponse alterarUsingPUT15(Long id, String nome, String tipo, String dataNascimento, String cpf, String cnpj, String sexo, String numeroIdentidade, String orgaoExpedidorIdentidade, String unidadeFederativaIdentidade, String dataEmissaoIdentidade) throws ApiException {
+  public PessoaResponse alterarUsingPUT16(Long id, String nome, String tipo, String dataNascimento, String cpf, String cnpj, String sexo, String numeroIdentidade, String orgaoExpedidorIdentidade, String unidadeFederativaIdentidade, String dataEmissaoIdentidade) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT15");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT16");
      }
      
      // verify the required parameter 'nome' is set
      if (nome == null) {
-        throw new ApiException(400, "Missing the required parameter 'nome' when calling alterarUsingPUT15");
+        throw new ApiException(400, "Missing the required parameter 'nome' when calling alterarUsingPUT16");
      }
      
      // verify the required parameter 'tipo' is set
      if (tipo == null) {
-        throw new ApiException(400, "Missing the required parameter 'tipo' when calling alterarUsingPUT15");
+        throw new ApiException(400, "Missing the required parameter 'tipo' when calling alterarUsingPUT16");
      }
      
      // verify the required parameter 'dataNascimento' is set
      if (dataNascimento == null) {
-        throw new ApiException(400, "Missing the required parameter 'dataNascimento' when calling alterarUsingPUT15");
+        throw new ApiException(400, "Missing the required parameter 'dataNascimento' when calling alterarUsingPUT16");
      }
      
     // create path and map variables
@@ -336,12 +336,12 @@ public class GlobaltagcadastroclienteApi {
    * @param ramal {{{telefone_alterar_persist_ramal_value}}}
    * @return TelefoneResponse
    */
-  public TelefoneResponse alterarUsingPUT17(Long id, Long idTipoTelefone, String ddd, String telefone, String ramal) throws ApiException {
+  public TelefoneResponse alterarUsingPUT18(Long id, Long idTipoTelefone, String ddd, String telefone, String ramal) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT17");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarUsingPUT18");
      }
      
     // create path and map variables
@@ -949,12 +949,12 @@ public class GlobaltagcadastroclienteApi {
    * @param id {{{pessoa_resource_consultar_param_id}}}
    * @return PessoaResponse
    */
-  public PessoaResponse consultarUsingGET30(Long id) throws ApiException {
+  public PessoaResponse consultarUsingGET31(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET30");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET31");
      }
      
     // create path and map variables
@@ -997,12 +997,12 @@ public class GlobaltagcadastroclienteApi {
    * @param id {{{telefone_resource_consultar_param_id}}}
    * @return TelefoneResponse
    */
-  public TelefoneResponse consultarUsingGET38(Long id) throws ApiException {
+  public TelefoneResponse consultarUsingGET39(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET38");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarUsingGET39");
      }
      
     // create path and map variables
@@ -1535,7 +1535,7 @@ public class GlobaltagcadastroclienteApi {
    * @param dataEmissaoIdentidade {{{pessoa_request_data_emissao_identidade_value}}}
    * @return PagePessoaResponse
    */
-  public PagePessoaResponse listarUsingGET34(List<String> sort, Integer page, Integer limit, Long id, String nome, String tipo, String cpf, String cnpj, String dataNascimento, String sexo, String numeroIdentidade, String orgaoExpedidorIdentidade, String unidadeFederativaIdentidade, String dataEmissaoIdentidade) throws ApiException {
+  public PagePessoaResponse listarUsingGET35(List<String> sort, Integer page, Integer limit, Long id, String nome, String tipo, String cpf, String cnpj, String dataNascimento, String sexo, String numeroIdentidade, String orgaoExpedidorIdentidade, String unidadeFederativaIdentidade, String dataEmissaoIdentidade) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -1614,7 +1614,7 @@ public class GlobaltagcadastroclienteApi {
    * @param status {{{telefone_request_status_value}}}
    * @return PageTelefoneResponse
    */
-  public PageTelefoneResponse listarUsingGET47(List<String> sort, Integer page, Integer limit, Long id, Long idTipoTelefone, Long idPessoa, String ddd, String telefone, String ramal, Integer status) throws ApiException {
+  public PageTelefoneResponse listarUsingGET48(List<String> sort, Integer page, Integer limit, Long id, Long idTipoTelefone, Long idPessoa, String ddd, String telefone, String ramal, Integer status) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -2077,22 +2077,22 @@ public class GlobaltagcadastroclienteApi {
    * @param dataEmissaoIdentidade {{{pessoa_persist_data_emissao_identidade_value}}}
    * @return PessoaResponse
    */
-  public PessoaResponse salvarUsingPOST23(String nome, String tipo, String dataNascimento, String cpf, String cnpj, String sexo, String numeroIdentidade, String orgaoExpedidorIdentidade, String unidadeFederativaIdentidade, String dataEmissaoIdentidade) throws ApiException {
+  public PessoaResponse salvarUsingPOST24(String nome, String tipo, String dataNascimento, String cpf, String cnpj, String sexo, String numeroIdentidade, String orgaoExpedidorIdentidade, String unidadeFederativaIdentidade, String dataEmissaoIdentidade) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'nome' is set
      if (nome == null) {
-        throw new ApiException(400, "Missing the required parameter 'nome' when calling salvarUsingPOST23");
+        throw new ApiException(400, "Missing the required parameter 'nome' when calling salvarUsingPOST24");
      }
      
      // verify the required parameter 'tipo' is set
      if (tipo == null) {
-        throw new ApiException(400, "Missing the required parameter 'tipo' when calling salvarUsingPOST23");
+        throw new ApiException(400, "Missing the required parameter 'tipo' when calling salvarUsingPOST24");
      }
      
      // verify the required parameter 'dataNascimento' is set
      if (dataNascimento == null) {
-        throw new ApiException(400, "Missing the required parameter 'dataNascimento' when calling salvarUsingPOST23");
+        throw new ApiException(400, "Missing the required parameter 'dataNascimento' when calling salvarUsingPOST24");
      }
      
     // create path and map variables
@@ -2158,7 +2158,7 @@ public class GlobaltagcadastroclienteApi {
    * @param ramal {{{telefone_persist_ramal_value}}}
    * @return TelefoneResponse
    */
-  public TelefoneResponse salvarUsingPOST27(Long idTipoTelefone, Long idPessoa, String ddd, String telefone, String ramal) throws ApiException {
+  public TelefoneResponse salvarUsingPOST28(Long idTipoTelefone, Long idPessoa, String ddd, String telefone, String ramal) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

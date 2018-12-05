@@ -220,7 +220,7 @@ public class GlobaltagdebitorecorrenteApi {
    * @param flagAtivo {{{tipo_debito_recorrente_request_flag_ativo_value}}}
    * @return PageTipoDebitoRecorrenteResponse
    */
-  public PageTipoDebitoRecorrenteResponse listarUsingGET51(List<String> sort, Integer page, Integer limit, Long id, String descricao, BigDecimal valor, Boolean flagAtivo) throws ApiException {
+  public PageTipoDebitoRecorrenteResponse listarUsingGET52(List<String> sort, Integer page, Integer limit, Long id, String descricao, BigDecimal valor, Boolean flagAtivo) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

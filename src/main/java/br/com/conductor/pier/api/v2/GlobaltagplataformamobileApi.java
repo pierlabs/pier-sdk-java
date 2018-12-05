@@ -101,7 +101,7 @@ public class GlobaltagplataformamobileApi {
    * @param nome {{{plataforma_mobile_request_nome_value}}}
    * @return PagePlataformaMobileResponse
    */
-  public PagePlataformaMobileResponse listarUsingGET35(List<String> sort, Integer page, Integer limit, String nome) throws ApiException {
+  public PagePlataformaMobileResponse listarUsingGET36(List<String> sort, Integer page, Integer limit, String nome) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -151,12 +151,12 @@ public class GlobaltagplataformamobileApi {
    * @param persist persist
    * @return PlataformaMobileResponse
    */
-  public PlataformaMobileResponse salvarUsingPOST24(PlataformaMobilePersistValue persist) throws ApiException {
+  public PlataformaMobileResponse salvarUsingPOST25(PlataformaMobilePersistValue persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST24");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarUsingPOST25");
      }
      
     // create path and map variables

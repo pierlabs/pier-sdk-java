@@ -476,7 +476,7 @@ public class GlobaltagservicocontaApi {
    * @param idTipoServico {{{servico_conta_request_id_tipo_servico_value}}}
    * @return PageServicoContaResponse
    */
-  public PageServicoContaResponse listarUsingGET42(List<String> sort, Integer page, Integer limit, Long idConta, Long idTipoServico) throws ApiException {
+  public PageServicoContaResponse listarUsingGET43(List<String> sort, Integer page, Integer limit, Long idConta, Long idTipoServico) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -528,12 +528,12 @@ public class GlobaltagservicocontaApi {
    * @param servicoContaPersist servicoContaPersist
    * @return Object
    */
-  public Object salvarUsingPOST25(ServicoContaPersistValue servicoContaPersist) throws ApiException {
+  public Object salvarUsingPOST26(ServicoContaPersistValue servicoContaPersist) throws ApiException {
     Object postBody = servicoContaPersist;
     
      // verify the required parameter 'servicoContaPersist' is set
      if (servicoContaPersist == null) {
-        throw new ApiException(400, "Missing the required parameter 'servicoContaPersist' when calling salvarUsingPOST25");
+        throw new ApiException(400, "Missing the required parameter 'servicoContaPersist' when calling salvarUsingPOST26");
      }
      
     // create path and map variables
