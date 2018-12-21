@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Reference object representation per Id
+ * {{{referencia_id_persist_description}}}
  **/
 
-@ApiModel(description = "Reference object representation per Id")
+@ApiModel(description = "{{{referencia_id_persist_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ReferenciaIdPersist   {
   

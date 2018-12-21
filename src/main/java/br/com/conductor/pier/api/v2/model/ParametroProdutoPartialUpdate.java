@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Parameters used in the product parameter partial update
+ * {{{parametro_produto_partial_update_description}}}
  **/
 
-@ApiModel(description = "Parameters used in the product parameter partial update")
+@ApiModel(description = "{{{parametro_produto_partial_update_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ParametroProdutoPartialUpdate   {
   
@@ -21,14 +21,14 @@ public class ParametroProdutoPartialUpdate   {
 
   
   /**
-   * Product parameter expiration date
+   * {{{parametro_produto_dto_data_validade_value}}}
    **/
   public ParametroProdutoPartialUpdate dataValidade(String dataValidade) {
     this.dataValidade = dataValidade;
     return this;
   }
   
-  @ApiModelProperty(example = "2020-12-31T00:00:00.000Z", value = "Product parameter expiration date")
+  @ApiModelProperty(example = "2020-12-31T00:00:00.000Z", value = "{{{parametro_produto_dto_data_validade_value}}}")
   @JsonProperty("dataValidade")
   public String getDataValidade() {
     return dataValidade;
@@ -39,14 +39,14 @@ public class ParametroProdutoPartialUpdate   {
 
   
   /**
-   * Description of the product parameter
+   * {{{parametro_produto_dto_descricao_value}}}
    **/
   public ParametroProdutoPartialUpdate descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "Parâmetro exemplo do parâmetro de produto", value = "Description of the product parameter")
+  @ApiModelProperty(example = "Parâmetro exemplo do parâmetro de produto", value = "{{{parametro_produto_dto_descricao_value}}}")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -57,14 +57,14 @@ public class ParametroProdutoPartialUpdate   {
 
   
   /**
-   * Product parameter value
+   * {{{parametro_produto_dto_valor_parametro_value}}}
    **/
   public ParametroProdutoPartialUpdate valorParametro(String valorParametro) {
     this.valorParametro = valorParametro;
     return this;
   }
   
-  @ApiModelProperty(example = "150.50", value = "Product parameter value")
+  @ApiModelProperty(example = "150.50", value = "{{{parametro_produto_dto_valor_parametro_value}}}")
   @JsonProperty("valorParametro")
   public String getValorParametro() {
     return valorParametro;

@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Object Bank
+ * {{{banco_response_description}}}
  **/
 
-@ApiModel(description = "Object Bank")
+@ApiModel(description = "{{{banco_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class BancoResponse   {
   
@@ -22,14 +22,14 @@ public class BancoResponse   {
 
   
   /**
-   * Identification Code of the Bank (id)
+   * {{{banco_response_id_value}}}
    **/
   public BancoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the Bank (id)")
+  @ApiModelProperty(example = "null", value = "{{{banco_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -40,14 +40,14 @@ public class BancoResponse   {
 
   
   /**
-   * Name of the Bank
+   * {{{banco_response_nome_value}}}
    **/
   public BancoResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Name of the Bank")
+  @ApiModelProperty(example = "null", value = "{{{banco_response_nome_value}}}")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -58,14 +58,14 @@ public class BancoResponse   {
 
   
   /**
-   * Description of the bank
+   * {{{banco_response_descricao_value}}}
    **/
   public BancoResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Description of the bank")
+  @ApiModelProperty(example = "null", value = "{{{banco_response_descricao_value}}}")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -76,14 +76,14 @@ public class BancoResponse   {
 
   
   /**
-   * Digit of the bank
+   * {{{banco_response_digito_banco_value}}}
    **/
   public BancoResponse digitoBanco(String digitoBanco) {
     this.digitoBanco = digitoBanco;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Digit of the bank")
+  @ApiModelProperty(example = "null", value = "{{{banco_response_digito_banco_value}}}")
   @JsonProperty("digitoBanco")
   public String getDigitoBanco() {
     return digitoBanco;

@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representation of user device response
+ * {{{controle_seguranca_dispositivo_resposta_descricao}}}
  **/
 
-@ApiModel(description = "Representation of user device response")
+@ApiModel(description = "{{{controle_seguranca_dispositivo_resposta_descricao}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ControleSegurancaDispositivoResponse   {
   
@@ -21,14 +21,14 @@ public class ControleSegurancaDispositivoResponse   {
 
   
   /**
-   * User device record identifier
+   * {{{controle_seguranca_dispositivo_resposta_id_descricao}}}
    **/
   public ControleSegurancaDispositivoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "User device record identifier")
+  @ApiModelProperty(example = "null", value = "{{{controle_seguranca_dispositivo_resposta_id_descricao}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -39,14 +39,14 @@ public class ControleSegurancaDispositivoResponse   {
 
   
   /**
-   * User identifier code
+   * {{{controle_seguranca_dispositivo_resposta_id_usuario_descricao}}}
    **/
   public ControleSegurancaDispositivoResponse idUsuario(Long idUsuario) {
     this.idUsuario = idUsuario;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "User identifier code")
+  @ApiModelProperty(example = "null", value = "{{{controle_seguranca_dispositivo_resposta_id_usuario_descricao}}}")
   @JsonProperty("idUsuario")
   public Long getIdUsuario() {
     return idUsuario;
@@ -57,14 +57,14 @@ public class ControleSegurancaDispositivoResponse   {
 
   
   /**
-   * User device identification (phoneId)
+   * {{{controle_seguranca_dispositivo_resposta_phone_id_descricao}}}
    **/
   public ControleSegurancaDispositivoResponse phoneId(String phoneId) {
     this.phoneId = phoneId;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "User device identification (phoneId)")
+  @ApiModelProperty(example = "null", value = "{{{controle_seguranca_dispositivo_resposta_phone_id_descricao}}}")
   @JsonProperty("phoneId")
   public String getPhoneId() {
     return phoneId;

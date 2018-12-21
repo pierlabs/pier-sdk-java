@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * PlanCampaign
+ * {{{plano_campanha_persist_description}}}
  **/
 
-@ApiModel(description = "PlanCampaign")
+@ApiModel(description = "{{{plano_campanha_persist_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PlanoCampanhaPersist   {
   

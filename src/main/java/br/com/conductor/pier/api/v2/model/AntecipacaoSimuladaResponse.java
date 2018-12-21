@@ -12,10 +12,10 @@ import java.util.List;
 
 
 /**
- * Response Representation of the Simulated Antecipation resource
+ * {{{antecipacao_simulada_response_description}}}
  **/
 
-@ApiModel(description = "Response Representation of the Simulated Antecipation resource")
+@ApiModel(description = "{{{antecipacao_simulada_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class AntecipacaoSimuladaResponse   {
   
@@ -81,14 +81,14 @@ public class AntecipacaoSimuladaResponse   {
 
   
   /**
-   * Identifier Code of the simulation of antecipation
+   * {{{antecipacao_simulada_response_id_antecipacao_simulada_value}}}
    **/
   public AntecipacaoSimuladaResponse idAntecipacaoSimulada(Long idAntecipacaoSimulada) {
     this.idAntecipacaoSimulada = idAntecipacaoSimulada;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identifier Code of the simulation of antecipation")
+  @ApiModelProperty(example = "null", value = "{{{antecipacao_simulada_response_id_antecipacao_simulada_value}}}")
   @JsonProperty("idAntecipacaoSimulada")
   public Long getIdAntecipacaoSimulada() {
     return idAntecipacaoSimulada;
@@ -99,14 +99,14 @@ public class AntecipacaoSimuladaResponse   {
 
   
   /**
-   * Identifier Code of the Account
+   * {{{antecipacao_simulada_response_id_conta_value}}}
    **/
   public AntecipacaoSimuladaResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identifier Code of the Account")
+  @ApiModelProperty(example = "null", value = "{{{antecipacao_simulada_response_id_conta_value}}}")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -117,14 +117,14 @@ public class AntecipacaoSimuladaResponse   {
 
   
   /**
-   * Identifier Code of the shop event
+   * {{{antecipacao_simulada_response_id_compra_value}}}
    **/
   public AntecipacaoSimuladaResponse idCompra(Long idCompra) {
     this.idCompra = idCompra;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identifier Code of the shop event")
+  @ApiModelProperty(example = "null", value = "{{{antecipacao_simulada_response_id_compra_value}}}")
   @JsonProperty("idCompra")
   public Long getIdCompra() {
     return idCompra;
@@ -135,14 +135,14 @@ public class AntecipacaoSimuladaResponse   {
 
   
   /**
-   * Identifier Code of type of the shop event
+   * {{{antecipacao_simulada_response_id_tipo_transacao_value}}}
    **/
   public AntecipacaoSimuladaResponse idTipoTransacao(Long idTipoTransacao) {
     this.idTipoTransacao = idTipoTransacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identifier Code of type of the shop event")
+  @ApiModelProperty(example = "null", value = "{{{antecipacao_simulada_response_id_tipo_transacao_value}}}")
   @JsonProperty("idTipoTransacao")
   public Long getIdTipoTransacao() {
     return idTipoTransacao;
@@ -153,14 +153,14 @@ public class AntecipacaoSimuladaResponse   {
 
   
   /**
-   * Quantity of the antecipated parcels
+   * {{{antecipacao_simulada_response_quantidade_parcelas_antecipaveis_value}}}
    **/
   public AntecipacaoSimuladaResponse quantidadeParcelasAntecipaveis(Integer quantidadeParcelasAntecipaveis) {
     this.quantidadeParcelasAntecipaveis = quantidadeParcelasAntecipaveis;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Quantity of the antecipated parcels")
+  @ApiModelProperty(example = "null", value = "{{{antecipacao_simulada_response_quantidade_parcelas_antecipaveis_value}}}")
   @JsonProperty("quantidadeParcelasAntecipaveis")
   public Integer getQuantidadeParcelasAntecipaveis() {
     return quantidadeParcelasAntecipaveis;
@@ -171,14 +171,14 @@ public class AntecipacaoSimuladaResponse   {
 
   
   /**
-   * Value of the parcel
+   * {{{antecipacao_simulada_response_valor_parcela_value}}}
    **/
   public AntecipacaoSimuladaResponse valorParcela(BigDecimal valorParcela) {
     this.valorParcela = valorParcela;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Value of the parcel")
+  @ApiModelProperty(example = "null", value = "{{{antecipacao_simulada_response_valor_parcela_value}}}")
   @JsonProperty("valorParcela")
   public BigDecimal getValorParcela() {
     return valorParcela;
@@ -189,14 +189,14 @@ public class AntecipacaoSimuladaResponse   {
 
   
   /**
-   * Date and time which the simulation was made
+   * {{{antecipacao_simulada_response_data_hora_simulacao_value}}}
    **/
   public AntecipacaoSimuladaResponse dataHoraSimulacao(String dataHoraSimulacao) {
     this.dataHoraSimulacao = dataHoraSimulacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Date and time which the simulation was made")
+  @ApiModelProperty(example = "null", value = "{{{antecipacao_simulada_response_data_hora_simulacao_value}}}")
   @JsonProperty("dataHoraSimulacao")
   public String getDataHoraSimulacao() {
     return dataHoraSimulacao;
@@ -207,14 +207,14 @@ public class AntecipacaoSimuladaResponse   {
 
   
   /**
-   * Taxe of the antecipation applied (to the year)
+   * {{{antecipacao_simulada_response_taxa_antecipacao_ano_value}}}
    **/
   public AntecipacaoSimuladaResponse taxaAntecipacaoAno(BigDecimal taxaAntecipacaoAno) {
     this.taxaAntecipacaoAno = taxaAntecipacaoAno;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Taxe of the antecipation applied (to the year)")
+  @ApiModelProperty(example = "null", value = "{{{antecipacao_simulada_response_taxa_antecipacao_ano_value}}}")
   @JsonProperty("taxaAntecipacaoAno")
   public BigDecimal getTaxaAntecipacaoAno() {
     return taxaAntecipacaoAno;
@@ -225,14 +225,14 @@ public class AntecipacaoSimuladaResponse   {
 
   
   /**
-   * Establishment where the transaction was made
+   * {{{antecipacao_simulada_response_nome_estabelecimento_value}}}
    **/
   public AntecipacaoSimuladaResponse nomeEstabelecimento(String nomeEstabelecimento) {
     this.nomeEstabelecimento = nomeEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Establishment where the transaction was made")
+  @ApiModelProperty(example = "null", value = "{{{antecipacao_simulada_response_nome_estabelecimento_value}}}")
   @JsonProperty("nomeEstabelecimento")
   public String getNomeEstabelecimento() {
     return nomeEstabelecimento;
@@ -243,14 +243,14 @@ public class AntecipacaoSimuladaResponse   {
 
   
   /**
-   * Description of status of the shop authorization
+   * {{{antecipacao_simulada_response_status_value}}}
    **/
   public AntecipacaoSimuladaResponse status(String status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Description of status of the shop authorization")
+  @ApiModelProperty(example = "null", value = "{{{antecipacao_simulada_response_status_value}}}")
   @JsonProperty("status")
   public String getStatus() {
     return status;
@@ -261,14 +261,14 @@ public class AntecipacaoSimuladaResponse   {
 
   
   /**
-   * Date of the shop
+   * {{{antecipacao_simulada_response_data_compra_value}}}
    **/
   public AntecipacaoSimuladaResponse dataCompra(String dataCompra) {
     this.dataCompra = dataCompra;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Date of the shop")
+  @ApiModelProperty(example = "null", value = "{{{antecipacao_simulada_response_data_compra_value}}}")
   @JsonProperty("dataCompra")
   public String getDataCompra() {
     return dataCompra;
@@ -279,14 +279,14 @@ public class AntecipacaoSimuladaResponse   {
 
   
   /**
-   * Transaction type of the shop
+   * {{{antecipacao_simulada_response_tipo_origem_transacao_value}}}
    **/
   public AntecipacaoSimuladaResponse tipoOrigemTransacao(String tipoOrigemTransacao) {
     this.tipoOrigemTransacao = tipoOrigemTransacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Transaction type of the shop")
+  @ApiModelProperty(example = "null", value = "{{{antecipacao_simulada_response_tipo_origem_transacao_value}}}")
   @JsonProperty("tipoOrigemTransacao")
   public String getTipoOrigemTransacao() {
     return tipoOrigemTransacao;
@@ -297,14 +297,14 @@ public class AntecipacaoSimuladaResponse   {
 
   
   /**
-   * City where the shop was made
+   * {{{antecipacao_simulada_response_cidade_value}}}
    **/
   public AntecipacaoSimuladaResponse cidade(String cidade) {
     this.cidade = cidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "City where the shop was made")
+  @ApiModelProperty(example = "null", value = "{{{antecipacao_simulada_response_cidade_value}}}")
   @JsonProperty("cidade")
   public String getCidade() {
     return cidade;
@@ -315,14 +315,14 @@ public class AntecipacaoSimuladaResponse   {
 
   
   /**
-   * Country where the shop was made
+   * {{{antecipacao_simulada_response_pais_value}}}
    **/
   public AntecipacaoSimuladaResponse pais(String pais) {
     this.pais = pais;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Country where the shop was made")
+  @ApiModelProperty(example = "null", value = "{{{antecipacao_simulada_response_pais_value}}}")
   @JsonProperty("pais")
   public String getPais() {
     return pais;
@@ -333,14 +333,14 @@ public class AntecipacaoSimuladaResponse   {
 
   
   /**
-   * Latitudinal Coordinate of location of the shop
+   * {{{antecipacao_simulada_response_latitude_value}}}
    **/
   public AntecipacaoSimuladaResponse latitude(String latitude) {
     this.latitude = latitude;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Latitudinal Coordinate of location of the shop")
+  @ApiModelProperty(example = "null", value = "{{{antecipacao_simulada_response_latitude_value}}}")
   @JsonProperty("latitude")
   public String getLatitude() {
     return latitude;
@@ -351,14 +351,14 @@ public class AntecipacaoSimuladaResponse   {
 
   
   /**
-   * Longitudinal Coordinate of the shop location
+   * {{{antecipacao_simulada_response_longitude_value}}}
    **/
   public AntecipacaoSimuladaResponse longitude(String longitude) {
     this.longitude = longitude;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Longitudinal Coordinate of the shop location")
+  @ApiModelProperty(example = "null", value = "{{{antecipacao_simulada_response_longitude_value}}}")
   @JsonProperty("longitude")
   public String getLongitude() {
     return longitude;
@@ -369,14 +369,14 @@ public class AntecipacaoSimuladaResponse   {
 
   
   /**
-   * Identification Code of the MCC group of the shop
+   * {{{antecipacao_simulada_response_id_grupo_m_c_c_value}}}
    **/
   public AntecipacaoSimuladaResponse idGrupoMCC(Long idGrupoMCC) {
     this.idGrupoMCC = idGrupoMCC;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the MCC group of the shop")
+  @ApiModelProperty(example = "null", value = "{{{antecipacao_simulada_response_id_grupo_m_c_c_value}}}")
   @JsonProperty("idGrupoMCC")
   public Long getIdGrupoMCC() {
     return idGrupoMCC;
@@ -387,14 +387,14 @@ public class AntecipacaoSimuladaResponse   {
 
   
   /**
-   * Description of the Group MCC of the shop
+   * {{{antecipacao_simulada_response_descricao_grupo_m_c_c_value}}}
    **/
   public AntecipacaoSimuladaResponse descricaoGrupoMCC(String descricaoGrupoMCC) {
     this.descricaoGrupoMCC = descricaoGrupoMCC;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Description of the Group MCC of the shop")
+  @ApiModelProperty(example = "null", value = "{{{antecipacao_simulada_response_descricao_grupo_m_c_c_value}}}")
   @JsonProperty("descricaoGrupoMCC")
   public String getDescricaoGrupoMCC() {
     return descricaoGrupoMCC;
@@ -405,14 +405,14 @@ public class AntecipacaoSimuladaResponse   {
 
   
   /**
-   * Identification Code of the shop product
+   * {{{antecipacao_simulada_response_id_produto_value}}}
    **/
   public AntecipacaoSimuladaResponse idProduto(Long idProduto) {
     this.idProduto = idProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the shop product")
+  @ApiModelProperty(example = "null", value = "{{{antecipacao_simulada_response_id_produto_value}}}")
   @JsonProperty("idProduto")
   public Long getIdProduto() {
     return idProduto;
@@ -423,14 +423,14 @@ public class AntecipacaoSimuladaResponse   {
 
   
   /**
-   * Description of the shop product
+   * {{{antecipacao_simulada_response_descricao_produto_value}}}
    **/
   public AntecipacaoSimuladaResponse descricaoProduto(String descricaoProduto) {
     this.descricaoProduto = descricaoProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Description of the shop product")
+  @ApiModelProperty(example = "null", value = "{{{antecipacao_simulada_response_descricao_produto_value}}}")
   @JsonProperty("descricaoProduto")
   public String getDescricaoProduto() {
     return descricaoProduto;
@@ -441,14 +441,14 @@ public class AntecipacaoSimuladaResponse   {
 
   
   /**
-   * Description of the establishment of the shop
+   * {{{antecipacao_simulada_response_descricao_estabelecimento_value}}}
    **/
   public AntecipacaoSimuladaResponse descricaoEstabelecimento(String descricaoEstabelecimento) {
     this.descricaoEstabelecimento = descricaoEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Description of the establishment of the shop")
+  @ApiModelProperty(example = "null", value = "{{{antecipacao_simulada_response_descricao_estabelecimento_value}}}")
   @JsonProperty("descricaoEstabelecimento")
   public String getDescricaoEstabelecimento() {
     return descricaoEstabelecimento;
@@ -459,14 +459,14 @@ public class AntecipacaoSimuladaResponse   {
 
   
   /**
-   * Fantasy name of the Establishment
+   * {{{antecipacao_simulada_response_nome_fantasia_estabelecimento_value}}}
    **/
   public AntecipacaoSimuladaResponse nomeFantasiaEstabelecimento(String nomeFantasiaEstabelecimento) {
     this.nomeFantasiaEstabelecimento = nomeFantasiaEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Fantasy name of the Establishment")
+  @ApiModelProperty(example = "null", value = "{{{antecipacao_simulada_response_nome_fantasia_estabelecimento_value}}}")
   @JsonProperty("nomeFantasiaEstabelecimento")
   public String getNomeFantasiaEstabelecimento() {
     return nomeFantasiaEstabelecimento;
@@ -477,14 +477,14 @@ public class AntecipacaoSimuladaResponse   {
 
   
   /**
-   * Details of the simulation
+   * {{{antecipacao_simulada_response_detalhes_value}}}
    **/
   public AntecipacaoSimuladaResponse detalhes(List<AntecipacaoSimuladaDetalhesResponse> detalhes) {
     this.detalhes = detalhes;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Details of the simulation")
+  @ApiModelProperty(example = "null", value = "{{{antecipacao_simulada_response_detalhes_value}}}")
   @JsonProperty("detalhes")
   public List<AntecipacaoSimuladaDetalhesResponse> getDetalhes() {
     return detalhes;

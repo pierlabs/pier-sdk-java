@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * List bank details of existing agreements
+ * {{{page_convenio_response_description}}}
  **/
 
-@ApiModel(description = "List bank details of existing agreements")
+@ApiModel(description = "{{{page_convenio_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageConvenioResponse   {
   

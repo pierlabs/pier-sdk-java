@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * List status of contestation
+ * {{{page_status_contestacao_response_description}}}
  **/
 
-@ApiModel(description = "List status of contestation")
+@ApiModel(description = "{{{page_status_contestacao_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageStatusContestacaoResponse   {
   

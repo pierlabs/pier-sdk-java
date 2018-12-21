@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Object of response for the validation of the card password
+ * {{{valida_senha_cartao_response_description}}}
  **/
 
-@ApiModel(description = "Object of response for the validation of the card password")
+@ApiModel(description = "{{{valida_senha_cartao_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ValidaSenhaCartaoResponse   {
   
@@ -23,14 +23,14 @@ public class ValidaSenhaCartaoResponse   {
 
   
   /**
-   * Message
+   * {{{valida_senha_cartao_response_mensagem_value}}}
    **/
   public ValidaSenhaCartaoResponse mensagem(String mensagem) {
     this.mensagem = mensagem;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Message")
+  @ApiModelProperty(example = "null", value = "{{{valida_senha_cartao_response_mensagem_value}}}")
   @JsonProperty("mensagem")
   public String getMensagem() {
     return mensagem;
@@ -41,14 +41,14 @@ public class ValidaSenhaCartaoResponse   {
 
   
   /**
-   * Description of the card status
+   * {{{valida_senha_cartao_response_id_status_cartao_value}}}
    **/
   public ValidaSenhaCartaoResponse idStatusCartao(Long idStatusCartao) {
     this.idStatusCartao = idStatusCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Description of the card status")
+  @ApiModelProperty(example = "null", value = "{{{valida_senha_cartao_response_id_status_cartao_value}}}")
   @JsonProperty("idStatusCartao")
   public Long getIdStatusCartao() {
     return idStatusCartao;
@@ -59,14 +59,14 @@ public class ValidaSenhaCartaoResponse   {
 
   
   /**
-   * Description of the card status
+   * {{{valida_senha_cartao_response_status_cartao_value}}}
    **/
   public ValidaSenhaCartaoResponse statusCartao(String statusCartao) {
     this.statusCartao = statusCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Description of the card status")
+  @ApiModelProperty(example = "null", value = "{{{valida_senha_cartao_response_status_cartao_value}}}")
   @JsonProperty("statusCartao")
   public String getStatusCartao() {
     return statusCartao;
@@ -77,14 +77,14 @@ public class ValidaSenhaCartaoResponse   {
 
   
   /**
-   * Quantity attempts
+   * {{{valida_senha_cartao_response_quantidade_tentativas_value}}}
    **/
   public ValidaSenhaCartaoResponse quantidadeTentativas(Integer quantidadeTentativas) {
     this.quantidadeTentativas = quantidadeTentativas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Quantity attempts")
+  @ApiModelProperty(example = "null", value = "{{{valida_senha_cartao_response_quantidade_tentativas_value}}}")
   @JsonProperty("quantidadeTentativas")
   public Integer getQuantidadeTentativas() {
     return quantidadeTentativas;
@@ -95,14 +95,14 @@ public class ValidaSenhaCartaoResponse   {
 
   
   /**
-   * Maximum Quantity of allowed attempts
+   * {{{valida_senha_cartao_response_quantidade_maxima_tentativas_value}}}
    **/
   public ValidaSenhaCartaoResponse quantidadeMaximaTentativas(Integer quantidadeMaximaTentativas) {
     this.quantidadeMaximaTentativas = quantidadeMaximaTentativas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Maximum Quantity of allowed attempts")
+  @ApiModelProperty(example = "null", value = "{{{valida_senha_cartao_response_quantidade_maxima_tentativas_value}}}")
   @JsonProperty("quantidadeMaximaTentativas")
   public Integer getQuantidadeMaximaTentativas() {
     return quantidadeMaximaTentativas;

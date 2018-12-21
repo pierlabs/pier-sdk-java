@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * List template document
+ * {{{page_documento_template_response_description}}}
  **/
 
-@ApiModel(description = "List template document")
+@ApiModel(description = "{{{page_documento_template_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageDocumentoTemplateResponse   {
   

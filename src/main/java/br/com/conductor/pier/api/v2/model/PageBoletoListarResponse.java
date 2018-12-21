@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * List the bank slips registered in the system
+ * {{{page_boleto_listar_response_description}}}
  **/
 
-@ApiModel(description = "List the bank slips registered in the system")
+@ApiModel(description = "{{{page_boleto_listar_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageBoletoListarResponse   {
   

@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Response Representation of the TypeOpportunity resource
+ * {{{tipo_oportunidade_response_description}}}
  **/
 
-@ApiModel(description = "Response Representation of the TypeOpportunity resource")
+@ApiModel(description = "{{{tipo_oportunidade_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TipoOportunidadeResponse   {
   
@@ -21,14 +21,14 @@ public class TipoOportunidadeResponse   {
 
   
   /**
-   * Identifier Code of the TypeOpportunity
+   * {{{tipo_oportunidade_response_id_value}}}
    **/
   public TipoOportunidadeResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Identifier Code of the TypeOpportunity")
+  @ApiModelProperty(example = "null", required = true, value = "{{{tipo_oportunidade_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -39,14 +39,14 @@ public class TipoOportunidadeResponse   {
 
   
   /**
-   * Description of the TypeOpportunity
+   * {{{tipo_oportunidade_response_descricao_value}}}
    **/
   public TipoOportunidadeResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Description of the TypeOpportunity")
+  @ApiModelProperty(example = "null", required = true, value = "{{{tipo_oportunidade_response_descricao_value}}}")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -57,14 +57,14 @@ public class TipoOportunidadeResponse   {
 
   
   /**
-   * Flag that represents if the opportunity type is active
+   * {{{tipo_oportunidade_response_flag_ativo_value}}}
    **/
   public TipoOportunidadeResponse flagAtivo(Boolean flagAtivo) {
     this.flagAtivo = flagAtivo;
     return this;
   }
   
-  @ApiModelProperty(example = "true", required = true, value = "Flag that represents if the opportunity type is active")
+  @ApiModelProperty(example = "true", required = true, value = "{{{tipo_oportunidade_response_flag_ativo_value}}}")
   @JsonProperty("flagAtivo")
   public Boolean getFlagAtivo() {
     return flagAtivo;

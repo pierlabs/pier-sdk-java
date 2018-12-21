@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v2.model.ObjectAddressApproved;
+import br.com.conductor.pier.api.v2.model.EnderecoAprovadoResponseValue;
 import br.com.conductor.pier.api.v2.model.ReferenciaComercialAprovadoResponse;
 import br.com.conductor.pier.api.v2.model.SocioAprovadoResponse;
 import br.com.conductor.pier.api.v2.model.TelefonePessoaAprovadaResponse;
@@ -15,10 +15,10 @@ import java.util.List;
 
 
 /**
- * PersonLegalApproedPersist
+ * {{{pessoa_juridica_aprovada_response_description}}}
  **/
 
-@ApiModel(description = "PersonLegalApproedPersist")
+@ApiModel(description = "{{{pessoa_juridica_aprovada_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PessoaJuridicaAprovadaResponse   {
   
@@ -41,7 +41,7 @@ public class PessoaJuridicaAprovadaResponse   {
   private String canalEntrada = null;
   private Integer valorPontuacao = null;
   private List<TelefonePessoaAprovadaResponse> telefones = new ArrayList<TelefonePessoaAprovadaResponse>();
-  private List<ObjectAddressApproved> enderecos = new ArrayList<ObjectAddressApproved>();
+  private List<EnderecoAprovadoResponseValue> enderecos = new ArrayList<EnderecoAprovadoResponseValue>();
   private List<SocioAprovadoResponse> socios = new ArrayList<SocioAprovadoResponse>();
   private List<ReferenciaComercialAprovadoResponse> referencias = new ArrayList<ReferenciaComercialAprovadoResponse>();
   private BigDecimal limiteGlobal = null;
@@ -51,14 +51,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * Identification Code of the Legal Person (id)
+   * {{{pessoa_juridica_aprovada_response_id_value}}}
    **/
   public PessoaJuridicaAprovadaResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the Legal Person (id)")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_juridica_aprovada_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -69,14 +69,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * Show the full name of the social reason (business name)
+   * {{{pessoa_juridica_aprovada_response_razao_social_value}}}
    **/
   public PessoaJuridicaAprovadaResponse razaoSocial(String razaoSocial) {
     this.razaoSocial = razaoSocial;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Show the full name of the social reason (business name)")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_juridica_aprovada_response_razao_social_value}}}")
   @JsonProperty("razaoSocial")
   public String getRazaoSocial() {
     return razaoSocial;
@@ -87,14 +87,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * Show the fantasy name of the company
+   * {{{pessoa_juridica_aprovada_response_nome_fantasia_value}}}
    **/
   public PessoaJuridicaAprovadaResponse nomeFantasia(String nomeFantasia) {
     this.nomeFantasia = nomeFantasia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Show the fantasy name of the company")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_juridica_aprovada_response_nome_fantasia_value}}}")
   @JsonProperty("nomeFantasia")
   public String getNomeFantasia() {
     return nomeFantasia;
@@ -105,14 +105,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * National Register Number of the Legal Person (CNPJ)
+   * {{{pessoa_juridica_aprovada_response_cnpj_value}}}
    **/
   public PessoaJuridicaAprovadaResponse cnpj(String cnpj) {
     this.cnpj = cnpj;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "National Register Number of the Legal Person (CNPJ)")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_juridica_aprovada_response_cnpj_value}}}")
   @JsonProperty("cnpj")
   public String getCnpj() {
     return cnpj;
@@ -123,14 +123,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * State Enrollment Number (SE)
+   * {{{pessoa_juridica_aprovada_response_inscricao_estadual_value}}}
    **/
   public PessoaJuridicaAprovadaResponse inscricaoEstadual(String inscricaoEstadual) {
     this.inscricaoEstadual = inscricaoEstadual;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "State Enrollment Number (SE)")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_juridica_aprovada_response_inscricao_estadual_value}}}")
   @JsonProperty("inscricaoEstadual")
   public String getInscricaoEstadual() {
     return inscricaoEstadual;
@@ -141,14 +141,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * Opening date of the company, this date must be informed in the format: yyyy-MM-dd
+   * {{{pessoa_juridica_aprovada_response_data_abertura_empresa_value}}}
    **/
   public PessoaJuridicaAprovadaResponse dataAberturaEmpresa(String dataAberturaEmpresa) {
     this.dataAberturaEmpresa = dataAberturaEmpresa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Opening date of the company, this date must be informed in the format: yyyy-MM-dd")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_juridica_aprovada_response_data_abertura_empresa_value}}}")
   @JsonProperty("dataAberturaEmpresa")
   public String getDataAberturaEmpresa() {
     return dataAberturaEmpresa;
@@ -159,14 +159,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * Id of the commercial origin
+   * {{{pessoa_juridica_aprovada_response_id_origem_comercial_value}}}
    **/
   public PessoaJuridicaAprovadaResponse idOrigemComercial(Long idOrigemComercial) {
     this.idOrigemComercial = idOrigemComercial;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Id of the commercial origin")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_juridica_aprovada_response_id_origem_comercial_value}}}")
   @JsonProperty("idOrigemComercial")
   public Long getIdOrigemComercial() {
     return idOrigemComercial;
@@ -177,14 +177,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * Id of the Product
+   * {{{pessoa_juridica_aprovada_response_id_produto_value}}}
    **/
   public PessoaJuridicaAprovadaResponse idProduto(Long idProduto) {
     this.idProduto = idProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Id of the Product")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_juridica_aprovada_response_id_produto_value}}}")
   @JsonProperty("idProduto")
   public Long getIdProduto() {
     return idProduto;
@@ -195,14 +195,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * Bank number
+   * {{{pessoa_juridica_aprovada_response_numero_banco_value}}}
    **/
   public PessoaJuridicaAprovadaResponse numeroBanco(Integer numeroBanco) {
     this.numeroBanco = numeroBanco;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Bank number")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_juridica_aprovada_response_numero_banco_value}}}")
   @JsonProperty("numeroBanco")
   public Integer getNumeroBanco() {
     return numeroBanco;
@@ -213,14 +213,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * Agency number
+   * {{{pessoa_juridica_aprovada_response_numero_agencia_value}}}
    **/
   public PessoaJuridicaAprovadaResponse numeroAgencia(Integer numeroAgencia) {
     this.numeroAgencia = numeroAgencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Agency number")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_juridica_aprovada_response_numero_agencia_value}}}")
   @JsonProperty("numeroAgencia")
   public Integer getNumeroAgencia() {
     return numeroAgencia;
@@ -231,14 +231,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * Current Account Number
+   * {{{pessoa_juridica_aprovada_response_numero_conta_corrente_value}}}
    **/
   public PessoaJuridicaAprovadaResponse numeroContaCorrente(String numeroContaCorrente) {
     this.numeroContaCorrente = numeroContaCorrente;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Current Account Number")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_juridica_aprovada_response_numero_conta_corrente_value}}}")
   @JsonProperty("numeroContaCorrente")
   public String getNumeroContaCorrente() {
     return numeroContaCorrente;
@@ -249,14 +249,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * Company name
+   * {{{pessoa_juridica_aprovada_response_email_value}}}
    **/
   public PessoaJuridicaAprovadaResponse email(String email) {
     this.email = email;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Company name")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_juridica_aprovada_response_email_value}}}")
   @JsonProperty("email")
   public String getEmail() {
     return email;
@@ -267,14 +267,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * Expiration day
+   * {{{pessoa_juridica_aprovada_response_dia_vencimento_value}}}
    **/
   public PessoaJuridicaAprovadaResponse diaVencimento(Integer diaVencimento) {
     this.diaVencimento = diaVencimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Expiration day")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_juridica_aprovada_response_dia_vencimento_value}}}")
   @JsonProperty("diaVencimento")
   public Integer getDiaVencimento() {
     return diaVencimento;
@@ -285,14 +285,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * Name that must be printed on the card
+   * {{{pessoa_juridica_aprovada_response_nome_impresso_value}}}
    **/
   public PessoaJuridicaAprovadaResponse nomeImpresso(String nomeImpresso) {
     this.nomeImpresso = nomeImpresso;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Name that must be printed on the card")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_juridica_aprovada_response_nome_impresso_value}}}")
   @JsonProperty("nomeImpresso")
   public String getNomeImpresso() {
     return nomeImpresso;
@@ -303,14 +303,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * Identification Code of the Registered Account
+   * {{{pessoa_juridica_aprovada_response_id_conta_value}}}
    **/
   public PessoaJuridicaAprovadaResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the Registered Account")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_juridica_aprovada_response_id_conta_value}}}")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -321,14 +321,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * Identification Code of the purpose
+   * {{{pessoa_juridica_aprovada_response_id_proposta_value}}}
    **/
   public PessoaJuridicaAprovadaResponse idProposta(Long idProposta) {
     this.idProposta = idProposta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the purpose")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_juridica_aprovada_response_id_proposta_value}}}")
   @JsonProperty("idProposta")
   public Long getIdProposta() {
     return idProposta;
@@ -339,14 +339,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * Indicate the way which the register of the client was created
+   * {{{pessoa_juridica_aprovada_response_canal_entrada_value}}}
    **/
   public PessoaJuridicaAprovadaResponse canalEntrada(String canalEntrada) {
     this.canalEntrada = canalEntrada;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Indicate the way which the register of the client was created")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_juridica_aprovada_response_canal_entrada_value}}}")
   @JsonProperty("canalEntrada")
   public String getCanalEntrada() {
     return canalEntrada;
@@ -357,14 +357,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * Indicate the value of the score attributed to the client (in case it is not informed it will be attributed the value =0)
+   * {{{pessoa_juridica_aprovada_response_valor_pontuacao_value}}}
    **/
   public PessoaJuridicaAprovadaResponse valorPontuacao(Integer valorPontuacao) {
     this.valorPontuacao = valorPontuacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Indicate the value of the score attributed to the client (in case it is not informed it will be attributed the value =0)")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_juridica_aprovada_response_valor_pontuacao_value}}}")
   @JsonProperty("valorPontuacao")
   public Integer getValorPontuacao() {
     return valorPontuacao;
@@ -375,14 +375,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * Show the telephones of the company
+   * {{{pessoa_juridica_aprovada_response_telefones_value}}}
    **/
   public PessoaJuridicaAprovadaResponse telefones(List<TelefonePessoaAprovadaResponse> telefones) {
     this.telefones = telefones;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Show the telephones of the company")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_juridica_aprovada_response_telefones_value}}}")
   @JsonProperty("telefones")
   public List<TelefonePessoaAprovadaResponse> getTelefones() {
     return telefones;
@@ -393,32 +393,32 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * It may be informed the types of address: Residential, Commercial and Others
+   * {{{pessoa_juridica_aprovada_response_enderecos_value}}}
    **/
-  public PessoaJuridicaAprovadaResponse enderecos(List<ObjectAddressApproved> enderecos) {
+  public PessoaJuridicaAprovadaResponse enderecos(List<EnderecoAprovadoResponseValue> enderecos) {
     this.enderecos = enderecos;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "It may be informed the types of address: Residential, Commercial and Others")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_juridica_aprovada_response_enderecos_value}}}")
   @JsonProperty("enderecos")
-  public List<ObjectAddressApproved> getEnderecos() {
+  public List<EnderecoAprovadoResponseValue> getEnderecos() {
     return enderecos;
   }
-  public void setEnderecos(List<ObjectAddressApproved> enderecos) {
+  public void setEnderecos(List<EnderecoAprovadoResponseValue> enderecos) {
     this.enderecos = enderecos;
   }
 
   
   /**
-   * Show the dates of the partners in the company, in case that it exists
+   * {{{pessoa_juridica_aprovada_response_socios_value}}}
    **/
   public PessoaJuridicaAprovadaResponse socios(List<SocioAprovadoResponse> socios) {
     this.socios = socios;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Show the dates of the partners in the company, in case that it exists")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_juridica_aprovada_response_socios_value}}}")
   @JsonProperty("socios")
   public List<SocioAprovadoResponse> getSocios() {
     return socios;
@@ -429,14 +429,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * Show the dates of the partners of the company, in case that it exists
+   * {{{pessoa_juridica_aprovada_response_referencias_value}}}
    **/
   public PessoaJuridicaAprovadaResponse referencias(List<ReferenciaComercialAprovadoResponse> referencias) {
     this.referencias = referencias;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Show the dates of the partners of the company, in case that it exists")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_juridica_aprovada_response_referencias_value}}}")
   @JsonProperty("referencias")
   public List<ReferenciaComercialAprovadoResponse> getReferencias() {
     return referencias;
@@ -447,14 +447,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * Value of the Global limit
+   * {{{pessoa_juridica_aprovada_response_limite_global_value}}}
    **/
   public PessoaJuridicaAprovadaResponse limiteGlobal(BigDecimal limiteGlobal) {
     this.limiteGlobal = limiteGlobal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Value of the Global limit")
+  @ApiModelProperty(example = "null", required = true, value = "{{{pessoa_juridica_aprovada_response_limite_global_value}}}")
   @JsonProperty("limiteGlobal")
   public BigDecimal getLimiteGlobal() {
     return limiteGlobal;
@@ -465,14 +465,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * Maximum value of limit credit to make trnsactions
+   * {{{pessoa_juridica_aprovada_response_limite_maximo_value}}}
    **/
   public PessoaJuridicaAprovadaResponse limiteMaximo(BigDecimal limiteMaximo) {
     this.limiteMaximo = limiteMaximo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Maximum value of limit credit to make trnsactions")
+  @ApiModelProperty(example = "null", required = true, value = "{{{pessoa_juridica_aprovada_response_limite_maximo_value}}}")
   @JsonProperty("limiteMaximo")
   public BigDecimal getLimiteMaximo() {
     return limiteMaximo;
@@ -483,14 +483,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * Value of accumulated credit limit of sum of the parcels of the shops
+   * {{{pessoa_juridica_aprovada_response_limite_parcelas_value}}}
    **/
   public PessoaJuridicaAprovadaResponse limiteParcelas(BigDecimal limiteParcelas) {
     this.limiteParcelas = limiteParcelas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Value of accumulated credit limit of sum of the parcels of the shops")
+  @ApiModelProperty(example = "null", required = true, value = "{{{pessoa_juridica_aprovada_response_limite_parcelas_value}}}")
   @JsonProperty("limiteParcelas")
   public BigDecimal getLimiteParcelas() {
     return limiteParcelas;
@@ -501,14 +501,14 @@ public class PessoaJuridicaAprovadaResponse   {
 
   
   /**
-   * Flag for banks business partners that are cardholders, but cannot operate financed credit transactions (Law n. 4595/64) 
+   * {{{pessoa_juridica_aprovada_response_impedido_de_financiamento_value}}}
    **/
   public PessoaJuridicaAprovadaResponse impedidoFinanciamento(Boolean impedidoFinanciamento) {
     this.impedidoFinanciamento = impedidoFinanciamento;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Flag for banks business partners that are cardholders, but cannot operate financed credit transactions (Law n. 4595/64) ")
+  @ApiModelProperty(example = "false", value = "{{{pessoa_juridica_aprovada_response_impedido_de_financiamento_value}}}")
   @JsonProperty("impedidoFinanciamento")
   public Boolean getImpedidoFinanciamento() {
     return impedidoFinanciamento;

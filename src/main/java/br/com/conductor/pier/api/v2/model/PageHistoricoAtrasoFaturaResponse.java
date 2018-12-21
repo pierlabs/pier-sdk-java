@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * Historic delay payment list
+ * {{{page_historico_atraso_fatura_response_description}}}
  **/
 
-@ApiModel(description = "Historic delay payment list")
+@ApiModel(description = "{{{page_historico_atraso_fatura_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageHistoricoAtrasoFaturaResponse   {
   

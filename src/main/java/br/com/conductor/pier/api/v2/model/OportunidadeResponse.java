@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * Response Representation of the resource opportunities
+ * {{{oportunidade_response_description}}}
  **/
 
-@ApiModel(description = "Response Representation of the resource opportunities")
+@ApiModel(description = "{{{oportunidade_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class OportunidadeResponse   {
   
@@ -31,14 +31,14 @@ public class OportunidadeResponse   {
 
   
   /**
-   * Identifier Code of the opportunity
+   * {{{oportunidade_response_id_value}}}
    **/
   public OportunidadeResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identifier Code of the opportunity")
+  @ApiModelProperty(example = "null", value = "{{{oportunidade_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -49,14 +49,14 @@ public class OportunidadeResponse   {
 
   
   /**
-   * Identifier Code of the opportunity type
+   * {{{oportunidade_response_id_tipo_oportunidade_value}}}
    **/
   public OportunidadeResponse idTipoOportunidade(Long idTipoOportunidade) {
     this.idTipoOportunidade = idTipoOportunidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identifier Code of the opportunity type")
+  @ApiModelProperty(example = "null", value = "{{{oportunidade_response_id_tipo_oportunidade_value}}}")
   @JsonProperty("idTipoOportunidade")
   public Long getIdTipoOportunidade() {
     return idTipoOportunidade;
@@ -67,14 +67,14 @@ public class OportunidadeResponse   {
 
   
   /**
-   * Identifier Code of the opportunity status
+   * {{{oportunidade_response_id_status_oportunidade_value}}}
    **/
   public OportunidadeResponse idStatusOportunidade(Long idStatusOportunidade) {
     this.idStatusOportunidade = idStatusOportunidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identifier Code of the opportunity status")
+  @ApiModelProperty(example = "null", value = "{{{oportunidade_response_id_status_oportunidade_value}}}")
   @JsonProperty("idStatusOportunidade")
   public Long getIdStatusOportunidade() {
     return idStatusOportunidade;
@@ -85,14 +85,14 @@ public class OportunidadeResponse   {
 
   
   /**
-   * Register date of the opportunity
+   * {{{oportunidade_response_data_cadastro_value}}}
    **/
   public OportunidadeResponse dataCadastro(String dataCadastro) {
     this.dataCadastro = dataCadastro;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Register date of the opportunity")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{oportunidade_response_data_cadastro_value}}}")
   @JsonProperty("dataCadastro")
   public String getDataCadastro() {
     return dataCadastro;
@@ -103,14 +103,14 @@ public class OportunidadeResponse   {
 
   
   /**
-   * Update date of the opportunity
+   * {{{oportunidade_response_data_atualizacao_value}}}
    **/
   public OportunidadeResponse dataAtualizacao(String dataAtualizacao) {
     this.dataAtualizacao = dataAtualizacao;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Update date of the opportunity")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{oportunidade_response_data_atualizacao_value}}}")
   @JsonProperty("dataAtualizacao")
   public String getDataAtualizacao() {
     return dataAtualizacao;
@@ -121,14 +121,14 @@ public class OportunidadeResponse   {
 
   
   /**
-   * IRs number of the client which it will be offered the opportunity
+   * {{{oportunidade_response_numero_receita_federal_value}}}
    **/
   public OportunidadeResponse numeroReceitaFederal(String numeroReceitaFederal) {
     this.numeroReceitaFederal = numeroReceitaFederal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "IRs number of the client which it will be offered the opportunity")
+  @ApiModelProperty(example = "null", value = "{{{oportunidade_response_numero_receita_federal_value}}}")
   @JsonProperty("numeroReceitaFederal")
   public String getNumeroReceitaFederal() {
     return numeroReceitaFederal;
@@ -139,14 +139,14 @@ public class OportunidadeResponse   {
 
   
   /**
-   * Beginning duration of the opportunity
+   * {{{oportunidade_response_data_inicio_vigencia_value}}}
    **/
   public OportunidadeResponse dataInicioVigencia(String dataInicioVigencia) {
     this.dataInicioVigencia = dataInicioVigencia;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Beginning duration of the opportunity")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{oportunidade_response_data_inicio_vigencia_value}}}")
   @JsonProperty("dataInicioVigencia")
   public String getDataInicioVigencia() {
     return dataInicioVigencia;
@@ -157,14 +157,14 @@ public class OportunidadeResponse   {
 
   
   /**
-   * Ending of duration of the opportunity
+   * {{{oportunidade_response_data_fim_vigencia_value}}}
    **/
   public OportunidadeResponse dataFimVigencia(String dataFimVigencia) {
     this.dataFimVigencia = dataFimVigencia;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Ending of duration of the opportunity")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{oportunidade_response_data_fim_vigencia_value}}}")
   @JsonProperty("dataFimVigencia")
   public String getDataFimVigencia() {
     return dataFimVigencia;
@@ -175,14 +175,14 @@ public class OportunidadeResponse   {
 
   
   /**
-   * Flag of verification if the opportunity is active
+   * {{{oportunidade_response_flag_ativo_value}}}
    **/
   public OportunidadeResponse flagAtivo(Boolean flagAtivo) {
     this.flagAtivo = flagAtivo;
     return this;
   }
   
-  @ApiModelProperty(example = "true", value = "Flag of verification if the opportunity is active")
+  @ApiModelProperty(example = "true", value = "{{{oportunidade_response_flag_ativo_value}}}")
   @JsonProperty("flagAtivo")
   public Boolean getFlagAtivo() {
     return flagAtivo;
@@ -193,14 +193,14 @@ public class OportunidadeResponse   {
 
   
   /**
-   * List of details of the opportunitie
+   * {{{oportunidade_response_detalhes_value}}}
    **/
   public OportunidadeResponse detalhes(List<DetalheOportunidadeResponse> detalhes) {
     this.detalhes = detalhes;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "List of details of the opportunitie")
+  @ApiModelProperty(example = "null", value = "{{{oportunidade_response_detalhes_value}}}")
   @JsonProperty("detalhes")
   public List<DetalheOportunidadeResponse> getDetalhes() {
     return detalhes;

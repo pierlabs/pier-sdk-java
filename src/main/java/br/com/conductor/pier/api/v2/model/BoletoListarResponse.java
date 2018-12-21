@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * Representation of bank slips response
+ * {{{boleto_listar_response_description}}}
  **/
 
-@ApiModel(description = "Representation of bank slips response")
+@ApiModel(description = "{{{boleto_listar_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class BoletoListarResponse   {
   
@@ -25,14 +25,14 @@ public class BoletoListarResponse   {
 
   
   /**
-   * id
+   * {{{boleto_response_id_value}}}
    **/
   public BoletoListarResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "id")
+  @ApiModelProperty(example = "null", value = "{{{boleto_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -43,14 +43,14 @@ public class BoletoListarResponse   {
 
   
   /**
-   * id_account
+   * {{{boleto_response_id_conta_value}}}
    **/
   public BoletoListarResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "id_account")
+  @ApiModelProperty(example = "null", value = "{{{boleto_response_id_conta_value}}}")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -61,14 +61,14 @@ public class BoletoListarResponse   {
 
   
   /**
-   * Our number is the code that the beneficiary choose to keep control on the bank slip. This value serves to the identifier which bank slips were paid or not. It is recommended the use of the sequencial numbers, to create lots of bank slips, to facilitate the identification of the paid bank slips
+   * {{{boleto_response_nosso_numero_value}}}
    **/
   public BoletoListarResponse nossoNumero(String nossoNumero) {
     this.nossoNumero = nossoNumero;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Our number is the code that the beneficiary choose to keep control on the bank slip. This value serves to the identifier which bank slips were paid or not. It is recommended the use of the sequencial numbers, to create lots of bank slips, to facilitate the identification of the paid bank slips")
+  @ApiModelProperty(example = "null", value = "{{{boleto_response_nosso_numero_value}}}")
   @JsonProperty("nossoNumero")
   public String getNossoNumero() {
     return nossoNumero;
@@ -79,14 +79,14 @@ public class BoletoListarResponse   {
 
   
   /**
-   * Date of the expiration
+   * {{{boleto_response_data_vencimento_value}}}
    **/
   public BoletoListarResponse dataVencimento(String dataVencimento) {
     this.dataVencimento = dataVencimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Date of the expiration")
+  @ApiModelProperty(example = "null", value = "{{{boleto_response_data_vencimento_value}}}")
   @JsonProperty("dataVencimento")
   public String getDataVencimento() {
     return dataVencimento;
@@ -97,14 +97,14 @@ public class BoletoListarResponse   {
 
   
   /**
-   * Value of the Bank slip
+   * {{{boleto_response_valor_boleto_value}}}
    **/
   public BoletoListarResponse valorBoleto(BigDecimal valorBoleto) {
     this.valorBoleto = valorBoleto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Value of the Bank slip")
+  @ApiModelProperty(example = "null", value = "{{{boleto_response_valor_boleto_value}}}")
   @JsonProperty("valorBoleto")
   public BigDecimal getValorBoleto() {
     return valorBoleto;
@@ -115,14 +115,14 @@ public class BoletoListarResponse   {
 
   
   /**
-   * id_type_bank_slip
+   * {{{boleto_response_id_tipo_boleto_value}}}
    **/
   public BoletoListarResponse idTipoBoleto(Long idTipoBoleto) {
     this.idTipoBoleto = idTipoBoleto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "id_type_bank_slip")
+  @ApiModelProperty(example = "null", value = "{{{boleto_response_id_tipo_boleto_value}}}")
   @JsonProperty("idTipoBoleto")
   public Long getIdTipoBoleto() {
     return idTipoBoleto;

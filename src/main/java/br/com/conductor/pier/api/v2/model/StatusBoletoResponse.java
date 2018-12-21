@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representation of the ticket status resource response
+ * {{{status_boleto_response_description}}}
  **/
 
-@ApiModel(description = "Representation of the ticket status resource response")
+@ApiModel(description = "{{{status_boleto_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class StatusBoletoResponse   {
   
@@ -20,14 +20,14 @@ public class StatusBoletoResponse   {
 
   
   /**
-   * Description of the CNAB summarized status of the ticket
+   * {{{status_boleto_dto_status_value}}}
    **/
   public StatusBoletoResponse status(String status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Description of the CNAB summarized status of the ticket")
+  @ApiModelProperty(example = "null", value = "{{{status_boleto_dto_status_value}}}")
   @JsonProperty("status")
   public String getStatus() {
     return status;
@@ -38,14 +38,14 @@ public class StatusBoletoResponse   {
 
   
   /**
-   * Date the status was set
+   * {{{status_boleto_dto_data_value}}}
    **/
   public StatusBoletoResponse data(String data) {
     this.data = data;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Date the status was set")
+  @ApiModelProperty(example = "null", value = "{{{status_boleto_dto_data_value}}}")
   @JsonProperty("data")
   public String getData() {
     return data;

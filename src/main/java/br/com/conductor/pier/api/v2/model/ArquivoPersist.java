@@ -12,10 +12,10 @@ import java.util.List;
 
 
 /**
- * Object File for the dates persistence
+ * {{{arquivo_persist_description}}}
  **/
 
-@ApiModel(description = "Object File for the dates persistence")
+@ApiModel(description = "{{{arquivo_persist_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ArquivoPersist   {
   
@@ -47,14 +47,14 @@ public class ArquivoPersist   {
 
   
   /**
-   * File type
+   * {{{arquivo_persist_id_tipo_arquivo_value}}}
    **/
   public ArquivoPersist idTipoArquivo(Long idTipoArquivo) {
     this.idTipoArquivo = idTipoArquivo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "File type")
+  @ApiModelProperty(example = "null", value = "{{{arquivo_persist_id_tipo_arquivo_value}}}")
   @JsonProperty("idTipoArquivo")
   public Long getIdTipoArquivo() {
     return idTipoArquivo;
@@ -65,14 +65,14 @@ public class ArquivoPersist   {
 
   
   /**
-   * Content of the converted file in base 64
+   * {{{arquivo_persist_arquivo_value}}}
    **/
   public ArquivoPersist arquivo(String arquivo) {
     this.arquivo = arquivo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Content of the converted file in base 64")
+  @ApiModelProperty(example = "null", required = true, value = "{{{arquivo_persist_arquivo_value}}}")
   @JsonProperty("arquivo")
   public String getArquivo() {
     return arquivo;
@@ -83,14 +83,14 @@ public class ArquivoPersist   {
 
   
   /**
-   * File name
+   * {{{arquivo_persist_nome_value}}}
    **/
   public ArquivoPersist nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "File name")
+  @ApiModelProperty(example = "null", value = "{{{arquivo_persist_nome_value}}}")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -101,14 +101,14 @@ public class ArquivoPersist   {
 
   
   /**
-   * File extension
+   * {{{arquivo_persist_extensao_value}}}
    **/
   public ArquivoPersist extensao(String extensao) {
     this.extensao = extensao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "File extension")
+  @ApiModelProperty(example = "null", value = "{{{arquivo_persist_extensao_value}}}")
   @JsonProperty("extensao")
   public String getExtensao() {
     return extensao;
@@ -119,14 +119,14 @@ public class ArquivoPersist   {
 
   
   /**
-   * Communication Type
+   * {{{arquivo_persist_tipo_comunicacao_value}}}
    **/
   public ArquivoPersist tipoComunicacao(TipoComunicacaoEnum tipoComunicacao) {
     this.tipoComunicacao = tipoComunicacao;
     return this;
   }
   
-  @ApiModelProperty(example = "SOAP", value = "Communication Type")
+  @ApiModelProperty(example = "SOAP", value = "{{{arquivo_persist_tipo_comunicacao_value}}}")
   @JsonProperty("tipoComunicacao")
   public TipoComunicacaoEnum getTipoComunicacao() {
     return tipoComunicacao;
@@ -137,14 +137,14 @@ public class ArquivoPersist   {
 
   
   /**
-   * Details containing additional information, related to the file
+   * {{{arquivo_persist_detalhes_value}}}
    **/
   public ArquivoPersist detalhes(List<ArquivoDetalhesPersist> detalhes) {
     this.detalhes = detalhes;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Details containing additional information, related to the file")
+  @ApiModelProperty(example = "null", required = true, value = "{{{arquivo_persist_detalhes_value}}}")
   @JsonProperty("detalhes")
   public List<ArquivoDetalhesPersist> getDetalhes() {
     return detalhes;

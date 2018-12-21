@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * Object account
+ * {{{configuracao_rotativo_detalhe_response_description}}}
  **/
 
-@ApiModel(description = "Object account")
+@ApiModel(description = "{{{configuracao_rotativo_detalhe_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ConfiguracaoRotativoDetalheResponse   {
   
@@ -35,14 +35,14 @@ public class ConfiguracaoRotativoDetalheResponse   {
 
   
   /**
-   * Identification Code of the ConfigurationRevolving (id)
+   * {{{configuracao_rotativo_detalhe_response_id_value}}}
    **/
   public ConfiguracaoRotativoDetalheResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the ConfigurationRevolving (id)")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_rotativo_detalhe_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -53,14 +53,14 @@ public class ConfiguracaoRotativoDetalheResponse   {
 
   
   /**
-   * Identification Code of the Product (idProduct)
+   * {{{configuracao_rotativo_detalhe_response_id_produto_value}}}
    **/
   public ConfiguracaoRotativoDetalheResponse idProduto(Long idProduto) {
     this.idProduto = idProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the Product (idProduct)")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_rotativo_detalhe_response_id_produto_value}}}")
   @JsonProperty("idProduto")
   public Long getIdProduto() {
     return idProduto;
@@ -71,14 +71,14 @@ public class ConfiguracaoRotativoDetalheResponse   {
 
   
   /**
-   * When it is true, indicate that the value of the revolving must have the offer of the installment
+   * {{{configuracao_rotativo_detalhe_response_compoe_oferta_valor_rotativo_value}}}
    **/
   public ConfiguracaoRotativoDetalheResponse compoeOfertaValorRotativo(Boolean compoeOfertaValorRotativo) {
     this.compoeOfertaValorRotativo = compoeOfertaValorRotativo;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "When it is true, indicate that the value of the revolving must have the offer of the installment")
+  @ApiModelProperty(example = "false", value = "{{{configuracao_rotativo_detalhe_response_compoe_oferta_valor_rotativo_value}}}")
   @JsonProperty("compoeOfertaValorRotativo")
   public Boolean getCompoeOfertaValorRotativo() {
     return compoeOfertaValorRotativo;
@@ -89,14 +89,14 @@ public class ConfiguracaoRotativoDetalheResponse   {
 
   
   /**
-   * when it is true, indicate that the value not financigable must have the offer of installment
+   * {{{configuracao_rotativo_detalhe_response_compoe_oferta_valor_nao_financiavel_value}}}
    **/
   public ConfiguracaoRotativoDetalheResponse compoeOfertaValorNaoFinanciavel(Boolean compoeOfertaValorNaoFinanciavel) {
     this.compoeOfertaValorNaoFinanciavel = compoeOfertaValorNaoFinanciavel;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "when it is true, indicate that the value not financigable must have the offer of installment")
+  @ApiModelProperty(example = "false", value = "{{{configuracao_rotativo_detalhe_response_compoe_oferta_valor_nao_financiavel_value}}}")
   @JsonProperty("compoeOfertaValorNaoFinanciavel")
   public Boolean getCompoeOfertaValorNaoFinanciavel() {
     return compoeOfertaValorNaoFinanciavel;
@@ -107,14 +107,14 @@ public class ConfiguracaoRotativoDetalheResponse   {
 
   
   /**
-   * when it is true, indicate that the value of new postings must have the offer of installment
+   * {{{configuracao_rotativo_detalhe_response_compoe_oferta_valor_novos_lancamentos_value}}}
    **/
   public ConfiguracaoRotativoDetalheResponse compoeOfertaValorNovosLancamentos(Boolean compoeOfertaValorNovosLancamentos) {
     this.compoeOfertaValorNovosLancamentos = compoeOfertaValorNovosLancamentos;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "when it is true, indicate that the value of new postings must have the offer of installment")
+  @ApiModelProperty(example = "false", value = "{{{configuracao_rotativo_detalhe_response_compoe_oferta_valor_novos_lancamentos_value}}}")
   @JsonProperty("compoeOfertaValorNovosLancamentos")
   public Boolean getCompoeOfertaValorNovosLancamentos() {
     return compoeOfertaValorNovosLancamentos;
@@ -125,14 +125,14 @@ public class ConfiguracaoRotativoDetalheResponse   {
 
   
   /**
-   * When it is true, indicate that it must recalculate the installment in case of the value paid of entrance be bigger than the value awaited
+   * {{{configuracao_rotativo_detalhe_response_recalcula_parcelamento_para_entrada_maior_value}}}
    **/
   public ConfiguracaoRotativoDetalheResponse recalculaParcelamentoParaEntradaMaior(Boolean recalculaParcelamentoParaEntradaMaior) {
     this.recalculaParcelamentoParaEntradaMaior = recalculaParcelamentoParaEntradaMaior;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "When it is true, indicate that it must recalculate the installment in case of the value paid of entrance be bigger than the value awaited")
+  @ApiModelProperty(example = "false", value = "{{{configuracao_rotativo_detalhe_response_recalcula_parcelamento_para_entrada_maior_value}}}")
   @JsonProperty("recalculaParcelamentoParaEntradaMaior")
   public Boolean getRecalculaParcelamentoParaEntradaMaior() {
     return recalculaParcelamentoParaEntradaMaior;
@@ -143,14 +143,14 @@ public class ConfiguracaoRotativoDetalheResponse   {
 
   
   /**
-   * Indicate the minimum of the parcels that will be obeyed in the recalculation of the installment
+   * {{{configuracao_rotativo_detalhe_response_minimo_parcelas_recalculo_parcelamento_value}}}
    **/
   public ConfiguracaoRotativoDetalheResponse minimoParcelasRecalculoParcelamento(Boolean minimoParcelasRecalculoParcelamento) {
     this.minimoParcelasRecalculoParcelamento = minimoParcelasRecalculoParcelamento;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Indicate the minimum of the parcels that will be obeyed in the recalculation of the installment")
+  @ApiModelProperty(example = "false", value = "{{{configuracao_rotativo_detalhe_response_minimo_parcelas_recalculo_parcelamento_value}}}")
   @JsonProperty("minimoParcelasRecalculoParcelamento")
   public Boolean getMinimoParcelasRecalculoParcelamento() {
     return minimoParcelasRecalculoParcelamento;
@@ -161,14 +161,14 @@ public class ConfiguracaoRotativoDetalheResponse   {
 
   
   /**
-   * When it is true, indicate that the installment must be recalculated in case of the value calculated of the offer be less than the value configurated minimum of the invoioce (valueMinimumParcel) and the percentage opened
+   * {{{configuracao_rotativo_detalhe_response_recalcula_parcelamento_value}}}
    **/
   public ConfiguracaoRotativoDetalheResponse recalculaParcelamento(Boolean recalculaParcelamento) {
     this.recalculaParcelamento = recalculaParcelamento;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "When it is true, indicate that the installment must be recalculated in case of the value calculated of the offer be less than the value configurated minimum of the invoioce (valueMinimumParcel) and the percentage opened")
+  @ApiModelProperty(example = "false", value = "{{{configuracao_rotativo_detalhe_response_recalcula_parcelamento_value}}}")
   @JsonProperty("recalculaParcelamento")
   public Boolean getRecalculaParcelamento() {
     return recalculaParcelamento;
@@ -179,14 +179,14 @@ public class ConfiguracaoRotativoDetalheResponse   {
 
   
   /**
-   * Minimum number of parcels that will be obeyed in the recalculation of the offer
+   * {{{configuracao_rotativo_detalhe_response_numero_minimo_ofertas_value}}}
    **/
   public ConfiguracaoRotativoDetalheResponse numeroMinimoOfertas(Boolean numeroMinimoOfertas) {
     this.numeroMinimoOfertas = numeroMinimoOfertas;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Minimum number of parcels that will be obeyed in the recalculation of the offer")
+  @ApiModelProperty(example = "false", value = "{{{configuracao_rotativo_detalhe_response_numero_minimo_ofertas_value}}}")
   @JsonProperty("numeroMinimoOfertas")
   public Boolean getNumeroMinimoOfertas() {
     return numeroMinimoOfertas;
@@ -197,14 +197,14 @@ public class ConfiguracaoRotativoDetalheResponse   {
 
   
   /**
-   * when it is true, indicate the paid values between the entrance value and the invoice minimum will be obeyed for the accession to the installment
+   * {{{configuracao_rotativo_detalhe_response_aceita_pagamento_maior_que_entrada_value}}}
    **/
   public ConfiguracaoRotativoDetalheResponse aceitaPagamentoMaiorQueEntrada(Boolean aceitaPagamentoMaiorQueEntrada) {
     this.aceitaPagamentoMaiorQueEntrada = aceitaPagamentoMaiorQueEntrada;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "when it is true, indicate the paid values between the entrance value and the invoice minimum will be obeyed for the accession to the installment")
+  @ApiModelProperty(example = "false", value = "{{{configuracao_rotativo_detalhe_response_aceita_pagamento_maior_que_entrada_value}}}")
   @JsonProperty("aceitaPagamentoMaiorQueEntrada")
   public Boolean getAceitaPagamentoMaiorQueEntrada() {
     return aceitaPagamentoMaiorQueEntrada;
@@ -215,14 +215,14 @@ public class ConfiguracaoRotativoDetalheResponse   {
 
   
   /**
-   * When it is true, indicate that it must include the current values of the opened installment
+   * {{{configuracao_rotativo_detalhe_response_antecipa_parcelamentos_abertos_value}}}
    **/
   public ConfiguracaoRotativoDetalheResponse antecipaParcelamentosAbertos(Boolean antecipaParcelamentosAbertos) {
     this.antecipaParcelamentosAbertos = antecipaParcelamentosAbertos;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "When it is true, indicate that it must include the current values of the opened installment")
+  @ApiModelProperty(example = "false", value = "{{{configuracao_rotativo_detalhe_response_antecipa_parcelamentos_abertos_value}}}")
   @JsonProperty("antecipaParcelamentosAbertos")
   public Boolean getAntecipaParcelamentosAbertos() {
     return antecipaParcelamentosAbertos;
@@ -233,14 +233,14 @@ public class ConfiguracaoRotativoDetalheResponse   {
 
   
   /**
-   * Minimum value of the parcel that must be accepted in the offer
+   * {{{configuracao_rotativo_detalhe_response_valor_minimo_parcela_value}}}
    **/
   public ConfiguracaoRotativoDetalheResponse valorMinimoParcela(BigDecimal valorMinimoParcela) {
     this.valorMinimoParcela = valorMinimoParcela;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Minimum value of the parcel that must be accepted in the offer")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_rotativo_detalhe_response_valor_minimo_parcela_value}}}")
   @JsonProperty("valorMinimoParcela")
   public BigDecimal getValorMinimoParcela() {
     return valorMinimoParcela;
@@ -251,14 +251,14 @@ public class ConfiguracaoRotativoDetalheResponse   {
 
   
   /**
-   * Percentage on the values of previous installment opened that must be considered to limit valueMinimumParcel
+   * {{{configuracao_rotativo_detalhe_response_percentual_limitar_valor_minimo_parcela_value}}}
    **/
   public ConfiguracaoRotativoDetalheResponse percentualLimitarValorMinimoParcela(BigDecimal percentualLimitarValorMinimoParcela) {
     this.percentualLimitarValorMinimoParcela = percentualLimitarValorMinimoParcela;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Percentage on the values of previous installment opened that must be considered to limit valueMinimumParcel")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_rotativo_detalhe_response_percentual_limitar_valor_minimo_parcela_value}}}")
   @JsonProperty("percentualLimitarValorMinimoParcela")
   public BigDecimal getPercentualLimitarValorMinimoParcela() {
     return percentualLimitarValorMinimoParcela;
@@ -269,14 +269,14 @@ public class ConfiguracaoRotativoDetalheResponse   {
 
   
   /**
-   * Identification Code of the Campaign Rule
+   * {{{configuracao_rotativo_detalhe_response_id_regra_campanha_value}}}
    **/
   public ConfiguracaoRotativoDetalheResponse idRegraCampanha(Long idRegraCampanha) {
     this.idRegraCampanha = idRegraCampanha;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the Campaign Rule")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_rotativo_detalhe_response_id_regra_campanha_value}}}")
   @JsonProperty("idRegraCampanha")
   public Long getIdRegraCampanha() {
     return idRegraCampanha;
@@ -287,14 +287,14 @@ public class ConfiguracaoRotativoDetalheResponse   {
 
   
   /**
-   * When it is true, indicate the installment offered will have the minimum value of the transactions
+   * {{{configuracao_rotativo_detalhe_response_parcelar_apenas_minimo_value}}}
    **/
   public ConfiguracaoRotativoDetalheResponse parcelarApenasMinimo(Boolean parcelarApenasMinimo) {
     this.parcelarApenasMinimo = parcelarApenasMinimo;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "When it is true, indicate the installment offered will have the minimum value of the transactions")
+  @ApiModelProperty(example = "false", value = "{{{configuracao_rotativo_detalhe_response_parcelar_apenas_minimo_value}}}")
   @JsonProperty("parcelarApenasMinimo")
   public Boolean getParcelarApenasMinimo() {
     return parcelarApenasMinimo;
@@ -305,14 +305,14 @@ public class ConfiguracaoRotativoDetalheResponse   {
 
   
   /**
-   * Username
+   * {{{configuracao_rotativo_detalhe_response_usuario_value}}}
    **/
   public ConfiguracaoRotativoDetalheResponse usuario(String usuario) {
     this.usuario = usuario;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Username")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_rotativo_detalhe_response_usuario_value}}}")
   @JsonProperty("usuario")
   public String getUsuario() {
     return usuario;

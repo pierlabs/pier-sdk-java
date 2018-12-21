@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * Representation of the interest rate response
+ * {{{taxa_juros_conta_response_description}}}
  **/
 
-@ApiModel(description = "Representation of the interest rate response")
+@ApiModel(description = "{{{taxa_juros_conta_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TaxaJurosContaResponse   {
   
@@ -24,14 +24,14 @@ public class TaxaJurosContaResponse   {
 
   
   /**
-   * id_conta
+   * {{{taxa_juros_conta_response_id_conta_value}}}
    **/
   public TaxaJurosContaResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "id_conta")
+  @ApiModelProperty(example = "null", value = "{{{taxa_juros_conta_response_id_conta_value}}}")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -42,14 +42,14 @@ public class TaxaJurosContaResponse   {
 
   
   /**
-   * Interest rate identification code
+   * {{{taxa_juros_conta_response_id_tabela_juros_value}}}
    **/
   public TaxaJurosContaResponse idTabelaJuros(Long idTabelaJuros) {
     this.idTabelaJuros = idTabelaJuros;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Interest rate identification code")
+  @ApiModelProperty(example = "null", value = "{{{taxa_juros_conta_response_id_tabela_juros_value}}}")
   @JsonProperty("idTabelaJuros")
   public Long getIdTabelaJuros() {
     return idTabelaJuros;
@@ -60,14 +60,14 @@ public class TaxaJurosContaResponse   {
 
   
   /**
-   * Listing of interest rates
+   * {{{taxa_juros_conta_response_taxas_juros_value}}}
    **/
   public TaxaJurosContaResponse taxasJuros(List<TaxaJurosContaListaResponse> taxasJuros) {
     this.taxasJuros = taxasJuros;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Listing of interest rates")
+  @ApiModelProperty(example = "null", value = "{{{taxa_juros_conta_response_taxas_juros_value}}}")
   @JsonProperty("taxasJuros")
   public List<TaxaJurosContaListaResponse> getTaxasJuros() {
     return taxasJuros;

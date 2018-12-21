@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * Response Representation of the TypeOperation Resource
+ * {{{tipo_operacao_response_description}}}
  **/
 
-@ApiModel(description = "Response Representation of the TypeOperation Resource")
+@ApiModel(description = "{{{tipo_operacao_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TipoOperacaoResponse   {
   
@@ -35,14 +35,14 @@ public class TipoOperacaoResponse   {
 
   
   /**
-   * Identifier Code of the OperationType
+   * {{{tipo_operacao_response_id_value}}}
    **/
   public TipoOperacaoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Identifier Code of the OperationType")
+  @ApiModelProperty(example = "null", required = true, value = "{{{tipo_operacao_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -53,14 +53,14 @@ public class TipoOperacaoResponse   {
 
   
   /**
-   * OperationType Code
+   * {{{tipo_operacao_response_tipo_operacao_value}}}
    **/
   public TipoOperacaoResponse tipoOperacao(String tipoOperacao) {
     this.tipoOperacao = tipoOperacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "OperationType Code")
+  @ApiModelProperty(example = "null", required = true, value = "{{{tipo_operacao_response_tipo_operacao_value}}}")
   @JsonProperty("tipoOperacao")
   public String getTipoOperacao() {
     return tipoOperacao;
@@ -71,14 +71,14 @@ public class TipoOperacaoResponse   {
 
   
   /**
-   * Name of the Operationtype
+   * {{{tipo_operacao_response_nome_value}}}
    **/
   public TipoOperacaoResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Name of the Operationtype")
+  @ApiModelProperty(example = "null", required = true, value = "{{{tipo_operacao_response_nome_value}}}")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -89,14 +89,14 @@ public class TipoOperacaoResponse   {
 
   
   /**
-   * Decri??o of the OperationType
+   * {{{tipo_operacao_response_descricao_value}}}
    **/
   public TipoOperacaoResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Decri??o of the OperationType")
+  @ApiModelProperty(example = "null", required = true, value = "{{{tipo_operacao_response_descricao_value}}}")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -107,14 +107,14 @@ public class TipoOperacaoResponse   {
 
   
   /**
-   * Exceed allowed for the TypeOperation
+   * {{{tipo_operacao_response_excedente_permitido_value}}}
    **/
   public TipoOperacaoResponse excedentePermitido(BigDecimal excedentePermitido) {
     this.excedentePermitido = excedentePermitido;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Exceed allowed for the TypeOperation")
+  @ApiModelProperty(example = "null", value = "{{{tipo_operacao_response_excedente_permitido_value}}}")
   @JsonProperty("excedentePermitido")
   public BigDecimal getExcedentePermitido() {
     return excedentePermitido;
@@ -125,14 +125,14 @@ public class TipoOperacaoResponse   {
 
   
   /**
-   * Type of the allowed exceeded for the OperationType
+   * {{{tipo_operacao_response_tipo_excedente_permitido_value}}}
    **/
   public TipoOperacaoResponse tipoExcedentePermitido(String tipoExcedentePermitido) {
     this.tipoExcedentePermitido = tipoExcedentePermitido;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Type of the allowed exceeded for the OperationType")
+  @ApiModelProperty(example = "null", value = "{{{tipo_operacao_response_tipo_excedente_permitido_value}}}")
   @JsonProperty("tipoExcedentePermitido")
   public String getTipoExcedentePermitido() {
     return tipoExcedentePermitido;
@@ -143,14 +143,14 @@ public class TipoOperacaoResponse   {
 
   
   /**
-   * Minimum value for the transaction of OperationType
+   * {{{tipo_operacao_response_valor_minimo_value}}}
    **/
   public TipoOperacaoResponse valorMinimo(BigDecimal valorMinimo) {
     this.valorMinimo = valorMinimo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Minimum value for the transaction of OperationType")
+  @ApiModelProperty(example = "null", required = true, value = "{{{tipo_operacao_response_valor_minimo_value}}}")
   @JsonProperty("valorMinimo")
   public BigDecimal getValorMinimo() {
     return valorMinimo;
@@ -161,14 +161,14 @@ public class TipoOperacaoResponse   {
 
   
   /**
-   * Maximum valuie for the transaction of the OperationType
+   * {{{tipo_operacao_response_valor_maximo_value}}}
    **/
   public TipoOperacaoResponse valorMaximo(BigDecimal valorMaximo) {
     this.valorMaximo = valorMaximo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Maximum valuie for the transaction of the OperationType")
+  @ApiModelProperty(example = "null", required = true, value = "{{{tipo_operacao_response_valor_maximo_value}}}")
   @JsonProperty("valorMaximo")
   public BigDecimal getValorMaximo() {
     return valorMaximo;
@@ -179,14 +179,14 @@ public class TipoOperacaoResponse   {
 
   
   /**
-   * TAC value of the transaction of OperationType
+   * {{{tipo_operacao_response_valor_t_a_c_value}}}
    **/
   public TipoOperacaoResponse valorTAC(BigDecimal valorTAC) {
     this.valorTAC = valorTAC;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "TAC value of the transaction of OperationType")
+  @ApiModelProperty(example = "null", value = "{{{tipo_operacao_response_valor_t_a_c_value}}}")
   @JsonProperty("valorTAC")
   public BigDecimal getValorTAC() {
     return valorTAC;
@@ -197,14 +197,14 @@ public class TipoOperacaoResponse   {
 
   
   /**
-   * Flag stripe TAC of the OperationType
+   * {{{tipo_operacao_response_flag_tira_tac_value}}}
    **/
   public TipoOperacaoResponse flagTiraTac(Integer flagTiraTac) {
     this.flagTiraTac = flagTiraTac;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Flag stripe TAC of the OperationType")
+  @ApiModelProperty(example = "null", value = "{{{tipo_operacao_response_flag_tira_tac_value}}}")
   @JsonProperty("flagTiraTac")
   public Integer getFlagTiraTac() {
     return flagTiraTac;
@@ -215,14 +215,14 @@ public class TipoOperacaoResponse   {
 
   
   /**
-   * Identifier of the TypeOperation of Product
+   * {{{tipo_operacao_response_id_produto_value}}}
    **/
   public TipoOperacaoResponse idProduto(Long idProduto) {
     this.idProduto = idProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Identifier of the TypeOperation of Product")
+  @ApiModelProperty(example = "null", required = true, value = "{{{tipo_operacao_response_id_produto_value}}}")
   @JsonProperty("idProduto")
   public Long getIdProduto() {
     return idProduto;
@@ -233,14 +233,14 @@ public class TipoOperacaoResponse   {
 
   
   /**
-   * Identifier of the Merchant of OperationType
+   * {{{tipo_operacao_response_id_estabelecimento_value}}}
    **/
   public TipoOperacaoResponse idEstabelecimento(Long idEstabelecimento) {
     this.idEstabelecimento = idEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Identifier of the Merchant of OperationType")
+  @ApiModelProperty(example = "null", required = true, value = "{{{tipo_operacao_response_id_estabelecimento_value}}}")
   @JsonProperty("idEstabelecimento")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
@@ -251,14 +251,14 @@ public class TipoOperacaoResponse   {
 
   
   /**
-   * OperationType fee
+   * {{{tipo_operacao_response_tarifa_value}}}
    **/
   public TipoOperacaoResponse tarifa(BigDecimal tarifa) {
     this.tarifa = tarifa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "OperationType fee")
+  @ApiModelProperty(example = "null", value = "{{{tipo_operacao_response_tarifa_value}}}")
   @JsonProperty("tarifa")
   public BigDecimal getTarifa() {
     return tarifa;
@@ -269,14 +269,14 @@ public class TipoOperacaoResponse   {
 
   
   /**
-   * Remunaration of the Issuer for the OperatioType
+   * {{{tipo_operacao_response_remuneracao_emissor_value}}}
    **/
   public TipoOperacaoResponse remuneracaoEmissor(BigDecimal remuneracaoEmissor) {
     this.remuneracaoEmissor = remuneracaoEmissor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Remunaration of the Issuer for the OperatioType")
+  @ApiModelProperty(example = "null", value = "{{{tipo_operacao_response_remuneracao_emissor_value}}}")
   @JsonProperty("remuneracaoEmissor")
   public BigDecimal getRemuneracaoEmissor() {
     return remuneracaoEmissor;
@@ -287,14 +287,14 @@ public class TipoOperacaoResponse   {
 
   
   /**
-   * Maximum Plan of the OperationType
+   * {{{tipo_operacao_response_plano_maximo_value}}}
    **/
   public TipoOperacaoResponse planoMaximo(Integer planoMaximo) {
     this.planoMaximo = planoMaximo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Maximum Plan of the OperationType")
+  @ApiModelProperty(example = "null", required = true, value = "{{{tipo_operacao_response_plano_maximo_value}}}")
   @JsonProperty("planoMaximo")
   public Integer getPlanoMaximo() {
     return planoMaximo;
@@ -305,14 +305,14 @@ public class TipoOperacaoResponse   {
 
   
   /**
-   * Minimum Plan of the OperationType
+   * {{{tipo_operacao_response_plano_minimo_value}}}
    **/
   public TipoOperacaoResponse planoMinimo(Integer planoMinimo) {
     this.planoMinimo = planoMinimo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Minimum Plan of the OperationType")
+  @ApiModelProperty(example = "null", required = true, value = "{{{tipo_operacao_response_plano_minimo_value}}}")
   @JsonProperty("planoMinimo")
   public Integer getPlanoMinimo() {
     return planoMinimo;

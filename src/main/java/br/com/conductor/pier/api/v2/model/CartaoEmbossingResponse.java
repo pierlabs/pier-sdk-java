@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Object Card to Print
+ * {{{cartao_embossing_response_description}}}
  **/
 
-@ApiModel(description = "Object Card to Print")
+@ApiModel(description = "{{{cartao_embossing_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class CartaoEmbossingResponse   {
   
@@ -28,14 +28,14 @@ public class CartaoEmbossingResponse   {
 
   
   /**
-   * Show the status that informs if the card is virtual
+   * {{{cartao_embossing_response_flag_virtual_value}}}
    **/
   public CartaoEmbossingResponse flagVirtual(Integer flagVirtual) {
     this.flagVirtual = flagVirtual;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Show the status that informs if the card is virtual")
+  @ApiModelProperty(example = "null", value = "{{{cartao_embossing_response_flag_virtual_value}}}")
   @JsonProperty("flagVirtual")
   public Integer getFlagVirtual() {
     return flagVirtual;
@@ -46,14 +46,14 @@ public class CartaoEmbossingResponse   {
 
   
   /**
-   * Show the Identification Code of the Account (id) which the created card belongs
+   * {{{cartao_embossing_response_id_conta_value}}}
    **/
   public CartaoEmbossingResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Show the Identification Code of the Account (id) which the created card belongs")
+  @ApiModelProperty(example = "null", value = "{{{cartao_embossing_response_id_conta_value}}}")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -64,14 +64,14 @@ public class CartaoEmbossingResponse   {
 
   
   /**
-   * Show the Identification Code of the Person (id) cardholder of the card created
+   * {{{cartao_embossing_response_id_pessoa_value}}}
    **/
   public CartaoEmbossingResponse idPessoa(Long idPessoa) {
     this.idPessoa = idPessoa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Show the Identification Code of the Person (id) cardholder of the card created")
+  @ApiModelProperty(example = "null", value = "{{{cartao_embossing_response_id_pessoa_value}}}")
   @JsonProperty("idPessoa")
   public Long getIdPessoa() {
     return idPessoa;
@@ -82,14 +82,14 @@ public class CartaoEmbossingResponse   {
 
   
   /**
-   * Show the identification Code of the Card (id) which was created
+   * {{{cartao_embossing_response_id_cartao_value}}}
    **/
   public CartaoEmbossingResponse idCartao(Long idCartao) {
     this.idCartao = idCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Show the identification Code of the Card (id) which was created")
+  @ApiModelProperty(example = "null", value = "{{{cartao_embossing_response_id_cartao_value}}}")
   @JsonProperty("idCartao")
   public Long getIdCartao() {
     return idCartao;
@@ -100,14 +100,14 @@ public class CartaoEmbossingResponse   {
 
   
   /**
-   * Show the identification code of the flag (id) which the card belongs, when it is flagged
+   * {{{cartao_embossing_response_id_bandeira_value}}}
    **/
   public CartaoEmbossingResponse idBandeira(Long idBandeira) {
     this.idBandeira = idBandeira;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Show the identification code of the flag (id) which the card belongs, when it is flagged")
+  @ApiModelProperty(example = "null", value = "{{{cartao_embossing_response_id_bandeira_value}}}")
   @JsonProperty("idBandeira")
   public Long getIdBandeira() {
     return idBandeira;
@@ -118,14 +118,14 @@ public class CartaoEmbossingResponse   {
 
   
   /**
-   * Show the identification Code of the Card type (id) attributed to the card
+   * {{{cartao_embossing_response_id_tipo_cartao_value}}}
    **/
   public CartaoEmbossingResponse idTipoCartao(Long idTipoCartao) {
     this.idTipoCartao = idTipoCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Show the identification Code of the Card type (id) attributed to the card")
+  @ApiModelProperty(example = "null", value = "{{{cartao_embossing_response_id_tipo_cartao_value}}}")
   @JsonProperty("idTipoCartao")
   public Long getIdTipoCartao() {
     return idTipoCartao;
@@ -136,14 +136,14 @@ public class CartaoEmbossingResponse   {
 
   
   /**
-   * Show the date of issue of the card
+   * {{{cartao_embossing_response_data_geracao_value}}}
    **/
   public CartaoEmbossingResponse dataGeracao(String dataGeracao) {
     this.dataGeracao = dataGeracao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Show the date of issue of the card")
+  @ApiModelProperty(example = "null", value = "{{{cartao_embossing_response_data_geracao_value}}}")
   @JsonProperty("dataGeracao")
   public String getDataGeracao() {
     return dataGeracao;
@@ -154,14 +154,14 @@ public class CartaoEmbossingResponse   {
 
   
   /**
-   * Show the expiration date of the Card
+   * {{{cartao_embossing_response_data_validade_value}}}
    **/
   public CartaoEmbossingResponse dataValidade(String dataValidade) {
     this.dataValidade = dataValidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Show the expiration date of the Card")
+  @ApiModelProperty(example = "null", value = "{{{cartao_embossing_response_data_validade_value}}}")
   @JsonProperty("dataValidade")
   public String getDataValidade() {
     return dataValidade;
@@ -172,14 +172,14 @@ public class CartaoEmbossingResponse   {
 
   
   /**
-   * Show the name of the Commercial Origin that the register was made of the holder which the Card belongs
+   * {{{cartao_embossing_response_nome_origem_comercial_value}}}
    **/
   public CartaoEmbossingResponse nomeOrigemComercial(String nomeOrigemComercial) {
     this.nomeOrigemComercial = nomeOrigemComercial;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Show the name of the Commercial Origin that the register was made of the holder which the Card belongs")
+  @ApiModelProperty(example = "null", value = "{{{cartao_embossing_response_nome_origem_comercial_value}}}")
   @JsonProperty("nomeOrigemComercial")
   public String getNomeOrigemComercial() {
     return nomeOrigemComercial;
@@ -190,14 +190,14 @@ public class CartaoEmbossingResponse   {
 
   
   /**
-   * Show the CPF of the Cardholder
+   * {{{cartao_embossing_response_cpf_value}}}
    **/
   public CartaoEmbossingResponse cpf(String cpf) {
     this.cpf = cpf;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Show the CPF of the Cardholder")
+  @ApiModelProperty(example = "null", value = "{{{cartao_embossing_response_cpf_value}}}")
   @JsonProperty("cpf")
   public String getCpf() {
     return cpf;

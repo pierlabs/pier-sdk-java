@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Object of the answer of the resolution type
+ * {{{tipo_resolucao_response_description}}}
  **/
 
-@ApiModel(description = "Object of the answer of the resolution type")
+@ApiModel(description = "{{{tipo_resolucao_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TipoResolucaoResponse   {
   
@@ -20,14 +20,14 @@ public class TipoResolucaoResponse   {
 
   
   /**
-   * Identification Code of the type of resolution
+   * {{{tipo_resolucao_response_id_value}}}
    **/
   public TipoResolucaoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the type of resolution")
+  @ApiModelProperty(example = "null", value = "{{{tipo_resolucao_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -38,14 +38,14 @@ public class TipoResolucaoResponse   {
 
   
   /**
-   * Description of the type of resolution
+   * {{{tipo_resolucao_response_descricao_value}}}
    **/
   public TipoResolucaoResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Description of the type of resolution")
+  @ApiModelProperty(example = "null", value = "{{{tipo_resolucao_response_descricao_value}}}")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;

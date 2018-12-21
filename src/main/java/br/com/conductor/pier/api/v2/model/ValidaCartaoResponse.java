@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Object of response for the card validation
+ * {{{valida_cartao_response_description}}}
  **/
 
-@ApiModel(description = "Object of response for the card validation")
+@ApiModel(description = "{{{valida_cartao_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ValidaCartaoResponse   {
   
@@ -26,14 +26,14 @@ public class ValidaCartaoResponse   {
 
   
   /**
-   * Description of the card status
+   * {{{valida_cartao_response_id_status_cartao_value}}}
    **/
   public ValidaCartaoResponse idStatusCartao(Long idStatusCartao) {
     this.idStatusCartao = idStatusCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Description of the card status")
+  @ApiModelProperty(example = "null", value = "{{{valida_cartao_response_id_status_cartao_value}}}")
   @JsonProperty("idStatusCartao")
   public Long getIdStatusCartao() {
     return idStatusCartao;
@@ -44,14 +44,14 @@ public class ValidaCartaoResponse   {
 
   
   /**
-   * Description of the card status
+   * {{{valida_cartao_response_status_cartao_value}}}
    **/
   public ValidaCartaoResponse statusCartao(String statusCartao) {
     this.statusCartao = statusCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Description of the card status")
+  @ApiModelProperty(example = "null", value = "{{{valida_cartao_response_status_cartao_value}}}")
   @JsonProperty("statusCartao")
   public String getStatusCartao() {
     return statusCartao;
@@ -62,14 +62,14 @@ public class ValidaCartaoResponse   {
 
   
   /**
-   * Description of the account status
+   * {{{valida_cartao_response_id_status_conta_value}}}
    **/
   public ValidaCartaoResponse idStatusConta(Long idStatusConta) {
     this.idStatusConta = idStatusConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Description of the account status")
+  @ApiModelProperty(example = "null", value = "{{{valida_cartao_response_id_status_conta_value}}}")
   @JsonProperty("idStatusConta")
   public Long getIdStatusConta() {
     return idStatusConta;
@@ -80,14 +80,14 @@ public class ValidaCartaoResponse   {
 
   
   /**
-   * Description of the account status
+   * {{{valida_cartao_response_status_conta_value}}}
    **/
   public ValidaCartaoResponse statusConta(String statusConta) {
     this.statusConta = statusConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Description of the account status")
+  @ApiModelProperty(example = "null", value = "{{{valida_cartao_response_status_conta_value}}}")
   @JsonProperty("statusConta")
   public String getStatusConta() {
     return statusConta;
@@ -98,14 +98,14 @@ public class ValidaCartaoResponse   {
 
   
   /**
-   * Identiifier Code of the Account
+   * {{{valida_cartao_response_id_conta_value}}}
    **/
   public ValidaCartaoResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identiifier Code of the Account")
+  @ApiModelProperty(example = "null", value = "{{{valida_cartao_response_id_conta_value}}}")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -116,14 +116,14 @@ public class ValidaCartaoResponse   {
 
   
   /**
-   * Number of the Agency
+   * {{{valida_cartao_response_numero_agencia_value}}}
    **/
   public ValidaCartaoResponse numeroAgencia(Integer numeroAgencia) {
     this.numeroAgencia = numeroAgencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Number of the Agency")
+  @ApiModelProperty(example = "null", value = "{{{valida_cartao_response_numero_agencia_value}}}")
   @JsonProperty("numeroAgencia")
   public Integer getNumeroAgencia() {
     return numeroAgencia;
@@ -134,14 +134,14 @@ public class ValidaCartaoResponse   {
 
   
   /**
-   * Number of the current account
+   * {{{valida_cartao_response_numero_conta_corrente_value}}}
    **/
   public ValidaCartaoResponse numeroContaCorrente(String numeroContaCorrente) {
     this.numeroContaCorrente = numeroContaCorrente;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Number of the current account")
+  @ApiModelProperty(example = "null", value = "{{{valida_cartao_response_numero_conta_corrente_value}}}")
   @JsonProperty("numeroContaCorrente")
   public String getNumeroContaCorrente() {
     return numeroContaCorrente;
@@ -152,14 +152,14 @@ public class ValidaCartaoResponse   {
 
   
   /**
-   * Cryptogram of the response
+   * {{{valida_cartao_response_criptograma_resposta_value}}}
    **/
   public ValidaCartaoResponse criptogramaResposta(String criptogramaResposta) {
     this.criptogramaResposta = criptogramaResposta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Cryptogram of the response")
+  @ApiModelProperty(example = "null", value = "{{{valida_cartao_response_criptograma_resposta_value}}}")
   @JsonProperty("criptogramaResposta")
   public String getCriptogramaResposta() {
     return criptogramaResposta;

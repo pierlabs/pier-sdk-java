@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * Future Invoice
+ * {{{lancamento_fatura_response_description}}}
  **/
 
-@ApiModel(description = "Future Invoice")
+@ApiModel(description = "{{{lancamento_fatura_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class LancamentoFaturaResponse   {
   
@@ -44,14 +44,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * Identification Code of the transaction
+   * {{{lancamento_fatura_response_id_transacao_value}}}
    **/
   public LancamentoFaturaResponse idTransacao(Long idTransacao) {
     this.idTransacao = idTransacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the transaction")
+  @ApiModelProperty(example = "null", value = "{{{lancamento_fatura_response_id_transacao_value}}}")
   @JsonProperty("idTransacao")
   public Long getIdTransacao() {
     return idTransacao;
@@ -62,14 +62,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * Description of the transaction type
+   * {{{lancamento_fatura_response_descricao_tipo_transacao_value}}}
    **/
   public LancamentoFaturaResponse descricaoTipoTransacao(String descricaoTipoTransacao) {
     this.descricaoTipoTransacao = descricaoTipoTransacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Description of the transaction type")
+  @ApiModelProperty(example = "null", value = "{{{lancamento_fatura_response_descricao_tipo_transacao_value}}}")
   @JsonProperty("descricaoTipoTransacao")
   public String getDescricaoTipoTransacao() {
     return descricaoTipoTransacao;
@@ -80,14 +80,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * Identifier Code of the event type
+   * {{{lancamento_fatura_response_id_tipo_evento_value}}}
    **/
   public LancamentoFaturaResponse idTipoEvento(Long idTipoEvento) {
     this.idTipoEvento = idTipoEvento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identifier Code of the event type")
+  @ApiModelProperty(example = "null", value = "{{{lancamento_fatura_response_id_tipo_evento_value}}}")
   @JsonProperty("idTipoEvento")
   public Long getIdTipoEvento() {
     return idTipoEvento;
@@ -98,14 +98,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * Description of the event type
+   * {{{lancamento_fatura_response_descricao_tipo_evento_value}}}
    **/
   public LancamentoFaturaResponse descricaoTipoEvento(String descricaoTipoEvento) {
     this.descricaoTipoEvento = descricaoTipoEvento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Description of the event type")
+  @ApiModelProperty(example = "null", value = "{{{lancamento_fatura_response_descricao_tipo_evento_value}}}")
   @JsonProperty("descricaoTipoEvento")
   public String getDescricaoTipoEvento() {
     return descricaoTipoEvento;
@@ -116,14 +116,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * Identifier Code of the event
+   * {{{lancamento_fatura_response_id_evento_value}}}
    **/
   public LancamentoFaturaResponse idEvento(Long idEvento) {
     this.idEvento = idEvento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identifier Code of the event")
+  @ApiModelProperty(example = "null", value = "{{{lancamento_fatura_response_id_evento_value}}}")
   @JsonProperty("idEvento")
   public Long getIdEvento() {
     return idEvento;
@@ -134,14 +134,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * Identification Code of the Account
+   * {{{lancamento_fatura_response_id_conta_value}}}
    **/
   public LancamentoFaturaResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the Account")
+  @ApiModelProperty(example = "null", value = "{{{lancamento_fatura_response_id_conta_value}}}")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -152,14 +152,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * Complementary Description of the event
+   * {{{lancamento_fatura_response_complemento_value}}}
    **/
   public LancamentoFaturaResponse complemento(String complemento) {
     this.complemento = complemento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Complementary Description of the event")
+  @ApiModelProperty(example = "null", value = "{{{lancamento_fatura_response_complemento_value}}}")
   @JsonProperty("complemento")
   public String getComplemento() {
     return complemento;
@@ -170,14 +170,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * Value in reais
+   * {{{lancamento_fatura_response_valor_b_r_l_value}}}
    **/
   public LancamentoFaturaResponse valorBRL(BigDecimal valorBRL) {
     this.valorBRL = valorBRL;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Value in reais")
+  @ApiModelProperty(example = "null", value = "{{{lancamento_fatura_response_valor_b_r_l_value}}}")
   @JsonProperty("valorBRL")
   public BigDecimal getValorBRL() {
     return valorBRL;
@@ -188,14 +188,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * value in dollar
+   * {{{lancamento_fatura_response_valor_u_s_d_value}}}
    **/
   public LancamentoFaturaResponse valorUSD(BigDecimal valorUSD) {
     this.valorUSD = valorUSD;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "value in dollar")
+  @ApiModelProperty(example = "null", value = "{{{lancamento_fatura_response_valor_u_s_d_value}}}")
   @JsonProperty("valorUSD")
   public BigDecimal getValorUSD() {
     return valorUSD;
@@ -206,14 +206,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * Number of the parcels
+   * {{{lancamento_fatura_response_numero_parcela_value}}}
    **/
   public LancamentoFaturaResponse numeroParcela(Integer numeroParcela) {
     this.numeroParcela = numeroParcela;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Number of the parcels")
+  @ApiModelProperty(example = "null", value = "{{{lancamento_fatura_response_numero_parcela_value}}}")
   @JsonProperty("numeroParcela")
   public Integer getNumeroParcela() {
     return numeroParcela;
@@ -224,14 +224,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * Quantity of parcels
+   * {{{lancamento_fatura_response_quantidade_parcelas_value}}}
    **/
   public LancamentoFaturaResponse quantidadeParcelas(Integer quantidadeParcelas) {
     this.quantidadeParcelas = quantidadeParcelas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Quantity of parcels")
+  @ApiModelProperty(example = "null", value = "{{{lancamento_fatura_response_quantidade_parcelas_value}}}")
   @JsonProperty("quantidadeParcelas")
   public Integer getQuantidadeParcelas() {
     return quantidadeParcelas;
@@ -242,14 +242,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * Transaction date
+   * {{{lancamento_fatura_response_data_hora_transacao_value}}}
    **/
   public LancamentoFaturaResponse dataHoraTransacao(String dataHoraTransacao) {
     this.dataHoraTransacao = dataHoraTransacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Transaction date")
+  @ApiModelProperty(example = "null", value = "{{{lancamento_fatura_response_data_hora_transacao_value}}}")
   @JsonProperty("dataHoraTransacao")
   public String getDataHoraTransacao() {
     return dataHoraTransacao;
@@ -260,14 +260,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * Merchant Name
+   * {{{lancamento_fatura_response_nome_estabelecimento_value}}}
    **/
   public LancamentoFaturaResponse nomeEstabelecimento(String nomeEstabelecimento) {
     this.nomeEstabelecimento = nomeEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Merchant Name")
+  @ApiModelProperty(example = "null", value = "{{{lancamento_fatura_response_nome_estabelecimento_value}}}")
   @JsonProperty("nomeEstabelecimento")
   public String getNomeEstabelecimento() {
     return nomeEstabelecimento;
@@ -278,14 +278,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * Merchant Description
+   * {{{lancamento_fatura_response_descricao_estabelecimento_value}}}
    **/
   public LancamentoFaturaResponse descricaoEstabelecimento(String descricaoEstabelecimento) {
     this.descricaoEstabelecimento = descricaoEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Merchant Description")
+  @ApiModelProperty(example = "null", value = "{{{lancamento_fatura_response_descricao_estabelecimento_value}}}")
   @JsonProperty("descricaoEstabelecimento")
   public String getDescricaoEstabelecimento() {
     return descricaoEstabelecimento;
@@ -296,14 +296,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * Fantasy Name of the Merchant
+   * {{{lancamento_fatura_response_nome_fantasia_estabelecimento_value}}}
    **/
   public LancamentoFaturaResponse nomeFantasiaEstabelecimento(String nomeFantasiaEstabelecimento) {
     this.nomeFantasiaEstabelecimento = nomeFantasiaEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Fantasy Name of the Merchant")
+  @ApiModelProperty(example = "null", value = "{{{lancamento_fatura_response_nome_fantasia_estabelecimento_value}}}")
   @JsonProperty("nomeFantasiaEstabelecimento")
   public String getNomeFantasiaEstabelecimento() {
     return nomeFantasiaEstabelecimento;
@@ -314,14 +314,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * Flag that indicates if the launch is of credit
+   * {{{lancamento_fatura_response_flag_credito_value}}}
    **/
   public LancamentoFaturaResponse flagCredito(Boolean flagCredito) {
     this.flagCredito = flagCredito;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Flag that indicates if the launch is of credit")
+  @ApiModelProperty(example = "false", value = "{{{lancamento_fatura_response_flag_credito_value}}}")
   @JsonProperty("flagCredito")
   public Boolean getFlagCredito() {
     return flagCredito;
@@ -332,14 +332,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * Identifier Code of the MCC (Merchant Category Codes)
+   * {{{lancamento_fatura_response_id_m_c_c_value}}}
    **/
   public LancamentoFaturaResponse idMCC(Long idMCC) {
     this.idMCC = idMCC;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identifier Code of the MCC (Merchant Category Codes)")
+  @ApiModelProperty(example = "null", value = "{{{lancamento_fatura_response_id_m_c_c_value}}}")
   @JsonProperty("idMCC")
   public Long getIdMCC() {
     return idMCC;
@@ -350,14 +350,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * Identifier Code of the Group MCC
+   * {{{lancamento_fatura_response_id_grupo_m_c_c_value}}}
    **/
   public LancamentoFaturaResponse idGrupoMCC(Long idGrupoMCC) {
     this.idGrupoMCC = idGrupoMCC;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identifier Code of the Group MCC")
+  @ApiModelProperty(example = "null", value = "{{{lancamento_fatura_response_id_grupo_m_c_c_value}}}")
   @JsonProperty("idGrupoMCC")
   public Long getIdGrupoMCC() {
     return idGrupoMCC;
@@ -368,14 +368,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * Description of the group MCC
+   * {{{lancamento_fatura_response_descricao_grupo_m_c_c_value}}}
    **/
   public LancamentoFaturaResponse descricaoGrupoMCC(String descricaoGrupoMCC) {
     this.descricaoGrupoMCC = descricaoGrupoMCC;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Description of the group MCC")
+  @ApiModelProperty(example = "null", value = "{{{lancamento_fatura_response_descricao_grupo_m_c_c_value}}}")
   @JsonProperty("descricaoGrupoMCC")
   public String getDescricaoGrupoMCC() {
     return descricaoGrupoMCC;
@@ -386,14 +386,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * Indicate if the the cardholder is the holder of the account
+   * {{{lancamento_fatura_response_titular_value}}}
    **/
   public LancamentoFaturaResponse titular(Boolean titular) {
     this.titular = titular;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Indicate if the the cardholder is the holder of the account")
+  @ApiModelProperty(example = "false", value = "{{{lancamento_fatura_response_titular_value}}}")
   @JsonProperty("titular")
   public Boolean getTitular() {
     return titular;
@@ -404,14 +404,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * Printed name on the card
+   * {{{lancamento_fatura_response_nome_portador_value}}}
    **/
   public LancamentoFaturaResponse nomePortador(String nomePortador) {
     this.nomePortador = nomePortador;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Printed name on the card")
+  @ApiModelProperty(example = "null", value = "{{{lancamento_fatura_response_nome_portador_value}}}")
   @JsonProperty("nomePortador")
   public String getNomePortador() {
     return nomePortador;
@@ -422,14 +422,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * Card number masked
+   * {{{lancamento_fatura_response_numero_cartao_mascarado_value}}}
    **/
   public LancamentoFaturaResponse numeroCartaoMascarado(String numeroCartaoMascarado) {
     this.numeroCartaoMascarado = numeroCartaoMascarado;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Card number masked")
+  @ApiModelProperty(example = "null", value = "{{{lancamento_fatura_response_numero_cartao_mascarado_value}}}")
   @JsonProperty("numeroCartaoMascarado")
   public String getNumeroCartaoMascarado() {
     return numeroCartaoMascarado;
@@ -440,14 +440,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * Flag that indicates if the client requested the contest of the transaction
+   * {{{lancamento_fatura_response_flag_solicitou_contestacao_value}}}
    **/
   public LancamentoFaturaResponse flagSolicitouContestacao(Boolean flagSolicitouContestacao) {
     this.flagSolicitouContestacao = flagSolicitouContestacao;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Flag that indicates if the client requested the contest of the transaction")
+  @ApiModelProperty(example = "false", value = "{{{lancamento_fatura_response_flag_solicitou_contestacao_value}}}")
   @JsonProperty("flagSolicitouContestacao")
   public Boolean getFlagSolicitouContestacao() {
     return flagSolicitouContestacao;
@@ -458,14 +458,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * Value of the Boarding taxe
+   * {{{lancamento_fatura_response_valor_taxa_embarque_value}}}
    **/
   public LancamentoFaturaResponse valorTaxaEmbarque(BigDecimal valorTaxaEmbarque) {
     this.valorTaxaEmbarque = valorTaxaEmbarque;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Value of the Boarding taxe")
+  @ApiModelProperty(example = "null", value = "{{{lancamento_fatura_response_valor_taxa_embarque_value}}}")
   @JsonProperty("valorTaxaEmbarque")
   public BigDecimal getValorTaxaEmbarque() {
     return valorTaxaEmbarque;
@@ -476,14 +476,14 @@ public class LancamentoFaturaResponse   {
 
   
   /**
-   * Description abbreviated of the transaction
+   * {{{lancamento_fatura_response_descricao_abreviada_value}}}
    **/
   public LancamentoFaturaResponse descricaoAbreviada(String descricaoAbreviada) {
     this.descricaoAbreviada = descricaoAbreviada;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Description abbreviated of the transaction")
+  @ApiModelProperty(example = "null", value = "{{{lancamento_fatura_response_descricao_abreviada_value}}}")
   @JsonProperty("descricaoAbreviada")
   public String getDescricaoAbreviada() {
     return descricaoAbreviada;

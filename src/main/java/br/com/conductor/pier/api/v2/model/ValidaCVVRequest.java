@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Request Representation of the CVV validation
+ * {{{valida_c_v_v_request_description}}}
  **/
 
-@ApiModel(description = "Request Representation of the CVV validation")
+@ApiModel(description = "{{{valida_c_v_v_request_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ValidaCVVRequest   {
   
@@ -20,14 +20,14 @@ public class ValidaCVVRequest   {
 
   
   /**
-   * Identification Code of the encrypted key
+   * {{{valida_c_v_v_request_id_chave_criptografia_value}}}
    **/
   public ValidaCVVRequest idChaveCriptografia(Long idChaveCriptografia) {
     this.idChaveCriptografia = idChaveCriptografia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the encrypted key")
+  @ApiModelProperty(example = "null", value = "{{{valida_c_v_v_request_id_chave_criptografia_value}}}")
   @JsonProperty("idChaveCriptografia")
   public Long getIdChaveCriptografia() {
     return idChaveCriptografia;
@@ -38,14 +38,14 @@ public class ValidaCVVRequest   {
 
   
   /**
-   * Value of the Card Checking (CVV)
+   * {{{valida_c_v_v_request_cvv_value}}}
    **/
   public ValidaCVVRequest cvv(String cvv) {
     this.cvv = cvv;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Value of the Card Checking (CVV)")
+  @ApiModelProperty(example = "null", value = "{{{valida_c_v_v_request_cvv_value}}}")
   @JsonProperty("cvv")
   public String getCvv() {
     return cvv;

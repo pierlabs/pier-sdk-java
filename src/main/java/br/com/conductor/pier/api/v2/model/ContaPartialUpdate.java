@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Object to change accounts. None of the fields are required. Only the fields you want to change must be entered
+ * {{{conta_partial_object_description}}}
  **/
 
-@ApiModel(description = "Object to change accounts. None of the fields are required. Only the fields you want to change must be entered")
+@ApiModel(description = "{{{conta_partial_object_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ContaPartialUpdate   {
   
@@ -20,14 +20,14 @@ public class ContaPartialUpdate   {
 
   
   /**
-   * Active account function. Represents the function in which the account is enabled. Property should only be reported if the issuer makes use of account functions. The functions available for the accounts can be viewed in api/contas/tipos-funcoes
+   * {{{conta_partial_funcao_ativa_value}}}
    **/
   public ContaPartialUpdate funcaoAtiva(String funcaoAtiva) {
     this.funcaoAtiva = funcaoAtiva;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Active account function. Represents the function in which the account is enabled. Property should only be reported if the issuer makes use of account functions. The functions available for the accounts can be viewed in api/contas/tipos-funcoes")
+  @ApiModelProperty(example = "null", value = "{{{conta_partial_funcao_ativa_value}}}")
   @JsonProperty("funcaoAtiva")
   public String getFuncaoAtiva() {
     return funcaoAtiva;
@@ -38,14 +38,14 @@ public class ContaPartialUpdate   {
 
   
   /**
-   * Identifier of the internal control account created by the issuer
+   * {{{conta_partial_id_conta_emissor_value}}}
    **/
   public ContaPartialUpdate idContaEmissor(Long idContaEmissor) {
     this.idContaEmissor = idContaEmissor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identifier of the internal control account created by the issuer")
+  @ApiModelProperty(example = "null", value = "{{{conta_partial_id_conta_emissor_value}}}")
   @JsonProperty("idContaEmissor")
   public Long getIdContaEmissor() {
     return idContaEmissor;

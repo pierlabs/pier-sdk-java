@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * File auditorial list
+ * {{{page_arquivo_a_u_d_response_description}}}
  **/
 
-@ApiModel(description = "File auditorial list")
+@ApiModel(description = "{{{page_arquivo_a_u_d_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageArquivoAUDResponse   {
   

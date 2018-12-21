@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Response Service Account Object
+ * {{{servico_conta_response_description}}}
  **/
 
-@ApiModel(description = "Response Service Account Object")
+@ApiModel(description = "{{{servico_conta_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ServicoContaResponse   {
   
@@ -27,14 +27,14 @@ public class ServicoContaResponse   {
 
   
   /**
-   * Account Service Identifier
+   * {{{servico_conta_response_id_value}}}
    **/
   public ServicoContaResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Account Service Identifier")
+  @ApiModelProperty(example = "null", value = "{{{servico_conta_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -45,14 +45,14 @@ public class ServicoContaResponse   {
 
   
   /**
-   * Account Identifier
+   * {{{servico_conta_response_id_conta_value}}}
    **/
   public ServicoContaResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Account Identifier")
+  @ApiModelProperty(example = "null", value = "{{{servico_conta_response_id_conta_value}}}")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -63,14 +63,14 @@ public class ServicoContaResponse   {
 
   
   /**
-   * Service Type Identifier
+   * {{{servico_conta_response_id_tipo_servico_value}}}
    **/
   public ServicoContaResponse idTipoServico(Long idTipoServico) {
     this.idTipoServico = idTipoServico;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Service Type Identifier")
+  @ApiModelProperty(example = "null", value = "{{{servico_conta_response_id_tipo_servico_value}}}")
   @JsonProperty("idTipoServico")
   public Long getIdTipoServico() {
     return idTipoServico;
@@ -81,14 +81,14 @@ public class ServicoContaResponse   {
 
   
   /**
-   * Service activation date
+   * {{{servico_conta_response_data_ativacao_value}}}
    **/
   public ServicoContaResponse dataAtivacao(String dataAtivacao) {
     this.dataAtivacao = dataAtivacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Service activation date")
+  @ApiModelProperty(example = "null", value = "{{{servico_conta_response_data_ativacao_value}}}")
   @JsonProperty("dataAtivacao")
   public String getDataAtivacao() {
     return dataAtivacao;
@@ -99,14 +99,14 @@ public class ServicoContaResponse   {
 
   
   /**
-   * User activated the service
+   * {{{servico_conta_response_id_usuario_ativou_value}}}
    **/
   public ServicoContaResponse idUsuarioAtivacao(Long idUsuarioAtivacao) {
     this.idUsuarioAtivacao = idUsuarioAtivacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "User activated the service")
+  @ApiModelProperty(example = "null", value = "{{{servico_conta_response_id_usuario_ativou_value}}}")
   @JsonProperty("idUsuarioAtivacao")
   public Long getIdUsuarioAtivacao() {
     return idUsuarioAtivacao;
@@ -117,14 +117,14 @@ public class ServicoContaResponse   {
 
   
   /**
-   * Platform activated service
+   * {{{servico_conta_response_id_plataforma_ativou_value}}}
    **/
   public ServicoContaResponse idPlataformaAtivacao(Long idPlataformaAtivacao) {
     this.idPlataformaAtivacao = idPlataformaAtivacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Platform activated service")
+  @ApiModelProperty(example = "null", value = "{{{servico_conta_response_id_plataforma_ativou_value}}}")
   @JsonProperty("idPlataformaAtivacao")
   public Long getIdPlataformaAtivacao() {
     return idPlataformaAtivacao;
@@ -135,14 +135,14 @@ public class ServicoContaResponse   {
 
   
   /**
-   * Service cancellation date
+   * {{{servico_conta_response_data_cancelou_value}}}
    **/
   public ServicoContaResponse dataCancelamento(String dataCancelamento) {
     this.dataCancelamento = dataCancelamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Service cancellation date")
+  @ApiModelProperty(example = "null", value = "{{{servico_conta_response_data_cancelou_value}}}")
   @JsonProperty("dataCancelamento")
   public String getDataCancelamento() {
     return dataCancelamento;
@@ -153,14 +153,14 @@ public class ServicoContaResponse   {
 
   
   /**
-   * User canceled service
+   * {{{servico_conta_response_id_usuario_cancelou_value}}}
    **/
   public ServicoContaResponse idUsuarioCancelamento(Long idUsuarioCancelamento) {
     this.idUsuarioCancelamento = idUsuarioCancelamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "User canceled service")
+  @ApiModelProperty(example = "null", value = "{{{servico_conta_response_id_usuario_cancelou_value}}}")
   @JsonProperty("idUsuarioCancelamento")
   public Long getIdUsuarioCancelamento() {
     return idUsuarioCancelamento;
@@ -171,14 +171,14 @@ public class ServicoContaResponse   {
 
   
   /**
-   * Platform canceled service
+   * {{{servico_conta_response_id_plataforma_cancelou_value}}}
    **/
   public ServicoContaResponse idPlataformaCancelamento(Long idPlataformaCancelamento) {
     this.idPlataformaCancelamento = idPlataformaCancelamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Platform canceled service")
+  @ApiModelProperty(example = "null", value = "{{{servico_conta_response_id_plataforma_cancelou_value}}}")
   @JsonProperty("idPlataformaCancelamento")
   public Long getIdPlataformaCancelamento() {
     return idPlataformaCancelamento;

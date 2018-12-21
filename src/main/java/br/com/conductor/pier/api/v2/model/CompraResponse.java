@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * Object of Purchase
+ * {{{compra_response_description}}}
  **/
 
-@ApiModel(description = "Object of Purchase")
+@ApiModel(description = "{{{compra_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class CompraResponse   {
   
@@ -76,14 +76,14 @@ public class CompraResponse   {
 
   
   /**
-   * Identification Code of the shop
+   * {{{compra_response_id_compra_value}}}
    **/
   public CompraResponse idCompra(Long idCompra) {
     this.idCompra = idCompra;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the shop")
+  @ApiModelProperty(example = "null", value = "{{{compra_response_id_compra_value}}}")
   @JsonProperty("idCompra")
   public Long getIdCompra() {
     return idCompra;
@@ -94,14 +94,14 @@ public class CompraResponse   {
 
   
   /**
-   * Description status of the shop authorization
+   * {{{compra_response_status_value}}}
    **/
   public CompraResponse status(String status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Description status of the shop authorization")
+  @ApiModelProperty(example = "null", value = "{{{compra_response_status_value}}}")
   @JsonProperty("status")
   public String getStatus() {
     return status;
@@ -112,14 +112,14 @@ public class CompraResponse   {
 
   
   /**
-   * Date of the shop
+   * {{{compra_response_data_compra_value}}}
    **/
   public CompraResponse dataCompra(String dataCompra) {
     this.dataCompra = dataCompra;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Date of the shop")
+  @ApiModelProperty(example = "null", value = "{{{compra_response_data_compra_value}}}")
   @JsonProperty("dataCompra")
   public String getDataCompra() {
     return dataCompra;
@@ -130,14 +130,14 @@ public class CompraResponse   {
 
   
   /**
-   * Total value of the shop
+   * {{{compra_response_valor_total_compra_value}}}
    **/
   public CompraResponse valorTotalCompra(BigDecimal valorTotalCompra) {
     this.valorTotalCompra = valorTotalCompra;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Total value of the shop")
+  @ApiModelProperty(example = "null", value = "{{{compra_response_valor_total_compra_value}}}")
   @JsonProperty("valorTotalCompra")
   public BigDecimal getValorTotalCompra() {
     return valorTotalCompra;
@@ -148,14 +148,14 @@ public class CompraResponse   {
 
   
   /**
-   * Parcel value of the shop
+   * {{{compra_response_valor_parcela_value}}}
    **/
   public CompraResponse valorParcela(BigDecimal valorParcela) {
     this.valorParcela = valorParcela;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Parcel value of the shop")
+  @ApiModelProperty(example = "null", value = "{{{compra_response_valor_parcela_value}}}")
   @JsonProperty("valorParcela")
   public BigDecimal getValorParcela() {
     return valorParcela;
@@ -166,14 +166,14 @@ public class CompraResponse   {
 
   
   /**
-   * First parcel value of the shop
+   * {{{compra_response_primeira_parcela_value}}}
    **/
   public CompraResponse primeiraParcela(BigDecimal primeiraParcela) {
     this.primeiraParcela = primeiraParcela;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "First parcel value of the shop")
+  @ApiModelProperty(example = "null", value = "{{{compra_response_primeira_parcela_value}}}")
   @JsonProperty("primeiraParcela")
   public BigDecimal getPrimeiraParcela() {
     return primeiraParcela;
@@ -184,14 +184,14 @@ public class CompraResponse   {
 
   
   /**
-   * Number of parcels of the shop
+   * {{{compra_response_numero_parcelas_value}}}
    **/
   public CompraResponse numeroParcelas(Integer numeroParcelas) {
     this.numeroParcelas = numeroParcelas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Number of parcels of the shop")
+  @ApiModelProperty(example = "null", value = "{{{compra_response_numero_parcelas_value}}}")
   @JsonProperty("numeroParcelas")
   public Integer getNumeroParcelas() {
     return numeroParcelas;
@@ -202,14 +202,14 @@ public class CompraResponse   {
 
   
   /**
-   * Number of of the antecipated parcels of the shops
+   * {{{compra_response_numero_parcelas_antecipaveis_value}}}
    **/
   public CompraResponse numeroParcelasAntecipaveis(Integer numeroParcelasAntecipaveis) {
     this.numeroParcelasAntecipaveis = numeroParcelasAntecipaveis;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Number of of the antecipated parcels of the shops")
+  @ApiModelProperty(example = "null", value = "{{{compra_response_numero_parcelas_antecipaveis_value}}}")
   @JsonProperty("numeroParcelasAntecipaveis")
   public Integer getNumeroParcelasAntecipaveis() {
     return numeroParcelasAntecipaveis;
@@ -220,14 +220,14 @@ public class CompraResponse   {
 
   
   /**
-   * Establishment name of the shop
+   * {{{compra_response_nome_estabelecimento_value}}}
    **/
   public CompraResponse nomeEstabelecimento(String nomeEstabelecimento) {
     this.nomeEstabelecimento = nomeEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Establishment name of the shop")
+  @ApiModelProperty(example = "null", value = "{{{compra_response_nome_estabelecimento_value}}}")
   @JsonProperty("nomeEstabelecimento")
   public String getNomeEstabelecimento() {
     return nomeEstabelecimento;
@@ -238,14 +238,14 @@ public class CompraResponse   {
 
   
   /**
-   * Type of transaction of the shop
+   * {{{compra_response_tipo_origem_transacao_value}}}
    **/
   public CompraResponse tipoOrigemTransacao(String tipoOrigemTransacao) {
     this.tipoOrigemTransacao = tipoOrigemTransacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Type of transaction of the shop")
+  @ApiModelProperty(example = "null", value = "{{{compra_response_tipo_origem_transacao_value}}}")
   @JsonProperty("tipoOrigemTransacao")
   public String getTipoOrigemTransacao() {
     return tipoOrigemTransacao;
@@ -256,14 +256,14 @@ public class CompraResponse   {
 
   
   /**
-   * City where the shop was made
+   * {{{compra_response_cidade_value}}}
    **/
   public CompraResponse cidade(String cidade) {
     this.cidade = cidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "City where the shop was made")
+  @ApiModelProperty(example = "null", value = "{{{compra_response_cidade_value}}}")
   @JsonProperty("cidade")
   public String getCidade() {
     return cidade;
@@ -274,14 +274,14 @@ public class CompraResponse   {
 
   
   /**
-   * country where the shop was made
+   * {{{compra_response_pais_value}}}
    **/
   public CompraResponse pais(String pais) {
     this.pais = pais;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "country where the shop was made")
+  @ApiModelProperty(example = "null", value = "{{{compra_response_pais_value}}}")
   @JsonProperty("pais")
   public String getPais() {
     return pais;
@@ -292,14 +292,14 @@ public class CompraResponse   {
 
   
   /**
-   * Latitudinal Coordinate of the shop location
+   * {{{compra_response_latitude_value}}}
    **/
   public CompraResponse latitude(String latitude) {
     this.latitude = latitude;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Latitudinal Coordinate of the shop location")
+  @ApiModelProperty(example = "null", value = "{{{compra_response_latitude_value}}}")
   @JsonProperty("latitude")
   public String getLatitude() {
     return latitude;
@@ -310,14 +310,14 @@ public class CompraResponse   {
 
   
   /**
-   * Longitudinal Coordinate of the shop location
+   * {{{compra_response_longitude_value}}}
    **/
   public CompraResponse longitude(String longitude) {
     this.longitude = longitude;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Longitudinal Coordinate of the shop location")
+  @ApiModelProperty(example = "null", value = "{{{compra_response_longitude_value}}}")
   @JsonProperty("longitude")
   public String getLongitude() {
     return longitude;
@@ -328,14 +328,14 @@ public class CompraResponse   {
 
   
   /**
-   * Identification Code of MCC Group of the shop
+   * {{{compra_response_id_grupo_m_c_c_value}}}
    **/
   public CompraResponse idGrupoMCC(Long idGrupoMCC) {
     this.idGrupoMCC = idGrupoMCC;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of MCC Group of the shop")
+  @ApiModelProperty(example = "null", value = "{{{compra_response_id_grupo_m_c_c_value}}}")
   @JsonProperty("idGrupoMCC")
   public Long getIdGrupoMCC() {
     return idGrupoMCC;
@@ -346,14 +346,14 @@ public class CompraResponse   {
 
   
   /**
-   * Description of MCC group of the shop
+   * {{{compra_response_descricao_grupo_m_c_c_value}}}
    **/
   public CompraResponse descricaoGrupoMCC(String descricaoGrupoMCC) {
     this.descricaoGrupoMCC = descricaoGrupoMCC;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Description of MCC group of the shop")
+  @ApiModelProperty(example = "null", value = "{{{compra_response_descricao_grupo_m_c_c_value}}}")
   @JsonProperty("descricaoGrupoMCC")
   public String getDescricaoGrupoMCC() {
     return descricaoGrupoMCC;
@@ -364,14 +364,14 @@ public class CompraResponse   {
 
   
   /**
-   * Identification Code of the account
+   * {{{compra_response_id_conta_value}}}
    **/
   public CompraResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the account")
+  @ApiModelProperty(example = "null", value = "{{{compra_response_id_conta_value}}}")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -382,14 +382,14 @@ public class CompraResponse   {
 
   
   /**
-   * Identification Code of the product of purchase
+   * {{{compra_response_id_produto_value}}}
    **/
   public CompraResponse idProduto(Long idProduto) {
     this.idProduto = idProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the product of purchase")
+  @ApiModelProperty(example = "null", value = "{{{compra_response_id_produto_value}}}")
   @JsonProperty("idProduto")
   public Long getIdProduto() {
     return idProduto;
@@ -400,14 +400,14 @@ public class CompraResponse   {
 
   
   /**
-   * Description of the product of purchase
+   * {{{compra_response_descricao_produto_value}}}
    **/
   public CompraResponse descricaoProduto(String descricaoProduto) {
     this.descricaoProduto = descricaoProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Description of the product of purchase")
+  @ApiModelProperty(example = "null", value = "{{{compra_response_descricao_produto_value}}}")
   @JsonProperty("descricaoProduto")
   public String getDescricaoProduto() {
     return descricaoProduto;
@@ -418,14 +418,14 @@ public class CompraResponse   {
 
   
   /**
-   * Card number of the shop
+   * {{{compra_response_cartao_value}}}
    **/
   public CompraResponse cartao(String cartao) {
     this.cartao = cartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Card number of the shop")
+  @ApiModelProperty(example = "null", value = "{{{compra_response_cartao_value}}}")
   @JsonProperty("cartao")
   public String getCartao() {
     return cartao;
@@ -436,14 +436,14 @@ public class CompraResponse   {
 
   
   /**
-   * Cardholder name of the shop
+   * {{{compra_response_nome_portador_cartao_value}}}
    **/
   public CompraResponse nomePortadorCartao(String nomePortadorCartao) {
     this.nomePortadorCartao = nomePortadorCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Cardholder name of the shop")
+  @ApiModelProperty(example = "null", value = "{{{compra_response_nome_portador_cartao_value}}}")
   @JsonProperty("nomePortadorCartao")
   public String getNomePortadorCartao() {
     return nomePortadorCartao;

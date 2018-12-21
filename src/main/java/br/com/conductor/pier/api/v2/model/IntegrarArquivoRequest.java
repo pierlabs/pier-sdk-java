@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Request Object of file integration
+ * {{{integrar_arquivo_request_description}}}
  **/
 
-@ApiModel(description = "Request Object of file integration")
+@ApiModel(description = "{{{integrar_arquivo_request_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class IntegrarArquivoRequest   {
   
@@ -19,14 +19,14 @@ public class IntegrarArquivoRequest   {
 
   
   /**
-   * IRs number (CPF) linked to one or more files that will be sent to be integrated
+   * {{{integrar_arquivo_request_numero_receita_federal_value}}}
    **/
   public IntegrarArquivoRequest numeroReceitaFederal(String numeroReceitaFederal) {
     this.numeroReceitaFederal = numeroReceitaFederal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "IRs number (CPF) linked to one or more files that will be sent to be integrated")
+  @ApiModelProperty(example = "null", value = "{{{integrar_arquivo_request_numero_receita_federal_value}}}")
   @JsonProperty("numeroReceitaFederal")
   public String getNumeroReceitaFederal() {
     return numeroReceitaFederal;

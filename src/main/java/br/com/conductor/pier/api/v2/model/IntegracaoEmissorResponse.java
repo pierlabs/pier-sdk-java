@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Response of the integration register inclusion resource
+ * {{{integracao_emissor_response_description}}}
  **/
 
-@ApiModel(description = "Response of the integration register inclusion resource")
+@ApiModel(description = "{{{integracao_emissor_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class IntegracaoEmissorResponse   {
   
@@ -24,14 +24,14 @@ public class IntegracaoEmissorResponse   {
 
   
   /**
-   * Identification Code of the registetr in the IntegrationIssuer table
+   * {{{integracao_emissor_response_id_value}}}
    **/
   public IntegracaoEmissorResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the registetr in the IntegrationIssuer table")
+  @ApiModelProperty(example = "null", value = "{{{integracao_emissor_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -42,14 +42,14 @@ public class IntegracaoEmissorResponse   {
 
   
   /**
-   * Identification Code of the Account
+   * {{{integracao_emissor_response_id_conta_value}}}
    **/
   public IntegracaoEmissorResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the Account")
+  @ApiModelProperty(example = "null", value = "{{{integracao_emissor_response_id_conta_value}}}")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -60,14 +60,14 @@ public class IntegracaoEmissorResponse   {
 
   
   /**
-   * Identification Code of the file
+   * {{{integracao_emissor_response_id_arquivo_value}}}
    **/
   public IntegracaoEmissorResponse idArquivo(Long idArquivo) {
     this.idArquivo = idArquivo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the file")
+  @ApiModelProperty(example = "null", value = "{{{integracao_emissor_response_id_arquivo_value}}}")
   @JsonProperty("idArquivo")
   public Long getIdArquivo() {
     return idArquivo;
@@ -78,14 +78,14 @@ public class IntegracaoEmissorResponse   {
 
   
   /**
-   * Register Status
+   * {{{integracao_emissor_response_status_value}}}
    **/
   public IntegracaoEmissorResponse status(String status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Register Status")
+  @ApiModelProperty(example = "null", value = "{{{integracao_emissor_response_status_value}}}")
   @JsonProperty("status")
   public String getStatus() {
     return status;
@@ -96,14 +96,14 @@ public class IntegracaoEmissorResponse   {
 
   
   /**
-   * Date of the resgister inclusion
+   * {{{integracao_emissor_response_data_inclusao_value}}}
    **/
   public IntegracaoEmissorResponse dataInclusao(String dataInclusao) {
     this.dataInclusao = dataInclusao;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Date of the resgister inclusion")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{integracao_emissor_response_data_inclusao_value}}}")
   @JsonProperty("dataInclusao")
   public String getDataInclusao() {
     return dataInclusao;
@@ -114,14 +114,14 @@ public class IntegracaoEmissorResponse   {
 
   
   /**
-   * Date of the last update of the register
+   * {{{integracao_emissor_response_data_alteracao_value}}}
    **/
   public IntegracaoEmissorResponse dataAlteracao(String dataAlteracao) {
     this.dataAlteracao = dataAlteracao;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Date of the last update of the register")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{integracao_emissor_response_data_alteracao_value}}}")
   @JsonProperty("dataAlteracao")
   public String getDataAlteracao() {
     return dataAlteracao;

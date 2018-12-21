@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * The list of all active tokens
+ * {{{page_usuario_token_resposta_descricao}}}
  **/
 
-@ApiModel(description = "The list of all active tokens")
+@ApiModel(description = "{{{page_usuario_token_resposta_descricao}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageUsuarioTokenResponse   {
   

@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Object Card
+ * {{{cartao_response_description}}}
  **/
 
-@ApiModel(description = "Object Card")
+@ApiModel(description = "{{{cartao_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class CartaoResponse   {
   
@@ -40,14 +40,14 @@ public class CartaoResponse   {
 
   
   /**
-   * Identification Code of the Card
+   * {{{cartao_response_id_value}}}
    **/
   public CartaoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the Card")
+  @ApiModelProperty(example = "null", value = "{{{cartao_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -58,14 +58,14 @@ public class CartaoResponse   {
 
   
   /**
-   * Show the tiype of the Cardholder, being: (1: Holder, 0: Additional)
+   * {{{cartao_response_flag_titular_value}}}
    **/
   public CartaoResponse flagTitular(Integer flagTitular) {
     this.flagTitular = flagTitular;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Show the tiype of the Cardholder, being: (1: Holder, 0: Additional)")
+  @ApiModelProperty(example = "null", value = "{{{cartao_response_flag_titular_value}}}")
   @JsonProperty("flagTitular")
   public Integer getFlagTitular() {
     return flagTitular;
@@ -76,14 +76,14 @@ public class CartaoResponse   {
 
   
   /**
-   * Identification Code of the Person which the card belongs
+   * {{{cartao_response_id_pessoa_value}}}
    **/
   public CartaoResponse idPessoa(Long idPessoa) {
     this.idPessoa = idPessoa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the Person which the card belongs")
+  @ApiModelProperty(example = "null", value = "{{{cartao_response_id_pessoa_value}}}")
   @JsonProperty("idPessoa")
   public Long getIdPessoa() {
     return idPessoa;
@@ -94,14 +94,14 @@ public class CartaoResponse   {
 
   
   /**
-   * Card Sequel Number
+   * {{{cartao_response_sequencial_cartao_value}}}
    **/
   public CartaoResponse sequencialCartao(Integer sequencialCartao) {
     this.sequencialCartao = sequencialCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Card Sequel Number")
+  @ApiModelProperty(example = "null", value = "{{{cartao_response_sequencial_cartao_value}}}")
   @JsonProperty("sequencialCartao")
   public Integer getSequencialCartao() {
     return sequencialCartao;
@@ -112,14 +112,14 @@ public class CartaoResponse   {
 
   
   /**
-   * Identification Code of the Account which the card belongs
+   * {{{cartao_response_id_conta_value}}}
    **/
   public CartaoResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the Account which the card belongs")
+  @ApiModelProperty(example = "null", value = "{{{cartao_response_id_conta_value}}}")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -130,14 +130,14 @@ public class CartaoResponse   {
 
   
   /**
-   * Identification Code of the Card Status
+   * {{{cartao_response_id_status_value}}}
    **/
   public CartaoResponse idStatus(Long idStatus) {
     this.idStatus = idStatus;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the Card Status")
+  @ApiModelProperty(example = "null", value = "{{{cartao_response_id_status_value}}}")
   @JsonProperty("idStatus")
   public Long getIdStatus() {
     return idStatus;
@@ -148,14 +148,14 @@ public class CartaoResponse   {
 
   
   /**
-   * Show the date which the current idStatusCard was applied, when there is
+   * {{{cartao_response_data_status_value}}}
    **/
   public CartaoResponse dataStatus(String dataStatus) {
     this.dataStatus = dataStatus;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Show the date which the current idStatusCard was applied, when there is")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{cartao_response_data_status_value}}}")
   @JsonProperty("dataStatus")
   public String getDataStatus() {
     return dataStatus;
@@ -166,14 +166,14 @@ public class CartaoResponse   {
 
   
   /**
-   * Identification Code of the Stage Printed Card
+   * {{{cartao_response_id_estagio_value}}}
    **/
   public CartaoResponse idEstagio(Long idEstagio) {
     this.idEstagio = idEstagio;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the Stage Printed Card")
+  @ApiModelProperty(example = "null", value = "{{{cartao_response_id_estagio_value}}}")
   @JsonProperty("idEstagio")
   public Long getIdEstagio() {
     return idEstagio;
@@ -184,14 +184,14 @@ public class CartaoResponse   {
 
   
   /**
-   * Show te date which the current idStage of the card applied, when there is
+   * {{{cartao_response_data_estagio_value}}}
    **/
   public CartaoResponse dataEstagio(String dataEstagio) {
     this.dataEstagio = dataEstagio;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Show te date which the current idStage of the card applied, when there is")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{cartao_response_data_estagio_value}}}")
   @JsonProperty("dataEstagio")
   public String getDataEstagio() {
     return dataEstagio;
@@ -202,14 +202,14 @@ public class CartaoResponse   {
 
   
   /**
-   * Bin number of the card
+   * {{{cartao_response_numero_bin_value}}}
    **/
   public CartaoResponse numeroBin(Long numeroBin) {
     this.numeroBin = numeroBin;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Bin number of the card")
+  @ApiModelProperty(example = "null", value = "{{{cartao_response_numero_bin_value}}}")
   @JsonProperty("numeroBin")
   public Long getNumeroBin() {
     return numeroBin;
@@ -220,14 +220,14 @@ public class CartaoResponse   {
 
   
   /**
-   * Show the card number
+   * {{{cartao_response_numero_cartao_value}}}
    **/
   public CartaoResponse numeroCartao(String numeroCartao) {
     this.numeroCartao = numeroCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Show the card number")
+  @ApiModelProperty(example = "null", value = "{{{cartao_response_numero_cartao_value}}}")
   @JsonProperty("numeroCartao")
   public String getNumeroCartao() {
     return numeroCartao;
@@ -238,14 +238,14 @@ public class CartaoResponse   {
 
   
   /**
-   * Hash Card Number
+   * {{{cartao_response_numero_cartao_hash_value}}}
    **/
   public CartaoResponse numeroCartaoHash(Long numeroCartaoHash) {
     this.numeroCartaoHash = numeroCartaoHash;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Hash Card Number")
+  @ApiModelProperty(example = "null", value = "{{{cartao_response_numero_cartao_hash_value}}}")
   @JsonProperty("numeroCartaoHash")
   public Long getNumeroCartaoHash() {
     return numeroCartaoHash;
@@ -256,14 +256,14 @@ public class CartaoResponse   {
 
   
   /**
-   * Encrypted Card Number
+   * {{{cartao_response_numero_cartao_criptografado_value}}}
    **/
   public CartaoResponse numeroCartaoCriptografado(String numeroCartaoCriptografado) {
     this.numeroCartaoCriptografado = numeroCartaoCriptografado;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Encrypted Card Number")
+  @ApiModelProperty(example = "null", value = "{{{cartao_response_numero_cartao_criptografado_value}}}")
   @JsonProperty("numeroCartaoCriptografado")
   public String getNumeroCartaoCriptografado() {
     return numeroCartaoCriptografado;
@@ -274,14 +274,14 @@ public class CartaoResponse   {
 
   
   /**
-   * Show the issue date of the card
+   * {{{cartao_response_data_emissao_value}}}
    **/
   public CartaoResponse dataEmissao(String dataEmissao) {
     this.dataEmissao = dataEmissao;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Show the issue date of the card")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{cartao_response_data_emissao_value}}}")
   @JsonProperty("dataEmissao")
   public String getDataEmissao() {
     return dataEmissao;
@@ -292,14 +292,14 @@ public class CartaoResponse   {
 
   
   /**
-   * Show the Expiration date of the card in the format yyyy-MM, when there is
+   * {{{cartao_response_data_validade_value}}}
    **/
   public CartaoResponse dataValidade(String dataValidade) {
     this.dataValidade = dataValidade;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Show the Expiration date of the card in the format yyyy-MM, when there is")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{cartao_response_data_validade_value}}}")
   @JsonProperty("dataValidade")
   public String getDataValidade() {
     return dataValidade;
@@ -310,14 +310,14 @@ public class CartaoResponse   {
 
   
   /**
-   * Show the status that informs if the card is virtual, being: (1: True, 0: False)
+   * {{{cartao_response_cartao_virtual_value}}}
    **/
   public CartaoResponse cartaoVirtual(Integer cartaoVirtual) {
     this.cartaoVirtual = cartaoVirtual;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Show the status that informs if the card is virtual, being: (1: True, 0: False)")
+  @ApiModelProperty(example = "null", value = "{{{cartao_response_cartao_virtual_value}}}")
   @JsonProperty("cartaoVirtual")
   public Integer getCartaoVirtual() {
     return cartaoVirtual;
@@ -328,14 +328,14 @@ public class CartaoResponse   {
 
   
   /**
-   * When it is active, indicates that the card was printed in the Commercial Origin
+   * {{{cartao_response_impressao_avulsa_value}}}
    **/
   public CartaoResponse impressaoAvulsa(Integer impressaoAvulsa) {
     this.impressaoAvulsa = impressaoAvulsa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "When it is active, indicates that the card was printed in the Commercial Origin")
+  @ApiModelProperty(example = "null", value = "{{{cartao_response_impressao_avulsa_value}}}")
   @JsonProperty("impressaoAvulsa")
   public Integer getImpressaoAvulsa() {
     return impressaoAvulsa;
@@ -346,14 +346,14 @@ public class CartaoResponse   {
 
   
   /**
-   * Show the date of the card that was printed, in case of printing in a store, or the date which was included in the file for printing in a Graphic
+   * {{{cartao_response_data_impressao_value}}}
    **/
   public CartaoResponse dataImpressao(String dataImpressao) {
     this.dataImpressao = dataImpressao;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Show the date of the card that was printed, in case of printing in a store, or the date which was included in the file for printing in a Graphic")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{cartao_response_data_impressao_value}}}")
   @JsonProperty("dataImpressao")
   public String getDataImpressao() {
     return dataImpressao;
@@ -364,14 +364,14 @@ public class CartaoResponse   {
 
   
   /**
-   * Show the name of the file where the card was included for printing, when there is
+   * {{{cartao_response_nome_arquivo_impressao_value}}}
    **/
   public CartaoResponse nomeArquivoImpressao(String nomeArquivoImpressao) {
     this.nomeArquivoImpressao = nomeArquivoImpressao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Show the name of the file where the card was included for printing, when there is")
+  @ApiModelProperty(example = "null", value = "{{{cartao_response_nome_arquivo_impressao_value}}}")
   @JsonProperty("nomeArquivoImpressao")
   public String getNomeArquivoImpressao() {
     return nomeArquivoImpressao;
@@ -382,14 +382,14 @@ public class CartaoResponse   {
 
   
   /**
-   * Identification Code of the Product which the card belongs
+   * {{{cartao_response_id_produto_value}}}
    **/
   public CartaoResponse idProduto(Long idProduto) {
     this.idProduto = idProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the Product which the card belongs")
+  @ApiModelProperty(example = "null", value = "{{{cartao_response_id_produto_value}}}")
   @JsonProperty("idProduto")
   public Long getIdProduto() {
     return idProduto;
@@ -400,14 +400,14 @@ public class CartaoResponse   {
 
   
   /**
-   * Show the name printed on the card
+   * {{{cartao_response_nome_impresso_value}}}
    **/
   public CartaoResponse nomeImpresso(String nomeImpresso) {
     this.nomeImpresso = nomeImpresso;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Show the name printed on the card")
+  @ApiModelProperty(example = "null", value = "{{{cartao_response_nome_impresso_value}}}")
   @JsonProperty("nomeImpresso")
   public String getNomeImpresso() {
     return nomeImpresso;
@@ -418,14 +418,14 @@ public class CartaoResponse   {
 
   
   /**
-   * Show a specific code to be used as a variable in the process of unlock the card for issuer that want to use this functionality
+   * {{{cartao_response_codigo_desbloqueio_value}}}
    **/
   public CartaoResponse codigoDesbloqueio(String codigoDesbloqueio) {
     this.codigoDesbloqueio = codigoDesbloqueio;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Show a specific code to be used as a variable in the process of unlock the card for issuer that want to use this functionality")
+  @ApiModelProperty(example = "null", value = "{{{cartao_response_codigo_desbloqueio_value}}}")
   @JsonProperty("codigoDesbloqueio")
   public String getCodigoDesbloqueio() {
     return codigoDesbloqueio;

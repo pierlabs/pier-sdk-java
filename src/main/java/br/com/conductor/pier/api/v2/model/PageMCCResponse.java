@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * List of the MCCs
+ * {{{page_m_c_c_response_description}}}
  **/
 
-@ApiModel(description = "List of the MCCs")
+@ApiModel(description = "{{{page_m_c_c_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageMCCResponse   {
   

@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Response of the merchant type resource
+ * {{{tipo_estabelecimento_response_description}}}
  **/
 
-@ApiModel(description = "Response of the merchant type resource")
+@ApiModel(description = "{{{tipo_estabelecimento_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TipoEstabelecimentoResponse   {
   
@@ -20,14 +20,14 @@ public class TipoEstabelecimentoResponse   {
 
   
   /**
-   * Identification Code of the Merchant Type (id)
+   * {{{tipo_estabelecimento_response_id_value}}}
    **/
   public TipoEstabelecimentoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the Merchant Type (id)")
+  @ApiModelProperty(example = "null", value = "{{{tipo_estabelecimento_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -38,14 +38,14 @@ public class TipoEstabelecimentoResponse   {
 
   
   /**
-   * Description of the Merchant Type
+   * {{{tipo_estabelecimento_response_descricao_value}}}
    **/
   public TipoEstabelecimentoResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Description of the Merchant Type")
+  @ApiModelProperty(example = "null", value = "{{{tipo_estabelecimento_response_descricao_value}}}")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;

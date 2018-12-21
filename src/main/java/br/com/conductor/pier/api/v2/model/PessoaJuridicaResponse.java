@@ -25,14 +25,14 @@ public class PessoaJuridicaResponse   {
 
   
   /**
-   * Id legal person
+   * {{{pessoa_juridica_persist_id_value}}}
    **/
   public PessoaJuridicaResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Id legal person")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_juridica_persist_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -43,14 +43,14 @@ public class PessoaJuridicaResponse   {
 
   
   /**
-   * Legal person contact
+   * {{{pessoa_juridica_persist_contato_value}}}
    **/
   public PessoaJuridicaResponse contato(String contato) {
     this.contato = contato;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Legal person contact")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_juridica_persist_contato_value}}}")
   @JsonProperty("contato")
   public String getContato() {
     return contato;
@@ -61,14 +61,14 @@ public class PessoaJuridicaResponse   {
 
   
   /**
-   * Legal person corporate name
+   * {{{pessoa_juridica_persist_razao_social_value}}}
    **/
   public PessoaJuridicaResponse razaoSocial(String razaoSocial) {
     this.razaoSocial = razaoSocial;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Legal person corporate name")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_juridica_persist_razao_social_value}}}")
   @JsonProperty("razaoSocial")
   public String getRazaoSocial() {
     return razaoSocial;
@@ -79,14 +79,14 @@ public class PessoaJuridicaResponse   {
 
   
   /**
-   * CGC (CNPJ) legal person
+   * {{{pessoa_juridica_persist_CGC_value}}}
    **/
   public PessoaJuridicaResponse numeroReceitaFederal(String numeroReceitaFederal) {
     this.numeroReceitaFederal = numeroReceitaFederal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "CGC (CNPJ) legal person")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_juridica_persist_CGC_value}}}")
   @JsonProperty("numeroReceitaFederal")
   public String getNumeroReceitaFederal() {
     return numeroReceitaFederal;
@@ -97,14 +97,14 @@ public class PessoaJuridicaResponse   {
 
   
   /**
-   * Legal person state registration
+   * {{{pessoa_juridica_persist_inscricao_estadual_value}}}
    **/
   public PessoaJuridicaResponse inscricaoEstadual(String inscricaoEstadual) {
     this.inscricaoEstadual = inscricaoEstadual;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Legal person state registration")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_juridica_persist_inscricao_estadual_value}}}")
   @JsonProperty("inscricaoEstadual")
   public String getInscricaoEstadual() {
     return inscricaoEstadual;
@@ -115,14 +115,14 @@ public class PessoaJuridicaResponse   {
 
   
   /**
-   * Bank of the legal person
+   * {{{pessoa_juridica_persist_banco_value}}}
    **/
   public PessoaJuridicaResponse banco(Integer banco) {
     this.banco = banco;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Bank of the legal person")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_juridica_persist_banco_value}}}")
   @JsonProperty("banco")
   public Integer getBanco() {
     return banco;
@@ -133,14 +133,14 @@ public class PessoaJuridicaResponse   {
 
   
   /**
-   * Agency of the legal person
+   * {{{pessoa_juridica_persist_agencia_value}}}
    **/
   public PessoaJuridicaResponse agencia(Integer agencia) {
     this.agencia = agencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Agency of the legal person")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_juridica_persist_agencia_value}}}")
   @JsonProperty("agencia")
   public Integer getAgencia() {
     return agencia;
@@ -151,14 +151,14 @@ public class PessoaJuridicaResponse   {
 
   
   /**
-   * Agency's digit
+   * {{{pessoa_juridica_persist_digito_agencia_value}}}
    **/
   public PessoaJuridicaResponse digitoAgencia(String digitoAgencia) {
     this.digitoAgencia = digitoAgencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Agency's digit")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_juridica_persist_digito_agencia_value}}}")
   @JsonProperty("digitoAgencia")
   public String getDigitoAgencia() {
     return digitoAgencia;
@@ -169,14 +169,14 @@ public class PessoaJuridicaResponse   {
 
   
   /**
-   * Current account legal person
+   * {{{pessoa_juridica_persist_conta_corrente_value}}}
    **/
   public PessoaJuridicaResponse contaCorrente(String contaCorrente) {
     this.contaCorrente = contaCorrente;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Current account legal person")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_juridica_persist_conta_corrente_value}}}")
   @JsonProperty("contaCorrente")
   public String getContaCorrente() {
     return contaCorrente;
@@ -187,14 +187,14 @@ public class PessoaJuridicaResponse   {
 
   
   /**
-   * Digit current account
+   * {{{pessoa_juridica_persist_digito_conta_corrente_value}}}
    **/
   public PessoaJuridicaResponse digitoContaCorrente(String digitoContaCorrente) {
     this.digitoContaCorrente = digitoContaCorrente;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Digit current account")
+  @ApiModelProperty(example = "null", value = "{{{pessoa_juridica_persist_digito_conta_corrente_value}}}")
   @JsonProperty("digitoContaCorrente")
   public String getDigitoContaCorrente() {
     return digitoContaCorrente;

@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * Object HistoricPaymentResponse
+ * {{{historico_pagamento_response_description}}}
  **/
 
-@ApiModel(description = "Object HistoricPaymentResponse")
+@ApiModel(description = "{{{historico_pagamento_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class HistoricoPagamentoResponse   {
   
@@ -28,14 +28,14 @@ public class HistoricoPagamentoResponse   {
 
   
   /**
-   * Identification Code of the Account
+   * {{{historico_pagamento_response_id_conta_value}}}
    **/
   public HistoricoPagamentoResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the Account")
+  @ApiModelProperty(example = "null", value = "{{{historico_pagamento_response_id_conta_value}}}")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -46,14 +46,14 @@ public class HistoricoPagamentoResponse   {
 
   
   /**
-   * Identification Code of the Payment
+   * {{{historico_pagamento_response_id_pagamento_value}}}
    **/
   public HistoricoPagamentoResponse idPagamento(Long idPagamento) {
     this.idPagamento = idPagamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the Payment")
+  @ApiModelProperty(example = "null", value = "{{{historico_pagamento_response_id_pagamento_value}}}")
   @JsonProperty("idPagamento")
   public Long getIdPagamento() {
     return idPagamento;
@@ -64,14 +64,14 @@ public class HistoricoPagamentoResponse   {
 
   
   /**
-   * Identification code of the Merchant where the Payment was made, when it is the place of the payment
+   * {{{historico_pagamento_response_id_estabelecimento_value}}}
    **/
   public HistoricoPagamentoResponse idEstabelecimento(Long idEstabelecimento) {
     this.idEstabelecimento = idEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification code of the Merchant where the Payment was made, when it is the place of the payment")
+  @ApiModelProperty(example = "null", value = "{{{historico_pagamento_response_id_estabelecimento_value}}}")
   @JsonProperty("idEstabelecimento")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
@@ -82,14 +82,14 @@ public class HistoricoPagamentoResponse   {
 
   
   /**
-   * Identification Code of the Banking Institution where the payment was made, when it is the place of the payment
+   * {{{historico_pagamento_response_id_banco_value}}}
    **/
   public HistoricoPagamentoResponse idBanco(Long idBanco) {
     this.idBanco = idBanco;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the Banking Institution where the payment was made, when it is the place of the payment")
+  @ApiModelProperty(example = "null", value = "{{{historico_pagamento_response_id_banco_value}}}")
   @JsonProperty("idBanco")
   public Long getIdBanco() {
     return idBanco;
@@ -100,14 +100,14 @@ public class HistoricoPagamentoResponse   {
 
   
   /**
-   * Identification Code of the Card
+   * {{{historico_pagamento_response_id_cartao_value}}}
    **/
   public HistoricoPagamentoResponse idCartao(Long idCartao) {
     this.idCartao = idCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the Card")
+  @ApiModelProperty(example = "null", value = "{{{historico_pagamento_response_id_cartao_value}}}")
   @JsonProperty("idCartao")
   public Long getIdCartao() {
     return idCartao;
@@ -118,14 +118,14 @@ public class HistoricoPagamentoResponse   {
 
   
   /**
-   * Value of the Payment
+   * {{{historico_pagamento_response_valor_pagamento_value}}}
    **/
   public HistoricoPagamentoResponse valorPagamento(BigDecimal valorPagamento) {
     this.valorPagamento = valorPagamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Value of the Payment")
+  @ApiModelProperty(example = "null", value = "{{{historico_pagamento_response_valor_pagamento_value}}}")
   @JsonProperty("valorPagamento")
   public BigDecimal getValorPagamento() {
     return valorPagamento;
@@ -136,14 +136,14 @@ public class HistoricoPagamentoResponse   {
 
   
   /**
-   * Date and time of the payment. When it is made in a Banking Institution, the payment time is displayed with zero value
+   * {{{historico_pagamento_response_data_hora_pagamento_value}}}
    **/
   public HistoricoPagamentoResponse dataHoraPagamento(String dataHoraPagamento) {
     this.dataHoraPagamento = dataHoraPagamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Date and time of the payment. When it is made in a Banking Institution, the payment time is displayed with zero value")
+  @ApiModelProperty(example = "null", value = "{{{historico_pagamento_response_data_hora_pagamento_value}}}")
   @JsonProperty("dataHoraPagamento")
   public String getDataHoraPagamento() {
     return dataHoraPagamento;
@@ -154,14 +154,14 @@ public class HistoricoPagamentoResponse   {
 
   
   /**
-   * Date and time which the Payment register was created
+   * {{{historico_pagamento_response_data_hora_entrada_pagamento_value}}}
    **/
   public HistoricoPagamentoResponse dataHoraEntradaPagamento(String dataHoraEntradaPagamento) {
     this.dataHoraEntradaPagamento = dataHoraEntradaPagamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Date and time which the Payment register was created")
+  @ApiModelProperty(example = "null", value = "{{{historico_pagamento_response_data_hora_entrada_pagamento_value}}}")
   @JsonProperty("dataHoraEntradaPagamento")
   public String getDataHoraEntradaPagamento() {
     return dataHoraEntradaPagamento;
@@ -172,14 +172,14 @@ public class HistoricoPagamentoResponse   {
 
   
   /**
-   * Identification Code of the Payment Status
+   * {{{historico_pagamento_response_status_value}}}
    **/
   public HistoricoPagamentoResponse status(Long status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the Payment Status")
+  @ApiModelProperty(example = "null", value = "{{{historico_pagamento_response_status_value}}}")
   @JsonProperty("status")
   public Long getStatus() {
     return status;

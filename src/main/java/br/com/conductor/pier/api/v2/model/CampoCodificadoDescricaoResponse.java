@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Object Field Encoded
+ * {{{campo_codificado_descricao_response_description}}}
  **/
 
-@ApiModel(description = "Object Field Encoded")
+@ApiModel(description = "{{{campo_codificado_descricao_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class CampoCodificadoDescricaoResponse   {
   
@@ -20,14 +20,14 @@ public class CampoCodificadoDescricaoResponse   {
 
   
   /**
-   * Identification Code of the description
+   * {{{campo_codificado_descricao_response_codigo_value}}}
    **/
   public CampoCodificadoDescricaoResponse codigo(Long codigo) {
     this.codigo = codigo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the description")
+  @ApiModelProperty(example = "null", value = "{{{campo_codificado_descricao_response_codigo_value}}}")
   @JsonProperty("codigo")
   public Long getCodigo() {
     return codigo;
@@ -38,14 +38,14 @@ public class CampoCodificadoDescricaoResponse   {
 
   
   /**
-   * Description of the encoded field
+   * {{{campo_codificado_descricao_response_descricao_value}}}
    **/
   public CampoCodificadoDescricaoResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Description of the encoded field")
+  @ApiModelProperty(example = "null", value = "{{{campo_codificado_descricao_response_descricao_value}}}")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;

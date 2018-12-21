@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * Adjustment type list
+ * {{{page_moeda_response_description}}}
  **/
 
-@ApiModel(description = "Adjustment type list")
+@ApiModel(description = "{{{page_moeda_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageMoedaResponse   {
   

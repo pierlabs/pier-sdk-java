@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Response object for bank account types
+ * {{{tipo_conta_bancaria_response_description}}}
  **/
 
-@ApiModel(description = "Response object for bank account types")
+@ApiModel(description = "{{{tipo_conta_bancaria_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TipoContaBancariaResponse   {
   
@@ -20,14 +20,14 @@ public class TipoContaBancariaResponse   {
 
   
   /**
-   * Bank Account Type Identifier
+   * {{{tipo_conta_bancaria_response_id_value}}}
    **/
   public TipoContaBancariaResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Bank Account Type Identifier")
+  @ApiModelProperty(example = "null", value = "{{{tipo_conta_bancaria_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -38,14 +38,14 @@ public class TipoContaBancariaResponse   {
 
   
   /**
-   * Description of bank account type
+   * {{{tipo_conta_bancaria_response_descricao_value}}}
    **/
   public TipoContaBancariaResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Description of bank account type")
+  @ApiModelProperty(example = "null", value = "{{{tipo_conta_bancaria_response_descricao_value}}}")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;

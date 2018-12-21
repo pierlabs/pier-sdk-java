@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * Transfer Object
+ * {{{transferencia_detalhe_response_description}}}
  **/
 
-@ApiModel(description = "Transfer Object")
+@ApiModel(description = "{{{transferencia_detalhe_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TransferenciaDetalheResponse   {
   
@@ -27,14 +27,14 @@ public class TransferenciaDetalheResponse   {
 
   
   /**
-   * Identification Code of the transfer (id)
+   * {{{transferencia_detalhe_response_id_value}}}
    **/
   public TransferenciaDetalheResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the transfer (id)")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_detalhe_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -45,14 +45,14 @@ public class TransferenciaDetalheResponse   {
 
   
   /**
-   * Date established to occur the transfer
+   * {{{transferencia_detalhe_response_data_transferencia_value}}}
    **/
   public TransferenciaDetalheResponse dataTransferencia(String dataTransferencia) {
     this.dataTransferencia = dataTransferencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Date established to occur the transfer")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_detalhe_response_data_transferencia_value}}}")
   @JsonProperty("dataTransferencia")
   public String getDataTransferencia() {
     return dataTransferencia;
@@ -63,14 +63,14 @@ public class TransferenciaDetalheResponse   {
 
   
   /**
-   * Identification Code of the account which the value will be debited to the transfer (id)
+   * {{{transferencia_detalhe_response_id_conta_origem_value}}}
    **/
   public TransferenciaDetalheResponse idContaOrigem(Long idContaOrigem) {
     this.idContaOrigem = idContaOrigem;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the account which the value will be debited to the transfer (id)")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_detalhe_response_id_conta_origem_value}}}")
   @JsonProperty("idContaOrigem")
   public Long getIdContaOrigem() {
     return idContaOrigem;
@@ -81,14 +81,14 @@ public class TransferenciaDetalheResponse   {
 
   
   /**
-   * Show the full name of the person that made the transfer
+   * {{{transferencia_detalhe_response_nome_pessoa_origem_value}}}
    **/
   public TransferenciaDetalheResponse nomePessoaOrigem(String nomePessoaOrigem) {
     this.nomePessoaOrigem = nomePessoaOrigem;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Show the full name of the person that made the transfer")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_detalhe_response_nome_pessoa_origem_value}}}")
   @JsonProperty("nomePessoaOrigem")
   public String getNomePessoaOrigem() {
     return nomePessoaOrigem;
@@ -99,14 +99,14 @@ public class TransferenciaDetalheResponse   {
 
   
   /**
-   * Identification Code of the account which the value will be credited to the transfer (id)
+   * {{{transferencia_detalhe_response_id_conta_destino_value}}}
    **/
   public TransferenciaDetalheResponse idContaDestino(Long idContaDestino) {
     this.idContaDestino = idContaDestino;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the account which the value will be credited to the transfer (id)")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_detalhe_response_id_conta_destino_value}}}")
   @JsonProperty("idContaDestino")
   public Long getIdContaDestino() {
     return idContaDestino;
@@ -117,14 +117,14 @@ public class TransferenciaDetalheResponse   {
 
   
   /**
-   * show the full name of the person that recieved the Transfer
+   * {{{transferencia_detalhe_response_nome_pessoa_destino_value}}}
    **/
   public TransferenciaDetalheResponse nomePessoaDestino(String nomePessoaDestino) {
     this.nomePessoaDestino = nomePessoaDestino;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "show the full name of the person that recieved the Transfer")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_detalhe_response_nome_pessoa_destino_value}}}")
   @JsonProperty("nomePessoaDestino")
   public String getNomePessoaDestino() {
     return nomePessoaDestino;
@@ -135,14 +135,14 @@ public class TransferenciaDetalheResponse   {
 
   
   /**
-   * Value established to be transfered
+   * {{{transferencia_detalhe_response_valor_transferencia_value}}}
    **/
   public TransferenciaDetalheResponse valorTransferencia(BigDecimal valorTransferencia) {
     this.valorTransferencia = valorTransferencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Value established to be transfered")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_detalhe_response_valor_transferencia_value}}}")
   @JsonProperty("valorTransferencia")
   public BigDecimal getValorTransferencia() {
     return valorTransferencia;
@@ -153,14 +153,14 @@ public class TransferenciaDetalheResponse   {
 
   
   /**
-   * Value established of the taxe for the transfer
+   * {{{transferencia_detalhe_response_valor_tarifa_value}}}
    **/
   public TransferenciaDetalheResponse valorTarifa(BigDecimal valorTarifa) {
     this.valorTarifa = valorTarifa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Value established of the taxe for the transfer")
+  @ApiModelProperty(example = "null", value = "{{{transferencia_detalhe_response_valor_tarifa_value}}}")
   @JsonProperty("valorTarifa")
   public BigDecimal getValorTarifa() {
     return valorTarifa;

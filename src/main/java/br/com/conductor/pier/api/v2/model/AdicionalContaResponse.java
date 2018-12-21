@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representation of the output of the additional registration feature
+ * {{{adicional_conta_response_description}}}
  **/
 
-@ApiModel(description = "Representation of the output of the additional registration feature")
+@ApiModel(description = "{{{adicional_conta_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class AdicionalContaResponse   {
   
@@ -29,14 +29,14 @@ public class AdicionalContaResponse   {
 
   
   /**
-   * Identification Code of the Account to register the Additional
+   * {{{adicional_conta_response_id_conta_value}}}
    **/
   public AdicionalContaResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the Account to register the Additional")
+  @ApiModelProperty(example = "null", value = "{{{adicional_conta_response_id_conta_value}}}")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -47,14 +47,14 @@ public class AdicionalContaResponse   {
 
   
   /**
-   * Additional Person's Identification Code
+   * {{{adicional_conta_response_id_pessoa_value}}}
    **/
   public AdicionalContaResponse idPessoa(Long idPessoa) {
     this.idPessoa = idPessoa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Additional Person's Identification Code")
+  @ApiModelProperty(example = "null", value = "{{{adicional_conta_response_id_pessoa_value}}}")
   @JsonProperty("idPessoa")
   public Long getIdPessoa() {
     return idPessoa;
@@ -65,14 +65,14 @@ public class AdicionalContaResponse   {
 
   
   /**
-   * Full Name of Additional
+   * {{{adicional_conta_response_nome_value}}}
    **/
   public AdicionalContaResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Full Name of Additional")
+  @ApiModelProperty(example = "null", value = "{{{adicional_conta_response_nome_value}}}")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -83,14 +83,14 @@ public class AdicionalContaResponse   {
 
   
   /**
-   * Name of the Additional that will be recorded on the Card
+   * {{{adicional_conta_response_nome_impresso_value}}}
    **/
   public AdicionalContaResponse nomeImpresso(String nomeImpresso) {
     this.nomeImpresso = nomeImpresso;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Name of the Additional that will be recorded on the Card")
+  @ApiModelProperty(example = "null", value = "{{{adicional_conta_response_nome_impresso_value}}}")
   @JsonProperty("nomeImpresso")
   public String getNomeImpresso() {
     return nomeImpresso;
@@ -101,14 +101,14 @@ public class AdicionalContaResponse   {
 
   
   /**
-   * CPF or CNPJ number of Additional
+   * {{{adicional_conta_response_numero_receita_federal_value}}}
    **/
   public AdicionalContaResponse numeroReceitaFederal(String numeroReceitaFederal) {
     this.numeroReceitaFederal = numeroReceitaFederal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "CPF or CNPJ number of Additional")
+  @ApiModelProperty(example = "null", value = "{{{adicional_conta_response_numero_receita_federal_value}}}")
   @JsonProperty("numeroReceitaFederal")
   public String getNumeroReceitaFederal() {
     return numeroReceitaFederal;
@@ -119,14 +119,14 @@ public class AdicionalContaResponse   {
 
   
   /**
-   * Additional Civil Status Identification Code
+   * {{{adicional_conta_response_id_estado_civil_value}}}
    **/
   public AdicionalContaResponse idEstadoCivil(Long idEstadoCivil) {
     this.idEstadoCivil = idEstadoCivil;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Additional Civil Status Identification Code")
+  @ApiModelProperty(example = "null", value = "{{{adicional_conta_response_id_estado_civil_value}}}")
   @JsonProperty("idEstadoCivil")
   public Long getIdEstadoCivil() {
     return idEstadoCivil;
@@ -137,14 +137,14 @@ public class AdicionalContaResponse   {
 
   
   /**
-   * Professional Identification Code of Additional
+   * {{{adicional_conta_response_id_profissao_value}}}
    **/
   public AdicionalContaResponse idProfissao(Long idProfissao) {
     this.idProfissao = idProfissao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Professional Identification Code of Additional")
+  @ApiModelProperty(example = "null", value = "{{{adicional_conta_response_id_profissao_value}}}")
   @JsonProperty("idProfissao")
   public Long getIdProfissao() {
     return idProfissao;
@@ -155,14 +155,14 @@ public class AdicionalContaResponse   {
 
   
   /**
-   * Nationality Identification Code of Additional
+   * {{{adicional_conta_response_id_nacionalidade_value}}}
    **/
   public AdicionalContaResponse idNacionalidade(Long idNacionalidade) {
     this.idNacionalidade = idNacionalidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nationality Identification Code of Additional")
+  @ApiModelProperty(example = "null", value = "{{{adicional_conta_response_id_nacionalidade_value}}}")
   @JsonProperty("idNacionalidade")
   public Long getIdNacionalidade() {
     return idNacionalidade;
@@ -173,14 +173,14 @@ public class AdicionalContaResponse   {
 
   
   /**
-   * Identification Code of Kinship (id)
+   * {{{adicional_conta_response_id_parentesco_value}}}
    **/
   public AdicionalContaResponse idParentesco(Long idParentesco) {
     this.idParentesco = idParentesco;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of Kinship (id)")
+  @ApiModelProperty(example = "null", value = "{{{adicional_conta_response_id_parentesco_value}}}")
   @JsonProperty("idParentesco")
   public Long getIdParentesco() {
     return idParentesco;
@@ -191,14 +191,14 @@ public class AdicionalContaResponse   {
 
   
   /**
-   * Email of Additional
+   * {{{adicional_conta_response_email_value}}}
    **/
   public AdicionalContaResponse email(String email) {
     this.email = email;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Email of Additional")
+  @ApiModelProperty(example = "null", value = "{{{adicional_conta_response_email_value}}}")
   @JsonProperty("email")
   public String getEmail() {
     return email;
@@ -209,14 +209,14 @@ public class AdicionalContaResponse   {
 
   
   /**
-   * Indicates the date of registration of the additional
+   * {{{adicional_conta_response_data_cadastro_portador_value}}}
    **/
   public AdicionalContaResponse dataCadastroPortador(String dataCadastroPortador) {
     this.dataCadastroPortador = dataCadastroPortador;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Indicates the date of registration of the additional")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{adicional_conta_response_data_cadastro_portador_value}}}")
   @JsonProperty("dataCadastroPortador")
   public String getDataCadastroPortador() {
     return dataCadastroPortador;

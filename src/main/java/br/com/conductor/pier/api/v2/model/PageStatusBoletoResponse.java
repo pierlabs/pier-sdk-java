@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * CNAB Status List Summarized
+ * {{{status_boleto_dto_page_description}}}
  **/
 
-@ApiModel(description = "CNAB Status List Summarized")
+@ApiModel(description = "{{{status_boleto_dto_page_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageStatusBoletoResponse   {
   

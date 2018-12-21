@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * Type of adjustment
+ * {{{tipo_ajuste_response_description}}}
  **/
 
-@ApiModel(description = "Type of adjustment")
+@ApiModel(description = "{{{tipo_ajuste_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TipoAjusteResponse   {
   
@@ -25,14 +25,14 @@ public class TipoAjusteResponse   {
 
   
   /**
-   * Identifier Code of the adjustment type
+   * {{{tipo_ajuste_response_id_value}}}
    **/
   public TipoAjusteResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identifier Code of the adjustment type")
+  @ApiModelProperty(example = "null", value = "{{{tipo_ajuste_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -43,14 +43,14 @@ public class TipoAjusteResponse   {
 
   
   /**
-   * Description of the adjustment type
+   * {{{tipo_ajuste_response_descricao_value}}}
    **/
   public TipoAjusteResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Description of the adjustment type")
+  @ApiModelProperty(example = "null", value = "{{{tipo_ajuste_response_descricao_value}}}")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -61,14 +61,14 @@ public class TipoAjusteResponse   {
 
   
   /**
-   * Identifies whether the payment was made in an establishment
+   * {{{tipo_ajuste_response_flag_pagamento_lojista_value}}}
    **/
   public TipoAjusteResponse flagPagamentoLojista(Boolean flagPagamentoLojista) {
     this.flagPagamentoLojista = flagPagamentoLojista;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Identifies whether the payment was made in an establishment")
+  @ApiModelProperty(example = "false", value = "{{{tipo_ajuste_response_flag_pagamento_lojista_value}}}")
   @JsonProperty("flagPagamentoLojista")
   public Boolean getFlagPagamentoLojista() {
     return flagPagamentoLojista;
@@ -79,14 +79,14 @@ public class TipoAjusteResponse   {
 
   
   /**
-   * Transactions by adjusts type
+   * {{{tipo_ajuste_response_transacoes_value}}}
    **/
   public TipoAjusteResponse transacoes(List<TipoTransacaoAjusteResponse> transacoes) {
     this.transacoes = transacoes;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Transactions by adjusts type")
+  @ApiModelProperty(example = "null", value = "{{{tipo_ajuste_response_transacoes_value}}}")
   @JsonProperty("transacoes")
   public List<TipoTransacaoAjusteResponse> getTransacoes() {
     return transacoes;

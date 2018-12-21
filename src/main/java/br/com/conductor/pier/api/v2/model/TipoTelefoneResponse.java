@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * ObjectTypeTelephone
+ * {{{tipo_telefone_response_description}}}
  **/
 
-@ApiModel(description = "ObjectTypeTelephone")
+@ApiModel(description = "{{{tipo_telefone_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TipoTelefoneResponse   {
   
@@ -20,14 +20,14 @@ public class TipoTelefoneResponse   {
 
   
   /**
-   * Identification Code of the telephone type (id)
+   * {{{tipo_telefone_response_id_value}}}
    **/
   public TipoTelefoneResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the telephone type (id)")
+  @ApiModelProperty(example = "null", value = "{{{tipo_telefone_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -38,14 +38,14 @@ public class TipoTelefoneResponse   {
 
   
   /**
-   * Name of the telephone Type
+   * {{{tipo_telefone_response_nome_value}}}
    **/
   public TipoTelefoneResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Name of the telephone Type")
+  @ApiModelProperty(example = "null", value = "{{{tipo_telefone_response_nome_value}}}")
   @JsonProperty("nome")
   public String getNome() {
     return nome;

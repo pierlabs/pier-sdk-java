@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Object with link-to-cards response
+ * {{{vincular_cartoes_response_description}}}
  **/
 
-@ApiModel(description = "Object with link-to-cards response")
+@ApiModel(description = "{{{vincular_cartoes_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class VinculoCartoesResponse   {
   
@@ -20,14 +20,14 @@ public class VinculoCartoesResponse   {
 
   
   /**
-   * ID code of main card generated
+   * {{{vincular_cartoes_response_id_cartao_value}}}
    **/
   public VinculoCartoesResponse idCartaoPrincipal(Long idCartaoPrincipal) {
     this.idCartaoPrincipal = idCartaoPrincipal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "ID code of main card generated")
+  @ApiModelProperty(example = "null", value = "{{{vincular_cartoes_response_id_cartao_value}}}")
   @JsonProperty("idCartaoPrincipal")
   public Long getIdCartaoPrincipal() {
     return idCartaoPrincipal;
@@ -38,14 +38,14 @@ public class VinculoCartoesResponse   {
 
   
   /**
-   * Id of the card attached to the card
+   * {{{vincular_cartoes_response_id_cartao_vinculado_value}}}
    **/
   public VinculoCartoesResponse idCartaoVinculado(Long idCartaoVinculado) {
     this.idCartaoVinculado = idCartaoVinculado;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Id of the card attached to the card")
+  @ApiModelProperty(example = "null", value = "{{{vincular_cartoes_response_id_cartao_vinculado_value}}}")
   @JsonProperty("idCartaoVinculado")
   public Long getIdCartaoVinculado() {
     return idCartaoVinculado;

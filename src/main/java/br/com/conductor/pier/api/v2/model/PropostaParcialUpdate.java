@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Object that represents a proposal
+ * {{{proposta_parcial_update_description}}}
  **/
 
-@ApiModel(description = "Object that represents a proposal")
+@ApiModel(description = "{{{proposta_parcial_update_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PropostaParcialUpdate   {
   
@@ -19,14 +19,14 @@ public class PropostaParcialUpdate   {
 
   
   /**
-   * Identifier of the mail address for the proposal
+   * {{{proposta_parcial_update_correspondencia_value}}}
    **/
   public PropostaParcialUpdate correspondencia(Integer correspondencia) {
     this.correspondencia = correspondencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identifier of the mail address for the proposal")
+  @ApiModelProperty(example = "null", value = "{{{proposta_parcial_update_correspondencia_value}}}")
   @JsonProperty("correspondencia")
   public Integer getCorrespondencia() {
     return correspondencia;

@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representation Object Response for Payment Benefit
+ * {{{beneficio_pagamento_atraso_response_description}}}
  **/
 
-@ApiModel(description = "Representation Object Response for Payment Benefit")
+@ApiModel(description = "{{{beneficio_pagamento_atraso_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class BeneficioPagamentoAtrasoResponse   {
   
@@ -19,14 +19,14 @@ public class BeneficioPagamentoAtrasoResponse   {
 
   
   /**
-   * Deadline ofr payment of the invoice dealy to recieve benefit of total exemption in the penalty payment, encharge, extra interest and IOF
+   * {{{beneficio_pagamento_atraso_response_data_beneficio_value}}}
    **/
   public BeneficioPagamentoAtrasoResponse dataBeneficio(String dataBeneficio) {
     this.dataBeneficio = dataBeneficio;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd", value = "Deadline ofr payment of the invoice dealy to recieve benefit of total exemption in the penalty payment, encharge, extra interest and IOF")
+  @ApiModelProperty(example = "yyyy-MM-dd", value = "{{{beneficio_pagamento_atraso_response_data_beneficio_value}}}")
   @JsonProperty("dataBeneficio")
   public String getDataBeneficio() {
     return dataBeneficio;

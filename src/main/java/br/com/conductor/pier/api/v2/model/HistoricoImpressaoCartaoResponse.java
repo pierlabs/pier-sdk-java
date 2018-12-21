@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Histotic Card Printing
+ * {{{historico_impressao_cartao_response_description}}}
  **/
 
-@ApiModel(description = "Histotic Card Printing")
+@ApiModel(description = "{{{historico_impressao_cartao_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class HistoricoImpressaoCartaoResponse   {
   
@@ -23,14 +23,14 @@ public class HistoricoImpressaoCartaoResponse   {
 
   
   /**
-   * Identification Code of the Printing Card Historic (id)
+   * {{{historico_impressao_cartao_response_id_value}}}
    **/
   public HistoricoImpressaoCartaoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Identification Code of the Printing Card Historic (id)")
+  @ApiModelProperty(example = "null", required = true, value = "{{{historico_impressao_cartao_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -41,14 +41,14 @@ public class HistoricoImpressaoCartaoResponse   {
 
   
   /**
-   * Identification Code of the Card (id)
+   * {{{historico_impressao_cartao_response_id_cartao_value}}}
    **/
   public HistoricoImpressaoCartaoResponse idCartao(Long idCartao) {
     this.idCartao = idCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Identification Code of the Card (id)")
+  @ApiModelProperty(example = "null", required = true, value = "{{{historico_impressao_cartao_response_id_cartao_value}}}")
   @JsonProperty("idCartao")
   public Long getIdCartao() {
     return idCartao;
@@ -59,14 +59,14 @@ public class HistoricoImpressaoCartaoResponse   {
 
   
   /**
-   * Identification Code of the Printing Card Status (id)
+   * {{{historico_impressao_cartao_response_id_status_impressao_cartao_value}}}
    **/
   public HistoricoImpressaoCartaoResponse idStatusImpressaoCartao(Long idStatusImpressaoCartao) {
     this.idStatusImpressaoCartao = idStatusImpressaoCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Identification Code of the Printing Card Status (id)")
+  @ApiModelProperty(example = "null", required = true, value = "{{{historico_impressao_cartao_response_id_status_impressao_cartao_value}}}")
   @JsonProperty("idStatusImpressaoCartao")
   public Long getIdStatusImpressaoCartao() {
     return idStatusImpressaoCartao;
@@ -77,14 +77,14 @@ public class HistoricoImpressaoCartaoResponse   {
 
   
   /**
-   * Show a message that describes the stage of the printing card process that was made
+   * {{{historico_impressao_cartao_response_mensagem_historico_value}}}
    **/
   public HistoricoImpressaoCartaoResponse mensagemHistorico(String mensagemHistorico) {
     this.mensagemHistorico = mensagemHistorico;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Show a message that describes the stage of the printing card process that was made")
+  @ApiModelProperty(example = "null", value = "{{{historico_impressao_cartao_response_mensagem_historico_value}}}")
   @JsonProperty("mensagemHistorico")
   public String getMensagemHistorico() {
     return mensagemHistorico;
@@ -95,14 +95,14 @@ public class HistoricoImpressaoCartaoResponse   {
 
   
   /**
-   * Show the date that the historic register of the Printing of a Card was inserted
+   * {{{historico_impressao_cartao_response_data_historico_value}}}
    **/
   public HistoricoImpressaoCartaoResponse dataHistorico(String dataHistorico) {
     this.dataHistorico = dataHistorico;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Show the date that the historic register of the Printing of a Card was inserted")
+  @ApiModelProperty(example = "null", value = "{{{historico_impressao_cartao_response_data_historico_value}}}")
   @JsonProperty("dataHistorico")
   public String getDataHistorico() {
     return dataHistorico;

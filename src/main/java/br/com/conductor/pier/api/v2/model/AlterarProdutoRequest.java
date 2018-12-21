@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Request Representation of the device resource
+ * {{{alterar_produto_request_description}}}
  **/
 
-@ApiModel(description = "Request Representation of the device resource")
+@ApiModel(description = "{{{alterar_produto_request_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class AlterarProdutoRequest   {
   
@@ -22,14 +22,14 @@ public class AlterarProdutoRequest   {
 
   
   /**
-   * Identifier Code of the product
+   * {{{alterar_produto_request_id_produto_value}}}
    **/
   public AlterarProdutoRequest idProduto(Long idProduto) {
     this.idProduto = idProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Identifier Code of the product")
+  @ApiModelProperty(example = "null", required = true, value = "{{{alterar_produto_request_id_produto_value}}}")
   @JsonProperty("idProduto")
   public Long getIdProduto() {
     return idProduto;
@@ -40,14 +40,14 @@ public class AlterarProdutoRequest   {
 
   
   /**
-   * Identifier Code of the commercial origin
+   * {{{alterar_produto_request_id_origem_comercial_value}}}
    **/
   public AlterarProdutoRequest idOrigemComercial(Long idOrigemComercial) {
     this.idOrigemComercial = idOrigemComercial;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identifier Code of the commercial origin")
+  @ApiModelProperty(example = "null", value = "{{{alterar_produto_request_id_origem_comercial_value}}}")
   @JsonProperty("idOrigemComercial")
   public Long getIdOrigemComercial() {
     return idOrigemComercial;
@@ -58,14 +58,14 @@ public class AlterarProdutoRequest   {
 
   
   /**
-   * It must be filled out with the idEstablishment where the Grade was made. When it is not informed, it is recorded with the idEstablishment associated to the Commercial Origin that captured the initial register of the account
+   * {{{alterar_produto_request_id_estabelecimento_value}}}
    **/
   public AlterarProdutoRequest idEstabelecimento(Long idEstabelecimento) {
     this.idEstabelecimento = idEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "It must be filled out with the idEstablishment where the Grade was made. When it is not informed, it is recorded with the idEstablishment associated to the Commercial Origin that captured the initial register of the account")
+  @ApiModelProperty(example = "null", value = "{{{alterar_produto_request_id_estabelecimento_value}}}")
   @JsonProperty("idEstabelecimento")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
@@ -76,14 +76,14 @@ public class AlterarProdutoRequest   {
 
   
   /**
-   * It must be filled out with the idCode of the Prosecutor where the Grade was made. When it is not informed, it is recorded a standard identification code
+   * {{{alterar_produto_request_id_promotor_value}}}
    **/
   public AlterarProdutoRequest idPromotor(Long idPromotor) {
     this.idPromotor = idPromotor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "It must be filled out with the idCode of the Prosecutor where the Grade was made. When it is not informed, it is recorded a standard identification code")
+  @ApiModelProperty(example = "null", value = "{{{alterar_produto_request_id_promotor_value}}}")
   @JsonProperty("idPromotor")
   public Long getIdPromotor() {
     return idPromotor;

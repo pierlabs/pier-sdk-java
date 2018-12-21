@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Update Parameters for a Proposal Status
+ * {{{status_proposta_update_request_description}}}
  **/
 
-@ApiModel(description = "Update Parameters for a Proposal Status")
+@ApiModel(description = "{{{status_proposta_update_request_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class StatusPropostaUpdate   {
   
@@ -19,14 +19,14 @@ public class StatusPropostaUpdate   {
 
   
   /**
-   * Proposal status
+   * {{{status_proposta_update_status_value}}}
    **/
   public StatusPropostaUpdate status(Integer status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Proposal status")
+  @ApiModelProperty(example = "null", required = true, value = "{{{status_proposta_update_status_value}}}")
   @JsonProperty("status")
   public Integer getStatus() {
     return status;

@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Represents the request of the feature to include issuer integration
+ * {{{integracao_emissor_proposta_persist_descricao}}}
  **/
 
-@ApiModel(description = "Represents the request of the feature to include issuer integration")
+@ApiModel(description = "{{{integracao_emissor_proposta_persist_descricao}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class IntegracaoEmissorPropostaPersist   {
   
@@ -20,14 +20,14 @@ public class IntegracaoEmissorPropostaPersist   {
 
   
   /**
-   * Registration  Note
+   * {{{integracao_emissor_proposta_persist_observacao}}}
    **/
   public IntegracaoEmissorPropostaPersist observacao(String observacao) {
     this.observacao = observacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Registration  Note")
+  @ApiModelProperty(example = "null", value = "{{{integracao_emissor_proposta_persist_observacao}}}")
   @JsonProperty("observacao")
   public String getObservacao() {
     return observacao;
@@ -38,14 +38,14 @@ public class IntegracaoEmissorPropostaPersist   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da proposta externa
+   * {{{integracao_emissor_proposta_persist_id_proposta}}}
    **/
   public IntegracaoEmissorPropostaPersist idProposta(Long idProposta) {
     this.idProposta = idProposta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o da proposta externa")
+  @ApiModelProperty(example = "null", value = "{{{integracao_emissor_proposta_persist_id_proposta}}}")
   @JsonProperty("idProposta")
   public Long getIdProposta() {
     return idProposta;

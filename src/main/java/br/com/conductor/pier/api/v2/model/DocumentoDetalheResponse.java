@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Response Representation for the detailed document
+ * {{{documento_detalhe_response_description}}}
  **/
 
-@ApiModel(description = "Response Representation for the detailed document")
+@ApiModel(description = "{{{documento_detalhe_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class DocumentoDetalheResponse   {
   
@@ -21,14 +21,14 @@ public class DocumentoDetalheResponse   {
 
   
   /**
-   * ID of identification of the document
+   * {{{documento_detalhe_response_id_value}}}
    **/
   public DocumentoDetalheResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "ID of identification of the document")
+  @ApiModelProperty(example = "null", value = "{{{documento_detalhe_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -39,14 +39,14 @@ public class DocumentoDetalheResponse   {
 
   
   /**
-   * Detailing Properties of the document
+   * {{{documento_detalhe_response_propriedade_value}}}
    **/
   public DocumentoDetalheResponse propriedade(String propriedade) {
     this.propriedade = propriedade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Detailing Properties of the document")
+  @ApiModelProperty(example = "null", value = "{{{documento_detalhe_response_propriedade_value}}}")
   @JsonProperty("propriedade")
   public String getPropriedade() {
     return propriedade;
@@ -57,14 +57,14 @@ public class DocumentoDetalheResponse   {
 
   
   /**
-   * Detailing Content of the document
+   * {{{documento_detalhe_response_conteudo_value}}}
    **/
   public DocumentoDetalheResponse conteudo(String conteudo) {
     this.conteudo = conteudo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Detailing Content of the document")
+  @ApiModelProperty(example = "null", value = "{{{documento_detalhe_response_conteudo_value}}}")
   @JsonProperty("conteudo")
   public String getConteudo() {
     return conteudo;

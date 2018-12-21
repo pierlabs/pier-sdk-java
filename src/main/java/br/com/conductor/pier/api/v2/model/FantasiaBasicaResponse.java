@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Response Representation of the telephone operator resource
+ * {{{fantasia_basica_response_description}}}
  **/
 
-@ApiModel(description = "Response Representation of the telephone operator resource")
+@ApiModel(description = "{{{fantasia_basica_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class FantasiaBasicaResponse   {
   
@@ -21,14 +21,14 @@ public class FantasiaBasicaResponse   {
 
   
   /**
-   * Identifier of the Basic Fantasy
+   * {{{fantasia_basica_response_id_value}}}
    **/
   public FantasiaBasicaResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identifier of the Basic Fantasy")
+  @ApiModelProperty(example = "null", value = "{{{fantasia_basica_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -39,14 +39,14 @@ public class FantasiaBasicaResponse   {
 
   
   /**
-   * Name of the Basic fantasy
+   * {{{fantasia_basica_response_nome_value}}}
    **/
   public FantasiaBasicaResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Name of the Basic fantasy")
+  @ApiModelProperty(example = "null", value = "{{{fantasia_basica_response_nome_value}}}")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -57,14 +57,14 @@ public class FantasiaBasicaResponse   {
 
   
   /**
-   * Description of the basic fantasy
+   * {{{fantasia_basica_response_descricao_value}}}
    **/
   public FantasiaBasicaResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Description of the basic fantasy")
+  @ApiModelProperty(example = "null", value = "{{{fantasia_basica_response_descricao_value}}}")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;

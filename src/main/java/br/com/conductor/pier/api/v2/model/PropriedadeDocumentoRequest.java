@@ -9,10 +9,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Object that encapsulate the properties of document detailing
+ * {{{propriedade_documento_request_description}}}
  **/
 
-@ApiModel(description = "Object that encapsulate the properties of document detailing")
+@ApiModel(description = "{{{propriedade_documento_request_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PropriedadeDocumentoRequest   {
   
@@ -43,14 +43,14 @@ public class PropriedadeDocumentoRequest   {
 
   
   /**
-   * Value of the property of document
+   * {{{propriedade_documento_request_chave_value}}}
    **/
   public PropriedadeDocumentoRequest chave(String chave) {
     this.chave = chave;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Value of the property of document")
+  @ApiModelProperty(example = "null", value = "{{{propriedade_documento_request_chave_value}}}")
   @JsonProperty("chave")
   public String getChave() {
     return chave;
@@ -61,14 +61,14 @@ public class PropriedadeDocumentoRequest   {
 
   
   /**
-   * Value of the property of document
+   * {{{propriedade_documento_request_valor_value}}}
    **/
   public PropriedadeDocumentoRequest valor(String valor) {
     this.valor = valor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Value of the property of document")
+  @ApiModelProperty(example = "null", value = "{{{propriedade_documento_request_valor_value}}}")
   @JsonProperty("valor")
   public String getValor() {
     return valor;
@@ -79,14 +79,14 @@ public class PropriedadeDocumentoRequest   {
 
   
   /**
-   * Type of the property of document
+   * {{{propriedade_documento_request_detalhes_tipo_value}}}
    **/
   public PropriedadeDocumentoRequest detalhesTipo(DetalhesTipoEnum detalhesTipo) {
     this.detalhesTipo = detalhesTipo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Type of the property of document")
+  @ApiModelProperty(example = "null", value = "{{{propriedade_documento_request_detalhes_tipo_value}}}")
   @JsonProperty("detalhesTipo")
   public DetalhesTipoEnum getDetalhesTipo() {
     return detalhesTipo;
@@ -97,14 +97,14 @@ public class PropriedadeDocumentoRequest   {
 
   
   /**
-   * Atrributed to what indicates if the parameter is an index (default =false)
+   * {{{propriedade_documento_request_flag_indice_value}}}
    **/
   public PropriedadeDocumentoRequest flagIndice(Boolean flagIndice) {
     this.flagIndice = flagIndice;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Atrributed to what indicates if the parameter is an index (default =false)")
+  @ApiModelProperty(example = "false", value = "{{{propriedade_documento_request_flag_indice_value}}}")
   @JsonProperty("flagIndice")
   public Boolean getFlagIndice() {
     return flagIndice;

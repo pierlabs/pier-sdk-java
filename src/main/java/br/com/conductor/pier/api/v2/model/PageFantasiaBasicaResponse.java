@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * Response Representation of the basic fantasy resource
+ * {{{page_fantasia_basica_response_description}}}
  **/
 
-@ApiModel(description = "Response Representation of the basic fantasy resource")
+@ApiModel(description = "{{{page_fantasia_basica_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageFantasiaBasicaResponse   {
   

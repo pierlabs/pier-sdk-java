@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * Response representation of the recurrent debit type resource
+ * {{{page_tipo_debito_recorrente_response_description}}}
  **/
 
-@ApiModel(description = "Response representation of the recurrent debit type resource")
+@ApiModel(description = "{{{page_tipo_debito_recorrente_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageTipoDebitoRecorrenteResponse   {
   

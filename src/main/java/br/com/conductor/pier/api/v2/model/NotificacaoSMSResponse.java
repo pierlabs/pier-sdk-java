@@ -9,10 +9,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Object SMS
+ * {{{notificacao_s_m_s_response_description}}}
  **/
 
-@ApiModel(description = "Object SMS")
+@ApiModel(description = "{{{notificacao_s_m_s_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class NotificacaoSMSResponse   {
   
@@ -98,14 +98,14 @@ public class NotificacaoSMSResponse   {
 
   
   /**
-   * Identifier Code
+   * {{{notificacao_s_m_s_response_id_value}}}
    **/
   public NotificacaoSMSResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identifier Code")
+  @ApiModelProperty(example = "null", value = "{{{notificacao_s_m_s_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -116,14 +116,14 @@ public class NotificacaoSMSResponse   {
 
   
   /**
-   * Unique Sequel Number
+   * {{{notificacao_s_m_s_response_nsu_value}}}
    **/
   public NotificacaoSMSResponse nsu(Long nsu) {
     this.nsu = nsu;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Unique Sequel Number")
+  @ApiModelProperty(example = "null", value = "{{{notificacao_s_m_s_response_nsu_value}}}")
   @JsonProperty("nsu")
   public Long getNsu() {
     return nsu;
@@ -134,14 +134,14 @@ public class NotificacaoSMSResponse   {
 
   
   /**
-   * Identification Code of the issuer (id)
+   * {{{notificacao_s_m_s_response_id_emissor_value}}}
    **/
   public NotificacaoSMSResponse idEmissor(Long idEmissor) {
     this.idEmissor = idEmissor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the issuer (id)")
+  @ApiModelProperty(example = "null", value = "{{{notificacao_s_m_s_response_id_emissor_value}}}")
   @JsonProperty("idEmissor")
   public Long getIdEmissor() {
     return idEmissor;
@@ -152,14 +152,14 @@ public class NotificacaoSMSResponse   {
 
   
   /**
-   * TipoEvento de notifica??o
+   * {{{notificacao_s_m_s_response_tipo_evento_value}}}
    **/
   public NotificacaoSMSResponse tipoEvento(TipoEventoEnum tipoEvento) {
     this.tipoEvento = tipoEvento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "TipoEvento de notifica??o")
+  @ApiModelProperty(example = "null", value = "{{{notificacao_s_m_s_response_tipo_evento_value}}}")
   @JsonProperty("tipoEvento")
   public TipoEventoEnum getTipoEvento() {
     return tipoEvento;
@@ -170,14 +170,14 @@ public class NotificacaoSMSResponse   {
 
   
   /**
-   * Notification Sending Status
+   * {{{notificacao_s_m_s_response_status_value}}}
    **/
   public NotificacaoSMSResponse status(StatusEnum status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Notification Sending Status")
+  @ApiModelProperty(example = "null", required = true, value = "{{{notificacao_s_m_s_response_status_value}}}")
   @JsonProperty("status")
   public StatusEnum getStatus() {
     return status;
@@ -188,14 +188,14 @@ public class NotificacaoSMSResponse   {
 
   
   /**
-   * Description of the sending status of the notification
+   * {{{notificacao_s_m_s_response_descricao_status_value}}}
    **/
   public NotificacaoSMSResponse descricaoStatus(String descricaoStatus) {
     this.descricaoStatus = descricaoStatus;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Description of the sending status of the notification")
+  @ApiModelProperty(example = "null", required = true, value = "{{{notificacao_s_m_s_response_descricao_status_value}}}")
   @JsonProperty("descricaoStatus")
   public String getDescricaoStatus() {
     return descricaoStatus;
@@ -206,14 +206,14 @@ public class NotificacaoSMSResponse   {
 
   
   /**
-   * Identified Code of the person
+   * {{{notificacao_s_m_s_response_id_pessoa_value}}}
    **/
   public NotificacaoSMSResponse idPessoa(Long idPessoa) {
     this.idPessoa = idPessoa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Identified Code of the person")
+  @ApiModelProperty(example = "null", required = true, value = "{{{notificacao_s_m_s_response_id_pessoa_value}}}")
   @JsonProperty("idPessoa")
   public Long getIdPessoa() {
     return idPessoa;
@@ -224,14 +224,14 @@ public class NotificacaoSMSResponse   {
 
   
   /**
-   * Identifier Code of the Account
+   * {{{notificacao_s_m_s_response_id_conta_value}}}
    **/
   public NotificacaoSMSResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Identifier Code of the Account")
+  @ApiModelProperty(example = "null", required = true, value = "{{{notificacao_s_m_s_response_id_conta_value}}}")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -242,14 +242,14 @@ public class NotificacaoSMSResponse   {
 
   
   /**
-   * Show the cell phone to be sent the SMS in format 5588999999999 or 5588999999999
+   * {{{notificacao_s_m_s_response_celular_value}}}
    **/
   public NotificacaoSMSResponse celular(String celular) {
     this.celular = celular;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Show the cell phone to be sent the SMS in format 5588999999999 or 5588999999999")
+  @ApiModelProperty(example = "null", required = true, value = "{{{notificacao_s_m_s_response_celular_value}}}")
   @JsonProperty("celular")
   public String getCelular() {
     return celular;
@@ -260,14 +260,14 @@ public class NotificacaoSMSResponse   {
 
   
   /**
-   * Show the operator of the cell phone to be sent the SMS
+   * {{{notificacao_s_m_s_response_operadora_value}}}
    **/
   public NotificacaoSMSResponse operadora(String operadora) {
     this.operadora = operadora;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Show the operator of the cell phone to be sent the SMS")
+  @ApiModelProperty(example = "null", required = true, value = "{{{notificacao_s_m_s_response_operadora_value}}}")
   @JsonProperty("operadora")
   public String getOperadora() {
     return operadora;
@@ -278,14 +278,14 @@ public class NotificacaoSMSResponse   {
 
   
   /**
-   * Show the notification text to be sent
+   * {{{notificacao_s_m_s_response_conteudo_value}}}
    **/
   public NotificacaoSMSResponse conteudo(String conteudo) {
     this.conteudo = conteudo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Show the notification text to be sent")
+  @ApiModelProperty(example = "null", required = true, value = "{{{notificacao_s_m_s_response_conteudo_value}}}")
   @JsonProperty("conteudo")
   public String getConteudo() {
     return conteudo;
@@ -296,14 +296,14 @@ public class NotificacaoSMSResponse   {
 
   
   /**
-   * Show the text of the notification response that was sent
+   * {{{notificacao_s_m_s_response_resposta_value}}}
    **/
   public NotificacaoSMSResponse resposta(String resposta) {
     this.resposta = resposta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Show the text of the notification response that was sent")
+  @ApiModelProperty(example = "null", required = true, value = "{{{notificacao_s_m_s_response_resposta_value}}}")
   @JsonProperty("resposta")
   public String getResposta() {
     return resposta;
@@ -314,14 +314,14 @@ public class NotificacaoSMSResponse   {
 
   
   /**
-   * Show the date and time which will be sent the notification
+   * {{{notificacao_s_m_s_response_data_agendamento_value}}}
    **/
   public NotificacaoSMSResponse dataAgendamento(String dataAgendamento) {
     this.dataAgendamento = dataAgendamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Show the date and time which will be sent the notification")
+  @ApiModelProperty(example = "null", required = true, value = "{{{notificacao_s_m_s_response_data_agendamento_value}}}")
   @JsonProperty("dataAgendamento")
   public String getDataAgendamento() {
     return dataAgendamento;
@@ -332,14 +332,14 @@ public class NotificacaoSMSResponse   {
 
   
   /**
-   * Quantity of attempts and notification sending
+   * {{{notificacao_s_m_s_response_quantidade_tentativas_envio_value}}}
    **/
   public NotificacaoSMSResponse quantidadeTentativasEnvio(Integer quantidadeTentativasEnvio) {
     this.quantidadeTentativasEnvio = quantidadeTentativasEnvio;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Quantity of attempts and notification sending")
+  @ApiModelProperty(example = "null", required = true, value = "{{{notificacao_s_m_s_response_quantidade_tentativas_envio_value}}}")
   @JsonProperty("quantidadeTentativasEnvio")
   public Integer getQuantidadeTentativasEnvio() {
     return quantidadeTentativasEnvio;
@@ -350,14 +350,14 @@ public class NotificacaoSMSResponse   {
 
   
   /**
-   * Show the date which the register was included in the base to be sent
+   * {{{notificacao_s_m_s_response_data_inclusao_value}}}
    **/
   public NotificacaoSMSResponse dataInclusao(String dataInclusao) {
     this.dataInclusao = dataInclusao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Show the date which the register was included in the base to be sent")
+  @ApiModelProperty(example = "null", required = true, value = "{{{notificacao_s_m_s_response_data_inclusao_value}}}")
   @JsonProperty("dataInclusao")
   public String getDataInclusao() {
     return dataInclusao;
@@ -368,14 +368,14 @@ public class NotificacaoSMSResponse   {
 
   
   /**
-   * Show the date which the status of the register was modified
+   * {{{notificacao_s_m_s_response_data_alteracao_status_value}}}
    **/
   public NotificacaoSMSResponse dataAlteracaoStatus(String dataAlteracaoStatus) {
     this.dataAlteracaoStatus = dataAlteracaoStatus;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Show the date which the status of the register was modified")
+  @ApiModelProperty(example = "null", required = true, value = "{{{notificacao_s_m_s_response_data_alteracao_status_value}}}")
   @JsonProperty("dataAlteracaoStatus")
   public String getDataAlteracaoStatus() {
     return dataAlteracaoStatus;
@@ -386,14 +386,14 @@ public class NotificacaoSMSResponse   {
 
   
   /**
-   * Protocol Number of the notification sending
+   * {{{notificacao_s_m_s_response_protocolo_value}}}
    **/
   public NotificacaoSMSResponse protocolo(String protocolo) {
     this.protocolo = protocolo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Protocol Number of the notification sending")
+  @ApiModelProperty(example = "null", value = "{{{notificacao_s_m_s_response_protocolo_value}}}")
   @JsonProperty("protocolo")
   public String getProtocolo() {
     return protocolo;

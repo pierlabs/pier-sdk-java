@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * Credit Transfer bank account request
+ * {{{plano_parcelamento_transferencia_credito_conta_bancaria_request_description}}}
  **/
 
-@ApiModel(description = "Credit Transfer bank account request")
+@ApiModel(description = "{{{plano_parcelamento_transferencia_credito_conta_bancaria_request_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest   {
   
@@ -22,14 +22,14 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest   {
 
   
   /**
-   * Identification Card of the Card
+   * {{{plano_parcelamento_transferencia_credito_conta_bancaria_request_id_cartao_value}}}
    **/
   public PlanoParcelamentoTransferenciaCreditoContaBancariaRequest idCartao(Long idCartao) {
     this.idCartao = idCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Identification Card of the Card")
+  @ApiModelProperty(example = "null", required = true, value = "{{{plano_parcelamento_transferencia_credito_conta_bancaria_request_id_cartao_value}}}")
   @JsonProperty("idCartao")
   public Long getIdCartao() {
     return idCartao;
@@ -40,14 +40,14 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest   {
 
   
   /**
-   * Value of transaction with two decimal places for the cents
+   * {{{plano_parcelamento_transferencia_credito_conta_bancaria_request_valor_transacao_value}}}
    **/
   public PlanoParcelamentoTransferenciaCreditoContaBancariaRequest valorTransacao(BigDecimal valorTransacao) {
     this.valorTransacao = valorTransacao;
     return this;
   }
   
-  @ApiModelProperty(example = "0.0", required = true, value = "Value of transaction with two decimal places for the cents")
+  @ApiModelProperty(example = "0.0", required = true, value = "{{{plano_parcelamento_transferencia_credito_conta_bancaria_request_valor_transacao_value}}}")
   @JsonProperty("valorTransacao")
   public BigDecimal getValorTransacao() {
     return valorTransacao;
@@ -58,14 +58,14 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest   {
 
   
   /**
-   * Represent the number of months given as shortage
+   * {{{plano_parcelamento_transferencia_credito_conta_bancaria_request_numero_meses_carencia_value}}}
    **/
   public PlanoParcelamentoTransferenciaCreditoContaBancariaRequest numeroMesesCarencia(Integer numeroMesesCarencia) {
     this.numeroMesesCarencia = numeroMesesCarencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Represent the number of months given as shortage")
+  @ApiModelProperty(example = "null", required = true, value = "{{{plano_parcelamento_transferencia_credito_conta_bancaria_request_numero_meses_carencia_value}}}")
   @JsonProperty("numeroMesesCarencia")
   public Integer getNumeroMesesCarencia() {
     return numeroMesesCarencia;

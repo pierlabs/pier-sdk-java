@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Request from OTP requisition
+ * {{{secure_3d_request_description}}}
  **/
 
-@ApiModel(description = "Request from OTP requisition")
+@ApiModel(description = "{{{secure_3d_request_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class Secure3dRequest   {
   
@@ -20,14 +20,14 @@ public class Secure3dRequest   {
 
   
   /**
-   * Identifier Account's card
+   * {{{secure_3d_request_id_cartao}}}
    **/
   public Secure3dRequest idCartao(Long idCartao) {
     this.idCartao = idCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identifier Account's card")
+  @ApiModelProperty(example = "null", value = "{{{secure_3d_request_id_cartao}}}")
   @JsonProperty("idCartao")
   public Long getIdCartao() {
     return idCartao;
@@ -38,14 +38,14 @@ public class Secure3dRequest   {
 
   
   /**
-   * OTP will send to client
+   * {{{secure_3d_request_otp_3d_secure}}}
    **/
   public Secure3dRequest otp(String otp) {
     this.otp = otp;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "OTP will send to client")
+  @ApiModelProperty(example = "null", value = "{{{secure_3d_request_otp_3d_secure}}}")
   @JsonProperty("otp")
   public String getOtp() {
     return otp;

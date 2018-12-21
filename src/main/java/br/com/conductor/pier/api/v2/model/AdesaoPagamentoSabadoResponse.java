@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Represents an adhesion of payment on saturdays
+ * {{{adesao_pagamento_sabado_resposta_descricao}}}
  **/
 
-@ApiModel(description = "Represents an adhesion of payment on saturdays")
+@ApiModel(description = "{{{adesao_pagamento_sabado_resposta_descricao}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class AdesaoPagamentoSabadoResponse   {
   
@@ -22,14 +22,14 @@ public class AdesaoPagamentoSabadoResponse   {
 
   
   /**
-   * Adhesion register date
+   * {{{adesao_pagamento_sabado_resposta_data_cadastro_descricao}}}
    **/
   public AdesaoPagamentoSabadoResponse dataCadastro(String dataCadastro) {
     this.dataCadastro = dataCadastro;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ", value = "Adhesion register date")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ", value = "{{{adesao_pagamento_sabado_resposta_data_cadastro_descricao}}}")
   @JsonProperty("dataCadastro")
   public String getDataCadastro() {
     return dataCadastro;
@@ -40,14 +40,14 @@ public class AdesaoPagamentoSabadoResponse   {
 
   
   /**
-   * Adhesion due date
+   * {{{adesao_pagamento_sabado_resposta_data_vencimento_descricao}}}
    **/
   public AdesaoPagamentoSabadoResponse dataVencimento(String dataVencimento) {
     this.dataVencimento = dataVencimento;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd", value = "Adhesion due date")
+  @ApiModelProperty(example = "yyyy-MM-dd", value = "{{{adesao_pagamento_sabado_resposta_data_vencimento_descricao}}}")
   @JsonProperty("dataVencimento")
   public String getDataVencimento() {
     return dataVencimento;
@@ -58,14 +58,14 @@ public class AdesaoPagamentoSabadoResponse   {
 
   
   /**
-   * Adhesion id
+   * {{{adesao_pagamento_sabado_resposta_id_descricao}}}
    **/
   public AdesaoPagamentoSabadoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Adhesion id")
+  @ApiModelProperty(example = "null", value = "{{{adesao_pagamento_sabado_resposta_id_descricao}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -76,14 +76,14 @@ public class AdesaoPagamentoSabadoResponse   {
 
   
   /**
-   * Account id
+   * {{{adesao_pagamento_sabado_resposta_id_conta_descricao}}}
    **/
   public AdesaoPagamentoSabadoResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Account id")
+  @ApiModelProperty(example = "null", value = "{{{adesao_pagamento_sabado_resposta_id_conta_descricao}}}")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;

@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * response Representation of the Annuity types resource
+ * {{{page_anuidade_response_description}}}
  **/
 
-@ApiModel(description = "response Representation of the Annuity types resource")
+@ApiModel(description = "{{{page_anuidade_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageAnuidadeResponse   {
   

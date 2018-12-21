@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * Invoice
+ * {{{fatura_fechada_response_description}}}
  **/
 
-@ApiModel(description = "Invoice")
+@ApiModel(description = "{{{fatura_fechada_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class FaturaFechadaResponse   {
   
@@ -47,14 +47,14 @@ public class FaturaFechadaResponse   {
 
   
   /**
-   * Identifier Code of the invoice
+   * {{{fatura_fechada_response_id_value}}}
    **/
   public FaturaFechadaResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identifier Code of the invoice")
+  @ApiModelProperty(example = "null", value = "{{{fatura_fechada_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -65,14 +65,14 @@ public class FaturaFechadaResponse   {
 
   
   /**
-   * Identifier code of the account
+   * {{{fatura_fechada_response_id_conta_value}}}
    **/
   public FaturaFechadaResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identifier code of the account")
+  @ApiModelProperty(example = "null", value = "{{{fatura_fechada_response_id_conta_value}}}")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -83,14 +83,14 @@ public class FaturaFechadaResponse   {
 
   
   /**
-   * Identifier Code of the account which the invoice refers to
+   * {{{fatura_fechada_response_flag_emite_fatura_value}}}
    **/
   public FaturaFechadaResponse flagEmiteFatura(Integer flagEmiteFatura) {
     this.flagEmiteFatura = flagEmiteFatura;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identifier Code of the account which the invoice refers to")
+  @ApiModelProperty(example = "null", value = "{{{fatura_fechada_response_flag_emite_fatura_value}}}")
   @JsonProperty("flagEmiteFatura")
   public Integer getFlagEmiteFatura() {
     return flagEmiteFatura;
@@ -101,14 +101,14 @@ public class FaturaFechadaResponse   {
 
   
   /**
-   * Expiration date of the invoice
+   * {{{fatura_fechada_response_data_vencimento_fatura_value}}}
    **/
   public FaturaFechadaResponse dataVencimentoFatura(String dataVencimentoFatura) {
     this.dataVencimentoFatura = dataVencimentoFatura;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Expiration date of the invoice")
+  @ApiModelProperty(example = "null", value = "{{{fatura_fechada_response_data_vencimento_fatura_value}}}")
   @JsonProperty("dataVencimentoFatura")
   public String getDataVencimentoFatura() {
     return dataVencimentoFatura;
@@ -119,14 +119,14 @@ public class FaturaFechadaResponse   {
 
   
   /**
-   * Value for the total payment of the invoice
+   * {{{fatura_fechada_response_valor_total_fatura_value}}}
    **/
   public FaturaFechadaResponse valorTotalFatura(BigDecimal valorTotalFatura) {
     this.valorTotalFatura = valorTotalFatura;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Value for the total payment of the invoice")
+  @ApiModelProperty(example = "null", value = "{{{fatura_fechada_response_valor_total_fatura_value}}}")
   @JsonProperty("valorTotalFatura")
   public BigDecimal getValorTotalFatura() {
     return valorTotalFatura;
@@ -137,14 +137,14 @@ public class FaturaFechadaResponse   {
 
   
   /**
-   * Total value of the previous invoice
+   * {{{fatura_fechada_response_valor_fatura_anterior_value}}}
    **/
   public FaturaFechadaResponse valorFaturaAnterior(BigDecimal valorFaturaAnterior) {
     this.valorFaturaAnterior = valorFaturaAnterior;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Total value of the previous invoice")
+  @ApiModelProperty(example = "null", value = "{{{fatura_fechada_response_valor_fatura_anterior_value}}}")
   @JsonProperty("valorFaturaAnterior")
   public BigDecimal getValorFaturaAnterior() {
     return valorFaturaAnterior;
@@ -155,14 +155,14 @@ public class FaturaFechadaResponse   {
 
   
   /**
-   * Minimum value for payment of the invoice
+   * {{{fatura_fechada_response_valor_pagamento_minimo_value}}}
    **/
   public FaturaFechadaResponse valorPagamentoMinimo(BigDecimal valorPagamentoMinimo) {
     this.valorPagamentoMinimo = valorPagamentoMinimo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Minimum value for payment of the invoice")
+  @ApiModelProperty(example = "null", value = "{{{fatura_fechada_response_valor_pagamento_minimo_value}}}")
   @JsonProperty("valorPagamentoMinimo")
   public BigDecimal getValorPagamentoMinimo() {
     return valorPagamentoMinimo;
@@ -173,14 +173,14 @@ public class FaturaFechadaResponse   {
 
   
   /**
-   * Total value of the national shops launched in the invoice
+   * {{{fatura_fechada_response_total_compras_nacionais_value}}}
    **/
   public FaturaFechadaResponse totalComprasNacionais(BigDecimal totalComprasNacionais) {
     this.totalComprasNacionais = totalComprasNacionais;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Total value of the national shops launched in the invoice")
+  @ApiModelProperty(example = "null", value = "{{{fatura_fechada_response_total_compras_nacionais_value}}}")
   @JsonProperty("totalComprasNacionais")
   public BigDecimal getTotalComprasNacionais() {
     return totalComprasNacionais;
@@ -191,14 +191,14 @@ public class FaturaFechadaResponse   {
 
   
   /**
-   * Total value of the internatitional shops launched in the invoice
+   * {{{fatura_fechada_response_total_compras_internacionas_value}}}
    **/
   public FaturaFechadaResponse totalComprasInternacionas(BigDecimal totalComprasInternacionas) {
     this.totalComprasInternacionas = totalComprasInternacionas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Total value of the internatitional shops launched in the invoice")
+  @ApiModelProperty(example = "null", value = "{{{fatura_fechada_response_total_compras_internacionas_value}}}")
   @JsonProperty("totalComprasInternacionas")
   public BigDecimal getTotalComprasInternacionas() {
     return totalComprasInternacionas;
@@ -209,14 +209,14 @@ public class FaturaFechadaResponse   {
 
   
   /**
-   * Total value of the national Withdrawals launched in the invoice
+   * {{{fatura_fechada_response_total_saques_nacionais_value}}}
    **/
   public FaturaFechadaResponse totalSaquesNacionais(BigDecimal totalSaquesNacionais) {
     this.totalSaquesNacionais = totalSaquesNacionais;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Total value of the national Withdrawals launched in the invoice")
+  @ApiModelProperty(example = "null", value = "{{{fatura_fechada_response_total_saques_nacionais_value}}}")
   @JsonProperty("totalSaquesNacionais")
   public BigDecimal getTotalSaquesNacionais() {
     return totalSaquesNacionais;
@@ -227,14 +227,14 @@ public class FaturaFechadaResponse   {
 
   
   /**
-   * Total value of the international Withdrawals launched in the invoice
+   * {{{fatura_fechada_response_total_saques_internacionais_value}}}
    **/
   public FaturaFechadaResponse totalSaquesInternacionais(BigDecimal totalSaquesInternacionais) {
     this.totalSaquesInternacionais = totalSaquesInternacionais;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Total value of the international Withdrawals launched in the invoice")
+  @ApiModelProperty(example = "null", value = "{{{fatura_fechada_response_total_saques_internacionais_value}}}")
   @JsonProperty("totalSaquesInternacionais")
   public BigDecimal getTotalSaquesInternacionais() {
     return totalSaquesInternacionais;
@@ -245,14 +245,14 @@ public class FaturaFechadaResponse   {
 
   
   /**
-   * Total Value of the national debits launched in the invoice
+   * {{{fatura_fechada_response_total_debitos_nacionais_value}}}
    **/
   public FaturaFechadaResponse totalDebitosNacionais(BigDecimal totalDebitosNacionais) {
     this.totalDebitosNacionais = totalDebitosNacionais;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Total Value of the national debits launched in the invoice")
+  @ApiModelProperty(example = "null", value = "{{{fatura_fechada_response_total_debitos_nacionais_value}}}")
   @JsonProperty("totalDebitosNacionais")
   public BigDecimal getTotalDebitosNacionais() {
     return totalDebitosNacionais;
@@ -263,14 +263,14 @@ public class FaturaFechadaResponse   {
 
   
   /**
-   * Total Value of the recurrent debits launched in the invoice
+   * {{{fatura_fechada_response_total_debitos_recorrentes_value}}}
    **/
   public FaturaFechadaResponse totalDebitosRecorrentes(BigDecimal totalDebitosRecorrentes) {
     this.totalDebitosRecorrentes = totalDebitosRecorrentes;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Total Value of the recurrent debits launched in the invoice")
+  @ApiModelProperty(example = "null", value = "{{{fatura_fechada_response_total_debitos_recorrentes_value}}}")
   @JsonProperty("totalDebitosRecorrentes")
   public BigDecimal getTotalDebitosRecorrentes() {
     return totalDebitosRecorrentes;
@@ -281,14 +281,14 @@ public class FaturaFechadaResponse   {
 
   
   /**
-   * Total value of the international debits launched in the invoice
+   * {{{fatura_fechada_response_total_debitos_internacionais_value}}}
    **/
   public FaturaFechadaResponse totalDebitosInternacionais(BigDecimal totalDebitosInternacionais) {
     this.totalDebitosInternacionais = totalDebitosInternacionais;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Total value of the international debits launched in the invoice")
+  @ApiModelProperty(example = "null", value = "{{{fatura_fechada_response_total_debitos_internacionais_value}}}")
   @JsonProperty("totalDebitosInternacionais")
   public BigDecimal getTotalDebitosInternacionais() {
     return totalDebitosInternacionais;
@@ -299,14 +299,14 @@ public class FaturaFechadaResponse   {
 
   
   /**
-   * Total Value of the Several National Debits launched in the invoice
+   * {{{fatura_fechada_response_total_debitos_diversos_nacionais_value}}}
    **/
   public FaturaFechadaResponse totalDebitosDiversosNacionais(BigDecimal totalDebitosDiversosNacionais) {
     this.totalDebitosDiversosNacionais = totalDebitosDiversosNacionais;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Total Value of the Several National Debits launched in the invoice")
+  @ApiModelProperty(example = "null", value = "{{{fatura_fechada_response_total_debitos_diversos_nacionais_value}}}")
   @JsonProperty("totalDebitosDiversosNacionais")
   public BigDecimal getTotalDebitosDiversosNacionais() {
     return totalDebitosDiversosNacionais;
@@ -317,14 +317,14 @@ public class FaturaFechadaResponse   {
 
   
   /**
-   * Total value of the Several Optional Debits launched in the invoice
+   * {{{fatura_fechada_response_total_debitos_opcionais_value}}}
    **/
   public FaturaFechadaResponse totalDebitosOpcionais(BigDecimal totalDebitosOpcionais) {
     this.totalDebitosOpcionais = totalDebitosOpcionais;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Total value of the Several Optional Debits launched in the invoice")
+  @ApiModelProperty(example = "null", value = "{{{fatura_fechada_response_total_debitos_opcionais_value}}}")
   @JsonProperty("totalDebitosOpcionais")
   public BigDecimal getTotalDebitosOpcionais() {
     return totalDebitosOpcionais;
@@ -335,14 +335,14 @@ public class FaturaFechadaResponse   {
 
   
   /**
-   * total value of the payments launched in the invoice
+   * {{{fatura_fechada_response_total_pagamentos_value}}}
    **/
   public FaturaFechadaResponse totalPagamentos(BigDecimal totalPagamentos) {
     this.totalPagamentos = totalPagamentos;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "total value of the payments launched in the invoice")
+  @ApiModelProperty(example = "null", value = "{{{fatura_fechada_response_total_pagamentos_value}}}")
   @JsonProperty("totalPagamentos")
   public BigDecimal getTotalPagamentos() {
     return totalPagamentos;
@@ -353,14 +353,14 @@ public class FaturaFechadaResponse   {
 
   
   /**
-   * Total value of the national credits launched in the invoice
+   * {{{fatura_fechada_response_total_creditos_nacionais_value}}}
    **/
   public FaturaFechadaResponse totalCreditosNacionais(BigDecimal totalCreditosNacionais) {
     this.totalCreditosNacionais = totalCreditosNacionais;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Total value of the national credits launched in the invoice")
+  @ApiModelProperty(example = "null", value = "{{{fatura_fechada_response_total_creditos_nacionais_value}}}")
   @JsonProperty("totalCreditosNacionais")
   public BigDecimal getTotalCreditosNacionais() {
     return totalCreditosNacionais;
@@ -371,14 +371,14 @@ public class FaturaFechadaResponse   {
 
   
   /**
-   * Total value of the adjustments launched in the invoice
+   * {{{fatura_fechada_response_total_ajustes_value}}}
    **/
   public FaturaFechadaResponse totalAjustes(BigDecimal totalAjustes) {
     this.totalAjustes = totalAjustes;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Total value of the adjustments launched in the invoice")
+  @ApiModelProperty(example = "null", value = "{{{fatura_fechada_response_total_ajustes_value}}}")
   @JsonProperty("totalAjustes")
   public BigDecimal getTotalAjustes() {
     return totalAjustes;
@@ -389,14 +389,14 @@ public class FaturaFechadaResponse   {
 
   
   /**
-   * Total value of the fees launched in the invoice
+   * {{{fatura_fechada_response_total_tarifas_value}}}
    **/
   public FaturaFechadaResponse totalTarifas(BigDecimal totalTarifas) {
     this.totalTarifas = totalTarifas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Total value of the fees launched in the invoice")
+  @ApiModelProperty(example = "null", value = "{{{fatura_fechada_response_total_tarifas_value}}}")
   @JsonProperty("totalTarifas")
   public BigDecimal getTotalTarifas() {
     return totalTarifas;
@@ -407,14 +407,14 @@ public class FaturaFechadaResponse   {
 
   
   /**
-   * Total Value of the fine launched in the invoice
+   * {{{fatura_fechada_response_total_multa_value}}}
    **/
   public FaturaFechadaResponse totalMulta(BigDecimal totalMulta) {
     this.totalMulta = totalMulta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Total Value of the fine launched in the invoice")
+  @ApiModelProperty(example = "null", value = "{{{fatura_fechada_response_total_multa_value}}}")
   @JsonProperty("totalMulta")
   public BigDecimal getTotalMulta() {
     return totalMulta;
@@ -425,14 +425,14 @@ public class FaturaFechadaResponse   {
 
   
   /**
-   * Total value of the interest launched in the invoice
+   * {{{fatura_fechada_response_total_juros_value}}}
    **/
   public FaturaFechadaResponse totalJuros(BigDecimal totalJuros) {
     this.totalJuros = totalJuros;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Total value of the interest launched in the invoice")
+  @ApiModelProperty(example = "null", value = "{{{fatura_fechada_response_total_juros_value}}}")
   @JsonProperty("totalJuros")
   public BigDecimal getTotalJuros() {
     return totalJuros;
@@ -443,14 +443,14 @@ public class FaturaFechadaResponse   {
 
   
   /**
-   * Percentage value of the revolving interest taxes
+   * {{{fatura_fechada_response_taxa_rotativo_value}}}
    **/
   public FaturaFechadaResponse taxaRotativo(BigDecimal taxaRotativo) {
     this.taxaRotativo = taxaRotativo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Percentage value of the revolving interest taxes")
+  @ApiModelProperty(example = "null", value = "{{{fatura_fechada_response_taxa_rotativo_value}}}")
   @JsonProperty("taxaRotativo")
   public BigDecimal getTaxaRotativo() {
     return taxaRotativo;
@@ -461,14 +461,14 @@ public class FaturaFechadaResponse   {
 
   
   /**
-   * Percentage value of the Withdrawal taxe
+   * {{{fatura_fechada_response_taxa_saque_value}}}
    **/
   public FaturaFechadaResponse taxaSaque(BigDecimal taxaSaque) {
     this.taxaSaque = taxaSaque;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Percentage value of the Withdrawal taxe")
+  @ApiModelProperty(example = "null", value = "{{{fatura_fechada_response_taxa_saque_value}}}")
   @JsonProperty("taxaSaque")
   public BigDecimal getTaxaSaque() {
     return taxaSaque;
@@ -479,14 +479,14 @@ public class FaturaFechadaResponse   {
 
   
   /**
-   * Maximum percentage value of the charges for the next period
+   * {{{fatura_fechada_response_taxa_maxima_proximo_periodo_value}}}
    **/
   public FaturaFechadaResponse taxaMaximaProximoPeriodo(BigDecimal taxaMaximaProximoPeriodo) {
     this.taxaMaximaProximoPeriodo = taxaMaximaProximoPeriodo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Maximum percentage value of the charges for the next period")
+  @ApiModelProperty(example = "null", value = "{{{fatura_fechada_response_taxa_maxima_proximo_periodo_value}}}")
   @JsonProperty("taxaMaximaProximoPeriodo")
   public BigDecimal getTaxaMaximaProximoPeriodo() {
     return taxaMaximaProximoPeriodo;
@@ -497,14 +497,14 @@ public class FaturaFechadaResponse   {
 
   
   /**
-   * Show the sum of all the charged insurances in the invoice of the client
+   * {{{fatura_fechada_response_total_servicos_value}}}
    **/
   public FaturaFechadaResponse totalServicos(BigDecimal totalServicos) {
     this.totalServicos = totalServicos;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Show the sum of all the charged insurances in the invoice of the client")
+  @ApiModelProperty(example = "null", required = true, value = "{{{fatura_fechada_response_total_servicos_value}}}")
   @JsonProperty("totalServicos")
   public BigDecimal getTotalServicos() {
     return totalServicos;
@@ -515,14 +515,14 @@ public class FaturaFechadaResponse   {
 
   
   /**
-   * Show the sum of all parceled values + national shops
+   * {{{fatura_fechada_response_total_parcelado_nacionais_value}}}
    **/
   public FaturaFechadaResponse totalParceladoNacionais(BigDecimal totalParceladoNacionais) {
     this.totalParceladoNacionais = totalParceladoNacionais;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Show the sum of all parceled values + national shops")
+  @ApiModelProperty(example = "null", required = true, value = "{{{fatura_fechada_response_total_parcelado_nacionais_value}}}")
   @JsonProperty("totalParceladoNacionais")
   public BigDecimal getTotalParceladoNacionais() {
     return totalParceladoNacionais;
@@ -533,14 +533,14 @@ public class FaturaFechadaResponse   {
 
   
   /**
-   * Show the sum of all the parceled values + international shops
+   * {{{fatura_fechada_response_total_parcelado_internacionais_value}}}
    **/
   public FaturaFechadaResponse totalParceladoInternacionais(BigDecimal totalParceladoInternacionais) {
     this.totalParceladoInternacionais = totalParceladoInternacionais;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Show the sum of all the parceled values + international shops")
+  @ApiModelProperty(example = "null", required = true, value = "{{{fatura_fechada_response_total_parcelado_internacionais_value}}}")
   @JsonProperty("totalParceladoInternacionais")
   public BigDecimal getTotalParceladoInternacionais() {
     return totalParceladoInternacionais;

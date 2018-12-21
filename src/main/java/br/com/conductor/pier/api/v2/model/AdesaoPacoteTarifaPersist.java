@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Persistence object for Membership Package Tariff
+ * {{{adesao_pacote_tarifa_persistencia_descricao}}}
  **/
 
-@ApiModel(description = "Persistence object for Membership Package Tariff")
+@ApiModel(description = "{{{adesao_pacote_tarifa_persistencia_descricao}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class AdesaoPacoteTarifaPersist   {
   
@@ -32,14 +32,14 @@ public class AdesaoPacoteTarifaPersist   {
 
   
   /**
-   * rate pack id
+   * {{{adesao_pacote_tarifa_persistencia_id_pacote_tarefa_descricao}}}
    **/
   public AdesaoPacoteTarifaPersist idPacoteTarifa(Long idPacoteTarifa) {
     this.idPacoteTarifa = idPacoteTarifa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "rate pack id")
+  @ApiModelProperty(example = "null", required = true, value = "{{{adesao_pacote_tarifa_persistencia_id_pacote_tarefa_descricao}}}")
   @JsonProperty("idPacoteTarifa")
   public Long getIdPacoteTarifa() {
     return idPacoteTarifa;
@@ -50,14 +50,14 @@ public class AdesaoPacoteTarifaPersist   {
 
   
   /**
-   * accession cycle
+   * {{{adesao_pacote_tarifa_persistencia_ciclo_descricao}}}
    **/
   public AdesaoPacoteTarifaPersist ciclo(Integer ciclo) {
     this.ciclo = ciclo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "accession cycle")
+  @ApiModelProperty(example = "null", value = "{{{adesao_pacote_tarifa_persistencia_ciclo_descricao}}}")
   @JsonProperty("ciclo")
   public Integer getCiclo() {
     return ciclo;
@@ -68,14 +68,14 @@ public class AdesaoPacoteTarifaPersist   {
 
   
   /**
-   * date of activation
+   * {{{adesao_pacote_tarifa_persistencia_data_hora_ativacao_descricao}}}
    **/
   public AdesaoPacoteTarifaPersist dataHoraAtivacao(String dataHoraAtivacao) {
     this.dataHoraAtivacao = dataHoraAtivacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "date of activation")
+  @ApiModelProperty(example = "null", value = "{{{adesao_pacote_tarifa_persistencia_data_hora_ativacao_descricao}}}")
   @JsonProperty("dataHoraAtivacao")
   public String getDataHoraAtivacao() {
     return dataHoraAtivacao;
@@ -86,14 +86,14 @@ public class AdesaoPacoteTarifaPersist   {
 
   
   /**
-   * date of deactivation
+   * {{{adesao_pacote_tarifa_persistencia_data_hora_desativacao_descricao}}}
    **/
   public AdesaoPacoteTarifaPersist dataHoraDesativacao(String dataHoraDesativacao) {
     this.dataHoraDesativacao = dataHoraDesativacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "date of deactivation")
+  @ApiModelProperty(example = "null", value = "{{{adesao_pacote_tarifa_persistencia_data_hora_desativacao_descricao}}}")
   @JsonProperty("dataHoraDesativacao")
   public String getDataHoraDesativacao() {
     return dataHoraDesativacao;
@@ -104,14 +104,14 @@ public class AdesaoPacoteTarifaPersist   {
 
   
   /**
-   * end date of the cycle
+   * {{{adesao_pacote_tarifa_persistencia_data_fim_ciclo_descricao}}}
    **/
   public AdesaoPacoteTarifaPersist dataFimCiclo(String dataFimCiclo) {
     this.dataFimCiclo = dataFimCiclo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "end date of the cycle")
+  @ApiModelProperty(example = "null", value = "{{{adesao_pacote_tarifa_persistencia_data_fim_ciclo_descricao}}}")
   @JsonProperty("dataFimCiclo")
   public String getDataFimCiclo() {
     return dataFimCiclo;
@@ -122,14 +122,14 @@ public class AdesaoPacoteTarifaPersist   {
 
   
   /**
-   * used cellular recharge
+   * {{{adesao_pacote_tarifa_persistencia_recarga_celular_utilizado_descricao}}}
    **/
   public AdesaoPacoteTarifaPersist recargaCelularUtilizado(Integer recargaCelularUtilizado) {
     this.recargaCelularUtilizado = recargaCelularUtilizado;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "used cellular recharge")
+  @ApiModelProperty(example = "null", required = true, value = "{{{adesao_pacote_tarifa_persistencia_recarga_celular_utilizado_descricao}}}")
   @JsonProperty("recargaCelularUtilizado")
   public Integer getRecargaCelularUtilizado() {
     return recargaCelularUtilizado;
@@ -140,14 +140,14 @@ public class AdesaoPacoteTarifaPersist   {
 
   
   /**
-   * Single Ticket Used
+   * {{{adesao_pacote_tarifa_persistencia_bilhete_unico_utilizado_descricao}}}
    **/
   public AdesaoPacoteTarifaPersist bilheteUnicoUtilizado(Integer bilheteUnicoUtilizado) {
     this.bilheteUnicoUtilizado = bilheteUnicoUtilizado;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Single Ticket Used")
+  @ApiModelProperty(example = "null", required = true, value = "{{{adesao_pacote_tarifa_persistencia_bilhete_unico_utilizado_descricao}}}")
   @JsonProperty("bilheteUnicoUtilizado")
   public Integer getBilheteUnicoUtilizado() {
     return bilheteUnicoUtilizado;
@@ -158,14 +158,14 @@ public class AdesaoPacoteTarifaPersist   {
 
   
   /**
-   * payment Used Account
+   * {{{adesao_pacote_tarifa_persistencia_pagamento_conta_utilizado_descricao}}}
    **/
   public AdesaoPacoteTarifaPersist pagamentoContaUtilizado(Integer pagamentoContaUtilizado) {
     this.pagamentoContaUtilizado = pagamentoContaUtilizado;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "payment Used Account")
+  @ApiModelProperty(example = "null", required = true, value = "{{{adesao_pacote_tarifa_persistencia_pagamento_conta_utilizado_descricao}}}")
   @JsonProperty("pagamentoContaUtilizado")
   public Integer getPagamentoContaUtilizado() {
     return pagamentoContaUtilizado;
@@ -176,14 +176,14 @@ public class AdesaoPacoteTarifaPersist   {
 
   
   /**
-   * serve used
+   * {{{adesao_pacote_tarifa_persistencia_saque_utilizado_descricao}}}
    **/
   public AdesaoPacoteTarifaPersist saqueUtilizado(Integer saqueUtilizado) {
     this.saqueUtilizado = saqueUtilizado;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "serve used")
+  @ApiModelProperty(example = "null", required = true, value = "{{{adesao_pacote_tarifa_persistencia_saque_utilizado_descricao}}}")
   @JsonProperty("saqueUtilizado")
   public Integer getSaqueUtilizado() {
     return saqueUtilizado;
@@ -194,14 +194,14 @@ public class AdesaoPacoteTarifaPersist   {
 
   
   /**
-   * used transfer
+   * {{{adesao_pacote_tarifa_persistencia_transferencia_utilizado_descricao}}}
    **/
   public AdesaoPacoteTarifaPersist transferenciaUtilizado(Integer transferenciaUtilizado) {
     this.transferenciaUtilizado = transferenciaUtilizado;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "used transfer")
+  @ApiModelProperty(example = "null", required = true, value = "{{{adesao_pacote_tarifa_persistencia_transferencia_utilizado_descricao}}}")
   @JsonProperty("transferenciaUtilizado")
   public Integer getTransferenciaUtilizado() {
     return transferenciaUtilizado;
@@ -212,14 +212,14 @@ public class AdesaoPacoteTarifaPersist   {
 
   
   /**
-   * used ticket
+   * {{{adesao_pacote_tarifa_persistencia_boleto_utilizado_descricao}}}
    **/
   public AdesaoPacoteTarifaPersist boletoUtilizado(Integer boletoUtilizado) {
     this.boletoUtilizado = boletoUtilizado;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "used ticket")
+  @ApiModelProperty(example = "null", required = true, value = "{{{adesao_pacote_tarifa_persistencia_boleto_utilizado_descricao}}}")
   @JsonProperty("boletoUtilizado")
   public Integer getBoletoUtilizado() {
     return boletoUtilizado;
@@ -230,14 +230,14 @@ public class AdesaoPacoteTarifaPersist   {
 
   
   /**
-   * application Used
+   * {{{adesao_pacote_tarifa_persistencia_aplicacao_utilizado_descricao}}}
    **/
   public AdesaoPacoteTarifaPersist aplicacaoUtilizado(Integer aplicacaoUtilizado) {
     this.aplicacaoUtilizado = aplicacaoUtilizado;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "application Used")
+  @ApiModelProperty(example = "null", required = true, value = "{{{adesao_pacote_tarifa_persistencia_aplicacao_utilizado_descricao}}}")
   @JsonProperty("aplicacaoUtilizado")
   public Integer getAplicacaoUtilizado() {
     return aplicacaoUtilizado;
@@ -248,14 +248,14 @@ public class AdesaoPacoteTarifaPersist   {
 
   
   /**
-   * Rate Maintenance Charged
+   * {{{adesao_pacote_tarifa_persistencia_tarifa_manutencao_cobrada_descricao}}}
    **/
   public AdesaoPacoteTarifaPersist tarifaManutencaoCobrada(Boolean tarifaManutencaoCobrada) {
     this.tarifaManutencaoCobrada = tarifaManutencaoCobrada;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Rate Maintenance Charged")
+  @ApiModelProperty(example = "false", value = "{{{adesao_pacote_tarifa_persistencia_tarifa_manutencao_cobrada_descricao}}}")
   @JsonProperty("tarifaManutencaoCobrada")
   public Boolean getTarifaManutencaoCobrada() {
     return tarifaManutencaoCobrada;
@@ -266,14 +266,14 @@ public class AdesaoPacoteTarifaPersist   {
 
   
   /**
-   * tariff charged
+   * {{{adesao_pacote_tarifa_persistencia_cobra_tarifa_descricao}}}
    **/
   public AdesaoPacoteTarifaPersist cobraTarifa(Boolean cobraTarifa) {
     this.cobraTarifa = cobraTarifa;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "tariff charged")
+  @ApiModelProperty(example = "false", value = "{{{adesao_pacote_tarifa_persistencia_cobra_tarifa_descricao}}}")
   @JsonProperty("cobraTarifa")
   public Boolean getCobraTarifa() {
     return cobraTarifa;

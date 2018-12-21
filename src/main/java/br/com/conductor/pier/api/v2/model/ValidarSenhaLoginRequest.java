@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representation of the login request valid for login
+ * {{{validar_senha_login_request_description}}}
  **/
 
-@ApiModel(description = "Representation of the login request valid for login")
+@ApiModel(description = "{{{validar_senha_login_request_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ValidarSenhaLoginRequest   {
   
@@ -19,14 +19,14 @@ public class ValidarSenhaLoginRequest   {
 
   
   /**
-   * PlataformId
+   * {{{validar_senha_login_request_id_plataforma_value}}}
    **/
   public ValidarSenhaLoginRequest idPlataforma(Integer idPlataforma) {
     this.idPlataforma = idPlataforma;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "PlataformId")
+  @ApiModelProperty(example = "null", value = "{{{validar_senha_login_request_id_plataforma_value}}}")
   @JsonProperty("idPlataforma")
   public Integer getIdPlataforma() {
     return idPlataforma;

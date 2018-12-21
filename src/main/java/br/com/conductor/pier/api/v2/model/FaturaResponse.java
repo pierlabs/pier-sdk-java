@@ -10,10 +10,10 @@ import java.math.BigDecimal;
 
 
 /**
- * Future Invoice
+ * {{{fatura_response_description}}}
  **/
 
-@ApiModel(description = "Future Invoice")
+@ApiModel(description = "{{{fatura_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class FaturaResponse   {
   
@@ -50,14 +50,14 @@ public class FaturaResponse   {
 
   
   /**
-   * Identification Code of the Account
+   * {{{fatura_response_id_conta_value}}}
    **/
   public FaturaResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the Account")
+  @ApiModelProperty(example = "null", value = "{{{fatura_response_id_conta_value}}}")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -68,14 +68,14 @@ public class FaturaResponse   {
 
   
   /**
-   * Processing situation of the invoice
+   * {{{fatura_response_situacao_processamento_value}}}
    **/
   public FaturaResponse situacaoProcessamento(SituacaoProcessamentoEnum situacaoProcessamento) {
     this.situacaoProcessamento = situacaoProcessamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Processing situation of the invoice")
+  @ApiModelProperty(example = "null", value = "{{{fatura_response_situacao_processamento_value}}}")
   @JsonProperty("situacaoProcessamento")
   public SituacaoProcessamentoEnum getSituacaoProcessamento() {
     return situacaoProcessamento;
@@ -86,14 +86,14 @@ public class FaturaResponse   {
 
   
   /**
-   * Effected Payment Status
+   * {{{fatura_response_pagamento_efetuado_value}}}
    **/
   public FaturaResponse pagamentoEfetuado(Boolean pagamentoEfetuado) {
     this.pagamentoEfetuado = pagamentoEfetuado;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Effected Payment Status")
+  @ApiModelProperty(example = "false", value = "{{{fatura_response_pagamento_efetuado_value}}}")
   @JsonProperty("pagamentoEfetuado")
   public Boolean getPagamentoEfetuado() {
     return pagamentoEfetuado;
@@ -104,14 +104,14 @@ public class FaturaResponse   {
 
   
   /**
-   * Expiration date of the invoice
+   * {{{fatura_response_data_vencimento_fatura_value}}}
    **/
   public FaturaResponse dataVencimentoFatura(String dataVencimentoFatura) {
     this.dataVencimentoFatura = dataVencimentoFatura;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd", value = "Expiration date of the invoice")
+  @ApiModelProperty(example = "yyyy-MM-dd", value = "{{{fatura_response_data_vencimento_fatura_value}}}")
   @JsonProperty("dataVencimentoFatura")
   public String getDataVencimentoFatura() {
     return dataVencimentoFatura;
@@ -122,14 +122,14 @@ public class FaturaResponse   {
 
   
   /**
-   * Real expiration date of the invoice
+   * {{{fatura_response_data_vencimento_real_value}}}
    **/
   public FaturaResponse dataVencimentoReal(String dataVencimentoReal) {
     this.dataVencimentoReal = dataVencimentoReal;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd", value = "Real expiration date of the invoice")
+  @ApiModelProperty(example = "yyyy-MM-dd", value = "{{{fatura_response_data_vencimento_real_value}}}")
   @JsonProperty("dataVencimentoReal")
   public String getDataVencimentoReal() {
     return dataVencimentoReal;
@@ -140,14 +140,14 @@ public class FaturaResponse   {
 
   
   /**
-   * Closing date of the invoice
+   * {{{fatura_response_data_fechamento_value}}}
    **/
   public FaturaResponse dataFechamento(String dataFechamento) {
     this.dataFechamento = dataFechamento;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd", value = "Closing date of the invoice")
+  @ApiModelProperty(example = "yyyy-MM-dd", value = "{{{fatura_response_data_fechamento_value}}}")
   @JsonProperty("dataFechamento")
   public String getDataFechamento() {
     return dataFechamento;
@@ -158,14 +158,14 @@ public class FaturaResponse   {
 
   
   /**
-   * Total value of the invoice
+   * {{{fatura_response_valor_total_value}}}
    **/
   public FaturaResponse valorTotal(BigDecimal valorTotal) {
     this.valorTotal = valorTotal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Total value of the invoice")
+  @ApiModelProperty(example = "null", value = "{{{fatura_response_valor_total_value}}}")
   @JsonProperty("valorTotal")
   public BigDecimal getValorTotal() {
     return valorTotal;
@@ -176,14 +176,14 @@ public class FaturaResponse   {
 
   
   /**
-   * Value of the minimum payment
+   * {{{fatura_response_valor_pagamento_minimo_value}}}
    **/
   public FaturaResponse valorPagamentoMinimo(BigDecimal valorPagamentoMinimo) {
     this.valorPagamentoMinimo = valorPagamentoMinimo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Value of the minimum payment")
+  @ApiModelProperty(example = "null", value = "{{{fatura_response_valor_pagamento_minimo_value}}}")
   @JsonProperty("valorPagamentoMinimo")
   public BigDecimal getValorPagamentoMinimo() {
     return valorPagamentoMinimo;
@@ -194,14 +194,14 @@ public class FaturaResponse   {
 
   
   /**
-   * Value of the previous value
+   * {{{fatura_response_saldo_anterior_value}}}
    **/
   public FaturaResponse saldoAnterior(BigDecimal saldoAnterior) {
     this.saldoAnterior = saldoAnterior;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Value of the previous value")
+  @ApiModelProperty(example = "null", value = "{{{fatura_response_saldo_anterior_value}}}")
   @JsonProperty("saldoAnterior")
   public BigDecimal getSaldoAnterior() {
     return saldoAnterior;
@@ -212,14 +212,14 @@ public class FaturaResponse   {
 
   
   /**
-   * Identification Code of the Ticket
+   * {{{fatura_response_id_boleto_value}}}
    **/
   public FaturaResponse idBoleto(Long idBoleto) {
     this.idBoleto = idBoleto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the Ticket")
+  @ApiModelProperty(example = "null", value = "{{{fatura_response_id_boleto_value}}}")
   @JsonProperty("idBoleto")
   public Long getIdBoleto() {
     return idBoleto;

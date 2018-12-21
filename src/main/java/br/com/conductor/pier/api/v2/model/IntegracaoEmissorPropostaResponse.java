@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Response of the inclusion of the record of the proposal for integration
+ * {{{integracao_emissor_proposta_resposta_descricao}}}
  **/
 
-@ApiModel(description = "Response of the inclusion of the record of the proposal for integration")
+@ApiModel(description = "{{{integracao_emissor_proposta_resposta_descricao}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class IntegracaoEmissorPropostaResponse   {
   
@@ -25,14 +25,14 @@ public class IntegracaoEmissorPropostaResponse   {
 
   
   /**
-   * Identification code
+   * {{{integracao_emissor_proposta_resposta_id}}}
    **/
   public IntegracaoEmissorPropostaResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification code")
+  @ApiModelProperty(example = "null", value = "{{{integracao_emissor_proposta_resposta_id}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -43,14 +43,14 @@ public class IntegracaoEmissorPropostaResponse   {
 
   
   /**
-   * Account ID code
+   * {{{integracao_emissor_proposta_resposta_id_conta}}}
    **/
   public IntegracaoEmissorPropostaResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Account ID code")
+  @ApiModelProperty(example = "null", value = "{{{integracao_emissor_proposta_resposta_id_conta}}}")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -61,14 +61,14 @@ public class IntegracaoEmissorPropostaResponse   {
 
   
   /**
-   * Registration status
+   * {{{integracao_emissor_proposta_resposta_status}}}
    **/
   public IntegracaoEmissorPropostaResponse status(Integer status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Registration status")
+  @ApiModelProperty(example = "null", value = "{{{integracao_emissor_proposta_resposta_status}}}")
   @JsonProperty("status")
   public Integer getStatus() {
     return status;
@@ -79,14 +79,14 @@ public class IntegracaoEmissorPropostaResponse   {
 
   
   /**
-   * Record notice
+   * {{{integracao_emissor_proposta_resposta_observacao}}}
    **/
   public IntegracaoEmissorPropostaResponse observacao(String observacao) {
     this.observacao = observacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Record notice")
+  @ApiModelProperty(example = "null", value = "{{{integracao_emissor_proposta_resposta_observacao}}}")
   @JsonProperty("observacao")
   public String getObservacao() {
     return observacao;
@@ -97,14 +97,14 @@ public class IntegracaoEmissorPropostaResponse   {
 
   
   /**
-   * Flag selected
+   * {{{integracao_emissor_proposta_resposta_flag_selecionado}}}
    **/
   public IntegracaoEmissorPropostaResponse flagSelecionado(Boolean flagSelecionado) {
     this.flagSelecionado = flagSelecionado;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Flag selected")
+  @ApiModelProperty(example = "false", value = "{{{integracao_emissor_proposta_resposta_flag_selecionado}}}")
   @JsonProperty("flagSelecionado")
   public Boolean getFlagSelecionado() {
     return flagSelecionado;
@@ -115,14 +115,14 @@ public class IntegracaoEmissorPropostaResponse   {
 
   
   /**
-   * Identification code of the external proposal
+   * {{{integracao_emissor_proposta_resposta_id_proposta_externa}}}
    **/
   public IntegracaoEmissorPropostaResponse idPropostaExterna(Long idPropostaExterna) {
     this.idPropostaExterna = idPropostaExterna;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification code of the external proposal")
+  @ApiModelProperty(example = "null", value = "{{{integracao_emissor_proposta_resposta_id_proposta_externa}}}")
   @JsonProperty("idPropostaExterna")
   public Long getIdPropostaExterna() {
     return idPropostaExterna;
@@ -133,14 +133,14 @@ public class IntegracaoEmissorPropostaResponse   {
 
   
   /**
-   * Date of the event
+   * {{{integracao_emissor_proposta_resposta_data_evento}}}
    **/
   public IntegracaoEmissorPropostaResponse dataEvento(String dataEvento) {
     this.dataEvento = dataEvento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Date of the event")
+  @ApiModelProperty(example = "null", value = "{{{integracao_emissor_proposta_resposta_data_evento}}}")
   @JsonProperty("dataEvento")
   public String getDataEvento() {
     return dataEvento;

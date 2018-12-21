@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * List of user linked accounts
+ * {{{page_usuario_conta_resposta_descricao}}}
  **/
 
-@ApiModel(description = "List of user linked accounts")
+@ApiModel(description = "{{{page_usuario_conta_resposta_descricao}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageUsuarioContasResponse   {
   

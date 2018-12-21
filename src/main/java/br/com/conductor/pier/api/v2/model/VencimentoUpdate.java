@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representation Object Update for Expirations
+ * {{{vencimento_update_description}}}
  **/
 
-@ApiModel(description = "Representation Object Update for Expirations")
+@ApiModel(description = "{{{vencimento_update_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class VencimentoUpdate   {
   
@@ -19,14 +19,14 @@ public class VencimentoUpdate   {
 
   
   /**
-   * expected expiring date
+   * {{{vencimento_update_data_prevista_corte_value}}}
    **/
   public VencimentoUpdate dataPrevistaCorte(String dataPrevistaCorte) {
     this.dataPrevistaCorte = dataPrevistaCorte;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "expected expiring date")
+  @ApiModelProperty(example = "null", value = "{{{vencimento_update_data_prevista_corte_value}}}")
   @JsonProperty("dataPrevistaCorte")
   public String getDataPrevistaCorte() {
     return dataPrevistaCorte;

@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Represents a mobile application response
+ * {{{aplicacao_mobile_emissor_resposta_descricao}}}
  **/
 
-@ApiModel(description = "Represents a mobile application response")
+@ApiModel(description = "{{{aplicacao_mobile_emissor_resposta_descricao}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class AplicacaoMobileEmissorResponse   {
   
@@ -19,14 +19,14 @@ public class AplicacaoMobileEmissorResponse   {
 
   
   /**
-   * Mobile application id
+   * {{{aplicacao_mobile_emissor_resposta_id_descricao}}}
    **/
   public AplicacaoMobileEmissorResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Mobile application id")
+  @ApiModelProperty(example = "null", value = "{{{aplicacao_mobile_emissor_resposta_id_descricao}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;

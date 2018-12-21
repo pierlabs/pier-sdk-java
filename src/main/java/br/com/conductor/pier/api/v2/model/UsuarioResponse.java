@@ -9,10 +9,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representation of the user resource
+ * {{{usuario_response_description}}}
  **/
 
-@ApiModel(description = "Representation of the user resource")
+@ApiModel(description = "{{{usuario_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class UsuarioResponse   {
   
@@ -51,14 +51,14 @@ public class UsuarioResponse   {
 
   
   /**
-   * User Id
+   * {{{usuario_response_id_value}}}
    **/
   public UsuarioResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "User Id")
+  @ApiModelProperty(example = "null", value = "{{{usuario_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -69,14 +69,14 @@ public class UsuarioResponse   {
 
   
   /**
-   * Username
+   * {{{usuario_response_nome_value}}}
    **/
   public UsuarioResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Username")
+  @ApiModelProperty(example = "null", value = "{{{usuario_response_nome_value}}}")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -87,14 +87,14 @@ public class UsuarioResponse   {
 
   
   /**
-   * User login
+   * {{{usuario_response_login_value}}}
    **/
   public UsuarioResponse login(String login) {
     this.login = login;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "User login")
+  @ApiModelProperty(example = "null", required = true, value = "{{{usuario_response_login_value}}}")
   @JsonProperty("login")
   public String getLogin() {
     return login;
@@ -105,14 +105,14 @@ public class UsuarioResponse   {
 
   
   /**
-   * User issuer Id
+   * {{{usuario_response_id_emissor_value}}}
    **/
   public UsuarioResponse idEmissor(Long idEmissor) {
     this.idEmissor = idEmissor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "User issuer Id")
+  @ApiModelProperty(example = "null", value = "{{{usuario_response_id_emissor_value}}}")
   @JsonProperty("idEmissor")
   public Long getIdEmissor() {
     return idEmissor;
@@ -123,14 +123,14 @@ public class UsuarioResponse   {
 
   
   /**
-   * User user
+   * {{{usuario_response_cpf_value}}}
    **/
   public UsuarioResponse cpf(String cpf) {
     this.cpf = cpf;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "User user")
+  @ApiModelProperty(example = "null", value = "{{{usuario_response_cpf_value}}}")
   @JsonProperty("cpf")
   public String getCpf() {
     return cpf;
@@ -141,14 +141,14 @@ public class UsuarioResponse   {
 
   
   /**
-   * User email
+   * {{{usuario_response_email_value}}}
    **/
   public UsuarioResponse email(String email) {
     this.email = email;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "User email")
+  @ApiModelProperty(example = "null", required = true, value = "{{{usuario_response_email_value}}}")
   @JsonProperty("email")
   public String getEmail() {
     return email;
@@ -159,14 +159,14 @@ public class UsuarioResponse   {
 
   
   /**
-   * User Status
+   * {{{usuario_response_status_value}}}
    **/
   public UsuarioResponse status(StatusEnum status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "User Status")
+  @ApiModelProperty(example = "null", value = "{{{usuario_response_status_value}}}")
   @JsonProperty("status")
   public StatusEnum getStatus() {
     return status;
@@ -177,14 +177,14 @@ public class UsuarioResponse   {
 
   
   /**
-   * Creation date of the user
+   * {{{usuario_response_data_criacao_value}}}
    **/
   public UsuarioResponse dataCriacao(String dataCriacao) {
     this.dataCriacao = dataCriacao;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Creation date of the user")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{usuario_response_data_criacao_value}}}")
   @JsonProperty("dataCriacao")
   public String getDataCriacao() {
     return dataCriacao;
@@ -195,14 +195,14 @@ public class UsuarioResponse   {
 
   
   /**
-   * Modification date of the user
+   * {{{usuario_response_data_modificacao_value}}}
    **/
   public UsuarioResponse dataModificacao(String dataModificacao) {
     this.dataModificacao = dataModificacao;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Modification date of the user")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{usuario_response_data_modificacao_value}}}")
   @JsonProperty("dataModificacao")
   public String getDataModificacao() {
     return dataModificacao;
@@ -213,14 +213,14 @@ public class UsuarioResponse   {
 
   
   /**
-   * Number of Incorrect validation attempts
+   * {{{usuario_response_tentativas_incorretas_value}}}
    **/
   public UsuarioResponse tentativasIncorretas(Long tentativasIncorretas) {
     this.tentativasIncorretas = tentativasIncorretas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Number of Incorrect validation attempts")
+  @ApiModelProperty(example = "null", value = "{{{usuario_response_tentativas_incorretas_value}}}")
   @JsonProperty("tentativasIncorretas")
   public Long getTentativasIncorretas() {
     return tentativasIncorretas;
@@ -231,14 +231,14 @@ public class UsuarioResponse   {
 
   
   /**
-   * Indicates whether access to the user application is blocked
+   * {{{usuario_response_bloquear_acesso_descricao}}}
    **/
   public UsuarioResponse bloquearAcesso(Boolean bloquearAcesso) {
     this.bloquearAcesso = bloquearAcesso;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Indicates whether access to the user application is blocked")
+  @ApiModelProperty(example = "false", value = "{{{usuario_response_bloquear_acesso_descricao}}}")
   @JsonProperty("bloquearAcesso")
   public Boolean getBloquearAcesso() {
     return bloquearAcesso;
@@ -249,14 +249,14 @@ public class UsuarioResponse   {
 
   
   /**
-   * expirationDate
+   * {{{usuario_response_data_validade_value}}}
    **/
   public UsuarioResponse dataValidade(String dataValidade) {
     this.dataValidade = dataValidade;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "expirationDate")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{usuario_response_data_validade_value}}}")
   @JsonProperty("dataValidade")
   public String getDataValidade() {
     return dataValidade;
@@ -267,14 +267,14 @@ public class UsuarioResponse   {
 
   
   /**
-   * plataformId
+   * {{{usuario_response_id_plataforma_value}}}
    **/
   public UsuarioResponse idPlataforma(Integer idPlataforma) {
     this.idPlataforma = idPlataforma;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "plataformId")
+  @ApiModelProperty(example = "null", value = "{{{usuario_response_id_plataforma_value}}}")
   @JsonProperty("idPlataforma")
   public Integer getIdPlataforma() {
     return idPlataforma;

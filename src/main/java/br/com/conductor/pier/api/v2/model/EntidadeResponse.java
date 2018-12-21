@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Objeto de Resposta da Entidade
+ * {{{entidade_response_description}}}
  **/
 
-@ApiModel(description = "Objeto de Resposta da Entidade")
+@ApiModel(description = "{{{entidade_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class EntidadeResponse   {
   
@@ -21,14 +21,14 @@ public class EntidadeResponse   {
 
   
   /**
-   * Identification Code of the entity
+   * {{{entidade_response_id_value}}}
    **/
   public EntidadeResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the entity")
+  @ApiModelProperty(example = "null", value = "{{{entidade_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -39,14 +39,14 @@ public class EntidadeResponse   {
 
   
   /**
-   * Entity Description
+   * {{{entidade_response_descricao_value}}}
    **/
   public EntidadeResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Entity Description")
+  @ApiModelProperty(example = "null", value = "{{{entidade_response_descricao_value}}}")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -57,14 +57,14 @@ public class EntidadeResponse   {
 
   
   /**
-   * Flag that indicates if the  Entity is active
+   * {{{entidade_response_flag_ativo_value}}}
    **/
   public EntidadeResponse flagAtivo(Boolean flagAtivo) {
     this.flagAtivo = flagAtivo;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Flag that indicates if the  Entity is active")
+  @ApiModelProperty(example = "false", value = "{{{entidade_response_flag_ativo_value}}}")
   @JsonProperty("flagAtivo")
   public Boolean getFlagAtivo() {
     return flagAtivo;

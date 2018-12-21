@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Object of the response of the Expirations
+ * {{{controle_vencimento_response_description}}}
  **/
 
-@ApiModel(description = "Object of the response of the Expirations")
+@ApiModel(description = "{{{controle_vencimento_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ControleVencimentoResponse   {
   
@@ -24,14 +24,14 @@ public class ControleVencimentoResponse   {
 
   
   /**
-   * Indicate the date of expiration of the invoices
+   * {{{controle_vencimento_response_data_vencimento_value}}}
    **/
   public ControleVencimentoResponse dataVencimento(String dataVencimento) {
     this.dataVencimento = dataVencimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Indicate the date of expiration of the invoices")
+  @ApiModelProperty(example = "null", value = "{{{controle_vencimento_response_data_vencimento_value}}}")
   @JsonProperty("dataVencimento")
   public String getDataVencimento() {
     return dataVencimento;
@@ -42,14 +42,14 @@ public class ControleVencimentoResponse   {
 
   
   /**
-   * Indicate the date previewed to make the cut of the invoices
+   * {{{controle_vencimento_response_data_prevista_corte_value}}}
    **/
   public ControleVencimentoResponse dataPrevistaCorte(String dataPrevistaCorte) {
     this.dataPrevistaCorte = dataPrevistaCorte;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Indicate the date previewed to make the cut of the invoices")
+  @ApiModelProperty(example = "null", value = "{{{controle_vencimento_response_data_prevista_corte_value}}}")
   @JsonProperty("dataPrevistaCorte")
   public String getDataPrevistaCorte() {
     return dataPrevistaCorte;
@@ -60,14 +60,14 @@ public class ControleVencimentoResponse   {
 
   
   /**
-   * Indicate the date and the time that was made the Cut of the invoices
+   * {{{controle_vencimento_response_data_hora_realizacao_corte_value}}}
    **/
   public ControleVencimentoResponse dataHoraRealizacaoCorte(String dataHoraRealizacaoCorte) {
     this.dataHoraRealizacaoCorte = dataHoraRealizacaoCorte;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Indicate the date and the time that was made the Cut of the invoices")
+  @ApiModelProperty(example = "null", value = "{{{controle_vencimento_response_data_hora_realizacao_corte_value}}}")
   @JsonProperty("dataHoraRealizacaoCorte")
   public String getDataHoraRealizacaoCorte() {
     return dataHoraRealizacaoCorte;
@@ -78,14 +78,14 @@ public class ControleVencimentoResponse   {
 
   
   /**
-   * Indicate the date previewed to make the billing
+   * {{{controle_vencimento_response_data_prevista_faturamento_value}}}
    **/
   public ControleVencimentoResponse dataPrevistaFaturamento(String dataPrevistaFaturamento) {
     this.dataPrevistaFaturamento = dataPrevistaFaturamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Indicate the date previewed to make the billing")
+  @ApiModelProperty(example = "null", value = "{{{controle_vencimento_response_data_prevista_faturamento_value}}}")
   @JsonProperty("dataPrevistaFaturamento")
   public String getDataPrevistaFaturamento() {
     return dataPrevistaFaturamento;
@@ -96,14 +96,14 @@ public class ControleVencimentoResponse   {
 
   
   /**
-   * Indicate the date and the time that was made the billing
+   * {{{controle_vencimento_response_data_hora_realizacao_faturamento_value}}}
    **/
   public ControleVencimentoResponse dataHoraRealizacaoFaturamento(String dataHoraRealizacaoFaturamento) {
     this.dataHoraRealizacaoFaturamento = dataHoraRealizacaoFaturamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Indicate the date and the time that was made the billing")
+  @ApiModelProperty(example = "null", value = "{{{controle_vencimento_response_data_hora_realizacao_faturamento_value}}}")
   @JsonProperty("dataHoraRealizacaoFaturamento")
   public String getDataHoraRealizacaoFaturamento() {
     return dataHoraRealizacaoFaturamento;
@@ -114,14 +114,14 @@ public class ControleVencimentoResponse   {
 
   
   /**
-   * Indicate the useful day that will be considered as the expiration date
+   * {{{controle_vencimento_response_data_real_vencimento_value}}}
    **/
   public ControleVencimentoResponse dataRealVencimento(String dataRealVencimento) {
     this.dataRealVencimento = dataRealVencimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Indicate the useful day that will be considered as the expiration date")
+  @ApiModelProperty(example = "null", value = "{{{controle_vencimento_response_data_real_vencimento_value}}}")
   @JsonProperty("dataRealVencimento")
   public String getDataRealVencimento() {
     return dataRealVencimento;

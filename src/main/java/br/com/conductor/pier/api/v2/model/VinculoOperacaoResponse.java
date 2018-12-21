@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * ObjectLinkedOperation
+ * {{{vinculo_operacao_response_description}}}
  **/
 
-@ApiModel(description = "ObjectLinkedOperation")
+@ApiModel(description = "{{{vinculo_operacao_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class VinculoOperacaoResponse   {
   
@@ -22,14 +22,14 @@ public class VinculoOperacaoResponse   {
 
   
   /**
-   * Identification Code of the Product (id)
+   * {{{vinculo_operacao_response_id_produto_value}}}
    **/
   public VinculoOperacaoResponse idProduto(Long idProduto) {
     this.idProduto = idProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the Product (id)")
+  @ApiModelProperty(example = "null", value = "{{{vinculo_operacao_response_id_produto_value}}}")
   @JsonProperty("idProduto")
   public Long getIdProduto() {
     return idProduto;
@@ -40,14 +40,14 @@ public class VinculoOperacaoResponse   {
 
   
   /**
-   * Identification Code of the Operation (id)
+   * {{{vinculo_operacao_response_id_operacao_value}}}
    **/
   public VinculoOperacaoResponse idOperacao(Long idOperacao) {
     this.idOperacao = idOperacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the Operation (id)")
+  @ApiModelProperty(example = "null", value = "{{{vinculo_operacao_response_id_operacao_value}}}")
   @JsonProperty("idOperacao")
   public Long getIdOperacao() {
     return idOperacao;
@@ -58,14 +58,14 @@ public class VinculoOperacaoResponse   {
 
   
   /**
-   * Processing Code
+   * {{{vinculo_operacao_response_codigo_processamento_value}}}
    **/
   public VinculoOperacaoResponse codigoProcessamento(String codigoProcessamento) {
     this.codigoProcessamento = codigoProcessamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Processing Code")
+  @ApiModelProperty(example = "null", value = "{{{vinculo_operacao_response_codigo_processamento_value}}}")
   @JsonProperty("codigoProcessamento")
   public String getCodigoProcessamento() {
     return codigoProcessamento;
@@ -76,14 +76,14 @@ public class VinculoOperacaoResponse   {
 
   
   /**
-   * MCC code
+   * {{{vinculo_operacao_response_codigo_m_c_c_value}}}
    **/
   public VinculoOperacaoResponse codigoMCC(Integer codigoMCC) {
     this.codigoMCC = codigoMCC;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "MCC code")
+  @ApiModelProperty(example = "null", value = "{{{vinculo_operacao_response_codigo_m_c_c_value}}}")
   @JsonProperty("codigoMCC")
   public Integer getCodigoMCC() {
     return codigoMCC;

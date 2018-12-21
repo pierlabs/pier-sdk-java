@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Response Representation of the operation resource
+ * {{{operacao_response_description}}}
  **/
 
-@ApiModel(description = "Response Representation of the operation resource")
+@ApiModel(description = "{{{operacao_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class OperacaoResponse   {
   
@@ -27,14 +27,14 @@ public class OperacaoResponse   {
 
   
   /**
-   * Code that identifies the operation
+   * {{{operacao_response_id_operacao_value}}}
    **/
   public OperacaoResponse idOperacao(Long idOperacao) {
     this.idOperacao = idOperacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Code that identifies the operation")
+  @ApiModelProperty(example = "null", value = "{{{operacao_response_id_operacao_value}}}")
   @JsonProperty("idOperacao")
   public Long getIdOperacao() {
     return idOperacao;
@@ -45,14 +45,14 @@ public class OperacaoResponse   {
 
   
   /**
-   * Processing Code used in transaction with the authorizer
+   * {{{operacao_response_codigo_processamento_value}}}
    **/
   public OperacaoResponse codigoProcessamento(String codigoProcessamento) {
     this.codigoProcessamento = codigoProcessamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Processing Code used in transaction with the authorizer")
+  @ApiModelProperty(example = "null", value = "{{{operacao_response_codigo_processamento_value}}}")
   @JsonProperty("codigoProcessamento")
   public String getCodigoProcessamento() {
     return codigoProcessamento;
@@ -63,14 +63,14 @@ public class OperacaoResponse   {
 
   
   /**
-   * Processing Code used to cancel transactions in the authorizer
+   * {{{operacao_response_codigo_processamento_cancelamento_value}}}
    **/
   public OperacaoResponse codigoProcessamentoCancelamento(String codigoProcessamentoCancelamento) {
     this.codigoProcessamentoCancelamento = codigoProcessamentoCancelamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Processing Code used to cancel transactions in the authorizer")
+  @ApiModelProperty(example = "null", value = "{{{operacao_response_codigo_processamento_cancelamento_value}}}")
   @JsonProperty("codigoProcessamentoCancelamento")
   public String getCodigoProcessamentoCancelamento() {
     return codigoProcessamentoCancelamento;
@@ -81,14 +81,14 @@ public class OperacaoResponse   {
 
   
   /**
-   * Operation name
+   * {{{operacao_response_nome_operacao_value}}}
    **/
   public OperacaoResponse nomeOperacao(String nomeOperacao) {
     this.nomeOperacao = nomeOperacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Operation name")
+  @ApiModelProperty(example = "null", value = "{{{operacao_response_nome_operacao_value}}}")
   @JsonProperty("nomeOperacao")
   public String getNomeOperacao() {
     return nomeOperacao;
@@ -99,14 +99,14 @@ public class OperacaoResponse   {
 
   
   /**
-   * Flag indicative for the charge of interest
+   * {{{operacao_response_flag_cobra_juros_value}}}
    **/
   public OperacaoResponse flagCobraJuros(Boolean flagCobraJuros) {
     this.flagCobraJuros = flagCobraJuros;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Flag indicative for the charge of interest")
+  @ApiModelProperty(example = "false", value = "{{{operacao_response_flag_cobra_juros_value}}}")
   @JsonProperty("flagCobraJuros")
   public Boolean getFlagCobraJuros() {
     return flagCobraJuros;
@@ -117,14 +117,14 @@ public class OperacaoResponse   {
 
   
   /**
-   * Flag indicative for the charge of taxes
+   * {{{operacao_response_flag_cobra_tarifa_value}}}
    **/
   public OperacaoResponse flagCobraTarifa(Boolean flagCobraTarifa) {
     this.flagCobraTarifa = flagCobraTarifa;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Flag indicative for the charge of taxes")
+  @ApiModelProperty(example = "false", value = "{{{operacao_response_flag_cobra_tarifa_value}}}")
   @JsonProperty("flagCobraTarifa")
   public Boolean getFlagCobraTarifa() {
     return flagCobraTarifa;
@@ -135,14 +135,14 @@ public class OperacaoResponse   {
 
   
   /**
-   * Quantity of months for the Lack
+   * {{{operacao_response_carencia_value}}}
    **/
   public OperacaoResponse carencia(Integer carencia) {
     this.carencia = carencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Quantity of months for the Lack")
+  @ApiModelProperty(example = "null", value = "{{{operacao_response_carencia_value}}}")
   @JsonProperty("carencia")
   public Integer getCarencia() {
     return carencia;
@@ -153,14 +153,14 @@ public class OperacaoResponse   {
 
   
   /**
-   * Allow parceled transactions
+   * {{{operacao_response_flag_permitir_parcelamento_value}}}
    **/
   public OperacaoResponse flagPermitirParcelamento(Boolean flagPermitirParcelamento) {
     this.flagPermitirParcelamento = flagPermitirParcelamento;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Allow parceled transactions")
+  @ApiModelProperty(example = "false", value = "{{{operacao_response_flag_permitir_parcelamento_value}}}")
   @JsonProperty("flagPermitirParcelamento")
   public Boolean getFlagPermitirParcelamento() {
     return flagPermitirParcelamento;
@@ -171,14 +171,14 @@ public class OperacaoResponse   {
 
   
   /**
-   * Boolean that signals to all transactions of this operation type must use the purchase interest rate as the due balance interest rate
+   * {{{operacao_response_flag_manter_taxa_juros_no_rotativo_value}}}
    **/
   public OperacaoResponse flagManterTaxaJurosNoRotativo(Boolean flagManterTaxaJurosNoRotativo) {
     this.flagManterTaxaJurosNoRotativo = flagManterTaxaJurosNoRotativo;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Boolean that signals to all transactions of this operation type must use the purchase interest rate as the due balance interest rate")
+  @ApiModelProperty(example = "false", value = "{{{operacao_response_flag_manter_taxa_juros_no_rotativo_value}}}")
   @JsonProperty("flagManterTaxaJurosNoRotativo")
   public Boolean getFlagManterTaxaJurosNoRotativo() {
     return flagManterTaxaJurosNoRotativo;

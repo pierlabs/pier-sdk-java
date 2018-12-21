@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * File List stored in the contingency
+ * {{{page_arquivo_response_description}}}
  **/
 
-@ApiModel(description = "File List stored in the contingency")
+@ApiModel(description = "{{{page_arquivo_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageArquivoResponse   {
   

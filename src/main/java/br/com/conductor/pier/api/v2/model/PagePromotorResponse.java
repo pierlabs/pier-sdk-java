@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * List of prosecutors
+ * {{{page_promotor_response_description}}}
  **/
 
-@ApiModel(description = "List of prosecutors")
+@ApiModel(description = "{{{page_promotor_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PagePromotorResponse   {
   

@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representation of the content decryption request
+ * {{{chave_criptografia_requisicao_descricao}}}
  **/
 
-@ApiModel(description = "Representation of the content decryption request")
+@ApiModel(description = "{{{chave_criptografia_requisicao_descricao}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ChaveCriptografiaRequest   {
   
@@ -20,14 +20,14 @@ public class ChaveCriptografiaRequest   {
 
   
   /**
-   * Decryption key identifier
+   * {{{chave_criptografia_requisicao_id_chave_valor}}}
    **/
   public ChaveCriptografiaRequest idChave(Long idChave) {
     this.idChave = idChave;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Decryption key identifier")
+  @ApiModelProperty(example = "null", required = true, value = "{{{chave_criptografia_requisicao_id_chave_valor}}}")
   @JsonProperty("idChave")
   public Long getIdChave() {
     return idChave;
@@ -38,14 +38,14 @@ public class ChaveCriptografiaRequest   {
 
   
   /**
-   * Content to be decrypted
+   * {{{chave_criptografia_requisicao_conteudo_valor}}}
    **/
   public ChaveCriptografiaRequest conteudo(String conteudo) {
     this.conteudo = conteudo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Content to be decrypted")
+  @ApiModelProperty(example = "null", required = true, value = "{{{chave_criptografia_requisicao_conteudo_valor}}}")
   @JsonProperty("conteudo")
   public String getConteudo() {
     return conteudo;

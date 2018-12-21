@@ -9,10 +9,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Result of two cards created associated
+ * {{{cartao_impressao_multiapp_response_description}}}
  **/
 
-@ApiModel(description = "Result of two cards created associated")
+@ApiModel(description = "{{{cartao_impressao_multiapp_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class CartaoMultiAppImpressaoResponse   {
   
@@ -21,14 +21,14 @@ public class CartaoMultiAppImpressaoResponse   {
 
   
   /**
-   * Primary card
+   * {{{cartao_impressao_multiapp_response_cartao_pai_value}}}
    **/
   public CartaoMultiAppImpressaoResponse cartaoPai(CartaoImpressaoResponse cartaoPai) {
     this.cartaoPai = cartaoPai;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Primary card")
+  @ApiModelProperty(example = "null", value = "{{{cartao_impressao_multiapp_response_cartao_pai_value}}}")
   @JsonProperty("cartaoPai")
   public CartaoImpressaoResponse getCartaoPai() {
     return cartaoPai;
@@ -39,14 +39,14 @@ public class CartaoMultiAppImpressaoResponse   {
 
   
   /**
-   * Secondary card
+   * {{{cartao_impressao_multiapp_response_cartao_filho_value}}}
    **/
   public CartaoMultiAppImpressaoResponse cartao(CartaoImpressaoResponse cartao) {
     this.cartao = cartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Secondary card")
+  @ApiModelProperty(example = "null", value = "{{{cartao_impressao_multiapp_response_cartao_filho_value}}}")
   @JsonProperty("cartao")
   public CartaoImpressaoResponse getCartao() {
     return cartao;

@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * Object of request of the transaction On Us
+ * {{{transacao_on_us_request_description}}}
  **/
 
-@ApiModel(description = "Object of request of the transaction On Us")
+@ApiModel(description = "{{{transacao_on_us_request_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TransacaoOnUsRequest   {
   
@@ -27,14 +27,14 @@ public class TransacaoOnUsRequest   {
 
   
   /**
-   * Unique Sequel Number that identifies the transaction in the system that has originated it
+   * {{{transacao_on_us_request_nsu_origem_value}}}
    **/
   public TransacaoOnUsRequest nsuOrigem(String nsuOrigem) {
     this.nsuOrigem = nsuOrigem;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Unique Sequel Number that identifies the transaction in the system that has originated it")
+  @ApiModelProperty(example = "null", required = true, value = "{{{transacao_on_us_request_nsu_origem_value}}}")
   @JsonProperty("nsuOrigem")
   public String getNsuOrigem() {
     return nsuOrigem;
@@ -45,14 +45,14 @@ public class TransacaoOnUsRequest   {
 
   
   /**
-   * Code of Processing that identifies the Type of Transaction
+   * {{{transacao_on_us_request_codigo_processamento_value}}}
    **/
   public TransacaoOnUsRequest codigoProcessamento(String codigoProcessamento) {
     this.codigoProcessamento = codigoProcessamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Code of Processing that identifies the Type of Transaction")
+  @ApiModelProperty(example = "null", required = true, value = "{{{transacao_on_us_request_codigo_processamento_value}}}")
   @JsonProperty("codigoProcessamento")
   public String getCodigoProcessamento() {
     return codigoProcessamento;
@@ -63,14 +63,14 @@ public class TransacaoOnUsRequest   {
 
   
   /**
-   * Value of transaction with two decimal places for the cents
+   * {{{transacao_on_us_request_valor_transacao_value}}}
    **/
   public TransacaoOnUsRequest valorTransacao(BigDecimal valorTransacao) {
     this.valorTransacao = valorTransacao;
     return this;
   }
   
-  @ApiModelProperty(example = "10.25", required = true, value = "Value of transaction with two decimal places for the cents")
+  @ApiModelProperty(example = "10.25", required = true, value = "{{{transacao_on_us_request_valor_transacao_value}}}")
   @JsonProperty("valorTransacao")
   public BigDecimal getValorTransacao() {
     return valorTransacao;
@@ -81,14 +81,14 @@ public class TransacaoOnUsRequest   {
 
   
   /**
-   * Real number of the card
+   * {{{transacao_on_us_request_numero_real_cartao_value}}}
    **/
   public TransacaoOnUsRequest numeroRealCartao(String numeroRealCartao) {
     this.numeroRealCartao = numeroRealCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Real number of the card")
+  @ApiModelProperty(example = "null", required = true, value = "{{{transacao_on_us_request_numero_real_cartao_value}}}")
   @JsonProperty("numeroRealCartao")
   public String getNumeroRealCartao() {
     return numeroRealCartao;
@@ -99,14 +99,14 @@ public class TransacaoOnUsRequest   {
 
   
   /**
-   * Expiration date of the Card. Ex: YYMM
+   * {{{transacao_on_us_request_data_validade_cartao_value}}}
    **/
   public TransacaoOnUsRequest dataValidadeCartao(String dataValidadeCartao) {
     this.dataValidadeCartao = dataValidadeCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Expiration date of the Card. Ex: YYMM")
+  @ApiModelProperty(example = "null", required = true, value = "{{{transacao_on_us_request_data_validade_cartao_value}}}")
   @JsonProperty("dataValidadeCartao")
   public String getDataValidadeCartao() {
     return dataValidadeCartao;
@@ -117,14 +117,14 @@ public class TransacaoOnUsRequest   {
 
   
   /**
-   * Number of the Establishment (Number+DV)
+   * {{{transacao_on_us_request_numero_estabelecimento_value}}}
    **/
   public TransacaoOnUsRequest numeroEstabelecimento(Long numeroEstabelecimento) {
     this.numeroEstabelecimento = numeroEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Number of the Establishment (Number+DV)")
+  @ApiModelProperty(example = "null", required = true, value = "{{{transacao_on_us_request_numero_estabelecimento_value}}}")
   @JsonProperty("numeroEstabelecimento")
   public Long getNumeroEstabelecimento() {
     return numeroEstabelecimento;
@@ -135,14 +135,14 @@ public class TransacaoOnUsRequest   {
 
   
   /**
-   * show the date and local time of the retrievement yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
+   * {{{transacao_on_us_request_data_hora_terminal_value}}}
    **/
   public TransacaoOnUsRequest dataHoraTerminal(String dataHoraTerminal) {
     this.dataHoraTerminal = dataHoraTerminal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "show the date and local time of the retrievement yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00")
+  @ApiModelProperty(example = "null", required = true, value = "{{{transacao_on_us_request_data_hora_terminal_value}}}")
   @JsonProperty("dataHoraTerminal")
   public String getDataHoraTerminal() {
     return dataHoraTerminal;
@@ -153,14 +153,14 @@ public class TransacaoOnUsRequest   {
 
   
   /**
-   * Show the identification of the terminal applicant
+   * {{{transacao_on_us_request_terminal_requisitante_value}}}
    **/
   public TransacaoOnUsRequest terminalRequisitante(String terminalRequisitante) {
     this.terminalRequisitante = terminalRequisitante;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Show the identification of the terminal applicant")
+  @ApiModelProperty(example = "null", required = true, value = "{{{transacao_on_us_request_terminal_requisitante_value}}}")
   @JsonProperty("terminalRequisitante")
   public String getTerminalRequisitante() {
     return terminalRequisitante;

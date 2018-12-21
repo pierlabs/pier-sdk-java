@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * Object POS
+ * {{{maquineta_persist_description}}}
  **/
 
-@ApiModel(description = "Object POS")
+@ApiModel(description = "{{{maquineta_persist_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class MaquinetaPersist   {
   
@@ -23,14 +23,14 @@ public class MaquinetaPersist   {
 
   
   /**
-   * Identification Code of the Terminal (id)
+   * {{{maquineta_persist_id_terminal_value}}}
    **/
   public MaquinetaPersist idTerminal(Long idTerminal) {
     this.idTerminal = idTerminal;
     return this;
   }
   
-  @ApiModelProperty(example = "11111", required = true, value = "Identification Code of the Terminal (id)")
+  @ApiModelProperty(example = "11111", required = true, value = "{{{maquineta_persist_id_terminal_value}}}")
   @JsonProperty("idTerminal")
   public Long getIdTerminal() {
     return idTerminal;
@@ -41,14 +41,14 @@ public class MaquinetaPersist   {
 
   
   /**
-   * Identification Code of the POS type (id)
+   * {{{maquineta_persist_id_tipo_maquineta_value}}}
    **/
   public MaquinetaPersist idTipoMaquineta(Long idTipoMaquineta) {
     this.idTipoMaquineta = idTipoMaquineta;
     return this;
   }
   
-  @ApiModelProperty(example = "1", required = true, value = "Identification Code of the POS type (id)")
+  @ApiModelProperty(example = "1", required = true, value = "{{{maquineta_persist_id_tipo_maquineta_value}}}")
   @JsonProperty("idTipoMaquineta")
   public Long getIdTipoMaquineta() {
     return idTipoMaquineta;
@@ -59,14 +59,14 @@ public class MaquinetaPersist   {
 
   
   /**
-   * Value of the POS maintenance
+   * {{{maquineta_persist_valor_value}}}
    **/
   public MaquinetaPersist valor(BigDecimal valor) {
     this.valor = valor;
     return this;
   }
   
-  @ApiModelProperty(example = "100.0", required = true, value = "Value of the POS maintenance")
+  @ApiModelProperty(example = "100.0", required = true, value = "{{{maquineta_persist_valor_value}}}")
   @JsonProperty("valor")
   public BigDecimal getValor() {
     return valor;
@@ -77,14 +77,14 @@ public class MaquinetaPersist   {
 
   
   /**
-   * Deploy date of the POS, Insert in the format yyyy-MM-dd'T'HH:mm:ss.SSS'Z'
+   * {{{maquineta_persist_data_hora_implantacao_value}}}
    **/
   public MaquinetaPersist dataHoraImplantacao(String dataHoraImplantacao) {
     this.dataHoraImplantacao = dataHoraImplantacao;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", required = true, value = "Deploy date of the POS, Insert in the format yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", required = true, value = "{{{maquineta_persist_data_hora_implantacao_value}}}")
   @JsonProperty("dataHoraImplantacao")
   public String getDataHoraImplantacao() {
     return dataHoraImplantacao;

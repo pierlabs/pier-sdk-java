@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Type of adjustment
+ * {{{tipo_ajuste_response_description}}}
  **/
 
-@ApiModel(description = "Type of adjustment")
+@ApiModel(description = "{{{tipo_ajuste_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TipoTransacaoAjusteResponse   {
   
@@ -20,14 +20,14 @@ public class TipoTransacaoAjusteResponse   {
 
   
   /**
-   * Transaction type ID
+   * {{{tipo_transacao_ajuste_response_id_value}}}
    **/
   public TipoTransacaoAjusteResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Transaction type ID")
+  @ApiModelProperty(example = "null", value = "{{{tipo_transacao_ajuste_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -38,14 +38,14 @@ public class TipoTransacaoAjusteResponse   {
 
   
   /**
-   * Transaction type description
+   * {{{tipo_transacao_ajuste_response_descricao_value}}}
    **/
   public TipoTransacaoAjusteResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Transaction type description")
+  @ApiModelProperty(example = "null", value = "{{{tipo_transacao_ajuste_response_descricao_value}}}")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;

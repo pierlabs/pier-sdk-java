@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * PersonPersist
+ * {{{socio_aprovado_response_description}}}
  **/
 
-@ApiModel(description = "PersonPersist")
+@ApiModel(description = "{{{socio_aprovado_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class SocioAprovadoResponse   {
   
@@ -35,14 +35,14 @@ public class SocioAprovadoResponse   {
 
   
   /**
-   * Identification code of the Partner (id)
+   * {{{socio_aprovado_response_id_value}}}
    **/
   public SocioAprovadoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification code of the Partner (id)")
+  @ApiModelProperty(example = "null", value = "{{{socio_aprovado_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -53,14 +53,14 @@ public class SocioAprovadoResponse   {
 
   
   /**
-   * Show the name of the partner
+   * {{{socio_aprovado_response_nome_value}}}
    **/
   public SocioAprovadoResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Show the name of the partner")
+  @ApiModelProperty(example = "null", value = "{{{socio_aprovado_response_nome_value}}}")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -71,14 +71,14 @@ public class SocioAprovadoResponse   {
 
   
   /**
-   * CPF number, when it is PP
+   * {{{socio_aprovado_response_cpf_value}}}
    **/
   public SocioAprovadoResponse cpf(String cpf) {
     this.cpf = cpf;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "CPF number, when it is PP")
+  @ApiModelProperty(example = "null", value = "{{{socio_aprovado_response_cpf_value}}}")
   @JsonProperty("cpf")
   public String getCpf() {
     return cpf;
@@ -89,14 +89,14 @@ public class SocioAprovadoResponse   {
 
   
   /**
-   * Birth Date of the Person, when it is PP, or the date of the Company Opening, when it is LP. This date must be informed in the format yyyy-MM-dd
+   * {{{socio_aprovado_response_data_nascimento_value}}}
    **/
   public SocioAprovadoResponse dataNascimento(String dataNascimento) {
     this.dataNascimento = dataNascimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Birth Date of the Person, when it is PP, or the date of the Company Opening, when it is LP. This date must be informed in the format yyyy-MM-dd")
+  @ApiModelProperty(example = "null", value = "{{{socio_aprovado_response_data_nascimento_value}}}")
   @JsonProperty("dataNascimento")
   public String getDataNascimento() {
     return dataNascimento;
@@ -107,14 +107,14 @@ public class SocioAprovadoResponse   {
 
   
   /**
-   * Identification code of the person sex, when it is PP, being: ('M': Male), ('F': Female), ('O': Other), ('N': Not Specified)
+   * {{{socio_aprovado_response_sexo_value}}}
    **/
   public SocioAprovadoResponse sexo(String sexo) {
     this.sexo = sexo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification code of the person sex, when it is PP, being: ('M': Male), ('F': Female), ('O': Other), ('N': Not Specified)")
+  @ApiModelProperty(example = "null", value = "{{{socio_aprovado_response_sexo_value}}}")
   @JsonProperty("sexo")
   public String getSexo() {
     return sexo;
@@ -125,14 +125,14 @@ public class SocioAprovadoResponse   {
 
   
   /**
-   * Identity Number
+   * {{{socio_aprovado_response_numero_identidade_value}}}
    **/
   public SocioAprovadoResponse numeroIdentidade(String numeroIdentidade) {
     this.numeroIdentidade = numeroIdentidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identity Number")
+  @ApiModelProperty(example = "null", value = "{{{socio_aprovado_response_numero_identidade_value}}}")
   @JsonProperty("numeroIdentidade")
   public String getNumeroIdentidade() {
     return numeroIdentidade;
@@ -143,14 +143,14 @@ public class SocioAprovadoResponse   {
 
   
   /**
-   * Issuer organ of the ID document
+   * {{{socio_aprovado_response_orgao_expedidor_identidade_value}}}
    **/
   public SocioAprovadoResponse orgaoExpedidorIdentidade(String orgaoExpedidorIdentidade) {
     this.orgaoExpedidorIdentidade = orgaoExpedidorIdentidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Issuer organ of the ID document")
+  @ApiModelProperty(example = "null", value = "{{{socio_aprovado_response_orgao_expedidor_identidade_value}}}")
   @JsonProperty("orgaoExpedidorIdentidade")
   public String getOrgaoExpedidorIdentidade() {
     return orgaoExpedidorIdentidade;
@@ -161,14 +161,14 @@ public class SocioAprovadoResponse   {
 
   
   /**
-   * Acronym Federal Unity where was issued the Identity
+   * {{{socio_aprovado_response_unidade_federativa_identidade_value}}}
    **/
   public SocioAprovadoResponse unidadeFederativaIdentidade(String unidadeFederativaIdentidade) {
     this.unidadeFederativaIdentidade = unidadeFederativaIdentidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Acronym Federal Unity where was issued the Identity")
+  @ApiModelProperty(example = "null", value = "{{{socio_aprovado_response_unidade_federativa_identidade_value}}}")
   @JsonProperty("unidadeFederativaIdentidade")
   public String getUnidadeFederativaIdentidade() {
     return unidadeFederativaIdentidade;
@@ -179,14 +179,14 @@ public class SocioAprovadoResponse   {
 
   
   /**
-   * Issue date of the identity
+   * {{{socio_aprovado_response_data_emissao_identidade_value}}}
    **/
   public SocioAprovadoResponse dataEmissaoIdentidade(String dataEmissaoIdentidade) {
     this.dataEmissaoIdentidade = dataEmissaoIdentidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Issue date of the identity")
+  @ApiModelProperty(example = "null", value = "{{{socio_aprovado_response_data_emissao_identidade_value}}}")
   @JsonProperty("dataEmissaoIdentidade")
   public String getDataEmissaoIdentidade() {
     return dataEmissaoIdentidade;
@@ -197,14 +197,14 @@ public class SocioAprovadoResponse   {
 
   
   /**
-   * Marital Status of the partner
+   * {{{socio_aprovado_response_estado_civil_value}}}
    **/
   public SocioAprovadoResponse estadoCivil(String estadoCivil) {
     this.estadoCivil = estadoCivil;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Marital Status of the partner")
+  @ApiModelProperty(example = "null", value = "{{{socio_aprovado_response_estado_civil_value}}}")
   @JsonProperty("estadoCivil")
   public String getEstadoCivil() {
     return estadoCivil;
@@ -215,14 +215,14 @@ public class SocioAprovadoResponse   {
 
   
   /**
-   * Partner occupation
+   * {{{socio_aprovado_response_profissao_value}}}
    **/
   public SocioAprovadoResponse profissao(String profissao) {
     this.profissao = profissao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Partner occupation")
+  @ApiModelProperty(example = "null", value = "{{{socio_aprovado_response_profissao_value}}}")
   @JsonProperty("profissao")
   public String getProfissao() {
     return profissao;
@@ -233,14 +233,14 @@ public class SocioAprovadoResponse   {
 
   
   /**
-   * Partner Nationality
+   * {{{socio_aprovado_response_nacionalidade_value}}}
    **/
   public SocioAprovadoResponse nacionalidade(String nacionalidade) {
     this.nacionalidade = nacionalidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Partner Nationality")
+  @ApiModelProperty(example = "null", value = "{{{socio_aprovado_response_nacionalidade_value}}}")
   @JsonProperty("nacionalidade")
   public String getNacionalidade() {
     return nacionalidade;
@@ -251,14 +251,14 @@ public class SocioAprovadoResponse   {
 
   
   /**
-   * Email of the partner
+   * {{{socio_aprovado_response_email_value}}}
    **/
   public SocioAprovadoResponse email(String email) {
     this.email = email;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Email of the partner")
+  @ApiModelProperty(example = "null", value = "{{{socio_aprovado_response_email_value}}}")
   @JsonProperty("email")
   public String getEmail() {
     return email;
@@ -269,14 +269,14 @@ public class SocioAprovadoResponse   {
 
   
   /**
-   * Inform the telephones of the partner
+   * {{{socio_aprovado_response_telefones_value}}}
    **/
   public SocioAprovadoResponse telefones(List<TelefonePessoaAprovadaResponse> telefones) {
     this.telefones = telefones;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Inform the telephones of the partner")
+  @ApiModelProperty(example = "null", value = "{{{socio_aprovado_response_telefones_value}}}")
   @JsonProperty("telefones")
   public List<TelefonePessoaAprovadaResponse> getTelefones() {
     return telefones;

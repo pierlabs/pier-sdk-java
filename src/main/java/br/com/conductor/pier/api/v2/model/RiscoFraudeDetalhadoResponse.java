@@ -12,10 +12,10 @@ import java.util.List;
 
 
 /**
- * Object of response of Detailed Fraud Risk
+ * {{{risco_fraude_detalhado_response_description}}}
  **/
 
-@ApiModel(description = "Object of response of Detailed Fraud Risk")
+@ApiModel(description = "{{{risco_fraude_detalhado_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class RiscoFraudeDetalhadoResponse   {
   
@@ -49,14 +49,14 @@ public class RiscoFraudeDetalhadoResponse   {
 
   
   /**
-   * Identification Code of risk of fraud
+   * {{{risco_fraude_detalhado_response_id_value}}}
    **/
   public RiscoFraudeDetalhadoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of risk of fraud")
+  @ApiModelProperty(example = "null", value = "{{{risco_fraude_detalhado_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -67,14 +67,14 @@ public class RiscoFraudeDetalhadoResponse   {
 
   
   /**
-   * Identification code of the type of resolution attributed to the register
+   * {{{risco_fraude_detalhado_response_id_tipo_resolucao_value}}}
    **/
   public RiscoFraudeDetalhadoResponse idTipoResolucao(Long idTipoResolucao) {
     this.idTipoResolucao = idTipoResolucao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification code of the type of resolution attributed to the register")
+  @ApiModelProperty(example = "null", value = "{{{risco_fraude_detalhado_response_id_tipo_resolucao_value}}}")
   @JsonProperty("idTipoResolucao")
   public Long getIdTipoResolucao() {
     return idTipoResolucao;
@@ -85,14 +85,14 @@ public class RiscoFraudeDetalhadoResponse   {
 
   
   /**
-   * Description of the type of resolution attributed to the resgister
+   * {{{risco_fraude_detalhado_response_descricao_tipo_resolucao_value}}}
    **/
   public RiscoFraudeDetalhadoResponse descricaoTipoResolucao(String descricaoTipoResolucao) {
     this.descricaoTipoResolucao = descricaoTipoResolucao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Description of the type of resolution attributed to the resgister")
+  @ApiModelProperty(example = "null", value = "{{{risco_fraude_detalhado_response_descricao_tipo_resolucao_value}}}")
   @JsonProperty("descricaoTipoResolucao")
   public String getDescricaoTipoResolucao() {
     return descricaoTipoResolucao;
@@ -103,14 +103,14 @@ public class RiscoFraudeDetalhadoResponse   {
 
   
   /**
-   * Indicate that a transaction has a great risk of fraud and all the following transactions will be denied until all the transactions ranked as a risk of fraud be analyzed
+   * {{{risco_fraude_detalhado_response_flag_alto_risco_value}}}
    **/
   public RiscoFraudeDetalhadoResponse flagAltoRisco(Boolean flagAltoRisco) {
     this.flagAltoRisco = flagAltoRisco;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Indicate that a transaction has a great risk of fraud and all the following transactions will be denied until all the transactions ranked as a risk of fraud be analyzed")
+  @ApiModelProperty(example = "false", value = "{{{risco_fraude_detalhado_response_flag_alto_risco_value}}}")
   @JsonProperty("flagAltoRisco")
   public Boolean getFlagAltoRisco() {
     return flagAltoRisco;
@@ -121,14 +121,14 @@ public class RiscoFraudeDetalhadoResponse   {
 
   
   /**
-   * Code of identification of the account
+   * {{{risco_fraude_detalhado_response_id_conta_value}}}
    **/
   public RiscoFraudeDetalhadoResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Code of identification of the account")
+  @ApiModelProperty(example = "null", value = "{{{risco_fraude_detalhado_response_id_conta_value}}}")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -139,14 +139,14 @@ public class RiscoFraudeDetalhadoResponse   {
 
   
   /**
-   * Identification code of the card
+   * {{{risco_fraude_detalhado_response_id_cartao_value}}}
    **/
   public RiscoFraudeDetalhadoResponse idCartao(Long idCartao) {
     this.idCartao = idCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification code of the card")
+  @ApiModelProperty(example = "null", value = "{{{risco_fraude_detalhado_response_id_cartao_value}}}")
   @JsonProperty("idCartao")
   public Long getIdCartao() {
     return idCartao;
@@ -157,14 +157,14 @@ public class RiscoFraudeDetalhadoResponse   {
 
   
   /**
-   * Code of identification of the product
+   * {{{risco_fraude_detalhado_response_id_produto_value}}}
    **/
   public RiscoFraudeDetalhadoResponse idProduto(Long idProduto) {
     this.idProduto = idProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Code of identification of the product")
+  @ApiModelProperty(example = "null", value = "{{{risco_fraude_detalhado_response_id_produto_value}}}")
   @JsonProperty("idProduto")
   public Long getIdProduto() {
     return idProduto;
@@ -175,14 +175,14 @@ public class RiscoFraudeDetalhadoResponse   {
 
   
   /**
-   * Identification Code of the transaction
+   * {{{risco_fraude_detalhado_response_id_transacao_value}}}
    **/
   public RiscoFraudeDetalhadoResponse idTransacao(Long idTransacao) {
     this.idTransacao = idTransacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification Code of the transaction")
+  @ApiModelProperty(example = "null", value = "{{{risco_fraude_detalhado_response_id_transacao_value}}}")
   @JsonProperty("idTransacao")
   public Long getIdTransacao() {
     return idTransacao;
@@ -193,14 +193,14 @@ public class RiscoFraudeDetalhadoResponse   {
 
   
   /**
-   * Date that the transaction ranked as a risk of fraude was made
+   * {{{risco_fraude_detalhado_response_data_transacao_value}}}
    **/
   public RiscoFraudeDetalhadoResponse dataTransacao(String dataTransacao) {
     this.dataTransacao = dataTransacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Date that the transaction ranked as a risk of fraude was made")
+  @ApiModelProperty(example = "null", value = "{{{risco_fraude_detalhado_response_data_transacao_value}}}")
   @JsonProperty("dataTransacao")
   public String getDataTransacao() {
     return dataTransacao;
@@ -211,14 +211,14 @@ public class RiscoFraudeDetalhadoResponse   {
 
   
   /**
-   * Value of the transaction ranked as a risk of fraud
+   * {{{risco_fraude_detalhado_response_valor_transacao_value}}}
    **/
   public RiscoFraudeDetalhadoResponse valorTransacao(BigDecimal valorTransacao) {
     this.valorTransacao = valorTransacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Value of the transaction ranked as a risk of fraud")
+  @ApiModelProperty(example = "null", value = "{{{risco_fraude_detalhado_response_valor_transacao_value}}}")
   @JsonProperty("valorTransacao")
   public BigDecimal getValorTransacao() {
     return valorTransacao;
@@ -229,14 +229,14 @@ public class RiscoFraudeDetalhadoResponse   {
 
   
   /**
-   * Code of the origin currency used for the transaction
+   * {{{risco_fraude_detalhado_response_codigo_moeda_origem_value}}}
    **/
   public RiscoFraudeDetalhadoResponse codigoMoedaOrigem(String codigoMoedaOrigem) {
     this.codigoMoedaOrigem = codigoMoedaOrigem;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Code of the origin currency used for the transaction")
+  @ApiModelProperty(example = "null", value = "{{{risco_fraude_detalhado_response_codigo_moeda_origem_value}}}")
   @JsonProperty("codigoMoedaOrigem")
   public String getCodigoMoedaOrigem() {
     return codigoMoedaOrigem;
@@ -247,14 +247,14 @@ public class RiscoFraudeDetalhadoResponse   {
 
   
   /**
-   * Value of the transactions in the origin currency
+   * {{{risco_fraude_detalhado_response_valor_origem_value}}}
    **/
   public RiscoFraudeDetalhadoResponse valorOrigem(BigDecimal valorOrigem) {
     this.valorOrigem = valorOrigem;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Value of the transactions in the origin currency")
+  @ApiModelProperty(example = "null", value = "{{{risco_fraude_detalhado_response_valor_origem_value}}}")
   @JsonProperty("valorOrigem")
   public BigDecimal getValorOrigem() {
     return valorOrigem;
@@ -265,14 +265,14 @@ public class RiscoFraudeDetalhadoResponse   {
 
   
   /**
-   * Code of the destination currency used for the transaction
+   * {{{risco_fraude_detalhado_response_codigo_moeda_destino_value}}}
    **/
   public RiscoFraudeDetalhadoResponse codigoMoedaDestino(String codigoMoedaDestino) {
     this.codigoMoedaDestino = codigoMoedaDestino;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Code of the destination currency used for the transaction")
+  @ApiModelProperty(example = "null", value = "{{{risco_fraude_detalhado_response_codigo_moeda_destino_value}}}")
   @JsonProperty("codigoMoedaDestino")
   public String getCodigoMoedaDestino() {
     return codigoMoedaDestino;
@@ -283,14 +283,14 @@ public class RiscoFraudeDetalhadoResponse   {
 
   
   /**
-   * Value of the transaction of the intended currency of the transaction of the destination currency
+   * {{{risco_fraude_detalhado_response_valor_destino_value}}}
    **/
   public RiscoFraudeDetalhadoResponse valorDestino(BigDecimal valorDestino) {
     this.valorDestino = valorDestino;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Value of the transaction of the intended currency of the transaction of the destination currency")
+  @ApiModelProperty(example = "null", value = "{{{risco_fraude_detalhado_response_valor_destino_value}}}")
   @JsonProperty("valorDestino")
   public BigDecimal getValorDestino() {
     return valorDestino;
@@ -301,14 +301,14 @@ public class RiscoFraudeDetalhadoResponse   {
 
   
   /**
-   * Name of the establishment where the transaction with risk of fraud was made
+   * {{{risco_fraude_detalhado_response_nome_estabelecimento_value}}}
    **/
   public RiscoFraudeDetalhadoResponse nomeEstabelecimento(String nomeEstabelecimento) {
     this.nomeEstabelecimento = nomeEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Name of the establishment where the transaction with risk of fraud was made")
+  @ApiModelProperty(example = "null", value = "{{{risco_fraude_detalhado_response_nome_estabelecimento_value}}}")
   @JsonProperty("nomeEstabelecimento")
   public String getNomeEstabelecimento() {
     return nomeEstabelecimento;
@@ -319,14 +319,14 @@ public class RiscoFraudeDetalhadoResponse   {
 
   
   /**
-   * Identification code of the Country
+   * {{{risco_fraude_detalhado_response_id_pais_value}}}
    **/
   public RiscoFraudeDetalhadoResponse idPais(String idPais) {
     this.idPais = idPais;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identification code of the Country")
+  @ApiModelProperty(example = "null", value = "{{{risco_fraude_detalhado_response_id_pais_value}}}")
   @JsonProperty("idPais")
   public String getIdPais() {
     return idPais;
@@ -337,14 +337,14 @@ public class RiscoFraudeDetalhadoResponse   {
 
   
   /**
-   * Response code of the authorizer for the transaction
+   * {{{risco_fraude_detalhado_response_codigo_resposta_autorizador_value}}}
    **/
   public RiscoFraudeDetalhadoResponse codigoRespostaAutorizador(String codigoRespostaAutorizador) {
     this.codigoRespostaAutorizador = codigoRespostaAutorizador;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Response code of the authorizer for the transaction")
+  @ApiModelProperty(example = "null", value = "{{{risco_fraude_detalhado_response_codigo_resposta_autorizador_value}}}")
   @JsonProperty("codigoRespostaAutorizador")
   public String getCodigoRespostaAutorizador() {
     return codigoRespostaAutorizador;
@@ -355,14 +355,14 @@ public class RiscoFraudeDetalhadoResponse   {
 
   
   /**
-   * Description of the response of the authorizer for the transaction
+   * {{{risco_fraude_detalhado_response_descricao_resposta_autorizador_value}}}
    **/
   public RiscoFraudeDetalhadoResponse descricaoRespostaAutorizador(String descricaoRespostaAutorizador) {
     this.descricaoRespostaAutorizador = descricaoRespostaAutorizador;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Description of the response of the authorizer for the transaction")
+  @ApiModelProperty(example = "null", value = "{{{risco_fraude_detalhado_response_descricao_resposta_autorizador_value}}}")
   @JsonProperty("descricaoRespostaAutorizador")
   public String getDescricaoRespostaAutorizador() {
     return descricaoRespostaAutorizador;
@@ -373,14 +373,14 @@ public class RiscoFraudeDetalhadoResponse   {
 
   
   /**
-   * Response code of the tool of fraund prevention for the transaction
+   * {{{risco_fraude_detalhado_response_codigo_resposta_fraude_value}}}
    **/
   public RiscoFraudeDetalhadoResponse codigoRespostaFraude(String codigoRespostaFraude) {
     this.codigoRespostaFraude = codigoRespostaFraude;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Response code of the tool of fraund prevention for the transaction")
+  @ApiModelProperty(example = "null", value = "{{{risco_fraude_detalhado_response_codigo_resposta_fraude_value}}}")
   @JsonProperty("codigoRespostaFraude")
   public String getCodigoRespostaFraude() {
     return codigoRespostaFraude;
@@ -391,14 +391,14 @@ public class RiscoFraudeDetalhadoResponse   {
 
   
   /**
-   * Description of the response of the Prevention tool to the fraud for the transaction
+   * {{{risco_fraude_detalhado_response_descricao_resposta_fraude_value}}}
    **/
   public RiscoFraudeDetalhadoResponse descricaoRespostaFraude(String descricaoRespostaFraude) {
     this.descricaoRespostaFraude = descricaoRespostaFraude;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Description of the response of the Prevention tool to the fraud for the transaction")
+  @ApiModelProperty(example = "null", value = "{{{risco_fraude_detalhado_response_descricao_resposta_fraude_value}}}")
   @JsonProperty("descricaoRespostaFraude")
   public String getDescricaoRespostaFraude() {
     return descricaoRespostaFraude;
@@ -409,14 +409,14 @@ public class RiscoFraudeDetalhadoResponse   {
 
   
   /**
-   * Type of Terminal that caused the Transaction (POS, ATM, TEF, etc)
+   * {{{risco_fraude_detalhado_response_origem_transacao_value}}}
    **/
   public RiscoFraudeDetalhadoResponse origemTransacao(String origemTransacao) {
     this.origemTransacao = origemTransacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Type of Terminal that caused the Transaction (POS, ATM, TEF, etc)")
+  @ApiModelProperty(example = "null", value = "{{{risco_fraude_detalhado_response_origem_transacao_value}}}")
   @JsonProperty("origemTransacao")
   public String getOrigemTransacao() {
     return origemTransacao;
@@ -427,14 +427,14 @@ public class RiscoFraudeDetalhadoResponse   {
 
   
   /**
-   * Code of identification of the origin mode of the transaction capture
+   * {{{risco_fraude_detalhado_response_codigo_modo_entrada_terminal_value}}}
    **/
   public RiscoFraudeDetalhadoResponse codigoModoEntradaTerminal(String codigoModoEntradaTerminal) {
     this.codigoModoEntradaTerminal = codigoModoEntradaTerminal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Code of identification of the origin mode of the transaction capture")
+  @ApiModelProperty(example = "null", value = "{{{risco_fraude_detalhado_response_codigo_modo_entrada_terminal_value}}}")
   @JsonProperty("codigoModoEntradaTerminal")
   public String getCodigoModoEntradaTerminal() {
     return codigoModoEntradaTerminal;
@@ -445,14 +445,14 @@ public class RiscoFraudeDetalhadoResponse   {
 
   
   /**
-   * Description of the origin mode of the transaction capture
+   * {{{risco_fraude_detalhado_response_descricao_modo_entrada_terminal_value}}}
    **/
   public RiscoFraudeDetalhadoResponse descricaoModoEntradaTerminal(String descricaoModoEntradaTerminal) {
     this.descricaoModoEntradaTerminal = descricaoModoEntradaTerminal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Description of the origin mode of the transaction capture")
+  @ApiModelProperty(example = "null", value = "{{{risco_fraude_detalhado_response_descricao_modo_entrada_terminal_value}}}")
   @JsonProperty("descricaoModoEntradaTerminal")
   public String getDescricaoModoEntradaTerminal() {
     return descricaoModoEntradaTerminal;
@@ -463,14 +463,14 @@ public class RiscoFraudeDetalhadoResponse   {
 
   
   /**
-   * Number of CPF of the Person carrdholder, when it is the Physical type
+   * {{{risco_fraude_detalhado_response_cpf_value}}}
    **/
   public RiscoFraudeDetalhadoResponse cpf(String cpf) {
     this.cpf = cpf;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Number of CPF of the Person carrdholder, when it is the Physical type")
+  @ApiModelProperty(example = "null", value = "{{{risco_fraude_detalhado_response_cpf_value}}}")
   @JsonProperty("cpf")
   public String getCpf() {
     return cpf;
@@ -481,14 +481,14 @@ public class RiscoFraudeDetalhadoResponse   {
 
   
   /**
-   * CNPJ number of the Per?son cardholder, when it is the Legal type
+   * {{{risco_fraude_detalhado_response_cnpj_value}}}
    **/
   public RiscoFraudeDetalhadoResponse cnpj(String cnpj) {
     this.cnpj = cnpj;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "CNPJ number of the Per?son cardholder, when it is the Legal type")
+  @ApiModelProperty(example = "null", value = "{{{risco_fraude_detalhado_response_cnpj_value}}}")
   @JsonProperty("cnpj")
   public String getCnpj() {
     return cnpj;
@@ -499,14 +499,14 @@ public class RiscoFraudeDetalhadoResponse   {
 
   
   /**
-   * Email Address of the Cardholder
+   * {{{risco_fraude_detalhado_response_email_value}}}
    **/
   public RiscoFraudeDetalhadoResponse email(String email) {
     this.email = email;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Email Address of the Cardholder")
+  @ApiModelProperty(example = "null", value = "{{{risco_fraude_detalhado_response_email_value}}}")
   @JsonProperty("email")
   public String getEmail() {
     return email;
@@ -517,14 +517,14 @@ public class RiscoFraudeDetalhadoResponse   {
 
   
   /**
-   * List of associated telephones to the cardholder
+   * {{{risco_fraude_detalhado_response_telefones_value}}}
    **/
   public RiscoFraudeDetalhadoResponse telefones(List<TelefoneResponse> telefones) {
     this.telefones = telefones;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "List of associated telephones to the cardholder")
+  @ApiModelProperty(example = "null", value = "{{{risco_fraude_detalhado_response_telefones_value}}}")
   @JsonProperty("telefones")
   public List<TelefoneResponse> getTelefones() {
     return telefones;

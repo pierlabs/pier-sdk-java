@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * List of Entities
+ * {{{page_entidade_response_description}}}
  **/
 
-@ApiModel(description = "List of Entities")
+@ApiModel(description = "{{{page_entidade_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageEntidadeResponse   {
   
