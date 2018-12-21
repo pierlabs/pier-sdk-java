@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{page_tipo_endereco_response_description}}}
+ * List of the Address Type
  **/
 
-@ApiModel(description = "{{{page_tipo_endereco_response_description}}}")
+@ApiModel(description = "List of the Address Type")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageTipoEnderecoResponse   {
   

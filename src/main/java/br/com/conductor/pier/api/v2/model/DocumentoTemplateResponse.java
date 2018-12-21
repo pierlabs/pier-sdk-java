@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{documento_template_response_description}}}
+ * Representation of the template resource document response
  **/
 
-@ApiModel(description = "{{{documento_template_response_description}}}")
+@ApiModel(description = "Representation of the template resource document response")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class DocumentoTemplateResponse   {
   
@@ -20,14 +20,14 @@ public class DocumentoTemplateResponse   {
 
   
   /**
-   * {{{documento_template_response_id_value}}}
+   * Template ID of the Document
    **/
   public DocumentoTemplateResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{documento_template_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "Template ID of the Document")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -38,14 +38,14 @@ public class DocumentoTemplateResponse   {
 
   
   /**
-   * {{{documento_template_response_id_tipo_template_value}}}
+   * ID of the Type of Template
    **/
   public DocumentoTemplateResponse idTipoTemplate(Long idTipoTemplate) {
     this.idTipoTemplate = idTipoTemplate;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{documento_template_response_id_tipo_template_value}}}")
+  @ApiModelProperty(example = "null", value = "ID of the Type of Template")
   @JsonProperty("idTipoTemplate")
   public Long getIdTipoTemplate() {
     return idTipoTemplate;

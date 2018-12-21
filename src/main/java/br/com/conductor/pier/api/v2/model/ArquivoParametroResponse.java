@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{arquivo_parametro_response_description}}}
+ * Object Response of the file parameter
  **/
 
-@ApiModel(description = "{{{arquivo_parametro_response_description}}}")
+@ApiModel(description = "Object Response of the file parameter")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ArquivoParametroResponse   {
   
@@ -21,14 +21,14 @@ public class ArquivoParametroResponse   {
 
   
   /**
-   * {{{arquivo_parametro_response_id_value}}}
+   * Identification Code of detail of the file
    **/
   public ArquivoParametroResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{arquivo_parametro_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of detail of the file")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -39,14 +39,14 @@ public class ArquivoParametroResponse   {
 
   
   /**
-   * {{{arquivo_parametro_response_nome_campo_value}}}
+   * Name that identify the details of the file
    **/
   public ArquivoParametroResponse nomeCampo(String nomeCampo) {
     this.nomeCampo = nomeCampo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{arquivo_parametro_response_nome_campo_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Name that identify the details of the file")
   @JsonProperty("nomeCampo")
   public String getNomeCampo() {
     return nomeCampo;
@@ -57,14 +57,14 @@ public class ArquivoParametroResponse   {
 
   
   /**
-   * {{{arquivo_parametro_response_conteudo_value}}}
+   * Content of nameField
    **/
   public ArquivoParametroResponse conteudo(String conteudo) {
     this.conteudo = conteudo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{arquivo_parametro_response_conteudo_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Content of nameField")
   @JsonProperty("conteudo")
   public String getConteudo() {
     return conteudo;

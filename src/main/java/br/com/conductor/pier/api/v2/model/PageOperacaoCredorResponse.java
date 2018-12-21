@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{page_operacao_credor_response_description}}}
+ * List of the OperationCreditor
  **/
 
-@ApiModel(description = "{{{page_operacao_credor_response_description}}}")
+@ApiModel(description = "List of the OperationCreditor")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageOperacaoCredorResponse   {
   

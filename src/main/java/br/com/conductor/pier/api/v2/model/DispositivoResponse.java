@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{dispositivo_response_description}}}
+ * Device Mobile
  **/
 
-@ApiModel(description = "{{{dispositivo_response_description}}}")
+@ApiModel(description = "Device Mobile")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class DispositivoResponse   {
   
@@ -22,14 +22,14 @@ public class DispositivoResponse   {
 
   
   /**
-   * {{{dispositivo_response_id_value}}}
+   * Identifier of the device
    **/
   public DispositivoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{dispositivo_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "Identifier of the device")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -40,14 +40,14 @@ public class DispositivoResponse   {
 
   
   /**
-   * {{{dispositivo_response_token_value}}}
+   * Token of the device
    **/
   public DispositivoResponse token(String token) {
     this.token = token;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{dispositivo_response_token_value}}}")
+  @ApiModelProperty(example = "null", value = "Token of the device")
   @JsonProperty("token")
   public String getToken() {
     return token;
@@ -58,14 +58,14 @@ public class DispositivoResponse   {
 
   
   /**
-   * {{{dispositivo_response_id_aplicacao_mobile_value}}}
+   * Identifier of the application
    **/
   public DispositivoResponse idAplicacaoMobile(Long idAplicacaoMobile) {
     this.idAplicacaoMobile = idAplicacaoMobile;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{dispositivo_response_id_aplicacao_mobile_value}}}")
+  @ApiModelProperty(example = "null", value = "Identifier of the application")
   @JsonProperty("idAplicacaoMobile")
   public Long getIdAplicacaoMobile() {
     return idAplicacaoMobile;
@@ -76,14 +76,14 @@ public class DispositivoResponse   {
 
   
   /**
-   * {{{dispositivo_response_id_usuario_value}}}
+   * Identifier of the user
    **/
   public DispositivoResponse idUsuario(Long idUsuario) {
     this.idUsuario = idUsuario;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{dispositivo_response_id_usuario_value}}}")
+  @ApiModelProperty(example = "null", value = "Identifier of the user")
   @JsonProperty("idUsuario")
   public Long getIdUsuario() {
     return idUsuario;

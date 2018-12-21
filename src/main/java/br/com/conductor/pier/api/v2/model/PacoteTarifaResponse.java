@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * {{{pacote_tarifa_resposta}}}
+ * Representation of an fee package tariff
  **/
 
-@ApiModel(description = "{{{pacote_tarifa_resposta}}}")
+@ApiModel(description = "Representation of an fee package tariff")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PacoteTarifaResponse   {
   
@@ -29,14 +29,14 @@ public class PacoteTarifaResponse   {
 
   
   /**
-   * {{{pacote_tarifa_resposta_descricao_descricao}}}
+   * The description of the fee
    **/
   public PacoteTarifaResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pacote_tarifa_resposta_descricao_descricao}}}")
+  @ApiModelProperty(example = "null", value = "The description of the fee")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -47,14 +47,14 @@ public class PacoteTarifaResponse   {
 
   
   /**
-   * {{{pacote_tarifa_resposta_id_descricao}}}
+   * Fee package id
    **/
   public PacoteTarifaResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pacote_tarifa_resposta_id_descricao}}}")
+  @ApiModelProperty(example = "null", value = "Fee package id")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -65,14 +65,14 @@ public class PacoteTarifaResponse   {
 
   
   /**
-   * {{{pacote_tarifa_resposta_quantidade_aplicacoes_descricao}}}
+   * Application amount
    **/
   public PacoteTarifaResponse quantidadeAplicacoes(Integer quantidadeAplicacoes) {
     this.quantidadeAplicacoes = quantidadeAplicacoes;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pacote_tarifa_resposta_quantidade_aplicacoes_descricao}}}")
+  @ApiModelProperty(example = "null", value = "Application amount")
   @JsonProperty("quantidadeAplicacoes")
   public Integer getQuantidadeAplicacoes() {
     return quantidadeAplicacoes;
@@ -83,14 +83,14 @@ public class PacoteTarifaResponse   {
 
   
   /**
-   * {{{pacote_tarifa_resposta_quantidade_bilhete_unico_descricao}}}
+   * Unique ticket amount
    **/
   public PacoteTarifaResponse quantidadeBilheteUnico(Integer quantidadeBilheteUnico) {
     this.quantidadeBilheteUnico = quantidadeBilheteUnico;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pacote_tarifa_resposta_quantidade_bilhete_unico_descricao}}}")
+  @ApiModelProperty(example = "null", value = "Unique ticket amount")
   @JsonProperty("quantidadeBilheteUnico")
   public Integer getQuantidadeBilheteUnico() {
     return quantidadeBilheteUnico;
@@ -101,14 +101,14 @@ public class PacoteTarifaResponse   {
 
   
   /**
-   * {{{pacote_tarifa_resposta_quantidade_boleto_descricao}}}
+   * Chage ticket amount
    **/
   public PacoteTarifaResponse quantidadeBoleto(Integer quantidadeBoleto) {
     this.quantidadeBoleto = quantidadeBoleto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pacote_tarifa_resposta_quantidade_boleto_descricao}}}")
+  @ApiModelProperty(example = "null", value = "Chage ticket amount")
   @JsonProperty("quantidadeBoleto")
   public Integer getQuantidadeBoleto() {
     return quantidadeBoleto;
@@ -119,14 +119,14 @@ public class PacoteTarifaResponse   {
 
   
   /**
-   * {{{pacote_tarifa_resposta_quantidade_recarga_celular_descricao}}}
+   * Cellphone recharge amount
    **/
   public PacoteTarifaResponse quantidadeRecargaCelular(Integer quantidadeRecargaCelular) {
     this.quantidadeRecargaCelular = quantidadeRecargaCelular;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pacote_tarifa_resposta_quantidade_recarga_celular_descricao}}}")
+  @ApiModelProperty(example = "null", value = "Cellphone recharge amount")
   @JsonProperty("quantidadeRecargaCelular")
   public Integer getQuantidadeRecargaCelular() {
     return quantidadeRecargaCelular;
@@ -137,14 +137,14 @@ public class PacoteTarifaResponse   {
 
   
   /**
-   * {{{pacote_tarifa_resposta_quantidade_saque_descricao}}}
+   * Cash out amount
    **/
   public PacoteTarifaResponse quantidadeSaque(Integer quantidadeSaque) {
     this.quantidadeSaque = quantidadeSaque;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pacote_tarifa_resposta_quantidade_saque_descricao}}}")
+  @ApiModelProperty(example = "null", value = "Cash out amount")
   @JsonProperty("quantidadeSaque")
   public Integer getQuantidadeSaque() {
     return quantidadeSaque;
@@ -155,14 +155,14 @@ public class PacoteTarifaResponse   {
 
   
   /**
-   * {{{pacote_tarifa_resposta_quantidade_taxa_pagamento_conta_descricao}}}
+   * Payment tax account amount
    **/
   public PacoteTarifaResponse quantidadeTaxaPagamentoConta(Integer quantidadeTaxaPagamentoConta) {
     this.quantidadeTaxaPagamentoConta = quantidadeTaxaPagamentoConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pacote_tarifa_resposta_quantidade_taxa_pagamento_conta_descricao}}}")
+  @ApiModelProperty(example = "null", value = "Payment tax account amount")
   @JsonProperty("quantidadeTaxaPagamentoConta")
   public Integer getQuantidadeTaxaPagamentoConta() {
     return quantidadeTaxaPagamentoConta;
@@ -173,14 +173,14 @@ public class PacoteTarifaResponse   {
 
   
   /**
-   * {{{pacote_tarifa_resposta_quantidade_transferencia_descricao}}}
+   * Transfer amount
    **/
   public PacoteTarifaResponse quantidadeTransferencia(Integer quantidadeTransferencia) {
     this.quantidadeTransferencia = quantidadeTransferencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pacote_tarifa_resposta_quantidade_transferencia_descricao}}}")
+  @ApiModelProperty(example = "null", value = "Transfer amount")
   @JsonProperty("quantidadeTransferencia")
   public Integer getQuantidadeTransferencia() {
     return quantidadeTransferencia;
@@ -191,14 +191,14 @@ public class PacoteTarifaResponse   {
 
   
   /**
-   * {{{pacote_tarifa_resposta_valor_tarifa_descricao}}}
+   * Tax value
    **/
   public PacoteTarifaResponse valorTarifa(BigDecimal valorTarifa) {
     this.valorTarifa = valorTarifa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pacote_tarifa_resposta_valor_tarifa_descricao}}}")
+  @ApiModelProperty(example = "null", value = "Tax value")
   @JsonProperty("valorTarifa")
   public BigDecimal getValorTarifa() {
     return valorTarifa;

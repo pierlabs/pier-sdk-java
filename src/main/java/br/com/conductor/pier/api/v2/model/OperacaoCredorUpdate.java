@@ -10,10 +10,10 @@ import java.math.BigDecimal;
 
 
 /**
- * {{{operacao_credor_update_description}}}
+ * Object OperationCreditor
  **/
 
-@ApiModel(description = "{{{operacao_credor_update_description}}}")
+@ApiModel(description = "Object OperationCreditor")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class OperacaoCredorUpdate   {
   
@@ -74,14 +74,14 @@ public class OperacaoCredorUpdate   {
 
   
   /**
-   * {{{operacao_credor_update_id_operacao_value}}}
+   * Show the Operation id
    **/
   public OperacaoCredorUpdate idOperacao(Long idOperacao) {
     this.idOperacao = idOperacao;
     return this;
   }
   
-  @ApiModelProperty(example = "2", required = true, value = "{{{operacao_credor_update_id_operacao_value}}}")
+  @ApiModelProperty(example = "2", required = true, value = "Show the Operation id")
   @JsonProperty("idOperacao")
   public Long getIdOperacao() {
     return idOperacao;
@@ -92,14 +92,14 @@ public class OperacaoCredorUpdate   {
 
   
   /**
-   * {{{operacao_credor_update_id_grupo_economico_value}}}
+   * Show the id of the Economic Group
    **/
   public OperacaoCredorUpdate idGrupoEconomico(Long idGrupoEconomico) {
     this.idGrupoEconomico = idGrupoEconomico;
     return this;
   }
   
-  @ApiModelProperty(example = "1", required = true, value = "{{{operacao_credor_update_id_grupo_economico_value}}}")
+  @ApiModelProperty(example = "1", required = true, value = "Show the id of the Economic Group")
   @JsonProperty("idGrupoEconomico")
   public Long getIdGrupoEconomico() {
     return idGrupoEconomico;
@@ -110,14 +110,14 @@ public class OperacaoCredorUpdate   {
 
   
   /**
-   * {{{operacao_credor_update_id_produto_value}}}
+   * Show the id of the product that will be updated
    **/
   public OperacaoCredorUpdate idProduto(Long idProduto) {
     this.idProduto = idProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "3", value = "{{{operacao_credor_update_id_produto_value}}}")
+  @ApiModelProperty(example = "3", value = "Show the id of the product that will be updated")
   @JsonProperty("idProduto")
   public Long getIdProduto() {
     return idProduto;
@@ -128,14 +128,14 @@ public class OperacaoCredorUpdate   {
 
   
   /**
-   * {{{operacao_credor_update_remuneracao_percentual_value}}}
+   * Remuneration Percentage
    **/
   public OperacaoCredorUpdate remuneracaoPercentual(BigDecimal remuneracaoPercentual) {
     this.remuneracaoPercentual = remuneracaoPercentual;
     return this;
   }
   
-  @ApiModelProperty(example = "0.04", value = "{{{operacao_credor_update_remuneracao_percentual_value}}}")
+  @ApiModelProperty(example = "0.04", value = "Remuneration Percentage")
   @JsonProperty("remuneracaoPercentual")
   public BigDecimal getRemuneracaoPercentual() {
     return remuneracaoPercentual;
@@ -146,14 +146,14 @@ public class OperacaoCredorUpdate   {
 
   
   /**
-   * {{{operacao_credor_update_remuneracao_fixa_value}}}
+   * Remuneration Fixed
    **/
   public OperacaoCredorUpdate remuneracaoFixa(BigDecimal remuneracaoFixa) {
     this.remuneracaoFixa = remuneracaoFixa;
     return this;
   }
   
-  @ApiModelProperty(example = "0.0", value = "{{{operacao_credor_update_remuneracao_fixa_value}}}")
+  @ApiModelProperty(example = "0.0", value = "Remuneration Fixed")
   @JsonProperty("remuneracaoFixa")
   public BigDecimal getRemuneracaoFixa() {
     return remuneracaoFixa;
@@ -164,14 +164,14 @@ public class OperacaoCredorUpdate   {
 
   
   /**
-   * {{{operacao_credor_update_periodicidade_value}}}
+   * Frequency (DAILY(1), WEEKLY(2), MONTHLY(3), DECENDIAL(4), BIWEEKLY(5))
    **/
   public OperacaoCredorUpdate periodicidade(PeriodicidadeEnum periodicidade) {
     this.periodicidade = periodicidade;
     return this;
   }
   
-  @ApiModelProperty(example = "MENSAL", value = "{{{operacao_credor_update_periodicidade_value}}}")
+  @ApiModelProperty(example = "MENSAL", value = "Frequency (DAILY(1), WEEKLY(2), MONTHLY(3), DECENDIAL(4), BIWEEKLY(5))")
   @JsonProperty("periodicidade")
   public PeriodicidadeEnum getPeriodicidade() {
     return periodicidade;
@@ -182,14 +182,14 @@ public class OperacaoCredorUpdate   {
 
   
   /**
-   * {{{operacao_credor_update_vencimento_primeira_parcela_value}}}
+   * Expiration of the first parcel
    **/
   public OperacaoCredorUpdate vencimentoPrimeiraParcela(Integer vencimentoPrimeiraParcela) {
     this.vencimentoPrimeiraParcela = vencimentoPrimeiraParcela;
     return this;
   }
   
-  @ApiModelProperty(example = "28", value = "{{{operacao_credor_update_vencimento_primeira_parcela_value}}}")
+  @ApiModelProperty(example = "28", value = "Expiration of the first parcel")
   @JsonProperty("vencimentoPrimeiraParcela")
   public Integer getVencimentoPrimeiraParcela() {
     return vencimentoPrimeiraParcela;
@@ -200,14 +200,14 @@ public class OperacaoCredorUpdate   {
 
   
   /**
-   * {{{operacao_credor_update_dias_afastamento_value}}}
+   * Clearance days
    **/
   public OperacaoCredorUpdate diasAfastamento(Integer diasAfastamento) {
     this.diasAfastamento = diasAfastamento;
     return this;
   }
   
-  @ApiModelProperty(example = "28", value = "{{{operacao_credor_update_dias_afastamento_value}}}")
+  @ApiModelProperty(example = "28", value = "Clearance days")
   @JsonProperty("diasAfastamento")
   public Integer getDiasAfastamento() {
     return diasAfastamento;
@@ -218,14 +218,14 @@ public class OperacaoCredorUpdate   {
 
   
   /**
-   * {{{operacao_credor_update_fator_multiplicador_value}}}
+   * Multiplier Factor (OUR_SCHEDULE(0), SCHEDULE(1))
    **/
   public OperacaoCredorUpdate fatorMultiplicador(FatorMultiplicadorEnum fatorMultiplicador) {
     this.fatorMultiplicador = fatorMultiplicador;
     return this;
   }
   
-  @ApiModelProperty(example = "AGENDA", value = "{{{operacao_credor_update_fator_multiplicador_value}}}")
+  @ApiModelProperty(example = "AGENDA", value = "Multiplier Factor (OUR_SCHEDULE(0), SCHEDULE(1))")
   @JsonProperty("fatorMultiplicador")
   public FatorMultiplicadorEnum getFatorMultiplicador() {
     return fatorMultiplicador;
@@ -236,14 +236,14 @@ public class OperacaoCredorUpdate   {
 
   
   /**
-   * {{{operacao_credor_update_flag_taxa_fixada_value}}}
+   * Flag taxe fixed
    **/
   public OperacaoCredorUpdate flagTaxaFixada(Boolean flagTaxaFixada) {
     this.flagTaxaFixada = flagTaxaFixada;
     return this;
   }
   
-  @ApiModelProperty(example = "true", value = "{{{operacao_credor_update_flag_taxa_fixada_value}}}")
+  @ApiModelProperty(example = "true", value = "Flag taxe fixed")
   @JsonProperty("flagTaxaFixada")
   public Boolean getFlagTaxaFixada() {
     return flagTaxaFixada;
@@ -254,14 +254,14 @@ public class OperacaoCredorUpdate   {
 
   
   /**
-   * {{{operacao_credor_update_plano_minimo_value}}}
+   * Minimum plan of the rule
    **/
   public OperacaoCredorUpdate planoMinimo(Integer planoMinimo) {
     this.planoMinimo = planoMinimo;
     return this;
   }
   
-  @ApiModelProperty(example = "1", required = true, value = "{{{operacao_credor_update_plano_minimo_value}}}")
+  @ApiModelProperty(example = "1", required = true, value = "Minimum plan of the rule")
   @JsonProperty("planoMinimo")
   public Integer getPlanoMinimo() {
     return planoMinimo;
@@ -272,14 +272,14 @@ public class OperacaoCredorUpdate   {
 
   
   /**
-   * {{{operacao_credor_update_plano_maximo_value}}}
+   * Maximum plan of the rule
    **/
   public OperacaoCredorUpdate planoMaximo(Integer planoMaximo) {
     this.planoMaximo = planoMaximo;
     return this;
   }
   
-  @ApiModelProperty(example = "5", required = true, value = "{{{operacao_credor_update_plano_maximo_value}}}")
+  @ApiModelProperty(example = "5", required = true, value = "Maximum plan of the rule")
   @JsonProperty("planoMaximo")
   public Integer getPlanoMaximo() {
     return planoMaximo;

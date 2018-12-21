@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{detalhe_oportunidade_response_description}}}
+ * Detail representation of the resource answer opportunity
  **/
 
-@ApiModel(description = "{{{detalhe_oportunidade_response_description}}}")
+@ApiModel(description = "Detail representation of the resource answer opportunity")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class DetalheOportunidadeResponse   {
   
@@ -21,14 +21,14 @@ public class DetalheOportunidadeResponse   {
 
   
   /**
-   * {{{detalhe_oportunidade_response_id_value}}}
+   * Identifier of the detail
    **/
   public DetalheOportunidadeResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{detalhe_oportunidade_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "Identifier of the detail")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -39,14 +39,14 @@ public class DetalheOportunidadeResponse   {
 
   
   /**
-   * {{{detalhe_oportunidade_response_nome_campo_value}}}
+   * Name of the Content
    **/
   public DetalheOportunidadeResponse nomeCampo(String nomeCampo) {
     this.nomeCampo = nomeCampo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{detalhe_oportunidade_response_nome_campo_value}}}")
+  @ApiModelProperty(example = "null", value = "Name of the Content")
   @JsonProperty("nomeCampo")
   public String getNomeCampo() {
     return nomeCampo;
@@ -57,14 +57,14 @@ public class DetalheOportunidadeResponse   {
 
   
   /**
-   * {{{detalhe_oportunidade_response_conteudo_value}}}
+   * Content of the detail
    **/
   public DetalheOportunidadeResponse conteudo(String conteudo) {
     this.conteudo = conteudo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{detalhe_oportunidade_response_conteudo_value}}}")
+  @ApiModelProperty(example = "null", value = "Content of the detail")
   @JsonProperty("conteudo")
   public String getConteudo() {
     return conteudo;

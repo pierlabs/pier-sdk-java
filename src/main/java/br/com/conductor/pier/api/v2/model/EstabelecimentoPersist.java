@@ -10,10 +10,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{estabelecimento_persist_description}}}
+ * Request Parameters of a Merchant
  **/
 
-@ApiModel(description = "{{{estabelecimento_persist_description}}}")
+@ApiModel(description = "Request Parameters of a Merchant")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class EstabelecimentoPersist   {
   
@@ -78,14 +78,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_flag_matriz_value}}}
+   * Indicate if it is headquarter or Branch
    **/
   public EstabelecimentoPersist flagMatriz(Integer flagMatriz) {
     this.flagMatriz = flagMatriz;
     return this;
   }
   
-  @ApiModelProperty(example = "0", value = "{{{estabelecimento_persist_flag_matriz_value}}}")
+  @ApiModelProperty(example = "0", value = "Indicate if it is headquarter or Branch")
   @JsonProperty("flagMatriz")
   public Integer getFlagMatriz() {
     return flagMatriz;
@@ -96,14 +96,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_id_grupo_economico_value}}}
+   * Show the identification number of the Economic Group
    **/
   public EstabelecimentoPersist idGrupoEconomico(Long idGrupoEconomico) {
     this.idGrupoEconomico = idGrupoEconomico;
     return this;
   }
   
-  @ApiModelProperty(example = "10", value = "{{{estabelecimento_persist_id_grupo_economico_value}}}")
+  @ApiModelProperty(example = "10", value = "Show the identification number of the Economic Group")
   @JsonProperty("idGrupoEconomico")
   public Long getIdGrupoEconomico() {
     return idGrupoEconomico;
@@ -114,14 +114,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_numero_receita_federal_value}}}
+   * Federal revenue number
    **/
   public EstabelecimentoPersist numeroReceitaFederal(String numeroReceitaFederal) {
     this.numeroReceitaFederal = numeroReceitaFederal;
     return this;
   }
   
-  @ApiModelProperty(example = "25487412547854", value = "{{{estabelecimento_persist_numero_receita_federal_value}}}")
+  @ApiModelProperty(example = "25487412547854", value = "Federal revenue number")
   @JsonProperty("numeroReceitaFederal")
   public String getNumeroReceitaFederal() {
     return numeroReceitaFederal;
@@ -132,14 +132,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_nome_value}}}
+   * Name of the Merchant
    **/
   public EstabelecimentoPersist nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "Padaria Mundial LTDA", value = "{{{estabelecimento_persist_nome_value}}}")
+  @ApiModelProperty(example = "Padaria Mundial LTDA", value = "Name of the Merchant")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -150,14 +150,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_descricao_value}}}
+   * Social Reason of the Merchant
    **/
   public EstabelecimentoPersist descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "Padaria Mundial", value = "{{{estabelecimento_persist_descricao_value}}}")
+  @ApiModelProperty(example = "Padaria Mundial", value = "Social Reason of the Merchant")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -168,14 +168,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_nome_fantasia_value}}}
+   * Commercial title of the Merchant
    **/
   public EstabelecimentoPersist nomeFantasia(String nomeFantasia) {
     this.nomeFantasia = nomeFantasia;
     return this;
   }
   
-  @ApiModelProperty(example = "Padaria Mundial", value = "{{{estabelecimento_persist_nome_fantasia_value}}}")
+  @ApiModelProperty(example = "Padaria Mundial", value = "Commercial title of the Merchant")
   @JsonProperty("nomeFantasia")
   public String getNomeFantasia() {
     return nomeFantasia;
@@ -186,14 +186,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_cep_value}}}
+   * CEP
    **/
   public EstabelecimentoPersist cep(String cep) {
     this.cep = cep;
     return this;
   }
   
-  @ApiModelProperty(example = "58000000", value = "{{{estabelecimento_persist_cep_value}}}")
+  @ApiModelProperty(example = "58000000", value = "CEP")
   @JsonProperty("cep")
   public String getCep() {
     return cep;
@@ -204,14 +204,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_nome_logradouro_value}}}
+   * Name of the Street
    **/
   public EstabelecimentoPersist nomeLogradouro(String nomeLogradouro) {
     this.nomeLogradouro = nomeLogradouro;
     return this;
   }
   
-  @ApiModelProperty(example = "Rua Antonio da Luz", value = "{{{estabelecimento_persist_nome_logradouro_value}}}")
+  @ApiModelProperty(example = "Rua Antonio da Luz", value = "Name of the Street")
   @JsonProperty("nomeLogradouro")
   public String getNomeLogradouro() {
     return nomeLogradouro;
@@ -222,14 +222,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_numero_endereco_value}}}
+   * Address Number
    **/
   public EstabelecimentoPersist numeroEndereco(Integer numeroEndereco) {
     this.numeroEndereco = numeroEndereco;
     return this;
   }
   
-  @ApiModelProperty(example = "3333", value = "{{{estabelecimento_persist_numero_endereco_value}}}")
+  @ApiModelProperty(example = "3333", value = "Address Number")
   @JsonProperty("numeroEndereco")
   public Integer getNumeroEndereco() {
     return numeroEndereco;
@@ -240,14 +240,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_bairro_value}}}
+   * Neighborhood address
    **/
   public EstabelecimentoPersist bairro(String bairro) {
     this.bairro = bairro;
     return this;
   }
   
-  @ApiModelProperty(example = "Centro", value = "{{{estabelecimento_persist_bairro_value}}}")
+  @ApiModelProperty(example = "Centro", value = "Neighborhood address")
   @JsonProperty("bairro")
   public String getBairro() {
     return bairro;
@@ -258,14 +258,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_cidade_value}}}
+   * Address City name
    **/
   public EstabelecimentoPersist cidade(String cidade) {
     this.cidade = cidade;
     return this;
   }
   
-  @ApiModelProperty(example = "João Pessoa", value = "{{{estabelecimento_persist_cidade_value}}}")
+  @ApiModelProperty(example = "João Pessoa", value = "Address City name")
   @JsonProperty("cidade")
   public String getCidade() {
     return cidade;
@@ -276,14 +276,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_complemento_value}}}
+   * Descri??es complementares referente ao endere?o
    **/
   public EstabelecimentoPersist complemento(String complemento) {
     this.complemento = complemento;
     return this;
   }
   
-  @ApiModelProperty(example = "Casa", value = "{{{estabelecimento_persist_complemento_value}}}")
+  @ApiModelProperty(example = "Casa", value = "Descri??es complementares referente ao endere?o")
   @JsonProperty("complemento")
   public String getComplemento() {
     return complemento;
@@ -294,14 +294,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_uf_value}}}
+   * Acronym of identification of the Address Federal Unity
    **/
   public EstabelecimentoPersist uf(String uf) {
     this.uf = uf;
     return this;
   }
   
-  @ApiModelProperty(example = "PB", value = "{{{estabelecimento_persist_uf_value}}}")
+  @ApiModelProperty(example = "PB", value = "Acronym of identification of the Address Federal Unity")
   @JsonProperty("uf")
   public String getUf() {
     return uf;
@@ -312,14 +312,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_cep2_value}}}
+   * CEP2
    **/
   public EstabelecimentoPersist cep2(String cep2) {
     this.cep2 = cep2;
     return this;
   }
   
-  @ApiModelProperty(example = "58000000", value = "{{{estabelecimento_persist_cep2_value}}}")
+  @ApiModelProperty(example = "58000000", value = "CEP2")
   @JsonProperty("cep2")
   public String getCep2() {
     return cep2;
@@ -330,14 +330,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_nome_logradouro2_value}}}
+   * Street name
    **/
   public EstabelecimentoPersist nomeLogradouro2(String nomeLogradouro2) {
     this.nomeLogradouro2 = nomeLogradouro2;
     return this;
   }
   
-  @ApiModelProperty(example = "Rua Antonio da Luz", value = "{{{estabelecimento_persist_nome_logradouro2_value}}}")
+  @ApiModelProperty(example = "Rua Antonio da Luz", value = "Street name")
   @JsonProperty("nomeLogradouro2")
   public String getNomeLogradouro2() {
     return nomeLogradouro2;
@@ -348,14 +348,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_numero_endereco2_value}}}
+   * Address Number
    **/
   public EstabelecimentoPersist numeroEndereco2(Integer numeroEndereco2) {
     this.numeroEndereco2 = numeroEndereco2;
     return this;
   }
   
-  @ApiModelProperty(example = "3333", value = "{{{estabelecimento_persist_numero_endereco2_value}}}")
+  @ApiModelProperty(example = "3333", value = "Address Number")
   @JsonProperty("numeroEndereco2")
   public Integer getNumeroEndereco2() {
     return numeroEndereco2;
@@ -366,14 +366,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_bairro2_value}}}
+   * Name of the neighborhood
    **/
   public EstabelecimentoPersist bairro2(String bairro2) {
     this.bairro2 = bairro2;
     return this;
   }
   
-  @ApiModelProperty(example = "Centro", value = "{{{estabelecimento_persist_bairro2_value}}}")
+  @ApiModelProperty(example = "Centro", value = "Name of the neighborhood")
   @JsonProperty("bairro2")
   public String getBairro2() {
     return bairro2;
@@ -384,14 +384,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_cidade2_value}}}
+   * Address City name
    **/
   public EstabelecimentoPersist cidade2(String cidade2) {
     this.cidade2 = cidade2;
     return this;
   }
   
-  @ApiModelProperty(example = "João Pessoa", value = "{{{estabelecimento_persist_cidade2_value}}}")
+  @ApiModelProperty(example = "João Pessoa", value = "Address City name")
   @JsonProperty("cidade2")
   public String getCidade2() {
     return cidade2;
@@ -402,14 +402,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_complemento2_value}}}
+   * Descri??es complementares referente ao endere?o
    **/
   public EstabelecimentoPersist complemento2(String complemento2) {
     this.complemento2 = complemento2;
     return this;
   }
   
-  @ApiModelProperty(example = "Casa", value = "{{{estabelecimento_persist_complemento2_value}}}")
+  @ApiModelProperty(example = "Casa", value = "Descri??es complementares referente ao endere?o")
   @JsonProperty("complemento2")
   public String getComplemento2() {
     return complemento2;
@@ -420,14 +420,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_uf2_value}}}
+   * Acronym of the identification of Federal Unity
    **/
   public EstabelecimentoPersist uf2(String uf2) {
     this.uf2 = uf2;
     return this;
   }
   
-  @ApiModelProperty(example = "PB", value = "{{{estabelecimento_persist_uf2_value}}}")
+  @ApiModelProperty(example = "PB", value = "Acronym of the identification of Federal Unity")
   @JsonProperty("uf2")
   public String getUf2() {
     return uf2;
@@ -438,14 +438,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_obs_value}}}
+   * Specific Details when according to the Merchant Register
    **/
   public EstabelecimentoPersist obs(String obs) {
     this.obs = obs;
     return this;
   }
   
-  @ApiModelProperty(example = "responsavel", value = "{{{estabelecimento_persist_obs_value}}}")
+  @ApiModelProperty(example = "responsavel", value = "Specific Details when according to the Merchant Register")
   @JsonProperty("obs")
   public String getObs() {
     return obs;
@@ -456,14 +456,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_contato_value}}}
+   * Name of the person to contact with the Merchant
    **/
   public EstabelecimentoPersist contato(String contato) {
     this.contato = contato;
     return this;
   }
   
-  @ApiModelProperty(example = "Arnaldo", value = "{{{estabelecimento_persist_contato_value}}}")
+  @ApiModelProperty(example = "Arnaldo", value = "Name of the person to contact with the Merchant")
   @JsonProperty("contato")
   public String getContato() {
     return contato;
@@ -474,14 +474,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_email_value}}}
+   * E-mail of the person to contact with the Merchant
    **/
   public EstabelecimentoPersist email(String email) {
     this.email = email;
     return this;
   }
   
-  @ApiModelProperty(example = "padaria@dominio.com.br", value = "{{{estabelecimento_persist_email_value}}}")
+  @ApiModelProperty(example = "padaria@dominio.com.br", value = "E-mail of the person to contact with the Merchant")
   @JsonProperty("email")
   public String getEmail() {
     return email;
@@ -492,14 +492,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_flag_arquivo_secr_fazenda_value}}}
+   * Indicate if the merchant will be include in the registerment file for the State Treasuary Secretary
    **/
   public EstabelecimentoPersist flagArquivoSecrFazenda(Integer flagArquivoSecrFazenda) {
     this.flagArquivoSecrFazenda = flagArquivoSecrFazenda;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_persist_flag_arquivo_secr_fazenda_value}}}")
+  @ApiModelProperty(example = "null", value = "Indicate if the merchant will be include in the registerment file for the State Treasuary Secretary")
   @JsonProperty("flagArquivoSecrFazenda")
   public Integer getFlagArquivoSecrFazenda() {
     return flagArquivoSecrFazenda;
@@ -510,14 +510,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_flag_cartao_digitado_value}}}
+   * Indicate if the merhcant can originate transactions without the reading of the magnetic stripe or the card chip
    **/
   public EstabelecimentoPersist flagCartaoDigitado(Integer flagCartaoDigitado) {
     this.flagCartaoDigitado = flagCartaoDigitado;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_persist_flag_cartao_digitado_value}}}")
+  @ApiModelProperty(example = "null", value = "Indicate if the merhcant can originate transactions without the reading of the magnetic stripe or the card chip")
   @JsonProperty("flagCartaoDigitado")
   public Integer getFlagCartaoDigitado() {
     return flagCartaoDigitado;
@@ -528,14 +528,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_inativo_value}}}
+   * Indicate if the merchant is inactive
    **/
   public EstabelecimentoPersist inativo(Integer inativo) {
     this.inativo = inativo;
     return this;
   }
   
-  @ApiModelProperty(example = "1", value = "{{{estabelecimento_persist_inativo_value}}}")
+  @ApiModelProperty(example = "1", value = "Indicate if the merchant is inactive")
   @JsonProperty("inativo")
   public Integer getInativo() {
     return inativo;
@@ -546,14 +546,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_id_moeda_value}}}
+   * Identifier Code of the Currency
    **/
   public EstabelecimentoPersist idMoeda(Long idMoeda) {
     this.idMoeda = idMoeda;
     return this;
   }
   
-  @ApiModelProperty(example = "425", value = "{{{estabelecimento_persist_id_moeda_value}}}")
+  @ApiModelProperty(example = "425", value = "Identifier Code of the Currency")
   @JsonProperty("idMoeda")
   public Long getIdMoeda() {
     return idMoeda;
@@ -564,14 +564,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_id_pais_value}}}
+   * Identifiier of the country
    **/
   public EstabelecimentoPersist idPais(Long idPais) {
     this.idPais = idPais;
     return this;
   }
   
-  @ApiModelProperty(example = "31", value = "{{{estabelecimento_persist_id_pais_value}}}")
+  @ApiModelProperty(example = "31", value = "Identifiier of the country")
   @JsonProperty("idPais")
   public Long getIdPais() {
     return idPais;
@@ -582,14 +582,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_associado_s_p_c_brasil_value}}}
+   * Associated number to the SPCBrazil
    **/
   public EstabelecimentoPersist associadoSPCBrasil(Integer associadoSPCBrasil) {
     this.associadoSPCBrasil = associadoSPCBrasil;
     return this;
   }
   
-  @ApiModelProperty(example = "17", value = "{{{estabelecimento_persist_associado_s_p_c_brasil_value}}}")
+  @ApiModelProperty(example = "17", value = "Associated number to the SPCBrazil")
   @JsonProperty("associadoSPCBrasil")
   public Integer getAssociadoSPCBrasil() {
     return associadoSPCBrasil;
@@ -600,14 +600,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_mcc_value}}}
+   * Merchant Category Code
    **/
   public EstabelecimentoPersist mcc(Long mcc) {
     this.mcc = mcc;
     return this;
   }
   
-  @ApiModelProperty(example = "9950", value = "{{{estabelecimento_persist_mcc_value}}}")
+  @ApiModelProperty(example = "9950", value = "Merchant Category Code")
   @JsonProperty("mcc")
   public Long getMcc() {
     return mcc;
@@ -618,14 +618,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_id_tipo_estabelecimento_value}}}
+   * Identification Code of the Merchant
    **/
   public EstabelecimentoPersist idTipoEstabelecimento(Long idTipoEstabelecimento) {
     this.idTipoEstabelecimento = idTipoEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "1", value = "{{{estabelecimento_persist_id_tipo_estabelecimento_value}}}")
+  @ApiModelProperty(example = "1", value = "Identification Code of the Merchant")
   @JsonProperty("idTipoEstabelecimento")
   public Long getIdTipoEstabelecimento() {
     return idTipoEstabelecimento;
@@ -636,14 +636,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_correspondencia_value}}}
+   * Indicator which the address the mails will be sent, where 1 is ORIGIN and 2 MAIL ADDRESS
    **/
   public EstabelecimentoPersist correspondencia(Integer correspondencia) {
     this.correspondencia = correspondencia;
     return this;
   }
   
-  @ApiModelProperty(example = "1", value = "{{{estabelecimento_persist_correspondencia_value}}}")
+  @ApiModelProperty(example = "1", value = "Indicator which the address the mails will be sent, where 1 is ORIGIN and 2 MAIL ADDRESS")
   @JsonProperty("correspondencia")
   public Integer getCorrespondencia() {
     return correspondencia;
@@ -654,14 +654,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_cargo_contato_value}}}
+   * Merchant Contact Occupation
    **/
   public EstabelecimentoPersist cargoContato(String cargoContato) {
     this.cargoContato = cargoContato;
     return this;
   }
   
-  @ApiModelProperty(example = "Vendedor", value = "{{{estabelecimento_persist_cargo_contato_value}}}")
+  @ApiModelProperty(example = "Vendedor", value = "Merchant Contact Occupation")
   @JsonProperty("cargoContato")
   public String getCargoContato() {
     return cargoContato;
@@ -672,14 +672,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_tipo_pagamento_value}}}
+   * Regime type of the merchant payment
    **/
   public EstabelecimentoPersist tipoPagamento(TipoPagamentoEnum tipoPagamento) {
     this.tipoPagamento = tipoPagamento;
     return this;
   }
   
-  @ApiModelProperty(example = "CENTRALIZADO", value = "{{{estabelecimento_persist_tipo_pagamento_value}}}")
+  @ApiModelProperty(example = "CENTRALIZADO", value = "Regime type of the merchant payment")
   @JsonProperty("tipoPagamento")
   public TipoPagamentoEnum getTipoPagamento() {
     return tipoPagamento;
@@ -690,14 +690,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_consulta_value}}}
+   * Register of register number one
    **/
   public EstabelecimentoPersist consulta(ConsultaCadastroEstabelecimentoDTO consulta) {
     this.consulta = consulta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_persist_consulta_value}}}")
+  @ApiModelProperty(example = "null", value = "Register of register number one")
   @JsonProperty("consulta")
   public ConsultaCadastroEstabelecimentoDTO getConsulta() {
     return consulta;
@@ -708,14 +708,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_consulta2_value}}}
+   * Retrieve the register number 2
    **/
   public EstabelecimentoPersist consulta2(ConsultaCadastroEstabelecimentoDTO consulta2) {
     this.consulta2 = consulta2;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_persist_consulta2_value}}}")
+  @ApiModelProperty(example = "null", value = "Retrieve the register number 2")
   @JsonProperty("consulta2")
   public ConsultaCadastroEstabelecimentoDTO getConsulta2() {
     return consulta2;
@@ -726,14 +726,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_consulta3_value}}}
+   * Retrieve the register number three
    **/
   public EstabelecimentoPersist consulta3(ConsultaCadastroEstabelecimentoDTO consulta3) {
     this.consulta3 = consulta3;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_persist_consulta3_value}}}")
+  @ApiModelProperty(example = "null", value = "Retrieve the register number three")
   @JsonProperty("consulta3")
   public ConsultaCadastroEstabelecimentoDTO getConsulta3() {
     return consulta3;
@@ -744,14 +744,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_flag_terminal_virtual_value}}}
+   * Flag indicating if the terminal is physical or virtual, being: (true: Yes), (false: No))
    **/
   public EstabelecimentoPersist flagTerminalVirtual(Boolean flagTerminalVirtual) {
     this.flagTerminalVirtual = flagTerminalVirtual;
     return this;
   }
   
-  @ApiModelProperty(example = "false", required = true, value = "{{{estabelecimento_persist_flag_terminal_virtual_value}}}")
+  @ApiModelProperty(example = "false", required = true, value = "Flag indicating if the terminal is physical or virtual, being: (true: Yes), (false: No))")
   @JsonProperty("flagTerminalVirtual")
   public Boolean getFlagTerminalVirtual() {
     return flagTerminalVirtual;
@@ -762,14 +762,14 @@ public class EstabelecimentoPersist   {
 
   
   /**
-   * {{{estabelecimento_persist_flag_consulta_extrato_value}}}
+   * Flag indicating if the terminal allows the statement retrieving, being: (true: Yes), (false: No))
    **/
   public EstabelecimentoPersist flagConsultaExtrato(Boolean flagConsultaExtrato) {
     this.flagConsultaExtrato = flagConsultaExtrato;
     return this;
   }
   
-  @ApiModelProperty(example = "false", required = true, value = "{{{estabelecimento_persist_flag_consulta_extrato_value}}}")
+  @ApiModelProperty(example = "false", required = true, value = "Flag indicating if the terminal allows the statement retrieving, being: (true: Yes), (false: No))")
   @JsonProperty("flagConsultaExtrato")
   public Boolean getFlagConsultaExtrato() {
     return flagConsultaExtrato;

@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{documento_detalhado_response_description}}}
+ * Response Representation of the Document resource
  **/
 
-@ApiModel(description = "{{{documento_detalhado_response_description}}}")
+@ApiModel(description = "Response Representation of the Document resource")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class DocumentoDetalhadoResponse   {
   
@@ -27,14 +27,14 @@ public class DocumentoDetalhadoResponse   {
 
   
   /**
-   * {{{documento_detalhado_response_id_value}}}
+   * ID of the Document
    **/
   public DocumentoDetalhadoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{documento_detalhado_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "ID of the Document")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -45,14 +45,14 @@ public class DocumentoDetalhadoResponse   {
 
   
   /**
-   * {{{documento_detalhado_response_id_template_documento_value}}}
+   * ID of the Template of the associated Document
    **/
   public DocumentoDetalhadoResponse idTemplateDocumento(Long idTemplateDocumento) {
     this.idTemplateDocumento = idTemplateDocumento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{documento_detalhado_response_id_template_documento_value}}}")
+  @ApiModelProperty(example = "null", value = "ID of the Template of the associated Document")
   @JsonProperty("idTemplateDocumento")
   public Long getIdTemplateDocumento() {
     return idTemplateDocumento;
@@ -63,14 +63,14 @@ public class DocumentoDetalhadoResponse   {
 
   
   /**
-   * {{{documento_detalhado_response_nome_value}}}
+   * Name of the Document
    **/
   public DocumentoDetalhadoResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{documento_detalhado_response_nome_value}}}")
+  @ApiModelProperty(example = "null", value = "Name of the Document")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -81,14 +81,14 @@ public class DocumentoDetalhadoResponse   {
 
   
   /**
-   * {{{documento_detalhado_response_documento_value}}}
+   * Representation of the document in Base64
    **/
   public DocumentoDetalhadoResponse documento(String documento) {
     this.documento = documento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{documento_detalhado_response_documento_value}}}")
+  @ApiModelProperty(example = "null", value = "Representation of the document in Base64")
   @JsonProperty("documento")
   public String getDocumento() {
     return documento;
@@ -99,14 +99,14 @@ public class DocumentoDetalhadoResponse   {
 
   
   /**
-   * {{{documento_detalhado_response_extensao_value}}}
+   * Extension of the Document
    **/
   public DocumentoDetalhadoResponse extensao(String extensao) {
     this.extensao = extensao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{documento_detalhado_response_extensao_value}}}")
+  @ApiModelProperty(example = "null", value = "Extension of the Document")
   @JsonProperty("extensao")
   public String getExtensao() {
     return extensao;
@@ -117,14 +117,14 @@ public class DocumentoDetalhadoResponse   {
 
   
   /**
-   * {{{documento_detalhado_response_documento_detalhes_value}}}
+   * Detailing of the document
    **/
   public DocumentoDetalhadoResponse documentoDetalhes(List<DocumentoDetalheResponse> documentoDetalhes) {
     this.documentoDetalhes = documentoDetalhes;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{documento_detalhado_response_documento_detalhes_value}}}")
+  @ApiModelProperty(example = "null", value = "Detailing of the document")
   @JsonProperty("documentoDetalhes")
   public List<DocumentoDetalheResponse> getDocumentoDetalhes() {
     return documentoDetalhes;

@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{page_web_hook_response_description}}}
+ * List of WebHooks
  **/
 
-@ApiModel(description = "{{{page_web_hook_response_description}}}")
+@ApiModel(description = "List of WebHooks")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageWebHookResponse   {
   

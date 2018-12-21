@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * {{{transacao_on_us_por_id_cartao_request_description}}}
+ * Object of transaction resquest On Us per idCard
  **/
 
-@ApiModel(description = "{{{transacao_on_us_por_id_cartao_request_description}}}")
+@ApiModel(description = "Object of transaction resquest On Us per idCard")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TransacaoOnUsPorIdCartaoRequest   {
   
@@ -27,14 +27,14 @@ public class TransacaoOnUsPorIdCartaoRequest   {
 
   
   /**
-   * {{{transacao_on_us_por_id_cartao_request_nsu_origem_value}}}
+   * Unique Sequel Number that identifies the transaction in the system that originated it
    **/
   public TransacaoOnUsPorIdCartaoRequest nsuOrigem(String nsuOrigem) {
     this.nsuOrigem = nsuOrigem;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{transacao_on_us_por_id_cartao_request_nsu_origem_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Unique Sequel Number that identifies the transaction in the system that originated it")
   @JsonProperty("nsuOrigem")
   public String getNsuOrigem() {
     return nsuOrigem;
@@ -45,14 +45,14 @@ public class TransacaoOnUsPorIdCartaoRequest   {
 
   
   /**
-   * {{{transacao_on_us_por_id_cartao_request_codigo_processamento_value}}}
+   * Code of Processing that identifies the type of transaction
    **/
   public TransacaoOnUsPorIdCartaoRequest codigoProcessamento(String codigoProcessamento) {
     this.codigoProcessamento = codigoProcessamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{transacao_on_us_por_id_cartao_request_codigo_processamento_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Code of Processing that identifies the type of transaction")
   @JsonProperty("codigoProcessamento")
   public String getCodigoProcessamento() {
     return codigoProcessamento;
@@ -63,14 +63,14 @@ public class TransacaoOnUsPorIdCartaoRequest   {
 
   
   /**
-   * {{{transacao_on_us_por_id_cartao_request_valor_transacao_value}}}
+   * Value of the transaction with two decimal places for the cents
    **/
   public TransacaoOnUsPorIdCartaoRequest valorTransacao(BigDecimal valorTransacao) {
     this.valorTransacao = valorTransacao;
     return this;
   }
   
-  @ApiModelProperty(example = "10.25", required = true, value = "{{{transacao_on_us_por_id_cartao_request_valor_transacao_value}}}")
+  @ApiModelProperty(example = "10.25", required = true, value = "Value of the transaction with two decimal places for the cents")
   @JsonProperty("valorTransacao")
   public BigDecimal getValorTransacao() {
     return valorTransacao;
@@ -81,14 +81,14 @@ public class TransacaoOnUsPorIdCartaoRequest   {
 
   
   /**
-   * {{{transacao_on_us_por_id_cartao_request_numero_estabelecimento_value}}}
+   * Number of the Establishment (Number+DV)
    **/
   public TransacaoOnUsPorIdCartaoRequest numeroEstabelecimento(Long numeroEstabelecimento) {
     this.numeroEstabelecimento = numeroEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{transacao_on_us_por_id_cartao_request_numero_estabelecimento_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Number of the Establishment (Number+DV)")
   @JsonProperty("numeroEstabelecimento")
   public Long getNumeroEstabelecimento() {
     return numeroEstabelecimento;
@@ -99,14 +99,14 @@ public class TransacaoOnUsPorIdCartaoRequest   {
 
   
   /**
-   * {{{transacao_on_us_por_id_cartao_request_nome_estabelecimento_value}}}
+   * Establishment Name
    **/
   public TransacaoOnUsPorIdCartaoRequest nomeEstabelecimento(String nomeEstabelecimento) {
     this.nomeEstabelecimento = nomeEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{transacao_on_us_por_id_cartao_request_nome_estabelecimento_value}}}")
+  @ApiModelProperty(example = "null", value = "Establishment Name")
   @JsonProperty("nomeEstabelecimento")
   public String getNomeEstabelecimento() {
     return nomeEstabelecimento;
@@ -117,14 +117,14 @@ public class TransacaoOnUsPorIdCartaoRequest   {
 
   
   /**
-   * {{{transacao_on_us_por_id_cartao_request_data_hora_terminal_value}}}
+   * Show the date and local time of the retrievement yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
    **/
   public TransacaoOnUsPorIdCartaoRequest dataHoraTerminal(String dataHoraTerminal) {
     this.dataHoraTerminal = dataHoraTerminal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{transacao_on_us_por_id_cartao_request_data_hora_terminal_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Show the date and local time of the retrievement yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00")
   @JsonProperty("dataHoraTerminal")
   public String getDataHoraTerminal() {
     return dataHoraTerminal;
@@ -135,14 +135,14 @@ public class TransacaoOnUsPorIdCartaoRequest   {
 
   
   /**
-   * {{{transacao_on_us_por_id_cartao_request_terminal_requisitante_value}}}
+   * Show the identification of the terminal applicant
    **/
   public TransacaoOnUsPorIdCartaoRequest terminalRequisitante(String terminalRequisitante) {
     this.terminalRequisitante = terminalRequisitante;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{transacao_on_us_por_id_cartao_request_terminal_requisitante_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Show the identification of the terminal applicant")
   @JsonProperty("terminalRequisitante")
   public String getTerminalRequisitante() {
     return terminalRequisitante;
@@ -153,14 +153,14 @@ public class TransacaoOnUsPorIdCartaoRequest   {
 
   
   /**
-   * {{{transacao_on_us_por_id_cartao_request_numero_parcelas_value}}}
+   * Number of Parcels
    **/
   public TransacaoOnUsPorIdCartaoRequest numeroParcelas(Long numeroParcelas) {
     this.numeroParcelas = numeroParcelas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{transacao_on_us_por_id_cartao_request_numero_parcelas_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Number of Parcels")
   @JsonProperty("numeroParcelas")
   public Long getNumeroParcelas() {
     return numeroParcelas;

@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{tipo_faturamento_response_description}}}
+ * Object Billing
  **/
 
-@ApiModel(description = "{{{tipo_faturamento_response_description}}}")
+@ApiModel(description = "Object Billing")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TipoFaturamentoResponse   {
   
@@ -22,14 +22,14 @@ public class TipoFaturamentoResponse   {
 
   
   /**
-   * {{{tipo_faturamento_response_id_value}}}
+   * Identification Code of the billing type (id)
    **/
   public TipoFaturamentoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_faturamento_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the billing type (id)")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -40,14 +40,14 @@ public class TipoFaturamentoResponse   {
 
   
   /**
-   * {{{tipo_faturamento_response_descricao_value}}}
+   * Description of theh billing type
    **/
   public TipoFaturamentoResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_faturamento_response_descricao_value}}}")
+  @ApiModelProperty(example = "null", value = "Description of theh billing type")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -58,14 +58,14 @@ public class TipoFaturamentoResponse   {
 
   
   /**
-   * {{{tipo_faturamento_response_flag_apenas_demonstrativo_value}}}
+   * Flag that represents that the billing will be only demonstrative
    **/
   public TipoFaturamentoResponse flagApenasDemonstrativo(Boolean flagApenasDemonstrativo) {
     this.flagApenasDemonstrativo = flagApenasDemonstrativo;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "{{{tipo_faturamento_response_flag_apenas_demonstrativo_value}}}")
+  @ApiModelProperty(example = "false", value = "Flag that represents that the billing will be only demonstrative")
   @JsonProperty("flagApenasDemonstrativo")
   public Boolean getFlagApenasDemonstrativo() {
     return flagApenasDemonstrativo;
@@ -76,14 +76,14 @@ public class TipoFaturamentoResponse   {
 
   
   /**
-   * {{{tipo_faturamento_response_id_convenio_value}}}
+   * Identification Code of the related covenant to the billing type
    **/
   public TipoFaturamentoResponse idConvenio(Long idConvenio) {
     this.idConvenio = idConvenio;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_faturamento_response_id_convenio_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the related covenant to the billing type")
   @JsonProperty("idConvenio")
   public Long getIdConvenio() {
     return idConvenio;

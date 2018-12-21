@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * {{{taxas_refinanciamento_response_description}}}
+ * Object of response for the validation of the refinancing taxes
  **/
 
-@ApiModel(description = "{{{taxas_refinanciamento_response_description}}}")
+@ApiModel(description = "Object of response for the validation of the refinancing taxes")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TaxasRefinanciamentoResponse   {
   
@@ -41,14 +41,14 @@ public class TaxasRefinanciamentoResponse   {
 
   
   /**
-   * {{{taxas_refinanciamento_response_id_value}}}
+   * ID of the taxes
    **/
   public TaxasRefinanciamentoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{taxas_refinanciamento_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "ID of the taxes")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -59,14 +59,14 @@ public class TaxasRefinanciamentoResponse   {
 
   
   /**
-   * {{{taxas_refinanciamento_response_id_conta_value}}}
+   * ID of the account
    **/
   public TaxasRefinanciamentoResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{taxas_refinanciamento_response_id_conta_value}}}")
+  @ApiModelProperty(example = "null", value = "ID of the account")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -77,14 +77,14 @@ public class TaxasRefinanciamentoResponse   {
 
   
   /**
-   * {{{taxas_refinanciamento_response_id_produto_value}}}
+   * ID of the product
    **/
   public TaxasRefinanciamentoResponse idProduto(Long idProduto) {
     this.idProduto = idProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{taxas_refinanciamento_response_id_produto_value}}}")
+  @ApiModelProperty(example = "null", value = "ID of the product")
   @JsonProperty("idProduto")
   public Long getIdProduto() {
     return idProduto;
@@ -95,14 +95,14 @@ public class TaxasRefinanciamentoResponse   {
 
   
   /**
-   * {{{taxas_refinanciamento_response_id_plano_conta_value}}}
+   * ID of the account plan
    **/
   public TaxasRefinanciamentoResponse idPlanoConta(Long idPlanoConta) {
     this.idPlanoConta = idPlanoConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{taxas_refinanciamento_response_id_plano_conta_value}}}")
+  @ApiModelProperty(example = "null", value = "ID of the account plan")
   @JsonProperty("idPlanoConta")
   public Long getIdPlanoConta() {
     return idPlanoConta;
@@ -113,14 +113,14 @@ public class TaxasRefinanciamentoResponse   {
 
   
   /**
-   * {{{taxas_refinanciamento_response_id_plano_pct_value}}}
+   * ID of the PCT plan
    **/
   public TaxasRefinanciamentoResponse idPlanoPct(Long idPlanoPct) {
     this.idPlanoPct = idPlanoPct;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{taxas_refinanciamento_response_id_plano_pct_value}}}")
+  @ApiModelProperty(example = "null", value = "ID of the PCT plan")
   @JsonProperty("idPlanoPct")
   public Long getIdPlanoPct() {
     return idPlanoPct;
@@ -131,14 +131,14 @@ public class TaxasRefinanciamentoResponse   {
 
   
   /**
-   * {{{taxas_refinanciamento_response_id_plano_credito_taxa_value}}}
+   * ID plan taxe credit
    **/
   public TaxasRefinanciamentoResponse idPlanoCreditoTaxa(Long idPlanoCreditoTaxa) {
     this.idPlanoCreditoTaxa = idPlanoCreditoTaxa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{taxas_refinanciamento_response_id_plano_credito_taxa_value}}}")
+  @ApiModelProperty(example = "null", value = "ID plan taxe credit")
   @JsonProperty("idPlanoCreditoTaxa")
   public Long getIdPlanoCreditoTaxa() {
     return idPlanoCreditoTaxa;
@@ -149,14 +149,14 @@ public class TaxasRefinanciamentoResponse   {
 
   
   /**
-   * {{{taxas_refinanciamento_response_data_entrada_value}}}
+   * Entrance date
    **/
   public TaxasRefinanciamentoResponse dataEntrada(String dataEntrada) {
     this.dataEntrada = dataEntrada;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{taxas_refinanciamento_response_data_entrada_value}}}")
+  @ApiModelProperty(example = "null", value = "Entrance date")
   @JsonProperty("dataEntrada")
   public String getDataEntrada() {
     return dataEntrada;
@@ -167,14 +167,14 @@ public class TaxasRefinanciamentoResponse   {
 
   
   /**
-   * {{{taxas_refinanciamento_response_vencimento_value}}}
+   * Expiration of the taxes
    **/
   public TaxasRefinanciamentoResponse vencimento(String vencimento) {
     this.vencimento = vencimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{taxas_refinanciamento_response_vencimento_value}}}")
+  @ApiModelProperty(example = "null", value = "Expiration of the taxes")
   @JsonProperty("vencimento")
   public String getVencimento() {
     return vencimento;
@@ -185,14 +185,14 @@ public class TaxasRefinanciamentoResponse   {
 
   
   /**
-   * {{{taxas_refinanciamento_response_recuperacao_encargos_financeiros_value}}}
+   * Retrieve of the financial charges
    **/
   public TaxasRefinanciamentoResponse recuperacaoEncargosFinanceiros(BigDecimal recuperacaoEncargosFinanceiros) {
     this.recuperacaoEncargosFinanceiros = recuperacaoEncargosFinanceiros;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{taxas_refinanciamento_response_recuperacao_encargos_financeiros_value}}}")
+  @ApiModelProperty(example = "null", value = "Retrieve of the financial charges")
   @JsonProperty("recuperacaoEncargosFinanceiros")
   public BigDecimal getRecuperacaoEncargosFinanceiros() {
     return recuperacaoEncargosFinanceiros;
@@ -203,14 +203,14 @@ public class TaxasRefinanciamentoResponse   {
 
   
   /**
-   * {{{taxas_refinanciamento_response_comissao_garantia_value}}}
+   * Description of the guarantee commission
    **/
   public TaxasRefinanciamentoResponse comissaoGarantia(BigDecimal comissaoGarantia) {
     this.comissaoGarantia = comissaoGarantia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{taxas_refinanciamento_response_comissao_garantia_value}}}")
+  @ApiModelProperty(example = "null", value = "Description of the guarantee commission")
   @JsonProperty("comissaoGarantia")
   public BigDecimal getComissaoGarantia() {
     return comissaoGarantia;
@@ -221,14 +221,14 @@ public class TaxasRefinanciamentoResponse   {
 
   
   /**
-   * {{{taxas_refinanciamento_response_agenciamento_value}}}
+   * Description of the management
    **/
   public TaxasRefinanciamentoResponse agenciamento(BigDecimal agenciamento) {
     this.agenciamento = agenciamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{taxas_refinanciamento_response_agenciamento_value}}}")
+  @ApiModelProperty(example = "null", value = "Description of the management")
   @JsonProperty("agenciamento")
   public BigDecimal getAgenciamento() {
     return agenciamento;
@@ -239,14 +239,14 @@ public class TaxasRefinanciamentoResponse   {
 
   
   /**
-   * {{{taxas_refinanciamento_response_taxa_maxima_proximo_periodo_value}}}
+   * Maximum taxe of the next period
    **/
   public TaxasRefinanciamentoResponse taxaMaximaProximoPeriodo(BigDecimal taxaMaximaProximoPeriodo) {
     this.taxaMaximaProximoPeriodo = taxaMaximaProximoPeriodo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{taxas_refinanciamento_response_taxa_maxima_proximo_periodo_value}}}")
+  @ApiModelProperty(example = "null", value = "Maximum taxe of the next period")
   @JsonProperty("taxaMaximaProximoPeriodo")
   public BigDecimal getTaxaMaximaProximoPeriodo() {
     return taxaMaximaProximoPeriodo;
@@ -257,14 +257,14 @@ public class TaxasRefinanciamentoResponse   {
 
   
   /**
-   * {{{taxas_refinanciamento_response_taxa_encargos_financiamento_value}}}
+   * Taxe of the financing charges
    **/
   public TaxasRefinanciamentoResponse taxaEncargosFinanciamento(BigDecimal taxaEncargosFinanciamento) {
     this.taxaEncargosFinanciamento = taxaEncargosFinanciamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{taxas_refinanciamento_response_taxa_encargos_financiamento_value}}}")
+  @ApiModelProperty(example = "null", value = "Taxe of the financing charges")
   @JsonProperty("taxaEncargosFinanciamento")
   public BigDecimal getTaxaEncargosFinanciamento() {
     return taxaEncargosFinanciamento;
@@ -275,14 +275,14 @@ public class TaxasRefinanciamentoResponse   {
 
   
   /**
-   * {{{taxas_refinanciamento_response_taxa_maxima_saque_value}}}
+   * Maximum taxe of the withdrawal
    **/
   public TaxasRefinanciamentoResponse taxaMaximaSaque(BigDecimal taxaMaximaSaque) {
     this.taxaMaximaSaque = taxaMaximaSaque;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{taxas_refinanciamento_response_taxa_maxima_saque_value}}}")
+  @ApiModelProperty(example = "null", value = "Maximum taxe of the withdrawal")
   @JsonProperty("taxaMaximaSaque")
   public BigDecimal getTaxaMaximaSaque() {
     return taxaMaximaSaque;
@@ -293,14 +293,14 @@ public class TaxasRefinanciamentoResponse   {
 
   
   /**
-   * {{{taxas_refinanciamento_response_taxa_saque_value}}}
+   * Withdrawal taxe
    **/
   public TaxasRefinanciamentoResponse taxaSaque(BigDecimal taxaSaque) {
     this.taxaSaque = taxaSaque;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{taxas_refinanciamento_response_taxa_saque_value}}}")
+  @ApiModelProperty(example = "null", value = "Withdrawal taxe")
   @JsonProperty("taxaSaque")
   public BigDecimal getTaxaSaque() {
     return taxaSaque;
@@ -311,14 +311,14 @@ public class TaxasRefinanciamentoResponse   {
 
   
   /**
-   * {{{taxas_refinanciamento_response_taxa_maxima_compra_juros_value}}}
+   * Maximum taxe of shop interest
    **/
   public TaxasRefinanciamentoResponse taxaMaximaCompraJuros(BigDecimal taxaMaximaCompraJuros) {
     this.taxaMaximaCompraJuros = taxaMaximaCompraJuros;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{taxas_refinanciamento_response_taxa_maxima_compra_juros_value}}}")
+  @ApiModelProperty(example = "null", value = "Maximum taxe of shop interest")
   @JsonProperty("taxaMaximaCompraJuros")
   public BigDecimal getTaxaMaximaCompraJuros() {
     return taxaMaximaCompraJuros;
@@ -329,14 +329,14 @@ public class TaxasRefinanciamentoResponse   {
 
   
   /**
-   * {{{taxas_refinanciamento_response_taxa_compra_juros_value}}}
+   * Shop interest taxes
    **/
   public TaxasRefinanciamentoResponse taxaCompraJuros(BigDecimal taxaCompraJuros) {
     this.taxaCompraJuros = taxaCompraJuros;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{taxas_refinanciamento_response_taxa_compra_juros_value}}}")
+  @ApiModelProperty(example = "null", value = "Shop interest taxes")
   @JsonProperty("taxaCompraJuros")
   public BigDecimal getTaxaCompraJuros() {
     return taxaCompraJuros;
@@ -347,14 +347,14 @@ public class TaxasRefinanciamentoResponse   {
 
   
   /**
-   * {{{taxas_refinanciamento_response_taxa_permanencia_value}}}
+   * Remaining Taxe
    **/
   public TaxasRefinanciamentoResponse taxaPermanencia(BigDecimal taxaPermanencia) {
     this.taxaPermanencia = taxaPermanencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{taxas_refinanciamento_response_taxa_permanencia_value}}}")
+  @ApiModelProperty(example = "null", value = "Remaining Taxe")
   @JsonProperty("taxaPermanencia")
   public BigDecimal getTaxaPermanencia() {
     return taxaPermanencia;
@@ -365,14 +365,14 @@ public class TaxasRefinanciamentoResponse   {
 
   
   /**
-   * {{{taxas_refinanciamento_response_taxa_refinanciamento_value}}}
+   * Remaining taxe
    **/
   public TaxasRefinanciamentoResponse taxaRefinanciamento(BigDecimal taxaRefinanciamento) {
     this.taxaRefinanciamento = taxaRefinanciamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{taxas_refinanciamento_response_taxa_refinanciamento_value}}}")
+  @ApiModelProperty(example = "null", value = "Remaining taxe")
   @JsonProperty("taxaRefinanciamento")
   public BigDecimal getTaxaRefinanciamento() {
     return taxaRefinanciamento;
@@ -383,14 +383,14 @@ public class TaxasRefinanciamentoResponse   {
 
   
   /**
-   * {{{taxas_refinanciamento_response_taxa_recuperacao_refinanciamento_value}}}
+   * Taxe of remaining
    **/
   public TaxasRefinanciamentoResponse taxaRecuperacaoRefinanciamento(BigDecimal taxaRecuperacaoRefinanciamento) {
     this.taxaRecuperacaoRefinanciamento = taxaRecuperacaoRefinanciamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{taxas_refinanciamento_response_taxa_recuperacao_refinanciamento_value}}}")
+  @ApiModelProperty(example = "null", value = "Taxe of remaining")
   @JsonProperty("taxaRecuperacaoRefinanciamento")
   public BigDecimal getTaxaRecuperacaoRefinanciamento() {
     return taxaRecuperacaoRefinanciamento;
@@ -401,14 +401,14 @@ public class TaxasRefinanciamentoResponse   {
 
   
   /**
-   * {{{taxas_refinanciamento_response_taxa_perc_calc_pagamento_minimo_value}}}
+   * Taxe of Installment for Minimum payment
    **/
   public TaxasRefinanciamentoResponse taxaPercCalcPagamentoMinimo(BigDecimal taxaPercCalcPagamentoMinimo) {
     this.taxaPercCalcPagamentoMinimo = taxaPercCalcPagamentoMinimo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{taxas_refinanciamento_response_taxa_perc_calc_pagamento_minimo_value}}}")
+  @ApiModelProperty(example = "null", value = "Taxe of Installment for Minimum payment")
   @JsonProperty("taxaPercCalcPagamentoMinimo")
   public BigDecimal getTaxaPercCalcPagamentoMinimo() {
     return taxaPercCalcPagamentoMinimo;
@@ -419,14 +419,14 @@ public class TaxasRefinanciamentoResponse   {
 
   
   /**
-   * {{{taxas_refinanciamento_response_plano_taxa_default_value}}}
+   * Plan of the standard taxe
    **/
   public TaxasRefinanciamentoResponse planoTaxaDefault(Integer planoTaxaDefault) {
     this.planoTaxaDefault = planoTaxaDefault;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{taxas_refinanciamento_response_plano_taxa_default_value}}}")
+  @ApiModelProperty(example = "null", value = "Plan of the standard taxe")
   @JsonProperty("planoTaxaDefault")
   public Integer getPlanoTaxaDefault() {
     return planoTaxaDefault;

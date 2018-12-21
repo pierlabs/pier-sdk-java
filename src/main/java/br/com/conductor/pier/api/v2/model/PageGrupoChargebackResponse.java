@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{page_grupo_chargeback_response_description}}}
+ * Group Chargeback Detail List
  **/
 
-@ApiModel(description = "{{{page_grupo_chargeback_response_description}}}")
+@ApiModel(description = "Group Chargeback Detail List")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageGrupoChargebackResponse   {
   

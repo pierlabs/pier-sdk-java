@@ -10,10 +10,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{inscricao_apn_resposta_descricao}}}
+ * Represents a subscription response
  **/
 
-@ApiModel(description = "{{{inscricao_apn_resposta_descricao}}}")
+@ApiModel(description = "Represents a subscription response")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class InscricaoAPNResponse   {
   
@@ -27,14 +27,14 @@ public class InscricaoAPNResponse   {
 
   
   /**
-   * {{{inscricao_apn_resposta_aplicacao_mobile_descricao}}}
+   * Represents the mobile application associated to the subscription
    **/
   public InscricaoAPNResponse aplicacaoMobile(AplicacaoMobileEmissorResponse aplicacaoMobile) {
     this.aplicacaoMobile = aplicacaoMobile;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{inscricao_apn_resposta_aplicacao_mobile_descricao}}}")
+  @ApiModelProperty(example = "null", value = "Represents the mobile application associated to the subscription")
   @JsonProperty("aplicacaoMobile")
   public AplicacaoMobileEmissorResponse getAplicacaoMobile() {
     return aplicacaoMobile;
@@ -45,14 +45,14 @@ public class InscricaoAPNResponse   {
 
   
   /**
-   * {{{inscricao_apn_resposta_ativo_descricao}}}
+   * Indicates is the subscription is active
    **/
   public InscricaoAPNResponse ativo(Boolean ativo) {
     this.ativo = ativo;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "{{{inscricao_apn_resposta_ativo_descricao}}}")
+  @ApiModelProperty(example = "false", value = "Indicates is the subscription is active")
   @JsonProperty("ativo")
   public Boolean getAtivo() {
     return ativo;
@@ -63,14 +63,14 @@ public class InscricaoAPNResponse   {
 
   
   /**
-   * {{{inscricao_apn_resposta_cartao_descricao}}}
+   * Represents the card associated to the subscription
    **/
   public InscricaoAPNResponse cartao(CartaoEmissorResponse cartao) {
     this.cartao = cartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{inscricao_apn_resposta_cartao_descricao}}}")
+  @ApiModelProperty(example = "null", value = "Represents the card associated to the subscription")
   @JsonProperty("cartao")
   public CartaoEmissorResponse getCartao() {
     return cartao;
@@ -81,14 +81,14 @@ public class InscricaoAPNResponse   {
 
   
   /**
-   * {{{inscricao_apn_resposta_data_criacao_descricao}}}
+   * The subscription creation date
    **/
   public InscricaoAPNResponse dataCriacao(String dataCriacao) {
     this.dataCriacao = dataCriacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{inscricao_apn_resposta_data_criacao_descricao}}}")
+  @ApiModelProperty(example = "null", value = "The subscription creation date")
   @JsonProperty("dataCriacao")
   public String getDataCriacao() {
     return dataCriacao;
@@ -99,14 +99,14 @@ public class InscricaoAPNResponse   {
 
   
   /**
-   * {{{inscricao_apn_resposta_data_desativacao_descricao}}}
+   * The subscription deactivation date
    **/
   public InscricaoAPNResponse dataDesativacao(String dataDesativacao) {
     this.dataDesativacao = dataDesativacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{inscricao_apn_resposta_data_desativacao_descricao}}}")
+  @ApiModelProperty(example = "null", value = "The subscription deactivation date")
   @JsonProperty("dataDesativacao")
   public String getDataDesativacao() {
     return dataDesativacao;
@@ -117,14 +117,14 @@ public class InscricaoAPNResponse   {
 
   
   /**
-   * {{{inscricao_apn_resposta_device_token_descricao}}}
+   * The device token
    **/
   public InscricaoAPNResponse deviceToken(String deviceToken) {
     this.deviceToken = deviceToken;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{inscricao_apn_resposta_device_token_descricao}}}")
+  @ApiModelProperty(example = "null", value = "The device token")
   @JsonProperty("deviceToken")
   public String getDeviceToken() {
     return deviceToken;
@@ -135,14 +135,14 @@ public class InscricaoAPNResponse   {
 
   
   /**
-   * {{{inscricao_apn_resposta_id_descricao}}}
+   * Subscription id
    **/
   public InscricaoAPNResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{inscricao_apn_resposta_id_descricao}}}")
+  @ApiModelProperty(example = "null", value = "Subscription id")
   @JsonProperty("id")
   public Long getId() {
     return id;

@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{adicional_update_description}}}
+ * Object Additionanl
  **/
 
-@ApiModel(description = "{{{adicional_update_description}}}")
+@ApiModel(description = "Object Additionanl")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class AdicionalUpdate   {
   
@@ -32,14 +32,14 @@ public class AdicionalUpdate   {
 
   
   /**
-   * {{{adicional_update_nome_value}}}
+   * Full name of the additional
    **/
   public AdicionalUpdate nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{adicional_update_nome_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Full name of the additional")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -50,14 +50,14 @@ public class AdicionalUpdate   {
 
   
   /**
-   * {{{adicional_update_nome_impresso_value}}}
+   * Additional name that will be printed on the card
    **/
   public AdicionalUpdate nomeImpresso(String nomeImpresso) {
     this.nomeImpresso = nomeImpresso;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{adicional_update_nome_impresso_value}}}")
+  @ApiModelProperty(example = "null", value = "Additional name that will be printed on the card")
   @JsonProperty("nomeImpresso")
   public String getNomeImpresso() {
     return nomeImpresso;
@@ -68,14 +68,14 @@ public class AdicionalUpdate   {
 
   
   /**
-   * {{{adicional_update_numero_receita_federal_value}}}
+   * Federal Revenue Number
    **/
   public AdicionalUpdate numeroReceitaFederal(String numeroReceitaFederal) {
     this.numeroReceitaFederal = numeroReceitaFederal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{adicional_update_numero_receita_federal_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Federal Revenue Number")
   @JsonProperty("numeroReceitaFederal")
   public String getNumeroReceitaFederal() {
     return numeroReceitaFederal;
@@ -86,14 +86,14 @@ public class AdicionalUpdate   {
 
   
   /**
-   * {{{adicional_update_data_nascimento_value}}}
+   * Birth date of the additional in the format yyyy-MM-dd
    **/
   public AdicionalUpdate dataNascimento(String dataNascimento) {
     this.dataNascimento = dataNascimento;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd", value = "{{{adicional_update_data_nascimento_value}}}")
+  @ApiModelProperty(example = "yyyy-MM-dd", value = "Birth date of the additional in the format yyyy-MM-dd")
   @JsonProperty("dataNascimento")
   public String getDataNascimento() {
     return dataNascimento;
@@ -104,14 +104,14 @@ public class AdicionalUpdate   {
 
   
   /**
-   * {{{adicional_update_sexo_value}}}
+   * Additional Gender
    **/
   public AdicionalUpdate sexo(String sexo) {
     this.sexo = sexo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{adicional_update_sexo_value}}}")
+  @ApiModelProperty(example = "null", value = "Additional Gender")
   @JsonProperty("sexo")
   public String getSexo() {
     return sexo;
@@ -122,14 +122,14 @@ public class AdicionalUpdate   {
 
   
   /**
-   * {{{adicional_update_numero_identidade_value}}}
+   * Identity number of the Additional
    **/
   public AdicionalUpdate numeroIdentidade(String numeroIdentidade) {
     this.numeroIdentidade = numeroIdentidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{adicional_update_numero_identidade_value}}}")
+  @ApiModelProperty(example = "null", value = "Identity number of the Additional")
   @JsonProperty("numeroIdentidade")
   public String getNumeroIdentidade() {
     return numeroIdentidade;
@@ -140,14 +140,14 @@ public class AdicionalUpdate   {
 
   
   /**
-   * {{{adicional_update_orgao_expedidor_identidade_value}}}
+   * Name of the Issuer organ of the Additional Identity Document
    **/
   public AdicionalUpdate orgaoExpedidorIdentidade(String orgaoExpedidorIdentidade) {
     this.orgaoExpedidorIdentidade = orgaoExpedidorIdentidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{adicional_update_orgao_expedidor_identidade_value}}}")
+  @ApiModelProperty(example = "null", value = "Name of the Issuer organ of the Additional Identity Document")
   @JsonProperty("orgaoExpedidorIdentidade")
   public String getOrgaoExpedidorIdentidade() {
     return orgaoExpedidorIdentidade;
@@ -158,14 +158,14 @@ public class AdicionalUpdate   {
 
   
   /**
-   * {{{adicional_update_unidade_federativa_identidade_value}}}
+   * Federative unit
    **/
   public AdicionalUpdate unidadeFederativaIdentidade(String unidadeFederativaIdentidade) {
     this.unidadeFederativaIdentidade = unidadeFederativaIdentidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{adicional_update_unidade_federativa_identidade_value}}}")
+  @ApiModelProperty(example = "null", value = "Federative unit")
   @JsonProperty("unidadeFederativaIdentidade")
   public String getUnidadeFederativaIdentidade() {
     return unidadeFederativaIdentidade;
@@ -176,14 +176,14 @@ public class AdicionalUpdate   {
 
   
   /**
-   * {{{adicional_update_data_emissao_identidade_value}}}
+   * Issue date of the identity document of the additional in the format yyyy-MM-dd
    **/
   public AdicionalUpdate dataEmissaoIdentidade(String dataEmissaoIdentidade) {
     this.dataEmissaoIdentidade = dataEmissaoIdentidade;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd", value = "{{{adicional_update_data_emissao_identidade_value}}}")
+  @ApiModelProperty(example = "yyyy-MM-dd", value = "Issue date of the identity document of the additional in the format yyyy-MM-dd")
   @JsonProperty("dataEmissaoIdentidade")
   public String getDataEmissaoIdentidade() {
     return dataEmissaoIdentidade;
@@ -194,14 +194,14 @@ public class AdicionalUpdate   {
 
   
   /**
-   * {{{adicional_update_id_parentesco_value}}}
+   * Identification Code of the Additional Kinship with the Owner
    **/
   public AdicionalUpdate idParentesco(Long idParentesco) {
     this.idParentesco = idParentesco;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{adicional_update_id_parentesco_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the Additional Kinship with the Owner")
   @JsonProperty("idParentesco")
   public Long getIdParentesco() {
     return idParentesco;
@@ -212,14 +212,14 @@ public class AdicionalUpdate   {
 
   
   /**
-   * {{{adicional_update_telefones_value}}}
+   * Additional Telephone List
    **/
   public AdicionalUpdate telefones(List<TelefoneAdicionalUpdate> telefones) {
     this.telefones = telefones;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{adicional_update_telefones_value}}}")
+  @ApiModelProperty(example = "null", value = "Additional Telephone List")
   @JsonProperty("telefones")
   public List<TelefoneAdicionalUpdate> getTelefones() {
     return telefones;

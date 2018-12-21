@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{telefone_estabelecimento_response_description}}}
+ * Object of response of the Merchant Telephone
  **/
 
-@ApiModel(description = "{{{telefone_estabelecimento_response_description}}}")
+@ApiModel(description = "Object of response of the Merchant Telephone")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TelefoneEstabelecimentoResponse   {
   
@@ -23,14 +23,14 @@ public class TelefoneEstabelecimentoResponse   {
 
   
   /**
-   * {{{telefone_estabelecimento_response_id_value}}}
+   * Identification Code of the telephone
    **/
   public TelefoneEstabelecimentoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{telefone_estabelecimento_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the telephone")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -41,14 +41,14 @@ public class TelefoneEstabelecimentoResponse   {
 
   
   /**
-   * {{{telefone_estabelecimento_response_id_estabelecimento_value}}}
+   * Identification Code of the Merchant Type
    **/
   public TelefoneEstabelecimentoResponse idEstabelecimento(Long idEstabelecimento) {
     this.idEstabelecimento = idEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{telefone_estabelecimento_response_id_estabelecimento_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the Merchant Type")
   @JsonProperty("idEstabelecimento")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
@@ -59,14 +59,14 @@ public class TelefoneEstabelecimentoResponse   {
 
   
   /**
-   * {{{telefone_estabelecimento_response_ddd_value}}}
+   * DDD code of the telephone
    **/
   public TelefoneEstabelecimentoResponse ddd(String ddd) {
     this.ddd = ddd;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{telefone_estabelecimento_response_ddd_value}}}")
+  @ApiModelProperty(example = "null", value = "DDD code of the telephone")
   @JsonProperty("ddd")
   public String getDdd() {
     return ddd;
@@ -77,14 +77,14 @@ public class TelefoneEstabelecimentoResponse   {
 
   
   /**
-   * {{{telefone_estabelecimento_response_telefone_value}}}
+   * Telephone Number
    **/
   public TelefoneEstabelecimentoResponse telefone(String telefone) {
     this.telefone = telefone;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{telefone_estabelecimento_response_telefone_value}}}")
+  @ApiModelProperty(example = "null", value = "Telephone Number")
   @JsonProperty("telefone")
   public String getTelefone() {
     return telefone;
@@ -95,14 +95,14 @@ public class TelefoneEstabelecimentoResponse   {
 
   
   /**
-   * {{{telefone_estabelecimento_response_ramal_value}}}
+   * Extension number
    **/
   public TelefoneEstabelecimentoResponse ramal(String ramal) {
     this.ramal = ramal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{telefone_estabelecimento_response_ramal_value}}}")
+  @ApiModelProperty(example = "null", value = "Extension number")
   @JsonProperty("ramal")
   public String getRamal() {
     return ramal;

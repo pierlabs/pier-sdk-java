@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{page_estagio_cartao_response_description}}}
+ * Card Stage List
  **/
 
-@ApiModel(description = "{{{page_estagio_cartao_response_description}}}")
+@ApiModel(description = "Card Stage List")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageEstagioCartaoResponse   {
   

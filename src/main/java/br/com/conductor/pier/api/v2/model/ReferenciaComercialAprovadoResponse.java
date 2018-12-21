@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{referencia_comercial_aprovado_response_description}}}
+ * ReferenceCommercialApprovedResponse
  **/
 
-@ApiModel(description = "{{{referencia_comercial_aprovado_response_description}}}")
+@ApiModel(description = "ReferenceCommercialApprovedResponse")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ReferenciaComercialAprovadoResponse   {
   
@@ -23,14 +23,14 @@ public class ReferenciaComercialAprovadoResponse   {
 
   
   /**
-   * {{{referencia_comercial_aprovado_response_razao_social_value}}}
+   * Show the full name of the social reason of the commercial reference (business name.)
    **/
   public ReferenciaComercialAprovadoResponse razaoSocial(String razaoSocial) {
     this.razaoSocial = razaoSocial;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{referencia_comercial_aprovado_response_razao_social_value}}}")
+  @ApiModelProperty(example = "null", value = "Show the full name of the social reason of the commercial reference (business name.)")
   @JsonProperty("razaoSocial")
   public String getRazaoSocial() {
     return razaoSocial;
@@ -41,14 +41,14 @@ public class ReferenciaComercialAprovadoResponse   {
 
   
   /**
-   * {{{referencia_comercial_aprovado_response_nome_contrato_value}}}
+   * Show the name of the responsable for the commercial reference
    **/
   public ReferenciaComercialAprovadoResponse nomeContrato(String nomeContrato) {
     this.nomeContrato = nomeContrato;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{referencia_comercial_aprovado_response_nome_contrato_value}}}")
+  @ApiModelProperty(example = "null", value = "Show the name of the responsable for the commercial reference")
   @JsonProperty("nomeContrato")
   public String getNomeContrato() {
     return nomeContrato;
@@ -59,14 +59,14 @@ public class ReferenciaComercialAprovadoResponse   {
 
   
   /**
-   * {{{referencia_comercial_aprovado_response_ddd_value}}}
+   * Show the contact DDD number of the commercial reference
    **/
   public ReferenciaComercialAprovadoResponse ddd(String ddd) {
     this.ddd = ddd;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{referencia_comercial_aprovado_response_ddd_value}}}")
+  @ApiModelProperty(example = "null", value = "Show the contact DDD number of the commercial reference")
   @JsonProperty("ddd")
   public String getDdd() {
     return ddd;
@@ -77,14 +77,14 @@ public class ReferenciaComercialAprovadoResponse   {
 
   
   /**
-   * {{{referencia_comercial_aprovado_response_telefone_value}}}
+   * Show the contact number of the commercial reference
    **/
   public ReferenciaComercialAprovadoResponse telefone(String telefone) {
     this.telefone = telefone;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{referencia_comercial_aprovado_response_telefone_value}}}")
+  @ApiModelProperty(example = "null", value = "Show the contact number of the commercial reference")
   @JsonProperty("telefone")
   public String getTelefone() {
     return telefone;
@@ -95,14 +95,14 @@ public class ReferenciaComercialAprovadoResponse   {
 
   
   /**
-   * {{{referencia_comercial_aprovado_response_email_value}}}
+   * Show the contact email of the commercial reference
    **/
   public ReferenciaComercialAprovadoResponse email(String email) {
     this.email = email;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{referencia_comercial_aprovado_response_email_value}}}")
+  @ApiModelProperty(example = "null", value = "Show the contact email of the commercial reference")
   @JsonProperty("email")
   public String getEmail() {
     return email;

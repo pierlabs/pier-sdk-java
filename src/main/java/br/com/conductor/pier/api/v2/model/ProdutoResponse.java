@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{produto_response_description}}}
+ * Product
  **/
 
-@ApiModel(description = "{{{produto_response_description}}}")
+@ApiModel(description = "Product")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ProdutoResponse   {
   
@@ -22,14 +22,14 @@ public class ProdutoResponse   {
 
   
   /**
-   * {{{produto_response_id_value}}}
+   * Identification Code of the Product (id)
    **/
   public ProdutoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{produto_response_id_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Identification Code of the Product (id)")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -40,14 +40,14 @@ public class ProdutoResponse   {
 
   
   /**
-   * {{{produto_response_nome_value}}}
+   * Name description of the product
    **/
   public ProdutoResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{produto_response_nome_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Name description of the product")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -58,14 +58,14 @@ public class ProdutoResponse   {
 
   
   /**
-   * {{{produto_response_status_value}}}
+   * Represent the status of the product, where: ('0': Inactive), ('1': Active
    **/
   public ProdutoResponse status(Integer status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{produto_response_status_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Represent the status of the product, where: ('0': Inactive), ('1': Active")
   @JsonProperty("status")
   public Integer getStatus() {
     return status;
@@ -76,14 +76,14 @@ public class ProdutoResponse   {
 
   
   /**
-   * {{{produto_response_id_fantasia_basica_value}}}
+   * Identification Code of the Basic Fantasy (id) which the product belongs
    **/
   public ProdutoResponse idFantasiaBasica(Long idFantasiaBasica) {
     this.idFantasiaBasica = idFantasiaBasica;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{produto_response_id_fantasia_basica_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the Basic Fantasy (id) which the product belongs")
   @JsonProperty("idFantasiaBasica")
   public Long getIdFantasiaBasica() {
     return idFantasiaBasica;

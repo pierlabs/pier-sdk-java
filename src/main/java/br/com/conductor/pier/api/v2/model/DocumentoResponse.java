@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{documento_response_description}}}
+ * Response Representation of the upload of a base64
  **/
 
-@ApiModel(description = "{{{documento_response_description}}}")
+@ApiModel(description = "Response Representation of the upload of a base64")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class DocumentoResponse   {
   
@@ -22,14 +22,14 @@ public class DocumentoResponse   {
 
   
   /**
-   * {{{documento_response_id_value}}}
+   * ID of the Document
    **/
   public DocumentoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{documento_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "ID of the Document")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -40,14 +40,14 @@ public class DocumentoResponse   {
 
   
   /**
-   * {{{documento_response_id_template_documento_value}}}
+   * ID of the Template of the associated Document
    **/
   public DocumentoResponse idTemplateDocumento(Long idTemplateDocumento) {
     this.idTemplateDocumento = idTemplateDocumento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{documento_response_id_template_documento_value}}}")
+  @ApiModelProperty(example = "null", value = "ID of the Template of the associated Document")
   @JsonProperty("idTemplateDocumento")
   public Long getIdTemplateDocumento() {
     return idTemplateDocumento;
@@ -58,14 +58,14 @@ public class DocumentoResponse   {
 
   
   /**
-   * {{{documento_response_nome_value}}}
+   * Name of the Document
    **/
   public DocumentoResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{documento_response_nome_value}}}")
+  @ApiModelProperty(example = "null", value = "Name of the Document")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -76,14 +76,14 @@ public class DocumentoResponse   {
 
   
   /**
-   * {{{documento_response_extensao_value}}}
+   * Extension of the Document
    **/
   public DocumentoResponse extensao(String extensao) {
     this.extensao = extensao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{documento_response_extensao_value}}}")
+  @ApiModelProperty(example = "null", value = "Extension of the Document")
   @JsonProperty("extensao")
   public String getExtensao() {
     return extensao;

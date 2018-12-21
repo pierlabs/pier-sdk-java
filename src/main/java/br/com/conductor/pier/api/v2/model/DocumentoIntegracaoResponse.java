@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{documento_integracao_response_description}}}
+ * Response Representation of the Integration Document Resource
  **/
 
-@ApiModel(description = "{{{documento_integracao_response_description}}}")
+@ApiModel(description = "Response Representation of the Integration Document Resource")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class DocumentoIntegracaoResponse   {
   
@@ -21,14 +21,14 @@ public class DocumentoIntegracaoResponse   {
 
   
   /**
-   * {{{documento_integracao_response_id_value}}}
+   * ID of the Integrated Document
    **/
   public DocumentoIntegracaoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{documento_integracao_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "ID of the Integrated Document")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -39,14 +39,14 @@ public class DocumentoIntegracaoResponse   {
 
   
   /**
-   * {{{documento_integracao_response_id_template_value}}}
+   * ID of the Template of the associated Document
    **/
   public DocumentoIntegracaoResponse idTemplate(Long idTemplate) {
     this.idTemplate = idTemplate;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{documento_integracao_response_id_template_value}}}")
+  @ApiModelProperty(example = "null", value = "ID of the Template of the associated Document")
   @JsonProperty("idTemplate")
   public Long getIdTemplate() {
     return idTemplate;
@@ -57,14 +57,14 @@ public class DocumentoIntegracaoResponse   {
 
   
   /**
-   * {{{documento_integracao_response_nome_value}}}
+   * Name of the Document
    **/
   public DocumentoIntegracaoResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{documento_integracao_response_nome_value}}}")
+  @ApiModelProperty(example = "null", value = "Name of the Document")
   @JsonProperty("nome")
   public String getNome() {
     return nome;

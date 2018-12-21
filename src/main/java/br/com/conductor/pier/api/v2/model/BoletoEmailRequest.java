@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{boleto_email_request_description}}}
+ * Representation with the parameters required to send a Ticket by email
  **/
 
-@ApiModel(description = "{{{boleto_email_request_description}}}")
+@ApiModel(description = "Representation with the parameters required to send a Ticket by email")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class BoletoEmailRequest   {
   
@@ -21,14 +21,14 @@ public class BoletoEmailRequest   {
 
   
   /**
-   * {{{boleto_email_request_value}}}
+   * Email to send the ticket
    **/
   public BoletoEmailRequest email(String email) {
     this.email = email;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{boleto_email_request_value}}}")
+  @ApiModelProperty(example = "null", value = "Email to send the ticket")
   @JsonProperty("email")
   public String getEmail() {
     return email;
@@ -39,14 +39,14 @@ public class BoletoEmailRequest   {
 
   
   /**
-   * {{{boleto_email_request_id_template_notificacao_value}}}
+   * Identification of notification template
    **/
   public BoletoEmailRequest idTemplateNotificacao(Long idTemplateNotificacao) {
     this.idTemplateNotificacao = idTemplateNotificacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{boleto_email_request_id_template_notificacao_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification of notification template")
   @JsonProperty("idTemplateNotificacao")
   public Long getIdTemplateNotificacao() {
     return idTemplateNotificacao;
@@ -57,14 +57,14 @@ public class BoletoEmailRequest   {
 
   
   /**
-   * {{{boleto_email_request_parametros_value}}}
+   * Map of parameters used in creating the email template
    **/
   public BoletoEmailRequest parametros(Object parametros) {
     this.parametros = parametros;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{boleto_email_request_parametros_value}}}")
+  @ApiModelProperty(example = "null", value = "Map of parameters used in creating the email template")
   @JsonProperty("parametros")
   public Object getParametros() {
     return parametros;

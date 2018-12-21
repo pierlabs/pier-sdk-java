@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{controle_tentativa_cadastro_resposta_descricao}}}
+ * Return of the attempts registration
  **/
 
-@ApiModel(description = "{{{controle_tentativa_cadastro_resposta_descricao}}}")
+@ApiModel(description = "Return of the attempts registration")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ControleTentativaCadastroResponse   {
   
@@ -21,14 +21,14 @@ public class ControleTentativaCadastroResponse   {
 
   
   /**
-   * {{{controle_tentativa_cadastro_resposta_cpf_descricao}}}
+   * User CPF
    **/
   public ControleTentativaCadastroResponse cpf(String cpf) {
     this.cpf = cpf;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{controle_tentativa_cadastro_resposta_cpf_descricao}}}")
+  @ApiModelProperty(example = "null", value = "User CPF")
   @JsonProperty("cpf")
   public String getCpf() {
     return cpf;
@@ -39,14 +39,14 @@ public class ControleTentativaCadastroResponse   {
 
   
   /**
-   * {{{controle_tentativa_cadastro_resposta_login_descricao}}}
+   * Login
    **/
   public ControleTentativaCadastroResponse login(String login) {
     this.login = login;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{controle_tentativa_cadastro_resposta_login_descricao}}}")
+  @ApiModelProperty(example = "null", value = "Login")
   @JsonProperty("login")
   public String getLogin() {
     return login;
@@ -57,14 +57,14 @@ public class ControleTentativaCadastroResponse   {
 
   
   /**
-   * {{{controle_tentativa_cadastro_resposta_tentativas_descricao}}}
+   * Number of attempts
    **/
   public ControleTentativaCadastroResponse tentativas(Integer tentativas) {
     this.tentativas = tentativas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{controle_tentativa_cadastro_resposta_tentativas_descricao}}}")
+  @ApiModelProperty(example = "null", value = "Number of attempts")
   @JsonProperty("tentativas")
   public Integer getTentativas() {
     return tentativas;

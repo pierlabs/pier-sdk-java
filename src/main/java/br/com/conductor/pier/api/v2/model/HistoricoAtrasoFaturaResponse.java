@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{historico_atraso_fatura_response_description}}}
+ * Historic Payment Invoice Delay
  **/
 
-@ApiModel(description = "{{{historico_atraso_fatura_response_description}}}")
+@ApiModel(description = "Historic Payment Invoice Delay")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class HistoricoAtrasoFaturaResponse   {
   
@@ -20,14 +20,14 @@ public class HistoricoAtrasoFaturaResponse   {
 
   
   /**
-   * {{{historico_atraso_fatura_response_data_vencimento_value}}}
+   * Expiration date of the invoice
    **/
   public HistoricoAtrasoFaturaResponse dataVencimento(String dataVencimento) {
     this.dataVencimento = dataVencimento;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{historico_atraso_fatura_response_data_vencimento_value}}}")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Expiration date of the invoice")
   @JsonProperty("dataVencimento")
   public String getDataVencimento() {
     return dataVencimento;
@@ -38,14 +38,14 @@ public class HistoricoAtrasoFaturaResponse   {
 
   
   /**
-   * {{{historico_atraso_fatura_response_dias_pagamento_apos_vencimento_value}}}
+   * Quantity of day in delay
    **/
   public HistoricoAtrasoFaturaResponse diasPagamentoAposVencimento(Long diasPagamentoAposVencimento) {
     this.diasPagamentoAposVencimento = diasPagamentoAposVencimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{historico_atraso_fatura_response_dias_pagamento_apos_vencimento_value}}}")
+  @ApiModelProperty(example = "null", value = "Quantity of day in delay")
   @JsonProperty("diasPagamentoAposVencimento")
   public Long getDiasPagamentoAposVencimento() {
     return diasPagamentoAposVencimento;

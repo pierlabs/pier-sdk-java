@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{plataforma_mobile_response_description}}}
+ * Platform Mobile
  **/
 
-@ApiModel(description = "{{{plataforma_mobile_response_description}}}")
+@ApiModel(description = "Platform Mobile")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PlataformaMobileResponse   {
   
@@ -20,14 +20,14 @@ public class PlataformaMobileResponse   {
 
   
   /**
-   * {{{plataforma_mobile_response_id_value}}}
+   * Identifier of the Platform
    **/
   public PlataformaMobileResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{plataforma_mobile_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "Identifier of the Platform")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -38,14 +38,14 @@ public class PlataformaMobileResponse   {
 
   
   /**
-   * {{{plataforma_mobile_response_nome_value}}}
+   * Platform Name
    **/
   public PlataformaMobileResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{plataforma_mobile_response_nome_value}}}")
+  @ApiModelProperty(example = "null", value = "Platform Name")
   @JsonProperty("nome")
   public String getNome() {
     return nome;

@@ -10,10 +10,10 @@ import java.math.BigDecimal;
 
 
 /**
- * {{{parametro_produto_response_description}}}
+ * Product Parameter Response
  **/
 
-@ApiModel(description = "{{{parametro_produto_response_description}}}")
+@ApiModel(description = "Product Parameter Response")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ParametroProdutoResponse   {
   
@@ -45,14 +45,14 @@ public class ParametroProdutoResponse   {
 
   
   /**
-   * {{{parametro_produto_dto_id_value}}}
+   * Product parameter identifier
    **/
   public ParametroProdutoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{parametro_produto_dto_id_value}}}")
+  @ApiModelProperty(example = "null", value = "Product parameter identifier")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -63,14 +63,14 @@ public class ParametroProdutoResponse   {
 
   
   /**
-   * {{{parametro_produto_dto_id_produto_value}}}
+   * Product identifier
    **/
   public ParametroProdutoResponse idProduto(Long idProduto) {
     this.idProduto = idProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{parametro_produto_dto_id_produto_value}}}")
+  @ApiModelProperty(example = "null", value = "Product identifier")
   @JsonProperty("idProduto")
   public Long getIdProduto() {
     return idProduto;
@@ -81,14 +81,14 @@ public class ParametroProdutoResponse   {
 
   
   /**
-   * {{{parametro_produto_dto_tipo_origem_transacao_value}}}
+   * Transaction Type (ON_US or OFF_US)
    **/
   public ParametroProdutoResponse tipoOrigemTransacao(TipoOrigemTransacaoEnum tipoOrigemTransacao) {
     this.tipoOrigemTransacao = tipoOrigemTransacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{parametro_produto_dto_tipo_origem_transacao_value}}}")
+  @ApiModelProperty(example = "null", value = "Transaction Type (ON_US or OFF_US)")
   @JsonProperty("tipoOrigemTransacao")
   public TipoOrigemTransacaoEnum getTipoOrigemTransacao() {
     return tipoOrigemTransacao;
@@ -99,14 +99,14 @@ public class ParametroProdutoResponse   {
 
   
   /**
-   * {{{parametro_produto_dto_descricao_value}}}
+   * Description of the product parameter
    **/
   public ParametroProdutoResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{parametro_produto_dto_descricao_value}}}")
+  @ApiModelProperty(example = "null", value = "Description of the product parameter")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -117,14 +117,14 @@ public class ParametroProdutoResponse   {
 
   
   /**
-   * {{{parametro_produto_dto_valor_parametro_value}}}
+   * Product parameter value
    **/
   public ParametroProdutoResponse valorParametro(BigDecimal valorParametro) {
     this.valorParametro = valorParametro;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{parametro_produto_dto_valor_parametro_value}}}")
+  @ApiModelProperty(example = "null", value = "Product parameter value")
   @JsonProperty("valorParametro")
   public BigDecimal getValorParametro() {
     return valorParametro;
@@ -135,14 +135,14 @@ public class ParametroProdutoResponse   {
 
   
   /**
-   * {{{parametro_produto_dto_data_validade_value}}}
+   * Product parameter expiration date
    **/
   public ParametroProdutoResponse dataValidade(String dataValidade) {
     this.dataValidade = dataValidade;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{parametro_produto_dto_data_validade_value}}}")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Product parameter expiration date")
   @JsonProperty("dataValidade")
   public String getDataValidade() {
     return dataValidade;

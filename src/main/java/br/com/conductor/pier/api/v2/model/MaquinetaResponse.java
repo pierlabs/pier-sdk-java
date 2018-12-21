@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * {{{maquineta_response_description}}}
+ * POS response object
  **/
 
-@ApiModel(description = "{{{maquineta_response_description}}}")
+@ApiModel(description = "POS response object")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class MaquinetaResponse   {
   
@@ -27,14 +27,14 @@ public class MaquinetaResponse   {
 
   
   /**
-   * {{{maquineta_response_id_value}}}
+   * Identification Code of the Card Machine
    **/
   public MaquinetaResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{maquineta_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the Card Machine")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -45,14 +45,14 @@ public class MaquinetaResponse   {
 
   
   /**
-   * {{{maquineta_response_id_estabelecimento_value}}}
+   * Identification Code of the Merchant
    **/
   public MaquinetaResponse idEstabelecimento(Long idEstabelecimento) {
     this.idEstabelecimento = idEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{maquineta_response_id_estabelecimento_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the Merchant")
   @JsonProperty("idEstabelecimento")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
@@ -63,14 +63,14 @@ public class MaquinetaResponse   {
 
   
   /**
-   * {{{maquineta_response_id_tipo_maquineta_value}}}
+   * Identification Code of the Card Machine
    **/
   public MaquinetaResponse idTipoMaquineta(Long idTipoMaquineta) {
     this.idTipoMaquineta = idTipoMaquineta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{maquineta_response_id_tipo_maquineta_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the Card Machine")
   @JsonProperty("idTipoMaquineta")
   public Long getIdTipoMaquineta() {
     return idTipoMaquineta;
@@ -81,14 +81,14 @@ public class MaquinetaResponse   {
 
   
   /**
-   * {{{maquineta_response_valor_value}}}
+   * Maintenance valeu of the card machine
    **/
   public MaquinetaResponse valor(BigDecimal valor) {
     this.valor = valor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{maquineta_response_valor_value}}}")
+  @ApiModelProperty(example = "null", value = "Maintenance valeu of the card machine")
   @JsonProperty("valor")
   public BigDecimal getValor() {
     return valor;
@@ -99,14 +99,14 @@ public class MaquinetaResponse   {
 
   
   /**
-   * {{{maquineta_response_data_hora_implantacao_value}}}
+   * Deployment date of the card machine
    **/
   public MaquinetaResponse dataHoraImplantacao(String dataHoraImplantacao) {
     this.dataHoraImplantacao = dataHoraImplantacao;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{maquineta_response_data_hora_implantacao_value}}}")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Deployment date of the card machine")
   @JsonProperty("dataHoraImplantacao")
   public String getDataHoraImplantacao() {
     return dataHoraImplantacao;
@@ -117,14 +117,14 @@ public class MaquinetaResponse   {
 
   
   /**
-   * {{{maquineta_response_data_hora_cadastramento_value}}}
+   * Registerment date of the Card Machine
    **/
   public MaquinetaResponse dataHoraCadastramento(String dataHoraCadastramento) {
     this.dataHoraCadastramento = dataHoraCadastramento;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{maquineta_response_data_hora_cadastramento_value}}}")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Registerment date of the Card Machine")
   @JsonProperty("dataHoraCadastramento")
   public String getDataHoraCadastramento() {
     return dataHoraCadastramento;
@@ -135,14 +135,14 @@ public class MaquinetaResponse   {
 
   
   /**
-   * {{{maquineta_response_terminal_value}}}
+   * Terminal number linked to the card machine
    **/
   public MaquinetaResponse terminal(String terminal) {
     this.terminal = terminal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{maquineta_response_terminal_value}}}")
+  @ApiModelProperty(example = "null", value = "Terminal number linked to the card machine")
   @JsonProperty("terminal")
   public String getTerminal() {
     return terminal;
@@ -153,14 +153,14 @@ public class MaquinetaResponse   {
 
   
   /**
-   * {{{maquineta_response_usuario_apl_value}}}
+   * User of the application
    **/
   public MaquinetaResponse usuarioApl(String usuarioApl) {
     this.usuarioApl = usuarioApl;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{maquineta_response_usuario_apl_value}}}")
+  @ApiModelProperty(example = "null", value = "User of the application")
   @JsonProperty("usuarioApl")
   public String getUsuarioApl() {
     return usuarioApl;

@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{page_codigo_seguranca_response_description}}}
+ * Safety Code List
  **/
 
-@ApiModel(description = "{{{page_codigo_seguranca_response_description}}}")
+@ApiModel(description = "Safety Code List")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageCodigoSegurancaResponse   {
   

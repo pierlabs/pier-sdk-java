@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{telefone_estabelecimento_update_description}}}
+ * Object telephone
  **/
 
-@ApiModel(description = "{{{telefone_estabelecimento_update_description}}}")
+@ApiModel(description = "Object telephone")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TelefoneEstabelecimentoUpdate   {
   
@@ -21,14 +21,14 @@ public class TelefoneEstabelecimentoUpdate   {
 
   
   /**
-   * {{{telefone_estabelecimento_update_ddd_value}}}
+   * Telephone area code
    **/
   public TelefoneEstabelecimentoUpdate ddd(String ddd) {
     this.ddd = ddd;
     return this;
   }
   
-  @ApiModelProperty(example = "83", required = true, value = "{{{telefone_estabelecimento_update_ddd_value}}}")
+  @ApiModelProperty(example = "83", required = true, value = "Telephone area code")
   @JsonProperty("ddd")
   public String getDdd() {
     return ddd;
@@ -39,14 +39,14 @@ public class TelefoneEstabelecimentoUpdate   {
 
   
   /**
-   * {{{telefone_estabelecimento_update_telefone_value}}}
+   * Phone Number
    **/
   public TelefoneEstabelecimentoUpdate telefone(String telefone) {
     this.telefone = telefone;
     return this;
   }
   
-  @ApiModelProperty(example = "987654321", required = true, value = "{{{telefone_estabelecimento_update_telefone_value}}}")
+  @ApiModelProperty(example = "987654321", required = true, value = "Phone Number")
   @JsonProperty("telefone")
   public String getTelefone() {
     return telefone;
@@ -57,14 +57,14 @@ public class TelefoneEstabelecimentoUpdate   {
 
   
   /**
-   * {{{telefone_estabelecimento_update_ramal_value}}}
+   * Phone branch
    **/
   public TelefoneEstabelecimentoUpdate ramal(String ramal) {
     this.ramal = ramal;
     return this;
   }
   
-  @ApiModelProperty(example = "1234", value = "{{{telefone_estabelecimento_update_ramal_value}}}")
+  @ApiModelProperty(example = "1234", value = "Phone branch")
   @JsonProperty("ramal")
   public String getRamal() {
     return ramal;

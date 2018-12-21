@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * {{{tipo_debito_recorrente_response_description}}}
+ * Response Representation of the recurrent debit type resource
  **/
 
-@ApiModel(description = "{{{tipo_debito_recorrente_response_description}}}")
+@ApiModel(description = "Response Representation of the recurrent debit type resource")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TipoDebitoRecorrenteResponse   {
   
@@ -64,14 +64,14 @@ public class TipoDebitoRecorrenteResponse   {
 
   
   /**
-   * {{{tipo_debito_recorrente_response_id_value}}}
+   * Identification Code of the recurrent debit type (id)
    **/
   public TipoDebitoRecorrenteResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_debito_recorrente_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the recurrent debit type (id)")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -82,14 +82,14 @@ public class TipoDebitoRecorrenteResponse   {
 
   
   /**
-   * {{{tipo_debito_recorrente_response_descricao_value}}}
+   * Description of the recurrent debit type
    **/
   public TipoDebitoRecorrenteResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_debito_recorrente_response_descricao_value}}}")
+  @ApiModelProperty(example = "null", value = "Description of the recurrent debit type")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -100,14 +100,14 @@ public class TipoDebitoRecorrenteResponse   {
 
   
   /**
-   * {{{tipo_debito_recorrente_response_valor_value}}}
+   * Value of the recurrent debit type
    **/
   public TipoDebitoRecorrenteResponse valor(BigDecimal valor) {
     this.valor = valor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_debito_recorrente_response_valor_value}}}")
+  @ApiModelProperty(example = "null", value = "Value of the recurrent debit type")
   @JsonProperty("valor")
   public BigDecimal getValor() {
     return valor;
@@ -118,14 +118,14 @@ public class TipoDebitoRecorrenteResponse   {
 
   
   /**
-   * {{{tipo_debito_recorrente_response_flag_ativo_value}}}
+   * Flag that identifies if the type of recurrent debit is active
    **/
   public TipoDebitoRecorrenteResponse flagAtivo(Boolean flagAtivo) {
     this.flagAtivo = flagAtivo;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "{{{tipo_debito_recorrente_response_flag_ativo_value}}}")
+  @ApiModelProperty(example = "false", value = "Flag that identifies if the type of recurrent debit is active")
   @JsonProperty("flagAtivo")
   public Boolean getFlagAtivo() {
     return flagAtivo;
@@ -136,14 +136,14 @@ public class TipoDebitoRecorrenteResponse   {
 
   
   /**
-   * {{{tipo_debito_recorrente_response_valor_bonus_value}}}
+   * Bonus value referring to the plan
    **/
   public TipoDebitoRecorrenteResponse valorBonus(BigDecimal valorBonus) {
     this.valorBonus = valorBonus;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_debito_recorrente_response_valor_bonus_value}}}")
+  @ApiModelProperty(example = "null", value = "Bonus value referring to the plan")
   @JsonProperty("valorBonus")
   public BigDecimal getValorBonus() {
     return valorBonus;
@@ -154,14 +154,14 @@ public class TipoDebitoRecorrenteResponse   {
 
   
   /**
-   * {{{tipo_debito_recorrente_response_numero_parcelas_value}}}
+   * Parcel Number referring to the plan
    **/
   public TipoDebitoRecorrenteResponse numeroParcelas(Integer numeroParcelas) {
     this.numeroParcelas = numeroParcelas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_debito_recorrente_response_numero_parcelas_value}}}")
+  @ApiModelProperty(example = "null", value = "Parcel Number referring to the plan")
   @JsonProperty("numeroParcelas")
   public Integer getNumeroParcelas() {
     return numeroParcelas;
@@ -172,14 +172,14 @@ public class TipoDebitoRecorrenteResponse   {
 
   
   /**
-   * {{{tipo_debito_recorrente_response_flag_adere_automatico_value}}}
+   * Flag that indicates if the renovation is going to be automatic
    **/
   public TipoDebitoRecorrenteResponse flagAdereAutomatico(Boolean flagAdereAutomatico) {
     this.flagAdereAutomatico = flagAdereAutomatico;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "{{{tipo_debito_recorrente_response_flag_adere_automatico_value}}}")
+  @ApiModelProperty(example = "false", value = "Flag that indicates if the renovation is going to be automatic")
   @JsonProperty("flagAdereAutomatico")
   public Boolean getFlagAdereAutomatico() {
     return flagAdereAutomatico;
@@ -190,14 +190,14 @@ public class TipoDebitoRecorrenteResponse   {
 
   
   /**
-   * {{{tipo_debito_recorrente_response_flag_gera_numero_sorte_value}}}
+   * Flag that indicates if the renewal is going to be automatic
    **/
   public TipoDebitoRecorrenteResponse flagGeraNumeroSorte(Boolean flagGeraNumeroSorte) {
     this.flagGeraNumeroSorte = flagGeraNumeroSorte;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "{{{tipo_debito_recorrente_response_flag_gera_numero_sorte_value}}}")
+  @ApiModelProperty(example = "false", value = "Flag that indicates if the renewal is going to be automatic")
   @JsonProperty("flagGeraNumeroSorte")
   public Boolean getFlagGeraNumeroSorte() {
     return flagGeraNumeroSorte;
@@ -208,14 +208,14 @@ public class TipoDebitoRecorrenteResponse   {
 
   
   /**
-   * {{{tipo_debito_recorrente_response_faixa_etaria_value}}}
+   * Indicates the age range to join to the plan
    **/
   public TipoDebitoRecorrenteResponse faixaEtaria(String faixaEtaria) {
     this.faixaEtaria = faixaEtaria;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_debito_recorrente_response_faixa_etaria_value}}}")
+  @ApiModelProperty(example = "null", value = "Indicates the age range to join to the plan")
   @JsonProperty("faixaEtaria")
   public String getFaixaEtaria() {
     return faixaEtaria;
@@ -226,14 +226,14 @@ public class TipoDebitoRecorrenteResponse   {
 
   
   /**
-   * {{{tipo_debito_recorrente_response_flag_seguro_value}}}
+   * Flag indicates if the plan is safe
    **/
   public TipoDebitoRecorrenteResponse flagSeguro(Boolean flagSeguro) {
     this.flagSeguro = flagSeguro;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "{{{tipo_debito_recorrente_response_flag_seguro_value}}}")
+  @ApiModelProperty(example = "false", value = "Flag indicates if the plan is safe")
   @JsonProperty("flagSeguro")
   public Boolean getFlagSeguro() {
     return flagSeguro;
@@ -244,14 +244,14 @@ public class TipoDebitoRecorrenteResponse   {
 
   
   /**
-   * {{{tipo_debito_recorrente_response_sorteios_mensais_value}}}
+   * Indicates which award referring to the month
    **/
   public TipoDebitoRecorrenteResponse sorteiosMensais(String sorteiosMensais) {
     this.sorteiosMensais = sorteiosMensais;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_debito_recorrente_response_sorteios_mensais_value}}}")
+  @ApiModelProperty(example = "null", value = "Indicates which award referring to the month")
   @JsonProperty("sorteiosMensais")
   public String getSorteiosMensais() {
     return sorteiosMensais;
@@ -262,14 +262,14 @@ public class TipoDebitoRecorrenteResponse   {
 
   
   /**
-   * {{{tipo_debito_recorrente_response_flag_adesao_automatica_value}}}
+   * Flag that indicates if the accession of the plan will be automatic
    **/
   public TipoDebitoRecorrenteResponse flagAdesaoAutomatica(Boolean flagAdesaoAutomatica) {
     this.flagAdesaoAutomatica = flagAdesaoAutomatica;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "{{{tipo_debito_recorrente_response_flag_adesao_automatica_value}}}")
+  @ApiModelProperty(example = "false", value = "Flag that indicates if the accession of the plan will be automatic")
   @JsonProperty("flagAdesaoAutomatica")
   public Boolean getFlagAdesaoAutomatica() {
     return flagAdesaoAutomatica;
@@ -280,14 +280,14 @@ public class TipoDebitoRecorrenteResponse   {
 
   
   /**
-   * {{{tipo_debito_recorrente_response_flag_dependente_value}}}
+   * Flag indicate if the plan covers the dependent
    **/
   public TipoDebitoRecorrenteResponse flagDependente(Boolean flagDependente) {
     this.flagDependente = flagDependente;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "{{{tipo_debito_recorrente_response_flag_dependente_value}}}")
+  @ApiModelProperty(example = "false", value = "Flag indicate if the plan covers the dependent")
   @JsonProperty("flagDependente")
   public Boolean getFlagDependente() {
     return flagDependente;
@@ -298,14 +298,14 @@ public class TipoDebitoRecorrenteResponse   {
 
   
   /**
-   * {{{tipo_debito_recorrente_response_quantidade_dependente_value}}}
+   * Indicate dependent numbers
    **/
   public TipoDebitoRecorrenteResponse quantidadeDependente(Integer quantidadeDependente) {
     this.quantidadeDependente = quantidadeDependente;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_debito_recorrente_response_quantidade_dependente_value}}}")
+  @ApiModelProperty(example = "null", value = "Indicate dependent numbers")
   @JsonProperty("quantidadeDependente")
   public Integer getQuantidadeDependente() {
     return quantidadeDependente;
@@ -316,14 +316,14 @@ public class TipoDebitoRecorrenteResponse   {
 
   
   /**
-   * {{{tipo_debito_recorrente_response_id_termo_seguro_servico_value}}}
+   * Identification Code of the security service term (id)
    **/
   public TipoDebitoRecorrenteResponse idTermoSeguroServico(Long idTermoSeguroServico) {
     this.idTermoSeguroServico = idTermoSeguroServico;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_debito_recorrente_response_id_termo_seguro_servico_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the security service term (id)")
   @JsonProperty("idTermoSeguroServico")
   public Long getIdTermoSeguroServico() {
     return idTermoSeguroServico;
@@ -334,14 +334,14 @@ public class TipoDebitoRecorrenteResponse   {
 
   
   /**
-   * {{{tipo_debito_recorrente_response_idade_minima_value}}}
+   * Minimum age to join to the plan
    **/
   public TipoDebitoRecorrenteResponse idadeMinima(Integer idadeMinima) {
     this.idadeMinima = idadeMinima;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_debito_recorrente_response_idade_minima_value}}}")
+  @ApiModelProperty(example = "null", value = "Minimum age to join to the plan")
   @JsonProperty("idadeMinima")
   public Integer getIdadeMinima() {
     return idadeMinima;
@@ -352,14 +352,14 @@ public class TipoDebitoRecorrenteResponse   {
 
   
   /**
-   * {{{tipo_debito_recorrente_response_idade_maxima_value}}}
+   * Maximum age to join to the plan
    **/
   public TipoDebitoRecorrenteResponse idadeMaxima(Integer idadeMaxima) {
     this.idadeMaxima = idadeMaxima;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_debito_recorrente_response_idade_maxima_value}}}")
+  @ApiModelProperty(example = "null", value = "Maximum age to join to the plan")
   @JsonProperty("idadeMaxima")
   public Integer getIdadeMaxima() {
     return idadeMaxima;
@@ -370,14 +370,14 @@ public class TipoDebitoRecorrenteResponse   {
 
   
   /**
-   * {{{tipo_debito_recorrente_response_flag_debito_incondicional_value}}}
+   * Flag indicates if the plan will have an unconditional debit
    **/
   public TipoDebitoRecorrenteResponse flagDebitoIncondicional(Boolean flagDebitoIncondicional) {
     this.flagDebitoIncondicional = flagDebitoIncondicional;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "{{{tipo_debito_recorrente_response_flag_debito_incondicional_value}}}")
+  @ApiModelProperty(example = "false", value = "Flag indicates if the plan will have an unconditional debit")
   @JsonProperty("flagDebitoIncondicional")
   public Boolean getFlagDebitoIncondicional() {
     return flagDebitoIncondicional;
@@ -388,14 +388,14 @@ public class TipoDebitoRecorrenteResponse   {
 
   
   /**
-   * {{{tipo_debito_recorrente_response_flag_extrato_incondicional_value}}}
+   * Flag that indicates if the plan will be unconditional extract
    **/
   public TipoDebitoRecorrenteResponse flagExtratoIncondicional(Boolean flagExtratoIncondicional) {
     this.flagExtratoIncondicional = flagExtratoIncondicional;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "{{{tipo_debito_recorrente_response_flag_extrato_incondicional_value}}}")
+  @ApiModelProperty(example = "false", value = "Flag that indicates if the plan will be unconditional extract")
   @JsonProperty("flagExtratoIncondicional")
   public Boolean getFlagExtratoIncondicional() {
     return flagExtratoIncondicional;
@@ -406,14 +406,14 @@ public class TipoDebitoRecorrenteResponse   {
 
   
   /**
-   * {{{tipo_debito_recorrente_response_flag_estorno_automatico_value}}}
+   * Flag indicates if the plan will have any automatic reversal
    **/
   public TipoDebitoRecorrenteResponse flagEstornoAutomatico(Boolean flagEstornoAutomatico) {
     this.flagEstornoAutomatico = flagEstornoAutomatico;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "{{{tipo_debito_recorrente_response_flag_estorno_automatico_value}}}")
+  @ApiModelProperty(example = "false", value = "Flag indicates if the plan will have any automatic reversal")
   @JsonProperty("flagEstornoAutomatico")
   public Boolean getFlagEstornoAutomatico() {
     return flagEstornoAutomatico;
@@ -424,14 +424,14 @@ public class TipoDebitoRecorrenteResponse   {
 
   
   /**
-   * {{{tipo_debito_recorrente_response_valor_repassado_seguradora_value}}}
+   * Value passed to the insurer
    **/
   public TipoDebitoRecorrenteResponse valorRepassadoSeguradora(BigDecimal valorRepassadoSeguradora) {
     this.valorRepassadoSeguradora = valorRepassadoSeguradora;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_debito_recorrente_response_valor_repassado_seguradora_value}}}")
+  @ApiModelProperty(example = "null", value = "Value passed to the insurer")
   @JsonProperty("valorRepassadoSeguradora")
   public BigDecimal getValorRepassadoSeguradora() {
     return valorRepassadoSeguradora;
@@ -442,14 +442,14 @@ public class TipoDebitoRecorrenteResponse   {
 
   
   /**
-   * {{{tipo_debito_recorrente_response_flag_lanca_transacao_value}}}
+   * Flag that indicates if it is going to launched a transaction
    **/
   public TipoDebitoRecorrenteResponse flagLancaTransacao(Boolean flagLancaTransacao) {
     this.flagLancaTransacao = flagLancaTransacao;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "{{{tipo_debito_recorrente_response_flag_lanca_transacao_value}}}")
+  @ApiModelProperty(example = "false", value = "Flag that indicates if it is going to launched a transaction")
   @JsonProperty("flagLancaTransacao")
   public Boolean getFlagLancaTransacao() {
     return flagLancaTransacao;
@@ -460,14 +460,14 @@ public class TipoDebitoRecorrenteResponse   {
 
   
   /**
-   * {{{tipo_debito_recorrente_response_flag_transferencia_automatica_value}}}
+   * Flag that indicates if it is going to be made an automatic transfer
    **/
   public TipoDebitoRecorrenteResponse flagTransferenciaAutomatica(Boolean flagTransferenciaAutomatica) {
     this.flagTransferenciaAutomatica = flagTransferenciaAutomatica;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "{{{tipo_debito_recorrente_response_flag_transferencia_automatica_value}}}")
+  @ApiModelProperty(example = "false", value = "Flag that indicates if it is going to be made an automatic transfer")
   @JsonProperty("flagTransferenciaAutomatica")
   public Boolean getFlagTransferenciaAutomatica() {
     return flagTransferenciaAutomatica;
@@ -478,14 +478,14 @@ public class TipoDebitoRecorrenteResponse   {
 
   
   /**
-   * {{{tipo_debito_recorrente_response_id_produto_value}}}
+   * Identification Code of the products (id)
    **/
   public TipoDebitoRecorrenteResponse idProduto(Long idProduto) {
     this.idProduto = idProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_debito_recorrente_response_id_produto_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the products (id)")
   @JsonProperty("idProduto")
   public Long getIdProduto() {
     return idProduto;
@@ -496,14 +496,14 @@ public class TipoDebitoRecorrenteResponse   {
 
   
   /**
-   * {{{tipo_debito_recorrente_response_id_grupo_debito_recorrente_value}}}
+   * Identification Code of the recurrent debit group (id)
    **/
   public TipoDebitoRecorrenteResponse idGrupoDebitoRecorrente(Long idGrupoDebitoRecorrente) {
     this.idGrupoDebitoRecorrente = idGrupoDebitoRecorrente;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_debito_recorrente_response_id_grupo_debito_recorrente_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the recurrent debit group (id)")
   @JsonProperty("idGrupoDebitoRecorrente")
   public Long getIdGrupoDebitoRecorrente() {
     return idGrupoDebitoRecorrente;
@@ -514,14 +514,14 @@ public class TipoDebitoRecorrenteResponse   {
 
   
   /**
-   * {{{tipo_debito_recorrente_response_quantidade_tentativas_cobranca_value}}}
+   * Attempt Quantities for the collection
    **/
   public TipoDebitoRecorrenteResponse quantidadeTentativasCobranca(Integer quantidadeTentativasCobranca) {
     this.quantidadeTentativasCobranca = quantidadeTentativasCobranca;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_debito_recorrente_response_quantidade_tentativas_cobranca_value}}}")
+  @ApiModelProperty(example = "null", value = "Attempt Quantities for the collection")
   @JsonProperty("quantidadeTentativasCobranca")
   public Integer getQuantidadeTentativasCobranca() {
     return quantidadeTentativasCobranca;
@@ -532,14 +532,14 @@ public class TipoDebitoRecorrenteResponse   {
 
   
   /**
-   * {{{tipo_debito_recorrente_response_id_ajuste_value}}}
+   * Identification Code of the adjustment types (id)
    **/
   public TipoDebitoRecorrenteResponse idAjuste(Long idAjuste) {
     this.idAjuste = idAjuste;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_debito_recorrente_response_id_ajuste_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the adjustment types (id)")
   @JsonProperty("idAjuste")
   public Long getIdAjuste() {
     return idAjuste;

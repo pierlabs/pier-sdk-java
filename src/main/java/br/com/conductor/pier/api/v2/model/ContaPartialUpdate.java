@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{conta_partial_object_description}}}
+ * Object to change accounts. None of the fields are required. Only the fields you want to change must be entered
  **/
 
-@ApiModel(description = "{{{conta_partial_object_description}}}")
+@ApiModel(description = "Object to change accounts. None of the fields are required. Only the fields you want to change must be entered")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ContaPartialUpdate   {
   
@@ -20,14 +20,14 @@ public class ContaPartialUpdate   {
 
   
   /**
-   * {{{conta_partial_funcao_ativa_value}}}
+   * Active account function. Represents the function in which the account is enabled. Property should only be reported if the issuer makes use of account functions. The functions available for the accounts can be viewed in api/contas/tipos-funcoes
    **/
   public ContaPartialUpdate funcaoAtiva(String funcaoAtiva) {
     this.funcaoAtiva = funcaoAtiva;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{conta_partial_funcao_ativa_value}}}")
+  @ApiModelProperty(example = "null", value = "Active account function. Represents the function in which the account is enabled. Property should only be reported if the issuer makes use of account functions. The functions available for the accounts can be viewed in api/contas/tipos-funcoes")
   @JsonProperty("funcaoAtiva")
   public String getFuncaoAtiva() {
     return funcaoAtiva;
@@ -38,14 +38,14 @@ public class ContaPartialUpdate   {
 
   
   /**
-   * {{{conta_partial_id_conta_emissor_value}}}
+   * Identifier of the internal control account created by the issuer
    **/
   public ContaPartialUpdate idContaEmissor(Long idContaEmissor) {
     this.idContaEmissor = idContaEmissor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{conta_partial_id_conta_emissor_value}}}")
+  @ApiModelProperty(example = "null", value = "Identifier of the internal control account created by the issuer")
   @JsonProperty("idContaEmissor")
   public Long getIdContaEmissor() {
     return idContaEmissor;

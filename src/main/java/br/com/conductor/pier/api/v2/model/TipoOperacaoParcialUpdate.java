@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{tipo_operacao_persist_description}}}
+ * Operation type object, containing only properties that can be changed
  **/
 
-@ApiModel(description = "{{{tipo_operacao_persist_description}}}")
+@ApiModel(description = "Operation type object, containing only properties that can be changed")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TipoOperacaoParcialUpdate   {
   
@@ -19,14 +19,14 @@ public class TipoOperacaoParcialUpdate   {
 
   
   /**
-   * {{{tipo_operacao_persist_flag_manter_taxa_juros_no_rotativo_value}}}
+   * Boolean that signals to all transactions of this operation type must use the purchase interest rate as the due balance interest rate
    **/
   public TipoOperacaoParcialUpdate flagManterTaxaJurosNoRotativo(Boolean flagManterTaxaJurosNoRotativo) {
     this.flagManterTaxaJurosNoRotativo = flagManterTaxaJurosNoRotativo;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "{{{tipo_operacao_persist_flag_manter_taxa_juros_no_rotativo_value}}}")
+  @ApiModelProperty(example = "false", value = "Boolean that signals to all transactions of this operation type must use the purchase interest rate as the due balance interest rate")
   @JsonProperty("flagManterTaxaJurosNoRotativo")
   public Boolean getFlagManterTaxaJurosNoRotativo() {
     return flagManterTaxaJurosNoRotativo;

@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{page_taxas_refinanciamento_response_description}}}
+ * Lista das taxas e tarifas
  **/
 
-@ApiModel(description = "{{{page_taxas_refinanciamento_response_description}}}")
+@ApiModel(description = "Lista das taxas e tarifas")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageTaxasRefinanciamentoResponse   {
   

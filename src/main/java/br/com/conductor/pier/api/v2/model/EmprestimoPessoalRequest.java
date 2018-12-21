@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * {{{emprestimo_pessoal_request_description}}}
+ * Request Representation of the Device resource
  **/
 
-@ApiModel(description = "{{{emprestimo_pessoal_request_description}}}")
+@ApiModel(description = "Request Representation of the Device resource")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class EmprestimoPessoalRequest   {
   
@@ -25,14 +25,14 @@ public class EmprestimoPessoalRequest   {
 
   
   /**
-   * {{{emprestimo_pessoal_request_valor_solicitado_value}}}
+   * Value of the Loan/financing
    **/
   public EmprestimoPessoalRequest valorSolicitado(BigDecimal valorSolicitado) {
     this.valorSolicitado = valorSolicitado;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{emprestimo_pessoal_request_valor_solicitado_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Value of the Loan/financing")
   @JsonProperty("valorSolicitado")
   public BigDecimal getValorSolicitado() {
     return valorSolicitado;
@@ -43,14 +43,14 @@ public class EmprestimoPessoalRequest   {
 
   
   /**
-   * {{{emprestimo_pessoal_request_numero_parcelas_value}}}
+   * Total Number of the portions of the loan/financing
    **/
   public EmprestimoPessoalRequest numeroParcelas(Integer numeroParcelas) {
     this.numeroParcelas = numeroParcelas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{emprestimo_pessoal_request_numero_parcelas_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Total Number of the portions of the loan/financing")
   @JsonProperty("numeroParcelas")
   public Integer getNumeroParcelas() {
     return numeroParcelas;
@@ -61,14 +61,14 @@ public class EmprestimoPessoalRequest   {
 
   
   /**
-   * {{{emprestimo_pessoal_request_taxa_juros_value}}}
+   * Percent value of the taxes of interest to be applied
    **/
   public EmprestimoPessoalRequest taxaJuros(BigDecimal taxaJuros) {
     this.taxaJuros = taxaJuros;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{emprestimo_pessoal_request_taxa_juros_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Percent value of the taxes of interest to be applied")
   @JsonProperty("taxaJuros")
   public BigDecimal getTaxaJuros() {
     return taxaJuros;
@@ -79,14 +79,14 @@ public class EmprestimoPessoalRequest   {
 
   
   /**
-   * {{{emprestimo_pessoal_request_periodo_taxa_value}}}
+   * Period of application of the taxes of interest
    **/
   public EmprestimoPessoalRequest periodoTaxa(String periodoTaxa) {
     this.periodoTaxa = periodoTaxa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{emprestimo_pessoal_request_periodo_taxa_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Period of application of the taxes of interest")
   @JsonProperty("periodoTaxa")
   public String getPeriodoTaxa() {
     return periodoTaxa;
@@ -97,14 +97,14 @@ public class EmprestimoPessoalRequest   {
 
   
   /**
-   * {{{emprestimo_pessoal_request_sistema_amortizacao_value}}}
+   * System to diminish the value of the portions
    **/
   public EmprestimoPessoalRequest sistemaAmortizacao(String sistemaAmortizacao) {
     this.sistemaAmortizacao = sistemaAmortizacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{emprestimo_pessoal_request_sistema_amortizacao_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "System to diminish the value of the portions")
   @JsonProperty("sistemaAmortizacao")
   public String getSistemaAmortizacao() {
     return sistemaAmortizacao;
@@ -115,14 +115,14 @@ public class EmprestimoPessoalRequest   {
 
   
   /**
-   * {{{emprestimo_pessoal_request_numero_meses_carencia_value}}}
+   * Number of months to the collection of the first portion
    **/
   public EmprestimoPessoalRequest numeroMesesCarencia(Integer numeroMesesCarencia) {
     this.numeroMesesCarencia = numeroMesesCarencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{emprestimo_pessoal_request_numero_meses_carencia_value}}}")
+  @ApiModelProperty(example = "null", value = "Number of months to the collection of the first portion")
   @JsonProperty("numeroMesesCarencia")
   public Integer getNumeroMesesCarencia() {
     return numeroMesesCarencia;

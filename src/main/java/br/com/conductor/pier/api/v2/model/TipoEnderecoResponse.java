@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{tipo_endereco_response_description}}}
+ * Representation of the Address Type Resource
  **/
 
-@ApiModel(description = "{{{tipo_endereco_response_description}}}")
+@ApiModel(description = "Representation of the Address Type Resource")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TipoEnderecoResponse   {
   
@@ -20,14 +20,14 @@ public class TipoEnderecoResponse   {
 
   
   /**
-   * {{{tipo_endereco_response_id_value}}}
+   * Identification Code of the Address Type (id)
    **/
   public TipoEnderecoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_endereco_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the Address Type (id)")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -38,14 +38,14 @@ public class TipoEnderecoResponse   {
 
   
   /**
-   * {{{tipo_endereco_response_nome_value}}}
+   * Name of the Address Type
    **/
   public TipoEnderecoResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_endereco_response_nome_value}}}")
+  @ApiModelProperty(example = "null", value = "Name of the Address Type")
   @JsonProperty("nome")
   public String getNome() {
     return nome;

@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{page_tipo_faturamento_por_conta_response_description}}}
+ * List of the billing types per Account
  **/
 
-@ApiModel(description = "{{{page_tipo_faturamento_por_conta_response_description}}}")
+@ApiModel(description = "List of the billing types per Account")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageTipoFaturamentoPorContaResponse   {
   

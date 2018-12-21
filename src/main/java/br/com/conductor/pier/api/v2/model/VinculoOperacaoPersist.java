@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{vinculo_operacao_persist_description}}}
+ * Object LinkOperation
  **/
 
-@ApiModel(description = "{{{vinculo_operacao_persist_description}}}")
+@ApiModel(description = "Object LinkOperation")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class VinculoOperacaoPersist   {
   
@@ -21,14 +21,14 @@ public class VinculoOperacaoPersist   {
 
   
   /**
-   * {{{vinculo_operacao_persist_id_produto_value}}}
+   * Identification Code of the Product (id)
    **/
   public VinculoOperacaoPersist idProduto(Long idProduto) {
     this.idProduto = idProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{vinculo_operacao_persist_id_produto_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the Product (id)")
   @JsonProperty("idProduto")
   public Long getIdProduto() {
     return idProduto;
@@ -39,14 +39,14 @@ public class VinculoOperacaoPersist   {
 
   
   /**
-   * {{{vinculo_operacao_persist_id_operacao_value}}}
+   * Identification Code of the Operation (id)
    **/
   public VinculoOperacaoPersist idOperacao(Long idOperacao) {
     this.idOperacao = idOperacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{vinculo_operacao_persist_id_operacao_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the Operation (id)")
   @JsonProperty("idOperacao")
   public Long getIdOperacao() {
     return idOperacao;
@@ -57,14 +57,14 @@ public class VinculoOperacaoPersist   {
 
   
   /**
-   * {{{vinculo_operacao_persist_codigo_m_c_c_value}}}
+   * Code MCC
    **/
   public VinculoOperacaoPersist codigoMCC(Integer codigoMCC) {
     this.codigoMCC = codigoMCC;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{vinculo_operacao_persist_codigo_m_c_c_value}}}")
+  @ApiModelProperty(example = "null", value = "Code MCC")
   @JsonProperty("codigoMCC")
   public Integer getCodigoMCC() {
     return codigoMCC;

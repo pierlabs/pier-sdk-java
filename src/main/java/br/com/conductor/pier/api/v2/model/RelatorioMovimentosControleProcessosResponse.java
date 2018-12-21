@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{relatorio_movimentos_controle_processos_response_description}}}
+ * Representation of response fields from a process control list
  **/
 
-@ApiModel(description = "{{{relatorio_movimentos_controle_processos_response_description}}}")
+@ApiModel(description = "Representation of response fields from a process control list")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class RelatorioMovimentosControleProcessosResponse   {
   

@@ -12,10 +12,10 @@ import java.util.List;
 
 
 /**
- * {{{detalhes_fatura_consignada_response_description}}}
+ * Object containing the details of a consignate invoice
  **/
 
-@ApiModel(description = "{{{detalhes_fatura_consignada_response_description}}}")
+@ApiModel(description = "Object containing the details of a consignate invoice")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class DetalhesFaturaConsignadaResponse   {
   
@@ -24,14 +24,14 @@ public class DetalhesFaturaConsignadaResponse   {
 
   
   /**
-   * {{{detalhes_fatura_consignada_response_fatura_consignada_response_value}}}
+   * Show the details of the invoice
    **/
   public DetalhesFaturaConsignadaResponse faturaConsignadaResponse(FaturaConsignadaResponse faturaConsignadaResponse) {
     this.faturaConsignadaResponse = faturaConsignadaResponse;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{detalhes_fatura_consignada_response_fatura_consignada_response_value}}}")
+  @ApiModelProperty(example = "null", value = "Show the details of the invoice")
   @JsonProperty("faturaConsignadaResponse")
   public FaturaConsignadaResponse getFaturaConsignadaResponse() {
     return faturaConsignadaResponse;
@@ -42,14 +42,14 @@ public class DetalhesFaturaConsignadaResponse   {
 
   
   /**
-   * {{{detalhes_fatura_consignada_response_transacoes_value}}}
+   * Show the transactions related to the invoice
    **/
   public DetalhesFaturaConsignadaResponse transacoes(List<TransacoesCorrentesResponse> transacoes) {
     this.transacoes = transacoes;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{detalhes_fatura_consignada_response_transacoes_value}}}")
+  @ApiModelProperty(example = "null", value = "Show the transactions related to the invoice")
   @JsonProperty("transacoes")
   public List<TransacoesCorrentesResponse> getTransacoes() {
     return transacoes;

@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{page_relatorio_movimentos_controle_processos_response_description}}}
+ * Representation of page to report query
  **/
 
-@ApiModel(description = "{{{page_relatorio_movimentos_controle_processos_response_description}}}")
+@ApiModel(description = "Representation of page to report query")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageRelatorioMovimentosControleProcessos   {
   

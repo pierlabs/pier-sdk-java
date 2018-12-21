@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{page_controle_vencimento_response_description}}}
+ * List of the Expiration
  **/
 
-@ApiModel(description = "{{{page_controle_vencimento_response_description}}}")
+@ApiModel(description = "List of the Expiration")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageControleVencimentoResponse   {
   

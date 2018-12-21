@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{page_pais_response_description}}}
+ * Country List
  **/
 
-@ApiModel(description = "{{{page_pais_response_description}}}")
+@ApiModel(description = "Country List")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PagePaisResponse   {
   

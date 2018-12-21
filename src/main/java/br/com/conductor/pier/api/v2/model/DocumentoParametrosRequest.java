@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{documento_parametros_request_description}}}
+ * Object that encapsulate the parameters for generation of a document
  **/
 
-@ApiModel(description = "{{{documento_parametros_request_description}}}")
+@ApiModel(description = "Object that encapsulate the parameters for generation of a document")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class DocumentoParametrosRequest   {
   
@@ -24,14 +24,14 @@ public class DocumentoParametrosRequest   {
 
   
   /**
-   * {{{documento_parametros_request_id_template_documento_value}}}
+   * ID for the template of the document
    **/
   public DocumentoParametrosRequest idTemplateDocumento(Long idTemplateDocumento) {
     this.idTemplateDocumento = idTemplateDocumento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{documento_parametros_request_id_template_documento_value}}}")
+  @ApiModelProperty(example = "null", value = "ID for the template of the document")
   @JsonProperty("idTemplateDocumento")
   public Long getIdTemplateDocumento() {
     return idTemplateDocumento;
@@ -42,14 +42,14 @@ public class DocumentoParametrosRequest   {
 
   
   /**
-   * {{{documento_parametros_request_nome_value}}}
+   * Name for the file
    **/
   public DocumentoParametrosRequest nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{documento_parametros_request_nome_value}}}")
+  @ApiModelProperty(example = "null", value = "Name for the file")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -60,14 +60,14 @@ public class DocumentoParametrosRequest   {
 
   
   /**
-   * {{{documento_parametros_request_parametros_conteudo_value}}}
+   * List the parameters for the formation of the document
    **/
   public DocumentoParametrosRequest parametrosConteudo(List<PropriedadeDocumentoRequest> parametrosConteudo) {
     this.parametrosConteudo = parametrosConteudo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{documento_parametros_request_parametros_conteudo_value}}}")
+  @ApiModelProperty(example = "null", value = "List the parameters for the formation of the document")
   @JsonProperty("parametrosConteudo")
   public List<PropriedadeDocumentoRequest> getParametrosConteudo() {
     return parametrosConteudo;

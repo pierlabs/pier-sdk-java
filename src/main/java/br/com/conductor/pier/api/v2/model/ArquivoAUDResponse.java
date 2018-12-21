@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{arquivo_a_u_d_response_description}}}
+ * Object Response of the file auditorial
  **/
 
-@ApiModel(description = "{{{arquivo_a_u_d_response_description}}}")
+@ApiModel(description = "Object Response of the file auditorial")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ArquivoAUDResponse   {
   
@@ -34,14 +34,14 @@ public class ArquivoAUDResponse   {
 
   
   /**
-   * {{{arquivo_a_u_d_response_rev_value}}}
+   * Identifier of the auditorail File
    **/
   public ArquivoAUDResponse rev(Long rev) {
     this.rev = rev;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{arquivo_a_u_d_response_rev_value}}}")
+  @ApiModelProperty(example = "null", value = "Identifier of the auditorail File")
   @JsonProperty("rev")
   public Long getRev() {
     return rev;
@@ -52,14 +52,14 @@ public class ArquivoAUDResponse   {
 
   
   /**
-   * {{{arquivo_a_u_d_response_rev_type_value}}}
+   * Identifier of the auditorial type (0 - Created, 1 - Updated, 2 - Excluded)
    **/
   public ArquivoAUDResponse revType(Integer revType) {
     this.revType = revType;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{arquivo_a_u_d_response_rev_type_value}}}")
+  @ApiModelProperty(example = "null", value = "Identifier of the auditorial type (0 - Created, 1 - Updated, 2 - Excluded)")
   @JsonProperty("revType")
   public Integer getRevType() {
     return revType;
@@ -70,14 +70,14 @@ public class ArquivoAUDResponse   {
 
   
   /**
-   * {{{arquivo_a_u_d_response_id_value}}}
+   * Identifier of the audited file
    **/
   public ArquivoAUDResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{arquivo_a_u_d_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "Identifier of the audited file")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -88,14 +88,14 @@ public class ArquivoAUDResponse   {
 
   
   /**
-   * {{{arquivo_a_u_d_response_nome_value}}}
+   * File name audited
    **/
   public ArquivoAUDResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{arquivo_a_u_d_response_nome_value}}}")
+  @ApiModelProperty(example = "null", value = "File name audited")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -106,14 +106,14 @@ public class ArquivoAUDResponse   {
 
   
   /**
-   * {{{arquivo_a_u_d_response_id_resposta_acesso_digital_value}}}
+   * Identifier of the answer of the Digital Access
    **/
   public ArquivoAUDResponse idRespostaAcessoDigital(String idRespostaAcessoDigital) {
     this.idRespostaAcessoDigital = idRespostaAcessoDigital;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{arquivo_a_u_d_response_id_resposta_acesso_digital_value}}}")
+  @ApiModelProperty(example = "null", value = "Identifier of the answer of the Digital Access")
   @JsonProperty("idRespostaAcessoDigital")
   public String getIdRespostaAcessoDigital() {
     return idRespostaAcessoDigital;
@@ -124,14 +124,14 @@ public class ArquivoAUDResponse   {
 
   
   /**
-   * {{{arquivo_a_u_d_response_data_hora_resposta_acesso_digital_value}}}
+   * Date of response of the Digital Access
    **/
   public ArquivoAUDResponse dataHoraRespostaAcessoDigital(String dataHoraRespostaAcessoDigital) {
     this.dataHoraRespostaAcessoDigital = dataHoraRespostaAcessoDigital;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{arquivo_a_u_d_response_data_hora_resposta_acesso_digital_value}}}")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Date of response of the Digital Access")
   @JsonProperty("dataHoraRespostaAcessoDigital")
   public String getDataHoraRespostaAcessoDigital() {
     return dataHoraRespostaAcessoDigital;
@@ -142,14 +142,14 @@ public class ArquivoAUDResponse   {
 
   
   /**
-   * {{{arquivo_a_u_d_response_id_resposta_neurotech_value}}}
+   * Identifier of the response of Neurotech
    **/
   public ArquivoAUDResponse idRespostaNeurotech(String idRespostaNeurotech) {
     this.idRespostaNeurotech = idRespostaNeurotech;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{arquivo_a_u_d_response_id_resposta_neurotech_value}}}")
+  @ApiModelProperty(example = "null", value = "Identifier of the response of Neurotech")
   @JsonProperty("idRespostaNeurotech")
   public String getIdRespostaNeurotech() {
     return idRespostaNeurotech;
@@ -160,14 +160,14 @@ public class ArquivoAUDResponse   {
 
   
   /**
-   * {{{arquivo_a_u_d_response_data_hora_resposta_neurotech_value}}}
+   * Date of response of the Neurotech
    **/
   public ArquivoAUDResponse dataHoraRespostaNeurotech(String dataHoraRespostaNeurotech) {
     this.dataHoraRespostaNeurotech = dataHoraRespostaNeurotech;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{arquivo_a_u_d_response_data_hora_resposta_neurotech_value}}}")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Date of response of the Neurotech")
   @JsonProperty("dataHoraRespostaNeurotech")
   public String getDataHoraRespostaNeurotech() {
     return dataHoraRespostaNeurotech;
@@ -178,14 +178,14 @@ public class ArquivoAUDResponse   {
 
   
   /**
-   * {{{arquivo_a_u_d_response_uri_value}}}
+   * Uri of access
    **/
   public ArquivoAUDResponse uri(String uri) {
     this.uri = uri;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{arquivo_a_u_d_response_uri_value}}}")
+  @ApiModelProperty(example = "null", value = "Uri of access")
   @JsonProperty("uri")
   public String getUri() {
     return uri;
@@ -196,14 +196,14 @@ public class ArquivoAUDResponse   {
 
   
   /**
-   * {{{arquivo_a_u_d_response_data_hora_inclusao_value}}}
+   * Date of inclusion of the audited file
    **/
   public ArquivoAUDResponse dataHoraInclusao(String dataHoraInclusao) {
     this.dataHoraInclusao = dataHoraInclusao;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{arquivo_a_u_d_response_data_hora_inclusao_value}}}")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Date of inclusion of the audited file")
   @JsonProperty("dataHoraInclusao")
   public String getDataHoraInclusao() {
     return dataHoraInclusao;
@@ -214,14 +214,14 @@ public class ArquivoAUDResponse   {
 
   
   /**
-   * {{{arquivo_a_u_d_response_data_hora_alteracao_value}}}
+   * Date of the audited file update
    **/
   public ArquivoAUDResponse dataHoraAlteracao(String dataHoraAlteracao) {
     this.dataHoraAlteracao = dataHoraAlteracao;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{arquivo_a_u_d_response_data_hora_alteracao_value}}}")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Date of the audited file update")
   @JsonProperty("dataHoraAlteracao")
   public String getDataHoraAlteracao() {
     return dataHoraAlteracao;
@@ -232,14 +232,14 @@ public class ArquivoAUDResponse   {
 
   
   /**
-   * {{{arquivo_a_u_d_response_extensao_value}}}
+   * Extension of the audited file
    **/
   public ArquivoAUDResponse extensao(String extensao) {
     this.extensao = extensao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{arquivo_a_u_d_response_extensao_value}}}")
+  @ApiModelProperty(example = "null", value = "Extension of the audited file")
   @JsonProperty("extensao")
   public String getExtensao() {
     return extensao;
@@ -250,14 +250,14 @@ public class ArquivoAUDResponse   {
 
   
   /**
-   * {{{arquivo_a_u_d_response_parametros_value}}}
+   * List of parameter of the audited file
    **/
   public ArquivoAUDResponse parametros(List<ArquivoParametroAUDResponse> parametros) {
     this.parametros = parametros;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{arquivo_a_u_d_response_parametros_value}}}")
+  @ApiModelProperty(example = "null", value = "List of parameter of the audited file")
   @JsonProperty("parametros")
   public List<ArquivoParametroAUDResponse> getParametros() {
     return parametros;

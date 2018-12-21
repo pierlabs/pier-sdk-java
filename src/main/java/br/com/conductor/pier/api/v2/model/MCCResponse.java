@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{m_c_c_response_description}}}
+ * ObjectMCC
  **/
 
-@ApiModel(description = "{{{m_c_c_response_description}}}")
+@ApiModel(description = "ObjectMCC")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class MCCResponse   {
   
@@ -20,14 +20,14 @@ public class MCCResponse   {
 
   
   /**
-   * {{{m_c_c_response_id_value}}}
+   * Identification Card of the MCC (id)
    **/
   public MCCResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{m_c_c_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Card of the MCC (id)")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -38,14 +38,14 @@ public class MCCResponse   {
 
   
   /**
-   * {{{m_c_c_response_descricao_value}}}
+   * description of the MCC
    **/
   public MCCResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{m_c_c_response_descricao_value}}}")
+  @ApiModelProperty(example = "null", value = "description of the MCC")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;

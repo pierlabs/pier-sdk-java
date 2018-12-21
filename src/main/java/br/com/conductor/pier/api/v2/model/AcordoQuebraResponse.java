@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * {{{acordo_quebra_response_description}}}
+ * Representation Object Response for agreement breaking
  **/
 
-@ApiModel(description = "{{{acordo_quebra_response_description}}}")
+@ApiModel(description = "Representation Object Response for agreement breaking")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class AcordoQuebraResponse   {
   
@@ -24,14 +24,14 @@ public class AcordoQuebraResponse   {
 
   
   /**
-   * {{{acordo_quebra_response_id_value}}}
+   * Identification code of the agreement (id)
    **/
   public AcordoQuebraResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{acordo_quebra_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification code of the agreement (id)")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -42,14 +42,14 @@ public class AcordoQuebraResponse   {
 
   
   /**
-   * {{{acordo_quebra_response_id_conta_value}}}
+   * Account Identification Code (idConta)
    **/
   public AcordoQuebraResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{acordo_quebra_response_id_conta_value}}}")
+  @ApiModelProperty(example = "null", value = "Account Identification Code (idConta)")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -60,14 +60,14 @@ public class AcordoQuebraResponse   {
 
   
   /**
-   * {{{acordo_quebra_response_status_conta_value}}}
+   * Agreement Account Status
    **/
   public AcordoQuebraResponse statusConta(Long statusConta) {
     this.statusConta = statusConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{acordo_quebra_response_status_conta_value}}}")
+  @ApiModelProperty(example = "null", value = "Agreement Account Status")
   @JsonProperty("statusConta")
   public Long getStatusConta() {
     return statusConta;
@@ -78,14 +78,14 @@ public class AcordoQuebraResponse   {
 
   
   /**
-   * {{{acordo_quebra_response_saldo_atual_final_value}}}
+   * Account Current Current Balance
    **/
   public AcordoQuebraResponse saldoAtualFinal(BigDecimal saldoAtualFinal) {
     this.saldoAtualFinal = saldoAtualFinal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{acordo_quebra_response_saldo_atual_final_value}}}")
+  @ApiModelProperty(example = "null", value = "Account Current Current Balance")
   @JsonProperty("saldoAtualFinal")
   public BigDecimal getSaldoAtualFinal() {
     return saldoAtualFinal;
@@ -96,14 +96,14 @@ public class AcordoQuebraResponse   {
 
   
   /**
-   * {{{acordo_quebra_response_data_quebra_acordo_value}}}
+   * Date of breach of agreement
    **/
   public AcordoQuebraResponse dataQuebraAcordo(String dataQuebraAcordo) {
     this.dataQuebraAcordo = dataQuebraAcordo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{acordo_quebra_response_data_quebra_acordo_value}}}")
+  @ApiModelProperty(example = "null", value = "Date of breach of agreement")
   @JsonProperty("dataQuebraAcordo")
   public String getDataQuebraAcordo() {
     return dataQuebraAcordo;

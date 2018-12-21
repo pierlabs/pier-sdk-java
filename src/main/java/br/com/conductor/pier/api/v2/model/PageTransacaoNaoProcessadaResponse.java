@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{page_transacao_nao_processada_response_description}}}
+ * Processed Transaction List
  **/
 
-@ApiModel(description = "{{{page_transacao_nao_processada_response_description}}}")
+@ApiModel(description = "Processed Transaction List")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageTransacaoNaoProcessadaResponse   {
   

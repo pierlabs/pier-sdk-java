@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{cartao_embossing_request_description}}}
+ * Request Parameters of the embossing card creation
  **/
 
-@ApiModel(description = "{{{cartao_embossing_request_description}}}")
+@ApiModel(description = "Request Parameters of the embossing card creation")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class CartaoEmbossingRequest   {
   
@@ -20,14 +20,14 @@ public class CartaoEmbossingRequest   {
 
   
   /**
-   * {{{cartao_embossing_request_id_pessoa_value}}}
+   * Identification Code of the Person which the card belongs (id)
    **/
   public CartaoEmbossingRequest idPessoa(Long idPessoa) {
     this.idPessoa = idPessoa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{cartao_embossing_request_id_pessoa_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the Person which the card belongs (id)")
   @JsonProperty("id_pessoa")
   public Long getIdPessoa() {
     return idPessoa;
@@ -38,14 +38,14 @@ public class CartaoEmbossingRequest   {
 
   
   /**
-   * {{{cartao_embossing_request_id_tipo_plastico_value}}}
+   * Identification Code of TypePlastic (id)
    **/
   public CartaoEmbossingRequest idTipoPlastico(Long idTipoPlastico) {
     this.idTipoPlastico = idTipoPlastico;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{cartao_embossing_request_id_tipo_plastico_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of TypePlastic (id)")
   @JsonProperty("id_tipo_plastico")
   public Long getIdTipoPlastico() {
     return idTipoPlastico;

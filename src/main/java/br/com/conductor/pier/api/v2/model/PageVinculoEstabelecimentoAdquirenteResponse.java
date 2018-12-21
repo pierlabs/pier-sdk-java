@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{page_vinculo_estabelecimento_adquirente_response_description}}}
+ * List of the LinkMerchantAcquirer
  **/
 
-@ApiModel(description = "{{{page_vinculo_estabelecimento_adquirente_response_description}}}")
+@ApiModel(description = "List of the LinkMerchantAcquirer")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageVinculoEstabelecimentoAdquirenteResponse   {
   

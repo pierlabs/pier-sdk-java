@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{codigo_seguranca_response_description}}}
+ * Object security code
  **/
 
-@ApiModel(description = "{{{codigo_seguranca_response_description}}}")
+@ApiModel(description = "Object security code")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class CodigoSegurancaResponse   {
   
@@ -24,14 +24,14 @@ public class CodigoSegurancaResponse   {
 
   
   /**
-   * {{{codigo_seguranca_response_id_value}}}
+   * Identification Code of the Safety Code (id)
    **/
   public CodigoSegurancaResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{codigo_seguranca_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the Safety Code (id)")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -42,14 +42,14 @@ public class CodigoSegurancaResponse   {
 
   
   /**
-   * {{{codigo_seguranca_response_id_emissor_value}}}
+   * Identification Code of the Issuer. (idIssuer)
    **/
   public CodigoSegurancaResponse idEmissor(Long idEmissor) {
     this.idEmissor = idEmissor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{codigo_seguranca_response_id_emissor_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the Issuer. (idIssuer)")
   @JsonProperty("idEmissor")
   public Long getIdEmissor() {
     return idEmissor;
@@ -60,14 +60,14 @@ public class CodigoSegurancaResponse   {
 
   
   /**
-   * {{{codigo_seguranca_response_modo_envio_value}}}
+   * Show the sending model of the Safety Code
    **/
   public CodigoSegurancaResponse modoEnvio(String modoEnvio) {
     this.modoEnvio = modoEnvio;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{codigo_seguranca_response_modo_envio_value}}}")
+  @ApiModelProperty(example = "null", value = "Show the sending model of the Safety Code")
   @JsonProperty("modoEnvio")
   public String getModoEnvio() {
     return modoEnvio;
@@ -78,14 +78,14 @@ public class CodigoSegurancaResponse   {
 
   
   /**
-   * {{{codigo_seguranca_response_contato_value}}}
+   * Show the contact of the safety code
    **/
   public CodigoSegurancaResponse contato(String contato) {
     this.contato = contato;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{codigo_seguranca_response_contato_value}}}")
+  @ApiModelProperty(example = "null", value = "Show the contact of the safety code")
   @JsonProperty("contato")
   public String getContato() {
     return contato;
@@ -96,14 +96,14 @@ public class CodigoSegurancaResponse   {
 
   
   /**
-   * {{{codigo_seguranca_response_ativo_value}}}
+   * Show the statys of the Safety Code
    **/
   public CodigoSegurancaResponse ativo(Boolean ativo) {
     this.ativo = ativo;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "{{{codigo_seguranca_response_ativo_value}}}")
+  @ApiModelProperty(example = "false", value = "Show the statys of the Safety Code")
   @JsonProperty("ativo")
   public Boolean getAtivo() {
     return ativo;
@@ -114,14 +114,14 @@ public class CodigoSegurancaResponse   {
 
   
   /**
-   * {{{codigo_seguranca_response_data_validade_value}}}
+   * Show the expiration date of the safety code created
    **/
   public CodigoSegurancaResponse dataValidade(String dataValidade) {
     this.dataValidade = dataValidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{codigo_seguranca_response_data_validade_value}}}")
+  @ApiModelProperty(example = "null", value = "Show the expiration date of the safety code created")
   @JsonProperty("dataValidade")
   public String getDataValidade() {
     return dataValidade;

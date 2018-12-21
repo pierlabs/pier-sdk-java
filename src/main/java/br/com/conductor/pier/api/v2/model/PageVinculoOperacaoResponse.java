@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{page_vinculo_operacao_response_description}}}
+ * List of LinkOperation
  **/
 
-@ApiModel(description = "{{{page_vinculo_operacao_response_description}}}")
+@ApiModel(description = "List of LinkOperation")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageVinculoOperacaoResponse   {
   

@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{page_status_arquivo_response_description}}}
+ * Status List of the registered files in the system
  **/
 
-@ApiModel(description = "{{{page_status_arquivo_response_description}}}")
+@ApiModel(description = "Status List of the registered files in the system")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageStatusArquivoResponse   {
   

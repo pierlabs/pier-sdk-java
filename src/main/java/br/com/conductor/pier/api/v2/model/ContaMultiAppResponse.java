@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{conta_multi_response_description}}}
+ * Object with account record response MultiApp
  **/
 
-@ApiModel(description = "{{{conta_multi_response_description}}}")
+@ApiModel(description = "Object with account record response MultiApp")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ContaMultiAppResponse   {
   
@@ -22,14 +22,14 @@ public class ContaMultiAppResponse   {
 
   
   /**
-   * {{{conta_multi_response_contas_value}}}
+   * generated MultiApp accounts
    **/
   public ContaMultiAppResponse contas(List<ContaResponse> contas) {
     this.contas = contas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{conta_multi_response_contas_value}}}")
+  @ApiModelProperty(example = "null", value = "generated MultiApp accounts")
   @JsonProperty("contas")
   public List<ContaResponse> getContas() {
     return contas;

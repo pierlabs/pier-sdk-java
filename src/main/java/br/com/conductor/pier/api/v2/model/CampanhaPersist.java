@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{campanha_persist_description}}}
+ * Campaign
  **/
 
-@ApiModel(description = "{{{campanha_persist_description}}}")
+@ApiModel(description = "Campaign")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class CampanhaPersist   {
   
@@ -24,14 +24,14 @@ public class CampanhaPersist   {
 
   
   /**
-   * {{{campanha_persist_nome_value}}}
+   * Name of the campaign
    **/
   public CampanhaPersist nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{campanha_persist_nome_value}}}")
+  @ApiModelProperty(example = "null", value = "Name of the campaign")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -42,14 +42,14 @@ public class CampanhaPersist   {
 
   
   /**
-   * {{{campanha_persist_id_tipo_campanha_value}}}
+   * Identification Code of the Campaign type
    **/
   public CampanhaPersist idTipoCampanha(Long idTipoCampanha) {
     this.idTipoCampanha = idTipoCampanha;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{campanha_persist_id_tipo_campanha_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the Campaign type")
   @JsonProperty("idTipoCampanha")
   public Long getIdTipoCampanha() {
     return idTipoCampanha;
@@ -60,14 +60,14 @@ public class CampanhaPersist   {
 
   
   /**
-   * {{{campanha_persist_planos_campanhas_value}}}
+   * List with the plans of the campaign
    **/
   public CampanhaPersist planosCampanhas(List<PlanoCampanhaPersist> planosCampanhas) {
     this.planosCampanhas = planosCampanhas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{campanha_persist_planos_campanhas_value}}}")
+  @ApiModelProperty(example = "null", value = "List with the plans of the campaign")
   @JsonProperty("planosCampanhas")
   public List<PlanoCampanhaPersist> getPlanosCampanhas() {
     return planosCampanhas;

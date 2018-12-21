@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{estagio_cartao_response_description}}}
+ * Representation of the Card Stage Resource
  **/
 
-@ApiModel(description = "{{{estagio_cartao_response_description}}}")
+@ApiModel(description = "Representation of the Card Stage Resource")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class EstagioCartaoResponse   {
   
@@ -20,14 +20,14 @@ public class EstagioCartaoResponse   {
 
   
   /**
-   * {{{estagio_cartao_response_id_value}}}
+   * Stage Card Id
    **/
   public EstagioCartaoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{estagio_cartao_response_id_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Stage Card Id")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -38,14 +38,14 @@ public class EstagioCartaoResponse   {
 
   
   /**
-   * {{{estagio_cartao_response_nome_value}}}
+   * Stage Card Name
    **/
   public EstagioCartaoResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{estagio_cartao_response_nome_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Stage Card Name")
   @JsonProperty("nome")
   public String getNome() {
     return nome;

@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * {{{desfazimento_transacao_on_us_request_description}}}
+ * Request Object of the undo transaction
  **/
 
-@ApiModel(description = "{{{desfazimento_transacao_on_us_request_description}}}")
+@ApiModel(description = "Request Object of the undo transaction")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class DesfazimentoTransacaoOnUsRequest   {
   
@@ -29,14 +29,14 @@ public class DesfazimentoTransacaoOnUsRequest   {
 
   
   /**
-   * {{{transacao_on_us_request_nsu_origem_value}}}
+   * Unique Sequel Number that identifies the transaction in the system that has originated it
    **/
   public DesfazimentoTransacaoOnUsRequest nsuOrigem(String nsuOrigem) {
     this.nsuOrigem = nsuOrigem;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{transacao_on_us_request_nsu_origem_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Unique Sequel Number that identifies the transaction in the system that has originated it")
   @JsonProperty("nsuOrigem")
   public String getNsuOrigem() {
     return nsuOrigem;
@@ -47,14 +47,14 @@ public class DesfazimentoTransacaoOnUsRequest   {
 
   
   /**
-   * {{{desfazimento_transacao_on_us_request_nsu_origem_transacao_cancelada_value}}}
+   * Unique Sequel Number that identifies the transaction in the system to be canceled
    **/
   public DesfazimentoTransacaoOnUsRequest nsuOrigemTransacaoCancelada(String nsuOrigemTransacaoCancelada) {
     this.nsuOrigemTransacaoCancelada = nsuOrigemTransacaoCancelada;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{desfazimento_transacao_on_us_request_nsu_origem_transacao_cancelada_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Unique Sequel Number that identifies the transaction in the system to be canceled")
   @JsonProperty("nsuOrigemTransacaoCancelada")
   public String getNsuOrigemTransacaoCancelada() {
     return nsuOrigemTransacaoCancelada;
@@ -65,14 +65,14 @@ public class DesfazimentoTransacaoOnUsRequest   {
 
   
   /**
-   * {{{transacao_on_us_request_codigo_processamento_value}}}
+   * Code of Processing that identifies the Type of Transaction
    **/
   public DesfazimentoTransacaoOnUsRequest codigoProcessamento(String codigoProcessamento) {
     this.codigoProcessamento = codigoProcessamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{transacao_on_us_request_codigo_processamento_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Code of Processing that identifies the Type of Transaction")
   @JsonProperty("codigoProcessamento")
   public String getCodigoProcessamento() {
     return codigoProcessamento;
@@ -83,14 +83,14 @@ public class DesfazimentoTransacaoOnUsRequest   {
 
   
   /**
-   * {{{desfazimento_transacao_on_us_request_data_hora_transacao_cancelada_value}}}
+   * List the date and local time of the transactionto be canceled yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
    **/
   public DesfazimentoTransacaoOnUsRequest dataHoraTransacaoCancelada(String dataHoraTransacaoCancelada) {
     this.dataHoraTransacaoCancelada = dataHoraTransacaoCancelada;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{desfazimento_transacao_on_us_request_data_hora_transacao_cancelada_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "List the date and local time of the transactionto be canceled yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00")
   @JsonProperty("dataHoraTransacaoCancelada")
   public String getDataHoraTransacaoCancelada() {
     return dataHoraTransacaoCancelada;
@@ -101,14 +101,14 @@ public class DesfazimentoTransacaoOnUsRequest   {
 
   
   /**
-   * {{{transacao_on_us_request_valor_transacao_value}}}
+   * Value of transaction with two decimal places for the cents
    **/
   public DesfazimentoTransacaoOnUsRequest valorTransacao(BigDecimal valorTransacao) {
     this.valorTransacao = valorTransacao;
     return this;
   }
   
-  @ApiModelProperty(example = "10.25", required = true, value = "{{{transacao_on_us_request_valor_transacao_value}}}")
+  @ApiModelProperty(example = "10.25", required = true, value = "Value of transaction with two decimal places for the cents")
   @JsonProperty("valorTransacao")
   public BigDecimal getValorTransacao() {
     return valorTransacao;
@@ -119,14 +119,14 @@ public class DesfazimentoTransacaoOnUsRequest   {
 
   
   /**
-   * {{{transacao_on_us_request_numero_real_cartao_value}}}
+   * Real number of the card
    **/
   public DesfazimentoTransacaoOnUsRequest numeroRealCartao(String numeroRealCartao) {
     this.numeroRealCartao = numeroRealCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{transacao_on_us_request_numero_real_cartao_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Real number of the card")
   @JsonProperty("numeroRealCartao")
   public String getNumeroRealCartao() {
     return numeroRealCartao;
@@ -137,14 +137,14 @@ public class DesfazimentoTransacaoOnUsRequest   {
 
   
   /**
-   * {{{transacao_on_us_request_data_validade_cartao_value}}}
+   * Expiration date of the Card. Ex: YYMM
    **/
   public DesfazimentoTransacaoOnUsRequest dataValidadeCartao(String dataValidadeCartao) {
     this.dataValidadeCartao = dataValidadeCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{transacao_on_us_request_data_validade_cartao_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Expiration date of the Card. Ex: YYMM")
   @JsonProperty("dataValidadeCartao")
   public String getDataValidadeCartao() {
     return dataValidadeCartao;
@@ -155,14 +155,14 @@ public class DesfazimentoTransacaoOnUsRequest   {
 
   
   /**
-   * {{{transacao_on_us_request_numero_estabelecimento_value}}}
+   * Number of the Establishment (Number+DV)
    **/
   public DesfazimentoTransacaoOnUsRequest numeroEstabelecimento(Long numeroEstabelecimento) {
     this.numeroEstabelecimento = numeroEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{transacao_on_us_request_numero_estabelecimento_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Number of the Establishment (Number+DV)")
   @JsonProperty("numeroEstabelecimento")
   public Long getNumeroEstabelecimento() {
     return numeroEstabelecimento;
@@ -173,14 +173,14 @@ public class DesfazimentoTransacaoOnUsRequest   {
 
   
   /**
-   * {{{transacao_on_us_request_data_hora_terminal_value}}}
+   * show the date and local time of the retrievement yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
    **/
   public DesfazimentoTransacaoOnUsRequest dataHoraTerminal(String dataHoraTerminal) {
     this.dataHoraTerminal = dataHoraTerminal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{transacao_on_us_request_data_hora_terminal_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "show the date and local time of the retrievement yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00")
   @JsonProperty("dataHoraTerminal")
   public String getDataHoraTerminal() {
     return dataHoraTerminal;
@@ -191,14 +191,14 @@ public class DesfazimentoTransacaoOnUsRequest   {
 
   
   /**
-   * {{{transacao_on_us_request_terminal_requisitante_value}}}
+   * Show the identification of the terminal applicant
    **/
   public DesfazimentoTransacaoOnUsRequest terminalRequisitante(String terminalRequisitante) {
     this.terminalRequisitante = terminalRequisitante;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{transacao_on_us_request_terminal_requisitante_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Show the identification of the terminal applicant")
   @JsonProperty("terminalRequisitante")
   public String getTerminalRequisitante() {
     return terminalRequisitante;

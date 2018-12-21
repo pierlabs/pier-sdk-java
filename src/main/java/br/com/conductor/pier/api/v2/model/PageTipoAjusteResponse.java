@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{page_tipo_ajuste_response_description}}}
+ * List of the adjustment types
  **/
 
-@ApiModel(description = "{{{page_tipo_ajuste_response_description}}}")
+@ApiModel(description = "List of the adjustment types")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageTipoAjusteResponse   {
   

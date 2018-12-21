@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{status_impressao_response_description}}}
+ * Representation of the Printing Status resource
  **/
 
-@ApiModel(description = "{{{status_impressao_response_description}}}")
+@ApiModel(description = "Representation of the Printing Status resource")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class StatusImpressaoResponse   {
   
@@ -20,14 +20,14 @@ public class StatusImpressaoResponse   {
 
   
   /**
-   * {{{status_impressao_response_id_value}}}
+   * Id of the card stage
    **/
   public StatusImpressaoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{status_impressao_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "Id of the card stage")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -38,14 +38,14 @@ public class StatusImpressaoResponse   {
 
   
   /**
-   * {{{status_impressao_response_nome_value}}}
+   * Name of the printing status
    **/
   public StatusImpressaoResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{status_impressao_response_nome_value}}}")
+  @ApiModelProperty(example = "null", value = "Name of the printing status")
   @JsonProperty("nome")
   public String getNome() {
     return nome;

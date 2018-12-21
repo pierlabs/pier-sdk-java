@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{vinculo_estabelecimento_adquirente_persist_description}}}
+ * Object LinkMerchantPersist
  **/
 
-@ApiModel(description = "{{{vinculo_estabelecimento_adquirente_persist_description}}}")
+@ApiModel(description = "Object LinkMerchantPersist")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class VinculoEstabelecimentoAdquirentePersist   {
   
@@ -21,14 +21,14 @@ public class VinculoEstabelecimentoAdquirentePersist   {
 
   
   /**
-   * {{{vinculo_estabelecimento_adquirente_persist_id_estabelecimento_value}}}
+   * Show the id of the Merchant
    **/
   public VinculoEstabelecimentoAdquirentePersist idEstabelecimento(Long idEstabelecimento) {
     this.idEstabelecimento = idEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{vinculo_estabelecimento_adquirente_persist_id_estabelecimento_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Show the id of the Merchant")
   @JsonProperty("idEstabelecimento")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
@@ -39,14 +39,14 @@ public class VinculoEstabelecimentoAdquirentePersist   {
 
   
   /**
-   * {{{vinculo_estabelecimento_adquirente_persist_id_adquirente_value}}}
+   * Show the id of the Acquirer
    **/
   public VinculoEstabelecimentoAdquirentePersist idAdquirente(Long idAdquirente) {
     this.idAdquirente = idAdquirente;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{vinculo_estabelecimento_adquirente_persist_id_adquirente_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Show the id of the Acquirer")
   @JsonProperty("idAdquirente")
   public Long getIdAdquirente() {
     return idAdquirente;
@@ -57,14 +57,14 @@ public class VinculoEstabelecimentoAdquirentePersist   {
 
   
   /**
-   * {{{vinculo_estabelecimento_adquirente_persist_codigo_estabelecimento_adquirente_value}}}
+   * Show the link code between the merchant and the acquirer
    **/
   public VinculoEstabelecimentoAdquirentePersist codigoEstabelecimentoAdquirente(String codigoEstabelecimentoAdquirente) {
     this.codigoEstabelecimentoAdquirente = codigoEstabelecimentoAdquirente;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{vinculo_estabelecimento_adquirente_persist_codigo_estabelecimento_adquirente_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Show the link code between the merchant and the acquirer")
   @JsonProperty("codigoEstabelecimentoAdquirente")
   public String getCodigoEstabelecimentoAdquirente() {
     return codigoEstabelecimentoAdquirente;

@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{arquivo_response_description}}}
+ * Object Response of the file
  **/
 
-@ApiModel(description = "{{{arquivo_response_description}}}")
+@ApiModel(description = "Object Response of the file")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ArquivoResponse   {
   
@@ -31,14 +31,14 @@ public class ArquivoResponse   {
 
   
   /**
-   * {{{arquivo_response_id_value}}}
+   * Identification Code of the File
    **/
   public ArquivoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{arquivo_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the File")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -49,14 +49,14 @@ public class ArquivoResponse   {
 
   
   /**
-   * {{{arquivo_response_id_tipo_arquivo_value}}}
+   * Identification Code of the File Type
    **/
   public ArquivoResponse idTipoArquivo(Long idTipoArquivo) {
     this.idTipoArquivo = idTipoArquivo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{arquivo_response_id_tipo_arquivo_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the File Type")
   @JsonProperty("idTipoArquivo")
   public Long getIdTipoArquivo() {
     return idTipoArquivo;
@@ -67,14 +67,14 @@ public class ArquivoResponse   {
 
   
   /**
-   * {{{arquivo_response_nome_tipo_arquivo_value}}}
+   * Description of the type of the file
    **/
   public ArquivoResponse nomeTipoArquivo(String nomeTipoArquivo) {
     this.nomeTipoArquivo = nomeTipoArquivo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{arquivo_response_nome_tipo_arquivo_value}}}")
+  @ApiModelProperty(example = "null", value = "Description of the type of the file")
   @JsonProperty("nomeTipoArquivo")
   public String getNomeTipoArquivo() {
     return nomeTipoArquivo;
@@ -85,14 +85,14 @@ public class ArquivoResponse   {
 
   
   /**
-   * {{{arquivo_response_id_status_arquivo_value}}}
+   * Identification Code of the File Staus
    **/
   public ArquivoResponse idStatusArquivo(Long idStatusArquivo) {
     this.idStatusArquivo = idStatusArquivo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{arquivo_response_id_status_arquivo_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the File Staus")
   @JsonProperty("idStatusArquivo")
   public Long getIdStatusArquivo() {
     return idStatusArquivo;
@@ -103,14 +103,14 @@ public class ArquivoResponse   {
 
   
   /**
-   * {{{arquivo_response_nome_status_arquivo_value}}}
+   * Description of the File Status
    **/
   public ArquivoResponse nomeStatusArquivo(String nomeStatusArquivo) {
     this.nomeStatusArquivo = nomeStatusArquivo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{arquivo_response_nome_status_arquivo_value}}}")
+  @ApiModelProperty(example = "null", value = "Description of the File Status")
   @JsonProperty("nomeStatusArquivo")
   public String getNomeStatusArquivo() {
     return nomeStatusArquivo;
@@ -121,14 +121,14 @@ public class ArquivoResponse   {
 
   
   /**
-   * {{{arquivo_response_nome_value}}}
+   * File name
    **/
   public ArquivoResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{arquivo_response_nome_value}}}")
+  @ApiModelProperty(example = "null", value = "File name")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -139,14 +139,14 @@ public class ArquivoResponse   {
 
   
   /**
-   * {{{arquivo_response_extensao_value}}}
+   * Format/Extens of the file
    **/
   public ArquivoResponse extensao(String extensao) {
     this.extensao = extensao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{arquivo_response_extensao_value}}}")
+  @ApiModelProperty(example = "null", value = "Format/Extens of the file")
   @JsonProperty("extensao")
   public String getExtensao() {
     return extensao;
@@ -157,14 +157,14 @@ public class ArquivoResponse   {
 
   
   /**
-   * {{{arquivo_response_data_inclusao_value}}}
+   * Date of Inclusion of the File
    **/
   public ArquivoResponse dataInclusao(String dataInclusao) {
     this.dataInclusao = dataInclusao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{arquivo_response_data_inclusao_value}}}")
+  @ApiModelProperty(example = "null", value = "Date of Inclusion of the File")
   @JsonProperty("dataInclusao")
   public String getDataInclusao() {
     return dataInclusao;
@@ -175,14 +175,14 @@ public class ArquivoResponse   {
 
   
   /**
-   * {{{arquivo_response_data_alteracao_value}}}
+   * Date of the last update of the file
    **/
   public ArquivoResponse dataAlteracao(String dataAlteracao) {
     this.dataAlteracao = dataAlteracao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{arquivo_response_data_alteracao_value}}}")
+  @ApiModelProperty(example = "null", value = "Date of the last update of the file")
   @JsonProperty("dataAlteracao")
   public String getDataAlteracao() {
     return dataAlteracao;
@@ -193,14 +193,14 @@ public class ArquivoResponse   {
 
   
   /**
-   * {{{arquivo_response_detalhes_value}}}
+   * Details containing additional information, realted to the file
    **/
   public ArquivoResponse detalhes(List<ArquivoParametroResponse> detalhes) {
     this.detalhes = detalhes;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{arquivo_response_detalhes_value}}}")
+  @ApiModelProperty(example = "null", value = "Details containing additional information, realted to the file")
   @JsonProperty("detalhes")
   public List<ArquivoParametroResponse> getDetalhes() {
     return detalhes;

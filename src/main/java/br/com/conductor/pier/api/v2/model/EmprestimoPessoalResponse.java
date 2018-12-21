@@ -12,10 +12,10 @@ import java.util.List;
 
 
 /**
- * {{{emprestimo_pessoal_response_description}}}
+ * Resource Response of simulating loan/financing
  **/
 
-@ApiModel(description = "{{{emprestimo_pessoal_response_description}}}")
+@ApiModel(description = "Resource Response of simulating loan/financing")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class EmprestimoPessoalResponse   {
   
@@ -48,14 +48,14 @@ public class EmprestimoPessoalResponse   {
 
   
   /**
-   * {{{emprestimo_pessoal_response_valor_solicitado_value}}}
+   * Requested value of the loan/financing
    **/
   public EmprestimoPessoalResponse valorSolicitado(BigDecimal valorSolicitado) {
     this.valorSolicitado = valorSolicitado;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{emprestimo_pessoal_response_valor_solicitado_value}}}")
+  @ApiModelProperty(example = "null", value = "Requested value of the loan/financing")
   @JsonProperty("valorSolicitado")
   public BigDecimal getValorSolicitado() {
     return valorSolicitado;
@@ -66,14 +66,14 @@ public class EmprestimoPessoalResponse   {
 
   
   /**
-   * {{{emprestimo_pessoal_response_valor_maximo_solicitacao_value}}}
+   * Maximum value of the loan for the limit value of the parcel
    **/
   public EmprestimoPessoalResponse valorMaximoSolicitacao(BigDecimal valorMaximoSolicitacao) {
     this.valorMaximoSolicitacao = valorMaximoSolicitacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{emprestimo_pessoal_response_valor_maximo_solicitacao_value}}}")
+  @ApiModelProperty(example = "null", value = "Maximum value of the loan for the limit value of the parcel")
   @JsonProperty("valorMaximoSolicitacao")
   public BigDecimal getValorMaximoSolicitacao() {
     return valorMaximoSolicitacao;
@@ -84,14 +84,14 @@ public class EmprestimoPessoalResponse   {
 
   
   /**
-   * {{{emprestimo_pessoal_response_numero_parcelas_value}}}
+   * Number of parcels requested
    **/
   public EmprestimoPessoalResponse numeroParcelas(Integer numeroParcelas) {
     this.numeroParcelas = numeroParcelas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{emprestimo_pessoal_response_numero_parcelas_value}}}")
+  @ApiModelProperty(example = "null", value = "Number of parcels requested")
   @JsonProperty("numeroParcelas")
   public Integer getNumeroParcelas() {
     return numeroParcelas;
@@ -102,14 +102,14 @@ public class EmprestimoPessoalResponse   {
 
   
   /**
-   * {{{emprestimo_pessoal_response_valor_maximo_parcela_value}}}
+   * Maximum limit of allowed parcels
    **/
   public EmprestimoPessoalResponse valorMaximoParcela(BigDecimal valorMaximoParcela) {
     this.valorMaximoParcela = valorMaximoParcela;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{emprestimo_pessoal_response_valor_maximo_parcela_value}}}")
+  @ApiModelProperty(example = "null", value = "Maximum limit of allowed parcels")
   @JsonProperty("valorMaximoParcela")
   public BigDecimal getValorMaximoParcela() {
     return valorMaximoParcela;
@@ -120,14 +120,14 @@ public class EmprestimoPessoalResponse   {
 
   
   /**
-   * {{{emprestimo_pessoal_response_data_primeira_parcela_value}}}
+   * Date of discount of the first parcel
    **/
   public EmprestimoPessoalResponse dataPrimeiraParcela(String dataPrimeiraParcela) {
     this.dataPrimeiraParcela = dataPrimeiraParcela;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{emprestimo_pessoal_response_data_primeira_parcela_value}}}")
+  @ApiModelProperty(example = "null", value = "Date of discount of the first parcel")
   @JsonProperty("dataPrimeiraParcela")
   public String getDataPrimeiraParcela() {
     return dataPrimeiraParcela;
@@ -138,14 +138,14 @@ public class EmprestimoPessoalResponse   {
 
   
   /**
-   * {{{emprestimo_pessoal_response_periodo_taxa_value}}}
+   * Application period of the interest taxes
    **/
   public EmprestimoPessoalResponse periodoTaxa(String periodoTaxa) {
     this.periodoTaxa = periodoTaxa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{emprestimo_pessoal_response_periodo_taxa_value}}}")
+  @ApiModelProperty(example = "null", value = "Application period of the interest taxes")
   @JsonProperty("periodoTaxa")
   public String getPeriodoTaxa() {
     return periodoTaxa;
@@ -156,14 +156,14 @@ public class EmprestimoPessoalResponse   {
 
   
   /**
-   * {{{emprestimo_pessoal_response_sistema_amortizacao_value}}}
+   * System for amortization of the parcel values
    **/
   public EmprestimoPessoalResponse sistemaAmortizacao(String sistemaAmortizacao) {
     this.sistemaAmortizacao = sistemaAmortizacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{emprestimo_pessoal_response_sistema_amortizacao_value}}}")
+  @ApiModelProperty(example = "null", value = "System for amortization of the parcel values")
   @JsonProperty("sistemaAmortizacao")
   public String getSistemaAmortizacao() {
     return sistemaAmortizacao;
@@ -174,14 +174,14 @@ public class EmprestimoPessoalResponse   {
 
   
   /**
-   * {{{emprestimo_pessoal_response_taxa_juros_value}}}
+   * Percentage value of the interest taxes to be applied
    **/
   public EmprestimoPessoalResponse taxaJuros(BigDecimal taxaJuros) {
     this.taxaJuros = taxaJuros;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{emprestimo_pessoal_response_taxa_juros_value}}}")
+  @ApiModelProperty(example = "null", value = "Percentage value of the interest taxes to be applied")
   @JsonProperty("taxaJuros")
   public BigDecimal getTaxaJuros() {
     return taxaJuros;

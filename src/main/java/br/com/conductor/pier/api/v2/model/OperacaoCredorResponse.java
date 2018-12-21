@@ -10,10 +10,10 @@ import java.math.BigDecimal;
 
 
 /**
- * {{{operacao_credor_response_description}}}
+ * ObjectOperationCreditor
  **/
 
-@ApiModel(description = "{{{operacao_credor_response_description}}}")
+@ApiModel(description = "ObjectOperationCreditor")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class OperacaoCredorResponse   {
   
@@ -75,14 +75,14 @@ public class OperacaoCredorResponse   {
 
   
   /**
-   * {{{operacao_credor_response_id_value}}}
+   * Show the id of the OperationCreditor
    **/
   public OperacaoCredorResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "2", value = "{{{operacao_credor_response_id_value}}}")
+  @ApiModelProperty(example = "2", value = "Show the id of the OperationCreditor")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -93,14 +93,14 @@ public class OperacaoCredorResponse   {
 
   
   /**
-   * {{{operacao_credor_response_id_operacao_value}}}
+   * Show the id of the Operation
    **/
   public OperacaoCredorResponse idOperacao(Long idOperacao) {
     this.idOperacao = idOperacao;
     return this;
   }
   
-  @ApiModelProperty(example = "2", value = "{{{operacao_credor_response_id_operacao_value}}}")
+  @ApiModelProperty(example = "2", value = "Show the id of the Operation")
   @JsonProperty("idOperacao")
   public Long getIdOperacao() {
     return idOperacao;
@@ -111,14 +111,14 @@ public class OperacaoCredorResponse   {
 
   
   /**
-   * {{{operacao_credor_response_id_grupo_economico_value}}}
+   * Show the Economic Id group
    **/
   public OperacaoCredorResponse idGrupoEconomico(Long idGrupoEconomico) {
     this.idGrupoEconomico = idGrupoEconomico;
     return this;
   }
   
-  @ApiModelProperty(example = "1", value = "{{{operacao_credor_response_id_grupo_economico_value}}}")
+  @ApiModelProperty(example = "1", value = "Show the Economic Id group")
   @JsonProperty("idGrupoEconomico")
   public Long getIdGrupoEconomico() {
     return idGrupoEconomico;
@@ -129,14 +129,14 @@ public class OperacaoCredorResponse   {
 
   
   /**
-   * {{{operacao_credor_response_id_produto_value}}}
+   * Show the id of the product
    **/
   public OperacaoCredorResponse idProduto(Long idProduto) {
     this.idProduto = idProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "1", value = "{{{operacao_credor_response_id_produto_value}}}")
+  @ApiModelProperty(example = "1", value = "Show the id of the product")
   @JsonProperty("idProduto")
   public Long getIdProduto() {
     return idProduto;
@@ -147,14 +147,14 @@ public class OperacaoCredorResponse   {
 
   
   /**
-   * {{{operacao_credor_response_remuneracao_percentual_value}}}
+   * Percentage Remunaration
    **/
   public OperacaoCredorResponse remuneracaoPercentual(BigDecimal remuneracaoPercentual) {
     this.remuneracaoPercentual = remuneracaoPercentual;
     return this;
   }
   
-  @ApiModelProperty(example = "0.04", value = "{{{operacao_credor_response_remuneracao_percentual_value}}}")
+  @ApiModelProperty(example = "0.04", value = "Percentage Remunaration")
   @JsonProperty("remuneracaoPercentual")
   public BigDecimal getRemuneracaoPercentual() {
     return remuneracaoPercentual;
@@ -165,14 +165,14 @@ public class OperacaoCredorResponse   {
 
   
   /**
-   * {{{operacao_credor_response_remuneracao_fixa_value}}}
+   * Remuneration fixed
    **/
   public OperacaoCredorResponse remuneracaoFixa(BigDecimal remuneracaoFixa) {
     this.remuneracaoFixa = remuneracaoFixa;
     return this;
   }
   
-  @ApiModelProperty(example = "0.0", value = "{{{operacao_credor_response_remuneracao_fixa_value}}}")
+  @ApiModelProperty(example = "0.0", value = "Remuneration fixed")
   @JsonProperty("remuneracaoFixa")
   public BigDecimal getRemuneracaoFixa() {
     return remuneracaoFixa;
@@ -183,14 +183,14 @@ public class OperacaoCredorResponse   {
 
   
   /**
-   * {{{operacao_credor_response_periodicidade_value}}}
+   * Frequency (DAILY(1), WEEKLY(2), MONTHLY(3), DECENDIAL(4), BIWEEKLY(5))
    **/
   public OperacaoCredorResponse periodicidade(PeriodicidadeEnum periodicidade) {
     this.periodicidade = periodicidade;
     return this;
   }
   
-  @ApiModelProperty(example = "MENSAL", value = "{{{operacao_credor_response_periodicidade_value}}}")
+  @ApiModelProperty(example = "MENSAL", value = "Frequency (DAILY(1), WEEKLY(2), MONTHLY(3), DECENDIAL(4), BIWEEKLY(5))")
   @JsonProperty("periodicidade")
   public PeriodicidadeEnum getPeriodicidade() {
     return periodicidade;
@@ -201,14 +201,14 @@ public class OperacaoCredorResponse   {
 
   
   /**
-   * {{{operacao_credor_response_vencimento_primeira_parcela_value}}}
+   * Expiration of the first parcel
    **/
   public OperacaoCredorResponse vencimentoPrimeiraParcela(Integer vencimentoPrimeiraParcela) {
     this.vencimentoPrimeiraParcela = vencimentoPrimeiraParcela;
     return this;
   }
   
-  @ApiModelProperty(example = "29", value = "{{{operacao_credor_response_vencimento_primeira_parcela_value}}}")
+  @ApiModelProperty(example = "29", value = "Expiration of the first parcel")
   @JsonProperty("vencimentoPrimeiraParcela")
   public Integer getVencimentoPrimeiraParcela() {
     return vencimentoPrimeiraParcela;
@@ -219,14 +219,14 @@ public class OperacaoCredorResponse   {
 
   
   /**
-   * {{{operacao_credor_response_dias_afastamento_value}}}
+   * Removal days
    **/
   public OperacaoCredorResponse diasAfastamento(Integer diasAfastamento) {
     this.diasAfastamento = diasAfastamento;
     return this;
   }
   
-  @ApiModelProperty(example = "29", value = "{{{operacao_credor_response_dias_afastamento_value}}}")
+  @ApiModelProperty(example = "29", value = "Removal days")
   @JsonProperty("diasAfastamento")
   public Integer getDiasAfastamento() {
     return diasAfastamento;
@@ -237,14 +237,14 @@ public class OperacaoCredorResponse   {
 
   
   /**
-   * {{{operacao_credor_response_fator_multiplicador_value}}}
+   * Factor Multiplier (OUT_SCHEDULE(0), SCHEDULE(1))
    **/
   public OperacaoCredorResponse fatorMultiplicador(FatorMultiplicadorEnum fatorMultiplicador) {
     this.fatorMultiplicador = fatorMultiplicador;
     return this;
   }
   
-  @ApiModelProperty(example = "AGENDA", value = "{{{operacao_credor_response_fator_multiplicador_value}}}")
+  @ApiModelProperty(example = "AGENDA", value = "Factor Multiplier (OUT_SCHEDULE(0), SCHEDULE(1))")
   @JsonProperty("fatorMultiplicador")
   public FatorMultiplicadorEnum getFatorMultiplicador() {
     return fatorMultiplicador;
@@ -255,14 +255,14 @@ public class OperacaoCredorResponse   {
 
   
   /**
-   * {{{operacao_credor_response_flag_taxa_fixada_value}}}
+   * Flag taxe fixed
    **/
   public OperacaoCredorResponse flagTaxaFixada(Boolean flagTaxaFixada) {
     this.flagTaxaFixada = flagTaxaFixada;
     return this;
   }
   
-  @ApiModelProperty(example = "true", value = "{{{operacao_credor_response_flag_taxa_fixada_value}}}")
+  @ApiModelProperty(example = "true", value = "Flag taxe fixed")
   @JsonProperty("flagTaxaFixada")
   public Boolean getFlagTaxaFixada() {
     return flagTaxaFixada;
@@ -273,14 +273,14 @@ public class OperacaoCredorResponse   {
 
   
   /**
-   * {{{operacao_credor_response_plano_minimo_value}}}
+   * Minimum Plan of the rule
    **/
   public OperacaoCredorResponse planoMinimo(Integer planoMinimo) {
     this.planoMinimo = planoMinimo;
     return this;
   }
   
-  @ApiModelProperty(example = "1", value = "{{{operacao_credor_response_plano_minimo_value}}}")
+  @ApiModelProperty(example = "1", value = "Minimum Plan of the rule")
   @JsonProperty("planoMinimo")
   public Integer getPlanoMinimo() {
     return planoMinimo;
@@ -291,14 +291,14 @@ public class OperacaoCredorResponse   {
 
   
   /**
-   * {{{operacao_credor_response_plano_maximo_value}}}
+   * Maximum Plan of the rule
    **/
   public OperacaoCredorResponse planoMaximo(Integer planoMaximo) {
     this.planoMaximo = planoMaximo;
     return this;
   }
   
-  @ApiModelProperty(example = "5", value = "{{{operacao_credor_response_plano_maximo_value}}}")
+  @ApiModelProperty(example = "5", value = "Maximum Plan of the rule")
   @JsonProperty("planoMaximo")
   public Integer getPlanoMaximo() {
     return planoMaximo;

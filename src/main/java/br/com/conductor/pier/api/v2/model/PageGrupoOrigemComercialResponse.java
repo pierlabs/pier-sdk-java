@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{page_grupo_origem_comercial_response_description}}}
+ * List the commercial origin groups
  **/
 
-@ApiModel(description = "{{{page_grupo_origem_comercial_response_description}}}")
+@ApiModel(description = "List the commercial origin groups")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageGrupoOrigemComercialResponse   {
   

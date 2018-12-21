@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{page_plano_parcelamento_response_description}}}
+ * Response Representation of the insntallment plan resource
  **/
 
-@ApiModel(description = "{{{page_plano_parcelamento_response_description}}}")
+@ApiModel(description = "Response Representation of the insntallment plan resource")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PagePlanoParcelamentoResponse   {
   

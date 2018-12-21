@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{status_cartao_response_description}}}
+ * Representation of Card Status Resource
  **/
 
-@ApiModel(description = "{{{status_cartao_response_description}}}")
+@ApiModel(description = "Representation of Card Status Resource")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class StatusCartaoResponse   {
   
@@ -24,14 +24,14 @@ public class StatusCartaoResponse   {
 
   
   /**
-   * {{{status_cartao_response_id_value}}}
+   * Identification Code of the Card Status (id)
    **/
   public StatusCartaoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{status_cartao_response_id_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Identification Code of the Card Status (id)")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -42,14 +42,14 @@ public class StatusCartaoResponse   {
 
   
   /**
-   * {{{status_cartao_response_nome_value}}}
+   * Name attributed to the status of the Card Delivery
    **/
   public StatusCartaoResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{status_cartao_response_nome_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Name attributed to the status of the Card Delivery")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -60,14 +60,14 @@ public class StatusCartaoResponse   {
 
   
   /**
-   * {{{status_cartao_response_permite_desbloquear_value}}}
+   * Parameter that define if the status of the card allows the reactivation of the card, being: 0: Inactive and 1: Active
    **/
   public StatusCartaoResponse permiteDesbloquear(Integer permiteDesbloquear) {
     this.permiteDesbloquear = permiteDesbloquear;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{status_cartao_response_permite_desbloquear_value}}}")
+  @ApiModelProperty(example = "null", value = "Parameter that define if the status of the card allows the reactivation of the card, being: 0: Inactive and 1: Active")
   @JsonProperty("permiteDesbloquear")
   public Integer getPermiteDesbloquear() {
     return permiteDesbloquear;
@@ -78,14 +78,14 @@ public class StatusCartaoResponse   {
 
   
   /**
-   * {{{status_cartao_response_permite_atribuir_como_bloqueio_value}}}
+   * Parameter that define if the status of the card allows the reactivation of the card, being: 0: Inactive and 1: Active
    **/
   public StatusCartaoResponse permiteAtribuirComoBloqueio(Integer permiteAtribuirComoBloqueio) {
     this.permiteAtribuirComoBloqueio = permiteAtribuirComoBloqueio;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{status_cartao_response_permite_atribuir_como_bloqueio_value}}}")
+  @ApiModelProperty(example = "null", value = "Parameter that define if the status of the card allows the reactivation of the card, being: 0: Inactive and 1: Active")
   @JsonProperty("permiteAtribuirComoBloqueio")
   public Integer getPermiteAtribuirComoBloqueio() {
     return permiteAtribuirComoBloqueio;
@@ -96,14 +96,14 @@ public class StatusCartaoResponse   {
 
   
   /**
-   * {{{status_cartao_response_permite_atribuir_como_cancelamento_value}}}
+   * Parameter that define if the status of the card allows the reactivation of the card, being: 0: Inactive and 1: Active
    **/
   public StatusCartaoResponse permiteAtribuirComoCancelamento(Integer permiteAtribuirComoCancelamento) {
     this.permiteAtribuirComoCancelamento = permiteAtribuirComoCancelamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{status_cartao_response_permite_atribuir_como_cancelamento_value}}}")
+  @ApiModelProperty(example = "null", value = "Parameter that define if the status of the card allows the reactivation of the card, being: 0: Inactive and 1: Active")
   @JsonProperty("permiteAtribuirComoCancelamento")
   public Integer getPermiteAtribuirComoCancelamento() {
     return permiteAtribuirComoCancelamento;
@@ -114,14 +114,14 @@ public class StatusCartaoResponse   {
 
   
   /**
-   * {{{status_cartao_response_cobrar_tarifa_ao_emitir_nova_via_value}}}
+   * Parameter that define if the status of the card allows the reactivation of the card, being: 0: Inactive and 1: Active
    **/
   public StatusCartaoResponse cobrarTarifaAoEmitirNovaVia(Integer cobrarTarifaAoEmitirNovaVia) {
     this.cobrarTarifaAoEmitirNovaVia = cobrarTarifaAoEmitirNovaVia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{status_cartao_response_cobrar_tarifa_ao_emitir_nova_via_value}}}")
+  @ApiModelProperty(example = "null", value = "Parameter that define if the status of the card allows the reactivation of the card, being: 0: Inactive and 1: Active")
   @JsonProperty("cobrarTarifaAoEmitirNovaVia")
   public Integer getCobrarTarifaAoEmitirNovaVia() {
     return cobrarTarifaAoEmitirNovaVia;

@@ -12,10 +12,10 @@ import java.util.List;
 
 
 /**
- * {{{detalhes_fatura_response_description}}}
+ * Object Containing the details of an invoice
  **/
 
-@ApiModel(description = "{{{detalhes_fatura_response_description}}}")
+@ApiModel(description = "Object Containing the details of an invoice")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class DetalhesFaturaResponse   {
   
@@ -24,14 +24,14 @@ public class DetalhesFaturaResponse   {
 
   
   /**
-   * {{{detalhes_fatura_response_fatura_value}}}
+   * Show the details of the invoice
    **/
   public DetalhesFaturaResponse fatura(FaturaFechadaResponse fatura) {
     this.fatura = fatura;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{detalhes_fatura_response_fatura_value}}}")
+  @ApiModelProperty(example = "null", value = "Show the details of the invoice")
   @JsonProperty("fatura")
   public FaturaFechadaResponse getFatura() {
     return fatura;
@@ -42,14 +42,14 @@ public class DetalhesFaturaResponse   {
 
   
   /**
-   * {{{detalhes_fatura_response_transacoes_value}}}
+   * Show the transactions related to the invoice
    **/
   public DetalhesFaturaResponse transacoes(List<TransacoesCorrentesResponse> transacoes) {
     this.transacoes = transacoes;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{detalhes_fatura_response_transacoes_value}}}")
+  @ApiModelProperty(example = "null", value = "Show the transactions related to the invoice")
   @JsonProperty("transacoes")
   public List<TransacoesCorrentesResponse> getTransacoes() {
     return transacoes;

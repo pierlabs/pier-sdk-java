@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{adicional_persist_description}}}
+ * Input Representation of the additional register resource
  **/
 
-@ApiModel(description = "{{{adicional_persist_description}}}")
+@ApiModel(description = "Input Representation of the additional register resource")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class AdicionalPersist   {
   
@@ -36,14 +36,14 @@ public class AdicionalPersist   {
 
   
   /**
-   * {{{adicional_persist_nome_value}}}
+   * Full name of the Additional
    **/
   public AdicionalPersist nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{adicional_persist_nome_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Full name of the Additional")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -54,14 +54,14 @@ public class AdicionalPersist   {
 
   
   /**
-   * {{{adicional_persist_nome_impresso_value}}}
+   * Additional name that will be printed on the card
    **/
   public AdicionalPersist nomeImpresso(String nomeImpresso) {
     this.nomeImpresso = nomeImpresso;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{adicional_persist_nome_impresso_value}}}")
+  @ApiModelProperty(example = "null", value = "Additional name that will be printed on the card")
   @JsonProperty("nomeImpresso")
   public String getNomeImpresso() {
     return nomeImpresso;
@@ -72,14 +72,14 @@ public class AdicionalPersist   {
 
   
   /**
-   * {{{adicional_persist_numero_receita_federal_value}}}
+   * Federal Revenue Number
    **/
   public AdicionalPersist numeroReceitaFederal(String numeroReceitaFederal) {
     this.numeroReceitaFederal = numeroReceitaFederal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{adicional_persist_numero_receita_federal_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Federal Revenue Number")
   @JsonProperty("numeroReceitaFederal")
   public String getNumeroReceitaFederal() {
     return numeroReceitaFederal;
@@ -90,14 +90,14 @@ public class AdicionalPersist   {
 
   
   /**
-   * {{{adicional_persist_data_nascimento_value}}}
+   * Birth date of the Additional in the format yyyy-MM-dd
    **/
   public AdicionalPersist dataNascimento(String dataNascimento) {
     this.dataNascimento = dataNascimento;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd", value = "{{{adicional_persist_data_nascimento_value}}}")
+  @ApiModelProperty(example = "yyyy-MM-dd", value = "Birth date of the Additional in the format yyyy-MM-dd")
   @JsonProperty("dataNascimento")
   public String getDataNascimento() {
     return dataNascimento;
@@ -108,14 +108,14 @@ public class AdicionalPersist   {
 
   
   /**
-   * {{{adicional_persist_sexo_value}}}
+   * Additional gender
    **/
   public AdicionalPersist sexo(String sexo) {
     this.sexo = sexo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{adicional_persist_sexo_value}}}")
+  @ApiModelProperty(example = "null", value = "Additional gender")
   @JsonProperty("sexo")
   public String getSexo() {
     return sexo;
@@ -126,14 +126,14 @@ public class AdicionalPersist   {
 
   
   /**
-   * {{{adicional_persist_numero_identidade_value}}}
+   * Document number of the additional Identity
    **/
   public AdicionalPersist numeroIdentidade(String numeroIdentidade) {
     this.numeroIdentidade = numeroIdentidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{adicional_persist_numero_identidade_value}}}")
+  @ApiModelProperty(example = "null", value = "Document number of the additional Identity")
   @JsonProperty("numeroIdentidade")
   public String getNumeroIdentidade() {
     return numeroIdentidade;
@@ -144,14 +144,14 @@ public class AdicionalPersist   {
 
   
   /**
-   * {{{adicional_persist_orgao_expedidor_identidade_value}}}
+   * Name of the issuer organ of the Additional Identity Document
    **/
   public AdicionalPersist orgaoExpedidorIdentidade(String orgaoExpedidorIdentidade) {
     this.orgaoExpedidorIdentidade = orgaoExpedidorIdentidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{adicional_persist_orgao_expedidor_identidade_value}}}")
+  @ApiModelProperty(example = "null", value = "Name of the issuer organ of the Additional Identity Document")
   @JsonProperty("orgaoExpedidorIdentidade")
   public String getOrgaoExpedidorIdentidade() {
     return orgaoExpedidorIdentidade;
@@ -162,14 +162,14 @@ public class AdicionalPersist   {
 
   
   /**
-   * {{{adicional_persist_unidade_federativa_identidade_value}}}
+   * Federative unit
    **/
   public AdicionalPersist unidadeFederativaIdentidade(String unidadeFederativaIdentidade) {
     this.unidadeFederativaIdentidade = unidadeFederativaIdentidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{adicional_persist_unidade_federativa_identidade_value}}}")
+  @ApiModelProperty(example = "null", value = "Federative unit")
   @JsonProperty("unidadeFederativaIdentidade")
   public String getUnidadeFederativaIdentidade() {
     return unidadeFederativaIdentidade;
@@ -180,14 +180,14 @@ public class AdicionalPersist   {
 
   
   /**
-   * {{{adicional_persist_data_emissao_identidade_value}}}
+   * Date of issue of the Identity document of the Additional in the format yyyy-MM-dd
    **/
   public AdicionalPersist dataEmissaoIdentidade(String dataEmissaoIdentidade) {
     this.dataEmissaoIdentidade = dataEmissaoIdentidade;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd", value = "{{{adicional_persist_data_emissao_identidade_value}}}")
+  @ApiModelProperty(example = "yyyy-MM-dd", value = "Date of issue of the Identity document of the Additional in the format yyyy-MM-dd")
   @JsonProperty("dataEmissaoIdentidade")
   public String getDataEmissaoIdentidade() {
     return dataEmissaoIdentidade;
@@ -198,14 +198,14 @@ public class AdicionalPersist   {
 
   
   /**
-   * {{{adicional_persist_id_estado_civil_value}}}
+   * Identification Code of the Additional Marital Status
    **/
   public AdicionalPersist idEstadoCivil(Long idEstadoCivil) {
     this.idEstadoCivil = idEstadoCivil;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{adicional_persist_id_estado_civil_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the Additional Marital Status")
   @JsonProperty("idEstadoCivil")
   public Long getIdEstadoCivil() {
     return idEstadoCivil;
@@ -216,14 +216,14 @@ public class AdicionalPersist   {
 
   
   /**
-   * {{{adicional_persist_id_profissao_value}}}
+   * Identification Code of the Additional Occupation
    **/
   public AdicionalPersist idProfissao(Long idProfissao) {
     this.idProfissao = idProfissao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{adicional_persist_id_profissao_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the Additional Occupation")
   @JsonProperty("idProfissao")
   public Long getIdProfissao() {
     return idProfissao;
@@ -234,14 +234,14 @@ public class AdicionalPersist   {
 
   
   /**
-   * {{{adicional_persist_id_nacionalidade_value}}}
+   * Identification Code of the Additional Nationality
    **/
   public AdicionalPersist idNacionalidade(Long idNacionalidade) {
     this.idNacionalidade = idNacionalidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{adicional_persist_id_nacionalidade_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the Additional Nationality")
   @JsonProperty("idNacionalidade")
   public Long getIdNacionalidade() {
     return idNacionalidade;
@@ -252,14 +252,14 @@ public class AdicionalPersist   {
 
   
   /**
-   * {{{adicional_persist_id_parentesco_value}}}
+   * Identification Code of the Additional Kinship with the holder
    **/
   public AdicionalPersist idParentesco(Long idParentesco) {
     this.idParentesco = idParentesco;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{adicional_persist_id_parentesco_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the Additional Kinship with the holder")
   @JsonProperty("idParentesco")
   public Long getIdParentesco() {
     return idParentesco;
@@ -270,14 +270,14 @@ public class AdicionalPersist   {
 
   
   /**
-   * {{{adicional_persist_email_value}}}
+   * Identification Code of the Additional Kinship with the holder
    **/
   public AdicionalPersist email(String email) {
     this.email = email;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{adicional_persist_email_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the Additional Kinship with the holder")
   @JsonProperty("email")
   public String getEmail() {
     return email;
@@ -288,14 +288,14 @@ public class AdicionalPersist   {
 
   
   /**
-   * {{{adicional_persist_telefones_value}}}
+   * Telephone list of the additional
    **/
   public AdicionalPersist telefones(List<TelefoneAdicionalPersist> telefones) {
     this.telefones = telefones;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{adicional_persist_telefones_value}}}")
+  @ApiModelProperty(example = "null", value = "Telephone list of the additional")
   @JsonProperty("telefones")
   public List<TelefoneAdicionalPersist> getTelefones() {
     return telefones;

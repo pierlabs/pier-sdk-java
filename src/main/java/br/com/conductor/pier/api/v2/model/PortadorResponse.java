@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{portador_response_description}}}
+ * Cardholder
  **/
 
-@ApiModel(description = "{{{portador_response_description}}}")
+@ApiModel(description = "Cardholder")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PortadorResponse   {
   
@@ -28,14 +28,14 @@ public class PortadorResponse   {
 
   
   /**
-   * {{{portador_response_id_conta_value}}}
+   * Identification Code of the Account (id)
    **/
   public PortadorResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{portador_response_id_conta_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the Account (id)")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -46,14 +46,14 @@ public class PortadorResponse   {
 
   
   /**
-   * {{{portador_response_id_produto_value}}}
+   * Identification Code of the Product (id)
    **/
   public PortadorResponse idProduto(Long idProduto) {
     this.idProduto = idProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{portador_response_id_produto_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the Product (id)")
   @JsonProperty("idProduto")
   public Long getIdProduto() {
     return idProduto;
@@ -64,14 +64,14 @@ public class PortadorResponse   {
 
   
   /**
-   * {{{portador_response_id_pessoa_value}}}
+   * Identification Code of the Person (id)
    **/
   public PortadorResponse idPessoa(Long idPessoa) {
     this.idPessoa = idPessoa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{portador_response_id_pessoa_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the Person (id)")
   @JsonProperty("idPessoa")
   public Long getIdPessoa() {
     return idPessoa;
@@ -82,14 +82,14 @@ public class PortadorResponse   {
 
   
   /**
-   * {{{portador_response_id_parentesco_value}}}
+   * Identification Code of the Kinship (id)
    **/
   public PortadorResponse idParentesco(Long idParentesco) {
     this.idParentesco = idParentesco;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{portador_response_id_parentesco_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the Kinship (id)")
   @JsonProperty("idParentesco")
   public Long getIdParentesco() {
     return idParentesco;
@@ -100,14 +100,14 @@ public class PortadorResponse   {
 
   
   /**
-   * {{{portador_response_tipo_portador_value}}}
+   * Show the type of Cardholder, being ('H': Holder, 'A': Additional)
    **/
   public PortadorResponse tipoPortador(String tipoPortador) {
     this.tipoPortador = tipoPortador;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{portador_response_tipo_portador_value}}}")
+  @ApiModelProperty(example = "null", value = "Show the type of Cardholder, being ('H': Holder, 'A': Additional)")
   @JsonProperty("tipoPortador")
   public String getTipoPortador() {
     return tipoPortador;
@@ -118,14 +118,14 @@ public class PortadorResponse   {
 
   
   /**
-   * {{{portador_response_nome_impresso_value}}}
+   * Show the name to be printed on the card
    **/
   public PortadorResponse nomeImpresso(String nomeImpresso) {
     this.nomeImpresso = nomeImpresso;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{portador_response_nome_impresso_value}}}")
+  @ApiModelProperty(example = "null", value = "Show the name to be printed on the card")
   @JsonProperty("nomeImpresso")
   public String getNomeImpresso() {
     return nomeImpresso;
@@ -136,14 +136,14 @@ public class PortadorResponse   {
 
   
   /**
-   * {{{portador_response_id_tipo_cartao_value}}}
+   * Show the identification Code of the Card type (id), that will be used to create cards of this cardholder, linked to the respective account through the Idaccount field
    **/
   public PortadorResponse idTipoCartao(Long idTipoCartao) {
     this.idTipoCartao = idTipoCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{portador_response_id_tipo_cartao_value}}}")
+  @ApiModelProperty(example = "null", value = "Show the identification Code of the Card type (id), that will be used to create cards of this cardholder, linked to the respective account through the Idaccount field")
   @JsonProperty("idTipoCartao")
   public Long getIdTipoCartao() {
     return idTipoCartao;
@@ -154,14 +154,14 @@ public class PortadorResponse   {
 
   
   /**
-   * {{{portador_response_flag_ativo_value}}}
+   * When it is active, indicate that the register of the Cardholder is active, in issuers that make this type of manangement
    **/
   public PortadorResponse flagAtivo(Integer flagAtivo) {
     this.flagAtivo = flagAtivo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{portador_response_flag_ativo_value}}}")
+  @ApiModelProperty(example = "null", value = "When it is active, indicate that the register of the Cardholder is active, in issuers that make this type of manangement")
   @JsonProperty("flagAtivo")
   public Integer getFlagAtivo() {
     return flagAtivo;
@@ -172,14 +172,14 @@ public class PortadorResponse   {
 
   
   /**
-   * {{{portador_response_data_cadastro_portador_value}}}
+   * show the date which the Cardholder was registered, when there is this information
    **/
   public PortadorResponse dataCadastroPortador(String dataCadastroPortador) {
     this.dataCadastroPortador = dataCadastroPortador;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{portador_response_data_cadastro_portador_value}}}")
+  @ApiModelProperty(example = "null", value = "show the date which the Cardholder was registered, when there is this information")
   @JsonProperty("dataCadastroPortador")
   public String getDataCadastroPortador() {
     return dataCadastroPortador;
@@ -190,14 +190,14 @@ public class PortadorResponse   {
 
   
   /**
-   * {{{portador_response_data_cancelamento_portador_value}}}
+   * Show the date which the Cardholder was canceled, when there is this information
    **/
   public PortadorResponse dataCancelamentoPortador(String dataCancelamentoPortador) {
     this.dataCancelamentoPortador = dataCancelamentoPortador;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{portador_response_data_cancelamento_portador_value}}}")
+  @ApiModelProperty(example = "null", value = "Show the date which the Cardholder was canceled, when there is this information")
   @JsonProperty("dataCancelamentoPortador")
   public String getDataCancelamentoPortador() {
     return dataCancelamentoPortador;

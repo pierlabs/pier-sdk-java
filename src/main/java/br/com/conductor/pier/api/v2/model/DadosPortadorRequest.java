@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{dados_portador_request_description}}}
+ * Request Parameters for validation of the cardholder dates
  **/
 
-@ApiModel(description = "{{{dados_portador_request_description}}}")
+@ApiModel(description = "Request Parameters for validation of the cardholder dates")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class DadosPortadorRequest   {
   
@@ -26,14 +26,14 @@ public class DadosPortadorRequest   {
 
   
   /**
-   * {{{dados_portador_request_cartao_value}}}
+   * Number of the card
    **/
   public DadosPortadorRequest cartao(String cartao) {
     this.cartao = cartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{dados_portador_request_cartao_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Number of the card")
   @JsonProperty("cartao")
   public String getCartao() {
     return cartao;
@@ -44,14 +44,14 @@ public class DadosPortadorRequest   {
 
   
   /**
-   * {{{dados_portador_request_cpf_value}}}
+   * CPF number
    **/
   public DadosPortadorRequest cpf(String cpf) {
     this.cpf = cpf;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{dados_portador_request_cpf_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "CPF number")
   @JsonProperty("cpf")
   public String getCpf() {
     return cpf;
@@ -62,14 +62,14 @@ public class DadosPortadorRequest   {
 
   
   /**
-   * {{{dados_portador_request_nome_value}}}
+   * Cardholder name
    **/
   public DadosPortadorRequest nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{dados_portador_request_nome_value}}}")
+  @ApiModelProperty(example = "null", value = "Cardholder name")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -80,14 +80,14 @@ public class DadosPortadorRequest   {
 
   
   /**
-   * {{{dados_portador_request_data_nascimento_value}}}
+   * Birth date of the cardholder
    **/
   public DadosPortadorRequest dataNascimento(String dataNascimento) {
     this.dataNascimento = dataNascimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{dados_portador_request_data_nascimento_value}}}")
+  @ApiModelProperty(example = "null", value = "Birth date of the cardholder")
   @JsonProperty("dataNascimento")
   public String getDataNascimento() {
     return dataNascimento;
@@ -98,14 +98,14 @@ public class DadosPortadorRequest   {
 
   
   /**
-   * {{{dados_portador_request_cep_residencial_value}}}
+   * Zip code of the Cardholder residence of the account
    **/
   public DadosPortadorRequest cepResidencial(String cepResidencial) {
     this.cepResidencial = cepResidencial;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{dados_portador_request_cep_residencial_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Zip code of the Cardholder residence of the account")
   @JsonProperty("cepResidencial")
   public String getCepResidencial() {
     return cepResidencial;
@@ -116,14 +116,14 @@ public class DadosPortadorRequest   {
 
   
   /**
-   * {{{dados_portador_request_email_value}}}
+   * E-mail of the cardholder
    **/
   public DadosPortadorRequest email(String email) {
     this.email = email;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{dados_portador_request_email_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "E-mail of the cardholder")
   @JsonProperty("email")
   public String getEmail() {
     return email;
@@ -134,14 +134,14 @@ public class DadosPortadorRequest   {
 
   
   /**
-   * {{{dados_portador_request_ddd_value}}}
+   * DDD of the telephone number of the cardholder
    **/
   public DadosPortadorRequest ddd(String ddd) {
     this.ddd = ddd;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{dados_portador_request_ddd_value}}}")
+  @ApiModelProperty(example = "null", value = "DDD of the telephone number of the cardholder")
   @JsonProperty("ddd")
   public String getDdd() {
     return ddd;
@@ -152,14 +152,14 @@ public class DadosPortadorRequest   {
 
   
   /**
-   * {{{dados_portador_request_telefone_value}}}
+   * Telephone Number of the cardholder
    **/
   public DadosPortadorRequest telefone(String telefone) {
     this.telefone = telefone;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{dados_portador_request_telefone_value}}}")
+  @ApiModelProperty(example = "null", value = "Telephone Number of the cardholder")
   @JsonProperty("telefone")
   public String getTelefone() {
     return telefone;

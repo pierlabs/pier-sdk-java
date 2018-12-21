@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{conta_bancaria_portador_response_description}}}
+ * Representation Object Response for Carrier Bank Account
  **/
 
-@ApiModel(description = "{{{conta_bancaria_portador_response_description}}}")
+@ApiModel(description = "Representation Object Response for Carrier Bank Account")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ContaBancariaPortadorResponse   {
   
@@ -33,14 +33,14 @@ public class ContaBancariaPortadorResponse   {
 
   
   /**
-   * {{{conta_bancaria_portador_response_id_value}}}
+   * Identifier Code of the Banking Account
    **/
   public ContaBancariaPortadorResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{conta_bancaria_portador_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "Identifier Code of the Banking Account")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -51,14 +51,14 @@ public class ContaBancariaPortadorResponse   {
 
   
   /**
-   * {{{conta_bancaria_portador_response_id_conta_value}}}
+   * Identifier Code of the Account Card
    **/
   public ContaBancariaPortadorResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{conta_bancaria_portador_response_id_conta_value}}}")
+  @ApiModelProperty(example = "null", value = "Identifier Code of the Account Card")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -69,14 +69,14 @@ public class ContaBancariaPortadorResponse   {
 
   
   /**
-   * {{{conta_bancaria_portador_response_nome_agencia_value}}}
+   * Description of the Agency
    **/
   public ContaBancariaPortadorResponse nomeAgencia(String nomeAgencia) {
     this.nomeAgencia = nomeAgencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{conta_bancaria_portador_response_nome_agencia_value}}}")
+  @ApiModelProperty(example = "null", value = "Description of the Agency")
   @JsonProperty("nomeAgencia")
   public String getNomeAgencia() {
     return nomeAgencia;
@@ -87,14 +87,14 @@ public class ContaBancariaPortadorResponse   {
 
   
   /**
-   * {{{conta_bancaria_portador_response_banco_value}}}
+   * BankCode
    **/
   public ContaBancariaPortadorResponse banco(Long banco) {
     this.banco = banco;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{conta_bancaria_portador_response_banco_value}}}")
+  @ApiModelProperty(example = "null", value = "BankCode")
   @JsonProperty("banco")
   public Long getBanco() {
     return banco;
@@ -105,14 +105,14 @@ public class ContaBancariaPortadorResponse   {
 
   
   /**
-   * {{{conta_bancaria_portador_response_numero_agencia_value}}}
+   * Agency Number
    **/
   public ContaBancariaPortadorResponse numeroAgencia(String numeroAgencia) {
     this.numeroAgencia = numeroAgencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{conta_bancaria_portador_response_numero_agencia_value}}}")
+  @ApiModelProperty(example = "null", value = "Agency Number")
   @JsonProperty("numeroAgencia")
   public String getNumeroAgencia() {
     return numeroAgencia;
@@ -123,14 +123,14 @@ public class ContaBancariaPortadorResponse   {
 
   
   /**
-   * {{{conta_bancaria_portador_response_digito_agencia_value}}}
+   * Agency Digit
    **/
   public ContaBancariaPortadorResponse digitoAgencia(String digitoAgencia) {
     this.digitoAgencia = digitoAgencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{conta_bancaria_portador_response_digito_agencia_value}}}")
+  @ApiModelProperty(example = "null", value = "Agency Digit")
   @JsonProperty("digitoAgencia")
   public String getDigitoAgencia() {
     return digitoAgencia;
@@ -141,14 +141,14 @@ public class ContaBancariaPortadorResponse   {
 
   
   /**
-   * {{{conta_bancaria_portador_response_numero_conta_value}}}
+   * Account Number
    **/
   public ContaBancariaPortadorResponse numeroConta(String numeroConta) {
     this.numeroConta = numeroConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{conta_bancaria_portador_response_numero_conta_value}}}")
+  @ApiModelProperty(example = "null", value = "Account Number")
   @JsonProperty("numeroConta")
   public String getNumeroConta() {
     return numeroConta;
@@ -159,14 +159,14 @@ public class ContaBancariaPortadorResponse   {
 
   
   /**
-   * {{{conta_bancaria_portador_response_digito_conta_value}}}
+   * Account digit
    **/
   public ContaBancariaPortadorResponse digitoConta(String digitoConta) {
     this.digitoConta = digitoConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{conta_bancaria_portador_response_digito_conta_value}}}")
+  @ApiModelProperty(example = "null", value = "Account digit")
   @JsonProperty("digitoConta")
   public String getDigitoConta() {
     return digitoConta;
@@ -177,14 +177,14 @@ public class ContaBancariaPortadorResponse   {
 
   
   /**
-   * {{{conta_bancaria_portador_response_flag_ativo_value}}}
+   * Signal if the account is active or not (1: Active, 0: Inactive)
    **/
   public ContaBancariaPortadorResponse flagAtivo(Integer flagAtivo) {
     this.flagAtivo = flagAtivo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{conta_bancaria_portador_response_flag_ativo_value}}}")
+  @ApiModelProperty(example = "null", value = "Signal if the account is active or not (1: Active, 0: Inactive)")
   @JsonProperty("flagAtivo")
   public Integer getFlagAtivo() {
     return flagAtivo;
@@ -195,14 +195,14 @@ public class ContaBancariaPortadorResponse   {
 
   
   /**
-   * {{{conta_bancaria_portador_response_flag_conta_origem_doc_value}}}
+   * Signal if the origin is DOC (1: DOC, 0: TED)
    **/
   public ContaBancariaPortadorResponse flagContaOrigemDoc(Integer flagContaOrigemDoc) {
     this.flagContaOrigemDoc = flagContaOrigemDoc;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{conta_bancaria_portador_response_flag_conta_origem_doc_value}}}")
+  @ApiModelProperty(example = "null", value = "Signal if the origin is DOC (1: DOC, 0: TED)")
   @JsonProperty("flagContaOrigemDoc")
   public Integer getFlagContaOrigemDoc() {
     return flagContaOrigemDoc;
@@ -213,14 +213,14 @@ public class ContaBancariaPortadorResponse   {
 
   
   /**
-   * {{{conta_bancaria_portador_response_id_pessoa_fisica_value}}}
+   * Person Code
    **/
   public ContaBancariaPortadorResponse idPessoaFisica(Long idPessoaFisica) {
     this.idPessoaFisica = idPessoaFisica;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{conta_bancaria_portador_response_id_pessoa_fisica_value}}}")
+  @ApiModelProperty(example = "null", value = "Person Code")
   @JsonProperty("idPessoaFisica")
   public Long getIdPessoaFisica() {
     return idPessoaFisica;
@@ -231,14 +231,14 @@ public class ContaBancariaPortadorResponse   {
 
   
   /**
-   * {{{conta_bancaria_portador_response_flag_conta_poupanca_value}}}
+   * Signal if the banking account is a saving account (1: Saving account, 0: Current Account)
    **/
   public ContaBancariaPortadorResponse flagContaPoupanca(Integer flagContaPoupanca) {
     this.flagContaPoupanca = flagContaPoupanca;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{conta_bancaria_portador_response_flag_conta_poupanca_value}}}")
+  @ApiModelProperty(example = "null", value = "Signal if the banking account is a saving account (1: Saving account, 0: Current Account)")
   @JsonProperty("flagContaPoupanca")
   public Integer getFlagContaPoupanca() {
     return flagContaPoupanca;
@@ -249,14 +249,14 @@ public class ContaBancariaPortadorResponse   {
 
   
   /**
-   * {{{conta_bancaria_portador_response_favorecido_value}}}
+   * Name of the favored
    **/
   public ContaBancariaPortadorResponse favorecido(String favorecido) {
     this.favorecido = favorecido;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{conta_bancaria_portador_response_favorecido_value}}}")
+  @ApiModelProperty(example = "null", value = "Name of the favored")
   @JsonProperty("favorecido")
   public String getFavorecido() {
     return favorecido;
@@ -267,14 +267,14 @@ public class ContaBancariaPortadorResponse   {
 
   
   /**
-   * {{{conta_bancaria_portador_response_numero_receira_federal_value}}}
+   * Document of the favored
    **/
   public ContaBancariaPortadorResponse numeroReceiraFederal(String numeroReceiraFederal) {
     this.numeroReceiraFederal = numeroReceiraFederal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{conta_bancaria_portador_response_numero_receira_federal_value}}}")
+  @ApiModelProperty(example = "null", value = "Document of the favored")
   @JsonProperty("numeroReceiraFederal")
   public String getNumeroReceiraFederal() {
     return numeroReceiraFederal;
@@ -285,14 +285,14 @@ public class ContaBancariaPortadorResponse   {
 
   
   /**
-   * {{{conta_bancaria_portador_response_titularidade_value}}}
+   * Account Ownership (1:cardholder is the owner, 0: cardholder is not the owner)
    **/
   public ContaBancariaPortadorResponse titularidade(Integer titularidade) {
     this.titularidade = titularidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{conta_bancaria_portador_response_titularidade_value}}}")
+  @ApiModelProperty(example = "null", value = "Account Ownership (1:cardholder is the owner, 0: cardholder is not the owner)")
   @JsonProperty("titularidade")
   public Integer getTitularidade() {
     return titularidade;

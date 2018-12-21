@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{page_grupo_economico_response_description}}}
+ * Response Representation of the economic groups resource
  **/
 
-@ApiModel(description = "{{{page_grupo_economico_response_description}}}")
+@ApiModel(description = "Response Representation of the economic groups resource")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageGrupoEconomicoResponse   {
   

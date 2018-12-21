@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{page_transacoes_correntes_response_description}}}
+ * List of the Current Transactions
  **/
 
-@ApiModel(description = "{{{page_transacoes_correntes_response_description}}}")
+@ApiModel(description = "List of the Current Transactions")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageTransacoesCorrentesResponse   {
   

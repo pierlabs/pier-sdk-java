@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{page_terminal_response_description}}}
+ * List of terminals
  **/
 
-@ApiModel(description = "{{{page_terminal_response_description}}}")
+@ApiModel(description = "List of terminals")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageTerminalResponse   {
   

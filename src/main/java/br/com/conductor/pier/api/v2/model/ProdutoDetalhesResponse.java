@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{produto_detalhes_response_description}}}
+ * ProductDetails
  **/
 
-@ApiModel(description = "{{{produto_detalhes_response_description}}}")
+@ApiModel(description = "ProductDetails")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ProdutoDetalhesResponse   {
   
@@ -24,14 +24,14 @@ public class ProdutoDetalhesResponse   {
 
   
   /**
-   * {{{produto_response_id_value}}}
+   * Identification Code of the Product (id)
    **/
   public ProdutoDetalhesResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{produto_response_id_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Identification Code of the Product (id)")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -42,14 +42,14 @@ public class ProdutoDetalhesResponse   {
 
   
   /**
-   * {{{produto_response_nome_value}}}
+   * Name description of the product
    **/
   public ProdutoDetalhesResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{produto_response_nome_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Name description of the product")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -60,14 +60,14 @@ public class ProdutoDetalhesResponse   {
 
   
   /**
-   * {{{produto_response_status_value}}}
+   * Represent the status of the product, where: ('0': Inactive), ('1': Active
    **/
   public ProdutoDetalhesResponse status(Integer status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{produto_response_status_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Represent the status of the product, where: ('0': Inactive), ('1': Active")
   @JsonProperty("status")
   public Integer getStatus() {
     return status;
@@ -78,14 +78,14 @@ public class ProdutoDetalhesResponse   {
 
   
   /**
-   * {{{produto_response_id_fantasia_basica_value}}}
+   * Identification Code of the Basic Fantasy (id) which the product belongs
    **/
   public ProdutoDetalhesResponse idFantasiaBasica(Long idFantasiaBasica) {
     this.idFantasiaBasica = idFantasiaBasica;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{produto_response_id_fantasia_basica_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the Basic Fantasy (id) which the product belongs")
   @JsonProperty("idFantasiaBasica")
   public Long getIdFantasiaBasica() {
     return idFantasiaBasica;
@@ -96,14 +96,14 @@ public class ProdutoDetalhesResponse   {
 
   
   /**
-   * {{{produto_detalhes_response_fantasia_basica_value}}}
+   * Description of the Basic Fantasy which the product belongs
    **/
   public ProdutoDetalhesResponse fantasiaBasica(String fantasiaBasica) {
     this.fantasiaBasica = fantasiaBasica;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{produto_detalhes_response_fantasia_basica_value}}}")
+  @ApiModelProperty(example = "null", value = "Description of the Basic Fantasy which the product belongs")
   @JsonProperty("fantasiaBasica")
   public String getFantasiaBasica() {
     return fantasiaBasica;
@@ -114,14 +114,14 @@ public class ProdutoDetalhesResponse   {
 
   
   /**
-   * {{{produto_detalhes_response_uso_exterior_value}}}
+   * Parameter that indicates if the product is enabled to shops abroad
    **/
   public ProdutoDetalhesResponse usoExterior(Boolean usoExterior) {
     this.usoExterior = usoExterior;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "{{{produto_detalhes_response_uso_exterior_value}}}")
+  @ApiModelProperty(example = "false", value = "Parameter that indicates if the product is enabled to shops abroad")
   @JsonProperty("usoExterior")
   public Boolean getUsoExterior() {
     return usoExterior;

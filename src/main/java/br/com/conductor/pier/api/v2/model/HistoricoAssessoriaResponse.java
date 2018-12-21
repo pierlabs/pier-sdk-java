@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{historico_assessoria_response_description}}}
+ * Response Representation of the {@link HistoricAdvisoryResponse}
  **/
 
-@ApiModel(description = "{{{historico_assessoria_response_description}}}")
+@ApiModel(description = "Response Representation of the {@link HistoricAdvisoryResponse}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class HistoricoAssessoriaResponse   {
   
@@ -21,14 +21,14 @@ public class HistoricoAssessoriaResponse   {
 
   
   /**
-   * {{{historico_assessoria_response_data_hora_historico_value}}}
+   * Show the date and time of the historic
    **/
   public HistoricoAssessoriaResponse dataHoraHistorico(String dataHoraHistorico) {
     this.dataHoraHistorico = dataHoraHistorico;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{historico_assessoria_response_data_hora_historico_value}}}")
+  @ApiModelProperty(example = "null", value = "Show the date and time of the historic")
   @JsonProperty("dataHoraHistorico")
   public String getDataHoraHistorico() {
     return dataHoraHistorico;
@@ -39,14 +39,14 @@ public class HistoricoAssessoriaResponse   {
 
   
   /**
-   * {{{historico_assessoria_response_tipo_historico_value}}}
+   * Show the type of historic can be input or output
    **/
   public HistoricoAssessoriaResponse tipoHistorico(String tipoHistorico) {
     this.tipoHistorico = tipoHistorico;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{historico_assessoria_response_tipo_historico_value}}}")
+  @ApiModelProperty(example = "null", value = "Show the type of historic can be input or output")
   @JsonProperty("tipoHistorico")
   public String getTipoHistorico() {
     return tipoHistorico;
@@ -57,14 +57,14 @@ public class HistoricoAssessoriaResponse   {
 
   
   /**
-   * {{{historico_assessoria_response_nome_assessoria_value}}}
+   * Show the name of the Collection Advisory related to the historic
    **/
   public HistoricoAssessoriaResponse nomeAssessoria(String nomeAssessoria) {
     this.nomeAssessoria = nomeAssessoria;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{historico_assessoria_response_nome_assessoria_value}}}")
+  @ApiModelProperty(example = "null", value = "Show the name of the Collection Advisory related to the historic")
   @JsonProperty("nomeAssessoria")
   public String getNomeAssessoria() {
     return nomeAssessoria;

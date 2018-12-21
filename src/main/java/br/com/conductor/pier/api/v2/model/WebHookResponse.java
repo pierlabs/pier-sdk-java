@@ -9,10 +9,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{web_hook_response_description}}}
+ * Representation webhook resource
  **/
 
-@ApiModel(description = "{{{web_hook_response_description}}}")
+@ApiModel(description = "Representation webhook resource")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class WebHookResponse   {
   
@@ -102,14 +102,14 @@ public class WebHookResponse   {
 
   
   /**
-   * {{{web_hook_response_id_value}}}
+   * Id of the WebHook
    **/
   public WebHookResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{web_hook_response_id_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Id of the WebHook")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -120,14 +120,14 @@ public class WebHookResponse   {
 
   
   /**
-   * {{{web_hook_response_tipo_evento_value}}}
+   * TypoEvent to be called by the WebHook
    **/
   public WebHookResponse tipoEvento(TipoEventoEnum tipoEvento) {
     this.tipoEvento = tipoEvento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{web_hook_response_tipo_evento_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "TypoEvent to be called by the WebHook")
   @JsonProperty("tipoEvento")
   public TipoEventoEnum getTipoEvento() {
     return tipoEvento;
@@ -138,14 +138,14 @@ public class WebHookResponse   {
 
   
   /**
-   * {{{web_hook_response_metodo_value}}}
+   * Method to be called by the WebHook
    **/
   public WebHookResponse metodo(MetodoEnum metodo) {
     this.metodo = metodo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{web_hook_response_metodo_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Method to be called by the WebHook")
   @JsonProperty("metodo")
   public MetodoEnum getMetodo() {
     return metodo;
@@ -156,14 +156,14 @@ public class WebHookResponse   {
 
   
   /**
-   * {{{web_hook_response_url_value}}}
+   * URL to be consumed by the WebHook
    **/
   public WebHookResponse url(String url) {
     this.url = url;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{web_hook_response_url_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "URL to be consumed by the WebHook")
   @JsonProperty("url")
   public String getUrl() {
     return url;
@@ -174,14 +174,14 @@ public class WebHookResponse   {
 
   
   /**
-   * {{{web_hook_response_status_value}}}
+   * Status of the WebHook
    **/
   public WebHookResponse status(StatusEnum status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{web_hook_response_status_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Status of the WebHook")
   @JsonProperty("status")
   public StatusEnum getStatus() {
     return status;

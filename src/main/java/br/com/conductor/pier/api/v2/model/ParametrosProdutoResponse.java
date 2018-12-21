@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{parametro_produto_response_description}}}
+ * Product Parameter Response
  **/
 
-@ApiModel(description = "{{{parametro_produto_response_description}}}")
+@ApiModel(description = "Product Parameter Response")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ParametrosProdutoResponse   {
   
@@ -25,14 +25,14 @@ public class ParametrosProdutoResponse   {
 
   
   /**
-   * {{{parametro_produto_dto_id_value}}}
+   * Product parameter identifier
    **/
   public ParametrosProdutoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{parametro_produto_dto_id_value}}}")
+  @ApiModelProperty(example = "null", value = "Product parameter identifier")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -43,14 +43,14 @@ public class ParametrosProdutoResponse   {
 
   
   /**
-   * {{{parametro_produto_dto_codigo_value}}}
+   * Product parameter code
    **/
   public ParametrosProdutoResponse codigo(String codigo) {
     this.codigo = codigo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{parametro_produto_dto_codigo_value}}}")
+  @ApiModelProperty(example = "null", value = "Product parameter code")
   @JsonProperty("codigo")
   public String getCodigo() {
     return codigo;
@@ -61,14 +61,14 @@ public class ParametrosProdutoResponse   {
 
   
   /**
-   * {{{parametro_produto_dto_descricao_value}}}
+   * Description of the product parameter
    **/
   public ParametrosProdutoResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{parametro_produto_dto_descricao_value}}}")
+  @ApiModelProperty(example = "null", value = "Description of the product parameter")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -79,14 +79,14 @@ public class ParametrosProdutoResponse   {
 
   
   /**
-   * {{{parametro_produto_dto_valor_parametro_value}}}
+   * Product parameter value
    **/
   public ParametrosProdutoResponse valorParametro(String valorParametro) {
     this.valorParametro = valorParametro;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{parametro_produto_dto_valor_parametro_value}}}")
+  @ApiModelProperty(example = "null", value = "Product parameter value")
   @JsonProperty("valorParametro")
   public String getValorParametro() {
     return valorParametro;
@@ -97,14 +97,14 @@ public class ParametrosProdutoResponse   {
 
   
   /**
-   * {{{parametro_produto_dto_data_validade_value}}}
+   * Product parameter expiration date
    **/
   public ParametrosProdutoResponse dataValidade(String dataValidade) {
     this.dataValidade = dataValidade;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{parametro_produto_dto_data_validade_value}}}")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Product parameter expiration date")
   @JsonProperty("dataValidade")
   public String getDataValidade() {
     return dataValidade;
@@ -115,14 +115,14 @@ public class ParametrosProdutoResponse   {
 
   
   /**
-   * {{{parametro_produto_dto_tipo_value}}}
+   * Product Parameter Type
    **/
   public ParametrosProdutoResponse tipo(String tipo) {
     this.tipo = tipo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{parametro_produto_dto_tipo_value}}}")
+  @ApiModelProperty(example = "null", value = "Product Parameter Type")
   @JsonProperty("tipo")
   public String getTipo() {
     return tipo;
@@ -133,14 +133,14 @@ public class ParametrosProdutoResponse   {
 
   
   /**
-   * {{{parametro_produto_dto_id_produto_value}}}
+   * Product identifier
    **/
   public ParametrosProdutoResponse idProduto(Long idProduto) {
     this.idProduto = idProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{parametro_produto_dto_id_produto_value}}}")
+  @ApiModelProperty(example = "null", value = "Product identifier")
   @JsonProperty("idProduto")
   public Long getIdProduto() {
     return idProduto;

@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{page_configuracao_rotativo_response_description}}}
+ * List Revolving Configuration
  **/
 
-@ApiModel(description = "{{{page_configuracao_rotativo_response_description}}}")
+@ApiModel(description = "List Revolving Configuration")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageConfiguracaoRotativoResponse   {
   

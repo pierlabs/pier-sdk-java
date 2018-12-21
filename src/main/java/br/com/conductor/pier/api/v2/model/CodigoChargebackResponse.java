@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{codigo_chargeback_response_description}}}
+ * Object Response for Chargeback Code
  **/
 
-@ApiModel(description = "{{{codigo_chargeback_response_description}}}")
+@ApiModel(description = "Object Response for Chargeback Code")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class CodigoChargebackResponse   {
   
@@ -20,14 +20,14 @@ public class CodigoChargebackResponse   {
 
   
   /**
-   * {{{codigo_chargeback_response_id_value}}}
+   * Chargeback Id Code
    **/
   public CodigoChargebackResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{codigo_chargeback_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "Chargeback Id Code")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -38,14 +38,14 @@ public class CodigoChargebackResponse   {
 
   
   /**
-   * {{{codigo_chargeback_response_descricao_value}}}
+   * Chargeback Code description
    **/
   public CodigoChargebackResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{codigo_chargeback_response_descricao_value}}}")
+  @ApiModelProperty(example = "null", value = "Chargeback Code description")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;

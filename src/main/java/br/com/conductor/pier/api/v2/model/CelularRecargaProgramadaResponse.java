@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * {{{celular_recarga_programada_resposta_descricao}}}
+ * Cellular recharge programmed answer
  **/
 
-@ApiModel(description = "{{{celular_recarga_programada_resposta_descricao}}}")
+@ApiModel(description = "Cellular recharge programmed answer")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class CelularRecargaProgramadaResponse   {
   
@@ -33,14 +33,14 @@ public class CelularRecargaProgramadaResponse   {
 
   
   /**
-   * {{{celular_recarga_programada_resposta_codigo_operadora_descricao}}}
+   * Operator code
    **/
   public CelularRecargaProgramadaResponse codigoOperadora(Long codigoOperadora) {
     this.codigoOperadora = codigoOperadora;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{celular_recarga_programada_resposta_codigo_operadora_descricao}}}")
+  @ApiModelProperty(example = "null", value = "Operator code")
   @JsonProperty("codigoOperadora")
   public Long getCodigoOperadora() {
     return codigoOperadora;
@@ -51,14 +51,14 @@ public class CelularRecargaProgramadaResponse   {
 
   
   /**
-   * {{{celular_recarga_programada_resposta_codigo_produto_descricao}}}
+   * product code
    **/
   public CelularRecargaProgramadaResponse codigoProduto(Long codigoProduto) {
     this.codigoProduto = codigoProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{celular_recarga_programada_resposta_codigo_produto_descricao}}}")
+  @ApiModelProperty(example = "null", value = "product code")
   @JsonProperty("codigoProduto")
   public Long getCodigoProduto() {
     return codigoProduto;
@@ -69,14 +69,14 @@ public class CelularRecargaProgramadaResponse   {
 
   
   /**
-   * {{{celular_recarga_programada_resposta_flag_gera_tarifa_descricao}}}
+   * Tariff signaling
    **/
   public CelularRecargaProgramadaResponse flagGeraTarifa(Boolean flagGeraTarifa) {
     this.flagGeraTarifa = flagGeraTarifa;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "{{{celular_recarga_programada_resposta_flag_gera_tarifa_descricao}}}")
+  @ApiModelProperty(example = "false", value = "Tariff signaling")
   @JsonProperty("flagGeraTarifa")
   public Boolean getFlagGeraTarifa() {
     return flagGeraTarifa;
@@ -87,14 +87,14 @@ public class CelularRecargaProgramadaResponse   {
 
   
   /**
-   * {{{celular_recarga_programada_resposta_id_recarga_programada_descricao}}}
+   * Card ID
    **/
   public CelularRecargaProgramadaResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{celular_recarga_programada_resposta_id_recarga_programada_descricao}}}")
+  @ApiModelProperty(example = "null", value = "Card ID")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -105,14 +105,14 @@ public class CelularRecargaProgramadaResponse   {
 
   
   /**
-   * {{{celular_recarga_programada_resposta_id_cartao_descricao}}}
+   * Card ID
    **/
   public CelularRecargaProgramadaResponse idCartao(Long idCartao) {
     this.idCartao = idCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{celular_recarga_programada_resposta_id_cartao_descricao}}}")
+  @ApiModelProperty(example = "null", value = "Card ID")
   @JsonProperty("idCartao")
   public Long getIdCartao() {
     return idCartao;
@@ -123,14 +123,14 @@ public class CelularRecargaProgramadaResponse   {
 
   
   /**
-   * {{{celular_recarga_programada_resposta_id_celular_recarga_descricao}}}
+   * Cellphone number
    **/
   public CelularRecargaProgramadaResponse idCelularRecarga(Long idCelularRecarga) {
     this.idCelularRecarga = idCelularRecarga;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{celular_recarga_programada_resposta_id_celular_recarga_descricao}}}")
+  @ApiModelProperty(example = "null", value = "Cellphone number")
   @JsonProperty("idCelularRecarga")
   public Long getIdCelularRecarga() {
     return idCelularRecarga;
@@ -141,14 +141,14 @@ public class CelularRecargaProgramadaResponse   {
 
   
   /**
-   * {{{celular_recarga_programada_resposta_id_conta_descricao}}}
+   * Account Identifier
    **/
   public CelularRecargaProgramadaResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{celular_recarga_programada_resposta_id_conta_descricao}}}")
+  @ApiModelProperty(example = "null", value = "Account Identifier")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -159,14 +159,14 @@ public class CelularRecargaProgramadaResponse   {
 
   
   /**
-   * {{{celular_recarga_programada_resposta_id_descricao_tipo_recarga_programada_descricao}}}
+   * Scheduled recharge type identifier
    **/
   public CelularRecargaProgramadaResponse idDescricaoTipoRecargaProgramada(Long idDescricaoTipoRecargaProgramada) {
     this.idDescricaoTipoRecargaProgramada = idDescricaoTipoRecargaProgramada;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{celular_recarga_programada_resposta_id_descricao_tipo_recarga_programada_descricao}}}")
+  @ApiModelProperty(example = "null", value = "Scheduled recharge type identifier")
   @JsonProperty("idDescricaoTipoRecargaProgramada")
   public Long getIdDescricaoTipoRecargaProgramada() {
     return idDescricaoTipoRecargaProgramada;
@@ -177,14 +177,14 @@ public class CelularRecargaProgramadaResponse   {
 
   
   /**
-   * {{{celular_recarga_programada_resposta_id_origem_comercial_descricao}}}
+   * Business Source Identifier
    **/
   public CelularRecargaProgramadaResponse idOrigemComercial(Long idOrigemComercial) {
     this.idOrigemComercial = idOrigemComercial;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{celular_recarga_programada_resposta_id_origem_comercial_descricao}}}")
+  @ApiModelProperty(example = "null", value = "Business Source Identifier")
   @JsonProperty("idOrigemComercial")
   public Long getIdOrigemComercial() {
     return idOrigemComercial;
@@ -195,14 +195,14 @@ public class CelularRecargaProgramadaResponse   {
 
   
   /**
-   * {{{celular_recarga_programada_resposta_id_proposta_descricao}}}
+   * Proposal identifier
    **/
   public CelularRecargaProgramadaResponse idProposta(Long idProposta) {
     this.idProposta = idProposta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{celular_recarga_programada_resposta_id_proposta_descricao}}}")
+  @ApiModelProperty(example = "null", value = "Proposal identifier")
   @JsonProperty("idProposta")
   public Long getIdProposta() {
     return idProposta;
@@ -213,14 +213,14 @@ public class CelularRecargaProgramadaResponse   {
 
   
   /**
-   * {{{celular_recarga_programada_resposta_id_usuario_recarga_descricao}}}
+   * User ID
    **/
   public CelularRecargaProgramadaResponse idUsuarioRecarga(Long idUsuarioRecarga) {
     this.idUsuarioRecarga = idUsuarioRecarga;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{celular_recarga_programada_resposta_id_usuario_recarga_descricao}}}")
+  @ApiModelProperty(example = "null", value = "User ID")
   @JsonProperty("idUsuarioRecarga")
   public Long getIdUsuarioRecarga() {
     return idUsuarioRecarga;
@@ -231,14 +231,14 @@ public class CelularRecargaProgramadaResponse   {
 
   
   /**
-   * {{{celular_recarga_programada_resposta_id_plataforma_descricao}}}
+   * Proposal identifier
    **/
   public CelularRecargaProgramadaResponse idiPlataforma(Long idiPlataforma) {
     this.idiPlataforma = idiPlataforma;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{celular_recarga_programada_resposta_id_plataforma_descricao}}}")
+  @ApiModelProperty(example = "null", value = "Proposal identifier")
   @JsonProperty("idiPlataforma")
   public Long getIdiPlataforma() {
     return idiPlataforma;
@@ -249,14 +249,14 @@ public class CelularRecargaProgramadaResponse   {
 
   
   /**
-   * {{{celular_recarga_programada_resposta_motivo_cancelamento_descricao}}}
+   * Reason for cancellation
    **/
   public CelularRecargaProgramadaResponse motivoCancelamento(Long motivoCancelamento) {
     this.motivoCancelamento = motivoCancelamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{celular_recarga_programada_resposta_motivo_cancelamento_descricao}}}")
+  @ApiModelProperty(example = "null", value = "Reason for cancellation")
   @JsonProperty("motivoCancelamento")
   public Long getMotivoCancelamento() {
     return motivoCancelamento;
@@ -267,14 +267,14 @@ public class CelularRecargaProgramadaResponse   {
 
   
   /**
-   * {{{celular_recarga_programada_resposta_valor_descricao}}}
+   * Recharge value
    **/
   public CelularRecargaProgramadaResponse valor(BigDecimal valor) {
     this.valor = valor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{celular_recarga_programada_resposta_valor_descricao}}}")
+  @ApiModelProperty(example = "null", value = "Recharge value")
   @JsonProperty("valor")
   public BigDecimal getValor() {
     return valor;

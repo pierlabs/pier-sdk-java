@@ -10,10 +10,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{estabelecimento_response_description}}}
+ * Objeto Estabelecimento
  **/
 
-@ApiModel(description = "{{{estabelecimento_response_description}}}")
+@ApiModel(description = "Objeto Estabelecimento")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class EstabelecimentoResponse   {
   
@@ -81,14 +81,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_id_value}}}
+   * Identification Code of the Merchant (id)
    **/
   public EstabelecimentoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the Merchant (id)")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -99,14 +99,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_numero_estabelecimento_value}}}
+   * Identification Number of the Merchant at Conductor
    **/
   public EstabelecimentoResponse numeroEstabelecimento(String numeroEstabelecimento) {
     this.numeroEstabelecimento = numeroEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_numero_estabelecimento_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Number of the Merchant at Conductor")
   @JsonProperty("numeroEstabelecimento")
   public String getNumeroEstabelecimento() {
     return numeroEstabelecimento;
@@ -117,14 +117,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_flag_matriz_value}}}
+   * Indicate if it is headquarter or Branch
    **/
   public EstabelecimentoResponse flagMatriz(Integer flagMatriz) {
     this.flagMatriz = flagMatriz;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_flag_matriz_value}}}")
+  @ApiModelProperty(example = "null", value = "Indicate if it is headquarter or Branch")
   @JsonProperty("flagMatriz")
   public Integer getFlagMatriz() {
     return flagMatriz;
@@ -135,14 +135,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_id_grupo_economico_value}}}
+   * Show the identification number of the Economic Group
    **/
   public EstabelecimentoResponse idGrupoEconomico(Long idGrupoEconomico) {
     this.idGrupoEconomico = idGrupoEconomico;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_id_grupo_economico_value}}}")
+  @ApiModelProperty(example = "null", value = "Show the identification number of the Economic Group")
   @JsonProperty("idGrupoEconomico")
   public Long getIdGrupoEconomico() {
     return idGrupoEconomico;
@@ -153,14 +153,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_numero_receita_federal_value}}}
+   * Show the number of the indentification number of the merchant in IRs
    **/
   public EstabelecimentoResponse numeroReceitaFederal(Long numeroReceitaFederal) {
     this.numeroReceitaFederal = numeroReceitaFederal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_numero_receita_federal_value}}}")
+  @ApiModelProperty(example = "null", value = "Show the number of the indentification number of the merchant in IRs")
   @JsonProperty("numeroReceitaFederal")
   public Long getNumeroReceitaFederal() {
     return numeroReceitaFederal;
@@ -171,14 +171,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_nome_value}}}
+   * Merchant name
    **/
   public EstabelecimentoResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_nome_value}}}")
+  @ApiModelProperty(example = "null", value = "Merchant name")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -189,14 +189,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_descricao_value}}}
+   * Social Reason of the Merchant
    **/
   public EstabelecimentoResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_descricao_value}}}")
+  @ApiModelProperty(example = "null", value = "Social Reason of the Merchant")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -207,14 +207,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_nome_fantasia_value}}}
+   * Merchant Commercial Title
    **/
   public EstabelecimentoResponse nomeFantasia(String nomeFantasia) {
     this.nomeFantasia = nomeFantasia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_nome_fantasia_value}}}")
+  @ApiModelProperty(example = "null", value = "Merchant Commercial Title")
   @JsonProperty("nomeFantasia")
   public String getNomeFantasia() {
     return nomeFantasia;
@@ -225,14 +225,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_cep_value}}}
+   * Mail Code (Zipcode)
    **/
   public EstabelecimentoResponse cep(String cep) {
     this.cep = cep;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_cep_value}}}")
+  @ApiModelProperty(example = "null", value = "Mail Code (Zipcode)")
   @JsonProperty("cep")
   public String getCep() {
     return cep;
@@ -243,14 +243,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_nome_logradouro_value}}}
+   * Name of the Street
    **/
   public EstabelecimentoResponse nomeLogradouro(String nomeLogradouro) {
     this.nomeLogradouro = nomeLogradouro;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_nome_logradouro_value}}}")
+  @ApiModelProperty(example = "null", value = "Name of the Street")
   @JsonProperty("nomeLogradouro")
   public String getNomeLogradouro() {
     return nomeLogradouro;
@@ -261,14 +261,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_numero_endereco_value}}}
+   * Address number
    **/
   public EstabelecimentoResponse numeroEndereco(String numeroEndereco) {
     this.numeroEndereco = numeroEndereco;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_numero_endereco_value}}}")
+  @ApiModelProperty(example = "null", value = "Address number")
   @JsonProperty("numeroEndereco")
   public String getNumeroEndereco() {
     return numeroEndereco;
@@ -279,14 +279,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_bairro_value}}}
+   * Neighborhood name
    **/
   public EstabelecimentoResponse bairro(String bairro) {
     this.bairro = bairro;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_bairro_value}}}")
+  @ApiModelProperty(example = "null", value = "Neighborhood name")
   @JsonProperty("bairro")
   public String getBairro() {
     return bairro;
@@ -297,14 +297,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_cidade_value}}}
+   * Address city name
    **/
   public EstabelecimentoResponse cidade(String cidade) {
     this.cidade = cidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_cidade_value}}}")
+  @ApiModelProperty(example = "null", value = "Address city name")
   @JsonProperty("cidade")
   public String getCidade() {
     return cidade;
@@ -315,14 +315,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_complemento_value}}}
+   * Complementary Descriptions referring to the address
    **/
   public EstabelecimentoResponse complemento(String complemento) {
     this.complemento = complemento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_complemento_value}}}")
+  @ApiModelProperty(example = "null", value = "Complementary Descriptions referring to the address")
   @JsonProperty("complemento")
   public String getComplemento() {
     return complemento;
@@ -333,14 +333,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_uf_value}}}
+   * Acronym of the Federal Unity identification of the address
    **/
   public EstabelecimentoResponse uf(String uf) {
     this.uf = uf;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_uf_value}}}")
+  @ApiModelProperty(example = "null", value = "Acronym of the Federal Unity identification of the address")
   @JsonProperty("uf")
   public String getUf() {
     return uf;
@@ -351,14 +351,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_cep2_value}}}
+   * Zip Code
    **/
   public EstabelecimentoResponse cep2(String cep2) {
     this.cep2 = cep2;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_cep2_value}}}")
+  @ApiModelProperty(example = "null", value = "Zip Code")
   @JsonProperty("cep2")
   public String getCep2() {
     return cep2;
@@ -369,14 +369,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_nome_logradouro2_value}}}
+   * Name of the Street
    **/
   public EstabelecimentoResponse nomeLogradouro2(String nomeLogradouro2) {
     this.nomeLogradouro2 = nomeLogradouro2;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_nome_logradouro2_value}}}")
+  @ApiModelProperty(example = "null", value = "Name of the Street")
   @JsonProperty("nomeLogradouro2")
   public String getNomeLogradouro2() {
     return nomeLogradouro2;
@@ -387,14 +387,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_numero_endereco2_value}}}
+   * Address number
    **/
   public EstabelecimentoResponse numeroEndereco2(String numeroEndereco2) {
     this.numeroEndereco2 = numeroEndereco2;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_numero_endereco2_value}}}")
+  @ApiModelProperty(example = "null", value = "Address number")
   @JsonProperty("numeroEndereco2")
   public String getNumeroEndereco2() {
     return numeroEndereco2;
@@ -405,14 +405,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_bairro2_value}}}
+   * Neighborhood address name
    **/
   public EstabelecimentoResponse bairro2(String bairro2) {
     this.bairro2 = bairro2;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_bairro2_value}}}")
+  @ApiModelProperty(example = "null", value = "Neighborhood address name")
   @JsonProperty("bairro2")
   public String getBairro2() {
     return bairro2;
@@ -423,14 +423,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_cidade2_value}}}
+   * Name of the city
    **/
   public EstabelecimentoResponse cidade2(String cidade2) {
     this.cidade2 = cidade2;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_cidade2_value}}}")
+  @ApiModelProperty(example = "null", value = "Name of the city")
   @JsonProperty("cidade2")
   public String getCidade2() {
     return cidade2;
@@ -441,14 +441,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_complemento2_value}}}
+   * Complementary Descriptions refering to the address
    **/
   public EstabelecimentoResponse complemento2(String complemento2) {
     this.complemento2 = complemento2;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_complemento2_value}}}")
+  @ApiModelProperty(example = "null", value = "Complementary Descriptions refering to the address")
   @JsonProperty("complemento2")
   public String getComplemento2() {
     return complemento2;
@@ -459,14 +459,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_uf2_value}}}
+   * Acronym of the Federal Unity identification of the address
    **/
   public EstabelecimentoResponse uf2(String uf2) {
     this.uf2 = uf2;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_uf2_value}}}")
+  @ApiModelProperty(example = "null", value = "Acronym of the Federal Unity identification of the address")
   @JsonProperty("uf2")
   public String getUf2() {
     return uf2;
@@ -477,14 +477,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_obs_value}}}
+   * Especific details about the Merchant Register
    **/
   public EstabelecimentoResponse obs(String obs) {
     this.obs = obs;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_obs_value}}}")
+  @ApiModelProperty(example = "null", value = "Especific details about the Merchant Register")
   @JsonProperty("obs")
   public String getObs() {
     return obs;
@@ -495,14 +495,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_contato_value}}}
+   * Name of the person for the contact with the Merchant
    **/
   public EstabelecimentoResponse contato(String contato) {
     this.contato = contato;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_contato_value}}}")
+  @ApiModelProperty(example = "null", value = "Name of the person for the contact with the Merchant")
   @JsonProperty("contato")
   public String getContato() {
     return contato;
@@ -513,14 +513,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_email_value}}}
+   * E-mail of the pessoa to contact with the Merchant
    **/
   public EstabelecimentoResponse email(String email) {
     this.email = email;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_email_value}}}")
+  @ApiModelProperty(example = "null", value = "E-mail of the pessoa to contact with the Merchant")
   @JsonProperty("email")
   public String getEmail() {
     return email;
@@ -531,14 +531,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_flag_arquivo_secr_fazenda_value}}}
+   * Indicate if the Merchant will be included in the file of register to the Secretary of State Treasury
    **/
   public EstabelecimentoResponse flagArquivoSecrFazenda(Integer flagArquivoSecrFazenda) {
     this.flagArquivoSecrFazenda = flagArquivoSecrFazenda;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_flag_arquivo_secr_fazenda_value}}}")
+  @ApiModelProperty(example = "null", value = "Indicate if the Merchant will be included in the file of register to the Secretary of State Treasury")
   @JsonProperty("flagArquivoSecrFazenda")
   public Integer getFlagArquivoSecrFazenda() {
     return flagArquivoSecrFazenda;
@@ -549,14 +549,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_flag_cartao_digitado_value}}}
+   * Indicate if the Merchant can originate transactions without reading the magnetic stripe or the card chip
    **/
   public EstabelecimentoResponse flagCartaoDigitado(Integer flagCartaoDigitado) {
     this.flagCartaoDigitado = flagCartaoDigitado;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_flag_cartao_digitado_value}}}")
+  @ApiModelProperty(example = "null", value = "Indicate if the Merchant can originate transactions without reading the magnetic stripe or the card chip")
   @JsonProperty("flagCartaoDigitado")
   public Integer getFlagCartaoDigitado() {
     return flagCartaoDigitado;
@@ -567,14 +567,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_inativo_value}}}
+   * Indicate if the Merchant is inactive
    **/
   public EstabelecimentoResponse inativo(Integer inativo) {
     this.inativo = inativo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_inativo_value}}}")
+  @ApiModelProperty(example = "null", value = "Indicate if the Merchant is inactive")
   @JsonProperty("inativo")
   public Integer getInativo() {
     return inativo;
@@ -585,14 +585,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_id_moeda_value}}}
+   * Identifier Code fo the currency
    **/
   public EstabelecimentoResponse idMoeda(Long idMoeda) {
     this.idMoeda = idMoeda;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_id_moeda_value}}}")
+  @ApiModelProperty(example = "null", value = "Identifier Code fo the currency")
   @JsonProperty("idMoeda")
   public Long getIdMoeda() {
     return idMoeda;
@@ -603,14 +603,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_id_pais_value}}}
+   * Country Identifier
    **/
   public EstabelecimentoResponse idPais(Long idPais) {
     this.idPais = idPais;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_id_pais_value}}}")
+  @ApiModelProperty(example = "null", value = "Country Identifier")
   @JsonProperty("idPais")
   public Long getIdPais() {
     return idPais;
@@ -621,14 +621,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_associado_s_p_c_brasil_value}}}
+   * Number associated to the SPCBrazil
    **/
   public EstabelecimentoResponse associadoSPCBrasil(Integer associadoSPCBrasil) {
     this.associadoSPCBrasil = associadoSPCBrasil;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_associado_s_p_c_brasil_value}}}")
+  @ApiModelProperty(example = "null", value = "Number associated to the SPCBrazil")
   @JsonProperty("associadoSPCBrasil")
   public Integer getAssociadoSPCBrasil() {
     return associadoSPCBrasil;
@@ -639,14 +639,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_mcc_value}}}
+   * Merchant Catergory Code
    **/
   public EstabelecimentoResponse mcc(Long mcc) {
     this.mcc = mcc;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_mcc_value}}}")
+  @ApiModelProperty(example = "null", value = "Merchant Catergory Code")
   @JsonProperty("mcc")
   public Long getMcc() {
     return mcc;
@@ -657,14 +657,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_id_tipo_estabelecimento_value}}}
+   * Identification Code of the Merchant
    **/
   public EstabelecimentoResponse idTipoEstabelecimento(Long idTipoEstabelecimento) {
     this.idTipoEstabelecimento = idTipoEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_id_tipo_estabelecimento_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the Merchant")
   @JsonProperty("idTipoEstabelecimento")
   public Long getIdTipoEstabelecimento() {
     return idTipoEstabelecimento;
@@ -675,14 +675,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_correspondencia_value}}}
+   * Type of Mail (MAIL, MAIL)
    **/
   public EstabelecimentoResponse correspondencia(Integer correspondencia) {
     this.correspondencia = correspondencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_correspondencia_value}}}")
+  @ApiModelProperty(example = "null", value = "Type of Mail (MAIL, MAIL)")
   @JsonProperty("correspondencia")
   public Integer getCorrespondencia() {
     return correspondencia;
@@ -693,14 +693,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_cargo_contato_value}}}
+   * Position of the Merchant
    **/
   public EstabelecimentoResponse cargoContato(String cargoContato) {
     this.cargoContato = cargoContato;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_cargo_contato_value}}}")
+  @ApiModelProperty(example = "null", value = "Position of the Merchant")
   @JsonProperty("cargoContato")
   public String getCargoContato() {
     return cargoContato;
@@ -711,14 +711,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_tipo_pagamento_value}}}
+   * Type of the Merchant Payment Scheme
    **/
   public EstabelecimentoResponse tipoPagamento(TipoPagamentoEnum tipoPagamento) {
     this.tipoPagamento = tipoPagamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_tipo_pagamento_value}}}")
+  @ApiModelProperty(example = "null", value = "Type of the Merchant Payment Scheme")
   @JsonProperty("tipoPagamento")
   public TipoPagamentoEnum getTipoPagamento() {
     return tipoPagamento;
@@ -729,14 +729,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_consulta_value}}}
+   * Retrieve the register number one
    **/
   public EstabelecimentoResponse consulta(ConsultaCadastroEstabelecimentoDTO consulta) {
     this.consulta = consulta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_consulta_value}}}")
+  @ApiModelProperty(example = "null", value = "Retrieve the register number one")
   @JsonProperty("consulta")
   public ConsultaCadastroEstabelecimentoDTO getConsulta() {
     return consulta;
@@ -747,14 +747,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_consulta2_value}}}
+   * Retrieve of register number two
    **/
   public EstabelecimentoResponse consulta2(ConsultaCadastroEstabelecimentoDTO consulta2) {
     this.consulta2 = consulta2;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_consulta2_value}}}")
+  @ApiModelProperty(example = "null", value = "Retrieve of register number two")
   @JsonProperty("consulta2")
   public ConsultaCadastroEstabelecimentoDTO getConsulta2() {
     return consulta2;
@@ -765,14 +765,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_consulta3_value}}}
+   * Retrieve the register number three
    **/
   public EstabelecimentoResponse consulta3(ConsultaCadastroEstabelecimentoDTO consulta3) {
     this.consulta3 = consulta3;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_consulta3_value}}}")
+  @ApiModelProperty(example = "null", value = "Retrieve the register number three")
   @JsonProperty("consulta3")
   public ConsultaCadastroEstabelecimentoDTO getConsulta3() {
     return consulta3;
@@ -783,14 +783,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_terminal_value}}}
+   * Terminal of the Merchant
    **/
   public EstabelecimentoResponse terminal(String terminal) {
     this.terminal = terminal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_terminal_value}}}")
+  @ApiModelProperty(example = "null", value = "Terminal of the Merchant")
   @JsonProperty("terminal")
   public String getTerminal() {
     return terminal;
@@ -801,14 +801,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_data_cadastramento_value}}}
+   * Resgister date of the Merchant
    **/
   public EstabelecimentoResponse dataCadastramento(String dataCadastramento) {
     this.dataCadastramento = dataCadastramento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_data_cadastramento_value}}}")
+  @ApiModelProperty(example = "null", value = "Resgister date of the Merchant")
   @JsonProperty("dataCadastramento")
   public String getDataCadastramento() {
     return dataCadastramento;
@@ -819,14 +819,14 @@ public class EstabelecimentoResponse   {
 
   
   /**
-   * {{{estabelecimento_response_usuario_value}}}
+   * User of the application
    **/
   public EstabelecimentoResponse usuario(String usuario) {
     this.usuario = usuario;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{estabelecimento_response_usuario_value}}}")
+  @ApiModelProperty(example = "null", value = "User of the application")
   @JsonProperty("usuario")
   public String getUsuario() {
     return usuario;

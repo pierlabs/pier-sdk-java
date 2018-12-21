@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{tipo_terminal_response_description}}}
+ * ObjecttypeTerminal
  **/
 
-@ApiModel(description = "{{{tipo_terminal_response_description}}}")
+@ApiModel(description = "ObjecttypeTerminal")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TipoTerminalResponse   {
   
@@ -20,14 +20,14 @@ public class TipoTerminalResponse   {
 
   
   /**
-   * {{{tipo_terminal_response_id_value}}}
+   * Identification Code of the Terminal Type (id)
    **/
   public TipoTerminalResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_terminal_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the Terminal Type (id)")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -38,14 +38,14 @@ public class TipoTerminalResponse   {
 
   
   /**
-   * {{{tipo_terminal_response_descricao_terminal_value}}}
+   * Description of the Terminal Type
    **/
   public TipoTerminalResponse descricaoTerminal(String descricaoTerminal) {
     this.descricaoTerminal = descricaoTerminal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_terminal_response_descricao_terminal_value}}}")
+  @ApiModelProperty(example = "null", value = "Description of the Terminal Type")
   @JsonProperty("descricaoTerminal")
   public String getDescricaoTerminal() {
     return descricaoTerminal;

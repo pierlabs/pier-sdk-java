@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{vinculo_estabelecimento_adquirente_response_description}}}
+ * Response object of the LinkMerchantAcquirer
  **/
 
-@ApiModel(description = "{{{vinculo_estabelecimento_adquirente_response_description}}}")
+@ApiModel(description = "Response object of the LinkMerchantAcquirer")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class VinculoEstabelecimentoAdquirenteResponse   {
   
@@ -25,14 +25,14 @@ public class VinculoEstabelecimentoAdquirenteResponse   {
 
   
   /**
-   * {{{vinculo_estabelecimento_adquirente_response_id_value}}}
+   * Identification Code of the LinkEstablishmentAcquirer (id)
    **/
   public VinculoEstabelecimentoAdquirenteResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{vinculo_estabelecimento_adquirente_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the LinkEstablishmentAcquirer (id)")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -43,14 +43,14 @@ public class VinculoEstabelecimentoAdquirenteResponse   {
 
   
   /**
-   * {{{vinculo_estabelecimento_adquirente_response_id_estabelecimento_value}}}
+   * Identification Code of the Establishment (id)
    **/
   public VinculoEstabelecimentoAdquirenteResponse idEstabelecimento(Long idEstabelecimento) {
     this.idEstabelecimento = idEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{vinculo_estabelecimento_adquirente_response_id_estabelecimento_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the Establishment (id)")
   @JsonProperty("idEstabelecimento")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
@@ -61,14 +61,14 @@ public class VinculoEstabelecimentoAdquirenteResponse   {
 
   
   /**
-   * {{{vinculo_estabelecimento_adquirente_response_id_adquirente_value}}}
+   * Identification Code of the Acquirer (id)
    **/
   public VinculoEstabelecimentoAdquirenteResponse idAdquirente(Long idAdquirente) {
     this.idAdquirente = idAdquirente;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{vinculo_estabelecimento_adquirente_response_id_adquirente_value}}}")
+  @ApiModelProperty(example = "null", value = "Identification Code of the Acquirer (id)")
   @JsonProperty("idAdquirente")
   public Long getIdAdquirente() {
     return idAdquirente;
@@ -79,14 +79,14 @@ public class VinculoEstabelecimentoAdquirenteResponse   {
 
   
   /**
-   * {{{vinculo_estabelecimento_adquirente_response_codigo_estabelecimento_adquirente_value}}}
+   * Link Code between the establishment and the acquirer
    **/
   public VinculoEstabelecimentoAdquirenteResponse codigoEstabelecimentoAdquirente(String codigoEstabelecimentoAdquirente) {
     this.codigoEstabelecimentoAdquirente = codigoEstabelecimentoAdquirente;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{vinculo_estabelecimento_adquirente_response_codigo_estabelecimento_adquirente_value}}}")
+  @ApiModelProperty(example = "null", value = "Link Code between the establishment and the acquirer")
   @JsonProperty("codigoEstabelecimentoAdquirente")
   public String getCodigoEstabelecimentoAdquirente() {
     return codigoEstabelecimentoAdquirente;
@@ -97,14 +97,14 @@ public class VinculoEstabelecimentoAdquirenteResponse   {
 
   
   /**
-   * {{{vinculo_estabelecimento_adquirente_response_data_hora_cadastro_value}}}
+   * Register date of the link
    **/
   public VinculoEstabelecimentoAdquirenteResponse dataHoraCadastro(String dataHoraCadastro) {
     this.dataHoraCadastro = dataHoraCadastro;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{vinculo_estabelecimento_adquirente_response_data_hora_cadastro_value}}}")
+  @ApiModelProperty(example = "null", value = "Register date of the link")
   @JsonProperty("dataHoraCadastro")
   public String getDataHoraCadastro() {
     return dataHoraCadastro;
@@ -115,14 +115,14 @@ public class VinculoEstabelecimentoAdquirenteResponse   {
 
   
   /**
-   * {{{vinculo_estabelecimento_adquirente_response_mensagem_value}}}
+   * Register date of the link
    **/
   public VinculoEstabelecimentoAdquirenteResponse mensagem(String mensagem) {
     this.mensagem = mensagem;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{vinculo_estabelecimento_adquirente_response_mensagem_value}}}")
+  @ApiModelProperty(example = "null", value = "Register date of the link")
   @JsonProperty("mensagem")
   public String getMensagem() {
     return mensagem;
@@ -133,14 +133,14 @@ public class VinculoEstabelecimentoAdquirenteResponse   {
 
   
   /**
-   * {{{vinculo_estabelecimento_adquirente_response_status_value}}}
+   * Register date of the link
    **/
   public VinculoEstabelecimentoAdquirenteResponse status(Integer status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{vinculo_estabelecimento_adquirente_response_status_value}}}")
+  @ApiModelProperty(example = "null", value = "Register date of the link")
   @JsonProperty("status")
   public Integer getStatus() {
     return status;

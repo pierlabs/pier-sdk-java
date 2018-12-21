@@ -10,10 +10,10 @@ import java.math.BigDecimal;
 
 
 /**
- * {{{taxa_antecipacao_request_description}}}
+ * Object Request of the Antecipation Taxe
  **/
 
-@ApiModel(description = "{{{taxa_antecipacao_request_description}}}")
+@ApiModel(description = "Object Request of the Antecipation Taxe")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TaxaAntecipacaoRequest   {
   
@@ -41,14 +41,14 @@ public class TaxaAntecipacaoRequest   {
 
   
   /**
-   * {{{taxa_antecipacao_request_tipo_transacao_value}}}
+   * Code that identifies if a parameter refers to a trnsaction On-Us or Off-Us
    **/
   public TaxaAntecipacaoRequest tipoTransacao(TipoTransacaoEnum tipoTransacao) {
     this.tipoTransacao = tipoTransacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{taxa_antecipacao_request_tipo_transacao_value}}}")
+  @ApiModelProperty(example = "null", value = "Code that identifies if a parameter refers to a trnsaction On-Us or Off-Us")
   @JsonProperty("tipoTransacao")
   public TipoTransacaoEnum getTipoTransacao() {
     return tipoTransacao;
@@ -59,14 +59,14 @@ public class TaxaAntecipacaoRequest   {
 
   
   /**
-   * {{{taxa_antecipacao_request_valor_taxa_value}}}
+   * Value of the Antecipation Taxe
    **/
   public TaxaAntecipacaoRequest valorTaxa(BigDecimal valorTaxa) {
     this.valorTaxa = valorTaxa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{taxa_antecipacao_request_valor_taxa_value}}}")
+  @ApiModelProperty(example = "null", value = "Value of the Antecipation Taxe")
   @JsonProperty("valorTaxa")
   public BigDecimal getValorTaxa() {
     return valorTaxa;

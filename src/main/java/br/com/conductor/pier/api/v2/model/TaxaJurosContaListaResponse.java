@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * {{{taxa_juros_conta_lista_response_description}}}
+ * Representation of the response of the interest rate listing
  **/
 
-@ApiModel(description = "{{{taxa_juros_conta_lista_response_description}}}")
+@ApiModel(description = "Representation of the response of the interest rate listing")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TaxaJurosContaListaResponse   {
   
@@ -21,14 +21,14 @@ public class TaxaJurosContaListaResponse   {
 
   
   /**
-   * {{{taxa_juros_conta_lista_response_plano_value}}}
+   * Fee plan tranche number
    **/
   public TaxaJurosContaListaResponse plano(Integer plano) {
     this.plano = plano;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{taxa_juros_conta_lista_response_plano_value}}}")
+  @ApiModelProperty(example = "null", value = "Fee plan tranche number")
   @JsonProperty("plano")
   public Integer getPlano() {
     return plano;
@@ -39,14 +39,14 @@ public class TaxaJurosContaListaResponse   {
 
   
   /**
-   * {{{taxa_juros_conta_lista_response_taxa_value}}}
+   * Interest rate value
    **/
   public TaxaJurosContaListaResponse taxa(BigDecimal taxa) {
     this.taxa = taxa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{taxa_juros_conta_lista_response_taxa_value}}}")
+  @ApiModelProperty(example = "null", value = "Interest rate value")
   @JsonProperty("taxa")
   public BigDecimal getTaxa() {
     return taxa;
