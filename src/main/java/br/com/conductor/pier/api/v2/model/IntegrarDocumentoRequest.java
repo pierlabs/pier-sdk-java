@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * Objeto de requisi\u00E7\u00E3o
+ * {{{integrar_documento_request_description}}}
  **/
 
-@ApiModel(description = "Objeto de requisi\u00E7\u00E3o")
+@ApiModel(description = "{{{integrar_documento_request_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class IntegrarDocumentoRequest   {
   
@@ -25,14 +25,14 @@ public class IntegrarDocumentoRequest   {
 
   
   /**
-   * Identificador do template de documento
+   * {{{integrar_documento_request_id_template_value}}}
    **/
   public IntegrarDocumentoRequest idTemplate(Long idTemplate) {
     this.idTemplate = idTemplate;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identificador do template de documento")
+  @ApiModelProperty(example = "null", value = "{{{integrar_documento_request_id_template_value}}}")
   @JsonProperty("idTemplate")
   public Long getIdTemplate() {
     return idTemplate;
@@ -43,14 +43,14 @@ public class IntegrarDocumentoRequest   {
 
   
   /**
-   * Conte\u00FAdo do arquivo convertido em Base 64
+   * {{{integrar_documento_request_arquivo_value}}}
    **/
   public IntegrarDocumentoRequest arquivo(String arquivo) {
     this.arquivo = arquivo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Conte\u00FAdo do arquivo convertido em Base 64")
+  @ApiModelProperty(example = "null", value = "{{{integrar_documento_request_arquivo_value}}}")
   @JsonProperty("arquivo")
   public String getArquivo() {
     return arquivo;
@@ -61,14 +61,14 @@ public class IntegrarDocumentoRequest   {
 
   
   /**
-   * Nome do arquivo
+   * {{{integrar_documento_request_nome_value}}}
    **/
   public IntegrarDocumentoRequest nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome do arquivo")
+  @ApiModelProperty(example = "null", value = "{{{integrar_documento_request_nome_value}}}")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -79,14 +79,14 @@ public class IntegrarDocumentoRequest   {
 
   
   /**
-   * Lista de par\u00E2metros para montagem do documento
+   * {{{integrar_documento_request_propriedades_value}}}
    **/
   public IntegrarDocumentoRequest propriedades(List<PropriedadeDocumentoRequest> propriedades) {
     this.propriedades = propriedades;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Lista de par\u00E2metros para montagem do documento")
+  @ApiModelProperty(example = "null", value = "{{{integrar_documento_request_propriedades_value}}}")
   @JsonProperty("propriedades")
   public List<PropriedadeDocumentoRequest> getPropriedades() {
     return propriedades;

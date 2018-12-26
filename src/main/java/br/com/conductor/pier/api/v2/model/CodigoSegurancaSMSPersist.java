@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso gerar c\u00F3digo de seguran\u00E7a
+ * {{{codigo_seguranca_s_m_s_persist_description}}}
  **/
 
-@ApiModel(description = "Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso gerar c\u00F3digo de seguran\u00E7a")
+@ApiModel(description = "{{{codigo_seguranca_s_m_s_persist_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class CodigoSegurancaSMSPersist   {
   
@@ -20,14 +20,14 @@ public class CodigoSegurancaSMSPersist   {
 
   
   /**
-   * DDD do telefone
+   * {{{codigo_seguranca_s_m_s_persist_ddd_value}}}
    **/
   public CodigoSegurancaSMSPersist ddd(String ddd) {
     this.ddd = ddd;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "DDD do telefone")
+  @ApiModelProperty(example = "null", value = "{{{codigo_seguranca_s_m_s_persist_ddd_value}}}")
   @JsonProperty("ddd")
   public String getDdd() {
     return ddd;
@@ -38,14 +38,14 @@ public class CodigoSegurancaSMSPersist   {
 
   
   /**
-   * telefone para envio
+   * {{{codigo_seguranca_s_m_s_persist_telefone_value}}}
    **/
   public CodigoSegurancaSMSPersist telefone(String telefone) {
     this.telefone = telefone;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "telefone para envio")
+  @ApiModelProperty(example = "null", value = "{{{codigo_seguranca_s_m_s_persist_telefone_value}}}")
   @JsonProperty("telefone")
   public String getTelefone() {
     return telefone;

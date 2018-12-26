@@ -10,10 +10,10 @@ import java.math.BigDecimal;
 
 
 /**
- * Objeto conta
+ * {{{conta_detalhe_response_description}}}
  **/
 
-@ApiModel(description = "Objeto conta")
+@ApiModel(description = "{{{conta_detalhe_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ContaDetalheResponse   {
   
@@ -77,14 +77,14 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o de conta (id)
+   * {{{conta_detalhe_response_id_value}}}
    **/
   public ContaDetalheResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o de conta (id)")
+  @ApiModelProperty(example = "null", value = "{{{conta_detalhe_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -95,14 +95,14 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id)
+   * {{{conta_detalhe_response_id_pessoa_value}}}
    **/
   public ContaDetalheResponse idPessoa(Long idPessoa) {
     this.idPessoa = idPessoa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id)")
+  @ApiModelProperty(example = "null", value = "{{{conta_detalhe_response_id_pessoa_value}}}")
   @JsonProperty("idPessoa")
   public Long getIdPessoa() {
     return idPessoa;
@@ -113,14 +113,14 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00E3o Social (Nome Empresarial)'
+   * {{{conta_detalhe_response_nome_value}}}
    **/
   public ContaDetalheResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00E3o Social (Nome Empresarial)'")
+  @ApiModelProperty(example = "null", value = "{{{conta_detalhe_response_nome_value}}}")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -131,14 +131,14 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id)
+   * {{{conta_detalhe_response_id_produto_value}}}
    **/
   public ContaDetalheResponse idProduto(Long idProduto) {
     this.idProduto = idProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id)")
+  @ApiModelProperty(example = "null", value = "{{{conta_detalhe_response_id_produto_value}}}")
   @JsonProperty("idProduto")
   public Long getIdProduto() {
     return idProduto;
@@ -149,14 +149,14 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta
+   * {{{conta_detalhe_response_id_origem_comercial_value}}}
    **/
   public ContaDetalheResponse idOrigemComercial(Long idOrigemComercial) {
     this.idOrigemComercial = idOrigemComercial;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta")
+  @ApiModelProperty(example = "null", value = "{{{conta_detalhe_response_id_origem_comercial_value}}}")
   @JsonProperty("idOrigemComercial")
   public Long getIdOrigemComercial() {
     return idOrigemComercial;
@@ -167,14 +167,14 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * Nome da origem comercial
+   * {{{conta_detalhe_response_nome_origem_comercial_value}}}
    **/
   public ContaDetalheResponse nomeOrigemComercial(String nomeOrigemComercial) {
     this.nomeOrigemComercial = nomeOrigemComercial;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome da origem comercial")
+  @ApiModelProperty(example = "null", value = "{{{conta_detalhe_response_nome_origem_comercial_value}}}")
   @JsonProperty("nomeOrigemComercial")
   public String getNomeOrigemComercial() {
     return nomeOrigemComercial;
@@ -185,14 +185,14 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia Basica (id)
+   * {{{conta_detalhe_response_id_fantasia_basica_value}}}
    **/
   public ContaDetalheResponse idFantasiaBasica(Long idFantasiaBasica) {
     this.idFantasiaBasica = idFantasiaBasica;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia Basica (id)")
+  @ApiModelProperty(example = "null", value = "{{{conta_detalhe_response_id_fantasia_basica_value}}}")
   @JsonProperty("idFantasiaBasica")
   public Long getIdFantasiaBasica() {
     return idFantasiaBasica;
@@ -203,14 +203,14 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * Nome da Fantasia Basica
+   * {{{conta_detalhe_response_nome_fantasia_basica_value}}}
    **/
   public ContaDetalheResponse nomeFantasiaBasica(String nomeFantasiaBasica) {
     this.nomeFantasiaBasica = nomeFantasiaBasica;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome da Fantasia Basica")
+  @ApiModelProperty(example = "null", value = "{{{conta_detalhe_response_nome_fantasia_basica_value}}}")
   @JsonProperty("nomeFantasiaBasica")
   public String getNomeFantasiaBasica() {
     return nomeFantasiaBasica;
@@ -221,14 +221,14 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do status atribuido a conta
+   * {{{conta_detalhe_response_id_status_conta_value}}}
    **/
   public ContaDetalheResponse idStatusConta(Long idStatusConta) {
     this.idStatusConta = idStatusConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do status atribuido a conta")
+  @ApiModelProperty(example = "null", value = "{{{conta_detalhe_response_id_status_conta_value}}}")
   @JsonProperty("idStatusConta")
   public Long getIdStatusConta() {
     return idStatusConta;
@@ -239,14 +239,14 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * Descri\u00E7\u00E3o do status da conta
+   * {{{conta_detalhe_response_status_conta_value}}}
    **/
   public ContaDetalheResponse statusConta(String statusConta) {
     this.statusConta = statusConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do status da conta")
+  @ApiModelProperty(example = "null", value = "{{{conta_detalhe_response_status_conta_value}}}")
   @JsonProperty("statusConta")
   public String getStatusConta() {
     return statusConta;
@@ -257,14 +257,14 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * Apresenta o dia de vencimento
+   * {{{conta_detalhe_response_dia_vencimento_value}}}
    **/
   public ContaDetalheResponse diaVencimento(Integer diaVencimento) {
     this.diaVencimento = diaVencimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o dia de vencimento")
+  @ApiModelProperty(example = "null", value = "{{{conta_detalhe_response_dia_vencimento_value}}}")
   @JsonProperty("diaVencimento")
   public Integer getDiaVencimento() {
     return diaVencimento;
@@ -275,14 +275,14 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * Apresenta o melhor dia de compra
+   * {{{conta_detalhe_response_melhor_dia_compra_value}}}
    **/
   public ContaDetalheResponse melhorDiaCompra(Integer melhorDiaCompra) {
     this.melhorDiaCompra = melhorDiaCompra;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o melhor dia de compra")
+  @ApiModelProperty(example = "null", value = "{{{conta_detalhe_response_melhor_dia_compra_value}}}")
   @JsonProperty("melhorDiaCompra")
   public Integer getMelhorDiaCompra() {
     return melhorDiaCompra;
@@ -293,14 +293,14 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela
+   * {{{conta_detalhe_response_data_status_conta_value}}}
    **/
   public ContaDetalheResponse dataStatusConta(String dataStatusConta) {
     this.dataStatusConta = dataStatusConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela")
+  @ApiModelProperty(example = "null", value = "{{{conta_detalhe_response_data_status_conta_value}}}")
   @JsonProperty("dataStatusConta")
   public String getDataStatusConta() {
     return dataStatusConta;
@@ -311,14 +311,14 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * Apresenta a data em que o cart\u00E3o foi gerado
+   * {{{conta_detalhe_response_data_cadastro_value}}}
    **/
   public ContaDetalheResponse dataCadastro(String dataCadastro) {
     this.dataCadastro = dataCadastro;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta a data em que o cart\u00E3o foi gerado")
+  @ApiModelProperty(example = "null", value = "{{{conta_detalhe_response_data_cadastro_value}}}")
   @JsonProperty("dataCadastro")
   public String getDataCadastro() {
     return dataCadastro;
@@ -329,14 +329,14 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * Apresenta a data da ultima altera\u00E7\u00E3o de vencimento
+   * {{{conta_detalhe_response_data_ultima_alteracao_vencimento_value}}}
    **/
   public ContaDetalheResponse dataUltimaAlteracaoVencimento(String dataUltimaAlteracaoVencimento) {
     this.dataUltimaAlteracaoVencimento = dataUltimaAlteracaoVencimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta a data da ultima altera\u00E7\u00E3o de vencimento")
+  @ApiModelProperty(example = "null", value = "{{{conta_detalhe_response_data_ultima_alteracao_vencimento_value}}}")
   @JsonProperty("dataUltimaAlteracaoVencimento")
   public String getDataUltimaAlteracaoVencimento() {
     return dataUltimaAlteracaoVencimento;
@@ -347,14 +347,14 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * Apresenta a data da ultima altera\u00E7\u00E3o de vencimento
+   * {{{conta_detalhe_response_data_hora_ultima_compra_value}}}
    **/
   public ContaDetalheResponse dataHoraUltimaCompra(String dataHoraUltimaCompra) {
     this.dataHoraUltimaCompra = dataHoraUltimaCompra;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta a data da ultima altera\u00E7\u00E3o de vencimento")
+  @ApiModelProperty(example = "null", value = "{{{conta_detalhe_response_data_hora_ultima_compra_value}}}")
   @JsonProperty("dataHoraUltimaCompra")
   public String getDataHoraUltimaCompra() {
     return dataHoraUltimaCompra;
@@ -365,14 +365,14 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * N\u00FAmero da ag\u00EAncia
+   * {{{conta_detalhe_response_numero_agencia_value}}}
    **/
   public ContaDetalheResponse numeroAgencia(Integer numeroAgencia) {
     this.numeroAgencia = numeroAgencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00FAmero da ag\u00EAncia")
+  @ApiModelProperty(example = "null", value = "{{{conta_detalhe_response_numero_agencia_value}}}")
   @JsonProperty("numeroAgencia")
   public Integer getNumeroAgencia() {
     return numeroAgencia;
@@ -383,14 +383,14 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * N\u00FAmero da conta corrente
+   * {{{conta_detalhe_response_numero_conta_corrente_value}}}
    **/
   public ContaDetalheResponse numeroContaCorrente(String numeroContaCorrente) {
     this.numeroContaCorrente = numeroContaCorrente;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00FAmero da conta corrente")
+  @ApiModelProperty(example = "null", value = "{{{conta_detalhe_response_numero_conta_corrente_value}}}")
   @JsonProperty("numeroContaCorrente")
   public String getNumeroContaCorrente() {
     return numeroContaCorrente;
@@ -401,14 +401,14 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * Valor da renda comprovada
+   * {{{conta_detalhe_response_valor_renda_value}}}
    **/
   public ContaDetalheResponse valorRenda(BigDecimal valorRenda) {
     this.valorRenda = valorRenda;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor da renda comprovada")
+  @ApiModelProperty(example = "null", value = "{{{conta_detalhe_response_valor_renda_value}}}")
   @JsonProperty("valorRenda")
   public BigDecimal getValorRenda() {
     return valorRenda;
@@ -419,14 +419,14 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * Forma de envio da fatura
+   * {{{conta_detalhe_response_forma_envio_fatura_value}}}
    **/
   public ContaDetalheResponse formaEnvioFatura(String formaEnvioFatura) {
     this.formaEnvioFatura = formaEnvioFatura;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Forma de envio da fatura")
+  @ApiModelProperty(example = "null", value = "{{{conta_detalhe_response_forma_envio_fatura_value}}}")
   @JsonProperty("formaEnvioFatura")
   public String getFormaEnvioFatura() {
     return formaEnvioFatura;
@@ -437,14 +437,14 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * Apresenta se a pessoa \u00E9 titular da conta
+   * {{{conta_detalhe_response_titular_value}}}
    **/
   public ContaDetalheResponse titular(Boolean titular) {
     this.titular = titular;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Apresenta se a pessoa \u00E9 titular da conta")
+  @ApiModelProperty(example = "false", value = "{{{conta_detalhe_response_titular_value}}}")
   @JsonProperty("titular")
   public Boolean getTitular() {
     return titular;
@@ -455,14 +455,14 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * Apresenta o valor do limite de cr\u00E9dito que o portador do cart\u00E3o possui
+   * {{{conta_detalhe_response_limite_global_value}}}
    **/
   public ContaDetalheResponse limiteGlobal(BigDecimal limiteGlobal) {
     this.limiteGlobal = limiteGlobal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o valor do limite de cr\u00E9dito que o portador do cart\u00E3o possui")
+  @ApiModelProperty(example = "null", value = "{{{conta_detalhe_response_limite_global_value}}}")
   @JsonProperty("limiteGlobal")
   public BigDecimal getLimiteGlobal() {
     return limiteGlobal;
@@ -473,14 +473,14 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional
+   * {{{conta_detalhe_response_limite_saque_global_value}}}
    **/
   public ContaDetalheResponse limiteSaqueGlobal(BigDecimal limiteSaqueGlobal) {
     this.limiteSaqueGlobal = limiteSaqueGlobal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional")
+  @ApiModelProperty(example = "null", value = "{{{conta_detalhe_response_limite_saque_global_value}}}")
   @JsonProperty("limiteSaqueGlobal")
   public BigDecimal getLimiteSaqueGlobal() {
     return limiteSaqueGlobal;
@@ -491,14 +491,14 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Nacionais
+   * {{{conta_detalhe_response_saldo_disponivel_global_value}}}
    **/
   public ContaDetalheResponse saldoDisponivelGlobal(BigDecimal saldoDisponivelGlobal) {
     this.saldoDisponivelGlobal = saldoDisponivelGlobal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Nacionais")
+  @ApiModelProperty(example = "null", value = "{{{conta_detalhe_response_saldo_disponivel_global_value}}}")
   @JsonProperty("saldoDisponivelGlobal")
   public BigDecimal getSaldoDisponivelGlobal() {
     return saldoDisponivelGlobal;
@@ -509,14 +509,14 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento
+   * {{{conta_detalhe_response_saldo_disponivel_saque_value}}}
    **/
   public ContaDetalheResponse saldoDisponivelSaque(BigDecimal saldoDisponivelSaque) {
     this.saldoDisponivelSaque = saldoDisponivelSaque;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento")
+  @ApiModelProperty(example = "null", value = "{{{conta_detalhe_response_saldo_disponivel_saque_value}}}")
   @JsonProperty("saldoDisponivelSaque")
   public BigDecimal getSaldoDisponivelSaque() {
     return saldoDisponivelSaque;
@@ -527,14 +527,14 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64)
+   * {{{conta_detalhe_response_impedido_de_financiamento_value}}}
    **/
   public ContaDetalheResponse impedidoFinanciamento(Boolean impedidoFinanciamento) {
     this.impedidoFinanciamento = impedidoFinanciamento;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64)")
+  @ApiModelProperty(example = "false", value = "{{{conta_detalhe_response_impedido_de_financiamento_value}}}")
   @JsonProperty("impedidoFinanciamento")
   public Boolean getImpedidoFinanciamento() {
     return impedidoFinanciamento;
@@ -545,14 +545,14 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * Apresenta a quantidade de dias que a conta esta em atraso
+   * {{{conta_detalhe_response_dias_atraso_value}}}
    **/
   public ContaDetalheResponse diasAtraso(Long diasAtraso) {
     this.diasAtraso = diasAtraso;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta a quantidade de dias que a conta esta em atraso")
+  @ApiModelProperty(example = "null", value = "{{{conta_detalhe_response_dias_atraso_value}}}")
   @JsonProperty("diasAtraso")
   public Long getDiasAtraso() {
     return diasAtraso;
@@ -563,14 +563,14 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * Pr\u00F3ximo Vencimento Padr\u00E3o
+   * {{{conta_response_proximo_vencimento_padrao_value}}}
    **/
   public ContaDetalheResponse proximoVencimentoPadrao(String proximoVencimentoPadrao) {
     this.proximoVencimentoPadrao = proximoVencimentoPadrao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Pr\u00F3ximo Vencimento Padr\u00E3o")
+  @ApiModelProperty(example = "null", value = "{{{conta_response_proximo_vencimento_padrao_value}}}")
   @JsonProperty("proximoVencimentoPadrao")
   public String getProximoVencimentoPadrao() {
     return proximoVencimentoPadrao;
@@ -581,14 +581,14 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * Identificador da proposta
+   * {{{conta_detalhe_response_id_proposta_value}}}
    **/
   public ContaDetalheResponse idProposta(Long idProposta) {
     this.idProposta = idProposta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identificador da proposta")
+  @ApiModelProperty(example = "null", value = "{{{conta_detalhe_response_id_proposta_value}}}")
   @JsonProperty("idProposta")
   public Long getIdProposta() {
     return idProposta;
@@ -599,14 +599,14 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * Quantidade de pagamentos
+   * {{{conta_detalhe_response_quantidade_pagamentos_value}}}
    **/
   public ContaDetalheResponse quantidadePagamentos(Integer quantidadePagamentos) {
     this.quantidadePagamentos = quantidadePagamentos;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Quantidade de pagamentos")
+  @ApiModelProperty(example = "null", value = "{{{conta_detalhe_response_quantidade_pagamentos_value}}}")
   @JsonProperty("quantidadePagamentos")
   public Integer getQuantidadePagamentos() {
     return quantidadePagamentos;
@@ -617,14 +617,14 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * correspond\u00EAncia
+   * {{{conta_detalhe_response_correspondencia_value}}}
    **/
   public ContaDetalheResponse correspondencia(Long correspondencia) {
     this.correspondencia = correspondencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "correspond\u00EAncia")
+  @ApiModelProperty(example = "null", value = "{{{conta_detalhe_response_correspondencia_value}}}")
   @JsonProperty("correspondencia")
   public Long getCorrespondencia() {
     return correspondencia;
@@ -635,14 +635,14 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * Data de vencimento da cobran\u00E7a
+   * {{{conta_detalhe_response_data_inicio_atraso_value}}}
    **/
   public ContaDetalheResponse dataInicioAtraso(String dataInicioAtraso) {
     this.dataInicioAtraso = dataInicioAtraso;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data de vencimento da cobran\u00E7a")
+  @ApiModelProperty(example = "null", value = "{{{conta_detalhe_response_data_inicio_atraso_value}}}")
   @JsonProperty("dataInicioAtraso")
   public String getDataInicioAtraso() {
     return dataInicioAtraso;
@@ -653,14 +653,14 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * Apresenta valor rotativo de juros da conta
+   * {{{estado_conta_response_rotativo_paga_juros_value}}}
    **/
   public ContaDetalheResponse rotativoPagaJuros(BigDecimal rotativoPagaJuros) {
     this.rotativoPagaJuros = rotativoPagaJuros;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta valor rotativo de juros da conta")
+  @ApiModelProperty(example = "null", value = "{{{estado_conta_response_rotativo_paga_juros_value}}}")
   @JsonProperty("rotativoPagaJuros")
   public BigDecimal getRotativoPagaJuros() {
     return rotativoPagaJuros;
@@ -671,14 +671,14 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * Apresenta valor da fatura ap\u00F3s a pr\u00F3xima
+   * {{{estado_conta_response_total_pos_proximo_value}}}
    **/
   public ContaDetalheResponse totalPosProx(BigDecimal totalPosProx) {
     this.totalPosProx = totalPosProx;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta valor da fatura ap\u00F3s a pr\u00F3xima")
+  @ApiModelProperty(example = "null", value = "{{{estado_conta_response_total_pos_proximo_value}}}")
   @JsonProperty("totalPosProx")
   public BigDecimal getTotalPosProx() {
     return totalPosProx;
@@ -689,14 +689,14 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * Apresenta valor do saldo atual final
+   * {{{estado_conta_response_saldo_atual_final_value}}}
    **/
   public ContaDetalheResponse saldoAtualFinal(BigDecimal saldoAtualFinal) {
     this.saldoAtualFinal = saldoAtualFinal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta valor do saldo atual final")
+  @ApiModelProperty(example = "null", value = "{{{estado_conta_response_saldo_atual_final_value}}}")
   @JsonProperty("saldoAtualFinal")
   public BigDecimal getSaldoAtualFinal() {
     return saldoAtualFinal;
@@ -707,14 +707,14 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * Apresenta o saldo do extrato anterior da conta
+   * {{{estado_conta_response_saldo_extrato_anterior_value}}}
    **/
   public ContaDetalheResponse saldoExtratoAnterior(BigDecimal saldoExtratoAnterior) {
     this.saldoExtratoAnterior = saldoExtratoAnterior;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o saldo do extrato anterior da conta")
+  @ApiModelProperty(example = "null", value = "{{{estado_conta_response_saldo_extrato_anterior_value}}}")
   @JsonProperty("saldoExtratoAnterior")
   public BigDecimal getSaldoExtratoAnterior() {
     return saldoExtratoAnterior;
@@ -725,14 +725,14 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * Flag que indica a aceita\u00E7\u00E3o de abertura de nova conta por grupo de produtos
+   * {{{conta_detalhe_response_aceita_nova_conta_grupo_produto_value}}}
    **/
   public ContaDetalheResponse aceitaNovaContaPorGrupoProduto(Boolean aceitaNovaContaPorGrupoProduto) {
     this.aceitaNovaContaPorGrupoProduto = aceitaNovaContaPorGrupoProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Flag que indica a aceita\u00E7\u00E3o de abertura de nova conta por grupo de produtos")
+  @ApiModelProperty(example = "false", value = "{{{conta_detalhe_response_aceita_nova_conta_grupo_produto_value}}}")
   @JsonProperty("aceitaNovaContaPorGrupoProduto")
   public Boolean getAceitaNovaContaPorGrupoProduto() {
     return aceitaNovaContaPorGrupoProduto;
@@ -743,14 +743,14 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * Fun\u00E7\u00E3o ativa da conta
+   * {{{conta_response_funcao_ativa_value}}}
    **/
   public ContaDetalheResponse funcaoAtiva(FuncaoAtivaEnum funcaoAtiva) {
     this.funcaoAtiva = funcaoAtiva;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Fun\u00E7\u00E3o ativa da conta")
+  @ApiModelProperty(example = "null", value = "{{{conta_response_funcao_ativa_value}}}")
   @JsonProperty("funcaoAtiva")
   public FuncaoAtivaEnum getFuncaoAtiva() {
     return funcaoAtiva;

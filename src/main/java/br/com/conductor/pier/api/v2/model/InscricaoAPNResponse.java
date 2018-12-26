@@ -10,10 +10,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representa a resposta de uma inscricao APN
+ * {{{inscricao_apn_resposta_descricao}}}
  **/
 
-@ApiModel(description = "Representa a resposta de uma inscricao APN")
+@ApiModel(description = "{{{inscricao_apn_resposta_descricao}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class InscricaoAPNResponse   {
   
@@ -27,14 +27,14 @@ public class InscricaoAPNResponse   {
 
   
   /**
-   * Representa a aplica\u00E7\u00E3o mobile da inscri\u00E7\u00E3o
+   * {{{inscricao_apn_resposta_aplicacao_mobile_descricao}}}
    **/
   public InscricaoAPNResponse aplicacaoMobile(AplicacaoMobileEmissorResponse aplicacaoMobile) {
     this.aplicacaoMobile = aplicacaoMobile;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Representa a aplica\u00E7\u00E3o mobile da inscri\u00E7\u00E3o")
+  @ApiModelProperty(example = "null", value = "{{{inscricao_apn_resposta_aplicacao_mobile_descricao}}}")
   @JsonProperty("aplicacaoMobile")
   public AplicacaoMobileEmissorResponse getAplicacaoMobile() {
     return aplicacaoMobile;
@@ -45,14 +45,14 @@ public class InscricaoAPNResponse   {
 
   
   /**
-   * Indica se a inscri\u00E7\u00E3o est\u00E1 ativa
+   * {{{inscricao_apn_resposta_ativo_descricao}}}
    **/
   public InscricaoAPNResponse ativo(Boolean ativo) {
     this.ativo = ativo;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Indica se a inscri\u00E7\u00E3o est\u00E1 ativa")
+  @ApiModelProperty(example = "false", value = "{{{inscricao_apn_resposta_ativo_descricao}}}")
   @JsonProperty("ativo")
   public Boolean getAtivo() {
     return ativo;
@@ -63,14 +63,14 @@ public class InscricaoAPNResponse   {
 
   
   /**
-   * Representa o cart\u00E3o associado \u00E0 inscri\u00E7\u00E3o
+   * {{{inscricao_apn_resposta_cartao_descricao}}}
    **/
   public InscricaoAPNResponse cartao(CartaoEmissorResponse cartao) {
     this.cartao = cartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Representa o cart\u00E3o associado \u00E0 inscri\u00E7\u00E3o")
+  @ApiModelProperty(example = "null", value = "{{{inscricao_apn_resposta_cartao_descricao}}}")
   @JsonProperty("cartao")
   public CartaoEmissorResponse getCartao() {
     return cartao;
@@ -81,14 +81,14 @@ public class InscricaoAPNResponse   {
 
   
   /**
-   * Data da cria\u00E7\u00E3o da inscri\u00E7\u00E3o
+   * {{{inscricao_apn_resposta_data_criacao_descricao}}}
    **/
   public InscricaoAPNResponse dataCriacao(String dataCriacao) {
     this.dataCriacao = dataCriacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data da cria\u00E7\u00E3o da inscri\u00E7\u00E3o")
+  @ApiModelProperty(example = "null", value = "{{{inscricao_apn_resposta_data_criacao_descricao}}}")
   @JsonProperty("dataCriacao")
   public String getDataCriacao() {
     return dataCriacao;
@@ -99,14 +99,14 @@ public class InscricaoAPNResponse   {
 
   
   /**
-   * Data da desativa\u00E7\u00E3o da inscri\u00E7\u00E3o
+   * {{{inscricao_apn_resposta_data_desativacao_descricao}}}
    **/
   public InscricaoAPNResponse dataDesativacao(String dataDesativacao) {
     this.dataDesativacao = dataDesativacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data da desativa\u00E7\u00E3o da inscri\u00E7\u00E3o")
+  @ApiModelProperty(example = "null", value = "{{{inscricao_apn_resposta_data_desativacao_descricao}}}")
   @JsonProperty("dataDesativacao")
   public String getDataDesativacao() {
     return dataDesativacao;
@@ -117,14 +117,14 @@ public class InscricaoAPNResponse   {
 
   
   /**
-   * Token do dispositivo
+   * {{{inscricao_apn_resposta_device_token_descricao}}}
    **/
   public InscricaoAPNResponse deviceToken(String deviceToken) {
     this.deviceToken = deviceToken;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Token do dispositivo")
+  @ApiModelProperty(example = "null", value = "{{{inscricao_apn_resposta_device_token_descricao}}}")
   @JsonProperty("deviceToken")
   public String getDeviceToken() {
     return deviceToken;
@@ -135,14 +135,14 @@ public class InscricaoAPNResponse   {
 
   
   /**
-   * Id da inscri\u00E7\u00E3o
+   * {{{inscricao_apn_resposta_id_descricao}}}
    **/
   public InscricaoAPNResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Id da inscri\u00E7\u00E3o")
+  @ApiModelProperty(example = "null", value = "{{{inscricao_apn_resposta_id_descricao}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;

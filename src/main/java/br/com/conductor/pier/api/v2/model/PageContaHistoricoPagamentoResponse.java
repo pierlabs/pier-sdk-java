@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * Lista de pagamentos da conta
+ * {{{page_conta_historico_pagamento_response_description}}}
  **/
 
-@ApiModel(description = "Lista de pagamentos da conta")
+@ApiModel(description = "{{{page_conta_historico_pagamento_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageContaHistoricoPagamentoResponse   {
   

@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representa a resposta de um cart\u00E3o
+ * {{{cartao_emissor_resposta_descricao}}}
  **/
 
-@ApiModel(description = "Representa a resposta de um cart\u00E3o")
+@ApiModel(description = "{{{cartao_emissor_resposta_descricao}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class CartaoEmissorResponse   {
   
@@ -19,14 +19,14 @@ public class CartaoEmissorResponse   {
 
   
   /**
-   * Id do cart\u00E3o
+   * {{{cartao_emissor_resposta_id_descricao}}}
    **/
   public CartaoEmissorResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Id do cart\u00E3o")
+  @ApiModelProperty(example = "null", value = "{{{cartao_emissor_resposta_id_descricao}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;

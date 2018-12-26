@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representa\u00E7\u00E3o do recurso Usuario Token
+ * {{{usuario_token_resposta_descricao}}}
  **/
 
-@ApiModel(description = "Representa\u00E7\u00E3o do recurso Usuario Token")
+@ApiModel(description = "{{{usuario_token_resposta_descricao}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class UsuarioTokenResponse   {
   
@@ -27,14 +27,14 @@ public class UsuarioTokenResponse   {
 
   
   /**
-   * Se o token est\u00E1 ativo
+   * {{{usuario_token_resposta_ativo_descricao}}}
    **/
   public UsuarioTokenResponse ativo(Boolean ativo) {
     this.ativo = ativo;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Se o token est\u00E1 ativo")
+  @ApiModelProperty(example = "false", value = "{{{usuario_token_resposta_ativo_descricao}}}")
   @JsonProperty("ativo")
   public Boolean getAtivo() {
     return ativo;
@@ -45,14 +45,14 @@ public class UsuarioTokenResponse   {
 
   
   /**
-   * CPF do usu\u00E1rio
+   * {{{usuario_token_resposta_cpf_descricao}}}
    **/
   public UsuarioTokenResponse cpf(String cpf) {
     this.cpf = cpf;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "CPF do usu\u00E1rio")
+  @ApiModelProperty(example = "null", value = "{{{usuario_token_resposta_cpf_descricao}}}")
   @JsonProperty("cpf")
   public String getCpf() {
     return cpf;
@@ -63,14 +63,14 @@ public class UsuarioTokenResponse   {
 
   
   /**
-   * Data da inclusao do usu\u00E1rio
+   * {{{usuario_token_resposta_data_inclusao_descricao}}}
    **/
   public UsuarioTokenResponse dataInclusao(String dataInclusao) {
     this.dataInclusao = dataInclusao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data da inclusao do usu\u00E1rio")
+  @ApiModelProperty(example = "null", value = "{{{usuario_token_resposta_data_inclusao_descricao}}}")
   @JsonProperty("dataInclusao")
   public String getDataInclusao() {
     return dataInclusao;
@@ -81,14 +81,14 @@ public class UsuarioTokenResponse   {
 
   
   /**
-   * Data de nascimento do usu\u00E1rio
+   * {{{usuario_token_resposta_data_nascimento_descricao}}}
    **/
   public UsuarioTokenResponse dataNascimento(String dataNascimento) {
     this.dataNascimento = dataNascimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data de nascimento do usu\u00E1rio")
+  @ApiModelProperty(example = "null", value = "{{{usuario_token_resposta_data_nascimento_descricao}}}")
   @JsonProperty("dataNascimento")
   public String getDataNascimento() {
     return dataNascimento;
@@ -99,14 +99,14 @@ public class UsuarioTokenResponse   {
 
   
   /**
-   * DDD do telefone do usu\u00E1rio
+   * {{{usuario_token_resposta_ddd_descricao}}}
    **/
   public UsuarioTokenResponse ddd(String ddd) {
     this.ddd = ddd;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "DDD do telefone do usu\u00E1rio")
+  @ApiModelProperty(example = "null", value = "{{{usuario_token_resposta_ddd_descricao}}}")
   @JsonProperty("ddd")
   public String getDdd() {
     return ddd;
@@ -117,14 +117,14 @@ public class UsuarioTokenResponse   {
 
   
   /**
-   * Email do usu\u00E1rio
+   * {{{usuario_token_resposta_email_descricao}}}
    **/
   public UsuarioTokenResponse email(String email) {
     this.email = email;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Email do usu\u00E1rio")
+  @ApiModelProperty(example = "null", value = "{{{usuario_token_resposta_email_descricao}}}")
   @JsonProperty("email")
   public String getEmail() {
     return email;
@@ -135,14 +135,14 @@ public class UsuarioTokenResponse   {
 
   
   /**
-   * N\u00FAmero do telefone do usu\u00E1rio
+   * {{{usuario_token_resposta_telefone_descricao}}}
    **/
   public UsuarioTokenResponse telefone(String telefone) {
     this.telefone = telefone;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00FAmero do telefone do usu\u00E1rio")
+  @ApiModelProperty(example = "null", value = "{{{usuario_token_resposta_telefone_descricao}}}")
   @JsonProperty("telefone")
   public String getTelefone() {
     return telefone;
@@ -153,14 +153,14 @@ public class UsuarioTokenResponse   {
 
   
   /**
-   * Token do usu\u00E1rio
+   * {{{usuario_token_resposta_token_descricao}}}
    **/
   public UsuarioTokenResponse token(String token) {
     this.token = token;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Token do usu\u00E1rio")
+  @ApiModelProperty(example = "null", value = "{{{usuario_token_resposta_token_descricao}}}")
   @JsonProperty("token")
   public String getToken() {
     return token;
@@ -171,14 +171,14 @@ public class UsuarioTokenResponse   {
 
   
   /**
-   * Validade do token
+   * {{{usuario_token_resposta_validade_descricao}}}
    **/
   public UsuarioTokenResponse validade(String validade) {
     this.validade = validade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Validade do token")
+  @ApiModelProperty(example = "null", value = "{{{usuario_token_resposta_validade_descricao}}}")
   @JsonProperty("validade")
   public String getValidade() {
     return validade;

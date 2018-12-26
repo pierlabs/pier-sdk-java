@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Retorno da lista de status de contestacao
+ * {{{status_contestacao_response_description}}}
  **/
 
-@ApiModel(description = "Retorno da lista de status de contestacao")
+@ApiModel(description = "{{{status_contestacao_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class StatusContestacaoResponse   {
   
@@ -20,14 +20,14 @@ public class StatusContestacaoResponse   {
 
   
   /**
-   * Id status da contesta\u00E7\u00E3o
+   * {{{status_contestacao_request_idstatuscontestacao_value}}}
    **/
   public StatusContestacaoResponse idStatusContestacao(Long idStatusContestacao) {
     this.idStatusContestacao = idStatusContestacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Id status da contesta\u00E7\u00E3o")
+  @ApiModelProperty(example = "null", value = "{{{status_contestacao_request_idstatuscontestacao_value}}}")
   @JsonProperty("idStatusContestacao")
   public Long getIdStatusContestacao() {
     return idStatusContestacao;
@@ -38,14 +38,14 @@ public class StatusContestacaoResponse   {
 
   
   /**
-   * Descri\u00E7\u00E3o da Constenta\u00E7\u00E3o
+   * {{{status_contestacao_response_descricao_value}}}
    **/
   public StatusContestacaoResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o da Constenta\u00E7\u00E3o")
+  @ApiModelProperty(example = "null", value = "{{{status_contestacao_response_descricao_value}}}")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;

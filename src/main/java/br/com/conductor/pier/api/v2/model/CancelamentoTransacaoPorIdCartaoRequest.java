@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * Objeto de Requisi\u00E7\u00E3o de Cancelamento de transa\u00E7\u00E3o por idCartao
+ * {{{cancelamento_transacao_por_id_cartao_request_description}}}
  **/
 
-@ApiModel(description = "Objeto de Requisi\u00E7\u00E3o de Cancelamento de transa\u00E7\u00E3o por idCartao")
+@ApiModel(description = "{{{cancelamento_transacao_por_id_cartao_request_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class CancelamentoTransacaoPorIdCartaoRequest   {
   
@@ -30,14 +30,14 @@ public class CancelamentoTransacaoPorIdCartaoRequest   {
 
   
   /**
-   * N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou
+   * {{{transacao_on_us_por_id_cartao_request_nsu_origem_value}}}
    **/
   public CancelamentoTransacaoPorIdCartaoRequest nsuOrigem(String nsuOrigem) {
     this.nsuOrigem = nsuOrigem;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou")
+  @ApiModelProperty(example = "null", required = true, value = "{{{transacao_on_us_por_id_cartao_request_nsu_origem_value}}}")
   @JsonProperty("nsuOrigem")
   public String getNsuOrigem() {
     return nsuOrigem;
@@ -48,14 +48,14 @@ public class CancelamentoTransacaoPorIdCartaoRequest   {
 
   
   /**
-   * N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema a ser cancelada
+   * {{{cancelamento_transacao_por_id_cartao_request_nsu_origem_transacao_cancelada_value}}}
    **/
   public CancelamentoTransacaoPorIdCartaoRequest nsuOrigemTransacaoCancelada(String nsuOrigemTransacaoCancelada) {
     this.nsuOrigemTransacaoCancelada = nsuOrigemTransacaoCancelada;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema a ser cancelada")
+  @ApiModelProperty(example = "null", required = true, value = "{{{cancelamento_transacao_por_id_cartao_request_nsu_origem_transacao_cancelada_value}}}")
   @JsonProperty("nsuOrigemTransacaoCancelada")
   public String getNsuOrigemTransacaoCancelada() {
     return nsuOrigemTransacaoCancelada;
@@ -66,14 +66,14 @@ public class CancelamentoTransacaoPorIdCartaoRequest   {
 
   
   /**
-   * C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o
+   * {{{transacao_on_us_por_id_cartao_request_codigo_processamento_value}}}
    **/
   public CancelamentoTransacaoPorIdCartaoRequest codigoProcessamento(String codigoProcessamento) {
     this.codigoProcessamento = codigoProcessamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o")
+  @ApiModelProperty(example = "null", required = true, value = "{{{transacao_on_us_por_id_cartao_request_codigo_processamento_value}}}")
   @JsonProperty("codigoProcessamento")
   public String getCodigoProcessamento() {
     return codigoProcessamento;
@@ -84,14 +84,14 @@ public class CancelamentoTransacaoPorIdCartaoRequest   {
 
   
   /**
-   * Apresenta a data e hora local da transa\u00E7\u00E3o a ser cancelada yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
+   * {{{cancelamento_transacao_por_id_cartao_request_data_hora_transacao_cancelada_value}}}
    **/
   public CancelamentoTransacaoPorIdCartaoRequest dataHoraTransacaoCancelada(String dataHoraTransacaoCancelada) {
     this.dataHoraTransacaoCancelada = dataHoraTransacaoCancelada;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Apresenta a data e hora local da transa\u00E7\u00E3o a ser cancelada yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00")
+  @ApiModelProperty(example = "null", required = true, value = "{{{cancelamento_transacao_por_id_cartao_request_data_hora_transacao_cancelada_value}}}")
   @JsonProperty("dataHoraTransacaoCancelada")
   public String getDataHoraTransacaoCancelada() {
     return dataHoraTransacaoCancelada;
@@ -102,14 +102,14 @@ public class CancelamentoTransacaoPorIdCartaoRequest   {
 
   
   /**
-   * N\u00FAmero Sequencial \u00DAnico do HOST que identifica a transa\u00E7\u00E3o no sistema que autorizou
+   * {{{cancelamento_transacao_por_id_cartao_request_nsu_autorizacao_transacao_cancelada_value}}}
    **/
   public CancelamentoTransacaoPorIdCartaoRequest nsuAutorizacaoTransacaoCancelada(String nsuAutorizacaoTransacaoCancelada) {
     this.nsuAutorizacaoTransacaoCancelada = nsuAutorizacaoTransacaoCancelada;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "N\u00FAmero Sequencial \u00DAnico do HOST que identifica a transa\u00E7\u00E3o no sistema que autorizou")
+  @ApiModelProperty(example = "null", required = true, value = "{{{cancelamento_transacao_por_id_cartao_request_nsu_autorizacao_transacao_cancelada_value}}}")
   @JsonProperty("nsuAutorizacaoTransacaoCancelada")
   public String getNsuAutorizacaoTransacaoCancelada() {
     return nsuAutorizacaoTransacaoCancelada;
@@ -120,14 +120,14 @@ public class CancelamentoTransacaoPorIdCartaoRequest   {
 
   
   /**
-   * Valor da transa\u00E7\u00E3o com duas casas decimais para os centavos
+   * {{{transacao_on_us_por_id_cartao_request_valor_transacao_value}}}
    **/
   public CancelamentoTransacaoPorIdCartaoRequest valorTransacao(BigDecimal valorTransacao) {
     this.valorTransacao = valorTransacao;
     return this;
   }
   
-  @ApiModelProperty(example = "10.25", required = true, value = "Valor da transa\u00E7\u00E3o com duas casas decimais para os centavos")
+  @ApiModelProperty(example = "10.25", required = true, value = "{{{transacao_on_us_por_id_cartao_request_valor_transacao_value}}}")
   @JsonProperty("valorTransacao")
   public BigDecimal getValorTransacao() {
     return valorTransacao;
@@ -138,14 +138,14 @@ public class CancelamentoTransacaoPorIdCartaoRequest   {
 
   
   /**
-   * N\u00FAmero do Estabelecimento (N\u00FAmero+DV)
+   * {{{transacao_on_us_por_id_cartao_request_numero_estabelecimento_value}}}
    **/
   public CancelamentoTransacaoPorIdCartaoRequest numeroEstabelecimento(Long numeroEstabelecimento) {
     this.numeroEstabelecimento = numeroEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "N\u00FAmero do Estabelecimento (N\u00FAmero+DV)")
+  @ApiModelProperty(example = "null", required = true, value = "{{{transacao_on_us_por_id_cartao_request_numero_estabelecimento_value}}}")
   @JsonProperty("numeroEstabelecimento")
   public Long getNumeroEstabelecimento() {
     return numeroEstabelecimento;
@@ -156,14 +156,14 @@ public class CancelamentoTransacaoPorIdCartaoRequest   {
 
   
   /**
-   * Nome do Estabelecimento
+   * {{{transacao_on_us_por_id_cartao_request_nome_estabelecimento_value}}}
    **/
   public CancelamentoTransacaoPorIdCartaoRequest nomeEstabelecimento(String nomeEstabelecimento) {
     this.nomeEstabelecimento = nomeEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome do Estabelecimento")
+  @ApiModelProperty(example = "null", value = "{{{transacao_on_us_por_id_cartao_request_nome_estabelecimento_value}}}")
   @JsonProperty("nomeEstabelecimento")
   public String getNomeEstabelecimento() {
     return nomeEstabelecimento;
@@ -174,14 +174,14 @@ public class CancelamentoTransacaoPorIdCartaoRequest   {
 
   
   /**
-   * Apresenta a data e hora local da consulta yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
+   * {{{transacao_on_us_por_id_cartao_request_data_hora_terminal_value}}}
    **/
   public CancelamentoTransacaoPorIdCartaoRequest dataHoraTerminal(String dataHoraTerminal) {
     this.dataHoraTerminal = dataHoraTerminal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Apresenta a data e hora local da consulta yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00")
+  @ApiModelProperty(example = "null", required = true, value = "{{{transacao_on_us_por_id_cartao_request_data_hora_terminal_value}}}")
   @JsonProperty("dataHoraTerminal")
   public String getDataHoraTerminal() {
     return dataHoraTerminal;
@@ -192,14 +192,14 @@ public class CancelamentoTransacaoPorIdCartaoRequest   {
 
   
   /**
-   * Apresenta a identifica\u00E7\u00E3o do terminal requisitante
+   * {{{transacao_on_us_por_id_cartao_request_terminal_requisitante_value}}}
    **/
   public CancelamentoTransacaoPorIdCartaoRequest terminalRequisitante(String terminalRequisitante) {
     this.terminalRequisitante = terminalRequisitante;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Apresenta a identifica\u00E7\u00E3o do terminal requisitante")
+  @ApiModelProperty(example = "null", required = true, value = "{{{transacao_on_us_por_id_cartao_request_terminal_requisitante_value}}}")
   @JsonProperty("terminalRequisitante")
   public String getTerminalRequisitante() {
     return terminalRequisitante;
@@ -210,14 +210,14 @@ public class CancelamentoTransacaoPorIdCartaoRequest   {
 
   
   /**
-   * N\u00FAmero de Parcelas
+   * {{{transacao_on_us_por_id_cartao_request_numero_parcelas_value}}}
    **/
   public CancelamentoTransacaoPorIdCartaoRequest numeroParcelas(Long numeroParcelas) {
     this.numeroParcelas = numeroParcelas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "N\u00FAmero de Parcelas")
+  @ApiModelProperty(example = "null", required = true, value = "{{{transacao_on_us_por_id_cartao_request_numero_parcelas_value}}}")
   @JsonProperty("numeroParcelas")
   public Long getNumeroParcelas() {
     return numeroParcelas;

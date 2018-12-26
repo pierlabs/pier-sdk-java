@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * Lista de auditorias dos status oportunidades
+ * {{{page_status_oportunidade_a_u_d_response_description}}}
  **/
 
-@ApiModel(description = "Lista de auditorias dos status oportunidades")
+@ApiModel(description = "{{{page_status_oportunidade_a_u_d_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageStatusOportunidadeAUDResponse   {
   

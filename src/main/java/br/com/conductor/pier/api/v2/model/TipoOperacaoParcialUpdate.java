@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Objeto tipo opera\u00E7\u00E3o com campos pass\u00EDveis de altera\u00E7\u00E3o
+ * {{{tipo_operacao_persist_description}}}
  **/
 
-@ApiModel(description = "Objeto tipo opera\u00E7\u00E3o com campos pass\u00EDveis de altera\u00E7\u00E3o")
+@ApiModel(description = "{{{tipo_operacao_persist_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TipoOperacaoParcialUpdate   {
   
@@ -19,14 +19,14 @@ public class TipoOperacaoParcialUpdate   {
 
   
   /**
-   * Flag que indica que a opera\u00E7\u00E3o deve utilizar a taxa da compra como taxa do rotativo para transa\u00E7\u00F5es desse tipo opera\u00E7\u00E3o
+   * {{{tipo_operacao_persist_flag_manter_taxa_juros_no_rotativo_value}}}
    **/
   public TipoOperacaoParcialUpdate flagManterTaxaJurosNoRotativo(Boolean flagManterTaxaJurosNoRotativo) {
     this.flagManterTaxaJurosNoRotativo = flagManterTaxaJurosNoRotativo;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Flag que indica que a opera\u00E7\u00E3o deve utilizar a taxa da compra como taxa do rotativo para transa\u00E7\u00F5es desse tipo opera\u00E7\u00E3o")
+  @ApiModelProperty(example = "false", value = "{{{tipo_operacao_persist_flag_manter_taxa_juros_no_rotativo_value}}}")
   @JsonProperty("flagManterTaxaJurosNoRotativo")
   public Boolean getFlagManterTaxaJurosNoRotativo() {
     return flagManterTaxaJurosNoRotativo;

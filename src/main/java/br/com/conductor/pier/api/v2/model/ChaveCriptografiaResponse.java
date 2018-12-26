@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Represeta o objeto resposta de Chave Criptografia
+ * {{{chave_criptografia_resposta_descricao}}}
  **/
 
-@ApiModel(description = "Represeta o objeto resposta de Chave Criptografia")
+@ApiModel(description = "{{{chave_criptografia_resposta_descricao}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ChaveCriptografiaResponse   {
   
@@ -19,14 +19,14 @@ public class ChaveCriptografiaResponse   {
 
   
   /**
-   * texto
+   * {{{chave_criptografia_resposta_texto_conteudo}}}
    **/
   public ChaveCriptografiaResponse conteudo(String conteudo) {
     this.conteudo = conteudo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "texto")
+  @ApiModelProperty(example = "null", value = "{{{chave_criptografia_resposta_texto_conteudo}}}")
   @JsonProperty("conteudo")
   public String getConteudo() {
     return conteudo;

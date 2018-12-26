@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * Classe de retorno das parcelas de acordo
+ * {{{parcela_acordo_response_description}}}
  **/
 
-@ApiModel(description = "Classe de retorno das parcelas de acordo")
+@ApiModel(description = "{{{parcela_acordo_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ParcelaAcordoResponse   {
   
@@ -27,14 +27,14 @@ public class ParcelaAcordoResponse   {
 
   
   /**
-   * C\u00F3digo identificador da parcela do acordo
+   * {{{parcela_acordo_response_id_value}}}
    **/
   public ParcelaAcordoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador da parcela do acordo")
+  @ApiModelProperty(example = "null", value = "{{{parcela_acordo_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -45,14 +45,14 @@ public class ParcelaAcordoResponse   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do acordo (Id)
+   * {{{parcela_acordo_response_id_acordo_value}}}
    **/
   public ParcelaAcordoResponse idAcordo(Long idAcordo) {
     this.idAcordo = idAcordo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do acordo (Id)")
+  @ApiModelProperty(example = "null", value = "{{{parcela_acordo_response_id_acordo_value}}}")
   @JsonProperty("idAcordo")
   public Long getIdAcordo() {
     return idAcordo;
@@ -63,14 +63,14 @@ public class ParcelaAcordoResponse   {
 
   
   /**
-   * N\u00FAmero da parcela
+   * {{{parcela_acordo_response_numero_parcela_value}}}
    **/
   public ParcelaAcordoResponse numeroParcela(Integer numeroParcela) {
     this.numeroParcela = numeroParcela;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00FAmero da parcela")
+  @ApiModelProperty(example = "null", value = "{{{parcela_acordo_response_numero_parcela_value}}}")
   @JsonProperty("numeroParcela")
   public Integer getNumeroParcela() {
     return numeroParcela;
@@ -81,14 +81,14 @@ public class ParcelaAcordoResponse   {
 
   
   /**
-   * Valor da parcela
+   * {{{parcela_acordo_response_valor_parcela_value}}}
    **/
   public ParcelaAcordoResponse valorParcela(BigDecimal valorParcela) {
     this.valorParcela = valorParcela;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor da parcela")
+  @ApiModelProperty(example = "null", value = "{{{parcela_acordo_response_valor_parcela_value}}}")
   @JsonProperty("valorParcela")
   public BigDecimal getValorParcela() {
     return valorParcela;
@@ -99,14 +99,14 @@ public class ParcelaAcordoResponse   {
 
   
   /**
-   * Data de vencimento da parcela
+   * {{{parcela_acordo_response_vencimento_parcela_value}}}
    **/
   public ParcelaAcordoResponse vencimentoParcela(String vencimentoParcela) {
     this.vencimentoParcela = vencimentoParcela;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data de vencimento da parcela")
+  @ApiModelProperty(example = "null", value = "{{{parcela_acordo_response_vencimento_parcela_value}}}")
   @JsonProperty("vencimentoParcela")
   public String getVencimentoParcela() {
     return vencimentoParcela;
@@ -117,14 +117,14 @@ public class ParcelaAcordoResponse   {
 
   
   /**
-   * Saldo da parcela
+   * {{{parcela_acordo_response_saldo_parcela_value}}}
    **/
   public ParcelaAcordoResponse saldoParcela(BigDecimal saldoParcela) {
     this.saldoParcela = saldoParcela;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Saldo da parcela")
+  @ApiModelProperty(example = "null", value = "{{{parcela_acordo_response_saldo_parcela_value}}}")
   @JsonProperty("saldoParcela")
   public BigDecimal getSaldoParcela() {
     return saldoParcela;
@@ -135,14 +135,14 @@ public class ParcelaAcordoResponse   {
 
   
   /**
-   * Nosso n\u00FAmero gerado por parcela
+   * {{{parcela_acordo_response_nosso_numero_value}}}
    **/
   public ParcelaAcordoResponse nossoNumero(String nossoNumero) {
     this.nossoNumero = nossoNumero;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nosso n\u00FAmero gerado por parcela")
+  @ApiModelProperty(example = "null", value = "{{{parcela_acordo_response_nosso_numero_value}}}")
   @JsonProperty("nossoNumero")
   public String getNossoNumero() {
     return nossoNumero;
@@ -153,14 +153,14 @@ public class ParcelaAcordoResponse   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do boleto
+   * {{{parcela_acordo_response_id_boleto_parcela_value}}}
    **/
   public ParcelaAcordoResponse idBoletoParcela(Long idBoletoParcela) {
     this.idBoletoParcela = idBoletoParcela;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do boleto")
+  @ApiModelProperty(example = "null", value = "{{{parcela_acordo_response_id_boleto_parcela_value}}}")
   @JsonProperty("idBoletoParcela")
   public Long getIdBoletoParcela() {
     return idBoletoParcela;

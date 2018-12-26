@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Objeto SMS
+ * {{{sms_envio_response_description}}}
  **/
 
-@ApiModel(description = "Objeto SMS")
+@ApiModel(description = "{{{sms_envio_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class SMSEnvioResponse   {
   
@@ -26,14 +26,14 @@ public class SMSEnvioResponse   {
 
   
   /**
-   * C\u00F3digo identificador
+   * {{{sms_envio_response_id_value}}}
    **/
   public SMSEnvioResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador")
+  @ApiModelProperty(example = "null", value = "{{{sms_envio_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -44,14 +44,14 @@ public class SMSEnvioResponse   {
 
   
   /**
-   * Status do SMS
+   * {{{sms_envio_response_status_value}}}
    **/
   public SMSEnvioResponse status(String status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Status do SMS")
+  @ApiModelProperty(example = "null", value = "{{{sms_envio_response_status_value}}}")
   @JsonProperty("status")
   public String getStatus() {
     return status;
@@ -62,14 +62,14 @@ public class SMSEnvioResponse   {
 
   
   /**
-   * identificador da conta
+   * {{{sms_envio_response_id_conta_value}}}
    **/
   public SMSEnvioResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "identificador da conta")
+  @ApiModelProperty(example = "null", value = "{{{sms_envio_response_id_conta_value}}}")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -80,14 +80,14 @@ public class SMSEnvioResponse   {
 
   
   /**
-   * N\u00FAmero do celular
+   * {{{sms_envio_response_celular_value}}}
    **/
   public SMSEnvioResponse celular(String celular) {
     this.celular = celular;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00FAmero do celular")
+  @ApiModelProperty(example = "null", value = "{{{sms_envio_response_celular_value}}}")
   @JsonProperty("celular")
   public String getCelular() {
     return celular;
@@ -98,14 +98,14 @@ public class SMSEnvioResponse   {
 
   
   /**
-   * Conte\u00FAdo da mensagem
+   * {{{sms_envio_response_conteudo_value}}}
    **/
   public SMSEnvioResponse conteudo(String conteudo) {
     this.conteudo = conteudo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Conte\u00FAdo da mensagem")
+  @ApiModelProperty(example = "null", value = "{{{sms_envio_response_conteudo_value}}}")
   @JsonProperty("conteudo")
   public String getConteudo() {
     return conteudo;
@@ -116,14 +116,14 @@ public class SMSEnvioResponse   {
 
   
   /**
-   * N\u00FAmero de tentativas de envio
+   * {{{sms_envio_response_quantidade_tentativas_envio_value}}}
    **/
   public SMSEnvioResponse quantidadeTentativasEnvio(Integer quantidadeTentativasEnvio) {
     this.quantidadeTentativasEnvio = quantidadeTentativasEnvio;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00FAmero de tentativas de envio")
+  @ApiModelProperty(example = "null", value = "{{{sms_envio_response_quantidade_tentativas_envio_value}}}")
   @JsonProperty("quantidadeTentativasEnvio")
   public Integer getQuantidadeTentativasEnvio() {
     return quantidadeTentativasEnvio;
@@ -134,14 +134,14 @@ public class SMSEnvioResponse   {
 
   
   /**
-   * Data de Inclus\u00E3o
+   * {{{s_m_s_envio_response_data_inclusao_value}}}
    **/
   public SMSEnvioResponse dataInclusao(String dataInclusao) {
     this.dataInclusao = dataInclusao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data de Inclus\u00E3o")
+  @ApiModelProperty(example = "null", value = "{{{s_m_s_envio_response_data_inclusao_value}}}")
   @JsonProperty("dataInclusao")
   public String getDataInclusao() {
     return dataInclusao;
@@ -152,14 +152,14 @@ public class SMSEnvioResponse   {
 
   
   /**
-   * CPF do cliente referente ao SMS enviado
+   * {{{sms_envio_response_cpf_value}}}
    **/
   public SMSEnvioResponse cpf(String cpf) {
     this.cpf = cpf;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "CPF do cliente referente ao SMS enviado")
+  @ApiModelProperty(example = "null", value = "{{{sms_envio_response_cpf_value}}}")
   @JsonProperty("cpf")
   public String getCpf() {
     return cpf;

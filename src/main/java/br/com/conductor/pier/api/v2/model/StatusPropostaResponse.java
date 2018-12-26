@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representa\u00E7\u00E3o da resposta do servi\u00E7o de status da proposta
+ * {{{status_proposta_response_description}}}
  **/
 
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta do servi\u00E7o de status da proposta")
+@ApiModel(description = "{{{status_proposta_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class StatusPropostaResponse   {
   
@@ -22,14 +22,14 @@ public class StatusPropostaResponse   {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do status da proposta (id)
+   * {{{status_proposta_response_id_value}}}
    **/
   public StatusPropostaResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do status da proposta (id)")
+  @ApiModelProperty(example = "null", value = "{{{status_proposta_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -40,14 +40,14 @@ public class StatusPropostaResponse   {
 
   
   /**
-   * Status da proposta
+   * {{{status_proposta_response_status_value}}}
    **/
   public StatusPropostaResponse status(Integer status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Status da proposta")
+  @ApiModelProperty(example = "null", value = "{{{status_proposta_response_status_value}}}")
   @JsonProperty("status")
   public Integer getStatus() {
     return status;
@@ -58,14 +58,14 @@ public class StatusPropostaResponse   {
 
   
   /**
-   * Descri\u00E7\u00E3o da proposta
+   * {{{status_proposta_response_descricao_value}}}
    **/
   public StatusPropostaResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o da proposta")
+  @ApiModelProperty(example = "null", value = "{{{status_proposta_response_descricao_value}}}")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -76,14 +76,14 @@ public class StatusPropostaResponse   {
 
   
   /**
-   * Flag que permite a altera\u00E7\u00E3o do status da proposta
+   * {{{status_proposta_response_flag_permite_alteracao_value}}}
    **/
   public StatusPropostaResponse flagPermiteAlteracao(Boolean flagPermiteAlteracao) {
     this.flagPermiteAlteracao = flagPermiteAlteracao;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Flag que permite a altera\u00E7\u00E3o do status da proposta")
+  @ApiModelProperty(example = "false", value = "{{{status_proposta_response_flag_permite_alteracao_value}}}")
   @JsonProperty("flagPermiteAlteracao")
   public Boolean getFlagPermiteAlteracao() {
     return flagPermiteAlteracao;

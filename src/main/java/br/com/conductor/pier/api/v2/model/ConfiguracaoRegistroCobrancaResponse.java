@@ -9,10 +9,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representa\u00E7\u00E3o da resposta do recurso de configura\u00E7\u00E3o de registro de cobran\u00E7a
+ * {{{configuracao_registro_cobranca_response_description}}}
  **/
 
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de configura\u00E7\u00E3o de registro de cobran\u00E7a")
+@ApiModel(description = "{{{configuracao_registro_cobranca_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ConfiguracaoRegistroCobrancaResponse   {
   
@@ -94,14 +94,14 @@ public class ConfiguracaoRegistroCobrancaResponse   {
 
   
   /**
-   * C\u00F3digo identificador da configura\u00E7\u00E3o
+   * {{{configuracao_registro_cobranca_response_id_value}}}
    **/
   public ConfiguracaoRegistroCobrancaResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador da configura\u00E7\u00E3o")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_registro_cobranca_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -112,14 +112,14 @@ public class ConfiguracaoRegistroCobrancaResponse   {
 
   
   /**
-   * C\u00F3digo do emissor
+   * {{{configuracao_registro_cobranca_response_id_emissor_value}}}
    **/
   public ConfiguracaoRegistroCobrancaResponse idEmissor(Long idEmissor) {
     this.idEmissor = idEmissor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo do emissor")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_registro_cobranca_response_id_emissor_value}}}")
   @JsonProperty("idEmissor")
   public Long getIdEmissor() {
     return idEmissor;
@@ -130,14 +130,14 @@ public class ConfiguracaoRegistroCobrancaResponse   {
 
   
   /**
-   * C\u00F3digo do Banco
+   * {{{configuracao_registro_cobranca_response_codigo_banco_value}}}
    **/
   public ConfiguracaoRegistroCobrancaResponse codigoBanco(Long codigoBanco) {
     this.codigoBanco = codigoBanco;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo do Banco")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_registro_cobranca_response_codigo_banco_value}}}")
   @JsonProperty("codigoBanco")
   public Long getCodigoBanco() {
     return codigoBanco;
@@ -148,14 +148,14 @@ public class ConfiguracaoRegistroCobrancaResponse   {
 
   
   /**
-   * URL de acesso ao banco
+   * {{{configuracao_registro_cobranca_response_uri_value}}}
    **/
   public ConfiguracaoRegistroCobrancaResponse uri(String uri) {
     this.uri = uri;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "URL de acesso ao banco")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_registro_cobranca_response_uri_value}}}")
   @JsonProperty("uri")
   public String getUri() {
     return uri;
@@ -166,14 +166,14 @@ public class ConfiguracaoRegistroCobrancaResponse   {
 
   
   /**
-   * Caminho do certificado digital do emissor
+   * {{{configuracao_registro_cobranca_response_key_store_name_value}}}
    **/
   public ConfiguracaoRegistroCobrancaResponse keyStoreName(String keyStoreName) {
     this.keyStoreName = keyStoreName;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Caminho do certificado digital do emissor")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_registro_cobranca_response_key_store_name_value}}}")
   @JsonProperty("keyStoreName")
   public String getKeyStoreName() {
     return keyStoreName;
@@ -184,14 +184,14 @@ public class ConfiguracaoRegistroCobrancaResponse   {
 
   
   /**
-   * Senha do certificado digital do emissor
+   * {{{configuracao_registro_cobranca_response_key_store_password_value}}}
    **/
   public ConfiguracaoRegistroCobrancaResponse keyStorePassword(String keyStorePassword) {
     this.keyStorePassword = keyStorePassword;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Senha do certificado digital do emissor")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_registro_cobranca_response_key_store_password_value}}}")
   @JsonProperty("keyStorePassword")
   public String getKeyStorePassword() {
     return keyStorePassword;
@@ -202,14 +202,14 @@ public class ConfiguracaoRegistroCobrancaResponse   {
 
   
   /**
-   * Alias do certificado digital do emissor
+   * {{{configuracao_registro_cobranca_response_keystore_alias_value}}}
    **/
   public ConfiguracaoRegistroCobrancaResponse keystoreAlias(String keystoreAlias) {
     this.keystoreAlias = keystoreAlias;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Alias do certificado digital do emissor")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_registro_cobranca_response_keystore_alias_value}}}")
   @JsonProperty("keystoreAlias")
   public String getKeystoreAlias() {
     return keystoreAlias;
@@ -220,14 +220,14 @@ public class ConfiguracaoRegistroCobrancaResponse   {
 
   
   /**
-   * Senha da chave privada do certificado digital do emissor
+   * {{{configuracao_registro_cobranca_response_key_store_private_key_password_value}}}
    **/
   public ConfiguracaoRegistroCobrancaResponse keyStorePrivateKeyPassword(String keyStorePrivateKeyPassword) {
     this.keyStorePrivateKeyPassword = keyStorePrivateKeyPassword;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Senha da chave privada do certificado digital do emissor")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_registro_cobranca_response_key_store_private_key_password_value}}}")
   @JsonProperty("keyStorePrivateKeyPassword")
   public String getKeyStorePrivateKeyPassword() {
     return keyStorePrivateKeyPassword;
@@ -238,14 +238,14 @@ public class ConfiguracaoRegistroCobrancaResponse   {
 
   
   /**
-   * Tipo do certificado digital do emissor
+   * {{{configuracao_registro_cobranca_response_type_keystore_value}}}
    **/
   public ConfiguracaoRegistroCobrancaResponse typeKeystore(String typeKeystore) {
     this.typeKeystore = typeKeystore;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Tipo do certificado digital do emissor")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_registro_cobranca_response_type_keystore_value}}}")
   @JsonProperty("typeKeystore")
   public String getTypeKeystore() {
     return typeKeystore;
@@ -256,14 +256,14 @@ public class ConfiguracaoRegistroCobrancaResponse   {
 
   
   /**
-   * Caminho do certificado digital do banco
+   * {{{configuracao_registro_cobranca_response_trust_store_name_value}}}
    **/
   public ConfiguracaoRegistroCobrancaResponse trustStoreName(String trustStoreName) {
     this.trustStoreName = trustStoreName;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Caminho do certificado digital do banco")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_registro_cobranca_response_trust_store_name_value}}}")
   @JsonProperty("trustStoreName")
   public String getTrustStoreName() {
     return trustStoreName;
@@ -274,14 +274,14 @@ public class ConfiguracaoRegistroCobrancaResponse   {
 
   
   /**
-   * Senha do certificado digital do banco
+   * {{{configuracao_registro_cobranca_response_trust_store_password_value}}}
    **/
   public ConfiguracaoRegistroCobrancaResponse trustStorePassword(String trustStorePassword) {
     this.trustStorePassword = trustStorePassword;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Senha do certificado digital do banco")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_registro_cobranca_response_trust_store_password_value}}}")
   @JsonProperty("trustStorePassword")
   public String getTrustStorePassword() {
     return trustStorePassword;
@@ -292,14 +292,14 @@ public class ConfiguracaoRegistroCobrancaResponse   {
 
   
   /**
-   * Alias do certificado digital do banco
+   * {{{configuracao_registro_cobranca_response_truststore_alias_value}}}
    **/
   public ConfiguracaoRegistroCobrancaResponse truststoreAlias(String truststoreAlias) {
     this.truststoreAlias = truststoreAlias;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Alias do certificado digital do banco")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_registro_cobranca_response_truststore_alias_value}}}")
   @JsonProperty("truststoreAlias")
   public String getTruststoreAlias() {
     return truststoreAlias;
@@ -310,14 +310,14 @@ public class ConfiguracaoRegistroCobrancaResponse   {
 
   
   /**
-   * Tipo do certificado digital do banco
+   * {{{configuracao_registro_cobranca_response_type_truststore_value}}}
    **/
   public ConfiguracaoRegistroCobrancaResponse typeTruststore(String typeTruststore) {
     this.typeTruststore = typeTruststore;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Tipo do certificado digital do banco")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_registro_cobranca_response_type_truststore_value}}}")
   @JsonProperty("typeTruststore")
   public String getTypeTruststore() {
     return typeTruststore;
@@ -328,14 +328,14 @@ public class ConfiguracaoRegistroCobrancaResponse   {
 
   
   /**
-   * URL adicional de acesso ao banco
+   * {{{configuracao_registro_cobranca_response_uri_adicional_value}}}
    **/
   public ConfiguracaoRegistroCobrancaResponse uriAdicional(String uriAdicional) {
     this.uriAdicional = uriAdicional;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "URL adicional de acesso ao banco")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_registro_cobranca_response_uri_adicional_value}}}")
   @JsonProperty("uriAdicional")
   public String getUriAdicional() {
     return uriAdicional;
@@ -346,14 +346,14 @@ public class ConfiguracaoRegistroCobrancaResponse   {
 
   
   /**
-   * Status indicador se a configura\u00E7\u00E3o est\u00E1 ativa
+   * {{{configuracao_registro_cobranca_response_status_value}}}
    **/
   public ConfiguracaoRegistroCobrancaResponse status(StatusEnum status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Status indicador se a configura\u00E7\u00E3o est\u00E1 ativa")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_registro_cobranca_response_status_value}}}")
   @JsonProperty("status")
   public StatusEnum getStatus() {
     return status;
@@ -364,14 +364,14 @@ public class ConfiguracaoRegistroCobrancaResponse   {
 
   
   /**
-   * Secret utilizado para recupera\u00E7\u00E3o de Token. Utilizado para registros junto ao Banco do Brasil
+   * {{{configuracao_registro_cobranca_persist_secret_value}}}
    **/
   public ConfiguracaoRegistroCobrancaResponse secret(SecretEnum secret) {
     this.secret = secret;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Secret utilizado para recupera\u00E7\u00E3o de Token. Utilizado para registros junto ao Banco do Brasil")
+  @ApiModelProperty(example = "null", required = true, value = "{{{configuracao_registro_cobranca_persist_secret_value}}}")
   @JsonProperty("secret")
   public SecretEnum getSecret() {
     return secret;
@@ -382,14 +382,14 @@ public class ConfiguracaoRegistroCobrancaResponse   {
 
   
   /**
-   * ClientID utilizado para recupera\u00E7\u00E3o de Token. Utilizado para registros junto ao Banco do Brasil
+   * {{{configuracao_registro_cobranca_persist_client_id_value}}}
    **/
   public ConfiguracaoRegistroCobrancaResponse clientID(ClientIDEnum clientID) {
     this.clientID = clientID;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "ClientID utilizado para recupera\u00E7\u00E3o de Token. Utilizado para registros junto ao Banco do Brasil")
+  @ApiModelProperty(example = "null", required = true, value = "{{{configuracao_registro_cobranca_persist_client_id_value}}}")
   @JsonProperty("clientID")
   public ClientIDEnum getClientID() {
     return clientID;
@@ -400,14 +400,14 @@ public class ConfiguracaoRegistroCobrancaResponse   {
 
   
   /**
-   * Chave utilizado para recupera\u00E7\u00E3o de Token. Utilizado para registros junto ao Banco do Brasil
+   * {{{configuracao_registro_cobranca_persist_chave_value}}}
    **/
   public ConfiguracaoRegistroCobrancaResponse chave(String chave) {
     this.chave = chave;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Chave utilizado para recupera\u00E7\u00E3o de Token. Utilizado para registros junto ao Banco do Brasil")
+  @ApiModelProperty(example = "null", value = "{{{configuracao_registro_cobranca_persist_chave_value}}}")
   @JsonProperty("chave")
   public String getChave() {
     return chave;

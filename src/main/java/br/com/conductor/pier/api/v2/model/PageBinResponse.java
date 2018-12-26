@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * Page bin
+ * {{{page_bin_response_description}}}
  **/
 
-@ApiModel(description = "Page bin")
+@ApiModel(description = "{{{page_bin_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageBinResponse   {
   

@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Objeto de resposta para ades\u00E3o de pagamento no s\u00E1bado
+ * {{{adesao_pagamento_sabado_resposta_descricao}}}
  **/
 
-@ApiModel(description = "Objeto de resposta para ades\u00E3o de pagamento no s\u00E1bado")
+@ApiModel(description = "{{{adesao_pagamento_sabado_resposta_descricao}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class AdesaoPagamentoSabadoResponse   {
   
@@ -22,14 +22,14 @@ public class AdesaoPagamentoSabadoResponse   {
 
   
   /**
-   * Data do cadastro da ades\u00E3o
+   * {{{adesao_pagamento_sabado_resposta_data_cadastro_descricao}}}
    **/
   public AdesaoPagamentoSabadoResponse dataCadastro(String dataCadastro) {
     this.dataCadastro = dataCadastro;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ", value = "Data do cadastro da ades\u00E3o")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ", value = "{{{adesao_pagamento_sabado_resposta_data_cadastro_descricao}}}")
   @JsonProperty("dataCadastro")
   public String getDataCadastro() {
     return dataCadastro;
@@ -40,14 +40,14 @@ public class AdesaoPagamentoSabadoResponse   {
 
   
   /**
-   * Data de vencimento para ades\u00E3o
+   * {{{adesao_pagamento_sabado_resposta_data_vencimento_descricao}}}
    **/
   public AdesaoPagamentoSabadoResponse dataVencimento(String dataVencimento) {
     this.dataVencimento = dataVencimento;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd", value = "Data de vencimento para ades\u00E3o")
+  @ApiModelProperty(example = "yyyy-MM-dd", value = "{{{adesao_pagamento_sabado_resposta_data_vencimento_descricao}}}")
   @JsonProperty("dataVencimento")
   public String getDataVencimento() {
     return dataVencimento;
@@ -58,14 +58,14 @@ public class AdesaoPagamentoSabadoResponse   {
 
   
   /**
-   * Id do registro de ades\u00E3o
+   * {{{adesao_pagamento_sabado_resposta_id_descricao}}}
    **/
   public AdesaoPagamentoSabadoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Id do registro de ades\u00E3o")
+  @ApiModelProperty(example = "null", value = "{{{adesao_pagamento_sabado_resposta_id_descricao}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -76,14 +76,14 @@ public class AdesaoPagamentoSabadoResponse   {
 
   
   /**
-   * Id da conta
+   * {{{adesao_pagamento_sabado_resposta_id_conta_descricao}}}
    **/
   public AdesaoPagamentoSabadoResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Id da conta")
+  @ApiModelProperty(example = "null", value = "{{{adesao_pagamento_sabado_resposta_id_conta_descricao}}}")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;

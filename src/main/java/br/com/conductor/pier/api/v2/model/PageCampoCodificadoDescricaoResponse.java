@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * Lista de Campos Codificados
+ * {{{page_campo_codificado_descricao_response_description}}}
  **/
 
-@ApiModel(description = "Lista de Campos Codificados")
+@ApiModel(description = "{{{page_campo_codificado_descricao_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageCampoCodificadoDescricaoResponse   {
   

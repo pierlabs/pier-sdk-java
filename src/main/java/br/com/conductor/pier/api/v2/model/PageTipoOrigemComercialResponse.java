@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * Listar tipos de origens comerciais
+ * {{{page_tipo_origem_comercial_response_description}}}
  **/
 
-@ApiModel(description = "Listar tipos de origens comerciais")
+@ApiModel(description = "{{{page_tipo_origem_comercial_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageTipoOrigemComercialResponse   {
   

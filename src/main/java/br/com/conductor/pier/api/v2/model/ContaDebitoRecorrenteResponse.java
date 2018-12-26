@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representa\u00E7\u00E3o de resposta do recurso de Conta Debito Recorrente
+ * {{{conta_debito_recorrente_response_description}}}
  **/
 
-@ApiModel(description = "Representa\u00E7\u00E3o de resposta do recurso de Conta Debito Recorrente")
+@ApiModel(description = "{{{conta_debito_recorrente_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ContaDebitoRecorrenteResponse   {
   
@@ -30,14 +30,14 @@ public class ContaDebitoRecorrenteResponse   {
 
   
   /**
-   * Identifica se o d\u00E9bito recorrente est\u00E1 ativo
+   * {{{conta_debito_recorrente_response_ativo_value}}}
    **/
   public ContaDebitoRecorrenteResponse ativo(Boolean ativo) {
     this.ativo = ativo;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Identifica se o d\u00E9bito recorrente est\u00E1 ativo")
+  @ApiModelProperty(example = "false", value = "{{{conta_debito_recorrente_response_ativo_value}}}")
   @JsonProperty("ativo")
   public Boolean getAtivo() {
     return ativo;
@@ -48,14 +48,14 @@ public class ContaDebitoRecorrenteResponse   {
 
   
   /**
-   * Data fim do d\u00E9bito recorrente
+   * {{{conta_debito_recorrente_response_data_hora_fim_value}}}
    **/
   public ContaDebitoRecorrenteResponse dataHoraFim(String dataHoraFim) {
     this.dataHoraFim = dataHoraFim;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data fim do d\u00E9bito recorrente")
+  @ApiModelProperty(example = "null", value = "{{{conta_debito_recorrente_response_data_hora_fim_value}}}")
   @JsonProperty("dataHoraFim")
   public String getDataHoraFim() {
     return dataHoraFim;
@@ -66,14 +66,14 @@ public class ContaDebitoRecorrenteResponse   {
 
   
   /**
-   * Data inicio do d\u00E9bito recorrente
+   * {{{conta_debito_recorrente_response_data_hora_inicio_value}}}
    **/
   public ContaDebitoRecorrenteResponse dataHoraInicio(String dataHoraInicio) {
     this.dataHoraInicio = dataHoraInicio;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data inicio do d\u00E9bito recorrente")
+  @ApiModelProperty(example = "null", value = "{{{conta_debito_recorrente_response_data_hora_inicio_value}}}")
   @JsonProperty("dataHoraInicio")
   public String getDataHoraInicio() {
     return dataHoraInicio;
@@ -84,14 +84,14 @@ public class ContaDebitoRecorrenteResponse   {
 
   
   /**
-   * Data do \u00FAltimo pagamento efetuado
+   * {{{conta_debito_recorrente_response_data_hora_ultimo_pagamento_value}}}
    **/
   public ContaDebitoRecorrenteResponse dataHoraUltimoPagamento(String dataHoraUltimoPagamento) {
     this.dataHoraUltimoPagamento = dataHoraUltimoPagamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data do \u00FAltimo pagamento efetuado")
+  @ApiModelProperty(example = "null", value = "{{{conta_debito_recorrente_response_data_hora_ultimo_pagamento_value}}}")
   @JsonProperty("dataHoraUltimoPagamento")
   public String getDataHoraUltimoPagamento() {
     return dataHoraUltimoPagamento;
@@ -102,14 +102,14 @@ public class ContaDebitoRecorrenteResponse   {
 
   
   /**
-   * Descri\u00E7\u00E3o do tipo de d\u00E9bito recorrente
+   * {{{conta_debito_recorrente_response_descricao_value}}}
    **/
   public ContaDebitoRecorrenteResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do tipo de d\u00E9bito recorrente")
+  @ApiModelProperty(example = "null", value = "{{{conta_debito_recorrente_response_descricao_value}}}")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -120,14 +120,14 @@ public class ContaDebitoRecorrenteResponse   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da Conta (id)
+   * {{{conta_debito_recorrente_response_id_conta_value}}}
    **/
   public ContaDebitoRecorrenteResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o da Conta (id)")
+  @ApiModelProperty(example = "null", value = "{{{conta_debito_recorrente_response_id_conta_value}}}")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -138,14 +138,14 @@ public class ContaDebitoRecorrenteResponse   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da ContaDebitoRecorrente (id)
+   * {{{conta_debito_recorrente_response_id_conta_debito_recorrente_value}}}
    **/
   public ContaDebitoRecorrenteResponse idContaDebitoRecorrente(Long idContaDebitoRecorrente) {
     this.idContaDebitoRecorrente = idContaDebitoRecorrente;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o da ContaDebitoRecorrente (id)")
+  @ApiModelProperty(example = "null", value = "{{{conta_debito_recorrente_response_id_conta_debito_recorrente_value}}}")
   @JsonProperty("idContaDebitoRecorrente")
   public Long getIdContaDebitoRecorrente() {
     return idContaDebitoRecorrente;
@@ -156,14 +156,14 @@ public class ContaDebitoRecorrenteResponse   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de d\u00E9bito recorrente (id)
+   * {{{conta_debito_recorrente_response_id_tipo_debito_recorrente_value}}}
    **/
   public ContaDebitoRecorrenteResponse idTipoDebitoRecorrente(Long idTipoDebitoRecorrente) {
     this.idTipoDebitoRecorrente = idTipoDebitoRecorrente;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo de d\u00E9bito recorrente (id)")
+  @ApiModelProperty(example = "null", value = "{{{conta_debito_recorrente_response_id_tipo_debito_recorrente_value}}}")
   @JsonProperty("idTipoDebitoRecorrente")
   public Long getIdTipoDebitoRecorrente() {
     return idTipoDebitoRecorrente;
@@ -174,14 +174,14 @@ public class ContaDebitoRecorrenteResponse   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do usu\u00E1rio logado no sistema (id)
+   * {{{conta_debito_recorrente_response_id_usuario_value}}}
    **/
   public ContaDebitoRecorrenteResponse idUsuario(Long idUsuario) {
     this.idUsuario = idUsuario;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do usu\u00E1rio logado no sistema (id)")
+  @ApiModelProperty(example = "null", value = "{{{conta_debito_recorrente_response_id_usuario_value}}}")
   @JsonProperty("idUsuario")
   public Long getIdUsuario() {
     return idUsuario;
@@ -192,14 +192,14 @@ public class ContaDebitoRecorrenteResponse   {
 
   
   /**
-   * Login do usu\u00E1rio logado do sistema
+   * {{{conta_debito_recorrente_response_id_login_value}}}
    **/
   public ContaDebitoRecorrenteResponse login(String login) {
     this.login = login;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Login do usu\u00E1rio logado do sistema")
+  @ApiModelProperty(example = "null", value = "{{{conta_debito_recorrente_response_id_login_value}}}")
   @JsonProperty("login")
   public String getLogin() {
     return login;
@@ -210,14 +210,14 @@ public class ContaDebitoRecorrenteResponse   {
 
   
   /**
-   * Numero de parcelas do d\u00E9bito recorrente
+   * {{{conta_debito_recorrente_response_num_parcelas_value}}}
    **/
   public ContaDebitoRecorrenteResponse numeroParcelas(Integer numeroParcelas) {
     this.numeroParcelas = numeroParcelas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Numero de parcelas do d\u00E9bito recorrente")
+  @ApiModelProperty(example = "null", value = "{{{conta_debito_recorrente_response_num_parcelas_value}}}")
   @JsonProperty("numeroParcelas")
   public Integer getNumeroParcelas() {
     return numeroParcelas;
@@ -228,14 +228,14 @@ public class ContaDebitoRecorrenteResponse   {
 
   
   /**
-   * Origem de onde foi feita a modifica\u00E7\u00E3o do registro
+   * {{{conta_debito_recorrente_response_origem_value}}}
    **/
   public ContaDebitoRecorrenteResponse origem(String origem) {
     this.origem = origem;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Origem de onde foi feita a modifica\u00E7\u00E3o do registro")
+  @ApiModelProperty(example = "null", value = "{{{conta_debito_recorrente_response_origem_value}}}")
   @JsonProperty("origem")
   public String getOrigem() {
     return origem;

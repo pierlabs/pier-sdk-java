@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representa\u00E7\u00E3o do recurso validar c\u00F3digo de seguran\u00E7a
+ * {{{codigo_seguranca_s_m_s_request_description}}}
  **/
 
-@ApiModel(description = "Representa\u00E7\u00E3o do recurso validar c\u00F3digo de seguran\u00E7a")
+@ApiModel(description = "{{{codigo_seguranca_s_m_s_request_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class CodigoSegurancaSMSRequest   {
   
@@ -21,14 +21,14 @@ public class CodigoSegurancaSMSRequest   {
 
   
   /**
-   * DDD
+   * {{{codigo_seguranca_s_m_s_request_ddd_value}}}
    **/
   public CodigoSegurancaSMSRequest ddd(String ddd) {
     this.ddd = ddd;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "DDD")
+  @ApiModelProperty(example = "null", value = "{{{codigo_seguranca_s_m_s_request_ddd_value}}}")
   @JsonProperty("ddd")
   public String getDdd() {
     return ddd;
@@ -39,14 +39,14 @@ public class CodigoSegurancaSMSRequest   {
 
   
   /**
-   * Telefone n\u00FAmero
+   * {{{codigo_seguranca_s_m_s_request_telefone_value}}}
    **/
   public CodigoSegurancaSMSRequest telefone(String telefone) {
     this.telefone = telefone;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Telefone n\u00FAmero")
+  @ApiModelProperty(example = "null", value = "{{{codigo_seguranca_s_m_s_request_telefone_value}}}")
   @JsonProperty("telefone")
   public String getTelefone() {
     return telefone;
@@ -57,14 +57,14 @@ public class CodigoSegurancaSMSRequest   {
 
   
   /**
-   * Token para valida\u00E7\u00E3o
+   * {{{codigo_seguranca_s_m_s_request_codigo_seguranca_value}}}
    **/
   public CodigoSegurancaSMSRequest codigoSeguranca(String codigoSeguranca) {
     this.codigoSeguranca = codigoSeguranca;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Token para valida\u00E7\u00E3o")
+  @ApiModelProperty(example = "null", value = "{{{codigo_seguranca_s_m_s_request_codigo_seguranca_value}}}")
   @JsonProperty("codigoSeguranca")
   public String getCodigoSeguranca() {
     return codigoSeguranca;

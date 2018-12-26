@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representa\u00E7\u00E3o do detalhe da resposta do recurso Oportunidades
+ * {{{detalhe_oportunidade_response_description}}}
  **/
 
-@ApiModel(description = "Representa\u00E7\u00E3o do detalhe da resposta do recurso Oportunidades")
+@ApiModel(description = "{{{detalhe_oportunidade_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class DetalheOportunidadeResponse   {
   
@@ -21,14 +21,14 @@ public class DetalheOportunidadeResponse   {
 
   
   /**
-   * C\u00F3digo identificador do detalhe
+   * {{{detalhe_oportunidade_response_id_value}}}
    **/
   public DetalheOportunidadeResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador do detalhe")
+  @ApiModelProperty(example = "null", value = "{{{detalhe_oportunidade_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -39,14 +39,14 @@ public class DetalheOportunidadeResponse   {
 
   
   /**
-   * Nome do conte\u00FAdo
+   * {{{detalhe_oportunidade_response_nome_campo_value}}}
    **/
   public DetalheOportunidadeResponse nomeCampo(String nomeCampo) {
     this.nomeCampo = nomeCampo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome do conte\u00FAdo")
+  @ApiModelProperty(example = "null", value = "{{{detalhe_oportunidade_response_nome_campo_value}}}")
   @JsonProperty("nomeCampo")
   public String getNomeCampo() {
     return nomeCampo;
@@ -57,14 +57,14 @@ public class DetalheOportunidadeResponse   {
 
   
   /**
-   * Conte\u00FAdo do detalhe
+   * {{{detalhe_oportunidade_response_conteudo_value}}}
    **/
   public DetalheOportunidadeResponse conteudo(String conteudo) {
     this.conteudo = conteudo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Conte\u00FAdo do detalhe")
+  @ApiModelProperty(example = "null", value = "{{{detalhe_oportunidade_response_conteudo_value}}}")
   @JsonProperty("conteudo")
   public String getConteudo() {
     return conteudo;

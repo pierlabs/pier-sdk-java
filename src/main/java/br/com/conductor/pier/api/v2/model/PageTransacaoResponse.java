@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * Lista de transa\u00E7\u00F5es de uma conta
+ * {{{page_transacao_response_description}}}
  **/
 
-@ApiModel(description = "Lista de transa\u00E7\u00F5es de uma conta")
+@ApiModel(description = "{{{page_transacao_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageTransacaoResponse   {
   

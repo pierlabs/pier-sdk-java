@@ -9,10 +9,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Objeto de resposta para ades\u00E3o servi\u00E7os
+ * {{{adesao_servico_resposta_descricao}}}
  **/
 
-@ApiModel(description = "Objeto de resposta para ades\u00E3o servi\u00E7os")
+@ApiModel(description = "{{{adesao_servico_resposta_descricao}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class AdesaoServicoResponse   {
   
@@ -51,14 +51,14 @@ public class AdesaoServicoResponse   {
 
   
   /**
-   * Canal de entrada
+   * {{{adesao_servico_resposta_canal_descricao}}}
    **/
   public AdesaoServicoResponse canal(String canal) {
     this.canal = canal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Canal de entrada")
+  @ApiModelProperty(example = "null", value = "{{{adesao_servico_resposta_canal_descricao}}}")
   @JsonProperty("canal")
   public String getCanal() {
     return canal;
@@ -69,14 +69,14 @@ public class AdesaoServicoResponse   {
 
   
   /**
-   * Cobranca do Limite de cr\u00E9dito
+   * {{{adesao_servico_resposta_cobranca_limite_credito_descricao}}}
    **/
   public AdesaoServicoResponse cobrancaLimiteCredito(Boolean cobrancaLimiteCredito) {
     this.cobrancaLimiteCredito = cobrancaLimiteCredito;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Cobranca do Limite de cr\u00E9dito")
+  @ApiModelProperty(example = "false", value = "{{{adesao_servico_resposta_cobranca_limite_credito_descricao}}}")
   @JsonProperty("cobrancaLimiteCredito")
   public Boolean getCobrancaLimiteCredito() {
     return cobrancaLimiteCredito;
@@ -87,14 +87,14 @@ public class AdesaoServicoResponse   {
 
   
   /**
-   * Estabelecimento
+   * {{{adesao_servico_resposta_estabelecimento_descricao}}}
    **/
   public AdesaoServicoResponse estabelecimento(Integer estabelecimento) {
     this.estabelecimento = estabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Estabelecimento")
+  @ApiModelProperty(example = "null", value = "{{{adesao_servico_resposta_estabelecimento_descricao}}}")
   @JsonProperty("estabelecimento")
   public Integer getEstabelecimento() {
     return estabelecimento;
@@ -105,14 +105,14 @@ public class AdesaoServicoResponse   {
 
   
   /**
-   * Oferecer cobran\u00E7a no limite de cr\u00E9dito
+   * {{{adesao_servico_resposta_ofertar_cobranca_limite_credito_descricao}}}
    **/
   public AdesaoServicoResponse flagCobrancaLimiteCredito(Boolean flagCobrancaLimiteCredito) {
     this.flagCobrancaLimiteCredito = flagCobrancaLimiteCredito;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Oferecer cobran\u00E7a no limite de cr\u00E9dito")
+  @ApiModelProperty(example = "false", value = "{{{adesao_servico_resposta_ofertar_cobranca_limite_credito_descricao}}}")
   @JsonProperty("flagCobrancaLimiteCredito")
   public Boolean getFlagCobrancaLimiteCredito() {
     return flagCobrancaLimiteCredito;
@@ -123,14 +123,14 @@ public class AdesaoServicoResponse   {
 
   
   /**
-   * Oferecer promo\u00E7\u00F5es disponiveis
+   * {{{adesao_servico_resposta_ofertar_ofertas_promocoes_descricao}}}
    **/
   public AdesaoServicoResponse flagOfertasPromocoes(Boolean flagOfertasPromocoes) {
     this.flagOfertasPromocoes = flagOfertasPromocoes;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Oferecer promo\u00E7\u00F5es disponiveis")
+  @ApiModelProperty(example = "false", value = "{{{adesao_servico_resposta_ofertar_ofertas_promocoes_descricao}}}")
   @JsonProperty("flagOfertasPromocoes")
   public Boolean getFlagOfertasPromocoes() {
     return flagOfertasPromocoes;
@@ -141,14 +141,14 @@ public class AdesaoServicoResponse   {
 
   
   /**
-   * Ofertar promo\u00E7\u00F5es
+   * {{{adesao_servico_resposta_ofertas_promocoes_descricao}}}
    **/
   public AdesaoServicoResponse flagPromocoes(Boolean flagPromocoes) {
     this.flagPromocoes = flagPromocoes;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Ofertar promo\u00E7\u00F5es")
+  @ApiModelProperty(example = "false", value = "{{{adesao_servico_resposta_ofertas_promocoes_descricao}}}")
   @JsonProperty("flagPromocoes")
   public Boolean getFlagPromocoes() {
     return flagPromocoes;
@@ -159,14 +159,14 @@ public class AdesaoServicoResponse   {
 
   
   /**
-   * Oferecer tipo de envio da fatura
+   * {{{adesao_servico_resposta_ofertar_tipo_envio_fatura_descricao}}}
    **/
   public AdesaoServicoResponse flagTipoEnvioFatura(Boolean flagTipoEnvioFatura) {
     this.flagTipoEnvioFatura = flagTipoEnvioFatura;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Oferecer tipo de envio da fatura")
+  @ApiModelProperty(example = "false", value = "{{{adesao_servico_resposta_ofertar_tipo_envio_fatura_descricao}}}")
   @JsonProperty("flagTipoEnvioFatura")
   public Boolean getFlagTipoEnvioFatura() {
     return flagTipoEnvioFatura;
@@ -177,14 +177,14 @@ public class AdesaoServicoResponse   {
 
   
   /**
-   * Oferecer tipo do sms
+   * {{{adesao_servico_resposta_ofertar_tipo_sms_descricao}}}
    **/
   public AdesaoServicoResponse flagTipoSms(Boolean flagTipoSms) {
     this.flagTipoSms = flagTipoSms;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Oferecer tipo do sms")
+  @ApiModelProperty(example = "false", value = "{{{adesao_servico_resposta_ofertar_tipo_sms_descricao}}}")
   @JsonProperty("flagTipoSms")
   public Boolean getFlagTipoSms() {
     return flagTipoSms;
@@ -195,14 +195,14 @@ public class AdesaoServicoResponse   {
 
   
   /**
-   * Identificador da conta
+   * {{{adesao_servico_resposta_id_descricao}}}
    **/
   public AdesaoServicoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Identificador da conta")
+  @ApiModelProperty(example = "null", value = "{{{adesao_servico_resposta_id_descricao}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -213,14 +213,14 @@ public class AdesaoServicoResponse   {
 
   
   /**
-   * Respons\u00E1vel
+   * {{{adesao_servico_resposta_responsavel_descricao}}}
    **/
   public AdesaoServicoResponse responsavel(String responsavel) {
     this.responsavel = responsavel;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Respons\u00E1vel")
+  @ApiModelProperty(example = "null", value = "{{{adesao_servico_resposta_responsavel_descricao}}}")
   @JsonProperty("responsavel")
   public String getResponsavel() {
     return responsavel;
@@ -231,14 +231,14 @@ public class AdesaoServicoResponse   {
 
   
   /**
-   * Tipo do envio da fatura
+   * {{{adesao_servico_resposta_tipo_envio_fatura_descricao}}}
    **/
   public AdesaoServicoResponse tipoEnvioFatura(Integer tipoEnvioFatura) {
     this.tipoEnvioFatura = tipoEnvioFatura;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Tipo do envio da fatura")
+  @ApiModelProperty(example = "null", value = "{{{adesao_servico_resposta_tipo_envio_fatura_descricao}}}")
   @JsonProperty("tipoEnvioFatura")
   public Integer getTipoEnvioFatura() {
     return tipoEnvioFatura;
@@ -249,14 +249,14 @@ public class AdesaoServicoResponse   {
 
   
   /**
-   * Tipo do sms
+   * {{{adesao_servico_resposta_tipo_sms_descricao}}}
    **/
   public AdesaoServicoResponse tipoSms(TipoSmsEnum tipoSms) {
     this.tipoSms = tipoSms;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Tipo do sms")
+  @ApiModelProperty(example = "null", value = "{{{adesao_servico_resposta_tipo_sms_descricao}}}")
   @JsonProperty("tipoSms")
   public TipoSmsEnum getTipoSms() {
     return tipoSms;

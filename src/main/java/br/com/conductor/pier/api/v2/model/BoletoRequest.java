@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * Par\u00E2metros de requisi\u00E7\u00E3o de um Boleto
+ * {{{boleto_request_description}}}
  **/
 
-@ApiModel(description = "Par\u00E2metros de requisi\u00E7\u00E3o de um Boleto")
+@ApiModel(description = "{{{boleto_request_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class BoletoRequest   {
   
@@ -24,14 +24,14 @@ public class BoletoRequest   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o da Conta (ID)
+   * {{{boleto_request_id_conta_value}}}
    **/
   public BoletoRequest idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo de identifica\u00E7\u00E3o da Conta (ID)")
+  @ApiModelProperty(example = "null", required = true, value = "{{{boleto_request_id_conta_value}}}")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -42,14 +42,14 @@ public class BoletoRequest   {
 
   
   /**
-   * Tipo de Boleto a ser gerado
+   * {{{boleto_request_tipo_boleto_value}}}
    **/
   public BoletoRequest tipoBoleto(Long tipoBoleto) {
     this.tipoBoleto = tipoBoleto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Tipo de Boleto a ser gerado")
+  @ApiModelProperty(example = "null", required = true, value = "{{{boleto_request_tipo_boleto_value}}}")
   @JsonProperty("tipoBoleto")
   public Long getTipoBoleto() {
     return tipoBoleto;
@@ -60,14 +60,14 @@ public class BoletoRequest   {
 
   
   /**
-   * Valor da cobran\u00E7a gerada
+   * {{{boleto_request_valor_value}}}
    **/
   public BoletoRequest valor(BigDecimal valor) {
     this.valor = valor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Valor da cobran\u00E7a gerada")
+  @ApiModelProperty(example = "null", required = true, value = "{{{boleto_request_valor_value}}}")
   @JsonProperty("valor")
   public BigDecimal getValor() {
     return valor;
@@ -78,14 +78,14 @@ public class BoletoRequest   {
 
   
   /**
-   * Data de vencimento da cobran\u00E7a
+   * {{{boleto_request_data_vencimento_value}}}
    **/
   public BoletoRequest dataVencimento(String dataVencimento) {
     this.dataVencimento = dataVencimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Data de vencimento da cobran\u00E7a")
+  @ApiModelProperty(example = "null", required = true, value = "{{{boleto_request_data_vencimento_value}}}")
   @JsonProperty("dataVencimento")
   public String getDataVencimento() {
     return dataVencimento;
@@ -96,14 +96,14 @@ public class BoletoRequest   {
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio para onde o boleto deve ser gerado
+   * {{{boleto_request_id_convenio_value}}}
    **/
   public BoletoRequest idConvenio(Long idConvenio) {
     this.idConvenio = idConvenio;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio para onde o boleto deve ser gerado")
+  @ApiModelProperty(example = "null", value = "{{{boleto_request_id_convenio_value}}}")
   @JsonProperty("idConvenio")
   public Long getIdConvenio() {
     return idConvenio;

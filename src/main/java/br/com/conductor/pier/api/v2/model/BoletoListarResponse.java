@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * Representa\u00E7\u00E3o da resposta do boleto de fatura
+ * {{{boleto_listar_response_description}}}
  **/
 
-@ApiModel(description = "Representa\u00E7\u00E3o da resposta do boleto de fatura")
+@ApiModel(description = "{{{boleto_listar_response_description}}}")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class BoletoListarResponse   {
   
@@ -25,14 +25,14 @@ public class BoletoListarResponse   {
 
   
   /**
-   * id
+   * {{{boleto_response_id_value}}}
    **/
   public BoletoListarResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "id")
+  @ApiModelProperty(example = "null", value = "{{{boleto_response_id_value}}}")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -43,14 +43,14 @@ public class BoletoListarResponse   {
 
   
   /**
-   * id_conta
+   * {{{boleto_response_id_conta_value}}}
    **/
   public BoletoListarResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "id_conta")
+  @ApiModelProperty(example = "null", value = "{{{boleto_response_id_conta_value}}}")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -61,14 +61,14 @@ public class BoletoListarResponse   {
 
   
   /**
-   * Nosso n\u00FAmero \u00E9 o c\u00F3digo que o benefici\u00E1rio escolhe para manter controle sobre seus boletos. Esse valor serve para o cedente identificar quais boletos foram pagos ou n\u00E3o. Recomenda-se o uso de n\u00FAmeros sequ\u00EAnciais, na gera\u00E7\u00E3o de diversos boletos, para facilitar a identifica\u00E7\u00E3o dos boletos pagos
+   * {{{boleto_response_nosso_numero_value}}}
    **/
   public BoletoListarResponse nossoNumero(String nossoNumero) {
     this.nossoNumero = nossoNumero;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nosso n\u00FAmero \u00E9 o c\u00F3digo que o benefici\u00E1rio escolhe para manter controle sobre seus boletos. Esse valor serve para o cedente identificar quais boletos foram pagos ou n\u00E3o. Recomenda-se o uso de n\u00FAmeros sequ\u00EAnciais, na gera\u00E7\u00E3o de diversos boletos, para facilitar a identifica\u00E7\u00E3o dos boletos pagos")
+  @ApiModelProperty(example = "null", value = "{{{boleto_response_nosso_numero_value}}}")
   @JsonProperty("nossoNumero")
   public String getNossoNumero() {
     return nossoNumero;
@@ -79,14 +79,14 @@ public class BoletoListarResponse   {
 
   
   /**
-   * Data do vencimento
+   * {{{boleto_response_data_vencimento_value}}}
    **/
   public BoletoListarResponse dataVencimento(String dataVencimento) {
     this.dataVencimento = dataVencimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data do vencimento")
+  @ApiModelProperty(example = "null", value = "{{{boleto_response_data_vencimento_value}}}")
   @JsonProperty("dataVencimento")
   public String getDataVencimento() {
     return dataVencimento;
@@ -97,14 +97,14 @@ public class BoletoListarResponse   {
 
   
   /**
-   * Valor do Boleto
+   * {{{boleto_response_valor_boleto_value}}}
    **/
   public BoletoListarResponse valorBoleto(BigDecimal valorBoleto) {
     this.valorBoleto = valorBoleto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Valor do Boleto")
+  @ApiModelProperty(example = "null", value = "{{{boleto_response_valor_boleto_value}}}")
   @JsonProperty("valorBoleto")
   public BigDecimal getValorBoleto() {
     return valorBoleto;
@@ -115,14 +115,14 @@ public class BoletoListarResponse   {
 
   
   /**
-   * Id do tipo de Boleto
+   * {{{boleto_response_id_tipo_boleto_value}}}
    **/
   public BoletoListarResponse idTipoBoleto(Long idTipoBoleto) {
     this.idTipoBoleto = idTipoBoleto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Id do tipo de Boleto")
+  @ApiModelProperty(example = "null", value = "{{{boleto_response_id_tipo_boleto_value}}}")
   @JsonProperty("idTipoBoleto")
   public Long getIdTipoBoleto() {
     return idTipoBoleto;
