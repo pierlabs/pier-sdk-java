@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{page_tipo_chave_response_description}}}
+ * Page tipo chave description
  **/
 
-@ApiModel(description = "{{{page_tipo_chave_response_description}}}")
+@ApiModel(description = "Page tipo chave description")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageTipoChaveResponse   {
   

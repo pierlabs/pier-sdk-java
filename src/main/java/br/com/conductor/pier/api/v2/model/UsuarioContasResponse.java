@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{usuario_conta_resposta_descricao}}}
+ * Representa\u00E7\u00E3o do recurso Usuario Conta
  **/
 
-@ApiModel(description = "{{{usuario_conta_resposta_descricao}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o do recurso Usuario Conta")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class UsuarioContasResponse   {
   
@@ -23,14 +23,14 @@ public class UsuarioContasResponse   {
 
   
   /**
-   * {{{usuario_conta_resposta_id_descricao}}}
+   * Id do usu\u00E1rio conta
    **/
   public UsuarioContasResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{usuario_conta_resposta_id_descricao}}}")
+  @ApiModelProperty(example = "null", value = "Id do usu\u00E1rio conta")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -41,14 +41,14 @@ public class UsuarioContasResponse   {
 
   
   /**
-   * {{{usuario_conta_resposta_id_conta_descricao}}}
+   * Id da conta vinculada ao usu\u00E1rio
    **/
   public UsuarioContasResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{usuario_conta_resposta_id_conta_descricao}}}")
+  @ApiModelProperty(example = "null", value = "Id da conta vinculada ao usu\u00E1rio")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -59,14 +59,14 @@ public class UsuarioContasResponse   {
 
   
   /**
-   * {{{usuario_conta_resposta_id_pessoa_descricao}}}
+   * Id da pessoa
    **/
   public UsuarioContasResponse idPessoa(Long idPessoa) {
     this.idPessoa = idPessoa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{usuario_conta_resposta_id_pessoa_descricao}}}")
+  @ApiModelProperty(example = "null", value = "Id da pessoa")
   @JsonProperty("idPessoa")
   public Long getIdPessoa() {
     return idPessoa;
@@ -77,14 +77,14 @@ public class UsuarioContasResponse   {
 
   
   /**
-   * {{{usuario_conta_resposta_id_usuario_descricao}}}
+   * Id do usu\u00E1rio vinculado a conta
    **/
   public UsuarioContasResponse idUsuario(Long idUsuario) {
     this.idUsuario = idUsuario;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{usuario_conta_resposta_id_usuario_descricao}}}")
+  @ApiModelProperty(example = "null", value = "Id do usu\u00E1rio vinculado a conta")
   @JsonProperty("idUsuario")
   public Long getIdUsuario() {
     return idUsuario;
@@ -95,14 +95,14 @@ public class UsuarioContasResponse   {
 
   
   /**
-   * {{{usuario_conta_resposta_nivel_acesso_descricao}}}
+   * N\u00EDvel de ACesso
    **/
   public UsuarioContasResponse nivelAcesso(Integer nivelAcesso) {
     this.nivelAcesso = nivelAcesso;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{usuario_conta_resposta_nivel_acesso_descricao}}}")
+  @ApiModelProperty(example = "null", value = "N\u00EDvel de ACesso")
   @JsonProperty("nivelAcesso")
   public Integer getNivelAcesso() {
     return nivelAcesso;

@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{arquivo_parametro_a_u_d_response_description}}}
+ * Objeto Response da auditoria dos par\u00E2metros do arquivo
  **/
 
-@ApiModel(description = "{{{arquivo_parametro_a_u_d_response_description}}}")
+@ApiModel(description = "Objeto Response da auditoria dos par\u00E2metros do arquivo")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ArquivoParametroAUDResponse   {
   
@@ -25,14 +25,14 @@ public class ArquivoParametroAUDResponse   {
 
   
   /**
-   * {{{arquivo_parametro_a_u_d_response_rev_value}}}
+   * Identificador da auditoria arquivo
    **/
   public ArquivoParametroAUDResponse rev(Long rev) {
     this.rev = rev;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{arquivo_parametro_a_u_d_response_rev_value}}}")
+  @ApiModelProperty(example = "null", value = "Identificador da auditoria arquivo")
   @JsonProperty("rev")
   public Long getRev() {
     return rev;
@@ -43,14 +43,14 @@ public class ArquivoParametroAUDResponse   {
 
   
   /**
-   * {{{arquivo_parametro_a_u_d_response_rev_type_value}}}
+   * Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00EDdo)
    **/
   public ArquivoParametroAUDResponse revType(Integer revType) {
     this.revType = revType;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{arquivo_parametro_a_u_d_response_rev_type_value}}}")
+  @ApiModelProperty(example = "null", value = "Identificador do tipo de auditoria (0 - Criado, 1 - Alterado, 2 - Exclu\u00EDdo)")
   @JsonProperty("revType")
   public Integer getRevType() {
     return revType;
@@ -61,14 +61,14 @@ public class ArquivoParametroAUDResponse   {
 
   
   /**
-   * {{{arquivo_parametro_a_u_d_response_id_value}}}
+   * Identificador do par\u00E2metro
    **/
   public ArquivoParametroAUDResponse id(String id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{arquivo_parametro_a_u_d_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "Identificador do par\u00E2metro")
   @JsonProperty("id")
   public String getId() {
     return id;
@@ -79,14 +79,14 @@ public class ArquivoParametroAUDResponse   {
 
   
   /**
-   * {{{arquivo_parametro_a_u_d_response_parametro_value}}}
+   * Nome do par\u00E2metro
    **/
   public ArquivoParametroAUDResponse parametro(String parametro) {
     this.parametro = parametro;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{arquivo_parametro_a_u_d_response_parametro_value}}}")
+  @ApiModelProperty(example = "null", value = "Nome do par\u00E2metro")
   @JsonProperty("parametro")
   public String getParametro() {
     return parametro;
@@ -97,14 +97,14 @@ public class ArquivoParametroAUDResponse   {
 
   
   /**
-   * {{{arquivo_parametro_a_u_d_response_conteudo_value}}}
+   * Conte\u00FAdo do par\u00E2metro
    **/
   public ArquivoParametroAUDResponse conteudo(String conteudo) {
     this.conteudo = conteudo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{arquivo_parametro_a_u_d_response_conteudo_value}}}")
+  @ApiModelProperty(example = "null", value = "Conte\u00FAdo do par\u00E2metro")
   @JsonProperty("conteudo")
   public String getConteudo() {
     return conteudo;
@@ -115,14 +115,14 @@ public class ArquivoParametroAUDResponse   {
 
   
   /**
-   * {{{arquivo_parametro_a_u_d_response_data_hora_inclusao_value}}}
+   * Data de inclus\u00E3o do par\u00E2metro
    **/
   public ArquivoParametroAUDResponse dataHoraInclusao(String dataHoraInclusao) {
     this.dataHoraInclusao = dataHoraInclusao;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{arquivo_parametro_a_u_d_response_data_hora_inclusao_value}}}")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data de inclus\u00E3o do par\u00E2metro")
   @JsonProperty("dataHoraInclusao")
   public String getDataHoraInclusao() {
     return dataHoraInclusao;
@@ -133,14 +133,14 @@ public class ArquivoParametroAUDResponse   {
 
   
   /**
-   * {{{arquivo_parametro_a_u_d_response_data_hora_alteracao_value}}}
+   * Data de altera\u00E7\u00E3o do par\u00E2metro
    **/
   public ArquivoParametroAUDResponse dataHoraAlteracao(String dataHoraAlteracao) {
     this.dataHoraAlteracao = dataHoraAlteracao;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{arquivo_parametro_a_u_d_response_data_hora_alteracao_value}}}")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data de altera\u00E7\u00E3o do par\u00E2metro")
   @JsonProperty("dataHoraAlteracao")
   public String getDataHoraAlteracao() {
     return dataHoraAlteracao;

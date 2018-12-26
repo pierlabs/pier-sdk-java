@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{cartao_impressao_provisorio_response_description}}}
+ * Objeto cart\u00E3o provis\u00F3rio
  **/
 
-@ApiModel(description = "{{{cartao_impressao_provisorio_response_description}}}")
+@ApiModel(description = "Objeto cart\u00E3o provis\u00F3rio")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class CartaoImpressaoProvisorioResponse   {
   
@@ -42,14 +42,14 @@ public class CartaoImpressaoProvisorioResponse   {
 
   
   /**
-   * {{{cartao_impressao_provisorio_response_id_conta_value}}}
+   * Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence
    **/
   public CartaoImpressaoProvisorioResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{cartao_impressao_provisorio_response_id_conta_value}}}")
+  @ApiModelProperty(example = "null", value = "Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -60,14 +60,14 @@ public class CartaoImpressaoProvisorioResponse   {
 
   
   /**
-   * {{{cartao_impressao_provisorio_response_id_pessoa_value}}}
+   * Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado
    **/
   public CartaoImpressaoProvisorioResponse idPessoa(Long idPessoa) {
     this.idPessoa = idPessoa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{cartao_impressao_provisorio_response_id_pessoa_value}}}")
+  @ApiModelProperty(example = "null", value = "Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado")
   @JsonProperty("idPessoa")
   public Long getIdPessoa() {
     return idPessoa;
@@ -78,14 +78,14 @@ public class CartaoImpressaoProvisorioResponse   {
 
   
   /**
-   * {{{cartao_impressao_provisorio_response_id_cartao_value}}}
+   * Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado
    **/
   public CartaoImpressaoProvisorioResponse idCartao(Long idCartao) {
     this.idCartao = idCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{cartao_impressao_provisorio_response_id_cartao_value}}}")
+  @ApiModelProperty(example = "null", value = "Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado")
   @JsonProperty("idCartao")
   public Long getIdCartao() {
     return idCartao;
@@ -96,14 +96,14 @@ public class CartaoImpressaoProvisorioResponse   {
 
   
   /**
-   * {{{cartao_impressao_provisorio_response_numero_cartao_value}}}
+   * Apresenta o n\u00FAmero do cart\u00E3o
    **/
   public CartaoImpressaoProvisorioResponse numeroCartao(String numeroCartao) {
     this.numeroCartao = numeroCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{cartao_impressao_provisorio_response_numero_cartao_value}}}")
+  @ApiModelProperty(example = "null", value = "Apresenta o n\u00FAmero do cart\u00E3o")
   @JsonProperty("numeroCartao")
   public String getNumeroCartao() {
     return numeroCartao;
@@ -114,14 +114,14 @@ public class CartaoImpressaoProvisorioResponse   {
 
   
   /**
-   * {{{cartao_impressao_provisorio_response_nome_plastico_value}}}
+   * Apresenta o nome do Portador do Cart\u00E3o
    **/
   public CartaoImpressaoProvisorioResponse nomePlastico(String nomePlastico) {
     this.nomePlastico = nomePlastico;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{cartao_impressao_provisorio_response_nome_plastico_value}}}")
+  @ApiModelProperty(example = "null", value = "Apresenta o nome do Portador do Cart\u00E3o")
   @JsonProperty("nomePlastico")
   public String getNomePlastico() {
     return nomePlastico;
@@ -132,14 +132,14 @@ public class CartaoImpressaoProvisorioResponse   {
 
   
   /**
-   * {{{cartao_impressao_provisorio_response_data_validade_value}}}
+   * Apresenta a data de Validade do Cart\u00E3o
    **/
   public CartaoImpressaoProvisorioResponse dataValidade(String dataValidade) {
     this.dataValidade = dataValidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{cartao_impressao_provisorio_response_data_validade_value}}}")
+  @ApiModelProperty(example = "null", value = "Apresenta a data de Validade do Cart\u00E3o")
   @JsonProperty("dataValidade")
   public String getDataValidade() {
     return dataValidade;

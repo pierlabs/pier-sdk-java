@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{promotor_response_description}}}
+ * Objeto Promotor
  **/
 
-@ApiModel(description = "{{{promotor_response_description}}}")
+@ApiModel(description = "Objeto Promotor")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PromotorResponse   {
   
@@ -23,14 +23,14 @@ public class PromotorResponse   {
 
   
   /**
-   * {{{promotor_response_id_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do promotor (id)
    **/
   public PromotorResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{promotor_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do promotor (id)")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -41,14 +41,14 @@ public class PromotorResponse   {
 
   
   /**
-   * {{{promotor_response_nome_value}}}
+   * Nome do Promotor
    **/
   public PromotorResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{promotor_response_nome_value}}}")
+  @ApiModelProperty(example = "null", value = "Nome do Promotor")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -59,14 +59,14 @@ public class PromotorResponse   {
 
   
   /**
-   * {{{promotor_response_data_cadastro_value}}}
+   * Data da Inclus\u00E3o
    **/
   public PromotorResponse dataCadastro(String dataCadastro) {
     this.dataCadastro = dataCadastro;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{promotor_response_data_cadastro_value}}}")
+  @ApiModelProperty(example = "null", value = "Data da Inclus\u00E3o")
   @JsonProperty("dataCadastro")
   public String getDataCadastro() {
     return dataCadastro;
@@ -77,14 +77,14 @@ public class PromotorResponse   {
 
   
   /**
-   * {{{promotor_response_id_estabelecimento_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento
    **/
   public PromotorResponse idEstabelecimento(Long idEstabelecimento) {
     this.idEstabelecimento = idEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{promotor_response_id_estabelecimento_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento")
   @JsonProperty("idEstabelecimento")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
@@ -95,14 +95,14 @@ public class PromotorResponse   {
 
   
   /**
-   * {{{promotor_response_id_usuario_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do usu\u00E1rio
    **/
   public PromotorResponse idUsuario(Long idUsuario) {
     this.idUsuario = idUsuario;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{promotor_response_id_usuario_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do usu\u00E1rio")
   @JsonProperty("idUsuario")
   public Long getIdUsuario() {
     return idUsuario;

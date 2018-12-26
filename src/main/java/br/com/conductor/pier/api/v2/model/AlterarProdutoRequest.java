@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{alterar_produto_request_description}}}
+ * Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do  recurso Dispositivo
  **/
 
-@ApiModel(description = "{{{alterar_produto_request_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do  recurso Dispositivo")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class AlterarProdutoRequest   {
   
@@ -22,14 +22,14 @@ public class AlterarProdutoRequest   {
 
   
   /**
-   * {{{alterar_produto_request_id_produto_value}}}
+   * C\u00F3digo identificador do produto
    **/
   public AlterarProdutoRequest idProduto(Long idProduto) {
     this.idProduto = idProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{alterar_produto_request_id_produto_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo identificador do produto")
   @JsonProperty("idProduto")
   public Long getIdProduto() {
     return idProduto;
@@ -40,14 +40,14 @@ public class AlterarProdutoRequest   {
 
   
   /**
-   * {{{alterar_produto_request_id_origem_comercial_value}}}
+   * C\u00F3digo identificador da origem comercial
    **/
   public AlterarProdutoRequest idOrigemComercial(Long idOrigemComercial) {
     this.idOrigemComercial = idOrigemComercial;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{alterar_produto_request_id_origem_comercial_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador da origem comercial")
   @JsonProperty("idOrigemComercial")
   public Long getIdOrigemComercial() {
     return idOrigemComercial;
@@ -58,14 +58,14 @@ public class AlterarProdutoRequest   {
 
   
   /**
-   * {{{alterar_produto_request_id_estabelecimento_value}}}
+   * Deve ser preenchido com o idEstabelecimento onde o Grade foi realizado. Quando n\u00E3o informado, \u00E9 gravado com o idEstabelecimento associado a Origem Comercial que capturou o cadastro inicial da Conta
    **/
   public AlterarProdutoRequest idEstabelecimento(Long idEstabelecimento) {
     this.idEstabelecimento = idEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{alterar_produto_request_id_estabelecimento_value}}}")
+  @ApiModelProperty(example = "null", value = "Deve ser preenchido com o idEstabelecimento onde o Grade foi realizado. Quando n\u00E3o informado, \u00E9 gravado com o idEstabelecimento associado a Origem Comercial que capturou o cadastro inicial da Conta")
   @JsonProperty("idEstabelecimento")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
@@ -76,14 +76,14 @@ public class AlterarProdutoRequest   {
 
   
   /**
-   * {{{alterar_produto_request_id_promotor_value}}}
+   * Deve ser preenchido com o C\u00F3digo de identifica\u00E7\u00E3o do Promotor que realizou o Grade. Quando n\u00E3o informado, ser\u00E1 gravado com um c\u00F3digo de identifica\u00E7\u00E3o padr\u00E3o
    **/
   public AlterarProdutoRequest idPromotor(Long idPromotor) {
     this.idPromotor = idPromotor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{alterar_produto_request_id_promotor_value}}}")
+  @ApiModelProperty(example = "null", value = "Deve ser preenchido com o C\u00F3digo de identifica\u00E7\u00E3o do Promotor que realizou o Grade. Quando n\u00E3o informado, ser\u00E1 gravado com um c\u00F3digo de identifica\u00E7\u00E3o padr\u00E3o")
   @JsonProperty("idPromotor")
   public Long getIdPromotor() {
     return idPromotor;

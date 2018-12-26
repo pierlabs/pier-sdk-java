@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{historico_eventos_response_description}}}
+ * Representa\u00E7\u00E3o do objeto que abstrai o hist\u00F3rico de eventos
  **/
 
-@ApiModel(description = "{{{historico_eventos_response_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o do objeto que abstrai o hist\u00F3rico de eventos")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class HistoricoEventosResponse   {
   
@@ -23,14 +23,14 @@ public class HistoricoEventosResponse   {
 
   
   /**
-   * {{{historico_eventos_response_id_historico_value}}}
+   * C\u00F3digo identificador do evento
    **/
   public HistoricoEventosResponse idHistorico(Long idHistorico) {
     this.idHistorico = idHistorico;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{historico_eventos_response_id_historico_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo identificador do evento")
   @JsonProperty("idHistorico")
   public Long getIdHistorico() {
     return idHistorico;
@@ -41,14 +41,14 @@ public class HistoricoEventosResponse   {
 
   
   /**
-   * {{{historico_eventos_response_data_historico_value}}}
+   * Data do evento
    **/
   public HistoricoEventosResponse dataHistorico(String dataHistorico) {
     this.dataHistorico = dataHistorico;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", required = true, value = "{{{historico_eventos_response_data_historico_value}}}")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", required = true, value = "Data do evento")
   @JsonProperty("dataHistorico")
   public String getDataHistorico() {
     return dataHistorico;
@@ -59,14 +59,14 @@ public class HistoricoEventosResponse   {
 
   
   /**
-   * {{{historico_eventos_response_tipo_historico_value}}}
+   * Nome do campo alterado
    **/
   public HistoricoEventosResponse tipoHistorico(String tipoHistorico) {
     this.tipoHistorico = tipoHistorico;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{historico_eventos_response_tipo_historico_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Nome do campo alterado")
   @JsonProperty("tipoHistorico")
   public String getTipoHistorico() {
     return tipoHistorico;
@@ -77,14 +77,14 @@ public class HistoricoEventosResponse   {
 
   
   /**
-   * {{{historico_eventos_response_valor_anterior_value}}}
+   * Valor anterior a modifica\u00E7\u00E3o
    **/
   public HistoricoEventosResponse valorAnterior(String valorAnterior) {
     this.valorAnterior = valorAnterior;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{historico_eventos_response_valor_anterior_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor anterior a modifica\u00E7\u00E3o")
   @JsonProperty("valorAnterior")
   public String getValorAnterior() {
     return valorAnterior;
@@ -95,14 +95,14 @@ public class HistoricoEventosResponse   {
 
   
   /**
-   * {{{historico_eventos_response_valor_atribuido_value}}}
+   * Valor atribu\u00EDdo na modifica\u00E7\u00E3o
    **/
   public HistoricoEventosResponse valorAtribuido(String valorAtribuido) {
     this.valorAtribuido = valorAtribuido;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{historico_eventos_response_valor_atribuido_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Valor atribu\u00EDdo na modifica\u00E7\u00E3o")
   @JsonProperty("valorAtribuido")
   public String getValorAtribuido() {
     return valorAtribuido;

@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{tipo_resolucao_response_description}}}
+ * Objeto de resposta de Tipo Resolu\u00E7\u00E3o
  **/
 
-@ApiModel(description = "{{{tipo_resolucao_response_description}}}")
+@ApiModel(description = "Objeto de resposta de Tipo Resolu\u00E7\u00E3o")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TipoResolucaoResponse   {
   
@@ -20,14 +20,14 @@ public class TipoResolucaoResponse   {
 
   
   /**
-   * {{{tipo_resolucao_response_id_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o
    **/
   public TipoResolucaoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_resolucao_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -38,14 +38,14 @@ public class TipoResolucaoResponse   {
 
   
   /**
-   * {{{tipo_resolucao_response_descricao_value}}}
+   * Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o
    **/
   public TipoResolucaoResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_resolucao_response_descricao_value}}}")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;

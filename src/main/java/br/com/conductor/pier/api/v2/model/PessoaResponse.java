@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{pessoa_response_description}}}
+ * Pessoa
  **/
 
-@ApiModel(description = "{{{pessoa_response_description}}}")
+@ApiModel(description = "Pessoa")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PessoaResponse   {
   
@@ -29,14 +29,14 @@ public class PessoaResponse   {
 
   
   /**
-   * {{{pessoa_response_id_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id)
    **/
   public PessoaResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{pessoa_response_id_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id)")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -47,14 +47,14 @@ public class PessoaResponse   {
 
   
   /**
-   * {{{pessoa_response_nome_value}}}
+   * Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00E3o Social (Nome Empresarial)'
    **/
   public PessoaResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{pessoa_response_nome_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta o 'Nome Completo da PF' ou o 'Nome Completo da Raz\u00E3o Social (Nome Empresarial)'")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -65,14 +65,14 @@ public class PessoaResponse   {
 
   
   /**
-   * {{{pessoa_response_tipo_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo da Pessoa, sendo: ('PF': Pessoa F\u00EDsica), ('PJ': Pessoa Jur\u00EDdica)
    **/
   public PessoaResponse tipo(String tipo) {
     this.tipo = tipo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{pessoa_response_tipo_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo da Pessoa, sendo: ('PF': Pessoa F\u00EDsica), ('PJ': Pessoa Jur\u00EDdica)")
   @JsonProperty("tipo")
   public String getTipo() {
     return tipo;
@@ -83,14 +83,14 @@ public class PessoaResponse   {
 
   
   /**
-   * {{{pessoa_response_cpf_value}}}
+   * N\u00FAmero do CPF, quando PF
    **/
   public PessoaResponse cpf(String cpf) {
     this.cpf = cpf;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pessoa_response_cpf_value}}}")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero do CPF, quando PF")
   @JsonProperty("cpf")
   public String getCpf() {
     return cpf;
@@ -101,14 +101,14 @@ public class PessoaResponse   {
 
   
   /**
-   * {{{pessoa_response_cnpj_value}}}
+   * N\u00FAmero do CNPJ, quando PJ
    **/
   public PessoaResponse cnpj(String cnpj) {
     this.cnpj = cnpj;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pessoa_response_cnpj_value}}}")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero do CNPJ, quando PJ")
   @JsonProperty("cnpj")
   public String getCnpj() {
     return cnpj;
@@ -119,14 +119,14 @@ public class PessoaResponse   {
 
   
   /**
-   * {{{pessoa_response_data_nascimento_value}}}
+   * Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ
    **/
   public PessoaResponse dataNascimento(String dataNascimento) {
     this.dataNascimento = dataNascimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pessoa_response_data_nascimento_value}}}")
+  @ApiModelProperty(example = "null", value = "Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ")
   @JsonProperty("dataNascimento")
   public String getDataNascimento() {
     return dataNascimento;
@@ -137,14 +137,14 @@ public class PessoaResponse   {
 
   
   /**
-   * {{{pessoa_response_numero_identidade_value}}}
+   * N\u00FAmero da Identidade
    **/
   public PessoaResponse numeroIdentidade(String numeroIdentidade) {
     this.numeroIdentidade = numeroIdentidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pessoa_response_numero_identidade_value}}}")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero da Identidade")
   @JsonProperty("numeroIdentidade")
   public String getNumeroIdentidade() {
     return numeroIdentidade;
@@ -155,14 +155,14 @@ public class PessoaResponse   {
 
   
   /**
-   * {{{pessoa_response_orgao_expedidor_identidade_value}}}
+   * Org\u00E3o expedidor do RG
    **/
   public PessoaResponse orgaoExpedidorIdentidade(String orgaoExpedidorIdentidade) {
     this.orgaoExpedidorIdentidade = orgaoExpedidorIdentidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pessoa_response_orgao_expedidor_identidade_value}}}")
+  @ApiModelProperty(example = "null", value = "Org\u00E3o expedidor do RG")
   @JsonProperty("orgaoExpedidorIdentidade")
   public String getOrgaoExpedidorIdentidade() {
     return orgaoExpedidorIdentidade;
@@ -173,14 +173,14 @@ public class PessoaResponse   {
 
   
   /**
-   * {{{pessoa_response_sexo_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: ('M': Masculino), ('F': Feminino), ('O': Outro), ('N': N\u00E3o Especificado)
    **/
   public PessoaResponse sexo(String sexo) {
     this.sexo = sexo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pessoa_response_sexo_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: ('M': Masculino), ('F': Feminino), ('O': Outro), ('N': N\u00E3o Especificado)")
   @JsonProperty("sexo")
   public String getSexo() {
     return sexo;
@@ -191,14 +191,14 @@ public class PessoaResponse   {
 
   
   /**
-   * {{{pessoa_response_unidade_federativa_identidade_value}}}
+   * Sigla da Unidade Federativa de onde foi expedido a Identidade
    **/
   public PessoaResponse unidadeFederativaIdentidade(String unidadeFederativaIdentidade) {
     this.unidadeFederativaIdentidade = unidadeFederativaIdentidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pessoa_response_unidade_federativa_identidade_value}}}")
+  @ApiModelProperty(example = "null", value = "Sigla da Unidade Federativa de onde foi expedido a Identidade")
   @JsonProperty("unidadeFederativaIdentidade")
   public String getUnidadeFederativaIdentidade() {
     return unidadeFederativaIdentidade;
@@ -209,14 +209,14 @@ public class PessoaResponse   {
 
   
   /**
-   * {{{pessoa_response_data_emissao_identidade_value}}}
+   * Data emiss\u00E3o da identidade no formato aaaa-MM-dd
    **/
   public PessoaResponse dataEmissaoIdentidade(String dataEmissaoIdentidade) {
     this.dataEmissaoIdentidade = dataEmissaoIdentidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pessoa_response_data_emissao_identidade_value}}}")
+  @ApiModelProperty(example = "null", value = "Data emiss\u00E3o da identidade no formato aaaa-MM-dd")
   @JsonProperty("dataEmissaoIdentidade")
   public String getDataEmissaoIdentidade() {
     return dataEmissaoIdentidade;

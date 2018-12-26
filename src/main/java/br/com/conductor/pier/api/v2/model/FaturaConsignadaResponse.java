@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * {{{fatura_consignada_response_description}}}
+ * Fatura Consignada
  **/
 
-@ApiModel(description = "{{{fatura_consignada_response_description}}}")
+@ApiModel(description = "Fatura Consignada")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class FaturaConsignadaResponse   {
   
@@ -47,14 +47,14 @@ public class FaturaConsignadaResponse   {
 
   
   /**
-   * {{{fatura_consignada_response_id_value}}}
+   * C\u00F3digo identificador da fatura
    **/
   public FaturaConsignadaResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{fatura_consignada_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador da fatura")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -65,14 +65,14 @@ public class FaturaConsignadaResponse   {
 
   
   /**
-   * {{{fatura_consignada_response_id_conta_value}}}
+   * C\u00F3digo identificador da conta (id)
    **/
   public FaturaConsignadaResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{fatura_consignada_response_id_conta_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador da conta (id)")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -83,14 +83,14 @@ public class FaturaConsignadaResponse   {
 
   
   /**
-   * {{{fatura_consignada_response_flag_emite_fatura_value}}}
+   * C\u00F3digo identificador da conta a qual a fatura se refere
    **/
   public FaturaConsignadaResponse flagEmiteFatura(Integer flagEmiteFatura) {
     this.flagEmiteFatura = flagEmiteFatura;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{fatura_consignada_response_flag_emite_fatura_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador da conta a qual a fatura se refere")
   @JsonProperty("flagEmiteFatura")
   public Integer getFlagEmiteFatura() {
     return flagEmiteFatura;
@@ -101,14 +101,14 @@ public class FaturaConsignadaResponse   {
 
   
   /**
-   * {{{fatura_consignada_response_data_vencimento_fatura_value}}}
+   * Data de vencimento da fatura
    **/
   public FaturaConsignadaResponse dataVencimentoFatura(String dataVencimentoFatura) {
     this.dataVencimentoFatura = dataVencimentoFatura;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{fatura_consignada_response_data_vencimento_fatura_value}}}")
+  @ApiModelProperty(example = "null", value = "Data de vencimento da fatura")
   @JsonProperty("dataVencimentoFatura")
   public String getDataVencimentoFatura() {
     return dataVencimentoFatura;
@@ -119,14 +119,14 @@ public class FaturaConsignadaResponse   {
 
   
   /**
-   * {{{fatura_consignada_response_valor_total_fatura_value}}}
+   * Valor para pagamento total da fatura
    **/
   public FaturaConsignadaResponse valorTotalFatura(BigDecimal valorTotalFatura) {
     this.valorTotalFatura = valorTotalFatura;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{fatura_consignada_response_valor_total_fatura_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor para pagamento total da fatura")
   @JsonProperty("valorTotalFatura")
   public BigDecimal getValorTotalFatura() {
     return valorTotalFatura;
@@ -137,14 +137,14 @@ public class FaturaConsignadaResponse   {
 
   
   /**
-   * {{{fatura_consignada_response_valor_fatura_anterior_value}}}
+   * Valor total da fatura anterior
    **/
   public FaturaConsignadaResponse valorFaturaAnterior(BigDecimal valorFaturaAnterior) {
     this.valorFaturaAnterior = valorFaturaAnterior;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{fatura_consignada_response_valor_fatura_anterior_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor total da fatura anterior")
   @JsonProperty("valorFaturaAnterior")
   public BigDecimal getValorFaturaAnterior() {
     return valorFaturaAnterior;
@@ -155,14 +155,14 @@ public class FaturaConsignadaResponse   {
 
   
   /**
-   * {{{fatura_consignada_response_valor_pagamento_minimo_value}}}
+   * Valor m\u00EDnimo para pagamento da fatura
    **/
   public FaturaConsignadaResponse valorPagamentoMinimo(BigDecimal valorPagamentoMinimo) {
     this.valorPagamentoMinimo = valorPagamentoMinimo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{fatura_consignada_response_valor_pagamento_minimo_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor m\u00EDnimo para pagamento da fatura")
   @JsonProperty("valorPagamentoMinimo")
   public BigDecimal getValorPagamentoMinimo() {
     return valorPagamentoMinimo;
@@ -173,14 +173,14 @@ public class FaturaConsignadaResponse   {
 
   
   /**
-   * {{{fatura_consignada_response_valor_pagamento_consignado_value}}}
+   * Valor da fatura pago atrav\u00E9s de desconto em folha
    **/
   public FaturaConsignadaResponse valorPagamentoConsignado(BigDecimal valorPagamentoConsignado) {
     this.valorPagamentoConsignado = valorPagamentoConsignado;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{fatura_consignada_response_valor_pagamento_consignado_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor da fatura pago atrav\u00E9s de desconto em folha")
   @JsonProperty("valorPagamentoConsignado")
   public BigDecimal getValorPagamentoConsignado() {
     return valorPagamentoConsignado;
@@ -191,14 +191,14 @@ public class FaturaConsignadaResponse   {
 
   
   /**
-   * {{{fatura_consignada_response_valor_pagamento_complementar_value}}}
+   * Valor complementar para considerar o pagamento m\u00EDnimo da fatura
    **/
   public FaturaConsignadaResponse valorPagamentoComplementar(BigDecimal valorPagamentoComplementar) {
     this.valorPagamentoComplementar = valorPagamentoComplementar;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{fatura_consignada_response_valor_pagamento_complementar_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor complementar para considerar o pagamento m\u00EDnimo da fatura")
   @JsonProperty("valorPagamentoComplementar")
   public BigDecimal getValorPagamentoComplementar() {
     return valorPagamentoComplementar;
@@ -209,14 +209,14 @@ public class FaturaConsignadaResponse   {
 
   
   /**
-   * {{{fatura_consignada_response_total_compras_nacionais_value}}}
+   * Valor total das compras nacionais lan\u00E7adas na fatura
    **/
   public FaturaConsignadaResponse totalComprasNacionais(BigDecimal totalComprasNacionais) {
     this.totalComprasNacionais = totalComprasNacionais;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{fatura_consignada_response_total_compras_nacionais_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor total das compras nacionais lan\u00E7adas na fatura")
   @JsonProperty("totalComprasNacionais")
   public BigDecimal getTotalComprasNacionais() {
     return totalComprasNacionais;
@@ -227,14 +227,14 @@ public class FaturaConsignadaResponse   {
 
   
   /**
-   * {{{fatura_consignada_response_total_compras_internacionas_value}}}
+   * Valor total das compras internacionais lan\u00E7adas na fatura
    **/
   public FaturaConsignadaResponse totalComprasInternacionas(BigDecimal totalComprasInternacionas) {
     this.totalComprasInternacionas = totalComprasInternacionas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{fatura_consignada_response_total_compras_internacionas_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor total das compras internacionais lan\u00E7adas na fatura")
   @JsonProperty("totalComprasInternacionas")
   public BigDecimal getTotalComprasInternacionas() {
     return totalComprasInternacionas;
@@ -245,14 +245,14 @@ public class FaturaConsignadaResponse   {
 
   
   /**
-   * {{{fatura_consignada_response_total_saques_nacionais_value}}}
+   * Valor total dos saques nacionais lan\u00E7ados na fatura
    **/
   public FaturaConsignadaResponse totalSaquesNacionais(BigDecimal totalSaquesNacionais) {
     this.totalSaquesNacionais = totalSaquesNacionais;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{fatura_consignada_response_total_saques_nacionais_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor total dos saques nacionais lan\u00E7ados na fatura")
   @JsonProperty("totalSaquesNacionais")
   public BigDecimal getTotalSaquesNacionais() {
     return totalSaquesNacionais;
@@ -263,14 +263,14 @@ public class FaturaConsignadaResponse   {
 
   
   /**
-   * {{{fatura_consignada_response_total_saques_internacionais_value}}}
+   * Valor total dos saques internacionais lan\u00E7ados na fatura
    **/
   public FaturaConsignadaResponse totalSaquesInternacionais(BigDecimal totalSaquesInternacionais) {
     this.totalSaquesInternacionais = totalSaquesInternacionais;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{fatura_consignada_response_total_saques_internacionais_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor total dos saques internacionais lan\u00E7ados na fatura")
   @JsonProperty("totalSaquesInternacionais")
   public BigDecimal getTotalSaquesInternacionais() {
     return totalSaquesInternacionais;
@@ -281,14 +281,14 @@ public class FaturaConsignadaResponse   {
 
   
   /**
-   * {{{fatura_consignada_response_total_debitos_nacionais_value}}}
+   * Valor total dos d\u00E9bitos nacionais lan\u00E7ados na fatura
    **/
   public FaturaConsignadaResponse totalDebitosNacionais(BigDecimal totalDebitosNacionais) {
     this.totalDebitosNacionais = totalDebitosNacionais;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{fatura_consignada_response_total_debitos_nacionais_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor total dos d\u00E9bitos nacionais lan\u00E7ados na fatura")
   @JsonProperty("totalDebitosNacionais")
   public BigDecimal getTotalDebitosNacionais() {
     return totalDebitosNacionais;
@@ -299,14 +299,14 @@ public class FaturaConsignadaResponse   {
 
   
   /**
-   * {{{fatura_consignada_response_total_debitos_recorrentes_value}}}
+   * Valor total dos d\u00E9bitos recorrentes lan\u00E7ados na fatura
    **/
   public FaturaConsignadaResponse totalDebitosRecorrentes(BigDecimal totalDebitosRecorrentes) {
     this.totalDebitosRecorrentes = totalDebitosRecorrentes;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{fatura_consignada_response_total_debitos_recorrentes_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor total dos d\u00E9bitos recorrentes lan\u00E7ados na fatura")
   @JsonProperty("totalDebitosRecorrentes")
   public BigDecimal getTotalDebitosRecorrentes() {
     return totalDebitosRecorrentes;
@@ -317,14 +317,14 @@ public class FaturaConsignadaResponse   {
 
   
   /**
-   * {{{fatura_consignada_response_total_debitos_internacionais_value}}}
+   * Valor total dos d\u00E9bitos internacionais lan\u00E7ados na fatura
    **/
   public FaturaConsignadaResponse totalDebitosInternacionais(BigDecimal totalDebitosInternacionais) {
     this.totalDebitosInternacionais = totalDebitosInternacionais;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{fatura_consignada_response_total_debitos_internacionais_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor total dos d\u00E9bitos internacionais lan\u00E7ados na fatura")
   @JsonProperty("totalDebitosInternacionais")
   public BigDecimal getTotalDebitosInternacionais() {
     return totalDebitosInternacionais;
@@ -335,14 +335,14 @@ public class FaturaConsignadaResponse   {
 
   
   /**
-   * {{{fatura_consignada_response_total_debitos_diversos_nacionais_value}}}
+   * Valor total dos d\u00E9bitos diversos nacionais lan\u00E7ados na fatura
    **/
   public FaturaConsignadaResponse totalDebitosDiversosNacionais(BigDecimal totalDebitosDiversosNacionais) {
     this.totalDebitosDiversosNacionais = totalDebitosDiversosNacionais;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{fatura_consignada_response_total_debitos_diversos_nacionais_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor total dos d\u00E9bitos diversos nacionais lan\u00E7ados na fatura")
   @JsonProperty("totalDebitosDiversosNacionais")
   public BigDecimal getTotalDebitosDiversosNacionais() {
     return totalDebitosDiversosNacionais;
@@ -353,14 +353,14 @@ public class FaturaConsignadaResponse   {
 
   
   /**
-   * {{{fatura_consignada_response_total_debitos_opcionais_value}}}
+   * Valor total dos d\u00E9bitos diversos opcionais lan\u00E7ados na fatura
    **/
   public FaturaConsignadaResponse totalDebitosOpcionais(BigDecimal totalDebitosOpcionais) {
     this.totalDebitosOpcionais = totalDebitosOpcionais;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{fatura_consignada_response_total_debitos_opcionais_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor total dos d\u00E9bitos diversos opcionais lan\u00E7ados na fatura")
   @JsonProperty("totalDebitosOpcionais")
   public BigDecimal getTotalDebitosOpcionais() {
     return totalDebitosOpcionais;
@@ -371,14 +371,14 @@ public class FaturaConsignadaResponse   {
 
   
   /**
-   * {{{fatura_consignada_response_total_pagamentos_value}}}
+   * Valor total dos pagamentos lan\u00E7ados na fatura
    **/
   public FaturaConsignadaResponse totalPagamentos(BigDecimal totalPagamentos) {
     this.totalPagamentos = totalPagamentos;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{fatura_consignada_response_total_pagamentos_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor total dos pagamentos lan\u00E7ados na fatura")
   @JsonProperty("totalPagamentos")
   public BigDecimal getTotalPagamentos() {
     return totalPagamentos;
@@ -389,14 +389,14 @@ public class FaturaConsignadaResponse   {
 
   
   /**
-   * {{{fatura_consignada_response_total_creditos_nacionais_value}}}
+   * Valor total dos cr\u00E9ditos nacionais lan\u00E7ados na fatura
    **/
   public FaturaConsignadaResponse totalCreditosNacionais(BigDecimal totalCreditosNacionais) {
     this.totalCreditosNacionais = totalCreditosNacionais;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{fatura_consignada_response_total_creditos_nacionais_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor total dos cr\u00E9ditos nacionais lan\u00E7ados na fatura")
   @JsonProperty("totalCreditosNacionais")
   public BigDecimal getTotalCreditosNacionais() {
     return totalCreditosNacionais;
@@ -407,14 +407,14 @@ public class FaturaConsignadaResponse   {
 
   
   /**
-   * {{{fatura_consignada_response_total_ajustes_value}}}
+   * Valor total dos ajustes lan\u00E7ados na fatura
    **/
   public FaturaConsignadaResponse totalAjustes(BigDecimal totalAjustes) {
     this.totalAjustes = totalAjustes;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{fatura_consignada_response_total_ajustes_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor total dos ajustes lan\u00E7ados na fatura")
   @JsonProperty("totalAjustes")
   public BigDecimal getTotalAjustes() {
     return totalAjustes;
@@ -425,14 +425,14 @@ public class FaturaConsignadaResponse   {
 
   
   /**
-   * {{{fatura_consignada_response_total_tarifas_value}}}
+   * Valor total das tarifas lan\u00E7adas na fatura
    **/
   public FaturaConsignadaResponse totalTarifas(BigDecimal totalTarifas) {
     this.totalTarifas = totalTarifas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{fatura_consignada_response_total_tarifas_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor total das tarifas lan\u00E7adas na fatura")
   @JsonProperty("totalTarifas")
   public BigDecimal getTotalTarifas() {
     return totalTarifas;
@@ -443,14 +443,14 @@ public class FaturaConsignadaResponse   {
 
   
   /**
-   * {{{fatura_consignada_response_total_multa_value}}}
+   * Valor total da multa lan\u00E7ada na fatura
    **/
   public FaturaConsignadaResponse totalMulta(BigDecimal totalMulta) {
     this.totalMulta = totalMulta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{fatura_consignada_response_total_multa_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor total da multa lan\u00E7ada na fatura")
   @JsonProperty("totalMulta")
   public BigDecimal getTotalMulta() {
     return totalMulta;
@@ -461,14 +461,14 @@ public class FaturaConsignadaResponse   {
 
   
   /**
-   * {{{fatura_consignada_response_total_juros_value}}}
+   * Valor total dos juros de mora lan\u00E7ados na fatura
    **/
   public FaturaConsignadaResponse totalJuros(BigDecimal totalJuros) {
     this.totalJuros = totalJuros;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{fatura_consignada_response_total_juros_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor total dos juros de mora lan\u00E7ados na fatura")
   @JsonProperty("totalJuros")
   public BigDecimal getTotalJuros() {
     return totalJuros;
@@ -479,14 +479,14 @@ public class FaturaConsignadaResponse   {
 
   
   /**
-   * {{{fatura_consignada_response_taxa_rotativo_value}}}
+   * Valor percentual da taxa de juros rotativos
    **/
   public FaturaConsignadaResponse taxaRotativo(BigDecimal taxaRotativo) {
     this.taxaRotativo = taxaRotativo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{fatura_consignada_response_taxa_rotativo_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor percentual da taxa de juros rotativos")
   @JsonProperty("taxaRotativo")
   public BigDecimal getTaxaRotativo() {
     return taxaRotativo;
@@ -497,14 +497,14 @@ public class FaturaConsignadaResponse   {
 
   
   /**
-   * {{{fatura_consignada_response_taxa_saque_value}}}
+   * Valor percentual da taxa de saque
    **/
   public FaturaConsignadaResponse taxaSaque(BigDecimal taxaSaque) {
     this.taxaSaque = taxaSaque;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{fatura_consignada_response_taxa_saque_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor percentual da taxa de saque")
   @JsonProperty("taxaSaque")
   public BigDecimal getTaxaSaque() {
     return taxaSaque;
@@ -515,14 +515,14 @@ public class FaturaConsignadaResponse   {
 
   
   /**
-   * {{{fatura_consignada_response_taxa_maxima_proximo_periodo_value}}}
+   * Valor m\u00E1ximo percentual da taxa de encargos para o pr\u00F3ximo per\u00EDodo
    **/
   public FaturaConsignadaResponse taxaMaximaProximoPeriodo(BigDecimal taxaMaximaProximoPeriodo) {
     this.taxaMaximaProximoPeriodo = taxaMaximaProximoPeriodo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{fatura_consignada_response_taxa_maxima_proximo_periodo_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor m\u00E1ximo percentual da taxa de encargos para o pr\u00F3ximo per\u00EDodo")
   @JsonProperty("taxaMaximaProximoPeriodo")
   public BigDecimal getTaxaMaximaProximoPeriodo() {
     return taxaMaximaProximoPeriodo;
@@ -533,14 +533,14 @@ public class FaturaConsignadaResponse   {
 
   
   /**
-   * {{{fatura_consignada_response_total_servicos_value}}}
+   * Apresenta a soma de todos os seguros cobrados na fatura do cliente
    **/
   public FaturaConsignadaResponse totalServicos(BigDecimal totalServicos) {
     this.totalServicos = totalServicos;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{fatura_consignada_response_total_servicos_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta a soma de todos os seguros cobrados na fatura do cliente")
   @JsonProperty("totalServicos")
   public BigDecimal getTotalServicos() {
     return totalServicos;

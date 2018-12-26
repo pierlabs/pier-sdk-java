@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{telefone_response_description}}}
+ * Objeto de Resposta de Telefone
  **/
 
-@ApiModel(description = "{{{telefone_response_description}}}")
+@ApiModel(description = "Objeto de Resposta de Telefone")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TelefoneResponse   {
   
@@ -25,14 +25,14 @@ public class TelefoneResponse   {
 
   
   /**
-   * {{{telefone_response_id_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Telefone
    **/
   public TelefoneResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{telefone_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Telefone")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -43,14 +43,14 @@ public class TelefoneResponse   {
 
   
   /**
-   * {{{telefone_response_id_tipo_telefone_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone
    **/
   public TelefoneResponse idTipoTelefone(Long idTipoTelefone) {
     this.idTipoTelefone = idTipoTelefone;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{telefone_response_id_tipo_telefone_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone")
   @JsonProperty("idTipoTelefone")
   public Long getIdTipoTelefone() {
     return idTipoTelefone;
@@ -61,14 +61,14 @@ public class TelefoneResponse   {
 
   
   /**
-   * {{{telefone_response_id_pessoa_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o telefone pertence
    **/
   public TelefoneResponse idPessoa(Long idPessoa) {
     this.idPessoa = idPessoa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{telefone_response_id_pessoa_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o telefone pertence")
   @JsonProperty("idPessoa")
   public Long getIdPessoa() {
     return idPessoa;
@@ -79,14 +79,14 @@ public class TelefoneResponse   {
 
   
   /**
-   * {{{telefone_response_ddd_value}}}
+   * C\u00F3digo DDD do telefone
    **/
   public TelefoneResponse ddd(String ddd) {
     this.ddd = ddd;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{telefone_response_ddd_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo DDD do telefone")
   @JsonProperty("ddd")
   public String getDdd() {
     return ddd;
@@ -97,14 +97,14 @@ public class TelefoneResponse   {
 
   
   /**
-   * {{{telefone_response_telefone_value}}}
+   * N\u00FAmero do telefone
    **/
   public TelefoneResponse telefone(String telefone) {
     this.telefone = telefone;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{telefone_response_telefone_value}}}")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero do telefone")
   @JsonProperty("telefone")
   public String getTelefone() {
     return telefone;
@@ -115,14 +115,14 @@ public class TelefoneResponse   {
 
   
   /**
-   * {{{telefone_response_ramal_value}}}
+   * N\u00FAmero do ramal
    **/
   public TelefoneResponse ramal(String ramal) {
     this.ramal = ramal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{telefone_response_ramal_value}}}")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero do ramal")
   @JsonProperty("ramal")
   public String getRamal() {
     return ramal;
@@ -133,14 +133,14 @@ public class TelefoneResponse   {
 
   
   /**
-   * {{{telefone_response_status_value}}}
+   * Apresenta o Status do Telefone, onde: '0': Inativo e '1': Ativo
    **/
   public TelefoneResponse status(Integer status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{telefone_response_status_value}}}")
+  @ApiModelProperty(example = "null", value = "Apresenta o Status do Telefone, onde: '0': Inativo e '1': Ativo")
   @JsonProperty("status")
   public Integer getStatus() {
     return status;

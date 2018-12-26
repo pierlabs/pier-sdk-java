@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{tipo_campanha_response_description}}}
+ * Representa\u00E7\u00E3o da resposta do recurso do tipo de campanha
  **/
 
-@ApiModel(description = "{{{tipo_campanha_response_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso do tipo de campanha")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TipoCampanhaResponse   {
   
@@ -20,14 +20,14 @@ public class TipoCampanhaResponse   {
 
   
   /**
-   * {{{tipo_campanha_response_id_value}}}
+   * Identificador do tipo de campanha
    **/
   public TipoCampanhaResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_campanha_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "Identificador do tipo de campanha")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -38,14 +38,14 @@ public class TipoCampanhaResponse   {
 
   
   /**
-   * {{{tipo_campanha_response_descricao_value}}}
+   * Descri\u00E7\u00E3o do tipo de campanha
    **/
   public TipoCampanhaResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_campanha_response_descricao_value}}}")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do tipo de campanha")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;

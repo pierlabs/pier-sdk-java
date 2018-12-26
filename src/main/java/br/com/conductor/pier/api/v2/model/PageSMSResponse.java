@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{page_s_m_s_response_description}}}
+ * Lista de SMS
  **/
 
-@ApiModel(description = "{{{page_s_m_s_response_description}}}")
+@ApiModel(description = "Lista de SMS")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageSMSResponse   {
   

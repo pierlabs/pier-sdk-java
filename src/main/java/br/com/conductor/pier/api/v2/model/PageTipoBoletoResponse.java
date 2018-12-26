@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{page_tipo_boleto_response_description}}}
+ * Lista dos tipos de boletos
  **/
 
-@ApiModel(description = "{{{page_tipo_boleto_response_description}}}")
+@ApiModel(description = "Lista dos tipos de boletos")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageTipoBoletoResponse   {
   

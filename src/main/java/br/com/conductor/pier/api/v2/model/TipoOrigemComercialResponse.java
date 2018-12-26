@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{tipo_origem_comercial_response_description}}}
+ * Objeto de resposta do recurso de tipos de origens comerciais
  **/
 
-@ApiModel(description = "{{{tipo_origem_comercial_response_description}}}")
+@ApiModel(description = "Objeto de resposta do recurso de tipos de origens comerciais")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TipoOrigemComercialResponse   {
   
@@ -20,14 +20,14 @@ public class TipoOrigemComercialResponse   {
 
   
   /**
-   * {{{tipo_origem_comercial_response_id_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Tipo de Origem Comercial
    **/
   public TipoOrigemComercialResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_origem_comercial_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Tipo de Origem Comercial")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -38,14 +38,14 @@ public class TipoOrigemComercialResponse   {
 
   
   /**
-   * {{{tipo_origem_comercial_response_nome_value}}}
+   * Nome do tipo de origem comercial
    **/
   public TipoOrigemComercialResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_origem_comercial_response_nome_value}}}")
+  @ApiModelProperty(example = "null", value = "Nome do tipo de origem comercial")
   @JsonProperty("nome")
   public String getNome() {
     return nome;

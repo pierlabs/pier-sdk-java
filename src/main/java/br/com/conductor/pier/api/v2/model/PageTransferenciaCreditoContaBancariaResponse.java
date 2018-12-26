@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{page_transferencia_credito_conta_bancaria_response_description}}}
+ * Lista de Transfer\u00EAncias de cr\u00E9dito conta banc\u00E1ria
  **/
 
-@ApiModel(description = "{{{page_transferencia_credito_conta_bancaria_response_description}}}")
+@ApiModel(description = "Lista de Transfer\u00EAncias de cr\u00E9dito conta banc\u00E1ria")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageTransferenciaCreditoContaBancariaResponse   {
   

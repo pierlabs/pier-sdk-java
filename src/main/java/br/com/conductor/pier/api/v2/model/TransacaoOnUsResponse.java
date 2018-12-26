@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{transacao_on_us_response_description}}}
+ * Objeto de Resposta de Autoriza\u00E7\u00E3o
  **/
 
-@ApiModel(description = "{{{transacao_on_us_response_description}}}")
+@ApiModel(description = "Objeto de Resposta de Autoriza\u00E7\u00E3o")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TransacaoOnUsResponse   {
   
@@ -28,14 +28,14 @@ public class TransacaoOnUsResponse   {
 
   
   /**
-   * {{{transacao_on_us_response_nsu_origem_value}}}
+   * N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou
    **/
   public TransacaoOnUsResponse nsuOrigem(String nsuOrigem) {
     this.nsuOrigem = nsuOrigem;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{transacao_on_us_response_nsu_origem_value}}}")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou")
   @JsonProperty("nsuOrigem")
   public String getNsuOrigem() {
     return nsuOrigem;
@@ -46,14 +46,14 @@ public class TransacaoOnUsResponse   {
 
   
   /**
-   * {{{transacao_on_us_response_nsu_autorizacao_value}}}
+   * N\u00FAmero Sequencial \u00DAnico gerado pelo Autorizador a cada Transa\u00E7\u00E3o
    **/
   public TransacaoOnUsResponse nsuAutorizacao(String nsuAutorizacao) {
     this.nsuAutorizacao = nsuAutorizacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{transacao_on_us_response_nsu_autorizacao_value}}}")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero Sequencial \u00DAnico gerado pelo Autorizador a cada Transa\u00E7\u00E3o")
   @JsonProperty("nsuAutorizacao")
   public String getNsuAutorizacao() {
     return nsuAutorizacao;
@@ -64,14 +64,14 @@ public class TransacaoOnUsResponse   {
 
   
   /**
-   * {{{transacao_on_us_response_plano_de_parcelamento_value}}}
+   * Descri\u00E7\u00E3o do Plano de Parcelamento atribu\u00EDdo a Transa\u00E7\u00E3o
    **/
   public TransacaoOnUsResponse planoDeParcelamento(List<MapOfstringAndstring> planoDeParcelamento) {
     this.planoDeParcelamento = planoDeParcelamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{transacao_on_us_response_plano_de_parcelamento_value}}}")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do Plano de Parcelamento atribu\u00EDdo a Transa\u00E7\u00E3o")
   @JsonProperty("planoDeParcelamento")
   public List<MapOfstringAndstring> getPlanoDeParcelamento() {
     return planoDeParcelamento;
@@ -82,14 +82,14 @@ public class TransacaoOnUsResponse   {
 
   
   /**
-   * {{{transacao_on_us_response_codigo_autorizacao_value}}}
+   * C\u00F3digo de Autoriza\u00E7\u00E3o gerado pelo Autorizador
    **/
   public TransacaoOnUsResponse codigoAutorizacao(String codigoAutorizacao) {
     this.codigoAutorizacao = codigoAutorizacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{transacao_on_us_response_codigo_autorizacao_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Autoriza\u00E7\u00E3o gerado pelo Autorizador")
   @JsonProperty("codigoAutorizacao")
   public String getCodigoAutorizacao() {
     return codigoAutorizacao;
@@ -100,14 +100,14 @@ public class TransacaoOnUsResponse   {
 
   
   /**
-   * {{{transacao_on_us_response_numero_mascarado_cartao_value}}}
+   * N\u00FAmero do Cart\u00E3o que originou a transa\u00E7\u00E3o em formato mascarado
    **/
   public TransacaoOnUsResponse numeroMascaradoCartao(String numeroMascaradoCartao) {
     this.numeroMascaradoCartao = numeroMascaradoCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{transacao_on_us_response_numero_mascarado_cartao_value}}}")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero do Cart\u00E3o que originou a transa\u00E7\u00E3o em formato mascarado")
   @JsonProperty("numeroMascaradoCartao")
   public String getNumeroMascaradoCartao() {
     return numeroMascaradoCartao;
@@ -118,14 +118,14 @@ public class TransacaoOnUsResponse   {
 
   
   /**
-   * {{{transacao_on_us_response_nome_portador_cartao_value}}}
+   * Nome do Portador do Cart\u00E3o que originou a transa\u00E7\u00E3o
    **/
   public TransacaoOnUsResponse nomePortadorCartao(String nomePortadorCartao) {
     this.nomePortadorCartao = nomePortadorCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{transacao_on_us_response_nome_portador_cartao_value}}}")
+  @ApiModelProperty(example = "null", value = "Nome do Portador do Cart\u00E3o que originou a transa\u00E7\u00E3o")
   @JsonProperty("nomePortadorCartao")
   public String getNomePortadorCartao() {
     return nomePortadorCartao;
@@ -136,14 +136,14 @@ public class TransacaoOnUsResponse   {
 
   
   /**
-   * {{{transacao_on_us_response_terminal_requisitante_value}}}
+   * Apresenta a identifica\u00E7\u00E3o do terminal requisitante
    **/
   public TransacaoOnUsResponse terminalRequisitante(String terminalRequisitante) {
     this.terminalRequisitante = terminalRequisitante;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{transacao_on_us_response_terminal_requisitante_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta a identifica\u00E7\u00E3o do terminal requisitante")
   @JsonProperty("terminalRequisitante")
   public String getTerminalRequisitante() {
     return terminalRequisitante;

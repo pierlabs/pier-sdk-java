@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{vincular_cartoes_response_description}}}
+ * Objeto com response do v\u00EDnculo entre cart\u00F5es
  **/
 
-@ApiModel(description = "{{{vincular_cartoes_response_description}}}")
+@ApiModel(description = "Objeto com response do v\u00EDnculo entre cart\u00F5es")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class VinculoCartoesResponse   {
   
@@ -20,14 +20,14 @@ public class VinculoCartoesResponse   {
 
   
   /**
-   * {{{vincular_cartoes_response_id_cartao_value}}}
+   * C\u00F3digo identificador do cart\u00E3o principal gerado
    **/
   public VinculoCartoesResponse idCartaoPrincipal(Long idCartaoPrincipal) {
     this.idCartaoPrincipal = idCartaoPrincipal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{vincular_cartoes_response_id_cartao_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador do cart\u00E3o principal gerado")
   @JsonProperty("idCartaoPrincipal")
   public Long getIdCartaoPrincipal() {
     return idCartaoPrincipal;
@@ -38,14 +38,14 @@ public class VinculoCartoesResponse   {
 
   
   /**
-   * {{{vincular_cartoes_response_id_cartao_vinculado_value}}}
+   * C\u00F3digo identificador do cart\u00E3o vinculado gerado
    **/
   public VinculoCartoesResponse idCartaoVinculado(Long idCartaoVinculado) {
     this.idCartaoVinculado = idCartaoVinculado;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{vincular_cartoes_response_id_cartao_vinculado_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador do cart\u00E3o vinculado gerado")
   @JsonProperty("idCartaoVinculado")
   public Long getIdCartaoVinculado() {
     return idCartaoVinculado;

@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{page_push_response_description}}}
+ * Lista de Push
  **/
 
-@ApiModel(description = "{{{page_push_response_description}}}")
+@ApiModel(description = "Lista de Push")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PagePushResponse   {
   

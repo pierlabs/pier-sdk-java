@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{page_relatorio_movimentos_controle_processos_response_description}}}
+ * Representa\u00E7\u00E3o da p\u00E1gina de resposta para consulta do relat\u00F3rio
  **/
 
-@ApiModel(description = "{{{page_relatorio_movimentos_controle_processos_response_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o da p\u00E1gina de resposta para consulta do relat\u00F3rio")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageRelatorioMovimentosControleProcessos   {
   

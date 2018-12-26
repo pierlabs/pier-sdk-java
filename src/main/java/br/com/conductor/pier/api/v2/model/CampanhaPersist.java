@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{campanha_persist_description}}}
+ * Campanha
  **/
 
-@ApiModel(description = "{{{campanha_persist_description}}}")
+@ApiModel(description = "Campanha")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class CampanhaPersist   {
   
@@ -24,14 +24,14 @@ public class CampanhaPersist   {
 
   
   /**
-   * {{{campanha_persist_nome_value}}}
+   * Nome da campanha
    **/
   public CampanhaPersist nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{campanha_persist_nome_value}}}")
+  @ApiModelProperty(example = "null", value = "Nome da campanha")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -42,14 +42,14 @@ public class CampanhaPersist   {
 
   
   /**
-   * {{{campanha_persist_id_tipo_campanha_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do tipo da campanha
    **/
   public CampanhaPersist idTipoCampanha(Long idTipoCampanha) {
     this.idTipoCampanha = idTipoCampanha;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{campanha_persist_id_tipo_campanha_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do tipo da campanha")
   @JsonProperty("idTipoCampanha")
   public Long getIdTipoCampanha() {
     return idTipoCampanha;
@@ -60,14 +60,14 @@ public class CampanhaPersist   {
 
   
   /**
-   * {{{campanha_persist_planos_campanhas_value}}}
+   * Lista com os planos de campanha
    **/
   public CampanhaPersist planosCampanhas(List<PlanoCampanhaPersist> planosCampanhas) {
     this.planosCampanhas = planosCampanhas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{campanha_persist_planos_campanhas_value}}}")
+  @ApiModelProperty(example = "null", value = "Lista com os planos de campanha")
   @JsonProperty("planosCampanhas")
   public List<PlanoCampanhaPersist> getPlanosCampanhas() {
     return planosCampanhas;

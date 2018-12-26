@@ -12,10 +12,10 @@ import java.util.List;
 
 
 /**
- * {{{antecipacao_simulada_lote_response_description}}}
+ * Representa\u00E7\u00E3o da resposta do recurso Antecipacao Simulada
  **/
 
-@ApiModel(description = "{{{antecipacao_simulada_lote_response_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso Antecipacao Simulada")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class AntecipacaoSimuladaLoteResponse   {
   
@@ -26,14 +26,14 @@ public class AntecipacaoSimuladaLoteResponse   {
 
   
   /**
-   * {{{antecipacao_simulada_lote_response_valor_total_antecipado_value}}}
+   * Valor total antecipado
    **/
   public AntecipacaoSimuladaLoteResponse valorTotalAntecipado(BigDecimal valorTotalAntecipado) {
     this.valorTotalAntecipado = valorTotalAntecipado;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{antecipacao_simulada_lote_response_valor_total_antecipado_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor total antecipado")
   @JsonProperty("valorTotalAntecipado")
   public BigDecimal getValorTotalAntecipado() {
     return valorTotalAntecipado;
@@ -44,14 +44,14 @@ public class AntecipacaoSimuladaLoteResponse   {
 
   
   /**
-   * {{{antecipacao_simulada_lote_response_valor_total_desconto_value}}}
+   * Valor total do desconto
    **/
   public AntecipacaoSimuladaLoteResponse valorTotalDesconto(BigDecimal valorTotalDesconto) {
     this.valorTotalDesconto = valorTotalDesconto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{antecipacao_simulada_lote_response_valor_total_desconto_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor total do desconto")
   @JsonProperty("valorTotalDesconto")
   public BigDecimal getValorTotalDesconto() {
     return valorTotalDesconto;
@@ -62,14 +62,14 @@ public class AntecipacaoSimuladaLoteResponse   {
 
   
   /**
-   * {{{antecipacao_simulada_lote_response_valor_total_com_desconto_value}}}
+   * Valor total antecipado com o desconto
    **/
   public AntecipacaoSimuladaLoteResponse valorTotalComDesconto(BigDecimal valorTotalComDesconto) {
     this.valorTotalComDesconto = valorTotalComDesconto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{antecipacao_simulada_lote_response_valor_total_com_desconto_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor total antecipado com o desconto")
   @JsonProperty("valorTotalComDesconto")
   public BigDecimal getValorTotalComDesconto() {
     return valorTotalComDesconto;
@@ -80,14 +80,14 @@ public class AntecipacaoSimuladaLoteResponse   {
 
   
   /**
-   * {{{antecipacao_simulada_lote_response_antecipacoes_simuladas_value}}}
+   * Antecipa\u00E7\u00F5es Simuladas
    **/
   public AntecipacaoSimuladaLoteResponse antecipacoesSimuladas(List<AntecipacaoSimuladaResponse> antecipacoesSimuladas) {
     this.antecipacoesSimuladas = antecipacoesSimuladas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{antecipacao_simulada_lote_response_antecipacoes_simuladas_value}}}")
+  @ApiModelProperty(example = "null", value = "Antecipa\u00E7\u00F5es Simuladas")
   @JsonProperty("antecipacoesSimuladas")
   public List<AntecipacaoSimuladaResponse> getAntecipacoesSimuladas() {
     return antecipacoesSimuladas;

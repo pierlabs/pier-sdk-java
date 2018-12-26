@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{documento_detalhe_response_description}}}
+ * Representa\u00E7\u00E3o da resposta para o detalhamento do documento
  **/
 
-@ApiModel(description = "{{{documento_detalhe_response_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta para o detalhamento do documento")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class DocumentoDetalheResponse   {
   
@@ -21,14 +21,14 @@ public class DocumentoDetalheResponse   {
 
   
   /**
-   * {{{documento_detalhe_response_id_value}}}
+   * ID de identifica\u00E7\u00E3o do detalhamento do documento
    **/
   public DocumentoDetalheResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{documento_detalhe_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "ID de identifica\u00E7\u00E3o do detalhamento do documento")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -39,14 +39,14 @@ public class DocumentoDetalheResponse   {
 
   
   /**
-   * {{{documento_detalhe_response_propriedade_value}}}
+   * Propriedade do detalhamento do documento
    **/
   public DocumentoDetalheResponse propriedade(String propriedade) {
     this.propriedade = propriedade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{documento_detalhe_response_propriedade_value}}}")
+  @ApiModelProperty(example = "null", value = "Propriedade do detalhamento do documento")
   @JsonProperty("propriedade")
   public String getPropriedade() {
     return propriedade;
@@ -57,14 +57,14 @@ public class DocumentoDetalheResponse   {
 
   
   /**
-   * {{{documento_detalhe_response_conteudo_value}}}
+   * Conte\u00FAdo do detalhamento do documento
    **/
   public DocumentoDetalheResponse conteudo(String conteudo) {
     this.conteudo = conteudo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{documento_detalhe_response_conteudo_value}}}")
+  @ApiModelProperty(example = "null", value = "Conte\u00FAdo do detalhamento do documento")
   @JsonProperty("conteudo")
   public String getConteudo() {
     return conteudo;

@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{telefone_escritorio_cobranca_d_t_o_description}}}
+ * Telefone de escritorio para cobran\u00E7a
  **/
 
-@ApiModel(description = "{{{telefone_escritorio_cobranca_d_t_o_description}}}")
+@ApiModel(description = "Telefone de escritorio para cobran\u00E7a")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TelefoneEscritorioCobrancaDTO   {
   
@@ -22,14 +22,14 @@ public class TelefoneEscritorioCobrancaDTO   {
 
   
   /**
-   * {{{telefone_escritorio_cobranca_d_t_o_id}}}
+   * Telefone escrit\u00F3rio cobranca id
    **/
   public TelefoneEscritorioCobrancaDTO id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{telefone_escritorio_cobranca_d_t_o_id}}}")
+  @ApiModelProperty(example = "null", value = "Telefone escrit\u00F3rio cobranca id")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -40,14 +40,14 @@ public class TelefoneEscritorioCobrancaDTO   {
 
   
   /**
-   * {{{telefone_escritorio_cobranca_d_t_o_ddd_value}}}
+   * Telefone escrit\u00F3rio cobranca ddd
    **/
   public TelefoneEscritorioCobrancaDTO ddd(String ddd) {
     this.ddd = ddd;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{telefone_escritorio_cobranca_d_t_o_ddd_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Telefone escrit\u00F3rio cobranca ddd")
   @JsonProperty("ddd")
   public String getDdd() {
     return ddd;
@@ -58,14 +58,14 @@ public class TelefoneEscritorioCobrancaDTO   {
 
   
   /**
-   * {{{telefone_escritorio_cobranca_d_t_o_telefone_value}}}
+   * Telefone escrit\u00F3rio cobranca telefone
    **/
   public TelefoneEscritorioCobrancaDTO telefone(String telefone) {
     this.telefone = telefone;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{telefone_escritorio_cobranca_d_t_o_telefone_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Telefone escrit\u00F3rio cobranca telefone")
   @JsonProperty("telefone")
   public String getTelefone() {
     return telefone;
@@ -76,14 +76,14 @@ public class TelefoneEscritorioCobrancaDTO   {
 
   
   /**
-   * {{{telefone_escritorio_cobranca_d_t_o_ramal_value}}}
+   * Telefone escrit\u00F3rio cobranca ramal
    **/
   public TelefoneEscritorioCobrancaDTO ramal(String ramal) {
     this.ramal = ramal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{telefone_escritorio_cobranca_d_t_o_ramal_value}}}")
+  @ApiModelProperty(example = "null", value = "Telefone escrit\u00F3rio cobranca ramal")
   @JsonProperty("ramal")
   public String getRamal() {
     return ramal;

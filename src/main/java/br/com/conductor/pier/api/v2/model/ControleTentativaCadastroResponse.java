@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{controle_tentativa_cadastro_resposta_descricao}}}
+ * Retorno da solicita\u00E7\u00E3o tentativa de cadastro
  **/
 
-@ApiModel(description = "{{{controle_tentativa_cadastro_resposta_descricao}}}")
+@ApiModel(description = "Retorno da solicita\u00E7\u00E3o tentativa de cadastro")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ControleTentativaCadastroResponse   {
   
@@ -21,14 +21,14 @@ public class ControleTentativaCadastroResponse   {
 
   
   /**
-   * {{{controle_tentativa_cadastro_resposta_cpf_descricao}}}
+   * CPF do usu\u00E1rio
    **/
   public ControleTentativaCadastroResponse cpf(String cpf) {
     this.cpf = cpf;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{controle_tentativa_cadastro_resposta_cpf_descricao}}}")
+  @ApiModelProperty(example = "null", value = "CPF do usu\u00E1rio")
   @JsonProperty("cpf")
   public String getCpf() {
     return cpf;
@@ -39,14 +39,14 @@ public class ControleTentativaCadastroResponse   {
 
   
   /**
-   * {{{controle_tentativa_cadastro_resposta_login_descricao}}}
+   * Usu\u00E1rio
    **/
   public ControleTentativaCadastroResponse login(String login) {
     this.login = login;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{controle_tentativa_cadastro_resposta_login_descricao}}}")
+  @ApiModelProperty(example = "null", value = "Usu\u00E1rio")
   @JsonProperty("login")
   public String getLogin() {
     return login;
@@ -57,14 +57,14 @@ public class ControleTentativaCadastroResponse   {
 
   
   /**
-   * {{{controle_tentativa_cadastro_resposta_tentativas_descricao}}}
+   * N\u00FAmero de tentativas
    **/
   public ControleTentativaCadastroResponse tentativas(Integer tentativas) {
     this.tentativas = tentativas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{controle_tentativa_cadastro_resposta_tentativas_descricao}}}")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero de tentativas")
   @JsonProperty("tentativas")
   public Integer getTentativas() {
     return tentativas;

@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{lote_cartoes_pre_pagos_response_description}}}
+ * Lote Cart\u00F5es Pr\u00E9-Pagos
  **/
 
-@ApiModel(description = "{{{lote_cartoes_pre_pagos_response_description}}}")
+@ApiModel(description = "Lote Cart\u00F5es Pr\u00E9-Pagos")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class LoteCartoesPrePagosResponse   {
   
@@ -29,14 +29,14 @@ public class LoteCartoesPrePagosResponse   {
 
   
   /**
-   * {{{lote_cartoes_pre_pagos_response_id_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do lote de cart\u00F5es pr\u00E9-pagos (id)
    **/
   public LoteCartoesPrePagosResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{lote_cartoes_pre_pagos_response_id_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo de identifica\u00E7\u00E3o do lote de cart\u00F5es pr\u00E9-pagos (id)")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -47,14 +47,14 @@ public class LoteCartoesPrePagosResponse   {
 
   
   /**
-   * {{{lote_cartoes_pre_pagos_response_id_origem_comercial_value}}}
+   * C\u00F3digo identificador da origem comercial
    **/
   public LoteCartoesPrePagosResponse idOrigemComercial(Long idOrigemComercial) {
     this.idOrigemComercial = idOrigemComercial;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{lote_cartoes_pre_pagos_response_id_origem_comercial_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo identificador da origem comercial")
   @JsonProperty("idOrigemComercial")
   public Long getIdOrigemComercial() {
     return idOrigemComercial;
@@ -65,14 +65,14 @@ public class LoteCartoesPrePagosResponse   {
 
   
   /**
-   * {{{lote_cartoes_pre_pagos_response_id_produto_value}}}
+   * C\u00F3digo identificador do Produto
    **/
   public LoteCartoesPrePagosResponse idProduto(Long idProduto) {
     this.idProduto = idProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{lote_cartoes_pre_pagos_response_id_produto_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo identificador do Produto")
   @JsonProperty("idProduto")
   public Long getIdProduto() {
     return idProduto;
@@ -83,14 +83,14 @@ public class LoteCartoesPrePagosResponse   {
 
   
   /**
-   * {{{lote_cartoes_pre_pagos_response_id_tipo_cartao_value}}}
+   * C\u00F3digo identificador do tipo do cart\u00E3o
    **/
   public LoteCartoesPrePagosResponse idTipoCartao(Long idTipoCartao) {
     this.idTipoCartao = idTipoCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{lote_cartoes_pre_pagos_response_id_tipo_cartao_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo identificador do tipo do cart\u00E3o")
   @JsonProperty("idTipoCartao")
   public Long getIdTipoCartao() {
     return idTipoCartao;
@@ -101,14 +101,14 @@ public class LoteCartoesPrePagosResponse   {
 
   
   /**
-   * {{{lote_cartoes_pre_pagos_response_id_imagem_value}}}
+   * C\u00F3digo identificador da Imagem do cart\u00E3o
    **/
   public LoteCartoesPrePagosResponse idImagem(Long idImagem) {
     this.idImagem = idImagem;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{lote_cartoes_pre_pagos_response_id_imagem_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo identificador da Imagem do cart\u00E3o")
   @JsonProperty("idImagem")
   public Long getIdImagem() {
     return idImagem;
@@ -119,14 +119,14 @@ public class LoteCartoesPrePagosResponse   {
 
   
   /**
-   * {{{lote_cartoes_pre_pagos_response_id_endereco_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o
    **/
   public LoteCartoesPrePagosResponse idEndereco(Long idEndereco) {
     this.idEndereco = idEndereco;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{lote_cartoes_pre_pagos_response_id_endereco_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o")
   @JsonProperty("idEndereco")
   public Long getIdEndereco() {
     return idEndereco;
@@ -137,14 +137,14 @@ public class LoteCartoesPrePagosResponse   {
 
   
   /**
-   * {{{lote_cartoes_pre_pagos_response_quantidade_value}}}
+   * N\u00FAmero de cart\u00F5es existentes no Lote
    **/
   public LoteCartoesPrePagosResponse quantidade(Integer quantidade) {
     this.quantidade = quantidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{lote_cartoes_pre_pagos_response_quantidade_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "N\u00FAmero de cart\u00F5es existentes no Lote")
   @JsonProperty("quantidade")
   public Integer getQuantidade() {
     return quantidade;
@@ -155,14 +155,14 @@ public class LoteCartoesPrePagosResponse   {
 
   
   /**
-   * {{{lote_cartoes_pre_pagos_response_data_cadastro_value}}}
+   * Data de cadastro do lote de cart\u00F5es pr\u00E9-pagos
    **/
   public LoteCartoesPrePagosResponse dataCadastro(String dataCadastro) {
     this.dataCadastro = dataCadastro;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{lote_cartoes_pre_pagos_response_data_cadastro_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Data de cadastro do lote de cart\u00F5es pr\u00E9-pagos")
   @JsonProperty("dataCadastro")
   public String getDataCadastro() {
     return dataCadastro;
@@ -173,14 +173,14 @@ public class LoteCartoesPrePagosResponse   {
 
   
   /**
-   * {{{lote_cartoes_pre_pagos_response_usuario_cadastro_value}}}
+   * Nome do usu\u00E1rio que criou o lote
    **/
   public LoteCartoesPrePagosResponse usuarioCadastro(String usuarioCadastro) {
     this.usuarioCadastro = usuarioCadastro;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{lote_cartoes_pre_pagos_response_usuario_cadastro_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Nome do usu\u00E1rio que criou o lote")
   @JsonProperty("usuarioCadastro")
   public String getUsuarioCadastro() {
     return usuarioCadastro;
@@ -191,14 +191,14 @@ public class LoteCartoesPrePagosResponse   {
 
   
   /**
-   * {{{lote_cartoes_pre_pagos_response_status_processamento_value}}}
+   * Indica o status de processamento do lote
    **/
   public LoteCartoesPrePagosResponse statusProcessamento(Integer statusProcessamento) {
     this.statusProcessamento = statusProcessamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{lote_cartoes_pre_pagos_response_status_processamento_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Indica o status de processamento do lote")
   @JsonProperty("statusProcessamento")
   public Integer getStatusProcessamento() {
     return statusProcessamento;
@@ -209,14 +209,14 @@ public class LoteCartoesPrePagosResponse   {
 
   
   /**
-   * {{{lote_cartoes_pre_pagos_response_identificador_externo_value}}}
+   * N\u00FAmero de identifica\u00E7\u00E3o externo (utilizado pelo emissor)
    **/
   public LoteCartoesPrePagosResponse identificadorExterno(String identificadorExterno) {
     this.identificadorExterno = identificadorExterno;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{lote_cartoes_pre_pagos_response_identificador_externo_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "N\u00FAmero de identifica\u00E7\u00E3o externo (utilizado pelo emissor)")
   @JsonProperty("identificadorExterno")
   public String getIdentificadorExterno() {
     return identificadorExterno;

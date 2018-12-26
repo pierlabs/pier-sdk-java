@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{aplicacao_mobile_response_description}}}
+ * Aplicacao Mobile
  **/
 
-@ApiModel(description = "{{{aplicacao_mobile_response_description}}}")
+@ApiModel(description = "Aplicacao Mobile")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class AplicacaoMobileResponse   {
   
@@ -26,14 +26,14 @@ public class AplicacaoMobileResponse   {
 
   
   /**
-   * {{{aplicacao_mobile_response_id_value}}}
+   * Apresenta o identificador da aplicacao
    **/
   public AplicacaoMobileResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{aplicacao_mobile_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "Apresenta o identificador da aplicacao")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -44,14 +44,14 @@ public class AplicacaoMobileResponse   {
 
   
   /**
-   * {{{aplicacao_mobile_response_id_plataforma_mobile_value}}}
+   * Apresenta o identificador da plataforma
    **/
   public AplicacaoMobileResponse idPlataformaMobile(Long idPlataformaMobile) {
     this.idPlataformaMobile = idPlataformaMobile;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{aplicacao_mobile_response_id_plataforma_mobile_value}}}")
+  @ApiModelProperty(example = "null", value = "Apresenta o identificador da plataforma")
   @JsonProperty("idPlataformaMobile")
   public Long getIdPlataformaMobile() {
     return idPlataformaMobile;
@@ -62,14 +62,14 @@ public class AplicacaoMobileResponse   {
 
   
   /**
-   * {{{aplicacao_mobile_response_token_value}}}
+   * Apresenta o token da aplicacao
    **/
   public AplicacaoMobileResponse token(String token) {
     this.token = token;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{aplicacao_mobile_response_token_value}}}")
+  @ApiModelProperty(example = "null", value = "Apresenta o token da aplicacao")
   @JsonProperty("token")
   public String getToken() {
     return token;
@@ -80,14 +80,14 @@ public class AplicacaoMobileResponse   {
 
   
   /**
-   * {{{aplicacao_mobile_response_cor_value}}}
+   * Apresenta a cor da mensagem da aplicacao
    **/
   public AplicacaoMobileResponse cor(String cor) {
     this.cor = cor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{aplicacao_mobile_response_cor_value}}}")
+  @ApiModelProperty(example = "null", value = "Apresenta a cor da mensagem da aplicacao")
   @JsonProperty("cor")
   public String getCor() {
     return cor;
@@ -98,14 +98,14 @@ public class AplicacaoMobileResponse   {
 
   
   /**
-   * {{{aplicacao_mobile_response_som_value}}}
+   * Apresenta o som da mensagem da aplicacao
    **/
   public AplicacaoMobileResponse som(String som) {
     this.som = som;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{aplicacao_mobile_response_som_value}}}")
+  @ApiModelProperty(example = "null", value = "Apresenta o som da mensagem da aplicacao")
   @JsonProperty("som")
   public String getSom() {
     return som;
@@ -116,14 +116,14 @@ public class AplicacaoMobileResponse   {
 
   
   /**
-   * {{{aplicacao_mobile_response_icone_value}}}
+   * Apresenta o icone da mensagem da aplica\u00E7\u00E3o
    **/
   public AplicacaoMobileResponse icone(String icone) {
     this.icone = icone;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{aplicacao_mobile_response_icone_value}}}")
+  @ApiModelProperty(example = "null", value = "Apresenta o icone da mensagem da aplica\u00E7\u00E3o")
   @JsonProperty("icone")
   public String getIcone() {
     return icone;
@@ -134,14 +134,14 @@ public class AplicacaoMobileResponse   {
 
   
   /**
-   * {{{aplicacao_mobile_response_certificado_base64_value}}}
+   * Apresenta o certificado da aplica\u00E7\u00E3o
    **/
   public AplicacaoMobileResponse certificadoBase64(String certificadoBase64) {
     this.certificadoBase64 = certificadoBase64;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{aplicacao_mobile_response_certificado_base64_value}}}")
+  @ApiModelProperty(example = "null", value = "Apresenta o certificado da aplica\u00E7\u00E3o")
   @JsonProperty("certificadoBase64")
   public String getCertificadoBase64() {
     return certificadoBase64;
@@ -152,14 +152,14 @@ public class AplicacaoMobileResponse   {
 
   
   /**
-   * {{{aplicacao_mobile_response_senha_value}}}
+   * Apresenta a senha da aplica\u00E7\u00E3o
    **/
   public AplicacaoMobileResponse senha(String senha) {
     this.senha = senha;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{aplicacao_mobile_response_senha_value}}}")
+  @ApiModelProperty(example = "null", value = "Apresenta a senha da aplica\u00E7\u00E3o")
   @JsonProperty("senha")
   public String getSenha() {
     return senha;

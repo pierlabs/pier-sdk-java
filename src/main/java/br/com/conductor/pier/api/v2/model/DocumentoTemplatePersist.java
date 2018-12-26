@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{documento_template_persist_description}}}
+ * Representa\u00E7\u00E3o do template do documento
  **/
 
-@ApiModel(description = "{{{documento_template_persist_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o do template do documento")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class DocumentoTemplatePersist   {
   
@@ -24,14 +24,14 @@ public class DocumentoTemplatePersist   {
 
   
   /**
-   * {{{documento_template_persist_id_tipo_template_value}}}
+   * ID para o Tipo de Template vinculado ao template
    **/
   public DocumentoTemplatePersist idTipoTemplate(Long idTipoTemplate) {
     this.idTipoTemplate = idTipoTemplate;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{documento_template_persist_id_tipo_template_value}}}")
+  @ApiModelProperty(example = "null", value = "ID para o Tipo de Template vinculado ao template")
   @JsonProperty("idTipoTemplate")
   public Long getIdTipoTemplate() {
     return idTipoTemplate;
@@ -42,14 +42,14 @@ public class DocumentoTemplatePersist   {
 
   
   /**
-   * {{{documento_template_persist_template_value}}}
+   * Template para o conte\u00FAdo do documento
    **/
   public DocumentoTemplatePersist template(String template) {
     this.template = template;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{documento_template_persist_template_value}}}")
+  @ApiModelProperty(example = "null", value = "Template para o conte\u00FAdo do documento")
   @JsonProperty("template")
   public String getTemplate() {
     return template;
@@ -60,14 +60,14 @@ public class DocumentoTemplatePersist   {
 
   
   /**
-   * {{{documento_template_persist_integracoes_value}}}
+   * Lista de configura\u00E7\u00F5es de integra\u00E7\u00E3o
    **/
   public DocumentoTemplatePersist integracoes(List<ReferenciaIdPersist> integracoes) {
     this.integracoes = integracoes;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{documento_template_persist_integracoes_value}}}")
+  @ApiModelProperty(example = "null", value = "Lista de configura\u00E7\u00F5es de integra\u00E7\u00E3o")
   @JsonProperty("integracoes")
   public List<ReferenciaIdPersist> getIntegracoes() {
     return integracoes;

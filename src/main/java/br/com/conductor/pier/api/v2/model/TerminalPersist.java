@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{terminal_persist_description}}}
+ * Objeto Terminal
  **/
 
-@ApiModel(description = "{{{terminal_persist_description}}}")
+@ApiModel(description = "Objeto Terminal")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TerminalPersist   {
   
@@ -21,14 +21,14 @@ public class TerminalPersist   {
 
   
   /**
-   * {{{terminal_persist_id_estabelecimento_value}}}
+   * Apresenta o id do estabelecimento
    **/
   public TerminalPersist idEstabelecimento(Long idEstabelecimento) {
     this.idEstabelecimento = idEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{terminal_persist_id_estabelecimento_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Apresenta o id do estabelecimento")
   @JsonProperty("idEstabelecimento")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
@@ -39,14 +39,14 @@ public class TerminalPersist   {
 
   
   /**
-   * {{{terminal_persist_flag_consulta_extrato_value}}}
+   * Flag indicando se permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o))
    **/
   public TerminalPersist flagConsultaExtrato(Boolean flagConsultaExtrato) {
     this.flagConsultaExtrato = flagConsultaExtrato;
     return this;
   }
   
-  @ApiModelProperty(example = "false", required = true, value = "{{{terminal_persist_flag_consulta_extrato_value}}}")
+  @ApiModelProperty(example = "false", required = true, value = "Flag indicando se permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o))")
   @JsonProperty("flagConsultaExtrato")
   public Boolean getFlagConsultaExtrato() {
     return flagConsultaExtrato;
@@ -57,14 +57,14 @@ public class TerminalPersist   {
 
   
   /**
-   * {{{terminal_persist_flag_terminal_virtual_value}}}
+   * Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o))
    **/
   public TerminalPersist flagTerminalVirtual(Boolean flagTerminalVirtual) {
     this.flagTerminalVirtual = flagTerminalVirtual;
     return this;
   }
   
-  @ApiModelProperty(example = "false", required = true, value = "{{{terminal_persist_flag_terminal_virtual_value}}}")
+  @ApiModelProperty(example = "false", required = true, value = "Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o))")
   @JsonProperty("flagTerminalVirtual")
   public Boolean getFlagTerminalVirtual() {
     return flagTerminalVirtual;

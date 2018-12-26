@@ -9,10 +9,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{faq_response_description}}}
+ * Objeto FAQ
  **/
 
-@ApiModel(description = "{{{faq_response_description}}}")
+@ApiModel(description = "Objeto FAQ")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class FaqResponse   {
   
@@ -45,14 +45,14 @@ public class FaqResponse   {
 
   
   /**
-   * {{{faq_response_id_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o da FAQ (id)
    **/
   public FaqResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{faq_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o da FAQ (id)")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -63,14 +63,14 @@ public class FaqResponse   {
 
   
   /**
-   * {{{faq_response_pergunta_value}}}
+   * Conte\u00FAdo da pergunta
    **/
   public FaqResponse pergunta(String pergunta) {
     this.pergunta = pergunta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{faq_response_pergunta_value}}}")
+  @ApiModelProperty(example = "null", value = "Conte\u00FAdo da pergunta")
   @JsonProperty("pergunta")
   public String getPergunta() {
     return pergunta;
@@ -81,14 +81,14 @@ public class FaqResponse   {
 
   
   /**
-   * {{{faq_response_resposta_value}}}
+   * Conte\u00FAdo da resposta
    **/
   public FaqResponse resposta(String resposta) {
     this.resposta = resposta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{faq_response_resposta_value}}}")
+  @ApiModelProperty(example = "null", value = "Conte\u00FAdo da resposta")
   @JsonProperty("resposta")
   public String getResposta() {
     return resposta;
@@ -99,14 +99,14 @@ public class FaqResponse   {
 
   
   /**
-   * {{{faq_response_relevancia_value}}}
+   * N\u00EDvel de relev\u00E2ncia da pergunta
    **/
   public FaqResponse relevancia(Integer relevancia) {
     this.relevancia = relevancia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{faq_response_relevancia_value}}}")
+  @ApiModelProperty(example = "null", value = "N\u00EDvel de relev\u00E2ncia da pergunta")
   @JsonProperty("relevancia")
   public Integer getRelevancia() {
     return relevancia;
@@ -117,14 +117,14 @@ public class FaqResponse   {
 
   
   /**
-   * {{{faq_response_plataforma_value}}}
+   * Plataforma em que a FAQ se encaixa
    **/
   public FaqResponse plataforma(String plataforma) {
     this.plataforma = plataforma;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{faq_response_plataforma_value}}}")
+  @ApiModelProperty(example = "null", value = "Plataforma em que a FAQ se encaixa")
   @JsonProperty("plataforma")
   public String getPlataforma() {
     return plataforma;
@@ -135,14 +135,14 @@ public class FaqResponse   {
 
   
   /**
-   * {{{faq_response_categoria_value}}}
+   * Categoria de assunto do qual a FAQ se trata
    **/
   public FaqResponse categoria(String categoria) {
     this.categoria = categoria;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{faq_response_categoria_value}}}")
+  @ApiModelProperty(example = "null", value = "Categoria de assunto do qual a FAQ se trata")
   @JsonProperty("categoria")
   public String getCategoria() {
     return categoria;
@@ -153,14 +153,14 @@ public class FaqResponse   {
 
   
   /**
-   * {{{faq_response_status_value}}}
+   * Status descrevendo a situa\u00E7\u00E3o atual da FAQ
    **/
   public FaqResponse status(StatusEnum status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{faq_response_status_value}}}")
+  @ApiModelProperty(example = "null", value = "Status descrevendo a situa\u00E7\u00E3o atual da FAQ")
   @JsonProperty("status")
   public StatusEnum getStatus() {
     return status;

@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{historico_impressao_cartao_response_description}}}
+ * Hist\u00F3rico Impress\u00E3o Cart\u00E3o
  **/
 
-@ApiModel(description = "{{{historico_impressao_cartao_response_description}}}")
+@ApiModel(description = "Hist\u00F3rico Impress\u00E3o Cart\u00E3o")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class HistoricoImpressaoCartaoResponse   {
   
@@ -23,14 +23,14 @@ public class HistoricoImpressaoCartaoResponse   {
 
   
   /**
-   * {{{historico_impressao_cartao_response_id_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Hist\u00F3rico de Impress\u00E3o Avulsa de Cart\u00F5es (id)
    **/
   public HistoricoImpressaoCartaoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{historico_impressao_cartao_response_id_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo de Identifica\u00E7\u00E3o do Hist\u00F3rico de Impress\u00E3o Avulsa de Cart\u00F5es (id)")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -41,14 +41,14 @@ public class HistoricoImpressaoCartaoResponse   {
 
   
   /**
-   * {{{historico_impressao_cartao_response_id_cartao_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)
    **/
   public HistoricoImpressaoCartaoResponse idCartao(Long idCartao) {
     this.idCartao = idCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{historico_impressao_cartao_response_id_cartao_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)")
   @JsonProperty("idCartao")
   public Long getIdCartao() {
     return idCartao;
@@ -59,14 +59,14 @@ public class HistoricoImpressaoCartaoResponse   {
 
   
   /**
-   * {{{historico_impressao_cartao_response_id_status_impressao_cartao_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Status de Impress\u00E3o do Cart\u00E3o (id)
    **/
   public HistoricoImpressaoCartaoResponse idStatusImpressaoCartao(Long idStatusImpressaoCartao) {
     this.idStatusImpressaoCartao = idStatusImpressaoCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{historico_impressao_cartao_response_id_status_impressao_cartao_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo de Identifica\u00E7\u00E3o do Status de Impress\u00E3o do Cart\u00E3o (id)")
   @JsonProperty("idStatusImpressaoCartao")
   public Long getIdStatusImpressaoCartao() {
     return idStatusImpressaoCartao;
@@ -77,14 +77,14 @@ public class HistoricoImpressaoCartaoResponse   {
 
   
   /**
-   * {{{historico_impressao_cartao_response_mensagem_historico_value}}}
+   * Apresenta uma mensagem que descreve a etapa do processo de impress\u00E3o do cart\u00E3o que fora realizado
    **/
   public HistoricoImpressaoCartaoResponse mensagemHistorico(String mensagemHistorico) {
     this.mensagemHistorico = mensagemHistorico;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{historico_impressao_cartao_response_mensagem_historico_value}}}")
+  @ApiModelProperty(example = "null", value = "Apresenta uma mensagem que descreve a etapa do processo de impress\u00E3o do cart\u00E3o que fora realizado")
   @JsonProperty("mensagemHistorico")
   public String getMensagemHistorico() {
     return mensagemHistorico;
@@ -95,14 +95,14 @@ public class HistoricoImpressaoCartaoResponse   {
 
   
   /**
-   * {{{historico_impressao_cartao_response_data_historico_value}}}
+   * Apresenta a data que o registro de Hist\u00F3rico de Impress\u00E3o de um Cart\u00E3o fora inserido
    **/
   public HistoricoImpressaoCartaoResponse dataHistorico(String dataHistorico) {
     this.dataHistorico = dataHistorico;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{historico_impressao_cartao_response_data_historico_value}}}")
+  @ApiModelProperty(example = "null", value = "Apresenta a data que o registro de Hist\u00F3rico de Impress\u00E3o de um Cart\u00E3o fora inserido")
   @JsonProperty("dataHistorico")
   public String getDataHistorico() {
     return dataHistorico;

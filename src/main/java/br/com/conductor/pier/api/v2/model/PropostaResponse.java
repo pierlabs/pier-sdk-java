@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{proposta_response_description}}}
+ * Representa\u00E7\u00E3o da resposta da proposta
  **/
 
-@ApiModel(description = "{{{proposta_response_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta da proposta")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PropostaResponse   {
   
@@ -22,14 +22,14 @@ public class PropostaResponse   {
 
   
   /**
-   * {{{proposta_response_id_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Proposta (id)
    **/
   public PropostaResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{proposta_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o da Proposta (id)")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -40,14 +40,14 @@ public class PropostaResponse   {
 
   
   /**
-   * {{{proposta_response_status_value}}}
+   * Status da proposta
    **/
   public PropostaResponse status(Integer status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{proposta_response_status_value}}}")
+  @ApiModelProperty(example = "null", value = "Status da proposta")
   @JsonProperty("status")
   public Integer getStatus() {
     return status;
@@ -58,14 +58,14 @@ public class PropostaResponse   {
 
   
   /**
-   * {{{proposta_response_data_cadastramento_value}}}
+   * Data de cadastramento da proposta
    **/
   public PropostaResponse dataCadastramento(String dataCadastramento) {
     this.dataCadastramento = dataCadastramento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{proposta_response_data_cadastramento_value}}}")
+  @ApiModelProperty(example = "null", value = "Data de cadastramento da proposta")
   @JsonProperty("dataCadastramento")
   public String getDataCadastramento() {
     return dataCadastramento;
@@ -76,14 +76,14 @@ public class PropostaResponse   {
 
   
   /**
-   * {{{proposta_response_data_aprovacaoNegacaoPendencia_value}}}
+   * Data de atualizaca\u00E7\uFFFD da proposta
    **/
   public PropostaResponse dataAprovacaoNegacaoPendencia(String dataAprovacaoNegacaoPendencia) {
     this.dataAprovacaoNegacaoPendencia = dataAprovacaoNegacaoPendencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{proposta_response_data_aprovacaoNegacaoPendencia_value}}}")
+  @ApiModelProperty(example = "null", value = "Data de atualizaca\u00E7\uFFFD da proposta")
   @JsonProperty("dataAprovacaoNegacaoPendencia")
   public String getDataAprovacaoNegacaoPendencia() {
     return dataAprovacaoNegacaoPendencia;

@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{terminal_response_description}}}
+ * ObjetoTerminal
  **/
 
-@ApiModel(description = "{{{terminal_response_description}}}")
+@ApiModel(description = "ObjetoTerminal")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TerminalResponse   {
   
@@ -24,14 +24,14 @@ public class TerminalResponse   {
 
   
   /**
-   * {{{terminal_response_id_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id)
    **/
   public TerminalResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{terminal_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id)")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -42,14 +42,14 @@ public class TerminalResponse   {
 
   
   /**
-   * {{{terminal_response_terminal_value}}}
+   * N\u00FAmero \u00FAnico do terminal
    **/
   public TerminalResponse terminal(String terminal) {
     this.terminal = terminal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{terminal_response_terminal_value}}}")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero \u00FAnico do terminal")
   @JsonProperty("terminal")
   public String getTerminal() {
     return terminal;
@@ -60,14 +60,14 @@ public class TerminalResponse   {
 
   
   /**
-   * {{{terminal_response_numero_estabelecimento_value}}}
+   * N\u00FAmero do estabelecimento a qual o terminal pertence
    **/
   public TerminalResponse numeroEstabelecimento(Long numeroEstabelecimento) {
     this.numeroEstabelecimento = numeroEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{terminal_response_numero_estabelecimento_value}}}")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero do estabelecimento a qual o terminal pertence")
   @JsonProperty("numeroEstabelecimento")
   public Long getNumeroEstabelecimento() {
     return numeroEstabelecimento;
@@ -78,14 +78,14 @@ public class TerminalResponse   {
 
   
   /**
-   * {{{terminal_response_id_estabelecimento_value}}}
+   * N\u00FAmero de identifica\u00E7\u00E3o do estabelecimento a qual o terminal pertence
    **/
   public TerminalResponse idEstabelecimento(Long idEstabelecimento) {
     this.idEstabelecimento = idEstabelecimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{terminal_response_id_estabelecimento_value}}}")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero de identifica\u00E7\u00E3o do estabelecimento a qual o terminal pertence")
   @JsonProperty("idEstabelecimento")
   public Long getIdEstabelecimento() {
     return idEstabelecimento;
@@ -96,14 +96,14 @@ public class TerminalResponse   {
 
   
   /**
-   * {{{terminal_response_flag_consulta_extrato_value}}}
+   * Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o))
    **/
   public TerminalResponse flagConsultaExtrato(Boolean flagConsultaExtrato) {
     this.flagConsultaExtrato = flagConsultaExtrato;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "{{{terminal_response_flag_consulta_extrato_value}}}")
+  @ApiModelProperty(example = "false", value = "Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o))")
   @JsonProperty("flagConsultaExtrato")
   public Boolean getFlagConsultaExtrato() {
     return flagConsultaExtrato;
@@ -114,14 +114,14 @@ public class TerminalResponse   {
 
   
   /**
-   * {{{terminal_response_flag_terminal_virtual_value}}}
+   * Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o))
    **/
   public TerminalResponse flagTerminalVirtual(Boolean flagTerminalVirtual) {
     this.flagTerminalVirtual = flagTerminalVirtual;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "{{{terminal_response_flag_terminal_virtual_value}}}")
+  @ApiModelProperty(example = "false", value = "Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o))")
   @JsonProperty("flagTerminalVirtual")
   public Boolean getFlagTerminalVirtual() {
     return flagTerminalVirtual;

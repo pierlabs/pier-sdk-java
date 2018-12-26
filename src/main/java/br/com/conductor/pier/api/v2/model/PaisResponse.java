@@ -9,10 +9,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{pais_response_description}}}
+ * Representa\u00E7\u00E3o da resposta do recurso pa\u00EDses
  **/
 
-@ApiModel(description = "{{{pais_response_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso pa\u00EDses")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PaisResponse   {
   
@@ -49,14 +49,14 @@ public class PaisResponse   {
 
   
   /**
-   * {{{pais_response_id_value}}}
+   * C\u00F3digo identificador \u00FAnico do pa\u00EDs na base
    **/
   public PaisResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pais_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador \u00FAnico do pa\u00EDs na base")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -67,14 +67,14 @@ public class PaisResponse   {
 
   
   /**
-   * {{{pais_response_codigo_value}}}
+   * C\u00F3digo identificador do pa\u00EDs
    **/
   public PaisResponse codigo(String codigo) {
     this.codigo = codigo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pais_response_codigo_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador do pa\u00EDs")
   @JsonProperty("codigo")
   public String getCodigo() {
     return codigo;
@@ -85,14 +85,14 @@ public class PaisResponse   {
 
   
   /**
-   * {{{pais_response_sigla_value}}}
+   * Sigla do pa\u00EDs
    **/
   public PaisResponse sigla(String sigla) {
     this.sigla = sigla;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pais_response_sigla_value}}}")
+  @ApiModelProperty(example = "null", value = "Sigla do pa\u00EDs")
   @JsonProperty("sigla")
   public String getSigla() {
     return sigla;
@@ -103,14 +103,14 @@ public class PaisResponse   {
 
   
   /**
-   * {{{pais_response_descricao_value}}}
+   * Nome do pa\u00EDs
    **/
   public PaisResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pais_response_descricao_value}}}")
+  @ApiModelProperty(example = "null", value = "Nome do pa\u00EDs")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -121,14 +121,14 @@ public class PaisResponse   {
 
   
   /**
-   * {{{pais_response_continente_value}}}
+   * Continente no qual o pa\u00EDs faz parte
    **/
   public PaisResponse continente(ContinenteEnum continente) {
     this.continente = continente;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pais_response_continente_value}}}")
+  @ApiModelProperty(example = "null", value = "Continente no qual o pa\u00EDs faz parte")
   @JsonProperty("continente")
   public ContinenteEnum getContinente() {
     return continente;
@@ -139,14 +139,14 @@ public class PaisResponse   {
 
   
   /**
-   * {{{pais_response_flag_ativo_value}}}
+   * Atributo que representa se o pa\u00EDs est\u00E1 ativo
    **/
   public PaisResponse flagAtivo(Boolean flagAtivo) {
     this.flagAtivo = flagAtivo;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "{{{pais_response_flag_ativo_value}}}")
+  @ApiModelProperty(example = "false", value = "Atributo que representa se o pa\u00EDs est\u00E1 ativo")
   @JsonProperty("flagAtivo")
   public Boolean getFlagAtivo() {
     return flagAtivo;

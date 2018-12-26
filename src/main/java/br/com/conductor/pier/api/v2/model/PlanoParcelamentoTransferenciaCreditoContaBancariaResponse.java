@@ -12,10 +12,10 @@ import java.util.List;
 
 
 /**
- * {{{plano_parcelamento_transferencia_credito_conta_bancaria_response_description}}}
+ * Plano de Parcelamentos para Transfer\u00EAncia de cr\u00E9dito para contas banc\u00E1rias
  **/
 
-@ApiModel(description = "{{{plano_parcelamento_transferencia_credito_conta_bancaria_response_description}}}")
+@ApiModel(description = "Plano de Parcelamentos para Transfer\u00EAncia de cr\u00E9dito para contas banc\u00E1rias")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse   {
   
@@ -27,14 +27,14 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse   {
 
   
   /**
-   * {{{plano_parcelamento_transferencia_credito_conta_bancaria_response_numero_mascarado_cartao_value}}}
+   * N\u00FAmero do Cart\u00E3o que originou a transa\u00E7\u00E3o em formato mascarado
    **/
   public PlanoParcelamentoTransferenciaCreditoContaBancariaResponse numeroMascaradoCartao(String numeroMascaradoCartao) {
     this.numeroMascaradoCartao = numeroMascaradoCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{plano_parcelamento_transferencia_credito_conta_bancaria_response_numero_mascarado_cartao_value}}}")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero do Cart\u00E3o que originou a transa\u00E7\u00E3o em formato mascarado")
   @JsonProperty("numeroMascaradoCartao")
   public String getNumeroMascaradoCartao() {
     return numeroMascaradoCartao;
@@ -45,14 +45,14 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse   {
 
   
   /**
-   * {{{plano_parcelamento_transferencia_credito_conta_bancaria_response_vencimento_primeira_parcela_value}}}
+   * Data de vencimento da primeira parcela
    **/
   public PlanoParcelamentoTransferenciaCreditoContaBancariaResponse vencimentoPrimeiraParcela(String vencimentoPrimeiraParcela) {
     this.vencimentoPrimeiraParcela = vencimentoPrimeiraParcela;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{plano_parcelamento_transferencia_credito_conta_bancaria_response_vencimento_primeira_parcela_value}}}")
+  @ApiModelProperty(example = "null", value = "Data de vencimento da primeira parcela")
   @JsonProperty("vencimentoPrimeiraParcela")
   public String getVencimentoPrimeiraParcela() {
     return vencimentoPrimeiraParcela;
@@ -63,14 +63,14 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse   {
 
   
   /**
-   * {{{plano_parcelamento_transferencia_credito_conta_bancaria_response_valor_transacao_value}}}
+   * Valor da solicita\u00E7\u00E3o de saque
    **/
   public PlanoParcelamentoTransferenciaCreditoContaBancariaResponse valorTransacao(BigDecimal valorTransacao) {
     this.valorTransacao = valorTransacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{plano_parcelamento_transferencia_credito_conta_bancaria_response_valor_transacao_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor da solicita\u00E7\u00E3o de saque")
   @JsonProperty("valorTransacao")
   public BigDecimal getValorTransacao() {
     return valorTransacao;
@@ -81,14 +81,14 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse   {
 
   
   /**
-   * {{{plano_parcelamento_transferencia_credito_conta_bancaria_response_numero_meses_carencia_value}}}
+   * N\u00FAmero de meses para car\u00EAncia
    **/
   public PlanoParcelamentoTransferenciaCreditoContaBancariaResponse numeroMesesCarencia(Integer numeroMesesCarencia) {
     this.numeroMesesCarencia = numeroMesesCarencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{plano_parcelamento_transferencia_credito_conta_bancaria_response_numero_meses_carencia_value}}}")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero de meses para car\u00EAncia")
   @JsonProperty("numeroMesesCarencia")
   public Integer getNumeroMesesCarencia() {
     return numeroMesesCarencia;
@@ -99,14 +99,14 @@ public class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse   {
 
   
   /**
-   * {{{plano_parcelamento_transferencia_credito_conta_bancaria_response_parcelas_value}}}
+   * Lista com os planos de parcelamento
    **/
   public PlanoParcelamentoTransferenciaCreditoContaBancariaResponse parcelas(List<ParcelamentoTransferenciaResponse> parcelas) {
     this.parcelas = parcelas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{plano_parcelamento_transferencia_credito_conta_bancaria_response_parcelas_value}}}")
+  @ApiModelProperty(example = "null", value = "Lista com os planos de parcelamento")
   @JsonProperty("parcelas")
   public List<ParcelamentoTransferenciaResponse> getParcelas() {
     return parcelas;

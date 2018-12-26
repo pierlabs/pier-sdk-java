@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{tipo_faturamento_por_conta_response_description}}}
+ * Objeto Faturamento
  **/
 
-@ApiModel(description = "{{{tipo_faturamento_por_conta_response_description}}}")
+@ApiModel(description = "Objeto Faturamento")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TipoFaturamentoPorContaResponse   {
   
@@ -25,14 +25,14 @@ public class TipoFaturamentoPorContaResponse   {
 
   
   /**
-   * {{{tipo_faturamento_por_conta_response_id_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id)
    **/
   public TipoFaturamentoPorContaResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_faturamento_por_conta_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id)")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -43,14 +43,14 @@ public class TipoFaturamentoPorContaResponse   {
 
   
   /**
-   * {{{tipo_faturamento_por_conta_response_id_conta_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o da conta relacionada ao tipo de faturamento
    **/
   public TipoFaturamentoPorContaResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_faturamento_por_conta_response_id_conta_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o da conta relacionada ao tipo de faturamento")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -61,14 +61,14 @@ public class TipoFaturamentoPorContaResponse   {
 
   
   /**
-   * {{{tipo_faturamento_por_conta_response_status_value}}}
+   * Status da configura\u00E7\u00E3o que representa que se o tipo de faturamento por conta est\u00E1 ativo ou cancelado
    **/
   public TipoFaturamentoPorContaResponse ativo(Boolean ativo) {
     this.ativo = ativo;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "{{{tipo_faturamento_por_conta_response_status_value}}}")
+  @ApiModelProperty(example = "false", value = "Status da configura\u00E7\u00E3o que representa que se o tipo de faturamento por conta est\u00E1 ativo ou cancelado")
   @JsonProperty("ativo")
   public Boolean getAtivo() {
     return ativo;
@@ -79,14 +79,14 @@ public class TipoFaturamentoPorContaResponse   {
 
   
   /**
-   * {{{tipo_faturamento_por_conta_response_id_tipo_faturamento_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o da tipo de faturamento referenciado
    **/
   public TipoFaturamentoPorContaResponse idTipoFaturamento(Long idTipoFaturamento) {
     this.idTipoFaturamento = idTipoFaturamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_faturamento_por_conta_response_id_tipo_faturamento_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o da tipo de faturamento referenciado")
   @JsonProperty("idTipoFaturamento")
   public Long getIdTipoFaturamento() {
     return idTipoFaturamento;
@@ -97,14 +97,14 @@ public class TipoFaturamentoPorContaResponse   {
 
   
   /**
-   * {{{tipo_faturamento_por_conta_response_data_hora_inclusao_value}}}
+   * Data de inclus\u00E3o da configura\u00E7\u00E3o de tipo de faturamento por conta
    **/
   public TipoFaturamentoPorContaResponse dataHoraInclusao(String dataHoraInclusao) {
     this.dataHoraInclusao = dataHoraInclusao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_faturamento_por_conta_response_data_hora_inclusao_value}}}")
+  @ApiModelProperty(example = "null", value = "Data de inclus\u00E3o da configura\u00E7\u00E3o de tipo de faturamento por conta")
   @JsonProperty("dataHoraInclusao")
   public String getDataHoraInclusao() {
     return dataHoraInclusao;
@@ -115,14 +115,14 @@ public class TipoFaturamentoPorContaResponse   {
 
   
   /**
-   * {{{tipo_faturamento_por_conta_response_data_hora_cancelamento_value}}}
+   * Data de cancelamento da configura\u00E7\u00E3o de tipo de faturamento por conta
    **/
   public TipoFaturamentoPorContaResponse dataHoraCancelamento(String dataHoraCancelamento) {
     this.dataHoraCancelamento = dataHoraCancelamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_faturamento_por_conta_response_data_hora_cancelamento_value}}}")
+  @ApiModelProperty(example = "null", value = "Data de cancelamento da configura\u00E7\u00E3o de tipo de faturamento por conta")
   @JsonProperty("dataHoraCancelamento")
   public String getDataHoraCancelamento() {
     return dataHoraCancelamento;
@@ -133,14 +133,14 @@ public class TipoFaturamentoPorContaResponse   {
 
   
   /**
-   * {{{tipo_faturamento_por_conta_response_modificado_por_value}}}
+   * Descri\u00E7\u00E3o do respons\u00E1vel pela \u00FAltima modifica\u00E7\u00E3o da configura\u00E7\u00E3o
    **/
   public TipoFaturamentoPorContaResponse modificadoPor(String modificadoPor) {
     this.modificadoPor = modificadoPor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_faturamento_por_conta_response_modificado_por_value}}}")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do respons\u00E1vel pela \u00FAltima modifica\u00E7\u00E3o da configura\u00E7\u00E3o")
   @JsonProperty("modificadoPor")
   public String getModificadoPor() {
     return modificadoPor;

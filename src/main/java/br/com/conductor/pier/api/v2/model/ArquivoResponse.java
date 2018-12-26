@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{arquivo_response_description}}}
+ * Objeto Response do arquivo
  **/
 
-@ApiModel(description = "{{{arquivo_response_description}}}")
+@ApiModel(description = "Objeto Response do arquivo")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ArquivoResponse   {
   
@@ -31,14 +31,14 @@ public class ArquivoResponse   {
 
   
   /**
-   * {{{arquivo_response_id_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do arquivo
    **/
   public ArquivoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{arquivo_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do arquivo")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -49,14 +49,14 @@ public class ArquivoResponse   {
 
   
   /**
-   * {{{arquivo_response_id_tipo_arquivo_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do Tipo do arquivo
    **/
   public ArquivoResponse idTipoArquivo(Long idTipoArquivo) {
     this.idTipoArquivo = idTipoArquivo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{arquivo_response_id_tipo_arquivo_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do Tipo do arquivo")
   @JsonProperty("idTipoArquivo")
   public Long getIdTipoArquivo() {
     return idTipoArquivo;
@@ -67,14 +67,14 @@ public class ArquivoResponse   {
 
   
   /**
-   * {{{arquivo_response_nome_tipo_arquivo_value}}}
+   * Descri\u00E7\u00E3o do tipo do arquivo
    **/
   public ArquivoResponse nomeTipoArquivo(String nomeTipoArquivo) {
     this.nomeTipoArquivo = nomeTipoArquivo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{arquivo_response_nome_tipo_arquivo_value}}}")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do tipo do arquivo")
   @JsonProperty("nomeTipoArquivo")
   public String getNomeTipoArquivo() {
     return nomeTipoArquivo;
@@ -85,14 +85,14 @@ public class ArquivoResponse   {
 
   
   /**
-   * {{{arquivo_response_id_status_arquivo_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do Status do arquivo
    **/
   public ArquivoResponse idStatusArquivo(Long idStatusArquivo) {
     this.idStatusArquivo = idStatusArquivo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{arquivo_response_id_status_arquivo_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do Status do arquivo")
   @JsonProperty("idStatusArquivo")
   public Long getIdStatusArquivo() {
     return idStatusArquivo;
@@ -103,14 +103,14 @@ public class ArquivoResponse   {
 
   
   /**
-   * {{{arquivo_response_nome_status_arquivo_value}}}
+   * Desci\u00E7\u00E3o do status do arquivo
    **/
   public ArquivoResponse nomeStatusArquivo(String nomeStatusArquivo) {
     this.nomeStatusArquivo = nomeStatusArquivo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{arquivo_response_nome_status_arquivo_value}}}")
+  @ApiModelProperty(example = "null", value = "Desci\u00E7\u00E3o do status do arquivo")
   @JsonProperty("nomeStatusArquivo")
   public String getNomeStatusArquivo() {
     return nomeStatusArquivo;
@@ -121,14 +121,14 @@ public class ArquivoResponse   {
 
   
   /**
-   * {{{arquivo_response_nome_value}}}
+   * Nome do arquivo
    **/
   public ArquivoResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{arquivo_response_nome_value}}}")
+  @ApiModelProperty(example = "null", value = "Nome do arquivo")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -139,14 +139,14 @@ public class ArquivoResponse   {
 
   
   /**
-   * {{{arquivo_response_extensao_value}}}
+   * Formato/Extens\u00E3o do arquivo
    **/
   public ArquivoResponse extensao(String extensao) {
     this.extensao = extensao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{arquivo_response_extensao_value}}}")
+  @ApiModelProperty(example = "null", value = "Formato/Extens\u00E3o do arquivo")
   @JsonProperty("extensao")
   public String getExtensao() {
     return extensao;
@@ -157,14 +157,14 @@ public class ArquivoResponse   {
 
   
   /**
-   * {{{arquivo_response_data_inclusao_value}}}
+   * Data de inclus\u00E3o do arquivo
    **/
   public ArquivoResponse dataInclusao(String dataInclusao) {
     this.dataInclusao = dataInclusao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{arquivo_response_data_inclusao_value}}}")
+  @ApiModelProperty(example = "null", value = "Data de inclus\u00E3o do arquivo")
   @JsonProperty("dataInclusao")
   public String getDataInclusao() {
     return dataInclusao;
@@ -175,14 +175,14 @@ public class ArquivoResponse   {
 
   
   /**
-   * {{{arquivo_response_data_alteracao_value}}}
+   * Data da \u00FAltima altera\u00E7\u00E3o do aquivo
    **/
   public ArquivoResponse dataAlteracao(String dataAlteracao) {
     this.dataAlteracao = dataAlteracao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{arquivo_response_data_alteracao_value}}}")
+  @ApiModelProperty(example = "null", value = "Data da \u00FAltima altera\u00E7\u00E3o do aquivo")
   @JsonProperty("dataAlteracao")
   public String getDataAlteracao() {
     return dataAlteracao;
@@ -193,14 +193,14 @@ public class ArquivoResponse   {
 
   
   /**
-   * {{{arquivo_response_detalhes_value}}}
+   * Detalhes contendo informa\u00E7\u00F5es adicionais, relacionadas ao arquivo
    **/
   public ArquivoResponse detalhes(List<ArquivoParametroResponse> detalhes) {
     this.detalhes = detalhes;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{arquivo_response_detalhes_value}}}")
+  @ApiModelProperty(example = "null", value = "Detalhes contendo informa\u00E7\u00F5es adicionais, relacionadas ao arquivo")
   @JsonProperty("detalhes")
   public List<ArquivoParametroResponse> getDetalhes() {
     return detalhes;

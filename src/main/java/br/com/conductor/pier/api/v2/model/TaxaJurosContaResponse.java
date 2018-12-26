@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{taxa_juros_conta_response_description}}}
+ * Representa\u00E7\u00E3o da resposta da taxa de juros
  **/
 
-@ApiModel(description = "{{{taxa_juros_conta_response_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta da taxa de juros")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TaxaJurosContaResponse   {
   
@@ -24,14 +24,14 @@ public class TaxaJurosContaResponse   {
 
   
   /**
-   * {{{taxa_juros_conta_response_id_conta_value}}}
+   * id_conta
    **/
   public TaxaJurosContaResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{taxa_juros_conta_response_id_conta_value}}}")
+  @ApiModelProperty(example = "null", value = "id_conta")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -42,14 +42,14 @@ public class TaxaJurosContaResponse   {
 
   
   /**
-   * {{{taxa_juros_conta_response_id_tabela_juros_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o da tabela de juros
    **/
   public TaxaJurosContaResponse idTabelaJuros(Long idTabelaJuros) {
     this.idTabelaJuros = idTabelaJuros;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{taxa_juros_conta_response_id_tabela_juros_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o da tabela de juros")
   @JsonProperty("idTabelaJuros")
   public Long getIdTabelaJuros() {
     return idTabelaJuros;
@@ -60,14 +60,14 @@ public class TaxaJurosContaResponse   {
 
   
   /**
-   * {{{taxa_juros_conta_response_taxas_juros_value}}}
+   * Listagem da taxas de juros
    **/
   public TaxaJurosContaResponse taxasJuros(List<TaxaJurosContaListaResponse> taxasJuros) {
     this.taxasJuros = taxasJuros;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{taxa_juros_conta_response_taxas_juros_value}}}")
+  @ApiModelProperty(example = "null", value = "Listagem da taxas de juros")
   @JsonProperty("taxasJuros")
   public List<TaxaJurosContaListaResponse> getTaxasJuros() {
     return taxasJuros;
