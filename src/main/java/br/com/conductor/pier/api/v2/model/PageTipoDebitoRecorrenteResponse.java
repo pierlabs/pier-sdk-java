@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{page_tipo_debito_recorrente_response_description}}}
+ * Representa\u00E7\u00E3o da resposta do recurso de Tipo Debito Recorrente
  **/
 
-@ApiModel(description = "{{{page_tipo_debito_recorrente_response_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de Tipo Debito Recorrente")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageTipoDebitoRecorrenteResponse   {
   

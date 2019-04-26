@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{page_banco_response_description}}}
+ * Lista de Bancos
  **/
 
-@ApiModel(description = "{{{page_banco_response_description}}}")
+@ApiModel(description = "Lista de Bancos")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageBancoResponse   {
   

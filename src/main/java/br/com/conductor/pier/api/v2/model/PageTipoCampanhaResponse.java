@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{page_tipo_campanha_response_description}}}
+ * Representa\u00E7\u00E3o da resposta do recurso de tipo de campanha
  **/
 
-@ApiModel(description = "{{{page_tipo_campanha_response_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de tipo de campanha")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageTipoCampanhaResponse   {
   

@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{tipo_template_response_description}}}
+ * Representa\u00E7\u00E3o da resposta do recurso de Tipo de Template
  **/
 
-@ApiModel(description = "{{{tipo_template_response_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de Tipo de Template")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TipoTemplateResponse   {
   
@@ -22,14 +22,14 @@ public class TipoTemplateResponse   {
 
   
   /**
-   * {{{tipo_template_response_id_value}}}
+   * ID do Tipo de Template
    **/
   public TipoTemplateResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_template_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "ID do Tipo de Template")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -40,14 +40,14 @@ public class TipoTemplateResponse   {
 
   
   /**
-   * {{{tipo_template_response_nome_value}}}
+   * Nome do Tipo de Template
    **/
   public TipoTemplateResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_template_response_nome_value}}}")
+  @ApiModelProperty(example = "null", value = "Nome do Tipo de Template")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -58,14 +58,14 @@ public class TipoTemplateResponse   {
 
   
   /**
-   * {{{tipo_template_response_descricao_value}}}
+   * Descri\u00E7\u00E3o do Tipo de Template
    **/
   public TipoTemplateResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_template_response_descricao_value}}}")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do Tipo de Template")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -76,14 +76,14 @@ public class TipoTemplateResponse   {
 
   
   /**
-   * {{{tipo_template_response_sigla_value}}}
+   * Sigla do Tipo de Template
    **/
   public TipoTemplateResponse sigla(String sigla) {
     this.sigla = sigla;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_template_response_sigla_value}}}")
+  @ApiModelProperty(example = "null", value = "Sigla do Tipo de Template")
   @JsonProperty("sigla")
   public String getSigla() {
     return sigla;

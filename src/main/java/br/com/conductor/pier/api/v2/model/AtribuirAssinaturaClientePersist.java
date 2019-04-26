@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{atribuir_assinatura_cliente_persist_description}}}
+ * Objeto que representa a atribui\u00E7\u00E3o da assinatura do cliente
  **/
 
-@ApiModel(description = "{{{atribuir_assinatura_cliente_persist_description}}}")
+@ApiModel(description = "Objeto que representa a atribui\u00E7\u00E3o da assinatura do cliente")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class AtribuirAssinaturaClientePersist   {
   
@@ -19,14 +19,14 @@ public class AtribuirAssinaturaClientePersist   {
 
   
   /**
-   * {{{atribuir_assinatura_cliente_persist_id_arquivo_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do Arquivo
    **/
   public AtribuirAssinaturaClientePersist idArquivo(Long idArquivo) {
     this.idArquivo = idArquivo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{atribuir_assinatura_cliente_persist_id_arquivo_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do Arquivo")
   @JsonProperty("idArquivo")
   public Long getIdArquivo() {
     return idArquivo;

@@ -10,10 +10,10 @@ import java.math.BigDecimal;
 
 
 /**
- * {{{parametro_produto_response_description}}}
+ * Resposta de par\u00E2metros de produto
  **/
 
-@ApiModel(description = "{{{parametro_produto_response_description}}}")
+@ApiModel(description = "Resposta de par\u00E2metros de produto")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ParametroProdutoResponse   {
   
@@ -45,14 +45,14 @@ public class ParametroProdutoResponse   {
 
   
   /**
-   * {{{parametro_produto_dto_id_value}}}
+   * Identificador do par\u00E2metro de produto
    **/
   public ParametroProdutoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{parametro_produto_dto_id_value}}}")
+  @ApiModelProperty(example = "null", value = "Identificador do par\u00E2metro de produto")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -63,14 +63,14 @@ public class ParametroProdutoResponse   {
 
   
   /**
-   * {{{parametro_produto_dto_id_produto_value}}}
+   * Identificador do produto
    **/
   public ParametroProdutoResponse idProduto(Long idProduto) {
     this.idProduto = idProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{parametro_produto_dto_id_produto_value}}}")
+  @ApiModelProperty(example = "null", value = "Identificador do produto")
   @JsonProperty("idProduto")
   public Long getIdProduto() {
     return idProduto;
@@ -81,14 +81,14 @@ public class ParametroProdutoResponse   {
 
   
   /**
-   * {{{parametro_produto_dto_tipo_origem_transacao_value}}}
+   * Tipo da Transa\u00E7\u00E3o (ON_US ou OFF_US)
    **/
   public ParametroProdutoResponse tipoOrigemTransacao(TipoOrigemTransacaoEnum tipoOrigemTransacao) {
     this.tipoOrigemTransacao = tipoOrigemTransacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{parametro_produto_dto_tipo_origem_transacao_value}}}")
+  @ApiModelProperty(example = "null", value = "Tipo da Transa\u00E7\u00E3o (ON_US ou OFF_US)")
   @JsonProperty("tipoOrigemTransacao")
   public TipoOrigemTransacaoEnum getTipoOrigemTransacao() {
     return tipoOrigemTransacao;
@@ -99,14 +99,14 @@ public class ParametroProdutoResponse   {
 
   
   /**
-   * {{{parametro_produto_dto_descricao_value}}}
+   * Descri\u00E7\u00E3o do par\u00E2metro de produto
    **/
   public ParametroProdutoResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{parametro_produto_dto_descricao_value}}}")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do par\u00E2metro de produto")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -117,14 +117,14 @@ public class ParametroProdutoResponse   {
 
   
   /**
-   * {{{parametro_produto_dto_valor_parametro_value}}}
+   * Valor do par\u00E2metro do produto
    **/
   public ParametroProdutoResponse valorParametro(BigDecimal valorParametro) {
     this.valorParametro = valorParametro;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{parametro_produto_dto_valor_parametro_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor do par\u00E2metro do produto")
   @JsonProperty("valorParametro")
   public BigDecimal getValorParametro() {
     return valorParametro;
@@ -135,14 +135,14 @@ public class ParametroProdutoResponse   {
 
   
   /**
-   * {{{parametro_produto_dto_data_validade_value}}}
+   * Data de validade do par\u00E2metro de produto
    **/
   public ParametroProdutoResponse dataValidade(String dataValidade) {
     this.dataValidade = dataValidade;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{parametro_produto_dto_data_validade_value}}}")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data de validade do par\u00E2metro de produto")
   @JsonProperty("dataValidade")
   public String getDataValidade() {
     return dataValidade;

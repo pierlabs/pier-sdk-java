@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{page_fantasia_basica_response_description}}}
+ * Representa\u00E7\u00E3o da resposta do recurso de fantasia b\u00E1sica
  **/
 
-@ApiModel(description = "{{{page_fantasia_basica_response_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de fantasia b\u00E1sica")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageFantasiaBasicaResponse   {
   

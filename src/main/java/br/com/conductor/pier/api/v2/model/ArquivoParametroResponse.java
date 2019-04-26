@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{arquivo_parametro_response_description}}}
+ * Objeto Response de par\u00E2metros do arquivo
  **/
 
-@ApiModel(description = "{{{arquivo_parametro_response_description}}}")
+@ApiModel(description = "Objeto Response de par\u00E2metros do arquivo")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ArquivoParametroResponse   {
   
@@ -21,14 +21,14 @@ public class ArquivoParametroResponse   {
 
   
   /**
-   * {{{arquivo_parametro_response_id_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do detalhe do arquivo
    **/
   public ArquivoParametroResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{arquivo_parametro_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do detalhe do arquivo")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -39,14 +39,14 @@ public class ArquivoParametroResponse   {
 
   
   /**
-   * {{{arquivo_parametro_response_nome_campo_value}}}
+   * Nome que identifica o detalhe do arquivo
    **/
   public ArquivoParametroResponse nomeCampo(String nomeCampo) {
     this.nomeCampo = nomeCampo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{arquivo_parametro_response_nome_campo_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Nome que identifica o detalhe do arquivo")
   @JsonProperty("nomeCampo")
   public String getNomeCampo() {
     return nomeCampo;
@@ -57,14 +57,14 @@ public class ArquivoParametroResponse   {
 
   
   /**
-   * {{{arquivo_parametro_response_conteudo_value}}}
+   * Conte\u00FAdo do nomeCampo
    **/
   public ArquivoParametroResponse conteudo(String conteudo) {
     this.conteudo = conteudo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{arquivo_parametro_response_conteudo_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Conte\u00FAdo do nomeCampo")
   @JsonProperty("conteudo")
   public String getConteudo() {
     return conteudo;

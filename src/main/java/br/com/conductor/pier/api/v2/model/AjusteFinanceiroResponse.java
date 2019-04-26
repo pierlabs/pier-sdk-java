@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * {{{ajuste_financeiro_response_description}}}
+ * Representa\u00E7\u00E3o de Objeto de Resposta para Ajuste financeiro
  **/
 
-@ApiModel(description = "{{{ajuste_financeiro_response_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o de Objeto de Resposta para Ajuste financeiro")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class AjusteFinanceiroResponse   {
   
@@ -26,14 +26,14 @@ public class AjusteFinanceiroResponse   {
 
   
   /**
-   * {{{ajuste_financeiro_response_id_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do ajuste (id)
    **/
   public AjusteFinanceiroResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{ajuste_financeiro_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do ajuste (id)")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -44,14 +44,14 @@ public class AjusteFinanceiroResponse   {
 
   
   /**
-   * {{{ajuste_financeiro_response_id_tipo_ajuste_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo do ajuste
    **/
   public AjusteFinanceiroResponse idTipoAjuste(Long idTipoAjuste) {
     this.idTipoAjuste = idTipoAjuste;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{ajuste_financeiro_response_id_tipo_ajuste_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo do ajuste")
   @JsonProperty("idTipoAjuste")
   public Long getIdTipoAjuste() {
     return idTipoAjuste;
@@ -62,14 +62,14 @@ public class AjusteFinanceiroResponse   {
 
   
   /**
-   * {{{ajuste_financeiro_response_id_conta_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o da conta (idConta)
    **/
   public AjusteFinanceiroResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{ajuste_financeiro_response_id_conta_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o da conta (idConta)")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -80,14 +80,14 @@ public class AjusteFinanceiroResponse   {
 
   
   /**
-   * {{{ajuste_financeiro_response_data_ajuste_value}}}
+   * Data do ajuste
    **/
   public AjusteFinanceiroResponse dataAjuste(String dataAjuste) {
     this.dataAjuste = dataAjuste;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{ajuste_financeiro_response_data_ajuste_value}}}")
+  @ApiModelProperty(example = "null", value = "Data do ajuste")
   @JsonProperty("dataAjuste")
   public String getDataAjuste() {
     return dataAjuste;
@@ -98,14 +98,14 @@ public class AjusteFinanceiroResponse   {
 
   
   /**
-   * {{{ajuste_financeiro_response_valor_value}}}
+   * Valor do ajuste
    **/
   public AjusteFinanceiroResponse valor(BigDecimal valor) {
     this.valor = valor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{ajuste_financeiro_response_valor_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor do ajuste")
   @JsonProperty("valor")
   public BigDecimal getValor() {
     return valor;
@@ -116,14 +116,14 @@ public class AjusteFinanceiroResponse   {
 
   
   /**
-   * {{{ajuste_financeiro_response_identificador_externo_value}}}
+   * Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra
    **/
   public AjusteFinanceiroResponse identificadorExterno(String identificadorExterno) {
     this.identificadorExterno = identificadorExterno;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{ajuste_financeiro_response_identificador_externo_value}}}")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra")
   @JsonProperty("identificadorExterno")
   public String getIdentificadorExterno() {
     return identificadorExterno;
@@ -134,14 +134,14 @@ public class AjusteFinanceiroResponse   {
 
   
   /**
-   * {{{ajuste_financeiro_response_status_value}}}
+   * Status do ajuste
    **/
   public AjusteFinanceiroResponse status(Long status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{ajuste_financeiro_response_status_value}}}")
+  @ApiModelProperty(example = "null", value = "Status do ajuste")
   @JsonProperty("status")
   public Long getStatus() {
     return status;

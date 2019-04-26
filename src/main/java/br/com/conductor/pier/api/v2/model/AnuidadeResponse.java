@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * {{{anuidade_response_description}}}
+ * Representa\u00E7\u00E3o da resposta do recurso de anuidade
  **/
 
-@ApiModel(description = "{{{anuidade_response_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de anuidade")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class AnuidadeResponse   {
   
@@ -23,14 +23,14 @@ public class AnuidadeResponse   {
 
   
   /**
-   * {{{anuidade_response_id_value}}}
+   * Identificador do Tipo de anuidade de b\u00F4nus de celular
    **/
   public AnuidadeResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{anuidade_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "Identificador do Tipo de anuidade de b\u00F4nus de celular")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -41,14 +41,14 @@ public class AnuidadeResponse   {
 
   
   /**
-   * {{{anuidade_response_descricao_value}}}
+   * Descri\u00E7\u00E3o do tipo de anuidade de b\u00F4nus de celular
    **/
   public AnuidadeResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{anuidade_response_descricao_value}}}")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do tipo de anuidade de b\u00F4nus de celular")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -59,14 +59,14 @@ public class AnuidadeResponse   {
 
   
   /**
-   * {{{anuidade_response_valor_value}}}
+   * Valor do tipo de anuidade de b\u00F4nus de celular
    **/
   public AnuidadeResponse valor(BigDecimal valor) {
     this.valor = valor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{anuidade_response_valor_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor do tipo de anuidade de b\u00F4nus de celular")
   @JsonProperty("valor")
   public BigDecimal getValor() {
     return valor;
@@ -77,14 +77,14 @@ public class AnuidadeResponse   {
 
   
   /**
-   * {{{anuidade_response_flag_anuidade_bonificada_value}}}
+   * Se o tipo de anuidade de b\u00F4nus de celular \u00E9 bonificada
    **/
   public AnuidadeResponse flagAnuidadeBonificada(Boolean flagAnuidadeBonificada) {
     this.flagAnuidadeBonificada = flagAnuidadeBonificada;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "{{{anuidade_response_flag_anuidade_bonificada_value}}}")
+  @ApiModelProperty(example = "false", value = "Se o tipo de anuidade de b\u00F4nus de celular \u00E9 bonificada")
   @JsonProperty("flagAnuidadeBonificada")
   public Boolean getFlagAnuidadeBonificada() {
     return flagAnuidadeBonificada;

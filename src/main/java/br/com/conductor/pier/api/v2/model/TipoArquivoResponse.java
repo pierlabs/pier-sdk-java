@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{tipo_arquivo_response_description}}}
+ * Objeto Response do tipo arquivo
  **/
 
-@ApiModel(description = "{{{tipo_arquivo_response_description}}}")
+@ApiModel(description = "Objeto Response do tipo arquivo")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TipoArquivoResponse   {
   
@@ -21,14 +21,14 @@ public class TipoArquivoResponse   {
 
   
   /**
-   * {{{tipo_arquivo_response_id_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo arquivo
    **/
   public TipoArquivoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_arquivo_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo arquivo")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -39,14 +39,14 @@ public class TipoArquivoResponse   {
 
   
   /**
-   * {{{tipo_arquivo_response_nome_value}}}
+   * Nome do tipo do arquivo
    **/
   public TipoArquivoResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_arquivo_response_nome_value}}}")
+  @ApiModelProperty(example = "null", value = "Nome do tipo do arquivo")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -57,14 +57,14 @@ public class TipoArquivoResponse   {
 
   
   /**
-   * {{{tipo_arquivo_response_descricao_value}}}
+   * Descri\u00E7\u00E3o do tipo do arquivo
    **/
   public TipoArquivoResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_arquivo_response_descricao_value}}}")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do tipo do arquivo")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;

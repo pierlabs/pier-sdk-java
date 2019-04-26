@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{operadora_response_description}}}
+ * Representa\u00E7\u00E3o da resposta do recurso de operadora telef\u00F4nica
  **/
 
-@ApiModel(description = "{{{operadora_response_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de operadora telef\u00F4nica")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class OperadoraResponse   {
   
@@ -20,14 +20,14 @@ public class OperadoraResponse   {
 
   
   /**
-   * {{{operadora_response_id_value}}}
+   * Identificador da operadora
    **/
   public OperadoraResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{operadora_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "Identificador da operadora")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -38,14 +38,14 @@ public class OperadoraResponse   {
 
   
   /**
-   * {{{operadora_response_nome_value}}}
+   * Nome da operadora
    **/
   public OperadoraResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{operadora_response_nome_value}}}")
+  @ApiModelProperty(example = "null", value = "Nome da operadora")
   @JsonProperty("nome")
   public String getNome() {
     return nome;

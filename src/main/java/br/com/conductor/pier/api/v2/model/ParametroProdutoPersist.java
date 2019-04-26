@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{parametro_produto_persist_description}}}
+ * Par\u00E2metros utilizados no cadastro de par\u00E2metros de produto
  **/
 
-@ApiModel(description = "{{{parametro_produto_persist_description}}}")
+@ApiModel(description = "Par\u00E2metros utilizados no cadastro de par\u00E2metros de produto")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ParametroProdutoPersist   {
   
@@ -24,14 +24,14 @@ public class ParametroProdutoPersist   {
 
   
   /**
-   * {{{parametro_produto_dto_id_produto_value}}}
+   * Identificador do produto
    **/
   public ParametroProdutoPersist idProduto(Long idProduto) {
     this.idProduto = idProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "1", required = true, value = "{{{parametro_produto_dto_id_produto_value}}}")
+  @ApiModelProperty(example = "1", required = true, value = "Identificador do produto")
   @JsonProperty("idProduto")
   public Long getIdProduto() {
     return idProduto;
@@ -42,14 +42,14 @@ public class ParametroProdutoPersist   {
 
   
   /**
-   * {{{parametro_produto_dto_data_validade_value}}}
+   * Data de validade do par\u00E2metro de produto
    **/
   public ParametroProdutoPersist dataValidade(String dataValidade) {
     this.dataValidade = dataValidade;
     return this;
   }
   
-  @ApiModelProperty(example = "2020-12-31T00:00:00.000Z", required = true, value = "{{{parametro_produto_dto_data_validade_value}}}")
+  @ApiModelProperty(example = "2020-12-31T00:00:00.000Z", required = true, value = "Data de validade do par\u00E2metro de produto")
   @JsonProperty("dataValidade")
   public String getDataValidade() {
     return dataValidade;
@@ -60,14 +60,14 @@ public class ParametroProdutoPersist   {
 
   
   /**
-   * {{{parametro_produto_dto_codigo_value}}}
+   * C\u00F3digo do par\u00E2metro do produto
    **/
   public ParametroProdutoPersist codigo(String codigo) {
     this.codigo = codigo;
     return this;
   }
   
-  @ApiModelProperty(example = "PARAMETRO_EXEMPLO", required = true, value = "{{{parametro_produto_dto_codigo_value}}}")
+  @ApiModelProperty(example = "PARAMETRO_EXEMPLO", required = true, value = "C\u00F3digo do par\u00E2metro do produto")
   @JsonProperty("codigo")
   public String getCodigo() {
     return codigo;
@@ -78,14 +78,14 @@ public class ParametroProdutoPersist   {
 
   
   /**
-   * {{{parametro_produto_dto_descricao_value}}}
+   * Descri\u00E7\u00E3o do par\u00E2metro de produto
    **/
   public ParametroProdutoPersist descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "Parâmetro exemplo do parâmetro de produto", required = true, value = "{{{parametro_produto_dto_descricao_value}}}")
+  @ApiModelProperty(example = "Parâmetro exemplo do parâmetro de produto", required = true, value = "Descri\u00E7\u00E3o do par\u00E2metro de produto")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -96,14 +96,14 @@ public class ParametroProdutoPersist   {
 
   
   /**
-   * {{{parametro_produto_dto_tipo_value}}}
+   * Tipo do par\u00E2metro de produto
    **/
   public ParametroProdutoPersist tipo(String tipo) {
     this.tipo = tipo;
     return this;
   }
   
-  @ApiModelProperty(example = "N", required = true, value = "{{{parametro_produto_dto_tipo_value}}}")
+  @ApiModelProperty(example = "N", required = true, value = "Tipo do par\u00E2metro de produto")
   @JsonProperty("tipo")
   public String getTipo() {
     return tipo;
@@ -114,14 +114,14 @@ public class ParametroProdutoPersist   {
 
   
   /**
-   * {{{parametro_produto_dto_valor_parametro_value}}}
+   * Valor do par\u00E2metro do produto
    **/
   public ParametroProdutoPersist valorParametro(String valorParametro) {
     this.valorParametro = valorParametro;
     return this;
   }
   
-  @ApiModelProperty(example = "150.50", value = "{{{parametro_produto_dto_valor_parametro_value}}}")
+  @ApiModelProperty(example = "150.50", value = "Valor do par\u00E2metro do produto")
   @JsonProperty("valorParametro")
   public String getValorParametro() {
     return valorParametro;

@@ -9,10 +9,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{consulta_cadastro_estabelecimento_d_t_o_description}}}
+ * Representa\u00E7\u00E3o da Requisi\u00E7\u00E3o do Recurso Cadastrar Estabelicimento
  **/
 
-@ApiModel(description = "{{{consulta_cadastro_estabelecimento_d_t_o_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o da Requisi\u00E7\u00E3o do Recurso Cadastrar Estabelicimento")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ConsultaCadastroEstabelecimentoDTO   {
   
@@ -60,14 +60,14 @@ public class ConsultaCadastroEstabelecimentoDTO   {
 
   
   /**
-   * {{{consulta_cadastro_estabelecimento_d_t_o_data_hora_consulta_value}}}
+   * Data hora de cadastro
    **/
   public ConsultaCadastroEstabelecimentoDTO dataHoraConsulta(String dataHoraConsulta) {
     this.dataHoraConsulta = dataHoraConsulta;
     return this;
   }
   
-  @ApiModelProperty(example = "2018-03-02T14:02:33.824Z", value = "{{{consulta_cadastro_estabelecimento_d_t_o_data_hora_consulta_value}}}")
+  @ApiModelProperty(example = "2018-03-02T14:02:33.824Z", value = "Data hora de cadastro")
   @JsonProperty("dataHoraConsulta")
   public String getDataHoraConsulta() {
     return dataHoraConsulta;
@@ -78,14 +78,14 @@ public class ConsultaCadastroEstabelecimentoDTO   {
 
   
   /**
-   * {{{consulta_cadastro_estabelecimento_d_t_o_status_value}}}
+   * Status da consulta (1 - OK, 2 - NOK)
    **/
   public ConsultaCadastroEstabelecimentoDTO status(StatusEnum status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{consulta_cadastro_estabelecimento_d_t_o_status_value}}}")
+  @ApiModelProperty(example = "null", value = "Status da consulta (1 - OK, 2 - NOK)")
   @JsonProperty("status")
   public StatusEnum getStatus() {
     return status;
@@ -96,14 +96,14 @@ public class ConsultaCadastroEstabelecimentoDTO   {
 
   
   /**
-   * {{{consulta_cadastro_estabelecimento_d_t_o_tipo_entidade_value}}}
+   * Tipo da entidade (1 - ATIVO, 2 - BLOQUEADO)
    **/
   public ConsultaCadastroEstabelecimentoDTO tipoEntidade(TipoEntidadeEnum tipoEntidade) {
     this.tipoEntidade = tipoEntidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{consulta_cadastro_estabelecimento_d_t_o_tipo_entidade_value}}}")
+  @ApiModelProperty(example = "null", value = "Tipo da entidade (1 - ATIVO, 2 - BLOQUEADO)")
   @JsonProperty("tipoEntidade")
   public TipoEntidadeEnum getTipoEntidade() {
     return tipoEntidade;

@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{page_acordo_parcela_response_description}}}
+ * Representa\u00E7\u00E3o do objeto de p\u00E1gina\u00E7\u00E3o para as parcelas de acordo
  **/
 
-@ApiModel(description = "{{{page_acordo_parcela_response_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o do objeto de p\u00E1gina\u00E7\u00E3o para as parcelas de acordo")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageAcordoParcelaResponse   {
   

@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * {{{boleto_listar_response_description}}}
+ * Representa\u00E7\u00E3o da resposta do boleto de fatura
  **/
 
-@ApiModel(description = "{{{boleto_listar_response_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do boleto de fatura")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class BoletoListarResponse   {
   
@@ -22,17 +22,20 @@ public class BoletoListarResponse   {
   private String dataVencimento = null;
   private BigDecimal valorBoleto = null;
   private Long idTipoBoleto = null;
+  private Integer idCodigoRetornoLayoutCNAB = null;
+  private Integer idEventoPagamento = null;
+  private Integer statusParcela = null;
 
   
   /**
-   * {{{boleto_response_id_value}}}
+   * id
    **/
   public BoletoListarResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{boleto_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "id")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -43,14 +46,14 @@ public class BoletoListarResponse   {
 
   
   /**
-   * {{{boleto_response_id_conta_value}}}
+   * id_conta
    **/
   public BoletoListarResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{boleto_response_id_conta_value}}}")
+  @ApiModelProperty(example = "null", value = "id_conta")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -61,14 +64,14 @@ public class BoletoListarResponse   {
 
   
   /**
-   * {{{boleto_response_nosso_numero_value}}}
+   * Nosso n\u00FAmero \u00E9 o c\u00F3digo que o benefici\u00E1rio escolhe para manter controle sobre seus boletos. Esse valor serve para o cedente identificar quais boletos foram pagos ou n\u00E3o. Recomenda-se o uso de n\u00FAmeros sequ\u00EAnciais, na gera\u00E7\u00E3o de diversos boletos, para facilitar a identifica\u00E7\u00E3o dos boletos pagos
    **/
   public BoletoListarResponse nossoNumero(String nossoNumero) {
     this.nossoNumero = nossoNumero;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{boleto_response_nosso_numero_value}}}")
+  @ApiModelProperty(example = "null", value = "Nosso n\u00FAmero \u00E9 o c\u00F3digo que o benefici\u00E1rio escolhe para manter controle sobre seus boletos. Esse valor serve para o cedente identificar quais boletos foram pagos ou n\u00E3o. Recomenda-se o uso de n\u00FAmeros sequ\u00EAnciais, na gera\u00E7\u00E3o de diversos boletos, para facilitar a identifica\u00E7\u00E3o dos boletos pagos")
   @JsonProperty("nossoNumero")
   public String getNossoNumero() {
     return nossoNumero;
@@ -79,14 +82,14 @@ public class BoletoListarResponse   {
 
   
   /**
-   * {{{boleto_response_data_vencimento_value}}}
+   * Data do vencimento
    **/
   public BoletoListarResponse dataVencimento(String dataVencimento) {
     this.dataVencimento = dataVencimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{boleto_response_data_vencimento_value}}}")
+  @ApiModelProperty(example = "null", value = "Data do vencimento")
   @JsonProperty("dataVencimento")
   public String getDataVencimento() {
     return dataVencimento;
@@ -97,14 +100,14 @@ public class BoletoListarResponse   {
 
   
   /**
-   * {{{boleto_response_valor_boleto_value}}}
+   * Valor do Boleto
    **/
   public BoletoListarResponse valorBoleto(BigDecimal valorBoleto) {
     this.valorBoleto = valorBoleto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{boleto_response_valor_boleto_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor do Boleto")
   @JsonProperty("valorBoleto")
   public BigDecimal getValorBoleto() {
     return valorBoleto;
@@ -115,20 +118,74 @@ public class BoletoListarResponse   {
 
   
   /**
-   * {{{boleto_response_id_tipo_boleto_value}}}
+   * Id do tipo de Boleto
    **/
   public BoletoListarResponse idTipoBoleto(Long idTipoBoleto) {
     this.idTipoBoleto = idTipoBoleto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{boleto_response_id_tipo_boleto_value}}}")
+  @ApiModelProperty(example = "null", value = "Id do tipo de Boleto")
   @JsonProperty("idTipoBoleto")
   public Long getIdTipoBoleto() {
     return idTipoBoleto;
   }
   public void setIdTipoBoleto(Long idTipoBoleto) {
     this.idTipoBoleto = idTipoBoleto;
+  }
+
+  
+  /**
+   * Id do c\u00F3digo de retorno do layout CNAB
+   **/
+  public BoletoListarResponse idCodigoRetornoLayoutCNAB(Integer idCodigoRetornoLayoutCNAB) {
+    this.idCodigoRetornoLayoutCNAB = idCodigoRetornoLayoutCNAB;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Id do c\u00F3digo de retorno do layout CNAB")
+  @JsonProperty("idCodigoRetornoLayoutCNAB")
+  public Integer getIdCodigoRetornoLayoutCNAB() {
+    return idCodigoRetornoLayoutCNAB;
+  }
+  public void setIdCodigoRetornoLayoutCNAB(Integer idCodigoRetornoLayoutCNAB) {
+    this.idCodigoRetornoLayoutCNAB = idCodigoRetornoLayoutCNAB;
+  }
+
+  
+  /**
+   * Id do pagamento do evento
+   **/
+  public BoletoListarResponse idEventoPagamento(Integer idEventoPagamento) {
+    this.idEventoPagamento = idEventoPagamento;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Id do pagamento do evento")
+  @JsonProperty("idEventoPagamento")
+  public Integer getIdEventoPagamento() {
+    return idEventoPagamento;
+  }
+  public void setIdEventoPagamento(Integer idEventoPagamento) {
+    this.idEventoPagamento = idEventoPagamento;
+  }
+
+  
+  /**
+   * Status da parcela
+   **/
+  public BoletoListarResponse statusParcela(Integer statusParcela) {
+    this.statusParcela = statusParcela;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Status da parcela")
+  @JsonProperty("statusParcela")
+  public Integer getStatusParcela() {
+    return statusParcela;
+  }
+  public void setStatusParcela(Integer statusParcela) {
+    this.statusParcela = statusParcela;
   }
 
   
@@ -147,12 +204,15 @@ public class BoletoListarResponse   {
         Objects.equals(this.nossoNumero, boletoListarResponse.nossoNumero) &&
         Objects.equals(this.dataVencimento, boletoListarResponse.dataVencimento) &&
         Objects.equals(this.valorBoleto, boletoListarResponse.valorBoleto) &&
-        Objects.equals(this.idTipoBoleto, boletoListarResponse.idTipoBoleto);
+        Objects.equals(this.idTipoBoleto, boletoListarResponse.idTipoBoleto) &&
+        Objects.equals(this.idCodigoRetornoLayoutCNAB, boletoListarResponse.idCodigoRetornoLayoutCNAB) &&
+        Objects.equals(this.idEventoPagamento, boletoListarResponse.idEventoPagamento) &&
+        Objects.equals(this.statusParcela, boletoListarResponse.statusParcela);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idConta, nossoNumero, dataVencimento, valorBoleto, idTipoBoleto);
+    return Objects.hash(id, idConta, nossoNumero, dataVencimento, valorBoleto, idTipoBoleto, idCodigoRetornoLayoutCNAB, idEventoPagamento, statusParcela);
   }
 
   @Override
@@ -166,6 +226,9 @@ public class BoletoListarResponse   {
     sb.append("    dataVencimento: ").append(toIndentedString(dataVencimento)).append("\n");
     sb.append("    valorBoleto: ").append(toIndentedString(valorBoleto)).append("\n");
     sb.append("    idTipoBoleto: ").append(toIndentedString(idTipoBoleto)).append("\n");
+    sb.append("    idCodigoRetornoLayoutCNAB: ").append(toIndentedString(idCodigoRetornoLayoutCNAB)).append("\n");
+    sb.append("    idEventoPagamento: ").append(toIndentedString(idEventoPagamento)).append("\n");
+    sb.append("    statusParcela: ").append(toIndentedString(statusParcela)).append("\n");
     sb.append("}");
     return sb.toString();
   }

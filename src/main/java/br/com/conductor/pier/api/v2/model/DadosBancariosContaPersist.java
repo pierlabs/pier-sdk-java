@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{dados_bancarios_conta_persist_description}}}
+ * Representa a requisi\u00E7\u00E3o do recurso de cadastro de dados bancarios para uma conta
  **/
 
-@ApiModel(description = "{{{dados_bancarios_conta_persist_description}}}")
+@ApiModel(description = "Representa a requisi\u00E7\u00E3o do recurso de cadastro de dados bancarios para uma conta")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class DadosBancariosContaPersist   {
   
@@ -25,14 +25,14 @@ public class DadosBancariosContaPersist   {
 
   
   /**
-   * {{{dados_bancarios_conta_persist_id_conta_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o da conta (id)
    **/
   public DadosBancariosContaPersist idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{dados_bancarios_conta_persist_id_conta_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o da conta (id)")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -43,14 +43,14 @@ public class DadosBancariosContaPersist   {
 
   
   /**
-   * {{{dados_bancarios_conta_persist_numero_agencia_value}}}
+   * N\u00FAmero da ag\u00EAncia
    **/
   public DadosBancariosContaPersist numeroAgencia(Long numeroAgencia) {
     this.numeroAgencia = numeroAgencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{dados_bancarios_conta_persist_numero_agencia_value}}}")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero da ag\u00EAncia")
   @JsonProperty("numeroAgencia")
   public Long getNumeroAgencia() {
     return numeroAgencia;
@@ -61,14 +61,14 @@ public class DadosBancariosContaPersist   {
 
   
   /**
-   * {{{dados_bancarios_conta_persist_numero_conta_corrente_value}}}
+   * N\u00FAmero da conta corrente
    **/
   public DadosBancariosContaPersist numeroContaCorrente(String numeroContaCorrente) {
     this.numeroContaCorrente = numeroContaCorrente;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{dados_bancarios_conta_persist_numero_conta_corrente_value}}}")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero da conta corrente")
   @JsonProperty("numeroContaCorrente")
   public String getNumeroContaCorrente() {
     return numeroContaCorrente;
@@ -79,14 +79,14 @@ public class DadosBancariosContaPersist   {
 
   
   /**
-   * {{{dados_bancarios_conta_persist_codigo_banco_value}}}
+   * C\u00F3digo do banco
    **/
   public DadosBancariosContaPersist codigoBanco(Long codigoBanco) {
     this.codigoBanco = codigoBanco;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{dados_bancarios_conta_persist_codigo_banco_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo do banco")
   @JsonProperty("codigoBanco")
   public Long getCodigoBanco() {
     return codigoBanco;
@@ -97,14 +97,14 @@ public class DadosBancariosContaPersist   {
 
   
   /**
-   * {{{dados_bancarios_conta_persist_id_tipo_conta_bancaria_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo da conta banc\u00E1ria (id)
    **/
   public DadosBancariosContaPersist idTipoContaBancaria(Long idTipoContaBancaria) {
     this.idTipoContaBancaria = idTipoContaBancaria;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{dados_bancarios_conta_persist_id_tipo_conta_bancaria_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo da conta banc\u00E1ria (id)")
   @JsonProperty("idTipoContaBancaria")
   public Long getIdTipoContaBancaria() {
     return idTipoContaBancaria;

@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * {{{detalhe_operacao_response_description}}}
+ * Representa\u00E7\u00E3o da resposta do recurso Operacao
  **/
 
-@ApiModel(description = "{{{detalhe_operacao_response_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso Operacao")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class DetalheOperacaoResponse   {
   
@@ -36,17 +36,23 @@ public class DetalheOperacaoResponse   {
   private BigDecimal excedentePermitido = null;
   private Boolean flagPermitirParcelamento = null;
   private Boolean flagManterTaxaJurosNoRotativo = null;
+  private Integer idEmissor = null;
+  private Long idTabela = null;
+  private Long valorParcela = null;
+  private Boolean flagCobraProRata = null;
+  private Long idTabelaJuros = null;
+  private String tipoExcedentePermitido = null;
 
   
   /**
-   * {{{detalhe_operacao_response_id_operacao_value}}}
+   * C\u00F3digo que identifica a opera\u00E7\u00E3o
    **/
   public DetalheOperacaoResponse idOperacao(Long idOperacao) {
     this.idOperacao = idOperacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{detalhe_operacao_response_id_operacao_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo que identifica a opera\u00E7\u00E3o")
   @JsonProperty("idOperacao")
   public Long getIdOperacao() {
     return idOperacao;
@@ -57,14 +63,14 @@ public class DetalheOperacaoResponse   {
 
   
   /**
-   * {{{detalhe_operacao_response_codigo_processamento_value}}}
+   * C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador
    **/
   public DetalheOperacaoResponse codigoProcessamento(String codigoProcessamento) {
     this.codigoProcessamento = codigoProcessamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{detalhe_operacao_response_codigo_processamento_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador")
   @JsonProperty("codigoProcessamento")
   public String getCodigoProcessamento() {
     return codigoProcessamento;
@@ -75,14 +81,14 @@ public class DetalheOperacaoResponse   {
 
   
   /**
-   * {{{detalhe_operacao_response_codigo_processamento_cancelamento_value}}}
+   * C\u00F3digo de processamento usado para cancelar transa\u00E7\u00F5es no autorizador
    **/
   public DetalheOperacaoResponse codigoProcessamentoCancelamento(String codigoProcessamentoCancelamento) {
     this.codigoProcessamentoCancelamento = codigoProcessamentoCancelamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{detalhe_operacao_response_codigo_processamento_cancelamento_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de processamento usado para cancelar transa\u00E7\u00F5es no autorizador")
   @JsonProperty("codigoProcessamentoCancelamento")
   public String getCodigoProcessamentoCancelamento() {
     return codigoProcessamentoCancelamento;
@@ -93,14 +99,14 @@ public class DetalheOperacaoResponse   {
 
   
   /**
-   * {{{detalhe_operacao_response_nome_operacao_value}}}
+   * Nome da opera\u00E7\u00E3o
    **/
   public DetalheOperacaoResponse nomeOperacao(String nomeOperacao) {
     this.nomeOperacao = nomeOperacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{detalhe_operacao_response_nome_operacao_value}}}")
+  @ApiModelProperty(example = "null", value = "Nome da opera\u00E7\u00E3o")
   @JsonProperty("nomeOperacao")
   public String getNomeOperacao() {
     return nomeOperacao;
@@ -111,14 +117,14 @@ public class DetalheOperacaoResponse   {
 
   
   /**
-   * {{{detalhe_operacao_response_descricao_operacao_value}}}
+   * Descri\u00E7\u00E3o da opera\u00E7\u00E3o
    **/
   public DetalheOperacaoResponse descricaoOperacao(String descricaoOperacao) {
     this.descricaoOperacao = descricaoOperacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{detalhe_operacao_response_descricao_operacao_value}}}")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o da opera\u00E7\u00E3o")
   @JsonProperty("descricaoOperacao")
   public String getDescricaoOperacao() {
     return descricaoOperacao;
@@ -129,14 +135,14 @@ public class DetalheOperacaoResponse   {
 
   
   /**
-   * {{{detalhe_operacao_response_plano_minimo_value}}}
+   * Quantidade m\u00EDnima de meses permitido para opera\u00E7\u00E3o
    **/
   public DetalheOperacaoResponse planoMinimo(Integer planoMinimo) {
     this.planoMinimo = planoMinimo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{detalhe_operacao_response_plano_minimo_value}}}")
+  @ApiModelProperty(example = "null", value = "Quantidade m\u00EDnima de meses permitido para opera\u00E7\u00E3o")
   @JsonProperty("planoMinimo")
   public Integer getPlanoMinimo() {
     return planoMinimo;
@@ -147,14 +153,14 @@ public class DetalheOperacaoResponse   {
 
   
   /**
-   * {{{detalhe_operacao_response_plano_maximo_value}}}
+   * Quantidade M\u00E1ximo de meses permitido para opera\u00E7\u00E3o
    **/
   public DetalheOperacaoResponse planoMaximo(Integer planoMaximo) {
     this.planoMaximo = planoMaximo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{detalhe_operacao_response_plano_maximo_value}}}")
+  @ApiModelProperty(example = "null", value = "Quantidade M\u00E1ximo de meses permitido para opera\u00E7\u00E3o")
   @JsonProperty("planoMaximo")
   public Integer getPlanoMaximo() {
     return planoMaximo;
@@ -165,14 +171,14 @@ public class DetalheOperacaoResponse   {
 
   
   /**
-   * {{{detalhe_operacao_response_valor_minimo_value}}}
+   * Valor m\u00EDnimo permitido permitido para opera\u00E7\u00E3o
    **/
   public DetalheOperacaoResponse valorMinimo(BigDecimal valorMinimo) {
     this.valorMinimo = valorMinimo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{detalhe_operacao_response_valor_minimo_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor m\u00EDnimo permitido permitido para opera\u00E7\u00E3o")
   @JsonProperty("valorMinimo")
   public BigDecimal getValorMinimo() {
     return valorMinimo;
@@ -183,14 +189,14 @@ public class DetalheOperacaoResponse   {
 
   
   /**
-   * {{{detalhe_operacao_response_valor_maximo_value}}}
+   * Valor m\u00E1ximo permitido permitido para opera\u00E7\u00E3o
    **/
   public DetalheOperacaoResponse valorMaximo(BigDecimal valorMaximo) {
     this.valorMaximo = valorMaximo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{detalhe_operacao_response_valor_maximo_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor m\u00E1ximo permitido permitido para opera\u00E7\u00E3o")
   @JsonProperty("valorMaximo")
   public BigDecimal getValorMaximo() {
     return valorMaximo;
@@ -201,14 +207,14 @@ public class DetalheOperacaoResponse   {
 
   
   /**
-   * {{{detalhe_operacao_response_flag_cobra_juros_value}}}
+   * Flag indicativa para crobran\u00E7a de juros
    **/
   public DetalheOperacaoResponse flagCobraJuros(Boolean flagCobraJuros) {
     this.flagCobraJuros = flagCobraJuros;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "{{{detalhe_operacao_response_flag_cobra_juros_value}}}")
+  @ApiModelProperty(example = "false", value = "Flag indicativa para crobran\u00E7a de juros")
   @JsonProperty("flagCobraJuros")
   public Boolean getFlagCobraJuros() {
     return flagCobraJuros;
@@ -219,14 +225,14 @@ public class DetalheOperacaoResponse   {
 
   
   /**
-   * {{{detalhe_operacao_response_taxa_juros_value}}}
+   * Valor do juros a ser cobrado, caso opera\u00E7\u00E3o cobre juros
    **/
   public DetalheOperacaoResponse taxaJuros(BigDecimal taxaJuros) {
     this.taxaJuros = taxaJuros;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{detalhe_operacao_response_taxa_juros_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor do juros a ser cobrado, caso opera\u00E7\u00E3o cobre juros")
   @JsonProperty("taxaJuros")
   public BigDecimal getTaxaJuros() {
     return taxaJuros;
@@ -237,14 +243,14 @@ public class DetalheOperacaoResponse   {
 
   
   /**
-   * {{{detalhe_operacao_response_flag_cobra_tarifa_value}}}
+   * Flag indicativa para crobran\u00E7a de tarifas
    **/
   public DetalheOperacaoResponse flagCobraTarifa(Boolean flagCobraTarifa) {
     this.flagCobraTarifa = flagCobraTarifa;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "{{{detalhe_operacao_response_flag_cobra_tarifa_value}}}")
+  @ApiModelProperty(example = "false", value = "Flag indicativa para crobran\u00E7a de tarifas")
   @JsonProperty("flagCobraTarifa")
   public Boolean getFlagCobraTarifa() {
     return flagCobraTarifa;
@@ -255,14 +261,14 @@ public class DetalheOperacaoResponse   {
 
   
   /**
-   * {{{detalhe_operacao_response_taxa_tarifa_value}}}
+   * Valor da tarifa a ser cobrado, caso opera\u00E7\u00E3o cobre tarifas
    **/
   public DetalheOperacaoResponse taxaTarifa(BigDecimal taxaTarifa) {
     this.taxaTarifa = taxaTarifa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{detalhe_operacao_response_taxa_tarifa_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor da tarifa a ser cobrado, caso opera\u00E7\u00E3o cobre tarifas")
   @JsonProperty("taxaTarifa")
   public BigDecimal getTaxaTarifa() {
     return taxaTarifa;
@@ -273,14 +279,14 @@ public class DetalheOperacaoResponse   {
 
   
   /**
-   * {{{detalhe_operacao_response_valor_tac_value}}}
+   * Valor da taxa de abertura de conta
    **/
   public DetalheOperacaoResponse valorTac(BigDecimal valorTac) {
     this.valorTac = valorTac;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{detalhe_operacao_response_valor_tac_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor da taxa de abertura de conta")
   @JsonProperty("valorTac")
   public BigDecimal getValorTac() {
     return valorTac;
@@ -291,14 +297,14 @@ public class DetalheOperacaoResponse   {
 
   
   /**
-   * {{{detalhe_operacao_response_percentual_tac_value}}}
+   * Percentual da taxa de abertura de conta
    **/
   public DetalheOperacaoResponse percentualTac(BigDecimal percentualTac) {
     this.percentualTac = percentualTac;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{detalhe_operacao_response_percentual_tac_value}}}")
+  @ApiModelProperty(example = "null", value = "Percentual da taxa de abertura de conta")
   @JsonProperty("percentualTac")
   public BigDecimal getPercentualTac() {
     return percentualTac;
@@ -309,14 +315,14 @@ public class DetalheOperacaoResponse   {
 
   
   /**
-   * {{{detalhe_operacao_response_valor_operacao_value}}}
+   * Valor da opera\u00E7\u00E3o
    **/
   public DetalheOperacaoResponse valorOperacao(BigDecimal valorOperacao) {
     this.valorOperacao = valorOperacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{detalhe_operacao_response_valor_operacao_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor da opera\u00E7\u00E3o")
   @JsonProperty("valorOperacao")
   public BigDecimal getValorOperacao() {
     return valorOperacao;
@@ -327,14 +333,14 @@ public class DetalheOperacaoResponse   {
 
   
   /**
-   * {{{detalhe_operacao_response_carencia_value}}}
+   * Quantidade de meses para car\u00EAncia
    **/
   public DetalheOperacaoResponse carencia(Integer carencia) {
     this.carencia = carencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{detalhe_operacao_response_carencia_value}}}")
+  @ApiModelProperty(example = "null", value = "Quantidade de meses para car\u00EAncia")
   @JsonProperty("carencia")
   public Integer getCarencia() {
     return carencia;
@@ -345,14 +351,14 @@ public class DetalheOperacaoResponse   {
 
   
   /**
-   * {{{detalhe_operacao_response_excedente_permitido_value}}}
+   * Valor excedente permitido para opera\u00E7\u00E3o
    **/
   public DetalheOperacaoResponse excedentePermitido(BigDecimal excedentePermitido) {
     this.excedentePermitido = excedentePermitido;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{detalhe_operacao_response_excedente_permitido_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor excedente permitido para opera\u00E7\u00E3o")
   @JsonProperty("excedentePermitido")
   public BigDecimal getExcedentePermitido() {
     return excedentePermitido;
@@ -363,14 +369,14 @@ public class DetalheOperacaoResponse   {
 
   
   /**
-   * {{{detalhe_operacao_response_flag_permitir_parcelamento_value}}}
+   * Permitir transa\u00E7\u00F5es parceladas
    **/
   public DetalheOperacaoResponse flagPermitirParcelamento(Boolean flagPermitirParcelamento) {
     this.flagPermitirParcelamento = flagPermitirParcelamento;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "{{{detalhe_operacao_response_flag_permitir_parcelamento_value}}}")
+  @ApiModelProperty(example = "false", value = "Permitir transa\u00E7\u00F5es parceladas")
   @JsonProperty("flagPermitirParcelamento")
   public Boolean getFlagPermitirParcelamento() {
     return flagPermitirParcelamento;
@@ -381,20 +387,128 @@ public class DetalheOperacaoResponse   {
 
   
   /**
-   * {{{detalhe_operacao_response_flag_manter_taxa_juros_no_rotativo_value}}}
+   * Flag que indica que a opera\u00E7\u00E3o deve utilizar a taxa da compra como taxa do rotativo para transa\u00E7\u00F5es desse tipo opera\u00E7\u00E3o
    **/
   public DetalheOperacaoResponse flagManterTaxaJurosNoRotativo(Boolean flagManterTaxaJurosNoRotativo) {
     this.flagManterTaxaJurosNoRotativo = flagManterTaxaJurosNoRotativo;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "{{{detalhe_operacao_response_flag_manter_taxa_juros_no_rotativo_value}}}")
+  @ApiModelProperty(example = "false", value = "Flag que indica que a opera\u00E7\u00E3o deve utilizar a taxa da compra como taxa do rotativo para transa\u00E7\u00F5es desse tipo opera\u00E7\u00E3o")
   @JsonProperty("flagManterTaxaJurosNoRotativo")
   public Boolean getFlagManterTaxaJurosNoRotativo() {
     return flagManterTaxaJurosNoRotativo;
   }
   public void setFlagManterTaxaJurosNoRotativo(Boolean flagManterTaxaJurosNoRotativo) {
     this.flagManterTaxaJurosNoRotativo = flagManterTaxaJurosNoRotativo;
+  }
+
+  
+  /**
+   * C\u00F3digo identificador do emissor
+   **/
+  public DetalheOperacaoResponse idEmissor(Integer idEmissor) {
+    this.idEmissor = idEmissor;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador do emissor")
+  @JsonProperty("idEmissor")
+  public Integer getIdEmissor() {
+    return idEmissor;
+  }
+  public void setIdEmissor(Integer idEmissor) {
+    this.idEmissor = idEmissor;
+  }
+
+  
+  /**
+   * C\u00F3digo identificador da tabela
+   **/
+  public DetalheOperacaoResponse idTabela(Long idTabela) {
+    this.idTabela = idTabela;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador da tabela")
+  @JsonProperty("idTabela")
+  public Long getIdTabela() {
+    return idTabela;
+  }
+  public void setIdTabela(Long idTabela) {
+    this.idTabela = idTabela;
+  }
+
+  
+  /**
+   * Valor da parcela
+   **/
+  public DetalheOperacaoResponse valorParcela(Long valorParcela) {
+    this.valorParcela = valorParcela;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor da parcela")
+  @JsonProperty("valorParcela")
+  public Long getValorParcela() {
+    return valorParcela;
+  }
+  public void setValorParcela(Long valorParcela) {
+    this.valorParcela = valorParcela;
+  }
+
+  
+  /**
+   * Flag indicativa de cobrar juros
+   **/
+  public DetalheOperacaoResponse flagCobraProRata(Boolean flagCobraProRata) {
+    this.flagCobraProRata = flagCobraProRata;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "Flag indicativa de cobrar juros")
+  @JsonProperty("flagCobraProRata")
+  public Boolean getFlagCobraProRata() {
+    return flagCobraProRata;
+  }
+  public void setFlagCobraProRata(Boolean flagCobraProRata) {
+    this.flagCobraProRata = flagCobraProRata;
+  }
+
+  
+  /**
+   * C\u00F3digo identificador da tabela de juros
+   **/
+  public DetalheOperacaoResponse idTabelaJuros(Long idTabelaJuros) {
+    this.idTabelaJuros = idTabelaJuros;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador da tabela de juros")
+  @JsonProperty("idTabelaJuros")
+  public Long getIdTabelaJuros() {
+    return idTabelaJuros;
+  }
+  public void setIdTabelaJuros(Long idTabelaJuros) {
+    this.idTabelaJuros = idTabelaJuros;
+  }
+
+  
+  /**
+   * Tipo excedente permitido
+   **/
+  public DetalheOperacaoResponse tipoExcedentePermitido(String tipoExcedentePermitido) {
+    this.tipoExcedentePermitido = tipoExcedentePermitido;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Tipo excedente permitido")
+  @JsonProperty("tipoExcedentePermitido")
+  public String getTipoExcedentePermitido() {
+    return tipoExcedentePermitido;
+  }
+  public void setTipoExcedentePermitido(String tipoExcedentePermitido) {
+    this.tipoExcedentePermitido = tipoExcedentePermitido;
   }
 
   
@@ -427,12 +541,18 @@ public class DetalheOperacaoResponse   {
         Objects.equals(this.carencia, detalheOperacaoResponse.carencia) &&
         Objects.equals(this.excedentePermitido, detalheOperacaoResponse.excedentePermitido) &&
         Objects.equals(this.flagPermitirParcelamento, detalheOperacaoResponse.flagPermitirParcelamento) &&
-        Objects.equals(this.flagManterTaxaJurosNoRotativo, detalheOperacaoResponse.flagManterTaxaJurosNoRotativo);
+        Objects.equals(this.flagManterTaxaJurosNoRotativo, detalheOperacaoResponse.flagManterTaxaJurosNoRotativo) &&
+        Objects.equals(this.idEmissor, detalheOperacaoResponse.idEmissor) &&
+        Objects.equals(this.idTabela, detalheOperacaoResponse.idTabela) &&
+        Objects.equals(this.valorParcela, detalheOperacaoResponse.valorParcela) &&
+        Objects.equals(this.flagCobraProRata, detalheOperacaoResponse.flagCobraProRata) &&
+        Objects.equals(this.idTabelaJuros, detalheOperacaoResponse.idTabelaJuros) &&
+        Objects.equals(this.tipoExcedentePermitido, detalheOperacaoResponse.tipoExcedentePermitido);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idOperacao, codigoProcessamento, codigoProcessamentoCancelamento, nomeOperacao, descricaoOperacao, planoMinimo, planoMaximo, valorMinimo, valorMaximo, flagCobraJuros, taxaJuros, flagCobraTarifa, taxaTarifa, valorTac, percentualTac, valorOperacao, carencia, excedentePermitido, flagPermitirParcelamento, flagManterTaxaJurosNoRotativo);
+    return Objects.hash(idOperacao, codigoProcessamento, codigoProcessamentoCancelamento, nomeOperacao, descricaoOperacao, planoMinimo, planoMaximo, valorMinimo, valorMaximo, flagCobraJuros, taxaJuros, flagCobraTarifa, taxaTarifa, valorTac, percentualTac, valorOperacao, carencia, excedentePermitido, flagPermitirParcelamento, flagManterTaxaJurosNoRotativo, idEmissor, idTabela, valorParcela, flagCobraProRata, idTabelaJuros, tipoExcedentePermitido);
   }
 
   @Override
@@ -460,6 +580,12 @@ public class DetalheOperacaoResponse   {
     sb.append("    excedentePermitido: ").append(toIndentedString(excedentePermitido)).append("\n");
     sb.append("    flagPermitirParcelamento: ").append(toIndentedString(flagPermitirParcelamento)).append("\n");
     sb.append("    flagManterTaxaJurosNoRotativo: ").append(toIndentedString(flagManterTaxaJurosNoRotativo)).append("\n");
+    sb.append("    idEmissor: ").append(toIndentedString(idEmissor)).append("\n");
+    sb.append("    idTabela: ").append(toIndentedString(idTabela)).append("\n");
+    sb.append("    valorParcela: ").append(toIndentedString(valorParcela)).append("\n");
+    sb.append("    flagCobraProRata: ").append(toIndentedString(flagCobraProRata)).append("\n");
+    sb.append("    idTabelaJuros: ").append(toIndentedString(idTabelaJuros)).append("\n");
+    sb.append("    tipoExcedentePermitido: ").append(toIndentedString(tipoExcedentePermitido)).append("\n");
     sb.append("}");
     return sb.toString();
   }

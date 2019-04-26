@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{page_boleto_listar_response_description}}}
+ * Lista os boletos cadastrados no sistema
  **/
 
-@ApiModel(description = "{{{page_boleto_listar_response_description}}}")
+@ApiModel(description = "Lista os boletos cadastrados no sistema")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageBoletoListarResponse   {
   

@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * {{{tipo_boleto_response_description}}}
+ * Fatura
  **/
 
-@ApiModel(description = "{{{tipo_boleto_response_description}}}")
+@ApiModel(description = "Fatura")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TipoBoletoResponse   {
   
@@ -27,14 +27,14 @@ public class TipoBoletoResponse   {
 
   
   /**
-   * {{{tipo_boleto_response_id_value}}}
+   * C\u00F3digo identificador do tipo de boleto
    **/
   public TipoBoletoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_boleto_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador do tipo de boleto")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -45,14 +45,14 @@ public class TipoBoletoResponse   {
 
   
   /**
-   * {{{tipo_boleto_response_descricao_value}}}
+   * Descri\u00E7\u00E3o do tipo de boleto
    **/
   public TipoBoletoResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_boleto_response_descricao_value}}}")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do tipo de boleto")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -63,14 +63,14 @@ public class TipoBoletoResponse   {
 
   
   /**
-   * {{{tipo_boleto_response_banco_value}}}
+   * C\u00F3digo identificador do banco
    **/
   public TipoBoletoResponse banco(Long banco) {
     this.banco = banco;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_boleto_response_banco_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador do banco")
   @JsonProperty("banco")
   public Long getBanco() {
     return banco;
@@ -81,14 +81,14 @@ public class TipoBoletoResponse   {
 
   
   /**
-   * {{{tipo_boleto_response_faixa_nosso_numero_value}}}
+   * Faixa permitida para cria\u00E7\u00E3o do nosso n\u00FAmero
    **/
   public TipoBoletoResponse faixaNossoNumero(Integer faixaNossoNumero) {
     this.faixaNossoNumero = faixaNossoNumero;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_boleto_response_faixa_nosso_numero_value}}}")
+  @ApiModelProperty(example = "null", value = "Faixa permitida para cria\u00E7\u00E3o do nosso n\u00FAmero")
   @JsonProperty("faixaNossoNumero")
   public Integer getFaixaNossoNumero() {
     return faixaNossoNumero;
@@ -99,14 +99,14 @@ public class TipoBoletoResponse   {
 
   
   /**
-   * {{{tipo_boleto_response_min_nosso_numero_value}}}
+   * N\u00FAmero minimo para o nosso n\u00FAmero
    **/
   public TipoBoletoResponse minNossoNumero(BigDecimal minNossoNumero) {
     this.minNossoNumero = minNossoNumero;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_boleto_response_min_nosso_numero_value}}}")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero minimo para o nosso n\u00FAmero")
   @JsonProperty("minNossoNumero")
   public BigDecimal getMinNossoNumero() {
     return minNossoNumero;
@@ -117,14 +117,14 @@ public class TipoBoletoResponse   {
 
   
   /**
-   * {{{tipo_boleto_response_max_nosso_numero_value}}}
+   * N\u00FAmero m\u00E1ximo para o nosso n\u00FAmero
    **/
   public TipoBoletoResponse maxNossoNumero(BigDecimal maxNossoNumero) {
     this.maxNossoNumero = maxNossoNumero;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_boleto_response_max_nosso_numero_value}}}")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero m\u00E1ximo para o nosso n\u00FAmero")
   @JsonProperty("maxNossoNumero")
   public BigDecimal getMaxNossoNumero() {
     return maxNossoNumero;
@@ -135,14 +135,14 @@ public class TipoBoletoResponse   {
 
   
   /**
-   * {{{tipo_boleto_response_tam_nosso_numero_value}}}
+   * Tamanho do nosso n\u00FAmero
    **/
   public TipoBoletoResponse tamNossoNumero(Integer tamNossoNumero) {
     this.tamNossoNumero = tamNossoNumero;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_boleto_response_tam_nosso_numero_value}}}")
+  @ApiModelProperty(example = "null", value = "Tamanho do nosso n\u00FAmero")
   @JsonProperty("tamNossoNumero")
   public Integer getTamNossoNumero() {
     return tamNossoNumero;
@@ -153,14 +153,14 @@ public class TipoBoletoResponse   {
 
   
   /**
-   * {{{tipo_boleto_response_ultimo_nosso_numero_value}}}
+   * \u00DAltimo nosso n\u00FAmero utilizado
    **/
   public TipoBoletoResponse ultimoNossoNumero(BigDecimal ultimoNossoNumero) {
     this.ultimoNossoNumero = ultimoNossoNumero;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_boleto_response_ultimo_nosso_numero_value}}}")
+  @ApiModelProperty(example = "null", value = "\u00DAltimo nosso n\u00FAmero utilizado")
   @JsonProperty("ultimoNossoNumero")
   public BigDecimal getUltimoNossoNumero() {
     return ultimoNossoNumero;

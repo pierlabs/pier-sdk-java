@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{dados_portador_request_description}}}
+ * Par\u00E2metros de requisi\u00E7\u00E3o para valida\u00E7\u00E3o dos dados do portador
  **/
 
-@ApiModel(description = "{{{dados_portador_request_description}}}")
+@ApiModel(description = "Par\u00E2metros de requisi\u00E7\u00E3o para valida\u00E7\u00E3o dos dados do portador")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class DadosPortadorRequest   {
   
@@ -26,14 +26,14 @@ public class DadosPortadorRequest   {
 
   
   /**
-   * {{{dados_portador_request_cartao_value}}}
+   * N\u00FAmero do cart\u00E3o
    **/
   public DadosPortadorRequest cartao(String cartao) {
     this.cartao = cartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{dados_portador_request_cartao_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "N\u00FAmero do cart\u00E3o")
   @JsonProperty("cartao")
   public String getCartao() {
     return cartao;
@@ -44,14 +44,14 @@ public class DadosPortadorRequest   {
 
   
   /**
-   * {{{dados_portador_request_cpf_value}}}
+   * N\u00FAmero do CPF
    **/
   public DadosPortadorRequest cpf(String cpf) {
     this.cpf = cpf;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{dados_portador_request_cpf_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "N\u00FAmero do CPF")
   @JsonProperty("cpf")
   public String getCpf() {
     return cpf;
@@ -62,14 +62,14 @@ public class DadosPortadorRequest   {
 
   
   /**
-   * {{{dados_portador_request_nome_value}}}
+   * Nome do portador
    **/
   public DadosPortadorRequest nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{dados_portador_request_nome_value}}}")
+  @ApiModelProperty(example = "null", value = "Nome do portador")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -80,14 +80,14 @@ public class DadosPortadorRequest   {
 
   
   /**
-   * {{{dados_portador_request_data_nascimento_value}}}
+   * Data de nascimento do portador do cart\u00E3o
    **/
   public DadosPortadorRequest dataNascimento(String dataNascimento) {
     this.dataNascimento = dataNascimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{dados_portador_request_data_nascimento_value}}}")
+  @ApiModelProperty(example = "null", value = "Data de nascimento do portador do cart\u00E3o")
   @JsonProperty("dataNascimento")
   public String getDataNascimento() {
     return dataNascimento;
@@ -98,14 +98,14 @@ public class DadosPortadorRequest   {
 
   
   /**
-   * {{{dados_portador_request_cep_residencial_value}}}
+   * CEP da resid\u00EAncia do portador da conta
    **/
   public DadosPortadorRequest cepResidencial(String cepResidencial) {
     this.cepResidencial = cepResidencial;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{dados_portador_request_cep_residencial_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "CEP da resid\u00EAncia do portador da conta")
   @JsonProperty("cepResidencial")
   public String getCepResidencial() {
     return cepResidencial;
@@ -116,14 +116,14 @@ public class DadosPortadorRequest   {
 
   
   /**
-   * {{{dados_portador_request_email_value}}}
+   * E-mail do portador do cart\u00E3o
    **/
   public DadosPortadorRequest email(String email) {
     this.email = email;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{dados_portador_request_email_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "E-mail do portador do cart\u00E3o")
   @JsonProperty("email")
   public String getEmail() {
     return email;
@@ -134,14 +134,14 @@ public class DadosPortadorRequest   {
 
   
   /**
-   * {{{dados_portador_request_ddd_value}}}
+   * DDD do n\u00FAmero de telefone do portador do cart\u00E3o
    **/
   public DadosPortadorRequest ddd(String ddd) {
     this.ddd = ddd;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{dados_portador_request_ddd_value}}}")
+  @ApiModelProperty(example = "null", value = "DDD do n\u00FAmero de telefone do portador do cart\u00E3o")
   @JsonProperty("ddd")
   public String getDdd() {
     return ddd;
@@ -152,14 +152,14 @@ public class DadosPortadorRequest   {
 
   
   /**
-   * {{{dados_portador_request_telefone_value}}}
+   * N\u00FAmero do telefone do portador do cart\u00E3o
    **/
   public DadosPortadorRequest telefone(String telefone) {
     this.telefone = telefone;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{dados_portador_request_telefone_value}}}")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero do telefone do portador do cart\u00E3o")
   @JsonProperty("telefone")
   public String getTelefone() {
     return telefone;

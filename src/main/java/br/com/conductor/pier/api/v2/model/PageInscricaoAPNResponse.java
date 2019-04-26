@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{page_inscricao_apn_resposta_descricao}}}
+ * Lista de inscri\u00E7\u00F5es
  **/
 
-@ApiModel(description = "{{{page_inscricao_apn_resposta_descricao}}}")
+@ApiModel(description = "Lista de inscri\u00E7\u00F5es")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageInscricaoAPNResponse   {
   

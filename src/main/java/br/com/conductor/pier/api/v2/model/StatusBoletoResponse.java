@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{status_boleto_response_description}}}
+ * Representa\u00E7\u00E3o da resposta do recurso de status de boleto
  **/
 
-@ApiModel(description = "{{{status_boleto_response_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso de status de boleto")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class StatusBoletoResponse   {
   
@@ -20,14 +20,14 @@ public class StatusBoletoResponse   {
 
   
   /**
-   * {{{status_boleto_dto_status_value}}}
+   * Descri\u00E7\u00E3o do status CNAB sumarizado do boleto
    **/
   public StatusBoletoResponse status(String status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{status_boleto_dto_status_value}}}")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do status CNAB sumarizado do boleto")
   @JsonProperty("status")
   public String getStatus() {
     return status;
@@ -38,14 +38,14 @@ public class StatusBoletoResponse   {
 
   
   /**
-   * {{{status_boleto_dto_data_value}}}
+   * Data em que o status foi definido
    **/
   public StatusBoletoResponse data(String data) {
     this.data = data;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{status_boleto_dto_data_value}}}")
+  @ApiModelProperty(example = "null", value = "Data em que o status foi definido")
   @JsonProperty("data")
   public String getData() {
     return data;

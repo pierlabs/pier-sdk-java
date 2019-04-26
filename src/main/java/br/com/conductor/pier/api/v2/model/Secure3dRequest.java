@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{secure_3d_request_description}}}
+ * Requisi\u00E7\u00E3o Solicita\u00E7\u00E3o Envio de OTP
  **/
 
-@ApiModel(description = "{{{secure_3d_request_description}}}")
+@ApiModel(description = "Requisi\u00E7\u00E3o Solicita\u00E7\u00E3o Envio de OTP")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class Secure3dRequest   {
   
@@ -20,14 +20,14 @@ public class Secure3dRequest   {
 
   
   /**
-   * {{{secure_3d_request_id_cartao}}}
+   * Identificador da conta
    **/
   public Secure3dRequest idCartao(Long idCartao) {
     this.idCartao = idCartao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{secure_3d_request_id_cartao}}}")
+  @ApiModelProperty(example = "null", value = "Identificador da conta")
   @JsonProperty("idCartao")
   public Long getIdCartao() {
     return idCartao;
@@ -38,14 +38,14 @@ public class Secure3dRequest   {
 
   
   /**
-   * {{{secure_3d_request_otp_3d_secure}}}
+   * OTP que ser\u00E1 enviado para cliente
    **/
   public Secure3dRequest otp(String otp) {
     this.otp = otp;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{secure_3d_request_otp_3d_secure}}}")
+  @ApiModelProperty(example = "null", value = "OTP que ser\u00E1 enviado para cliente")
   @JsonProperty("otp")
   public String getOtp() {
     return otp;

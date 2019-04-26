@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{tipo_template_request_description}}}
+ * Representa\u00E7\u00E3o do tipo de template
  **/
 
-@ApiModel(description = "{{{tipo_template_request_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o do tipo de template")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TipoTemplateRequest   {
   
@@ -21,14 +21,14 @@ public class TipoTemplateRequest   {
 
   
   /**
-   * {{{tipo_template_request_nome_value}}}
+   * Nome do tipo de template
    **/
   public TipoTemplateRequest nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_template_request_nome_value}}}")
+  @ApiModelProperty(example = "null", value = "Nome do tipo de template")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -39,14 +39,14 @@ public class TipoTemplateRequest   {
 
   
   /**
-   * {{{tipo_template_request_descricao_value}}}
+   * Descri\u00E7\u00E3o do tipo de template
    **/
   public TipoTemplateRequest descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_template_request_descricao_value}}}")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do tipo de template")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -57,14 +57,14 @@ public class TipoTemplateRequest   {
 
   
   /**
-   * {{{tipo_template_request_sigla_value}}}
+   * Sigla do tipo de template
    **/
   public TipoTemplateRequest sigla(String sigla) {
     this.sigla = sigla;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_template_request_sigla_value}}}")
+  @ApiModelProperty(example = "null", value = "Sigla do tipo de template")
   @JsonProperty("sigla")
   public String getSigla() {
     return sigla;

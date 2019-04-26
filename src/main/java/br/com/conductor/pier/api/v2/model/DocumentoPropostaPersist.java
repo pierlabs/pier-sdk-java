@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{documento_proposta_persist_description}}}
+ * Classe de representa\u00E7\u00E3o dos par\u00E2metros utilizados por um persist
  **/
 
-@ApiModel(description = "{{{documento_proposta_persist_description}}}")
+@ApiModel(description = "Classe de representa\u00E7\u00E3o dos par\u00E2metros utilizados por um persist")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class DocumentoPropostaPersist   {
   
@@ -31,14 +31,14 @@ public class DocumentoPropostaPersist   {
 
   
   /**
-   * {{{documento_proposta_persist_id_proposta_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o da proposta(id)
    **/
   public DocumentoPropostaPersist idProposta(Long idProposta) {
     this.idProposta = idProposta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{documento_proposta_persist_id_proposta_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo de identifica\u00E7\u00E3o da proposta(id)")
   @JsonProperty("idProposta")
   public Long getIdProposta() {
     return idProposta;
@@ -49,14 +49,14 @@ public class DocumentoPropostaPersist   {
 
   
   /**
-   * {{{documento_proposta_persist_id_tipo_documento_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o para o tipo do documento
    **/
   public DocumentoPropostaPersist idDocumentosCredito(Long idDocumentosCredito) {
     this.idDocumentosCredito = idDocumentosCredito;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{documento_proposta_persist_id_tipo_documento_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo de identifica\u00E7\u00E3o para o tipo do documento")
   @JsonProperty("idDocumentosCredito")
   public Long getIdDocumentosCredito() {
     return idDocumentosCredito;
@@ -67,14 +67,14 @@ public class DocumentoPropostaPersist   {
 
   
   /**
-   * {{{documento_proposta_persist_id_status_documento_credito_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do Status do documento cr\u00E9dito
    **/
   public DocumentoPropostaPersist idStatusDocumentosCredito(Long idStatusDocumentosCredito) {
     this.idStatusDocumentosCredito = idStatusDocumentosCredito;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{documento_proposta_persist_id_status_documento_credito_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo de identifica\u00E7\u00E3o do Status do documento cr\u00E9dito")
   @JsonProperty("idStatusDocumentosCredito")
   public Long getIdStatusDocumentosCredito() {
     return idStatusDocumentosCredito;
@@ -85,14 +85,14 @@ public class DocumentoPropostaPersist   {
 
   
   /**
-   * {{{documento_proposta_persist_id_condicao_documento_credito_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o da condi\u00E7\u00E3o do documento cr\u00E9dito
    **/
   public DocumentoPropostaPersist idCondicoesDocumentosCredito(Long idCondicoesDocumentosCredito) {
     this.idCondicoesDocumentosCredito = idCondicoesDocumentosCredito;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{documento_proposta_persist_id_condicao_documento_credito_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o da condi\u00E7\u00E3o do documento cr\u00E9dito")
   @JsonProperty("idCondicoesDocumentosCredito")
   public Long getIdCondicoesDocumentosCredito() {
     return idCondicoesDocumentosCredito;
@@ -103,14 +103,14 @@ public class DocumentoPropostaPersist   {
 
   
   /**
-   * {{{documento_proposta_persist_id_tipo_documento_credito_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo do documento cr\u00E9dito
    **/
   public DocumentoPropostaPersist idTipoDocumentoCredito(Long idTipoDocumentoCredito) {
     this.idTipoDocumentoCredito = idTipoDocumentoCredito;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{documento_proposta_persist_id_tipo_documento_credito_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo do documento cr\u00E9dito")
   @JsonProperty("idTipoDocumentoCredito")
   public Long getIdTipoDocumentoCredito() {
     return idTipoDocumentoCredito;
@@ -121,14 +121,14 @@ public class DocumentoPropostaPersist   {
 
   
   /**
-   * {{{documento_proposta_persist_id_pessoa_fisica_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o da pessoa f\u00EDsica
    **/
   public DocumentoPropostaPersist idPessoaFisica(Long idPessoaFisica) {
     this.idPessoaFisica = idPessoaFisica;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{documento_proposta_persist_id_pessoa_fisica_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o da pessoa f\u00EDsica")
   @JsonProperty("idPessoaFisica")
   public Long getIdPessoaFisica() {
     return idPessoaFisica;
@@ -139,14 +139,14 @@ public class DocumentoPropostaPersist   {
 
   
   /**
-   * {{{documento_proposta_persist_id_log_atendimento_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do Log de Atendimento
    **/
   public DocumentoPropostaPersist idLogAtendimento(Long idLogAtendimento) {
     this.idLogAtendimento = idLogAtendimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{documento_proposta_persist_id_log_atendimento_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do Log de Atendimento")
   @JsonProperty("idLogAtendimento")
   public Long getIdLogAtendimento() {
     return idLogAtendimento;
@@ -157,14 +157,14 @@ public class DocumentoPropostaPersist   {
 
   
   /**
-   * {{{documento_proposta_persist_responsavel_value}}}
+   * Respons\u00E1vel
    **/
   public DocumentoPropostaPersist responsavel(String responsavel) {
     this.responsavel = responsavel;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{documento_proposta_persist_responsavel_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Respons\u00E1vel")
   @JsonProperty("responsavel")
   public String getResponsavel() {
     return responsavel;
@@ -175,14 +175,14 @@ public class DocumentoPropostaPersist   {
 
   
   /**
-   * {{{documento_proposta_persist_flag_documento_digitalizado_value}}}
+   * Indica se o documento ser\u00E1 digitalizado
    **/
   public DocumentoPropostaPersist flagDocumentoDigitalizado(Integer flagDocumentoDigitalizado) {
     this.flagDocumentoDigitalizado = flagDocumentoDigitalizado;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{documento_proposta_persist_flag_documento_digitalizado_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Indica se o documento ser\u00E1 digitalizado")
   @JsonProperty("flagDocumentoDigitalizado")
   public Integer getFlagDocumentoDigitalizado() {
     return flagDocumentoDigitalizado;
@@ -193,14 +193,14 @@ public class DocumentoPropostaPersist   {
 
   
   /**
-   * {{{documento_proposta_persist_documento_digitalizado_value}}}
+   * Nome do documento digitalizado
    **/
   public DocumentoPropostaPersist documentoDigitalizado(String documentoDigitalizado) {
     this.documentoDigitalizado = documentoDigitalizado;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{documento_proposta_persist_documento_digitalizado_value}}}")
+  @ApiModelProperty(example = "null", value = "Nome do documento digitalizado")
   @JsonProperty("documentoDigitalizado")
   public String getDocumentoDigitalizado() {
     return documentoDigitalizado;
@@ -211,14 +211,14 @@ public class DocumentoPropostaPersist   {
 
   
   /**
-   * {{{documento_proposta_persist_seq_analise_condicao_value}}}
+   * C\u00F3digo de sequ\u00EAncia de analise de condi\u00E7\u00E3o
    **/
   public DocumentoPropostaPersist seqAnaliseCondicao(Long seqAnaliseCondicao) {
     this.seqAnaliseCondicao = seqAnaliseCondicao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{documento_proposta_persist_seq_analise_condicao_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de sequ\u00EAncia de analise de condi\u00E7\u00E3o")
   @JsonProperty("seqAnaliseCondicao")
   public Long getSeqAnaliseCondicao() {
     return seqAnaliseCondicao;
@@ -229,14 +229,14 @@ public class DocumentoPropostaPersist   {
 
   
   /**
-   * {{{documento_proposta_persist_observacao_value}}}
+   * Observa\u00E7\u00E3o
    **/
   public DocumentoPropostaPersist observacao(String observacao) {
     this.observacao = observacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{documento_proposta_persist_observacao_value}}}")
+  @ApiModelProperty(example = "null", value = "Observa\u00E7\u00E3o")
   @JsonProperty("observacao")
   public String getObservacao() {
     return observacao;
@@ -247,14 +247,14 @@ public class DocumentoPropostaPersist   {
 
   
   /**
-   * {{{documento_proposta_persist_data_status_value}}}
+   * Data de status
    **/
   public DocumentoPropostaPersist dataStatus(String dataStatus) {
     this.dataStatus = dataStatus;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{documento_proposta_persist_data_status_value}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Data de status")
   @JsonProperty("dataStatus")
   public String getDataStatus() {
     return dataStatus;

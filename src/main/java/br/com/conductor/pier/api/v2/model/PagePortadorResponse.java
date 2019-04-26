@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{page_portador_response_description}}}
+ * Lista de Portadores
  **/
 
-@ApiModel(description = "{{{page_portador_response_description}}}")
+@ApiModel(description = "Lista de Portadores")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PagePortadorResponse   {
   

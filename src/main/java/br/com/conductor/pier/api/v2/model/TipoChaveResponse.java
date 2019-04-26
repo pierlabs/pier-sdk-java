@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{tipo_chave_response_description}}}
+ * Representa\u00E7\u00E3o da resposta do recurso do Tipo Chave
  **/
 
-@ApiModel(description = "{{{tipo_chave_response_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o da resposta do recurso do Tipo Chave")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class TipoChaveResponse   {
   
@@ -20,14 +20,14 @@ public class TipoChaveResponse   {
 
   
   /**
-   * {{{tipo_chave_response_id_value}}}
+   * Tipo chave id
    **/
   public TipoChaveResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_chave_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "Tipo chave id")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -38,14 +38,14 @@ public class TipoChaveResponse   {
 
   
   /**
-   * {{{tipo_chave_response_descricao_value}}}
+   * Tipo chave descri\u00E7\u00E3o
    **/
   public TipoChaveResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{tipo_chave_response_descricao_value}}}")
+  @ApiModelProperty(example = "null", value = "Tipo chave descri\u00E7\u00E3o")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;

@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{chave_criptografia_requisicao_descricao}}}
+ * Representa\u00E7\u00E3o da requisi\u00E7\u00E3o da descriptografia de conteudo
  **/
 
-@ApiModel(description = "{{{chave_criptografia_requisicao_descricao}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o da requisi\u00E7\u00E3o da descriptografia de conteudo")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ChaveCriptografiaRequest   {
   
@@ -20,14 +20,14 @@ public class ChaveCriptografiaRequest   {
 
   
   /**
-   * {{{chave_criptografia_requisicao_id_chave_valor}}}
+   * Identificador da chave de descriptografia
    **/
   public ChaveCriptografiaRequest idChave(Long idChave) {
     this.idChave = idChave;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{chave_criptografia_requisicao_id_chave_valor}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Identificador da chave de descriptografia")
   @JsonProperty("idChave")
   public Long getIdChave() {
     return idChave;
@@ -38,14 +38,14 @@ public class ChaveCriptografiaRequest   {
 
   
   /**
-   * {{{chave_criptografia_requisicao_conteudo_valor}}}
+   * Conteudo a ser descriptografado
    **/
   public ChaveCriptografiaRequest conteudo(String conteudo) {
     this.conteudo = conteudo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "{{{chave_criptografia_requisicao_conteudo_valor}}}")
+  @ApiModelProperty(example = "null", required = true, value = "Conteudo a ser descriptografado")
   @JsonProperty("conteudo")
   public String getConteudo() {
     return conteudo;

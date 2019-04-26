@@ -8,26 +8,27 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{cartao_embossing_request_description}}}
+ * Parametros de requisi\u00E7\u00E3o da gera\u00E7\u00E3o do cart\u00E3o embossing
  **/
 
-@ApiModel(description = "{{{cartao_embossing_request_description}}}")
+@ApiModel(description = "Parametros de requisi\u00E7\u00E3o da gera\u00E7\u00E3o do cart\u00E3o embossing")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class CartaoEmbossingRequest   {
   
   private Long idPessoa = null;
   private Long idTipoPlastico = null;
+  private Long idImagem = null;
 
   
   /**
-   * {{{cartao_embossing_request_id_pessoa_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence (id)
    **/
   public CartaoEmbossingRequest idPessoa(Long idPessoa) {
     this.idPessoa = idPessoa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{cartao_embossing_request_id_pessoa_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence (id)")
   @JsonProperty("id_pessoa")
   public Long getIdPessoa() {
     return idPessoa;
@@ -38,20 +39,38 @@ public class CartaoEmbossingRequest   {
 
   
   /**
-   * {{{cartao_embossing_request_id_tipo_plastico_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id)
    **/
   public CartaoEmbossingRequest idTipoPlastico(Long idTipoPlastico) {
     this.idTipoPlastico = idTipoPlastico;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{cartao_embossing_request_id_tipo_plastico_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id)")
   @JsonProperty("id_tipo_plastico")
   public Long getIdTipoPlastico() {
     return idTipoPlastico;
   }
   public void setIdTipoPlastico(Long idTipoPlastico) {
     this.idTipoPlastico = idTipoPlastico;
+  }
+
+  
+  /**
+   * C\u00F3digo de identifica\u00E7\u00E3o da imagem (id)
+   **/
+  public CartaoEmbossingRequest idImagem(Long idImagem) {
+    this.idImagem = idImagem;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o da imagem (id)")
+  @JsonProperty("idImagem")
+  public Long getIdImagem() {
+    return idImagem;
+  }
+  public void setIdImagem(Long idImagem) {
+    this.idImagem = idImagem;
   }
 
   
@@ -66,12 +85,13 @@ public class CartaoEmbossingRequest   {
     }
     CartaoEmbossingRequest cartaoEmbossingRequest = (CartaoEmbossingRequest) o;
     return Objects.equals(this.idPessoa, cartaoEmbossingRequest.idPessoa) &&
-        Objects.equals(this.idTipoPlastico, cartaoEmbossingRequest.idTipoPlastico);
+        Objects.equals(this.idTipoPlastico, cartaoEmbossingRequest.idTipoPlastico) &&
+        Objects.equals(this.idImagem, cartaoEmbossingRequest.idImagem);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idPessoa, idTipoPlastico);
+    return Objects.hash(idPessoa, idTipoPlastico, idImagem);
   }
 
   @Override
@@ -81,6 +101,7 @@ public class CartaoEmbossingRequest   {
     
     sb.append("    idPessoa: ").append(toIndentedString(idPessoa)).append("\n");
     sb.append("    idTipoPlastico: ").append(toIndentedString(idTipoPlastico)).append("\n");
+    sb.append("    idImagem: ").append(toIndentedString(idImagem)).append("\n");
     sb.append("}");
     return sb.toString();
   }

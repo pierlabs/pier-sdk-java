@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{vinculo_operacao_persist_description}}}
+ * Objeto VinculoOperacao
  **/
 
-@ApiModel(description = "{{{vinculo_operacao_persist_description}}}")
+@ApiModel(description = "Objeto VinculoOperacao")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class VinculoOperacaoPersist   {
   
@@ -21,14 +21,14 @@ public class VinculoOperacaoPersist   {
 
   
   /**
-   * {{{vinculo_operacao_persist_id_produto_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id)
    **/
   public VinculoOperacaoPersist idProduto(Long idProduto) {
     this.idProduto = idProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{vinculo_operacao_persist_id_produto_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id)")
   @JsonProperty("idProduto")
   public Long getIdProduto() {
     return idProduto;
@@ -39,14 +39,14 @@ public class VinculoOperacaoPersist   {
 
   
   /**
-   * {{{vinculo_operacao_persist_id_operacao_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id)
    **/
   public VinculoOperacaoPersist idOperacao(Long idOperacao) {
     this.idOperacao = idOperacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{vinculo_operacao_persist_id_operacao_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id)")
   @JsonProperty("idOperacao")
   public Long getIdOperacao() {
     return idOperacao;
@@ -57,14 +57,14 @@ public class VinculoOperacaoPersist   {
 
   
   /**
-   * {{{vinculo_operacao_persist_codigo_m_c_c_value}}}
+   * C\u00F3digo MCC
    **/
   public VinculoOperacaoPersist codigoMCC(Integer codigoMCC) {
     this.codigoMCC = codigoMCC;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{vinculo_operacao_persist_codigo_m_c_c_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo MCC")
   @JsonProperty("codigoMCC")
   public Integer getCodigoMCC() {
     return codigoMCC;

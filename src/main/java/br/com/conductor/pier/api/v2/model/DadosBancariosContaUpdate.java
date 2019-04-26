@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{dados_bancarios_conta_update_description}}}
+ * Par\u00E2metros para atualizar dados da conta banc\u00E1ria
  **/
 
-@ApiModel(description = "{{{dados_bancarios_conta_update_description}}}")
+@ApiModel(description = "Par\u00E2metros para atualizar dados da conta banc\u00E1ria")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class DadosBancariosContaUpdate   {
   
@@ -23,14 +23,14 @@ public class DadosBancariosContaUpdate   {
 
   
   /**
-   * {{{dados_bancarios_conta_update_idConta_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o da conta (id)
    **/
   public DadosBancariosContaUpdate idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{dados_bancarios_conta_update_idConta_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o da conta (id)")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -41,14 +41,14 @@ public class DadosBancariosContaUpdate   {
 
   
   /**
-   * {{{dados_bancarios_conta_update_banco_value}}}
+   * N\u00FAmerdo do Banco
    **/
   public DadosBancariosContaUpdate codigoBanco(Long codigoBanco) {
     this.codigoBanco = codigoBanco;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{dados_bancarios_conta_update_banco_value}}}")
+  @ApiModelProperty(example = "null", value = "N\u00FAmerdo do Banco")
   @JsonProperty("codigoBanco")
   public Long getCodigoBanco() {
     return codigoBanco;
@@ -59,14 +59,14 @@ public class DadosBancariosContaUpdate   {
 
   
   /**
-   * {{{dados_bancarios_conta_update_agencia_value}}}
+   * N\u00FAmero da Ag\u00EAncia
    **/
   public DadosBancariosContaUpdate numeroAgencia(Long numeroAgencia) {
     this.numeroAgencia = numeroAgencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{dados_bancarios_conta_update_agencia_value}}}")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero da Ag\u00EAncia")
   @JsonProperty("numeroAgencia")
   public Long getNumeroAgencia() {
     return numeroAgencia;
@@ -77,14 +77,14 @@ public class DadosBancariosContaUpdate   {
 
   
   /**
-   * {{{dados_bancarios_conta_update_contaCorrente_value}}}
+   * n\u00FAmero da Conta
    **/
   public DadosBancariosContaUpdate numeroContaCorrente(String numeroContaCorrente) {
     this.numeroContaCorrente = numeroContaCorrente;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{dados_bancarios_conta_update_contaCorrente_value}}}")
+  @ApiModelProperty(example = "null", value = "n\u00FAmero da Conta")
   @JsonProperty("numeroContaCorrente")
   public String getNumeroContaCorrente() {
     return numeroContaCorrente;
@@ -95,14 +95,14 @@ public class DadosBancariosContaUpdate   {
 
   
   /**
-   * {{{dados_bancarios_conta_update_idTipoContaBancaria_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de conta banc\u00E1ria do registro (id)
    **/
   public DadosBancariosContaUpdate idTipoContaBancaria(Long idTipoContaBancaria) {
     this.idTipoContaBancaria = idTipoContaBancaria;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{dados_bancarios_conta_update_idTipoContaBancaria_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo de conta banc\u00E1ria do registro (id)")
   @JsonProperty("idTipoContaBancaria")
   public Long getIdTipoContaBancaria() {
     return idTipoContaBancaria;

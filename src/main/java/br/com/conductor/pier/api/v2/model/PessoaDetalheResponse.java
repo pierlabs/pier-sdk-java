@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * {{{pessoa_detalhe_response_description}}}
+ * PessoaDetalheResponse
  **/
 
-@ApiModel(description = "{{{pessoa_detalhe_response_description}}}")
+@ApiModel(description = "PessoaDetalheResponse")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PessoaDetalheResponse   {
   
@@ -39,17 +39,18 @@ public class PessoaDetalheResponse   {
   private Integer numeroDependentes = null;
   private String nomePai = null;
   private Integer chequeEspecial = null;
+  private String numeroCnh = null;
 
   
   /**
-   * {{{pessoa_detalhe_response_id_pessoa_value}}}
+   * C\u00F3digo identificador da pessoa
    **/
   public PessoaDetalheResponse idPessoa(Long idPessoa) {
     this.idPessoa = idPessoa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pessoa_detalhe_response_id_pessoa_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador da pessoa")
   @JsonProperty("idPessoa")
   public Long getIdPessoa() {
     return idPessoa;
@@ -60,14 +61,14 @@ public class PessoaDetalheResponse   {
 
   
   /**
-   * {{{pessoa_detalhe_response_nome_mae_value}}}
+   * Apresenta o nome da m\u00E3e da pessoa fisica
    **/
   public PessoaDetalheResponse nomeMae(String nomeMae) {
     this.nomeMae = nomeMae;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pessoa_detalhe_response_nome_mae_value}}}")
+  @ApiModelProperty(example = "null", value = "Apresenta o nome da m\u00E3e da pessoa fisica")
   @JsonProperty("nomeMae")
   public String getNomeMae() {
     return nomeMae;
@@ -78,14 +79,14 @@ public class PessoaDetalheResponse   {
 
   
   /**
-   * {{{pessoa_detalhe_response_id_estado_civil_value}}}
+   * Id Estado civil da pessoa fisica
    **/
   public PessoaDetalheResponse idEstadoCivil(Long idEstadoCivil) {
     this.idEstadoCivil = idEstadoCivil;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pessoa_detalhe_response_id_estado_civil_value}}}")
+  @ApiModelProperty(example = "null", value = "Id Estado civil da pessoa fisica")
   @JsonProperty("idEstadoCivil")
   public Long getIdEstadoCivil() {
     return idEstadoCivil;
@@ -96,14 +97,14 @@ public class PessoaDetalheResponse   {
 
   
   /**
-   * {{{pessoa_detalhe_response_id_profissao_value}}}
+   * Profiss\u00E3o da pessoa fisica
    **/
   public PessoaDetalheResponse idProfissao(String idProfissao) {
     this.idProfissao = idProfissao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pessoa_detalhe_response_id_profissao_value}}}")
+  @ApiModelProperty(example = "null", value = "Profiss\u00E3o da pessoa fisica")
   @JsonProperty("idProfissao")
   public String getIdProfissao() {
     return idProfissao;
@@ -114,14 +115,14 @@ public class PessoaDetalheResponse   {
 
   
   /**
-   * {{{pessoa_detalhe_response_id_natureza_ocupacao_value}}}
+   * Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica
    **/
   public PessoaDetalheResponse idNaturezaOcupacao(Long idNaturezaOcupacao) {
     this.idNaturezaOcupacao = idNaturezaOcupacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pessoa_detalhe_response_id_natureza_ocupacao_value}}}")
+  @ApiModelProperty(example = "null", value = "Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica")
   @JsonProperty("idNaturezaOcupacao")
   public Long getIdNaturezaOcupacao() {
     return idNaturezaOcupacao;
@@ -132,14 +133,14 @@ public class PessoaDetalheResponse   {
 
   
   /**
-   * {{{pessoa_detalhe_response_id_nacionalidade_value}}}
+   * Id Nacionalidade da pessoa fisica
    **/
   public PessoaDetalheResponse idNacionalidade(Long idNacionalidade) {
     this.idNacionalidade = idNacionalidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pessoa_detalhe_response_id_nacionalidade_value}}}")
+  @ApiModelProperty(example = "null", value = "Id Nacionalidade da pessoa fisica")
   @JsonProperty("idNacionalidade")
   public Long getIdNacionalidade() {
     return idNacionalidade;
@@ -150,14 +151,14 @@ public class PessoaDetalheResponse   {
 
   
   /**
-   * {{{pessoa_detalhe_response_numero_banco_value}}}
+   * N\u00FAmero do banco
    **/
   public PessoaDetalheResponse numeroBanco(Integer numeroBanco) {
     this.numeroBanco = numeroBanco;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pessoa_detalhe_response_numero_banco_value}}}")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero do banco")
   @JsonProperty("numeroBanco")
   public Integer getNumeroBanco() {
     return numeroBanco;
@@ -168,14 +169,14 @@ public class PessoaDetalheResponse   {
 
   
   /**
-   * {{{pessoa_detalhe_response_numero_agencia_value}}}
+   * N\u00FAmero da ag\u00EAncia
    **/
   public PessoaDetalheResponse numeroAgencia(Integer numeroAgencia) {
     this.numeroAgencia = numeroAgencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pessoa_detalhe_response_numero_agencia_value}}}")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero da ag\u00EAncia")
   @JsonProperty("numeroAgencia")
   public Integer getNumeroAgencia() {
     return numeroAgencia;
@@ -186,14 +187,14 @@ public class PessoaDetalheResponse   {
 
   
   /**
-   * {{{pessoa_detalhe_response_numero_conta_corrente_value}}}
+   * N\u00FAmero da conta corrente
    **/
   public PessoaDetalheResponse numeroContaCorrente(String numeroContaCorrente) {
     this.numeroContaCorrente = numeroContaCorrente;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pessoa_detalhe_response_numero_conta_corrente_value}}}")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero da conta corrente")
   @JsonProperty("numeroContaCorrente")
   public String getNumeroContaCorrente() {
     return numeroContaCorrente;
@@ -204,14 +205,14 @@ public class PessoaDetalheResponse   {
 
   
   /**
-   * {{{pessoa_detalhe_response_email_value}}}
+   * Email da pessoa fisica
    **/
   public PessoaDetalheResponse email(String email) {
     this.email = email;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pessoa_detalhe_response_email_value}}}")
+  @ApiModelProperty(example = "null", value = "Email da pessoa fisica")
   @JsonProperty("email")
   public String getEmail() {
     return email;
@@ -222,14 +223,14 @@ public class PessoaDetalheResponse   {
 
   
   /**
-   * {{{pessoa_detalhe_response_nome_empresa_value}}}
+   * Nome que deve ser impresso no cart\u00E3o
    **/
   public PessoaDetalheResponse nomeEmpresa(String nomeEmpresa) {
     this.nomeEmpresa = nomeEmpresa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pessoa_detalhe_response_nome_empresa_value}}}")
+  @ApiModelProperty(example = "null", value = "Nome que deve ser impresso no cart\u00E3o")
   @JsonProperty("nomeEmpresa")
   public String getNomeEmpresa() {
     return nomeEmpresa;
@@ -240,14 +241,14 @@ public class PessoaDetalheResponse   {
 
   
   /**
-   * {{{pessoa_detalhe_response_nome_referencia_1_value}}}
+   * Nome de refer\u00EAncia 1
    **/
   public PessoaDetalheResponse nomeReferencia1(String nomeReferencia1) {
     this.nomeReferencia1 = nomeReferencia1;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pessoa_detalhe_response_nome_referencia_1_value}}}")
+  @ApiModelProperty(example = "null", value = "Nome de refer\u00EAncia 1")
   @JsonProperty("nomeReferencia1")
   public String getNomeReferencia1() {
     return nomeReferencia1;
@@ -258,14 +259,14 @@ public class PessoaDetalheResponse   {
 
   
   /**
-   * {{{pessoa_detalhe_response_endereco_referencia_1_value}}}
+   * Endere\u00E7o de refer\u00EAncia 1
    **/
   public PessoaDetalheResponse enderecoReferencia1(String enderecoReferencia1) {
     this.enderecoReferencia1 = enderecoReferencia1;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pessoa_detalhe_response_endereco_referencia_1_value}}}")
+  @ApiModelProperty(example = "null", value = "Endere\u00E7o de refer\u00EAncia 1")
   @JsonProperty("enderecoReferencia1")
   public String getEnderecoReferencia1() {
     return enderecoReferencia1;
@@ -276,14 +277,14 @@ public class PessoaDetalheResponse   {
 
   
   /**
-   * {{{pessoa_detalhe_response_nome_referencia_2_value}}}
+   * Nome de refer\u00EAncia 2
    **/
   public PessoaDetalheResponse nomeReferencia2(String nomeReferencia2) {
     this.nomeReferencia2 = nomeReferencia2;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pessoa_detalhe_response_nome_referencia_2_value}}}")
+  @ApiModelProperty(example = "null", value = "Nome de refer\u00EAncia 2")
   @JsonProperty("nomeReferencia2")
   public String getNomeReferencia2() {
     return nomeReferencia2;
@@ -294,14 +295,14 @@ public class PessoaDetalheResponse   {
 
   
   /**
-   * {{{pessoa_detalhe_response_endereco_referencia_2_value}}}
+   * Endere\u00E7o de refer\u00EAncia 2
    **/
   public PessoaDetalheResponse enderecoReferencia2(String enderecoReferencia2) {
     this.enderecoReferencia2 = enderecoReferencia2;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pessoa_detalhe_response_endereco_referencia_2_value}}}")
+  @ApiModelProperty(example = "null", value = "Endere\u00E7o de refer\u00EAncia 2")
   @JsonProperty("enderecoReferencia2")
   public String getEnderecoReferencia2() {
     return enderecoReferencia2;
@@ -312,14 +313,14 @@ public class PessoaDetalheResponse   {
 
   
   /**
-   * {{{pessoa_detalhe_response_salario_value}}}
+   * Sal\u00E1rio
    **/
   public PessoaDetalheResponse salario(BigDecimal salario) {
     this.salario = salario;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pessoa_detalhe_response_salario_value}}}")
+  @ApiModelProperty(example = "null", value = "Sal\u00E1rio")
   @JsonProperty("salario")
   public BigDecimal getSalario() {
     return salario;
@@ -330,14 +331,14 @@ public class PessoaDetalheResponse   {
 
   
   /**
-   * {{{pessoa_detalhe_response_impedido_de_financiamento_value}}}
+   * Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64)
    **/
   public PessoaDetalheResponse impedidoFinanciamento(Boolean impedidoFinanciamento) {
     this.impedidoFinanciamento = impedidoFinanciamento;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "{{{pessoa_detalhe_response_impedido_de_financiamento_value}}}")
+  @ApiModelProperty(example = "false", value = "Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64)")
   @JsonProperty("impedidoFinanciamento")
   public Boolean getImpedidoFinanciamento() {
     return impedidoFinanciamento;
@@ -348,14 +349,14 @@ public class PessoaDetalheResponse   {
 
   
   /**
-   * {{{pessoa_detalhe_response_naturalidade_Cidade_value}}}
+   * Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica
    **/
   public PessoaDetalheResponse naturalidadeCidade(String naturalidadeCidade) {
     this.naturalidadeCidade = naturalidadeCidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pessoa_detalhe_response_naturalidade_Cidade_value}}}")
+  @ApiModelProperty(example = "null", value = "Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica")
   @JsonProperty("naturalidadeCidade")
   public String getNaturalidadeCidade() {
     return naturalidadeCidade;
@@ -366,14 +367,14 @@ public class PessoaDetalheResponse   {
 
   
   /**
-   * {{{pessoa_detalhe_response_naturalidade_Estado_value}}}
+   * Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica
    **/
   public PessoaDetalheResponse naturalidadeEstado(String naturalidadeEstado) {
     this.naturalidadeEstado = naturalidadeEstado;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pessoa_detalhe_response_naturalidade_Estado_value}}}")
+  @ApiModelProperty(example = "null", value = "Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica")
   @JsonProperty("naturalidadeEstado")
   public String getNaturalidadeEstado() {
     return naturalidadeEstado;
@@ -384,14 +385,14 @@ public class PessoaDetalheResponse   {
 
   
   /**
-   * {{{pessoa_detalhe_response_grau_Instrucao_value}}}
+   * Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica
    **/
   public PessoaDetalheResponse grauInstrucao(Integer grauInstrucao) {
     this.grauInstrucao = grauInstrucao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pessoa_detalhe_response_grau_Instrucao_value}}}")
+  @ApiModelProperty(example = "null", value = "Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica")
   @JsonProperty("grauInstrucao")
   public Integer getGrauInstrucao() {
     return grauInstrucao;
@@ -402,14 +403,14 @@ public class PessoaDetalheResponse   {
 
   
   /**
-   * {{{pessoa_detalhe_response_numero_Dependentes_value}}}
+   * Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica
    **/
   public PessoaDetalheResponse numeroDependentes(Integer numeroDependentes) {
     this.numeroDependentes = numeroDependentes;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pessoa_detalhe_response_numero_Dependentes_value}}}")
+  @ApiModelProperty(example = "null", value = "Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica")
   @JsonProperty("numeroDependentes")
   public Integer getNumeroDependentes() {
     return numeroDependentes;
@@ -420,14 +421,14 @@ public class PessoaDetalheResponse   {
 
   
   /**
-   * {{{pessoa_detalhe_response_nome_Pai_value}}}
+   * Apresenta o nome do pai da pessoa f\u00EDsica
    **/
   public PessoaDetalheResponse nomePai(String nomePai) {
     this.nomePai = nomePai;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pessoa_detalhe_response_nome_Pai_value}}}")
+  @ApiModelProperty(example = "null", value = "Apresenta o nome do pai da pessoa f\u00EDsica")
   @JsonProperty("nomePai")
   public String getNomePai() {
     return nomePai;
@@ -438,20 +439,38 @@ public class PessoaDetalheResponse   {
 
   
   /**
-   * {{{pessoa_detalhe_response_cheque_Especial_value}}}
+   * Indica se pessoa f\u00EDsica aderir ao cheque especial
    **/
   public PessoaDetalheResponse chequeEspecial(Integer chequeEspecial) {
     this.chequeEspecial = chequeEspecial;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{pessoa_detalhe_response_cheque_Especial_value}}}")
+  @ApiModelProperty(example = "null", value = "Indica se pessoa f\u00EDsica aderir ao cheque especial")
   @JsonProperty("chequeEspecial")
   public Integer getChequeEspecial() {
     return chequeEspecial;
   }
   public void setChequeEspecial(Integer chequeEspecial) {
     this.chequeEspecial = chequeEspecial;
+  }
+
+  
+  /**
+   * N\u00FAmero da CNH da pessoa
+   **/
+  public PessoaDetalheResponse numeroCnh(String numeroCnh) {
+    this.numeroCnh = numeroCnh;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "N\u00FAmero da CNH da pessoa")
+  @JsonProperty("numeroCnh")
+  public String getNumeroCnh() {
+    return numeroCnh;
+  }
+  public void setNumeroCnh(String numeroCnh) {
+    this.numeroCnh = numeroCnh;
   }
 
   
@@ -487,12 +506,13 @@ public class PessoaDetalheResponse   {
         Objects.equals(this.grauInstrucao, pessoaDetalheResponse.grauInstrucao) &&
         Objects.equals(this.numeroDependentes, pessoaDetalheResponse.numeroDependentes) &&
         Objects.equals(this.nomePai, pessoaDetalheResponse.nomePai) &&
-        Objects.equals(this.chequeEspecial, pessoaDetalheResponse.chequeEspecial);
+        Objects.equals(this.chequeEspecial, pessoaDetalheResponse.chequeEspecial) &&
+        Objects.equals(this.numeroCnh, pessoaDetalheResponse.numeroCnh);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa, nomeReferencia1, enderecoReferencia1, nomeReferencia2, enderecoReferencia2, salario, impedidoFinanciamento, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial);
+    return Objects.hash(idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa, nomeReferencia1, enderecoReferencia1, nomeReferencia2, enderecoReferencia2, salario, impedidoFinanciamento, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial, numeroCnh);
   }
 
   @Override
@@ -523,6 +543,7 @@ public class PessoaDetalheResponse   {
     sb.append("    numeroDependentes: ").append(toIndentedString(numeroDependentes)).append("\n");
     sb.append("    nomePai: ").append(toIndentedString(nomePai)).append("\n");
     sb.append("    chequeEspecial: ").append(toIndentedString(chequeEspecial)).append("\n");
+    sb.append("    numeroCnh: ").append(toIndentedString(numeroCnh)).append("\n");
     sb.append("}");
     return sb.toString();
   }

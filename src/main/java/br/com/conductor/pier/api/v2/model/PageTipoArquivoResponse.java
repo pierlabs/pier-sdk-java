@@ -11,10 +11,10 @@ import java.util.List;
 
 
 /**
- * {{{page_tipo_arquivo_response_description}}}
+ * Lista tipos de arquivos cadastrados no sistema
  **/
 
-@ApiModel(description = "{{{page_tipo_arquivo_response_description}}}")
+@ApiModel(description = "Lista tipos de arquivos cadastrados no sistema")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageTipoArquivoResponse   {
   

@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{historico_telefone_response_description}}}
+ * Objeto de resposta para historico de telefones
  **/
 
-@ApiModel(description = "{{{historico_telefone_response_description}}}")
+@ApiModel(description = "Objeto de resposta para historico de telefones")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class HistoricoTelefoneResponse   {
   
@@ -23,14 +23,14 @@ public class HistoricoTelefoneResponse   {
 
   
   /**
-   * {{{historico_telefone_response_id_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Telefone (id)
    **/
   public HistoricoTelefoneResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{historico_telefone_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Telefone (id)")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -41,14 +41,14 @@ public class HistoricoTelefoneResponse   {
 
   
   /**
-   * {{{historico_telefone_response_telefone_value}}}
+   * Apresenta o N\u00FAmero do telefone
    **/
   public HistoricoTelefoneResponse telefone(String telefone) {
     this.telefone = telefone;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{historico_telefone_response_telefone_value}}}")
+  @ApiModelProperty(example = "null", value = "Apresenta o N\u00FAmero do telefone")
   @JsonProperty("telefone")
   public String getTelefone() {
     return telefone;
@@ -59,14 +59,14 @@ public class HistoricoTelefoneResponse   {
 
   
   /**
-   * {{{historico_telefone_response_id_tipo_telefone_value}}}
+   * Apresenta o id do tipo do telefone
    **/
   public HistoricoTelefoneResponse idTipoTelefone(Long idTipoTelefone) {
     this.idTipoTelefone = idTipoTelefone;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{historico_telefone_response_id_tipo_telefone_value}}}")
+  @ApiModelProperty(example = "null", value = "Apresenta o id do tipo do telefone")
   @JsonProperty("idTipoTelefone")
   public Long getIdTipoTelefone() {
     return idTipoTelefone;
@@ -77,14 +77,14 @@ public class HistoricoTelefoneResponse   {
 
   
   /**
-   * {{{historico_telefone_response_tipo_telefone_value}}}
+   * Apresenta a descri\u00E7\u00E3o do tipo do telefone
    **/
   public HistoricoTelefoneResponse tipoTelefone(String tipoTelefone) {
     this.tipoTelefone = tipoTelefone;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{historico_telefone_response_tipo_telefone_value}}}")
+  @ApiModelProperty(example = "null", value = "Apresenta a descri\u00E7\u00E3o do tipo do telefone")
   @JsonProperty("tipoTelefone")
   public String getTipoTelefone() {
     return tipoTelefone;
@@ -95,14 +95,14 @@ public class HistoricoTelefoneResponse   {
 
   
   /**
-   * {{{historico_telefone_response_data_modificacao_value}}}
+   * Apresenta a data que o telefone fora alterado
    **/
   public HistoricoTelefoneResponse dataModificacao(String dataModificacao) {
     this.dataModificacao = dataModificacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{historico_telefone_response_data_modificacao_value}}}")
+  @ApiModelProperty(example = "null", value = "Apresenta a data que o telefone fora alterado")
   @JsonProperty("dataModificacao")
   public String getDataModificacao() {
     return dataModificacao;

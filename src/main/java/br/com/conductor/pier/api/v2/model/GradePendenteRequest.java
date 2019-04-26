@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{grade_pendente_request_description}}}
+ * Representa\u00E7\u00E3o do Objeto para consulta para Grade Pedente
  **/
 
-@ApiModel(description = "{{{grade_pendente_request_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o do Objeto para consulta para Grade Pedente")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class GradePendenteRequest   {
   
@@ -20,14 +20,14 @@ public class GradePendenteRequest   {
 
   
   /**
-   * {{{grade_pendente_request_id_conta_value}}}
+   * C\u00F3digo identificador da conta
    **/
   public GradePendenteRequest idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{grade_pendente_request_id_conta_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador da conta")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -38,14 +38,14 @@ public class GradePendenteRequest   {
 
   
   /**
-   * {{{grade_pendente_request_data_base_value}}}
+   * Data do ajuste no formato yyyy-MM-dd
    **/
   public GradePendenteRequest dataBase(String dataBase) {
     this.dataBase = dataBase;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd", value = "{{{grade_pendente_request_data_base_value}}}")
+  @ApiModelProperty(example = "yyyy-MM-dd", value = "Data do ajuste no formato yyyy-MM-dd")
   @JsonProperty("dataBase")
   public String getDataBase() {
     return dataBase;

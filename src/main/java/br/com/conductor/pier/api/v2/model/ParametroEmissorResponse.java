@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{parametro_emissor_resposta_description}}}
+ * Representa\u00E7\u00E3o do recurso Par\u00E2metro Emissor
  **/
 
-@ApiModel(description = "{{{parametro_emissor_resposta_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o do recurso Par\u00E2metro Emissor")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ParametroEmissorResponse   {
   
@@ -23,14 +23,14 @@ public class ParametroEmissorResponse   {
 
   
   /**
-   * {{{parametro_emissor_resposta_codigo_descricao}}}
+   * C\u00F3digo do par\u00E2metro
    **/
   public ParametroEmissorResponse codigo(String codigo) {
     this.codigo = codigo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{parametro_emissor_resposta_codigo_descricao}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo do par\u00E2metro")
   @JsonProperty("codigo")
   public String getCodigo() {
     return codigo;
@@ -41,14 +41,14 @@ public class ParametroEmissorResponse   {
 
   
   /**
-   * {{{parametro_emissor_resposta_data_validade_descricao}}}
+   * Data da validade do par\u00E2metro
    **/
   public ParametroEmissorResponse dataValidade(String dataValidade) {
     this.dataValidade = dataValidade;
     return this;
   }
   
-  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "{{{parametro_emissor_resposta_data_validade_descricao}}}")
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data da validade do par\u00E2metro")
   @JsonProperty("dataValidade")
   public String getDataValidade() {
     return dataValidade;
@@ -59,14 +59,14 @@ public class ParametroEmissorResponse   {
 
   
   /**
-   * {{{parametro_emissor_resposta_descricao_description}}}
+   * Descri\u00E7\u00E3o do par\u00E2metro
    **/
   public ParametroEmissorResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{parametro_emissor_resposta_descricao_description}}}")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do par\u00E2metro")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -77,14 +77,14 @@ public class ParametroEmissorResponse   {
 
   
   /**
-   * {{{parametro_emissor_resposta_tipo_descricao}}}
+   * Tipo do par\u00E2metro
    **/
   public ParametroEmissorResponse tipo(String tipo) {
     this.tipo = tipo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{parametro_emissor_resposta_tipo_descricao}}}")
+  @ApiModelProperty(example = "null", value = "Tipo do par\u00E2metro")
   @JsonProperty("tipo")
   public String getTipo() {
     return tipo;
@@ -95,14 +95,14 @@ public class ParametroEmissorResponse   {
 
   
   /**
-   * {{{parametro_emissor_resposta_valor_parametro_descricao}}}
+   * Valor do par\u00E2metro
    **/
   public ParametroEmissorResponse valorParametro(String valorParametro) {
     this.valorParametro = valorParametro;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{parametro_emissor_resposta_valor_parametro_descricao}}}")
+  @ApiModelProperty(example = "null", value = "Valor do par\u00E2metro")
   @JsonProperty("valorParametro")
   public String getValorParametro() {
     return valorParametro;

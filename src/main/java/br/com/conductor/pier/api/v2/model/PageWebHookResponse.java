@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v2.model.WebHookResponse;
+import br.com.conductor.pier.api.v2.model.WebhookResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -11,14 +11,14 @@ import java.util.List;
 
 
 /**
- * {{{page_web_hook_response_description}}}
+ * Lista de WebHooks
  **/
 
-@ApiModel(description = "{{{page_web_hook_response_description}}}")
+@ApiModel(description = "Lista de WebHooks")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PageWebHookResponse   {
   
-  private List<WebHookResponse> content = new ArrayList<WebHookResponse>();
+  private List<WebhookResponse> content = new ArrayList<WebhookResponse>();
   private Boolean first = null;
   private Boolean firstPage = null;
   private Boolean hasContent = null;
@@ -36,17 +36,17 @@ public class PageWebHookResponse   {
   
   /**
    **/
-  public PageWebHookResponse content(List<WebHookResponse> content) {
+  public PageWebHookResponse content(List<WebhookResponse> content) {
     this.content = content;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("content")
-  public List<WebHookResponse> getContent() {
+  public List<WebhookResponse> getContent() {
     return content;
   }
-  public void setContent(List<WebHookResponse> content) {
+  public void setContent(List<WebhookResponse> content) {
     this.content = content;
   }
 

@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{anexo_notificacao_email_request_description}}}
+ * Representa\u00E7\u00E3o de um documento anexo para uma notifica\u00E7\u00E3o
  **/
 
-@ApiModel(description = "{{{anexo_notificacao_email_request_description}}}")
+@ApiModel(description = "Representa\u00E7\u00E3o de um documento anexo para uma notifica\u00E7\u00E3o")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class AnexoNotificacaoEmailRequest   {
   
@@ -19,14 +19,14 @@ public class AnexoNotificacaoEmailRequest   {
 
   
   /**
-   * {{{anexo_notificacao_email_request_id_documento_value}}}
+   * ID do documento que ser\u00E1 anexado a notifica\u00E7\u00E3o
    **/
   public AnexoNotificacaoEmailRequest idDocumento(Long idDocumento) {
     this.idDocumento = idDocumento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{anexo_notificacao_email_request_id_documento_value}}}")
+  @ApiModelProperty(example = "null", value = "ID do documento que ser\u00E1 anexado a notifica\u00E7\u00E3o")
   @JsonProperty("idDocumento")
   public Long getIdDocumento() {
     return idDocumento;

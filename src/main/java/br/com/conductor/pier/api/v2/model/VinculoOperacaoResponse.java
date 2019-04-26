@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{vinculo_operacao_response_description}}}
+ * ObjetoVinculoOperacao
  **/
 
-@ApiModel(description = "{{{vinculo_operacao_response_description}}}")
+@ApiModel(description = "ObjetoVinculoOperacao")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class VinculoOperacaoResponse   {
   
@@ -19,17 +19,18 @@ public class VinculoOperacaoResponse   {
   private Long idOperacao = null;
   private String codigoProcessamento = null;
   private Integer codigoMCC = null;
+  private String nomeOperacao = null;
 
   
   /**
-   * {{{vinculo_operacao_response_id_produto_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id)
    **/
   public VinculoOperacaoResponse idProduto(Long idProduto) {
     this.idProduto = idProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{vinculo_operacao_response_id_produto_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id)")
   @JsonProperty("idProduto")
   public Long getIdProduto() {
     return idProduto;
@@ -40,14 +41,14 @@ public class VinculoOperacaoResponse   {
 
   
   /**
-   * {{{vinculo_operacao_response_id_operacao_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id)
    **/
   public VinculoOperacaoResponse idOperacao(Long idOperacao) {
     this.idOperacao = idOperacao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{vinculo_operacao_response_id_operacao_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id)")
   @JsonProperty("idOperacao")
   public Long getIdOperacao() {
     return idOperacao;
@@ -58,14 +59,14 @@ public class VinculoOperacaoResponse   {
 
   
   /**
-   * {{{vinculo_operacao_response_codigo_processamento_value}}}
+   * C\u00F3digo de processamento
    **/
   public VinculoOperacaoResponse codigoProcessamento(String codigoProcessamento) {
     this.codigoProcessamento = codigoProcessamento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{vinculo_operacao_response_codigo_processamento_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de processamento")
   @JsonProperty("codigoProcessamento")
   public String getCodigoProcessamento() {
     return codigoProcessamento;
@@ -76,20 +77,38 @@ public class VinculoOperacaoResponse   {
 
   
   /**
-   * {{{vinculo_operacao_response_codigo_m_c_c_value}}}
+   * C\u00F3digo MCC
    **/
   public VinculoOperacaoResponse codigoMCC(Integer codigoMCC) {
     this.codigoMCC = codigoMCC;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{vinculo_operacao_response_codigo_m_c_c_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo MCC")
   @JsonProperty("codigoMCC")
   public Integer getCodigoMCC() {
     return codigoMCC;
   }
   public void setCodigoMCC(Integer codigoMCC) {
     this.codigoMCC = codigoMCC;
+  }
+
+  
+  /**
+   * Nome da opera\u00E7\u00E3o
+   **/
+  public VinculoOperacaoResponse nomeOperacao(String nomeOperacao) {
+    this.nomeOperacao = nomeOperacao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Nome da opera\u00E7\u00E3o")
+  @JsonProperty("nomeOperacao")
+  public String getNomeOperacao() {
+    return nomeOperacao;
+  }
+  public void setNomeOperacao(String nomeOperacao) {
+    this.nomeOperacao = nomeOperacao;
   }
 
   
@@ -106,12 +125,13 @@ public class VinculoOperacaoResponse   {
     return Objects.equals(this.idProduto, vinculoOperacaoResponse.idProduto) &&
         Objects.equals(this.idOperacao, vinculoOperacaoResponse.idOperacao) &&
         Objects.equals(this.codigoProcessamento, vinculoOperacaoResponse.codigoProcessamento) &&
-        Objects.equals(this.codigoMCC, vinculoOperacaoResponse.codigoMCC);
+        Objects.equals(this.codigoMCC, vinculoOperacaoResponse.codigoMCC) &&
+        Objects.equals(this.nomeOperacao, vinculoOperacaoResponse.nomeOperacao);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idProduto, idOperacao, codigoProcessamento, codigoMCC);
+    return Objects.hash(idProduto, idOperacao, codigoProcessamento, codigoMCC, nomeOperacao);
   }
 
   @Override
@@ -123,6 +143,7 @@ public class VinculoOperacaoResponse   {
     sb.append("    idOperacao: ").append(toIndentedString(idOperacao)).append("\n");
     sb.append("    codigoProcessamento: ").append(toIndentedString(codigoProcessamento)).append("\n");
     sb.append("    codigoMCC: ").append(toIndentedString(codigoMCC)).append("\n");
+    sb.append("    nomeOperacao: ").append(toIndentedString(nomeOperacao)).append("\n");
     sb.append("}");
     return sb.toString();
   }

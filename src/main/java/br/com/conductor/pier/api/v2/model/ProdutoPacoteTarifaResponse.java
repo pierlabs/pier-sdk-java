@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{produto_pacote_tarifa_response_descricao}}}
+ * Objeto de Resposta  de um  Pacote de Tarifa
  **/
 
-@ApiModel(description = "{{{produto_pacote_tarifa_response_descricao}}}")
+@ApiModel(description = "Objeto de Resposta  de um  Pacote de Tarifa")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ProdutoPacoteTarifaResponse   {
   
@@ -22,14 +22,14 @@ public class ProdutoPacoteTarifaResponse   {
 
   
   /**
-   * {{{produto_pacote_tarifa_response_flag_default_descricao}}}
+   * Sinaliza se \u00E9 Padr\u00E3o
    **/
   public ProdutoPacoteTarifaResponse flagDefault(Boolean flagDefault) {
     this.flagDefault = flagDefault;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "{{{produto_pacote_tarifa_response_flag_default_descricao}}}")
+  @ApiModelProperty(example = "false", value = "Sinaliza se \u00E9 Padr\u00E3o")
   @JsonProperty("flagDefault")
   public Boolean getFlagDefault() {
     return flagDefault;
@@ -40,14 +40,14 @@ public class ProdutoPacoteTarifaResponse   {
 
   
   /**
-   * {{{produto_pacote_tarifa_response_id_descricao}}}
+   * Identificador do Produto de Pacote de  Tarifa
    **/
   public ProdutoPacoteTarifaResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{produto_pacote_tarifa_response_id_descricao}}}")
+  @ApiModelProperty(example = "null", value = "Identificador do Produto de Pacote de  Tarifa")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -58,14 +58,14 @@ public class ProdutoPacoteTarifaResponse   {
 
   
   /**
-   * {{{produto_pacote_tarifa_response_id_pacote_tarifa_descricao}}}
+   * Identificador do Pacote de Tarfica
    **/
   public ProdutoPacoteTarifaResponse idPacoteTarifa(Long idPacoteTarifa) {
     this.idPacoteTarifa = idPacoteTarifa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{produto_pacote_tarifa_response_id_pacote_tarifa_descricao}}}")
+  @ApiModelProperty(example = "null", value = "Identificador do Pacote de Tarfica")
   @JsonProperty("idPacoteTarifa")
   public Long getIdPacoteTarifa() {
     return idPacoteTarifa;
@@ -76,14 +76,14 @@ public class ProdutoPacoteTarifaResponse   {
 
   
   /**
-   * {{{produto_pacote_tarifa_response_id_produto_descricao}}}
+   * Identificador do Produto
    **/
   public ProdutoPacoteTarifaResponse idProduto(Long idProduto) {
     this.idProduto = idProduto;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{produto_pacote_tarifa_response_id_produto_descricao}}}")
+  @ApiModelProperty(example = "null", value = "Identificador do Produto")
   @JsonProperty("idProduto")
   public Long getIdProduto() {
     return idProduto;

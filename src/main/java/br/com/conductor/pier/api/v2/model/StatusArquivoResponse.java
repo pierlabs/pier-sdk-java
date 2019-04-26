@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{status_arquivo_response_description}}}
+ * Objeto Response do status arquivo
  **/
 
-@ApiModel(description = "{{{status_arquivo_response_description}}}")
+@ApiModel(description = "Objeto Response do status arquivo")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class StatusArquivoResponse   {
   
@@ -21,14 +21,14 @@ public class StatusArquivoResponse   {
 
   
   /**
-   * {{{status_arquivo_response_id_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do status do arquivo
    **/
   public StatusArquivoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{status_arquivo_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do status do arquivo")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -39,14 +39,14 @@ public class StatusArquivoResponse   {
 
   
   /**
-   * {{{status_arquivo_response_nome_value}}}
+   * Nome do status do arquivo
    **/
   public StatusArquivoResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{status_arquivo_response_nome_value}}}")
+  @ApiModelProperty(example = "null", value = "Nome do status do arquivo")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -57,14 +57,14 @@ public class StatusArquivoResponse   {
 
   
   /**
-   * {{{status_arquivo_response_descricao_value}}}
+   * Descri\u00E7\u00E3o do status do arquivo
    **/
   public StatusArquivoResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{status_arquivo_response_descricao_value}}}")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do status do arquivo")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;

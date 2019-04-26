@@ -9,10 +9,10 @@ import java.math.BigDecimal;
 
 
 /**
- * {{{parcelamento_transferencia_response_description}}}
+ * Detalhe do plano de parcelamento para Transfer\u00EAncia de cr\u00E9dito para contas banc\u00E1rias
  **/
 
-@ApiModel(description = "{{{parcelamento_transferencia_response_description}}}")
+@ApiModel(description = "Detalhe do plano de parcelamento para Transfer\u00EAncia de cr\u00E9dito para contas banc\u00E1rias")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ParcelamentoTransferenciaResponse   {
   
@@ -26,14 +26,14 @@ public class ParcelamentoTransferenciaResponse   {
 
   
   /**
-   * {{{parcelamento_transferencia_response_numero_parcela_value}}}
+   * N\u00FAmero de parcelas dispon\u00EDveis
    **/
   public ParcelamentoTransferenciaResponse numeroParcela(Integer numeroParcela) {
     this.numeroParcela = numeroParcela;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{parcelamento_transferencia_response_numero_parcela_value}}}")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero de parcelas dispon\u00EDveis")
   @JsonProperty("numeroParcela")
   public Integer getNumeroParcela() {
     return numeroParcela;
@@ -44,14 +44,14 @@ public class ParcelamentoTransferenciaResponse   {
 
   
   /**
-   * {{{parcelamento_transferencia_response_valor_parcelas_value}}}
+   * Valor das demais parcelas
    **/
   public ParcelamentoTransferenciaResponse valorParcelas(BigDecimal valorParcelas) {
     this.valorParcelas = valorParcelas;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{parcelamento_transferencia_response_valor_parcelas_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor das demais parcelas")
   @JsonProperty("valorParcelas")
   public BigDecimal getValorParcelas() {
     return valorParcelas;
@@ -62,14 +62,14 @@ public class ParcelamentoTransferenciaResponse   {
 
   
   /**
-   * {{{parcelamento_transferencia_response_valor_total_value}}}
+   * Valor total do financiamento
    **/
   public ParcelamentoTransferenciaResponse valorTotal(BigDecimal valorTotal) {
     this.valorTotal = valorTotal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{parcelamento_transferencia_response_valor_total_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor total do financiamento")
   @JsonProperty("valorTotal")
   public BigDecimal getValorTotal() {
     return valorTotal;
@@ -80,14 +80,14 @@ public class ParcelamentoTransferenciaResponse   {
 
   
   /**
-   * {{{parcelamento_transferencia_response_valor_t_a_c_value}}}
+   * Valor da tarifa de contrata\u00E7\u00E3o
    **/
   public ParcelamentoTransferenciaResponse valorTAC(BigDecimal valorTAC) {
     this.valorTAC = valorTAC;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{parcelamento_transferencia_response_valor_t_a_c_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor da tarifa de contrata\u00E7\u00E3o")
   @JsonProperty("valorTAC")
   public BigDecimal getValorTAC() {
     return valorTAC;
@@ -98,14 +98,14 @@ public class ParcelamentoTransferenciaResponse   {
 
   
   /**
-   * {{{parcelamento_transferencia_response_valor_i_o_f_value}}}
+   * IOF calculado para o cliente
    **/
   public ParcelamentoTransferenciaResponse valorIOF(BigDecimal valorIOF) {
     this.valorIOF = valorIOF;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{parcelamento_transferencia_response_valor_i_o_f_value}}}")
+  @ApiModelProperty(example = "null", value = "IOF calculado para o cliente")
   @JsonProperty("valorIOF")
   public BigDecimal getValorIOF() {
     return valorIOF;
@@ -116,14 +116,14 @@ public class ParcelamentoTransferenciaResponse   {
 
   
   /**
-   * {{{parcelamento_transferencia_response_taxa_juros_value}}}
+   * Valor da taxa de juros
    **/
   public ParcelamentoTransferenciaResponse taxaJuros(BigDecimal taxaJuros) {
     this.taxaJuros = taxaJuros;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{parcelamento_transferencia_response_taxa_juros_value}}}")
+  @ApiModelProperty(example = "null", value = "Valor da taxa de juros")
   @JsonProperty("taxaJuros")
   public BigDecimal getTaxaJuros() {
     return taxaJuros;
@@ -134,14 +134,14 @@ public class ParcelamentoTransferenciaResponse   {
 
   
   /**
-   * {{{parcelamento_transferencia_response_cet_anual_value}}}
+   * CET anual
    **/
   public ParcelamentoTransferenciaResponse cetAnual(BigDecimal cetAnual) {
     this.cetAnual = cetAnual;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{parcelamento_transferencia_response_cet_anual_value}}}")
+  @ApiModelProperty(example = "null", value = "CET anual")
   @JsonProperty("cetAnual")
   public BigDecimal getCetAnual() {
     return cetAnual;

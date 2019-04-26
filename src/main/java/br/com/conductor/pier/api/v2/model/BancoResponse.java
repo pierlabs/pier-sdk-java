@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{banco_response_description}}}
+ * Objeto Banco
  **/
 
-@ApiModel(description = "{{{banco_response_description}}}")
+@ApiModel(description = "Objeto Banco")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class BancoResponse   {
   
@@ -19,17 +19,18 @@ public class BancoResponse   {
   private String nome = null;
   private String descricao = null;
   private String digitoBanco = null;
+  private String ispb = null;
 
   
   /**
-   * {{{banco_response_id_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Banco (id)
    **/
   public BancoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{banco_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Banco (id)")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -40,14 +41,14 @@ public class BancoResponse   {
 
   
   /**
-   * {{{banco_response_nome_value}}}
+   * Nome do banco
    **/
   public BancoResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{banco_response_nome_value}}}")
+  @ApiModelProperty(example = "null", value = "Nome do banco")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -58,14 +59,14 @@ public class BancoResponse   {
 
   
   /**
-   * {{{banco_response_descricao_value}}}
+   * Descri\u00E7\u00E3o do banco
    **/
   public BancoResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{banco_response_descricao_value}}}")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do banco")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -76,20 +77,38 @@ public class BancoResponse   {
 
   
   /**
-   * {{{banco_response_digito_banco_value}}}
+   * Digito do banco
    **/
   public BancoResponse digitoBanco(String digitoBanco) {
     this.digitoBanco = digitoBanco;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{banco_response_digito_banco_value}}}")
+  @ApiModelProperty(example = "null", value = "Digito do banco")
   @JsonProperty("digitoBanco")
   public String getDigitoBanco() {
     return digitoBanco;
   }
   public void setDigitoBanco(String digitoBanco) {
     this.digitoBanco = digitoBanco;
+  }
+
+  
+  /**
+   * C\u00F3digo ispb do banco
+   **/
+  public BancoResponse ispb(String ispb) {
+    this.ispb = ispb;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00F3digo ispb do banco")
+  @JsonProperty("ispb")
+  public String getIspb() {
+    return ispb;
+  }
+  public void setIspb(String ispb) {
+    this.ispb = ispb;
   }
 
   
@@ -106,12 +125,13 @@ public class BancoResponse   {
     return Objects.equals(this.id, bancoResponse.id) &&
         Objects.equals(this.nome, bancoResponse.nome) &&
         Objects.equals(this.descricao, bancoResponse.descricao) &&
-        Objects.equals(this.digitoBanco, bancoResponse.digitoBanco);
+        Objects.equals(this.digitoBanco, bancoResponse.digitoBanco) &&
+        Objects.equals(this.ispb, bancoResponse.ispb);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, nome, descricao, digitoBanco);
+    return Objects.hash(id, nome, descricao, digitoBanco, ispb);
   }
 
   @Override
@@ -123,6 +143,7 @@ public class BancoResponse   {
     sb.append("    nome: ").append(toIndentedString(nome)).append("\n");
     sb.append("    descricao: ").append(toIndentedString(descricao)).append("\n");
     sb.append("    digitoBanco: ").append(toIndentedString(digitoBanco)).append("\n");
+    sb.append("    ispb: ").append(toIndentedString(ispb)).append("\n");
     sb.append("}");
     return sb.toString();
   }

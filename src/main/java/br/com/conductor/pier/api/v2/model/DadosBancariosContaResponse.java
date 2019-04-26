@@ -8,10 +8,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * {{{dados_bancarios_conta_response_description}}}
+ * Dados banc\u00E1rios
  **/
 
-@ApiModel(description = "{{{dados_bancarios_conta_response_description}}}")
+@ApiModel(description = "Dados banc\u00E1rios")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class DadosBancariosContaResponse   {
   
@@ -26,14 +26,14 @@ public class DadosBancariosContaResponse   {
 
   
   /**
-   * {{{dados_bancarios_conta_response_id_value}}}
+   * C\u00F3digo de identifica\u00E7\u00E3o do registro dos dados banc\u00E1rios. (id)
    **/
   public DadosBancariosContaResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{dados_bancarios_conta_response_id_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do registro dos dados banc\u00E1rios. (id)")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -44,14 +44,14 @@ public class DadosBancariosContaResponse   {
 
   
   /**
-   * {{{dados_bancarios_conta_response_idConta_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)
    **/
   public DadosBancariosContaResponse idConta(Long idConta) {
     this.idConta = idConta;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{dados_bancarios_conta_response_idConta_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)")
   @JsonProperty("idConta")
   public Long getIdConta() {
     return idConta;
@@ -62,14 +62,14 @@ public class DadosBancariosContaResponse   {
 
   
   /**
-   * {{{dados_bancarios_conta_response_banco_value}}}
+   * Banco
    **/
   public DadosBancariosContaResponse codigoBanco(Long codigoBanco) {
     this.codigoBanco = codigoBanco;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{dados_bancarios_conta_response_banco_value}}}")
+  @ApiModelProperty(example = "null", value = "Banco")
   @JsonProperty("codigoBanco")
   public Long getCodigoBanco() {
     return codigoBanco;
@@ -80,14 +80,14 @@ public class DadosBancariosContaResponse   {
 
   
   /**
-   * {{{dados_bancarios_conta_response_agencia_value}}}
+   * Ag\u00EAncia
    **/
   public DadosBancariosContaResponse numeroAgencia(Long numeroAgencia) {
     this.numeroAgencia = numeroAgencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{dados_bancarios_conta_response_agencia_value}}}")
+  @ApiModelProperty(example = "null", value = "Ag\u00EAncia")
   @JsonProperty("numeroAgencia")
   public Long getNumeroAgencia() {
     return numeroAgencia;
@@ -98,14 +98,14 @@ public class DadosBancariosContaResponse   {
 
   
   /**
-   * {{{dados_bancarios_conta_response_contaCorrente_value}}}
+   * Conta Corrente
    **/
   public DadosBancariosContaResponse numeroContaCorrente(String numeroContaCorrente) {
     this.numeroContaCorrente = numeroContaCorrente;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{dados_bancarios_conta_response_contaCorrente_value}}}")
+  @ApiModelProperty(example = "null", value = "Conta Corrente")
   @JsonProperty("numeroContaCorrente")
   public String getNumeroContaCorrente() {
     return numeroContaCorrente;
@@ -116,14 +116,14 @@ public class DadosBancariosContaResponse   {
 
   
   /**
-   * {{{dados_bancarios_conta_response_IdTipoContaBancaria_value}}}
+   * C\u00F3digo de Identifica\u00E7\u00E3o do tipo de conta banc\u00E1ria (id)
    **/
   public DadosBancariosContaResponse idTipoContaBancaria(Long idTipoContaBancaria) {
     this.idTipoContaBancaria = idTipoContaBancaria;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "{{{dados_bancarios_conta_response_IdTipoContaBancaria_value}}}")
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do tipo de conta banc\u00E1ria (id)")
   @JsonProperty("idTipoContaBancaria")
   public Long getIdTipoContaBancaria() {
     return idTipoContaBancaria;
