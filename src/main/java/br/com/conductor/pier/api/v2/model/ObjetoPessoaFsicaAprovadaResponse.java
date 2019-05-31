@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v2.model.ObjetoEndereoAprovado;
+import br.com.conductor.pier.api.v2.model.EnderecoAprovadoResponse;
 import br.com.conductor.pier.api.v2.model.TelefonePessoaAprovadaResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
@@ -45,7 +45,7 @@ public class ObjetoPessoaFsicaAprovadaResponse   {
   private String canalEntrada = null;
   private Integer valorPontuacao = null;
   private List<TelefonePessoaAprovadaResponse> telefones = new ArrayList<TelefonePessoaAprovadaResponse>();
-  private List<ObjetoEndereoAprovado> enderecos = new ArrayList<ObjetoEndereoAprovado>();
+  private List<EnderecoAprovadoResponse> enderecos = new ArrayList<EnderecoAprovadoResponse>();
   private BigDecimal limiteGlobal = null;
   private BigDecimal limiteMaximo = null;
   private BigDecimal limiteParcelas = null;
@@ -577,17 +577,17 @@ public class ObjetoPessoaFsicaAprovadaResponse   {
   /**
    * Pode ser informado os seguintes tipos de endere\u00E7o: Residencial, Comercial, e Outros
    **/
-  public ObjetoPessoaFsicaAprovadaResponse enderecos(List<ObjetoEndereoAprovado> enderecos) {
+  public ObjetoPessoaFsicaAprovadaResponse enderecos(List<EnderecoAprovadoResponse> enderecos) {
     this.enderecos = enderecos;
     return this;
   }
   
   @ApiModelProperty(example = "null", required = true, value = "Pode ser informado os seguintes tipos de endere\u00E7o: Residencial, Comercial, e Outros")
   @JsonProperty("enderecos")
-  public List<ObjetoEndereoAprovado> getEnderecos() {
+  public List<EnderecoAprovadoResponse> getEnderecos() {
     return enderecos;
   }
-  public void setEnderecos(List<ObjetoEndereoAprovado> enderecos) {
+  public void setEnderecos(List<EnderecoAprovadoResponse> enderecos) {
     this.enderecos = enderecos;
   }
 

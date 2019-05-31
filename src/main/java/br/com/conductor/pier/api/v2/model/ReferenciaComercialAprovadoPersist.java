@@ -8,12 +8,12 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * RefenciaAprovadoPersist
+ * Objeto de persist\u00EAncia da refer\u00EAncia comercial da pessoa aprovada
  **/
 
-@ApiModel(description = "RefenciaAprovadoPersist")
+@ApiModel(description = "Objeto de persist\u00EAncia da refer\u00EAncia comercial da pessoa aprovada")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class RefenciaComercialAprovadoPersist   {
+public class ReferenciaComercialAprovadoPersist   {
   
   private String razaoSocial = null;
   private String nomeContrato = null;
@@ -23,14 +23,14 @@ public class RefenciaComercialAprovadoPersist   {
 
   
   /**
-   * Apresenta o nome completo da raz\u00E3o social da refer\u00EAncia comercial (nome empresarial)
+   * Nome completo da raz\u00E3o social da refer\u00EAncia comercial. Nome empresarial
    **/
-  public RefenciaComercialAprovadoPersist razaoSocial(String razaoSocial) {
+  public ReferenciaComercialAprovadoPersist razaoSocial(String razaoSocial) {
     this.razaoSocial = razaoSocial;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o nome completo da raz\u00E3o social da refer\u00EAncia comercial (nome empresarial)")
+  @ApiModelProperty(example = "CONDUCTOR S/A", value = "Nome completo da raz\u00E3o social da refer\u00EAncia comercial. Nome empresarial")
   @JsonProperty("razaoSocial")
   public String getRazaoSocial() {
     return razaoSocial;
@@ -43,12 +43,12 @@ public class RefenciaComercialAprovadoPersist   {
   /**
    * Nome do respons\u00E1vel pela refer\u00EAncia comercial
    **/
-  public RefenciaComercialAprovadoPersist nomeContrato(String nomeContrato) {
+  public ReferenciaComercialAprovadoPersist nomeContrato(String nomeContrato) {
     this.nomeContrato = nomeContrato;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nome do respons\u00E1vel pela refer\u00EAncia comercial")
+  @ApiModelProperty(example = "Beltrano de Tal", value = "Nome do respons\u00E1vel pela refer\u00EAncia comercial")
   @JsonProperty("nomeContrato")
   public String getNomeContrato() {
     return nomeContrato;
@@ -59,14 +59,14 @@ public class RefenciaComercialAprovadoPersist   {
 
   
   /**
-   * DDD do n\u00FAmero telefone
+   * DDD do contato da refer\u00EAncia comercial
    **/
-  public RefenciaComercialAprovadoPersist ddd(String ddd) {
+  public ReferenciaComercialAprovadoPersist ddd(String ddd) {
     this.ddd = ddd;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "DDD do n\u00FAmero telefone")
+  @ApiModelProperty(example = "083", value = "DDD do contato da refer\u00EAncia comercial")
   @JsonProperty("ddd")
   public String getDdd() {
     return ddd;
@@ -77,14 +77,14 @@ public class RefenciaComercialAprovadoPersist   {
 
   
   /**
-   * n\u00FAmero do telefone da refer\u00EAncia comercial
+   * N\u00FAmero do telefone da refer\u00EAncia comercial
    **/
-  public RefenciaComercialAprovadoPersist telefone(String telefone) {
+  public ReferenciaComercialAprovadoPersist telefone(String telefone) {
     this.telefone = telefone;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "n\u00FAmero do telefone da refer\u00EAncia comercial")
+  @ApiModelProperty(example = "988712354", value = "N\u00FAmero do telefone da refer\u00EAncia comercial")
   @JsonProperty("telefone")
   public String getTelefone() {
     return telefone;
@@ -97,12 +97,12 @@ public class RefenciaComercialAprovadoPersist   {
   /**
    * E-mail da refer\u00EAncia comercial
    **/
-  public RefenciaComercialAprovadoPersist email(String email) {
+  public ReferenciaComercialAprovadoPersist email(String email) {
     this.email = email;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "E-mail da refer\u00EAncia comercial")
+  @ApiModelProperty(example = "beltrano.tal@email.com", value = "E-mail da refer\u00EAncia comercial")
   @JsonProperty("email")
   public String getEmail() {
     return email;
@@ -121,12 +121,12 @@ public class RefenciaComercialAprovadoPersist   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    RefenciaComercialAprovadoPersist refenciaComercialAprovadoPersist = (RefenciaComercialAprovadoPersist) o;
-    return Objects.equals(this.razaoSocial, refenciaComercialAprovadoPersist.razaoSocial) &&
-        Objects.equals(this.nomeContrato, refenciaComercialAprovadoPersist.nomeContrato) &&
-        Objects.equals(this.ddd, refenciaComercialAprovadoPersist.ddd) &&
-        Objects.equals(this.telefone, refenciaComercialAprovadoPersist.telefone) &&
-        Objects.equals(this.email, refenciaComercialAprovadoPersist.email);
+    ReferenciaComercialAprovadoPersist referenciaComercialAprovadoPersist = (ReferenciaComercialAprovadoPersist) o;
+    return Objects.equals(this.razaoSocial, referenciaComercialAprovadoPersist.razaoSocial) &&
+        Objects.equals(this.nomeContrato, referenciaComercialAprovadoPersist.nomeContrato) &&
+        Objects.equals(this.ddd, referenciaComercialAprovadoPersist.ddd) &&
+        Objects.equals(this.telefone, referenciaComercialAprovadoPersist.telefone) &&
+        Objects.equals(this.email, referenciaComercialAprovadoPersist.email);
   }
 
   @Override
@@ -137,7 +137,7 @@ public class RefenciaComercialAprovadoPersist   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class RefenciaComercialAprovadoPersist {\n");
+    sb.append("class ReferenciaComercialAprovadoPersist {\n");
     
     sb.append("    razaoSocial: ").append(toIndentedString(razaoSocial)).append("\n");
     sb.append("    nomeContrato: ").append(toIndentedString(nomeContrato)).append("\n");

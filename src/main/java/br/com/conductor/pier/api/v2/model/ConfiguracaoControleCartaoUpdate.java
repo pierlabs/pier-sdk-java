@@ -15,25 +15,26 @@ import io.swagger.annotations.ApiModelProperty;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class ConfiguracaoControleCartaoUpdate   {
   
-  private Integer permiteEcommerce = null;
-  private Integer permiteSaque = null;
-  private Integer permiteWallet = null;
+  private Boolean permiteEcommerce = null;
+  private Boolean permiteSaque = null;
+  private Boolean permiteWallet = null;
+  private Boolean permiteControleMCC = null;
 
   
   /**
    * Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es ecommerce
    **/
-  public ConfiguracaoControleCartaoUpdate permiteEcommerce(Integer permiteEcommerce) {
+  public ConfiguracaoControleCartaoUpdate permiteEcommerce(Boolean permiteEcommerce) {
     this.permiteEcommerce = permiteEcommerce;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es ecommerce")
+  @ApiModelProperty(example = "false", value = "Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es ecommerce")
   @JsonProperty("permiteEcommerce")
-  public Integer getPermiteEcommerce() {
+  public Boolean getPermiteEcommerce() {
     return permiteEcommerce;
   }
-  public void setPermiteEcommerce(Integer permiteEcommerce) {
+  public void setPermiteEcommerce(Boolean permiteEcommerce) {
     this.permiteEcommerce = permiteEcommerce;
   }
 
@@ -41,17 +42,17 @@ public class ConfiguracaoControleCartaoUpdate   {
   /**
    * Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es de saque
    **/
-  public ConfiguracaoControleCartaoUpdate permiteSaque(Integer permiteSaque) {
+  public ConfiguracaoControleCartaoUpdate permiteSaque(Boolean permiteSaque) {
     this.permiteSaque = permiteSaque;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es de saque")
+  @ApiModelProperty(example = "false", value = "Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es de saque")
   @JsonProperty("permiteSaque")
-  public Integer getPermiteSaque() {
+  public Boolean getPermiteSaque() {
     return permiteSaque;
   }
-  public void setPermiteSaque(Integer permiteSaque) {
+  public void setPermiteSaque(Boolean permiteSaque) {
     this.permiteSaque = permiteSaque;
   }
 
@@ -59,18 +60,36 @@ public class ConfiguracaoControleCartaoUpdate   {
   /**
    * Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es por wallet
    **/
-  public ConfiguracaoControleCartaoUpdate permiteWallet(Integer permiteWallet) {
+  public ConfiguracaoControleCartaoUpdate permiteWallet(Boolean permiteWallet) {
     this.permiteWallet = permiteWallet;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es por wallet")
+  @ApiModelProperty(example = "false", value = "Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es por wallet")
   @JsonProperty("permiteWallet")
-  public Integer getPermiteWallet() {
+  public Boolean getPermiteWallet() {
     return permiteWallet;
   }
-  public void setPermiteWallet(Integer permiteWallet) {
+  public void setPermiteWallet(Boolean permiteWallet) {
     this.permiteWallet = permiteWallet;
+  }
+
+  
+  /**
+   * Indica se o cart\u00E3o est\u00E1 ativo para controle por grupos de MCCs
+   **/
+  public ConfiguracaoControleCartaoUpdate permiteControleMCC(Boolean permiteControleMCC) {
+    this.permiteControleMCC = permiteControleMCC;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "Indica se o cart\u00E3o est\u00E1 ativo para controle por grupos de MCCs")
+  @JsonProperty("permiteControleMCC")
+  public Boolean getPermiteControleMCC() {
+    return permiteControleMCC;
+  }
+  public void setPermiteControleMCC(Boolean permiteControleMCC) {
+    this.permiteControleMCC = permiteControleMCC;
   }
 
   
@@ -86,12 +105,13 @@ public class ConfiguracaoControleCartaoUpdate   {
     ConfiguracaoControleCartaoUpdate configuracaoControleCartaoUpdate = (ConfiguracaoControleCartaoUpdate) o;
     return Objects.equals(this.permiteEcommerce, configuracaoControleCartaoUpdate.permiteEcommerce) &&
         Objects.equals(this.permiteSaque, configuracaoControleCartaoUpdate.permiteSaque) &&
-        Objects.equals(this.permiteWallet, configuracaoControleCartaoUpdate.permiteWallet);
+        Objects.equals(this.permiteWallet, configuracaoControleCartaoUpdate.permiteWallet) &&
+        Objects.equals(this.permiteControleMCC, configuracaoControleCartaoUpdate.permiteControleMCC);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(permiteEcommerce, permiteSaque, permiteWallet);
+    return Objects.hash(permiteEcommerce, permiteSaque, permiteWallet, permiteControleMCC);
   }
 
   @Override
@@ -102,6 +122,7 @@ public class ConfiguracaoControleCartaoUpdate   {
     sb.append("    permiteEcommerce: ").append(toIndentedString(permiteEcommerce)).append("\n");
     sb.append("    permiteSaque: ").append(toIndentedString(permiteSaque)).append("\n");
     sb.append("    permiteWallet: ").append(toIndentedString(permiteWallet)).append("\n");
+    sb.append("    permiteControleMCC: ").append(toIndentedString(permiteControleMCC)).append("\n");
     sb.append("}");
     return sb.toString();
   }

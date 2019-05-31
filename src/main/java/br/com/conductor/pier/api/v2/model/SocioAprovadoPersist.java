@@ -11,12 +11,12 @@ import java.util.List;
 
 
 /**
- * PessoaPersist
+ * Objeto de persist\u00EAncia do s\u00F3cio da pessoa aprovada
  **/
 
-@ApiModel(description = "PessoaPersist")
+@ApiModel(description = "Objeto de persist\u00EAncia do s\u00F3cio da pessoa aprovada")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class PessoaPersist   {
+public class SocioAprovadoPersist   {
   
   private String nome = null;
   private String cpf = null;
@@ -34,14 +34,14 @@ public class PessoaPersist   {
 
   
   /**
-   * Apresenta o Nome do Socio
+   * Nome do s\u00F3cio
    **/
-  public PessoaPersist nome(String nome) {
+  public SocioAprovadoPersist nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Apresenta o Nome do Socio")
+  @ApiModelProperty(example = "Cicrano de Tal", required = true, value = "Nome do s\u00F3cio")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -52,14 +52,14 @@ public class PessoaPersist   {
 
   
   /**
-   * CPF do S\u00F3cio
+   * CPF do s\u00F3cio
    **/
-  public PessoaPersist cpf(String cpf) {
+  public SocioAprovadoPersist cpf(String cpf) {
     this.cpf = cpf;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "CPF do S\u00F3cio")
+  @ApiModelProperty(example = "22646872070", value = "CPF do s\u00F3cio")
   @JsonProperty("cpf")
   public String getCpf() {
     return cpf;
@@ -72,12 +72,12 @@ public class PessoaPersist   {
   /**
    * Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd
    **/
-  public PessoaPersist dataNascimento(String dataNascimento) {
+  public SocioAprovadoPersist dataNascimento(String dataNascimento) {
     this.dataNascimento = dataNascimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd")
+  @ApiModelProperty(example = "1980-01-01", required = true, value = "Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd")
   @JsonProperty("dataNascimento")
   public String getDataNascimento() {
     return dataNascimento;
@@ -88,14 +88,14 @@ public class PessoaPersist   {
 
   
   /**
-   * Sexo do S\u00F3cio
+   * Sexo do s\u00F3cio
    **/
-  public PessoaPersist sexo(String sexo) {
+  public SocioAprovadoPersist sexo(String sexo) {
     this.sexo = sexo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Sexo do S\u00F3cio")
+  @ApiModelProperty(example = "M", value = "Sexo do s\u00F3cio")
   @JsonProperty("sexo")
   public String getSexo() {
     return sexo;
@@ -108,12 +108,12 @@ public class PessoaPersist   {
   /**
    * N\u00FAmero da Identidade
    **/
-  public PessoaPersist numeroIdentidade(String numeroIdentidade) {
+  public SocioAprovadoPersist numeroIdentidade(String numeroIdentidade) {
     this.numeroIdentidade = numeroIdentidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00FAmero da Identidade")
+  @ApiModelProperty(example = "987654321", value = "N\u00FAmero da Identidade")
   @JsonProperty("numeroIdentidade")
   public String getNumeroIdentidade() {
     return numeroIdentidade;
@@ -126,12 +126,12 @@ public class PessoaPersist   {
   /**
    * Org\u00E3o expedidor da Identidade
    **/
-  public PessoaPersist orgaoExpedidorIdentidade(String orgaoExpedidorIdentidade) {
+  public SocioAprovadoPersist orgaoExpedidorIdentidade(String orgaoExpedidorIdentidade) {
     this.orgaoExpedidorIdentidade = orgaoExpedidorIdentidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Org\u00E3o expedidor da Identidade")
+  @ApiModelProperty(example = "SSP", value = "Org\u00E3o expedidor da Identidade")
   @JsonProperty("orgaoExpedidorIdentidade")
   public String getOrgaoExpedidorIdentidade() {
     return orgaoExpedidorIdentidade;
@@ -144,12 +144,12 @@ public class PessoaPersist   {
   /**
    * Sigla da Unidade Federativa de onde foi expedido a Identidade
    **/
-  public PessoaPersist unidadeFederativaIdentidade(String unidadeFederativaIdentidade) {
+  public SocioAprovadoPersist unidadeFederativaIdentidade(String unidadeFederativaIdentidade) {
     this.unidadeFederativaIdentidade = unidadeFederativaIdentidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Sigla da Unidade Federativa de onde foi expedido a Identidade")
+  @ApiModelProperty(example = "PB", value = "Sigla da Unidade Federativa de onde foi expedido a Identidade")
   @JsonProperty("unidadeFederativaIdentidade")
   public String getUnidadeFederativaIdentidade() {
     return unidadeFederativaIdentidade;
@@ -162,12 +162,12 @@ public class PessoaPersist   {
   /**
    * Data emiss\u00E3o da Identidade
    **/
-  public PessoaPersist dataEmissaoIdentidade(String dataEmissaoIdentidade) {
+  public SocioAprovadoPersist dataEmissaoIdentidade(String dataEmissaoIdentidade) {
     this.dataEmissaoIdentidade = dataEmissaoIdentidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data emiss\u00E3o da Identidade")
+  @ApiModelProperty(example = "2000-01-01", value = "Data emiss\u00E3o da Identidade")
   @JsonProperty("dataEmissaoIdentidade")
   public String getDataEmissaoIdentidade() {
     return dataEmissaoIdentidade;
@@ -180,12 +180,12 @@ public class PessoaPersist   {
   /**
    * Estado civil do s\u00F3cio
    **/
-  public PessoaPersist estadoCivil(String estadoCivil) {
+  public SocioAprovadoPersist estadoCivil(String estadoCivil) {
     this.estadoCivil = estadoCivil;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Estado civil do s\u00F3cio")
+  @ApiModelProperty(example = "SOLTEIRO", value = "Estado civil do s\u00F3cio")
   @JsonProperty("estadoCivil")
   public String getEstadoCivil() {
     return estadoCivil;
@@ -198,12 +198,12 @@ public class PessoaPersist   {
   /**
    * Profiss\u00E3o do s\u00F3cio
    **/
-  public PessoaPersist profissao(String profissao) {
+  public SocioAprovadoPersist profissao(String profissao) {
     this.profissao = profissao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Profiss\u00E3o do s\u00F3cio")
+  @ApiModelProperty(example = "Entregador", value = "Profiss\u00E3o do s\u00F3cio")
   @JsonProperty("profissao")
   public String getProfissao() {
     return profissao;
@@ -216,12 +216,12 @@ public class PessoaPersist   {
   /**
    * Nacionalidade do s\u00F3cio
    **/
-  public PessoaPersist nacionalidade(String nacionalidade) {
+  public SocioAprovadoPersist nacionalidade(String nacionalidade) {
     this.nacionalidade = nacionalidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nacionalidade do s\u00F3cio")
+  @ApiModelProperty(example = "Brasileiro", value = "Nacionalidade do s\u00F3cio")
   @JsonProperty("nacionalidade")
   public String getNacionalidade() {
     return nacionalidade;
@@ -234,12 +234,12 @@ public class PessoaPersist   {
   /**
    * Email do s\u00F3cio
    **/
-  public PessoaPersist email(String email) {
+  public SocioAprovadoPersist email(String email) {
     this.email = email;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Email do s\u00F3cio")
+  @ApiModelProperty(example = "sicrano.tal@email.com", value = "Email do s\u00F3cio")
   @JsonProperty("email")
   public String getEmail() {
     return email;
@@ -250,14 +250,14 @@ public class PessoaPersist   {
 
   
   /**
-   * Informa os telefones do s\u00F3cio
+   * Telefones do s\u00F3cio
    **/
-  public PessoaPersist telefones(List<TelefonePessoaAprovadaPersist> telefones) {
+  public SocioAprovadoPersist telefones(List<TelefonePessoaAprovadaPersist> telefones) {
     this.telefones = telefones;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Informa os telefones do s\u00F3cio")
+  @ApiModelProperty(example = "null", value = "Telefones do s\u00F3cio")
   @JsonProperty("telefones")
   public List<TelefonePessoaAprovadaPersist> getTelefones() {
     return telefones;
@@ -276,20 +276,20 @@ public class PessoaPersist   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    PessoaPersist pessoaPersist = (PessoaPersist) o;
-    return Objects.equals(this.nome, pessoaPersist.nome) &&
-        Objects.equals(this.cpf, pessoaPersist.cpf) &&
-        Objects.equals(this.dataNascimento, pessoaPersist.dataNascimento) &&
-        Objects.equals(this.sexo, pessoaPersist.sexo) &&
-        Objects.equals(this.numeroIdentidade, pessoaPersist.numeroIdentidade) &&
-        Objects.equals(this.orgaoExpedidorIdentidade, pessoaPersist.orgaoExpedidorIdentidade) &&
-        Objects.equals(this.unidadeFederativaIdentidade, pessoaPersist.unidadeFederativaIdentidade) &&
-        Objects.equals(this.dataEmissaoIdentidade, pessoaPersist.dataEmissaoIdentidade) &&
-        Objects.equals(this.estadoCivil, pessoaPersist.estadoCivil) &&
-        Objects.equals(this.profissao, pessoaPersist.profissao) &&
-        Objects.equals(this.nacionalidade, pessoaPersist.nacionalidade) &&
-        Objects.equals(this.email, pessoaPersist.email) &&
-        Objects.equals(this.telefones, pessoaPersist.telefones);
+    SocioAprovadoPersist socioAprovadoPersist = (SocioAprovadoPersist) o;
+    return Objects.equals(this.nome, socioAprovadoPersist.nome) &&
+        Objects.equals(this.cpf, socioAprovadoPersist.cpf) &&
+        Objects.equals(this.dataNascimento, socioAprovadoPersist.dataNascimento) &&
+        Objects.equals(this.sexo, socioAprovadoPersist.sexo) &&
+        Objects.equals(this.numeroIdentidade, socioAprovadoPersist.numeroIdentidade) &&
+        Objects.equals(this.orgaoExpedidorIdentidade, socioAprovadoPersist.orgaoExpedidorIdentidade) &&
+        Objects.equals(this.unidadeFederativaIdentidade, socioAprovadoPersist.unidadeFederativaIdentidade) &&
+        Objects.equals(this.dataEmissaoIdentidade, socioAprovadoPersist.dataEmissaoIdentidade) &&
+        Objects.equals(this.estadoCivil, socioAprovadoPersist.estadoCivil) &&
+        Objects.equals(this.profissao, socioAprovadoPersist.profissao) &&
+        Objects.equals(this.nacionalidade, socioAprovadoPersist.nacionalidade) &&
+        Objects.equals(this.email, socioAprovadoPersist.email) &&
+        Objects.equals(this.telefones, socioAprovadoPersist.telefones);
   }
 
   @Override
@@ -300,7 +300,7 @@ public class PessoaPersist   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PessoaPersist {\n");
+    sb.append("class SocioAprovadoPersist {\n");
     
     sb.append("    nome: ").append(toIndentedString(nome)).append("\n");
     sb.append("    cpf: ").append(toIndentedString(cpf)).append("\n");

@@ -35,14 +35,14 @@ public class SocioAprovadoResponse   {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do S\u00F3cio (id)
+   * C\u00F3digo de Identifica\u00E7\u00E3o do S\u00F3cio
    **/
   public SocioAprovadoResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do S\u00F3cio (id)")
+  @ApiModelProperty(example = "1", value = "C\u00F3digo de Identifica\u00E7\u00E3o do S\u00F3cio")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -53,14 +53,14 @@ public class SocioAprovadoResponse   {
 
   
   /**
-   * Apresenta o Nome do Socio
+   * Nome do Socio
    **/
   public SocioAprovadoResponse nome(String nome) {
     this.nome = nome;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o Nome do Socio")
+  @ApiModelProperty(example = "Cicrano de Tal", value = "Nome do Socio")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -71,14 +71,14 @@ public class SocioAprovadoResponse   {
 
   
   /**
-   * CPF
+   * CPF do s\u00F3cio
    **/
   public SocioAprovadoResponse cpf(String cpf) {
     this.cpf = cpf;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "CPF")
+  @ApiModelProperty(example = "22646872070", value = "CPF do s\u00F3cio")
   @JsonProperty("cpf")
   public String getCpf() {
     return cpf;
@@ -89,14 +89,14 @@ public class SocioAprovadoResponse   {
 
   
   /**
-   * Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd
+   * Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
    **/
   public SocioAprovadoResponse dataNascimento(String dataNascimento) {
     this.dataNascimento = dataNascimento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd")
+  @ApiModelProperty(example = "1960-01-01", value = "Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.")
   @JsonProperty("dataNascimento")
   public String getDataNascimento() {
     return dataNascimento;
@@ -114,7 +114,7 @@ public class SocioAprovadoResponse   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do sexo da pessoa, quando for PF, sendo: ('M': Masculino), ('F': F\u00EAmea), ('O': Outros), ('N': N\u00E3o Especificado)")
+  @ApiModelProperty(example = "M", value = "C\u00F3digo de identifica\u00E7\u00E3o do sexo da pessoa, quando for PF, sendo: ('M': Masculino), ('F': F\u00EAmea), ('O': Outros), ('N': N\u00E3o Especificado)")
   @JsonProperty("sexo")
   public String getSexo() {
     return sexo;
@@ -132,7 +132,7 @@ public class SocioAprovadoResponse   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "N\u00FAmero da Identidade")
+  @ApiModelProperty(example = "987654321", value = "N\u00FAmero da Identidade")
   @JsonProperty("numeroIdentidade")
   public String getNumeroIdentidade() {
     return numeroIdentidade;
@@ -150,7 +150,7 @@ public class SocioAprovadoResponse   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Org\u00E3o expedidor do RG")
+  @ApiModelProperty(example = "SSP", value = "Org\u00E3o expedidor do RG")
   @JsonProperty("orgaoExpedidorIdentidade")
   public String getOrgaoExpedidorIdentidade() {
     return orgaoExpedidorIdentidade;
@@ -168,7 +168,7 @@ public class SocioAprovadoResponse   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Sigla da Unidade Federativa de onde foi expedido a Identidade")
+  @ApiModelProperty(example = "PB", value = "Sigla da Unidade Federativa de onde foi expedido a Identidade")
   @JsonProperty("unidadeFederativaIdentidade")
   public String getUnidadeFederativaIdentidade() {
     return unidadeFederativaIdentidade;
@@ -186,7 +186,7 @@ public class SocioAprovadoResponse   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Data emiss\u00E3o da Identidade")
+  @ApiModelProperty(example = "2000-01-01", value = "Data emiss\u00E3o da Identidade")
   @JsonProperty("dataEmissaoIdentidade")
   public String getDataEmissaoIdentidade() {
     return dataEmissaoIdentidade;
@@ -204,7 +204,7 @@ public class SocioAprovadoResponse   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Estado civil do s\u00F3cio")
+  @ApiModelProperty(example = "CASADO", value = "Estado civil do s\u00F3cio")
   @JsonProperty("estadoCivil")
   public String getEstadoCivil() {
     return estadoCivil;
@@ -222,7 +222,7 @@ public class SocioAprovadoResponse   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Profiss\u00E3o do s\u00F3cio")
+  @ApiModelProperty(example = "DIRETOR", value = "Profiss\u00E3o do s\u00F3cio")
   @JsonProperty("profissao")
   public String getProfissao() {
     return profissao;
@@ -240,7 +240,7 @@ public class SocioAprovadoResponse   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Nacionalidade do s\u00F3cio")
+  @ApiModelProperty(example = "Brasileiro", value = "Nacionalidade do s\u00F3cio")
   @JsonProperty("nacionalidade")
   public String getNacionalidade() {
     return nacionalidade;
@@ -258,7 +258,7 @@ public class SocioAprovadoResponse   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Email do s\u00F3cio")
+  @ApiModelProperty(example = "sicrano.tal@email.com", value = "Email do s\u00F3cio")
   @JsonProperty("email")
   public String getEmail() {
     return email;
@@ -269,14 +269,14 @@ public class SocioAprovadoResponse   {
 
   
   /**
-   * Informa os telefones do s\u00F3cio
+   * Telefones do s\u00F3cio
    **/
   public SocioAprovadoResponse telefones(List<TelefonePessoaAprovadaResponse> telefones) {
     this.telefones = telefones;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Informa os telefones do s\u00F3cio")
+  @ApiModelProperty(example = "null", value = "Telefones do s\u00F3cio")
   @JsonProperty("telefones")
   public List<TelefonePessoaAprovadaResponse> getTelefones() {
     return telefones;

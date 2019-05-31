@@ -25,6 +25,7 @@ import br.com.conductor.pier.api.v2.model.PageLoteCartoesPrePagosResponse;
 import br.com.conductor.pier.api.v2.model.ValidaCVVRequest;
 import br.com.conductor.pier.api.v2.model.ValidaCartaoResponse;
 import br.com.conductor.pier.api.v2.model.ValidaSenhaCartaoResponse;
+import br.com.conductor.pier.api.v2.model.SenhaDTO;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -1594,20 +1595,20 @@ public class CartaoApi {
    * Permite validar a senha de um Cart\u00E3o
    * Esta opera\u00E7\u00E3o tem como objetivo permitir validar que a senha informada pelo portador de um determinado cart\u00E3o est\u00E1 correta
    * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)
-   * @param senha Senha para ser validada
+   * @param senhaDTO Representa o DTO de senha para usu\u00E1rio
    * @return ValidaSenhaCartaoResponse
    */
-  public ValidaSenhaCartaoResponse validarSenha(Long id, String senha) throws ApiException {
-    Object postBody = null;
+  public ValidaSenhaCartaoResponse validarSenha(Long id, SenhaDTO senhaDTO) throws ApiException {
+    Object postBody = senhaDTO;
     
      // verify the required parameter 'id' is set
      if (id == null) {
         throw new ApiException(400, "Missing the required parameter 'id' when calling validarSenha");
      }
      
-     // verify the required parameter 'senha' is set
-     if (senha == null) {
-        throw new ApiException(400, "Missing the required parameter 'senha' when calling validarSenha");
+     // verify the required parameter 'senhaDTO' is set
+     if (senhaDTO == null) {
+        throw new ApiException(400, "Missing the required parameter 'senhaDTO' when calling validarSenha");
      }
      
     // create path and map variables
@@ -1621,8 +1622,6 @@ public class CartaoApi {
 
     
 
-    if (senha != null)
-      headerParams.put("senha", apiClient.parameterToString(senha));
     
 
     
@@ -1633,7 +1632,7 @@ public class CartaoApi {
     final String accept = apiClient.selectHeaderAccept(accepts);
 
     final String[] contentTypes = {
-      "application/json"
+      "application/json", "application/x-www-form-urlencoded"
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
@@ -1642,7 +1641,7 @@ public class CartaoApi {
 
     
     GenericType<ValidaSenhaCartaoResponse> returnType = new GenericType<ValidaSenhaCartaoResponse>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   

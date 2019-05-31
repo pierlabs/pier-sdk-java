@@ -36,6 +36,7 @@ import br.com.conductor.pier.api.v2.model.PageTipoEstabelecimentoResponse;
 import br.com.conductor.pier.api.v2.model.PageCampoCodificadoDescricaoResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoOrigemComercialResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoTerminalResponse;
+import br.com.conductor.pier.api.v2.model.PageTipoTerminalTransacoesResponse;
 import br.com.conductor.pier.api.v2.model.PageEstabelecimentoResponse;
 import br.com.conductor.pier.api.v2.model.PageVinculoOperacaoResponse;
 import br.com.conductor.pier.api.v2.model.PageGrupoEconomicoResponse;
@@ -1792,6 +1793,81 @@ public class EstabelecimentoApi {
 
     
     GenericType<PageTipoTerminalResponse> returnType = new GenericType<PageTipoTerminalResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Listar transa\u00E7\u00F5es existentes no banco de dados do Terminal
+   * Este recurso permite listar transa\u00E7\u00F5es existentes no banco de dados do Terminal
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o do terminal (id)
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
+   * @param page P\u00E1gina
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
+   * @param dataTransacao Data inicial
+   * @param codigoProcessamento C\u00F3digo de processamento da transa\u00E7\u00E3o
+   * @param nsuEmissor NSU Emissor
+   * @param nsuOrigem NSU Origem
+   * @param statusConta Status da conta
+   * @param valorTransacao Valor da transa\u00E7\u00E3o
+   * @return PageTipoTerminalTransacoesResponse
+   */
+  public PageTipoTerminalTransacoesResponse listarTransacoes(Long id, List<String> sort, Integer page, Integer limit, String dataTransacao, String codigoProcessamento, Integer nsuEmissor, Integer nsuOrigem, Integer statusConta, BigDecimal valorTransacao) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling listarTransacoes");
+     }
+     
+    // create path and map variables
+    String path = "/api/tipos-terminais-estabelecimento/{id}/transacoes".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "dataTransacao", dataTransacao));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "codigoProcessamento", codigoProcessamento));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "nsuEmissor", nsuEmissor));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "nsuOrigem", nsuOrigem));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "statusConta", statusConta));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "valorTransacao", valorTransacao));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PageTipoTerminalTransacoesResponse> returnType = new GenericType<PageTipoTerminalTransacoesResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

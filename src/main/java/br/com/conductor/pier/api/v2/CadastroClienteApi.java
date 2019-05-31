@@ -16,15 +16,19 @@ import br.com.conductor.pier.api.v2.model.TelefoneResponse;
 import br.com.conductor.pier.api.v2.model.AtribuirAssinaturaClientePersist;
 import br.com.conductor.pier.api.v2.model.IntegracaoEmissorPersist;
 import br.com.conductor.pier.api.v2.model.IntegracaoEmissorResponse;
+import br.com.conductor.pier.api.v2.model.IndicacaoAmigoResponse;
+import br.com.conductor.pier.api.v2.model.IndicacaoAmigoUpdate;
 import br.com.conductor.pier.api.v2.model.CelularRecargaProgramadaPersist;
 import br.com.conductor.pier.api.v2.model.CelularRecargaProgramadaResponse;
 import br.com.conductor.pier.api.v2.model.AdicionalContaPersist;
 import br.com.conductor.pier.api.v2.model.AdicionalContaResponse;
+import br.com.conductor.pier.api.v2.model.IndicacaoAmigoPersist;
 import br.com.conductor.pier.api.v2.model.AdicionalPersist;
 import br.com.conductor.pier.api.v2.model.AdicionalResponse;
 import br.com.conductor.pier.api.v2.model.PageContaDetalheResponse;
 import br.com.conductor.pier.api.v2.model.PageHistoricoEnderecoResponse;
 import br.com.conductor.pier.api.v2.model.HistoricoTelefoneResponse;
+import br.com.conductor.pier.api.v2.model.PageIndicacaoAmigoResponse;
 import br.com.conductor.pier.api.v2.model.PagePessoaResponse;
 import br.com.conductor.pier.api.v2.model.PageEnderecoResponse;
 import br.com.conductor.pier.api.v2.model.PagePessoaDetalheResponse;
@@ -642,6 +646,67 @@ public class CadastroClienteApi {
   }
   
   /**
+   * Atualizar indica\u00E7\u00E3o de amigos
+   * Atualiza a indica\u00E7\u00E3o de amigo uma pessoa
+   * @param id C\u00F3digo idenficador da pessoa
+   * @param idIndicacao C\u00F3difo identificador da indica\u00E7\u00E3o
+   * @param update update
+   * @return IndicacaoAmigoResponse
+   */
+  public IndicacaoAmigoResponse atualizarIndicacaoAmigo(Long id, Long idIndicacao, IndicacaoAmigoUpdate update) throws ApiException {
+    Object postBody = update;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling atualizarIndicacaoAmigo");
+     }
+     
+     // verify the required parameter 'idIndicacao' is set
+     if (idIndicacao == null) {
+        throw new ApiException(400, "Missing the required parameter 'idIndicacao' when calling atualizarIndicacaoAmigo");
+     }
+     
+     // verify the required parameter 'update' is set
+     if (update == null) {
+        throw new ApiException(400, "Missing the required parameter 'update' when calling atualizarIndicacaoAmigo");
+     }
+     
+    // create path and map variables
+    String path = "/api/pessoas/{id}/indicacoes-amigos/{idIndicacao}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()))
+      .replaceAll("\\{" + "idIndicacao" + "\\}", apiClient.escapeString(idIndicacao.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<IndicacaoAmigoResponse> returnType = new GenericType<IndicacaoAmigoResponse>() {};
+    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Cadastro da recarga programada
    * Este recurso permite cadastrar uma nova recarga programada na base do emissor
    * @param persistencia persistencia
@@ -738,6 +803,60 @@ public class CadastroClienteApi {
 
     
     GenericType<AdicionalContaResponse> returnType = new GenericType<AdicionalContaResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Cadastra uma indica\u00E7\u00E3o de amigo
+   * Cadastra uma indica\u00E7\u00E3o de amigo
+   * @param id C\u00F3digo idenficador da pessoa
+   * @param persist persist
+   * @return IndicacaoAmigoResponse
+   */
+  public IndicacaoAmigoResponse cadastrarIndicacaoAmigo(Long id, IndicacaoAmigoPersist persist) throws ApiException {
+    Object postBody = persist;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling cadastrarIndicacaoAmigo");
+     }
+     
+     // verify the required parameter 'persist' is set
+     if (persist == null) {
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling cadastrarIndicacaoAmigo");
+     }
+     
+    // create path and map variables
+    String path = "/api/pessoas/{id}/indicacoes-amigos".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<IndicacaoAmigoResponse> returnType = new GenericType<IndicacaoAmigoResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -1327,6 +1446,80 @@ public class CadastroClienteApi {
   }
   
   /**
+   * Listar indica\u00E7\u00F5es de amigos
+   * Lista as indica\u00E7\u00F5es de amigos uma pessoa
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
+   * @param page P\u00E1gina
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
+   * @param dataIndicacao Data da indica\u00E7\u00E3o
+   * @param dataUtilizacao Data da utiliza\u00E7\u00E3o da indica\u00E7\u00E3o
+   * @param dataValidade Data de validade da indica\u00E7\u00E3o
+   * @param cpfIndicado N\u00FAmero do CPF do amigo indicado
+   * @param emailIndicado Email do amigo indicado
+   * @param codigoIndicacao C\u00F3digo da indica\u00E7\u00E3o
+   * @param idPessoa C\u00F3digo identificador da pessoa
+   * @param status Status da indica\u00E7\u00E3o (1 - CRIADO, 2 - UTILIZADO, 3 - PAGO)
+   * @return PageIndicacaoAmigoResponse
+   */
+  public PageIndicacaoAmigoResponse listarIndicacaoAmigo(List<String> sort, Integer page, Integer limit, String dataIndicacao, String dataUtilizacao, String dataValidade, String cpfIndicado, String emailIndicado, Long codigoIndicacao, Integer idPessoa, Integer status) throws ApiException {
+    Object postBody = null;
+    
+    // create path and map variables
+    String path = "/api/pessoas/indicacoes-amigos".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "dataIndicacao", dataIndicacao));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "dataUtilizacao", dataUtilizacao));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "dataValidade", dataValidade));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "cpfIndicado", cpfIndicado));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "emailIndicado", emailIndicado));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "codigoIndicacao", codigoIndicacao));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idPessoa", idPessoa));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "status", status));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PageIndicacaoAmigoResponse> returnType = new GenericType<PageIndicacaoAmigoResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Listar s\u00F3cios de uma pessoa jur\u00EDdica
    * Lista os s\u00F3cios vinculados \u00E0 uma Pessoa Jur\u00EDdica cadastrada
    * @param id C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Jur\u00EDdica
@@ -1839,8 +2032,8 @@ public class CadastroClienteApi {
   }
   
   /**
-   * Cadastro de Conta e Pessoa Jur\u00EDdica
-   * Cadastro de Conta e Pessoa Jur\u00EDdica Permite realizar o cadastro de uma Conta para um cliente do tipo Pessoa Jur\u00EDdica, recebendo nesta opera\u00E7\u00E3o todos os dados cadastrais que se fazem necess\u00E1rios para isso, inclu\u00EDndo o registro de cada um dos s\u00F3cios. Uma vez criado, poder\u00E1 ser acionado o m\u00E9todo de &#39;Gera\u00E7\u00E3o de Cart\u00E3o&#39; para o cliente e cada um dos s\u00F3cios vinculados
+   * Cadastrar conta de Pessoa Jur\u00EDdica
+   * Realiza os procedimentos necess\u00E1rios de cria\u00E7\u00E3o de conta para pessoa jur\u00EDdica incluindo os cadastros de telefones, endere\u00E7os, limites e s\u00F3cios.
    * @param pessoaPersist pessoaPersist
    * @return PessoaJuridicaAprovadaResponse
    */

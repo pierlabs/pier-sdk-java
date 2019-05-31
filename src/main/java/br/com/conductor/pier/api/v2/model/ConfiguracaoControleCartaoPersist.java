@@ -8,15 +8,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Representa\u00E7\u00E3o para resposta de dados de Configuracao de Controle do Cartao
+ * Objeto para persist\u00EAncia de Configuracao de Controle do Cartao
  **/
 
-@ApiModel(description = "Representa\u00E7\u00E3o para resposta de dados de Configuracao de Controle do Cartao")
+@ApiModel(description = "Objeto para persist\u00EAncia de Configuracao de Controle do Cartao")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class ConfiguracaoControleCartaoResponse   {
+public class ConfiguracaoControleCartaoPersist   {
   
-  private Long id = null;
-  private Long idCartao = null;
   private Boolean permiteEcommerce = null;
   private Boolean permiteSaque = null;
   private Boolean permiteWallet = null;
@@ -24,45 +22,9 @@ public class ConfiguracaoControleCartaoResponse   {
 
   
   /**
-   * C\u00F3digo Identificador da configura\u00E7\u00E3o na base (id)
-   **/
-  public ConfiguracaoControleCartaoResponse id(Long id) {
-    this.id = id;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "C\u00F3digo Identificador da configura\u00E7\u00E3o na base (id)")
-  @JsonProperty("id")
-  public Long getId() {
-    return id;
-  }
-  public void setId(Long id) {
-    this.id = id;
-  }
-
-  
-  /**
-   * C\u00F3digo Identificador do cart\u00E3o na base (id)
-   **/
-  public ConfiguracaoControleCartaoResponse idCartao(Long idCartao) {
-    this.idCartao = idCartao;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "C\u00F3digo Identificador do cart\u00E3o na base (id)")
-  @JsonProperty("idCartao")
-  public Long getIdCartao() {
-    return idCartao;
-  }
-  public void setIdCartao(Long idCartao) {
-    this.idCartao = idCartao;
-  }
-
-  
-  /**
    * Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es ecommerce
    **/
-  public ConfiguracaoControleCartaoResponse permiteEcommerce(Boolean permiteEcommerce) {
+  public ConfiguracaoControleCartaoPersist permiteEcommerce(Boolean permiteEcommerce) {
     this.permiteEcommerce = permiteEcommerce;
     return this;
   }
@@ -80,7 +42,7 @@ public class ConfiguracaoControleCartaoResponse   {
   /**
    * Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es de saque
    **/
-  public ConfiguracaoControleCartaoResponse permiteSaque(Boolean permiteSaque) {
+  public ConfiguracaoControleCartaoPersist permiteSaque(Boolean permiteSaque) {
     this.permiteSaque = permiteSaque;
     return this;
   }
@@ -96,14 +58,14 @@ public class ConfiguracaoControleCartaoResponse   {
 
   
   /**
-   * Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es por wallet
+   * Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es por meio wallet
    **/
-  public ConfiguracaoControleCartaoResponse permiteWallet(Boolean permiteWallet) {
+  public ConfiguracaoControleCartaoPersist permiteWallet(Boolean permiteWallet) {
     this.permiteWallet = permiteWallet;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es por wallet")
+  @ApiModelProperty(example = "false", value = "Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es por meio wallet")
   @JsonProperty("permiteWallet")
   public Boolean getPermiteWallet() {
     return permiteWallet;
@@ -116,7 +78,7 @@ public class ConfiguracaoControleCartaoResponse   {
   /**
    * Indica se o cart\u00E3o est\u00E1 ativo para controle por grupos de MCCs
    **/
-  public ConfiguracaoControleCartaoResponse permiteControleMCC(Boolean permiteControleMCC) {
+  public ConfiguracaoControleCartaoPersist permiteControleMCC(Boolean permiteControleMCC) {
     this.permiteControleMCC = permiteControleMCC;
     return this;
   }
@@ -140,27 +102,23 @@ public class ConfiguracaoControleCartaoResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ConfiguracaoControleCartaoResponse configuracaoControleCartaoResponse = (ConfiguracaoControleCartaoResponse) o;
-    return Objects.equals(this.id, configuracaoControleCartaoResponse.id) &&
-        Objects.equals(this.idCartao, configuracaoControleCartaoResponse.idCartao) &&
-        Objects.equals(this.permiteEcommerce, configuracaoControleCartaoResponse.permiteEcommerce) &&
-        Objects.equals(this.permiteSaque, configuracaoControleCartaoResponse.permiteSaque) &&
-        Objects.equals(this.permiteWallet, configuracaoControleCartaoResponse.permiteWallet) &&
-        Objects.equals(this.permiteControleMCC, configuracaoControleCartaoResponse.permiteControleMCC);
+    ConfiguracaoControleCartaoPersist configuracaoControleCartaoPersist = (ConfiguracaoControleCartaoPersist) o;
+    return Objects.equals(this.permiteEcommerce, configuracaoControleCartaoPersist.permiteEcommerce) &&
+        Objects.equals(this.permiteSaque, configuracaoControleCartaoPersist.permiteSaque) &&
+        Objects.equals(this.permiteWallet, configuracaoControleCartaoPersist.permiteWallet) &&
+        Objects.equals(this.permiteControleMCC, configuracaoControleCartaoPersist.permiteControleMCC);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idCartao, permiteEcommerce, permiteSaque, permiteWallet, permiteControleMCC);
+    return Objects.hash(permiteEcommerce, permiteSaque, permiteWallet, permiteControleMCC);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ConfiguracaoControleCartaoResponse {\n");
+    sb.append("class ConfiguracaoControleCartaoPersist {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    idCartao: ").append(toIndentedString(idCartao)).append("\n");
     sb.append("    permiteEcommerce: ").append(toIndentedString(permiteEcommerce)).append("\n");
     sb.append("    permiteSaque: ").append(toIndentedString(permiteSaque)).append("\n");
     sb.append("    permiteWallet: ").append(toIndentedString(permiteWallet)).append("\n");

@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v2.model.WebhookResponse;
+import br.com.conductor.pier.api.v2.model.IndicacaoAmigoResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -11,14 +11,14 @@ import java.util.List;
 
 
 /**
- * Lista de WebHooks
+ * Lista de indica\u00E7\u00F5es de amigos de uma pessoa
  **/
 
-@ApiModel(description = "Lista de WebHooks")
+@ApiModel(description = "Lista de indica\u00E7\u00F5es de amigos de uma pessoa")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class PageWebHookResponse   {
+public class PageIndicacaoAmigoResponse   {
   
-  private List<WebhookResponse> content = new ArrayList<WebhookResponse>();
+  private List<IndicacaoAmigoResponse> content = new ArrayList<IndicacaoAmigoResponse>();
   private Boolean first = null;
   private Boolean firstPage = null;
   private Boolean hasContent = null;
@@ -36,24 +36,24 @@ public class PageWebHookResponse   {
   
   /**
    **/
-  public PageWebHookResponse content(List<WebhookResponse> content) {
+  public PageIndicacaoAmigoResponse content(List<IndicacaoAmigoResponse> content) {
     this.content = content;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("content")
-  public List<WebhookResponse> getContent() {
+  public List<IndicacaoAmigoResponse> getContent() {
     return content;
   }
-  public void setContent(List<WebhookResponse> content) {
+  public void setContent(List<IndicacaoAmigoResponse> content) {
     this.content = content;
   }
 
   
   /**
    **/
-  public PageWebHookResponse first(Boolean first) {
+  public PageIndicacaoAmigoResponse first(Boolean first) {
     this.first = first;
     return this;
   }
@@ -70,7 +70,7 @@ public class PageWebHookResponse   {
   
   /**
    **/
-  public PageWebHookResponse firstPage(Boolean firstPage) {
+  public PageIndicacaoAmigoResponse firstPage(Boolean firstPage) {
     this.firstPage = firstPage;
     return this;
   }
@@ -87,7 +87,7 @@ public class PageWebHookResponse   {
   
   /**
    **/
-  public PageWebHookResponse hasContent(Boolean hasContent) {
+  public PageIndicacaoAmigoResponse hasContent(Boolean hasContent) {
     this.hasContent = hasContent;
     return this;
   }
@@ -104,7 +104,7 @@ public class PageWebHookResponse   {
   
   /**
    **/
-  public PageWebHookResponse hasNextPage(Boolean hasNextPage) {
+  public PageIndicacaoAmigoResponse hasNextPage(Boolean hasNextPage) {
     this.hasNextPage = hasNextPage;
     return this;
   }
@@ -121,7 +121,7 @@ public class PageWebHookResponse   {
   
   /**
    **/
-  public PageWebHookResponse hasPreviousPage(Boolean hasPreviousPage) {
+  public PageIndicacaoAmigoResponse hasPreviousPage(Boolean hasPreviousPage) {
     this.hasPreviousPage = hasPreviousPage;
     return this;
   }
@@ -138,7 +138,7 @@ public class PageWebHookResponse   {
   
   /**
    **/
-  public PageWebHookResponse last(Boolean last) {
+  public PageIndicacaoAmigoResponse last(Boolean last) {
     this.last = last;
     return this;
   }
@@ -155,7 +155,7 @@ public class PageWebHookResponse   {
   
   /**
    **/
-  public PageWebHookResponse nextPage(Integer nextPage) {
+  public PageIndicacaoAmigoResponse nextPage(Integer nextPage) {
     this.nextPage = nextPage;
     return this;
   }
@@ -172,7 +172,7 @@ public class PageWebHookResponse   {
   
   /**
    **/
-  public PageWebHookResponse number(Integer number) {
+  public PageIndicacaoAmigoResponse number(Integer number) {
     this.number = number;
     return this;
   }
@@ -189,7 +189,7 @@ public class PageWebHookResponse   {
   
   /**
    **/
-  public PageWebHookResponse numberOfElements(Integer numberOfElements) {
+  public PageIndicacaoAmigoResponse numberOfElements(Integer numberOfElements) {
     this.numberOfElements = numberOfElements;
     return this;
   }
@@ -206,7 +206,7 @@ public class PageWebHookResponse   {
   
   /**
    **/
-  public PageWebHookResponse previousPage(Integer previousPage) {
+  public PageIndicacaoAmigoResponse previousPage(Integer previousPage) {
     this.previousPage = previousPage;
     return this;
   }
@@ -223,7 +223,7 @@ public class PageWebHookResponse   {
   
   /**
    **/
-  public PageWebHookResponse size(Integer size) {
+  public PageIndicacaoAmigoResponse size(Integer size) {
     this.size = size;
     return this;
   }
@@ -240,7 +240,7 @@ public class PageWebHookResponse   {
   
   /**
    **/
-  public PageWebHookResponse totalElements(Long totalElements) {
+  public PageIndicacaoAmigoResponse totalElements(Long totalElements) {
     this.totalElements = totalElements;
     return this;
   }
@@ -257,7 +257,7 @@ public class PageWebHookResponse   {
   
   /**
    **/
-  public PageWebHookResponse totalPages(Integer totalPages) {
+  public PageIndicacaoAmigoResponse totalPages(Integer totalPages) {
     this.totalPages = totalPages;
     return this;
   }
@@ -281,21 +281,21 @@ public class PageWebHookResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    PageWebHookResponse pageWebHookResponse = (PageWebHookResponse) o;
-    return Objects.equals(this.content, pageWebHookResponse.content) &&
-        Objects.equals(this.first, pageWebHookResponse.first) &&
-        Objects.equals(this.firstPage, pageWebHookResponse.firstPage) &&
-        Objects.equals(this.hasContent, pageWebHookResponse.hasContent) &&
-        Objects.equals(this.hasNextPage, pageWebHookResponse.hasNextPage) &&
-        Objects.equals(this.hasPreviousPage, pageWebHookResponse.hasPreviousPage) &&
-        Objects.equals(this.last, pageWebHookResponse.last) &&
-        Objects.equals(this.nextPage, pageWebHookResponse.nextPage) &&
-        Objects.equals(this.number, pageWebHookResponse.number) &&
-        Objects.equals(this.numberOfElements, pageWebHookResponse.numberOfElements) &&
-        Objects.equals(this.previousPage, pageWebHookResponse.previousPage) &&
-        Objects.equals(this.size, pageWebHookResponse.size) &&
-        Objects.equals(this.totalElements, pageWebHookResponse.totalElements) &&
-        Objects.equals(this.totalPages, pageWebHookResponse.totalPages);
+    PageIndicacaoAmigoResponse pageIndicacaoAmigoResponse = (PageIndicacaoAmigoResponse) o;
+    return Objects.equals(this.content, pageIndicacaoAmigoResponse.content) &&
+        Objects.equals(this.first, pageIndicacaoAmigoResponse.first) &&
+        Objects.equals(this.firstPage, pageIndicacaoAmigoResponse.firstPage) &&
+        Objects.equals(this.hasContent, pageIndicacaoAmigoResponse.hasContent) &&
+        Objects.equals(this.hasNextPage, pageIndicacaoAmigoResponse.hasNextPage) &&
+        Objects.equals(this.hasPreviousPage, pageIndicacaoAmigoResponse.hasPreviousPage) &&
+        Objects.equals(this.last, pageIndicacaoAmigoResponse.last) &&
+        Objects.equals(this.nextPage, pageIndicacaoAmigoResponse.nextPage) &&
+        Objects.equals(this.number, pageIndicacaoAmigoResponse.number) &&
+        Objects.equals(this.numberOfElements, pageIndicacaoAmigoResponse.numberOfElements) &&
+        Objects.equals(this.previousPage, pageIndicacaoAmigoResponse.previousPage) &&
+        Objects.equals(this.size, pageIndicacaoAmigoResponse.size) &&
+        Objects.equals(this.totalElements, pageIndicacaoAmigoResponse.totalElements) &&
+        Objects.equals(this.totalPages, pageIndicacaoAmigoResponse.totalPages);
   }
 
   @Override
@@ -306,7 +306,7 @@ public class PageWebHookResponse   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PageWebHookResponse {\n");
+    sb.append("class PageIndicacaoAmigoResponse {\n");
     
     sb.append("    content: ").append(toIndentedString(content)).append("\n");
     sb.append("    first: ").append(toIndentedString(first)).append("\n");

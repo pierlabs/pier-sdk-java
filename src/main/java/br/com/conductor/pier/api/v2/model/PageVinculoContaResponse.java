@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v2.model.WebhookHeaderResponse;
+import br.com.conductor.pier.api.v2.model.VinculoContaResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -10,12 +10,15 @@ import java.util.List;
 
 
 
+/**
+ * Lista de V\u00EDnculos entre Contas
+ **/
 
-
+@ApiModel(description = "Lista de V\u00EDnculos entre Contas")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class PageWebhookHeaderResponse   {
+public class PageVinculoContaResponse   {
   
-  private List<WebhookHeaderResponse> content = new ArrayList<WebhookHeaderResponse>();
+  private List<VinculoContaResponse> content = new ArrayList<VinculoContaResponse>();
   private Boolean first = null;
   private Boolean firstPage = null;
   private Boolean hasContent = null;
@@ -33,24 +36,24 @@ public class PageWebhookHeaderResponse   {
   
   /**
    **/
-  public PageWebhookHeaderResponse content(List<WebhookHeaderResponse> content) {
+  public PageVinculoContaResponse content(List<VinculoContaResponse> content) {
     this.content = content;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("content")
-  public List<WebhookHeaderResponse> getContent() {
+  public List<VinculoContaResponse> getContent() {
     return content;
   }
-  public void setContent(List<WebhookHeaderResponse> content) {
+  public void setContent(List<VinculoContaResponse> content) {
     this.content = content;
   }
 
   
   /**
    **/
-  public PageWebhookHeaderResponse first(Boolean first) {
+  public PageVinculoContaResponse first(Boolean first) {
     this.first = first;
     return this;
   }
@@ -67,7 +70,7 @@ public class PageWebhookHeaderResponse   {
   
   /**
    **/
-  public PageWebhookHeaderResponse firstPage(Boolean firstPage) {
+  public PageVinculoContaResponse firstPage(Boolean firstPage) {
     this.firstPage = firstPage;
     return this;
   }
@@ -84,7 +87,7 @@ public class PageWebhookHeaderResponse   {
   
   /**
    **/
-  public PageWebhookHeaderResponse hasContent(Boolean hasContent) {
+  public PageVinculoContaResponse hasContent(Boolean hasContent) {
     this.hasContent = hasContent;
     return this;
   }
@@ -101,7 +104,7 @@ public class PageWebhookHeaderResponse   {
   
   /**
    **/
-  public PageWebhookHeaderResponse hasNextPage(Boolean hasNextPage) {
+  public PageVinculoContaResponse hasNextPage(Boolean hasNextPage) {
     this.hasNextPage = hasNextPage;
     return this;
   }
@@ -118,7 +121,7 @@ public class PageWebhookHeaderResponse   {
   
   /**
    **/
-  public PageWebhookHeaderResponse hasPreviousPage(Boolean hasPreviousPage) {
+  public PageVinculoContaResponse hasPreviousPage(Boolean hasPreviousPage) {
     this.hasPreviousPage = hasPreviousPage;
     return this;
   }
@@ -135,7 +138,7 @@ public class PageWebhookHeaderResponse   {
   
   /**
    **/
-  public PageWebhookHeaderResponse last(Boolean last) {
+  public PageVinculoContaResponse last(Boolean last) {
     this.last = last;
     return this;
   }
@@ -152,7 +155,7 @@ public class PageWebhookHeaderResponse   {
   
   /**
    **/
-  public PageWebhookHeaderResponse nextPage(Integer nextPage) {
+  public PageVinculoContaResponse nextPage(Integer nextPage) {
     this.nextPage = nextPage;
     return this;
   }
@@ -169,7 +172,7 @@ public class PageWebhookHeaderResponse   {
   
   /**
    **/
-  public PageWebhookHeaderResponse number(Integer number) {
+  public PageVinculoContaResponse number(Integer number) {
     this.number = number;
     return this;
   }
@@ -186,7 +189,7 @@ public class PageWebhookHeaderResponse   {
   
   /**
    **/
-  public PageWebhookHeaderResponse numberOfElements(Integer numberOfElements) {
+  public PageVinculoContaResponse numberOfElements(Integer numberOfElements) {
     this.numberOfElements = numberOfElements;
     return this;
   }
@@ -203,7 +206,7 @@ public class PageWebhookHeaderResponse   {
   
   /**
    **/
-  public PageWebhookHeaderResponse previousPage(Integer previousPage) {
+  public PageVinculoContaResponse previousPage(Integer previousPage) {
     this.previousPage = previousPage;
     return this;
   }
@@ -220,7 +223,7 @@ public class PageWebhookHeaderResponse   {
   
   /**
    **/
-  public PageWebhookHeaderResponse size(Integer size) {
+  public PageVinculoContaResponse size(Integer size) {
     this.size = size;
     return this;
   }
@@ -237,7 +240,7 @@ public class PageWebhookHeaderResponse   {
   
   /**
    **/
-  public PageWebhookHeaderResponse totalElements(Long totalElements) {
+  public PageVinculoContaResponse totalElements(Long totalElements) {
     this.totalElements = totalElements;
     return this;
   }
@@ -254,7 +257,7 @@ public class PageWebhookHeaderResponse   {
   
   /**
    **/
-  public PageWebhookHeaderResponse totalPages(Integer totalPages) {
+  public PageVinculoContaResponse totalPages(Integer totalPages) {
     this.totalPages = totalPages;
     return this;
   }
@@ -278,21 +281,21 @@ public class PageWebhookHeaderResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    PageWebhookHeaderResponse pageWebhookHeaderResponse = (PageWebhookHeaderResponse) o;
-    return Objects.equals(this.content, pageWebhookHeaderResponse.content) &&
-        Objects.equals(this.first, pageWebhookHeaderResponse.first) &&
-        Objects.equals(this.firstPage, pageWebhookHeaderResponse.firstPage) &&
-        Objects.equals(this.hasContent, pageWebhookHeaderResponse.hasContent) &&
-        Objects.equals(this.hasNextPage, pageWebhookHeaderResponse.hasNextPage) &&
-        Objects.equals(this.hasPreviousPage, pageWebhookHeaderResponse.hasPreviousPage) &&
-        Objects.equals(this.last, pageWebhookHeaderResponse.last) &&
-        Objects.equals(this.nextPage, pageWebhookHeaderResponse.nextPage) &&
-        Objects.equals(this.number, pageWebhookHeaderResponse.number) &&
-        Objects.equals(this.numberOfElements, pageWebhookHeaderResponse.numberOfElements) &&
-        Objects.equals(this.previousPage, pageWebhookHeaderResponse.previousPage) &&
-        Objects.equals(this.size, pageWebhookHeaderResponse.size) &&
-        Objects.equals(this.totalElements, pageWebhookHeaderResponse.totalElements) &&
-        Objects.equals(this.totalPages, pageWebhookHeaderResponse.totalPages);
+    PageVinculoContaResponse pageVinculoContaResponse = (PageVinculoContaResponse) o;
+    return Objects.equals(this.content, pageVinculoContaResponse.content) &&
+        Objects.equals(this.first, pageVinculoContaResponse.first) &&
+        Objects.equals(this.firstPage, pageVinculoContaResponse.firstPage) &&
+        Objects.equals(this.hasContent, pageVinculoContaResponse.hasContent) &&
+        Objects.equals(this.hasNextPage, pageVinculoContaResponse.hasNextPage) &&
+        Objects.equals(this.hasPreviousPage, pageVinculoContaResponse.hasPreviousPage) &&
+        Objects.equals(this.last, pageVinculoContaResponse.last) &&
+        Objects.equals(this.nextPage, pageVinculoContaResponse.nextPage) &&
+        Objects.equals(this.number, pageVinculoContaResponse.number) &&
+        Objects.equals(this.numberOfElements, pageVinculoContaResponse.numberOfElements) &&
+        Objects.equals(this.previousPage, pageVinculoContaResponse.previousPage) &&
+        Objects.equals(this.size, pageVinculoContaResponse.size) &&
+        Objects.equals(this.totalElements, pageVinculoContaResponse.totalElements) &&
+        Objects.equals(this.totalPages, pageVinculoContaResponse.totalPages);
   }
 
   @Override
@@ -303,7 +306,7 @@ public class PageWebhookHeaderResponse   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PageWebhookHeaderResponse {\n");
+    sb.append("class PageVinculoContaResponse {\n");
     
     sb.append("    content: ").append(toIndentedString(content)).append("\n");
     sb.append("    first: ").append(toIndentedString(first)).append("\n");

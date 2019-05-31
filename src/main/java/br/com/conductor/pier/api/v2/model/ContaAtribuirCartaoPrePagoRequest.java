@@ -16,6 +16,7 @@ import io.swagger.annotations.ApiModelProperty;
 public class ContaAtribuirCartaoPrePagoRequest   {
   
   private Long idCartao = null;
+  private Long idPessoaFisica = null;
 
   
   /**
@@ -36,6 +37,24 @@ public class ContaAtribuirCartaoPrePagoRequest   {
   }
 
   
+  /**
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Portador (id).
+   **/
+  public ContaAtribuirCartaoPrePagoRequest idPessoaFisica(Long idPessoaFisica) {
+    this.idPessoaFisica = idPessoaFisica;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Portador (id).")
+  @JsonProperty("idPessoaFisica")
+  public Long getIdPessoaFisica() {
+    return idPessoaFisica;
+  }
+  public void setIdPessoaFisica(Long idPessoaFisica) {
+    this.idPessoaFisica = idPessoaFisica;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -46,12 +65,13 @@ public class ContaAtribuirCartaoPrePagoRequest   {
       return false;
     }
     ContaAtribuirCartaoPrePagoRequest contaAtribuirCartaoPrePagoRequest = (ContaAtribuirCartaoPrePagoRequest) o;
-    return Objects.equals(this.idCartao, contaAtribuirCartaoPrePagoRequest.idCartao);
+    return Objects.equals(this.idCartao, contaAtribuirCartaoPrePagoRequest.idCartao) &&
+        Objects.equals(this.idPessoaFisica, contaAtribuirCartaoPrePagoRequest.idPessoaFisica);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idCartao);
+    return Objects.hash(idCartao, idPessoaFisica);
   }
 
   @Override
@@ -60,6 +80,7 @@ public class ContaAtribuirCartaoPrePagoRequest   {
     sb.append("class ContaAtribuirCartaoPrePagoRequest {\n");
     
     sb.append("    idCartao: ").append(toIndentedString(idCartao)).append("\n");
+    sb.append("    idPessoaFisica: ").append(toIndentedString(idPessoaFisica)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -7,12 +7,14 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
+/**
+ * Objeto de persist\u00EAncia do endere\u00E7o
+ **/
 
-
+@ApiModel(description = "Objeto de persist\u00EAncia do endere\u00E7o")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class ObjetoEndereoAprovado   {
+public class EnderecoAprovadoPersist   {
   
-  private Long id = null;
   private Long idTipoEndereco = null;
   private String cep = null;
   private String logradouro = null;
@@ -29,32 +31,14 @@ public class ObjetoEndereoAprovado   {
 
   
   /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de endere\u00E7o
    **/
-  public ObjetoEndereoAprovado id(Long id) {
-    this.id = id;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)")
-  @JsonProperty("id")
-  public Long getId() {
-    return id;
-  }
-  public void setId(Long id) {
-    this.id = id;
-  }
-
-  
-  /**
-   * C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)
-   **/
-  public ObjetoEndereoAprovado idTipoEndereco(Long idTipoEndereco) {
+  public EnderecoAprovadoPersist idTipoEndereco(Long idTipoEndereco) {
     this.idTipoEndereco = idTipoEndereco;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)")
+  @ApiModelProperty(example = "1", required = true, value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo de endere\u00E7o")
   @JsonProperty("idTipoEndereco")
   public Long getIdTipoEndereco() {
     return idTipoEndereco;
@@ -65,14 +49,14 @@ public class ObjetoEndereoAprovado   {
 
   
   /**
-   * Retorna o CEP no formato '58800000'
+   * C\u00F3digo de Endere\u00E7amento Postal (CEP)
    **/
-  public ObjetoEndereoAprovado cep(String cep) {
+  public EnderecoAprovadoPersist cep(String cep) {
     this.cep = cep;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Retorna o CEP no formato '58800000'")
+  @ApiModelProperty(example = "58051000", value = "C\u00F3digo de Endere\u00E7amento Postal (CEP)")
   @JsonProperty("cep")
   public String getCep() {
     return cep;
@@ -83,14 +67,14 @@ public class ObjetoEndereoAprovado   {
 
   
   /**
-   * Apresenta o nome do Logradouro
+   * Nome do logradouro
    **/
-  public ObjetoEndereoAprovado logradouro(String logradouro) {
+  public EnderecoAprovadoPersist logradouro(String logradouro) {
     this.logradouro = logradouro;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o nome do Logradouro")
+  @ApiModelProperty(example = "AV. JOÃO PESSOA", value = "Nome do logradouro")
   @JsonProperty("logradouro")
   public String getLogradouro() {
     return logradouro;
@@ -101,14 +85,14 @@ public class ObjetoEndereoAprovado   {
 
   
   /**
-   * Apresenta o n\u00FAmero do endere\u00E7o
+   * N\u00FAmero do endere\u00E7o
    **/
-  public ObjetoEndereoAprovado numero(Integer numero) {
+  public EnderecoAprovadoPersist numero(Integer numero) {
     this.numero = numero;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o n\u00FAmero do endere\u00E7o")
+  @ApiModelProperty(example = "102", value = "N\u00FAmero do endere\u00E7o")
   @JsonProperty("numero")
   public Integer getNumero() {
     return numero;
@@ -119,14 +103,14 @@ public class ObjetoEndereoAprovado   {
 
   
   /**
-   * Apresenta descri\u00E7oes complementares referente ao endere\u00E7o
+   * Descri\u00E7\u00F5es complementares referentes ao endere\u00E7o
    **/
-  public ObjetoEndereoAprovado complemento(String complemento) {
+  public EnderecoAprovadoPersist complemento(String complemento) {
     this.complemento = complemento;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta descri\u00E7oes complementares referente ao endere\u00E7o")
+  @ApiModelProperty(example = "AP 14", value = "Descri\u00E7\u00F5es complementares referentes ao endere\u00E7o")
   @JsonProperty("complemento")
   public String getComplemento() {
     return complemento;
@@ -137,14 +121,14 @@ public class ObjetoEndereoAprovado   {
 
   
   /**
-   * Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o
+   * Descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o
    **/
-  public ObjetoEndereoAprovado pontoReferencia(String pontoReferencia) {
+  public EnderecoAprovadoPersist pontoReferencia(String pontoReferencia) {
     this.pontoReferencia = pontoReferencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o")
+  @ApiModelProperty(example = "Rua do Teatro", value = "Descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o")
   @JsonProperty("pontoReferencia")
   public String getPontoReferencia() {
     return pontoReferencia;
@@ -155,14 +139,14 @@ public class ObjetoEndereoAprovado   {
 
   
   /**
-   * Apresenta nome do bairro
+   * Nome do bairro
    **/
-  public ObjetoEndereoAprovado bairro(String bairro) {
+  public EnderecoAprovadoPersist bairro(String bairro) {
     this.bairro = bairro;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta nome do bairro")
+  @ApiModelProperty(example = "Rua do Teatro", value = "Nome do bairro")
   @JsonProperty("bairro")
   public String getBairro() {
     return bairro;
@@ -173,14 +157,14 @@ public class ObjetoEndereoAprovado   {
 
   
   /**
-   * Apresenta nome da cidade
+   * Nome da cidade
    **/
-  public ObjetoEndereoAprovado cidade(String cidade) {
+  public EnderecoAprovadoPersist cidade(String cidade) {
     this.cidade = cidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta nome da cidade")
+  @ApiModelProperty(example = "JOÃO PESSOA", required = true, value = "Nome da cidade")
   @JsonProperty("cidade")
   public String getCidade() {
     return cidade;
@@ -191,14 +175,14 @@ public class ObjetoEndereoAprovado   {
 
   
   /**
-   * Apresenta sigla da Unidade Federativa
+   * Sigla da Unidade Federativa
    **/
-  public ObjetoEndereoAprovado uf(String uf) {
+  public EnderecoAprovadoPersist uf(String uf) {
     this.uf = uf;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta sigla da Unidade Federativa")
+  @ApiModelProperty(example = "PB", required = true, value = "Sigla da Unidade Federativa")
   @JsonProperty("uf")
   public String getUf() {
     return uf;
@@ -209,14 +193,14 @@ public class ObjetoEndereoAprovado   {
 
   
   /**
-   * Apresenta nome do Pa\u00EDs
+   * Nome do Pa\u00EDs
    **/
-  public ObjetoEndereoAprovado pais(String pais) {
+  public EnderecoAprovadoPersist pais(String pais) {
     this.pais = pais;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta nome do Pa\u00EDs")
+  @ApiModelProperty(example = "Brasil", value = "Nome do Pa\u00EDs")
   @JsonProperty("pais")
   public String getPais() {
     return pais;
@@ -229,12 +213,12 @@ public class ObjetoEndereoAprovado   {
   /**
    * Indica se o endere\u00E7o informado \u00E9 o de correspond\u00EAncia
    **/
-  public ObjetoEndereoAprovado enderecoCorrespondencia(Boolean enderecoCorrespondencia) {
+  public EnderecoAprovadoPersist enderecoCorrespondencia(Boolean enderecoCorrespondencia) {
     this.enderecoCorrespondencia = enderecoCorrespondencia;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Indica se o endere\u00E7o informado \u00E9 o de correspond\u00EAncia")
+  @ApiModelProperty(example = "true", required = true, value = "Indica se o endere\u00E7o informado \u00E9 o de correspond\u00EAncia")
   @JsonProperty("enderecoCorrespondencia")
   public Boolean getEnderecoCorrespondencia() {
     return enderecoCorrespondencia;
@@ -245,14 +229,14 @@ public class ObjetoEndereoAprovado   {
 
   
   /**
-   * Apresenta o tempo de resid\u00EAncia em anos
+   * Tempo de resid\u00EAncia em anos
    **/
-  public ObjetoEndereoAprovado tempoResidenciaAnos(Integer tempoResidenciaAnos) {
+  public EnderecoAprovadoPersist tempoResidenciaAnos(Integer tempoResidenciaAnos) {
     this.tempoResidenciaAnos = tempoResidenciaAnos;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o tempo de resid\u00EAncia em anos")
+  @ApiModelProperty(example = "5", value = "Tempo de resid\u00EAncia em anos")
   @JsonProperty("tempoResidenciaAnos")
   public Integer getTempoResidenciaAnos() {
     return tempoResidenciaAnos;
@@ -263,14 +247,14 @@ public class ObjetoEndereoAprovado   {
 
   
   /**
-   * Apresenta o tempo de resid\u00EAncia em meses
+   * Tempo de resid\u00EAncia em meses
    **/
-  public ObjetoEndereoAprovado tempoResidenciaMeses(Integer tempoResidenciaMeses) {
+  public EnderecoAprovadoPersist tempoResidenciaMeses(Integer tempoResidenciaMeses) {
     this.tempoResidenciaMeses = tempoResidenciaMeses;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Apresenta o tempo de resid\u00EAncia em meses")
+  @ApiModelProperty(example = "60", value = "Tempo de resid\u00EAncia em meses")
   @JsonProperty("tempoResidenciaMeses")
   public Integer getTempoResidenciaMeses() {
     return tempoResidenciaMeses;
@@ -289,34 +273,32 @@ public class ObjetoEndereoAprovado   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ObjetoEndereoAprovado objetoEndereoAprovado = (ObjetoEndereoAprovado) o;
-    return Objects.equals(this.id, objetoEndereoAprovado.id) &&
-        Objects.equals(this.idTipoEndereco, objetoEndereoAprovado.idTipoEndereco) &&
-        Objects.equals(this.cep, objetoEndereoAprovado.cep) &&
-        Objects.equals(this.logradouro, objetoEndereoAprovado.logradouro) &&
-        Objects.equals(this.numero, objetoEndereoAprovado.numero) &&
-        Objects.equals(this.complemento, objetoEndereoAprovado.complemento) &&
-        Objects.equals(this.pontoReferencia, objetoEndereoAprovado.pontoReferencia) &&
-        Objects.equals(this.bairro, objetoEndereoAprovado.bairro) &&
-        Objects.equals(this.cidade, objetoEndereoAprovado.cidade) &&
-        Objects.equals(this.uf, objetoEndereoAprovado.uf) &&
-        Objects.equals(this.pais, objetoEndereoAprovado.pais) &&
-        Objects.equals(this.enderecoCorrespondencia, objetoEndereoAprovado.enderecoCorrespondencia) &&
-        Objects.equals(this.tempoResidenciaAnos, objetoEndereoAprovado.tempoResidenciaAnos) &&
-        Objects.equals(this.tempoResidenciaMeses, objetoEndereoAprovado.tempoResidenciaMeses);
+    EnderecoAprovadoPersist enderecoAprovadoPersist = (EnderecoAprovadoPersist) o;
+    return Objects.equals(this.idTipoEndereco, enderecoAprovadoPersist.idTipoEndereco) &&
+        Objects.equals(this.cep, enderecoAprovadoPersist.cep) &&
+        Objects.equals(this.logradouro, enderecoAprovadoPersist.logradouro) &&
+        Objects.equals(this.numero, enderecoAprovadoPersist.numero) &&
+        Objects.equals(this.complemento, enderecoAprovadoPersist.complemento) &&
+        Objects.equals(this.pontoReferencia, enderecoAprovadoPersist.pontoReferencia) &&
+        Objects.equals(this.bairro, enderecoAprovadoPersist.bairro) &&
+        Objects.equals(this.cidade, enderecoAprovadoPersist.cidade) &&
+        Objects.equals(this.uf, enderecoAprovadoPersist.uf) &&
+        Objects.equals(this.pais, enderecoAprovadoPersist.pais) &&
+        Objects.equals(this.enderecoCorrespondencia, enderecoAprovadoPersist.enderecoCorrespondencia) &&
+        Objects.equals(this.tempoResidenciaAnos, enderecoAprovadoPersist.tempoResidenciaAnos) &&
+        Objects.equals(this.tempoResidenciaMeses, enderecoAprovadoPersist.tempoResidenciaMeses);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idTipoEndereco, cep, logradouro, numero, complemento, pontoReferencia, bairro, cidade, uf, pais, enderecoCorrespondencia, tempoResidenciaAnos, tempoResidenciaMeses);
+    return Objects.hash(idTipoEndereco, cep, logradouro, numero, complemento, pontoReferencia, bairro, cidade, uf, pais, enderecoCorrespondencia, tempoResidenciaAnos, tempoResidenciaMeses);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ObjetoEndereoAprovado {\n");
+    sb.append("class EnderecoAprovadoPersist {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idTipoEndereco: ").append(toIndentedString(idTipoEndereco)).append("\n");
     sb.append("    cep: ").append(toIndentedString(cep)).append("\n");
     sb.append("    logradouro: ").append(toIndentedString(logradouro)).append("\n");

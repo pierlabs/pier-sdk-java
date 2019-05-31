@@ -162,9 +162,10 @@ public class ServicoContaApi {
    * @param celular N\u00FAmero do celular
    * @param idOperadora Identificador da operadora do celular
    * @param idOrigemComercial Identificador da origem comercial
+   * @param colaborador Matr\u00EDcula do colaborador
    * @return Object
    */
-  public Object ativarAnuidade(Long id, Long idAnuidade, List<String> sort, Integer page, Integer limit, String DDD, String celular, Long idOperadora, Long idOrigemComercial) throws ApiException {
+  public Object ativarAnuidade(Long id, Long idAnuidade, List<String> sort, Integer page, Integer limit, String DDD, String celular, Long idOperadora, Long idOrigemComercial, String colaborador) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -202,6 +203,8 @@ public class ServicoContaApi {
     queryParams.addAll(apiClient.parameterToPairs("", "idOperadora", idOperadora));
     
     queryParams.addAll(apiClient.parameterToPairs("", "idOrigemComercial", idOrigemComercial));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "colaborador", colaborador));
     
 
     

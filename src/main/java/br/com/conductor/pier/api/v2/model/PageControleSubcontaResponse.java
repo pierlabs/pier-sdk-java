@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v2.model.PagamentosInvalidosResponse;
+import br.com.conductor.pier.api.v2.model.ControleSubcontaResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -11,14 +11,14 @@ import java.util.List;
 
 
 /**
- * Lista de pagamentos inv\u00E1lidos
+ * Lista de Controles de subcontas
  **/
 
-@ApiModel(description = "Lista de pagamentos inv\u00E1lidos")
+@ApiModel(description = "Lista de Controles de subcontas")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class PagePagamentosInvalidosResponse   {
+public class PageControleSubcontaResponse   {
   
-  private List<PagamentosInvalidosResponse> content = new ArrayList<PagamentosInvalidosResponse>();
+  private List<ControleSubcontaResponse> content = new ArrayList<ControleSubcontaResponse>();
   private Boolean first = null;
   private Boolean firstPage = null;
   private Boolean hasContent = null;
@@ -36,24 +36,24 @@ public class PagePagamentosInvalidosResponse   {
   
   /**
    **/
-  public PagePagamentosInvalidosResponse content(List<PagamentosInvalidosResponse> content) {
+  public PageControleSubcontaResponse content(List<ControleSubcontaResponse> content) {
     this.content = content;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("content")
-  public List<PagamentosInvalidosResponse> getContent() {
+  public List<ControleSubcontaResponse> getContent() {
     return content;
   }
-  public void setContent(List<PagamentosInvalidosResponse> content) {
+  public void setContent(List<ControleSubcontaResponse> content) {
     this.content = content;
   }
 
   
   /**
    **/
-  public PagePagamentosInvalidosResponse first(Boolean first) {
+  public PageControleSubcontaResponse first(Boolean first) {
     this.first = first;
     return this;
   }
@@ -70,7 +70,7 @@ public class PagePagamentosInvalidosResponse   {
   
   /**
    **/
-  public PagePagamentosInvalidosResponse firstPage(Boolean firstPage) {
+  public PageControleSubcontaResponse firstPage(Boolean firstPage) {
     this.firstPage = firstPage;
     return this;
   }
@@ -87,7 +87,7 @@ public class PagePagamentosInvalidosResponse   {
   
   /**
    **/
-  public PagePagamentosInvalidosResponse hasContent(Boolean hasContent) {
+  public PageControleSubcontaResponse hasContent(Boolean hasContent) {
     this.hasContent = hasContent;
     return this;
   }
@@ -104,7 +104,7 @@ public class PagePagamentosInvalidosResponse   {
   
   /**
    **/
-  public PagePagamentosInvalidosResponse hasNextPage(Boolean hasNextPage) {
+  public PageControleSubcontaResponse hasNextPage(Boolean hasNextPage) {
     this.hasNextPage = hasNextPage;
     return this;
   }
@@ -121,7 +121,7 @@ public class PagePagamentosInvalidosResponse   {
   
   /**
    **/
-  public PagePagamentosInvalidosResponse hasPreviousPage(Boolean hasPreviousPage) {
+  public PageControleSubcontaResponse hasPreviousPage(Boolean hasPreviousPage) {
     this.hasPreviousPage = hasPreviousPage;
     return this;
   }
@@ -138,7 +138,7 @@ public class PagePagamentosInvalidosResponse   {
   
   /**
    **/
-  public PagePagamentosInvalidosResponse last(Boolean last) {
+  public PageControleSubcontaResponse last(Boolean last) {
     this.last = last;
     return this;
   }
@@ -155,7 +155,7 @@ public class PagePagamentosInvalidosResponse   {
   
   /**
    **/
-  public PagePagamentosInvalidosResponse nextPage(Integer nextPage) {
+  public PageControleSubcontaResponse nextPage(Integer nextPage) {
     this.nextPage = nextPage;
     return this;
   }
@@ -172,7 +172,7 @@ public class PagePagamentosInvalidosResponse   {
   
   /**
    **/
-  public PagePagamentosInvalidosResponse number(Integer number) {
+  public PageControleSubcontaResponse number(Integer number) {
     this.number = number;
     return this;
   }
@@ -189,7 +189,7 @@ public class PagePagamentosInvalidosResponse   {
   
   /**
    **/
-  public PagePagamentosInvalidosResponse numberOfElements(Integer numberOfElements) {
+  public PageControleSubcontaResponse numberOfElements(Integer numberOfElements) {
     this.numberOfElements = numberOfElements;
     return this;
   }
@@ -206,7 +206,7 @@ public class PagePagamentosInvalidosResponse   {
   
   /**
    **/
-  public PagePagamentosInvalidosResponse previousPage(Integer previousPage) {
+  public PageControleSubcontaResponse previousPage(Integer previousPage) {
     this.previousPage = previousPage;
     return this;
   }
@@ -223,7 +223,7 @@ public class PagePagamentosInvalidosResponse   {
   
   /**
    **/
-  public PagePagamentosInvalidosResponse size(Integer size) {
+  public PageControleSubcontaResponse size(Integer size) {
     this.size = size;
     return this;
   }
@@ -240,7 +240,7 @@ public class PagePagamentosInvalidosResponse   {
   
   /**
    **/
-  public PagePagamentosInvalidosResponse totalElements(Long totalElements) {
+  public PageControleSubcontaResponse totalElements(Long totalElements) {
     this.totalElements = totalElements;
     return this;
   }
@@ -257,7 +257,7 @@ public class PagePagamentosInvalidosResponse   {
   
   /**
    **/
-  public PagePagamentosInvalidosResponse totalPages(Integer totalPages) {
+  public PageControleSubcontaResponse totalPages(Integer totalPages) {
     this.totalPages = totalPages;
     return this;
   }
@@ -281,21 +281,21 @@ public class PagePagamentosInvalidosResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    PagePagamentosInvalidosResponse pagePagamentosInvalidosResponse = (PagePagamentosInvalidosResponse) o;
-    return Objects.equals(this.content, pagePagamentosInvalidosResponse.content) &&
-        Objects.equals(this.first, pagePagamentosInvalidosResponse.first) &&
-        Objects.equals(this.firstPage, pagePagamentosInvalidosResponse.firstPage) &&
-        Objects.equals(this.hasContent, pagePagamentosInvalidosResponse.hasContent) &&
-        Objects.equals(this.hasNextPage, pagePagamentosInvalidosResponse.hasNextPage) &&
-        Objects.equals(this.hasPreviousPage, pagePagamentosInvalidosResponse.hasPreviousPage) &&
-        Objects.equals(this.last, pagePagamentosInvalidosResponse.last) &&
-        Objects.equals(this.nextPage, pagePagamentosInvalidosResponse.nextPage) &&
-        Objects.equals(this.number, pagePagamentosInvalidosResponse.number) &&
-        Objects.equals(this.numberOfElements, pagePagamentosInvalidosResponse.numberOfElements) &&
-        Objects.equals(this.previousPage, pagePagamentosInvalidosResponse.previousPage) &&
-        Objects.equals(this.size, pagePagamentosInvalidosResponse.size) &&
-        Objects.equals(this.totalElements, pagePagamentosInvalidosResponse.totalElements) &&
-        Objects.equals(this.totalPages, pagePagamentosInvalidosResponse.totalPages);
+    PageControleSubcontaResponse pageControleSubcontaResponse = (PageControleSubcontaResponse) o;
+    return Objects.equals(this.content, pageControleSubcontaResponse.content) &&
+        Objects.equals(this.first, pageControleSubcontaResponse.first) &&
+        Objects.equals(this.firstPage, pageControleSubcontaResponse.firstPage) &&
+        Objects.equals(this.hasContent, pageControleSubcontaResponse.hasContent) &&
+        Objects.equals(this.hasNextPage, pageControleSubcontaResponse.hasNextPage) &&
+        Objects.equals(this.hasPreviousPage, pageControleSubcontaResponse.hasPreviousPage) &&
+        Objects.equals(this.last, pageControleSubcontaResponse.last) &&
+        Objects.equals(this.nextPage, pageControleSubcontaResponse.nextPage) &&
+        Objects.equals(this.number, pageControleSubcontaResponse.number) &&
+        Objects.equals(this.numberOfElements, pageControleSubcontaResponse.numberOfElements) &&
+        Objects.equals(this.previousPage, pageControleSubcontaResponse.previousPage) &&
+        Objects.equals(this.size, pageControleSubcontaResponse.size) &&
+        Objects.equals(this.totalElements, pageControleSubcontaResponse.totalElements) &&
+        Objects.equals(this.totalPages, pageControleSubcontaResponse.totalPages);
   }
 
   @Override
@@ -306,7 +306,7 @@ public class PagePagamentosInvalidosResponse   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PagePagamentosInvalidosResponse {\n");
+    sb.append("class PageControleSubcontaResponse {\n");
     
     sb.append("    content: ").append(toIndentedString(content)).append("\n");
     sb.append("    first: ").append(toIndentedString(first)).append("\n");
