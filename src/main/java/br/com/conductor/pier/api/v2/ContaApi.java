@@ -19,7 +19,10 @@ import br.com.conductor.pier.api.v2.model.AdesaoServicoResponse;
 import br.com.conductor.pier.api.v2.model.ContaPartialUpdate;
 import br.com.conductor.pier.api.v2.model.SegurancaMobileResponse;
 import br.com.conductor.pier.api.v2.model.SegurancaMobileParcialUpdate;
+import br.com.conductor.pier.api.v2.model.RecargaCelularFavoritoParcialUpdate;
+import br.com.conductor.pier.api.v2.model.RecargaCelularFavoritoResponse;
 import br.com.conductor.pier.api.v2.model.AdesaoPagamentoSabadoResponse;
+import br.com.conductor.pier.api.v2.model.RecargaCelularFavoritoPersist;
 import br.com.conductor.pier.api.v2.model.SegurancaMobilePersist;
 import br.com.conductor.pier.api.v2.model.ExtratoTarifasResponse;
 import br.com.conductor.pier.api.v2.model.BeneficioPagamentoAtrasoResponse;
@@ -41,6 +44,7 @@ import br.com.conductor.pier.api.v2.model.CartaoEmbossingRequest;
 import br.com.conductor.pier.api.v2.model.CartaoImpressaoProvisorioResponse;
 import br.com.conductor.pier.api.v2.model.PageContaResponse;
 import br.com.conductor.pier.api.v2.model.PageControleSubcontaResponse;
+import br.com.conductor.pier.api.v2.model.PageRecargaCelularFavoritoResponse;
 import br.com.conductor.pier.api.v2.model.PageHistoricoEventosResponse;
 import br.com.conductor.pier.api.v2.model.PageHistoricoAssessoriaResponse;
 import br.com.conductor.pier.api.v2.model.PageHistoricoAtrasoFaturaResponse;
@@ -754,6 +758,67 @@ public class ContaApi {
   }
   
   /**
+   * Atualiza parcialmente o registro de um favorito de recarga de celular
+   * Este recurso permite Atualizar parcialmente um favorito de recarga de celular
+   * @param id Identificador da conta
+   * @param idFavorito Identificador do favorito de recarga
+   * @param parcialUpdate parcialUpdate
+   * @return RecargaCelularFavoritoResponse
+   */
+  public RecargaCelularFavoritoResponse atualizarParcialmenteFavoritoRecargaCelular(Long id, Long idFavorito, RecargaCelularFavoritoParcialUpdate parcialUpdate) throws ApiException {
+    Object postBody = parcialUpdate;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling atualizarParcialmenteFavoritoRecargaCelular");
+     }
+     
+     // verify the required parameter 'idFavorito' is set
+     if (idFavorito == null) {
+        throw new ApiException(400, "Missing the required parameter 'idFavorito' when calling atualizarParcialmenteFavoritoRecargaCelular");
+     }
+     
+     // verify the required parameter 'parcialUpdate' is set
+     if (parcialUpdate == null) {
+        throw new ApiException(400, "Missing the required parameter 'parcialUpdate' when calling atualizarParcialmenteFavoritoRecargaCelular");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/{id}/celulares/recargas/favoritos/{idFavorito}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()))
+      .replaceAll("\\{" + "idFavorito" + "\\}", apiClient.escapeString(idFavorito.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<RecargaCelularFavoritoResponse> returnType = new GenericType<RecargaCelularFavoritoResponse>() {};
+    return apiClient.invokeAPI(path, "PATCH", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Realiza o bloqueio de uma determinada Conta
    * Este m\u00E9todo permite a realiza\u00E7\u00E3o do bloqueio de uma determinada conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
    * @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)
@@ -854,6 +919,60 @@ public class ContaApi {
 
     
     GenericType<AdesaoPagamentoSabadoResponse> returnType = new GenericType<AdesaoPagamentoSabadoResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Cadastro de favorito de recarga de celular
+   * Este recurso permite cadastrar um favorito de recarga de celular
+   * @param id Identificador da conta
+   * @param persist persist
+   * @return RecargaCelularFavoritoResponse
+   */
+  public RecargaCelularFavoritoResponse cadastrarRecargaCelularFavorito(Long id, RecargaCelularFavoritoPersist persist) throws ApiException {
+    Object postBody = persist;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling cadastrarRecargaCelularFavorito");
+     }
+     
+     // verify the required parameter 'persist' is set
+     if (persist == null) {
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling cadastrarRecargaCelularFavorito");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/{id}/celulares/recargas/favoritos".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<RecargaCelularFavoritoResponse> returnType = new GenericType<RecargaCelularFavoritoResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -2518,6 +2637,75 @@ public class ContaApi {
 
     
     GenericType<PageControleSubcontaResponse> returnType = new GenericType<PageControleSubcontaResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Lista registros de favoritos de recarga de celular
+   * Este recurso permite listar registros de favoritos de recarga de celular
+   * @param id Identificador da conta
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
+   * @param page P\u00E1gina
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
+   * @param dddCelular DDD do celular
+   * @param numeroCelular N\u00FAmero do celular
+   * @param nome Nome do propriet\u00E1rio do celular
+   * @param ativo Indicador de status do favorito
+   * @return PageRecargaCelularFavoritoResponse
+   */
+  public PageRecargaCelularFavoritoResponse listarFavoritosRecargasCelular(Long id, List<String> sort, Integer page, Integer limit, String dddCelular, String numeroCelular, String nome, Boolean ativo) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling listarFavoritosRecargasCelular");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/{id}/celulares/recargas/favoritos".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "dddCelular", dddCelular));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "numeroCelular", numeroCelular));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "nome", nome));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "ativo", ativo));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PageRecargaCelularFavoritoResponse> returnType = new GenericType<PageRecargaCelularFavoritoResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

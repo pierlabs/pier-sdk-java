@@ -9,9 +9,13 @@ import br.com.conductor.pier.api.v2.invoker.Pair;
 
 import br.com.conductor.pier.api.v2.model.ContaDebitoRecorrente;
 import br.com.conductor.pier.api.v2.model.ContaDebitoRecorrenteResponse;
+import br.com.conductor.pier.api.v2.model.PortadorDebitoRecorrenteResponse;
+import br.com.conductor.pier.api.v2.model.PortadorDebitoRecorrenteUpdate;
 import br.com.conductor.pier.api.v2.model.PageContaDebitoRecorrenteResponse;
+import br.com.conductor.pier.api.v2.model.PagePortadorDebitoRecorrenteResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoDebitoRecorrenteResponse;
 import java.math.BigDecimal;
+import br.com.conductor.pier.api.v2.model.PortadorDebitoRecorrentePersist;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -83,6 +87,67 @@ public class DebitoRecorrenteApi {
     
     GenericType<ContaDebitoRecorrenteResponse> returnType = new GenericType<ContaDebitoRecorrenteResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Atualiza parcialmente um d\u00E9bito recorrente por portador de uma determinada conta
+   * Este recurso permite atualizar parcialmente um d\u00E9bito recorrente por portador de uma determinada conta
+   * @param id C\u00F3digo Identificador da conta
+   * @param idRegistro C\u00F3digo identificador do registro
+   * @param portadorDebitoRecorrenteUpdate portadorDebitoRecorrenteUpdate
+   * @return PortadorDebitoRecorrenteResponse
+   */
+  public PortadorDebitoRecorrenteResponse atualizarParcialPortadorDebitoRecorrente(Long id, Long idRegistro, PortadorDebitoRecorrenteUpdate portadorDebitoRecorrenteUpdate) throws ApiException {
+    Object postBody = portadorDebitoRecorrenteUpdate;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling atualizarParcialPortadorDebitoRecorrente");
+     }
+     
+     // verify the required parameter 'idRegistro' is set
+     if (idRegistro == null) {
+        throw new ApiException(400, "Missing the required parameter 'idRegistro' when calling atualizarParcialPortadorDebitoRecorrente");
+     }
+     
+     // verify the required parameter 'portadorDebitoRecorrenteUpdate' is set
+     if (portadorDebitoRecorrenteUpdate == null) {
+        throw new ApiException(400, "Missing the required parameter 'portadorDebitoRecorrenteUpdate' when calling atualizarParcialPortadorDebitoRecorrente");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/{id}/portadores/debitos-recorrentes/{idRegistro}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()))
+      .replaceAll("\\{" + "idRegistro" + "\\}", apiClient.escapeString(idRegistro.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PortadorDebitoRecorrenteResponse> returnType = new GenericType<PortadorDebitoRecorrenteResponse>() {};
+    return apiClient.invokeAPI(path, "PATCH", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
@@ -209,6 +274,63 @@ public class DebitoRecorrenteApi {
   }
   
   /**
+   * Lista os d\u00E9bitos recorrentes por portador de uma determinada conta
+   * Este recurso permite consultar os d\u00E9bitos recorrentes por portador de uma determinada conta
+   * @param id C\u00F3digo Identificador da conta
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
+   * @param page P\u00E1gina
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
+   * @return PagePortadorDebitoRecorrenteResponse
+   */
+  public PagePortadorDebitoRecorrenteResponse listarPortadorDebitoRecorrente(Long id, List<String> sort, Integer page, Integer limit) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling listarPortadorDebitoRecorrente");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/{id}/portadores/debitos-recorrentes".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PagePortadorDebitoRecorrenteResponse> returnType = new GenericType<PagePortadorDebitoRecorrenteResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Listar Tipos Debitos Recorrentes
    * Para os emissores que utilizam a entidade Debitos Recorrentes precisam previamente solicitar a Conductor o cadastro de quais Tipos eles poder\u00E3o comercializar. Por isso, este recurso tem como objetivo apresentar todos os Tipos de D\u00E9bitos Recorrentes que est\u00E3o cadastrados para um determinado Emissor, independente do status dele
    * @param sort Tipo de ordena\u00E7\u00E3o dos registros
@@ -267,6 +389,60 @@ public class DebitoRecorrenteApi {
     
     GenericType<PageTipoDebitoRecorrenteResponse> returnType = new GenericType<PageTipoDebitoRecorrenteResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Salva os d\u00E9bitos recorrentes por portador de uma determinada conta
+   * Este recurso permite salvar os d\u00E9bitos recorrentes por portador de uma determinada conta
+   * @param id C\u00F3digo Identificador da conta
+   * @param portadorDebitoRecorrentePersist portadorDebitoRecorrentePersist
+   * @return PortadorDebitoRecorrenteResponse
+   */
+  public PortadorDebitoRecorrenteResponse salvarPortadorDebitoRecorrente(Long id, PortadorDebitoRecorrentePersist portadorDebitoRecorrentePersist) throws ApiException {
+    Object postBody = portadorDebitoRecorrentePersist;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling salvarPortadorDebitoRecorrente");
+     }
+     
+     // verify the required parameter 'portadorDebitoRecorrentePersist' is set
+     if (portadorDebitoRecorrentePersist == null) {
+        throw new ApiException(400, "Missing the required parameter 'portadorDebitoRecorrentePersist' when calling salvarPortadorDebitoRecorrente");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/{id}/portadores/debitos-recorrentes".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PortadorDebitoRecorrenteResponse> returnType = new GenericType<PortadorDebitoRecorrenteResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
