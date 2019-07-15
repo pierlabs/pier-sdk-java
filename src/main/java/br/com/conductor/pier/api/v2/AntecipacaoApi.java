@@ -47,17 +47,17 @@ public class AntecipacaoApi {
    * @param taxaAntecipacaoRequest taxaAntecipacaoRequest
    * @return ParametroProdutoResponse
    */
-  public ParametroProdutoResponse configurarTaxaAntecipacao(Long id, TaxaAntecipacaoRequest taxaAntecipacaoRequest) throws ApiException {
+  public ParametroProdutoResponse configurarTaxaAntecipacaoProduto(Long id, TaxaAntecipacaoRequest taxaAntecipacaoRequest) throws ApiException {
     Object postBody = taxaAntecipacaoRequest;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling configurarTaxaAntecipacao");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling configurarTaxaAntecipacaoProduto");
      }
      
      // verify the required parameter 'taxaAntecipacaoRequest' is set
      if (taxaAntecipacaoRequest == null) {
-        throw new ApiException(400, "Missing the required parameter 'taxaAntecipacaoRequest' when calling configurarTaxaAntecipacao");
+        throw new ApiException(400, "Missing the required parameter 'taxaAntecipacaoRequest' when calling configurarTaxaAntecipacaoProduto");
      }
      
     // create path and map variables
@@ -101,17 +101,17 @@ public class AntecipacaoApi {
    * @param tipoTransacao Tipo da Transa\u00E7\u00E3o (ON-US ou OFF-US)
    * @return ParametroProdutoResponse
    */
-  public ParametroProdutoResponse consultarTaxaAntecipacao(Long id, String tipoTransacao) throws ApiException {
+  public ParametroProdutoResponse consultarTaxaAntecipacaoProduto(Long id, String tipoTransacao) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarTaxaAntecipacao");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarTaxaAntecipacaoProduto");
      }
      
      // verify the required parameter 'tipoTransacao' is set
      if (tipoTransacao == null) {
-        throw new ApiException(400, "Missing the required parameter 'tipoTransacao' when calling consultarTaxaAntecipacao");
+        throw new ApiException(400, "Missing the required parameter 'tipoTransacao' when calling consultarTaxaAntecipacaoProduto");
      }
      
     // create path and map variables
@@ -159,22 +159,22 @@ public class AntecipacaoApi {
    * @param complemento Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o
    * @return AntecipacaoResponse
    */
-  public AntecipacaoResponse efetivarAntecipacao(Long idConta, Long id, Long quantidadeParcelas, String complemento) throws ApiException {
+  public AntecipacaoResponse efetivarAntecipacaoCompra(Long idConta, Long id, Long quantidadeParcelas, String complemento) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idConta' is set
      if (idConta == null) {
-        throw new ApiException(400, "Missing the required parameter 'idConta' when calling efetivarAntecipacao");
+        throw new ApiException(400, "Missing the required parameter 'idConta' when calling efetivarAntecipacaoCompra");
      }
      
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling efetivarAntecipacao");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling efetivarAntecipacaoCompra");
      }
      
      // verify the required parameter 'quantidadeParcelas' is set
      if (quantidadeParcelas == null) {
-        throw new ApiException(400, "Missing the required parameter 'quantidadeParcelas' when calling efetivarAntecipacao");
+        throw new ApiException(400, "Missing the required parameter 'quantidadeParcelas' when calling efetivarAntecipacaoCompra");
      }
      
     // create path and map variables
@@ -224,12 +224,12 @@ public class AntecipacaoApi {
    * @param complemento Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o
    * @return AntecipacaoResponse
    */
-  public AntecipacaoResponse efetivarAntecipacoes(Long idConta, String complemento) throws ApiException {
+  public AntecipacaoResponse efetivarAntecipacoesEmLotes(Long idConta, String complemento) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idConta' is set
      if (idConta == null) {
-        throw new ApiException(400, "Missing the required parameter 'idConta' when calling efetivarAntecipacoes");
+        throw new ApiException(400, "Missing the required parameter 'idConta' when calling efetivarAntecipacoesEmLotes");
      }
      
     // create path and map variables
@@ -282,12 +282,12 @@ public class AntecipacaoApi {
    * @param tipoOrigemTransacao Indica se a compra \u00E9 ON-US ou OFF-US
    * @return PageCompraResponse
    */
-  public PageCompraResponse listar(Long idConta, List<String> sort, Integer page, Integer limit, Long idCompra, Boolean parcelada, Boolean juros, String tipoOrigemTransacao) throws ApiException {
+  public PageCompraResponse listarComprasAntecipaveis(Long idConta, List<String> sort, Integer page, Integer limit, Long idCompra, Boolean parcelada, Boolean juros, String tipoOrigemTransacao) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idConta' is set
      if (idConta == null) {
-        throw new ApiException(400, "Missing the required parameter 'idConta' when calling listar");
+        throw new ApiException(400, "Missing the required parameter 'idConta' when calling listarComprasAntecipaveis");
      }
      
     // create path and map variables
@@ -347,17 +347,17 @@ public class AntecipacaoApi {
    * @param complemento Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o
    * @return AntecipacaoSimuladaResponse
    */
-  public AntecipacaoSimuladaResponse simularAntecipacao(Long idConta, Long id, String complemento) throws ApiException {
+  public AntecipacaoSimuladaResponse simularAntecipacaoCompra(Long idConta, Long id, String complemento) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idConta' is set
      if (idConta == null) {
-        throw new ApiException(400, "Missing the required parameter 'idConta' when calling simularAntecipacao");
+        throw new ApiException(400, "Missing the required parameter 'idConta' when calling simularAntecipacaoCompra");
      }
      
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling simularAntecipacao");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling simularAntecipacaoCompra");
      }
      
     // create path and map variables
@@ -405,12 +405,12 @@ public class AntecipacaoApi {
    * @param complemento Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o
    * @return AntecipacaoSimuladaLoteResponse
    */
-  public AntecipacaoSimuladaLoteResponse simularAntecipacoes(Long idConta, String complemento) throws ApiException {
+  public AntecipacaoSimuladaLoteResponse simularAntecipacoesEmLote(Long idConta, String complemento) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idConta' is set
      if (idConta == null) {
-        throw new ApiException(400, "Missing the required parameter 'idConta' when calling simularAntecipacoes");
+        throw new ApiException(400, "Missing the required parameter 'idConta' when calling simularAntecipacoesEmLote");
      }
      
     // create path and map variables

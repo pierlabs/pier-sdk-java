@@ -7,14 +7,14 @@ import br.com.conductor.pier.api.v2.invoker.ApiClient;
 import br.com.conductor.pier.api.v2.invoker.Configuration;
 import br.com.conductor.pier.api.v2.invoker.Pair;
 
-import br.com.conductor.pier.api.v2.model.StatusContaResponse;
 import br.com.conductor.pier.api.v2.model.EstagioCartaoResponse;
 import br.com.conductor.pier.api.v2.model.StatusCartaoResponse;
+import br.com.conductor.pier.api.v2.model.StatusContaResponse;
 import br.com.conductor.pier.api.v2.model.StatusImpressaoResponse;
-import br.com.conductor.pier.api.v2.model.PageStatusContaResponse;
 import br.com.conductor.pier.api.v2.model.PageEstagioCartaoResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoBoletoResponse;
 import br.com.conductor.pier.api.v2.model.PageStatusCartaoResponse;
+import br.com.conductor.pier.api.v2.model.PageStatusContaResponse;
 import br.com.conductor.pier.api.v2.model.PageStatusImpressaoResponse;
 
 import java.util.ArrayList;
@@ -42,54 +42,6 @@ public class StatusParametroApi {
     this.apiClient = apiClient;
   }
 
-  
-  /**
-   * Apresenta os dados de um determinado Status Conta
-   * Este m\u00E9todo permite consultar os par\u00E2metros de um determinado Status Conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
-   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id)
-   * @return StatusContaResponse
-   */
-  public StatusContaResponse consultar(Long id) throws ApiException {
-    Object postBody = null;
-    
-     // verify the required parameter 'id' is set
-     if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultar");
-     }
-     
-    // create path and map variables
-    String path = "/api/status-contas/{id}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<StatusContaResponse> returnType = new GenericType<StatusContaResponse>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
   
   /**
    * Apresenta os dados de um determinado Estagio Cart\u00E3o
@@ -188,17 +140,65 @@ public class StatusParametroApi {
   }
   
   /**
+   * Apresenta os dados de um determinado Status Conta
+   * Este m\u00E9todo permite consultar os par\u00E2metros de um determinado Status Conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id)
+   * @return StatusContaResponse
+   */
+  public StatusContaResponse consultarStatusConta(Long id) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarStatusConta");
+     }
+     
+    // create path and map variables
+    String path = "/api/status-contas/{id}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<StatusContaResponse> returnType = new GenericType<StatusContaResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Apresenta os dados de um determinado Status Impress\u00E3o
    * Este m\u00E9todo permite consultar os par\u00E2metros de um determinado Status de Impress\u00E3o do Cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
    * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Status de Impress\u00E3o do Cart\u00E3o (id)
    * @return StatusImpressaoResponse
    */
-  public StatusImpressaoResponse consultar_0(Long id) throws ApiException {
+  public StatusImpressaoResponse consultarStatusImpressaoCartao(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultar_0");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarStatusImpressaoCartao");
      }
      
     // create path and map variables
@@ -231,89 +231,6 @@ public class StatusParametroApi {
 
     
     GenericType<StatusImpressaoResponse> returnType = new GenericType<StatusImpressaoResponse>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
-   * Lista os Status Contas cadastrados para o Emissor
-   * Este m\u00E9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor
-   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
-   * @param page P\u00E1gina
-   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
-   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id)
-   * @param nome Nome atribu\u00EDdo ao Status da Conta
-   * @param permiteAlterarVencimento Par\u00E2metro que define se o Status da conta permite a solicita\u00E7\u00E3o da altera\u00E7\u00E3o do Dia para Vencimento das Faturas, sendo: 0: Inativo e 1: Ativo
-   * @param permiteAlterarLimite Par\u00E2metro que define se o Status da conta permite altera\u00E7\u00E3o de Limites, sendo: 0: Inativo e 1: Ativo
-   * @param permiteEmitirNovaViaCartao Par\u00E2metro que define se o Status da conta permite solicitar uma nova via de Cart\u00E3o, sendo: 0: Inativo e 1: Ativo
-   * @param permiteFazerTransferencia Par\u00E2metro que define se o Status da conta permite originar Transfer\u00EAncias de Cr\u00E9dito para outras Contas do mesmo Emissor ou para uma Conta Banc\u00E1ria, sendo: 0: Inativo e 1: Ativo
-   * @param permiteReceberTransferencia Par\u00E2metro que define se o Status da conta permite  receber Transfer\u00EAncias de Cr\u00E9dito originadas de outras Contas do mesmo emissor, sendo: 0: Inativo e 1: Ativo
-   * @param permiteCriarAcordoCobranca Par\u00E2metro que define se o Status da conta permite ter um Acordo de Cobran\u00E7a de D\u00EDvida criado para ela, sendo: 0: Inativo e 1: Ativo
-   * @param permiteAtribuirComoBloqueio Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo
-   * @param permiteDesbloquear Par\u00E2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo
-   * @param permiteAtribuirComoCancelamento Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo
-   * @return PageStatusContaResponse
-   */
-  public PageStatusContaResponse listar(List<String> sort, Integer page, Integer limit, Long id, String nome, Integer permiteAlterarVencimento, Integer permiteAlterarLimite, Integer permiteEmitirNovaViaCartao, Integer permiteFazerTransferencia, Integer permiteReceberTransferencia, Integer permiteCriarAcordoCobranca, Integer permiteAtribuirComoBloqueio, Integer permiteDesbloquear, Integer permiteAtribuirComoCancelamento) throws ApiException {
-    Object postBody = null;
-    
-    // create path and map variables
-    String path = "/api/status-contas".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "id", id));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "nome", nome));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "permiteAlterarVencimento", permiteAlterarVencimento));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "permiteAlterarLimite", permiteAlterarLimite));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "permiteEmitirNovaViaCartao", permiteEmitirNovaViaCartao));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "permiteFazerTransferencia", permiteFazerTransferencia));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "permiteReceberTransferencia", permiteReceberTransferencia));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "permiteCriarAcordoCobranca", permiteCriarAcordoCobranca));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "permiteAtribuirComoBloqueio", permiteAtribuirComoBloqueio));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "permiteDesbloquear", permiteDesbloquear));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "permiteAtribuirComoCancelamento", permiteAtribuirComoCancelamento));
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<PageStatusContaResponse> returnType = new GenericType<PageStatusContaResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -493,6 +410,89 @@ public class StatusParametroApi {
   }
   
   /**
+   * Lista os Status Contas cadastrados para o Emissor
+   * Este m\u00E9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
+   * @param page P\u00E1gina
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id)
+   * @param nome Nome atribu\u00EDdo ao Status da Conta
+   * @param permiteAlterarVencimento Par\u00E2metro que define se o Status da conta permite a solicita\u00E7\u00E3o da altera\u00E7\u00E3o do Dia para Vencimento das Faturas, sendo: 0: Inativo e 1: Ativo
+   * @param permiteAlterarLimite Par\u00E2metro que define se o Status da conta permite altera\u00E7\u00E3o de Limites, sendo: 0: Inativo e 1: Ativo
+   * @param permiteEmitirNovaViaCartao Par\u00E2metro que define se o Status da conta permite solicitar uma nova via de Cart\u00E3o, sendo: 0: Inativo e 1: Ativo
+   * @param permiteFazerTransferencia Par\u00E2metro que define se o Status da conta permite originar Transfer\u00EAncias de Cr\u00E9dito para outras Contas do mesmo Emissor ou para uma Conta Banc\u00E1ria, sendo: 0: Inativo e 1: Ativo
+   * @param permiteReceberTransferencia Par\u00E2metro que define se o Status da conta permite  receber Transfer\u00EAncias de Cr\u00E9dito originadas de outras Contas do mesmo emissor, sendo: 0: Inativo e 1: Ativo
+   * @param permiteCriarAcordoCobranca Par\u00E2metro que define se o Status da conta permite ter um Acordo de Cobran\u00E7a de D\u00EDvida criado para ela, sendo: 0: Inativo e 1: Ativo
+   * @param permiteAtribuirComoBloqueio Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo
+   * @param permiteDesbloquear Par\u00E2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo
+   * @param permiteAtribuirComoCancelamento Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo
+   * @return PageStatusContaResponse
+   */
+  public PageStatusContaResponse listarStatusConta(List<String> sort, Integer page, Integer limit, Long id, String nome, Integer permiteAlterarVencimento, Integer permiteAlterarLimite, Integer permiteEmitirNovaViaCartao, Integer permiteFazerTransferencia, Integer permiteReceberTransferencia, Integer permiteCriarAcordoCobranca, Integer permiteAtribuirComoBloqueio, Integer permiteDesbloquear, Integer permiteAtribuirComoCancelamento) throws ApiException {
+    Object postBody = null;
+    
+    // create path and map variables
+    String path = "/api/status-contas".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "id", id));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "nome", nome));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "permiteAlterarVencimento", permiteAlterarVencimento));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "permiteAlterarLimite", permiteAlterarLimite));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "permiteEmitirNovaViaCartao", permiteEmitirNovaViaCartao));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "permiteFazerTransferencia", permiteFazerTransferencia));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "permiteReceberTransferencia", permiteReceberTransferencia));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "permiteCriarAcordoCobranca", permiteCriarAcordoCobranca));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "permiteAtribuirComoBloqueio", permiteAtribuirComoBloqueio));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "permiteDesbloquear", permiteDesbloquear));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "permiteAtribuirComoCancelamento", permiteAtribuirComoCancelamento));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PageStatusContaResponse> returnType = new GenericType<PageStatusContaResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Lista as op\u00E7\u00F5es de Status Impress\u00E3o
    * Este m\u00E9todo permite que sejam listadas as op\u00E7\u00F5es de Status Impress\u00E3o que podem ser atribu\u00EDdas aos Cart\u00F5es
    * @param sort Tipo de ordena\u00E7\u00E3o dos registros
@@ -502,7 +502,7 @@ public class StatusParametroApi {
    * @param nome Nome do status impress\u00E3o
    * @return PageStatusImpressaoResponse
    */
-  public PageStatusImpressaoResponse listar_0(List<String> sort, Integer page, Integer limit, Long id, String nome) throws ApiException {
+  public PageStatusImpressaoResponse listarStatusImpressaoCartao(List<String> sort, Integer page, Integer limit, Long id, String nome) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

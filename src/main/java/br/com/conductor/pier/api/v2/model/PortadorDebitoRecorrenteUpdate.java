@@ -28,6 +28,7 @@ public class PortadorDebitoRecorrenteUpdate   {
   private BigDecimal percentualDesconto = null;
   private Boolean flagCartaoDesbloqueado = null;
   private Boolean flagLancatarifa = null;
+  private String dataFimDescontoAnuidade = null;
 
   
   /**
@@ -246,6 +247,24 @@ public class PortadorDebitoRecorrenteUpdate   {
   }
 
   
+  /**
+   * Data referente ao final do desconto da anuidade
+   **/
+  public PortadorDebitoRecorrenteUpdate dataFimDescontoAnuidade(String dataFimDescontoAnuidade) {
+    this.dataFimDescontoAnuidade = dataFimDescontoAnuidade;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Data referente ao final do desconto da anuidade")
+  @JsonProperty("dataFimDescontoAnuidade")
+  public String getDataFimDescontoAnuidade() {
+    return dataFimDescontoAnuidade;
+  }
+  public void setDataFimDescontoAnuidade(String dataFimDescontoAnuidade) {
+    this.dataFimDescontoAnuidade = dataFimDescontoAnuidade;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -267,12 +286,13 @@ public class PortadorDebitoRecorrenteUpdate   {
         Objects.equals(this.valorOriginal, portadorDebitoRecorrenteUpdate.valorOriginal) &&
         Objects.equals(this.percentualDesconto, portadorDebitoRecorrenteUpdate.percentualDesconto) &&
         Objects.equals(this.flagCartaoDesbloqueado, portadorDebitoRecorrenteUpdate.flagCartaoDesbloqueado) &&
-        Objects.equals(this.flagLancatarifa, portadorDebitoRecorrenteUpdate.flagLancatarifa);
+        Objects.equals(this.flagLancatarifa, portadorDebitoRecorrenteUpdate.flagLancatarifa) &&
+        Objects.equals(this.dataFimDescontoAnuidade, portadorDebitoRecorrenteUpdate.dataFimDescontoAnuidade);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(portador, idProduto, idAnuidade, dataHoraInicio, dataHoraFim, numeroParcela, parcelaPerdida, valorParcela, valorOriginal, percentualDesconto, flagCartaoDesbloqueado, flagLancatarifa);
+    return Objects.hash(portador, idProduto, idAnuidade, dataHoraInicio, dataHoraFim, numeroParcela, parcelaPerdida, valorParcela, valorOriginal, percentualDesconto, flagCartaoDesbloqueado, flagLancatarifa, dataFimDescontoAnuidade);
   }
 
   @Override
@@ -292,6 +312,7 @@ public class PortadorDebitoRecorrenteUpdate   {
     sb.append("    percentualDesconto: ").append(toIndentedString(percentualDesconto)).append("\n");
     sb.append("    flagCartaoDesbloqueado: ").append(toIndentedString(flagCartaoDesbloqueado)).append("\n");
     sb.append("    flagLancatarifa: ").append(toIndentedString(flagLancatarifa)).append("\n");
+    sb.append("    dataFimDescontoAnuidade: ").append(toIndentedString(dataFimDescontoAnuidade)).append("\n");
     sb.append("}");
     return sb.toString();
   }

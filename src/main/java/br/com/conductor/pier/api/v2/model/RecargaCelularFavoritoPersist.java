@@ -19,6 +19,7 @@ public class RecargaCelularFavoritoPersist   {
   private String numeroCelular = null;
   private Boolean ativo = null;
   private String nome = null;
+  private String descricaoOperadora = null;
 
   
   /**
@@ -93,6 +94,24 @@ public class RecargaCelularFavoritoPersist   {
   }
 
   
+  /**
+   * Descri\u00E7\u00E3o da operadora
+   **/
+  public RecargaCelularFavoritoPersist descricaoOperadora(String descricaoOperadora) {
+    this.descricaoOperadora = descricaoOperadora;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "VIVO", value = "Descri\u00E7\u00E3o da operadora")
+  @JsonProperty("descricaoOperadora")
+  public String getDescricaoOperadora() {
+    return descricaoOperadora;
+  }
+  public void setDescricaoOperadora(String descricaoOperadora) {
+    this.descricaoOperadora = descricaoOperadora;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -106,12 +125,13 @@ public class RecargaCelularFavoritoPersist   {
     return Objects.equals(this.dddCelular, recargaCelularFavoritoPersist.dddCelular) &&
         Objects.equals(this.numeroCelular, recargaCelularFavoritoPersist.numeroCelular) &&
         Objects.equals(this.ativo, recargaCelularFavoritoPersist.ativo) &&
-        Objects.equals(this.nome, recargaCelularFavoritoPersist.nome);
+        Objects.equals(this.nome, recargaCelularFavoritoPersist.nome) &&
+        Objects.equals(this.descricaoOperadora, recargaCelularFavoritoPersist.descricaoOperadora);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(dddCelular, numeroCelular, ativo, nome);
+    return Objects.hash(dddCelular, numeroCelular, ativo, nome, descricaoOperadora);
   }
 
   @Override
@@ -123,6 +143,7 @@ public class RecargaCelularFavoritoPersist   {
     sb.append("    numeroCelular: ").append(toIndentedString(numeroCelular)).append("\n");
     sb.append("    ativo: ").append(toIndentedString(ativo)).append("\n");
     sb.append("    nome: ").append(toIndentedString(nome)).append("\n");
+    sb.append("    descricaoOperadora: ").append(toIndentedString(descricaoOperadora)).append("\n");
     sb.append("}");
     return sb.toString();
   }

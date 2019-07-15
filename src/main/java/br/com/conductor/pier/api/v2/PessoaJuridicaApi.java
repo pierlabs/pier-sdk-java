@@ -46,17 +46,17 @@ public class PessoaJuridicaApi {
    * @param login login
    * @return PessoaJuridicaResponse
    */
-  public PessoaJuridicaResponse alterar(Long id, PessoaJuridicaUpdate request, String login) throws ApiException {
+  public PessoaJuridicaResponse alterarPessoaJuridica(Long id, PessoaJuridicaUpdate request, String login) throws ApiException {
     Object postBody = request;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling alterar");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarPessoaJuridica");
      }
      
      // verify the required parameter 'request' is set
      if (request == null) {
-        throw new ApiException(400, "Missing the required parameter 'request' when calling alterar");
+        throw new ApiException(400, "Missing the required parameter 'request' when calling alterarPessoaJuridica");
      }
      
     // create path and map variables
@@ -101,12 +101,12 @@ public class PessoaJuridicaApi {
    * @param id Pessoa Juridica id
    * @return PessoaJuridicaResponse
    */
-  public PessoaJuridicaResponse consultar(Long id) throws ApiException {
+  public PessoaJuridicaResponse consultarPessoaJuridica(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultar");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarPessoaJuridica");
      }
      
     // create path and map variables
@@ -149,18 +149,18 @@ public class PessoaJuridicaApi {
    * @param sort Tipo de ordena\u00E7\u00E3o dos registros
    * @param page P\u00E1gina
    * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
-   * @param contato Pessoa jur\u00EDdica jur\u00EDdica
-   * @param razaoSocial Raz\u00E3o social pessoa jur\u00EDdica
-   * @param numeroReceitaFederal CGC(CNPJ) pessoa jur\u00EDdica
-   * @param inscricaoEstadual Inscri\u00E7\u00E3o estadual pessoa jur\u00EDdica
+   * @param contato Contato da pessoa jur\u00EDdica
+   * @param razaoSocial Raz\u00E3o social
+   * @param numeroReceitaFederal CGC(CNPJ) da pessoa jur\u00EDdica
+   * @param inscricaoEstadual Inscri\u00E7\u00E3o estadual da pessoa jur\u00EDdica
    * @param banco Banco da pessoa jur\u00EDdica
    * @param agencia Ag\u00EAncia da pessoa jur\u00EDdica
-   * @param digitoAgencia D\u00EDgito da jur\u00EDdica
-   * @param contaCorrente Conta corrente pessoa jur\u00EDdica
-   * @param digitoContaCorrente D\u00EDgito conta jur\u00EDdica
+   * @param digitoAgencia D\u00EDgito da ag\u00EAncia
+   * @param contaCorrente Conta corrente da pessoa jur\u00EDdica
+   * @param digitoContaCorrente D\u00EDgito conta da conta corrente
    * @return PagePessoaJuridicaResponse
    */
-  public PagePessoaJuridicaResponse listar(List<String> sort, Integer page, Integer limit, String contato, String razaoSocial, String numeroReceitaFederal, String inscricaoEstadual, Integer banco, Integer agencia, String digitoAgencia, String contaCorrente, String digitoContaCorrente) throws ApiException {
+  public PagePessoaJuridicaResponse listarPessoasJuridicas(List<String> sort, Integer page, Integer limit, String contato, String razaoSocial, String numeroReceitaFederal, String inscricaoEstadual, Integer banco, Integer agencia, String digitoAgencia, String contaCorrente, String digitoContaCorrente) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -227,12 +227,12 @@ public class PessoaJuridicaApi {
    * @param login login
    * @return PessoaJuridicaResponse
    */
-  public PessoaJuridicaResponse salvar(PessoaJuridicaPersist pessoaJuridicaPersist, String login) throws ApiException {
+  public PessoaJuridicaResponse salvarPessoaJuridica(PessoaJuridicaPersist pessoaJuridicaPersist, String login) throws ApiException {
     Object postBody = pessoaJuridicaPersist;
     
      // verify the required parameter 'pessoaJuridicaPersist' is set
      if (pessoaJuridicaPersist == null) {
-        throw new ApiException(400, "Missing the required parameter 'pessoaJuridicaPersist' when calling salvar");
+        throw new ApiException(400, "Missing the required parameter 'pessoaJuridicaPersist' when calling salvarPessoaJuridica");
      }
      
     // create path and map variables

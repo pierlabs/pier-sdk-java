@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.math.BigDecimal;
 
 
 
@@ -67,6 +68,12 @@ public class OperacaoBancariaParcialUpdate   {
   private String agenciaBeneficiario = null;
   private String contaBeneficiario = null;
   private String dvContaBeneficiario = null;
+  private String operadora = null;
+  private String celular = null;
+  private String ddd = null;
+  private String dataRealizacao = null;
+  private String dataAgendamento = null;
+  private BigDecimal valorOperacao = null;
 
   
   /**
@@ -501,6 +508,114 @@ public class OperacaoBancariaParcialUpdate   {
   }
 
   
+  /**
+   * Descri\u00E7\u00E3o da operadora do celular
+   **/
+  public OperacaoBancariaParcialUpdate operadora(String operadora) {
+    this.operadora = operadora;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o da operadora do celular")
+  @JsonProperty("operadora")
+  public String getOperadora() {
+    return operadora;
+  }
+  public void setOperadora(String operadora) {
+    this.operadora = operadora;
+  }
+
+  
+  /**
+   * N\u00FAmero da operadora
+   **/
+  public OperacaoBancariaParcialUpdate celular(String celular) {
+    this.celular = celular;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "N\u00FAmero da operadora")
+  @JsonProperty("celular")
+  public String getCelular() {
+    return celular;
+  }
+  public void setCelular(String celular) {
+    this.celular = celular;
+  }
+
+  
+  /**
+   * DDD do celular
+   **/
+  public OperacaoBancariaParcialUpdate ddd(String ddd) {
+    this.ddd = ddd;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "DDD do celular")
+  @JsonProperty("ddd")
+  public String getDdd() {
+    return ddd;
+  }
+  public void setDdd(String ddd) {
+    this.ddd = ddd;
+  }
+
+  
+  /**
+   * Data e hora referente a realiza\u00E7\u00E3o da opera\u00E7\u00E3o
+   **/
+  public OperacaoBancariaParcialUpdate dataRealizacao(String dataRealizacao) {
+    this.dataRealizacao = dataRealizacao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data e hora referente a realiza\u00E7\u00E3o da opera\u00E7\u00E3o")
+  @JsonProperty("dataRealizacao")
+  public String getDataRealizacao() {
+    return dataRealizacao;
+  }
+  public void setDataRealizacao(String dataRealizacao) {
+    this.dataRealizacao = dataRealizacao;
+  }
+
+  
+  /**
+   * Data e hora referente ao agendamento da opera\u00E7\u00E3o
+   **/
+  public OperacaoBancariaParcialUpdate dataAgendamento(String dataAgendamento) {
+    this.dataAgendamento = dataAgendamento;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Data e hora referente ao agendamento da opera\u00E7\u00E3o")
+  @JsonProperty("dataAgendamento")
+  public String getDataAgendamento() {
+    return dataAgendamento;
+  }
+  public void setDataAgendamento(String dataAgendamento) {
+    this.dataAgendamento = dataAgendamento;
+  }
+
+  
+  /**
+   * Valor movimentado na opera\u00E7\u00E3o banc\u00E1ria
+   **/
+  public OperacaoBancariaParcialUpdate valorOperacao(BigDecimal valorOperacao) {
+    this.valorOperacao = valorOperacao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "15.65", value = "Valor movimentado na opera\u00E7\u00E3o banc\u00E1ria")
+  @JsonProperty("valorOperacao")
+  public BigDecimal getValorOperacao() {
+    return valorOperacao;
+  }
+  public void setValorOperacao(BigDecimal valorOperacao) {
+    this.valorOperacao = valorOperacao;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -534,12 +649,18 @@ public class OperacaoBancariaParcialUpdate   {
         Objects.equals(this.bancoBeneficiario, operacaoBancariaParcialUpdate.bancoBeneficiario) &&
         Objects.equals(this.agenciaBeneficiario, operacaoBancariaParcialUpdate.agenciaBeneficiario) &&
         Objects.equals(this.contaBeneficiario, operacaoBancariaParcialUpdate.contaBeneficiario) &&
-        Objects.equals(this.dvContaBeneficiario, operacaoBancariaParcialUpdate.dvContaBeneficiario);
+        Objects.equals(this.dvContaBeneficiario, operacaoBancariaParcialUpdate.dvContaBeneficiario) &&
+        Objects.equals(this.operadora, operacaoBancariaParcialUpdate.operadora) &&
+        Objects.equals(this.celular, operacaoBancariaParcialUpdate.celular) &&
+        Objects.equals(this.ddd, operacaoBancariaParcialUpdate.ddd) &&
+        Objects.equals(this.dataRealizacao, operacaoBancariaParcialUpdate.dataRealizacao) &&
+        Objects.equals(this.dataAgendamento, operacaoBancariaParcialUpdate.dataAgendamento) &&
+        Objects.equals(this.valorOperacao, operacaoBancariaParcialUpdate.valorOperacao);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idContaDestino, idCartaoOrigem, idCartaoDestino, bancoPagador, agenciaPagadora, contaPagadora, dvContaPagadora, nomePagador, cpfCnpjBeneficiario, idEventoAjusteOrigem, idEventoAjusteDestino, idExterno, codigoIspb, status, idOperacaoBancariaOriginal, observacao, numeroBilheteUnico, idDocumento, idCelularRecarga, nomeBeneficiario, bancoBeneficiario, agenciaBeneficiario, contaBeneficiario, dvContaBeneficiario);
+    return Objects.hash(idContaDestino, idCartaoOrigem, idCartaoDestino, bancoPagador, agenciaPagadora, contaPagadora, dvContaPagadora, nomePagador, cpfCnpjBeneficiario, idEventoAjusteOrigem, idEventoAjusteDestino, idExterno, codigoIspb, status, idOperacaoBancariaOriginal, observacao, numeroBilheteUnico, idDocumento, idCelularRecarga, nomeBeneficiario, bancoBeneficiario, agenciaBeneficiario, contaBeneficiario, dvContaBeneficiario, operadora, celular, ddd, dataRealizacao, dataAgendamento, valorOperacao);
   }
 
   @Override
@@ -571,6 +692,12 @@ public class OperacaoBancariaParcialUpdate   {
     sb.append("    agenciaBeneficiario: ").append(toIndentedString(agenciaBeneficiario)).append("\n");
     sb.append("    contaBeneficiario: ").append(toIndentedString(contaBeneficiario)).append("\n");
     sb.append("    dvContaBeneficiario: ").append(toIndentedString(dvContaBeneficiario)).append("\n");
+    sb.append("    operadora: ").append(toIndentedString(operadora)).append("\n");
+    sb.append("    celular: ").append(toIndentedString(celular)).append("\n");
+    sb.append("    ddd: ").append(toIndentedString(ddd)).append("\n");
+    sb.append("    dataRealizacao: ").append(toIndentedString(dataRealizacao)).append("\n");
+    sb.append("    dataAgendamento: ").append(toIndentedString(dataAgendamento)).append("\n");
+    sb.append("    valorOperacao: ").append(toIndentedString(valorOperacao)).append("\n");
     sb.append("}");
     return sb.toString();
   }

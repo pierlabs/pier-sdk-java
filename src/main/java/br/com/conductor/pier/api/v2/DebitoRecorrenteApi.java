@@ -219,7 +219,7 @@ public class DebitoRecorrenteApi {
    * @param dataHoraUltimoPagamento Data e hora do \u00FAltimo pagamento efetuado yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
    * @return PageContaDebitoRecorrenteResponse
    */
-  public PageContaDebitoRecorrenteResponse listar(Long idConta, Long idTipoDebitoRecorrente, List<String> sort, Integer page, Integer limit, String dataHoraInicio, String dataHoraFim, Boolean ativo, String dataHoraUltimoPagamento) throws ApiException {
+  public PageContaDebitoRecorrenteResponse listarDebitosRecorrentesConta(Long idConta, Long idTipoDebitoRecorrente, List<String> sort, Integer page, Integer limit, String dataHoraInicio, String dataHoraFim, Boolean ativo, String dataHoraUltimoPagamento) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -342,7 +342,7 @@ public class DebitoRecorrenteApi {
    * @param flagAtivo Flag que identifica se o tipo d\u00E9bito recorrente est\u00E1 ativo
    * @return PageTipoDebitoRecorrenteResponse
    */
-  public PageTipoDebitoRecorrenteResponse listar_0(List<String> sort, Integer page, Integer limit, Long id, String descricao, BigDecimal valor, Boolean flagAtivo) throws ApiException {
+  public PageTipoDebitoRecorrenteResponse listarTiposDebitosRecorrentes(List<String> sort, Integer page, Integer limit, Long id, String descricao, BigDecimal valor, Boolean flagAtivo) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

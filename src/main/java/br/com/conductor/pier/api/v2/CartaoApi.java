@@ -54,62 +54,6 @@ public class CartaoApi {
 
   
   /**
-   * Realiza a altera\u00E7\u00E3o da senha de um Cart\u00E3o
-   * Esta opera\u00E7\u00E3o tem como objetivo permitir que o portador de um determinado cart\u00E3o possa definir uma senha a sua escolha
-   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)
-   * @param senha Senha para ser cadastrada ou alterada
-   * @return String
-   */
-  public String alterarAlterarSenha(Long id, String senha) throws ApiException {
-    Object postBody = null;
-    
-     // verify the required parameter 'id' is set
-     if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarAlterarSenha");
-     }
-     
-     // verify the required parameter 'senha' is set
-     if (senha == null) {
-        throw new ApiException(400, "Missing the required parameter 'senha' when calling alterarAlterarSenha");
-     }
-     
-    // create path and map variables
-    String path = "/api/cartoes/{id}/alterar-senha".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-
-    if (senha != null)
-      headerParams.put("senha", apiClient.parameterToString(senha));
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<String> returnType = new GenericType<String>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
    * Realiza a altera\u00E7\u00E3o de um est\u00E1gio de cart\u00E3o
    * Esta m\u00E9todo permite que seja alterado o est\u00E1gio do cart\u00E3o para um outro informado na requisi\u00E7\u00E3o
    * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)
@@ -160,6 +104,62 @@ public class CartaoApi {
     
     GenericType<CartaoResponse> returnType = new GenericType<CartaoResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Realiza a altera\u00E7\u00E3o da senha de um Cart\u00E3o
+   * Esta opera\u00E7\u00E3o tem como objetivo permitir que o portador de um determinado cart\u00E3o possa definir uma senha a sua escolha
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)
+   * @param senha Senha para ser cadastrada ou alterada
+   * @return String
+   */
+  public String alterarSenha(Long id, String senha) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarSenha");
+     }
+     
+     // verify the required parameter 'senha' is set
+     if (senha == null) {
+        throw new ApiException(400, "Missing the required parameter 'senha' when calling alterarSenha");
+     }
+     
+    // create path and map variables
+    String path = "/api/cartoes/{id}/alterar-senha".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    if (senha != null)
+      headerParams.put("senha", apiClient.parameterToString(senha));
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<String> returnType = new GenericType<String>() {};
+    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
@@ -283,22 +283,22 @@ public class CartaoApi {
    * @param observacao Texto informando uma observa\u00E7\u00E3o sobre o bloqueio
    * @return CartaoResponse
    */
-  public CartaoResponse bloquear(Long id, Long idStatus, String observacao) throws ApiException {
+  public CartaoResponse bloquearCartao(Long id, Long idStatus, String observacao) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling bloquear");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling bloquearCartao");
      }
      
      // verify the required parameter 'idStatus' is set
      if (idStatus == null) {
-        throw new ApiException(400, "Missing the required parameter 'idStatus' when calling bloquear");
+        throw new ApiException(400, "Missing the required parameter 'idStatus' when calling bloquearCartao");
      }
      
      // verify the required parameter 'observacao' is set
      if (observacao == null) {
-        throw new ApiException(400, "Missing the required parameter 'observacao' when calling bloquear");
+        throw new ApiException(400, "Missing the required parameter 'observacao' when calling bloquearCartao");
      }
      
     // create path and map variables
@@ -346,17 +346,17 @@ public class CartaoApi {
    * @param senha Senha para ser cadastrada ou alterada
    * @return String
    */
-  public String cadastrarAlterarSenha(Long id, String senha) throws ApiException {
+  public String cadastrarSenha(Long id, String senha) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling cadastrarAlterarSenha");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling cadastrarSenha");
      }
      
      // verify the required parameter 'senha' is set
      if (senha == null) {
-        throw new ApiException(400, "Missing the required parameter 'senha' when calling cadastrarAlterarSenha");
+        throw new ApiException(400, "Missing the required parameter 'senha' when calling cadastrarSenha");
      }
      
     // create path and map variables
@@ -403,22 +403,22 @@ public class CartaoApi {
    * @param observacao Texto informando uma observa\u00E7\u00E3o sobre o cancelamento
    * @return CartaoResponse
    */
-  public CartaoResponse cancelar(Long id, Long idStatus, String observacao) throws ApiException {
+  public CartaoResponse cancelarCartao(Long id, Long idStatus, String observacao) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling cancelar");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling cancelarCartao");
      }
      
      // verify the required parameter 'idStatus' is set
      if (idStatus == null) {
-        throw new ApiException(400, "Missing the required parameter 'idStatus' when calling cancelar");
+        throw new ApiException(400, "Missing the required parameter 'idStatus' when calling cancelarCartao");
      }
      
      // verify the required parameter 'observacao' is set
      if (observacao == null) {
-        throw new ApiException(400, "Missing the required parameter 'observacao' when calling cancelar");
+        throw new ApiException(400, "Missing the required parameter 'observacao' when calling cancelarCartao");
      }
      
     // create path and map variables
@@ -465,12 +465,12 @@ public class CartaoApi {
    * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)
    * @return CartaoDetalheResponse
    */
-  public CartaoDetalheResponse consultar(Long id) throws ApiException {
+  public CartaoDetalheResponse consultarCartao(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultar");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarCartao");
      }
      
     // create path and map variables
@@ -513,12 +513,12 @@ public class CartaoApi {
    * @param id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)
    * @return DadosCartaoImpressaoResponse
    */
-  public DadosCartaoImpressaoResponse consultarCartaoImpressao(Long id) throws ApiException {
+  public DadosCartaoImpressaoResponse consultarDadosImpressao(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarCartaoImpressao");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarDadosImpressao");
      }
      
     // create path and map variables
@@ -609,12 +609,12 @@ public class CartaoApi {
    * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)
    * @return LimiteDisponibilidadeResponse
    */
-  public LimiteDisponibilidadeResponse consultarLimiteDisponibilidade(Long id) throws ApiException {
+  public LimiteDisponibilidadeResponse consultarLimitesDisponiveis(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarLimiteDisponibilidade");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarLimitesDisponiveis");
      }
      
     // create path and map variables
@@ -657,12 +657,12 @@ public class CartaoApi {
    * @param id C\u00F3digo de Identifica\u00E7\u00E3o do lote de cart\u00F5es (id)
    * @return LoteCartoesPrePagosResponse
    */
-  public LoteCartoesPrePagosResponse consultarLotesCartoesPrePagos(Long id) throws ApiException {
+  public LoteCartoesPrePagosResponse consultarLoteCartoesPrePagos(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarLotesCartoesPrePagos");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarLoteCartoesPrePagos");
      }
      
     // create path and map variables
@@ -800,64 +800,16 @@ public class CartaoApi {
    * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)
    * @return CartaoResponse
    */
-  public CartaoResponse desbloquear(Long id) throws ApiException {
+  public CartaoResponse desbloquearCartao(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling desbloquear");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling desbloquearCartao");
      }
      
     // create path and map variables
     String path = "/api/cartoes/{id}/desbloquear".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<CartaoResponse> returnType = new GenericType<CartaoResponse>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
-   * Realiza o desbloqueio de um cart\u00E3o bloqueado por tentativas de senha incorretas
-   * Este m\u00E9todo permite que seja desbloqueado um determinado cart\u00E3o que foi bloqueado por tentativas de senha incorretas, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
-   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)
-   * @return CartaoResponse
-   */
-  public CartaoResponse desbloquearSenhaIncorreta(Long id) throws ApiException {
-    Object postBody = null;
-    
-     // verify the required parameter 'id' is set
-     if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling desbloquearSenhaIncorreta");
-     }
-     
-    // create path and map variables
-    String path = "/api/cartoes/{id}/desbloquear-senha-incorreta".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
     // query params
@@ -902,7 +854,7 @@ public class CartaoApi {
    * @param identificadorExterno N\u00FAmero de identifica\u00E7\u00E3o externo (utilizado pelo emissor)
    * @return LoteCartoesPrePagosResponse
    */
-  public LoteCartoesPrePagosResponse gerarLotesCartoesPrePagos(Long idOrigemComercial, Long idProduto, Long idTipoCartao, Long idImagem, Long idEndereco, Integer quantidadeCartoes, String identificadorExterno) throws ApiException {
+  public LoteCartoesPrePagosResponse gerarLoteCartoesPrePagos(Long idOrigemComercial, Long idProduto, Long idTipoCartao, Long idImagem, Long idEndereco, Integer quantidadeCartoes, String identificadorExterno) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -959,12 +911,12 @@ public class CartaoApi {
    * @param idImagem C\u00F3digo de Identifica\u00E7\u00E3o da imagem do cart\u00E3o (id)
    * @return CartaoImpressaoResponse
    */
-  public CartaoImpressaoResponse gerarNovaVia(Long id, Long idImagem) throws ApiException {
+  public CartaoImpressaoResponse gerarNovaViaCartao(Long id, Long idImagem) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling gerarNovaVia");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling gerarNovaViaCartao");
      }
      
     // create path and map variables
@@ -1057,12 +1009,12 @@ public class CartaoApi {
    * @param id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)
    * @return Object
    */
-  public Object lancarTarifaSegundaVia(Long id) throws ApiException {
+  public Object lancarTarifaReemissao(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling lancarTarifaSegundaVia");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling lancarTarifaReemissao");
      }
      
     // create path and map variables
@@ -1126,7 +1078,7 @@ public class CartaoApi {
    * @param identificadorExterno Identificador externo do cart\u00E3o
    * @return PageCartaoResponse
    */
-  public PageCartaoResponse listar(List<String> sort, Integer page, Integer limit, Long idStatusCartao, Long idEstagioCartao, Long idConta, Long idPessoa, Long idProduto, String tipoPortador, String numeroCartao, String nomeImpresso, String dataGeracao, String dataStatusCartao, String dataEstagioCartao, String dataValidade, String dataImpressao, String arquivoImpressao, Integer flagImpressaoOrigemComercial, Integer flagProvisorio, String codigoDesbloqueio, Integer sequencialCartao, Long identificadorExterno) throws ApiException {
+  public PageCartaoResponse listarCartoes(List<String> sort, Integer page, Integer limit, Long idStatusCartao, Long idEstagioCartao, Long idConta, Long idPessoa, Long idProduto, String tipoPortador, String numeroCartao, String nomeImpresso, String dataGeracao, String dataStatusCartao, String dataEstagioCartao, String dataValidade, String dataImpressao, String arquivoImpressao, Integer flagImpressaoOrigemComercial, Integer flagProvisorio, String codigoDesbloqueio, Integer sequencialCartao, Long identificadorExterno) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -1292,16 +1244,64 @@ public class CartaoApi {
    * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)
    * @return CartaoResponse
    */
-  public CartaoResponse reativar(Long id) throws ApiException {
+  public CartaoResponse reativarCartao(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling reativar");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling reativarCartao");
      }
      
     // create path and map variables
     String path = "/api/cartoes/{id}/reativar".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<CartaoResponse> returnType = new GenericType<CartaoResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Realiza o desbloqueio de um cart\u00E3o bloqueado por tentativas de senha incorretas
+   * Este m\u00E9todo permite que seja desbloqueado um determinado cart\u00E3o que foi bloqueado por tentativas de senha incorretas, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)
+   * @return CartaoResponse
+   */
+  public CartaoResponse resetarTentativasSenhaIncorreta(Long id) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling resetarTentativasSenhaIncorreta");
+     }
+     
+    // create path and map variables
+    String path = "/api/cartoes/{id}/desbloquear-senha-incorreta".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
     // query params
@@ -1389,6 +1389,63 @@ public class CartaoApi {
   }
   
   /**
+   * Permite validar um Cart\u00E3o com bandeira Mastercard a partir do de55
+   * Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem o DE55 gerado a partir da leitura de um chip EMV de um Cart\u00E3o com bandeira Mastercard a fim de verificar a sua autenticidade. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o antes de permitir que o portador realize transa\u00E7\u00F5es diversas, como as de compra e saque na modalidade d\u00E9bito em conta corrente, dentre outras
+   * @param numeroCartao N\u00FAmero do cart\u00E3o a ser validado
+   * @param criptograma Criptograma do cart\u00E3o no formato de55
+   * @return ValidaCartaoResponse
+   */
+  public ValidaCartaoResponse validarDE55Mastercard(String numeroCartao, String criptograma) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'numeroCartao' is set
+     if (numeroCartao == null) {
+        throw new ApiException(400, "Missing the required parameter 'numeroCartao' when calling validarDE55Mastercard");
+     }
+     
+     // verify the required parameter 'criptograma' is set
+     if (criptograma == null) {
+        throw new ApiException(400, "Missing the required parameter 'criptograma' when calling validarDE55Mastercard");
+     }
+     
+    // create path and map variables
+    String path = "/api/cartoes/validar-de55-mastercard".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "numero_cartao", numeroCartao));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "criptograma", criptograma));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<ValidaCartaoResponse> returnType = new GenericType<ValidaCartaoResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Permite validar os dados impressos em um cart\u00E3o bandeirado
    * Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem a autenticidade de um determinado Cart\u00E3o a partir do envio dos dados sens\u00EDveis impressos nele. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o para a realiza\u00E7\u00E3o de transa\u00E7\u00F5es e-commerce ou por meio de Centrais de Atendimento Eletr\u00F4nico (URA), dentre outras
    * @param numeroCartao N\u00FAmero do cart\u00E3o a ser validado
@@ -1397,27 +1454,27 @@ public class CartaoApi {
    * @param codigoSeguranca C\u00F3digo de seguran\u00E7a do cart\u00E3o com tr\u00EAs n\u00FAmeros
    * @return ValidaCartaoResponse
    */
-  public ValidaCartaoResponse validarDadosImpressosBandeirado(String numeroCartao, String nomePortador, String dataValidade, String codigoSeguranca) throws ApiException {
+  public ValidaCartaoResponse validarDadosCartaoBandeirado(String numeroCartao, String nomePortador, String dataValidade, String codigoSeguranca) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'numeroCartao' is set
      if (numeroCartao == null) {
-        throw new ApiException(400, "Missing the required parameter 'numeroCartao' when calling validarDadosImpressosBandeirado");
+        throw new ApiException(400, "Missing the required parameter 'numeroCartao' when calling validarDadosCartaoBandeirado");
      }
      
      // verify the required parameter 'nomePortador' is set
      if (nomePortador == null) {
-        throw new ApiException(400, "Missing the required parameter 'nomePortador' when calling validarDadosImpressosBandeirado");
+        throw new ApiException(400, "Missing the required parameter 'nomePortador' when calling validarDadosCartaoBandeirado");
      }
      
      // verify the required parameter 'dataValidade' is set
      if (dataValidade == null) {
-        throw new ApiException(400, "Missing the required parameter 'dataValidade' when calling validarDadosImpressosBandeirado");
+        throw new ApiException(400, "Missing the required parameter 'dataValidade' when calling validarDadosCartaoBandeirado");
      }
      
      // verify the required parameter 'codigoSeguranca' is set
      if (codigoSeguranca == null) {
-        throw new ApiException(400, "Missing the required parameter 'codigoSeguranca' when calling validarDadosImpressosBandeirado");
+        throw new ApiException(400, "Missing the required parameter 'codigoSeguranca' when calling validarDadosCartaoBandeirado");
      }
      
     // create path and map variables
@@ -1470,27 +1527,27 @@ public class CartaoApi {
    * @param codigoSeguranca C\u00F3digo de seguran\u00E7a do cart\u00E3o com tr\u00EAs n\u00FAmeros
    * @return ValidaCartaoResponse
    */
-  public ValidaCartaoResponse validarDadosImpressosNaoBandeirado(String numeroCartao, String nomePortador, String dataValidade, String codigoSeguranca) throws ApiException {
+  public ValidaCartaoResponse validarDadosCartaoPrivate(String numeroCartao, String nomePortador, String dataValidade, String codigoSeguranca) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'numeroCartao' is set
      if (numeroCartao == null) {
-        throw new ApiException(400, "Missing the required parameter 'numeroCartao' when calling validarDadosImpressosNaoBandeirado");
+        throw new ApiException(400, "Missing the required parameter 'numeroCartao' when calling validarDadosCartaoPrivate");
      }
      
      // verify the required parameter 'nomePortador' is set
      if (nomePortador == null) {
-        throw new ApiException(400, "Missing the required parameter 'nomePortador' when calling validarDadosImpressosNaoBandeirado");
+        throw new ApiException(400, "Missing the required parameter 'nomePortador' when calling validarDadosCartaoPrivate");
      }
      
      // verify the required parameter 'dataValidade' is set
      if (dataValidade == null) {
-        throw new ApiException(400, "Missing the required parameter 'dataValidade' when calling validarDadosImpressosNaoBandeirado");
+        throw new ApiException(400, "Missing the required parameter 'dataValidade' when calling validarDadosCartaoPrivate");
      }
      
      // verify the required parameter 'codigoSeguranca' is set
      if (codigoSeguranca == null) {
-        throw new ApiException(400, "Missing the required parameter 'codigoSeguranca' when calling validarDadosImpressosNaoBandeirado");
+        throw new ApiException(400, "Missing the required parameter 'codigoSeguranca' when calling validarDadosCartaoPrivate");
      }
      
     // create path and map variables
@@ -1509,63 +1566,6 @@ public class CartaoApi {
     queryParams.addAll(apiClient.parameterToPairs("", "data_validade", dataValidade));
     
     queryParams.addAll(apiClient.parameterToPairs("", "codigo_seguranca", codigoSeguranca));
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<ValidaCartaoResponse> returnType = new GenericType<ValidaCartaoResponse>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
-   * Permite validar um Cart\u00E3o com bandeira Mastercard a partir do de55
-   * Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores validem o DE55 gerado a partir da leitura de um chip EMV de um Cart\u00E3o com bandeira Mastercard a fim de verificar a sua autenticidade. A utiliza\u00E7\u00E3o desde m\u00E9todo tem diversas aplica\u00E7\u00F5es, sendo a principal delas a de Identifica\u00E7\u00E3o Positiva do Cart\u00E3o antes de permitir que o portador realize transa\u00E7\u00F5es diversas, como as de compra e saque na modalidade d\u00E9bito em conta corrente, dentre outras
-   * @param numeroCartao N\u00FAmero do cart\u00E3o a ser validado
-   * @param criptograma Criptograma do cart\u00E3o no formato de55
-   * @return ValidaCartaoResponse
-   */
-  public ValidaCartaoResponse validarDe55CartaoMastercard(String numeroCartao, String criptograma) throws ApiException {
-    Object postBody = null;
-    
-     // verify the required parameter 'numeroCartao' is set
-     if (numeroCartao == null) {
-        throw new ApiException(400, "Missing the required parameter 'numeroCartao' when calling validarDe55CartaoMastercard");
-     }
-     
-     // verify the required parameter 'criptograma' is set
-     if (criptograma == null) {
-        throw new ApiException(400, "Missing the required parameter 'criptograma' when calling validarDe55CartaoMastercard");
-     }
-     
-    // create path and map variables
-    String path = "/api/cartoes/validar-de55-mastercard".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "numero_cartao", numeroCartao));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "criptograma", criptograma));
     
 
     

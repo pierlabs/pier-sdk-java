@@ -17,6 +17,7 @@ public class RecargaCelularFavoritoResponse   {
   
   private Boolean ativo = null;
   private String dddCelular = null;
+  private String descricaoOperadora = null;
   private Long id = null;
   private Long idConta = null;
   private String nome = null;
@@ -56,6 +57,24 @@ public class RecargaCelularFavoritoResponse   {
   }
   public void setDddCelular(String dddCelular) {
     this.dddCelular = dddCelular;
+  }
+
+  
+  /**
+   * Descri\u00E7\u00E3o da operadora
+   **/
+  public RecargaCelularFavoritoResponse descricaoOperadora(String descricaoOperadora) {
+    this.descricaoOperadora = descricaoOperadora;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "VIVO", value = "Descri\u00E7\u00E3o da operadora")
+  @JsonProperty("descricaoOperadora")
+  public String getDescricaoOperadora() {
+    return descricaoOperadora;
+  }
+  public void setDescricaoOperadora(String descricaoOperadora) {
+    this.descricaoOperadora = descricaoOperadora;
   }
 
   
@@ -143,6 +162,7 @@ public class RecargaCelularFavoritoResponse   {
     RecargaCelularFavoritoResponse recargaCelularFavoritoResponse = (RecargaCelularFavoritoResponse) o;
     return Objects.equals(this.ativo, recargaCelularFavoritoResponse.ativo) &&
         Objects.equals(this.dddCelular, recargaCelularFavoritoResponse.dddCelular) &&
+        Objects.equals(this.descricaoOperadora, recargaCelularFavoritoResponse.descricaoOperadora) &&
         Objects.equals(this.id, recargaCelularFavoritoResponse.id) &&
         Objects.equals(this.idConta, recargaCelularFavoritoResponse.idConta) &&
         Objects.equals(this.nome, recargaCelularFavoritoResponse.nome) &&
@@ -151,7 +171,7 @@ public class RecargaCelularFavoritoResponse   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(ativo, dddCelular, id, idConta, nome, numeroCelular);
+    return Objects.hash(ativo, dddCelular, descricaoOperadora, id, idConta, nome, numeroCelular);
   }
 
   @Override
@@ -161,6 +181,7 @@ public class RecargaCelularFavoritoResponse   {
     
     sb.append("    ativo: ").append(toIndentedString(ativo)).append("\n");
     sb.append("    dddCelular: ").append(toIndentedString(dddCelular)).append("\n");
+    sb.append("    descricaoOperadora: ").append(toIndentedString(descricaoOperadora)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idConta: ").append(toIndentedString(idConta)).append("\n");
     sb.append("    nome: ").append(toIndentedString(nome)).append("\n");

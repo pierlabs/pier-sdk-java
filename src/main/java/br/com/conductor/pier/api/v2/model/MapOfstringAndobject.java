@@ -9,7 +9,7 @@ import java.util.Map;
 
 
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class MapOfstringAndstring extends HashMap<String, String>  {
+public class MapOfstringAndobject extends HashMap<String, Object>  {
   
 
   
@@ -33,7 +33,7 @@ public class MapOfstringAndstring extends HashMap<String, String>  {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class MapOfstringAndstring {\n");
+    sb.append("class MapOfstringAndobject {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("}");
     return sb.toString();

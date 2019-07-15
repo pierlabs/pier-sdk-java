@@ -37,75 +37,6 @@ public class FAQApi {
 
   
   /**
-   * Adiciona uma nova FAQ
-   * Adiciona uma nova FAQ
-   * @param pergunta Conte\u00FAdo da pergunta
-   * @param resposta Conte\u00FAdo da resposta
-   * @param relevancia N\u00EDvel de relev\u00E2ncia da pergunta
-   * @param plataforma Plataforma em que a FAQ se encaixa
-   * @param categoria Categoria de assunto do qual a FAQ se trata
-   * @param status Status descrevendo a situa\u00E7\u00E3o atual da FAQ
-   * @return FaqResponse
-   */
-  public FaqResponse adicionar(String pergunta, String resposta, Integer relevancia, String plataforma, String categoria, String status) throws ApiException {
-    Object postBody = null;
-    
-     // verify the required parameter 'pergunta' is set
-     if (pergunta == null) {
-        throw new ApiException(400, "Missing the required parameter 'pergunta' when calling adicionar");
-     }
-     
-     // verify the required parameter 'resposta' is set
-     if (resposta == null) {
-        throw new ApiException(400, "Missing the required parameter 'resposta' when calling adicionar");
-     }
-     
-    // create path and map variables
-    String path = "/api/faqs".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "pergunta", pergunta));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "resposta", resposta));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "relevancia", relevancia));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "plataforma", plataforma));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "categoria", categoria));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "status", status));
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<FaqResponse> returnType = new GenericType<FaqResponse>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
    * Alterar FAQ
    * Alterar FAQ
    * @param id Id
@@ -117,22 +48,22 @@ public class FAQApi {
    * @param status Status descrevendo a situa\u00E7\u00E3o atual da FAQ
    * @return FaqResponse
    */
-  public FaqResponse alterar(Long id, String pergunta, String resposta, Integer relevancia, String plataforma, String categoria, String status) throws ApiException {
+  public FaqResponse alterarFAQ(Long id, String pergunta, String resposta, Integer relevancia, String plataforma, String categoria, String status) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling alterar");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarFAQ");
      }
      
      // verify the required parameter 'pergunta' is set
      if (pergunta == null) {
-        throw new ApiException(400, "Missing the required parameter 'pergunta' when calling alterar");
+        throw new ApiException(400, "Missing the required parameter 'pergunta' when calling alterarFAQ");
      }
      
      // verify the required parameter 'resposta' is set
      if (resposta == null) {
-        throw new ApiException(400, "Missing the required parameter 'resposta' when calling alterar");
+        throw new ApiException(400, "Missing the required parameter 'resposta' when calling alterarFAQ");
      }
      
     // create path and map variables
@@ -187,12 +118,12 @@ public class FAQApi {
    * @param id Id
    * @return FaqResponse
    */
-  public FaqResponse consultar(Long id) throws ApiException {
+  public FaqResponse consultarFAQ(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultar");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarFAQ");
      }
      
     // create path and map variables
@@ -244,7 +175,7 @@ public class FAQApi {
    * @param status Status descrevendo a situa\u00E7\u00E3o atual da FAQ
    * @return PageFaqResponse
    */
-  public PageFaqResponse listar(List<String> sort, Integer page, Integer limit, Long idFaq, String pergunta, String resposta, Integer relevancia, String plataforma, String categoria, String status) throws ApiException {
+  public PageFaqResponse listarFAQs(List<String> sort, Integer page, Integer limit, Long idFaq, String pergunta, String resposta, Integer relevancia, String plataforma, String categoria, String status) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -297,6 +228,75 @@ public class FAQApi {
     
     GenericType<PageFaqResponse> returnType = new GenericType<PageFaqResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Adiciona uma nova FAQ
+   * Adiciona uma nova FAQ
+   * @param pergunta Conte\u00FAdo da pergunta
+   * @param resposta Conte\u00FAdo da resposta
+   * @param relevancia N\u00EDvel de relev\u00E2ncia da pergunta
+   * @param plataforma Plataforma em que a FAQ se encaixa
+   * @param categoria Categoria de assunto do qual a FAQ se trata
+   * @param status Status descrevendo a situa\u00E7\u00E3o atual da FAQ
+   * @return FaqResponse
+   */
+  public FaqResponse salvarFAQ(String pergunta, String resposta, Integer relevancia, String plataforma, String categoria, String status) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'pergunta' is set
+     if (pergunta == null) {
+        throw new ApiException(400, "Missing the required parameter 'pergunta' when calling salvarFAQ");
+     }
+     
+     // verify the required parameter 'resposta' is set
+     if (resposta == null) {
+        throw new ApiException(400, "Missing the required parameter 'resposta' when calling salvarFAQ");
+     }
+     
+    // create path and map variables
+    String path = "/api/faqs".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "pergunta", pergunta));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "resposta", resposta));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "relevancia", relevancia));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "plataforma", plataforma));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "categoria", categoria));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "status", status));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<FaqResponse> returnType = new GenericType<FaqResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   

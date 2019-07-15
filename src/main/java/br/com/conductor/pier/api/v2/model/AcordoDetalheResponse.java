@@ -1,10 +1,13 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
+import br.com.conductor.pier.api.v2.model.ParcelaAcordoResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 
 
@@ -31,8 +34,11 @@ public class AcordoDetalheResponse   {
   private String dataQuebraAcordo = null;
   private BigDecimal valorParcela1 = null;
   private BigDecimal valorParcelaN = null;
+  private BigDecimal valorEntrada = null;
   private Integer parcelaPedida = null;
   private String vencimentoParcelaPedida = null;
+  private Long idBoletoEntrada = null;
+  private List<ParcelaAcordoResponse> parcelas = new ArrayList<ParcelaAcordoResponse>();
 
   
   /**
@@ -306,6 +312,24 @@ public class AcordoDetalheResponse   {
 
   
   /**
+   * Valor da entrada do acordo
+   **/
+  public AcordoDetalheResponse valorEntrada(BigDecimal valorEntrada) {
+    this.valorEntrada = valorEntrada;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor da entrada do acordo")
+  @JsonProperty("valorEntrada")
+  public BigDecimal getValorEntrada() {
+    return valorEntrada;
+  }
+  public void setValorEntrada(BigDecimal valorEntrada) {
+    this.valorEntrada = valorEntrada;
+  }
+
+  
+  /**
    * Parcela pedida
    **/
   public AcordoDetalheResponse parcelaPedida(Integer parcelaPedida) {
@@ -341,6 +365,42 @@ public class AcordoDetalheResponse   {
   }
 
   
+  /**
+   * C\u00F3digo de identifica\u00E7\u00E3o do boleto de entrada.
+   **/
+  public AcordoDetalheResponse idBoletoEntrada(Long idBoletoEntrada) {
+    this.idBoletoEntrada = idBoletoEntrada;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do boleto de entrada.")
+  @JsonProperty("idBoletoEntrada")
+  public Long getIdBoletoEntrada() {
+    return idBoletoEntrada;
+  }
+  public void setIdBoletoEntrada(Long idBoletoEntrada) {
+    this.idBoletoEntrada = idBoletoEntrada;
+  }
+
+  
+  /**
+   * Listagem das parcelas do acordo.
+   **/
+  public AcordoDetalheResponse parcelas(List<ParcelaAcordoResponse> parcelas) {
+    this.parcelas = parcelas;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Listagem das parcelas do acordo.")
+  @JsonProperty("parcelas")
+  public List<ParcelaAcordoResponse> getParcelas() {
+    return parcelas;
+  }
+  public void setParcelas(List<ParcelaAcordoResponse> parcelas) {
+    this.parcelas = parcelas;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -366,13 +426,16 @@ public class AcordoDetalheResponse   {
         Objects.equals(this.dataQuebraAcordo, acordoDetalheResponse.dataQuebraAcordo) &&
         Objects.equals(this.valorParcela1, acordoDetalheResponse.valorParcela1) &&
         Objects.equals(this.valorParcelaN, acordoDetalheResponse.valorParcelaN) &&
+        Objects.equals(this.valorEntrada, acordoDetalheResponse.valorEntrada) &&
         Objects.equals(this.parcelaPedida, acordoDetalheResponse.parcelaPedida) &&
-        Objects.equals(this.vencimentoParcelaPedida, acordoDetalheResponse.vencimentoParcelaPedida);
+        Objects.equals(this.vencimentoParcelaPedida, acordoDetalheResponse.vencimentoParcelaPedida) &&
+        Objects.equals(this.idBoletoEntrada, acordoDetalheResponse.idBoletoEntrada) &&
+        Objects.equals(this.parcelas, acordoDetalheResponse.parcelas);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idConta, statusAcordo, valorAcordo, dataAcordo, quantidadeParcelas, saldoAtualFinal, diasEmAtraso, statusConta, assessoriaAtual, totalPagamentos, dataVencimentoCobranca, dataQuebraAcordo, valorParcela1, valorParcelaN, parcelaPedida, vencimentoParcelaPedida);
+    return Objects.hash(id, idConta, statusAcordo, valorAcordo, dataAcordo, quantidadeParcelas, saldoAtualFinal, diasEmAtraso, statusConta, assessoriaAtual, totalPagamentos, dataVencimentoCobranca, dataQuebraAcordo, valorParcela1, valorParcelaN, valorEntrada, parcelaPedida, vencimentoParcelaPedida, idBoletoEntrada, parcelas);
   }
 
   @Override
@@ -395,8 +458,11 @@ public class AcordoDetalheResponse   {
     sb.append("    dataQuebraAcordo: ").append(toIndentedString(dataQuebraAcordo)).append("\n");
     sb.append("    valorParcela1: ").append(toIndentedString(valorParcela1)).append("\n");
     sb.append("    valorParcelaN: ").append(toIndentedString(valorParcelaN)).append("\n");
+    sb.append("    valorEntrada: ").append(toIndentedString(valorEntrada)).append("\n");
     sb.append("    parcelaPedida: ").append(toIndentedString(parcelaPedida)).append("\n");
     sb.append("    vencimentoParcelaPedida: ").append(toIndentedString(vencimentoParcelaPedida)).append("\n");
+    sb.append("    idBoletoEntrada: ").append(toIndentedString(idBoletoEntrada)).append("\n");
+    sb.append("    parcelas: ").append(toIndentedString(parcelas)).append("\n");
     sb.append("}");
     return sb.toString();
   }

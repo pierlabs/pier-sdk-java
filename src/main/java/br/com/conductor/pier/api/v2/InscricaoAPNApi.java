@@ -43,12 +43,12 @@ public class InscricaoAPNApi {
    * @param id id
    * @return InscricaoAPNResponse
    */
-  public InscricaoAPNResponse desativar(Long id) throws ApiException {
+  public InscricaoAPNResponse desativarInscricaoAPN(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling desativar");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling desativarInscricaoAPN");
      }
      
     // create path and map variables
@@ -99,7 +99,7 @@ public class InscricaoAPNApi {
    * @param idAplicacaoMobile Id da aplica\u00E7\u00E3o mobile
    * @return PageInscricaoAPNResponse
    */
-  public PageInscricaoAPNResponse listar(List<String> sort, List<Long> idCartoes, Integer page, Integer limit, String deviceToken, String dataCriacao, String dataDesativacao, Boolean ativo, Long idAplicacaoMobile) throws ApiException {
+  public PageInscricaoAPNResponse listarInscricoesAPN(List<String> sort, List<Long> idCartoes, Integer page, Integer limit, String deviceToken, String dataCriacao, String dataDesativacao, Boolean ativo, Long idAplicacaoMobile) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -159,12 +159,12 @@ public class InscricaoAPNApi {
    * @param inscricaoPersist inscricaoPersist
    * @return List<InscricaoAPNResponse>
    */
-  public List<InscricaoAPNResponse> salvar(InscricaoAPN inscricaoPersist) throws ApiException {
+  public List<InscricaoAPNResponse> salvarInscricaoAPN(InscricaoAPN inscricaoPersist) throws ApiException {
     Object postBody = inscricaoPersist;
     
      // verify the required parameter 'inscricaoPersist' is set
      if (inscricaoPersist == null) {
-        throw new ApiException(400, "Missing the required parameter 'inscricaoPersist' when calling salvar");
+        throw new ApiException(400, "Missing the required parameter 'inscricaoPersist' when calling salvarInscricaoAPN");
      }
      
     // create path and map variables

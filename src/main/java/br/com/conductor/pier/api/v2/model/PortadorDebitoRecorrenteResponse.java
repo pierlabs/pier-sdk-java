@@ -16,6 +16,7 @@ import java.math.BigDecimal;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class PortadorDebitoRecorrenteResponse   {
   
+  private String dataFimDescontoAnuidade = null;
   private String dataHoraFim = null;
   private String dataHoraInicio = null;
   private Boolean flagCartaoDesbloqueado = null;
@@ -30,6 +31,24 @@ public class PortadorDebitoRecorrenteResponse   {
   private Integer portador = null;
   private BigDecimal valorOriginal = null;
   private BigDecimal valorParcela = null;
+
+  
+  /**
+   * Data referente ao final do desconto da anuidade
+   **/
+  public PortadorDebitoRecorrenteResponse dataFimDescontoAnuidade(String dataFimDescontoAnuidade) {
+    this.dataFimDescontoAnuidade = dataFimDescontoAnuidade;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Data referente ao final do desconto da anuidade")
+  @JsonProperty("dataFimDescontoAnuidade")
+  public String getDataFimDescontoAnuidade() {
+    return dataFimDescontoAnuidade;
+  }
+  public void setDataFimDescontoAnuidade(String dataFimDescontoAnuidade) {
+    this.dataFimDescontoAnuidade = dataFimDescontoAnuidade;
+  }
 
   
   /**
@@ -294,7 +313,8 @@ public class PortadorDebitoRecorrenteResponse   {
       return false;
     }
     PortadorDebitoRecorrenteResponse portadorDebitoRecorrenteResponse = (PortadorDebitoRecorrenteResponse) o;
-    return Objects.equals(this.dataHoraFim, portadorDebitoRecorrenteResponse.dataHoraFim) &&
+    return Objects.equals(this.dataFimDescontoAnuidade, portadorDebitoRecorrenteResponse.dataFimDescontoAnuidade) &&
+        Objects.equals(this.dataHoraFim, portadorDebitoRecorrenteResponse.dataHoraFim) &&
         Objects.equals(this.dataHoraInicio, portadorDebitoRecorrenteResponse.dataHoraInicio) &&
         Objects.equals(this.flagCartaoDesbloqueado, portadorDebitoRecorrenteResponse.flagCartaoDesbloqueado) &&
         Objects.equals(this.flagLancatarifa, portadorDebitoRecorrenteResponse.flagLancatarifa) &&
@@ -312,7 +332,7 @@ public class PortadorDebitoRecorrenteResponse   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(dataHoraFim, dataHoraInicio, flagCartaoDesbloqueado, flagLancatarifa, id, idAnuidade, idConta, idProduto, numeroParcela, parcelaPerdida, percentualDesconto, portador, valorOriginal, valorParcela);
+    return Objects.hash(dataFimDescontoAnuidade, dataHoraFim, dataHoraInicio, flagCartaoDesbloqueado, flagLancatarifa, id, idAnuidade, idConta, idProduto, numeroParcela, parcelaPerdida, percentualDesconto, portador, valorOriginal, valorParcela);
   }
 
   @Override
@@ -320,6 +340,7 @@ public class PortadorDebitoRecorrenteResponse   {
     StringBuilder sb = new StringBuilder();
     sb.append("class PortadorDebitoRecorrenteResponse {\n");
     
+    sb.append("    dataFimDescontoAnuidade: ").append(toIndentedString(dataFimDescontoAnuidade)).append("\n");
     sb.append("    dataHoraFim: ").append(toIndentedString(dataHoraFim)).append("\n");
     sb.append("    dataHoraInicio: ").append(toIndentedString(dataHoraInicio)).append("\n");
     sb.append("    flagCartaoDesbloqueado: ").append(toIndentedString(flagCartaoDesbloqueado)).append("\n");

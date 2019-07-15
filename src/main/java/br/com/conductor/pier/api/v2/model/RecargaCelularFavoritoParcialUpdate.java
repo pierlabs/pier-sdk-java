@@ -19,6 +19,7 @@ public class RecargaCelularFavoritoParcialUpdate   {
   private String numeroCelular = null;
   private String nome = null;
   private Boolean ativo = null;
+  private String descricaoOperadora = null;
 
   
   /**
@@ -65,7 +66,7 @@ public class RecargaCelularFavoritoParcialUpdate   {
     return this;
   }
   
-  @ApiModelProperty(example = "true", value = "Nome do propriet\u00E1rio do celular")
+  @ApiModelProperty(example = "João da Silva", value = "Nome do propriet\u00E1rio do celular")
   @JsonProperty("nome")
   public String getNome() {
     return nome;
@@ -93,6 +94,24 @@ public class RecargaCelularFavoritoParcialUpdate   {
   }
 
   
+  /**
+   * Descri\u00E7\u00E3o da operadora
+   **/
+  public RecargaCelularFavoritoParcialUpdate descricaoOperadora(String descricaoOperadora) {
+    this.descricaoOperadora = descricaoOperadora;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "VIVO", value = "Descri\u00E7\u00E3o da operadora")
+  @JsonProperty("descricaoOperadora")
+  public String getDescricaoOperadora() {
+    return descricaoOperadora;
+  }
+  public void setDescricaoOperadora(String descricaoOperadora) {
+    this.descricaoOperadora = descricaoOperadora;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -106,12 +125,13 @@ public class RecargaCelularFavoritoParcialUpdate   {
     return Objects.equals(this.dddCelular, recargaCelularFavoritoParcialUpdate.dddCelular) &&
         Objects.equals(this.numeroCelular, recargaCelularFavoritoParcialUpdate.numeroCelular) &&
         Objects.equals(this.nome, recargaCelularFavoritoParcialUpdate.nome) &&
-        Objects.equals(this.ativo, recargaCelularFavoritoParcialUpdate.ativo);
+        Objects.equals(this.ativo, recargaCelularFavoritoParcialUpdate.ativo) &&
+        Objects.equals(this.descricaoOperadora, recargaCelularFavoritoParcialUpdate.descricaoOperadora);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(dddCelular, numeroCelular, nome, ativo);
+    return Objects.hash(dddCelular, numeroCelular, nome, ativo, descricaoOperadora);
   }
 
   @Override
@@ -123,6 +143,7 @@ public class RecargaCelularFavoritoParcialUpdate   {
     sb.append("    numeroCelular: ").append(toIndentedString(numeroCelular)).append("\n");
     sb.append("    nome: ").append(toIndentedString(nome)).append("\n");
     sb.append("    ativo: ").append(toIndentedString(ativo)).append("\n");
+    sb.append("    descricaoOperadora: ").append(toIndentedString(descricaoOperadora)).append("\n");
     sb.append("}");
     return sb.toString();
   }

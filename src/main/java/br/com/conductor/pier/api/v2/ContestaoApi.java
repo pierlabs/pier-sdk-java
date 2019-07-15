@@ -49,7 +49,7 @@ public class ContestaoApi {
    * @param flagSistema Flag do sistema
    * @return PageStatusContestacaoResponse
    */
-  public PageStatusContestacaoResponse listarStatusContestacao(List<String> sort, Integer page, Integer limit, Long idStatusContestacao, Long idStatusContestacaoOrigem, String descricao, Integer flagPermiteAlteracao, Integer flagSistema) throws ApiException {
+  public PageStatusContestacaoResponse listarStatusContestacoes(List<String> sort, Integer page, Integer limit, Long idStatusContestacao, Long idStatusContestacaoOrigem, String descricao, Integer flagPermiteAlteracao, Integer flagSistema) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -111,7 +111,7 @@ public class ContestaoApi {
    * @param descricao Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o da contesta\u00E7\u00E3o
    * @return PageTipoResolucaoContestacaoResponse
    */
-  public PageTipoResolucaoContestacaoResponse listarTipoResolucaoContestacao(List<String> sort, Integer page, Integer limit, Long idTipoResolucaoContestacao, String descricao) throws ApiException {
+  public PageTipoResolucaoContestacaoResponse listarTiposResolucoesContestacoes(List<String> sort, Integer page, Integer limit, Long idTipoResolucaoContestacao, String descricao) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

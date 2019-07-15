@@ -45,17 +45,17 @@ public class SMSApi {
    * @param idServicoSMSConta idServicoSMSConta
    * @return Object
    */
-  public Object desativarServicoSMSConta(Long id, Long idServicoSMSConta) throws ApiException {
+  public Object desativarServicoSMSParaConta(Long id, Long idServicoSMSConta) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling desativarServicoSMSConta");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling desativarServicoSMSParaConta");
      }
      
      // verify the required parameter 'idServicoSMSConta' is set
      if (idServicoSMSConta == null) {
-        throw new ApiException(400, "Missing the required parameter 'idServicoSMSConta' when calling desativarServicoSMSConta");
+        throw new ApiException(400, "Missing the required parameter 'idServicoSMSConta' when calling desativarServicoSMSParaConta");
      }
      
     // create path and map variables
@@ -104,12 +104,12 @@ public class SMSApi {
    * @param dataFim Data fim do per\u00EDodo da consulta
    * @return PageSMSEnvioResponse
    */
-  public PageSMSEnvioResponse listarSMS(Long idConta, List<String> sort, Integer page, Integer limit, String dataInicio, String dataFim) throws ApiException {
+  public PageSMSEnvioResponse listarSMS1(Long idConta, List<String> sort, Integer page, Integer limit, String dataInicio, String dataFim) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idConta' is set
      if (idConta == null) {
-        throw new ApiException(400, "Missing the required parameter 'idConta' when calling listarSMS");
+        throw new ApiException(400, "Missing the required parameter 'idConta' when calling listarSMS1");
      }
      
     // create path and map variables
@@ -168,12 +168,12 @@ public class SMSApi {
    * @param flagAtivo Se o par\u00E2metro for verdadeiro o recurso s\u00F3 retornar\u00E1 os servi\u00E7os ativos para a conta requisitada. Caso seja falso, retornar\u00E1 os servi\u00E7os inativos. Se o par\u00E2metro for nulo, retornar\u00E1 servi\u00E7os ativos e inativos
    * @return PageSMSContaResponse
    */
-  public PageSMSContaResponse listarServicosSmsConta(Long id, List<String> sort, Integer page, Integer limit, Long idSMSTipoServico, Boolean flagAtivo) throws ApiException {
+  public PageSMSContaResponse listarServicosSMSPorConta(Long id, List<String> sort, Integer page, Integer limit, Long idSMSTipoServico, Boolean flagAtivo) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling listarServicosSmsConta");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling listarServicosSMSPorConta");
      }
      
     // create path and map variables
@@ -277,17 +277,17 @@ public class SMSApi {
    * @param smsContaPersist smsContaPersist
    * @return Object
    */
-  public Object salvarServicoSMSConta(Long id, SMSContaPersist smsContaPersist) throws ApiException {
+  public Object salvarServicoSMSParaConta(Long id, SMSContaPersist smsContaPersist) throws ApiException {
     Object postBody = smsContaPersist;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling salvarServicoSMSConta");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling salvarServicoSMSParaConta");
      }
      
      // verify the required parameter 'smsContaPersist' is set
      if (smsContaPersist == null) {
-        throw new ApiException(400, "Missing the required parameter 'smsContaPersist' when calling salvarServicoSMSConta");
+        throw new ApiException(400, "Missing the required parameter 'smsContaPersist' when calling salvarServicoSMSParaConta");
      }
      
     // create path and map variables

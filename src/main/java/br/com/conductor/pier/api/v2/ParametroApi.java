@@ -43,12 +43,12 @@ public class ParametroApi {
    * @param codigo C\u00F3digo para pesquisa
    * @return ParametroEmissorResponse
    */
-  public ParametroEmissorResponse consultar(String codigo) throws ApiException {
+  public ParametroEmissorResponse consultarParametroEmissor(String codigo) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'codigo' is set
      if (codigo == null) {
-        throw new ApiException(400, "Missing the required parameter 'codigo' when calling consultar");
+        throw new ApiException(400, "Missing the required parameter 'codigo' when calling consultarParametroEmissor");
      }
      
     // create path and map variables
@@ -91,12 +91,12 @@ public class ParametroApi {
    * @param id id
    * @return ParametrosProdutoResponse
    */
-  public ParametrosProdutoResponse consultar_0(Long id) throws ApiException {
+  public ParametrosProdutoResponse consultarParametrosProdutos(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultar_0");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarParametrosProdutos");
      }
      
     // create path and map variables
@@ -146,7 +146,7 @@ public class ParametroApi {
    * @param descricao Descri\u00E7\u00E3o do par\u00E2metro de produto
    * @return PageParametroProdutoResponse
    */
-  public PageParametroProdutoResponse listarParametrosProduto(List<String> sort, Integer page, Integer limit, Long id, String codigo, String tipo, Long idProduto, String descricao) throws ApiException {
+  public PageParametroProdutoResponse listarParametrosProdutos(List<String> sort, Integer page, Integer limit, Long id, String codigo, String tipo, Long idProduto, String descricao) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

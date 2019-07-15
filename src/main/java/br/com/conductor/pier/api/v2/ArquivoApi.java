@@ -47,12 +47,12 @@ public class ArquivoApi {
    * @param id C\u00F3digo de Identifica\u00E7\u00E3o do arquivo
    * @return ArquivoDetalheResponse
    */
-  public ArquivoDetalheResponse consultar(Long id) throws ApiException {
+  public ArquivoDetalheResponse consultarArquivo(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultar");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarArquivo");
      }
      
     // create path and map variables
@@ -95,12 +95,12 @@ public class ArquivoApi {
    * @param integrarArquivoRequest integrarArquivoRequest
    * @return Object
    */
-  public Object integrar(IntegrarArquivoRequest integrarArquivoRequest) throws ApiException {
+  public Object integrarArquivos(IntegrarArquivoRequest integrarArquivoRequest) throws ApiException {
     Object postBody = integrarArquivoRequest;
     
      // verify the required parameter 'integrarArquivoRequest' is set
      if (integrarArquivoRequest == null) {
-        throw new ApiException(400, "Missing the required parameter 'integrarArquivoRequest' when calling integrar");
+        throw new ApiException(400, "Missing the required parameter 'integrarArquivoRequest' when calling integrarArquivos");
      }
      
     // create path and map variables
@@ -148,7 +148,7 @@ public class ArquivoApi {
    * @param extensao Extens\u00E3o do arquivo
    * @return PageArquivoResponse
    */
-  public PageArquivoResponse listar(List<String> sort, Integer page, Integer limit, String nome, Long idTipoArquivo, Long idStatusArquivo, String extensao) throws ApiException {
+  public PageArquivoResponse listarArquivos(List<String> sort, Integer page, Integer limit, String nome, Long idTipoArquivo, Long idStatusArquivo, String extensao) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -206,12 +206,12 @@ public class ArquivoApi {
    * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
    * @return PageArquivoAUDResponse
    */
-  public PageArquivoAUDResponse listarPorNumeroReceitaFederal(String numeroReceitaFederal, Integer page, Integer limit) throws ApiException {
+  public PageArquivoAUDResponse listarAuditorias(String numeroReceitaFederal, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'numeroReceitaFederal' is set
      if (numeroReceitaFederal == null) {
-        throw new ApiException(400, "Missing the required parameter 'numeroReceitaFederal' when calling listarPorNumeroReceitaFederal");
+        throw new ApiException(400, "Missing the required parameter 'numeroReceitaFederal' when calling listarAuditorias");
      }
      
     // create path and map variables
@@ -224,6 +224,60 @@ public class ArquivoApi {
 
     
     queryParams.addAll(apiClient.parameterToPairs("", "numeroReceitaFederal", numeroReceitaFederal));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PageArquivoAUDResponse> returnType = new GenericType<PageArquivoAUDResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Lista as auditorias do arquivo
+   * Este recurso permite listar as auditorias de um determinado arquivo a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do arquivo
+   * @param page P\u00E1gina solicitada (Default =0)
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
+   * @return PageArquivoAUDResponse
+   */
+  public PageArquivoAUDResponse listarAuditoriasDeArquivo(Long id, Integer page, Integer limit) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling listarAuditoriasDeArquivo");
+     }
+     
+    // create path and map variables
+    String path = "/api/arquivos/{id}/auditorias".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
     
     queryParams.addAll(apiClient.parameterToPairs("", "page", page));
     
@@ -366,71 +420,17 @@ public class ArquivoApi {
   }
   
   /**
-   * Lista as auditorias do arquivo
-   * Este recurso permite listar as auditorias de um determinado arquivo a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
-   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do arquivo
-   * @param page P\u00E1gina solicitada (Default =0)
-   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
-   * @return PageArquivoAUDResponse
-   */
-  public PageArquivoAUDResponse listar_0(Long id, Integer page, Integer limit) throws ApiException {
-    Object postBody = null;
-    
-     // verify the required parameter 'id' is set
-     if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling listar_0");
-     }
-     
-    // create path and map variables
-    String path = "/api/arquivos/{id}/auditorias".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<PageArquivoAUDResponse> returnType = new GenericType<PageArquivoAUDResponse>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
    * Permite armazenar arquivos no PIER Cloud
    * Este recurso permite o armazenamento de arquivos no PIER Cloud
    * @param arquivoPersist arquivoPersist
    * @return ArquivoDetalheResponse
    */
-  public ArquivoDetalheResponse salvar(ArquivoPersist arquivoPersist) throws ApiException {
+  public ArquivoDetalheResponse salvarArquivo(ArquivoPersist arquivoPersist) throws ApiException {
     Object postBody = arquivoPersist;
     
      // verify the required parameter 'arquivoPersist' is set
      if (arquivoPersist == null) {
-        throw new ApiException(400, "Missing the required parameter 'arquivoPersist' when calling salvar");
+        throw new ApiException(400, "Missing the required parameter 'arquivoPersist' when calling salvarArquivo");
      }
      
     // create path and map variables

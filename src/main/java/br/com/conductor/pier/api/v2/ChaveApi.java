@@ -45,7 +45,7 @@ public class ChaveApi {
    * @param descricao Tipo chave descricao
    * @return PageTipoChaveResponse
    */
-  public PageTipoChaveResponse listarTipoChave(List<String> sort, Integer page, Integer limit, Long id, String descricao) throws ApiException {
+  public PageTipoChaveResponse listarTiposChaves(List<String> sort, Integer page, Integer limit, Long id, String descricao) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

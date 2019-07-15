@@ -21,6 +21,7 @@ public class OperacaoBancariaResponse   {
   private String agenciaPagadora = null;
   private String bancoBeneficiario = null;
   private String bancoPagador = null;
+  private String celular = null;
   private String codigoIspb = null;
   private String contaBeneficiario = null;
   private String contaPagadora = null;
@@ -28,6 +29,7 @@ public class OperacaoBancariaResponse   {
   private String dataAgendamento = null;
   private String dataHoraOperacao = null;
   private String dataRealizacao = null;
+  private String ddd = null;
   private String dvContaBeneficiario = null;
   private String dvContaPagadora = null;
   private Long id = null;
@@ -47,6 +49,7 @@ public class OperacaoBancariaResponse   {
   private String nomePagador = null;
   private Long numeroBilheteUnico = null;
   private String observacao = null;
+  private String operadora = null;
 
 
   public enum StatusEnum {
@@ -148,6 +151,24 @@ public class OperacaoBancariaResponse   {
   }
   public void setBancoPagador(String bancoPagador) {
     this.bancoPagador = bancoPagador;
+  }
+
+  
+  /**
+   * N\u00FAmero da operadora
+   **/
+  public OperacaoBancariaResponse celular(String celular) {
+    this.celular = celular;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "N\u00FAmero da operadora")
+  @JsonProperty("celular")
+  public String getCelular() {
+    return celular;
+  }
+  public void setCelular(String celular) {
+    this.celular = celular;
   }
 
   
@@ -274,6 +295,24 @@ public class OperacaoBancariaResponse   {
   }
   public void setDataRealizacao(String dataRealizacao) {
     this.dataRealizacao = dataRealizacao;
+  }
+
+  
+  /**
+   * DDD do celular
+   **/
+  public OperacaoBancariaResponse ddd(String ddd) {
+    this.ddd = ddd;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "DDD do celular")
+  @JsonProperty("ddd")
+  public String getDdd() {
+    return ddd;
+  }
+  public void setDdd(String ddd) {
+    this.ddd = ddd;
   }
 
   
@@ -620,6 +659,24 @@ public class OperacaoBancariaResponse   {
 
   
   /**
+   * Descri\u00E7\u00E3o da operadora do celular
+   **/
+  public OperacaoBancariaResponse operadora(String operadora) {
+    this.operadora = operadora;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o da operadora do celular")
+  @JsonProperty("operadora")
+  public String getOperadora() {
+    return operadora;
+  }
+  public void setOperadora(String operadora) {
+    this.operadora = operadora;
+  }
+
+  
+  /**
    * Status da opera\u00E7\u00E3o
    **/
   public OperacaoBancariaResponse status(StatusEnum status) {
@@ -687,6 +744,7 @@ public class OperacaoBancariaResponse   {
         Objects.equals(this.agenciaPagadora, operacaoBancariaResponse.agenciaPagadora) &&
         Objects.equals(this.bancoBeneficiario, operacaoBancariaResponse.bancoBeneficiario) &&
         Objects.equals(this.bancoPagador, operacaoBancariaResponse.bancoPagador) &&
+        Objects.equals(this.celular, operacaoBancariaResponse.celular) &&
         Objects.equals(this.codigoIspb, operacaoBancariaResponse.codigoIspb) &&
         Objects.equals(this.contaBeneficiario, operacaoBancariaResponse.contaBeneficiario) &&
         Objects.equals(this.contaPagadora, operacaoBancariaResponse.contaPagadora) &&
@@ -694,6 +752,7 @@ public class OperacaoBancariaResponse   {
         Objects.equals(this.dataAgendamento, operacaoBancariaResponse.dataAgendamento) &&
         Objects.equals(this.dataHoraOperacao, operacaoBancariaResponse.dataHoraOperacao) &&
         Objects.equals(this.dataRealizacao, operacaoBancariaResponse.dataRealizacao) &&
+        Objects.equals(this.ddd, operacaoBancariaResponse.ddd) &&
         Objects.equals(this.dvContaBeneficiario, operacaoBancariaResponse.dvContaBeneficiario) &&
         Objects.equals(this.dvContaPagadora, operacaoBancariaResponse.dvContaPagadora) &&
         Objects.equals(this.id, operacaoBancariaResponse.id) &&
@@ -713,6 +772,7 @@ public class OperacaoBancariaResponse   {
         Objects.equals(this.nomePagador, operacaoBancariaResponse.nomePagador) &&
         Objects.equals(this.numeroBilheteUnico, operacaoBancariaResponse.numeroBilheteUnico) &&
         Objects.equals(this.observacao, operacaoBancariaResponse.observacao) &&
+        Objects.equals(this.operadora, operacaoBancariaResponse.operadora) &&
         Objects.equals(this.status, operacaoBancariaResponse.status) &&
         Objects.equals(this.valorOperacao, operacaoBancariaResponse.valorOperacao) &&
         Objects.equals(this.valorTarifa, operacaoBancariaResponse.valorTarifa);
@@ -720,7 +780,7 @@ public class OperacaoBancariaResponse   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(agenciaBeneficiario, agenciaPagadora, bancoBeneficiario, bancoPagador, codigoIspb, contaBeneficiario, contaPagadora, cpfCnpjBeneficiario, dataAgendamento, dataHoraOperacao, dataRealizacao, dvContaBeneficiario, dvContaPagadora, id, idCartaoDestino, idCartaoOrigem, idCelularRecarga, idContaDestino, idContaOrigem, idDadosBancariosConta, idDocumento, idEventoAjusteDestino, idEventoAjusteOrigem, idExterno, idOperacaoBancariaOriginal, idTipoOperacaoBancaria, nomeBeneficiario, nomePagador, numeroBilheteUnico, observacao, status, valorOperacao, valorTarifa);
+    return Objects.hash(agenciaBeneficiario, agenciaPagadora, bancoBeneficiario, bancoPagador, celular, codigoIspb, contaBeneficiario, contaPagadora, cpfCnpjBeneficiario, dataAgendamento, dataHoraOperacao, dataRealizacao, ddd, dvContaBeneficiario, dvContaPagadora, id, idCartaoDestino, idCartaoOrigem, idCelularRecarga, idContaDestino, idContaOrigem, idDadosBancariosConta, idDocumento, idEventoAjusteDestino, idEventoAjusteOrigem, idExterno, idOperacaoBancariaOriginal, idTipoOperacaoBancaria, nomeBeneficiario, nomePagador, numeroBilheteUnico, observacao, operadora, status, valorOperacao, valorTarifa);
   }
 
   @Override
@@ -732,6 +792,7 @@ public class OperacaoBancariaResponse   {
     sb.append("    agenciaPagadora: ").append(toIndentedString(agenciaPagadora)).append("\n");
     sb.append("    bancoBeneficiario: ").append(toIndentedString(bancoBeneficiario)).append("\n");
     sb.append("    bancoPagador: ").append(toIndentedString(bancoPagador)).append("\n");
+    sb.append("    celular: ").append(toIndentedString(celular)).append("\n");
     sb.append("    codigoIspb: ").append(toIndentedString(codigoIspb)).append("\n");
     sb.append("    contaBeneficiario: ").append(toIndentedString(contaBeneficiario)).append("\n");
     sb.append("    contaPagadora: ").append(toIndentedString(contaPagadora)).append("\n");
@@ -739,6 +800,7 @@ public class OperacaoBancariaResponse   {
     sb.append("    dataAgendamento: ").append(toIndentedString(dataAgendamento)).append("\n");
     sb.append("    dataHoraOperacao: ").append(toIndentedString(dataHoraOperacao)).append("\n");
     sb.append("    dataRealizacao: ").append(toIndentedString(dataRealizacao)).append("\n");
+    sb.append("    ddd: ").append(toIndentedString(ddd)).append("\n");
     sb.append("    dvContaBeneficiario: ").append(toIndentedString(dvContaBeneficiario)).append("\n");
     sb.append("    dvContaPagadora: ").append(toIndentedString(dvContaPagadora)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
@@ -758,6 +820,7 @@ public class OperacaoBancariaResponse   {
     sb.append("    nomePagador: ").append(toIndentedString(nomePagador)).append("\n");
     sb.append("    numeroBilheteUnico: ").append(toIndentedString(numeroBilheteUnico)).append("\n");
     sb.append("    observacao: ").append(toIndentedString(observacao)).append("\n");
+    sb.append("    operadora: ").append(toIndentedString(operadora)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    valorOperacao: ").append(toIndentedString(valorOperacao)).append("\n");
     sb.append("    valorTarifa: ").append(toIndentedString(valorTarifa)).append("\n");

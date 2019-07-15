@@ -48,22 +48,22 @@ public class OperacoesBancariasApi {
    * @param parcialUpdate parcialUpdate
    * @return OperacaoBancariaResponse
    */
-  public OperacaoBancariaResponse atualizarParcialOperacoesBancarias(Long id, Long idOperacaoBancaria, OperacaoBancariaParcialUpdate parcialUpdate) throws ApiException {
+  public OperacaoBancariaResponse atualizarParcialmenteOperacaoBancaria(Long id, Long idOperacaoBancaria, OperacaoBancariaParcialUpdate parcialUpdate) throws ApiException {
     Object postBody = parcialUpdate;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling atualizarParcialOperacoesBancarias");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling atualizarParcialmenteOperacaoBancaria");
      }
      
      // verify the required parameter 'idOperacaoBancaria' is set
      if (idOperacaoBancaria == null) {
-        throw new ApiException(400, "Missing the required parameter 'idOperacaoBancaria' when calling atualizarParcialOperacoesBancarias");
+        throw new ApiException(400, "Missing the required parameter 'idOperacaoBancaria' when calling atualizarParcialmenteOperacaoBancaria");
      }
      
      // verify the required parameter 'parcialUpdate' is set
      if (parcialUpdate == null) {
-        throw new ApiException(400, "Missing the required parameter 'parcialUpdate' when calling atualizarParcialOperacoesBancarias");
+        throw new ApiException(400, "Missing the required parameter 'parcialUpdate' when calling atualizarParcialmenteOperacaoBancaria");
      }
      
     // create path and map variables
@@ -115,12 +115,12 @@ public class OperacoesBancariasApi {
    * @param statusOperacao Status da opera\u00E7\u00E3o banc\u00E1ria
    * @return PageOperacaoBancariaResponse
    */
-  public PageOperacaoBancariaResponse consultar(Long id, List<String> sort, Integer page, Integer limit, Long idOperacao, String dataGeracaoInicial, String dataGeracaoFinal, Long idTipoOperacaoBancaria, String statusOperacao) throws ApiException {
+  public PageOperacaoBancariaResponse consultarOperacaoBancaria(Long id, List<String> sort, Integer page, Integer limit, Long idOperacao, String dataGeracaoInicial, String dataGeracaoFinal, Long idTipoOperacaoBancaria, String statusOperacao) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultar");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarOperacaoBancaria");
      }
      
     // create path and map variables
@@ -179,12 +179,12 @@ public class OperacoesBancariasApi {
    * @param id Identificador do tipo de opera\u00E7\u00E3o banc\u00E1ria
    * @return TipoOperacaoBancariaResponse
    */
-  public TipoOperacaoBancariaResponse consultar_0(Long id) throws ApiException {
+  public TipoOperacaoBancariaResponse consultarTipoOperacaoBancaria(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultar_0");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarTipoOperacaoBancaria");
      }
      
     // create path and map variables
@@ -231,7 +231,7 @@ public class OperacoesBancariasApi {
    * @param idTipoTemplate Identificador do template
    * @return PageTipoOperacaoBancariaResponse
    */
-  public PageTipoOperacaoBancariaResponse listarTipoOperacaoBancaria(List<String> sort, Integer page, Integer limit, String descricao, Long idTipoTemplate) throws ApiException {
+  public PageTipoOperacaoBancariaResponse listarTiposOperacoesBancarias(List<String> sort, Integer page, Integer limit, String descricao, Long idTipoTemplate) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -284,17 +284,17 @@ public class OperacoesBancariasApi {
    * @param persist persist
    * @return OperacaoBancariaResponse
    */
-  public OperacaoBancariaResponse salvarOperacoesBancarias(Long id, OperacaoBancariaPersist persist) throws ApiException {
+  public OperacaoBancariaResponse salvarOperacaoBancaria(Long id, OperacaoBancariaPersist persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling salvarOperacoesBancarias");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling salvarOperacaoBancaria");
      }
      
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarOperacoesBancarias");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarOperacaoBancaria");
      }
      
     // create path and map variables

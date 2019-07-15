@@ -40,6 +40,9 @@ public class PessoaDetalheResponse   {
   private String nomePai = null;
   private Integer chequeEspecial = null;
   private String numeroCnh = null;
+  private Boolean pessoaPoliticamenteExposta = null;
+  private BigDecimal patrimonioTotal = null;
+  private String nomeConjuge = null;
 
   
   /**
@@ -474,6 +477,60 @@ public class PessoaDetalheResponse   {
   }
 
   
+  /**
+   * Flag para identificar se a pessoa \u00E9 politicamente exposta
+   **/
+  public PessoaDetalheResponse pessoaPoliticamenteExposta(Boolean pessoaPoliticamenteExposta) {
+    this.pessoaPoliticamenteExposta = pessoaPoliticamenteExposta;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "Flag para identificar se a pessoa \u00E9 politicamente exposta")
+  @JsonProperty("pessoaPoliticamenteExposta")
+  public Boolean getPessoaPoliticamenteExposta() {
+    return pessoaPoliticamenteExposta;
+  }
+  public void setPessoaPoliticamenteExposta(Boolean pessoaPoliticamenteExposta) {
+    this.pessoaPoliticamenteExposta = pessoaPoliticamenteExposta;
+  }
+
+  
+  /**
+   * Patrim\u00F4nio total da pessoa
+   **/
+  public PessoaDetalheResponse patrimonioTotal(BigDecimal patrimonioTotal) {
+    this.patrimonioTotal = patrimonioTotal;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Patrim\u00F4nio total da pessoa")
+  @JsonProperty("patrimonioTotal")
+  public BigDecimal getPatrimonioTotal() {
+    return patrimonioTotal;
+  }
+  public void setPatrimonioTotal(BigDecimal patrimonioTotal) {
+    this.patrimonioTotal = patrimonioTotal;
+  }
+
+  
+  /**
+   * Nome do c\u00F4njuge da pessoa
+   **/
+  public PessoaDetalheResponse nomeConjuge(String nomeConjuge) {
+    this.nomeConjuge = nomeConjuge;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Nome do c\u00F4njuge da pessoa")
+  @JsonProperty("nomeConjuge")
+  public String getNomeConjuge() {
+    return nomeConjuge;
+  }
+  public void setNomeConjuge(String nomeConjuge) {
+    this.nomeConjuge = nomeConjuge;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -507,12 +564,15 @@ public class PessoaDetalheResponse   {
         Objects.equals(this.numeroDependentes, pessoaDetalheResponse.numeroDependentes) &&
         Objects.equals(this.nomePai, pessoaDetalheResponse.nomePai) &&
         Objects.equals(this.chequeEspecial, pessoaDetalheResponse.chequeEspecial) &&
-        Objects.equals(this.numeroCnh, pessoaDetalheResponse.numeroCnh);
+        Objects.equals(this.numeroCnh, pessoaDetalheResponse.numeroCnh) &&
+        Objects.equals(this.pessoaPoliticamenteExposta, pessoaDetalheResponse.pessoaPoliticamenteExposta) &&
+        Objects.equals(this.patrimonioTotal, pessoaDetalheResponse.patrimonioTotal) &&
+        Objects.equals(this.nomeConjuge, pessoaDetalheResponse.nomeConjuge);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa, nomeReferencia1, enderecoReferencia1, nomeReferencia2, enderecoReferencia2, salario, impedidoFinanciamento, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial, numeroCnh);
+    return Objects.hash(idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa, nomeReferencia1, enderecoReferencia1, nomeReferencia2, enderecoReferencia2, salario, impedidoFinanciamento, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial, numeroCnh, pessoaPoliticamenteExposta, patrimonioTotal, nomeConjuge);
   }
 
   @Override
@@ -544,6 +604,9 @@ public class PessoaDetalheResponse   {
     sb.append("    nomePai: ").append(toIndentedString(nomePai)).append("\n");
     sb.append("    chequeEspecial: ").append(toIndentedString(chequeEspecial)).append("\n");
     sb.append("    numeroCnh: ").append(toIndentedString(numeroCnh)).append("\n");
+    sb.append("    pessoaPoliticamenteExposta: ").append(toIndentedString(pessoaPoliticamenteExposta)).append("\n");
+    sb.append("    patrimonioTotal: ").append(toIndentedString(patrimonioTotal)).append("\n");
+    sb.append("    nomeConjuge: ").append(toIndentedString(nomeConjuge)).append("\n");
     sb.append("}");
     return sb.toString();
   }

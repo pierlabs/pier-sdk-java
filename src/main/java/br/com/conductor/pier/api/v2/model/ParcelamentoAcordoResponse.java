@@ -23,6 +23,7 @@ public class ParcelamentoAcordoResponse   {
   private BigDecimal valorEntrada = null;
   private BigDecimal valorParcela = null;
   private BigDecimal valorPrimeiraParcela = null;
+  private Integer numeroParcelas = null;
 
   
   /**
@@ -151,6 +152,24 @@ public class ParcelamentoAcordoResponse   {
   }
 
   
+  /**
+   * N\u00FAmero de parcelas do acordo
+   **/
+  public ParcelamentoAcordoResponse numeroParcelas(Integer numeroParcelas) {
+    this.numeroParcelas = numeroParcelas;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "N\u00FAmero de parcelas do acordo")
+  @JsonProperty("numeroParcelas")
+  public Integer getNumeroParcelas() {
+    return numeroParcelas;
+  }
+  public void setNumeroParcelas(Integer numeroParcelas) {
+    this.numeroParcelas = numeroParcelas;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -167,12 +186,13 @@ public class ParcelamentoAcordoResponse   {
         Objects.equals(this.valorLiquido, parcelamentoAcordoResponse.valorLiquido) &&
         Objects.equals(this.valorEntrada, parcelamentoAcordoResponse.valorEntrada) &&
         Objects.equals(this.valorParcela, parcelamentoAcordoResponse.valorParcela) &&
-        Objects.equals(this.valorPrimeiraParcela, parcelamentoAcordoResponse.valorPrimeiraParcela);
+        Objects.equals(this.valorPrimeiraParcela, parcelamentoAcordoResponse.valorPrimeiraParcela) &&
+        Objects.equals(this.numeroParcelas, parcelamentoAcordoResponse.numeroParcelas);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(percentualEntrada, percentualDesconto, valorDesconto, valorLiquido, valorEntrada, valorParcela, valorPrimeiraParcela);
+    return Objects.hash(percentualEntrada, percentualDesconto, valorDesconto, valorLiquido, valorEntrada, valorParcela, valorPrimeiraParcela, numeroParcelas);
   }
 
   @Override
@@ -187,6 +207,7 @@ public class ParcelamentoAcordoResponse   {
     sb.append("    valorEntrada: ").append(toIndentedString(valorEntrada)).append("\n");
     sb.append("    valorParcela: ").append(toIndentedString(valorParcela)).append("\n");
     sb.append("    valorPrimeiraParcela: ").append(toIndentedString(valorPrimeiraParcela)).append("\n");
+    sb.append("    numeroParcelas: ").append(toIndentedString(numeroParcelas)).append("\n");
     sb.append("}");
     return sb.toString();
   }

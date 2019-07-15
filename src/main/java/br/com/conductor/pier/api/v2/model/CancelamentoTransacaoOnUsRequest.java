@@ -55,7 +55,7 @@ public class CancelamentoTransacaoOnUsRequest   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou")
+  @ApiModelProperty(example = "123456", required = true, value = "N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou")
   @JsonProperty("nsuOrigem")
   public String getNsuOrigem() {
     return nsuOrigem;
@@ -91,7 +91,7 @@ public class CancelamentoTransacaoOnUsRequest   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o")
+  @ApiModelProperty(example = "003000", required = true, value = "C\u00F3digo de Processamento que identifica o Tipo da Transa\u00E7\u00E3o")
   @JsonProperty("codigoProcessamento")
   public String getCodigoProcessamento() {
     return codigoProcessamento;
@@ -127,7 +127,7 @@ public class CancelamentoTransacaoOnUsRequest   {
     return this;
   }
   
-  @ApiModelProperty(example = "10.25", required = true, value = "Valor da transa\u00E7\u00E3o com duas casas decimais para os centavos")
+  @ApiModelProperty(example = "99.9", required = true, value = "Valor da transa\u00E7\u00E3o com duas casas decimais para os centavos")
   @JsonProperty("valorTransacao")
   public BigDecimal getValorTransacao() {
     return valorTransacao;
@@ -145,7 +145,7 @@ public class CancelamentoTransacaoOnUsRequest   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "N\u00FAmero Real do Cart\u00E3o")
+  @ApiModelProperty(example = "4916077506643876", required = true, value = "N\u00FAmero Real do Cart\u00E3o")
   @JsonProperty("numeroRealCartao")
   public String getNumeroRealCartao() {
     return numeroRealCartao;
@@ -163,7 +163,7 @@ public class CancelamentoTransacaoOnUsRequest   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Data de Validade do Cart\u00E3o. Ex: AAMM")
+  @ApiModelProperty(example = "2504", required = true, value = "Data de Validade do Cart\u00E3o. Ex: AAMM")
   @JsonProperty("dataValidadeCartao")
   public String getDataValidadeCartao() {
     return dataValidadeCartao;
@@ -181,7 +181,7 @@ public class CancelamentoTransacaoOnUsRequest   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "N\u00FAmero do Estabelecimento (N\u00FAmero+DV)")
+  @ApiModelProperty(example = "262", required = true, value = "N\u00FAmero do Estabelecimento (N\u00FAmero+DV)")
   @JsonProperty("numeroEstabelecimento")
   public Long getNumeroEstabelecimento() {
     return numeroEstabelecimento;
@@ -199,7 +199,7 @@ public class CancelamentoTransacaoOnUsRequest   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Apresenta a data e hora local da consulta yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00")
+  @ApiModelProperty(example = "2019-06-16T16:30:10.000Z", required = true, value = "Apresenta a data e hora local da consulta yyyy-MM-dd'T'HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00")
   @JsonProperty("dataHoraTerminal")
   public String getDataHoraTerminal() {
     return dataHoraTerminal;
@@ -217,7 +217,7 @@ public class CancelamentoTransacaoOnUsRequest   {
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Apresenta a identifica\u00E7\u00E3o do terminal requisitante")
+  @ApiModelProperty(example = "00000201", required = true, value = "Apresenta a identifica\u00E7\u00E3o do terminal requisitante")
   @JsonProperty("terminalRequisitante")
   public String getTerminalRequisitante() {
     return terminalRequisitante;

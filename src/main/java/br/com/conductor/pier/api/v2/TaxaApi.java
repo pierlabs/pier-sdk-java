@@ -47,7 +47,7 @@ public class TaxaApi {
    * @param vencimento Vencimento da Taxa
    * @return PageTaxasRefinanciamentoResponse
    */
-  public PageTaxasRefinanciamentoResponse listar(List<String> sort, Integer page, Integer limit, Long id, Long idProduto, String dataEntrada, String vencimento) throws ApiException {
+  public PageTaxasRefinanciamentoResponse listarTaxasRefinanciamento(List<String> sort, Integer page, Integer limit, Long id, Long idProduto, String dataEntrada, String vencimento) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

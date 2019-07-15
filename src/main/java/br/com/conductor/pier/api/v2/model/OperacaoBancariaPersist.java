@@ -75,6 +75,9 @@ public class OperacaoBancariaPersist   {
   private String agenciaBeneficiario = null;
   private String contaBeneficiario = null;
   private String dvContaBeneficiario = null;
+  private String operadora = null;
+  private String celular = null;
+  private String ddd = null;
 
   
   /**
@@ -635,6 +638,60 @@ public class OperacaoBancariaPersist   {
   }
 
   
+  /**
+   * Descri\u00E7\u00E3o da operadora do celular
+   **/
+  public OperacaoBancariaPersist operadora(String operadora) {
+    this.operadora = operadora;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o da operadora do celular")
+  @JsonProperty("operadora")
+  public String getOperadora() {
+    return operadora;
+  }
+  public void setOperadora(String operadora) {
+    this.operadora = operadora;
+  }
+
+  
+  /**
+   * N\u00FAmero da operadora
+   **/
+  public OperacaoBancariaPersist celular(String celular) {
+    this.celular = celular;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "N\u00FAmero da operadora")
+  @JsonProperty("celular")
+  public String getCelular() {
+    return celular;
+  }
+  public void setCelular(String celular) {
+    this.celular = celular;
+  }
+
+  
+  /**
+   * DDD do celular
+   **/
+  public OperacaoBancariaPersist ddd(String ddd) {
+    this.ddd = ddd;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "DDD do celular")
+  @JsonProperty("ddd")
+  public String getDdd() {
+    return ddd;
+  }
+  public void setDdd(String ddd) {
+    this.ddd = ddd;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -675,12 +732,15 @@ public class OperacaoBancariaPersist   {
         Objects.equals(this.bancoBeneficiario, operacaoBancariaPersist.bancoBeneficiario) &&
         Objects.equals(this.agenciaBeneficiario, operacaoBancariaPersist.agenciaBeneficiario) &&
         Objects.equals(this.contaBeneficiario, operacaoBancariaPersist.contaBeneficiario) &&
-        Objects.equals(this.dvContaBeneficiario, operacaoBancariaPersist.dvContaBeneficiario);
+        Objects.equals(this.dvContaBeneficiario, operacaoBancariaPersist.dvContaBeneficiario) &&
+        Objects.equals(this.operadora, operacaoBancariaPersist.operadora) &&
+        Objects.equals(this.celular, operacaoBancariaPersist.celular) &&
+        Objects.equals(this.ddd, operacaoBancariaPersist.ddd);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idTipoOperacaoBancaria, idContaDestino, idCartaoOrigem, idCartaoDestino, bancoPagador, agenciaPagadora, contaPagadora, dvContaPagadora, nomePagador, cpfCnpjBeneficiario, idEventoAjusteOrigem, idEventoAjusteDestino, idExterno, codigoIspb, valorOperacao, valorTarifa, dataHoraOperacao, dataAgendamento, dataRealizacao, status, idDadosBancariosConta, idOperacaoBancariaOriginal, observacao, numeroBilheteUnico, idDocumento, idCelularRecarga, nomeBeneficiario, bancoBeneficiario, agenciaBeneficiario, contaBeneficiario, dvContaBeneficiario);
+    return Objects.hash(idTipoOperacaoBancaria, idContaDestino, idCartaoOrigem, idCartaoDestino, bancoPagador, agenciaPagadora, contaPagadora, dvContaPagadora, nomePagador, cpfCnpjBeneficiario, idEventoAjusteOrigem, idEventoAjusteDestino, idExterno, codigoIspb, valorOperacao, valorTarifa, dataHoraOperacao, dataAgendamento, dataRealizacao, status, idDadosBancariosConta, idOperacaoBancariaOriginal, observacao, numeroBilheteUnico, idDocumento, idCelularRecarga, nomeBeneficiario, bancoBeneficiario, agenciaBeneficiario, contaBeneficiario, dvContaBeneficiario, operadora, celular, ddd);
   }
 
   @Override
@@ -719,6 +779,9 @@ public class OperacaoBancariaPersist   {
     sb.append("    agenciaBeneficiario: ").append(toIndentedString(agenciaBeneficiario)).append("\n");
     sb.append("    contaBeneficiario: ").append(toIndentedString(contaBeneficiario)).append("\n");
     sb.append("    dvContaBeneficiario: ").append(toIndentedString(dvContaBeneficiario)).append("\n");
+    sb.append("    operadora: ").append(toIndentedString(operadora)).append("\n");
+    sb.append("    celular: ").append(toIndentedString(celular)).append("\n");
+    sb.append("    ddd: ").append(toIndentedString(ddd)).append("\n");
     sb.append("}");
     return sb.toString();
   }

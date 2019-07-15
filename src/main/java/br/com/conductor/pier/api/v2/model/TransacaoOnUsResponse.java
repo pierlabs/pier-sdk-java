@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v2.model.MapOfstringAndstring;
+import br.com.conductor.pier.api.v2.model.MapOfstringAndobject;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -20,7 +20,7 @@ public class TransacaoOnUsResponse   {
   
   private String nsuOrigem = null;
   private String nsuAutorizacao = null;
-  private List<MapOfstringAndstring> planoDeParcelamento = new ArrayList<MapOfstringAndstring>();
+  private List<MapOfstringAndobject> planoDeParcelamento = new ArrayList<MapOfstringAndobject>();
   private String codigoAutorizacao = null;
   private String numeroMascaradoCartao = null;
   private String nomePortadorCartao = null;
@@ -66,17 +66,17 @@ public class TransacaoOnUsResponse   {
   /**
    * Descri\u00E7\u00E3o do Plano de Parcelamento atribu\u00EDdo a Transa\u00E7\u00E3o
    **/
-  public TransacaoOnUsResponse planoDeParcelamento(List<MapOfstringAndstring> planoDeParcelamento) {
+  public TransacaoOnUsResponse planoDeParcelamento(List<MapOfstringAndobject> planoDeParcelamento) {
     this.planoDeParcelamento = planoDeParcelamento;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do Plano de Parcelamento atribu\u00EDdo a Transa\u00E7\u00E3o")
   @JsonProperty("planoDeParcelamento")
-  public List<MapOfstringAndstring> getPlanoDeParcelamento() {
+  public List<MapOfstringAndobject> getPlanoDeParcelamento() {
     return planoDeParcelamento;
   }
-  public void setPlanoDeParcelamento(List<MapOfstringAndstring> planoDeParcelamento) {
+  public void setPlanoDeParcelamento(List<MapOfstringAndobject> planoDeParcelamento) {
     this.planoDeParcelamento = planoDeParcelamento;
   }
 

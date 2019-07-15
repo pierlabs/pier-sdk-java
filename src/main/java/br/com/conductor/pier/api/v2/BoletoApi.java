@@ -47,12 +47,12 @@ public class BoletoApi {
    * @param zeraValorCodigoBarras Indica se deve zerar o campo de valor do c\u00F3digo de barras
    * @return BoletoResponse
    */
-  public BoletoResponse consultar(Long id, Boolean zeraValorCodigoBarras) throws ApiException {
+  public BoletoResponse consultarBoleto(Long id, Boolean zeraValorCodigoBarras) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultar");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarBoleto");
      }
      
     // create path and map variables
@@ -98,17 +98,17 @@ public class BoletoApi {
    * @param request request
    * @return Object
    */
-  public Object enviarBoletoEmail(Long id, BoletoEmailRequest request) throws ApiException {
+  public Object enviarBoletoPorEmail(Long id, BoletoEmailRequest request) throws ApiException {
     Object postBody = request;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling enviarBoletoEmail");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling enviarBoletoPorEmail");
      }
      
      // verify the required parameter 'request' is set
      if (request == null) {
-        throw new ApiException(400, "Missing the required parameter 'request' when calling enviarBoletoEmail");
+        throw new ApiException(400, "Missing the required parameter 'request' when calling enviarBoletoPorEmail");
      }
      
     // create path and map variables
@@ -207,7 +207,7 @@ public class BoletoApi {
    * @param statusParcela Status da parcela
    * @return PageBoletoListarResponse
    */
-  public PageBoletoListarResponse listar(List<String> sort, Integer page, Integer limit, Long idConta, String dataVencimento, BigDecimal valorBoleto, Long idTipoBoleto, Long nossoNumero, Integer idEventoPagamento, Integer statusParcela) throws ApiException {
+  public PageBoletoListarResponse listarBoletos(List<String> sort, Integer page, Integer limit, Long idConta, String dataVencimento, BigDecimal valorBoleto, Long idTipoBoleto, Long nossoNumero, Integer idEventoPagamento, Integer statusParcela) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -272,12 +272,12 @@ public class BoletoApi {
    * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
    * @return PageStatusBoletoResponse
    */
-  public PageStatusBoletoResponse listarHistoricoStatusBoleto(Long id, List<String> sort, Integer page, Integer limit) throws ApiException {
+  public PageStatusBoletoResponse listarHistoricoStatusBoletos(Long id, List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling listarHistoricoStatusBoleto");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling listarHistoricoStatusBoletos");
      }
      
     // create path and map variables

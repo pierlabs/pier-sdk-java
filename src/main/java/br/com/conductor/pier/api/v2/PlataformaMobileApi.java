@@ -45,17 +45,17 @@ public class PlataformaMobileApi {
    * @param update update
    * @return PlataformaMobileResponse
    */
-  public PlataformaMobileResponse atualizar(Long id, PlataformaMobileUpdate update) throws ApiException {
+  public PlataformaMobileResponse atualizarPlataformaMobile(Long id, PlataformaMobileUpdate update) throws ApiException {
     Object postBody = update;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling atualizar");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling atualizarPlataformaMobile");
      }
      
      // verify the required parameter 'update' is set
      if (update == null) {
-        throw new ApiException(400, "Missing the required parameter 'update' when calling atualizar");
+        throw new ApiException(400, "Missing the required parameter 'update' when calling atualizarPlataformaMobile");
      }
      
     // create path and map variables
@@ -101,7 +101,7 @@ public class PlataformaMobileApi {
    * @param nome Nome da Plataforma Mobile
    * @return PagePlataformaMobileResponse
    */
-  public PagePlataformaMobileResponse listar(List<String> sort, Integer page, Integer limit, String nome) throws ApiException {
+  public PagePlataformaMobileResponse listarPlataformasMobile(List<String> sort, Integer page, Integer limit, String nome) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -151,12 +151,12 @@ public class PlataformaMobileApi {
    * @param persist persist
    * @return PlataformaMobileResponse
    */
-  public PlataformaMobileResponse salvar(PlataformaMobilePersist persist) throws ApiException {
+  public PlataformaMobileResponse salvarPlataformaMobile(PlataformaMobilePersist persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvar");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarPlataformaMobile");
      }
      
     // create path and map variables

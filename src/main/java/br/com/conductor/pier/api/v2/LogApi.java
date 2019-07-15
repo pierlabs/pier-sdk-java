@@ -99,12 +99,12 @@ public class LogApi {
    * @param logAcessoUsuarioPersist logAcessoUsuarioPersist
    * @return LogAcessoUsuarioResponse
    */
-  public LogAcessoUsuarioResponse salvar(LogAcessoUsuarioPersist logAcessoUsuarioPersist) throws ApiException {
+  public LogAcessoUsuarioResponse salvarLogAcessoUsuario(LogAcessoUsuarioPersist logAcessoUsuarioPersist) throws ApiException {
     Object postBody = logAcessoUsuarioPersist;
     
      // verify the required parameter 'logAcessoUsuarioPersist' is set
      if (logAcessoUsuarioPersist == null) {
-        throw new ApiException(400, "Missing the required parameter 'logAcessoUsuarioPersist' when calling salvar");
+        throw new ApiException(400, "Missing the required parameter 'logAcessoUsuarioPersist' when calling salvarLogAcessoUsuario");
      }
      
     // create path and map variables

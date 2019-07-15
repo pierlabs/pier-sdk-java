@@ -57,12 +57,12 @@ public class LimiteDisponibilidadeApi {
    * @param limiteMaximo Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es
    * @return LimiteDisponibilidadeResponse
    */
-  public LimiteDisponibilidadeResponse alterar(Long idConta, BigDecimal limiteGlobal, BigDecimal limiteCompra, BigDecimal limiteParcelado, BigDecimal limiteParcelas, BigDecimal limiteSaqueGlobal, BigDecimal limiteSaquePeriodo, BigDecimal limiteConsignado, BigDecimal limiteInternacionalCompra, BigDecimal limiteInternacionalParcelado, BigDecimal limiteInternacionalParcelas, BigDecimal limiteInternacionalSaqueGlobal, BigDecimal limiteInternacionalSaquePeriodo, BigDecimal limiteMaximo) throws ApiException {
+  public LimiteDisponibilidadeResponse alterarLimitesDisponiveis(Long idConta, BigDecimal limiteGlobal, BigDecimal limiteCompra, BigDecimal limiteParcelado, BigDecimal limiteParcelas, BigDecimal limiteSaqueGlobal, BigDecimal limiteSaquePeriodo, BigDecimal limiteConsignado, BigDecimal limiteInternacionalCompra, BigDecimal limiteInternacionalParcelado, BigDecimal limiteInternacionalParcelas, BigDecimal limiteInternacionalSaqueGlobal, BigDecimal limiteInternacionalSaquePeriodo, BigDecimal limiteMaximo) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idConta' is set
      if (idConta == null) {
-        throw new ApiException(400, "Missing the required parameter 'idConta' when calling alterar");
+        throw new ApiException(400, "Missing the required parameter 'idConta' when calling alterarLimitesDisponiveis");
      }
      
     // create path and map variables
@@ -132,12 +132,12 @@ public class LimiteDisponibilidadeApi {
    * @param idConta Id Conta
    * @return LimiteDisponibilidadeResponse
    */
-  public LimiteDisponibilidadeResponse consultar(Long idConta) throws ApiException {
+  public LimiteDisponibilidadeResponse consultarLimitesDisponiveis1(Long idConta) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idConta' is set
      if (idConta == null) {
-        throw new ApiException(400, "Missing the required parameter 'idConta' when calling consultar");
+        throw new ApiException(400, "Missing the required parameter 'idConta' when calling consultarLimitesDisponiveis1");
      }
      
     // create path and map variables
@@ -186,12 +186,12 @@ public class LimiteDisponibilidadeApi {
    * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
    * @return PagePIEROfLimiteDisponibilidadeLogResponse
    */
-  public PagePIEROfLimiteDisponibilidadeLogResponse listarHistorico(Long id, String dataAlteracaoInicio, String dataAlteracaoFim, List<String> sort, Integer page, Integer limit) throws ApiException {
+  public PagePIEROfLimiteDisponibilidadeLogResponse listarHistoricoAlteracoesLimitesDisponiveis(Long id, String dataAlteracaoInicio, String dataAlteracaoFim, List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling listarHistorico");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling listarHistoricoAlteracoesLimitesDisponiveis");
      }
      
     // create path and map variables

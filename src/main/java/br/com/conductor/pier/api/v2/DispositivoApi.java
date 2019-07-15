@@ -43,12 +43,12 @@ public class DispositivoApi {
    * @param id C\u00F3digo de Identifica\u00E7\u00E3o da Plataforma (id)
    * @return DispositivoResponse
    */
-  public DispositivoResponse ativar(Long id) throws ApiException {
+  public DispositivoResponse ativarDispositivo(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling ativar");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling ativarDispositivo");
      }
      
     // create path and map variables
@@ -91,12 +91,12 @@ public class DispositivoApi {
    * @param id C\u00F3digo de Identifica\u00E7\u00E3o da Plataforma (id)
    * @return DispositivoResponse
    */
-  public DispositivoResponse desativar(Long id) throws ApiException {
+  public DispositivoResponse desativarDispositivo(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling desativar");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling desativarDispositivo");
      }
      
     // create path and map variables
@@ -146,7 +146,7 @@ public class DispositivoApi {
    * @param dataDesativacao Apresenta a data e em que o registro foi desativado
    * @return PageDispositivoResponse
    */
-  public PageDispositivoResponse listar(List<String> sort, Integer page, Integer limit, String token, Long idUsuario, Long idAplicacaoMobile, String dataCriacao, String dataDesativacao) throws ApiException {
+  public PageDispositivoResponse listarDispositivos(List<String> sort, Integer page, Integer limit, String token, Long idUsuario, Long idAplicacaoMobile, String dataCriacao, String dataDesativacao) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -204,12 +204,12 @@ public class DispositivoApi {
    * @param persist persist
    * @return DispositivoResponse
    */
-  public DispositivoResponse salvar(DispositivoPersist persist) throws ApiException {
+  public DispositivoResponse salvarDispositivo(DispositivoPersist persist) throws ApiException {
     Object postBody = persist;
     
      // verify the required parameter 'persist' is set
      if (persist == null) {
-        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvar");
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling salvarDispositivo");
      }
      
     // create path and map variables

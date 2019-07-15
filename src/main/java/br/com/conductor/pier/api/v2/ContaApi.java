@@ -7,8 +7,6 @@ import br.com.conductor.pier.api.v2.invoker.ApiClient;
 import br.com.conductor.pier.api.v2.invoker.Configuration;
 import br.com.conductor.pier.api.v2.invoker.Pair;
 
-import br.com.conductor.pier.api.v2.model.AjusteFinanceiroResponse;
-import java.math.BigDecimal;
 import br.com.conductor.pier.api.v2.model.ControleSubcontaResponse;
 import br.com.conductor.pier.api.v2.model.ControleSubcontaUpdate;
 import br.com.conductor.pier.api.v2.model.AlterarProdutoRequest;
@@ -19,54 +17,58 @@ import br.com.conductor.pier.api.v2.model.AdesaoServicoResponse;
 import br.com.conductor.pier.api.v2.model.ContaPartialUpdate;
 import br.com.conductor.pier.api.v2.model.SegurancaMobileResponse;
 import br.com.conductor.pier.api.v2.model.SegurancaMobileParcialUpdate;
+import br.com.conductor.pier.api.v2.model.ContaDebitoTarifaUpdate;
+import br.com.conductor.pier.api.v2.model.ContaDebitoTarifaResponse;
 import br.com.conductor.pier.api.v2.model.RecargaCelularFavoritoParcialUpdate;
 import br.com.conductor.pier.api.v2.model.RecargaCelularFavoritoResponse;
 import br.com.conductor.pier.api.v2.model.AdesaoPagamentoSabadoResponse;
 import br.com.conductor.pier.api.v2.model.RecargaCelularFavoritoPersist;
 import br.com.conductor.pier.api.v2.model.SegurancaMobilePersist;
-import br.com.conductor.pier.api.v2.model.ExtratoTarifasResponse;
 import br.com.conductor.pier.api.v2.model.BeneficioPagamentoAtrasoResponse;
 import br.com.conductor.pier.api.v2.model.BoletoResponse;
+import br.com.conductor.pier.api.v2.model.ContaDetalheResponse;
 import br.com.conductor.pier.api.v2.model.DividaClienteResponse;
-import br.com.conductor.pier.api.v2.model.PageParcelaAgendamentoResponse;
-import br.com.conductor.pier.api.v2.model.TransacoesCorrentesResponse;
+import br.com.conductor.pier.api.v2.model.PageExtratoResponse;
+import br.com.conductor.pier.api.v2.model.ExtratoTarifasResponse;
 import br.com.conductor.pier.api.v2.model.QuitacaoAnualResponse;
 import br.com.conductor.pier.api.v2.model.PageTaxasRefinanciamentoResponse;
+import br.com.conductor.pier.api.v2.model.PageTransacaoResponse;
 import br.com.conductor.pier.api.v2.model.TipoVinculoContaResponse;
-import br.com.conductor.pier.api.v2.model.ContaDetalheResponse;
-import br.com.conductor.pier.api.v2.model.PageExtratoResponse;
+import br.com.conductor.pier.api.v2.model.TransacoesCorrentesResponse;
 import br.com.conductor.pier.api.v2.model.TransferenciaDetalheResponse;
 import br.com.conductor.pier.api.v2.model.ContaMultiAppResponse;
 import br.com.conductor.pier.api.v2.model.ContaMultiAppPersist;
+import java.math.BigDecimal;
 import br.com.conductor.pier.api.v2.model.CartaoImpressaoResponse;
 import br.com.conductor.pier.api.v2.model.CartaoEmbossingResponse;
 import br.com.conductor.pier.api.v2.model.CartaoEmbossingRequest;
 import br.com.conductor.pier.api.v2.model.CartaoImpressaoProvisorioResponse;
+import br.com.conductor.pier.api.v2.model.PageContaDebitoTarifaResponse;
 import br.com.conductor.pier.api.v2.model.PageContaResponse;
 import br.com.conductor.pier.api.v2.model.PageControleSubcontaResponse;
 import br.com.conductor.pier.api.v2.model.PageRecargaCelularFavoritoResponse;
 import br.com.conductor.pier.api.v2.model.PageHistoricoEventosResponse;
 import br.com.conductor.pier.api.v2.model.PageHistoricoAssessoriaResponse;
 import br.com.conductor.pier.api.v2.model.PageHistoricoAtrasoFaturaResponse;
-import br.com.conductor.pier.api.v2.model.PageTransacaoNaoProcessadaResponse;
-import br.com.conductor.pier.api.v2.model.PageTransacoesCorrentesResponse;
 import br.com.conductor.pier.api.v2.model.PageSegurancaMobileResponse;
 import br.com.conductor.pier.api.v2.model.PageVinculoContaResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoVinculoContaResponse;
-import br.com.conductor.pier.api.v2.model.PageProjecaoCompraNaoProcessadaResponse;
 import br.com.conductor.pier.api.v2.model.PageTransacaoProcessadaNaoProcessadaResponse;
+import br.com.conductor.pier.api.v2.model.PageTransacaoNaoProcessadaResponse;
+import br.com.conductor.pier.api.v2.model.PageTransacaoNegadaResponse;
+import br.com.conductor.pier.api.v2.model.PageTransacoesCorrentesResponse;
+import br.com.conductor.pier.api.v2.model.PageProjecaoCompraNaoProcessadaResponse;
 import br.com.conductor.pier.api.v2.model.PageTransferenciaResponse;
-import br.com.conductor.pier.api.v2.model.ContaPersist;
 import br.com.conductor.pier.api.v2.model.AdesaoServicoPersist;
-import br.com.conductor.pier.api.v2.model.AgendamentoPersist;
-import br.com.conductor.pier.api.v2.model.AgendamentoResponse;
+import br.com.conductor.pier.api.v2.model.AjusteFinanceiroResponse;
+import br.com.conductor.pier.api.v2.model.ContaPersist;
+import br.com.conductor.pier.api.v2.model.ContaDebitoTarifaPersist;
 import br.com.conductor.pier.api.v2.model.ControleSubcontaPersist;
 import br.com.conductor.pier.api.v2.model.TipoVinculoContaPersist;
 import br.com.conductor.pier.api.v2.model.VinculoContaPersist;
 import br.com.conductor.pier.api.v2.model.VinculoContaResponse;
 import br.com.conductor.pier.api.v2.model.EmprestimoPessoalRequest;
 import br.com.conductor.pier.api.v2.model.EmprestimoPessoalResponse;
-import br.com.conductor.pier.api.v2.model.PageTransacaoResponse;
 import br.com.conductor.pier.api.v2.model.TransferenciaPortadoresResponse;
 import br.com.conductor.pier.api.v2.model.TransferenciaPortadoresPersist;
 
@@ -95,96 +97,6 @@ public class ContaApi {
     this.apiClient = apiClient;
   }
 
-  
-  /**
-   * Lan\u00E7a um ajuste para a conta do id informado
-   * Este recurso insere um ajuste para a conta do id informado
-   * @param id Id Conta
-   * @param idTipoAjuste C\u00F3digo identificador do tipo de ajuste
-   * @param dataAjuste Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ
-   * @param valorAjuste Valor do ajuste
-   * @param login login
-   * @param identificadorExterno Identificador Externo
-   * @param idTransacaoOriginal Identificador da transa\u00E7\u00E3o original (estorno)
-   * @param idEstabelecimento Identificador do estabelecimento quando o pagamento for efetuado em loja
-   * @param flagAtendimento Flag para lan\u00E7ar o atendimento
-   * @param mensagemAtendimento Mensagem enviada no atendimento
-   * @return AjusteFinanceiroResponse
-   */
-  public AjusteFinanceiroResponse ajustarConta(Long id, Long idTipoAjuste, String dataAjuste, BigDecimal valorAjuste, String login, String identificadorExterno, Long idTransacaoOriginal, Long idEstabelecimento, Boolean flagAtendimento, String mensagemAtendimento) throws ApiException {
-    Object postBody = null;
-    
-     // verify the required parameter 'id' is set
-     if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling ajustarConta");
-     }
-     
-     // verify the required parameter 'idTipoAjuste' is set
-     if (idTipoAjuste == null) {
-        throw new ApiException(400, "Missing the required parameter 'idTipoAjuste' when calling ajustarConta");
-     }
-     
-     // verify the required parameter 'dataAjuste' is set
-     if (dataAjuste == null) {
-        throw new ApiException(400, "Missing the required parameter 'dataAjuste' when calling ajustarConta");
-     }
-     
-     // verify the required parameter 'valorAjuste' is set
-     if (valorAjuste == null) {
-        throw new ApiException(400, "Missing the required parameter 'valorAjuste' when calling ajustarConta");
-     }
-     
-    // create path and map variables
-    String path = "/api/contas/{id}/ajustes-financeiros".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "idTipoAjuste", idTipoAjuste));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "dataAjuste", dataAjuste));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "valorAjuste", valorAjuste));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "identificadorExterno", identificadorExterno));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "idTransacaoOriginal", idTransacaoOriginal));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "idEstabelecimento", idEstabelecimento));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "flagAtendimento", flagAtendimento));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "mensagemAtendimento", mensagemAtendimento));
-    
-
-    if (login != null)
-      headerParams.put("login", apiClient.parameterToString(login));
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<AjusteFinanceiroResponse> returnType = new GenericType<AjusteFinanceiroResponse>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
   
   /**
    * Altera parcialmente um controle de uma subconta
@@ -247,17 +159,17 @@ public class ContaApi {
    * @param request request
    * @return String
    */
-  public String alterarProduto(Long id, AlterarProdutoRequest request) throws ApiException {
+  public String alterarProdutoConta(Long id, AlterarProdutoRequest request) throws ApiException {
     Object postBody = request;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarProduto");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarProdutoConta");
      }
      
      // verify the required parameter 'request' is set
      if (request == null) {
-        throw new ApiException(400, "Missing the required parameter 'request' when calling alterarProduto");
+        throw new ApiException(400, "Missing the required parameter 'request' when calling alterarProdutoConta");
      }
      
     // create path and map variables
@@ -407,6 +319,54 @@ public class ContaApi {
   }
   
   /**
+   * Ativa o servi\u00E7o de envio de fatura por email
+   * Este recurso ativa o servi\u00E7o de envio de fatura por email
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id)
+   * @return Object
+   */
+  public Object ativarEnvioFaturaEmail(Long id) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling ativarEnvioFaturaEmail");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/{id}/ativar-fatura-email".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<Object> returnType = new GenericType<Object>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Atribuir Anuidade
    * Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta
    * @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id)
@@ -421,17 +381,17 @@ public class ContaApi {
    * @param colaborador Matr\u00EDcula do colaborador
    * @return Object
    */
-  public Object ativarAnuidade(Long id, Long idAnuidade, List<String> sort, Integer page, Integer limit, String DDD, String celular, Long idOperadora, Long idOrigemComercial, String colaborador) throws ApiException {
+  public Object atribuirAnuidade(Long id, Long idAnuidade, List<String> sort, Integer page, Integer limit, String DDD, String celular, Long idOperadora, Long idOrigemComercial, String colaborador) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling ativarAnuidade");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling atribuirAnuidade");
      }
      
      // verify the required parameter 'idAnuidade' is set
      if (idAnuidade == null) {
-        throw new ApiException(400, "Missing the required parameter 'idAnuidade' when calling ativarAnuidade");
+        throw new ApiException(400, "Missing the required parameter 'idAnuidade' when calling atribuirAnuidade");
      }
      
     // create path and map variables
@@ -461,54 +421,6 @@ public class ContaApi {
     queryParams.addAll(apiClient.parameterToPairs("", "idOrigemComercial", idOrigemComercial));
     
     queryParams.addAll(apiClient.parameterToPairs("", "colaborador", colaborador));
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<Object> returnType = new GenericType<Object>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
-   * Ativa o servi\u00E7o de envio de fatura por email
-   * Este recurso ativa o servi\u00E7o de envio de fatura por email
-   * @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id)
-   * @return Object
-   */
-  public Object ativarEnvioFaturaEmail(Long id) throws ApiException {
-    Object postBody = null;
-    
-     // verify the required parameter 'id' is set
-     if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling ativarEnvioFaturaEmail");
-     }
-     
-    // create path and map variables
-    String path = "/api/contas/{id}/ativar-fatura-email".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
     
 
     
@@ -649,17 +561,17 @@ public class ContaApi {
    * @param contaPartialUpdate contaPartialUpdate
    * @return ContaResponse
    */
-  public ContaResponse atualizarParcial(Long id, ContaPartialUpdate contaPartialUpdate) throws ApiException {
+  public ContaResponse atualizarContaParcialmente(Long id, ContaPartialUpdate contaPartialUpdate) throws ApiException {
     Object postBody = contaPartialUpdate;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling atualizarParcial");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling atualizarContaParcialmente");
      }
      
      // verify the required parameter 'contaPartialUpdate' is set
      if (contaPartialUpdate == null) {
-        throw new ApiException(400, "Missing the required parameter 'contaPartialUpdate' when calling atualizarParcial");
+        throw new ApiException(400, "Missing the required parameter 'contaPartialUpdate' when calling atualizarContaParcialmente");
      }
      
     // create path and map variables
@@ -758,6 +670,67 @@ public class ContaApi {
   }
   
   /**
+   * Atualizar parcialmente uma tarifa de d\u00E9bito da conta
+   * Este recurso permite atualizar parcialmente uma tarifa de d\u00E9bito da conta
+   * @param id Identificador da conta
+   * @param idDebitoTarifa Identificador do registro de d\u00E9bito tarifa da conta
+   * @param contaDebitoTarifaUpdate contaDebitoTarifaUpdate
+   * @return ContaDebitoTarifaResponse
+   */
+  public ContaDebitoTarifaResponse atualizarParcialmenteContaDebitoTarifa(Long id, Long idDebitoTarifa, ContaDebitoTarifaUpdate contaDebitoTarifaUpdate) throws ApiException {
+    Object postBody = contaDebitoTarifaUpdate;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling atualizarParcialmenteContaDebitoTarifa");
+     }
+     
+     // verify the required parameter 'idDebitoTarifa' is set
+     if (idDebitoTarifa == null) {
+        throw new ApiException(400, "Missing the required parameter 'idDebitoTarifa' when calling atualizarParcialmenteContaDebitoTarifa");
+     }
+     
+     // verify the required parameter 'contaDebitoTarifaUpdate' is set
+     if (contaDebitoTarifaUpdate == null) {
+        throw new ApiException(400, "Missing the required parameter 'contaDebitoTarifaUpdate' when calling atualizarParcialmenteContaDebitoTarifa");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/{id}/tarifas/debitos/{idDebitoTarifa}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()))
+      .replaceAll("\\{" + "idDebitoTarifa" + "\\}", apiClient.escapeString(idDebitoTarifa.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<ContaDebitoTarifaResponse> returnType = new GenericType<ContaDebitoTarifaResponse>() {};
+    return apiClient.invokeAPI(path, "PATCH", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Atualiza parcialmente o registro de um favorito de recarga de celular
    * Este recurso permite Atualizar parcialmente um favorito de recarga de celular
    * @param id Identificador da conta
@@ -825,17 +798,17 @@ public class ContaApi {
    * @param idStatus C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta
    * @return ContaResponse
    */
-  public ContaResponse bloquear(Long id, Long idStatus) throws ApiException {
+  public ContaResponse bloquearConta(Long id, Long idStatus) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling bloquear");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling bloquearConta");
      }
      
      // verify the required parameter 'idStatus' is set
      if (idStatus == null) {
-        throw new ApiException(400, "Missing the required parameter 'idStatus' when calling bloquear");
+        throw new ApiException(400, "Missing the required parameter 'idStatus' when calling bloquearConta");
      }
      
     // create path and map variables
@@ -1038,17 +1011,17 @@ public class ContaApi {
    * @param idStatus C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta
    * @return ContaResponse
    */
-  public ContaResponse cancelar(Long id, Long idStatus) throws ApiException {
+  public ContaResponse cancelarConta(Long id, Long idStatus) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling cancelar");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling cancelarConta");
      }
      
      // verify the required parameter 'idStatus' is set
      if (idStatus == null) {
-        throw new ApiException(400, "Missing the required parameter 'idStatus' when calling cancelar");
+        throw new ApiException(400, "Missing the required parameter 'idStatus' when calling cancelarConta");
      }
      
     // create path and map variables
@@ -1084,178 +1057,6 @@ public class ContaApi {
     
     GenericType<ContaResponse> returnType = new GenericType<ContaResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
-   * Realiza o cancelamento de uma parcela agendada
-   * Este recurso permite cancelar uma parcela agendada, sem interferir nas demais parcelas
-   * @param id ID da Parcela
-   * @param idAgendamento idAgendamento
-   * @param idParcela idParcela
-   * @return String
-   */
-  public String cancelarParcela(Long id, Long idAgendamento, Long idParcela) throws ApiException {
-    Object postBody = null;
-    
-     // verify the required parameter 'id' is set
-     if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling cancelarParcela");
-     }
-     
-     // verify the required parameter 'idAgendamento' is set
-     if (idAgendamento == null) {
-        throw new ApiException(400, "Missing the required parameter 'idAgendamento' when calling cancelarParcela");
-     }
-     
-     // verify the required parameter 'idParcela' is set
-     if (idParcela == null) {
-        throw new ApiException(400, "Missing the required parameter 'idParcela' when calling cancelarParcela");
-     }
-     
-    // create path and map variables
-    String path = "/api/contas/{id}/agendamentos/{idAgendamento}/parcelas/{idParcela}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()))
-      .replaceAll("\\{" + "idAgendamento" + "\\}", apiClient.escapeString(idAgendamento.toString()))
-      .replaceAll("\\{" + "idParcela" + "\\}", apiClient.escapeString(idParcela.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<String> returnType = new GenericType<String>() {};
-    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
-   * Realiza o cancelamento completo de um agendamento
-   * Este recurso permite cancelar um agendamento existente, bem como todas suas parcelas em aberto
-   * @param idAgendamento Id do Agendamento
-   * @param id id
-   * @return String
-   */
-  public String carcelarAgendamento(Long idAgendamento, Long id) throws ApiException {
-    Object postBody = null;
-    
-     // verify the required parameter 'idAgendamento' is set
-     if (idAgendamento == null) {
-        throw new ApiException(400, "Missing the required parameter 'idAgendamento' when calling carcelarAgendamento");
-     }
-     
-     // verify the required parameter 'id' is set
-     if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling carcelarAgendamento");
-     }
-     
-    // create path and map variables
-    String path = "/api/contas/{id}/agendamentos/{idAgendamento}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "idAgendamento" + "\\}", apiClient.escapeString(idAgendamento.toString()))
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<String> returnType = new GenericType<String>() {};
-    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
-   * Consulta o extrato anual de tarifas de uma conta
-   * Esse recurso permite consultar o extrato anual de tarifas cobradas de uma determinada conta
-   * @param id Identificador da conta
-   * @param ano Ano base para gera\u00E7\u00E3o do extrato de tarifas
-   * @return ExtratoTarifasResponse
-   */
-  public ExtratoTarifasResponse consultaExtratoTarifasAnual(Long id, Integer ano) throws ApiException {
-    Object postBody = null;
-    
-     // verify the required parameter 'id' is set
-     if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultaExtratoTarifasAnual");
-     }
-     
-     // verify the required parameter 'ano' is set
-     if (ano == null) {
-        throw new ApiException(400, "Missing the required parameter 'ano' when calling consultaExtratoTarifasAnual");
-     }
-     
-    // create path and map variables
-    String path = "/api/contas/{id}/extrato-tarifas/{ano}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()))
-      .replaceAll("\\{" + "ano" + "\\}", apiClient.escapeString(ano.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<ExtratoTarifasResponse> returnType = new GenericType<ExtratoTarifasResponse>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
@@ -1370,12 +1171,12 @@ public class ContaApi {
    * @param id Id Conta
    * @return BoletoResponse
    */
-  public BoletoResponse consultarBoletoEmitido(Long id) throws ApiException {
+  public BoletoResponse consultarBoletosEmitidos(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarBoletoEmitido");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarBoletosEmitidos");
      }
      
     // create path and map variables
@@ -1408,6 +1209,54 @@ public class ContaApi {
 
     
     GenericType<BoletoResponse> returnType = new GenericType<BoletoResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Apresenta dados de uma determinada conta
+   * Este m\u00E9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00E7\u00E3o (id)
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id)
+   * @return ContaDetalheResponse
+   */
+  public ContaDetalheResponse consultarConta(Long id) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarConta");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/{id}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<ContaDetalheResponse> returnType = new GenericType<ContaDetalheResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -1471,12 +1320,12 @@ public class ContaApi {
    * @param idEscritorioCobranca C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a
    * @return DividaClienteResponse
    */
-  public DividaClienteResponse consultarDividaAtualizadaCliente(Long id, List<String> sort, Integer page, Integer limit, String dataVencimento, Long idEscritorioCobranca) throws ApiException {
+  public DividaClienteResponse consultarDividaAtualizada(Long id, List<String> sort, Integer page, Integer limit, String dataVencimento, Long idEscritorioCobranca) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarDividaAtualizadaCliente");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarDividaAtualizada");
      }
      
     // create path and map variables
@@ -1524,31 +1373,29 @@ public class ContaApi {
   }
   
   /**
-   * Realiza a consulta das parcelas de um determinado agendamento
-   * Este recurso lista todas as parcelas de um agendamento, independente de seus status
-   * @param idAgendamento Id do Agendamento
-   * @param id id
+   * Consulta extrato da conta
+   * Consulta extrato da conta
+   * @param id Identificador da conta
    * @param sort Tipo de ordena\u00E7\u00E3o dos registros
+   * @param idsTiposTransacoes C\u00F3digos identificadores dos tipos de transa\u00E7\u00F5es para transfer\u00EAncia de valores e que possuir\u00E3o na descri\u00E7\u00E3o do extrato, os dados da conta destino da transfer\u00EAncia.
+   * @param idsTiposTransacoesTransferencias C\u00F3digos identificadores dos tipos de transa\u00E7\u00F5es que ser\u00E3o consultadas no extrato 
    * @param page P\u00E1gina
    * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
-   * @return PageParcelaAgendamentoResponse
+   * @param dataInicio Data de in\u00EDcio para consulta do extrato da conta formato yyyy-MM-dd
+   * @param dataFim Data de fim para consulta do extrato da conta formato yyyy-MM-dd
+   * @param idPessoaFisicaSolicitante C\u00F3digo identificador da pessoa que solicitou o extrato
+   * @return PageExtratoResponse
    */
-  public PageParcelaAgendamentoResponse consultarParcelasAgendamento(Long idAgendamento, Long id, List<String> sort, Integer page, Integer limit) throws ApiException {
+  public PageExtratoResponse consultarExtratoConta(Long id, List<String> sort, List<Long> idsTiposTransacoes, List<Long> idsTiposTransacoesTransferencias, Integer page, Integer limit, String dataInicio, String dataFim, Long idPessoaFisicaSolicitante) throws ApiException {
     Object postBody = null;
     
-     // verify the required parameter 'idAgendamento' is set
-     if (idAgendamento == null) {
-        throw new ApiException(400, "Missing the required parameter 'idAgendamento' when calling consultarParcelasAgendamento");
-     }
-     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarParcelasAgendamento");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarExtratoConta");
      }
      
     // create path and map variables
-    String path = "/api/contas/{id}/agendamentos/{idAgendamento}/parcelas".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "idAgendamento" + "\\}", apiClient.escapeString(idAgendamento.toString()))
+    String path = "/api/contas/{id}/extratos".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
     // query params
@@ -1559,9 +1406,19 @@ public class ContaApi {
     
     queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
     
+    queryParams.addAll(apiClient.parameterToPairs("multi", "idsTiposTransacoes", idsTiposTransacoes));
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "idsTiposTransacoesTransferencias", idsTiposTransacoesTransferencias));
+    
     queryParams.addAll(apiClient.parameterToPairs("", "page", page));
     
     queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "dataInicio", dataInicio));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "dataFim", dataFim));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idPessoaFisicaSolicitante", idPessoaFisicaSolicitante));
     
 
     
@@ -1582,35 +1439,35 @@ public class ContaApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<PageParcelaAgendamentoResponse> returnType = new GenericType<PageParcelaAgendamentoResponse>() {};
+    GenericType<PageExtratoResponse> returnType = new GenericType<PageExtratoResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
   /**
-   * Consulta uma transa\u00E7\u00E3o processada da conta.
-   * Este recurso permite consultar os detalhes de uma transa\u00E7\u00E3o processada pertencente a uma conta.
-   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
-   * @param idTransacao C\u00F3digo de Identifica\u00E7\u00E3o da transa\u00E7\u00E3o (id).
-   * @return TransacoesCorrentesResponse
+   * Consulta o extrato anual de tarifas de uma conta
+   * Esse recurso permite consultar o extrato anual de tarifas cobradas de uma determinada conta
+   * @param id Identificador da conta
+   * @param ano Ano base para gera\u00E7\u00E3o do extrato de tarifas
+   * @return ExtratoTarifasResponse
    */
-  public TransacoesCorrentesResponse consultarProcessada(Long id, Long idTransacao) throws ApiException {
+  public ExtratoTarifasResponse consultarExtratoTarifasAnual(Long id, Integer ano) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarProcessada");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarExtratoTarifasAnual");
      }
      
-     // verify the required parameter 'idTransacao' is set
-     if (idTransacao == null) {
-        throw new ApiException(400, "Missing the required parameter 'idTransacao' when calling consultarProcessada");
+     // verify the required parameter 'ano' is set
+     if (ano == null) {
+        throw new ApiException(400, "Missing the required parameter 'ano' when calling consultarExtratoTarifasAnual");
      }
      
     // create path and map variables
-    String path = "/api/contas/{id}/transacoes-processadas/{idTransacao}".replaceAll("\\{format\\}","json")
+    String path = "/api/contas/{id}/extrato-tarifas/{ano}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()))
-      .replaceAll("\\{" + "idTransacao" + "\\}", apiClient.escapeString(idTransacao.toString()));
+      .replaceAll("\\{" + "ano" + "\\}", apiClient.escapeString(ano.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1637,7 +1494,55 @@ public class ContaApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<TransacoesCorrentesResponse> returnType = new GenericType<TransacoesCorrentesResponse>() {};
+    GenericType<ExtratoTarifasResponse> returnType = new GenericType<ExtratoTarifasResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Apresenta dados de um determinado tipo de fun\u00E7\u00E3o para contas
+   * Este m\u00E9todo permite consultar dados de um determinado tipo de fun\u00E7\u00E3o para contas a partir de seu codigo de identifica\u00E7\u00E3o (id)
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o do tipo de fun\u00E7\u00E3o para contas (id)
+   * @return String
+   */
+  public String consultarFuncaoConta(Integer id) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarFuncaoConta");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/tipos-funcoes/{id}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<String> returnType = new GenericType<String>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -1755,6 +1660,63 @@ public class ContaApi {
   }
   
   /**
+   * Permite listar uma linha do tempo com os eventos da conta
+   * Esta opera\u00E7\u00E3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00E7\u00F5es, fechamento da fatura, pagamentos, gera\u00E7\u00E3o de cart\u00F5es e altera\u00E7\u00E3o de limite s\u00E3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00E9todo, as opera\u00E7\u00F5es s\u00E3o ordenadas de forma decrescente
+   * @param id Id Conta
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
+   * @param page P\u00E1gina
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
+   * @return PageTransacaoResponse
+   */
+  public PageTransacaoResponse consultarTimeline(Long id, List<String> sort, Integer page, Integer limit) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarTimeline");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/{id}/timeline".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PageTransacaoResponse> returnType = new GenericType<PageTransacaoResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Consulta um tipo de v\u00EDnculo
    * Este recurso permite consultar um tipo de v\u00EDnculo cadastrado na base do emissor a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
    * @param id C\u00F3digo identificador do tipo de v\u00EDnculo (id)
@@ -1803,22 +1765,29 @@ public class ContaApi {
   }
   
   /**
-   * Apresenta dados de um determinado tipo de fun\u00E7\u00E3o para contas
-   * Este m\u00E9todo permite consultar dados de um determinado tipo de fun\u00E7\u00E3o para contas a partir de seu codigo de identifica\u00E7\u00E3o (id)
-   * @param id C\u00F3digo de identifica\u00E7\u00E3o do tipo de fun\u00E7\u00E3o para contas (id)
-   * @return String
+   * Consulta uma transa\u00E7\u00E3o processada da conta.
+   * Este recurso permite consultar os detalhes de uma transa\u00E7\u00E3o processada pertencente a uma conta.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
+   * @param idTransacao C\u00F3digo de Identifica\u00E7\u00E3o da transa\u00E7\u00E3o (id).
+   * @return TransacoesCorrentesResponse
    */
-  public String consultar_0(Integer id) throws ApiException {
+  public TransacoesCorrentesResponse consultarTransacaoProcessadaConta(Long id, Long idTransacao) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultar_0");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarTransacaoProcessadaConta");
+     }
+     
+     // verify the required parameter 'idTransacao' is set
+     if (idTransacao == null) {
+        throw new ApiException(400, "Missing the required parameter 'idTransacao' when calling consultarTransacaoProcessadaConta");
      }
      
     // create path and map variables
-    String path = "/api/contas/tipos-funcoes/{id}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+    String path = "/api/contas/{id}/transacoes-processadas/{idTransacao}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()))
+      .replaceAll("\\{" + "idTransacao" + "\\}", apiClient.escapeString(idTransacao.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1845,127 +1814,7 @@ public class ContaApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<String> returnType = new GenericType<String>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
-   * Apresenta dados de uma determinada conta
-   * Este m\u00E9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00E7\u00E3o (id)
-   * @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id)
-   * @return ContaDetalheResponse
-   */
-  public ContaDetalheResponse consultar_1(Long id) throws ApiException {
-    Object postBody = null;
-    
-     // verify the required parameter 'id' is set
-     if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultar_1");
-     }
-     
-    // create path and map variables
-    String path = "/api/contas/{id}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<ContaDetalheResponse> returnType = new GenericType<ContaDetalheResponse>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
-   * Consulta extrato da conta
-   * Consulta extrato da conta
-   * @param id Identificador da conta
-   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
-   * @param idsTiposTransacoes C\u00F3digos identificadores dos tipos de transa\u00E7\u00F5es para transfer\u00EAncia de valores e que possuir\u00E3o na descri\u00E7\u00E3o do extrato, os dados da conta destino da transfer\u00EAncia.
-   * @param idsTiposTransacoesTransferencias C\u00F3digos identificadores dos tipos de transa\u00E7\u00F5es que ser\u00E3o consultadas no extrato 
-   * @param page P\u00E1gina
-   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
-   * @param dataInicio Data de in\u00EDcio para consulta do extrato da conta formato yyyy-MM-dd
-   * @param dataFim Data de fim para consulta do extrato da conta formato yyyy-MM-dd
-   * @param idPessoaFisicaSolicitante C\u00F3digo identificador da pessoa que solicitou o extrato
-   * @return PageExtratoResponse
-   */
-  public PageExtratoResponse consultar_2(Long id, List<String> sort, List<Long> idsTiposTransacoes, List<Long> idsTiposTransacoesTransferencias, Integer page, Integer limit, String dataInicio, String dataFim, Long idPessoaFisicaSolicitante) throws ApiException {
-    Object postBody = null;
-    
-     // verify the required parameter 'id' is set
-     if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultar_2");
-     }
-     
-    // create path and map variables
-    String path = "/api/contas/{id}/extratos".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
-    
-    queryParams.addAll(apiClient.parameterToPairs("multi", "idsTiposTransacoes", idsTiposTransacoes));
-    
-    queryParams.addAll(apiClient.parameterToPairs("multi", "idsTiposTransacoesTransferencias", idsTiposTransacoesTransferencias));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "dataInicio", dataInicio));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "dataFim", dataFim));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "idPessoaFisicaSolicitante", idPessoaFisicaSolicitante));
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<PageExtratoResponse> returnType = new GenericType<PageExtratoResponse>() {};
+    GenericType<TransacoesCorrentesResponse> returnType = new GenericType<TransacoesCorrentesResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -1977,17 +1826,17 @@ public class ContaApi {
    * @param idTransferencia C\u00F3digo de Identifica\u00E7\u00E3o da transfer\u00EAncia (id_transferencia)
    * @return TransferenciaDetalheResponse
    */
-  public TransferenciaDetalheResponse consultar_3(Long id, Long idTransferencia) throws ApiException {
+  public TransferenciaDetalheResponse consultarTransferenciaDeCreditoEntreCartoes(Long id, Long idTransferencia) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultar_3");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarTransferenciaDeCreditoEntreCartoes");
      }
      
      // verify the required parameter 'idTransferencia' is set
      if (idTransferencia == null) {
-        throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultar_3");
+        throw new ApiException(400, "Missing the required parameter 'idTransferencia' when calling consultarTransferenciaDeCreditoEntreCartoes");
      }
      
     // create path and map variables
@@ -2288,17 +2137,17 @@ public class ContaApi {
    * @param idTipoPlastico C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id)
    * @return CartaoImpressaoResponse
    */
-  public CartaoImpressaoResponse gerarCartao(Long id, Long idPessoa, Long idTipoPlastico) throws ApiException {
+  public CartaoImpressaoResponse gerarCartaoDaPessoa(Long id, Long idPessoa, Long idTipoPlastico) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling gerarCartao");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling gerarCartaoDaPessoa");
      }
      
      // verify the required parameter 'idPessoa' is set
      if (idPessoa == null) {
-        throw new ApiException(400, "Missing the required parameter 'idPessoa' when calling gerarCartao");
+        throw new ApiException(400, "Missing the required parameter 'idPessoa' when calling gerarCartaoDaPessoa");
      }
      
     // create path and map variables
@@ -2345,17 +2194,17 @@ public class ContaApi {
    * @param cartaoEmbossingRequest cartaoEmbossingRequest
    * @return CartaoEmbossingResponse
    */
-  public CartaoEmbossingResponse gerarCartaoEmbossing(Long id, CartaoEmbossingRequest cartaoEmbossingRequest) throws ApiException {
+  public CartaoEmbossingResponse gerarCartaoGrafica(Long id, CartaoEmbossingRequest cartaoEmbossingRequest) throws ApiException {
     Object postBody = cartaoEmbossingRequest;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling gerarCartaoEmbossing");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling gerarCartaoGrafica");
      }
      
      // verify the required parameter 'cartaoEmbossingRequest' is set
      if (cartaoEmbossingRequest == null) {
-        throw new ApiException(400, "Missing the required parameter 'cartaoEmbossingRequest' when calling gerarCartaoEmbossing");
+        throw new ApiException(400, "Missing the required parameter 'cartaoEmbossingRequest' when calling gerarCartaoGrafica");
      }
      
     // create path and map variables
@@ -2497,6 +2346,63 @@ public class ContaApi {
   }
   
   /**
+   * Listar uma tarifa de d\u00E9bito para uma conta
+   * Este recurso permite listar as tarifas de d\u00E9bito de uma conta
+   * @param id Identificador da conta
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
+   * @param page P\u00E1gina
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
+   * @return PageContaDebitoTarifaResponse
+   */
+  public PageContaDebitoTarifaResponse listarContaDebitoTarifa(Long id, List<String> sort, Integer page, Integer limit) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling listarContaDebitoTarifa");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/{id}/tarifas/debitos".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PageContaDebitoTarifaResponse> returnType = new GenericType<PageContaDebitoTarifaResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Lista contas existentes na base de dados do Emissor
    * Este recurso permite listar contas existentes na base de dados do Emissor
    * @param sort Tipo de ordena\u00E7\u00E3o dos registros
@@ -2514,7 +2420,7 @@ public class ContaApi {
    * @param funcaoAtiva 
    * @return PageContaResponse
    */
-  public PageContaResponse listar(List<String> sort, Integer page, Integer limit, Long idProduto, Long idOrigemComercial, Long idPessoa, Long idStatusConta, Integer diaVencimento, Integer melhorDiaCompra, String dataStatusConta, String dataCadastro, String dataUltimaAlteracaoVencimento, String funcaoAtiva) throws ApiException {
+  public PageContaResponse listarContas(List<String> sort, Integer page, Integer limit, Long idProduto, Long idOrigemComercial, Long idPessoa, Long idStatusConta, Integer diaVencimento, Integer melhorDiaCompra, String dataStatusConta, String dataCadastro, String dataUltimaAlteracaoVencimento, String funcaoAtiva) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -2652,9 +2558,10 @@ public class ContaApi {
    * @param numeroCelular N\u00FAmero do celular
    * @param nome Nome do propriet\u00E1rio do celular
    * @param ativo Indicador de status do favorito
+   * @param descricaoOperadora Descri\u00E7\u00E3o da operadora
    * @return PageRecargaCelularFavoritoResponse
    */
-  public PageRecargaCelularFavoritoResponse listarFavoritosRecargasCelular(Long id, List<String> sort, Integer page, Integer limit, String dddCelular, String numeroCelular, String nome, Boolean ativo) throws ApiException {
+  public PageRecargaCelularFavoritoResponse listarFavoritosRecargasCelular(Long id, List<String> sort, Integer page, Integer limit, String dddCelular, String numeroCelular, String nome, Boolean ativo, String descricaoOperadora) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -2686,6 +2593,8 @@ public class ContaApi {
     
     queryParams.addAll(apiClient.parameterToPairs("", "ativo", ativo));
     
+    queryParams.addAll(apiClient.parameterToPairs("", "descricaoOperadora", descricaoOperadora));
+    
 
     
 
@@ -2706,6 +2615,47 @@ public class ContaApi {
 
     
     GenericType<PageRecargaCelularFavoritoResponse> returnType = new GenericType<PageRecargaCelularFavoritoResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Lista os tipos de fun\u00E7\u00F5es para contas do Emissor
+   * Este recurso permite listar os tipos de fun\u00E7\u00F5es para as contas do Emissor
+   * @return String
+   */
+  public String listarFuncoesContas() throws ApiException {
+    Object postBody = null;
+    
+    // create path and map variables
+    String path = "/api/contas/tipos-funcoes".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<String> returnType = new GenericType<String>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -2833,12 +2783,12 @@ public class ContaApi {
    * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
    * @return PageHistoricoAtrasoFaturaResponse
    */
-  public PageHistoricoAtrasoFaturaResponse listarHistoricoAtrasosFaturas(Long id, List<String> sort, Integer page, Integer limit) throws ApiException {
+  public PageHistoricoAtrasoFaturaResponse listarHistoricoFaturasAtrasadas(Long id, List<String> sort, Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling listarHistoricoAtrasosFaturas");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling listarHistoricoFaturasAtrasadas");
      }
      
     // create path and map variables
@@ -2877,141 +2827,6 @@ public class ContaApi {
 
     
     GenericType<PageHistoricoAtrasoFaturaResponse> returnType = new GenericType<PageHistoricoAtrasoFaturaResponse>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
-   * Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta
-   * Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas da Conta.
-   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)
-   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
-   * @param page P\u00E1gina
-   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
-   * @param dataInicio Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Par\u00E2mentro Ignorado se dataFim n\u00E3o for definida)
-   * @param dataFim Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00E2mentro Ignorado se dataInicio n\u00E3o for definida)
-   * @return PageTransacaoNaoProcessadaResponse
-   */
-  public PageTransacaoNaoProcessadaResponse listarNaoProcessadas(Long id, List<String> sort, Integer page, Integer limit, String dataInicio, String dataFim) throws ApiException {
-    Object postBody = null;
-    
-     // verify the required parameter 'id' is set
-     if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling listarNaoProcessadas");
-     }
-     
-    // create path and map variables
-    String path = "/api/contas/{id}/transacoes/listar-nao-processadas".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "dataInicio", dataInicio));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "dataFim", dataFim));
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<PageTransacaoNaoProcessadaResponse> returnType = new GenericType<PageTransacaoNaoProcessadaResponse>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
-   * Lista as transa\u00E7\u00F5es processadas da conta
-   * Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es processadas da Conta
-   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
-   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
-   * @param page P\u00E1gina
-   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
-   * @param dataVencimento Data de vencimento do extrato no formato yyyy-MM-dd
-   * @param dataInicio Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado)
-   * @param dataFim Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado)
-   * @param idTipoTransacao transacoes_processadas_request_tipo_transacao
-   * @param recuperaEncargos Adiciona as transa\u00E7\u00F5es de encargos na consulta
-   * @return PageTransacoesCorrentesResponse
-   */
-  public PageTransacoesCorrentesResponse listarProcessadas(Long id, List<String> sort, Integer page, Integer limit, String dataVencimento, String dataInicio, String dataFim, Long idTipoTransacao, Integer recuperaEncargos) throws ApiException {
-    Object postBody = null;
-    
-     // verify the required parameter 'id' is set
-     if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling listarProcessadas");
-     }
-     
-    // create path and map variables
-    String path = "/api/contas/{id}/transacoes/listar-processadas".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "dataVencimento", dataVencimento));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "dataInicio", dataInicio));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "dataFim", dataFim));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "idTipoTransacao", idTipoTransacao));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "recuperaEncargos", recuperaEncargos));
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<PageTransacoesCorrentesResponse> returnType = new GenericType<PageTransacoesCorrentesResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -3232,232 +3047,6 @@ public class ContaApi {
   }
   
   /**
-   * Este recurso permite que uma proje\u00E7\u00E3o de compra ainda n\u00E3o processada seja recuperada. Os valores das compras s\u00E3o agrupados e exibidos em blocos mensais.
-   * Este recurso permite que uma proje\u00E7\u00E3o de compra ainda n\u00E3o processada seja recuperada. Os valores das compras s\u00E3o agrupados e exibidos em blocos mensais.
-   * @param id C\u00F3digo de identifica\u00E7\u00E3o da conta
-   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
-   * @param page P\u00E1gina
-   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
-   * @return PageProjecaoCompraNaoProcessadaResponse
-   */
-  public PageProjecaoCompraNaoProcessadaResponse listarTransacoesProjetadas(Long id, List<String> sort, Integer page, Integer limit) throws ApiException {
-    Object postBody = null;
-    
-     // verify the required parameter 'id' is set
-     if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling listarTransacoesProjetadas");
-     }
-     
-    // create path and map variables
-    String path = "/api/contas/{id}/transacoes/projetadas".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<PageProjecaoCompraNaoProcessadaResponse> returnType = new GenericType<PageProjecaoCompraNaoProcessadaResponse>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
-   * Lista v\u00EDnculos de contas
-   * Este recurso permite listar os v\u00EDnculos de contas existentes na base
-   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
-   * @param page P\u00E1gina
-   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
-   * @param idConta Id da subconta
-   * @param idTipoVinculo Id do tipo de v\u00EDnculo entre as duas contas
-   * @return PageVinculoContaResponse
-   */
-  public PageVinculoContaResponse listarVinculoConta(List<String> sort, Integer page, Integer limit, Long idConta, Long idTipoVinculo) throws ApiException {
-    Object postBody = null;
-    
-    // create path and map variables
-    String path = "/api/contas/vinculos".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "idConta", idConta));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "idTipoVinculo", idTipoVinculo));
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<PageVinculoContaResponse> returnType = new GenericType<PageVinculoContaResponse>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
-   * Lista os tipos de fun\u00E7\u00F5es para contas do Emissor
-   * Este recurso permite listar os tipos de fun\u00E7\u00F5es para as contas do Emissor
-   * @return String
-   */
-  public String listar_0() throws ApiException {
-    Object postBody = null;
-    
-    // create path and map variables
-    String path = "/api/contas/tipos-funcoes".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<String> returnType = new GenericType<String>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
-   * Realiza a listagem de todos os agendamentos
-   * Este recurso permite listar todos os agendamentos
-   * @param id id
-   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
-   * @param page P\u00E1gina
-   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
-   * @param tipoOperacao Tipo opera\u00E7\u00E3o 
-   * @param tipoRecorrencia Tipo Recorr\u00EAncia
-   * @param quantidadeAgendamento Quantidade agendamento 
-   * @param diaRecorrencia Dia recorr\u00EAncia
-   * @param valor Valor Agendamento
-   * @return String
-   */
-  public String listar_1(Long id, List<String> sort, Integer page, Integer limit, Integer tipoOperacao, Integer tipoRecorrencia, Integer quantidadeAgendamento, Integer diaRecorrencia, BigDecimal valor) throws ApiException {
-    Object postBody = null;
-    
-     // verify the required parameter 'id' is set
-     if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling listar_1");
-     }
-     
-    // create path and map variables
-    String path = "/api/contas/{id}/agendamentos".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "tipoOperacao", tipoOperacao));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "tipoRecorrencia", tipoRecorrencia));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "quantidadeAgendamento", quantidadeAgendamento));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "diaRecorrencia", diaRecorrencia));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "valor", valor));
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<String> returnType = new GenericType<String>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
    * Lista as transa\u00E7\u00F5es n\u00E3o processadas e processadas da conta
    * Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas e processadas da Conta
    * @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)
@@ -3477,12 +3066,12 @@ public class ContaApi {
    * @param grupoMCC Grupo MCC da transa\u00E7\u00E3o
    * @return PageTransacaoProcessadaNaoProcessadaResponse
    */
-  public PageTransacaoProcessadaNaoProcessadaResponse listar_2(Long id, List<String> sort, List<Integer> status, Integer page, Integer limit, String dataVencimento, String dataInicio, String dataFim, Long idTipoTransacao, Boolean flagCredito, Boolean flagFaturado, Boolean flagProcessada, Integer plano, Long codigoMCC, Long grupoMCC) throws ApiException {
+  public PageTransacaoProcessadaNaoProcessadaResponse listarTransacoesConta(Long id, List<String> sort, List<Integer> status, Integer page, Integer limit, String dataVencimento, String dataInicio, String dataFim, Long idTipoTransacao, Boolean flagCredito, Boolean flagFaturado, Boolean flagProcessada, Integer plano, Long codigoMCC, Long grupoMCC) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling listar_2");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling listarTransacoesConta");
      }
      
     // create path and map variables
@@ -3548,6 +3137,258 @@ public class ContaApi {
   }
   
   /**
+   * Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta
+   * Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas da Conta.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
+   * @param page P\u00E1gina
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
+   * @param dataInicio Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Par\u00E2mentro Ignorado se dataFim n\u00E3o for definida)
+   * @param dataFim Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00E2mentro Ignorado se dataInicio n\u00E3o for definida)
+   * @return PageTransacaoNaoProcessadaResponse
+   */
+  public PageTransacaoNaoProcessadaResponse listarTransacoesNaoProcessadasConta(Long id, List<String> sort, Integer page, Integer limit, String dataInicio, String dataFim) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling listarTransacoesNaoProcessadasConta");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/{id}/transacoes/listar-nao-processadas".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "dataInicio", dataInicio));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "dataFim", dataFim));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PageTransacaoNaoProcessadaResponse> returnType = new GenericType<PageTransacaoNaoProcessadaResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Listar as transa\u00E7\u00F5es negadas da conta
+   * Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es negadas da Conta
+   * @param id C\u00F3digo identificador da conta
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
+   * @param page P\u00E1gina
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
+   * @param idCartao C\u00F3digo identificador do cart\u00E3o
+   * @return PageTransacaoNegadaResponse
+   */
+  public PageTransacaoNegadaResponse listarTransacoesNegadas(Long id, List<String> sort, Integer page, Integer limit, Long idCartao) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling listarTransacoesNegadas");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/{id}/transacoes/negadas".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idCartao", idCartao));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PageTransacaoNegadaResponse> returnType = new GenericType<PageTransacaoNegadaResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Lista as transa\u00E7\u00F5es processadas da conta
+   * Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es processadas da Conta
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
+   * @param page P\u00E1gina
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
+   * @param dataVencimento Data de vencimento do extrato no formato yyyy-MM-dd
+   * @param dataInicio Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado)
+   * @param dataFim Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado)
+   * @param idTipoTransacao transacoes_processadas_request_tipo_transacao
+   * @param recuperaEncargos Adiciona as transa\u00E7\u00F5es de encargos na consulta
+   * @return PageTransacoesCorrentesResponse
+   */
+  public PageTransacoesCorrentesResponse listarTransacoesProcessadasConta(Long id, List<String> sort, Integer page, Integer limit, String dataVencimento, String dataInicio, String dataFim, Long idTipoTransacao, Integer recuperaEncargos) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling listarTransacoesProcessadasConta");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/{id}/transacoes/listar-processadas".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "dataVencimento", dataVencimento));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "dataInicio", dataInicio));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "dataFim", dataFim));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idTipoTransacao", idTipoTransacao));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "recuperaEncargos", recuperaEncargos));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PageTransacoesCorrentesResponse> returnType = new GenericType<PageTransacoesCorrentesResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Este recurso permite que uma proje\u00E7\u00E3o de compra ainda n\u00E3o processada seja recuperada. Os valores das compras s\u00E3o agrupados e exibidos em blocos mensais.
+   * Este recurso permite que uma proje\u00E7\u00E3o de compra ainda n\u00E3o processada seja recuperada. Os valores das compras s\u00E3o agrupados e exibidos em blocos mensais.
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o da conta
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
+   * @param page P\u00E1gina
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
+   * @return PageProjecaoCompraNaoProcessadaResponse
+   */
+  public PageProjecaoCompraNaoProcessadaResponse listarTransacoesProjetadasConta(Long id, List<String> sort, Integer page, Integer limit) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling listarTransacoesProjetadasConta");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/{id}/transacoes/projetadas".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PageProjecaoCompraNaoProcessadaResponse> returnType = new GenericType<PageProjecaoCompraNaoProcessadaResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Lista as transfer\u00EAncias realizadas pela conta
    * Este m\u00E9todo permite que sejam listadas as transfer\u00EAncias realizadas pela conta existentes na base do emissor
    * @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)
@@ -3561,12 +3402,12 @@ public class ContaApi {
    * @param dataTransferencia Data estabelecida para ocorrer a transfer\u00EAncia
    * @return PageTransferenciaResponse
    */
-  public PageTransferenciaResponse listar_3(Long id, List<String> sort, Integer page, Integer limit, Long idTransferencia, Long idContaOrigem, Long idContaDestino, BigDecimal valorTransferencia, String dataTransferencia) throws ApiException {
+  public PageTransferenciaResponse listarTransferenciasDeCreditoEntreCartoes(Long id, List<String> sort, Integer page, Integer limit, Long idTransferencia, Long idContaOrigem, Long idContaDestino, BigDecimal valorTransferencia, String dataTransferencia) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling listar_3");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling listarTransferenciasDeCreditoEntreCartoes");
      }
      
     // create path and map variables
@@ -3620,18 +3461,74 @@ public class ContaApi {
   }
   
   /**
+   * Lista v\u00EDnculos de contas
+   * Este recurso permite listar os v\u00EDnculos de contas existentes na base
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
+   * @param page P\u00E1gina
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
+   * @param idConta Id da subconta
+   * @param idTipoVinculo Id do tipo de v\u00EDnculo entre as duas contas
+   * @return PageVinculoContaResponse
+   */
+  public PageVinculoContaResponse listarVinculoConta(List<String> sort, Integer page, Integer limit, Long idConta, Long idTipoVinculo) throws ApiException {
+    Object postBody = null;
+    
+    // create path and map variables
+    String path = "/api/contas/vinculos".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idConta", idConta));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idTipoVinculo", idTipoVinculo));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PageVinculoContaResponse> returnType = new GenericType<PageVinculoContaResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Realiza a normaliza\u00E7\u00E3o de uma conta
    * Este m\u00E9todo permite que uma conta seja normalizada, ajustando assim o seu status e lan\u00E7ando os ajustes necess\u00E1rios
    * @param id C\u00F3digo de identifica\u00E7\u00E3o de uma Conta (id)
    * @param login login
    * @return Object
    */
-  public Object normalizacao(Long id, String login) throws ApiException {
+  public Object normalizarConta(Long id, String login) throws ApiException {
     Object postBody = login;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling normalizacao");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling normalizarConta");
      }
      
     // create path and map variables
@@ -3674,12 +3571,12 @@ public class ContaApi {
    * @param id Id Conta
    * @return Object
    */
-  public Object reativar(Long id) throws ApiException {
+  public Object reativarConta(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling reativar");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling reativarConta");
      }
      
     // create path and map variables
@@ -3712,53 +3609,6 @@ public class ContaApi {
 
     
     GenericType<Object> returnType = new GenericType<Object>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
-   * Realiza o cadastro de uma nova conta
-   * Esse recurso permite cadastrar uma nova conta para uma pessoa j\u00E1 existente na base de dados do emissor
-   * @param contaPersist contaPersist
-   * @return ContaResponse
-   */
-  public ContaResponse salvar(ContaPersist contaPersist) throws ApiException {
-    Object postBody = contaPersist;
-    
-     // verify the required parameter 'contaPersist' is set
-     if (contaPersist == null) {
-        throw new ApiException(400, "Missing the required parameter 'contaPersist' when calling salvar");
-     }
-     
-    // create path and map variables
-    String path = "/api/contas".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<ContaResponse> returnType = new GenericType<ContaResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -3818,27 +3668,164 @@ public class ContaApi {
   }
   
   /**
-   * Realiza o agendamento de transacoes
-   * Este recurso permite agendar opera\u00E7\u00F5es financeiras
-   * @param agendamentoPersist agendamentoPersist
-   * @param id id
-   * @return AgendamentoResponse
+   * Lan\u00E7a um ajuste para a conta do id informado
+   * Este recurso insere um ajuste para a conta do id informado
+   * @param id Id Conta
+   * @param idTipoAjuste C\u00F3digo identificador do tipo de ajuste
+   * @param dataAjuste Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ
+   * @param valorAjuste Valor do ajuste
+   * @param login login
+   * @param identificadorExterno Identificador Externo
+   * @param idTransacaoOriginal Identificador da transa\u00E7\u00E3o original (estorno)
+   * @param idEstabelecimento Identificador do estabelecimento quando o pagamento for efetuado em loja
+   * @param flagAtendimento Flag para lan\u00E7ar o atendimento
+   * @param mensagemAtendimento Mensagem enviada no atendimento
+   * @return AjusteFinanceiroResponse
    */
-  public AgendamentoResponse salvarAgendamento(AgendamentoPersist agendamentoPersist, Long id) throws ApiException {
-    Object postBody = agendamentoPersist;
+  public AjusteFinanceiroResponse salvarAjusteFinanceiroConta(Long id, Long idTipoAjuste, String dataAjuste, BigDecimal valorAjuste, String login, String identificadorExterno, Long idTransacaoOriginal, Long idEstabelecimento, Boolean flagAtendimento, String mensagemAtendimento) throws ApiException {
+    Object postBody = null;
     
-     // verify the required parameter 'agendamentoPersist' is set
-     if (agendamentoPersist == null) {
-        throw new ApiException(400, "Missing the required parameter 'agendamentoPersist' when calling salvarAgendamento");
-     }
-     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling salvarAgendamento");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling salvarAjusteFinanceiroConta");
+     }
+     
+     // verify the required parameter 'idTipoAjuste' is set
+     if (idTipoAjuste == null) {
+        throw new ApiException(400, "Missing the required parameter 'idTipoAjuste' when calling salvarAjusteFinanceiroConta");
+     }
+     
+     // verify the required parameter 'dataAjuste' is set
+     if (dataAjuste == null) {
+        throw new ApiException(400, "Missing the required parameter 'dataAjuste' when calling salvarAjusteFinanceiroConta");
+     }
+     
+     // verify the required parameter 'valorAjuste' is set
+     if (valorAjuste == null) {
+        throw new ApiException(400, "Missing the required parameter 'valorAjuste' when calling salvarAjusteFinanceiroConta");
      }
      
     // create path and map variables
-    String path = "/api/contas/{id}/agendamentos".replaceAll("\\{format\\}","json")
+    String path = "/api/contas/{id}/ajustes-financeiros".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idTipoAjuste", idTipoAjuste));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "dataAjuste", dataAjuste));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "valorAjuste", valorAjuste));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "identificadorExterno", identificadorExterno));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idTransacaoOriginal", idTransacaoOriginal));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idEstabelecimento", idEstabelecimento));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "flagAtendimento", flagAtendimento));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "mensagemAtendimento", mensagemAtendimento));
+    
+
+    if (login != null)
+      headerParams.put("login", apiClient.parameterToString(login));
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<AjusteFinanceiroResponse> returnType = new GenericType<AjusteFinanceiroResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Realiza o cadastro de uma nova conta
+   * Esse recurso permite cadastrar uma nova conta para uma pessoa j\u00E1 existente na base de dados do emissor
+   * @param contaPersist contaPersist
+   * @return ContaResponse
+   */
+  public ContaResponse salvarConta(ContaPersist contaPersist) throws ApiException {
+    Object postBody = contaPersist;
+    
+     // verify the required parameter 'contaPersist' is set
+     if (contaPersist == null) {
+        throw new ApiException(400, "Missing the required parameter 'contaPersist' when calling salvarConta");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<ContaResponse> returnType = new GenericType<ContaResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Salvar uma tarifa de d\u00E9bito para uma conta
+   * Este recurso permite salvar uma tarifa de d\u00E9bito para a conta
+   * @param id Identificador da conta
+   * @param contaDebitoTarifaPersist contaDebitoTarifaPersist
+   * @return ContaDebitoTarifaResponse
+   */
+  public ContaDebitoTarifaResponse salvarContaDebitoTarifa(Long id, ContaDebitoTarifaPersist contaDebitoTarifaPersist) throws ApiException {
+    Object postBody = contaDebitoTarifaPersist;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling salvarContaDebitoTarifa");
+     }
+     
+     // verify the required parameter 'contaDebitoTarifaPersist' is set
+     if (contaDebitoTarifaPersist == null) {
+        throw new ApiException(400, "Missing the required parameter 'contaDebitoTarifaPersist' when calling salvarContaDebitoTarifa");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/{id}/tarifas/debitos".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
     // query params
@@ -3866,7 +3853,7 @@ public class ContaApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<AgendamentoResponse> returnType = new GenericType<AgendamentoResponse>() {};
+    GenericType<ContaDebitoTarifaResponse> returnType = new GenericType<ContaDebitoTarifaResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -4088,63 +4075,6 @@ public class ContaApi {
   }
   
   /**
-   * Permite listar uma linha do tempo com os eventos da conta
-   * Esta opera\u00E7\u00E3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00E7\u00F5es, fechamento da fatura, pagamentos, gera\u00E7\u00E3o de cart\u00F5es e altera\u00E7\u00E3o de limite s\u00E3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00E9todo, as opera\u00E7\u00F5es s\u00E3o ordenadas de forma decrescente
-   * @param id Id Conta
-   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
-   * @param page P\u00E1gina
-   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
-   * @return PageTransacaoResponse
-   */
-  public PageTransacaoResponse transacoes(Long id, List<String> sort, Integer page, Integer limit) throws ApiException {
-    Object postBody = null;
-    
-     // verify the required parameter 'id' is set
-     if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling transacoes");
-     }
-     
-    // create path and map variables
-    String path = "/api/contas/{id}/timeline".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<PageTransacaoResponse> returnType = new GenericType<PageTransacaoResponse>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
    * Realiza uma transfer\u00EAncia de Cr\u00E9dito para outro cliente do mesmo Emissor
    * Este m\u00E9todo permite que um portador de um cart\u00E3o possa realizar auma transfer\u00EAncia de cr\u00E9dito para outro cliente do mesmo emissor
    * @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta do cliente portador do cart\u00E3o que ser\u00E1 debitado (id)
@@ -4152,22 +4082,22 @@ public class ContaApi {
    * @param valorTransferencia Valor da Transfer\u00EAncia
    * @return TransferenciaDetalheResponse
    */
-  public TransferenciaDetalheResponse transferir(Long id, Long idContaDestino, BigDecimal valorTransferencia) throws ApiException {
+  public TransferenciaDetalheResponse transferirCreditoEntreCartoes(Long id, Long idContaDestino, BigDecimal valorTransferencia) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling transferir");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling transferirCreditoEntreCartoes");
      }
      
      // verify the required parameter 'idContaDestino' is set
      if (idContaDestino == null) {
-        throw new ApiException(400, "Missing the required parameter 'idContaDestino' when calling transferir");
+        throw new ApiException(400, "Missing the required parameter 'idContaDestino' when calling transferirCreditoEntreCartoes");
      }
      
      // verify the required parameter 'valorTransferencia' is set
      if (valorTransferencia == null) {
-        throw new ApiException(400, "Missing the required parameter 'valorTransferencia' when calling transferir");
+        throw new ApiException(400, "Missing the required parameter 'valorTransferencia' when calling transferirCreditoEntreCartoes");
      }
      
     // create path and map variables
@@ -4215,17 +4145,17 @@ public class ContaApi {
    * @param transferencia transferencia
    * @return TransferenciaPortadoresResponse
    */
-  public TransferenciaPortadoresResponse transferirCreditoPortadores(Long id, TransferenciaPortadoresPersist transferencia) throws ApiException {
+  public TransferenciaPortadoresResponse transferirCreditoEntrePortadores(Long id, TransferenciaPortadoresPersist transferencia) throws ApiException {
     Object postBody = transferencia;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling transferirCreditoPortadores");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling transferirCreditoEntrePortadores");
      }
      
      // verify the required parameter 'transferencia' is set
      if (transferencia == null) {
-        throw new ApiException(400, "Missing the required parameter 'transferencia' when calling transferirCreditoPortadores");
+        throw new ApiException(400, "Missing the required parameter 'transferencia' when calling transferirCreditoEntrePortadores");
      }
      
     // create path and map variables

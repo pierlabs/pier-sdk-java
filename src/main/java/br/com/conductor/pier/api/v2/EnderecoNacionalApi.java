@@ -41,12 +41,12 @@ public class EnderecoNacionalApi {
    * @param CEP CEP
    * @return EnderecoResponse
    */
-  public EnderecoResponse consultarEndereco(String CEP) throws ApiException {
+  public EnderecoResponse consultarEnderecoPorCep(String CEP) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'CEP' is set
      if (CEP == null) {
-        throw new ApiException(400, "Missing the required parameter 'CEP' when calling consultarEndereco");
+        throw new ApiException(400, "Missing the required parameter 'CEP' when calling consultarEnderecoPorCep");
      }
      
     // create path and map variables

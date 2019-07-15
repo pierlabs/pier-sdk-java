@@ -9,10 +9,10 @@ import br.com.conductor.pier.api.v2.invoker.Pair;
 
 import br.com.conductor.pier.api.v2.model.TipoFaturamentoPersist;
 import br.com.conductor.pier.api.v2.model.TipoFaturamentoResponse;
-import br.com.conductor.pier.api.v2.model.TipoFaturamentoPorContaPersist;
 import br.com.conductor.pier.api.v2.model.TipoFaturamentoPorContaResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoFaturamentoPorContaResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoFaturamentoResponse;
+import br.com.conductor.pier.api.v2.model.TipoFaturamentoPorContaPersist;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -91,100 +91,6 @@ public class FaturamentoApi {
     
     GenericType<TipoFaturamentoResponse> returnType = new GenericType<TipoFaturamentoResponse>() {};
     return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
-   * Adiciona uma nova configura\u00E7\u00E3o de faturamento para uma conta
-   * Este m\u00E9todo permite adicionar uma nova configura\u00E7\u00E3o de tipo de faturamento para um conta espec\u00EDfica
-   * @param tipoFaturamentoPorContaPersist tipoFaturamentoPorContaPersist
-   * @return TipoFaturamentoPorContaResponse
-   */
-  public TipoFaturamentoPorContaResponse cadastrarFaturamentoPorConta(TipoFaturamentoPorContaPersist tipoFaturamentoPorContaPersist) throws ApiException {
-    Object postBody = tipoFaturamentoPorContaPersist;
-    
-     // verify the required parameter 'tipoFaturamentoPorContaPersist' is set
-     if (tipoFaturamentoPorContaPersist == null) {
-        throw new ApiException(400, "Missing the required parameter 'tipoFaturamentoPorContaPersist' when calling cadastrarFaturamentoPorConta");
-     }
-     
-    // create path and map variables
-    String path = "/api/tipos-faturamento-conta".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<TipoFaturamentoPorContaResponse> returnType = new GenericType<TipoFaturamentoPorContaResponse>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
-   * Adiciona um novo faturamento
-   * Adiciona uma nova configura\u00E7\u00E3o de tipo de faturamento
-   * @param tipoFaturamentoPersist tipoFaturamentoPersist
-   * @return TipoFaturamentoResponse
-   */
-  public TipoFaturamentoResponse cadastrarTipoFaturamento(TipoFaturamentoPersist tipoFaturamentoPersist) throws ApiException {
-    Object postBody = tipoFaturamentoPersist;
-    
-     // verify the required parameter 'tipoFaturamentoPersist' is set
-     if (tipoFaturamentoPersist == null) {
-        throw new ApiException(400, "Missing the required parameter 'tipoFaturamentoPersist' when calling cadastrarTipoFaturamento");
-     }
-     
-    // create path and map variables
-    String path = "/api/tipos-faturamento".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<TipoFaturamentoResponse> returnType = new GenericType<TipoFaturamentoResponse>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
@@ -347,7 +253,7 @@ public class FaturamentoApi {
    * @param modificadoPor Identificador do respons\u00E1vel pela modifica\u00E7\u00E3o do registro
    * @return PageTipoFaturamentoPorContaResponse
    */
-  public PageTipoFaturamentoPorContaResponse listarFaturamentoPorConta(List<String> sort, Integer page, Integer limit, Long idTipoFaturamentoPorConta, Boolean ativo, Long idConta, Long idTipoFaturamento, String dataHoraInclusao, String dataHoraCancelamento, String modificadoPor) throws ApiException {
+  public PageTipoFaturamentoPorContaResponse listarFaturamentosPorConta(List<String> sort, Integer page, Integer limit, Long idTipoFaturamentoPorConta, Boolean ativo, Long idConta, Long idTipoFaturamento, String dataHoraInclusao, String dataHoraCancelamento, String modificadoPor) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -415,7 +321,7 @@ public class FaturamentoApi {
    * @param idConvenio C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio relacionado ao tipo de faturamento
    * @return PageTipoFaturamentoResponse
    */
-  public PageTipoFaturamentoResponse listarTipoFaturamento(List<String> sort, Integer page, Integer limit, Long idTipoFaturamento, String descricao, Boolean flagApenasDemonstrativo, Long idConvenio) throws ApiException {
+  public PageTipoFaturamentoResponse listarTiposFaturamentos(List<String> sort, Integer page, Integer limit, Long idTipoFaturamento, String descricao, Boolean flagApenasDemonstrativo, Long idConvenio) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -462,6 +368,100 @@ public class FaturamentoApi {
     
     GenericType<PageTipoFaturamentoResponse> returnType = new GenericType<PageTipoFaturamentoResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Adiciona uma nova configura\u00E7\u00E3o de faturamento para uma conta
+   * Este m\u00E9todo permite adicionar uma nova configura\u00E7\u00E3o de tipo de faturamento para um conta espec\u00EDfica
+   * @param tipoFaturamentoPorContaPersist tipoFaturamentoPorContaPersist
+   * @return TipoFaturamentoPorContaResponse
+   */
+  public TipoFaturamentoPorContaResponse salvarFaturamentoPorConta(TipoFaturamentoPorContaPersist tipoFaturamentoPorContaPersist) throws ApiException {
+    Object postBody = tipoFaturamentoPorContaPersist;
+    
+     // verify the required parameter 'tipoFaturamentoPorContaPersist' is set
+     if (tipoFaturamentoPorContaPersist == null) {
+        throw new ApiException(400, "Missing the required parameter 'tipoFaturamentoPorContaPersist' when calling salvarFaturamentoPorConta");
+     }
+     
+    // create path and map variables
+    String path = "/api/tipos-faturamento-conta".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<TipoFaturamentoPorContaResponse> returnType = new GenericType<TipoFaturamentoPorContaResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Adiciona um novo faturamento
+   * Adiciona uma nova configura\u00E7\u00E3o de tipo de faturamento
+   * @param tipoFaturamentoPersist tipoFaturamentoPersist
+   * @return TipoFaturamentoResponse
+   */
+  public TipoFaturamentoResponse salvarTipoFaturamento(TipoFaturamentoPersist tipoFaturamentoPersist) throws ApiException {
+    Object postBody = tipoFaturamentoPersist;
+    
+     // verify the required parameter 'tipoFaturamentoPersist' is set
+     if (tipoFaturamentoPersist == null) {
+        throw new ApiException(400, "Missing the required parameter 'tipoFaturamentoPersist' when calling salvarTipoFaturamento");
+     }
+     
+    // create path and map variables
+    String path = "/api/tipos-faturamento".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<TipoFaturamentoResponse> returnType = new GenericType<TipoFaturamentoResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   

@@ -46,17 +46,17 @@ public class DadosBancariosContaApi {
    * @param update update
    * @return DadosBancariosContaResponse
    */
-  public DadosBancariosContaResponse alterar(Long id, DadosBancariosContaUpdate update) throws ApiException {
+  public DadosBancariosContaResponse alterarDadosBancarios(Long id, DadosBancariosContaUpdate update) throws ApiException {
     Object postBody = update;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling alterar");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarDadosBancarios");
      }
      
      // verify the required parameter 'update' is set
      if (update == null) {
-        throw new ApiException(400, "Missing the required parameter 'update' when calling alterar");
+        throw new ApiException(400, "Missing the required parameter 'update' when calling alterarDadosBancarios");
      }
      
     // create path and map variables
@@ -94,65 +94,17 @@ public class DadosBancariosContaApi {
   }
   
   /**
-   * Apresenta dados de um determinado tipo de conta banc\u00E1ria
-   * Este m\u00E9todo permite consultar dados de um determinado tipo de conta banc\u00E1ria a partir de seu codigo de identifica\u00E7\u00E3o (id)
-   * @param id C\u00F3digo de identifica\u00E7\u00E3o do tipo de conta banc\u00E1ria (id)
-   * @return CdtTipoContaBancaria
-   */
-  public CdtTipoContaBancaria consultar(Long id) throws ApiException {
-    Object postBody = null;
-    
-     // verify the required parameter 'id' is set
-     if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultar");
-     }
-     
-    // create path and map variables
-    String path = "/api/dados-bancarios-conta/tipos-contas-bancarias/{id}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<CdtTipoContaBancaria> returnType = new GenericType<CdtTipoContaBancaria>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
    * Apresenta os dados banc\u00E1rios de uma determinada conta
    * Este m\u00E9todo permite consultar os dados banc\u00E1rios de uma determinada conta a partir de seu codigo de identifica\u00E7\u00E3o (id)
    * @param id C\u00F3digo de identifica\u00E7\u00E3o do dado banc\u00E1rio da conta (id)
    * @return DadosBancariosContaResponse
    */
-  public DadosBancariosContaResponse consultar_0(Long id) throws ApiException {
+  public DadosBancariosContaResponse consultarDadosBancarios(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultar_0");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarDadosBancarios");
      }
      
     // create path and map variables
@@ -190,6 +142,54 @@ public class DadosBancariosContaApi {
   }
   
   /**
+   * Apresenta dados de um determinado tipo de conta banc\u00E1ria
+   * Este m\u00E9todo permite consultar dados de um determinado tipo de conta banc\u00E1ria a partir de seu codigo de identifica\u00E7\u00E3o (id)
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o do tipo de conta banc\u00E1ria (id)
+   * @return CdtTipoContaBancaria
+   */
+  public CdtTipoContaBancaria consultarTipoContaBancaria(Long id) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarTipoContaBancaria");
+     }
+     
+    // create path and map variables
+    String path = "/api/dados-bancarios-conta/tipos-contas-bancarias/{id}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<CdtTipoContaBancaria> returnType = new GenericType<CdtTipoContaBancaria>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Apresenta os dados banc\u00E1rios a partir dos filtros informados
    * Este m\u00E9todo permite consultar os dados banc\u00E1rios a partir dos filtros informados
    * @param sort Tipo de ordena\u00E7\u00E3o dos registros
@@ -203,7 +203,7 @@ public class DadosBancariosContaApi {
    * @param idTipoContaBancaria C\u00F3digo de Identifica\u00E7\u00E3o do tipo de conta banc\u00E1ria (id). 
    * @return PageDadosBancariosContaResponse
    */
-  public PageDadosBancariosContaResponse listar(List<String> sort, Integer page, Integer limit, Long id, Long idConta, Long codigoBanco, Long numeroAgencia, String numeroContaCorrente, Long idTipoContaBancaria) throws ApiException {
+  public PageDadosBancariosContaResponse listarDadosBancarios(List<String> sort, Integer page, Integer limit, Long id, Long idConta, Long codigoBanco, Long numeroAgencia, String numeroContaCorrente, Long idTipoContaBancaria) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -266,7 +266,7 @@ public class DadosBancariosContaApi {
    * @param descricao Descri\u00E7\u00E3o do tipo de conta banc\u00E1ria
    * @return CdtTipoContaBancaria
    */
-  public CdtTipoContaBancaria listar_0(List<String> sort, Integer page, Integer limit, String descricao) throws ApiException {
+  public CdtTipoContaBancaria listarTiposContasBancarias(List<String> sort, Integer page, Integer limit, String descricao) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -316,12 +316,12 @@ public class DadosBancariosContaApi {
    * @param dadosBancariosContaPersist dadosBancariosContaPersist
    * @return DadosBancariosContaResponse
    */
-  public DadosBancariosContaResponse salvar(DadosBancariosContaPersist dadosBancariosContaPersist) throws ApiException {
+  public DadosBancariosContaResponse salvarDadosBancarios(DadosBancariosContaPersist dadosBancariosContaPersist) throws ApiException {
     Object postBody = dadosBancariosContaPersist;
     
      // verify the required parameter 'dadosBancariosContaPersist' is set
      if (dadosBancariosContaPersist == null) {
-        throw new ApiException(400, "Missing the required parameter 'dadosBancariosContaPersist' when calling salvar");
+        throw new ApiException(400, "Missing the required parameter 'dadosBancariosContaPersist' when calling salvarDadosBancarios");
      }
      
     // create path and map variables

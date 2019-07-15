@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v2.model.ClasseParcelaAgendamentoResponse;
+import br.com.conductor.pier.api.v2.model.CredorResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -10,12 +10,15 @@ import java.util.List;
 
 
 
+/**
+ * P\u00E1gina de Credores
+ **/
 
-
+@ApiModel(description = "P\u00E1gina de Credores")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class PageParcelaAgendamentoResponse   {
+public class PageCredorResponse   {
   
-  private List<ClasseParcelaAgendamentoResponse> content = new ArrayList<ClasseParcelaAgendamentoResponse>();
+  private List<CredorResponse> content = new ArrayList<CredorResponse>();
   private Boolean first = null;
   private Boolean firstPage = null;
   private Boolean hasContent = null;
@@ -33,24 +36,24 @@ public class PageParcelaAgendamentoResponse   {
   
   /**
    **/
-  public PageParcelaAgendamentoResponse content(List<ClasseParcelaAgendamentoResponse> content) {
+  public PageCredorResponse content(List<CredorResponse> content) {
     this.content = content;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("content")
-  public List<ClasseParcelaAgendamentoResponse> getContent() {
+  public List<CredorResponse> getContent() {
     return content;
   }
-  public void setContent(List<ClasseParcelaAgendamentoResponse> content) {
+  public void setContent(List<CredorResponse> content) {
     this.content = content;
   }
 
   
   /**
    **/
-  public PageParcelaAgendamentoResponse first(Boolean first) {
+  public PageCredorResponse first(Boolean first) {
     this.first = first;
     return this;
   }
@@ -67,7 +70,7 @@ public class PageParcelaAgendamentoResponse   {
   
   /**
    **/
-  public PageParcelaAgendamentoResponse firstPage(Boolean firstPage) {
+  public PageCredorResponse firstPage(Boolean firstPage) {
     this.firstPage = firstPage;
     return this;
   }
@@ -84,7 +87,7 @@ public class PageParcelaAgendamentoResponse   {
   
   /**
    **/
-  public PageParcelaAgendamentoResponse hasContent(Boolean hasContent) {
+  public PageCredorResponse hasContent(Boolean hasContent) {
     this.hasContent = hasContent;
     return this;
   }
@@ -101,7 +104,7 @@ public class PageParcelaAgendamentoResponse   {
   
   /**
    **/
-  public PageParcelaAgendamentoResponse hasNextPage(Boolean hasNextPage) {
+  public PageCredorResponse hasNextPage(Boolean hasNextPage) {
     this.hasNextPage = hasNextPage;
     return this;
   }
@@ -118,7 +121,7 @@ public class PageParcelaAgendamentoResponse   {
   
   /**
    **/
-  public PageParcelaAgendamentoResponse hasPreviousPage(Boolean hasPreviousPage) {
+  public PageCredorResponse hasPreviousPage(Boolean hasPreviousPage) {
     this.hasPreviousPage = hasPreviousPage;
     return this;
   }
@@ -135,7 +138,7 @@ public class PageParcelaAgendamentoResponse   {
   
   /**
    **/
-  public PageParcelaAgendamentoResponse last(Boolean last) {
+  public PageCredorResponse last(Boolean last) {
     this.last = last;
     return this;
   }
@@ -152,7 +155,7 @@ public class PageParcelaAgendamentoResponse   {
   
   /**
    **/
-  public PageParcelaAgendamentoResponse nextPage(Integer nextPage) {
+  public PageCredorResponse nextPage(Integer nextPage) {
     this.nextPage = nextPage;
     return this;
   }
@@ -169,7 +172,7 @@ public class PageParcelaAgendamentoResponse   {
   
   /**
    **/
-  public PageParcelaAgendamentoResponse number(Integer number) {
+  public PageCredorResponse number(Integer number) {
     this.number = number;
     return this;
   }
@@ -186,7 +189,7 @@ public class PageParcelaAgendamentoResponse   {
   
   /**
    **/
-  public PageParcelaAgendamentoResponse numberOfElements(Integer numberOfElements) {
+  public PageCredorResponse numberOfElements(Integer numberOfElements) {
     this.numberOfElements = numberOfElements;
     return this;
   }
@@ -203,7 +206,7 @@ public class PageParcelaAgendamentoResponse   {
   
   /**
    **/
-  public PageParcelaAgendamentoResponse previousPage(Integer previousPage) {
+  public PageCredorResponse previousPage(Integer previousPage) {
     this.previousPage = previousPage;
     return this;
   }
@@ -220,7 +223,7 @@ public class PageParcelaAgendamentoResponse   {
   
   /**
    **/
-  public PageParcelaAgendamentoResponse size(Integer size) {
+  public PageCredorResponse size(Integer size) {
     this.size = size;
     return this;
   }
@@ -237,7 +240,7 @@ public class PageParcelaAgendamentoResponse   {
   
   /**
    **/
-  public PageParcelaAgendamentoResponse totalElements(Long totalElements) {
+  public PageCredorResponse totalElements(Long totalElements) {
     this.totalElements = totalElements;
     return this;
   }
@@ -254,7 +257,7 @@ public class PageParcelaAgendamentoResponse   {
   
   /**
    **/
-  public PageParcelaAgendamentoResponse totalPages(Integer totalPages) {
+  public PageCredorResponse totalPages(Integer totalPages) {
     this.totalPages = totalPages;
     return this;
   }
@@ -278,21 +281,21 @@ public class PageParcelaAgendamentoResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    PageParcelaAgendamentoResponse pageParcelaAgendamentoResponse = (PageParcelaAgendamentoResponse) o;
-    return Objects.equals(this.content, pageParcelaAgendamentoResponse.content) &&
-        Objects.equals(this.first, pageParcelaAgendamentoResponse.first) &&
-        Objects.equals(this.firstPage, pageParcelaAgendamentoResponse.firstPage) &&
-        Objects.equals(this.hasContent, pageParcelaAgendamentoResponse.hasContent) &&
-        Objects.equals(this.hasNextPage, pageParcelaAgendamentoResponse.hasNextPage) &&
-        Objects.equals(this.hasPreviousPage, pageParcelaAgendamentoResponse.hasPreviousPage) &&
-        Objects.equals(this.last, pageParcelaAgendamentoResponse.last) &&
-        Objects.equals(this.nextPage, pageParcelaAgendamentoResponse.nextPage) &&
-        Objects.equals(this.number, pageParcelaAgendamentoResponse.number) &&
-        Objects.equals(this.numberOfElements, pageParcelaAgendamentoResponse.numberOfElements) &&
-        Objects.equals(this.previousPage, pageParcelaAgendamentoResponse.previousPage) &&
-        Objects.equals(this.size, pageParcelaAgendamentoResponse.size) &&
-        Objects.equals(this.totalElements, pageParcelaAgendamentoResponse.totalElements) &&
-        Objects.equals(this.totalPages, pageParcelaAgendamentoResponse.totalPages);
+    PageCredorResponse pageCredorResponse = (PageCredorResponse) o;
+    return Objects.equals(this.content, pageCredorResponse.content) &&
+        Objects.equals(this.first, pageCredorResponse.first) &&
+        Objects.equals(this.firstPage, pageCredorResponse.firstPage) &&
+        Objects.equals(this.hasContent, pageCredorResponse.hasContent) &&
+        Objects.equals(this.hasNextPage, pageCredorResponse.hasNextPage) &&
+        Objects.equals(this.hasPreviousPage, pageCredorResponse.hasPreviousPage) &&
+        Objects.equals(this.last, pageCredorResponse.last) &&
+        Objects.equals(this.nextPage, pageCredorResponse.nextPage) &&
+        Objects.equals(this.number, pageCredorResponse.number) &&
+        Objects.equals(this.numberOfElements, pageCredorResponse.numberOfElements) &&
+        Objects.equals(this.previousPage, pageCredorResponse.previousPage) &&
+        Objects.equals(this.size, pageCredorResponse.size) &&
+        Objects.equals(this.totalElements, pageCredorResponse.totalElements) &&
+        Objects.equals(this.totalPages, pageCredorResponse.totalPages);
   }
 
   @Override
@@ -303,7 +306,7 @@ public class PageParcelaAgendamentoResponse   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PageParcelaAgendamentoResponse {\n");
+    sb.append("class PageCredorResponse {\n");
     
     sb.append("    content: ").append(toIndentedString(content)).append("\n");
     sb.append("    first: ").append(toIndentedString(first)).append("\n");

@@ -46,70 +46,16 @@ public class AutorizacaoApi {
    * @param autorizacaoOnUsRequest autorizacaoOnUsRequest
    * @return TransacaoOnUsResponse
    */
-  public TransacaoOnUsResponse autorizar(AutorizacaoOnUsRequest autorizacaoOnUsRequest) throws ApiException {
+  public TransacaoOnUsResponse autorizarTransacao(AutorizacaoOnUsRequest autorizacaoOnUsRequest) throws ApiException {
     Object postBody = autorizacaoOnUsRequest;
     
      // verify the required parameter 'autorizacaoOnUsRequest' is set
      if (autorizacaoOnUsRequest == null) {
-        throw new ApiException(400, "Missing the required parameter 'autorizacaoOnUsRequest' when calling autorizar");
+        throw new ApiException(400, "Missing the required parameter 'autorizacaoOnUsRequest' when calling autorizarTransacao");
      }
      
     // create path and map variables
     String path = "/api/autorizar-transacao".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<TransacaoOnUsResponse> returnType = new GenericType<TransacaoOnUsResponse>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
-   * Autoriza transa\u00E7\u00E3o financeira por idConta
-   * Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idConta
-   * @param id Id Conta
-   * @param transacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest
-   * @return TransacaoOnUsResponse
-   */
-  public TransacaoOnUsResponse autorizarPorConta(Long id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest) throws ApiException {
-    Object postBody = transacaoOnUsPorIdCartaoRequest;
-    
-     // verify the required parameter 'id' is set
-     if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling autorizarPorConta");
-     }
-     
-     // verify the required parameter 'transacaoOnUsPorIdCartaoRequest' is set
-     if (transacaoOnUsPorIdCartaoRequest == null) {
-        throw new ApiException(400, "Missing the required parameter 'transacaoOnUsPorIdCartaoRequest' when calling autorizarPorConta");
-     }
-     
-    // create path and map variables
-    String path = "/api/contas/{id}/autorizar-transacao".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -148,21 +94,75 @@ public class AutorizacaoApi {
    * @param transacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest
    * @return TransacaoOnUsResponse
    */
-  public TransacaoOnUsResponse autorizar_0(Long id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest) throws ApiException {
+  public TransacaoOnUsResponse autorizarTransacaoPorCartao(Long id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest) throws ApiException {
     Object postBody = transacaoOnUsPorIdCartaoRequest;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling autorizar_0");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling autorizarTransacaoPorCartao");
      }
      
      // verify the required parameter 'transacaoOnUsPorIdCartaoRequest' is set
      if (transacaoOnUsPorIdCartaoRequest == null) {
-        throw new ApiException(400, "Missing the required parameter 'transacaoOnUsPorIdCartaoRequest' when calling autorizar_0");
+        throw new ApiException(400, "Missing the required parameter 'transacaoOnUsPorIdCartaoRequest' when calling autorizarTransacaoPorCartao");
      }
      
     // create path and map variables
     String path = "/api/cartoes/{id}/autorizar-transacao".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<TransacaoOnUsResponse> returnType = new GenericType<TransacaoOnUsResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Autoriza transa\u00E7\u00E3o financeira por idConta
+   * Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idConta
+   * @param id Id Conta
+   * @param transacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest
+   * @return TransacaoOnUsResponse
+   */
+  public TransacaoOnUsResponse autorizarTransacaoPorConta(Long id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest) throws ApiException {
+    Object postBody = transacaoOnUsPorIdCartaoRequest;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling autorizarTransacaoPorConta");
+     }
+     
+     // verify the required parameter 'transacaoOnUsPorIdCartaoRequest' is set
+     if (transacaoOnUsPorIdCartaoRequest == null) {
+        throw new ApiException(400, "Missing the required parameter 'transacaoOnUsPorIdCartaoRequest' when calling autorizarTransacaoPorConta");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/{id}/autorizar-transacao".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
     // query params
@@ -201,70 +201,16 @@ public class AutorizacaoApi {
    * @param cancelamentoRequest cancelamentoRequest
    * @return TransacaoOnUsResponse
    */
-  public TransacaoOnUsResponse cancelar(CancelamentoTransacaoOnUsRequest cancelamentoRequest) throws ApiException {
+  public TransacaoOnUsResponse cancelarTransacao(CancelamentoTransacaoOnUsRequest cancelamentoRequest) throws ApiException {
     Object postBody = cancelamentoRequest;
     
      // verify the required parameter 'cancelamentoRequest' is set
      if (cancelamentoRequest == null) {
-        throw new ApiException(400, "Missing the required parameter 'cancelamentoRequest' when calling cancelar");
+        throw new ApiException(400, "Missing the required parameter 'cancelamentoRequest' when calling cancelarTransacao");
      }
      
     // create path and map variables
     String path = "/api/cancelar-transacao".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<TransacaoOnUsResponse> returnType = new GenericType<TransacaoOnUsResponse>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
-   * Cancela transa\u00E7\u00E3o financeira por idConta
-   * Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idConta
-   * @param id Id Conta
-   * @param cancelamentoRequest cancelamentoRequest
-   * @return TransacaoOnUsResponse
-   */
-  public TransacaoOnUsResponse cancelarPorIdConta(Long id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest) throws ApiException {
-    Object postBody = cancelamentoRequest;
-    
-     // verify the required parameter 'id' is set
-     if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling cancelarPorIdConta");
-     }
-     
-     // verify the required parameter 'cancelamentoRequest' is set
-     if (cancelamentoRequest == null) {
-        throw new ApiException(400, "Missing the required parameter 'cancelamentoRequest' when calling cancelarPorIdConta");
-     }
-     
-    // create path and map variables
-    String path = "/api/contas/{id}/cancelar-transacao".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -303,17 +249,17 @@ public class AutorizacaoApi {
    * @param cancelamentoRequest cancelamentoRequest
    * @return TransacaoOnUsResponse
    */
-  public TransacaoOnUsResponse cancelar_0(Long id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest) throws ApiException {
+  public TransacaoOnUsResponse cancelarTransacaoPorCartao(Long id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest) throws ApiException {
     Object postBody = cancelamentoRequest;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling cancelar_0");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling cancelarTransacaoPorCartao");
      }
      
      // verify the required parameter 'cancelamentoRequest' is set
      if (cancelamentoRequest == null) {
-        throw new ApiException(400, "Missing the required parameter 'cancelamentoRequest' when calling cancelar_0");
+        throw new ApiException(400, "Missing the required parameter 'cancelamentoRequest' when calling cancelarTransacaoPorCartao");
      }
      
     // create path and map variables
@@ -351,11 +297,65 @@ public class AutorizacaoApi {
   }
   
   /**
+   * Cancela transa\u00E7\u00E3o financeira por idConta
+   * Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idConta
+   * @param id Id Conta
+   * @param cancelamentoRequest cancelamentoRequest
+   * @return TransacaoOnUsResponse
+   */
+  public TransacaoOnUsResponse cancelarTransacaoPorConta(Long id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest) throws ApiException {
+    Object postBody = cancelamentoRequest;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling cancelarTransacaoPorConta");
+     }
+     
+     // verify the required parameter 'cancelamentoRequest' is set
+     if (cancelamentoRequest == null) {
+        throw new ApiException(400, "Missing the required parameter 'cancelamentoRequest' when calling cancelarTransacaoPorConta");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/{id}/cancelar-transacao".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<TransacaoOnUsResponse> returnType = new GenericType<TransacaoOnUsResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Retorna c\u00F3digos de processamento de autoriza\u00E7\u00E3o
    * Este m\u00E9todo retorna a lista dos c\u00F3digos de processamento para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es financeiras
    * @return List<Object>
    */
-  public List<Object> listarCodigosProcessamentoAutorizacao() throws ApiException {
+  public List<Object> consultarCodigosProcessamentoAutorizacao() throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -438,12 +438,12 @@ public class AutorizacaoApi {
    * @param transacoesRequest transacoesRequest
    * @return TransacaoOnUsResponse
    */
-  public TransacaoOnUsResponse simular(TransacaoOnUsRequest transacoesRequest) throws ApiException {
+  public TransacaoOnUsResponse simularTransacao(TransacaoOnUsRequest transacoesRequest) throws ApiException {
     Object postBody = transacoesRequest;
     
      // verify the required parameter 'transacoesRequest' is set
      if (transacoesRequest == null) {
-        throw new ApiException(400, "Missing the required parameter 'transacoesRequest' when calling simular");
+        throw new ApiException(400, "Missing the required parameter 'transacoesRequest' when calling simularTransacao");
      }
      
     // create path and map variables

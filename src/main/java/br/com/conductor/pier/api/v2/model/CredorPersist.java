@@ -120,14 +120,14 @@ public class CredorPersist   {
 
   
   /**
-   * Credor persist nome credor
+   * Nome do credor
    **/
   public CredorPersist nomeCredor(String nomeCredor) {
     this.nomeCredor = nomeCredor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Credor persist nome credor")
+  @ApiModelProperty(example = "null", value = "Nome do credor")
   @JsonProperty("nomeCredor")
   public String getNomeCredor() {
     return nomeCredor;
@@ -138,14 +138,14 @@ public class CredorPersist   {
 
   
   /**
-   * Credor persist pagamento semanal
+   * Dia do pagamento caso seja semanal
    **/
   public CredorPersist diaPagamentoSemanal(Integer diaPagamentoSemanal) {
     this.diaPagamentoSemanal = diaPagamentoSemanal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Credor persist pagamento semanal")
+  @ApiModelProperty(example = "null", value = "Dia do pagamento caso seja semanal")
   @JsonProperty("diaPagamentoSemanal")
   public Integer getDiaPagamentoSemanal() {
     return diaPagamentoSemanal;
@@ -156,14 +156,14 @@ public class CredorPersist   {
 
   
   /**
-   * Credor persist pagamento mensal
+   * Dia do pagamento caso seja mensal
    **/
   public CredorPersist diaPagamentoMensal(Integer diaPagamentoMensal) {
     this.diaPagamentoMensal = diaPagamentoMensal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Credor persist pagamento mensal")
+  @ApiModelProperty(example = "null", value = "Dia do pagamento caso seja mensal")
   @JsonProperty("diaPagamentoMensal")
   public Integer getDiaPagamentoMensal() {
     return diaPagamentoMensal;
@@ -174,14 +174,14 @@ public class CredorPersist   {
 
   
   /**
-   * Credor respone pagamento decendial primeiro
+   * Dia do primeiro pagamento caso seja decendial
    **/
   public CredorPersist diaPagamentoDecendialPrimeiro(Integer diaPagamentoDecendialPrimeiro) {
     this.diaPagamentoDecendialPrimeiro = diaPagamentoDecendialPrimeiro;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Credor respone pagamento decendial primeiro")
+  @ApiModelProperty(example = "null", value = "Dia do primeiro pagamento caso seja decendial")
   @JsonProperty("diaPagamentoDecendialPrimeiro")
   public Integer getDiaPagamentoDecendialPrimeiro() {
     return diaPagamentoDecendialPrimeiro;
@@ -192,14 +192,14 @@ public class CredorPersist   {
 
   
   /**
-   * Credor respone pagamento decendial segundo
+   * Dia do segundo pagamento caso seja decendial
    **/
   public CredorPersist diaPagamentoDecendialSegundo(Integer diaPagamentoDecendialSegundo) {
     this.diaPagamentoDecendialSegundo = diaPagamentoDecendialSegundo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Credor respone pagamento decendial segundo")
+  @ApiModelProperty(example = "null", value = "Dia do segundo pagamento caso seja decendial")
   @JsonProperty("diaPagamentoDecendialSegundo")
   public Integer getDiaPagamentoDecendialSegundo() {
     return diaPagamentoDecendialSegundo;
@@ -210,14 +210,14 @@ public class CredorPersist   {
 
   
   /**
-   * Credor respone pagamento decendial terceiro
+   * Dia do terceiro pagamento caso seja decendial
    **/
   public CredorPersist diaPagamentoDecendialTerceiro(Integer diaPagamentoDecendialTerceiro) {
     this.diaPagamentoDecendialTerceiro = diaPagamentoDecendialTerceiro;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Credor respone pagamento decendial terceiro")
+  @ApiModelProperty(example = "null", value = "Dia do terceiro pagamento caso seja decendial")
   @JsonProperty("diaPagamentoDecendialTerceiro")
   public Integer getDiaPagamentoDecendialTerceiro() {
     return diaPagamentoDecendialTerceiro;
@@ -228,14 +228,14 @@ public class CredorPersist   {
 
   
   /**
-   * Credor respone pagamento quinzenal primeiro
+   * Dia do primeiro pagamento caso seja quinzenal
    **/
   public CredorPersist diaPagamentoQuinzenalPrimeiro(Integer diaPagamentoQuinzenalPrimeiro) {
     this.diaPagamentoQuinzenalPrimeiro = diaPagamentoQuinzenalPrimeiro;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Credor respone pagamento quinzenal primeiro")
+  @ApiModelProperty(example = "null", value = "Dia do primeiro pagamento caso seja quinzenal")
   @JsonProperty("diaPagamentoQuinzenalPrimeiro")
   public Integer getDiaPagamentoQuinzenalPrimeiro() {
     return diaPagamentoQuinzenalPrimeiro;
@@ -246,14 +246,14 @@ public class CredorPersist   {
 
   
   /**
-   * Credor respone pagamento quinzenal segundo
+   * Dia do segundo pagamento caso seja quinzenal
    **/
   public CredorPersist diaPagamentoQuinzenalSegundo(Integer diaPagamentoQuinzenalSegundo) {
     this.diaPagamentoQuinzenalSegundo = diaPagamentoQuinzenalSegundo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Credor respone pagamento quinzenal segundo")
+  @ApiModelProperty(example = "null", value = "Dia do segundo pagamento caso seja quinzenal")
   @JsonProperty("diaPagamentoQuinzenalSegundo")
   public Integer getDiaPagamentoQuinzenalSegundo() {
     return diaPagamentoQuinzenalSegundo;
@@ -264,14 +264,14 @@ public class CredorPersist   {
 
   
   /**
-   * credor persist banco
+   * Banco do credor
    **/
   public CredorPersist banco(Integer banco) {
     this.banco = banco;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "credor persist banco")
+  @ApiModelProperty(example = "null", value = "Banco do credor")
   @JsonProperty("banco")
   public Integer getBanco() {
     return banco;
@@ -282,14 +282,14 @@ public class CredorPersist   {
 
   
   /**
-   * Credor persist ag\u00EAncia
+   * Ag\u00EAncia do credor
    **/
   public CredorPersist agencia(Integer agencia) {
     this.agencia = agencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Credor persist ag\u00EAncia")
+  @ApiModelProperty(example = "null", value = "Ag\u00EAncia do credor")
   @JsonProperty("agencia")
   public Integer getAgencia() {
     return agencia;
@@ -300,14 +300,14 @@ public class CredorPersist   {
 
   
   /**
-   * Credor persist d\u00EDgito ag\u00EAncia
+   * D\u00EDgito da ag\u00EAncia
    **/
   public CredorPersist digitoAgencia(String digitoAgencia) {
     this.digitoAgencia = digitoAgencia;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Credor persist d\u00EDgito ag\u00EAncia")
+  @ApiModelProperty(example = "null", value = "D\u00EDgito da ag\u00EAncia")
   @JsonProperty("digitoAgencia")
   public String getDigitoAgencia() {
     return digitoAgencia;
@@ -318,14 +318,14 @@ public class CredorPersist   {
 
   
   /**
-   * Credor persist conta corrente
+   * Conta corrente do credor
    **/
   public CredorPersist contaCorrente(String contaCorrente) {
     this.contaCorrente = contaCorrente;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Credor persist conta corrente")
+  @ApiModelProperty(example = "null", value = "Conta corrente do credor")
   @JsonProperty("contaCorrente")
   public String getContaCorrente() {
     return contaCorrente;
@@ -336,14 +336,14 @@ public class CredorPersist   {
 
   
   /**
-   * Credor persist d\u00EDgito conta corrente
+   * D\u00EDgito da conta corrente
    **/
   public CredorPersist digitoContaCorrente(String digitoContaCorrente) {
     this.digitoContaCorrente = digitoContaCorrente;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Credor persist d\u00EDgito conta corrente")
+  @ApiModelProperty(example = "null", value = "D\u00EDgito da conta corrente")
   @JsonProperty("digitoContaCorrente")
   public String getDigitoContaCorrente() {
     return digitoContaCorrente;
@@ -354,14 +354,14 @@ public class CredorPersist   {
 
   
   /**
-   * Credor persist credor banco
+   * Banco credor
    **/
   public CredorPersist credorBanco(Boolean credorBanco) {
     this.credorBanco = credorBanco;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Credor persist credor banco")
+  @ApiModelProperty(example = "false", value = "Banco credor")
   @JsonProperty("credorBanco")
   public Boolean getCredorBanco() {
     return credorBanco;
@@ -372,14 +372,14 @@ public class CredorPersist   {
 
   
   /**
-   * Credor persist percentual rav
+   * Percentual RAV
    **/
   public CredorPersist percentualRAV(BigDecimal percentualRAV) {
     this.percentualRAV = percentualRAV;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Credor persist percentual rav")
+  @ApiModelProperty(example = "null", required = true, value = "Percentual RAV")
   @JsonProperty("percentualRAV")
   public BigDecimal getPercentualRAV() {
     return percentualRAV;
@@ -390,14 +390,14 @@ public class CredorPersist   {
 
   
   /**
-   * Credor persist recebe rav
+   * Identifica se o credor tem um RAV associado, e seu tipo
    **/
   public CredorPersist recebeRAV(RecebeRAVEnum recebeRAV) {
     this.recebeRAV = recebeRAV;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Credor persist recebe rav")
+  @ApiModelProperty(example = "null", value = "Identifica se o credor tem um RAV associado, e seu tipo")
   @JsonProperty("recebeRAV")
   public RecebeRAVEnum getRecebeRAV() {
     return recebeRAV;
@@ -408,14 +408,14 @@ public class CredorPersist   {
 
   
   /**
-   * Credor persist percentual multiplica
+   * Percentual de multiplica\u00E7\u00E3o utilizado para gerar taxa de desconto do RAV
    **/
   public CredorPersist percentualMultiplica(BigDecimal percentualMultiplica) {
     this.percentualMultiplica = percentualMultiplica;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Credor persist percentual multiplica")
+  @ApiModelProperty(example = "null", value = "Percentual de multiplica\u00E7\u00E3o utilizado para gerar taxa de desconto do RAV")
   @JsonProperty("percentualMultiplica")
   public BigDecimal getPercentualMultiplica() {
     return percentualMultiplica;
@@ -426,14 +426,14 @@ public class CredorPersist   {
 
   
   /**
-   * Credor persist taxa adm
+   * Taxa administrativa usada para gerar o valor do RAV
    **/
   public CredorPersist taxaAdministrativa(BigDecimal taxaAdministrativa) {
     this.taxaAdministrativa = taxaAdministrativa;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Credor persist taxa adm")
+  @ApiModelProperty(example = "null", value = "Taxa administrativa usada para gerar o valor do RAV")
   @JsonProperty("taxaAdministrativa")
   public BigDecimal getTaxaAdministrativa() {
     return taxaAdministrativa;
@@ -444,14 +444,14 @@ public class CredorPersist   {
 
   
   /**
-   * Credor persist taxa banco
+   * Taxa do banco RAV
    **/
   public CredorPersist taxaBanco(BigDecimal taxaBanco) {
     this.taxaBanco = taxaBanco;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Credor persist taxa banco")
+  @ApiModelProperty(example = "null", value = "Taxa do banco RAV")
   @JsonProperty("taxaBanco")
   public BigDecimal getTaxaBanco() {
     return taxaBanco;
@@ -462,14 +462,14 @@ public class CredorPersist   {
 
   
   /**
-   * Credor persist limite rav
+   * Valor limite do RAV
    **/
   public CredorPersist limiteRAV(BigDecimal limiteRAV) {
     this.limiteRAV = limiteRAV;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Credor persist limite rav")
+  @ApiModelProperty(example = "null", value = "Valor limite do RAV")
   @JsonProperty("limiteRAV")
   public BigDecimal getLimiteRAV() {
     return limiteRAV;
@@ -480,14 +480,14 @@ public class CredorPersist   {
 
   
   /**
-   * Credor persist id credor rav
+   * Identificador da RAV do credor
    **/
   public CredorPersist idCredorRAV(Long idCredorRAV) {
     this.idCredorRAV = idCredorRAV;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Credor persist id credor rav")
+  @ApiModelProperty(example = "null", required = true, value = "Identificador da RAV do credor")
   @JsonProperty("idCredorRAV")
   public Long getIdCredorRAV() {
     return idCredorRAV;
@@ -498,14 +498,14 @@ public class CredorPersist   {
 
   
   /**
-   * Credor persist periodicidade
+   * Periodicidade do pagamento
    **/
   public CredorPersist periodicidade(PeriodicidadeEnum periodicidade) {
     this.periodicidade = periodicidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Credor persist periodicidade")
+  @ApiModelProperty(example = "null", required = true, value = "Periodicidade do pagamento")
   @JsonProperty("periodicidade")
   public PeriodicidadeEnum getPeriodicidade() {
     return periodicidade;
@@ -516,14 +516,14 @@ public class CredorPersist   {
 
   
   /**
-   * Credor persist id pessoa juridica
+   * Identificador da pessoa jur\u00EDdica associada ao credor
    **/
   public CredorPersist idPessoaJuridica(Long idPessoaJuridica) {
     this.idPessoaJuridica = idPessoaJuridica;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Credor persist id pessoa juridica")
+  @ApiModelProperty(example = "null", required = true, value = "Identificador da pessoa jur\u00EDdica associada ao credor")
   @JsonProperty("idPessoaJuridica")
   public Long getIdPessoaJuridica() {
     return idPessoaJuridica;
@@ -534,14 +534,14 @@ public class CredorPersist   {
 
   
   /**
-   * Credor persist flag escritorio cobranca
+   * Flag para controle interno
    **/
   public CredorPersist flagEscritorioCobranca(Boolean flagEscritorioCobranca) {
     this.flagEscritorioCobranca = flagEscritorioCobranca;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Credor persist flag escritorio cobranca")
+  @ApiModelProperty(example = "false", value = "Flag para controle interno")
   @JsonProperty("flagEscritorioCobranca")
   public Boolean getFlagEscritorioCobranca() {
     return flagEscritorioCobranca;
@@ -552,14 +552,14 @@ public class CredorPersist   {
 
   
   /**
-   * Credor persist prefixo
+   * Prefixo utilizado pelo escrit\u00F3rio de cobran\u00E7a
    **/
   public CredorPersist prefixo(String prefixo) {
     this.prefixo = prefixo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Credor persist prefixo")
+  @ApiModelProperty(example = "null", value = "Prefixo utilizado pelo escrit\u00F3rio de cobran\u00E7a")
   @JsonProperty("prefixo")
   public String getPrefixo() {
     return prefixo;
@@ -570,14 +570,14 @@ public class CredorPersist   {
 
   
   /**
-   * Credor persist flag ativo
+   * Identifica se o escrit\u00F3rio de cobran\u00E7a est\u00E1 ativo
    **/
   public CredorPersist ativo(Boolean ativo) {
     this.ativo = ativo;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Credor persist flag ativo")
+  @ApiModelProperty(example = "false", value = "Identifica se o escrit\u00F3rio de cobran\u00E7a est\u00E1 ativo")
   @JsonProperty("ativo")
   public Boolean getAtivo() {
     return ativo;
@@ -588,14 +588,14 @@ public class CredorPersist   {
 
   
   /**
-   * Credor persist contato
+   * Nome para contato no escrit\u00F3rio de cobran\u00E7a
    **/
   public CredorPersist nomeContato(String nomeContato) {
     this.nomeContato = nomeContato;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Credor persist contato")
+  @ApiModelProperty(example = "null", value = "Nome para contato no escrit\u00F3rio de cobran\u00E7a")
   @JsonProperty("nomeContato")
   public String getNomeContato() {
     return nomeContato;
@@ -606,14 +606,14 @@ public class CredorPersist   {
 
   
   /**
-   * Credor persist email
+   * Email do contato no escrit\u00F3rio de cobran\u00E7a
    **/
   public CredorPersist email(String email) {
     this.email = email;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Credor persist email")
+  @ApiModelProperty(example = "null", value = "Email do contato no escrit\u00F3rio de cobran\u00E7a")
   @JsonProperty("email")
   public String getEmail() {
     return email;
@@ -624,14 +624,14 @@ public class CredorPersist   {
 
   
   /**
-   * Credor persist logradouro
+   * Logradouro do credor
    **/
   public CredorPersist nomeLogradouro(String nomeLogradouro) {
     this.nomeLogradouro = nomeLogradouro;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Credor persist logradouro")
+  @ApiModelProperty(example = "null", value = "Logradouro do credor")
   @JsonProperty("nomeLogradouro")
   public String getNomeLogradouro() {
     return nomeLogradouro;
@@ -642,14 +642,14 @@ public class CredorPersist   {
 
   
   /**
-   * Credor persist numero endereco
+   * N\u00FAmero do endere\u00E7o do credor
    **/
   public CredorPersist numeroEndereco(Integer numeroEndereco) {
     this.numeroEndereco = numeroEndereco;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Credor persist numero endereco")
+  @ApiModelProperty(example = "null", value = "N\u00FAmero do endere\u00E7o do credor")
   @JsonProperty("numeroEndereco")
   public Integer getNumeroEndereco() {
     return numeroEndereco;
@@ -660,14 +660,14 @@ public class CredorPersist   {
 
   
   /**
-   * Credor persist complemento endereco
+   * Complemento do endere\u00E7o do credor
    **/
   public CredorPersist complementoEndereco(String complementoEndereco) {
     this.complementoEndereco = complementoEndereco;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Credor persist complemento endereco")
+  @ApiModelProperty(example = "null", value = "Complemento do endere\u00E7o do credor")
   @JsonProperty("complementoEndereco")
   public String getComplementoEndereco() {
     return complementoEndereco;
@@ -678,14 +678,14 @@ public class CredorPersist   {
 
   
   /**
-   * Credor persist bairro
+   * Bairro do endere\u00E7o do credor
    **/
   public CredorPersist bairro(String bairro) {
     this.bairro = bairro;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Credor persist bairro")
+  @ApiModelProperty(example = "null", value = "Bairro do endere\u00E7o do credor")
   @JsonProperty("bairro")
   public String getBairro() {
     return bairro;
@@ -696,14 +696,14 @@ public class CredorPersist   {
 
   
   /**
-   * Credor persist cidade
+   * Cidade do endere\u00E7o do credor
    **/
   public CredorPersist cidade(String cidade) {
     this.cidade = cidade;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Credor persist cidade")
+  @ApiModelProperty(example = "null", value = "Cidade do endere\u00E7o do credor")
   @JsonProperty("cidade")
   public String getCidade() {
     return cidade;
@@ -714,14 +714,14 @@ public class CredorPersist   {
 
   
   /**
-   * Credor persist cep
+   * CEP do endere\u00E7o do credor
    **/
   public CredorPersist cep(String cep) {
     this.cep = cep;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Credor persist cep")
+  @ApiModelProperty(example = "null", value = "CEP do endere\u00E7o do credor")
   @JsonProperty("cep")
   public String getCep() {
     return cep;
@@ -732,14 +732,14 @@ public class CredorPersist   {
 
   
   /**
-   * Credor persist uf
+   * UF do endere\u00E7o do credor
    **/
   public CredorPersist uf(String uf) {
     this.uf = uf;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Credor persist uf")
+  @ApiModelProperty(example = "null", value = "UF do endere\u00E7o do credor")
   @JsonProperty("uf")
   public String getUf() {
     return uf;
@@ -750,14 +750,14 @@ public class CredorPersist   {
 
   
   /**
-   * Credor persist responsavel
+   * Respons\u00E1vel pelo credor
    **/
   public CredorPersist responsavel(String responsavel) {
     this.responsavel = responsavel;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Credor persist responsavel")
+  @ApiModelProperty(example = "null", value = "Respons\u00E1vel pelo credor")
   @JsonProperty("responsavel")
   public String getResponsavel() {
     return responsavel;
@@ -768,14 +768,14 @@ public class CredorPersist   {
 
   
   /**
-   * Credor persist flag segunda via acordo
+   * Identifica se h\u00E1 uma segunda via do acordo firmado
    **/
   public CredorPersist flagSegundaViaAcordo(Integer flagSegundaViaAcordo) {
     this.flagSegundaViaAcordo = flagSegundaViaAcordo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Credor persist flag segunda via acordo")
+  @ApiModelProperty(example = "null", value = "Identifica se h\u00E1 uma segunda via do acordo firmado")
   @JsonProperty("flagSegundaViaAcordo")
   public Integer getFlagSegundaViaAcordo() {
     return flagSegundaViaAcordo;
@@ -786,14 +786,14 @@ public class CredorPersist   {
 
   
   /**
-   * Credor persist valor minimo parcela
+   * Valor m\u00EDnimo da parcela cobrado pelo escrit\u00F3rio de cobran\u00E7a
    **/
   public CredorPersist valorMinimoParcela(BigDecimal valorMinimoParcela) {
     this.valorMinimoParcela = valorMinimoParcela;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Credor persist valor minimo parcela")
+  @ApiModelProperty(example = "null", value = "Valor m\u00EDnimo da parcela cobrado pelo escrit\u00F3rio de cobran\u00E7a")
   @JsonProperty("valorMinimoParcela")
   public BigDecimal getValorMinimoParcela() {
     return valorMinimoParcela;
@@ -804,14 +804,14 @@ public class CredorPersist   {
 
   
   /**
-   * Credor persist desconto maximo
+   * Desconto m\u00E1ximo estabelecido pelo escrit\u00F3rio de cobran\u00E7a
    **/
   public CredorPersist descontoMaximo(BigDecimal descontoMaximo) {
     this.descontoMaximo = descontoMaximo;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Credor persist desconto maximo")
+  @ApiModelProperty(example = "null", value = "Desconto m\u00E1ximo estabelecido pelo escrit\u00F3rio de cobran\u00E7a")
   @JsonProperty("descontoMaximo")
   public BigDecimal getDescontoMaximo() {
     return descontoMaximo;

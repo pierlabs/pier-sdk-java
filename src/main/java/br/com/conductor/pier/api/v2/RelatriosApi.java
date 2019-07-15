@@ -45,7 +45,7 @@ public class RelatriosApi {
    * @param dataVencimentoFim 
    * @return PageRelatorioMovimentosControleProcessos
    */
-  public PageRelatorioMovimentosControleProcessos movimentosControleProcessos(List<String> sort, Integer page, Integer limit, String dataVencimento, String dataVencimentoFim) throws ApiException {
+  public PageRelatorioMovimentosControleProcessos gerarRelatorioMovimentacaoControleProcessos(List<String> sort, Integer page, Integer limit, String dataVencimento, String dataVencimentoFim) throws ApiException {
     Object postBody = null;
     
     // create path and map variables

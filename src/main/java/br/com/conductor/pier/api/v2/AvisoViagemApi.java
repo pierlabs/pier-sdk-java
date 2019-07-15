@@ -42,12 +42,12 @@ public class AvisoViagemApi {
    * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id)
    * @return AvisoViagemResponse
    */
-  public AvisoViagemResponse consultar(Long id) throws ApiException {
+  public AvisoViagemResponse consultarAvisoViagem(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultar");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarAvisoViagem");
      }
      
     // create path and map variables
@@ -90,12 +90,12 @@ public class AvisoViagemApi {
    * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id)
    * @return AvisoViagemResponse
    */
-  public AvisoViagemResponse desabilitar(Long id) throws ApiException {
+  public AvisoViagemResponse desabilitarAvisoViagem(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling desabilitar");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling desabilitarAvisoViagem");
      }
      
     // create path and map variables
@@ -138,12 +138,12 @@ public class AvisoViagemApi {
    * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id)
    * @return AvisoViagemResponse
    */
-  public AvisoViagemResponse habilitar(Long id) throws ApiException {
+  public AvisoViagemResponse habilitarAvisoViagem(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling habilitar");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling habilitarAvisoViagem");
      }
      
     // create path and map variables
@@ -194,7 +194,7 @@ public class AvisoViagemApi {
    * @param paisDescricao Descri\u00E7\u00E3o do pa\u00EDs
    * @return PageAvisoViagemResponse
    */
-  public PageAvisoViagemResponse listar(List<String> sort, Integer page, Integer limit, Long idCartao, String codigoPais, String dataInicio, String dataFim, Integer flagAtivo, String paisDescricao) throws ApiException {
+  public PageAvisoViagemResponse listarAvisosViagem(List<String> sort, Integer page, Integer limit, Long idCartao, String codigoPais, String dataInicio, String dataFim, Integer flagAtivo, String paisDescricao) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -257,27 +257,27 @@ public class AvisoViagemApi {
    * @param dataFim Data fim do aviso viagem
    * @return AvisoViagemResponse
    */
-  public AvisoViagemResponse salvar(Long idCartao, String codigoPais, String dataInicio, String dataFim) throws ApiException {
+  public AvisoViagemResponse salvarAvisoViagem(Long idCartao, String codigoPais, String dataInicio, String dataFim) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idCartao' is set
      if (idCartao == null) {
-        throw new ApiException(400, "Missing the required parameter 'idCartao' when calling salvar");
+        throw new ApiException(400, "Missing the required parameter 'idCartao' when calling salvarAvisoViagem");
      }
      
      // verify the required parameter 'codigoPais' is set
      if (codigoPais == null) {
-        throw new ApiException(400, "Missing the required parameter 'codigoPais' when calling salvar");
+        throw new ApiException(400, "Missing the required parameter 'codigoPais' when calling salvarAvisoViagem");
      }
      
      // verify the required parameter 'dataInicio' is set
      if (dataInicio == null) {
-        throw new ApiException(400, "Missing the required parameter 'dataInicio' when calling salvar");
+        throw new ApiException(400, "Missing the required parameter 'dataInicio' when calling salvarAvisoViagem");
      }
      
      // verify the required parameter 'dataFim' is set
      if (dataFim == null) {
-        throw new ApiException(400, "Missing the required parameter 'dataFim' when calling salvar");
+        throw new ApiException(400, "Missing the required parameter 'dataFim' when calling salvarAvisoViagem");
      }
      
     // create path and map variables

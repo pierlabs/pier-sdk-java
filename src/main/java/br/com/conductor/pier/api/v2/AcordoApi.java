@@ -10,7 +10,10 @@ import br.com.conductor.pier.api.v2.invoker.Pair;
 import br.com.conductor.pier.api.v2.model.AcordoDetalheResponse;
 import br.com.conductor.pier.api.v2.model.ParcelaAcordoResponse;
 import br.com.conductor.pier.api.v2.model.AcordoEmailRequest;
+import br.com.conductor.pier.api.v2.model.AcordoBoletoPersist;
+import br.com.conductor.pier.api.v2.model.BoletoResponse;
 import br.com.conductor.pier.api.v2.model.BoletoParcelaAcordoResponse;
+import br.com.conductor.pier.api.v2.model.AcordoPersist;
 import br.com.conductor.pier.api.v2.model.PageAcordoResponse;
 import br.com.conductor.pier.api.v2.model.PageAcordoParcelaResponse;
 import br.com.conductor.pier.api.v2.model.AcordoQuebraResponse;
@@ -49,12 +52,12 @@ public class AcordoApi {
    * @param id C\u00F3digo de identifica\u00E7\u00E3o do acordo (id)
    * @return AcordoDetalheResponse
    */
-  public AcordoDetalheResponse consultar(Long id) throws ApiException {
+  public AcordoDetalheResponse consultarAcordo(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultar");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarAcordo");
      }
      
     // create path and map variables
@@ -97,12 +100,12 @@ public class AcordoApi {
    * @param id Identificador da parcela
    * @return ParcelaAcordoResponse
    */
-  public ParcelaAcordoResponse consultarPorId(Long id) throws ApiException {
+  public ParcelaAcordoResponse consultarParcelaAcordo(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarPorId");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarParcelaAcordo");
      }
      
     // create path and map variables
@@ -146,17 +149,17 @@ public class AcordoApi {
    * @param emailRequest emailRequest
    * @return String
    */
-  public String enviarEmailTermo(Long id, AcordoEmailRequest emailRequest) throws ApiException {
+  public String enviarTermoPorEmail(Long id, AcordoEmailRequest emailRequest) throws ApiException {
     Object postBody = emailRequest;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling enviarEmailTermo");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling enviarTermoPorEmail");
      }
      
      // verify the required parameter 'emailRequest' is set
      if (emailRequest == null) {
-        throw new ApiException(400, "Missing the required parameter 'emailRequest' when calling enviarEmailTermo");
+        throw new ApiException(400, "Missing the required parameter 'emailRequest' when calling enviarTermoPorEmail");
      }
      
     // create path and map variables
@@ -194,17 +197,66 @@ public class AcordoApi {
   }
   
   /**
+   * Realiza a gera\u00E7\u00E3o de um boleto de entrada para o c\u00F3digo de identifica\u00E7\u00E3o do acordo informado
+   * Realiza a gera\u00E7\u00E3o de um boleto de entrada para o c\u00F3digo de identifica\u00E7\u00E3o do acordo informado.
+   * @param id id
+   * @param acordoBoletoPersist acordoBoletoPersist
+   * @return BoletoResponse
+   */
+  public BoletoResponse gerarBoletoEntrada(Long id, AcordoBoletoPersist acordoBoletoPersist) throws ApiException {
+    Object postBody = acordoBoletoPersist;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling gerarBoletoEntrada");
+     }
+     
+    // create path and map variables
+    String path = "/api/acordos/{id}/boletos".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json;charset=UTF-8"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<BoletoResponse> returnType = new GenericType<BoletoResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Gerar boleto da parcela do acordo
    * Este recurso permite a gera\u00E7\u00E3o do boleto de uma parcela de um acordo
    * @param id Identificador da parcela
    * @return BoletoParcelaAcordoResponse
    */
-  public BoletoParcelaAcordoResponse gerarBoleto(Long id) throws ApiException {
+  public BoletoParcelaAcordoResponse gerarBoletoParcelaAcordo(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling gerarBoleto");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling gerarBoletoParcelaAcordo");
      }
      
     // create path and map variables
@@ -247,12 +299,12 @@ public class AcordoApi {
    * @param id C\u00F3digo de identifica\u00E7\u00E3o do acordo (id).
    * @return List<byte[]>
    */
-  public List<byte[]> gerarTermo(Long id) throws ApiException {
+  public List<byte[]> gerarTermoAcordo(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling gerarTermo");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling gerarTermoAcordo");
      }
      
     // create path and map variables
@@ -290,6 +342,53 @@ public class AcordoApi {
   }
   
   /**
+   * Insere um novo acordo.
+   * Recurso para a cria\u00E7\u00E3o de um novo acordo de cobran\u00E7a.
+   * @param acordoPersist acordoPersist
+   * @return AcordoDetalheResponse
+   */
+  public AcordoDetalheResponse incluirAcordo(AcordoPersist acordoPersist) throws ApiException {
+    Object postBody = acordoPersist;
+    
+     // verify the required parameter 'acordoPersist' is set
+     if (acordoPersist == null) {
+        throw new ApiException(400, "Missing the required parameter 'acordoPersist' when calling incluirAcordo");
+     }
+     
+    // create path and map variables
+    String path = "/api/acordos".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json;charset=UTF-8"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<AcordoDetalheResponse> returnType = new GenericType<AcordoDetalheResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Lista os acordos existentes na base
    * Este m\u00E9todo permite que sejam listados todos os acordos existentes na base do emissor
    * @param sort Tipo de ordena\u00E7\u00E3o dos registros
@@ -301,7 +400,7 @@ public class AcordoApi {
    * @param quantidadeParcelas Quantidade de parcelas
    * @return PageAcordoResponse
    */
-  public PageAcordoResponse listar(List<String> sort, Integer page, Integer limit, Long idConta, Long statusAcordo, String dataAcordo, Integer quantidadeParcelas) throws ApiException {
+  public PageAcordoResponse listarAcordos(List<String> sort, Integer page, Integer limit, Long idConta, Long statusAcordo, String dataAcordo, Integer quantidadeParcelas) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -363,7 +462,7 @@ public class AcordoApi {
    * @param dataVencimento Data vencimento da parcela do acordo
    * @return PageAcordoParcelaResponse
    */
-  public PageAcordoParcelaResponse listar_0(List<String> sort, Integer page, Integer limit, Long idAcordo, String nossoNumero, Integer numeroParcela, String dataVencimento) throws ApiException {
+  public PageAcordoParcelaResponse listarParcelasAcordo(List<String> sort, Integer page, Integer limit, Long idAcordo, String nossoNumero, Integer numeroParcela, String dataVencimento) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -467,12 +566,12 @@ public class AcordoApi {
    * @param request request
    * @return PlanoParcelamentoAcordoResponse
    */
-  public PlanoParcelamentoAcordoResponse simularPlanosParcelamentos(PlanoParcelamentoAcordoRequest request) throws ApiException {
+  public PlanoParcelamentoAcordoResponse simularPlanosParcelamentosAcordos(PlanoParcelamentoAcordoRequest request) throws ApiException {
     Object postBody = request;
     
      // verify the required parameter 'request' is set
      if (request == null) {
-        throw new ApiException(400, "Missing the required parameter 'request' when calling simularPlanosParcelamentos");
+        throw new ApiException(400, "Missing the required parameter 'request' when calling simularPlanosParcelamentosAcordos");
      }
      
     // create path and map variables
@@ -514,12 +613,12 @@ public class AcordoApi {
    * @param id C\u00F3digo de identifica\u00E7\u00E3o do acordo (id)
    * @return Object
    */
-  public Object visualizarBoletos(Long id) throws ApiException {
+  public Object visualizarBoletosAcordo(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling visualizarBoletos");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling visualizarBoletosAcordo");
      }
      
     // create path and map variables

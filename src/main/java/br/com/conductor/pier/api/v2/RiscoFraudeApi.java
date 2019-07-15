@@ -43,12 +43,12 @@ public class RiscoFraudeApi {
    * @param id C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude
    * @return RiscoFraudeDetalhadoResponse
    */
-  public RiscoFraudeDetalhadoResponse consultar(Long id) throws ApiException {
+  public RiscoFraudeDetalhadoResponse consultarRiscoFraude(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultar");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarRiscoFraude");
      }
      
     // create path and map variables
@@ -92,7 +92,7 @@ public class RiscoFraudeApi {
    * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
    * @return TipoResolucaoResponse
    */
-  public TipoResolucaoResponse listarTiposResolucao(Integer page, Integer limit) throws ApiException {
+  public TipoResolucaoResponse listarTiposResolucoes(Integer page, Integer limit) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -138,12 +138,12 @@ public class RiscoFraudeApi {
    * @param id C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude
    * @return Object
    */
-  public Object negar(Long id) throws ApiException {
+  public Object negarRiscoFraude(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling negar");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling negarRiscoFraude");
      }
      
     // create path and map variables
@@ -186,12 +186,12 @@ public class RiscoFraudeApi {
    * @param id C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude
    * @return Object
    */
-  public Object reconhecer(Long id) throws ApiException {
+  public Object reconhecerRiscoFraude(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling reconhecer");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling reconhecerRiscoFraude");
      }
      
     // create path and map variables
@@ -234,12 +234,12 @@ public class RiscoFraudeApi {
    * @param request request
    * @return Object
    */
-  public Object validarDadosPortador(DadosPortadorRequest request) throws ApiException {
+  public Object validarPortadorRiscoFraude(DadosPortadorRequest request) throws ApiException {
     Object postBody = request;
     
      // verify the required parameter 'request' is set
      if (request == null) {
-        throw new ApiException(400, "Missing the required parameter 'request' when calling validarDadosPortador");
+        throw new ApiException(400, "Missing the required parameter 'request' when calling validarPortadorRiscoFraude");
      }
      
     // create path and map variables
