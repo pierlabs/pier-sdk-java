@@ -18,14 +18,15 @@ import br.com.conductor.pier.api.v2.model.LoteCartoesPrePagosResponse;
 import br.com.conductor.pier.api.v2.model.PortadorResponse;
 import br.com.conductor.pier.api.v2.model.VinculoCartoesResponse;
 import br.com.conductor.pier.api.v2.model.CartaoMultiAppPersist;
+import br.com.conductor.pier.api.v2.model.SenhaDTO;
 import br.com.conductor.pier.api.v2.model.CartaoImpressaoResponse;
+import br.com.conductor.pier.api.v2.model.CartaoMifareRequest;
 import br.com.conductor.pier.api.v2.model.CartaoMultiAppImpressaoResponse;
 import br.com.conductor.pier.api.v2.model.PageCartaoResponse;
 import br.com.conductor.pier.api.v2.model.PageLoteCartoesPrePagosResponse;
 import br.com.conductor.pier.api.v2.model.ValidaCVVRequest;
 import br.com.conductor.pier.api.v2.model.ValidaCartaoResponse;
 import br.com.conductor.pier.api.v2.model.ValidaSenhaCartaoResponse;
-import br.com.conductor.pier.api.v2.model.SenhaDTO;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -104,62 +105,6 @@ public class CartaoApi {
     
     GenericType<CartaoResponse> returnType = new GenericType<CartaoResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
-   * Realiza a altera\u00E7\u00E3o da senha de um Cart\u00E3o
-   * Esta opera\u00E7\u00E3o tem como objetivo permitir que o portador de um determinado cart\u00E3o possa definir uma senha a sua escolha
-   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)
-   * @param senha Senha para ser cadastrada ou alterada
-   * @return String
-   */
-  public String alterarSenha(Long id, String senha) throws ApiException {
-    Object postBody = null;
-    
-     // verify the required parameter 'id' is set
-     if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarSenha");
-     }
-     
-     // verify the required parameter 'senha' is set
-     if (senha == null) {
-        throw new ApiException(400, "Missing the required parameter 'senha' when calling alterarSenha");
-     }
-     
-    // create path and map variables
-    String path = "/api/cartoes/{id}/alterar-senha".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-
-    if (senha != null)
-      headerParams.put("senha", apiClient.parameterToString(senha));
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<String> returnType = new GenericType<String>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
@@ -340,62 +285,6 @@ public class CartaoApi {
   }
   
   /**
-   * Realiza o cadastro da senha de um Cart\u00E3o
-   * Esta opera\u00E7\u00E3o tem como objetivo permitir que o portador de um determinado cart\u00E3o possa definir uma senha a sua escolha
-   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)
-   * @param senha Senha para ser cadastrada ou alterada
-   * @return String
-   */
-  public String cadastrarSenha(Long id, String senha) throws ApiException {
-    Object postBody = null;
-    
-     // verify the required parameter 'id' is set
-     if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling cadastrarSenha");
-     }
-     
-     // verify the required parameter 'senha' is set
-     if (senha == null) {
-        throw new ApiException(400, "Missing the required parameter 'senha' when calling cadastrarSenha");
-     }
-     
-    // create path and map variables
-    String path = "/api/cartoes/{id}/cadastrar-senha".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-
-    if (senha != null)
-      headerParams.put("senha", apiClient.parameterToString(senha));
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<String> returnType = new GenericType<String>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
    * Realiza o cancelamento de um determinado Cart\u00E3o
    * Este m\u00E9todo permite a realiza\u00E7\u00E3o cancelamento de um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id). Para isso, \u00E9 preciso informar qual o motivo deste bloqueio que nada mais \u00E9 do que atribuir um novo StatusCartao para ele dentre as op\u00E7\u00F5es praticadas pelo emissor
    * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)
@@ -557,8 +446,8 @@ public class CartaoApi {
   
   /**
    * Consultar Detalhes do Cart\u00E3o
-   * Este m\u00E9todo permite que seja consultado os dados necessarios de um cart\u00E3o para executar servi\u00E7os de autoriza\u00E7\u00E3o
-   * @param id id
+   * Este m\u00E9todo permite consultar os dados necessarios de um cart\u00E3o para executar servi\u00E7os de autoriza\u00E7\u00E3o.
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)
    * @return DadosCartaoResponse
    */
   public DadosCartaoResponse consultarDadosReaisCartao(Long id) throws ApiException {
@@ -795,6 +684,60 @@ public class CartaoApi {
   }
   
   /**
+   * Realiza a defini\u00E7\u00E3o da senha de um cart\u00E3o
+   * Esta opera\u00E7\u00E3o tem como objetivo permitir que o portador de um determinado cart\u00E3o possa definir uma senha a sua escolha
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)
+   * @param senhaDTO senhaDTO
+   * @return String
+   */
+  public String definirSenhaCartao(Long id, SenhaDTO senhaDTO) throws ApiException {
+    Object postBody = senhaDTO;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling definirSenhaCartao");
+     }
+     
+     // verify the required parameter 'senhaDTO' is set
+     if (senhaDTO == null) {
+        throw new ApiException(400, "Missing the required parameter 'senhaDTO' when calling definirSenhaCartao");
+     }
+     
+    // create path and map variables
+    String path = "/api/cartoes/{id}/senhas".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<String> returnType = new GenericType<String>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Realiza o desbloqueio de um determinado Cart\u00E3o
    * Este m\u00E9todo permite que seja desbloqueado um determinado cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
    * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)
@@ -909,10 +852,11 @@ public class CartaoApi {
    * Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores ou seus clientes possam solicitar a gera\u00E7\u00E3o de uma nova via de Cart\u00E3o que ser\u00E1 encaminhando para impress\u00E3o e postagem de acordo com os fluxos padr\u00F5es j\u00E1 definidos pelo emissor. Para isso, \u00E9 preciso que o cliente j\u00E1 possua um cart\u00E3o gerado e informar o C\u00F3digo de Identifica\u00E7\u00E3o deste (idCartao) para que ele possa utilizar esta opera\u00E7\u00E3o. Assim, esta funcionalidade se aplica apenas para a gera\u00E7\u00E3o de cart\u00F5es f\u00EDsicos
    * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)
    * @param idImagem C\u00F3digo de Identifica\u00E7\u00E3o da imagem do cart\u00E3o (id)
+   * @param cartaoMifareRequest cartaoMifareRequest
    * @return CartaoImpressaoResponse
    */
-  public CartaoImpressaoResponse gerarNovaViaCartao(Long id, Long idImagem) throws ApiException {
-    Object postBody = null;
+  public CartaoImpressaoResponse gerarNovaViaCartao(Long id, Long idImagem, CartaoMifareRequest cartaoMifareRequest) throws ApiException {
+    Object postBody = cartaoMifareRequest;
     
      // verify the required parameter 'id' is set
      if (id == null) {
@@ -959,10 +903,11 @@ public class CartaoApi {
    * Gerar nova via de cart\u00E3o m\u00FAltiplo
    * Este recurso permite gerar uma nova via de cart\u00E3o m\u00FAltiplo (com dois produtos relacionados)
    * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)
+   * @param cartaoMifareRequest cartaoMifareRequest
    * @return CartaoMultiAppImpressaoResponse
    */
-  public CartaoMultiAppImpressaoResponse gerarNovaViaCartaoMultiApp(Long id) throws ApiException {
-    Object postBody = null;
+  public CartaoMultiAppImpressaoResponse gerarNovaViaCartaoMultiApp(Long id, CartaoMifareRequest cartaoMifareRequest) throws ApiException {
+    Object postBody = cartaoMifareRequest;
     
      // verify the required parameter 'id' is set
      if (id == null) {
@@ -1076,9 +1021,10 @@ public class CartaoApi {
    * @param codigoDesbloqueio Apresenta um c\u00F3digo espec\u00EDfico para ser utilizado como vari\u00E1vel no processo de desbloqueio do cart\u00E3o para emissores que querem usar esta funcionalidade
    * @param sequencialCartao N\u00FAmero sequencial do cart\u00E3o
    * @param identificadorExterno Identificador externo do cart\u00E3o
+   * @param flagCartaoMifare Identifica se o cart\u00E3o cont\u00E9m a tecnologia mifare
    * @return PageCartaoResponse
    */
-  public PageCartaoResponse listarCartoes(List<String> sort, Integer page, Integer limit, Long idStatusCartao, Long idEstagioCartao, Long idConta, Long idPessoa, Long idProduto, String tipoPortador, String numeroCartao, String nomeImpresso, String dataGeracao, String dataStatusCartao, String dataEstagioCartao, String dataValidade, String dataImpressao, String arquivoImpressao, Integer flagImpressaoOrigemComercial, Integer flagProvisorio, String codigoDesbloqueio, Integer sequencialCartao, Long identificadorExterno) throws ApiException {
+  public PageCartaoResponse listarCartoes(List<String> sort, Integer page, Integer limit, Long idStatusCartao, Long idEstagioCartao, Long idConta, Long idPessoa, Long idProduto, String tipoPortador, String numeroCartao, String nomeImpresso, String dataGeracao, String dataStatusCartao, String dataEstagioCartao, String dataValidade, String dataImpressao, String arquivoImpressao, Integer flagImpressaoOrigemComercial, Integer flagProvisorio, String codigoDesbloqueio, Integer sequencialCartao, Long identificadorExterno, Boolean flagCartaoMifare) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -1133,6 +1079,8 @@ public class CartaoApi {
     queryParams.addAll(apiClient.parameterToPairs("", "sequencialCartao", sequencialCartao));
     
     queryParams.addAll(apiClient.parameterToPairs("", "identificadorExterno", identificadorExterno));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "flagCartaoMifare", flagCartaoMifare));
     
 
     

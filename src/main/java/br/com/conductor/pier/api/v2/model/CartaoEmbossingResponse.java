@@ -25,6 +25,8 @@ public class CartaoEmbossingResponse   {
   private String dataValidade = null;
   private String nomeOrigemComercial = null;
   private String cpf = null;
+  private Long idMifare = null;
+  private String matriculaMifare = null;
 
   
   /**
@@ -207,6 +209,42 @@ public class CartaoEmbossingResponse   {
   }
 
   
+  /**
+   * C\u00F3digo identificador da tecnologia MIFARE
+   **/
+  public CartaoEmbossingResponse idMifare(Long idMifare) {
+    this.idMifare = idMifare;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador da tecnologia MIFARE")
+  @JsonProperty("idMifare")
+  public Long getIdMifare() {
+    return idMifare;
+  }
+  public void setIdMifare(Long idMifare) {
+    this.idMifare = idMifare;
+  }
+
+  
+  /**
+   * N\u00FAmero da matricula do portador
+   **/
+  public CartaoEmbossingResponse matriculaMifare(String matriculaMifare) {
+    this.matriculaMifare = matriculaMifare;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "N\u00FAmero da matricula do portador")
+  @JsonProperty("matriculaMifare")
+  public String getMatriculaMifare() {
+    return matriculaMifare;
+  }
+  public void setMatriculaMifare(String matriculaMifare) {
+    this.matriculaMifare = matriculaMifare;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -226,12 +264,14 @@ public class CartaoEmbossingResponse   {
         Objects.equals(this.dataGeracao, cartaoEmbossingResponse.dataGeracao) &&
         Objects.equals(this.dataValidade, cartaoEmbossingResponse.dataValidade) &&
         Objects.equals(this.nomeOrigemComercial, cartaoEmbossingResponse.nomeOrigemComercial) &&
-        Objects.equals(this.cpf, cartaoEmbossingResponse.cpf);
+        Objects.equals(this.cpf, cartaoEmbossingResponse.cpf) &&
+        Objects.equals(this.idMifare, cartaoEmbossingResponse.idMifare) &&
+        Objects.equals(this.matriculaMifare, cartaoEmbossingResponse.matriculaMifare);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(flagVirtual, idConta, idPessoa, idCartao, idBandeira, idTipoCartao, dataGeracao, dataValidade, nomeOrigemComercial, cpf);
+    return Objects.hash(flagVirtual, idConta, idPessoa, idCartao, idBandeira, idTipoCartao, dataGeracao, dataValidade, nomeOrigemComercial, cpf, idMifare, matriculaMifare);
   }
 
   @Override
@@ -249,6 +289,8 @@ public class CartaoEmbossingResponse   {
     sb.append("    dataValidade: ").append(toIndentedString(dataValidade)).append("\n");
     sb.append("    nomeOrigemComercial: ").append(toIndentedString(nomeOrigemComercial)).append("\n");
     sb.append("    cpf: ").append(toIndentedString(cpf)).append("\n");
+    sb.append("    idMifare: ").append(toIndentedString(idMifare)).append("\n");
+    sb.append("    matriculaMifare: ").append(toIndentedString(matriculaMifare)).append("\n");
     sb.append("}");
     return sb.toString();
   }

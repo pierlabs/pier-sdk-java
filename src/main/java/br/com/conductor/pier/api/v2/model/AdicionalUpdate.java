@@ -28,6 +28,7 @@ public class AdicionalUpdate   {
   private String unidadeFederativaIdentidade = null;
   private String dataEmissaoIdentidade = null;
   private Long idParentesco = null;
+  private Boolean flagDeficienteVisual = null;
   private List<TelefoneAdicionalUpdate> telefones = new ArrayList<TelefoneAdicionalUpdate>();
 
   
@@ -212,6 +213,24 @@ public class AdicionalUpdate   {
 
   
   /**
+   * Flag que identifica uma pessoa como deficiente visual
+   **/
+  public AdicionalUpdate flagDeficienteVisual(Boolean flagDeficienteVisual) {
+    this.flagDeficienteVisual = flagDeficienteVisual;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "Flag que identifica uma pessoa como deficiente visual")
+  @JsonProperty("flagDeficienteVisual")
+  public Boolean getFlagDeficienteVisual() {
+    return flagDeficienteVisual;
+  }
+  public void setFlagDeficienteVisual(Boolean flagDeficienteVisual) {
+    this.flagDeficienteVisual = flagDeficienteVisual;
+  }
+
+  
+  /**
    * Lista de telefones do adicional
    **/
   public AdicionalUpdate telefones(List<TelefoneAdicionalUpdate> telefones) {
@@ -249,12 +268,13 @@ public class AdicionalUpdate   {
         Objects.equals(this.unidadeFederativaIdentidade, adicionalUpdate.unidadeFederativaIdentidade) &&
         Objects.equals(this.dataEmissaoIdentidade, adicionalUpdate.dataEmissaoIdentidade) &&
         Objects.equals(this.idParentesco, adicionalUpdate.idParentesco) &&
+        Objects.equals(this.flagDeficienteVisual, adicionalUpdate.flagDeficienteVisual) &&
         Objects.equals(this.telefones, adicionalUpdate.telefones);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(nome, nomeImpresso, numeroReceitaFederal, dataNascimento, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, idParentesco, telefones);
+    return Objects.hash(nome, nomeImpresso, numeroReceitaFederal, dataNascimento, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, idParentesco, flagDeficienteVisual, telefones);
   }
 
   @Override
@@ -272,6 +292,7 @@ public class AdicionalUpdate   {
     sb.append("    unidadeFederativaIdentidade: ").append(toIndentedString(unidadeFederativaIdentidade)).append("\n");
     sb.append("    dataEmissaoIdentidade: ").append(toIndentedString(dataEmissaoIdentidade)).append("\n");
     sb.append("    idParentesco: ").append(toIndentedString(idParentesco)).append("\n");
+    sb.append("    flagDeficienteVisual: ").append(toIndentedString(flagDeficienteVisual)).append("\n");
     sb.append("    telefones: ").append(toIndentedString(telefones)).append("\n");
     sb.append("}");
     return sb.toString();

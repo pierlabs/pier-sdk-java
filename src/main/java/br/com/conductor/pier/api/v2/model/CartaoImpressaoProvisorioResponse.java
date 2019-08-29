@@ -22,6 +22,8 @@ public class CartaoImpressaoProvisorioResponse   {
   private String numeroCartao = null;
   private String nomePlastico = null;
   private String dataValidade = null;
+  private Long idMifare = null;
+  private String matriculaMifare = null;
 
   
   /**
@@ -149,6 +151,42 @@ public class CartaoImpressaoProvisorioResponse   {
   }
 
   
+  /**
+   * C\u00F3digo identificador da tecnologia MIFARE
+   **/
+  public CartaoImpressaoProvisorioResponse idMifare(Long idMifare) {
+    this.idMifare = idMifare;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador da tecnologia MIFARE")
+  @JsonProperty("idMifare")
+  public Long getIdMifare() {
+    return idMifare;
+  }
+  public void setIdMifare(Long idMifare) {
+    this.idMifare = idMifare;
+  }
+
+  
+  /**
+   * N\u00FAmero da matricula do portador
+   **/
+  public CartaoImpressaoProvisorioResponse matriculaMifare(String matriculaMifare) {
+    this.matriculaMifare = matriculaMifare;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "N\u00FAmero da matricula do portador")
+  @JsonProperty("matriculaMifare")
+  public String getMatriculaMifare() {
+    return matriculaMifare;
+  }
+  public void setMatriculaMifare(String matriculaMifare) {
+    this.matriculaMifare = matriculaMifare;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -165,12 +203,14 @@ public class CartaoImpressaoProvisorioResponse   {
         Objects.equals(this.idCartao, cartaoImpressaoProvisorioResponse.idCartao) &&
         Objects.equals(this.numeroCartao, cartaoImpressaoProvisorioResponse.numeroCartao) &&
         Objects.equals(this.nomePlastico, cartaoImpressaoProvisorioResponse.nomePlastico) &&
-        Objects.equals(this.dataValidade, cartaoImpressaoProvisorioResponse.dataValidade);
+        Objects.equals(this.dataValidade, cartaoImpressaoProvisorioResponse.dataValidade) &&
+        Objects.equals(this.idMifare, cartaoImpressaoProvisorioResponse.idMifare) &&
+        Objects.equals(this.matriculaMifare, cartaoImpressaoProvisorioResponse.matriculaMifare);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(flagVirtual, idConta, idPessoa, idCartao, numeroCartao, nomePlastico, dataValidade);
+    return Objects.hash(flagVirtual, idConta, idPessoa, idCartao, numeroCartao, nomePlastico, dataValidade, idMifare, matriculaMifare);
   }
 
   @Override
@@ -185,6 +225,8 @@ public class CartaoImpressaoProvisorioResponse   {
     sb.append("    numeroCartao: ").append(toIndentedString(numeroCartao)).append("\n");
     sb.append("    nomePlastico: ").append(toIndentedString(nomePlastico)).append("\n");
     sb.append("    dataValidade: ").append(toIndentedString(dataValidade)).append("\n");
+    sb.append("    idMifare: ").append(toIndentedString(idMifare)).append("\n");
+    sb.append("    matriculaMifare: ").append(toIndentedString(matriculaMifare)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -786,6 +786,50 @@ public class NotificacaoApi {
   }
   
   /**
+   * limparConfiguracoesCachesTww
+   * 
+   * @param idEmissor idEmissor
+   * @return Object
+   */
+  public Object limparConfiguracoesCachesTww(Long idEmissor) throws ApiException {
+    Object postBody = null;
+    
+    // create path and map variables
+    String path = "/api/configuracoes-sms/caches".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    if (idEmissor != null)
+      headerParams.put("idEmissor", apiClient.parameterToString(idEmissor));
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<Object> returnType = new GenericType<Object>() {};
+    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Lista os c\u00F3digos de seguran\u00E7a E-Mail
    * Esse recurso permite listar os codigos de seguran\u00E7a por E-Mail
    * @param sort Tipo de ordena\u00E7\u00E3o dos registros

@@ -11,6 +11,8 @@ import br.com.conductor.pier.api.v2.model.EstabelecimentoUpdate;
 import br.com.conductor.pier.api.v2.model.EstabelecimentoResponse;
 import br.com.conductor.pier.api.v2.model.GrupoEconomicoDTO;
 import br.com.conductor.pier.api.v2.model.GrupoEconomicoResponse;
+import br.com.conductor.pier.api.v2.model.GrupoEstabelecimentoUpdate;
+import br.com.conductor.pier.api.v2.model.GrupoEstabelecimentoResponse;
 import br.com.conductor.pier.api.v2.model.MaquinetaResponse;
 import br.com.conductor.pier.api.v2.model.MaquinetaUpdate;
 import br.com.conductor.pier.api.v2.model.OperacaoCredorUpdate;
@@ -46,6 +48,7 @@ import br.com.conductor.pier.api.v2.model.PageTipoTerminalResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoTerminalTransacoesResponse;
 import br.com.conductor.pier.api.v2.model.PageVinculoEstabelecimentoAdquirenteResponse;
 import br.com.conductor.pier.api.v2.model.EstabelecimentoPersist;
+import br.com.conductor.pier.api.v2.model.GrupoEstabelecimentoPersist;
 import br.com.conductor.pier.api.v2.model.MaquinetaPersist;
 import br.com.conductor.pier.api.v2.model.OperacaoCredorPersist;
 import br.com.conductor.pier.api.v2.model.TelefoneEstabelecimentoPersist;
@@ -182,6 +185,60 @@ public class EstabelecimentoApi {
 
     
     GenericType<GrupoEconomicoResponse> returnType = new GenericType<GrupoEconomicoResponse>() {};
+    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Alterar Grupo Estabelecimento
+   * Altera um grupo de estabelecimento
+   * @param id id
+   * @param grupoEstabelecimentoUpdate grupoEstabelecimentoUpdate
+   * @return GrupoEstabelecimentoResponse
+   */
+  public GrupoEstabelecimentoResponse alterarGrupoEstabelecimentos(Long id, GrupoEstabelecimentoUpdate grupoEstabelecimentoUpdate) throws ApiException {
+    Object postBody = grupoEstabelecimentoUpdate;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarGrupoEstabelecimentos");
+     }
+     
+     // verify the required parameter 'grupoEstabelecimentoUpdate' is set
+     if (grupoEstabelecimentoUpdate == null) {
+        throw new ApiException(400, "Missing the required parameter 'grupoEstabelecimentoUpdate' when calling alterarGrupoEstabelecimentos");
+     }
+     
+    // create path and map variables
+    String path = "/api/grupos-estabelecimentos/{id}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<GrupoEstabelecimentoResponse> returnType = new GenericType<GrupoEstabelecimentoResponse>() {};
     return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -595,6 +652,54 @@ public class EstabelecimentoApi {
 
     
     GenericType<GrupoEconomicoResponse> returnType = new GenericType<GrupoEconomicoResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Consultar grupo de estabelecimento
+   * Consulta um grupo de estabelecimento atrav\u00E9s do seu identificador
+   * @param id id
+   * @return GrupoEstabelecimentoResponse
+   */
+  public GrupoEstabelecimentoResponse consultarGrupoEstabelecimentos(Long id) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarGrupoEstabelecimentos");
+     }
+     
+    // create path and map variables
+    String path = "/api/grupos-estabelecimentos/{id}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<GrupoEstabelecimentoResponse> returnType = new GenericType<GrupoEstabelecimentoResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -1358,6 +1463,62 @@ public class EstabelecimentoApi {
 
     
     GenericType<PageMCCResponse> returnType = new GenericType<PageMCCResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Lista os grupos de estabelecimento na base
+   * Este m\u00E9todo permite que sejam listados todos os grupos de estabelecimento existentes na base do emissor
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
+   * @param page P\u00E1gina
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
+   * @param descricao Descri\u00E7\u00E3o do grupo de estabelecimento
+   * @param idLayout idLayout
+   * @return GrupoEstabelecimentoResponse
+   */
+  public GrupoEstabelecimentoResponse listarGrupoEstabelecimentos(List<String> sort, Integer page, Integer limit, String descricao, Long idLayout) throws ApiException {
+    Object postBody = null;
+    
+    // create path and map variables
+    String path = "/api/grupos-estabelecimentos".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "descricao", descricao));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idLayout", idLayout));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<GrupoEstabelecimentoResponse> returnType = new GenericType<GrupoEstabelecimentoResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -2553,6 +2714,53 @@ public class EstabelecimentoApi {
 
     
     GenericType<GrupoEconomicoResponse> returnType = new GenericType<GrupoEconomicoResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Cadastrar Grupo Estabelecimento
+   * Cadastra um grupo de estabelecimento
+   * @param grupoEstabelecimentoPersist grupoEstabelecimentoPersist
+   * @return GrupoEstabelecimentoResponse
+   */
+  public GrupoEstabelecimentoResponse salvarGrupoEstabelecimentos(GrupoEstabelecimentoPersist grupoEstabelecimentoPersist) throws ApiException {
+    Object postBody = grupoEstabelecimentoPersist;
+    
+     // verify the required parameter 'grupoEstabelecimentoPersist' is set
+     if (grupoEstabelecimentoPersist == null) {
+        throw new ApiException(400, "Missing the required parameter 'grupoEstabelecimentoPersist' when calling salvarGrupoEstabelecimentos");
+     }
+     
+    // create path and map variables
+    String path = "/api/grupos-estabelecimentos".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<GrupoEstabelecimentoResponse> returnType = new GenericType<GrupoEstabelecimentoResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

@@ -40,6 +40,8 @@ public class CartaoImpressaoResponse   {
   private Integer flagVirtual = null;
   private Long numeroCartaoHash = null;
   private Long idImagem = null;
+  private Long idMifare = null;
+  private String matriculaMifare = null;
 
   
   /**
@@ -492,6 +494,42 @@ public class CartaoImpressaoResponse   {
   }
 
   
+  /**
+   * C\u00F3digo identificador da tecnologia MIFARE
+   **/
+  public CartaoImpressaoResponse idMifare(Long idMifare) {
+    this.idMifare = idMifare;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador da tecnologia MIFARE")
+  @JsonProperty("idMifare")
+  public Long getIdMifare() {
+    return idMifare;
+  }
+  public void setIdMifare(Long idMifare) {
+    this.idMifare = idMifare;
+  }
+
+  
+  /**
+   * N\u00FAmero da matricula do portador
+   **/
+  public CartaoImpressaoResponse matriculaMifare(String matriculaMifare) {
+    this.matriculaMifare = matriculaMifare;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "N\u00FAmero da matricula do portador")
+  @JsonProperty("matriculaMifare")
+  public String getMatriculaMifare() {
+    return matriculaMifare;
+  }
+  public void setMatriculaMifare(String matriculaMifare) {
+    this.matriculaMifare = matriculaMifare;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -526,12 +564,14 @@ public class CartaoImpressaoResponse   {
         Objects.equals(this.trilhaCVV2, cartaoImpressaoResponse.trilhaCVV2) &&
         Objects.equals(this.flagVirtual, cartaoImpressaoResponse.flagVirtual) &&
         Objects.equals(this.numeroCartaoHash, cartaoImpressaoResponse.numeroCartaoHash) &&
-        Objects.equals(this.idImagem, cartaoImpressaoResponse.idImagem);
+        Objects.equals(this.idImagem, cartaoImpressaoResponse.idImagem) &&
+        Objects.equals(this.idMifare, cartaoImpressaoResponse.idMifare) &&
+        Objects.equals(this.matriculaMifare, cartaoImpressaoResponse.matriculaMifare);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idConta, idPessoa, idCartao, idBandeira, idTipoCartao, numeroCartao, nomePlastico, cvv2, dataGeracao, dataValidade, nomeOrigemComercial, nomeEmpresa, numeroAgencia, numeroContaCorente, nomeEmpresaBeneficio, cpf, tipoPortador, nomeEmpregador, trilha1, trilha2, trilhaCVV1, trilhaCVV2, flagVirtual, numeroCartaoHash, idImagem);
+    return Objects.hash(idConta, idPessoa, idCartao, idBandeira, idTipoCartao, numeroCartao, nomePlastico, cvv2, dataGeracao, dataValidade, nomeOrigemComercial, nomeEmpresa, numeroAgencia, numeroContaCorente, nomeEmpresaBeneficio, cpf, tipoPortador, nomeEmpregador, trilha1, trilha2, trilhaCVV1, trilhaCVV2, flagVirtual, numeroCartaoHash, idImagem, idMifare, matriculaMifare);
   }
 
   @Override
@@ -564,6 +604,8 @@ public class CartaoImpressaoResponse   {
     sb.append("    flagVirtual: ").append(toIndentedString(flagVirtual)).append("\n");
     sb.append("    numeroCartaoHash: ").append(toIndentedString(numeroCartaoHash)).append("\n");
     sb.append("    idImagem: ").append(toIndentedString(idImagem)).append("\n");
+    sb.append("    idMifare: ").append(toIndentedString(idMifare)).append("\n");
+    sb.append("    matriculaMifare: ").append(toIndentedString(matriculaMifare)).append("\n");
     sb.append("}");
     return sb.toString();
   }

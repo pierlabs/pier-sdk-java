@@ -19,6 +19,7 @@ public class ConfiguracaoControleCartaoPersist   {
   private Boolean permiteSaque = null;
   private Boolean permiteWallet = null;
   private Boolean permiteControleMCC = null;
+  private Boolean permiteCompraInternacional = null;
 
   
   /**
@@ -93,6 +94,24 @@ public class ConfiguracaoControleCartaoPersist   {
   }
 
   
+  /**
+   * Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es internacionais
+   **/
+  public ConfiguracaoControleCartaoPersist permiteCompraInternacional(Boolean permiteCompraInternacional) {
+    this.permiteCompraInternacional = permiteCompraInternacional;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es internacionais")
+  @JsonProperty("permiteCompraInternacional")
+  public Boolean getPermiteCompraInternacional() {
+    return permiteCompraInternacional;
+  }
+  public void setPermiteCompraInternacional(Boolean permiteCompraInternacional) {
+    this.permiteCompraInternacional = permiteCompraInternacional;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -106,12 +125,13 @@ public class ConfiguracaoControleCartaoPersist   {
     return Objects.equals(this.permiteEcommerce, configuracaoControleCartaoPersist.permiteEcommerce) &&
         Objects.equals(this.permiteSaque, configuracaoControleCartaoPersist.permiteSaque) &&
         Objects.equals(this.permiteWallet, configuracaoControleCartaoPersist.permiteWallet) &&
-        Objects.equals(this.permiteControleMCC, configuracaoControleCartaoPersist.permiteControleMCC);
+        Objects.equals(this.permiteControleMCC, configuracaoControleCartaoPersist.permiteControleMCC) &&
+        Objects.equals(this.permiteCompraInternacional, configuracaoControleCartaoPersist.permiteCompraInternacional);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(permiteEcommerce, permiteSaque, permiteWallet, permiteControleMCC);
+    return Objects.hash(permiteEcommerce, permiteSaque, permiteWallet, permiteControleMCC, permiteCompraInternacional);
   }
 
   @Override
@@ -123,6 +143,7 @@ public class ConfiguracaoControleCartaoPersist   {
     sb.append("    permiteSaque: ").append(toIndentedString(permiteSaque)).append("\n");
     sb.append("    permiteWallet: ").append(toIndentedString(permiteWallet)).append("\n");
     sb.append("    permiteControleMCC: ").append(toIndentedString(permiteControleMCC)).append("\n");
+    sb.append("    permiteCompraInternacional: ").append(toIndentedString(permiteCompraInternacional)).append("\n");
     sb.append("}");
     return sb.toString();
   }

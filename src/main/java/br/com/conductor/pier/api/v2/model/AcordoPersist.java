@@ -33,6 +33,7 @@ public class AcordoPersist   {
   private String responsavel = null;
   private Boolean isComIOF = null;
   private String nossoNumero = null;
+  private BigDecimal valorIOF = null;
 
   
   /**
@@ -341,6 +342,24 @@ public class AcordoPersist   {
   }
 
   
+  /**
+   * Valor do IOF
+   **/
+  public AcordoPersist valorIOF(BigDecimal valorIOF) {
+    this.valorIOF = valorIOF;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor do IOF")
+  @JsonProperty("valorIOF")
+  public BigDecimal getValorIOF() {
+    return valorIOF;
+  }
+  public void setValorIOF(BigDecimal valorIOF) {
+    this.valorIOF = valorIOF;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -367,12 +386,13 @@ public class AcordoPersist   {
         Objects.equals(this.dataVencimentoEntrada, acordoPersist.dataVencimentoEntrada) &&
         Objects.equals(this.responsavel, acordoPersist.responsavel) &&
         Objects.equals(this.isComIOF, acordoPersist.isComIOF) &&
-        Objects.equals(this.nossoNumero, acordoPersist.nossoNumero);
+        Objects.equals(this.nossoNumero, acordoPersist.nossoNumero) &&
+        Objects.equals(this.valorIOF, acordoPersist.valorIOF);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idConta, idEscritorioCobranca, valorLiquido, valorEntrada, valorParcelaUm, valorParcelas, saldoDevedorCreliq, saldoDevedorCorrigido, quantidadeParcelas, percentualCorrecao, percentualDesconto, valorDesconto, diasAtraso, dataVencimentoEntrada, responsavel, isComIOF, nossoNumero);
+    return Objects.hash(idConta, idEscritorioCobranca, valorLiquido, valorEntrada, valorParcelaUm, valorParcelas, saldoDevedorCreliq, saldoDevedorCorrigido, quantidadeParcelas, percentualCorrecao, percentualDesconto, valorDesconto, diasAtraso, dataVencimentoEntrada, responsavel, isComIOF, nossoNumero, valorIOF);
   }
 
   @Override
@@ -397,6 +417,7 @@ public class AcordoPersist   {
     sb.append("    responsavel: ").append(toIndentedString(responsavel)).append("\n");
     sb.append("    isComIOF: ").append(toIndentedString(isComIOF)).append("\n");
     sb.append("    nossoNumero: ").append(toIndentedString(nossoNumero)).append("\n");
+    sb.append("    valorIOF: ").append(toIndentedString(valorIOF)).append("\n");
     sb.append("}");
     return sb.toString();
   }

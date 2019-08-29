@@ -50,6 +50,7 @@ public class ContaResponse   {
   }
 
   private FuncaoAtivaEnum funcaoAtiva = null;
+  private Boolean possuiOverLimit = null;
 
   
   /**
@@ -286,6 +287,24 @@ public class ContaResponse   {
   }
 
   
+  /**
+   * Sinaliza se o OverLimit da conta est\uFFFD ativo
+   **/
+  public ContaResponse possuiOverLimit(Boolean possuiOverLimit) {
+    this.possuiOverLimit = possuiOverLimit;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "Sinaliza se o OverLimit da conta est\uFFFD ativo")
+  @JsonProperty("possuiOverLimit")
+  public Boolean getPossuiOverLimit() {
+    return possuiOverLimit;
+  }
+  public void setPossuiOverLimit(Boolean possuiOverLimit) {
+    this.possuiOverLimit = possuiOverLimit;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -308,12 +327,13 @@ public class ContaResponse   {
         Objects.equals(this.dataUltimaAlteracaoVencimento, contaResponse.dataUltimaAlteracaoVencimento) &&
         Objects.equals(this.valorRenda, contaResponse.valorRenda) &&
         Objects.equals(this.idProposta, contaResponse.idProposta) &&
-        Objects.equals(this.funcaoAtiva, contaResponse.funcaoAtiva);
+        Objects.equals(this.funcaoAtiva, contaResponse.funcaoAtiva) &&
+        Objects.equals(this.possuiOverLimit, contaResponse.possuiOverLimit);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idProduto, idOrigemComercial, idPessoa, idStatusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, dataUltimaAlteracaoVencimento, valorRenda, idProposta, funcaoAtiva);
+    return Objects.hash(id, idProduto, idOrigemComercial, idPessoa, idStatusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, dataUltimaAlteracaoVencimento, valorRenda, idProposta, funcaoAtiva, possuiOverLimit);
   }
 
   @Override
@@ -334,6 +354,7 @@ public class ContaResponse   {
     sb.append("    valorRenda: ").append(toIndentedString(valorRenda)).append("\n");
     sb.append("    idProposta: ").append(toIndentedString(idProposta)).append("\n");
     sb.append("    funcaoAtiva: ").append(toIndentedString(funcaoAtiva)).append("\n");
+    sb.append("    possuiOverLimit: ").append(toIndentedString(possuiOverLimit)).append("\n");
     sb.append("}");
     return sb.toString();
   }

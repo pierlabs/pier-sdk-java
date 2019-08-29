@@ -17,6 +17,8 @@ public class CartaoMultiAppPersist   {
   
   private Long idConta = null;
   private Long idPessoa = null;
+  private String matriculaMifare = null;
+  private Long idMifare = null;
 
   
   /**
@@ -55,6 +57,42 @@ public class CartaoMultiAppPersist   {
   }
 
   
+  /**
+   * N\u00FAmero da matricula do portador
+   **/
+  public CartaoMultiAppPersist matriculaMifare(String matriculaMifare) {
+    this.matriculaMifare = matriculaMifare;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "N\u00FAmero da matricula do portador")
+  @JsonProperty("matriculaMifare")
+  public String getMatriculaMifare() {
+    return matriculaMifare;
+  }
+  public void setMatriculaMifare(String matriculaMifare) {
+    this.matriculaMifare = matriculaMifare;
+  }
+
+  
+  /**
+   * C\u00F3digo identificador da tecnologia MIFARE
+   **/
+  public CartaoMultiAppPersist idMifare(Long idMifare) {
+    this.idMifare = idMifare;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador da tecnologia MIFARE")
+  @JsonProperty("idMifare")
+  public Long getIdMifare() {
+    return idMifare;
+  }
+  public void setIdMifare(Long idMifare) {
+    this.idMifare = idMifare;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -66,12 +104,14 @@ public class CartaoMultiAppPersist   {
     }
     CartaoMultiAppPersist cartaoMultiAppPersist = (CartaoMultiAppPersist) o;
     return Objects.equals(this.idConta, cartaoMultiAppPersist.idConta) &&
-        Objects.equals(this.idPessoa, cartaoMultiAppPersist.idPessoa);
+        Objects.equals(this.idPessoa, cartaoMultiAppPersist.idPessoa) &&
+        Objects.equals(this.matriculaMifare, cartaoMultiAppPersist.matriculaMifare) &&
+        Objects.equals(this.idMifare, cartaoMultiAppPersist.idMifare);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idConta, idPessoa);
+    return Objects.hash(idConta, idPessoa, matriculaMifare, idMifare);
   }
 
   @Override
@@ -81,6 +121,8 @@ public class CartaoMultiAppPersist   {
     
     sb.append("    idConta: ").append(toIndentedString(idConta)).append("\n");
     sb.append("    idPessoa: ").append(toIndentedString(idPessoa)).append("\n");
+    sb.append("    matriculaMifare: ").append(toIndentedString(matriculaMifare)).append("\n");
+    sb.append("    idMifare: ").append(toIndentedString(idMifare)).append("\n");
     sb.append("}");
     return sb.toString();
   }

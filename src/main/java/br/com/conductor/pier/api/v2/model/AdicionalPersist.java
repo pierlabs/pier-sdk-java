@@ -32,6 +32,7 @@ public class AdicionalPersist   {
   private Long idNacionalidade = null;
   private Long idParentesco = null;
   private String email = null;
+  private Boolean flagDeficienteVisual = null;
   private List<TelefoneAdicionalPersist> telefones = new ArrayList<TelefoneAdicionalPersist>();
 
   
@@ -288,6 +289,24 @@ public class AdicionalPersist   {
 
   
   /**
+   * Flag que identifica uma pessoa como deficiente visual
+   **/
+  public AdicionalPersist flagDeficienteVisual(Boolean flagDeficienteVisual) {
+    this.flagDeficienteVisual = flagDeficienteVisual;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "Flag que identifica uma pessoa como deficiente visual")
+  @JsonProperty("flagDeficienteVisual")
+  public Boolean getFlagDeficienteVisual() {
+    return flagDeficienteVisual;
+  }
+  public void setFlagDeficienteVisual(Boolean flagDeficienteVisual) {
+    this.flagDeficienteVisual = flagDeficienteVisual;
+  }
+
+  
+  /**
    * Lista de telefones do adicional
    **/
   public AdicionalPersist telefones(List<TelefoneAdicionalPersist> telefones) {
@@ -329,12 +348,13 @@ public class AdicionalPersist   {
         Objects.equals(this.idNacionalidade, adicionalPersist.idNacionalidade) &&
         Objects.equals(this.idParentesco, adicionalPersist.idParentesco) &&
         Objects.equals(this.email, adicionalPersist.email) &&
+        Objects.equals(this.flagDeficienteVisual, adicionalPersist.flagDeficienteVisual) &&
         Objects.equals(this.telefones, adicionalPersist.telefones);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(nome, nomeImpresso, numeroReceitaFederal, dataNascimento, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, idEstadoCivil, idProfissao, idNacionalidade, idParentesco, email, telefones);
+    return Objects.hash(nome, nomeImpresso, numeroReceitaFederal, dataNascimento, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, idEstadoCivil, idProfissao, idNacionalidade, idParentesco, email, flagDeficienteVisual, telefones);
   }
 
   @Override
@@ -356,6 +376,7 @@ public class AdicionalPersist   {
     sb.append("    idNacionalidade: ").append(toIndentedString(idNacionalidade)).append("\n");
     sb.append("    idParentesco: ").append(toIndentedString(idParentesco)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    flagDeficienteVisual: ").append(toIndentedString(flagDeficienteVisual)).append("\n");
     sb.append("    telefones: ").append(toIndentedString(telefones)).append("\n");
     sb.append("}");
     return sb.toString();

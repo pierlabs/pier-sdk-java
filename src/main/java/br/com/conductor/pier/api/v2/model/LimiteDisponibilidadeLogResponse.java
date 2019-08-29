@@ -30,6 +30,7 @@ public class LimiteDisponibilidadeLogResponse   {
   private BigDecimal limiteCompraInternacional = null;
   private BigDecimal limiteCompraNacional = null;
   private BigDecimal limiteGlobalCredito = null;
+  private BigDecimal limiteMaximo = null;
   private BigDecimal limiteParceladoInternacional = null;
   private BigDecimal limiteParceladoNacional = null;
   private BigDecimal limiteParcelasInternacional = null;
@@ -298,6 +299,24 @@ public class LimiteDisponibilidadeLogResponse   {
 
   
   /**
+   * Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es
+   **/
+  public LimiteDisponibilidadeLogResponse limiteMaximo(BigDecimal limiteMaximo) {
+    this.limiteMaximo = limiteMaximo;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es")
+  @JsonProperty("limiteMaximo")
+  public BigDecimal getLimiteMaximo() {
+    return limiteMaximo;
+  }
+  public void setLimiteMaximo(BigDecimal limiteMaximo) {
+    this.limiteMaximo = limiteMaximo;
+  }
+
+  
+  /**
    * Limite parcelado internacional
    **/
   public LimiteDisponibilidadeLogResponse limiteParceladoInternacional(BigDecimal limiteParceladoInternacional) {
@@ -555,6 +574,7 @@ public class LimiteDisponibilidadeLogResponse   {
         Objects.equals(this.limiteCompraInternacional, limiteDisponibilidadeLogResponse.limiteCompraInternacional) &&
         Objects.equals(this.limiteCompraNacional, limiteDisponibilidadeLogResponse.limiteCompraNacional) &&
         Objects.equals(this.limiteGlobalCredito, limiteDisponibilidadeLogResponse.limiteGlobalCredito) &&
+        Objects.equals(this.limiteMaximo, limiteDisponibilidadeLogResponse.limiteMaximo) &&
         Objects.equals(this.limiteParceladoInternacional, limiteDisponibilidadeLogResponse.limiteParceladoInternacional) &&
         Objects.equals(this.limiteParceladoNacional, limiteDisponibilidadeLogResponse.limiteParceladoNacional) &&
         Objects.equals(this.limiteParcelasInternacional, limiteDisponibilidadeLogResponse.limiteParcelasInternacional) &&
@@ -572,7 +592,7 @@ public class LimiteDisponibilidadeLogResponse   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(dataAlteracao, disponibilidadeCompraInternacional, disponibilidadeCompraNacional, disponibilidadeGlobalCredito, disponibilidadeParceladoNacional, disponibilidadeParcelasNacional, disponibilidadeSaqueInternacionalGlobal, disponibilidadeSaqueNacionalGlobal, id, idConta, idEmissor, limiteCompraInternacional, limiteCompraNacional, limiteGlobalCredito, limiteParceladoInternacional, limiteParceladoNacional, limiteParcelasInternacional, limiteParcelasNacional, limitePontuacao, limiteSaqueInternacionalGlobal, limiteSaqueInternacionalPeriodo, limiteSaqueNacionalGlobal, limiteSaqueNacionalPeriodo, maquina, margemConsignada, ordemAtualizacao, tipoAlteracao);
+    return Objects.hash(dataAlteracao, disponibilidadeCompraInternacional, disponibilidadeCompraNacional, disponibilidadeGlobalCredito, disponibilidadeParceladoNacional, disponibilidadeParcelasNacional, disponibilidadeSaqueInternacionalGlobal, disponibilidadeSaqueNacionalGlobal, id, idConta, idEmissor, limiteCompraInternacional, limiteCompraNacional, limiteGlobalCredito, limiteMaximo, limiteParceladoInternacional, limiteParceladoNacional, limiteParcelasInternacional, limiteParcelasNacional, limitePontuacao, limiteSaqueInternacionalGlobal, limiteSaqueInternacionalPeriodo, limiteSaqueNacionalGlobal, limiteSaqueNacionalPeriodo, maquina, margemConsignada, ordemAtualizacao, tipoAlteracao);
   }
 
   @Override
@@ -594,6 +614,7 @@ public class LimiteDisponibilidadeLogResponse   {
     sb.append("    limiteCompraInternacional: ").append(toIndentedString(limiteCompraInternacional)).append("\n");
     sb.append("    limiteCompraNacional: ").append(toIndentedString(limiteCompraNacional)).append("\n");
     sb.append("    limiteGlobalCredito: ").append(toIndentedString(limiteGlobalCredito)).append("\n");
+    sb.append("    limiteMaximo: ").append(toIndentedString(limiteMaximo)).append("\n");
     sb.append("    limiteParceladoInternacional: ").append(toIndentedString(limiteParceladoInternacional)).append("\n");
     sb.append("    limiteParceladoNacional: ").append(toIndentedString(limiteParceladoNacional)).append("\n");
     sb.append("    limiteParcelasInternacional: ").append(toIndentedString(limiteParcelasInternacional)).append("\n");

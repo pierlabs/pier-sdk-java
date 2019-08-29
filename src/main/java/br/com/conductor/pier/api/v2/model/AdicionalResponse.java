@@ -30,6 +30,7 @@ public class AdicionalResponse   {
   private Integer flagAtivo = null;
   private String dataCadastroPortador = null;
   private String dataCancelamentoPortador = null;
+  private Boolean flagDeficienteVisual = null;
 
   
   /**
@@ -302,6 +303,24 @@ public class AdicionalResponse   {
   }
 
   
+  /**
+   * Flag que identifica uma pessoa como deficiente visual
+   **/
+  public AdicionalResponse flagDeficienteVisual(Boolean flagDeficienteVisual) {
+    this.flagDeficienteVisual = flagDeficienteVisual;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "Flag que identifica uma pessoa como deficiente visual")
+  @JsonProperty("flagDeficienteVisual")
+  public Boolean getFlagDeficienteVisual() {
+    return flagDeficienteVisual;
+  }
+  public void setFlagDeficienteVisual(Boolean flagDeficienteVisual) {
+    this.flagDeficienteVisual = flagDeficienteVisual;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -326,12 +345,13 @@ public class AdicionalResponse   {
         Objects.equals(this.idParentesco, adicionalResponse.idParentesco) &&
         Objects.equals(this.flagAtivo, adicionalResponse.flagAtivo) &&
         Objects.equals(this.dataCadastroPortador, adicionalResponse.dataCadastroPortador) &&
-        Objects.equals(this.dataCancelamentoPortador, adicionalResponse.dataCancelamentoPortador);
+        Objects.equals(this.dataCancelamentoPortador, adicionalResponse.dataCancelamentoPortador) &&
+        Objects.equals(this.flagDeficienteVisual, adicionalResponse.flagDeficienteVisual);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idConta, idPessoa, nome, nomeImpresso, numeroReceitaFederal, dataNascimento, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, idParentesco, flagAtivo, dataCadastroPortador, dataCancelamentoPortador);
+    return Objects.hash(idConta, idPessoa, nome, nomeImpresso, numeroReceitaFederal, dataNascimento, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, idParentesco, flagAtivo, dataCadastroPortador, dataCancelamentoPortador, flagDeficienteVisual);
   }
 
   @Override
@@ -354,6 +374,7 @@ public class AdicionalResponse   {
     sb.append("    flagAtivo: ").append(toIndentedString(flagAtivo)).append("\n");
     sb.append("    dataCadastroPortador: ").append(toIndentedString(dataCadastroPortador)).append("\n");
     sb.append("    dataCancelamentoPortador: ").append(toIndentedString(dataCancelamentoPortador)).append("\n");
+    sb.append("    flagDeficienteVisual: ").append(toIndentedString(flagDeficienteVisual)).append("\n");
     sb.append("}");
     return sb.toString();
   }

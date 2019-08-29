@@ -30,6 +30,7 @@ public class SocioAprovadoPersist   {
   private String profissao = null;
   private String nacionalidade = null;
   private String email = null;
+  private Boolean flagDeficienteVisual = null;
   private List<TelefonePessoaAprovadaPersist> telefones = new ArrayList<TelefonePessoaAprovadaPersist>();
 
   
@@ -250,6 +251,24 @@ public class SocioAprovadoPersist   {
 
   
   /**
+   * Flag que identifica uma pessoa como deficiente visual
+   **/
+  public SocioAprovadoPersist flagDeficienteVisual(Boolean flagDeficienteVisual) {
+    this.flagDeficienteVisual = flagDeficienteVisual;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "Flag que identifica uma pessoa como deficiente visual")
+  @JsonProperty("flagDeficienteVisual")
+  public Boolean getFlagDeficienteVisual() {
+    return flagDeficienteVisual;
+  }
+  public void setFlagDeficienteVisual(Boolean flagDeficienteVisual) {
+    this.flagDeficienteVisual = flagDeficienteVisual;
+  }
+
+  
+  /**
    * Telefones do s\u00F3cio
    **/
   public SocioAprovadoPersist telefones(List<TelefonePessoaAprovadaPersist> telefones) {
@@ -289,12 +308,13 @@ public class SocioAprovadoPersist   {
         Objects.equals(this.profissao, socioAprovadoPersist.profissao) &&
         Objects.equals(this.nacionalidade, socioAprovadoPersist.nacionalidade) &&
         Objects.equals(this.email, socioAprovadoPersist.email) &&
+        Objects.equals(this.flagDeficienteVisual, socioAprovadoPersist.flagDeficienteVisual) &&
         Objects.equals(this.telefones, socioAprovadoPersist.telefones);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(nome, cpf, dataNascimento, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, estadoCivil, profissao, nacionalidade, email, telefones);
+    return Objects.hash(nome, cpf, dataNascimento, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, estadoCivil, profissao, nacionalidade, email, flagDeficienteVisual, telefones);
   }
 
   @Override
@@ -314,6 +334,7 @@ public class SocioAprovadoPersist   {
     sb.append("    profissao: ").append(toIndentedString(profissao)).append("\n");
     sb.append("    nacionalidade: ").append(toIndentedString(nacionalidade)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    flagDeficienteVisual: ").append(toIndentedString(flagDeficienteVisual)).append("\n");
     sb.append("    telefones: ").append(toIndentedString(telefones)).append("\n");
     sb.append("}");
     return sb.toString();

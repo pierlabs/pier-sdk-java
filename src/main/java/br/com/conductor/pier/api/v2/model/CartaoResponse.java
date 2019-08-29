@@ -15,7 +15,6 @@ import io.swagger.annotations.ApiModelProperty;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
 public class CartaoResponse   {
   
-  private Integer portador = null;
   private Long id = null;
   private Integer flagTitular = null;
   private Long idPessoa = null;
@@ -38,24 +37,9 @@ public class CartaoResponse   {
   private Long idProduto = null;
   private String nomeImpresso = null;
   private String codigoDesbloqueio = null;
-
-  
-  /**
-   * Apresenta o n\u00FAmero do portador do cart\u00E3o
-   **/
-  public CartaoResponse portador(Integer portador) {
-    this.portador = portador;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Apresenta o n\u00FAmero do portador do cart\u00E3o")
-  @JsonProperty("portador")
-  public Integer getPortador() {
-    return portador;
-  }
-  public void setPortador(Integer portador) {
-    this.portador = portador;
-  }
+  private Integer portador = null;
+  private Boolean flagCartaoMifare = null;
+  private Long idImagem = null;
 
   
   /**
@@ -454,6 +438,60 @@ public class CartaoResponse   {
   }
 
   
+  /**
+   * Apresenta o n\u00FAmero do portador do cart\u00E3o
+   **/
+  public CartaoResponse portador(Integer portador) {
+    this.portador = portador;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Apresenta o n\u00FAmero do portador do cart\u00E3o")
+  @JsonProperty("portador")
+  public Integer getPortador() {
+    return portador;
+  }
+  public void setPortador(Integer portador) {
+    this.portador = portador;
+  }
+
+  
+  /**
+   * Identifica se o cart\u00E3o cont\u00E9m a tecnologia mifare
+   **/
+  public CartaoResponse flagCartaoMifare(Boolean flagCartaoMifare) {
+    this.flagCartaoMifare = flagCartaoMifare;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "Identifica se o cart\u00E3o cont\u00E9m a tecnologia mifare")
+  @JsonProperty("flagCartaoMifare")
+  public Boolean getFlagCartaoMifare() {
+    return flagCartaoMifare;
+  }
+  public void setFlagCartaoMifare(Boolean flagCartaoMifare) {
+    this.flagCartaoMifare = flagCartaoMifare;
+  }
+
+  
+  /**
+   * Apresenta o identificador da cor do cart\u00E3o
+   **/
+  public CartaoResponse idImagem(Long idImagem) {
+    this.idImagem = idImagem;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Apresenta o identificador da cor do cart\u00E3o")
+  @JsonProperty("idImagem")
+  public Long getIdImagem() {
+    return idImagem;
+  }
+  public void setIdImagem(Long idImagem) {
+    this.idImagem = idImagem;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -464,8 +502,7 @@ public class CartaoResponse   {
       return false;
     }
     CartaoResponse cartaoResponse = (CartaoResponse) o;
-    return Objects.equals(this.portador, cartaoResponse.portador) &&
-        Objects.equals(this.id, cartaoResponse.id) &&
+    return Objects.equals(this.id, cartaoResponse.id) &&
         Objects.equals(this.flagTitular, cartaoResponse.flagTitular) &&
         Objects.equals(this.idPessoa, cartaoResponse.idPessoa) &&
         Objects.equals(this.sequencialCartao, cartaoResponse.sequencialCartao) &&
@@ -486,12 +523,15 @@ public class CartaoResponse   {
         Objects.equals(this.nomeArquivoImpressao, cartaoResponse.nomeArquivoImpressao) &&
         Objects.equals(this.idProduto, cartaoResponse.idProduto) &&
         Objects.equals(this.nomeImpresso, cartaoResponse.nomeImpresso) &&
-        Objects.equals(this.codigoDesbloqueio, cartaoResponse.codigoDesbloqueio);
+        Objects.equals(this.codigoDesbloqueio, cartaoResponse.codigoDesbloqueio) &&
+        Objects.equals(this.portador, cartaoResponse.portador) &&
+        Objects.equals(this.flagCartaoMifare, cartaoResponse.flagCartaoMifare) &&
+        Objects.equals(this.idImagem, cartaoResponse.idImagem);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(portador, id, flagTitular, idPessoa, sequencialCartao, idConta, idStatus, dataStatus, idEstagio, dataEstagio, numeroBin, numeroCartao, numeroCartaoHash, numeroCartaoCriptografado, dataEmissao, dataValidade, cartaoVirtual, impressaoAvulsa, dataImpressao, nomeArquivoImpressao, idProduto, nomeImpresso, codigoDesbloqueio);
+    return Objects.hash(id, flagTitular, idPessoa, sequencialCartao, idConta, idStatus, dataStatus, idEstagio, dataEstagio, numeroBin, numeroCartao, numeroCartaoHash, numeroCartaoCriptografado, dataEmissao, dataValidade, cartaoVirtual, impressaoAvulsa, dataImpressao, nomeArquivoImpressao, idProduto, nomeImpresso, codigoDesbloqueio, portador, flagCartaoMifare, idImagem);
   }
 
   @Override
@@ -499,7 +539,6 @@ public class CartaoResponse   {
     StringBuilder sb = new StringBuilder();
     sb.append("class CartaoResponse {\n");
     
-    sb.append("    portador: ").append(toIndentedString(portador)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    flagTitular: ").append(toIndentedString(flagTitular)).append("\n");
     sb.append("    idPessoa: ").append(toIndentedString(idPessoa)).append("\n");
@@ -522,6 +561,9 @@ public class CartaoResponse   {
     sb.append("    idProduto: ").append(toIndentedString(idProduto)).append("\n");
     sb.append("    nomeImpresso: ").append(toIndentedString(nomeImpresso)).append("\n");
     sb.append("    codigoDesbloqueio: ").append(toIndentedString(codigoDesbloqueio)).append("\n");
+    sb.append("    portador: ").append(toIndentedString(portador)).append("\n");
+    sb.append("    flagCartaoMifare: ").append(toIndentedString(flagCartaoMifare)).append("\n");
+    sb.append("    idImagem: ").append(toIndentedString(idImagem)).append("\n");
     sb.append("}");
     return sb.toString();
   }

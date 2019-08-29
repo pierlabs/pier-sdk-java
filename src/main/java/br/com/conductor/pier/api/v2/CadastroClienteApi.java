@@ -16,6 +16,7 @@ import br.com.conductor.pier.api.v2.model.TelefoneResponse;
 import br.com.conductor.pier.api.v2.model.AtribuirAssinaturaClientePersist;
 import br.com.conductor.pier.api.v2.model.IndicacaoAmigoResponse;
 import br.com.conductor.pier.api.v2.model.IndicacaoAmigoUpdate;
+import br.com.conductor.pier.api.v2.model.PessoaDetalhePartialUpdate;
 import br.com.conductor.pier.api.v2.model.IntegracaoEmissorPersist;
 import br.com.conductor.pier.api.v2.model.IntegracaoEmissorResponse;
 import br.com.conductor.pier.api.v2.model.IndicacaoAmigoPersist;
@@ -237,9 +238,10 @@ public class CadastroClienteApi {
    * @param unidadeFederativaIdentidade Sigla da Unidade Federativa de onde foi expedido a Identidade
    * @param dataEmissaoIdentidade Data emiss\u00E3o da Identidade
    * @param usuarioAlteracao Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o
+   * @param flagDeficienteVisual Flag que identifica uma pessoa como deficiente visual
    * @return PessoaResponse
    */
-  public PessoaResponse alterarPessoa(Long id, String nome, String tipo, String dataNascimento, String cpf, String cnpj, String sexo, String numeroIdentidade, String orgaoExpedidorIdentidade, String unidadeFederativaIdentidade, String dataEmissaoIdentidade, String usuarioAlteracao) throws ApiException {
+  public PessoaResponse alterarPessoa(Long id, String nome, String tipo, String dataNascimento, String cpf, String cnpj, String sexo, String numeroIdentidade, String orgaoExpedidorIdentidade, String unidadeFederativaIdentidade, String dataEmissaoIdentidade, String usuarioAlteracao, Boolean flagDeficienteVisual) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -293,6 +295,8 @@ public class CadastroClienteApi {
     queryParams.addAll(apiClient.parameterToPairs("", "dataEmissaoIdentidade", dataEmissaoIdentidade));
     
     queryParams.addAll(apiClient.parameterToPairs("", "usuarioAlteracao", usuarioAlteracao));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "flagDeficienteVisual", flagDeficienteVisual));
     
 
     
@@ -670,6 +674,60 @@ public class CadastroClienteApi {
     
     GenericType<IndicacaoAmigoResponse> returnType = new GenericType<IndicacaoAmigoResponse>() {};
     return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Atualiza\u00E7\u00E3o parcial do detalhe da pessoa
+   * Este recurso permite realizar uma atualiza\u00E7\u00E3o parcial dos detalhes da pessoa
+   * @param id Identificador da pessoa
+   * @param pessoaDetalhePartialUpdate pessoaDetalhePartialUpdate
+   * @return Object
+   */
+  public Object atualizarParcialPessoaDetalhe(Long id, PessoaDetalhePartialUpdate pessoaDetalhePartialUpdate) throws ApiException {
+    Object postBody = pessoaDetalhePartialUpdate;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling atualizarParcialPessoaDetalhe");
+     }
+     
+     // verify the required parameter 'pessoaDetalhePartialUpdate' is set
+     if (pessoaDetalhePartialUpdate == null) {
+        throw new ApiException(400, "Missing the required parameter 'pessoaDetalhePartialUpdate' when calling atualizarParcialPessoaDetalhe");
+     }
+     
+    // create path and map variables
+    String path = "/api/pessoas/{id}/detalhes".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<Object> returnType = new GenericType<Object>() {};
+    return apiClient.invokeAPI(path, "PATCH", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
@@ -1542,9 +1600,10 @@ public class CadastroClienteApi {
    * @param orgaoExpedidorIdentidade Org\u00E3o expedidor do RG
    * @param unidadeFederativaIdentidade Sigla da Unidade Federativa de onde foi expedido a Identidade
    * @param dataEmissaoIdentidade Data emiss\u00E3o da identidade no formato aaaa-MM-dd
+   * @param flagDeficienteVisual Flag que identifica uma pessoa como deficiente visual
    * @return PagePessoaResponse
    */
-  public PagePessoaResponse listarPessoas(List<String> sort, Integer page, Integer limit, Long id, String nome, String tipo, String cpf, String cnpj, String dataNascimento, String sexo, String numeroIdentidade, String orgaoExpedidorIdentidade, String unidadeFederativaIdentidade, String dataEmissaoIdentidade) throws ApiException {
+  public PagePessoaResponse listarPessoas(List<String> sort, Integer page, Integer limit, Long id, String nome, String tipo, String cpf, String cnpj, String dataNascimento, String sexo, String numeroIdentidade, String orgaoExpedidorIdentidade, String unidadeFederativaIdentidade, String dataEmissaoIdentidade, Boolean flagDeficienteVisual) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -1583,6 +1642,8 @@ public class CadastroClienteApi {
     queryParams.addAll(apiClient.parameterToPairs("", "unidadeFederativaIdentidade", unidadeFederativaIdentidade));
     
     queryParams.addAll(apiClient.parameterToPairs("", "dataEmissaoIdentidade", dataEmissaoIdentidade));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "flagDeficienteVisual", flagDeficienteVisual));
     
 
     
@@ -2006,9 +2067,10 @@ public class CadastroClienteApi {
    * @param unidadeFederativaIdentidade Sigla da Unidade Federativa de onde foi expedido a Identidade
    * @param dataEmissaoIdentidade Data emiss\u00E3o da Identidade
    * @param usuarioAlteracao Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o
+   * @param flagDeficienteVisual Flag que identifica uma pessoa como deficiente visual
    * @return PessoaResponse
    */
-  public PessoaResponse salvarPessoa(String nome, String tipo, String dataNascimento, String cpf, String cnpj, String sexo, String numeroIdentidade, String orgaoExpedidorIdentidade, String unidadeFederativaIdentidade, String dataEmissaoIdentidade, String usuarioAlteracao) throws ApiException {
+  public PessoaResponse salvarPessoa(String nome, String tipo, String dataNascimento, String cpf, String cnpj, String sexo, String numeroIdentidade, String orgaoExpedidorIdentidade, String unidadeFederativaIdentidade, String dataEmissaoIdentidade, String usuarioAlteracao, Boolean flagDeficienteVisual) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'nome' is set
@@ -2056,6 +2118,8 @@ public class CadastroClienteApi {
     queryParams.addAll(apiClient.parameterToPairs("", "dataEmissaoIdentidade", dataEmissaoIdentidade));
     
     queryParams.addAll(apiClient.parameterToPairs("", "usuarioAlteracao", usuarioAlteracao));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "flagDeficienteVisual", flagDeficienteVisual));
     
 
     

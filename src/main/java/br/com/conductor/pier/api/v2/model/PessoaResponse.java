@@ -26,6 +26,7 @@ public class PessoaResponse   {
   private String sexo = null;
   private String unidadeFederativaIdentidade = null;
   private String dataEmissaoIdentidade = null;
+  private Boolean flagDeficienteVisual = null;
 
   
   /**
@@ -226,6 +227,24 @@ public class PessoaResponse   {
   }
 
   
+  /**
+   * Flag que identifica uma pessoa como deficiente visual
+   **/
+  public PessoaResponse flagDeficienteVisual(Boolean flagDeficienteVisual) {
+    this.flagDeficienteVisual = flagDeficienteVisual;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "Flag que identifica uma pessoa como deficiente visual")
+  @JsonProperty("flagDeficienteVisual")
+  public Boolean getFlagDeficienteVisual() {
+    return flagDeficienteVisual;
+  }
+  public void setFlagDeficienteVisual(Boolean flagDeficienteVisual) {
+    this.flagDeficienteVisual = flagDeficienteVisual;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -246,12 +265,13 @@ public class PessoaResponse   {
         Objects.equals(this.orgaoExpedidorIdentidade, pessoaResponse.orgaoExpedidorIdentidade) &&
         Objects.equals(this.sexo, pessoaResponse.sexo) &&
         Objects.equals(this.unidadeFederativaIdentidade, pessoaResponse.unidadeFederativaIdentidade) &&
-        Objects.equals(this.dataEmissaoIdentidade, pessoaResponse.dataEmissaoIdentidade);
+        Objects.equals(this.dataEmissaoIdentidade, pessoaResponse.dataEmissaoIdentidade) &&
+        Objects.equals(this.flagDeficienteVisual, pessoaResponse.flagDeficienteVisual);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, nome, tipo, cpf, cnpj, dataNascimento, numeroIdentidade, orgaoExpedidorIdentidade, sexo, unidadeFederativaIdentidade, dataEmissaoIdentidade);
+    return Objects.hash(id, nome, tipo, cpf, cnpj, dataNascimento, numeroIdentidade, orgaoExpedidorIdentidade, sexo, unidadeFederativaIdentidade, dataEmissaoIdentidade, flagDeficienteVisual);
   }
 
   @Override
@@ -270,6 +290,7 @@ public class PessoaResponse   {
     sb.append("    sexo: ").append(toIndentedString(sexo)).append("\n");
     sb.append("    unidadeFederativaIdentidade: ").append(toIndentedString(unidadeFederativaIdentidade)).append("\n");
     sb.append("    dataEmissaoIdentidade: ").append(toIndentedString(dataEmissaoIdentidade)).append("\n");
+    sb.append("    flagDeficienteVisual: ").append(toIndentedString(flagDeficienteVisual)).append("\n");
     sb.append("}");
     return sb.toString();
   }

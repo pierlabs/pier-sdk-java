@@ -75,6 +75,7 @@ public class ContaDetalheResponse   {
   }
 
   private FuncaoAtivaEnum funcaoAtiva = null;
+  private Boolean possuiOverLimit = null;
 
   
   /**
@@ -761,6 +762,24 @@ public class ContaDetalheResponse   {
   }
 
   
+  /**
+   * Sinaliza se o OverLimit da conta est\uFFFD ativo
+   **/
+  public ContaDetalheResponse possuiOverLimit(Boolean possuiOverLimit) {
+    this.possuiOverLimit = possuiOverLimit;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "Sinaliza se o OverLimit da conta est\uFFFD ativo")
+  @JsonProperty("possuiOverLimit")
+  public Boolean getPossuiOverLimit() {
+    return possuiOverLimit;
+  }
+  public void setPossuiOverLimit(Boolean possuiOverLimit) {
+    this.possuiOverLimit = possuiOverLimit;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -808,12 +827,13 @@ public class ContaDetalheResponse   {
         Objects.equals(this.saldoAtualFinal, contaDetalheResponse.saldoAtualFinal) &&
         Objects.equals(this.saldoExtratoAnterior, contaDetalheResponse.saldoExtratoAnterior) &&
         Objects.equals(this.aceitaNovaContaPorGrupoProduto, contaDetalheResponse.aceitaNovaContaPorGrupoProduto) &&
-        Objects.equals(this.funcaoAtiva, contaDetalheResponse.funcaoAtiva);
+        Objects.equals(this.funcaoAtiva, contaDetalheResponse.funcaoAtiva) &&
+        Objects.equals(this.possuiOverLimit, contaDetalheResponse.possuiOverLimit);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idPessoa, nome, idProduto, idOrigemComercial, nomeOrigemComercial, idFantasiaBasica, nomeFantasiaBasica, idStatusConta, statusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, dataUltimaAlteracaoVencimento, dataHoraUltimaCompra, numeroAgencia, numeroContaCorrente, valorRenda, formaEnvioFatura, titular, limiteGlobal, limiteSaqueGlobal, saldoDisponivelGlobal, saldoDisponivelSaque, impedidoFinanciamento, diasAtraso, proximoVencimentoPadrao, idProposta, quantidadePagamentos, correspondencia, dataInicioAtraso, rotativoPagaJuros, totalPosProx, saldoAtualFinal, saldoExtratoAnterior, aceitaNovaContaPorGrupoProduto, funcaoAtiva);
+    return Objects.hash(id, idPessoa, nome, idProduto, idOrigemComercial, nomeOrigemComercial, idFantasiaBasica, nomeFantasiaBasica, idStatusConta, statusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, dataUltimaAlteracaoVencimento, dataHoraUltimaCompra, numeroAgencia, numeroContaCorrente, valorRenda, formaEnvioFatura, titular, limiteGlobal, limiteSaqueGlobal, saldoDisponivelGlobal, saldoDisponivelSaque, impedidoFinanciamento, diasAtraso, proximoVencimentoPadrao, idProposta, quantidadePagamentos, correspondencia, dataInicioAtraso, rotativoPagaJuros, totalPosProx, saldoAtualFinal, saldoExtratoAnterior, aceitaNovaContaPorGrupoProduto, funcaoAtiva, possuiOverLimit);
   }
 
   @Override
@@ -859,6 +879,7 @@ public class ContaDetalheResponse   {
     sb.append("    saldoExtratoAnterior: ").append(toIndentedString(saldoExtratoAnterior)).append("\n");
     sb.append("    aceitaNovaContaPorGrupoProduto: ").append(toIndentedString(aceitaNovaContaPorGrupoProduto)).append("\n");
     sb.append("    funcaoAtiva: ").append(toIndentedString(funcaoAtiva)).append("\n");
+    sb.append("    possuiOverLimit: ").append(toIndentedString(possuiOverLimit)).append("\n");
     sb.append("}");
     return sb.toString();
   }

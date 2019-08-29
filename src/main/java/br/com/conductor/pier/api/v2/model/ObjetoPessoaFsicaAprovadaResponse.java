@@ -28,6 +28,7 @@ public class ObjetoPessoaFsicaAprovadaResponse   {
   private String orgaoExpedidorIdentidade = null;
   private String unidadeFederativaIdentidade = null;
   private String dataEmissaoIdentidade = null;
+  private Boolean flagDeficienteVisual = null;
   private Long idEstadoCivil = null;
   private String idProfissao = null;
   private Long idNaturezaOcupacao = null;
@@ -265,6 +266,24 @@ public class ObjetoPessoaFsicaAprovadaResponse   {
   }
   public void setDataEmissaoIdentidade(String dataEmissaoIdentidade) {
     this.dataEmissaoIdentidade = dataEmissaoIdentidade;
+  }
+
+  
+  /**
+   * Flag que identifica uma pessoa como deficiente visual
+   **/
+  public ObjetoPessoaFsicaAprovadaResponse flagDeficienteVisual(Boolean flagDeficienteVisual) {
+    this.flagDeficienteVisual = flagDeficienteVisual;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "Flag que identifica uma pessoa como deficiente visual")
+  @JsonProperty("flagDeficienteVisual")
+  public Boolean getFlagDeficienteVisual() {
+    return flagDeficienteVisual;
+  }
+  public void setFlagDeficienteVisual(Boolean flagDeficienteVisual) {
+    this.flagDeficienteVisual = flagDeficienteVisual;
   }
 
   
@@ -972,6 +991,7 @@ public class ObjetoPessoaFsicaAprovadaResponse   {
         Objects.equals(this.orgaoExpedidorIdentidade, objetoPessoaFsicaAprovadaResponse.orgaoExpedidorIdentidade) &&
         Objects.equals(this.unidadeFederativaIdentidade, objetoPessoaFsicaAprovadaResponse.unidadeFederativaIdentidade) &&
         Objects.equals(this.dataEmissaoIdentidade, objetoPessoaFsicaAprovadaResponse.dataEmissaoIdentidade) &&
+        Objects.equals(this.flagDeficienteVisual, objetoPessoaFsicaAprovadaResponse.flagDeficienteVisual) &&
         Objects.equals(this.idEstadoCivil, objetoPessoaFsicaAprovadaResponse.idEstadoCivil) &&
         Objects.equals(this.idProfissao, objetoPessoaFsicaAprovadaResponse.idProfissao) &&
         Objects.equals(this.idNaturezaOcupacao, objetoPessoaFsicaAprovadaResponse.idNaturezaOcupacao) &&
@@ -1014,7 +1034,7 @@ public class ObjetoPessoaFsicaAprovadaResponse   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, nome, nomeMae, dataNascimento, sexo, cpf, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, idOrigemComercial, idProduto, numeroAgencia, numeroContaCorrente, email, diaVencimento, nomeImpresso, nomeEmpresa, idConta, idProposta, canalEntrada, valorPontuacao, telefones, enderecos, limiteGlobal, limiteMaximo, limiteParcelas, limiteConsignado, impedidoFinanciamento, nomeReferencia1, enderecoReferencia1, nomeReferencia2, enderecoReferencia2, funcaoAtiva, matricula, responsavelDigitacao, idPromotorVenda, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial, numeroBanco);
+    return Objects.hash(id, nome, nomeMae, dataNascimento, sexo, cpf, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, flagDeficienteVisual, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, idOrigemComercial, idProduto, numeroAgencia, numeroContaCorrente, email, diaVencimento, nomeImpresso, nomeEmpresa, idConta, idProposta, canalEntrada, valorPontuacao, telefones, enderecos, limiteGlobal, limiteMaximo, limiteParcelas, limiteConsignado, impedidoFinanciamento, nomeReferencia1, enderecoReferencia1, nomeReferencia2, enderecoReferencia2, funcaoAtiva, matricula, responsavelDigitacao, idPromotorVenda, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial, numeroBanco);
   }
 
   @Override
@@ -1032,6 +1052,7 @@ public class ObjetoPessoaFsicaAprovadaResponse   {
     sb.append("    orgaoExpedidorIdentidade: ").append(toIndentedString(orgaoExpedidorIdentidade)).append("\n");
     sb.append("    unidadeFederativaIdentidade: ").append(toIndentedString(unidadeFederativaIdentidade)).append("\n");
     sb.append("    dataEmissaoIdentidade: ").append(toIndentedString(dataEmissaoIdentidade)).append("\n");
+    sb.append("    flagDeficienteVisual: ").append(toIndentedString(flagDeficienteVisual)).append("\n");
     sb.append("    idEstadoCivil: ").append(toIndentedString(idEstadoCivil)).append("\n");
     sb.append("    idProfissao: ").append(toIndentedString(idProfissao)).append("\n");
     sb.append("    idNaturezaOcupacao: ").append(toIndentedString(idNaturezaOcupacao)).append("\n");

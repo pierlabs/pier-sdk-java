@@ -1511,9 +1511,15 @@ public class CadastroGeralApi {
    * @param sort Tipo de ordena\u00E7\u00E3o dos registros
    * @param page P\u00E1gina
    * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
+   * @param nome Nome do banco
+   * @param descricao Descri\u00E7\u00E3o do banco
+   * @param digitoBanco D\u00EDgito verificador do banco
+   * @param ispb N\u00FAmero identificador de sistema de pagamento brasileiro 
+   * @param cnpj N\u00FAmero do CNPJ do banco
+   * @param flagAtivoBacen Indica se o banco est\u00E1 ativo no BACEN
    * @return PageBancoResponse
    */
-  public PageBancoResponse listarBancos(List<String> sort, Integer page, Integer limit) throws ApiException {
+  public PageBancoResponse listarBancos(List<String> sort, Integer page, Integer limit, String nome, String descricao, String digitoBanco, String ispb, String cnpj, Boolean flagAtivoBacen) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -1530,6 +1536,18 @@ public class CadastroGeralApi {
     queryParams.addAll(apiClient.parameterToPairs("", "page", page));
     
     queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "nome", nome));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "descricao", descricao));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "digitoBanco", digitoBanco));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "ispb", ispb));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "cnpj", cnpj));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "flagAtivoBacen", flagAtivoBacen));
     
 
     

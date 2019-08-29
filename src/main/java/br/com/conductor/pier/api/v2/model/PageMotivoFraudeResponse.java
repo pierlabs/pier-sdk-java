@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v2.model.TransacaoProcessadaNaoProcessadaResponse;
+import br.com.conductor.pier.api.v2.model.MotivoFraudeResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -11,14 +11,14 @@ import java.util.List;
 
 
 /**
- * Lista de Transa\u00E7\u00F5es processadas e nao Processadas
+ * Pagina\u00E7\u00E3o do response do servi\u00E7o motivo fraude
  **/
 
-@ApiModel(description = "Lista de Transa\u00E7\u00F5es processadas e nao Processadas")
+@ApiModel(description = "Pagina\u00E7\u00E3o do response do servi\u00E7o motivo fraude")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class PageTransacaoProcessadaNaoProcessadaResponse   {
+public class PageMotivoFraudeResponse   {
   
-  private List<TransacaoProcessadaNaoProcessadaResponse> content = new ArrayList<TransacaoProcessadaNaoProcessadaResponse>();
+  private List<MotivoFraudeResponse> content = new ArrayList<MotivoFraudeResponse>();
   private Boolean first = null;
   private Boolean firstPage = null;
   private Boolean hasContent = null;
@@ -36,24 +36,24 @@ public class PageTransacaoProcessadaNaoProcessadaResponse   {
   
   /**
    **/
-  public PageTransacaoProcessadaNaoProcessadaResponse content(List<TransacaoProcessadaNaoProcessadaResponse> content) {
+  public PageMotivoFraudeResponse content(List<MotivoFraudeResponse> content) {
     this.content = content;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("content")
-  public List<TransacaoProcessadaNaoProcessadaResponse> getContent() {
+  public List<MotivoFraudeResponse> getContent() {
     return content;
   }
-  public void setContent(List<TransacaoProcessadaNaoProcessadaResponse> content) {
+  public void setContent(List<MotivoFraudeResponse> content) {
     this.content = content;
   }
 
   
   /**
    **/
-  public PageTransacaoProcessadaNaoProcessadaResponse first(Boolean first) {
+  public PageMotivoFraudeResponse first(Boolean first) {
     this.first = first;
     return this;
   }
@@ -70,7 +70,7 @@ public class PageTransacaoProcessadaNaoProcessadaResponse   {
   
   /**
    **/
-  public PageTransacaoProcessadaNaoProcessadaResponse firstPage(Boolean firstPage) {
+  public PageMotivoFraudeResponse firstPage(Boolean firstPage) {
     this.firstPage = firstPage;
     return this;
   }
@@ -87,7 +87,7 @@ public class PageTransacaoProcessadaNaoProcessadaResponse   {
   
   /**
    **/
-  public PageTransacaoProcessadaNaoProcessadaResponse hasContent(Boolean hasContent) {
+  public PageMotivoFraudeResponse hasContent(Boolean hasContent) {
     this.hasContent = hasContent;
     return this;
   }
@@ -104,7 +104,7 @@ public class PageTransacaoProcessadaNaoProcessadaResponse   {
   
   /**
    **/
-  public PageTransacaoProcessadaNaoProcessadaResponse hasNextPage(Boolean hasNextPage) {
+  public PageMotivoFraudeResponse hasNextPage(Boolean hasNextPage) {
     this.hasNextPage = hasNextPage;
     return this;
   }
@@ -121,7 +121,7 @@ public class PageTransacaoProcessadaNaoProcessadaResponse   {
   
   /**
    **/
-  public PageTransacaoProcessadaNaoProcessadaResponse hasPreviousPage(Boolean hasPreviousPage) {
+  public PageMotivoFraudeResponse hasPreviousPage(Boolean hasPreviousPage) {
     this.hasPreviousPage = hasPreviousPage;
     return this;
   }
@@ -138,7 +138,7 @@ public class PageTransacaoProcessadaNaoProcessadaResponse   {
   
   /**
    **/
-  public PageTransacaoProcessadaNaoProcessadaResponse last(Boolean last) {
+  public PageMotivoFraudeResponse last(Boolean last) {
     this.last = last;
     return this;
   }
@@ -155,7 +155,7 @@ public class PageTransacaoProcessadaNaoProcessadaResponse   {
   
   /**
    **/
-  public PageTransacaoProcessadaNaoProcessadaResponse nextPage(Integer nextPage) {
+  public PageMotivoFraudeResponse nextPage(Integer nextPage) {
     this.nextPage = nextPage;
     return this;
   }
@@ -172,7 +172,7 @@ public class PageTransacaoProcessadaNaoProcessadaResponse   {
   
   /**
    **/
-  public PageTransacaoProcessadaNaoProcessadaResponse number(Integer number) {
+  public PageMotivoFraudeResponse number(Integer number) {
     this.number = number;
     return this;
   }
@@ -189,7 +189,7 @@ public class PageTransacaoProcessadaNaoProcessadaResponse   {
   
   /**
    **/
-  public PageTransacaoProcessadaNaoProcessadaResponse numberOfElements(Integer numberOfElements) {
+  public PageMotivoFraudeResponse numberOfElements(Integer numberOfElements) {
     this.numberOfElements = numberOfElements;
     return this;
   }
@@ -206,7 +206,7 @@ public class PageTransacaoProcessadaNaoProcessadaResponse   {
   
   /**
    **/
-  public PageTransacaoProcessadaNaoProcessadaResponse previousPage(Integer previousPage) {
+  public PageMotivoFraudeResponse previousPage(Integer previousPage) {
     this.previousPage = previousPage;
     return this;
   }
@@ -223,7 +223,7 @@ public class PageTransacaoProcessadaNaoProcessadaResponse   {
   
   /**
    **/
-  public PageTransacaoProcessadaNaoProcessadaResponse size(Integer size) {
+  public PageMotivoFraudeResponse size(Integer size) {
     this.size = size;
     return this;
   }
@@ -240,7 +240,7 @@ public class PageTransacaoProcessadaNaoProcessadaResponse   {
   
   /**
    **/
-  public PageTransacaoProcessadaNaoProcessadaResponse totalElements(Long totalElements) {
+  public PageMotivoFraudeResponse totalElements(Long totalElements) {
     this.totalElements = totalElements;
     return this;
   }
@@ -257,7 +257,7 @@ public class PageTransacaoProcessadaNaoProcessadaResponse   {
   
   /**
    **/
-  public PageTransacaoProcessadaNaoProcessadaResponse totalPages(Integer totalPages) {
+  public PageMotivoFraudeResponse totalPages(Integer totalPages) {
     this.totalPages = totalPages;
     return this;
   }
@@ -281,21 +281,21 @@ public class PageTransacaoProcessadaNaoProcessadaResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    PageTransacaoProcessadaNaoProcessadaResponse pageTransacaoProcessadaNaoProcessadaResponse = (PageTransacaoProcessadaNaoProcessadaResponse) o;
-    return Objects.equals(this.content, pageTransacaoProcessadaNaoProcessadaResponse.content) &&
-        Objects.equals(this.first, pageTransacaoProcessadaNaoProcessadaResponse.first) &&
-        Objects.equals(this.firstPage, pageTransacaoProcessadaNaoProcessadaResponse.firstPage) &&
-        Objects.equals(this.hasContent, pageTransacaoProcessadaNaoProcessadaResponse.hasContent) &&
-        Objects.equals(this.hasNextPage, pageTransacaoProcessadaNaoProcessadaResponse.hasNextPage) &&
-        Objects.equals(this.hasPreviousPage, pageTransacaoProcessadaNaoProcessadaResponse.hasPreviousPage) &&
-        Objects.equals(this.last, pageTransacaoProcessadaNaoProcessadaResponse.last) &&
-        Objects.equals(this.nextPage, pageTransacaoProcessadaNaoProcessadaResponse.nextPage) &&
-        Objects.equals(this.number, pageTransacaoProcessadaNaoProcessadaResponse.number) &&
-        Objects.equals(this.numberOfElements, pageTransacaoProcessadaNaoProcessadaResponse.numberOfElements) &&
-        Objects.equals(this.previousPage, pageTransacaoProcessadaNaoProcessadaResponse.previousPage) &&
-        Objects.equals(this.size, pageTransacaoProcessadaNaoProcessadaResponse.size) &&
-        Objects.equals(this.totalElements, pageTransacaoProcessadaNaoProcessadaResponse.totalElements) &&
-        Objects.equals(this.totalPages, pageTransacaoProcessadaNaoProcessadaResponse.totalPages);
+    PageMotivoFraudeResponse pageMotivoFraudeResponse = (PageMotivoFraudeResponse) o;
+    return Objects.equals(this.content, pageMotivoFraudeResponse.content) &&
+        Objects.equals(this.first, pageMotivoFraudeResponse.first) &&
+        Objects.equals(this.firstPage, pageMotivoFraudeResponse.firstPage) &&
+        Objects.equals(this.hasContent, pageMotivoFraudeResponse.hasContent) &&
+        Objects.equals(this.hasNextPage, pageMotivoFraudeResponse.hasNextPage) &&
+        Objects.equals(this.hasPreviousPage, pageMotivoFraudeResponse.hasPreviousPage) &&
+        Objects.equals(this.last, pageMotivoFraudeResponse.last) &&
+        Objects.equals(this.nextPage, pageMotivoFraudeResponse.nextPage) &&
+        Objects.equals(this.number, pageMotivoFraudeResponse.number) &&
+        Objects.equals(this.numberOfElements, pageMotivoFraudeResponse.numberOfElements) &&
+        Objects.equals(this.previousPage, pageMotivoFraudeResponse.previousPage) &&
+        Objects.equals(this.size, pageMotivoFraudeResponse.size) &&
+        Objects.equals(this.totalElements, pageMotivoFraudeResponse.totalElements) &&
+        Objects.equals(this.totalPages, pageMotivoFraudeResponse.totalPages);
   }
 
   @Override
@@ -306,7 +306,7 @@ public class PageTransacaoProcessadaNaoProcessadaResponse   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PageTransacaoProcessadaNaoProcessadaResponse {\n");
+    sb.append("class PageMotivoFraudeResponse {\n");
     
     sb.append("    content: ").append(toIndentedString(content)).append("\n");
     sb.append("    first: ").append(toIndentedString(first)).append("\n");

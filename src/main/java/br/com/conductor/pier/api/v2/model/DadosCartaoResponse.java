@@ -28,6 +28,8 @@ public class DadosCartaoResponse   {
   private String statusConta = null;
   private Long idStatusCartao = null;
   private String statusCartao = null;
+  private Long idMifare = null;
+  private String matriculaMifare = null;
 
   
   /**
@@ -263,6 +265,42 @@ public class DadosCartaoResponse   {
   }
 
   
+  /**
+   * C\u00F3digo identificador da tecnologia MIFARE
+   **/
+  public DadosCartaoResponse idMifare(Long idMifare) {
+    this.idMifare = idMifare;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador da tecnologia MIFARE")
+  @JsonProperty("idMifare")
+  public Long getIdMifare() {
+    return idMifare;
+  }
+  public void setIdMifare(Long idMifare) {
+    this.idMifare = idMifare;
+  }
+
+  
+  /**
+   * N\u00FAmero da matricula do portador
+   **/
+  public DadosCartaoResponse matriculaMifare(String matriculaMifare) {
+    this.matriculaMifare = matriculaMifare;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "N\u00FAmero da matricula do portador")
+  @JsonProperty("matriculaMifare")
+  public String getMatriculaMifare() {
+    return matriculaMifare;
+  }
+  public void setMatriculaMifare(String matriculaMifare) {
+    this.matriculaMifare = matriculaMifare;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -285,12 +323,14 @@ public class DadosCartaoResponse   {
         Objects.equals(this.idStatusConta, dadosCartaoResponse.idStatusConta) &&
         Objects.equals(this.statusConta, dadosCartaoResponse.statusConta) &&
         Objects.equals(this.idStatusCartao, dadosCartaoResponse.idStatusCartao) &&
-        Objects.equals(this.statusCartao, dadosCartaoResponse.statusCartao);
+        Objects.equals(this.statusCartao, dadosCartaoResponse.statusCartao) &&
+        Objects.equals(this.idMifare, dadosCartaoResponse.idMifare) &&
+        Objects.equals(this.matriculaMifare, dadosCartaoResponse.matriculaMifare);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(flagVirtual, numeroCartao, dataValidade, cvv2, nomePlastico, idConta, idCartao, numeroAgencia, numeroContaCorente, idStatusConta, statusConta, idStatusCartao, statusCartao);
+    return Objects.hash(flagVirtual, numeroCartao, dataValidade, cvv2, nomePlastico, idConta, idCartao, numeroAgencia, numeroContaCorente, idStatusConta, statusConta, idStatusCartao, statusCartao, idMifare, matriculaMifare);
   }
 
   @Override
@@ -311,6 +351,8 @@ public class DadosCartaoResponse   {
     sb.append("    statusConta: ").append(toIndentedString(statusConta)).append("\n");
     sb.append("    idStatusCartao: ").append(toIndentedString(idStatusCartao)).append("\n");
     sb.append("    statusCartao: ").append(toIndentedString(statusCartao)).append("\n");
+    sb.append("    idMifare: ").append(toIndentedString(idMifare)).append("\n");
+    sb.append("    matriculaMifare: ").append(toIndentedString(matriculaMifare)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -36,6 +36,9 @@ public class TransacaoCorrenteResponse   {
   private Integer flagSolicitouContestacao = null;
   private Integer tipoTransacao = null;
   private Integer idEventoAjuste = null;
+  private String numeroCartao = null;
+  private String latitude = null;
+  private String longitude = null;
 
   
   /**
@@ -397,6 +400,60 @@ public class TransacaoCorrenteResponse   {
   }
 
   
+  /**
+   * Atributo que representa o numero do cart\u00E3o mascarado
+   **/
+  public TransacaoCorrenteResponse numeroCartao(String numeroCartao) {
+    this.numeroCartao = numeroCartao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Atributo que representa o numero do cart\u00E3o mascarado")
+  @JsonProperty("numeroCartao")
+  public String getNumeroCartao() {
+    return numeroCartao;
+  }
+  public void setNumeroCartao(String numeroCartao) {
+    this.numeroCartao = numeroCartao;
+  }
+
+  
+  /**
+   * Atributo que representa a latitude de onde a transa\u00E7\u00E3o ocorreu
+   **/
+  public TransacaoCorrenteResponse latitude(String latitude) {
+    this.latitude = latitude;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Atributo que representa a latitude de onde a transa\u00E7\u00E3o ocorreu")
+  @JsonProperty("latitude")
+  public String getLatitude() {
+    return latitude;
+  }
+  public void setLatitude(String latitude) {
+    this.latitude = latitude;
+  }
+
+  
+  /**
+   * Atributo que representa a longetude de onde a transa\u00E7\u00E3o ocorreu
+   **/
+  public TransacaoCorrenteResponse longitude(String longitude) {
+    this.longitude = longitude;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Atributo que representa a longetude de onde a transa\u00E7\u00E3o ocorreu")
+  @JsonProperty("longitude")
+  public String getLongitude() {
+    return longitude;
+  }
+  public void setLongitude(String longitude) {
+    this.longitude = longitude;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -426,12 +483,15 @@ public class TransacaoCorrenteResponse   {
         Objects.equals(this.idGrupoMCC, transacaoCorrenteResponse.idGrupoMCC) &&
         Objects.equals(this.flagSolicitouContestacao, transacaoCorrenteResponse.flagSolicitouContestacao) &&
         Objects.equals(this.tipoTransacao, transacaoCorrenteResponse.tipoTransacao) &&
-        Objects.equals(this.idEventoAjuste, transacaoCorrenteResponse.idEventoAjuste);
+        Objects.equals(this.idEventoAjuste, transacaoCorrenteResponse.idEventoAjuste) &&
+        Objects.equals(this.numeroCartao, transacaoCorrenteResponse.numeroCartao) &&
+        Objects.equals(this.latitude, transacaoCorrenteResponse.latitude) &&
+        Objects.equals(this.longitude, transacaoCorrenteResponse.longitude);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(ultimaParcelaLancada, idConta, idTipoRegistro, ordem, idTransacao, descricao, status, descricaoStatus, valor, valorDolar, quantidadeParcelas, valorParcela, dataEvento, estabelecimento, flagCredito, tipoEstabelecimento, idGrupoMCC, flagSolicitouContestacao, tipoTransacao, idEventoAjuste);
+    return Objects.hash(ultimaParcelaLancada, idConta, idTipoRegistro, ordem, idTransacao, descricao, status, descricaoStatus, valor, valorDolar, quantidadeParcelas, valorParcela, dataEvento, estabelecimento, flagCredito, tipoEstabelecimento, idGrupoMCC, flagSolicitouContestacao, tipoTransacao, idEventoAjuste, numeroCartao, latitude, longitude);
   }
 
   @Override
@@ -459,6 +519,9 @@ public class TransacaoCorrenteResponse   {
     sb.append("    flagSolicitouContestacao: ").append(toIndentedString(flagSolicitouContestacao)).append("\n");
     sb.append("    tipoTransacao: ").append(toIndentedString(tipoTransacao)).append("\n");
     sb.append("    idEventoAjuste: ").append(toIndentedString(idEventoAjuste)).append("\n");
+    sb.append("    numeroCartao: ").append(toIndentedString(numeroCartao)).append("\n");
+    sb.append("    latitude: ").append(toIndentedString(latitude)).append("\n");
+    sb.append("    longitude: ").append(toIndentedString(longitude)).append("\n");
     sb.append("}");
     return sb.toString();
   }

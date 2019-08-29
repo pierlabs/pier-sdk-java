@@ -37,6 +37,7 @@ public class AdicionalDetalheResponse   {
   private Integer flagAtivo = null;
   private String dataCadastroPortador = null;
   private String dataCancelamentoPortador = null;
+  private Boolean flagDeficienteVisual = null;
   private List<TelefoneResponse> telefones = new ArrayList<TelefoneResponse>();
 
   
@@ -383,6 +384,24 @@ public class AdicionalDetalheResponse   {
 
   
   /**
+   * Flag que identifica uma pessoa como deficiente visual
+   **/
+  public AdicionalDetalheResponse flagDeficienteVisual(Boolean flagDeficienteVisual) {
+    this.flagDeficienteVisual = flagDeficienteVisual;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "Flag que identifica uma pessoa como deficiente visual")
+  @JsonProperty("flagDeficienteVisual")
+  public Boolean getFlagDeficienteVisual() {
+    return flagDeficienteVisual;
+  }
+  public void setFlagDeficienteVisual(Boolean flagDeficienteVisual) {
+    this.flagDeficienteVisual = flagDeficienteVisual;
+  }
+
+  
+  /**
    * Lista dos telefones do adicional
    **/
   public AdicionalDetalheResponse telefones(List<TelefoneResponse> telefones) {
@@ -429,12 +448,13 @@ public class AdicionalDetalheResponse   {
         Objects.equals(this.flagAtivo, adicionalDetalheResponse.flagAtivo) &&
         Objects.equals(this.dataCadastroPortador, adicionalDetalheResponse.dataCadastroPortador) &&
         Objects.equals(this.dataCancelamentoPortador, adicionalDetalheResponse.dataCancelamentoPortador) &&
+        Objects.equals(this.flagDeficienteVisual, adicionalDetalheResponse.flagDeficienteVisual) &&
         Objects.equals(this.telefones, adicionalDetalheResponse.telefones);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idConta, idPessoa, nome, nomeImpresso, numeroReceitaFederal, dataNascimento, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, idEstadoCivil, idProfissao, idNacionalidade, idParentesco, email, flagAtivo, dataCadastroPortador, dataCancelamentoPortador, telefones);
+    return Objects.hash(idConta, idPessoa, nome, nomeImpresso, numeroReceitaFederal, dataNascimento, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, idEstadoCivil, idProfissao, idNacionalidade, idParentesco, email, flagAtivo, dataCadastroPortador, dataCancelamentoPortador, flagDeficienteVisual, telefones);
   }
 
   @Override
@@ -461,6 +481,7 @@ public class AdicionalDetalheResponse   {
     sb.append("    flagAtivo: ").append(toIndentedString(flagAtivo)).append("\n");
     sb.append("    dataCadastroPortador: ").append(toIndentedString(dataCadastroPortador)).append("\n");
     sb.append("    dataCancelamentoPortador: ").append(toIndentedString(dataCancelamentoPortador)).append("\n");
+    sb.append("    flagDeficienteVisual: ").append(toIndentedString(flagDeficienteVisual)).append("\n");
     sb.append("    telefones: ").append(toIndentedString(telefones)).append("\n");
     sb.append("}");
     return sb.toString();

@@ -21,6 +21,7 @@ public class ConfiguracaoControleCartaoResponse   {
   private Boolean permiteSaque = null;
   private Boolean permiteWallet = null;
   private Boolean permiteControleMCC = null;
+  private Boolean permiteCompraInternacional = null;
 
   
   /**
@@ -131,6 +132,24 @@ public class ConfiguracaoControleCartaoResponse   {
   }
 
   
+  /**
+   * Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es internacionais
+   **/
+  public ConfiguracaoControleCartaoResponse permiteCompraInternacional(Boolean permiteCompraInternacional) {
+    this.permiteCompraInternacional = permiteCompraInternacional;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es internacionais")
+  @JsonProperty("permiteCompraInternacional")
+  public Boolean getPermiteCompraInternacional() {
+    return permiteCompraInternacional;
+  }
+  public void setPermiteCompraInternacional(Boolean permiteCompraInternacional) {
+    this.permiteCompraInternacional = permiteCompraInternacional;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -146,12 +165,13 @@ public class ConfiguracaoControleCartaoResponse   {
         Objects.equals(this.permiteEcommerce, configuracaoControleCartaoResponse.permiteEcommerce) &&
         Objects.equals(this.permiteSaque, configuracaoControleCartaoResponse.permiteSaque) &&
         Objects.equals(this.permiteWallet, configuracaoControleCartaoResponse.permiteWallet) &&
-        Objects.equals(this.permiteControleMCC, configuracaoControleCartaoResponse.permiteControleMCC);
+        Objects.equals(this.permiteControleMCC, configuracaoControleCartaoResponse.permiteControleMCC) &&
+        Objects.equals(this.permiteCompraInternacional, configuracaoControleCartaoResponse.permiteCompraInternacional);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idCartao, permiteEcommerce, permiteSaque, permiteWallet, permiteControleMCC);
+    return Objects.hash(id, idCartao, permiteEcommerce, permiteSaque, permiteWallet, permiteControleMCC, permiteCompraInternacional);
   }
 
   @Override
@@ -165,6 +185,7 @@ public class ConfiguracaoControleCartaoResponse   {
     sb.append("    permiteSaque: ").append(toIndentedString(permiteSaque)).append("\n");
     sb.append("    permiteWallet: ").append(toIndentedString(permiteWallet)).append("\n");
     sb.append("    permiteControleMCC: ").append(toIndentedString(permiteControleMCC)).append("\n");
+    sb.append("    permiteCompraInternacional: ").append(toIndentedString(permiteCompraInternacional)).append("\n");
     sb.append("}");
     return sb.toString();
   }

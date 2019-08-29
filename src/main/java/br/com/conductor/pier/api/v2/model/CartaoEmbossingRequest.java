@@ -18,6 +18,8 @@ public class CartaoEmbossingRequest   {
   private Long idPessoa = null;
   private Long idTipoPlastico = null;
   private Long idImagem = null;
+  private Long idMifare = null;
+  private String matriculaMifare = null;
 
   
   /**
@@ -74,6 +76,42 @@ public class CartaoEmbossingRequest   {
   }
 
   
+  /**
+   * C\u00F3digo identificador da tecnologia MIFARE
+   **/
+  public CartaoEmbossingRequest idMifare(Long idMifare) {
+    this.idMifare = idMifare;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador da tecnologia MIFARE")
+  @JsonProperty("idMifare")
+  public Long getIdMifare() {
+    return idMifare;
+  }
+  public void setIdMifare(Long idMifare) {
+    this.idMifare = idMifare;
+  }
+
+  
+  /**
+   * N\u00FAmero da matricula do portador
+   **/
+  public CartaoEmbossingRequest matriculaMifare(String matriculaMifare) {
+    this.matriculaMifare = matriculaMifare;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "N\u00FAmero da matricula do portador")
+  @JsonProperty("matriculaMifare")
+  public String getMatriculaMifare() {
+    return matriculaMifare;
+  }
+  public void setMatriculaMifare(String matriculaMifare) {
+    this.matriculaMifare = matriculaMifare;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -86,12 +124,14 @@ public class CartaoEmbossingRequest   {
     CartaoEmbossingRequest cartaoEmbossingRequest = (CartaoEmbossingRequest) o;
     return Objects.equals(this.idPessoa, cartaoEmbossingRequest.idPessoa) &&
         Objects.equals(this.idTipoPlastico, cartaoEmbossingRequest.idTipoPlastico) &&
-        Objects.equals(this.idImagem, cartaoEmbossingRequest.idImagem);
+        Objects.equals(this.idImagem, cartaoEmbossingRequest.idImagem) &&
+        Objects.equals(this.idMifare, cartaoEmbossingRequest.idMifare) &&
+        Objects.equals(this.matriculaMifare, cartaoEmbossingRequest.matriculaMifare);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idPessoa, idTipoPlastico, idImagem);
+    return Objects.hash(idPessoa, idTipoPlastico, idImagem, idMifare, matriculaMifare);
   }
 
   @Override
@@ -102,6 +142,8 @@ public class CartaoEmbossingRequest   {
     sb.append("    idPessoa: ").append(toIndentedString(idPessoa)).append("\n");
     sb.append("    idTipoPlastico: ").append(toIndentedString(idTipoPlastico)).append("\n");
     sb.append("    idImagem: ").append(toIndentedString(idImagem)).append("\n");
+    sb.append("    idMifare: ").append(toIndentedString(idMifare)).append("\n");
+    sb.append("    matriculaMifare: ").append(toIndentedString(matriculaMifare)).append("\n");
     sb.append("}");
     return sb.toString();
   }

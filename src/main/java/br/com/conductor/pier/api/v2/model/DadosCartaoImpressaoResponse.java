@@ -65,6 +65,8 @@ public class DadosCartaoImpressaoResponse   {
   private String senhaCriptografada = null;
   private String icvv = null;
   private Long idStatusImpressao = null;
+  private Long idMifare = null;
+  private String matriculaMifare = null;
 
   
   /**
@@ -967,6 +969,42 @@ public class DadosCartaoImpressaoResponse   {
   }
 
   
+  /**
+   * C\u00F3digo identificador da tecnologia MIFARE
+   **/
+  public DadosCartaoImpressaoResponse idMifare(Long idMifare) {
+    this.idMifare = idMifare;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador da tecnologia MIFARE")
+  @JsonProperty("idMifare")
+  public Long getIdMifare() {
+    return idMifare;
+  }
+  public void setIdMifare(Long idMifare) {
+    this.idMifare = idMifare;
+  }
+
+  
+  /**
+   * N\u00FAmero da matricula do portador
+   **/
+  public DadosCartaoImpressaoResponse matriculaMifare(String matriculaMifare) {
+    this.matriculaMifare = matriculaMifare;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "N\u00FAmero da matricula do portador")
+  @JsonProperty("matriculaMifare")
+  public String getMatriculaMifare() {
+    return matriculaMifare;
+  }
+  public void setMatriculaMifare(String matriculaMifare) {
+    this.matriculaMifare = matriculaMifare;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -1026,12 +1064,14 @@ public class DadosCartaoImpressaoResponse   {
         Objects.equals(this.pais, dadosCartaoImpressaoResponse.pais) &&
         Objects.equals(this.senhaCriptografada, dadosCartaoImpressaoResponse.senhaCriptografada) &&
         Objects.equals(this.icvv, dadosCartaoImpressaoResponse.icvv) &&
-        Objects.equals(this.idStatusImpressao, dadosCartaoImpressaoResponse.idStatusImpressao);
+        Objects.equals(this.idStatusImpressao, dadosCartaoImpressaoResponse.idStatusImpressao) &&
+        Objects.equals(this.idMifare, dadosCartaoImpressaoResponse.idMifare) &&
+        Objects.equals(this.matriculaMifare, dadosCartaoImpressaoResponse.matriculaMifare);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idConta, idPessoa, idCartao, idBandeira, idTipoCartao, numeroCartao, nomePlastico, cvv2, dataGeracao, dataValidade, cpf, tipoPortador, trilha1, trilha2, trilhaCVV1, trilhaCVV2, flagVirtual, nomeBandeira, flagTitular, sequencialCartao, idStatus, descricaoStatusCartao, dataStatus, idEstagio, descricaoEstagio, dataEstagio, numeroBin, idProduto, descricaoProduto, idStatusConta, descricaoStatusConta, dataEmbossing, codigoDesbloqueio, nomePessoa, tipoPessoa, dataNascimento, idEndereco, idTipoEndereco, descricaoTipoEndereco, cep, logradouro, numeroEndereco, complementoEndereco, bairro, cidade, uf, pais, senhaCriptografada, icvv, idStatusImpressao);
+    return Objects.hash(idConta, idPessoa, idCartao, idBandeira, idTipoCartao, numeroCartao, nomePlastico, cvv2, dataGeracao, dataValidade, cpf, tipoPortador, trilha1, trilha2, trilhaCVV1, trilhaCVV2, flagVirtual, nomeBandeira, flagTitular, sequencialCartao, idStatus, descricaoStatusCartao, dataStatus, idEstagio, descricaoEstagio, dataEstagio, numeroBin, idProduto, descricaoProduto, idStatusConta, descricaoStatusConta, dataEmbossing, codigoDesbloqueio, nomePessoa, tipoPessoa, dataNascimento, idEndereco, idTipoEndereco, descricaoTipoEndereco, cep, logradouro, numeroEndereco, complementoEndereco, bairro, cidade, uf, pais, senhaCriptografada, icvv, idStatusImpressao, idMifare, matriculaMifare);
   }
 
   @Override
@@ -1089,6 +1129,8 @@ public class DadosCartaoImpressaoResponse   {
     sb.append("    senhaCriptografada: ").append(toIndentedString(senhaCriptografada)).append("\n");
     sb.append("    icvv: ").append(toIndentedString(icvv)).append("\n");
     sb.append("    idStatusImpressao: ").append(toIndentedString(idStatusImpressao)).append("\n");
+    sb.append("    idMifare: ").append(toIndentedString(idMifare)).append("\n");
+    sb.append("    matriculaMifare: ").append(toIndentedString(matriculaMifare)).append("\n");
     sb.append("}");
     return sb.toString();
   }

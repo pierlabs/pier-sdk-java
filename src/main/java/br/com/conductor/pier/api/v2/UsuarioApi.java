@@ -53,22 +53,22 @@ public class UsuarioApi {
    * @param senhaNova Senha Nova
    * @return String
    */
-  public String alterarSenha1(Long id, String senhaAtual, String senhaNova) throws ApiException {
+  public String alterarSenha(Long id, String senhaAtual, String senhaNova) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarSenha1");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarSenha");
      }
      
      // verify the required parameter 'senhaAtual' is set
      if (senhaAtual == null) {
-        throw new ApiException(400, "Missing the required parameter 'senhaAtual' when calling alterarSenha1");
+        throw new ApiException(400, "Missing the required parameter 'senhaAtual' when calling alterarSenha");
      }
      
      // verify the required parameter 'senhaNova' is set
      if (senhaNova == null) {
-        throw new ApiException(400, "Missing the required parameter 'senhaNova' when calling alterarSenha1");
+        throw new ApiException(400, "Missing the required parameter 'senhaNova' when calling alterarSenha");
      }
      
     // create path and map variables

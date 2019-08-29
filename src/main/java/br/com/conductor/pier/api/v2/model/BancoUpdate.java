@@ -19,6 +19,8 @@ public class BancoUpdate   {
   private String descricao = null;
   private String digitoBanco = null;
   private String ispb = null;
+  private String cnpj = null;
+  private Boolean flagAtivoBacen = null;
 
   
   /**
@@ -93,6 +95,42 @@ public class BancoUpdate   {
   }
 
   
+  /**
+   * N\u00FAmero do CNPJ do banco
+   **/
+  public BancoUpdate cnpj(String cnpj) {
+    this.cnpj = cnpj;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "N\u00FAmero do CNPJ do banco")
+  @JsonProperty("cnpj")
+  public String getCnpj() {
+    return cnpj;
+  }
+  public void setCnpj(String cnpj) {
+    this.cnpj = cnpj;
+  }
+
+  
+  /**
+   * Indica se o banco est\u00E1 ativo no BACEN
+   **/
+  public BancoUpdate flagAtivoBacen(Boolean flagAtivoBacen) {
+    this.flagAtivoBacen = flagAtivoBacen;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "Indica se o banco est\u00E1 ativo no BACEN")
+  @JsonProperty("flagAtivoBacen")
+  public Boolean getFlagAtivoBacen() {
+    return flagAtivoBacen;
+  }
+  public void setFlagAtivoBacen(Boolean flagAtivoBacen) {
+    this.flagAtivoBacen = flagAtivoBacen;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -106,12 +144,14 @@ public class BancoUpdate   {
     return Objects.equals(this.nome, bancoUpdate.nome) &&
         Objects.equals(this.descricao, bancoUpdate.descricao) &&
         Objects.equals(this.digitoBanco, bancoUpdate.digitoBanco) &&
-        Objects.equals(this.ispb, bancoUpdate.ispb);
+        Objects.equals(this.ispb, bancoUpdate.ispb) &&
+        Objects.equals(this.cnpj, bancoUpdate.cnpj) &&
+        Objects.equals(this.flagAtivoBacen, bancoUpdate.flagAtivoBacen);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(nome, descricao, digitoBanco, ispb);
+    return Objects.hash(nome, descricao, digitoBanco, ispb, cnpj, flagAtivoBacen);
   }
 
   @Override
@@ -123,6 +163,8 @@ public class BancoUpdate   {
     sb.append("    descricao: ").append(toIndentedString(descricao)).append("\n");
     sb.append("    digitoBanco: ").append(toIndentedString(digitoBanco)).append("\n");
     sb.append("    ispb: ").append(toIndentedString(ispb)).append("\n");
+    sb.append("    cnpj: ").append(toIndentedString(cnpj)).append("\n");
+    sb.append("    flagAtivoBacen: ").append(toIndentedString(flagAtivoBacen)).append("\n");
     sb.append("}");
     return sb.toString();
   }
