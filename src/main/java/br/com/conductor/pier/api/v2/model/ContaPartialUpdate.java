@@ -22,6 +22,7 @@ public class ContaPartialUpdate   {
   private BigDecimal valorRenda = null;
   private Boolean possuiOverLimit = null;
   private String usuarioModificacao = null;
+  private Integer behaviorScore = null;
 
   
   /**
@@ -97,14 +98,14 @@ public class ContaPartialUpdate   {
 
   
   /**
-   * Sinaliza se o OverLimit da conta est\uFFFD ativo
+   * Sinaliza se o OverLimit da conta est\u00E1 ativo
    **/
   public ContaPartialUpdate possuiOverLimit(Boolean possuiOverLimit) {
     this.possuiOverLimit = possuiOverLimit;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Sinaliza se o OverLimit da conta est\uFFFD ativo")
+  @ApiModelProperty(example = "false", value = "Sinaliza se o OverLimit da conta est\u00E1 ativo")
   @JsonProperty("possuiOverLimit")
   public Boolean getPossuiOverLimit() {
     return possuiOverLimit;
@@ -132,6 +133,24 @@ public class ContaPartialUpdate   {
   }
 
   
+  /**
+   * Valor da pontua\u00E7\u00E3o de comportamento (behavior score).
+   **/
+  public ContaPartialUpdate behaviorScore(Integer behaviorScore) {
+    this.behaviorScore = behaviorScore;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor da pontua\u00E7\u00E3o de comportamento (behavior score).")
+  @JsonProperty("behaviorScore")
+  public Integer getBehaviorScore() {
+    return behaviorScore;
+  }
+  public void setBehaviorScore(Integer behaviorScore) {
+    this.behaviorScore = behaviorScore;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -147,12 +166,13 @@ public class ContaPartialUpdate   {
         Objects.equals(this.dataCadastro, contaPartialUpdate.dataCadastro) &&
         Objects.equals(this.valorRenda, contaPartialUpdate.valorRenda) &&
         Objects.equals(this.possuiOverLimit, contaPartialUpdate.possuiOverLimit) &&
-        Objects.equals(this.usuarioModificacao, contaPartialUpdate.usuarioModificacao);
+        Objects.equals(this.usuarioModificacao, contaPartialUpdate.usuarioModificacao) &&
+        Objects.equals(this.behaviorScore, contaPartialUpdate.behaviorScore);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(funcaoAtiva, idContaEmissor, dataCadastro, valorRenda, possuiOverLimit, usuarioModificacao);
+    return Objects.hash(funcaoAtiva, idContaEmissor, dataCadastro, valorRenda, possuiOverLimit, usuarioModificacao, behaviorScore);
   }
 
   @Override
@@ -166,6 +186,7 @@ public class ContaPartialUpdate   {
     sb.append("    valorRenda: ").append(toIndentedString(valorRenda)).append("\n");
     sb.append("    possuiOverLimit: ").append(toIndentedString(possuiOverLimit)).append("\n");
     sb.append("    usuarioModificacao: ").append(toIndentedString(usuarioModificacao)).append("\n");
+    sb.append("    behaviorScore: ").append(toIndentedString(behaviorScore)).append("\n");
     sb.append("}");
     return sb.toString();
   }

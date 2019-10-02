@@ -26,6 +26,7 @@ public class OperacaoCredorResponse   {
 
 
   public enum PeriodicidadeEnum {
+    NENHUM("NENHUM"),
     DIARIO("DIARIO"),
     SEMANAL("SEMANAL"),
     MENSAL("MENSAL"),

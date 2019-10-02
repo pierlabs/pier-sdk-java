@@ -2296,9 +2296,10 @@ public class ContaApi {
    * Este recurso permite que seja gerado um Cart\u00E3o virtual para um determinado Portador que esteja vinculado a uma Conta. Para isso, ser\u00E1 preciso informar o c\u00F3digo de identifica\u00E7\u00E3o da Conta (id). Esta funcionalidade poder\u00E1 ser utilizada para realizar a cria\u00E7\u00E3o de cart\u00F5es virtuaes atraves de um app
    * @param id C\u00F3digo de identifica\u00E7\u00E3o da conta (id)
    * @param dataValidade Data de Validade
+   * @param idPessoaFisica C\u00F3digo de Identifica\u00E7\u00E3o da pessoa a qual o cart\u00E3o ser\u00E1 vinculado (id)
    * @return CartaoImpressaoResponse
    */
-  public CartaoImpressaoResponse gerarCartaoVirtual(Long id, String dataValidade) throws ApiException {
+  public CartaoImpressaoResponse gerarCartaoVirtual(Long id, String dataValidade, Long idPessoaFisica) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -2322,6 +2323,8 @@ public class ContaApi {
 
     
     queryParams.addAll(apiClient.parameterToPairs("", "dataValidade", dataValidade));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idPessoaFisica", idPessoaFisica));
     
 
     
@@ -2420,9 +2423,11 @@ public class ContaApi {
    * @param dataCadastro Apresenta a data em que o cart\u00E3o foi gerado
    * @param dataUltimaAlteracaoVencimento Apresenta a data da ultima altera\u00E7\u00E3o de vencimento
    * @param funcaoAtiva 
+   * @param possuiOverLimit Sinaliza se o OverLimit da conta est\u00E1 ativo
+   * @param behaviorScore Apresenta valor de pontua\u00E7\u00E3o de comportamento (behavior score).
    * @return PageContaResponse
    */
-  public PageContaResponse listarContas(List<String> sort, Integer page, Integer limit, Long idProduto, Long idOrigemComercial, Long idPessoa, Long idStatusConta, Integer diaVencimento, Integer melhorDiaCompra, String dataStatusConta, String dataCadastro, String dataUltimaAlteracaoVencimento, String funcaoAtiva) throws ApiException {
+  public PageContaResponse listarContas(List<String> sort, Integer page, Integer limit, Long idProduto, Long idOrigemComercial, Long idPessoa, Long idStatusConta, Integer diaVencimento, Integer melhorDiaCompra, String dataStatusConta, String dataCadastro, String dataUltimaAlteracaoVencimento, String funcaoAtiva, Boolean possuiOverLimit, Integer behaviorScore) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -2459,6 +2464,10 @@ public class ContaApi {
     queryParams.addAll(apiClient.parameterToPairs("", "dataUltimaAlteracaoVencimento", dataUltimaAlteracaoVencimento));
     
     queryParams.addAll(apiClient.parameterToPairs("", "funcaoAtiva", funcaoAtiva));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "possuiOverLimit", possuiOverLimit));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "behaviorScore", behaviorScore));
     
 
     
@@ -3601,27 +3610,27 @@ public class ContaApi {
    * @param mensagemAtendimento Mensagem enviada no atendimento
    * @return AjusteFinanceiroResponse
    */
-  public AjusteFinanceiroResponse salvarAjusteFinanceiroConta(Long id, Long idTipoAjuste, String dataAjuste, BigDecimal valorAjuste, String login, String identificadorExterno, Long idTransacaoOriginal, Long idEstabelecimento, Boolean flagAtendimento, String mensagemAtendimento) throws ApiException {
+  public AjusteFinanceiroResponse salvarAjusteFinanceiroConta1(Long id, Long idTipoAjuste, String dataAjuste, BigDecimal valorAjuste, String login, String identificadorExterno, Long idTransacaoOriginal, Long idEstabelecimento, Boolean flagAtendimento, String mensagemAtendimento) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
      if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling salvarAjusteFinanceiroConta");
+        throw new ApiException(400, "Missing the required parameter 'id' when calling salvarAjusteFinanceiroConta1");
      }
      
      // verify the required parameter 'idTipoAjuste' is set
      if (idTipoAjuste == null) {
-        throw new ApiException(400, "Missing the required parameter 'idTipoAjuste' when calling salvarAjusteFinanceiroConta");
+        throw new ApiException(400, "Missing the required parameter 'idTipoAjuste' when calling salvarAjusteFinanceiroConta1");
      }
      
      // verify the required parameter 'dataAjuste' is set
      if (dataAjuste == null) {
-        throw new ApiException(400, "Missing the required parameter 'dataAjuste' when calling salvarAjusteFinanceiroConta");
+        throw new ApiException(400, "Missing the required parameter 'dataAjuste' when calling salvarAjusteFinanceiroConta1");
      }
      
      // verify the required parameter 'valorAjuste' is set
      if (valorAjuste == null) {
-        throw new ApiException(400, "Missing the required parameter 'valorAjuste' when calling salvarAjusteFinanceiroConta");
+        throw new ApiException(400, "Missing the required parameter 'valorAjuste' when calling salvarAjusteFinanceiroConta1");
      }
      
     // create path and map variables

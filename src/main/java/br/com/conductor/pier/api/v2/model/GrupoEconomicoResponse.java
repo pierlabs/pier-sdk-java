@@ -32,6 +32,7 @@ public class GrupoEconomicoResponse   {
 
 
   public enum PeriodicidadeEnum {
+    NENHUM("NENHUM"),
     DIARIO("DIARIO"),
     SEMANAL("SEMANAL"),
     MENSAL("MENSAL"),

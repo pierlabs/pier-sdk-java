@@ -34,6 +34,7 @@ public class ContaPersist   {
   private String responsavelDigitacao = null;
   private Integer idPromotorVenda = null;
   private Long idStatusConta = null;
+  private Integer behaviorScore = null;
 
   
   /**
@@ -360,6 +361,24 @@ public class ContaPersist   {
   }
 
   
+  /**
+   * Apresenta valor de pontua\u00E7\u00E3o de comportamento (behavior score).
+   **/
+  public ContaPersist behaviorScore(Integer behaviorScore) {
+    this.behaviorScore = behaviorScore;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Apresenta valor de pontua\u00E7\u00E3o de comportamento (behavior score).")
+  @JsonProperty("behaviorScore")
+  public Integer getBehaviorScore() {
+    return behaviorScore;
+  }
+  public void setBehaviorScore(Integer behaviorScore) {
+    this.behaviorScore = behaviorScore;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -387,12 +406,13 @@ public class ContaPersist   {
         Objects.equals(this.matricula, contaPersist.matricula) &&
         Objects.equals(this.responsavelDigitacao, contaPersist.responsavelDigitacao) &&
         Objects.equals(this.idPromotorVenda, contaPersist.idPromotorVenda) &&
-        Objects.equals(this.idStatusConta, contaPersist.idStatusConta);
+        Objects.equals(this.idStatusConta, contaPersist.idStatusConta) &&
+        Objects.equals(this.behaviorScore, contaPersist.behaviorScore);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idPessoa, idOrigemComercial, idProduto, diaVencimento, valorRenda, canalEntrada, valorPontuacao, idEnderecoCorrespondencia, limiteGlobal, limiteMaximo, limiteParcelas, limiteConsignado, flagFaturaPorEmail, funcaoAtiva, matricula, responsavelDigitacao, idPromotorVenda, idStatusConta);
+    return Objects.hash(idPessoa, idOrigemComercial, idProduto, diaVencimento, valorRenda, canalEntrada, valorPontuacao, idEnderecoCorrespondencia, limiteGlobal, limiteMaximo, limiteParcelas, limiteConsignado, flagFaturaPorEmail, funcaoAtiva, matricula, responsavelDigitacao, idPromotorVenda, idStatusConta, behaviorScore);
   }
 
   @Override
@@ -418,6 +438,7 @@ public class ContaPersist   {
     sb.append("    responsavelDigitacao: ").append(toIndentedString(responsavelDigitacao)).append("\n");
     sb.append("    idPromotorVenda: ").append(toIndentedString(idPromotorVenda)).append("\n");
     sb.append("    idStatusConta: ").append(toIndentedString(idStatusConta)).append("\n");
+    sb.append("    behaviorScore: ").append(toIndentedString(behaviorScore)).append("\n");
     sb.append("}");
     return sb.toString();
   }

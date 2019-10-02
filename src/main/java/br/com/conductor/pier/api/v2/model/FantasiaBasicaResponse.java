@@ -18,6 +18,8 @@ public class FantasiaBasicaResponse   {
   private Long id = null;
   private String nome = null;
   private String descricao = null;
+  private String descricaoArquivo = null;
+  private Integer quantidadeMaxProposta = null;
 
   
   /**
@@ -74,6 +76,42 @@ public class FantasiaBasicaResponse   {
   }
 
   
+  /**
+   * Descri\u00E7\u00E3o do arquivo da fantasia b\u00E1sica
+   **/
+  public FantasiaBasicaResponse descricaoArquivo(String descricaoArquivo) {
+    this.descricaoArquivo = descricaoArquivo;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do arquivo da fantasia b\u00E1sica")
+  @JsonProperty("descricaoArquivo")
+  public String getDescricaoArquivo() {
+    return descricaoArquivo;
+  }
+  public void setDescricaoArquivo(String descricaoArquivo) {
+    this.descricaoArquivo = descricaoArquivo;
+  }
+
+  
+  /**
+   * Quantidade m\u00E1xima de propostas da fantasia b\u00E1sica
+   **/
+  public FantasiaBasicaResponse quantidadeMaxProposta(Integer quantidadeMaxProposta) {
+    this.quantidadeMaxProposta = quantidadeMaxProposta;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Quantidade m\u00E1xima de propostas da fantasia b\u00E1sica")
+  @JsonProperty("quantidadeMaxProposta")
+  public Integer getQuantidadeMaxProposta() {
+    return quantidadeMaxProposta;
+  }
+  public void setQuantidadeMaxProposta(Integer quantidadeMaxProposta) {
+    this.quantidadeMaxProposta = quantidadeMaxProposta;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -86,12 +124,14 @@ public class FantasiaBasicaResponse   {
     FantasiaBasicaResponse fantasiaBasicaResponse = (FantasiaBasicaResponse) o;
     return Objects.equals(this.id, fantasiaBasicaResponse.id) &&
         Objects.equals(this.nome, fantasiaBasicaResponse.nome) &&
-        Objects.equals(this.descricao, fantasiaBasicaResponse.descricao);
+        Objects.equals(this.descricao, fantasiaBasicaResponse.descricao) &&
+        Objects.equals(this.descricaoArquivo, fantasiaBasicaResponse.descricaoArquivo) &&
+        Objects.equals(this.quantidadeMaxProposta, fantasiaBasicaResponse.quantidadeMaxProposta);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, nome, descricao);
+    return Objects.hash(id, nome, descricao, descricaoArquivo, quantidadeMaxProposta);
   }
 
   @Override
@@ -102,6 +142,8 @@ public class FantasiaBasicaResponse   {
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    nome: ").append(toIndentedString(nome)).append("\n");
     sb.append("    descricao: ").append(toIndentedString(descricao)).append("\n");
+    sb.append("    descricaoArquivo: ").append(toIndentedString(descricaoArquivo)).append("\n");
+    sb.append("    quantidadeMaxProposta: ").append(toIndentedString(quantidadeMaxProposta)).append("\n");
     sb.append("}");
     return sb.toString();
   }

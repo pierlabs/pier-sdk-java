@@ -76,6 +76,7 @@ public class ContaDetalheResponse   {
 
   private FuncaoAtivaEnum funcaoAtiva = null;
   private Boolean possuiOverLimit = null;
+  private Integer behaviorScore = null;
 
   
   /**
@@ -763,20 +764,38 @@ public class ContaDetalheResponse   {
 
   
   /**
-   * Sinaliza se o OverLimit da conta est\uFFFD ativo
+   * Sinaliza se o OverLimit da conta est\u00E1 ativo
    **/
   public ContaDetalheResponse possuiOverLimit(Boolean possuiOverLimit) {
     this.possuiOverLimit = possuiOverLimit;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Sinaliza se o OverLimit da conta est\uFFFD ativo")
+  @ApiModelProperty(example = "false", value = "Sinaliza se o OverLimit da conta est\u00E1 ativo")
   @JsonProperty("possuiOverLimit")
   public Boolean getPossuiOverLimit() {
     return possuiOverLimit;
   }
   public void setPossuiOverLimit(Boolean possuiOverLimit) {
     this.possuiOverLimit = possuiOverLimit;
+  }
+
+  
+  /**
+   * Apresenta valor de pontua\u00E7\u00E3o de comportamento (behavior score).
+   **/
+  public ContaDetalheResponse behaviorScore(Integer behaviorScore) {
+    this.behaviorScore = behaviorScore;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Apresenta valor de pontua\u00E7\u00E3o de comportamento (behavior score).")
+  @JsonProperty("behaviorScore")
+  public Integer getBehaviorScore() {
+    return behaviorScore;
+  }
+  public void setBehaviorScore(Integer behaviorScore) {
+    this.behaviorScore = behaviorScore;
   }
 
   
@@ -828,12 +847,13 @@ public class ContaDetalheResponse   {
         Objects.equals(this.saldoExtratoAnterior, contaDetalheResponse.saldoExtratoAnterior) &&
         Objects.equals(this.aceitaNovaContaPorGrupoProduto, contaDetalheResponse.aceitaNovaContaPorGrupoProduto) &&
         Objects.equals(this.funcaoAtiva, contaDetalheResponse.funcaoAtiva) &&
-        Objects.equals(this.possuiOverLimit, contaDetalheResponse.possuiOverLimit);
+        Objects.equals(this.possuiOverLimit, contaDetalheResponse.possuiOverLimit) &&
+        Objects.equals(this.behaviorScore, contaDetalheResponse.behaviorScore);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idPessoa, nome, idProduto, idOrigemComercial, nomeOrigemComercial, idFantasiaBasica, nomeFantasiaBasica, idStatusConta, statusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, dataUltimaAlteracaoVencimento, dataHoraUltimaCompra, numeroAgencia, numeroContaCorrente, valorRenda, formaEnvioFatura, titular, limiteGlobal, limiteSaqueGlobal, saldoDisponivelGlobal, saldoDisponivelSaque, impedidoFinanciamento, diasAtraso, proximoVencimentoPadrao, idProposta, quantidadePagamentos, correspondencia, dataInicioAtraso, rotativoPagaJuros, totalPosProx, saldoAtualFinal, saldoExtratoAnterior, aceitaNovaContaPorGrupoProduto, funcaoAtiva, possuiOverLimit);
+    return Objects.hash(id, idPessoa, nome, idProduto, idOrigemComercial, nomeOrigemComercial, idFantasiaBasica, nomeFantasiaBasica, idStatusConta, statusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, dataUltimaAlteracaoVencimento, dataHoraUltimaCompra, numeroAgencia, numeroContaCorrente, valorRenda, formaEnvioFatura, titular, limiteGlobal, limiteSaqueGlobal, saldoDisponivelGlobal, saldoDisponivelSaque, impedidoFinanciamento, diasAtraso, proximoVencimentoPadrao, idProposta, quantidadePagamentos, correspondencia, dataInicioAtraso, rotativoPagaJuros, totalPosProx, saldoAtualFinal, saldoExtratoAnterior, aceitaNovaContaPorGrupoProduto, funcaoAtiva, possuiOverLimit, behaviorScore);
   }
 
   @Override
@@ -880,6 +900,7 @@ public class ContaDetalheResponse   {
     sb.append("    aceitaNovaContaPorGrupoProduto: ").append(toIndentedString(aceitaNovaContaPorGrupoProduto)).append("\n");
     sb.append("    funcaoAtiva: ").append(toIndentedString(funcaoAtiva)).append("\n");
     sb.append("    possuiOverLimit: ").append(toIndentedString(possuiOverLimit)).append("\n");
+    sb.append("    behaviorScore: ").append(toIndentedString(behaviorScore)).append("\n");
     sb.append("}");
     return sb.toString();
   }

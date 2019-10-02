@@ -17,12 +17,14 @@ import br.com.conductor.pier.api.v2.model.ConfiguracaoRotativoDetalheResponse;
 import br.com.conductor.pier.api.v2.model.ConfiguracaoRotativoPersist;
 import br.com.conductor.pier.api.v2.model.ConvenioPersist;
 import br.com.conductor.pier.api.v2.model.ConvenioResponse;
-import br.com.conductor.pier.api.v2.model.PacoteTarifaUpdate;
-import br.com.conductor.pier.api.v2.model.PacoteTarifaResponse;
+import br.com.conductor.pier.api.v2.model.FantasiaBasicaPersist;
+import br.com.conductor.pier.api.v2.model.FantasiaBasicaResponse;
 import br.com.conductor.pier.api.v2.model.PortadorResponse;
 import br.com.conductor.pier.api.v2.model.PortadorParcialUpdate;
 import br.com.conductor.pier.api.v2.model.TipoOperacaoParcialUpdate;
 import br.com.conductor.pier.api.v2.model.TipoOperacaoResponse;
+import br.com.conductor.pier.api.v2.model.PacoteTarifaUpdate;
+import br.com.conductor.pier.api.v2.model.PacoteTarifaResponse;
 import br.com.conductor.pier.api.v2.model.ParametroProdutoResponse;
 import br.com.conductor.pier.api.v2.model.TaxaAntecipacaoRequest;
 import br.com.conductor.pier.api.v2.model.AtendimentoClienteResponse;
@@ -33,6 +35,7 @@ import br.com.conductor.pier.api.v2.model.TipoAjusteResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoBoletoResponse;
 import br.com.conductor.pier.api.v2.model.TipoEnderecoResponse;
 import br.com.conductor.pier.api.v2.model.TipoTelefoneResponse;
+import br.com.conductor.pier.api.v2.model.PageFantasiaBasicaResponse;
 import br.com.conductor.pier.api.v2.model.PageAtendimentoClienteResponse;
 import br.com.conductor.pier.api.v2.model.PageBancoResponse;
 import br.com.conductor.pier.api.v2.model.PageCampanhaResponse;
@@ -41,8 +44,8 @@ import br.com.conductor.pier.api.v2.model.PageConvenioResponse;
 import java.math.BigDecimal;
 import br.com.conductor.pier.api.v2.model.PageMCCResponse;
 import br.com.conductor.pier.api.v2.model.PageCampoCodificadoDescricaoResponse;
-import br.com.conductor.pier.api.v2.model.PageFantasiaBasicaResponse;
 import br.com.conductor.pier.api.v2.model.PageGrupoMCCResponse;
+import br.com.conductor.pier.api.v2.model.GrupoTransacaoLojistaResponse;
 import br.com.conductor.pier.api.v2.model.PagePortadorResponse;
 import br.com.conductor.pier.api.v2.model.PageProdutoResponse;
 import br.com.conductor.pier.api.v2.model.PagePromotorResponse;
@@ -353,27 +356,27 @@ public class CadastroGeralApi {
   }
   
   /**
-   * Atualizar um pacote de tarifas
-   * Atualiza um pacote de tarifas a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
-   * @param id C\u00F3digo identificador do pacote de tarifa
-   * @param update update
-   * @return PacoteTarifaResponse
+   * atualizar
+   * 
+   * @param id id
+   * @param persist persist
+   * @return FantasiaBasicaResponse
    */
-  public PacoteTarifaResponse atualizar(Long id, PacoteTarifaUpdate update) throws ApiException {
-    Object postBody = update;
+  public FantasiaBasicaResponse atualizar(Long id, FantasiaBasicaPersist persist) throws ApiException {
+    Object postBody = persist;
     
      // verify the required parameter 'id' is set
      if (id == null) {
         throw new ApiException(400, "Missing the required parameter 'id' when calling atualizar");
      }
      
-     // verify the required parameter 'update' is set
-     if (update == null) {
-        throw new ApiException(400, "Missing the required parameter 'update' when calling atualizar");
+     // verify the required parameter 'persist' is set
+     if (persist == null) {
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling atualizar");
      }
      
     // create path and map variables
-    String path = "/api/pacotes-tarifas/{id}".replaceAll("\\{format\\}","json")
+    String path = "/api/fantasias-basicas/{id}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
     // query params
@@ -401,7 +404,7 @@ public class CadastroGeralApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<PacoteTarifaResponse> returnType = new GenericType<PacoteTarifaResponse>() {};
+    GenericType<FantasiaBasicaResponse> returnType = new GenericType<FantasiaBasicaResponse>() {};
     return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -522,6 +525,107 @@ public class CadastroGeralApi {
   }
   
   /**
+   * Atualizar um pacote de tarifas
+   * Atualiza um pacote de tarifas a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
+   * @param id C\u00F3digo identificador do pacote de tarifa
+   * @param update update
+   * @return PacoteTarifaResponse
+   */
+  public PacoteTarifaResponse atualizar_0(Long id, PacoteTarifaUpdate update) throws ApiException {
+    Object postBody = update;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling atualizar_0");
+     }
+     
+     // verify the required parameter 'update' is set
+     if (update == null) {
+        throw new ApiException(400, "Missing the required parameter 'update' when calling atualizar_0");
+     }
+     
+    // create path and map variables
+    String path = "/api/pacotes-tarifas/{id}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PacoteTarifaResponse> returnType = new GenericType<PacoteTarifaResponse>() {};
+    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * cadastrar
+   * 
+   * @param persist persist
+   * @return FantasiaBasicaResponse
+   */
+  public FantasiaBasicaResponse cadastrar(FantasiaBasicaPersist persist) throws ApiException {
+    Object postBody = persist;
+    
+     // verify the required parameter 'persist' is set
+     if (persist == null) {
+        throw new ApiException(400, "Missing the required parameter 'persist' when calling cadastrar");
+     }
+     
+    // create path and map variables
+    String path = "/api/fantasias-basicas".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<FantasiaBasicaResponse> returnType = new GenericType<FantasiaBasicaResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Configura a Taxa de Antecipa\u00E7\u00E3o de um Produto
    * Este recurso permite configurar a Taxa de Antecipa\u00E7\u00E3o de um Produto, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
    * @param id Id Produto
@@ -576,12 +680,12 @@ public class CadastroGeralApi {
   }
   
   /**
-   * Consultar um pacote de tarifa
-   * Consulta o pacote de tarifa a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
-   * @param id C\u00F3digo identificador do pacote de tarifa
-   * @return PacoteTarifaResponse
+   * consultar
+   * 
+   * @param id id
+   * @return FantasiaBasicaResponse
    */
-  public PacoteTarifaResponse consultar(Long id) throws ApiException {
+  public FantasiaBasicaResponse consultar(Long id) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -590,7 +694,7 @@ public class CadastroGeralApi {
      }
      
     // create path and map variables
-    String path = "/api/pacotes-tarifas/{id}".replaceAll("\\{format\\}","json")
+    String path = "/api/fantasias-basicas/{id}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
     // query params
@@ -618,7 +722,7 @@ public class CadastroGeralApi {
     String[] authNames = new String[] {"client_id", "access_token"};
 
     
-    GenericType<PacoteTarifaResponse> returnType = new GenericType<PacoteTarifaResponse>() {};
+    GenericType<FantasiaBasicaResponse> returnType = new GenericType<FantasiaBasicaResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -1444,6 +1548,116 @@ public class CadastroGeralApi {
   }
   
   /**
+   * Consultar um pacote de tarifa
+   * Consulta o pacote de tarifa a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
+   * @param id C\u00F3digo identificador do pacote de tarifa
+   * @return PacoteTarifaResponse
+   */
+  public PacoteTarifaResponse consultar_0(Long id) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultar_0");
+     }
+     
+    // create path and map variables
+    String path = "/api/pacotes-tarifas/{id}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PacoteTarifaResponse> returnType = new GenericType<PacoteTarifaResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Listar Fantasias B\u00E1sicas
+   * Lista as fantasia b\u00E1sicas
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
+   * @param page P\u00E1gina
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
+   * @param nome Nome da fantasia b\u00E1sica
+   * @param descricao Descri\u00E7\u00E3o da fantasia b\u00E1sica
+   * @param descricaoArquivo Descri\u00E7\u00E3o do arquivo da fantasia b\u00E1sica
+   * @param quantidadeMaxProposta Quantidade m\u00E1xima de propostas da fantasia b\u00E1sica
+   * @return PageFantasiaBasicaResponse
+   */
+  public PageFantasiaBasicaResponse listar(List<String> sort, Integer page, Integer limit, String nome, String descricao, String descricaoArquivo, Integer quantidadeMaxProposta) throws ApiException {
+    Object postBody = null;
+    
+    // create path and map variables
+    String path = "/api/fantasias-basicas".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "nome", nome));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "descricao", descricao));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "descricaoArquivo", descricaoArquivo));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "quantidadeMaxProposta", quantidadeMaxProposta));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PageFantasiaBasicaResponse> returnType = new GenericType<PageFantasiaBasicaResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Lista todos os atendimentos
    * Este m\u00E9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo
    * @param sort Tipo de ordena\u00E7\u00E3o dos registros
@@ -1913,56 +2127,6 @@ public class CadastroGeralApi {
   }
   
   /**
-   * Listar Fantasias B\u00E1sicas
-   * Lista as fantasia b\u00E1sicas
-   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
-   * @param page P\u00E1gina
-   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
-   * @return PageFantasiaBasicaResponse
-   */
-  public PageFantasiaBasicaResponse listarFantasiasBasicas(List<String> sort, Integer page, Integer limit) throws ApiException {
-    Object postBody = null;
-    
-    // create path and map variables
-    String path = "/api/fantasias-basicas".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<PageFantasiaBasicaResponse> returnType = new GenericType<PageFantasiaBasicaResponse>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
    * Lista os Grupos MCCs
    * Este m\u00E9todo permite que sejam listados os grupos MCCs existentes na base de dados do Emissor
    * @param sort Tipo de ordena\u00E7\u00E3o dos registros
@@ -2017,6 +2181,83 @@ public class CadastroGeralApi {
 
     
     GenericType<PageGrupoMCCResponse> returnType = new GenericType<PageGrupoMCCResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Lista os grupos de transa\u00E7\u00F5es lojistas
+   * Este m\u00E9todo permite que sejam listados os grupos de transa\u00E7\u00F5es lojistas existentes na base de dados do Emissor
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
+   * @param page P\u00E1gina
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
+   * @param id C\u00F3digo identificador do grupo de transa\u00E7\u00E3o lojista
+   * @param descricao Descri\u00E7\u00E3o do request de grupo transa\u00E7\u00E3o lojista
+   * @param flagCompra Indica se permite compra
+   * @param flagSaque Indica se permite saque
+   * @param flagComissao Indica se recebe comiss\u00E3o
+   * @param flagChargeBack Indica se permite chargeback
+   * @param flagOutrosDebitos Indica se recebe outros d\u00E9bitos
+   * @param flagPagamento Indica pagamento
+   * @param flagOutrosCreditos Indica se recebe outros cr\u00E9ditos
+   * @return GrupoTransacaoLojistaResponse
+   */
+  public GrupoTransacaoLojistaResponse listarGruposTransacoesLojistas(List<String> sort, Integer page, Integer limit, Long id, String descricao, Boolean flagCompra, Boolean flagSaque, Boolean flagComissao, Boolean flagChargeBack, Boolean flagOutrosDebitos, Boolean flagPagamento, Boolean flagOutrosCreditos) throws ApiException {
+    Object postBody = null;
+    
+    // create path and map variables
+    String path = "/api/grupos-transacoes-lojistas".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "id", id));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "descricao", descricao));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "flagCompra", flagCompra));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "flagSaque", flagSaque));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "flagComissao", flagComissao));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "flagChargeBack", flagChargeBack));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "flagOutrosDebitos", flagOutrosDebitos));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "flagPagamento", flagPagamento));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "flagOutrosCreditos", flagOutrosCreditos));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<GrupoTransacaoLojistaResponse> returnType = new GenericType<GrupoTransacaoLojistaResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -2702,6 +2943,53 @@ public class CadastroGeralApi {
     
     GenericType<PageControleVencimentoResponse> returnType = new GenericType<PageControleVencimentoResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * remover
+   * 
+   * @param id id
+   * @return void
+   */
+  public void remover(Long id) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling remover");
+     }
+     
+    // create path and map variables
+    String path = "/api/fantasias-basicas/{id}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, null);
     
   }
   

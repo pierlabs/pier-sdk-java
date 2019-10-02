@@ -10,6 +10,8 @@ import br.com.conductor.pier.api.v2.invoker.Pair;
 import br.com.conductor.pier.api.v2.model.CartaoResponse;
 import br.com.conductor.pier.api.v2.model.EstagioCartaoUpdate;
 import br.com.conductor.pier.api.v2.model.HistoricoImpressaoCartaoResponse;
+import br.com.conductor.pier.api.v2.model.CvvDinamicoResponse;
+import br.com.conductor.pier.api.v2.model.CvvDinamicoPersist;
 import br.com.conductor.pier.api.v2.model.CartaoDetalheResponse;
 import br.com.conductor.pier.api.v2.model.DadosCartaoImpressaoResponse;
 import br.com.conductor.pier.api.v2.model.DadosCartaoResponse;
@@ -226,9 +228,10 @@ public class CartaoApi {
    * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)
    * @param idStatus C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Cart\u00E3o
    * @param observacao Texto informando uma observa\u00E7\u00E3o sobre o bloqueio
+   * @param usuario Usu\u00E1rio que realizou a requisi\u00E7\u00E3o
    * @return CartaoResponse
    */
-  public CartaoResponse bloquearCartao(Long id, Long idStatus, String observacao) throws ApiException {
+  public CartaoResponse bloquearCartao(Long id, Long idStatus, String observacao, String usuario) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -259,6 +262,8 @@ public class CartaoApi {
     queryParams.addAll(apiClient.parameterToPairs("", "id_status", idStatus));
     
     queryParams.addAll(apiClient.parameterToPairs("", "observacao", observacao));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "usuario", usuario));
     
 
     
@@ -344,6 +349,156 @@ public class CartaoApi {
 
     
     GenericType<CartaoResponse> returnType = new GenericType<CartaoResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Consultar CVV2 din\u00E2mico ativo
+   * Este recurso permite realizar a consulta ao CVV2 din\u00E2mico ativo
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)
+   * @return CvvDinamicoResponse
+   */
+  public CvvDinamicoResponse cartaoConsultarCvvDinamico(Long id) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling cartaoConsultarCvvDinamico");
+     }
+     
+    // create path and map variables
+    String path = "/api/cartoes/{id}/cvv-dinamico".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<CvvDinamicoResponse> returnType = new GenericType<CvvDinamicoResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Expirar um CVV2 din\u00E2mico que estiver ativo
+   * Este recurso expira o CVV2 din\u00E2mico que estiver ativo
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)
+   * @return Object
+   */
+  public Object cartaoExpirarCvvDinamico(Long id) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling cartaoExpirarCvvDinamico");
+     }
+     
+    // create path and map variables
+    String path = "/api/cartoes/{id}/cvv-dinamico".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<Object> returnType = new GenericType<Object>() {};
+    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Gerar CVV2 de forma din\u00E2mica para cart\u00F5es virtuais
+   * Este recurso permite gerar CVV2 de forma din\u00E2mica para cart\u00F5es do tipo virtual com par\u00E2metro produto &#39;CVV2DINAMICO&#39; devidamente cadastrado com valor 1
+   * @param id C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)
+   * @param cvvDinamicoPersist Objeto de cria\u00E7\u00E3o para um CVV din\u00E2mico
+   * @return CvvDinamicoResponse
+   */
+  public CvvDinamicoResponse cartaoGerarCvvDinamico(Long id, CvvDinamicoPersist cvvDinamicoPersist) throws ApiException {
+    Object postBody = cvvDinamicoPersist;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling cartaoGerarCvvDinamico");
+     }
+     
+     // verify the required parameter 'cvvDinamicoPersist' is set
+     if (cvvDinamicoPersist == null) {
+        throw new ApiException(400, "Missing the required parameter 'cvvDinamicoPersist' when calling cartaoGerarCvvDinamico");
+     }
+     
+    // create path and map variables
+    String path = "/api/cartoes/{id}/cvv-dinamico".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<CvvDinamicoResponse> returnType = new GenericType<CvvDinamicoResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

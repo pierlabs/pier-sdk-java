@@ -51,6 +51,7 @@ public class ContaResponse   {
 
   private FuncaoAtivaEnum funcaoAtiva = null;
   private Boolean possuiOverLimit = null;
+  private Integer behaviorScore = null;
 
   
   /**
@@ -288,20 +289,38 @@ public class ContaResponse   {
 
   
   /**
-   * Sinaliza se o OverLimit da conta est\uFFFD ativo
+   * Sinaliza se o OverLimit da conta est\u00E1 ativo
    **/
   public ContaResponse possuiOverLimit(Boolean possuiOverLimit) {
     this.possuiOverLimit = possuiOverLimit;
     return this;
   }
   
-  @ApiModelProperty(example = "false", value = "Sinaliza se o OverLimit da conta est\uFFFD ativo")
+  @ApiModelProperty(example = "false", value = "Sinaliza se o OverLimit da conta est\u00E1 ativo")
   @JsonProperty("possuiOverLimit")
   public Boolean getPossuiOverLimit() {
     return possuiOverLimit;
   }
   public void setPossuiOverLimit(Boolean possuiOverLimit) {
     this.possuiOverLimit = possuiOverLimit;
+  }
+
+  
+  /**
+   * Apresenta valor de pontua\u00E7\u00E3o de comportamento (behavior score).
+   **/
+  public ContaResponse behaviorScore(Integer behaviorScore) {
+    this.behaviorScore = behaviorScore;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Apresenta valor de pontua\u00E7\u00E3o de comportamento (behavior score).")
+  @JsonProperty("behaviorScore")
+  public Integer getBehaviorScore() {
+    return behaviorScore;
+  }
+  public void setBehaviorScore(Integer behaviorScore) {
+    this.behaviorScore = behaviorScore;
   }
 
   
@@ -328,12 +347,13 @@ public class ContaResponse   {
         Objects.equals(this.valorRenda, contaResponse.valorRenda) &&
         Objects.equals(this.idProposta, contaResponse.idProposta) &&
         Objects.equals(this.funcaoAtiva, contaResponse.funcaoAtiva) &&
-        Objects.equals(this.possuiOverLimit, contaResponse.possuiOverLimit);
+        Objects.equals(this.possuiOverLimit, contaResponse.possuiOverLimit) &&
+        Objects.equals(this.behaviorScore, contaResponse.behaviorScore);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idProduto, idOrigemComercial, idPessoa, idStatusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, dataUltimaAlteracaoVencimento, valorRenda, idProposta, funcaoAtiva, possuiOverLimit);
+    return Objects.hash(id, idProduto, idOrigemComercial, idPessoa, idStatusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, dataUltimaAlteracaoVencimento, valorRenda, idProposta, funcaoAtiva, possuiOverLimit, behaviorScore);
   }
 
   @Override
@@ -355,6 +375,7 @@ public class ContaResponse   {
     sb.append("    idProposta: ").append(toIndentedString(idProposta)).append("\n");
     sb.append("    funcaoAtiva: ").append(toIndentedString(funcaoAtiva)).append("\n");
     sb.append("    possuiOverLimit: ").append(toIndentedString(possuiOverLimit)).append("\n");
+    sb.append("    behaviorScore: ").append(toIndentedString(behaviorScore)).append("\n");
     sb.append("}");
     return sb.toString();
   }

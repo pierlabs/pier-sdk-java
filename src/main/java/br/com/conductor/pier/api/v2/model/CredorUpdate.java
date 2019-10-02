@@ -62,6 +62,7 @@ public class CredorUpdate   {
 
 
   public enum PeriodicidadeEnum {
+    NENHUM("NENHUM"),
     DIARIO("DIARIO"),
     SEMANAL("SEMANAL"),
     MENSAL("MENSAL"),
