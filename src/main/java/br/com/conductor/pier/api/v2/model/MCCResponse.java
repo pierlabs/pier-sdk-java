@@ -17,6 +17,8 @@ public class MCCResponse   {
   
   private Long id = null;
   private String descricao = null;
+  private Long grupoMCCId = null;
+  private String grupoMCCDescricao = null;
 
   
   /**
@@ -55,6 +57,42 @@ public class MCCResponse   {
   }
 
   
+  /**
+   * C\u00F3digo de indentifica\u00E7\u00E3o do grupo MCC
+   **/
+  public MCCResponse grupoMCCId(Long grupoMCCId) {
+    this.grupoMCCId = grupoMCCId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de indentifica\u00E7\u00E3o do grupo MCC")
+  @JsonProperty("grupoMCCId")
+  public Long getGrupoMCCId() {
+    return grupoMCCId;
+  }
+  public void setGrupoMCCId(Long grupoMCCId) {
+    this.grupoMCCId = grupoMCCId;
+  }
+
+  
+  /**
+   * Descri\u00E7\u00E3o do grupo MCC
+   **/
+  public MCCResponse grupoMCCDescricao(String grupoMCCDescricao) {
+    this.grupoMCCDescricao = grupoMCCDescricao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do grupo MCC")
+  @JsonProperty("grupoMCCDescricao")
+  public String getGrupoMCCDescricao() {
+    return grupoMCCDescricao;
+  }
+  public void setGrupoMCCDescricao(String grupoMCCDescricao) {
+    this.grupoMCCDescricao = grupoMCCDescricao;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -66,12 +104,14 @@ public class MCCResponse   {
     }
     MCCResponse mCCResponse = (MCCResponse) o;
     return Objects.equals(this.id, mCCResponse.id) &&
-        Objects.equals(this.descricao, mCCResponse.descricao);
+        Objects.equals(this.descricao, mCCResponse.descricao) &&
+        Objects.equals(this.grupoMCCId, mCCResponse.grupoMCCId) &&
+        Objects.equals(this.grupoMCCDescricao, mCCResponse.grupoMCCDescricao);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, descricao);
+    return Objects.hash(id, descricao, grupoMCCId, grupoMCCDescricao);
   }
 
   @Override
@@ -81,6 +121,8 @@ public class MCCResponse   {
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    descricao: ").append(toIndentedString(descricao)).append("\n");
+    sb.append("    grupoMCCId: ").append(toIndentedString(grupoMCCId)).append("\n");
+    sb.append("    grupoMCCDescricao: ").append(toIndentedString(grupoMCCDescricao)).append("\n");
     sb.append("}");
     return sb.toString();
   }

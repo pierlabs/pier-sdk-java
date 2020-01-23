@@ -564,9 +564,11 @@ public class ControleCartaoApi {
    * @param permiteWallet Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es por meio wallet
    * @param permiteControleMCC Indica se o cart\u00E3o est\u00E1 ativo para controle por grupos de MCCs
    * @param permiteCompraInternacional Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es internacionais
+   * @param permiteTarjaMagnetica Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es por tarja magnetica
+   * @param permiteContactless Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es via contactless
    * @return PageConfiguracaoControleCartaoResponse
    */
-  public PageConfiguracaoControleCartaoResponse listarConfiguracaoControleCartao(List<String> sort, Integer page, Integer limit, Long idCartao, Boolean permiteEcommerce, Boolean permiteSaque, Boolean permiteWallet, Boolean permiteControleMCC, Boolean permiteCompraInternacional) throws ApiException {
+  public PageConfiguracaoControleCartaoResponse listarConfiguracaoControleCartao(List<String> sort, Integer page, Integer limit, Long idCartao, Boolean permiteEcommerce, Boolean permiteSaque, Boolean permiteWallet, Boolean permiteControleMCC, Boolean permiteCompraInternacional, Boolean permiteTarjaMagnetica, Boolean permiteContactless) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -595,6 +597,10 @@ public class ControleCartaoApi {
     queryParams.addAll(apiClient.parameterToPairs("", "permiteControleMCC", permiteControleMCC));
     
     queryParams.addAll(apiClient.parameterToPairs("", "permiteCompraInternacional", permiteCompraInternacional));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "permiteTarjaMagnetica", permiteTarjaMagnetica));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "permiteContactless", permiteContactless));
     
 
     

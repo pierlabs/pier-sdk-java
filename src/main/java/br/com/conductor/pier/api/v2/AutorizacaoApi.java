@@ -479,4 +479,112 @@ public class AutorizacaoApi {
     
   }
   
+  /**
+   * Simula planos de transa\u00E7\u00F5es a partir do idCartao
+   * Este m\u00E9todo permite que seja simulada um plano de transa\u00E7\u00F5es a partir do idCartao
+   * @param id id
+   * @param transacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest
+   * @return TransacaoOnUsResponse
+   */
+  public TransacaoOnUsResponse simularTransacaoPorCartao(Long id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest) throws ApiException {
+    Object postBody = transacaoOnUsPorIdCartaoRequest;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling simularTransacaoPorCartao");
+     }
+     
+     // verify the required parameter 'transacaoOnUsPorIdCartaoRequest' is set
+     if (transacaoOnUsPorIdCartaoRequest == null) {
+        throw new ApiException(400, "Missing the required parameter 'transacaoOnUsPorIdCartaoRequest' when calling simularTransacaoPorCartao");
+     }
+     
+    // create path and map variables
+    String path = "/api/cartoes/{id}/simular-transacao".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<TransacaoOnUsResponse> returnType = new GenericType<TransacaoOnUsResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Simula planos de transa\u00E7\u00F5es a partir do idConta
+   * Este m\u00E9todo permite que seja simulada um plano de transa\u00E7\u00F5es a partir do idConta
+   * @param id id
+   * @param transacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest
+   * @return TransacaoOnUsResponse
+   */
+  public TransacaoOnUsResponse simularTransacaoPorConta(Long id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest) throws ApiException {
+    Object postBody = transacaoOnUsPorIdCartaoRequest;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling simularTransacaoPorConta");
+     }
+     
+     // verify the required parameter 'transacaoOnUsPorIdCartaoRequest' is set
+     if (transacaoOnUsPorIdCartaoRequest == null) {
+        throw new ApiException(400, "Missing the required parameter 'transacaoOnUsPorIdCartaoRequest' when calling simularTransacaoPorConta");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/{id}/simular-transacao".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<TransacaoOnUsResponse> returnType = new GenericType<TransacaoOnUsResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
 }

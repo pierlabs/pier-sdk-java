@@ -9,6 +9,8 @@ import br.com.conductor.pier.api.v2.invoker.Pair;
 
 import br.com.conductor.pier.api.v2.model.AdicionalDetalheResponse;
 import br.com.conductor.pier.api.v2.model.AdicionalUpdate;
+import br.com.conductor.pier.api.v2.model.BeneficioResponse;
+import br.com.conductor.pier.api.v2.model.BeneficioUpdate;
 import br.com.conductor.pier.api.v2.model.EnderecoResponse;
 import br.com.conductor.pier.api.v2.model.PessoaResponse;
 import br.com.conductor.pier.api.v2.model.PessoaDetalheResponse;
@@ -19,10 +21,13 @@ import br.com.conductor.pier.api.v2.model.IndicacaoAmigoUpdate;
 import br.com.conductor.pier.api.v2.model.PessoaDetalhePartialUpdate;
 import br.com.conductor.pier.api.v2.model.IntegracaoEmissorPersist;
 import br.com.conductor.pier.api.v2.model.IntegracaoEmissorResponse;
+import br.com.conductor.pier.api.v2.model.BeneficioPersist;
 import br.com.conductor.pier.api.v2.model.IndicacaoAmigoPersist;
 import br.com.conductor.pier.api.v2.model.CelularRecargaProgramadaPersist;
 import br.com.conductor.pier.api.v2.model.CelularRecargaProgramadaResponse;
+import br.com.conductor.pier.api.v2.model.TipoBeneficioResponse;
 import br.com.conductor.pier.api.v2.model.AdicionalResponse;
+import br.com.conductor.pier.api.v2.model.PageBeneficioResponse;
 import br.com.conductor.pier.api.v2.model.PageContaDetalheResponse;
 import br.com.conductor.pier.api.v2.model.PageEnderecoResponse;
 import br.com.conductor.pier.api.v2.model.PageHistoricoEnderecoResponse;
@@ -32,6 +37,7 @@ import br.com.conductor.pier.api.v2.model.PagePessoaResponse;
 import br.com.conductor.pier.api.v2.model.PagePessoaDetalheResponse;
 import java.math.BigDecimal;
 import br.com.conductor.pier.api.v2.model.PageTelefoneResponse;
+import br.com.conductor.pier.api.v2.model.PageTipoBeneficioResponse;
 import br.com.conductor.pier.api.v2.model.AdicionalContaPersist;
 import br.com.conductor.pier.api.v2.model.AdicionalContaResponse;
 import br.com.conductor.pier.api.v2.model.ObjetoPessoaFsicaAprovadaResponse;
@@ -126,6 +132,60 @@ public class CadastroClienteApi {
     
     GenericType<AdicionalDetalheResponse> returnType = new GenericType<AdicionalDetalheResponse>() {};
     return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Altera um benef\u00EDcio existente
+   * Este recurso permite a altera\u00E7\u00E3o de um benef\u00EDcio ativo existente em uma conta
+   * @param id Identificador do benef\u00EDcio
+   * @param beneficioUpdate beneficioUpdate
+   * @return BeneficioResponse
+   */
+  public BeneficioResponse alterarBeneficio(Long id, BeneficioUpdate beneficioUpdate) throws ApiException {
+    Object postBody = beneficioUpdate;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling alterarBeneficio");
+     }
+     
+     // verify the required parameter 'beneficioUpdate' is set
+     if (beneficioUpdate == null) {
+        throw new ApiException(400, "Missing the required parameter 'beneficioUpdate' when calling alterarBeneficio");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/beneficios/{id}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<BeneficioResponse> returnType = new GenericType<BeneficioResponse>() {};
+    return apiClient.invokeAPI(path, "PATCH", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
@@ -781,6 +841,60 @@ public class CadastroClienteApi {
   }
   
   /**
+   * Cadastra um benef\u00EDcio em uma conta espec\u00EDfica
+   * Este recurso permite cadastrar um benef\u00EDcio de uma pessoa em uma conta espec\u00EDfica, com cardinalidade n para n
+   * @param id Identificador da conta
+   * @param beneficioPersist beneficioPersist
+   * @return BeneficioResponse
+   */
+  public BeneficioResponse cadastrarBeneficio(Long id, BeneficioPersist beneficioPersist) throws ApiException {
+    Object postBody = beneficioPersist;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling cadastrarBeneficio");
+     }
+     
+     // verify the required parameter 'beneficioPersist' is set
+     if (beneficioPersist == null) {
+        throw new ApiException(400, "Missing the required parameter 'beneficioPersist' when calling cadastrarBeneficio");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/{id}/beneficios".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<BeneficioResponse> returnType = new GenericType<BeneficioResponse>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Cadastra uma indica\u00E7\u00E3o de amigo
    * Cadastra uma indica\u00E7\u00E3o de amigo
    * @param id C\u00F3digo idenficador da pessoa
@@ -878,6 +992,54 @@ public class CadastroClienteApi {
     
     GenericType<CelularRecargaProgramadaResponse> returnType = new GenericType<CelularRecargaProgramadaResponse>() {};
     return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Consulta um benef\u00EDcio
+   * Este recurso permite consultar um benef\u00EDcio espec\u00EDfico
+   * @param id Identificador do benef\u00EDcio
+   * @return BeneficioResponse
+   */
+  public BeneficioResponse consultarBeneficio(Long id) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarBeneficio");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/beneficios/{id}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<BeneficioResponse> returnType = new GenericType<BeneficioResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
@@ -1129,6 +1291,54 @@ public class CadastroClienteApi {
   }
   
   /**
+   * Consulta um tipo de benef\u00EDcio
+   * Este recurso permite consultar um tipo de benef\u00EDcio
+   * @param id Identificador do tipo de benef\u00EDcio
+   * @return TipoBeneficioResponse
+   */
+  public TipoBeneficioResponse consultarTipoBeneficio(Long id) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarTipoBeneficio");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/beneficios/tipos/{id}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<TipoBeneficioResponse> returnType = new GenericType<TipoBeneficioResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
    * Inativa Adicional de uma Conta
    * Este m\u00E9todo permite que seja inativado um portador Adicional de uma determinada Conta
    * @param id C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)
@@ -1236,6 +1446,71 @@ public class CadastroClienteApi {
 
     
     GenericType<AdicionalResponse> returnType = new GenericType<AdicionalResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Lista os benef\u00EDcios existentes
+   * Este recurso permite listar os benef\u00EDcios existentes
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
+   * @param page P\u00E1gina
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
+   * @param idConta Identificador da conta
+   * @param tipoBeneficio Tipo do benef\u00EDcio
+   * @param numeroBeneficio N\u00FAmero do benef\u00EDcio
+   * @param mesProvaVida M\u00EAs de prova de vida do benefici\u00E1rio
+   * @param status Status do benef\u00EDcio(1 = ATIVO, 0 = INATIVO)
+   * @return PageBeneficioResponse
+   */
+  public PageBeneficioResponse listarBeneficios(List<String> sort, Integer page, Integer limit, Long idConta, String tipoBeneficio, String numeroBeneficio, Integer mesProvaVida, Boolean status) throws ApiException {
+    Object postBody = null;
+    
+    // create path and map variables
+    String path = "/api/contas/beneficios".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idConta", idConta));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "tipoBeneficio", tipoBeneficio));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "numeroBeneficio", numeroBeneficio));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "mesProvaVida", mesProvaVida));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "status", status));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PageBeneficioResponse> returnType = new GenericType<PageBeneficioResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
@@ -1910,6 +2185,107 @@ public class CadastroClienteApi {
     
     GenericType<PageTelefoneResponse> returnType = new GenericType<PageTelefoneResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Lista os tipos de benef\u00EDcios existentes
+   * Este recurso permite listar os tipos de benef\u00EDcios existentes
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
+   * @param page P\u00E1gina
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
+   * @param descricao Descri\u00E7\u00E3o do tipo do benef\u00EDcio
+   * @return PageTipoBeneficioResponse
+   */
+  public PageTipoBeneficioResponse listarTiposBeneficios(List<String> sort, Integer page, Integer limit, String descricao) throws ApiException {
+    Object postBody = null;
+    
+    // create path and map variables
+    String path = "/api/contas/beneficios/tipos".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "descricao", descricao));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PageTipoBeneficioResponse> returnType = new GenericType<PageTipoBeneficioResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Desativa um benef\u00EDcio
+   * Este recurso permite a desativa\u00E7\u00E3o de um benef\u00EDcio, tornando seu status = 0
+   * @param id Identificador do benef\u00EDcio
+   * @return BeneficioResponse
+   */
+  public BeneficioResponse removerBeneficio(Long id) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling removerBeneficio");
+     }
+     
+    // create path and map variables
+    String path = "/api/contas/beneficios/{id}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<BeneficioResponse> returnType = new GenericType<BeneficioResponse>() {};
+    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   

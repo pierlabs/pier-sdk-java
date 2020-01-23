@@ -1,7 +1,7 @@
 package br.com.conductor.pier.api.v2.model;
 
 import java.util.Objects;
-import br.com.conductor.pier.api.v2.model.RiscoFraudeResponse;
+import br.com.conductor.pier.api.v2.model.ParametroAcumuladorContaOperacaoResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -11,14 +11,14 @@ import java.util.List;
 
 
 /**
- * Lista dos riscos de fraudes
+ * Objeto de pagina\u00E7\u00E3o de um par\u00E2metro acumulador de conta/opera\u00E7\u00E3o
  **/
 
-@ApiModel(description = "Lista dos riscos de fraudes")
+@ApiModel(description = "Objeto de pagina\u00E7\u00E3o de um par\u00E2metro acumulador de conta/opera\u00E7\u00E3o")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class PageRiscoFraudeResponse   {
+public class PageParametroAcumuladorContaOperacaoResponse   {
   
-  private List<RiscoFraudeResponse> content = new ArrayList<RiscoFraudeResponse>();
+  private List<ParametroAcumuladorContaOperacaoResponse> content = new ArrayList<ParametroAcumuladorContaOperacaoResponse>();
   private Boolean first = null;
   private Boolean firstPage = null;
   private Boolean hasContent = null;
@@ -36,24 +36,24 @@ public class PageRiscoFraudeResponse   {
   
   /**
    **/
-  public PageRiscoFraudeResponse content(List<RiscoFraudeResponse> content) {
+  public PageParametroAcumuladorContaOperacaoResponse content(List<ParametroAcumuladorContaOperacaoResponse> content) {
     this.content = content;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
   @JsonProperty("content")
-  public List<RiscoFraudeResponse> getContent() {
+  public List<ParametroAcumuladorContaOperacaoResponse> getContent() {
     return content;
   }
-  public void setContent(List<RiscoFraudeResponse> content) {
+  public void setContent(List<ParametroAcumuladorContaOperacaoResponse> content) {
     this.content = content;
   }
 
   
   /**
    **/
-  public PageRiscoFraudeResponse first(Boolean first) {
+  public PageParametroAcumuladorContaOperacaoResponse first(Boolean first) {
     this.first = first;
     return this;
   }
@@ -70,7 +70,7 @@ public class PageRiscoFraudeResponse   {
   
   /**
    **/
-  public PageRiscoFraudeResponse firstPage(Boolean firstPage) {
+  public PageParametroAcumuladorContaOperacaoResponse firstPage(Boolean firstPage) {
     this.firstPage = firstPage;
     return this;
   }
@@ -87,7 +87,7 @@ public class PageRiscoFraudeResponse   {
   
   /**
    **/
-  public PageRiscoFraudeResponse hasContent(Boolean hasContent) {
+  public PageParametroAcumuladorContaOperacaoResponse hasContent(Boolean hasContent) {
     this.hasContent = hasContent;
     return this;
   }
@@ -104,7 +104,7 @@ public class PageRiscoFraudeResponse   {
   
   /**
    **/
-  public PageRiscoFraudeResponse hasNextPage(Boolean hasNextPage) {
+  public PageParametroAcumuladorContaOperacaoResponse hasNextPage(Boolean hasNextPage) {
     this.hasNextPage = hasNextPage;
     return this;
   }
@@ -121,7 +121,7 @@ public class PageRiscoFraudeResponse   {
   
   /**
    **/
-  public PageRiscoFraudeResponse hasPreviousPage(Boolean hasPreviousPage) {
+  public PageParametroAcumuladorContaOperacaoResponse hasPreviousPage(Boolean hasPreviousPage) {
     this.hasPreviousPage = hasPreviousPage;
     return this;
   }
@@ -138,7 +138,7 @@ public class PageRiscoFraudeResponse   {
   
   /**
    **/
-  public PageRiscoFraudeResponse last(Boolean last) {
+  public PageParametroAcumuladorContaOperacaoResponse last(Boolean last) {
     this.last = last;
     return this;
   }
@@ -155,7 +155,7 @@ public class PageRiscoFraudeResponse   {
   
   /**
    **/
-  public PageRiscoFraudeResponse nextPage(Integer nextPage) {
+  public PageParametroAcumuladorContaOperacaoResponse nextPage(Integer nextPage) {
     this.nextPage = nextPage;
     return this;
   }
@@ -172,7 +172,7 @@ public class PageRiscoFraudeResponse   {
   
   /**
    **/
-  public PageRiscoFraudeResponse number(Integer number) {
+  public PageParametroAcumuladorContaOperacaoResponse number(Integer number) {
     this.number = number;
     return this;
   }
@@ -189,7 +189,7 @@ public class PageRiscoFraudeResponse   {
   
   /**
    **/
-  public PageRiscoFraudeResponse numberOfElements(Integer numberOfElements) {
+  public PageParametroAcumuladorContaOperacaoResponse numberOfElements(Integer numberOfElements) {
     this.numberOfElements = numberOfElements;
     return this;
   }
@@ -206,7 +206,7 @@ public class PageRiscoFraudeResponse   {
   
   /**
    **/
-  public PageRiscoFraudeResponse previousPage(Integer previousPage) {
+  public PageParametroAcumuladorContaOperacaoResponse previousPage(Integer previousPage) {
     this.previousPage = previousPage;
     return this;
   }
@@ -223,7 +223,7 @@ public class PageRiscoFraudeResponse   {
   
   /**
    **/
-  public PageRiscoFraudeResponse size(Integer size) {
+  public PageParametroAcumuladorContaOperacaoResponse size(Integer size) {
     this.size = size;
     return this;
   }
@@ -240,7 +240,7 @@ public class PageRiscoFraudeResponse   {
   
   /**
    **/
-  public PageRiscoFraudeResponse totalElements(Long totalElements) {
+  public PageParametroAcumuladorContaOperacaoResponse totalElements(Long totalElements) {
     this.totalElements = totalElements;
     return this;
   }
@@ -257,7 +257,7 @@ public class PageRiscoFraudeResponse   {
   
   /**
    **/
-  public PageRiscoFraudeResponse totalPages(Integer totalPages) {
+  public PageParametroAcumuladorContaOperacaoResponse totalPages(Integer totalPages) {
     this.totalPages = totalPages;
     return this;
   }
@@ -281,21 +281,21 @@ public class PageRiscoFraudeResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    PageRiscoFraudeResponse pageRiscoFraudeResponse = (PageRiscoFraudeResponse) o;
-    return Objects.equals(this.content, pageRiscoFraudeResponse.content) &&
-        Objects.equals(this.first, pageRiscoFraudeResponse.first) &&
-        Objects.equals(this.firstPage, pageRiscoFraudeResponse.firstPage) &&
-        Objects.equals(this.hasContent, pageRiscoFraudeResponse.hasContent) &&
-        Objects.equals(this.hasNextPage, pageRiscoFraudeResponse.hasNextPage) &&
-        Objects.equals(this.hasPreviousPage, pageRiscoFraudeResponse.hasPreviousPage) &&
-        Objects.equals(this.last, pageRiscoFraudeResponse.last) &&
-        Objects.equals(this.nextPage, pageRiscoFraudeResponse.nextPage) &&
-        Objects.equals(this.number, pageRiscoFraudeResponse.number) &&
-        Objects.equals(this.numberOfElements, pageRiscoFraudeResponse.numberOfElements) &&
-        Objects.equals(this.previousPage, pageRiscoFraudeResponse.previousPage) &&
-        Objects.equals(this.size, pageRiscoFraudeResponse.size) &&
-        Objects.equals(this.totalElements, pageRiscoFraudeResponse.totalElements) &&
-        Objects.equals(this.totalPages, pageRiscoFraudeResponse.totalPages);
+    PageParametroAcumuladorContaOperacaoResponse pageParametroAcumuladorContaOperacaoResponse = (PageParametroAcumuladorContaOperacaoResponse) o;
+    return Objects.equals(this.content, pageParametroAcumuladorContaOperacaoResponse.content) &&
+        Objects.equals(this.first, pageParametroAcumuladorContaOperacaoResponse.first) &&
+        Objects.equals(this.firstPage, pageParametroAcumuladorContaOperacaoResponse.firstPage) &&
+        Objects.equals(this.hasContent, pageParametroAcumuladorContaOperacaoResponse.hasContent) &&
+        Objects.equals(this.hasNextPage, pageParametroAcumuladorContaOperacaoResponse.hasNextPage) &&
+        Objects.equals(this.hasPreviousPage, pageParametroAcumuladorContaOperacaoResponse.hasPreviousPage) &&
+        Objects.equals(this.last, pageParametroAcumuladorContaOperacaoResponse.last) &&
+        Objects.equals(this.nextPage, pageParametroAcumuladorContaOperacaoResponse.nextPage) &&
+        Objects.equals(this.number, pageParametroAcumuladorContaOperacaoResponse.number) &&
+        Objects.equals(this.numberOfElements, pageParametroAcumuladorContaOperacaoResponse.numberOfElements) &&
+        Objects.equals(this.previousPage, pageParametroAcumuladorContaOperacaoResponse.previousPage) &&
+        Objects.equals(this.size, pageParametroAcumuladorContaOperacaoResponse.size) &&
+        Objects.equals(this.totalElements, pageParametroAcumuladorContaOperacaoResponse.totalElements) &&
+        Objects.equals(this.totalPages, pageParametroAcumuladorContaOperacaoResponse.totalPages);
   }
 
   @Override
@@ -306,7 +306,7 @@ public class PageRiscoFraudeResponse   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PageRiscoFraudeResponse {\n");
+    sb.append("class PageParametroAcumuladorContaOperacaoResponse {\n");
     
     sb.append("    content: ").append(toIndentedString(content)).append("\n");
     sb.append("    first: ").append(toIndentedString(first)).append("\n");

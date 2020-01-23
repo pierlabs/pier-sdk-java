@@ -18,8 +18,11 @@ public class ContaDebitoTarifaResponse   {
   
   private String dataHoraExpiracao = null;
   private String dataHoraFimCobranca = null;
+  private String dataHoraInclusaoDebito = null;
   private Long id = null;
+  private Long idAjuste = null;
   private Long idConta = null;
+  private Long idTarifaExtrato = null;
   private BigDecimal percentualDesconto = null;
   private BigDecimal valor = null;
   private BigDecimal valorOriginal = null;
@@ -62,6 +65,24 @@ public class ContaDebitoTarifaResponse   {
 
   
   /**
+   * Data e hota da inclus\u00E3o do d\u00E9bito
+   **/
+  public ContaDebitoTarifaResponse dataHoraInclusaoDebito(String dataHoraInclusaoDebito) {
+    this.dataHoraInclusaoDebito = dataHoraInclusaoDebito;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Data e hota da inclus\u00E3o do d\u00E9bito")
+  @JsonProperty("dataHoraInclusaoDebito")
+  public String getDataHoraInclusaoDebito() {
+    return dataHoraInclusaoDebito;
+  }
+  public void setDataHoraInclusaoDebito(String dataHoraInclusaoDebito) {
+    this.dataHoraInclusaoDebito = dataHoraInclusaoDebito;
+  }
+
+  
+  /**
    * Identificador do registro
    **/
   public ContaDebitoTarifaResponse id(Long id) {
@@ -80,6 +101,24 @@ public class ContaDebitoTarifaResponse   {
 
   
   /**
+   * C\u00F3digo identificador do ajuste 
+   **/
+  public ContaDebitoTarifaResponse idAjuste(Long idAjuste) {
+    this.idAjuste = idAjuste;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00F3digo identificador do ajuste ")
+  @JsonProperty("idAjuste")
+  public Long getIdAjuste() {
+    return idAjuste;
+  }
+  public void setIdAjuste(Long idAjuste) {
+    this.idAjuste = idAjuste;
+  }
+
+  
+  /**
    * Identificador da conta
    **/
   public ContaDebitoTarifaResponse idConta(Long idConta) {
@@ -94,6 +133,24 @@ public class ContaDebitoTarifaResponse   {
   }
   public void setIdConta(Long idConta) {
     this.idConta = idConta;
+  }
+
+  
+  /**
+   * Identificador do extrato da tarifa
+   **/
+  public ContaDebitoTarifaResponse idTarifaExtrato(Long idTarifaExtrato) {
+    this.idTarifaExtrato = idTarifaExtrato;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Identificador do extrato da tarifa")
+  @JsonProperty("idTarifaExtrato")
+  public Long getIdTarifaExtrato() {
+    return idTarifaExtrato;
+  }
+  public void setIdTarifaExtrato(Long idTarifaExtrato) {
+    this.idTarifaExtrato = idTarifaExtrato;
   }
 
   
@@ -163,8 +220,11 @@ public class ContaDebitoTarifaResponse   {
     ContaDebitoTarifaResponse contaDebitoTarifaResponse = (ContaDebitoTarifaResponse) o;
     return Objects.equals(this.dataHoraExpiracao, contaDebitoTarifaResponse.dataHoraExpiracao) &&
         Objects.equals(this.dataHoraFimCobranca, contaDebitoTarifaResponse.dataHoraFimCobranca) &&
+        Objects.equals(this.dataHoraInclusaoDebito, contaDebitoTarifaResponse.dataHoraInclusaoDebito) &&
         Objects.equals(this.id, contaDebitoTarifaResponse.id) &&
+        Objects.equals(this.idAjuste, contaDebitoTarifaResponse.idAjuste) &&
         Objects.equals(this.idConta, contaDebitoTarifaResponse.idConta) &&
+        Objects.equals(this.idTarifaExtrato, contaDebitoTarifaResponse.idTarifaExtrato) &&
         Objects.equals(this.percentualDesconto, contaDebitoTarifaResponse.percentualDesconto) &&
         Objects.equals(this.valor, contaDebitoTarifaResponse.valor) &&
         Objects.equals(this.valorOriginal, contaDebitoTarifaResponse.valorOriginal);
@@ -172,7 +232,7 @@ public class ContaDebitoTarifaResponse   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(dataHoraExpiracao, dataHoraFimCobranca, id, idConta, percentualDesconto, valor, valorOriginal);
+    return Objects.hash(dataHoraExpiracao, dataHoraFimCobranca, dataHoraInclusaoDebito, id, idAjuste, idConta, idTarifaExtrato, percentualDesconto, valor, valorOriginal);
   }
 
   @Override
@@ -182,8 +242,11 @@ public class ContaDebitoTarifaResponse   {
     
     sb.append("    dataHoraExpiracao: ").append(toIndentedString(dataHoraExpiracao)).append("\n");
     sb.append("    dataHoraFimCobranca: ").append(toIndentedString(dataHoraFimCobranca)).append("\n");
+    sb.append("    dataHoraInclusaoDebito: ").append(toIndentedString(dataHoraInclusaoDebito)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    idAjuste: ").append(toIndentedString(idAjuste)).append("\n");
     sb.append("    idConta: ").append(toIndentedString(idConta)).append("\n");
+    sb.append("    idTarifaExtrato: ").append(toIndentedString(idTarifaExtrato)).append("\n");
     sb.append("    percentualDesconto: ").append(toIndentedString(percentualDesconto)).append("\n");
     sb.append("    valor: ").append(toIndentedString(valor)).append("\n");
     sb.append("    valorOriginal: ").append(toIndentedString(valorOriginal)).append("\n");

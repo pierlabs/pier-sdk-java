@@ -20,6 +20,8 @@ public class ConfiguracaoControleCartaoUpdate   {
   private Boolean permiteWallet = null;
   private Boolean permiteControleMCC = null;
   private Boolean permiteCompraInternacional = null;
+  private Boolean permiteTarjaMagnetica = null;
+  private Boolean permiteContactless = null;
 
   
   /**
@@ -112,6 +114,42 @@ public class ConfiguracaoControleCartaoUpdate   {
   }
 
   
+  /**
+   * Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es por tarja magnetica
+   **/
+  public ConfiguracaoControleCartaoUpdate permiteTarjaMagnetica(Boolean permiteTarjaMagnetica) {
+    this.permiteTarjaMagnetica = permiteTarjaMagnetica;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es por tarja magnetica")
+  @JsonProperty("permiteTarjaMagnetica")
+  public Boolean getPermiteTarjaMagnetica() {
+    return permiteTarjaMagnetica;
+  }
+  public void setPermiteTarjaMagnetica(Boolean permiteTarjaMagnetica) {
+    this.permiteTarjaMagnetica = permiteTarjaMagnetica;
+  }
+
+  
+  /**
+   * Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es via contactless
+   **/
+  public ConfiguracaoControleCartaoUpdate permiteContactless(Boolean permiteContactless) {
+    this.permiteContactless = permiteContactless;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es via contactless")
+  @JsonProperty("permiteContactless")
+  public Boolean getPermiteContactless() {
+    return permiteContactless;
+  }
+  public void setPermiteContactless(Boolean permiteContactless) {
+    this.permiteContactless = permiteContactless;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -126,12 +164,14 @@ public class ConfiguracaoControleCartaoUpdate   {
         Objects.equals(this.permiteSaque, configuracaoControleCartaoUpdate.permiteSaque) &&
         Objects.equals(this.permiteWallet, configuracaoControleCartaoUpdate.permiteWallet) &&
         Objects.equals(this.permiteControleMCC, configuracaoControleCartaoUpdate.permiteControleMCC) &&
-        Objects.equals(this.permiteCompraInternacional, configuracaoControleCartaoUpdate.permiteCompraInternacional);
+        Objects.equals(this.permiteCompraInternacional, configuracaoControleCartaoUpdate.permiteCompraInternacional) &&
+        Objects.equals(this.permiteTarjaMagnetica, configuracaoControleCartaoUpdate.permiteTarjaMagnetica) &&
+        Objects.equals(this.permiteContactless, configuracaoControleCartaoUpdate.permiteContactless);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(permiteEcommerce, permiteSaque, permiteWallet, permiteControleMCC, permiteCompraInternacional);
+    return Objects.hash(permiteEcommerce, permiteSaque, permiteWallet, permiteControleMCC, permiteCompraInternacional, permiteTarjaMagnetica, permiteContactless);
   }
 
   @Override
@@ -144,6 +184,8 @@ public class ConfiguracaoControleCartaoUpdate   {
     sb.append("    permiteWallet: ").append(toIndentedString(permiteWallet)).append("\n");
     sb.append("    permiteControleMCC: ").append(toIndentedString(permiteControleMCC)).append("\n");
     sb.append("    permiteCompraInternacional: ").append(toIndentedString(permiteCompraInternacional)).append("\n");
+    sb.append("    permiteTarjaMagnetica: ").append(toIndentedString(permiteTarjaMagnetica)).append("\n");
+    sb.append("    permiteContactless: ").append(toIndentedString(permiteContactless)).append("\n");
     sb.append("}");
     return sb.toString();
   }

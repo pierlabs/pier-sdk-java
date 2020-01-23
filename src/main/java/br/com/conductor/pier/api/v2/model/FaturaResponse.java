@@ -48,6 +48,7 @@ public class FaturaResponse   {
   private BigDecimal saldoAnterior = null;
   private Long idBoleto = null;
   private Boolean flagEmiteExtrato = null;
+  private String linhaDigitavel = null;
 
   
   /**
@@ -248,6 +249,24 @@ public class FaturaResponse   {
   }
 
   
+  /**
+   * Linha digit\u00E1vel da fatura
+   **/
+  public FaturaResponse linhaDigitavel(String linhaDigitavel) {
+    this.linhaDigitavel = linhaDigitavel;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Linha digit\u00E1vel da fatura")
+  @JsonProperty("linhaDigitavel")
+  public String getLinhaDigitavel() {
+    return linhaDigitavel;
+  }
+  public void setLinhaDigitavel(String linhaDigitavel) {
+    this.linhaDigitavel = linhaDigitavel;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -268,12 +287,13 @@ public class FaturaResponse   {
         Objects.equals(this.valorPagamentoMinimo, faturaResponse.valorPagamentoMinimo) &&
         Objects.equals(this.saldoAnterior, faturaResponse.saldoAnterior) &&
         Objects.equals(this.idBoleto, faturaResponse.idBoleto) &&
-        Objects.equals(this.flagEmiteExtrato, faturaResponse.flagEmiteExtrato);
+        Objects.equals(this.flagEmiteExtrato, faturaResponse.flagEmiteExtrato) &&
+        Objects.equals(this.linhaDigitavel, faturaResponse.linhaDigitavel);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idConta, situacaoProcessamento, pagamentoEfetuado, dataVencimentoFatura, dataVencimentoReal, dataFechamento, valorTotal, valorPagamentoMinimo, saldoAnterior, idBoleto, flagEmiteExtrato);
+    return Objects.hash(idConta, situacaoProcessamento, pagamentoEfetuado, dataVencimentoFatura, dataVencimentoReal, dataFechamento, valorTotal, valorPagamentoMinimo, saldoAnterior, idBoleto, flagEmiteExtrato, linhaDigitavel);
   }
 
   @Override
@@ -292,6 +312,7 @@ public class FaturaResponse   {
     sb.append("    saldoAnterior: ").append(toIndentedString(saldoAnterior)).append("\n");
     sb.append("    idBoleto: ").append(toIndentedString(idBoleto)).append("\n");
     sb.append("    flagEmiteExtrato: ").append(toIndentedString(flagEmiteExtrato)).append("\n");
+    sb.append("    linhaDigitavel: ").append(toIndentedString(linhaDigitavel)).append("\n");
     sb.append("}");
     return sb.toString();
   }

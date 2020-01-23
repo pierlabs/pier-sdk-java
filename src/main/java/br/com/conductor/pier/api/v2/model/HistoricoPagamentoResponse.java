@@ -25,6 +25,7 @@ public class HistoricoPagamentoResponse   {
   private String dataHoraPagamento = null;
   private String dataHoraEntradaPagamento = null;
   private Long status = null;
+  private Long nossoNumero = null;
 
   
   /**
@@ -189,6 +190,24 @@ public class HistoricoPagamentoResponse   {
   }
 
   
+  /**
+   * C\u00F3digo de Identifica\u00E7\u00E3o do nosso n\u00FAmero
+   **/
+  public HistoricoPagamentoResponse nossoNumero(Long nossoNumero) {
+    this.nossoNumero = nossoNumero;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do nosso n\u00FAmero")
+  @JsonProperty("nossoNumero")
+  public Long getNossoNumero() {
+    return nossoNumero;
+  }
+  public void setNossoNumero(Long nossoNumero) {
+    this.nossoNumero = nossoNumero;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -207,12 +226,13 @@ public class HistoricoPagamentoResponse   {
         Objects.equals(this.valorPagamento, historicoPagamentoResponse.valorPagamento) &&
         Objects.equals(this.dataHoraPagamento, historicoPagamentoResponse.dataHoraPagamento) &&
         Objects.equals(this.dataHoraEntradaPagamento, historicoPagamentoResponse.dataHoraEntradaPagamento) &&
-        Objects.equals(this.status, historicoPagamentoResponse.status);
+        Objects.equals(this.status, historicoPagamentoResponse.status) &&
+        Objects.equals(this.nossoNumero, historicoPagamentoResponse.nossoNumero);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idConta, idPagamento, idEstabelecimento, idBanco, idCartao, valorPagamento, dataHoraPagamento, dataHoraEntradaPagamento, status);
+    return Objects.hash(idConta, idPagamento, idEstabelecimento, idBanco, idCartao, valorPagamento, dataHoraPagamento, dataHoraEntradaPagamento, status, nossoNumero);
   }
 
   @Override
@@ -229,6 +249,7 @@ public class HistoricoPagamentoResponse   {
     sb.append("    dataHoraPagamento: ").append(toIndentedString(dataHoraPagamento)).append("\n");
     sb.append("    dataHoraEntradaPagamento: ").append(toIndentedString(dataHoraEntradaPagamento)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    nossoNumero: ").append(toIndentedString(nossoNumero)).append("\n");
     sb.append("}");
     return sb.toString();
   }

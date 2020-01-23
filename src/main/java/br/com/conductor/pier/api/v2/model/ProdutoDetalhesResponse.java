@@ -20,6 +20,7 @@ public class ProdutoDetalhesResponse   {
   private Integer status = null;
   private Long idFantasiaBasica = null;
   private String fantasiaBasica = null;
+  private Long idBandeira = null;
   private Boolean usoExterior = null;
 
   
@@ -114,6 +115,24 @@ public class ProdutoDetalhesResponse   {
 
   
   /**
+   * C\u00F3digo de identifica\u00E7\u00E3o da bandeira
+   **/
+  public ProdutoDetalhesResponse idBandeira(Long idBandeira) {
+    this.idBandeira = idBandeira;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o da bandeira")
+  @JsonProperty("idBandeira")
+  public Long getIdBandeira() {
+    return idBandeira;
+  }
+  public void setIdBandeira(Long idBandeira) {
+    this.idBandeira = idBandeira;
+  }
+
+  
+  /**
    * Par\u00E2metro que indica se o produto est\u00E1 habilitado para compras no exterior
    **/
   public ProdutoDetalhesResponse usoExterior(Boolean usoExterior) {
@@ -146,12 +165,13 @@ public class ProdutoDetalhesResponse   {
         Objects.equals(this.status, produtoDetalhesResponse.status) &&
         Objects.equals(this.idFantasiaBasica, produtoDetalhesResponse.idFantasiaBasica) &&
         Objects.equals(this.fantasiaBasica, produtoDetalhesResponse.fantasiaBasica) &&
+        Objects.equals(this.idBandeira, produtoDetalhesResponse.idBandeira) &&
         Objects.equals(this.usoExterior, produtoDetalhesResponse.usoExterior);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, nome, status, idFantasiaBasica, fantasiaBasica, usoExterior);
+    return Objects.hash(id, nome, status, idFantasiaBasica, fantasiaBasica, idBandeira, usoExterior);
   }
 
   @Override
@@ -164,6 +184,7 @@ public class ProdutoDetalhesResponse   {
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    idFantasiaBasica: ").append(toIndentedString(idFantasiaBasica)).append("\n");
     sb.append("    fantasiaBasica: ").append(toIndentedString(fantasiaBasica)).append("\n");
+    sb.append("    idBandeira: ").append(toIndentedString(idBandeira)).append("\n");
     sb.append("    usoExterior: ").append(toIndentedString(usoExterior)).append("\n");
     sb.append("}");
     return sb.toString();

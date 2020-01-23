@@ -7,8 +7,6 @@ import br.com.conductor.pier.api.v2.invoker.ApiClient;
 import br.com.conductor.pier.api.v2.invoker.Configuration;
 import br.com.conductor.pier.api.v2.invoker.Pair;
 
-import br.com.conductor.pier.api.v2.model.RiscoFraudeDetalhadoResponse;
-import br.com.conductor.pier.api.v2.model.TipoResolucaoResponse;
 import br.com.conductor.pier.api.v2.model.DadosPortadorRequest;
 
 import java.util.ArrayList;
@@ -36,101 +34,6 @@ public class RiscoFraudeApi {
     this.apiClient = apiClient;
   }
 
-  
-  /**
-   * Consultar uma transa\u00E7\u00E3o classificada com risco de fraude
-   * Consulta os detalhes de uma transa\u00E7\u00E3o classificada como risco de fraude
-   * @param id C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude
-   * @return RiscoFraudeDetalhadoResponse
-   */
-  public RiscoFraudeDetalhadoResponse consultarRiscoFraude(Long id) throws ApiException {
-    Object postBody = null;
-    
-     // verify the required parameter 'id' is set
-     if (id == null) {
-        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarRiscoFraude");
-     }
-     
-    // create path and map variables
-    String path = "/api/riscos-fraudes/{id}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<RiscoFraudeDetalhadoResponse> returnType = new GenericType<RiscoFraudeDetalhadoResponse>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  /**
-   * Listar os tipos de resolu\u00E7\u00E3o de fraude
-   * Este recurso permite que sejam listados os tipos de resolu\u00E7\u00E3o de fraude, cadastrados para um emissor
-   * @param page P\u00E1gina solicitada (Default =0)
-   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50)
-   * @return TipoResolucaoResponse
-   */
-  public TipoResolucaoResponse listarTiposResolucoes(Integer page, Integer limit) throws ApiException {
-    Object postBody = null;
-    
-    // create path and map variables
-    String path = "/api/tipos-resolucao".replaceAll("\\{format\\}","json");
-
-    // query params
-    List<Pair> queryParams = new ArrayList<Pair>();
-    Map<String, String> headerParams = new HashMap<String, String>();
-    Map<String, Object> formParams = new HashMap<String, Object>();
-
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
-    
-    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
-    
-
-    
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      "application/json"
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    //String[] authNames = new String[] {"client_id",  };
-    String[] authNames = new String[] {"client_id", "access_token"};
-
-    
-    GenericType<TipoResolucaoResponse> returnType = new GenericType<TipoResolucaoResponse>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
   
   /**
    * Negar autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude

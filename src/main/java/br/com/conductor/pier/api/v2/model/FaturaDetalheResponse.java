@@ -52,6 +52,7 @@ public class FaturaDetalheResponse   {
   private BigDecimal saldoAnterior = null;
   private Long idBoleto = null;
   private Boolean flagEmiteExtrato = null;
+  private String linhaDigitavel = null;
 
   
   /**
@@ -270,6 +271,24 @@ public class FaturaDetalheResponse   {
   }
 
   
+  /**
+   * Linha digit\u00E1vel da fatura
+   **/
+  public FaturaDetalheResponse linhaDigitavel(String linhaDigitavel) {
+    this.linhaDigitavel = linhaDigitavel;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Linha digit\u00E1vel da fatura")
+  @JsonProperty("linhaDigitavel")
+  public String getLinhaDigitavel() {
+    return linhaDigitavel;
+  }
+  public void setLinhaDigitavel(String linhaDigitavel) {
+    this.linhaDigitavel = linhaDigitavel;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -291,12 +310,13 @@ public class FaturaDetalheResponse   {
         Objects.equals(this.lancamentosFaturaResponse, faturaDetalheResponse.lancamentosFaturaResponse) &&
         Objects.equals(this.saldoAnterior, faturaDetalheResponse.saldoAnterior) &&
         Objects.equals(this.idBoleto, faturaDetalheResponse.idBoleto) &&
-        Objects.equals(this.flagEmiteExtrato, faturaDetalheResponse.flagEmiteExtrato);
+        Objects.equals(this.flagEmiteExtrato, faturaDetalheResponse.flagEmiteExtrato) &&
+        Objects.equals(this.linhaDigitavel, faturaDetalheResponse.linhaDigitavel);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idConta, situacaoProcessamento, pagamentoEfetuado, dataVencimentoFatura, dataVencimentoReal, dataFechamento, valorTotal, valorPagamentoMinimo, lancamentosFaturaResponse, saldoAnterior, idBoleto, flagEmiteExtrato);
+    return Objects.hash(idConta, situacaoProcessamento, pagamentoEfetuado, dataVencimentoFatura, dataVencimentoReal, dataFechamento, valorTotal, valorPagamentoMinimo, lancamentosFaturaResponse, saldoAnterior, idBoleto, flagEmiteExtrato, linhaDigitavel);
   }
 
   @Override
@@ -316,6 +336,7 @@ public class FaturaDetalheResponse   {
     sb.append("    saldoAnterior: ").append(toIndentedString(saldoAnterior)).append("\n");
     sb.append("    idBoleto: ").append(toIndentedString(idBoleto)).append("\n");
     sb.append("    flagEmiteExtrato: ").append(toIndentedString(flagEmiteExtrato)).append("\n");
+    sb.append("    linhaDigitavel: ").append(toIndentedString(linhaDigitavel)).append("\n");
     sb.append("}");
     return sb.toString();
   }

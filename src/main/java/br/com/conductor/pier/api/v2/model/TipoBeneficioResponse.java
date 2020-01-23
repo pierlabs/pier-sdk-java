@@ -8,26 +8,26 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Objeto de resposta de Tipo Resolu\u00E7\u00E3o
+ * Objeto de resposta do tipo de benef\u00EDcio
  **/
 
-@ApiModel(description = "Objeto de resposta de Tipo Resolu\u00E7\u00E3o")
+@ApiModel(description = "Objeto de resposta do tipo de benef\u00EDcio")
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen")
-public class TipoResolucaoResponse   {
+public class TipoBeneficioResponse   {
   
   private Long id = null;
   private String descricao = null;
 
   
   /**
-   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o
+   * Identificador do tipo de benef\u00EDcio
    **/
-  public TipoResolucaoResponse id(Long id) {
+  public TipoBeneficioResponse id(Long id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o")
+  @ApiModelProperty(example = "null", value = "Identificador do tipo de benef\u00EDcio")
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -38,14 +38,14 @@ public class TipoResolucaoResponse   {
 
   
   /**
-   * Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o
+   * Descri\u00E7\u00E3o do tipo de benef\u00EDcio
    **/
-  public TipoResolucaoResponse descricao(String descricao) {
+  public TipoBeneficioResponse descricao(String descricao) {
     this.descricao = descricao;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o")
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o do tipo de benef\u00EDcio")
   @JsonProperty("descricao")
   public String getDescricao() {
     return descricao;
@@ -64,9 +64,9 @@ public class TipoResolucaoResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    TipoResolucaoResponse tipoResolucaoResponse = (TipoResolucaoResponse) o;
-    return Objects.equals(this.id, tipoResolucaoResponse.id) &&
-        Objects.equals(this.descricao, tipoResolucaoResponse.descricao);
+    TipoBeneficioResponse tipoBeneficioResponse = (TipoBeneficioResponse) o;
+    return Objects.equals(this.id, tipoBeneficioResponse.id) &&
+        Objects.equals(this.descricao, tipoBeneficioResponse.descricao);
   }
 
   @Override
@@ -77,7 +77,7 @@ public class TipoResolucaoResponse   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class TipoResolucaoResponse {\n");
+    sb.append("class TipoBeneficioResponse {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    descricao: ").append(toIndentedString(descricao)).append("\n");

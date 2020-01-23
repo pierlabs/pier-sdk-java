@@ -19,6 +19,7 @@ public class ProdutoResponse   {
   private String nome = null;
   private Integer status = null;
   private Long idFantasiaBasica = null;
+  private Long idBandeira = null;
 
   
   /**
@@ -93,6 +94,24 @@ public class ProdutoResponse   {
   }
 
   
+  /**
+   * C\u00F3digo de identifica\u00E7\u00E3o da bandeira
+   **/
+  public ProdutoResponse idBandeira(Long idBandeira) {
+    this.idBandeira = idBandeira;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o da bandeira")
+  @JsonProperty("idBandeira")
+  public Long getIdBandeira() {
+    return idBandeira;
+  }
+  public void setIdBandeira(Long idBandeira) {
+    this.idBandeira = idBandeira;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -106,12 +125,13 @@ public class ProdutoResponse   {
     return Objects.equals(this.id, produtoResponse.id) &&
         Objects.equals(this.nome, produtoResponse.nome) &&
         Objects.equals(this.status, produtoResponse.status) &&
-        Objects.equals(this.idFantasiaBasica, produtoResponse.idFantasiaBasica);
+        Objects.equals(this.idFantasiaBasica, produtoResponse.idFantasiaBasica) &&
+        Objects.equals(this.idBandeira, produtoResponse.idBandeira);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, nome, status, idFantasiaBasica);
+    return Objects.hash(id, nome, status, idFantasiaBasica, idBandeira);
   }
 
   @Override
@@ -123,6 +143,7 @@ public class ProdutoResponse   {
     sb.append("    nome: ").append(toIndentedString(nome)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    idFantasiaBasica: ").append(toIndentedString(idFantasiaBasica)).append("\n");
+    sb.append("    idBandeira: ").append(toIndentedString(idBandeira)).append("\n");
     sb.append("}");
     return sb.toString();
   }

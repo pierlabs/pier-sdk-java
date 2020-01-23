@@ -21,6 +21,9 @@ public class ContaDebitoTarifaPersist   {
   private BigDecimal percentualDesconto = null;
   private String dataHoraFimCobranca = null;
   private String dataHoraExpiracao = null;
+  private Long idAjuste = null;
+  private Long idTarifaExtrato = null;
+  private String dataHoraInclusaoDebito = null;
 
   
   /**
@@ -113,6 +116,60 @@ public class ContaDebitoTarifaPersist   {
   }
 
   
+  /**
+   * Valor do c\u00F3digo identificador do ajuste 
+   **/
+  public ContaDebitoTarifaPersist idAjuste(Long idAjuste) {
+    this.idAjuste = idAjuste;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor do c\u00F3digo identificador do ajuste ")
+  @JsonProperty("idAjuste")
+  public Long getIdAjuste() {
+    return idAjuste;
+  }
+  public void setIdAjuste(Long idAjuste) {
+    this.idAjuste = idAjuste;
+  }
+
+  
+  /**
+   * Valor do identificador do extrato da tarifa
+   **/
+  public ContaDebitoTarifaPersist idTarifaExtrato(Long idTarifaExtrato) {
+    this.idTarifaExtrato = idTarifaExtrato;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor do identificador do extrato da tarifa")
+  @JsonProperty("idTarifaExtrato")
+  public Long getIdTarifaExtrato() {
+    return idTarifaExtrato;
+  }
+  public void setIdTarifaExtrato(Long idTarifaExtrato) {
+    this.idTarifaExtrato = idTarifaExtrato;
+  }
+
+  
+  /**
+   * Data e hota da inclus\u00E3o do d\u00E9bito
+   **/
+  public ContaDebitoTarifaPersist dataHoraInclusaoDebito(String dataHoraInclusaoDebito) {
+    this.dataHoraInclusaoDebito = dataHoraInclusaoDebito;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Data e hota da inclus\u00E3o do d\u00E9bito")
+  @JsonProperty("dataHoraInclusaoDebito")
+  public String getDataHoraInclusaoDebito() {
+    return dataHoraInclusaoDebito;
+  }
+  public void setDataHoraInclusaoDebito(String dataHoraInclusaoDebito) {
+    this.dataHoraInclusaoDebito = dataHoraInclusaoDebito;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -127,12 +184,15 @@ public class ContaDebitoTarifaPersist   {
         Objects.equals(this.valorOriginal, contaDebitoTarifaPersist.valorOriginal) &&
         Objects.equals(this.percentualDesconto, contaDebitoTarifaPersist.percentualDesconto) &&
         Objects.equals(this.dataHoraFimCobranca, contaDebitoTarifaPersist.dataHoraFimCobranca) &&
-        Objects.equals(this.dataHoraExpiracao, contaDebitoTarifaPersist.dataHoraExpiracao);
+        Objects.equals(this.dataHoraExpiracao, contaDebitoTarifaPersist.dataHoraExpiracao) &&
+        Objects.equals(this.idAjuste, contaDebitoTarifaPersist.idAjuste) &&
+        Objects.equals(this.idTarifaExtrato, contaDebitoTarifaPersist.idTarifaExtrato) &&
+        Objects.equals(this.dataHoraInclusaoDebito, contaDebitoTarifaPersist.dataHoraInclusaoDebito);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(valor, valorOriginal, percentualDesconto, dataHoraFimCobranca, dataHoraExpiracao);
+    return Objects.hash(valor, valorOriginal, percentualDesconto, dataHoraFimCobranca, dataHoraExpiracao, idAjuste, idTarifaExtrato, dataHoraInclusaoDebito);
   }
 
   @Override
@@ -145,6 +205,9 @@ public class ContaDebitoTarifaPersist   {
     sb.append("    percentualDesconto: ").append(toIndentedString(percentualDesconto)).append("\n");
     sb.append("    dataHoraFimCobranca: ").append(toIndentedString(dataHoraFimCobranca)).append("\n");
     sb.append("    dataHoraExpiracao: ").append(toIndentedString(dataHoraExpiracao)).append("\n");
+    sb.append("    idAjuste: ").append(toIndentedString(idAjuste)).append("\n");
+    sb.append("    idTarifaExtrato: ").append(toIndentedString(idTarifaExtrato)).append("\n");
+    sb.append("    dataHoraInclusaoDebito: ").append(toIndentedString(dataHoraInclusaoDebito)).append("\n");
     sb.append("}");
     return sb.toString();
   }
