@@ -42,6 +42,7 @@ import br.com.conductor.pier.api.v2.model.PageCampanhaResponse;
 import br.com.conductor.pier.api.v2.model.PageConfiguracaoRotativoResponse;
 import br.com.conductor.pier.api.v2.model.PageConvenioResponse;
 import java.math.BigDecimal;
+import br.com.conductor.pier.api.v2.model.PageCotacaoDolarResponse;
 import br.com.conductor.pier.api.v2.model.PageMCCResponse;
 import br.com.conductor.pier.api.v2.model.PageCampoCodificadoDescricaoResponse;
 import br.com.conductor.pier.api.v2.model.PageGrupoMCCResponse;
@@ -2004,6 +2005,62 @@ public class CadastroGeralApi {
 
     
     GenericType<PageConvenioResponse> returnType = new GenericType<PageConvenioResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Lista as cota\u00E7\u00F5es Dolar no per\u00EDodo de data informado. 
+   * Lista as cota\u00E7\u00F5es Dolar no per\u00EDodo de data informado. 
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
+   * @param page P\u00E1gina
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
+   * @param dataInicio Filtro data inicial do fechamento
+   * @param dataFim Filtro data final do fechamento
+   * @return PageCotacaoDolarResponse
+   */
+  public PageCotacaoDolarResponse listarCotacaoDolar(List<String> sort, Integer page, Integer limit, String dataInicio, String dataFim) throws ApiException {
+    Object postBody = null;
+    
+    // create path and map variables
+    String path = "/api/cotacoes/dolar".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "dataInicio", dataInicio));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "dataFim", dataFim));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PageCotacaoDolarResponse> returnType = new GenericType<PageCotacaoDolarResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

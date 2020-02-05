@@ -41,6 +41,7 @@ public class TransacaoNaoProcessadaResponse   {
   private Long idTransacaoEstorno = null;
   private String localidadeEstabelecimento = null;
   private String modoEntradaTransacao = null;
+  private String moedaEstrangeira = null;
   private String nomeEstabelecimento = null;
   private String nomeFantasiaEstabelecimento = null;
   private String nomePortador = null;
@@ -49,6 +50,7 @@ public class TransacaoNaoProcessadaResponse   {
   private Integer status = null;
   private BigDecimal taxaEmbarque = null;
   private BigDecimal valorBRL = null;
+  private BigDecimal valorCompraMoedaEstrangeira = null;
   private BigDecimal valorEntrada = null;
   private BigDecimal valorIOF = null;
   private BigDecimal valorTAC = null;
@@ -506,6 +508,24 @@ public class TransacaoNaoProcessadaResponse   {
 
   
   /**
+   * S\u00EDmbolo da moeda estrangeira
+   **/
+  public TransacaoNaoProcessadaResponse moedaEstrangeira(String moedaEstrangeira) {
+    this.moedaEstrangeira = moedaEstrangeira;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "S\u00EDmbolo da moeda estrangeira")
+  @JsonProperty("moedaEstrangeira")
+  public String getMoedaEstrangeira() {
+    return moedaEstrangeira;
+  }
+  public void setMoedaEstrangeira(String moedaEstrangeira) {
+    this.moedaEstrangeira = moedaEstrangeira;
+  }
+
+  
+  /**
    * Nome do Estabelecimento
    **/
   public TransacaoNaoProcessadaResponse nomeEstabelecimento(String nomeEstabelecimento) {
@@ -650,6 +670,24 @@ public class TransacaoNaoProcessadaResponse   {
 
   
   /**
+   * Valor da compra em moeda estrangeira
+   **/
+  public TransacaoNaoProcessadaResponse valorCompraMoedaEstrangeira(BigDecimal valorCompraMoedaEstrangeira) {
+    this.valorCompraMoedaEstrangeira = valorCompraMoedaEstrangeira;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor da compra em moeda estrangeira")
+  @JsonProperty("valorCompraMoedaEstrangeira")
+  public BigDecimal getValorCompraMoedaEstrangeira() {
+    return valorCompraMoedaEstrangeira;
+  }
+  public void setValorCompraMoedaEstrangeira(BigDecimal valorCompraMoedaEstrangeira) {
+    this.valorCompraMoedaEstrangeira = valorCompraMoedaEstrangeira;
+  }
+
+  
+  /**
    * Valor da Entrada em Real (BRL) quando a transa\u00E7\u00E3o for do tipo Parcelada com o pagamento de um valor de Entrada
    **/
   public TransacaoNaoProcessadaResponse valorEntrada(BigDecimal valorEntrada) {
@@ -756,6 +794,7 @@ public class TransacaoNaoProcessadaResponse   {
         Objects.equals(this.idTransacaoEstorno, transacaoNaoProcessadaResponse.idTransacaoEstorno) &&
         Objects.equals(this.localidadeEstabelecimento, transacaoNaoProcessadaResponse.localidadeEstabelecimento) &&
         Objects.equals(this.modoEntradaTransacao, transacaoNaoProcessadaResponse.modoEntradaTransacao) &&
+        Objects.equals(this.moedaEstrangeira, transacaoNaoProcessadaResponse.moedaEstrangeira) &&
         Objects.equals(this.nomeEstabelecimento, transacaoNaoProcessadaResponse.nomeEstabelecimento) &&
         Objects.equals(this.nomeFantasiaEstabelecimento, transacaoNaoProcessadaResponse.nomeFantasiaEstabelecimento) &&
         Objects.equals(this.nomePortador, transacaoNaoProcessadaResponse.nomePortador) &&
@@ -764,6 +803,7 @@ public class TransacaoNaoProcessadaResponse   {
         Objects.equals(this.status, transacaoNaoProcessadaResponse.status) &&
         Objects.equals(this.taxaEmbarque, transacaoNaoProcessadaResponse.taxaEmbarque) &&
         Objects.equals(this.valorBRL, transacaoNaoProcessadaResponse.valorBRL) &&
+        Objects.equals(this.valorCompraMoedaEstrangeira, transacaoNaoProcessadaResponse.valorCompraMoedaEstrangeira) &&
         Objects.equals(this.valorEntrada, transacaoNaoProcessadaResponse.valorEntrada) &&
         Objects.equals(this.valorIOF, transacaoNaoProcessadaResponse.valorIOF) &&
         Objects.equals(this.valorTAC, transacaoNaoProcessadaResponse.valorTAC) &&
@@ -772,7 +812,7 @@ public class TransacaoNaoProcessadaResponse   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(cartaoMascarado, codigoAutorizacao, codigoMCC, codigoMoedaDestino, codigoMoedaOrigem, codigoReferencia, codigoTerminal, cotacaoUSD, dataCotacaoUSD, dataFaturamento, dataOrigem, dataVencimentoReal, descricaoAbreviada, descricaoTipoTransacaoNaoProcessada, detalhesTransacao, flagCredito, flagFaturado, grupoDescricaoMCC, grupoMCC, idConta, idEstabelecimento, idTipoTransacaoNaoProcessada, idTransacaoEstorno, localidadeEstabelecimento, modoEntradaTransacao, nomeEstabelecimento, nomeFantasiaEstabelecimento, nomePortador, parcela, plano, status, taxaEmbarque, valorBRL, valorEntrada, valorIOF, valorTAC, valorUSD);
+    return Objects.hash(cartaoMascarado, codigoAutorizacao, codigoMCC, codigoMoedaDestino, codigoMoedaOrigem, codigoReferencia, codigoTerminal, cotacaoUSD, dataCotacaoUSD, dataFaturamento, dataOrigem, dataVencimentoReal, descricaoAbreviada, descricaoTipoTransacaoNaoProcessada, detalhesTransacao, flagCredito, flagFaturado, grupoDescricaoMCC, grupoMCC, idConta, idEstabelecimento, idTipoTransacaoNaoProcessada, idTransacaoEstorno, localidadeEstabelecimento, modoEntradaTransacao, moedaEstrangeira, nomeEstabelecimento, nomeFantasiaEstabelecimento, nomePortador, parcela, plano, status, taxaEmbarque, valorBRL, valorCompraMoedaEstrangeira, valorEntrada, valorIOF, valorTAC, valorUSD);
   }
 
   @Override
@@ -805,6 +845,7 @@ public class TransacaoNaoProcessadaResponse   {
     sb.append("    idTransacaoEstorno: ").append(toIndentedString(idTransacaoEstorno)).append("\n");
     sb.append("    localidadeEstabelecimento: ").append(toIndentedString(localidadeEstabelecimento)).append("\n");
     sb.append("    modoEntradaTransacao: ").append(toIndentedString(modoEntradaTransacao)).append("\n");
+    sb.append("    moedaEstrangeira: ").append(toIndentedString(moedaEstrangeira)).append("\n");
     sb.append("    nomeEstabelecimento: ").append(toIndentedString(nomeEstabelecimento)).append("\n");
     sb.append("    nomeFantasiaEstabelecimento: ").append(toIndentedString(nomeFantasiaEstabelecimento)).append("\n");
     sb.append("    nomePortador: ").append(toIndentedString(nomePortador)).append("\n");
@@ -813,6 +854,7 @@ public class TransacaoNaoProcessadaResponse   {
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    taxaEmbarque: ").append(toIndentedString(taxaEmbarque)).append("\n");
     sb.append("    valorBRL: ").append(toIndentedString(valorBRL)).append("\n");
+    sb.append("    valorCompraMoedaEstrangeira: ").append(toIndentedString(valorCompraMoedaEstrangeira)).append("\n");
     sb.append("    valorEntrada: ").append(toIndentedString(valorEntrada)).append("\n");
     sb.append("    valorIOF: ").append(toIndentedString(valorIOF)).append("\n");
     sb.append("    valorTAC: ").append(toIndentedString(valorTAC)).append("\n");

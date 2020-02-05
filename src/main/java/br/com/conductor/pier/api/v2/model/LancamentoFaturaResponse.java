@@ -41,6 +41,9 @@ public class LancamentoFaturaResponse   {
   private Boolean flagSolicitouContestacao = null;
   private BigDecimal valorTaxaEmbarque = null;
   private String descricaoAbreviada = null;
+  private String moedaEstrangeira = null;
+  private BigDecimal valorCompraMoedaEstrangeira = null;
+  private BigDecimal cotacaoDolarCompra = null;
 
   
   /**
@@ -493,6 +496,60 @@ public class LancamentoFaturaResponse   {
   }
 
   
+  /**
+   * S\u00EDmbolo da moeda estrangeira da compra
+   **/
+  public LancamentoFaturaResponse moedaEstrangeira(String moedaEstrangeira) {
+    this.moedaEstrangeira = moedaEstrangeira;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "S\u00EDmbolo da moeda estrangeira da compra")
+  @JsonProperty("moedaEstrangeira")
+  public String getMoedaEstrangeira() {
+    return moedaEstrangeira;
+  }
+  public void setMoedaEstrangeira(String moedaEstrangeira) {
+    this.moedaEstrangeira = moedaEstrangeira;
+  }
+
+  
+  /**
+   * Valor da compra em moeda estrangeira
+   **/
+  public LancamentoFaturaResponse valorCompraMoedaEstrangeira(BigDecimal valorCompraMoedaEstrangeira) {
+    this.valorCompraMoedaEstrangeira = valorCompraMoedaEstrangeira;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor da compra em moeda estrangeira")
+  @JsonProperty("valorCompraMoedaEstrangeira")
+  public BigDecimal getValorCompraMoedaEstrangeira() {
+    return valorCompraMoedaEstrangeira;
+  }
+  public void setValorCompraMoedaEstrangeira(BigDecimal valorCompraMoedaEstrangeira) {
+    this.valorCompraMoedaEstrangeira = valorCompraMoedaEstrangeira;
+  }
+
+  
+  /**
+   * Taxa de convers\u00E3o do d\u00F3lar para reais na data da compra
+   **/
+  public LancamentoFaturaResponse cotacaoDolarCompra(BigDecimal cotacaoDolarCompra) {
+    this.cotacaoDolarCompra = cotacaoDolarCompra;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Taxa de convers\u00E3o do d\u00F3lar para reais na data da compra")
+  @JsonProperty("cotacaoDolarCompra")
+  public BigDecimal getCotacaoDolarCompra() {
+    return cotacaoDolarCompra;
+  }
+  public void setCotacaoDolarCompra(BigDecimal cotacaoDolarCompra) {
+    this.cotacaoDolarCompra = cotacaoDolarCompra;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -527,12 +584,15 @@ public class LancamentoFaturaResponse   {
         Objects.equals(this.numeroCartaoMascarado, lancamentoFaturaResponse.numeroCartaoMascarado) &&
         Objects.equals(this.flagSolicitouContestacao, lancamentoFaturaResponse.flagSolicitouContestacao) &&
         Objects.equals(this.valorTaxaEmbarque, lancamentoFaturaResponse.valorTaxaEmbarque) &&
-        Objects.equals(this.descricaoAbreviada, lancamentoFaturaResponse.descricaoAbreviada);
+        Objects.equals(this.descricaoAbreviada, lancamentoFaturaResponse.descricaoAbreviada) &&
+        Objects.equals(this.moedaEstrangeira, lancamentoFaturaResponse.moedaEstrangeira) &&
+        Objects.equals(this.valorCompraMoedaEstrangeira, lancamentoFaturaResponse.valorCompraMoedaEstrangeira) &&
+        Objects.equals(this.cotacaoDolarCompra, lancamentoFaturaResponse.cotacaoDolarCompra);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idTransacao, descricaoTipoTransacao, idTipoEvento, descricaoTipoEvento, idEvento, idConta, complemento, valorBRL, valorUSD, numeroParcela, quantidadeParcelas, dataHoraTransacao, nomeEstabelecimento, descricaoEstabelecimento, nomeFantasiaEstabelecimento, flagCredito, idMCC, idGrupoMCC, descricaoGrupoMCC, titular, nomePortador, numeroCartaoMascarado, flagSolicitouContestacao, valorTaxaEmbarque, descricaoAbreviada);
+    return Objects.hash(idTransacao, descricaoTipoTransacao, idTipoEvento, descricaoTipoEvento, idEvento, idConta, complemento, valorBRL, valorUSD, numeroParcela, quantidadeParcelas, dataHoraTransacao, nomeEstabelecimento, descricaoEstabelecimento, nomeFantasiaEstabelecimento, flagCredito, idMCC, idGrupoMCC, descricaoGrupoMCC, titular, nomePortador, numeroCartaoMascarado, flagSolicitouContestacao, valorTaxaEmbarque, descricaoAbreviada, moedaEstrangeira, valorCompraMoedaEstrangeira, cotacaoDolarCompra);
   }
 
   @Override
@@ -565,6 +625,9 @@ public class LancamentoFaturaResponse   {
     sb.append("    flagSolicitouContestacao: ").append(toIndentedString(flagSolicitouContestacao)).append("\n");
     sb.append("    valorTaxaEmbarque: ").append(toIndentedString(valorTaxaEmbarque)).append("\n");
     sb.append("    descricaoAbreviada: ").append(toIndentedString(descricaoAbreviada)).append("\n");
+    sb.append("    moedaEstrangeira: ").append(toIndentedString(moedaEstrangeira)).append("\n");
+    sb.append("    valorCompraMoedaEstrangeira: ").append(toIndentedString(valorCompraMoedaEstrangeira)).append("\n");
+    sb.append("    cotacaoDolarCompra: ").append(toIndentedString(cotacaoDolarCompra)).append("\n");
     sb.append("}");
     return sb.toString();
   }

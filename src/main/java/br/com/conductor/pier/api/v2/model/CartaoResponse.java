@@ -37,6 +37,15 @@ public class CartaoResponse   {
   private Long idProduto = null;
   private String nomeImpresso = null;
   private String codigoDesbloqueio = null;
+  private String tipoPortador = null;
+  private Long idStatusCartao = null;
+  private String dataStatusCartao = null;
+  private Long idEstagioCartao = null;
+  private String dataEstagioCartao = null;
+  private String dataGeracao = null;
+  private Integer flagVirtual = null;
+  private Integer flagImpressaoOrigemComercial = null;
+  private String arquivoImpressao = null;
   private Integer portador = null;
   private Boolean flagCartaoMifare = null;
   private Long idImagem = null;
@@ -439,6 +448,168 @@ public class CartaoResponse   {
 
   
   /**
+   * Apresenta o tipo do Portador do cart\u00E3o, sendo: ('T': Titular, 'A': Adicional)
+   **/
+  public CartaoResponse tipoPortador(String tipoPortador) {
+    this.tipoPortador = tipoPortador;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Apresenta o tipo do Portador do cart\u00E3o, sendo: ('T': Titular, 'A': Adicional)")
+  @JsonProperty("tipoPortador")
+  public String getTipoPortador() {
+    return tipoPortador;
+  }
+  public void setTipoPortador(String tipoPortador) {
+    this.tipoPortador = tipoPortador;
+  }
+
+  
+  /**
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Status do Cart\u00E3o
+   **/
+  public CartaoResponse idStatusCartao(Long idStatusCartao) {
+    this.idStatusCartao = idStatusCartao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Status do Cart\u00E3o")
+  @JsonProperty("idStatusCartao")
+  public Long getIdStatusCartao() {
+    return idStatusCartao;
+  }
+  public void setIdStatusCartao(Long idStatusCartao) {
+    this.idStatusCartao = idStatusCartao;
+  }
+
+  
+  /**
+   * Apresenta a data em que o idStatusCartao atual do cart\u00E3o fora aplicado, quando houver
+   **/
+  public CartaoResponse dataStatusCartao(String dataStatusCartao) {
+    this.dataStatusCartao = dataStatusCartao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Apresenta a data em que o idStatusCartao atual do cart\u00E3o fora aplicado, quando houver")
+  @JsonProperty("dataStatusCartao")
+  public String getDataStatusCartao() {
+    return dataStatusCartao;
+  }
+  public void setDataStatusCartao(String dataStatusCartao) {
+    this.dataStatusCartao = dataStatusCartao;
+  }
+
+  
+  /**
+   * C\u00F3digo de Identifica\u00E7\u00E3o do Est\u00E1gio de Impress\u00E3o do Cart\u00E3o
+   **/
+  public CartaoResponse idEstagioCartao(Long idEstagioCartao) {
+    this.idEstagioCartao = idEstagioCartao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de Identifica\u00E7\u00E3o do Est\u00E1gio de Impress\u00E3o do Cart\u00E3o")
+  @JsonProperty("idEstagioCartao")
+  public Long getIdEstagioCartao() {
+    return idEstagioCartao;
+  }
+  public void setIdEstagioCartao(Long idEstagioCartao) {
+    this.idEstagioCartao = idEstagioCartao;
+  }
+
+  
+  /**
+   * Apresenta a data em que o idEstagioCartao atual do cart\u00E3o fora aplicado, quando houver
+   **/
+  public CartaoResponse dataEstagioCartao(String dataEstagioCartao) {
+    this.dataEstagioCartao = dataEstagioCartao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Apresenta a data em que o idEstagioCartao atual do cart\u00E3o fora aplicado, quando houver")
+  @JsonProperty("dataEstagioCartao")
+  public String getDataEstagioCartao() {
+    return dataEstagioCartao;
+  }
+  public void setDataEstagioCartao(String dataEstagioCartao) {
+    this.dataEstagioCartao = dataEstagioCartao;
+  }
+
+  
+  /**
+   * Apresenta a data em que o cart\u00E3o foi gerado
+   **/
+  public CartaoResponse dataGeracao(String dataGeracao) {
+    this.dataGeracao = dataGeracao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;", value = "Apresenta a data em que o cart\u00E3o foi gerado")
+  @JsonProperty("dataGeracao")
+  public String getDataGeracao() {
+    return dataGeracao;
+  }
+  public void setDataGeracao(String dataGeracao) {
+    this.dataGeracao = dataGeracao;
+  }
+
+  
+  /**
+   * Apresenta o status que informa se o cart\u00E3o \u00E9 virtual
+   **/
+  public CartaoResponse flagVirtual(Integer flagVirtual) {
+    this.flagVirtual = flagVirtual;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Apresenta o status que informa se o cart\u00E3o \u00E9 virtual")
+  @JsonProperty("flagVirtual")
+  public Integer getFlagVirtual() {
+    return flagVirtual;
+  }
+  public void setFlagVirtual(Integer flagVirtual) {
+    this.flagVirtual = flagVirtual;
+  }
+
+  
+  /**
+   * Quando ativa, indica que o cart\u00E3o fora impresso na Origem Comercial
+   **/
+  public CartaoResponse flagImpressaoOrigemComercial(Integer flagImpressaoOrigemComercial) {
+    this.flagImpressaoOrigemComercial = flagImpressaoOrigemComercial;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Quando ativa, indica que o cart\u00E3o fora impresso na Origem Comercial")
+  @JsonProperty("flagImpressaoOrigemComercial")
+  public Integer getFlagImpressaoOrigemComercial() {
+    return flagImpressaoOrigemComercial;
+  }
+  public void setFlagImpressaoOrigemComercial(Integer flagImpressaoOrigemComercial) {
+    this.flagImpressaoOrigemComercial = flagImpressaoOrigemComercial;
+  }
+
+  
+  /**
+   * Apresenta o nome do arquivo onde o cart\u00E3o fora inclu\u00EDdo para impress\u00E3o por uma gr\u00E1fica, quando houver
+   **/
+  public CartaoResponse arquivoImpressao(String arquivoImpressao) {
+    this.arquivoImpressao = arquivoImpressao;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Apresenta o nome do arquivo onde o cart\u00E3o fora inclu\u00EDdo para impress\u00E3o por uma gr\u00E1fica, quando houver")
+  @JsonProperty("arquivoImpressao")
+  public String getArquivoImpressao() {
+    return arquivoImpressao;
+  }
+  public void setArquivoImpressao(String arquivoImpressao) {
+    this.arquivoImpressao = arquivoImpressao;
+  }
+
+  
+  /**
    * Apresenta o n\u00FAmero do portador do cart\u00E3o
    **/
   public CartaoResponse portador(Integer portador) {
@@ -524,6 +695,15 @@ public class CartaoResponse   {
         Objects.equals(this.idProduto, cartaoResponse.idProduto) &&
         Objects.equals(this.nomeImpresso, cartaoResponse.nomeImpresso) &&
         Objects.equals(this.codigoDesbloqueio, cartaoResponse.codigoDesbloqueio) &&
+        Objects.equals(this.tipoPortador, cartaoResponse.tipoPortador) &&
+        Objects.equals(this.idStatusCartao, cartaoResponse.idStatusCartao) &&
+        Objects.equals(this.dataStatusCartao, cartaoResponse.dataStatusCartao) &&
+        Objects.equals(this.idEstagioCartao, cartaoResponse.idEstagioCartao) &&
+        Objects.equals(this.dataEstagioCartao, cartaoResponse.dataEstagioCartao) &&
+        Objects.equals(this.dataGeracao, cartaoResponse.dataGeracao) &&
+        Objects.equals(this.flagVirtual, cartaoResponse.flagVirtual) &&
+        Objects.equals(this.flagImpressaoOrigemComercial, cartaoResponse.flagImpressaoOrigemComercial) &&
+        Objects.equals(this.arquivoImpressao, cartaoResponse.arquivoImpressao) &&
         Objects.equals(this.portador, cartaoResponse.portador) &&
         Objects.equals(this.flagCartaoMifare, cartaoResponse.flagCartaoMifare) &&
         Objects.equals(this.idImagem, cartaoResponse.idImagem);
@@ -531,7 +711,7 @@ public class CartaoResponse   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, flagTitular, idPessoa, sequencialCartao, idConta, idStatus, dataStatus, idEstagio, dataEstagio, numeroBin, numeroCartao, numeroCartaoHash, numeroCartaoCriptografado, dataEmissao, dataValidade, cartaoVirtual, impressaoAvulsa, dataImpressao, nomeArquivoImpressao, idProduto, nomeImpresso, codigoDesbloqueio, portador, flagCartaoMifare, idImagem);
+    return Objects.hash(id, flagTitular, idPessoa, sequencialCartao, idConta, idStatus, dataStatus, idEstagio, dataEstagio, numeroBin, numeroCartao, numeroCartaoHash, numeroCartaoCriptografado, dataEmissao, dataValidade, cartaoVirtual, impressaoAvulsa, dataImpressao, nomeArquivoImpressao, idProduto, nomeImpresso, codigoDesbloqueio, tipoPortador, idStatusCartao, dataStatusCartao, idEstagioCartao, dataEstagioCartao, dataGeracao, flagVirtual, flagImpressaoOrigemComercial, arquivoImpressao, portador, flagCartaoMifare, idImagem);
   }
 
   @Override
@@ -561,6 +741,15 @@ public class CartaoResponse   {
     sb.append("    idProduto: ").append(toIndentedString(idProduto)).append("\n");
     sb.append("    nomeImpresso: ").append(toIndentedString(nomeImpresso)).append("\n");
     sb.append("    codigoDesbloqueio: ").append(toIndentedString(codigoDesbloqueio)).append("\n");
+    sb.append("    tipoPortador: ").append(toIndentedString(tipoPortador)).append("\n");
+    sb.append("    idStatusCartao: ").append(toIndentedString(idStatusCartao)).append("\n");
+    sb.append("    dataStatusCartao: ").append(toIndentedString(dataStatusCartao)).append("\n");
+    sb.append("    idEstagioCartao: ").append(toIndentedString(idEstagioCartao)).append("\n");
+    sb.append("    dataEstagioCartao: ").append(toIndentedString(dataEstagioCartao)).append("\n");
+    sb.append("    dataGeracao: ").append(toIndentedString(dataGeracao)).append("\n");
+    sb.append("    flagVirtual: ").append(toIndentedString(flagVirtual)).append("\n");
+    sb.append("    flagImpressaoOrigemComercial: ").append(toIndentedString(flagImpressaoOrigemComercial)).append("\n");
+    sb.append("    arquivoImpressao: ").append(toIndentedString(arquivoImpressao)).append("\n");
     sb.append("    portador: ").append(toIndentedString(portador)).append("\n");
     sb.append("    flagCartaoMifare: ").append(toIndentedString(flagCartaoMifare)).append("\n");
     sb.append("    idImagem: ").append(toIndentedString(idImagem)).append("\n");

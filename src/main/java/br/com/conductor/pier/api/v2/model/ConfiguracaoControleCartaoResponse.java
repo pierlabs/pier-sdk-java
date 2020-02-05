@@ -4,6 +4,7 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.math.BigDecimal;
 
 
 
@@ -24,6 +25,7 @@ public class ConfiguracaoControleCartaoResponse   {
   private Boolean permiteCompraInternacional = null;
   private Boolean permiteTarjaMagnetica = null;
   private Boolean permiteContactless = null;
+  private BigDecimal limiteContactlessSemSenha = null;
 
   
   /**
@@ -188,6 +190,24 @@ public class ConfiguracaoControleCartaoResponse   {
   }
 
   
+  /**
+   * Indica o limite usado em transa\u00E7\u00F5es com a fun\u00E7\u00E3o contactless sem senha. O valor m\u00E1ximo \u00E9 50 e o m\u00EDnimo \u00E9 1.
+   **/
+  public ConfiguracaoControleCartaoResponse limiteContactlessSemSenha(BigDecimal limiteContactlessSemSenha) {
+    this.limiteContactlessSemSenha = limiteContactlessSemSenha;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Indica o limite usado em transa\u00E7\u00F5es com a fun\u00E7\u00E3o contactless sem senha. O valor m\u00E1ximo \u00E9 50 e o m\u00EDnimo \u00E9 1.")
+  @JsonProperty("limiteContactlessSemSenha")
+  public BigDecimal getLimiteContactlessSemSenha() {
+    return limiteContactlessSemSenha;
+  }
+  public void setLimiteContactlessSemSenha(BigDecimal limiteContactlessSemSenha) {
+    this.limiteContactlessSemSenha = limiteContactlessSemSenha;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -206,12 +226,13 @@ public class ConfiguracaoControleCartaoResponse   {
         Objects.equals(this.permiteControleMCC, configuracaoControleCartaoResponse.permiteControleMCC) &&
         Objects.equals(this.permiteCompraInternacional, configuracaoControleCartaoResponse.permiteCompraInternacional) &&
         Objects.equals(this.permiteTarjaMagnetica, configuracaoControleCartaoResponse.permiteTarjaMagnetica) &&
-        Objects.equals(this.permiteContactless, configuracaoControleCartaoResponse.permiteContactless);
+        Objects.equals(this.permiteContactless, configuracaoControleCartaoResponse.permiteContactless) &&
+        Objects.equals(this.limiteContactlessSemSenha, configuracaoControleCartaoResponse.limiteContactlessSemSenha);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idCartao, permiteEcommerce, permiteSaque, permiteWallet, permiteControleMCC, permiteCompraInternacional, permiteTarjaMagnetica, permiteContactless);
+    return Objects.hash(id, idCartao, permiteEcommerce, permiteSaque, permiteWallet, permiteControleMCC, permiteCompraInternacional, permiteTarjaMagnetica, permiteContactless, limiteContactlessSemSenha);
   }
 
   @Override
@@ -228,6 +249,7 @@ public class ConfiguracaoControleCartaoResponse   {
     sb.append("    permiteCompraInternacional: ").append(toIndentedString(permiteCompraInternacional)).append("\n");
     sb.append("    permiteTarjaMagnetica: ").append(toIndentedString(permiteTarjaMagnetica)).append("\n");
     sb.append("    permiteContactless: ").append(toIndentedString(permiteContactless)).append("\n");
+    sb.append("    limiteContactlessSemSenha: ").append(toIndentedString(limiteContactlessSemSenha)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -54,6 +54,8 @@ public class TransacoesCorrentesResponse   {
   private Integer flagFaturado = null;
   private Integer flagEstorno = null;
   private Long idTransacaoEstorno = null;
+  private BigDecimal valorCompraMoedaEstrangeira = null;
+  private String moedaEstrangeira = null;
 
   
   /**
@@ -740,6 +742,42 @@ public class TransacoesCorrentesResponse   {
   }
 
   
+  /**
+   * Valor da compra em moeda estrangeira
+   **/
+  public TransacoesCorrentesResponse valorCompraMoedaEstrangeira(BigDecimal valorCompraMoedaEstrangeira) {
+    this.valorCompraMoedaEstrangeira = valorCompraMoedaEstrangeira;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor da compra em moeda estrangeira")
+  @JsonProperty("valorCompraMoedaEstrangeira")
+  public BigDecimal getValorCompraMoedaEstrangeira() {
+    return valorCompraMoedaEstrangeira;
+  }
+  public void setValorCompraMoedaEstrangeira(BigDecimal valorCompraMoedaEstrangeira) {
+    this.valorCompraMoedaEstrangeira = valorCompraMoedaEstrangeira;
+  }
+
+  
+  /**
+   * S\u00EDmbolo da moeda estrangeira
+   **/
+  public TransacoesCorrentesResponse moedaEstrangeira(String moedaEstrangeira) {
+    this.moedaEstrangeira = moedaEstrangeira;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "S\u00EDmbolo da moeda estrangeira")
+  @JsonProperty("moedaEstrangeira")
+  public String getMoedaEstrangeira() {
+    return moedaEstrangeira;
+  }
+  public void setMoedaEstrangeira(String moedaEstrangeira) {
+    this.moedaEstrangeira = moedaEstrangeira;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -787,12 +825,14 @@ public class TransacoesCorrentesResponse   {
         Objects.equals(this.flagCredito, transacoesCorrentesResponse.flagCredito) &&
         Objects.equals(this.flagFaturado, transacoesCorrentesResponse.flagFaturado) &&
         Objects.equals(this.flagEstorno, transacoesCorrentesResponse.flagEstorno) &&
-        Objects.equals(this.idTransacaoEstorno, transacoesCorrentesResponse.idTransacaoEstorno);
+        Objects.equals(this.idTransacaoEstorno, transacoesCorrentesResponse.idTransacaoEstorno) &&
+        Objects.equals(this.valorCompraMoedaEstrangeira, transacoesCorrentesResponse.valorCompraMoedaEstrangeira) &&
+        Objects.equals(this.moedaEstrangeira, transacoesCorrentesResponse.moedaEstrangeira);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idTipoTransacao, descricaoAbreviada, statusTransacao, idEvento, tipoEvento, idConta, cartaoMascarado, nomePortador, dataTransacao, dataFaturamento, dataVencimento, modoEntradaTransacao, valorTaxaEmbarque, valorEntrada, valorBRL, valorUSD, cotacaoUSD, dataCotacaoUSD, codigoMoedaOrigem, codigoMoedaDestino, codigoAutorizacao, codigoReferencia, codigoTerminal, codigoMCC, grupoMCC, grupoDescricaoMCC, idEstabelecimento, nomeEstabelecimento, nomeFantasiaEstabelecimento, localidadeEstabelecimento, planoParcelamento, numeroParcela, detalhesTransacao, flagCredito, flagFaturado, flagEstorno, idTransacaoEstorno);
+    return Objects.hash(id, idTipoTransacao, descricaoAbreviada, statusTransacao, idEvento, tipoEvento, idConta, cartaoMascarado, nomePortador, dataTransacao, dataFaturamento, dataVencimento, modoEntradaTransacao, valorTaxaEmbarque, valorEntrada, valorBRL, valorUSD, cotacaoUSD, dataCotacaoUSD, codigoMoedaOrigem, codigoMoedaDestino, codigoAutorizacao, codigoReferencia, codigoTerminal, codigoMCC, grupoMCC, grupoDescricaoMCC, idEstabelecimento, nomeEstabelecimento, nomeFantasiaEstabelecimento, localidadeEstabelecimento, planoParcelamento, numeroParcela, detalhesTransacao, flagCredito, flagFaturado, flagEstorno, idTransacaoEstorno, valorCompraMoedaEstrangeira, moedaEstrangeira);
   }
 
   @Override
@@ -838,6 +878,8 @@ public class TransacoesCorrentesResponse   {
     sb.append("    flagFaturado: ").append(toIndentedString(flagFaturado)).append("\n");
     sb.append("    flagEstorno: ").append(toIndentedString(flagEstorno)).append("\n");
     sb.append("    idTransacaoEstorno: ").append(toIndentedString(idTransacaoEstorno)).append("\n");
+    sb.append("    valorCompraMoedaEstrangeira: ").append(toIndentedString(valorCompraMoedaEstrangeira)).append("\n");
+    sb.append("    moedaEstrangeira: ").append(toIndentedString(moedaEstrangeira)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -39,6 +39,9 @@ public class TransacaoCorrenteResponse   {
   private String numeroCartao = null;
   private String latitude = null;
   private String longitude = null;
+  private String moedaEstrangeira = null;
+  private BigDecimal valorCompraMoedaEstrangeira = null;
+  private BigDecimal cotacaoDolarCompra = null;
 
   
   /**
@@ -454,6 +457,60 @@ public class TransacaoCorrenteResponse   {
   }
 
   
+  /**
+   * S\u00EDmbolo da moeda estrangeira da compra
+   **/
+  public TransacaoCorrenteResponse moedaEstrangeira(String moedaEstrangeira) {
+    this.moedaEstrangeira = moedaEstrangeira;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "S\u00EDmbolo da moeda estrangeira da compra")
+  @JsonProperty("moedaEstrangeira")
+  public String getMoedaEstrangeira() {
+    return moedaEstrangeira;
+  }
+  public void setMoedaEstrangeira(String moedaEstrangeira) {
+    this.moedaEstrangeira = moedaEstrangeira;
+  }
+
+  
+  /**
+   * Valor da compra em moeda estrangeira
+   **/
+  public TransacaoCorrenteResponse valorCompraMoedaEstrangeira(BigDecimal valorCompraMoedaEstrangeira) {
+    this.valorCompraMoedaEstrangeira = valorCompraMoedaEstrangeira;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor da compra em moeda estrangeira")
+  @JsonProperty("valorCompraMoedaEstrangeira")
+  public BigDecimal getValorCompraMoedaEstrangeira() {
+    return valorCompraMoedaEstrangeira;
+  }
+  public void setValorCompraMoedaEstrangeira(BigDecimal valorCompraMoedaEstrangeira) {
+    this.valorCompraMoedaEstrangeira = valorCompraMoedaEstrangeira;
+  }
+
+  
+  /**
+   * Taxa de convers\u00E3o do d\u00F3lar para reais na data da compra
+   **/
+  public TransacaoCorrenteResponse cotacaoDolarCompra(BigDecimal cotacaoDolarCompra) {
+    this.cotacaoDolarCompra = cotacaoDolarCompra;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Taxa de convers\u00E3o do d\u00F3lar para reais na data da compra")
+  @JsonProperty("cotacaoDolarCompra")
+  public BigDecimal getCotacaoDolarCompra() {
+    return cotacaoDolarCompra;
+  }
+  public void setCotacaoDolarCompra(BigDecimal cotacaoDolarCompra) {
+    this.cotacaoDolarCompra = cotacaoDolarCompra;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -486,12 +543,15 @@ public class TransacaoCorrenteResponse   {
         Objects.equals(this.idEventoAjuste, transacaoCorrenteResponse.idEventoAjuste) &&
         Objects.equals(this.numeroCartao, transacaoCorrenteResponse.numeroCartao) &&
         Objects.equals(this.latitude, transacaoCorrenteResponse.latitude) &&
-        Objects.equals(this.longitude, transacaoCorrenteResponse.longitude);
+        Objects.equals(this.longitude, transacaoCorrenteResponse.longitude) &&
+        Objects.equals(this.moedaEstrangeira, transacaoCorrenteResponse.moedaEstrangeira) &&
+        Objects.equals(this.valorCompraMoedaEstrangeira, transacaoCorrenteResponse.valorCompraMoedaEstrangeira) &&
+        Objects.equals(this.cotacaoDolarCompra, transacaoCorrenteResponse.cotacaoDolarCompra);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(ultimaParcelaLancada, idConta, idTipoRegistro, ordem, idTransacao, descricao, status, descricaoStatus, valor, valorDolar, quantidadeParcelas, valorParcela, dataEvento, estabelecimento, flagCredito, tipoEstabelecimento, idGrupoMCC, flagSolicitouContestacao, tipoTransacao, idEventoAjuste, numeroCartao, latitude, longitude);
+    return Objects.hash(ultimaParcelaLancada, idConta, idTipoRegistro, ordem, idTransacao, descricao, status, descricaoStatus, valor, valorDolar, quantidadeParcelas, valorParcela, dataEvento, estabelecimento, flagCredito, tipoEstabelecimento, idGrupoMCC, flagSolicitouContestacao, tipoTransacao, idEventoAjuste, numeroCartao, latitude, longitude, moedaEstrangeira, valorCompraMoedaEstrangeira, cotacaoDolarCompra);
   }
 
   @Override
@@ -522,6 +582,9 @@ public class TransacaoCorrenteResponse   {
     sb.append("    numeroCartao: ").append(toIndentedString(numeroCartao)).append("\n");
     sb.append("    latitude: ").append(toIndentedString(latitude)).append("\n");
     sb.append("    longitude: ").append(toIndentedString(longitude)).append("\n");
+    sb.append("    moedaEstrangeira: ").append(toIndentedString(moedaEstrangeira)).append("\n");
+    sb.append("    valorCompraMoedaEstrangeira: ").append(toIndentedString(valorCompraMoedaEstrangeira)).append("\n");
+    sb.append("    cotacaoDolarCompra: ").append(toIndentedString(cotacaoDolarCompra)).append("\n");
     sb.append("}");
     return sb.toString();
   }

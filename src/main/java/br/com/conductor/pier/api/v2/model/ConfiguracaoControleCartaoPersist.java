@@ -4,6 +4,7 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.math.BigDecimal;
 
 
 
@@ -22,6 +23,7 @@ public class ConfiguracaoControleCartaoPersist   {
   private Boolean permiteCompraInternacional = null;
   private Boolean permiteTarjaMagnetica = null;
   private Boolean permiteContactless = null;
+  private BigDecimal limiteContactlessSemSenha = null;
 
   
   /**
@@ -150,6 +152,24 @@ public class ConfiguracaoControleCartaoPersist   {
   }
 
   
+  /**
+   * Indica o limite usado em transa\u00E7\u00F5es com a fun\u00E7\u00E3o contactless sem senha. O valor m\u00E1ximo \u00E9 50 e o m\u00EDnimo \u00E9 1.
+   **/
+  public ConfiguracaoControleCartaoPersist limiteContactlessSemSenha(BigDecimal limiteContactlessSemSenha) {
+    this.limiteContactlessSemSenha = limiteContactlessSemSenha;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Indica o limite usado em transa\u00E7\u00F5es com a fun\u00E7\u00E3o contactless sem senha. O valor m\u00E1ximo \u00E9 50 e o m\u00EDnimo \u00E9 1.")
+  @JsonProperty("limiteContactlessSemSenha")
+  public BigDecimal getLimiteContactlessSemSenha() {
+    return limiteContactlessSemSenha;
+  }
+  public void setLimiteContactlessSemSenha(BigDecimal limiteContactlessSemSenha) {
+    this.limiteContactlessSemSenha = limiteContactlessSemSenha;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -166,12 +186,13 @@ public class ConfiguracaoControleCartaoPersist   {
         Objects.equals(this.permiteControleMCC, configuracaoControleCartaoPersist.permiteControleMCC) &&
         Objects.equals(this.permiteCompraInternacional, configuracaoControleCartaoPersist.permiteCompraInternacional) &&
         Objects.equals(this.permiteTarjaMagnetica, configuracaoControleCartaoPersist.permiteTarjaMagnetica) &&
-        Objects.equals(this.permiteContactless, configuracaoControleCartaoPersist.permiteContactless);
+        Objects.equals(this.permiteContactless, configuracaoControleCartaoPersist.permiteContactless) &&
+        Objects.equals(this.limiteContactlessSemSenha, configuracaoControleCartaoPersist.limiteContactlessSemSenha);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(permiteEcommerce, permiteSaque, permiteWallet, permiteControleMCC, permiteCompraInternacional, permiteTarjaMagnetica, permiteContactless);
+    return Objects.hash(permiteEcommerce, permiteSaque, permiteWallet, permiteControleMCC, permiteCompraInternacional, permiteTarjaMagnetica, permiteContactless, limiteContactlessSemSenha);
   }
 
   @Override
@@ -186,6 +207,7 @@ public class ConfiguracaoControleCartaoPersist   {
     sb.append("    permiteCompraInternacional: ").append(toIndentedString(permiteCompraInternacional)).append("\n");
     sb.append("    permiteTarjaMagnetica: ").append(toIndentedString(permiteTarjaMagnetica)).append("\n");
     sb.append("    permiteContactless: ").append(toIndentedString(permiteContactless)).append("\n");
+    sb.append("    limiteContactlessSemSenha: ").append(toIndentedString(limiteContactlessSemSenha)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -13,6 +13,7 @@ import br.com.conductor.pier.api.v2.model.ControleLimiteCartaoResponse;
 import br.com.conductor.pier.api.v2.model.ControleLimiteCartaoUpdate;
 import br.com.conductor.pier.api.v2.model.ControleCartaoGrupoMCCResponse;
 import br.com.conductor.pier.api.v2.model.PageConfiguracaoControleCartaoResponse;
+import java.math.BigDecimal;
 import br.com.conductor.pier.api.v2.model.PageControleCartaoGrupoMCCResponse;
 import br.com.conductor.pier.api.v2.model.PageControleLimiteCartaoResponse;
 import br.com.conductor.pier.api.v2.model.ConfiguracaoControleCartaoPersist;
@@ -566,9 +567,10 @@ public class ControleCartaoApi {
    * @param permiteCompraInternacional Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es internacionais
    * @param permiteTarjaMagnetica Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es por tarja magnetica
    * @param permiteContactless Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es via contactless
+   * @param limiteContactlessSemSenha Indica o limite usado em transa\u00E7\u00F5es com a fun\u00E7\u00E3o contactless sem senha
    * @return PageConfiguracaoControleCartaoResponse
    */
-  public PageConfiguracaoControleCartaoResponse listarConfiguracaoControleCartao(List<String> sort, Integer page, Integer limit, Long idCartao, Boolean permiteEcommerce, Boolean permiteSaque, Boolean permiteWallet, Boolean permiteControleMCC, Boolean permiteCompraInternacional, Boolean permiteTarjaMagnetica, Boolean permiteContactless) throws ApiException {
+  public PageConfiguracaoControleCartaoResponse listarConfiguracaoControleCartao(List<String> sort, Integer page, Integer limit, Long idCartao, Boolean permiteEcommerce, Boolean permiteSaque, Boolean permiteWallet, Boolean permiteControleMCC, Boolean permiteCompraInternacional, Boolean permiteTarjaMagnetica, Boolean permiteContactless, BigDecimal limiteContactlessSemSenha) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -601,6 +603,8 @@ public class ControleCartaoApi {
     queryParams.addAll(apiClient.parameterToPairs("", "permiteTarjaMagnetica", permiteTarjaMagnetica));
     
     queryParams.addAll(apiClient.parameterToPairs("", "permiteContactless", permiteContactless));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limiteContactlessSemSenha", limiteContactlessSemSenha));
     
 
     
