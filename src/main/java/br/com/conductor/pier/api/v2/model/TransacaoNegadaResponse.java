@@ -32,6 +32,9 @@ public class TransacaoNegadaResponse   {
   private Long idDescricao = null;
   private String descricaoAplicativo = null;
   private String descricaoTerminal = null;
+  private String moedaEstrangeira = null;
+  private BigDecimal valorCompraMoedaEstrangeira = null;
+  private BigDecimal cotacaoDolar = null;
 
   
   /**
@@ -322,6 +325,60 @@ public class TransacaoNegadaResponse   {
   }
 
   
+  /**
+   * S\u00EDmbolo da moeda estrangeira
+   **/
+  public TransacaoNegadaResponse moedaEstrangeira(String moedaEstrangeira) {
+    this.moedaEstrangeira = moedaEstrangeira;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "S\u00EDmbolo da moeda estrangeira")
+  @JsonProperty("moedaEstrangeira")
+  public String getMoedaEstrangeira() {
+    return moedaEstrangeira;
+  }
+  public void setMoedaEstrangeira(String moedaEstrangeira) {
+    this.moedaEstrangeira = moedaEstrangeira;
+  }
+
+  
+  /**
+   * Valor da transa\u00E7\u00E3o em moeda estrangeira
+   **/
+  public TransacaoNegadaResponse valorCompraMoedaEstrangeira(BigDecimal valorCompraMoedaEstrangeira) {
+    this.valorCompraMoedaEstrangeira = valorCompraMoedaEstrangeira;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor da transa\u00E7\u00E3o em moeda estrangeira")
+  @JsonProperty("valorCompraMoedaEstrangeira")
+  public BigDecimal getValorCompraMoedaEstrangeira() {
+    return valorCompraMoedaEstrangeira;
+  }
+  public void setValorCompraMoedaEstrangeira(BigDecimal valorCompraMoedaEstrangeira) {
+    this.valorCompraMoedaEstrangeira = valorCompraMoedaEstrangeira;
+  }
+
+  
+  /**
+   * Valor da cota\u00E7\u00E3o do d\u00F3lar no dia da transa\u00E7ao
+   **/
+  public TransacaoNegadaResponse cotacaoDolar(BigDecimal cotacaoDolar) {
+    this.cotacaoDolar = cotacaoDolar;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor da cota\u00E7\u00E3o do d\u00F3lar no dia da transa\u00E7ao")
+  @JsonProperty("cotacaoDolar")
+  public BigDecimal getCotacaoDolar() {
+    return cotacaoDolar;
+  }
+  public void setCotacaoDolar(BigDecimal cotacaoDolar) {
+    this.cotacaoDolar = cotacaoDolar;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -347,12 +404,15 @@ public class TransacaoNegadaResponse   {
         Objects.equals(this.respostaAutorizador, transacaoNegadaResponse.respostaAutorizador) &&
         Objects.equals(this.idDescricao, transacaoNegadaResponse.idDescricao) &&
         Objects.equals(this.descricaoAplicativo, transacaoNegadaResponse.descricaoAplicativo) &&
-        Objects.equals(this.descricaoTerminal, transacaoNegadaResponse.descricaoTerminal);
+        Objects.equals(this.descricaoTerminal, transacaoNegadaResponse.descricaoTerminal) &&
+        Objects.equals(this.moedaEstrangeira, transacaoNegadaResponse.moedaEstrangeira) &&
+        Objects.equals(this.valorCompraMoedaEstrangeira, transacaoNegadaResponse.valorCompraMoedaEstrangeira) &&
+        Objects.equals(this.cotacaoDolar, transacaoNegadaResponse.cotacaoDolar);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idProduto, idCartao, numeroCartao, codigoProcessamento, codigoProcessamentoDescricao, valor, parcelas, nomeEstabelecimento, dataHoraEntrada, dataHoraSaida, codigoResposta, respostaAutorizador, idDescricao, descricaoAplicativo, descricaoTerminal);
+    return Objects.hash(id, idProduto, idCartao, numeroCartao, codigoProcessamento, codigoProcessamentoDescricao, valor, parcelas, nomeEstabelecimento, dataHoraEntrada, dataHoraSaida, codigoResposta, respostaAutorizador, idDescricao, descricaoAplicativo, descricaoTerminal, moedaEstrangeira, valorCompraMoedaEstrangeira, cotacaoDolar);
   }
 
   @Override
@@ -376,6 +436,9 @@ public class TransacaoNegadaResponse   {
     sb.append("    idDescricao: ").append(toIndentedString(idDescricao)).append("\n");
     sb.append("    descricaoAplicativo: ").append(toIndentedString(descricaoAplicativo)).append("\n");
     sb.append("    descricaoTerminal: ").append(toIndentedString(descricaoTerminal)).append("\n");
+    sb.append("    moedaEstrangeira: ").append(toIndentedString(moedaEstrangeira)).append("\n");
+    sb.append("    valorCompraMoedaEstrangeira: ").append(toIndentedString(valorCompraMoedaEstrangeira)).append("\n");
+    sb.append("    cotacaoDolar: ").append(toIndentedString(cotacaoDolar)).append("\n");
     sb.append("}");
     return sb.toString();
   }
