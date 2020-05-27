@@ -24,6 +24,7 @@ public class AjustePersist   {
   private Long idEstabelecimento = null;
   private Boolean flagAtendimento = null;
   private String mensagemAtendimento = null;
+  private String descricaoEstabelecimentoExterno = null;
 
   
   /**
@@ -170,6 +171,24 @@ public class AjustePersist   {
   }
 
   
+  /**
+   * Descri\u00E7\u00E3o externa do estabelecimento
+   **/
+  public AjustePersist descricaoEstabelecimentoExterno(String descricaoEstabelecimentoExterno) {
+    this.descricaoEstabelecimentoExterno = descricaoEstabelecimentoExterno;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Descri\u00E7\u00E3o externa do estabelecimento")
+  @JsonProperty("descricaoEstabelecimentoExterno")
+  public String getDescricaoEstabelecimentoExterno() {
+    return descricaoEstabelecimentoExterno;
+  }
+  public void setDescricaoEstabelecimentoExterno(String descricaoEstabelecimentoExterno) {
+    this.descricaoEstabelecimentoExterno = descricaoEstabelecimentoExterno;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -187,12 +206,13 @@ public class AjustePersist   {
         Objects.equals(this.idTransacaoOriginal, ajustePersist.idTransacaoOriginal) &&
         Objects.equals(this.idEstabelecimento, ajustePersist.idEstabelecimento) &&
         Objects.equals(this.flagAtendimento, ajustePersist.flagAtendimento) &&
-        Objects.equals(this.mensagemAtendimento, ajustePersist.mensagemAtendimento);
+        Objects.equals(this.mensagemAtendimento, ajustePersist.mensagemAtendimento) &&
+        Objects.equals(this.descricaoEstabelecimentoExterno, ajustePersist.descricaoEstabelecimentoExterno);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idTipoAjuste, dataAjuste, valorAjuste, identificadorExterno, idTransacaoOriginal, idEstabelecimento, flagAtendimento, mensagemAtendimento);
+    return Objects.hash(idTipoAjuste, dataAjuste, valorAjuste, identificadorExterno, idTransacaoOriginal, idEstabelecimento, flagAtendimento, mensagemAtendimento, descricaoEstabelecimentoExterno);
   }
 
   @Override
@@ -208,6 +228,7 @@ public class AjustePersist   {
     sb.append("    idEstabelecimento: ").append(toIndentedString(idEstabelecimento)).append("\n");
     sb.append("    flagAtendimento: ").append(toIndentedString(flagAtendimento)).append("\n");
     sb.append("    mensagemAtendimento: ").append(toIndentedString(mensagemAtendimento)).append("\n");
+    sb.append("    descricaoEstabelecimentoExterno: ").append(toIndentedString(descricaoEstabelecimentoExterno)).append("\n");
     sb.append("}");
     return sb.toString();
   }

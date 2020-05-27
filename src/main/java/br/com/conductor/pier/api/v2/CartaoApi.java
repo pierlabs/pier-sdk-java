@@ -18,6 +18,7 @@ import br.com.conductor.pier.api.v2.model.DadosCartaoResponse;
 import br.com.conductor.pier.api.v2.model.LimiteDisponibilidadeResponse;
 import br.com.conductor.pier.api.v2.model.LoteCartoesPrePagosResponse;
 import br.com.conductor.pier.api.v2.model.PortadorResponse;
+import br.com.conductor.pier.api.v2.model.ConsultarSenhaCartaoResponse;
 import br.com.conductor.pier.api.v2.model.VinculoCartoesResponse;
 import br.com.conductor.pier.api.v2.model.CartaoMultiAppPersist;
 import br.com.conductor.pier.api.v2.model.SenhaDTO;
@@ -787,6 +788,54 @@ public class CartaoApi {
 
     
     GenericType<PortadorResponse> returnType = new GenericType<PortadorResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Consulta a senha real de um cart\u00E3o
+   * Esse recurso permite consultar a senha real de um cart\u00E3o
+   * @param id C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o
+   * @return ConsultarSenhaCartaoResponse
+   */
+  public ConsultarSenhaCartaoResponse consultarSenhaCartao(Long id) throws ApiException {
+    Object postBody = null;
+    
+     // verify the required parameter 'id' is set
+     if (id == null) {
+        throw new ApiException(400, "Missing the required parameter 'id' when calling consultarSenhaCartao");
+     }
+     
+    // create path and map variables
+    String path = "/api/cartoes/{id}/senhas".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<ConsultarSenhaCartaoResponse> returnType = new GenericType<ConsultarSenhaCartaoResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

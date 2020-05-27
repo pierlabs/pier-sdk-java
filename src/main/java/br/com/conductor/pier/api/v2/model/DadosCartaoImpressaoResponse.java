@@ -67,6 +67,7 @@ public class DadosCartaoImpressaoResponse   {
   private Long idStatusImpressao = null;
   private Long idMifare = null;
   private String matriculaMifare = null;
+  private String cnpj = null;
 
   
   /**
@@ -1005,6 +1006,24 @@ public class DadosCartaoImpressaoResponse   {
   }
 
   
+  /**
+   * O CNPJ do Portador do Cart\u00E3o
+   **/
+  public DadosCartaoImpressaoResponse cnpj(String cnpj) {
+    this.cnpj = cnpj;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "O CNPJ do Portador do Cart\u00E3o")
+  @JsonProperty("cnpj")
+  public String getCnpj() {
+    return cnpj;
+  }
+  public void setCnpj(String cnpj) {
+    this.cnpj = cnpj;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -1066,12 +1085,13 @@ public class DadosCartaoImpressaoResponse   {
         Objects.equals(this.icvv, dadosCartaoImpressaoResponse.icvv) &&
         Objects.equals(this.idStatusImpressao, dadosCartaoImpressaoResponse.idStatusImpressao) &&
         Objects.equals(this.idMifare, dadosCartaoImpressaoResponse.idMifare) &&
-        Objects.equals(this.matriculaMifare, dadosCartaoImpressaoResponse.matriculaMifare);
+        Objects.equals(this.matriculaMifare, dadosCartaoImpressaoResponse.matriculaMifare) &&
+        Objects.equals(this.cnpj, dadosCartaoImpressaoResponse.cnpj);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idConta, idPessoa, idCartao, idBandeira, idTipoCartao, numeroCartao, nomePlastico, cvv2, dataGeracao, dataValidade, cpf, tipoPortador, trilha1, trilha2, trilhaCVV1, trilhaCVV2, flagVirtual, nomeBandeira, flagTitular, sequencialCartao, idStatus, descricaoStatusCartao, dataStatus, idEstagio, descricaoEstagio, dataEstagio, numeroBin, idProduto, descricaoProduto, idStatusConta, descricaoStatusConta, dataEmbossing, codigoDesbloqueio, nomePessoa, tipoPessoa, dataNascimento, idEndereco, idTipoEndereco, descricaoTipoEndereco, cep, logradouro, numeroEndereco, complementoEndereco, bairro, cidade, uf, pais, senhaCriptografada, icvv, idStatusImpressao, idMifare, matriculaMifare);
+    return Objects.hash(idConta, idPessoa, idCartao, idBandeira, idTipoCartao, numeroCartao, nomePlastico, cvv2, dataGeracao, dataValidade, cpf, tipoPortador, trilha1, trilha2, trilhaCVV1, trilhaCVV2, flagVirtual, nomeBandeira, flagTitular, sequencialCartao, idStatus, descricaoStatusCartao, dataStatus, idEstagio, descricaoEstagio, dataEstagio, numeroBin, idProduto, descricaoProduto, idStatusConta, descricaoStatusConta, dataEmbossing, codigoDesbloqueio, nomePessoa, tipoPessoa, dataNascimento, idEndereco, idTipoEndereco, descricaoTipoEndereco, cep, logradouro, numeroEndereco, complementoEndereco, bairro, cidade, uf, pais, senhaCriptografada, icvv, idStatusImpressao, idMifare, matriculaMifare, cnpj);
   }
 
   @Override
@@ -1131,6 +1151,7 @@ public class DadosCartaoImpressaoResponse   {
     sb.append("    idStatusImpressao: ").append(toIndentedString(idStatusImpressao)).append("\n");
     sb.append("    idMifare: ").append(toIndentedString(idMifare)).append("\n");
     sb.append("    matriculaMifare: ").append(toIndentedString(matriculaMifare)).append("\n");
+    sb.append("    cnpj: ").append(toIndentedString(cnpj)).append("\n");
     sb.append("}");
     return sb.toString();
   }

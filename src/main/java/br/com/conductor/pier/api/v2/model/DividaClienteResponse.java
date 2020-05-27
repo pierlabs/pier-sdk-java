@@ -33,6 +33,7 @@ public class DividaClienteResponse   {
   private Long idEscritorioCobranca = null;
   private String nomeEscritorioCobranca = null;
   private String emailPessoaConta = null;
+  private String dataEntradaCreliq = null;
 
   
   /**
@@ -341,6 +342,24 @@ public class DividaClienteResponse   {
   }
 
   
+  /**
+   * Data de entrada em creliq
+   **/
+  public DividaClienteResponse dataEntradaCreliq(String dataEntradaCreliq) {
+    this.dataEntradaCreliq = dataEntradaCreliq;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Data de entrada em creliq")
+  @JsonProperty("dataEntradaCreliq")
+  public String getDataEntradaCreliq() {
+    return dataEntradaCreliq;
+  }
+  public void setDataEntradaCreliq(String dataEntradaCreliq) {
+    this.dataEntradaCreliq = dataEntradaCreliq;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -367,12 +386,13 @@ public class DividaClienteResponse   {
         Objects.equals(this.descricaoStatusAcordo, dividaClienteResponse.descricaoStatusAcordo) &&
         Objects.equals(this.idEscritorioCobranca, dividaClienteResponse.idEscritorioCobranca) &&
         Objects.equals(this.nomeEscritorioCobranca, dividaClienteResponse.nomeEscritorioCobranca) &&
-        Objects.equals(this.emailPessoaConta, dividaClienteResponse.emailPessoaConta);
+        Objects.equals(this.emailPessoaConta, dividaClienteResponse.emailPessoaConta) &&
+        Objects.equals(this.dataEntradaCreliq, dividaClienteResponse.dataEntradaCreliq);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, dataVencimentoFaturaAtraso, quantidadeDiasAtraso, dataVencimentoAcordo, quantidadeDiasAtrasoCorrigido, valorSaldoDevedor, taxaCorrecao, valorCorrecao, valorIOF, valorSaldoCorrigido, idStatusConta, descricaoStatusConta, idStatusAcordo, descricaoStatusAcordo, idEscritorioCobranca, nomeEscritorioCobranca, emailPessoaConta);
+    return Objects.hash(id, dataVencimentoFaturaAtraso, quantidadeDiasAtraso, dataVencimentoAcordo, quantidadeDiasAtrasoCorrigido, valorSaldoDevedor, taxaCorrecao, valorCorrecao, valorIOF, valorSaldoCorrigido, idStatusConta, descricaoStatusConta, idStatusAcordo, descricaoStatusAcordo, idEscritorioCobranca, nomeEscritorioCobranca, emailPessoaConta, dataEntradaCreliq);
   }
 
   @Override
@@ -397,6 +417,7 @@ public class DividaClienteResponse   {
     sb.append("    idEscritorioCobranca: ").append(toIndentedString(idEscritorioCobranca)).append("\n");
     sb.append("    nomeEscritorioCobranca: ").append(toIndentedString(nomeEscritorioCobranca)).append("\n");
     sb.append("    emailPessoaConta: ").append(toIndentedString(emailPessoaConta)).append("\n");
+    sb.append("    dataEntradaCreliq: ").append(toIndentedString(dataEntradaCreliq)).append("\n");
     sb.append("}");
     return sb.toString();
   }

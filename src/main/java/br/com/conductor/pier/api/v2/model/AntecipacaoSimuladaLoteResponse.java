@@ -22,6 +22,7 @@ public class AntecipacaoSimuladaLoteResponse   {
   private BigDecimal valorTotalAntecipado = null;
   private BigDecimal valorTotalDesconto = null;
   private BigDecimal valorTotalComDesconto = null;
+  private BigDecimal valorTotalAbatimentoJuros = null;
   private List<AntecipacaoSimuladaResponse> antecipacoesSimuladas = new ArrayList<AntecipacaoSimuladaResponse>();
 
   
@@ -80,6 +81,24 @@ public class AntecipacaoSimuladaLoteResponse   {
 
   
   /**
+   * Valor total do abatimento de juros
+   **/
+  public AntecipacaoSimuladaLoteResponse valorTotalAbatimentoJuros(BigDecimal valorTotalAbatimentoJuros) {
+    this.valorTotalAbatimentoJuros = valorTotalAbatimentoJuros;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor total do abatimento de juros")
+  @JsonProperty("valorTotalAbatimentoJuros")
+  public BigDecimal getValorTotalAbatimentoJuros() {
+    return valorTotalAbatimentoJuros;
+  }
+  public void setValorTotalAbatimentoJuros(BigDecimal valorTotalAbatimentoJuros) {
+    this.valorTotalAbatimentoJuros = valorTotalAbatimentoJuros;
+  }
+
+  
+  /**
    * Antecipa\u00E7\u00F5es Simuladas
    **/
   public AntecipacaoSimuladaLoteResponse antecipacoesSimuladas(List<AntecipacaoSimuladaResponse> antecipacoesSimuladas) {
@@ -110,12 +129,13 @@ public class AntecipacaoSimuladaLoteResponse   {
     return Objects.equals(this.valorTotalAntecipado, antecipacaoSimuladaLoteResponse.valorTotalAntecipado) &&
         Objects.equals(this.valorTotalDesconto, antecipacaoSimuladaLoteResponse.valorTotalDesconto) &&
         Objects.equals(this.valorTotalComDesconto, antecipacaoSimuladaLoteResponse.valorTotalComDesconto) &&
+        Objects.equals(this.valorTotalAbatimentoJuros, antecipacaoSimuladaLoteResponse.valorTotalAbatimentoJuros) &&
         Objects.equals(this.antecipacoesSimuladas, antecipacaoSimuladaLoteResponse.antecipacoesSimuladas);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(valorTotalAntecipado, valorTotalDesconto, valorTotalComDesconto, antecipacoesSimuladas);
+    return Objects.hash(valorTotalAntecipado, valorTotalDesconto, valorTotalComDesconto, valorTotalAbatimentoJuros, antecipacoesSimuladas);
   }
 
   @Override
@@ -126,6 +146,7 @@ public class AntecipacaoSimuladaLoteResponse   {
     sb.append("    valorTotalAntecipado: ").append(toIndentedString(valorTotalAntecipado)).append("\n");
     sb.append("    valorTotalDesconto: ").append(toIndentedString(valorTotalDesconto)).append("\n");
     sb.append("    valorTotalComDesconto: ").append(toIndentedString(valorTotalComDesconto)).append("\n");
+    sb.append("    valorTotalAbatimentoJuros: ").append(toIndentedString(valorTotalAbatimentoJuros)).append("\n");
     sb.append("    antecipacoesSimuladas: ").append(toIndentedString(antecipacoesSimuladas)).append("\n");
     sb.append("}");
     return sb.toString();

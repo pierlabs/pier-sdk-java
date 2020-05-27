@@ -41,6 +41,7 @@ public class TipoOperacaoResponse   {
   private Integer percentualTAC = null;
   private Integer idTabelaJuros = null;
   private String codigoProcessamento = null;
+  private Integer flagIOFApartado = null;
 
   
   /**
@@ -493,6 +494,24 @@ public class TipoOperacaoResponse   {
   }
 
   
+  /**
+   * Flag IOF Apartado
+   **/
+  public TipoOperacaoResponse flagIOFApartado(Integer flagIOFApartado) {
+    this.flagIOFApartado = flagIOFApartado;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Flag IOF Apartado")
+  @JsonProperty("flagIOFApartado")
+  public Integer getFlagIOFApartado() {
+    return flagIOFApartado;
+  }
+  public void setFlagIOFApartado(Integer flagIOFApartado) {
+    this.flagIOFApartado = flagIOFApartado;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -527,12 +546,13 @@ public class TipoOperacaoResponse   {
         Objects.equals(this.flagPosProximoVencimento, tipoOperacaoResponse.flagPosProximoVencimento) &&
         Objects.equals(this.percentualTAC, tipoOperacaoResponse.percentualTAC) &&
         Objects.equals(this.idTabelaJuros, tipoOperacaoResponse.idTabelaJuros) &&
-        Objects.equals(this.codigoProcessamento, tipoOperacaoResponse.codigoProcessamento);
+        Objects.equals(this.codigoProcessamento, tipoOperacaoResponse.codigoProcessamento) &&
+        Objects.equals(this.flagIOFApartado, tipoOperacaoResponse.flagIOFApartado);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, tipoOperacao, nome, descricao, excedentePermitido, tipoExcedentePermitido, valorMinimo, valorMaximo, valorTAC, flagTiraTac, idProduto, idEstabelecimento, tarifa, remuneracaoEmissor, planoMaximo, planoMinimo, idEmissor, idTabela, valorParcela, flagCobraProRata, flagCobraJuros, flagPosProximoVencimento, percentualTAC, idTabelaJuros, codigoProcessamento);
+    return Objects.hash(id, tipoOperacao, nome, descricao, excedentePermitido, tipoExcedentePermitido, valorMinimo, valorMaximo, valorTAC, flagTiraTac, idProduto, idEstabelecimento, tarifa, remuneracaoEmissor, planoMaximo, planoMinimo, idEmissor, idTabela, valorParcela, flagCobraProRata, flagCobraJuros, flagPosProximoVencimento, percentualTAC, idTabelaJuros, codigoProcessamento, flagIOFApartado);
   }
 
   @Override
@@ -565,6 +585,7 @@ public class TipoOperacaoResponse   {
     sb.append("    percentualTAC: ").append(toIndentedString(percentualTAC)).append("\n");
     sb.append("    idTabelaJuros: ").append(toIndentedString(idTabelaJuros)).append("\n");
     sb.append("    codigoProcessamento: ").append(toIndentedString(codigoProcessamento)).append("\n");
+    sb.append("    flagIOFApartado: ").append(toIndentedString(flagIOFApartado)).append("\n");
     sb.append("}");
     return sb.toString();
   }

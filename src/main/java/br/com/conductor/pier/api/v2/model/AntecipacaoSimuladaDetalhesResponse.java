@@ -20,6 +20,7 @@ public class AntecipacaoSimuladaDetalhesResponse   {
   private BigDecimal valorParcelas = null;
   private BigDecimal valorDesconto = null;
   private BigDecimal valorParcelasDesconto = null;
+  private BigDecimal valorAbatimentoJuros = null;
 
   
   /**
@@ -94,6 +95,24 @@ public class AntecipacaoSimuladaDetalhesResponse   {
   }
 
   
+  /**
+   * Valor do abatimento de juros
+   **/
+  public AntecipacaoSimuladaDetalhesResponse valorAbatimentoJuros(BigDecimal valorAbatimentoJuros) {
+    this.valorAbatimentoJuros = valorAbatimentoJuros;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor do abatimento de juros")
+  @JsonProperty("valorAbatimentoJuros")
+  public BigDecimal getValorAbatimentoJuros() {
+    return valorAbatimentoJuros;
+  }
+  public void setValorAbatimentoJuros(BigDecimal valorAbatimentoJuros) {
+    this.valorAbatimentoJuros = valorAbatimentoJuros;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -107,12 +126,13 @@ public class AntecipacaoSimuladaDetalhesResponse   {
     return Objects.equals(this.quantidadeParcelas, antecipacaoSimuladaDetalhesResponse.quantidadeParcelas) &&
         Objects.equals(this.valorParcelas, antecipacaoSimuladaDetalhesResponse.valorParcelas) &&
         Objects.equals(this.valorDesconto, antecipacaoSimuladaDetalhesResponse.valorDesconto) &&
-        Objects.equals(this.valorParcelasDesconto, antecipacaoSimuladaDetalhesResponse.valorParcelasDesconto);
+        Objects.equals(this.valorParcelasDesconto, antecipacaoSimuladaDetalhesResponse.valorParcelasDesconto) &&
+        Objects.equals(this.valorAbatimentoJuros, antecipacaoSimuladaDetalhesResponse.valorAbatimentoJuros);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(quantidadeParcelas, valorParcelas, valorDesconto, valorParcelasDesconto);
+    return Objects.hash(quantidadeParcelas, valorParcelas, valorDesconto, valorParcelasDesconto, valorAbatimentoJuros);
   }
 
   @Override
@@ -124,6 +144,7 @@ public class AntecipacaoSimuladaDetalhesResponse   {
     sb.append("    valorParcelas: ").append(toIndentedString(valorParcelas)).append("\n");
     sb.append("    valorDesconto: ").append(toIndentedString(valorDesconto)).append("\n");
     sb.append("    valorParcelasDesconto: ").append(toIndentedString(valorParcelasDesconto)).append("\n");
+    sb.append("    valorAbatimentoJuros: ").append(toIndentedString(valorAbatimentoJuros)).append("\n");
     sb.append("}");
     return sb.toString();
   }

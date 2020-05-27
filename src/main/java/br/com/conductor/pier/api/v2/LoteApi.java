@@ -9,6 +9,7 @@ import br.com.conductor.pier.api.v2.invoker.Pair;
 
 import br.com.conductor.pier.api.v2.model.LoteCartaoUpdate;
 import br.com.conductor.pier.api.v2.model.LoteCartaoResponse;
+import br.com.conductor.pier.api.v2.model.PageCartaoLoteResponse;
 import br.com.conductor.pier.api.v2.model.PageLoteCartaoResponse;
 import br.com.conductor.pier.api.v2.model.LoteCartaoPersist;
 
@@ -185,6 +186,65 @@ public class LoteApi {
     
     GenericType<Object> returnType = new GenericType<Object>() {};
     return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Lista os identificadores de lotes e cart\u00F5es
+   * Este recurso permite listar os identificadores de lotes e de cart\u00F5es Noname cadastrados
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
+   * @param page P\u00E1gina
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
+   * @param idCartao C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o
+   * @param idLote C\u00F3digo de identifica\u00E7\u00E3o do lote
+   * @param idCartaoPai C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o pai
+   * @return PageCartaoLoteResponse
+   */
+  public PageCartaoLoteResponse listarIdentificadoresCartoesLotes(List<String> sort, Integer page, Integer limit, Long idCartao, Long idLote, Long idCartaoPai) throws ApiException {
+    Object postBody = null;
+    
+    // create path and map variables
+    String path = "/api/lotes/cartoes/identificadores".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idCartao", idCartao));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idLote", idLote));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "idCartaoPai", idCartaoPai));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PageCartaoLoteResponse> returnType = new GenericType<PageCartaoLoteResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   

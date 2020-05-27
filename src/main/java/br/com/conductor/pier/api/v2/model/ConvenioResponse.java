@@ -36,6 +36,7 @@ public class ConvenioResponse   {
   private String operador = null;
   private String data = null;
   private String maquina = null;
+  private BigDecimal complementoCarteira = null;
 
   
   /**
@@ -398,6 +399,24 @@ public class ConvenioResponse   {
   }
 
   
+  /**
+   * Complemento registro de boleto
+   **/
+  public ConvenioResponse complementoCarteira(BigDecimal complementoCarteira) {
+    this.complementoCarteira = complementoCarteira;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Complemento registro de boleto")
+  @JsonProperty("complementoCarteira")
+  public BigDecimal getComplementoCarteira() {
+    return complementoCarteira;
+  }
+  public void setComplementoCarteira(BigDecimal complementoCarteira) {
+    this.complementoCarteira = complementoCarteira;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -427,12 +446,13 @@ public class ConvenioResponse   {
         Objects.equals(this.cnpjBeneficiario, convenioResponse.cnpjBeneficiario) &&
         Objects.equals(this.operador, convenioResponse.operador) &&
         Objects.equals(this.data, convenioResponse.data) &&
-        Objects.equals(this.maquina, convenioResponse.maquina);
+        Objects.equals(this.maquina, convenioResponse.maquina) &&
+        Objects.equals(this.complementoCarteira, convenioResponse.complementoCarteira);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, banco, agencia, contaCorrente, especie, numeroConvenio, carteira, codigoCedente, especieTipo, especieDocumento, aceite, instrucoes, localPagamento1, localPagamento2, enderecoCobrancaEmissor, nomeBeneficiario, cnpjBeneficiario, operador, data, maquina);
+    return Objects.hash(id, banco, agencia, contaCorrente, especie, numeroConvenio, carteira, codigoCedente, especieTipo, especieDocumento, aceite, instrucoes, localPagamento1, localPagamento2, enderecoCobrancaEmissor, nomeBeneficiario, cnpjBeneficiario, operador, data, maquina, complementoCarteira);
   }
 
   @Override
@@ -460,6 +480,7 @@ public class ConvenioResponse   {
     sb.append("    operador: ").append(toIndentedString(operador)).append("\n");
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("    maquina: ").append(toIndentedString(maquina)).append("\n");
+    sb.append("    complementoCarteira: ").append(toIndentedString(complementoCarteira)).append("\n");
     sb.append("}");
     return sb.toString();
   }

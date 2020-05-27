@@ -32,6 +32,7 @@ public class ConvenioPersist   {
   private String enderecoCobrancaEmissor = null;
   private String nomeBeneficiario = null;
   private String cnpjBeneficiario = null;
+  private BigDecimal complementoCarteira = null;
 
   
   /**
@@ -322,6 +323,24 @@ public class ConvenioPersist   {
   }
 
   
+  /**
+   * Complemento registro de boleto
+   **/
+  public ConvenioPersist complementoCarteira(BigDecimal complementoCarteira) {
+    this.complementoCarteira = complementoCarteira;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Complemento registro de boleto")
+  @JsonProperty("complementoCarteira")
+  public BigDecimal getComplementoCarteira() {
+    return complementoCarteira;
+  }
+  public void setComplementoCarteira(BigDecimal complementoCarteira) {
+    this.complementoCarteira = complementoCarteira;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -347,12 +366,13 @@ public class ConvenioPersist   {
         Objects.equals(this.localPagamento2, convenioPersist.localPagamento2) &&
         Objects.equals(this.enderecoCobrancaEmissor, convenioPersist.enderecoCobrancaEmissor) &&
         Objects.equals(this.nomeBeneficiario, convenioPersist.nomeBeneficiario) &&
-        Objects.equals(this.cnpjBeneficiario, convenioPersist.cnpjBeneficiario);
+        Objects.equals(this.cnpjBeneficiario, convenioPersist.cnpjBeneficiario) &&
+        Objects.equals(this.complementoCarteira, convenioPersist.complementoCarteira);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(banco, agencia, contaCorrente, especie, numeroConvenio, carteira, codigoCedente, especieTipo, especieDocumento, aceite, instrucoes, localPagamento1, localPagamento2, enderecoCobrancaEmissor, nomeBeneficiario, cnpjBeneficiario);
+    return Objects.hash(banco, agencia, contaCorrente, especie, numeroConvenio, carteira, codigoCedente, especieTipo, especieDocumento, aceite, instrucoes, localPagamento1, localPagamento2, enderecoCobrancaEmissor, nomeBeneficiario, cnpjBeneficiario, complementoCarteira);
   }
 
   @Override
@@ -376,6 +396,7 @@ public class ConvenioPersist   {
     sb.append("    enderecoCobrancaEmissor: ").append(toIndentedString(enderecoCobrancaEmissor)).append("\n");
     sb.append("    nomeBeneficiario: ").append(toIndentedString(nomeBeneficiario)).append("\n");
     sb.append("    cnpjBeneficiario: ").append(toIndentedString(cnpjBeneficiario)).append("\n");
+    sb.append("    complementoCarteira: ").append(toIndentedString(complementoCarteira)).append("\n");
     sb.append("}");
     return sb.toString();
   }

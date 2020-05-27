@@ -568,9 +568,10 @@ public class ControleCartaoApi {
    * @param permiteTarjaMagnetica Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es por tarja magnetica
    * @param permiteContactless Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es via contactless
    * @param limiteContactlessSemSenha Indica o limite usado em transa\u00E7\u00F5es com a fun\u00E7\u00E3o contactless sem senha
+   * @param funcaoAtiva Indica o tipo de fun\u00E7\u00E3o ativa
    * @return PageConfiguracaoControleCartaoResponse
    */
-  public PageConfiguracaoControleCartaoResponse listarConfiguracaoControleCartao(List<String> sort, Integer page, Integer limit, Long idCartao, Boolean permiteEcommerce, Boolean permiteSaque, Boolean permiteWallet, Boolean permiteControleMCC, Boolean permiteCompraInternacional, Boolean permiteTarjaMagnetica, Boolean permiteContactless, BigDecimal limiteContactlessSemSenha) throws ApiException {
+  public PageConfiguracaoControleCartaoResponse listarConfiguracaoControleCartao(List<String> sort, Integer page, Integer limit, Long idCartao, Boolean permiteEcommerce, Boolean permiteSaque, Boolean permiteWallet, Boolean permiteControleMCC, Boolean permiteCompraInternacional, Boolean permiteTarjaMagnetica, Boolean permiteContactless, BigDecimal limiteContactlessSemSenha, String funcaoAtiva) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -605,6 +606,8 @@ public class ControleCartaoApi {
     queryParams.addAll(apiClient.parameterToPairs("", "permiteContactless", permiteContactless));
     
     queryParams.addAll(apiClient.parameterToPairs("", "limiteContactlessSemSenha", limiteContactlessSemSenha));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "funcaoAtiva", funcaoAtiva));
     
 
     

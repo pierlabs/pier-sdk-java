@@ -43,6 +43,7 @@ public class AntecipacaoSimuladaResponse   {
   private String descricaoProduto = null;
   private String descricaoEstabelecimento = null;
   private String nomeFantasiaEstabelecimento = null;
+  private String tipoEvento = null;
   private List<AntecipacaoSimuladaDetalhesResponse> detalhes = new ArrayList<AntecipacaoSimuladaDetalhesResponse>();
 
   
@@ -477,6 +478,24 @@ public class AntecipacaoSimuladaResponse   {
 
   
   /**
+   * Tipo do evento
+   **/
+  public AntecipacaoSimuladaResponse tipoEvento(String tipoEvento) {
+    this.tipoEvento = tipoEvento;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Tipo do evento")
+  @JsonProperty("tipoEvento")
+  public String getTipoEvento() {
+    return tipoEvento;
+  }
+  public void setTipoEvento(String tipoEvento) {
+    this.tipoEvento = tipoEvento;
+  }
+
+  
+  /**
    * Detalhes da simula\u00E7\u00E3o
    **/
   public AntecipacaoSimuladaResponse detalhes(List<AntecipacaoSimuladaDetalhesResponse> detalhes) {
@@ -528,12 +547,13 @@ public class AntecipacaoSimuladaResponse   {
         Objects.equals(this.descricaoProduto, antecipacaoSimuladaResponse.descricaoProduto) &&
         Objects.equals(this.descricaoEstabelecimento, antecipacaoSimuladaResponse.descricaoEstabelecimento) &&
         Objects.equals(this.nomeFantasiaEstabelecimento, antecipacaoSimuladaResponse.nomeFantasiaEstabelecimento) &&
+        Objects.equals(this.tipoEvento, antecipacaoSimuladaResponse.tipoEvento) &&
         Objects.equals(this.detalhes, antecipacaoSimuladaResponse.detalhes);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(mcc, uf, idAntecipacaoSimulada, idConta, idCompra, idTipoTransacao, quantidadeParcelasAntecipaveis, valorParcela, dataHoraSimulacao, taxaAntecipacaoAno, nomeEstabelecimento, status, dataCompra, tipoOrigemTransacao, cidade, pais, latitude, longitude, idGrupoMCC, descricaoGrupoMCC, idProduto, descricaoProduto, descricaoEstabelecimento, nomeFantasiaEstabelecimento, detalhes);
+    return Objects.hash(mcc, uf, idAntecipacaoSimulada, idConta, idCompra, idTipoTransacao, quantidadeParcelasAntecipaveis, valorParcela, dataHoraSimulacao, taxaAntecipacaoAno, nomeEstabelecimento, status, dataCompra, tipoOrigemTransacao, cidade, pais, latitude, longitude, idGrupoMCC, descricaoGrupoMCC, idProduto, descricaoProduto, descricaoEstabelecimento, nomeFantasiaEstabelecimento, tipoEvento, detalhes);
   }
 
   @Override
@@ -565,6 +585,7 @@ public class AntecipacaoSimuladaResponse   {
     sb.append("    descricaoProduto: ").append(toIndentedString(descricaoProduto)).append("\n");
     sb.append("    descricaoEstabelecimento: ").append(toIndentedString(descricaoEstabelecimento)).append("\n");
     sb.append("    nomeFantasiaEstabelecimento: ").append(toIndentedString(nomeFantasiaEstabelecimento)).append("\n");
+    sb.append("    tipoEvento: ").append(toIndentedString(tipoEvento)).append("\n");
     sb.append("    detalhes: ").append(toIndentedString(detalhes)).append("\n");
     sb.append("}");
     return sb.toString();

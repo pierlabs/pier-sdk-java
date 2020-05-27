@@ -39,6 +39,7 @@ public class CompraResponse   {
   private String descricaoProduto = null;
   private String cartao = null;
   private String nomePortadorCartao = null;
+  private String tipoEvento = null;
 
   
   /**
@@ -453,6 +454,24 @@ public class CompraResponse   {
   }
 
   
+  /**
+   * Tipo do evento
+   **/
+  public CompraResponse tipoEvento(String tipoEvento) {
+    this.tipoEvento = tipoEvento;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Tipo do evento")
+  @JsonProperty("tipoEvento")
+  public String getTipoEvento() {
+    return tipoEvento;
+  }
+  public void setTipoEvento(String tipoEvento) {
+    this.tipoEvento = tipoEvento;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -485,12 +504,13 @@ public class CompraResponse   {
         Objects.equals(this.idProduto, compraResponse.idProduto) &&
         Objects.equals(this.descricaoProduto, compraResponse.descricaoProduto) &&
         Objects.equals(this.cartao, compraResponse.cartao) &&
-        Objects.equals(this.nomePortadorCartao, compraResponse.nomePortadorCartao);
+        Objects.equals(this.nomePortadorCartao, compraResponse.nomePortadorCartao) &&
+        Objects.equals(this.tipoEvento, compraResponse.tipoEvento);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(mcc, uf, idCompra, status, dataCompra, valorTotalCompra, valorParcela, primeiraParcela, numeroParcelas, numeroParcelasAntecipaveis, nomeEstabelecimento, tipoOrigemTransacao, cidade, pais, latitude, longitude, idGrupoMCC, descricaoGrupoMCC, idConta, idProduto, descricaoProduto, cartao, nomePortadorCartao);
+    return Objects.hash(mcc, uf, idCompra, status, dataCompra, valorTotalCompra, valorParcela, primeiraParcela, numeroParcelas, numeroParcelasAntecipaveis, nomeEstabelecimento, tipoOrigemTransacao, cidade, pais, latitude, longitude, idGrupoMCC, descricaoGrupoMCC, idConta, idProduto, descricaoProduto, cartao, nomePortadorCartao, tipoEvento);
   }
 
   @Override
@@ -521,6 +541,7 @@ public class CompraResponse   {
     sb.append("    descricaoProduto: ").append(toIndentedString(descricaoProduto)).append("\n");
     sb.append("    cartao: ").append(toIndentedString(cartao)).append("\n");
     sb.append("    nomePortadorCartao: ").append(toIndentedString(nomePortadorCartao)).append("\n");
+    sb.append("    tipoEvento: ").append(toIndentedString(tipoEvento)).append("\n");
     sb.append("}");
     return sb.toString();
   }

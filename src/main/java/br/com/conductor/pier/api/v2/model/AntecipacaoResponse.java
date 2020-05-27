@@ -27,6 +27,7 @@ public class AntecipacaoResponse   {
   private BigDecimal valorDescontoTotal = null;
   private BigDecimal valorTotalComDesconto = null;
   private BigDecimal taxaDesconto = null;
+  private BigDecimal valorAbatimentoJuros = null;
   private String dataCompra = null;
   private String status = null;
   private String nomeEstabelecimento = null;
@@ -236,6 +237,24 @@ public class AntecipacaoResponse   {
   }
   public void setTaxaDesconto(BigDecimal taxaDesconto) {
     this.taxaDesconto = taxaDesconto;
+  }
+
+  
+  /**
+   * Apresenta o valor de abatimento de juros
+   **/
+  public AntecipacaoResponse valorAbatimentoJuros(BigDecimal valorAbatimentoJuros) {
+    this.valorAbatimentoJuros = valorAbatimentoJuros;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Apresenta o valor de abatimento de juros")
+  @JsonProperty("valorAbatimentoJuros")
+  public BigDecimal getValorAbatimentoJuros() {
+    return valorAbatimentoJuros;
+  }
+  public void setValorAbatimentoJuros(BigDecimal valorAbatimentoJuros) {
+    this.valorAbatimentoJuros = valorAbatimentoJuros;
   }
 
   
@@ -512,6 +531,7 @@ public class AntecipacaoResponse   {
         Objects.equals(this.valorDescontoTotal, antecipacaoResponse.valorDescontoTotal) &&
         Objects.equals(this.valorTotalComDesconto, antecipacaoResponse.valorTotalComDesconto) &&
         Objects.equals(this.taxaDesconto, antecipacaoResponse.taxaDesconto) &&
+        Objects.equals(this.valorAbatimentoJuros, antecipacaoResponse.valorAbatimentoJuros) &&
         Objects.equals(this.dataCompra, antecipacaoResponse.dataCompra) &&
         Objects.equals(this.status, antecipacaoResponse.status) &&
         Objects.equals(this.nomeEstabelecimento, antecipacaoResponse.nomeEstabelecimento) &&
@@ -530,7 +550,7 @@ public class AntecipacaoResponse   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(mcc, uf, id, idConta, idCompra, quantidadeParcelasTotal, quantidadeParcelasAntecipadas, valorParcela, valorDescontoTotal, valorTotalComDesconto, taxaDesconto, dataCompra, status, nomeEstabelecimento, tipoOrigemTransacao, cidade, pais, latitude, longitude, idGrupoMCC, descricaoGrupoMCC, idProduto, descricaoProduto, descricaoEstabelecimento, nomeFantasiaEstabelecimento);
+    return Objects.hash(mcc, uf, id, idConta, idCompra, quantidadeParcelasTotal, quantidadeParcelasAntecipadas, valorParcela, valorDescontoTotal, valorTotalComDesconto, taxaDesconto, valorAbatimentoJuros, dataCompra, status, nomeEstabelecimento, tipoOrigemTransacao, cidade, pais, latitude, longitude, idGrupoMCC, descricaoGrupoMCC, idProduto, descricaoProduto, descricaoEstabelecimento, nomeFantasiaEstabelecimento);
   }
 
   @Override
@@ -549,6 +569,7 @@ public class AntecipacaoResponse   {
     sb.append("    valorDescontoTotal: ").append(toIndentedString(valorDescontoTotal)).append("\n");
     sb.append("    valorTotalComDesconto: ").append(toIndentedString(valorTotalComDesconto)).append("\n");
     sb.append("    taxaDesconto: ").append(toIndentedString(taxaDesconto)).append("\n");
+    sb.append("    valorAbatimentoJuros: ").append(toIndentedString(valorAbatimentoJuros)).append("\n");
     sb.append("    dataCompra: ").append(toIndentedString(dataCompra)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    nomeEstabelecimento: ").append(toIndentedString(nomeEstabelecimento)).append("\n");

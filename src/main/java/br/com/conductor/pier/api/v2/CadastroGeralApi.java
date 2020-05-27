@@ -53,6 +53,7 @@ import br.com.conductor.pier.api.v2.model.PagePromotorResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoAjusteResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoCampanhaResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoEnderecoResponse;
+import br.com.conductor.pier.api.v2.model.PageTiposOperacoesResponse;
 import br.com.conductor.pier.api.v2.model.PageTipoTelefoneResponse;
 import br.com.conductor.pier.api.v2.model.PageControleVencimentoResponse;
 import br.com.conductor.pier.api.v2.model.PacoteTarifaPersist;
@@ -2887,6 +2888,59 @@ public class CadastroGeralApi {
 
     
     GenericType<PageTipoEnderecoResponse> returnType = new GenericType<PageTipoEnderecoResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+  }
+  
+  /**
+   * Listar os tipos de opera\u00E7\u00F5es
+   * Este recurso permite listar os tipos de opera\u00E7\u00F5es
+   * @param sort Tipo de ordena\u00E7\u00E3o dos registros
+   * @param page P\u00E1gina
+   * @param limit Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50)
+   * @param descricao 
+   * @return PageTiposOperacoesResponse
+   */
+  public PageTiposOperacoesResponse listarTiposOperacoes(List<String> sort, Integer page, Integer limit, String descricao) throws ApiException {
+    Object postBody = null;
+    
+    // create path and map variables
+    String path = "/api/operacoes/tipos".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    Map<String, String> headerParams = new HashMap<String, String>();
+    Map<String, Object> formParams = new HashMap<String, Object>();
+
+    
+    queryParams.addAll(apiClient.parameterToPairs("multi", "sort", sort));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "limit", limit));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "descricao", descricao));
+    
+
+    
+
+    
+
+    final String[] accepts = {
+      "application/json"
+    };
+    final String accept = apiClient.selectHeaderAccept(accepts);
+
+    final String[] contentTypes = {
+      "application/json"
+    };
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+
+    //String[] authNames = new String[] {"client_id",  };
+    String[] authNames = new String[] {"client_id", "access_token"};
+
+    
+    GenericType<PageTiposOperacoesResponse> returnType = new GenericType<PageTiposOperacoesResponse>() {};
     return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }

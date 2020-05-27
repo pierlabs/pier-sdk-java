@@ -24,6 +24,7 @@ public class OperacaoResponse   {
   private Integer carencia = null;
   private Boolean flagPermitirParcelamento = null;
   private Boolean flagManterTaxaJurosNoRotativo = null;
+  private Boolean flagIOFApartado = null;
 
   
   /**
@@ -188,6 +189,24 @@ public class OperacaoResponse   {
   }
 
   
+  /**
+   * Flag que indica se o IOF \u00E9 apartado
+   **/
+  public OperacaoResponse flagIOFApartado(Boolean flagIOFApartado) {
+    this.flagIOFApartado = flagIOFApartado;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "Flag que indica se o IOF \u00E9 apartado")
+  @JsonProperty("flagIOFApartado")
+  public Boolean getFlagIOFApartado() {
+    return flagIOFApartado;
+  }
+  public void setFlagIOFApartado(Boolean flagIOFApartado) {
+    this.flagIOFApartado = flagIOFApartado;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -206,12 +225,13 @@ public class OperacaoResponse   {
         Objects.equals(this.flagCobraTarifa, operacaoResponse.flagCobraTarifa) &&
         Objects.equals(this.carencia, operacaoResponse.carencia) &&
         Objects.equals(this.flagPermitirParcelamento, operacaoResponse.flagPermitirParcelamento) &&
-        Objects.equals(this.flagManterTaxaJurosNoRotativo, operacaoResponse.flagManterTaxaJurosNoRotativo);
+        Objects.equals(this.flagManterTaxaJurosNoRotativo, operacaoResponse.flagManterTaxaJurosNoRotativo) &&
+        Objects.equals(this.flagIOFApartado, operacaoResponse.flagIOFApartado);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idOperacao, codigoProcessamento, codigoProcessamentoCancelamento, nomeOperacao, flagCobraJuros, flagCobraTarifa, carencia, flagPermitirParcelamento, flagManterTaxaJurosNoRotativo);
+    return Objects.hash(idOperacao, codigoProcessamento, codigoProcessamentoCancelamento, nomeOperacao, flagCobraJuros, flagCobraTarifa, carencia, flagPermitirParcelamento, flagManterTaxaJurosNoRotativo, flagIOFApartado);
   }
 
   @Override
@@ -228,6 +248,7 @@ public class OperacaoResponse   {
     sb.append("    carencia: ").append(toIndentedString(carencia)).append("\n");
     sb.append("    flagPermitirParcelamento: ").append(toIndentedString(flagPermitirParcelamento)).append("\n");
     sb.append("    flagManterTaxaJurosNoRotativo: ").append(toIndentedString(flagManterTaxaJurosNoRotativo)).append("\n");
+    sb.append("    flagIOFApartado: ").append(toIndentedString(flagIOFApartado)).append("\n");
     sb.append("}");
     return sb.toString();
   }

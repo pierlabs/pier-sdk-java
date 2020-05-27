@@ -42,6 +42,7 @@ public class DetalheOperacaoResponse   {
   private Boolean flagCobraProRata = null;
   private Long idTabelaJuros = null;
   private String tipoExcedentePermitido = null;
+  private Boolean flagIOFApartado = null;
 
   
   /**
@@ -512,6 +513,24 @@ public class DetalheOperacaoResponse   {
   }
 
   
+  /**
+   * Flag que indica se o IOF \u00E9 apartado
+   **/
+  public DetalheOperacaoResponse flagIOFApartado(Boolean flagIOFApartado) {
+    this.flagIOFApartado = flagIOFApartado;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "Flag que indica se o IOF \u00E9 apartado")
+  @JsonProperty("flagIOFApartado")
+  public Boolean getFlagIOFApartado() {
+    return flagIOFApartado;
+  }
+  public void setFlagIOFApartado(Boolean flagIOFApartado) {
+    this.flagIOFApartado = flagIOFApartado;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -547,12 +566,13 @@ public class DetalheOperacaoResponse   {
         Objects.equals(this.valorParcela, detalheOperacaoResponse.valorParcela) &&
         Objects.equals(this.flagCobraProRata, detalheOperacaoResponse.flagCobraProRata) &&
         Objects.equals(this.idTabelaJuros, detalheOperacaoResponse.idTabelaJuros) &&
-        Objects.equals(this.tipoExcedentePermitido, detalheOperacaoResponse.tipoExcedentePermitido);
+        Objects.equals(this.tipoExcedentePermitido, detalheOperacaoResponse.tipoExcedentePermitido) &&
+        Objects.equals(this.flagIOFApartado, detalheOperacaoResponse.flagIOFApartado);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idOperacao, codigoProcessamento, codigoProcessamentoCancelamento, nomeOperacao, descricaoOperacao, planoMinimo, planoMaximo, valorMinimo, valorMaximo, flagCobraJuros, taxaJuros, flagCobraTarifa, taxaTarifa, valorTac, percentualTac, valorOperacao, carencia, excedentePermitido, flagPermitirParcelamento, flagManterTaxaJurosNoRotativo, idEmissor, idTabela, valorParcela, flagCobraProRata, idTabelaJuros, tipoExcedentePermitido);
+    return Objects.hash(idOperacao, codigoProcessamento, codigoProcessamentoCancelamento, nomeOperacao, descricaoOperacao, planoMinimo, planoMaximo, valorMinimo, valorMaximo, flagCobraJuros, taxaJuros, flagCobraTarifa, taxaTarifa, valorTac, percentualTac, valorOperacao, carencia, excedentePermitido, flagPermitirParcelamento, flagManterTaxaJurosNoRotativo, idEmissor, idTabela, valorParcela, flagCobraProRata, idTabelaJuros, tipoExcedentePermitido, flagIOFApartado);
   }
 
   @Override
@@ -586,6 +606,7 @@ public class DetalheOperacaoResponse   {
     sb.append("    flagCobraProRata: ").append(toIndentedString(flagCobraProRata)).append("\n");
     sb.append("    idTabelaJuros: ").append(toIndentedString(idTabelaJuros)).append("\n");
     sb.append("    tipoExcedentePermitido: ").append(toIndentedString(tipoExcedentePermitido)).append("\n");
+    sb.append("    flagIOFApartado: ").append(toIndentedString(flagIOFApartado)).append("\n");
     sb.append("}");
     return sb.toString();
   }

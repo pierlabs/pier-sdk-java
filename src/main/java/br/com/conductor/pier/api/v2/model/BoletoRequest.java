@@ -22,6 +22,7 @@ public class BoletoRequest   {
   private String dataVencimento = null;
   private Long idConvenio = null;
   private Long idPessoafontePagadora = null;
+  private Integer tipoPagamento = null;
 
   
   /**
@@ -132,6 +133,24 @@ public class BoletoRequest   {
   }
 
   
+  /**
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de pagamento
+   **/
+  public BoletoRequest tipoPagamento(Integer tipoPagamento) {
+    this.tipoPagamento = tipoPagamento;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo de pagamento")
+  @JsonProperty("tipoPagamento")
+  public Integer getTipoPagamento() {
+    return tipoPagamento;
+  }
+  public void setTipoPagamento(Integer tipoPagamento) {
+    this.tipoPagamento = tipoPagamento;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -147,12 +166,13 @@ public class BoletoRequest   {
         Objects.equals(this.valor, boletoRequest.valor) &&
         Objects.equals(this.dataVencimento, boletoRequest.dataVencimento) &&
         Objects.equals(this.idConvenio, boletoRequest.idConvenio) &&
-        Objects.equals(this.idPessoafontePagadora, boletoRequest.idPessoafontePagadora);
+        Objects.equals(this.idPessoafontePagadora, boletoRequest.idPessoafontePagadora) &&
+        Objects.equals(this.tipoPagamento, boletoRequest.tipoPagamento);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idConta, tipoBoleto, valor, dataVencimento, idConvenio, idPessoafontePagadora);
+    return Objects.hash(idConta, tipoBoleto, valor, dataVencimento, idConvenio, idPessoafontePagadora, tipoPagamento);
   }
 
   @Override
@@ -166,6 +186,7 @@ public class BoletoRequest   {
     sb.append("    dataVencimento: ").append(toIndentedString(dataVencimento)).append("\n");
     sb.append("    idConvenio: ").append(toIndentedString(idConvenio)).append("\n");
     sb.append("    idPessoafontePagadora: ").append(toIndentedString(idPessoafontePagadora)).append("\n");
+    sb.append("    tipoPagamento: ").append(toIndentedString(tipoPagamento)).append("\n");
     sb.append("}");
     return sb.toString();
   }

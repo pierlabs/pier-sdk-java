@@ -54,6 +54,7 @@ public class BoletoResponse   {
   private Long status = null;
   private Boolean boletoRegistrado = null;
   private String fontePagadora = null;
+  private Integer tipoPagamento = null;
 
   
   /**
@@ -704,6 +705,24 @@ public class BoletoResponse   {
   }
 
   
+  /**
+   * C\u00F3digo de identifica\u00E7\u00E3o do tipo de pagamento
+   **/
+  public BoletoResponse tipoPagamento(Integer tipoPagamento) {
+    this.tipoPagamento = tipoPagamento;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "C\u00F3digo de identifica\u00E7\u00E3o do tipo de pagamento")
+  @JsonProperty("tipoPagamento")
+  public Integer getTipoPagamento() {
+    return tipoPagamento;
+  }
+  public void setTipoPagamento(Integer tipoPagamento) {
+    this.tipoPagamento = tipoPagamento;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -749,12 +768,13 @@ public class BoletoResponse   {
         Objects.equals(this.enderecoCobrancaBeneficiario, boletoResponse.enderecoCobrancaBeneficiario) &&
         Objects.equals(this.status, boletoResponse.status) &&
         Objects.equals(this.boletoRegistrado, boletoResponse.boletoRegistrado) &&
-        Objects.equals(this.fontePagadora, boletoResponse.fontePagadora);
+        Objects.equals(this.fontePagadora, boletoResponse.fontePagadora) &&
+        Objects.equals(this.tipoPagamento, boletoResponse.tipoPagamento);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(numeroDoDocumento, dataProcessamento, dataDocumento, dataVencimento, dataFechamento, valorBoleto, nomeBeneficiario, documentoBeneficiario, agencia, codigoBeneficiario, numeroConvenio, digitoCodigoBeneficiario, carteira, nossoNumero, digitoNossoNumero, banco, aceite, especieDoDocumento, especie, instrucoes, locaisDePagamento, nomePagador, documentoPagador, logradouroPagador, bairroPagador, cepPagador, cidadePagador, ufPagador, codigoDeBarras, linhaDigitavel, id, idConta, enderecoCobrancaBeneficiario, status, boletoRegistrado, fontePagadora);
+    return Objects.hash(numeroDoDocumento, dataProcessamento, dataDocumento, dataVencimento, dataFechamento, valorBoleto, nomeBeneficiario, documentoBeneficiario, agencia, codigoBeneficiario, numeroConvenio, digitoCodigoBeneficiario, carteira, nossoNumero, digitoNossoNumero, banco, aceite, especieDoDocumento, especie, instrucoes, locaisDePagamento, nomePagador, documentoPagador, logradouroPagador, bairroPagador, cepPagador, cidadePagador, ufPagador, codigoDeBarras, linhaDigitavel, id, idConta, enderecoCobrancaBeneficiario, status, boletoRegistrado, fontePagadora, tipoPagamento);
   }
 
   @Override
@@ -798,6 +818,7 @@ public class BoletoResponse   {
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    boletoRegistrado: ").append(toIndentedString(boletoRegistrado)).append("\n");
     sb.append("    fontePagadora: ").append(toIndentedString(fontePagadora)).append("\n");
+    sb.append("    tipoPagamento: ").append(toIndentedString(tipoPagamento)).append("\n");
     sb.append("}");
     return sb.toString();
   }

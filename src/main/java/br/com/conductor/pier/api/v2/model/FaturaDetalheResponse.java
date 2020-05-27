@@ -53,6 +53,8 @@ public class FaturaDetalheResponse   {
   private Long idBoleto = null;
   private Boolean flagEmiteExtrato = null;
   private String linhaDigitavel = null;
+  private BigDecimal cetMensal = null;
+  private BigDecimal cetAnual = null;
 
   
   /**
@@ -289,6 +291,42 @@ public class FaturaDetalheResponse   {
   }
 
   
+  /**
+   * Valor do CET (Custo efetivo total) mensal.
+   **/
+  public FaturaDetalheResponse cetMensal(BigDecimal cetMensal) {
+    this.cetMensal = cetMensal;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor do CET (Custo efetivo total) mensal.")
+  @JsonProperty("cetMensal")
+  public BigDecimal getCetMensal() {
+    return cetMensal;
+  }
+  public void setCetMensal(BigDecimal cetMensal) {
+    this.cetMensal = cetMensal;
+  }
+
+  
+  /**
+   * Valor do CET (Custo efetivo total) anual.
+   **/
+  public FaturaDetalheResponse cetAnual(BigDecimal cetAnual) {
+    this.cetAnual = cetAnual;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor do CET (Custo efetivo total) anual.")
+  @JsonProperty("cetAnual")
+  public BigDecimal getCetAnual() {
+    return cetAnual;
+  }
+  public void setCetAnual(BigDecimal cetAnual) {
+    this.cetAnual = cetAnual;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -311,12 +349,14 @@ public class FaturaDetalheResponse   {
         Objects.equals(this.saldoAnterior, faturaDetalheResponse.saldoAnterior) &&
         Objects.equals(this.idBoleto, faturaDetalheResponse.idBoleto) &&
         Objects.equals(this.flagEmiteExtrato, faturaDetalheResponse.flagEmiteExtrato) &&
-        Objects.equals(this.linhaDigitavel, faturaDetalheResponse.linhaDigitavel);
+        Objects.equals(this.linhaDigitavel, faturaDetalheResponse.linhaDigitavel) &&
+        Objects.equals(this.cetMensal, faturaDetalheResponse.cetMensal) &&
+        Objects.equals(this.cetAnual, faturaDetalheResponse.cetAnual);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idConta, situacaoProcessamento, pagamentoEfetuado, dataVencimentoFatura, dataVencimentoReal, dataFechamento, valorTotal, valorPagamentoMinimo, lancamentosFaturaResponse, saldoAnterior, idBoleto, flagEmiteExtrato, linhaDigitavel);
+    return Objects.hash(idConta, situacaoProcessamento, pagamentoEfetuado, dataVencimentoFatura, dataVencimentoReal, dataFechamento, valorTotal, valorPagamentoMinimo, lancamentosFaturaResponse, saldoAnterior, idBoleto, flagEmiteExtrato, linhaDigitavel, cetMensal, cetAnual);
   }
 
   @Override
@@ -337,6 +377,8 @@ public class FaturaDetalheResponse   {
     sb.append("    idBoleto: ").append(toIndentedString(idBoleto)).append("\n");
     sb.append("    flagEmiteExtrato: ").append(toIndentedString(flagEmiteExtrato)).append("\n");
     sb.append("    linhaDigitavel: ").append(toIndentedString(linhaDigitavel)).append("\n");
+    sb.append("    cetMensal: ").append(toIndentedString(cetMensal)).append("\n");
+    sb.append("    cetAnual: ").append(toIndentedString(cetAnual)).append("\n");
     sb.append("}");
     return sb.toString();
   }

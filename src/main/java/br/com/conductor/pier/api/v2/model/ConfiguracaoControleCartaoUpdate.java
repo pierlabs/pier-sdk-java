@@ -24,6 +24,7 @@ public class ConfiguracaoControleCartaoUpdate   {
   private Boolean permiteTarjaMagnetica = null;
   private Boolean permiteContactless = null;
   private BigDecimal limiteContactlessSemSenha = null;
+  private String funcaoAtiva = null;
 
   
   /**
@@ -170,6 +171,24 @@ public class ConfiguracaoControleCartaoUpdate   {
   }
 
   
+  /**
+   * Indica o tipo de fun\u00E7\u00E3o ativa.
+   **/
+  public ConfiguracaoControleCartaoUpdate funcaoAtiva(String funcaoAtiva) {
+    this.funcaoAtiva = funcaoAtiva;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Indica o tipo de fun\u00E7\u00E3o ativa.")
+  @JsonProperty("funcaoAtiva")
+  public String getFuncaoAtiva() {
+    return funcaoAtiva;
+  }
+  public void setFuncaoAtiva(String funcaoAtiva) {
+    this.funcaoAtiva = funcaoAtiva;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -187,12 +206,13 @@ public class ConfiguracaoControleCartaoUpdate   {
         Objects.equals(this.permiteCompraInternacional, configuracaoControleCartaoUpdate.permiteCompraInternacional) &&
         Objects.equals(this.permiteTarjaMagnetica, configuracaoControleCartaoUpdate.permiteTarjaMagnetica) &&
         Objects.equals(this.permiteContactless, configuracaoControleCartaoUpdate.permiteContactless) &&
-        Objects.equals(this.limiteContactlessSemSenha, configuracaoControleCartaoUpdate.limiteContactlessSemSenha);
+        Objects.equals(this.limiteContactlessSemSenha, configuracaoControleCartaoUpdate.limiteContactlessSemSenha) &&
+        Objects.equals(this.funcaoAtiva, configuracaoControleCartaoUpdate.funcaoAtiva);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(permiteEcommerce, permiteSaque, permiteWallet, permiteControleMCC, permiteCompraInternacional, permiteTarjaMagnetica, permiteContactless, limiteContactlessSemSenha);
+    return Objects.hash(permiteEcommerce, permiteSaque, permiteWallet, permiteControleMCC, permiteCompraInternacional, permiteTarjaMagnetica, permiteContactless, limiteContactlessSemSenha, funcaoAtiva);
   }
 
   @Override
@@ -208,6 +228,7 @@ public class ConfiguracaoControleCartaoUpdate   {
     sb.append("    permiteTarjaMagnetica: ").append(toIndentedString(permiteTarjaMagnetica)).append("\n");
     sb.append("    permiteContactless: ").append(toIndentedString(permiteContactless)).append("\n");
     sb.append("    limiteContactlessSemSenha: ").append(toIndentedString(limiteContactlessSemSenha)).append("\n");
+    sb.append("    funcaoAtiva: ").append(toIndentedString(funcaoAtiva)).append("\n");
     sb.append("}");
     return sb.toString();
   }

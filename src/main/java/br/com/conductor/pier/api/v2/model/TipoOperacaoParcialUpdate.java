@@ -34,6 +34,7 @@ public class TipoOperacaoParcialUpdate   {
   private String tipoExcedentePermitido = null;
   private BigDecimal valorTAC = null;
   private BigDecimal percentualTac = null;
+  private Boolean flagIOFApartado = null;
 
   
   /**
@@ -360,6 +361,24 @@ public class TipoOperacaoParcialUpdate   {
   }
 
   
+  /**
+   * Flag que indica se o IOF \u00E9 apartado
+   **/
+  public TipoOperacaoParcialUpdate flagIOFApartado(Boolean flagIOFApartado) {
+    this.flagIOFApartado = flagIOFApartado;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "Flag que indica se o IOF \u00E9 apartado")
+  @JsonProperty("flagIOFApartado")
+  public Boolean getFlagIOFApartado() {
+    return flagIOFApartado;
+  }
+  public void setFlagIOFApartado(Boolean flagIOFApartado) {
+    this.flagIOFApartado = flagIOFApartado;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -387,12 +406,13 @@ public class TipoOperacaoParcialUpdate   {
         Objects.equals(this.excedentePermitido, tipoOperacaoParcialUpdate.excedentePermitido) &&
         Objects.equals(this.tipoExcedentePermitido, tipoOperacaoParcialUpdate.tipoExcedentePermitido) &&
         Objects.equals(this.valorTAC, tipoOperacaoParcialUpdate.valorTAC) &&
-        Objects.equals(this.percentualTac, tipoOperacaoParcialUpdate.percentualTac);
+        Objects.equals(this.percentualTac, tipoOperacaoParcialUpdate.percentualTac) &&
+        Objects.equals(this.flagIOFApartado, tipoOperacaoParcialUpdate.flagIOFApartado);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(flagManterTaxaJurosNoRotativo, nome, descricao, idEmissor, idTabela, valorParcela, flagCobraProRata, flagCobraJuros, planoMinimo, planoMaximo, valorMinimo, valorMaximo, idTabelaJuros, flagPosProximoVencimento, excedentePermitido, tipoExcedentePermitido, valorTAC, percentualTac);
+    return Objects.hash(flagManterTaxaJurosNoRotativo, nome, descricao, idEmissor, idTabela, valorParcela, flagCobraProRata, flagCobraJuros, planoMinimo, planoMaximo, valorMinimo, valorMaximo, idTabelaJuros, flagPosProximoVencimento, excedentePermitido, tipoExcedentePermitido, valorTAC, percentualTac, flagIOFApartado);
   }
 
   @Override
@@ -418,6 +438,7 @@ public class TipoOperacaoParcialUpdate   {
     sb.append("    tipoExcedentePermitido: ").append(toIndentedString(tipoExcedentePermitido)).append("\n");
     sb.append("    valorTAC: ").append(toIndentedString(valorTAC)).append("\n");
     sb.append("    percentualTac: ").append(toIndentedString(percentualTac)).append("\n");
+    sb.append("    flagIOFApartado: ").append(toIndentedString(flagIOFApartado)).append("\n");
     sb.append("}");
     return sb.toString();
   }

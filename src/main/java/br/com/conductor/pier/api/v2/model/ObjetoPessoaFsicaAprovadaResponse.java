@@ -87,6 +87,7 @@ public class ObjetoPessoaFsicaAprovadaResponse   {
   private String nomePai = null;
   private Integer chequeEspecial = null;
   private Integer numeroBanco = null;
+  private BigDecimal limiteParcelado = null;
 
   
   /**
@@ -971,6 +972,24 @@ public class ObjetoPessoaFsicaAprovadaResponse   {
   }
 
   
+  /**
+   * Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de compras parceladas
+   **/
+  public ObjetoPessoaFsicaAprovadaResponse limiteParcelado(BigDecimal limiteParcelado) {
+    this.limiteParcelado = limiteParcelado;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de compras parceladas")
+  @JsonProperty("limiteParcelado")
+  public BigDecimal getLimiteParcelado() {
+    return limiteParcelado;
+  }
+  public void setLimiteParcelado(BigDecimal limiteParcelado) {
+    this.limiteParcelado = limiteParcelado;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -1029,12 +1048,13 @@ public class ObjetoPessoaFsicaAprovadaResponse   {
         Objects.equals(this.numeroDependentes, objetoPessoaFsicaAprovadaResponse.numeroDependentes) &&
         Objects.equals(this.nomePai, objetoPessoaFsicaAprovadaResponse.nomePai) &&
         Objects.equals(this.chequeEspecial, objetoPessoaFsicaAprovadaResponse.chequeEspecial) &&
-        Objects.equals(this.numeroBanco, objetoPessoaFsicaAprovadaResponse.numeroBanco);
+        Objects.equals(this.numeroBanco, objetoPessoaFsicaAprovadaResponse.numeroBanco) &&
+        Objects.equals(this.limiteParcelado, objetoPessoaFsicaAprovadaResponse.limiteParcelado);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, nome, nomeMae, dataNascimento, sexo, cpf, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, flagDeficienteVisual, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, idOrigemComercial, idProduto, numeroAgencia, numeroContaCorrente, email, diaVencimento, nomeImpresso, nomeEmpresa, idConta, idProposta, canalEntrada, valorPontuacao, telefones, enderecos, limiteGlobal, limiteMaximo, limiteParcelas, limiteConsignado, impedidoFinanciamento, nomeReferencia1, enderecoReferencia1, nomeReferencia2, enderecoReferencia2, funcaoAtiva, matricula, responsavelDigitacao, idPromotorVenda, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial, numeroBanco);
+    return Objects.hash(id, nome, nomeMae, dataNascimento, sexo, cpf, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, flagDeficienteVisual, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, idOrigemComercial, idProduto, numeroAgencia, numeroContaCorrente, email, diaVencimento, nomeImpresso, nomeEmpresa, idConta, idProposta, canalEntrada, valorPontuacao, telefones, enderecos, limiteGlobal, limiteMaximo, limiteParcelas, limiteConsignado, impedidoFinanciamento, nomeReferencia1, enderecoReferencia1, nomeReferencia2, enderecoReferencia2, funcaoAtiva, matricula, responsavelDigitacao, idPromotorVenda, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial, numeroBanco, limiteParcelado);
   }
 
   @Override
@@ -1091,6 +1111,7 @@ public class ObjetoPessoaFsicaAprovadaResponse   {
     sb.append("    nomePai: ").append(toIndentedString(nomePai)).append("\n");
     sb.append("    chequeEspecial: ").append(toIndentedString(chequeEspecial)).append("\n");
     sb.append("    numeroBanco: ").append(toIndentedString(numeroBanco)).append("\n");
+    sb.append("    limiteParcelado: ").append(toIndentedString(limiteParcelado)).append("\n");
     sb.append("}");
     return sb.toString();
   }
