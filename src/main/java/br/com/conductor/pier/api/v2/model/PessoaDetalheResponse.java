@@ -43,6 +43,9 @@ public class PessoaDetalheResponse   {
   private Boolean pessoaPoliticamenteExposta = null;
   private BigDecimal patrimonioTotal = null;
   private String nomeConjuge = null;
+  private Boolean flagNomePaiNaoInformado = null;
+  private Boolean flagSemEnderecoComercialFixo = null;
+  private String dataEmissaoCnh = null;
 
   
   /**
@@ -531,6 +534,60 @@ public class PessoaDetalheResponse   {
   }
 
   
+  /**
+   * Flag que indica se a pessoa informou nome do pai
+   **/
+  public PessoaDetalheResponse flagNomePaiNaoInformado(Boolean flagNomePaiNaoInformado) {
+    this.flagNomePaiNaoInformado = flagNomePaiNaoInformado;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "Flag que indica se a pessoa informou nome do pai")
+  @JsonProperty("flagNomePaiNaoInformado")
+  public Boolean getFlagNomePaiNaoInformado() {
+    return flagNomePaiNaoInformado;
+  }
+  public void setFlagNomePaiNaoInformado(Boolean flagNomePaiNaoInformado) {
+    this.flagNomePaiNaoInformado = flagNomePaiNaoInformado;
+  }
+
+  
+  /**
+   * Flag que indica se a pessoa possui endere\u00E7o comercial fixo
+   **/
+  public PessoaDetalheResponse flagSemEnderecoComercialFixo(Boolean flagSemEnderecoComercialFixo) {
+    this.flagSemEnderecoComercialFixo = flagSemEnderecoComercialFixo;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "false", value = "Flag que indica se a pessoa possui endere\u00E7o comercial fixo")
+  @JsonProperty("flagSemEnderecoComercialFixo")
+  public Boolean getFlagSemEnderecoComercialFixo() {
+    return flagSemEnderecoComercialFixo;
+  }
+  public void setFlagSemEnderecoComercialFixo(Boolean flagSemEnderecoComercialFixo) {
+    this.flagSemEnderecoComercialFixo = flagSemEnderecoComercialFixo;
+  }
+
+  
+  /**
+   * Data emiss\u00E3o CNH
+   **/
+  public PessoaDetalheResponse dataEmissaoCnh(String dataEmissaoCnh) {
+    this.dataEmissaoCnh = dataEmissaoCnh;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "Data emiss\u00E3o CNH")
+  @JsonProperty("dataEmissaoCnh")
+  public String getDataEmissaoCnh() {
+    return dataEmissaoCnh;
+  }
+  public void setDataEmissaoCnh(String dataEmissaoCnh) {
+    this.dataEmissaoCnh = dataEmissaoCnh;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -567,12 +624,15 @@ public class PessoaDetalheResponse   {
         Objects.equals(this.numeroCnh, pessoaDetalheResponse.numeroCnh) &&
         Objects.equals(this.pessoaPoliticamenteExposta, pessoaDetalheResponse.pessoaPoliticamenteExposta) &&
         Objects.equals(this.patrimonioTotal, pessoaDetalheResponse.patrimonioTotal) &&
-        Objects.equals(this.nomeConjuge, pessoaDetalheResponse.nomeConjuge);
+        Objects.equals(this.nomeConjuge, pessoaDetalheResponse.nomeConjuge) &&
+        Objects.equals(this.flagNomePaiNaoInformado, pessoaDetalheResponse.flagNomePaiNaoInformado) &&
+        Objects.equals(this.flagSemEnderecoComercialFixo, pessoaDetalheResponse.flagSemEnderecoComercialFixo) &&
+        Objects.equals(this.dataEmissaoCnh, pessoaDetalheResponse.dataEmissaoCnh);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa, nomeReferencia1, enderecoReferencia1, nomeReferencia2, enderecoReferencia2, salario, impedidoFinanciamento, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial, numeroCnh, pessoaPoliticamenteExposta, patrimonioTotal, nomeConjuge);
+    return Objects.hash(idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa, nomeReferencia1, enderecoReferencia1, nomeReferencia2, enderecoReferencia2, salario, impedidoFinanciamento, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial, numeroCnh, pessoaPoliticamenteExposta, patrimonioTotal, nomeConjuge, flagNomePaiNaoInformado, flagSemEnderecoComercialFixo, dataEmissaoCnh);
   }
 
   @Override
@@ -607,6 +667,9 @@ public class PessoaDetalheResponse   {
     sb.append("    pessoaPoliticamenteExposta: ").append(toIndentedString(pessoaPoliticamenteExposta)).append("\n");
     sb.append("    patrimonioTotal: ").append(toIndentedString(patrimonioTotal)).append("\n");
     sb.append("    nomeConjuge: ").append(toIndentedString(nomeConjuge)).append("\n");
+    sb.append("    flagNomePaiNaoInformado: ").append(toIndentedString(flagNomePaiNaoInformado)).append("\n");
+    sb.append("    flagSemEnderecoComercialFixo: ").append(toIndentedString(flagSemEnderecoComercialFixo)).append("\n");
+    sb.append("    dataEmissaoCnh: ").append(toIndentedString(dataEmissaoCnh)).append("\n");
     sb.append("}");
     return sb.toString();
   }

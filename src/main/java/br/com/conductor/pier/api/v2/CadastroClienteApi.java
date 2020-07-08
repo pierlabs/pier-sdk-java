@@ -410,9 +410,12 @@ public class CadastroClienteApi {
    * @param numeroCnh N\u00FAmero da CNH da pessoa
    * @param pessoaPoliticamenteExposta Flag para identificar se a pessoa \u00E9 politicamente exposta
    * @param usuarioAlteracao Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o
+   * @param flagNomePaiNaoInformado Flag que indica se a pessoa informou nome do pai
+   * @param flagSemEnderecoComercialFixo Flag que indica se a pessoa possui endere\u00E7o comercial fixo
+   * @param dataEmissaoCnh Data emiss\u00E3o CNH 
    * @return PessoaDetalheResponse
    */
-  public PessoaDetalheResponse alterarPessoaDetalhe(Long id, String nomeMae, Long idEstadoCivil, String idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroBanco, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa, String nomeReferencia1, String enderecoReferencia1, String nomeReferencia2, String enderecoReferencia2, Boolean impedidoFinanciamento, String naturalidadeCidade, String naturalidadeEstado, Integer grauInstrucao, Integer numeroDependentes, String nomePai, Integer chequeEspecial, String numeroCnh, Boolean pessoaPoliticamenteExposta, String usuarioAlteracao) throws ApiException {
+  public PessoaDetalheResponse alterarPessoaDetalhe(Long id, String nomeMae, Long idEstadoCivil, String idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroBanco, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa, String nomeReferencia1, String enderecoReferencia1, String nomeReferencia2, String enderecoReferencia2, Boolean impedidoFinanciamento, String naturalidadeCidade, String naturalidadeEstado, Integer grauInstrucao, Integer numeroDependentes, String nomePai, Integer chequeEspecial, String numeroCnh, Boolean pessoaPoliticamenteExposta, String usuarioAlteracao, Boolean flagNomePaiNaoInformado, Boolean flagSemEnderecoComercialFixo, String dataEmissaoCnh) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'id' is set
@@ -477,6 +480,12 @@ public class CadastroClienteApi {
     queryParams.addAll(apiClient.parameterToPairs("", "pessoaPoliticamenteExposta", pessoaPoliticamenteExposta));
     
     queryParams.addAll(apiClient.parameterToPairs("", "usuarioAlteracao", usuarioAlteracao));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "flagNomePaiNaoInformado", flagNomePaiNaoInformado));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "flagSemEnderecoComercialFixo", flagSemEnderecoComercialFixo));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "dataEmissaoCnh", dataEmissaoCnh));
     
 
     
@@ -1972,9 +1981,12 @@ public class CadastroClienteApi {
    * @param patrimonioTotal Patrim\u00F4nio total da pessoa
    * @param salario Sal\u00E1rio da pessoa
    * @param nomeConjuge Nome do c\u00F4njuge da pessoa
+   * @param flagNomePaiNaoInformado Flag que indica se a pessoa informou nome do pai
+   * @param flagSemEnderecoComercialFixo Flag que indica se a pessoa possui endere\u00E7o comercial fixo
+   * @param dataEmissaoCnh Data emiss\u00E3o CNH 
    * @return PagePessoaDetalheResponse
    */
-  public PagePessoaDetalheResponse listarPessoasDetalhes(List<String> sort, Integer page, Integer limit, Long idPessoa, String nomeMae, Long idEstadoCivil, String idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroBanco, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa, String naturalidadeCidade, String naturalidadeEstado, Integer grauInstrucao, Integer numeroDependentes, String nomePai, Integer chequeEspecial, Boolean impedidoFinanciamento, String numeroCnh, BigDecimal patrimonioTotal, BigDecimal salario, String nomeConjuge) throws ApiException {
+  public PagePessoaDetalheResponse listarPessoasDetalhes(List<String> sort, Integer page, Integer limit, Long idPessoa, String nomeMae, Long idEstadoCivil, String idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroBanco, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa, String naturalidadeCidade, String naturalidadeEstado, Integer grauInstrucao, Integer numeroDependentes, String nomePai, Integer chequeEspecial, Boolean impedidoFinanciamento, String numeroCnh, BigDecimal patrimonioTotal, BigDecimal salario, String nomeConjuge, Boolean flagNomePaiNaoInformado, Boolean flagSemEnderecoComercialFixo, String dataEmissaoCnh) throws ApiException {
     Object postBody = null;
     
     // create path and map variables
@@ -2035,6 +2047,12 @@ public class CadastroClienteApi {
     queryParams.addAll(apiClient.parameterToPairs("", "salario", salario));
     
     queryParams.addAll(apiClient.parameterToPairs("", "nomeConjuge", nomeConjuge));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "flagNomePaiNaoInformado", flagNomePaiNaoInformado));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "flagSemEnderecoComercialFixo", flagSemEnderecoComercialFixo));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "dataEmissaoCnh", dataEmissaoCnh));
     
 
     
@@ -2551,9 +2569,12 @@ public class CadastroClienteApi {
    * @param patrimonioTotal Patrim\u00F4nio total da pessoa
    * @param salario Sal\u00E1rio da pessoa
    * @param nomeConjuge Nome do c\u00F4njuge da pessoa
+   * @param flagNomePaiNaoInformado Flag que indica se a pessoa informou nome do pai
+   * @param flagSemEnderecoComercialFixo Flag que indica se a pessoa possui endere\u00E7o comercial fixo
+   * @param dataEmissaoCnh Data emiss\u00E3o CNH
    * @return PessoaDetalheResponse
    */
-  public PessoaDetalheResponse salvarPessoaDetalhe(Long idPessoa, String nomeMae, Long idEstadoCivil, String idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroBanco, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa, String nomeReferencia1, String enderecoReferencia1, String nomeReferencia2, String enderecoReferencia2, String naturalidadeCidade, String naturalidadeEstado, Integer grauInstrucao, Integer numeroDependentes, String nomePai, Integer chequeEspecial, Boolean impedidoFinanciamento, String numeroCnh, Boolean pessoaPoliticamenteExposta, BigDecimal patrimonioTotal, BigDecimal salario, String nomeConjuge) throws ApiException {
+  public PessoaDetalheResponse salvarPessoaDetalhe(Long idPessoa, String nomeMae, Long idEstadoCivil, String idProfissao, Long idNaturezaOcupacao, Long idNacionalidade, Integer numeroBanco, Integer numeroAgencia, String numeroContaCorrente, String email, String nomeEmpresa, String nomeReferencia1, String enderecoReferencia1, String nomeReferencia2, String enderecoReferencia2, String naturalidadeCidade, String naturalidadeEstado, Integer grauInstrucao, Integer numeroDependentes, String nomePai, Integer chequeEspecial, Boolean impedidoFinanciamento, String numeroCnh, Boolean pessoaPoliticamenteExposta, BigDecimal patrimonioTotal, BigDecimal salario, String nomeConjuge, Boolean flagNomePaiNaoInformado, Boolean flagSemEnderecoComercialFixo, String dataEmissaoCnh) throws ApiException {
     Object postBody = null;
     
      // verify the required parameter 'idPessoa' is set
@@ -2623,6 +2644,12 @@ public class CadastroClienteApi {
     queryParams.addAll(apiClient.parameterToPairs("", "salario", salario));
     
     queryParams.addAll(apiClient.parameterToPairs("", "nomeConjuge", nomeConjuge));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "flagNomePaiNaoInformado", flagNomePaiNaoInformado));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "flagSemEnderecoComercialFixo", flagSemEnderecoComercialFixo));
+    
+    queryParams.addAll(apiClient.parameterToPairs("", "dataEmissaoCnh", dataEmissaoCnh));
     
 
     
